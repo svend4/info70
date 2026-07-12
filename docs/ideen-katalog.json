@@ -1,0 +1,2322 @@
+{
+ "stand": "2026-07-12",
+ "quelle": "baukasten-katalog workflow (8 Achsen)",
+ "statistik": {
+  "roh": 170,
+  "nachTitelDedup": 168,
+  "final": 139
+ },
+ "zaehlung": {
+  "kinder-app": 35,
+  "content-pack": 35,
+  "funktion": 24,
+  "erwachsenen-werkzeug": 27,
+  "unterricht": 12,
+  "doku": 6
+ },
+ "top30": [
+  {
+   "titel": "Deepfake-Studio",
+   "begruendung": "Desinformation/Deepfakes sind Top-Bedarf im Gefaehrdungsatlas; der konstruktionistische Ansatz (selber faelschen statt nur erkennen) ist einzigartig und deckt zugleich die AI-Act-Kennzeichnungspflicht ab."
+  },
+  {
+   "titel": "Bot oder Buddy?",
+   "begruendung": "Parasoziale KI-Chatbot-Bindungen sind das aktuellste Atlas-Risiko, und die komplett lokal geskriptete Umsetzung ohne offenen Chat ist risikofrei baubar und bislang konkurrenzlos."
+  },
+  {
+   "titel": "Dark-Pattern-Labyrinth",
+   "begruendung": "Dark Patterns sind explizites Atlas-Thema und DSA-Regulierungsfokus; die begehbare Fake-App ist die einzigartigste Mechanik im ganzen Ideenpool und foerderpolitisch hochanschlussfaehig."
+  },
+  {
+   "titel": "Lootbox-Labor",
+   "begruendung": "Kostenfallen/Gluecksspielmechaniken sind Kern-Gefaehrdung laut Atlas; der Simulator mit offengelegten Wahrscheinlichkeiten macht erlebbar, was Quizformate nur erklaeren (absorbiert die Familienausgabe)."
+  },
+  {
+   "titel": "Kontakt-Schutz-Training (NUR MIT PARTNER)",
+   "begruendung": "Cybergrooming ist das gravierendste Risiko im Gefaehrdungsatlas; das Modell mit medienpaedagogischem Fachpartner passt exakt zur BzKJ-Foerderlogik und schliesst die groesste inhaltliche Luecke."
+  },
+  {
+   "titel": "Verschwoerungs-Werkstatt",
+   "begruendung": "Trifft den BzKJ/NRW-Foerderfokus Demokratiefaehigkeit; Prebunking durch Selberbauen absurder Erzaehlungen ist wissenschaftlich fundiert und im deutschen Kindermedienangebot einzigartig."
+  },
+  {
+   "titel": "Feed-Forscher Profi (13-15)",
+   "begruendung": "Empfehlungs-Radikalisierung ist zentrales Atlas-Thema fuer Jugendliche; als Ausbau des vorhandenen feed-forscher-Simulators (inkl. der Mechaniken aus feed-forscher 13+) sehr guenstig baubar."
+  },
+  {
+   "titel": "Sog-Maschine",
+   "begruendung": "Exzessive Nutzung/Bindungsmechaniken direkt aus dem Atlas; das Live-Panel, das den wirkenden Trick benennt, ist einzigartig und auf der feed-forscher-Engine umsetzbar (absorbiert Endlos-Scroll-Labor)."
+  },
+  {
+   "titel": "stark-im-chat 13+ (Jugendversion)",
+   "begruendung": "Hassrede und Blossstellung bei Jugendlichen sind Dauer-Top-Risiko; die realistische Gruppenchat-Optik plus konkrete DSA-Meldewege laeuft direkt auf der vorhandenen Szenario-Engine."
+  },
+  {
+   "titel": "Spiral-Stopper",
+   "begruendung": "Cybermobbing-Bedarf laut Atlas; die sichtbare Eskalations-/Deeskalationskurve macht die Wirkung von Gegenrede und Melden erfahrbar statt belehrend - eine einzigartige Simulationsmechanik."
+  },
+  {
+   "titel": "Challenge-Druck-Simulator",
+   "begruendung": "Riskante Challenges sind ein benanntes Atlas-Risiko; Druck-Messer plus trainierte Ausstiegs-Saetze bieten einen konkreten Uebungsansatz, den es so noch nicht gibt."
+  },
+  {
+   "titel": "Filter-Spiegel",
+   "begruendung": "Koerperbild- und Selbstwert-Risiken durch Beauty-Filter stehen im Atlas; die Comic-Avatar-Loesung ohne Kamerabild ist einzigartig datensparsam und damit foerder- und schultauglich."
+  },
+  {
+   "titel": "Beschwerde-Lotse",
+   "begruendung": "Uebersetzt GC25/DSA-Beschwerderechte in einen erwachsenenfreien ersten Hilfeweg fuer Kinder - einzigartig im Markt und als Entscheidungsbaum auf der Szenario-Engine baubar (absorbiert Hilfe-Kompass)."
+  },
+  {
+   "titel": "Rechte-Kompass",
+   "begruendung": "Macht UN-KRK-Rechte aussprechbar statt nur bekannt (Foerderfokus Kinderrechte) und nutzt das erprobte 2/1/0-Trainermuster (absorbiert 'Mein Bild gehoert mir')."
+  },
+  {
+   "titel": "Daten-Radiergummi",
+   "begruendung": "Visualisiert das Loeschrecht (DSGVO Art. 17) auf der vorhandenen Graph-Engine des kettenbrief-stoppers - geringer Aufwand, hoher Aha-Effekt, keine vergleichbare App bekannt."
+  },
+  {
+   "titel": "Deepfake-Spürnase (nachrichten-detektive)",
+   "begruendung": "Bedient den akuten Atlas-Bedarf KI-Erkennung als reines S-Content-Pack auf dem vorhandenen Quiz - bestes Wirkung-pro-Aufwand-Verhaeltnis (absorbiert 'Echt oder KI? - Familiencheck')."
+  },
+  {
+   "titel": "Pack Digitale Rechte",
+   "begruendung": "Uebersetzt GC25 in konkrete DSGVO/DSA/AI-Act-Fragen fuer Kinder - inhaltlich einzigartig und als Daten-Pack auf dem vorhandenen kinderrechte-entdecker sofort baubar."
+  },
+  {
+   "titel": "Quiz-Klassenraum-Modus \"Alle raten mit\"",
+   "begruendung": "Macht alle Quiz-Apps ohne Schuelergeraete und ohne jegliche Schuelerdaten im Unterricht nutzbar - der groesste einzelne Hebel fuer die Schulverbreitung des Baukastens."
+  },
+  {
+   "titel": "Projektwochen-Paket \"Sicher im Netz\"",
+   "begruendung": "Buendelt fuenf vorhandene Apps ohne Neuentwicklung zu einem schulfertigen Fuenf-Tage-Format nach Medienkompetenzrahmen NRW - starker Multiplikator und Foerderantrags-Baustein."
+  },
+  {
+   "titel": "Kinderrats-Modul",
+   "begruendung": "Bedient den BzKJ-Foerderfokus Demokratiefaehigkeit und den SGB-VIII-Beteiligungsnachweis von Einrichtungen auf der vorhandenen mitmach-arena (absorbiert Themenspeicher und Protokoll-Generator)."
+  },
+  {
+   "titel": "Klassen-Koffer-Auswertung für Lehrkräfte",
+   "begruendung": "Gibt Lehrkraeften Lernstands-Feedback voellig ohne personenbezogene Daten - ein Alleinstellungsmerkmal gegenueber kommerziellen Lernplattformen, auf dem vorhandenen Koffer-Muster baubar."
+  },
+  {
+   "titel": "Schulfreigabe-Dossier \"Null-Daten-Nachweis\"",
+   "begruendung": "Raeumt mit S-Aufwand die groesste reale Einfuehrungshuerde (Datenschutz-Freigabe an Schulen) fuer saemtliche Apps des Baukastens auf einmal ab."
+  },
+  {
+   "titel": "Lehrkräfte-Szenariotraining \"Ernstfall Pausenhof-Chat\"",
+   "begruendung": "Fachkraefte sind der Engpass der Medienbildung; das erprobte 2/1/0-Muster gibt Handlungssicherheit bei echten Vorfaellen (absorbiert Recht-im-Schulalltag-Trainer)."
+  },
+  {
+   "titel": "Elternabend-Kit \"Digital daheim\"",
+   "begruendung": "Erreicht Eltern als wichtigste Schutzinstanz mit Atlas-Themen (Lootboxen, Kettenbriefe, Sharenting), dreisprachig ueber vorhandene mini-i18n und komplett offline."
+  },
+  {
+   "titel": "Familien-Medienvertrag",
+   "begruendung": "Vielfach nachgefragtes, partizipatives Werkzeug mit Pflicht-Bausteinen auch fuer Eltern, trivial auf der Formular-zu-Dokument-Engine baubar (absorbiert die takt-pause-Variante)."
+  },
+  {
+   "titel": "Hilfe-Inseln",
+   "begruendung": "Der standardisierte 116-111-Hilfebaustein in allen Apps ist Safeguarding-Grundausstattung und Pflichtkriterium fuer Guetesiegel - mit S-Aufwand einmal gebaut, ueberall wirksam (absorbiert Hilfe-Kompass offline)."
+  },
+  {
+   "titel": "Leichte-Sprache-Schalter in kinder-ui",
+   "begruendung": "Einmal in der i18n-Infrastruktur umgesetzt, oeffnet er saemtliche Apps fuer Kinder mit Lese- und Lernschwierigkeiten und zahlt direkt auf BFSG/EAA-Pflichten ein (absorbiert die daten-schatz-Variante)."
+  },
+  {
+   "titel": "Screenreader- und Tastatur-Audit-Pack",
+   "begruendung": "BFSG/EN-301-549-Konformitaet ist seit 2025 gesetzliche Pflicht und faktische Foerdervoraussetzung; zentrale Fixes in kinder-ui vererben sich automatisch auf alle elf Apps."
+  },
+  {
+   "titel": "Ukrainisch/Russisch-Komplettierung",
+   "begruendung": "Maximale Reichweite pro Aufwand dank vorhandener mini-i18n samt Vollstaendigkeitstest; Integrations- und Teilhabe-Fit fuer NRW-Foerderprogramme."
+  },
+  {
+   "titel": "KRIA-Check",
+   "begruendung": "Ein GC25-basiertes Kinderrechte-Folgenabschaetzungs-Werkzeug fuer Anbieter und Traeger fehlt in Deutschland komplett; auf der kriterien-check-Engine baubar (absorbiert Kinderrechte-Folgenabschaetzung)."
+  }
+ ],
+ "ideen": [
+  {
+   "titel": "Dark-Pattern-Labyrinth",
+   "typ": "kinder-app",
+   "thema": "Dark Patterns / manipulatives Interface-Design (Gefaehrdungsatlas)",
+   "beschreibung": "Kinder muessen sich durch eine nachgebaute Fake-App voller Tricks (Countdown-Druck, versteckter Schliessen-Knopf, vorangekreuzte Haken, Confirmshaming) zum ehrlichen Ausgang klicken; jedes entdeckte Muster wird benannt und erklaert. Lernziel: manipulative Gestaltung erkennen und ihr widerstehen.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "DSA",
+    "UN-KRK",
+    "JuSchG"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Deepfake-Studio",
+   "typ": "kinder-app",
+   "thema": "Deepfakes / Desinformation (Gefaehrdungsatlas)",
+   "beschreibung": "Kinder bauen aus vorgefertigten Bausteinen (Gesicht, Stimm-Text, Ort, Schlagzeile) in Sekunden eine ueberzeugende Faelschung zusammen und erleben, WIE leicht Faelschen ist; danach folgt eine Erkennungs-Checkliste. Lernziel: gesunde Skepsis gegenueber Bild- und Tonbeweisen plus Kennzeichnungspflicht fuer KI-Inhalte verstehen.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "AI Act",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (KI)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Lootbox-Labor",
+   "typ": "kinder-app",
+   "thema": "Lootboxen / gluecksspielaehnliche Mechaniken (Gefaehrdungsatlas)",
+   "beschreibung": "Simulierte Lootbox mit offengelegten echten Wahrscheinlichkeiten und Taschengeld-Zaehler: Kinder erleben, wie selten das begehrte Item faellt und wie schnell das Geld weg ist. Lernziel: Zufalls- und Kostenmechaniken durchschauen, bevor echtes Geld fliesst.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "JuSchG",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "foerderfit": "NRW-Games 80%",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Muenz-Trick",
+   "typ": "kinder-app",
+   "thema": "Kostenfallen / virtuelle Spielwaehrungen (Gefaehrdungsatlas)",
+   "beschreibung": "Umrechnungs-Simulator zeigt live, wie Spielwaehrungen (Gems, Muenzen, Punkte-Pakete) echte Euro-Preise verschleiern; Kinder rechnen Shop-Angebote in Taschengeld-Wochen um. Lernziel: den Verschleierungs-Trick doppelter Waehrungen erkennen.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "JuSchG",
+    "UN-KRK",
+    "DSA"
+   ],
+   "foerderfit": "NRW-Games 80%",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Sog-Maschine",
+   "typ": "kinder-app",
+   "thema": "Exzessive Nutzung / persuasives Design (Autoplay, Streaks, Endlos-Scroll)",
+   "beschreibung": "Ein harmloser Demo-Feed mit zuschaltbarem Autoplay, Endlos-Scroll, Streaks und Belohnungs-Sounds; ein Live-Panel zeigt, welcher Trick gerade wirkt und wie viel Zeit unbemerkt vergangen ist. Lernziel: Bindungs-Mechaniken benennen und bewusst abschalten koennen.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "DSA",
+    "UN-KRK",
+    "JuSchG"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Spiral-Stopper",
+   "typ": "kinder-app",
+   "thema": "Hassrede / Eskalationsdynamik (Gefaehrdungsatlas)",
+   "beschreibung": "Simulierter Kommentar-Thread, in dem jede Reaktion (zurueckpoebeln, ignorieren, Gegenrede, melden) eine sichtbare Stimmungs-Kurve veraendert; Kinder erleben, wie Eskalation entsteht und wodurch sie stoppt. Lernziel: Wirkung von Gegenrede und Meldewegen erfahren statt nur hoeren.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "JMStV",
+    "DSA",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Challenge-Druck-Simulator",
+   "typ": "kinder-app",
+   "thema": "Riskante Challenges / Mutproben / Gruppendruck (Gefaehrdungsatlas)",
+   "beschreibung": "Ein nachgestellter Gruppenchat draengt zur riskanten Challenge, waehrend ein Druck-Messer die Tricks sichtbar macht (Zeitdruck, 'alle machen mit', Ausschluss-Drohung); Kinder ueben erprobte Ausstiegs-Saetze. Lernziel: Gruppendruck als Mechanik erkennen und Nein-Sagen trainieren.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "JuSchG",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Interaktion)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Verschwoerungs-Werkstatt",
+   "typ": "kinder-app",
+   "thema": "Verschwoerungserzaehlungen (Gefaehrdungsatlas)",
+   "beschreibung": "Jugendliche bauen aus Bausteinen (geheime Gruppe + Ereignis + 'wem nuetzt es?') absichtlich absurde Verschwoerungserzaehlungen und durchschauen so das immer gleiche Baumuster echter Erzaehlungen. Lernziel: Struktur statt Einzelfall erkennen, Immunisierung durch Selbermachen.",
+   "alter": "13-15",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "JMStV",
+    "DSA",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Bot oder Buddy?",
+   "typ": "kinder-app",
+   "thema": "KI-Chatbots / parasoziale KI-Beziehungen (Gefaehrdungsatlas, KI)",
+   "beschreibung": "Ein komplett lokaler, fest geskripteter Demo-Chatbot 'tut freundlich'; Kinder decken auf, mit welchen Formulierungs-Tricks er Gefuehle und Verstaendnis nur simuliert. Lernziel: KI ist kein Freund und muss sich als KI zu erkennen geben - ohne offenen Chat, alle Dialoge vorverfasst.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "AI Act",
+    "UN-KRK",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (KI)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Filter-Spiegel",
+   "typ": "kinder-app",
+   "thema": "Beauty-Filter / unrealistische Koerperbilder (Gefaehrdungsatlas)",
+   "beschreibung": "Auf einen Comic-Avatar (kein Kamerabild, also keine personenbezogenen Daten) lassen sich typische Beauty-Filter stapeln; ein Regler zeigt den wachsenden Abstand zur Realitaet. Lernziel: verstehen, dass Vergleichsbilder im Feed technisch konstruiert sind und wie das aufs Selbstbild wirkt.",
+   "alter": "13-15",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "JMStV",
+    "DSGVO"
+   ],
+   "foerderfit": "Preise",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Spuren-Lupe",
+   "typ": "kinder-app",
+   "thema": "Datenspuren / Tracking und Profilbildung (Gefaehrdungsatlas)",
+   "beschreibung": "Zeigt Kindern rein lokal und ohne jede Uebertragung, was eine Webseite ueber sie sehen koennte (Geraet, Bildschirm, Klickpfade, Verweildauer) und macht unsichtbares Tracking damit begreifbar. Lernziel: verstehen, dass auch ohne Eingabe Daten entstehen, und Schutzeinstellungen kennenlernen.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "DSA",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Passwort-Pruefstand",
+   "typ": "kinder-app",
+   "thema": "Identitaetsdiebstahl / Account-Sicherheit (Gefaehrdungsatlas)",
+   "beschreibung": "Lokaler Knack-Simulator zeigt, in wie vielen Sekunden oder Jahrhunderten ein Passwort faellt, und laesst Kinder mit der Drei-Woerter-Methode starke Passsaetze bauen. Lernziel: warum '1234' den Account kostet und wie man Konten wirksam schuetzt.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "foerderfit": "Preise",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Koeder-Quiz",
+   "typ": "kinder-app",
+   "thema": "Phishing / Fake-Gewinnspiele (Gefaehrdungsatlas, Identitaetsdiebstahl)",
+   "beschreibung": "Echt oder Koeder? Kinder beurteilen nachgestellte Nachrichten ('Du hast gewonnen!', 'Dein Account wird gesperrt!') und lernen die drei Phishing-Warnzeichen Absender, Druck, Link. Lernziel: Betrugsnachrichten erkennen, bevor geklickt wird.",
+   "alter": "8-12",
+   "engine": "quiz-kern",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "UN-KRK",
+    "JuSchG"
+   ],
+   "foerderfit": "-",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Smarte Ohren",
+   "typ": "kinder-app",
+   "thema": "Sprachassistenten / Smart Toys (Gefaehrdungsatlas, KI im Kinderzimmer)",
+   "beschreibung": "Leichte-Sprache-Szenarien zu Sprachassistent, Smart-Toy und Tablet: Was hoert mit, was erzaehle ich lieber nicht, wann hole ich Erwachsene dazu? Mit automatischer Vorlesefunktion aus kinder-ui. Lernziel: erste Datensparsamkeit gegenueber sprechenden Geraeten.",
+   "alter": "6-8",
+   "engine": "szenario",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "AI Act",
+    "UN-KRK",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ (KI)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "FOMO-Kompass",
+   "typ": "kinder-app",
+   "thema": "FOMO / Angst etwas zu verpassen (Gefaehrdungsatlas)",
+   "beschreibung": "Selbstbeobachtungs-App nach takt-pause-Muster: Jugendliche protokollieren lokal, wann die Verpassens-Angst auftritt, und testen Gegenstrategien; die Wochenauswertung bleibt vollstaendig auf dem Geraet. Lernziel: eigene FOMO-Ausloeser erkennen und Erholungszeiten planen.",
+   "alter": "13-15",
+   "engine": "planer",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "DSGVO"
+   ],
+   "foerderfit": "-",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Regel-Werkstatt",
+   "typ": "kinder-app",
+   "thema": "Digitale Teilhabe / Aushandeln von Medienregeln (UN-KRK Art. 12)",
+   "beschreibung": "Die Klasse handelt eigene Medienregeln aus: Vorschlaege sammeln, abstimmen, Ergebnis als 'Klassen-Koffer'-Datei exportieren und als Plakat drucken - Beteiligung ohne Server nach mitmach-arena-Muster. Lernziel: demokratisches Aushandeln von Regeln selbst erleben.",
+   "alter": "8-12",
+   "engine": "beteiligung",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Teilhabe)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Barriere-Detektive",
+   "typ": "kinder-app",
+   "thema": "Barrierefreiheit als Mitmach-Thema (BFSG/EAA 2025)",
+   "beschreibung": "Kinder pruefen ihre Lieblingsapps und -seiten mit einer Kinder-Checkliste (Vorlesen moeglich? Kontrast? Ohne Ton verstaendlich?) und stimmen ueber die fairste App ab. Lernziel: Barrierefreiheit als Fairness-Kriterium verstehen und Perspektivwechsel ueben.",
+   "alter": "8-12",
+   "engine": "beteiligung",
+   "aufwand": "M",
+   "standards": [
+    "BFSG/EAA",
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "Preise",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Darf ich das posten?",
+   "typ": "kinder-app",
+   "thema": "Urheberrecht und Bildrechte beim Teilen (Gefaehrdungsatlas, Identitaet/Recht)",
+   "beschreibung": "Quiz zu Alltagsfaellen: fremdes Meme weiterleiten, Foto vom Freund posten, Musik unters Video legen - erlaubt oder nicht? Erklaerungen in Kindersprache nach jeder Antwort. Lernziel: Grundregeln von Urheber- und Persoenlichkeitsrecht praktisch anwenden.",
+   "alter": "8-12",
+   "engine": "quiz-kern",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "UN-KRK",
+    "JMStV"
+   ],
+   "foerderfit": "-",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Kontakt-Schutz-Training (NUR MIT PARTNER)",
+   "typ": "kinder-app",
+   "thema": "Cybergrooming - nur mit medienpaedagogischem Partner umsetzbar",
+   "beschreibung": "Szenario-Trainer zu Kontaktanbahnung durch Fremde (Schmeicheln, Geheimhaltungs-Druck, Bitte um Bilder, Wechsel in private Kanaele) mit klaren Hilfe-Ausgaengen. Konzeption, Testung und Begleitmaterial ausschliesslich mit medienpaedagogischem Fachpartner (z.B. Landesmedienanstalt-nahe Fachstelle).",
+   "alter": "8-12",
+   "engine": "szenario",
+   "aufwand": "M",
+   "standards": [
+    "JuSchG",
+    "DSA",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (nur mit medienpaedagogischem Partner)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Grenzen-Setzen-Training (NUR MIT PARTNER)",
+   "typ": "kinder-app",
+   "thema": "Sexualisierte Ansprache / Bild-Erpressung - nur mit medienpaedagogischem Partner umsetzbar",
+   "beschreibung": "Szenarien zu sexualisierter Ansprache und Sextortion mit Fokus auf Grenzen setzen, Beweise sichern, Hilfe holen (klare Verweise auf Fachberatung). Umsetzung ausschliesslich gemeinsam mit medienpaedagogischem und fachberatendem Partner.",
+   "alter": "13-15",
+   "engine": "szenario",
+   "aufwand": "M",
+   "standards": [
+    "JuSchG",
+    "JMStV",
+    "DSA",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (nur mit medienpaedagogischem Partner)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Stark im Chat Mini (6-8)",
+   "typ": "kinder-app",
+   "thema": "Altersvariante: Cybermobbing in leichter Sprache",
+   "beschreibung": "6-8-Variante von stark-im-chat: leichte Sprache, nur zwei statt drei Optionen, automatisches Vorlesen und Piktogramme; erste Regeln gegen Gemeinheiten im Chat. Lernziel: Gemeinheiten benennen und Erwachsene einbeziehen.",
+   "alter": "6-8",
+   "engine": "szenario",
+   "aufwand": "S",
+   "standards": [
+    "JuSchG",
+    "UN-KRK",
+    "fragFINN",
+    "BFSG/EAA"
+   ],
+   "foerderfit": "-",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Nachrichten-Detektive Profi (13-15)",
+   "typ": "kinder-app",
+   "thema": "Altersvariante: Desinformation vertieft (Deepfakes, KI-Texte, Quellencheck)",
+   "beschreibung": "13-15-Variante von nachrichten-detektive: schwerere Quizfaelle mit Deepfake-Merkmalen, KI-generierten Texten und Quellencheck-Strategien (Wer? Wo noch? Wie alt?). Lernziel: systematische Pruefroutine statt Bauchgefuehl.",
+   "alter": "13-15",
+   "engine": "quiz-kern",
+   "aufwand": "S",
+   "standards": [
+    "AI Act",
+    "JMStV",
+    "DSA"
+   ],
+   "foerderfit": "BzKJ (KI, Demokratiefaehigkeit)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Daten-Schatz Mini (6-8)",
+   "typ": "kinder-app",
+   "thema": "Altersvariante: Datenschutz in leichter Sprache",
+   "beschreibung": "6-8-Variante von daten-schatz: Name, Adresse, Fotos - was ist geheim? Mit Piktogrammen, Vorlesen und vereinfachten Szenarien. Lernziel: erste Unterscheidung 'darf jeder wissen / bleibt geheim'.",
+   "alter": "6-8",
+   "engine": "szenario",
+   "aufwand": "S",
+   "standards": [
+    "DSGVO",
+    "UN-KRK",
+    "fragFINN"
+   ],
+   "foerderfit": "-",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Feed-Forscher Profi (13-15)",
+   "typ": "kinder-app",
+   "thema": "Altersvariante: Rabbit-Hole-Effekt und Radikalisierungsdynamik",
+   "beschreibung": "13-15-Erweiterung von feed-forscher: der Simulator zeigt abstrahiert (ohne echte Inhalte), wie wenige Klicks den Feed in Richtung immer extremerer Empfehlungen kippen und wie man ihn zuruecksetzt. Lernziel: Empfehlungslogik als Radikalisierungs-Risiko verstehen.",
+   "alter": "13-15",
+   "engine": "simulator",
+   "aufwand": "S",
+   "standards": [
+    "DSA",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "achse": "atlas-x-engines"
+  },
+  {
+   "titel": "Pack Schutzrechte",
+   "typ": "content-pack",
+   "thema": "UN-KRK Schutzrechte (Art. 19, 32, 34, 36) und deren digitale Dimension nach General Comment 25",
+   "beschreibung": "Fragenbank-Erweiterung fuer den Kinderrechte-Entdecker (daten/fragen.json): 12-15 Fragen zu Schutz vor Gewalt, Ausbeutung und Mobbing - offline wie online. Kinder lernen, dass Hilfeholen ein Recht ist und kein Petzen, mit 116 111 als konkreter Anlaufstelle in jeder Erklaerung.",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "JuSchG",
+    "JMStV"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen, Schutz)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Pack Foerderrechte",
+   "typ": "content-pack",
+   "thema": "UN-KRK Foerderrechte (Art. 24, 28, 29, 31) inkl. Recht auf digitalen Zugang nach GC25",
+   "beschreibung": "Fragenbank zum Recht auf Bildung, Gesundheit, Spiel und Erholung; Kinder lernen, dass auch Pausen, Freizeit und Zugang zu guten Medienangeboten Rechte sind, nicht Belohnungen. Verweist am Rundenende auf takt-pause (Erholung) als lebendes Beispiel.",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Teilhabe)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Pack Beteiligungsrechte",
+   "typ": "content-pack",
+   "thema": "UN-KRK Beteiligungsrechte (Art. 12, 13, 14, 15, 17): gehoert werden, Meinung, Information",
+   "beschreibung": "Fragenbank zu Meinungsfreiheit, Recht auf Gehoert-werden und Informationszugang; Kinder lernen, wo sie in Familie, Schule und Gemeinde mitentscheiden duerfen (z.B. Klassenrat, Jugendparlament). Brueckt am Rundenende zur Mitmach-Arena als Ort, das Recht sofort auszuprobieren.",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit, Teilhabe)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Pack Digitale Rechte",
+   "typ": "content-pack",
+   "thema": "General Comment 25 komplett: Privatsphaere (Art. 16), Loeschung, Werbeschutz, KI-Transparenz",
+   "beschreibung": "Fragenbank, die GC25 in konkrete EU-Regeln uebersetzt: Recht auf Datenloeschung (DSGVO Art. 17), Verbot profilbasierter Werbung an Minderjaehrige (DSA Art. 28), Kennzeichnung von KI-Inhalten (AI Act Art. 50). Kinder lernen, dass ihre Rechte im Netz keine Bitte sind, sondern geltendes EU-Recht.",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "DSGVO",
+    "DSA",
+    "AI Act"
+   ],
+   "foerderfit": "BzKJ (KI, sichere Voreinstellungen)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Rechte-Kompass",
+   "typ": "kinder-app",
+   "thema": "Kinderrechte in Alltagssituationen erkennen und einfordern (Art. 12, 16, 31; Sharenting aus dem Gefaehrdungsatlas)",
+   "beschreibung": "Szenario-Trainer: 'Mama will dein peinliches Foto posten', 'Die App will deinen Standort', 'Beim Umzug fragt dich keiner' - das Kind waehlt aus 3 Reaktionen (2/1/0) und erfaehrt, welcher KRK-Artikel betroffen ist und welcher Satz das Recht hoeflich einfordert. Lernziel: Rechte nicht nur kennen, sondern aussprechen koennen.",
+   "aufwand": "M",
+   "engine": "szenario",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Beschwerde-Lotse",
+   "typ": "kinder-app",
+   "thema": "Kindgerechtes Beschwerderecht nach GC25 Rz. 43 ff. und EU-Kinderrechtsstrategie (kindgerechte Justiz)",
+   "beschreibung": "Entscheidungsbaum auf der Szenario-Engine: vom Problem ('gemeines Video ueber mich', 'jemand nutzt mein Foto', 'Abo-Falle im Spiel') fuehren 2-3 Fragen zur richtigen deutschen Anlaufstelle - Melde-Knopf in der Plattform (DSA Art. 20), Nummer gegen Kummer 116 111, jugendschutz.net-Beschwerdestelle, Datenschutzbehoerde. Kinder lernen: Fuer jedes Problem gibt es einen erwachsenenfreien ersten Schritt.",
+   "aufwand": "M",
+   "engine": "szenario",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "DSA",
+    "DSGVO",
+    "JMStV"
+   ],
+   "foerderfit": "BzKJ (Teilhabe, sichere Voreinstellungen)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Kinderrats-Modul",
+   "typ": "funktion",
+   "thema": "Art. 12 als echtes Verfahren: Beteiligungs- und Beschwerdeverfahren nach Paragraf 45 SGB VIII",
+   "beschreibung": "Erweiterung der Mitmach-Arena um einen Sitzungsmodus: Tagesordnung, Redeliste, Abstimmung mit Ergebnis-Begruendung und Protokoll als Datei-Export in den Klassen-Koffer (kein Server). Kinder erleben ein formales Beteiligungsverfahren, wie es Kitas und Heime nach SGB VIII nachweisen muessen - anschlussfaehig an den Nationalen Aktionsplan Kinder- und Jugendbeteiligung.",
+   "aufwand": "M",
+   "engine": "mitmach-arena",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Interaktion, Teilhabe, Demokratiefaehigkeit)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Hilfe-Inseln",
+   "typ": "funktion",
+   "thema": "Recht auf Hilfe und Rehabilitation (Art. 39) und zugaengliche Hilfewege nach GC25",
+   "beschreibung": "Einheitlicher 'Ich brauche Hilfe'-Baustein in kinder-ui, den jede App einbindet: ein ruhiger Screen mit 116 111, kurzer Ermutigung ('Du hast das Recht auf Hilfe') und Vorlesen - ohne Chat, ohne externen Request. Standardisiert, was der Kinderrechte-Entdecker mit Frage k10 begonnen hat, als Pflicht-Baustein des Kriterienkatalogs.",
+   "aufwand": "S",
+   "engine": "statisch",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Daten-Radiergummi",
+   "typ": "kinder-app",
+   "thema": "Recht auf Privatsphaere (Art. 16) und Recht auf Loeschung (DSGVO Art. 17) erlebbar machen",
+   "beschreibung": "Auf der Graph-Engine des Kettenbrief-Stoppers verbreitet sich ein Foto von Knoten zu Knoten; das Kind loest eine Loeschanfrage aus und sieht, was sie erreicht (Original weg) und was nicht (Kopien bleiben). Lernziel: Loeschung ist ein starkes Recht, aber frueh handeln und vorher nachdenken ist staerker.",
+   "aufwand": "M",
+   "engine": "simulator",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Spiel-Recht-Balance",
+   "typ": "funktion",
+   "thema": "Art. 31: Recht auf Ruhe, Freizeit und Spiel als positiver Rahmen statt Verbotslogik",
+   "beschreibung": "Erweiterung von takt-pause: Die Tagesstatistik zeigt den Tag als Balance von drei Rechten (Spiel/Medien, Ruhe, Draussen/Freunde) statt nur als Bildschirmzeit-Ampel; das Kind plant selbst, wo heute welches Recht zu kurz kam. Lernziel: Mediennutzung selbst regulieren, weil Erholung ein eigenes Recht ist - nicht weil Erwachsene es verbieten (FOMO/exzessive Nutzung aus dem Gefaehrdungsatlas).",
+   "aufwand": "M",
+   "engine": "planer",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Teilhabe)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Chat-Rechte-Pack",
+   "typ": "content-pack",
+   "thema": "Meinungsfreiheit (Art. 13) und ihre Grenzen: Hassrede, Melden, Blockieren als Rechtsausuebung",
+   "beschreibung": "Neue Szenarien fuer stark-im-chat, die Chat-Situationen als Rechtsfragen rahmen: Meine Meinung sagen ist Art. 13 - beleidigen ist es nicht; Melden ueber den Plattform-Knopf ist mein Recht aus DSA Art. 20, kein Petzen. Kinder lernen die Doppel-Natur der Beteiligungsrechte: Freiheit plus Verantwortung.",
+   "aufwand": "S",
+   "engine": "szenario",
+   "alter": "8-12",
+   "standards": [
+    "UN-KRK",
+    "DSA",
+    "JMStV"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Artikel-Lexikon in Leichter Sprache",
+   "typ": "funktion",
+   "thema": "Alle 54 KRK-Artikel kindgerecht zugaenglich (Art. 2 Nichtdiskriminierung, Art. 17 Zugang zu Information)",
+   "beschreibung": "Nachschlage-Modus im Kinderrechte-Entdecker: jeder Artikel als 2-3 Saetze in Leichter Sprache, in de/uk/ru (mini-i18n mit Vollstaendigkeitstest) und mit Vorlesen ueber kinder-ui. Erfuellt zugleich die Barrierefreiheits-Pflicht aus BFSG/EAA 2025 und macht die Quiz-Erklaerungen verlinkbar.",
+   "aufwand": "M",
+   "engine": "statisch",
+   "alter": "6-8, 8-12",
+   "standards": [
+    "UN-KRK",
+    "BFSG/EAA",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Teilhabe)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "KRIA-Check",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Child Rights Impact Assessment: GC25 empfiehlt Kinderrechte-Folgenabschaetzung fuer digitale Angebote",
+   "beschreibung": "Kriterienkatalog auf der kriterien-check-Engine, mit dem Anbieter, Schulen und Traeger ein digitales Angebot gegen GC25-Anforderungen pruefen (Kindeswohlvorrang, Datenminimierung, keine Dark Patterns, Beschwerdeweg, Alterseignung) - mit Datei-Export des Pruefberichts. Nutzer lernen, welche Luecken vor einer Beschaffung oder einem Foerderantrag zu schliessen sind.",
+   "aufwand": "M",
+   "engine": "katalog",
+   "alter": "Betreiber",
+   "standards": [
+    "UN-KRK",
+    "DSA",
+    "DSGVO",
+    "AI Act",
+    "JMStV"
+   ],
+   "foerderfit": "-",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Ombuds-Landkarte",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Deutsches Beschwerde- und Ombudswesen fuer Kinderrechte, gebuendelt fuer Eltern und Fachkraefte",
+   "beschreibung": "Gefilterte Karten auf der foerder-navigator-Engine: Ombudsstellen nach Paragraf 9a SGB VIII je Bundesland, Landes-Kinderbeauftragte, Datenschutz-Beschwerde (DSGVO Art. 77), jugendschutz.net/KJM, Bundesnetzagentur als Digital Services Coordinator (DSA-Beschwerden), Monitoring-Stelle UN-KRK am Deutschen Institut fuer Menschenrechte. Eltern lernen, welche Stelle fuer welches Problem zustaendig ist und wie man sie erreicht - Daten statisch gepflegt, keine externen Requests.",
+   "aufwand": "M",
+   "engine": "katalog",
+   "alter": "Eltern",
+   "standards": [
+    "UN-KRK",
+    "DSGVO",
+    "DSA"
+   ],
+   "foerderfit": "-",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Stationenlernen: Deine Rechte, dein Netz",
+   "typ": "unterricht",
+   "thema": "KRK-Artikel-Cluster als Unterrichtseinheit, verzahnt mit den vier Content-Packs",
+   "beschreibung": "Druckfaehige HTML-Einheit (2 Doppelstunden, Klasse 3-6) mit vier Stationen (Schutz, Foerderung, Beteiligung, digital), an denen Kleingruppen die jeweiligen Apps/Packs durchlaufen und ein Rechte-Plakat erstellen; mit dokumentierten Lernzielen und Kompetenzraster nach Medienkompetenzrahmen NRW und KMK-Strategie 'Bildung in der digitalen Welt'. Offline nutzbar, OER-lizenzierbar dank AGPL-Baukasten.",
+   "aufwand": "S",
+   "engine": "statisch",
+   "alter": "Lehrkraefte (Kinder 8-12)",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "Preise (Dieter Baacke Preis)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Klassenrat-Handbuch",
+   "typ": "unterricht",
+   "thema": "Art. 12 im Schulalltag: wiederkehrender Klassenrat mit der Mitmach-Arena",
+   "beschreibung": "Schritt-fuer-Schritt-Anleitung fuer Lehrkraefte, mit Mitmach-Arena plus Kinderrats-Modul einen woechentlichen Klassenrat zu fuehren: Rollenkarten (Leitung, Zeit, Protokoll), Ablaufplan, Klassen-Koffer-Workflow fuer Protokolle ohne Server. Bezug: KMK-Empfehlung Demokratiebildung (2018) und BzKJ-Foerderfokus Demokratiefaehigkeit.",
+   "aufwand": "S",
+   "engine": "statisch",
+   "alter": "Lehrkraefte (Kinder 8-12)",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit, Teilhabe)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Beschwerde-Brief-Werkstatt",
+   "typ": "unterricht",
+   "thema": "Beschwerderecht real ausueben: Eingaben an Schulleitung, Petitionsausschuss, Kinderkommission",
+   "beschreibung": "Unterrichtseinheit mit Vorlagen, in der Kinder eine echte Beschwerde oder Petition formulieren - an die Schulleitung, den Petitionsausschuss des Bundestags (Petitionen ohne Mindestalter moeglich) oder die Kinderkommission des Bundestags. Kinder lernen Aufbau, Ton und Adressat einer wirksamen Eingabe und dass Art. 12/13 auch gegenueber dem Staat gelten.",
+   "aufwand": "S",
+   "engine": "statisch",
+   "alter": "Lehrkraefte (Kinder 8-12)",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "-",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Kinderrechte-Charta des Baukastens",
+   "typ": "doku",
+   "thema": "Selbstverpflichtung und Nachweis: Mapping aller Apps auf KRK-Artikel und GC25",
+   "beschreibung": "Oeffentliches Dokument in docs/, das jede App des Monorepos auf konkrete KRK-Artikel und GC25-Anforderungen mappt und ein Selbst-KRIA (mit dem KRIA-Check) enthaelt. Dient als wiederverwendbarer Nachweisbaustein fuer BzKJ-Foerderantraege sowie fragFINN- und Seitenstark-Aufnahmeverfahren.",
+   "aufwand": "S",
+   "engine": "statisch",
+   "alter": "Betreiber",
+   "standards": [
+    "UN-KRK",
+    "fragFINN",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Antragsbaustein)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Mini-Rechte-Entdecker",
+   "typ": "content-pack",
+   "thema": "Altersvariante 6-8 der Kinderrechte fuer Erstleser (Art. 2, 7, 12, 16, 31)",
+   "beschreibung": "Pack fuer den Kinderrechte-Entdecker im Binaer-Modus des quiz-kern: sehr kurze Ja/Nein-Fragen ('Darf jemand dein Tagebuch lesen?'), grosse Symbole, komplett vorlesbar ueber Web Speech. Kinder ab 6 lernen die fuenf wichtigsten Rechte, bevor sie lesen koennen - erfuellt zugleich BFSG/EAA-Anforderungen an einfache Bedienbarkeit.",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "alter": "6-8",
+   "standards": [
+    "UN-KRK",
+    "BFSG/EAA",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ (Teilhabe)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Plattform-Rechte-Pack 13+",
+   "typ": "content-pack",
+   "thema": "Durchsetzbare EU-Rechte Jugendlicher auf Plattformen: DSA- und DSGVO-Werkzeuge",
+   "beschreibung": "Altersvariante 13-15 des Kinderrechte-Entdeckers: Fragen zu Moderations-Begruendungspflicht (DSA Art. 17), internem Widerspruch (DSA Art. 20), Datenauskunft (DSGVO Art. 15), Einwilligungsalter (DSGVO Art. 8, in DE 16 Jahre) und Werbeverbot fuer Minderjaehrigen-Profile (DSA Art. 28). Jugendliche lernen die konkreten Knoepfe und Fristen, mit denen sie diese Rechte selbst durchsetzen.",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "alter": "13-15",
+   "standards": [
+    "UN-KRK",
+    "DSA",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "achse": "un-krk"
+  },
+  {
+   "titel": "Impressum-Detektive",
+   "typ": "content-pack",
+   "thema": "fragFINN-Kriterium Anbieterkennzeichnung: Wer steckt hinter einer Seite?",
+   "beschreibung": "Detektivspiel auf dem quiz-kern: Kinder bekommen nachgebaute Webseiten-Ausschnitte (als lokale Bilder/HTML-Schnipsel) und muessen entscheiden, ob ein vollstaendiges Impressum vorhanden ist und wo es sich versteckt (Footer, Menue, fehlt ganz). Nach jeder Antwort erklaert die App, warum ein Impressum Pflicht ist (DDG Paragraf 5 / MStV Paragraf 18) und woran man ein echtes erkennt.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "foerderfit": "BzKJ (Demokratiefaehigkeit/Transparenz)",
+   "standards": [
+    "fragFINN",
+    "Seitenstark",
+    "JMStV"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Fake-Shop-Fahnder",
+   "typ": "content-pack",
+   "thema": "Kostenfallen/Identitaetsdiebstahl (Gefaehrdungsatlas) + fragFINN-Kriterium Kaufappelle/Serioesitaet",
+   "beschreibung": "Binaer-Quiz auf dem quiz-kern: echter Shop oder Fake-Shop? Kinder pruefen nachgebaute Shop-Ausschnitte auf Warnsignale (Preis viel zu guenstig, kein Impressum, nur Vorkasse, Fantasie-Guetesiegel, Druck-Countdown) und lernen nach jeder Antwort das konkrete Erkennungsmerkmal.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "foerderfit": "BzKJ (sichere Voreinstellungen/Verbraucherschutz)",
+   "standards": [
+    "fragFINN",
+    "JuSchG",
+    "DSA"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Seiten-Scanner",
+   "typ": "kinder-app",
+   "thema": "fragFINN-Kriterienkatalog als kindgerechte Sichere-Seite-Checkliste",
+   "beschreibung": "Vereinfachte Kinder-Version des kriterien-check: Eine abhakbare Checkliste mit 8-10 kindgerecht formulierten Fragen (Gibt es ein Impressum? Fragt die Seite nach deinem Namen? Gibt es Werbung? Kannst du mit Fremden schreiben?), die Kinder Schritt fuer Schritt neben einer beliebigen Webseite durchgehen; am Ende gibt es eine Ampel-Einschaetzung mit Erklaerung, alles nur lokal gespeichert.",
+   "alter": "8-12",
+   "aufwand": "M",
+   "engine": "katalog",
+   "foerderfit": "BzKJ (Interaktion, sichere Voreinstellungen)",
+   "standards": [
+    "fragFINN",
+    "Seitenstark",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Formular-Falle",
+   "typ": "content-pack",
+   "thema": "fragFINN/Seitenstark-Kriterium Datensparsamkeit + DSGVO Art. 8",
+   "beschreibung": "Szenario-Trainer-Pack: Kinder sehen nachgebaute Anmelde- und Gewinnspiel-Formulare und waehlen zwischen drei Handlungen (alles ausfuellen / nur Spitzname / Eltern fragen und abbrechen) mit 2/1/0-Wertung. Gelernt wird, welche Datenabfragen auf einer guten Kinderseite gar nicht vorkommen duerfen (Adresse, Telefonnummer, Foto) und warum Pflichtfelder mit Sternchen ein Warnsignal sind.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "szenario",
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "standards": [
+    "DSGVO",
+    "fragFINN",
+    "Seitenstark"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Chat-Check",
+   "typ": "content-pack",
+   "thema": "fragFINN-Kriterium Kommunikationsrisiken: moderierte vs. unmoderierte Interaktion erkennen",
+   "beschreibung": "Szenario-Pack: Kinder bewerten Kommunikationsfunktionen auf Beispielseiten (moderiertes Gaestebuch mit Melde-Button vs. offener Chat mit Fremden vs. Kommentare ohne Aufsicht) und waehlen die sichere Handlung. Lernziel ist das Erkennen der Schutzmerkmale Moderation, Melde-Funktion und Spitzname-Pflicht - ohne Grooming-Inhalte, rein als Kriterien-Training.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "szenario",
+   "foerderfit": "BzKJ (Interaktion)",
+   "standards": [
+    "fragFINN",
+    "JMStV",
+    "DSA",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Link-Kompass",
+   "typ": "content-pack",
+   "thema": "fragFINN/Seitenstark-Kriterium kindgeeignete Verlinkung: Wohin fuehrt dieser Link?",
+   "beschreibung": "Quiz-Pack: Kinder ordnen Links und Buttons ein (interner Link, gekennzeichneter externer Link, Download, App-Store, Werbelink) anhand von URL, Symbolen und Hinweistexten. Nach jeder Antwort wird erklaert, warum gute Kinderseiten externe Links kennzeichnen und was man vor dem Klicken pruefen kann.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "standards": [
+    "fragFINN",
+    "Seitenstark"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Wer steckt dahinter?",
+   "typ": "content-pack",
+   "thema": "Seitenstark-Qualitaetskriterium Transparenz/Urheberschaft + Desinformation (Gefaehrdungsatlas)",
+   "beschreibung": "Quiz-Pack als Ergaenzung zu nachrichten-detektive: Kinder suchen in nachgebauten Artikel-Ausschnitten die drei Transparenz-Merkmale Autor, Datum und Quelle und entscheiden, ob ein Beitrag nachpruefbar ist. Lernziel: Eine gute Kinderseite sagt immer, wer schreibt und woher die Information stammt.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "foerderfit": "BzKJ (Demokratiefaehigkeit)",
+   "standards": [
+    "Seitenstark",
+    "fragFINN"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Dark-Pattern-Detektiv",
+   "typ": "kinder-app",
+   "thema": "Dark Patterns / Kaufappelle (Gefaehrdungsatlas + fragFINN-Kriterium keine Kaufaufforderung)",
+   "beschreibung": "Szenario-Trainer mit nachgebauten UI-Ausschnitten: Kinder erkennen manipulative Muster (Countdown-Druck, 'nur noch 2 uebrig', winziger Schliessen-Button, vorangekreuzte Haekchen, Schaeme-dich-Buttons) und waehlen die selbstbestimmte Reaktion. Jede Aufloesung benennt das Muster mit Namen, damit Kinder es wiedererkennen koennen.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "szenario",
+   "foerderfit": "BzKJ (KI/Manipulationsschutz), NRW-Games 80% moeglich",
+   "standards": [
+    "DSA",
+    "fragFINN",
+    "JuSchG"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "App-Rechte-Quiz",
+   "typ": "content-pack",
+   "thema": "fragFINN-App-Kriterien / Datensparsamkeit: Welche Berechtigung braucht eine App wirklich?",
+   "beschreibung": "Binaer-Quiz: 'Eine Mal-App will auf dein Mikrofon zugreifen - passt das?' Kinder lernen, Berechtigungsanfragen (Kamera, Standort, Kontakte) mit dem Zweck der App abzugleichen und Nein zu sagen, wenn beides nicht zusammenpasst.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "standards": [
+    "DSGVO",
+    "fragFINN"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Barriere-Spuernasen",
+   "typ": "kinder-app",
+   "thema": "Seitenstark-Kriterium Barrierefreiheit / BFSG als erlebbares Thema",
+   "beschreibung": "Kleiner Simulator: Kinder erleben dieselbe Beispielseite mit schlechtem Kontrast, winziger Schrift, ohne Vorlese-Funktion und ohne Bildbeschreibungen - und schalten dann die Barrierefreiheits-Merkmale einzeln ein, um den Unterschied zu sehen. Lernziel: verstehen, warum gute Kinderseiten fuer alle Kinder funktionieren muessen (UN-KRK Art. 23).",
+   "alter": "8-12",
+   "aufwand": "M",
+   "engine": "simulator",
+   "foerderfit": "BzKJ (Teilhabe)",
+   "standards": [
+    "BFSG/EAA",
+    "Seitenstark",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "fragFINN-Selbsttest",
+   "typ": "content-pack",
+   "thema": "Kompletter fragFINN-Kriterienkatalog als Betreiber-Selbstpruefung",
+   "beschreibung": "Content-Pack auf der kriterien-check-Engine: Betreiber von Kinderseiten gehen die fragFINN-Aufnahmekriterien Punkt fuer Punkt mit Hilfe-Texten und Beispielen durch und erhalten am Ende einen lokal erzeugten Pruefbericht (Datei-Export) als Vorbereitung fuer den fragFINN-Antrag.",
+   "alter": "Betreiber",
+   "aufwand": "S",
+   "engine": "katalog",
+   "foerderfit": "fragFINN-Aufnahme als Verbreitungskanal",
+   "standards": [
+    "fragFINN",
+    "JMStV",
+    "DSGVO"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Seitenstark-Qualitaets-Check",
+   "typ": "content-pack",
+   "thema": "Seitenstark-Qualitaetskriterien als Betreiber-Selbstpruefung",
+   "beschreibung": "Zweites Content-Pack auf kriterien-check: die Seitenstark-Qualitaetskriterien (Transparenz, Redaktion, Interaktionsschutz, Werbefreiheit bzw. -kennzeichnung, Barrierefreiheit) als gefuehrte Checkliste mit Erlaeuterung, was Seitenstark-Mitgliedsseiten jeweils konkret umsetzen. Ergebnis als exportierbarer Massnahmenplan.",
+   "alter": "Betreiber",
+   "aufwand": "S",
+   "engine": "katalog",
+   "foerderfit": "Seitenstark-Mitgliedschaft als Verbreitungskanal",
+   "standards": [
+    "Seitenstark",
+    "JMStV",
+    "BFSG/EAA"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Impressum-Generator fuer Kinderseiten",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "fragFINN-Kriterium Anbieterkennzeichnung erfuellen (DDG Paragraf 5, MStV Paragraf 18)",
+   "beschreibung": "Offline-Formular: Betreiber waehlt Rechtsform (Privatperson, Verein, gGmbH, Schule) und Angebotstyp, fuellt die Pflichtfelder aus und erhaelt ein fertiges, kopierbares Impressum als HTML/Text - inklusive der journalistisch-redaktionellen Zusatzangabe nach MStV und Hinweisen, welche Angaben bei Kinderseiten haeufig vergessen werden. Keine Datenspeicherung ausser optional lokal.",
+   "alter": "Betreiber",
+   "aufwand": "M",
+   "engine": "neu:Formular-zu-Dokument-Generator (wiederverwendbar fuer weitere Generatoren)",
+   "foerderfit": "-",
+   "standards": [
+    "fragFINN",
+    "JMStV",
+    "Seitenstark"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Datenschutzerklaerung-Baukasten fuer Kinderseiten",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "DSGVO Art. 12/13 kindgerechte Transparenz + Art. 8 Einwilligung Minderjaehriger",
+   "beschreibung": "Baustein-Auswahl (localStorage ja/nein, Kontaktformular, Newsletter, eingebettete Medien, Analyse) erzeugt zwei aufeinander abgestimmte Texte: eine juristische Datenschutzerklaerung und eine Kinder-Version in einfacher Sprache ('Was wir ueber dich wissen - und was nicht'). Laeuft komplett im Browser auf der Formular-zu-Dokument-Engine des Impressum-Generators.",
+   "alter": "Betreiber",
+   "aufwand": "M",
+   "engine": "neu:Formular-zu-Dokument-Generator (geteilt mit Impressum-Generator)",
+   "foerderfit": "-",
+   "standards": [
+    "DSGVO",
+    "fragFINN",
+    "Seitenstark",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Werbekennzeichnungs-Vorschau",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "fragFINN/Seitenstark-Kriterium Werbetrennung + JMStV Paragraf 6 (Werbung und Kinder)",
+   "beschreibung": "Betreiber waehlt einen Anzeigentyp (Banner, gesponserter Beitrag, Kooperations-Hinweis) und sieht in einer Live-Vorschau, wie die Kennzeichnung nach JMStV/MStV korrekt aussehen muss - Position, Wortlaut ('Anzeige'/'Werbung'), Mindestabstand zum Inhalt - inklusive Negativ-Beispielen, wie es bei Kinderseiten nicht zulaessig ist. Vorlagen als Copy-Paste-HTML.",
+   "alter": "Betreiber",
+   "aufwand": "M",
+   "engine": "neu:UI-Vorschau mit Vorlagen-Galerie",
+   "foerderfit": "-",
+   "standards": [
+    "JMStV",
+    "fragFINN",
+    "Seitenstark",
+    "DSA"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Link-Inventar-Pruefer",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "fragFINN/Seitenstark-Kriterium kindgeeignete Verlinkung systematisch pruefen",
+   "beschreibung": "Offline-Werkzeug: Betreiber laedt exportierte HTML-Dateien oder eine Sitemap per Datei-Import (kein Netzwerkzugriff), das Tool extrahiert alle externen Links und fuehrt durch eine Pruefliste je Link (kindgeeignetes Ziel? gekennzeichnet? oeffnet neues Fenster? fuehrt zu Shop/Social Media?). Pruefstand wird lokal gespeichert und als Bericht exportiert - dasselbe Datei-Export-Muster wie der Klassen-Koffer.",
+   "alter": "Betreiber",
+   "aufwand": "M",
+   "engine": "neu:lokaler HTML-Parser + katalog-Pruefliste",
+   "foerderfit": "-",
+   "standards": [
+    "fragFINN",
+    "Seitenstark",
+    "JMStV"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "BFSG-Check fuer Kinderseiten",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Barrierefreiheit nach BFSG/EAA 2025 und WCAG als Seitenstark-Kriterium",
+   "beschreibung": "kriterien-check-Pack mit den fuer Kinderseiten relevanten BFSG/WCAG-Anforderungen (Kontrast, Tastaturbedienung, Alternativtexte, einfache Sprache, Vorlese-Tauglichkeit) als manuell pruefbare Schritte ohne externe Tools, ergaenzt um einen eingebauten Offline-Kontrast-Rechner (zwei Farben eingeben, WCAG-Stufe ablesen). Export als Pruefprotokoll fuer die Barrierefreiheitserklaerung.",
+   "alter": "Betreiber",
+   "aufwand": "M",
+   "engine": "katalog + neu:Kontrast-Rechner-Baustein",
+   "foerderfit": "BzKJ (Teilhabe)",
+   "standards": [
+    "BFSG/EAA",
+    "Seitenstark",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Interaktions-Konzept-Assistent",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "fragFINN-Kriterium sichere Kommunikationsfunktionen + DSA Art. 28 Minderjaehrigenschutz",
+   "beschreibung": "Betreiber waehlt die geplante Interaktionsfunktion (Kommentare, Gaestebuch, Upload, Abstimmung) und erhaelt die jeweils geltenden Anforderungen (Vormoderation, Melde-Weg, Netiquette, keine Klarnamen) als Checkliste plus eine exportierbare Moderationskonzept-Vorlage zum Ausfuellen. Baut auf dem foerder-navigator-Muster gefilterte Karten auf.",
+   "alter": "Betreiber",
+   "aufwand": "S",
+   "engine": "katalog",
+   "foerderfit": "BzKJ (Interaktion, sichere Voreinstellungen)",
+   "standards": [
+    "fragFINN",
+    "DSA",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Eltern-Kompass-Generator",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Seitenstark-Kriterium Elterninformation / eigene Baukasten-Politik als Standard etablieren",
+   "beschreibung": "Formular-Werkzeug, das aus strukturierten Angaben (Lernziele, Altersgruppe, gespeicherte Daten, Interaktionsfunktionen, Kostenfreiheit) eine fertige Eltern-Kompass-HTML-Seite erzeugt - zuerst fuer die eigenen info70-Apps, dann als Angebot an andere Kinderseiten-Betreiber. Nutzt dieselbe Formular-zu-Dokument-Engine wie Impressum- und Datenschutz-Generator.",
+   "alter": "Betreiber",
+   "aufwand": "M",
+   "engine": "neu:Formular-zu-Dokument-Generator (geteilt)",
+   "foerderfit": "Seitenstark (Transparenz gegenueber Eltern)",
+   "standards": [
+    "Seitenstark",
+    "fragFINN",
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "achse": "kriterien-training"
+  },
+  {
+   "titel": "Einwilligungs-Pruefpfad Art. 8",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "DSGVO Art. 8: Einwilligung Minderjaehriger als Rechtsgrundlage",
+   "beschreibung": "Gefuehrter Frage-Pfad fuer Betreiber: Richtet sich das Angebot an Kinder, ist Einwilligung ueberhaupt die Rechtsgrundlage, greift die 16-Jahre-Grenze in DE, welche 'angemessenen Anstrengungen' zur Verifikation der Eltern-Einwilligung sind dokumentiert? Am Ende entsteht ein exportierbarer Pruefbericht mit Luecken-Liste (alles lokal, Datei-Export statt Server).",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "DSGVO"
+   ],
+   "foerderfit": "-",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "DSA-Selbstaudit Minderjaehrigenschutz",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "DSA Art. 28: Pflichten fuer Online-Angebote mit minderjaehrigen Nutzern",
+   "beschreibung": "Selbstaudit-Checkliste auf dem kriterien-check-Muster: hohe Privatsphaere/Sicherheit by design, kein profilbasiertes Werbe-Targeting Minderjaehriger, Melde- und Beschwerdewege, AGB in kindverstaendlicher Sprache. Ampel-Bericht zeigt Betreibern, welche DSA-Pflichten erfuellt, offen oder nicht anwendbar sind.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "DSA",
+    "JuSchG"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Barrierefreiheitserklaerungs-Generator",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "BFSG: Pflicht zur Erklaerung zur Barrierefreiheit",
+   "beschreibung": "Formular erzeugt aus Angaben (oder per Datei-Import des BFSG-Selbsttest-Berichts) eine fertige Erklaerung zur Barrierefreiheit als HTML/Markdown zum Kopieren, inklusive Abschnitt in Leichter Sprache und Feedback-/Durchsetzungshinweisen. Laeuft komplett lokal, kein Server noetig.",
+   "alter": "Betreiber",
+   "engine": "neu:Formular-zu-Text-Generator mit Datei-Import (Klassen-Koffer-Muster)",
+   "aufwand": "M",
+   "standards": [
+    "BFSG/EAA"
+   ],
+   "foerderfit": "-",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Leichte-Sprache-Pruefhilfe",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "BFSG/EAA und Seitenstark: Verstaendlichkeit von Kindertexten",
+   "beschreibung": "Lokales Textanalyse-Werkzeug: Text einfuegen, Pruefung messbarer Regeln (Satzlaenge, Wortlaenge, Passiv-Signale, Nominalstil, Fremdwortliste) mit konkreten Umformulierungs-Hinweisen nach Leichte-/Einfache-Sprache-Regeln (DIN SPEC 33429). Keine KI, keine externen Requests, alles regelbasiert im Browser.",
+   "alter": "Betreiber",
+   "engine": "neu:regelbasierte lokale Textanalyse",
+   "aufwand": "M",
+   "standards": [
+    "BFSG/EAA",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "KI-Transparenz-Check",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "EU AI Act: Kinder als vulnerable Gruppe, Transparenzpflichten",
+   "beschreibung": "Checkliste fuer Betreiber, die KI in Kinderangeboten einsetzen wollen: Verbotspruefung nach Art. 5 (Ausnutzung der Vulnerabilitaet von Kindern), Risikoeinstufung, Transparenzpflichten nach Art. 50 (Chatbot- und Deepfake-Kennzeichnung), Dokumentationspflichten. Ergebnis ist eine Pflichtenliste mit Bericht-Export.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "AI Act",
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "KI-Kennzeichnungs-Generator",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "AI Act Art. 50: kindgerechte Kennzeichnung von KI-Inhalten",
+   "beschreibung": "Formular erzeugt fertige, kindgerechte Kennzeichnungstexte und ein einbindbares HTML/CSS-Badge ('Hier antwortet eine Maschine', 'Dieses Bild hat eine KI gemacht') in de/uk/ru, abgestuft fuer 6-8, 8-12 und 13-15. Betreiber kopieren Text und Snippet direkt in ihr Angebot.",
+   "alter": "Betreiber",
+   "engine": "neu:Formular-zu-Text-Generator (nutzt kinder-ui und mini-i18n)",
+   "aufwand": "M",
+   "standards": [
+    "AI Act",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "JMStV-Einstufungs-Helfer",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "JMStV/JuSchG: Alterskennzeichnung und technische Jugendschutzmittel",
+   "beschreibung": "Gefuehrter Pruefpfad: Braucht mein Inhalt eine Alterskennzeichnung, welche Stufe passt, welche technischen Mittel (Label, Zeitsteuerung, Altersverifikation) verlangt der JMStV? Am Ende generiert das Werkzeug ein technisches age-de.xml-Label zum Download, das Jugendschutzprogramme auslesen koennen.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "M",
+   "standards": [
+    "JMStV",
+    "JuSchG"
+   ],
+   "foerderfit": "-",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "AVV-Checkliste Hosting",
+   "typ": "doku",
+   "thema": "DSGVO Art. 28: Auftragsverarbeitung beim Hosting von Kinderangeboten",
+   "beschreibung": "Checkliste zur Pruefung von Hosting-Anbietern und deren AV-Vertraegen: Pflichtinhalte nach Art. 28 Abs. 3, EU-Serverstandort, Drittlandtransfer, Subunternehmerkette, Log-Speicherfristen - mit kinderspezifischen Verschaerfungen (Datenminimierung, keine Analyse-Dienste). Luecken-Bericht als Entscheidungshilfe vor Vertragsschluss.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "DSGVO"
+   ],
+   "foerderfit": "-",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Vorsorge-Check Paragraf 24a JuSchG",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "JuSchG Paragraf 24a: Anbietervorsorge und sichere Voreinstellungen",
+   "beschreibung": "Selbstaudit entlang der Vorsorgemassnahmen des JuSchG: sichere Voreinstellungen, Melde- und Abhilfeverfahren, Einordnungs- und Elterninformationen, Verzicht auf Risiko-Features (offener Chat, Standortfreigabe). Ampel-Bericht dokumentiert den Stand fuer BzKJ-Aufsicht und Foerderantraege.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "JuSchG",
+    "DSA"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Dark-Pattern-Selbstinspektion",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "DSA Art. 25 Dark-Pattern-Verbot; Gefaehrdungsatlas Kostenfallen/Lootboxen",
+   "beschreibung": "UI-Pruefliste, mit der Betreiber und Designer das eigene Angebot Screen fuer Screen auf manipulative Muster pruefen (Countdown-Druck, versteckte Kosten, Confirmshaming, Endlos-Feeds) - jedes Muster mit Beispiel, Kind-Wirkung und fairer Alternative. Bericht dokumentiert Befunde und Abstellmassnahmen.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "DSA",
+    "JuSchG",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Meldewege-Planer",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "DSA Notice-and-Action + JuSchG Paragraf 24a: kindgerechte Melde- und Hilfesysteme",
+   "beschreibung": "Planungswerkzeug, das Betreiber durch den Aufbau eines kindgerechten Meldewegs fuehrt (Ausloeser, Erreichbarkeit, Rueckmeldung, Verweis auf Hilfeangebote wie Nummer gegen Kummer) und daraus fertige kindgerechte Meldetexte in de/uk/ru plus eine Prozess-Doku exportiert.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "M",
+   "standards": [
+    "DSA",
+    "JuSchG",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Jugendschutz-Wissens-Quiz fuer Fachkraefte",
+   "typ": "unterricht",
+   "thema": "JMStV/JuSchG-Novelle 2021: Kennzeichen und Interaktionsrisiken verstehen",
+   "beschreibung": "Quiz auf der quiz-kern-Engine fuer Lehrkraefte, OGS- und Medienpaedagogik-Fachkraefte: Was bedeuten USK/FSK-Kennzeichen, warum kann ein 'ab 6'-Spiel wegen Chat und Lootboxen trotzdem riskant sein, welche Pflichten haben Plattformen? Jede Antwort mit Erklaerung und Praxis-Tipp fuer den Elternabend.",
+   "alter": "Fachkraefte",
+   "engine": "quiz-kern",
+   "aufwand": "S",
+   "standards": [
+    "JuSchG",
+    "JMStV"
+   ],
+   "foerderfit": "-",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Eltern-Rechtebriefe",
+   "typ": "doku",
+   "thema": "DSGVO Art. 15/17: Auskunft und Loeschung von Kinderdaten durchsetzen",
+   "beschreibung": "Statische Musterbrief-Sammlung fuer Eltern und Fachkraefte: Auskunftsersuchen, Loeschantrag (mit Verweis auf das besonders starke Loeschrecht bei Kinderdaten, Erwaegungsgrund 65), Widerruf der Einwilligung - je Brief mit Ausfuellhilfe und Kopier-Funktion, ohne jede Datenerhebung.",
+   "alter": "Eltern",
+   "engine": "statisch",
+   "aufwand": "S",
+   "standards": [
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "foerderfit": "-",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "Compliance-Koffer",
+   "typ": "funktion",
+   "thema": "Nachweisfuehrung ueber alle Selbstaudits hinweg (Rechenschaftspflicht Art. 5 DSGVO)",
+   "beschreibung": "Export/Import-Funktion nach dem Klassen-Koffer-Muster der mitmach-arena: Die Berichte aller Pruefwerkzeuge (Art. 8, DSA, BFSG, AI Act, Paragraf 24a, CRIA) werden in eine einzige Audit-Datei gebuendelt, versioniert und als Gesamtbericht gedruckt - als Nachweis-Mappe fuer Foerdergeber, Aufsicht und Traeger, ganz ohne Server.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "DSGVO",
+    "DSA",
+    "BFSG/EAA",
+    "AI Act"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "eu-standards"
+  },
+  {
+   "titel": "OER-Bausteinvorlage \"info70-Unterrichtsstunde\"",
+   "typ": "doku",
+   "thema": "Einheitliches OER-Format für alle App-Stundenentwürfe",
+   "beschreibung": "Standardisierte CC-BY-Vorlage (Lernziele, 45-Min-Ablauf, druckbares Arbeitsblatt, Differenzierung, Kompetenz-Mapping auf Medienkompetenzrahmen NRW und KMK-Strategie), aus der alle weiteren Stundenentwürfe generiert werden. Liegt als statisches HTML mit Druck-CSS im Repo, komplett offline nutzbar.",
+   "alter": "Lehrkräfte",
+   "aufwand": "S",
+   "engine": "statisch",
+   "standards": [
+    "KMK 'Bildung in der digitalen Welt'",
+    "Medienkompetenzrahmen NRW",
+    "UN-KRK GC25"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stundenentwurf \"Mein Feed, deine Blase\" (feed-forscher)",
+   "typ": "unterricht",
+   "thema": "Empfehlungsalgorithmen, Filterblase, Desinformation",
+   "beschreibung": "Doppelstunde: Kinder erleben im feed-forscher-Simulator, wie ein Algorithmus ihren Feed formt, und spielen anschließend den 'Papier-Algorithmus' (Klasse sortiert Nachrichtenkarten nach Regeln) als Offline-Arbeitsblatt nach. Sicherung: Merkplakat 'Warum sieht mein Feed anders aus als deiner?'.",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "S",
+   "engine": "simulator",
+   "standards": [
+    "EU AI Act (Transparenz)",
+    "DSA (Minderjährigenschutz)",
+    "Medienkompetenzrahmen NRW"
+   ],
+   "foerderfit": "BzKJ (Förderfokus KI)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stundenentwurf \"Stopp die Kette\" (kettenbrief-stopper)",
+   "typ": "unterricht",
+   "thema": "Kettenbriefe, Angst-Challenges, Weiterleitungsdruck",
+   "beschreibung": "45-Minuten-Einheit: Simulator zeigt die Ausbreitung eines Kettenbriefs im Klassen-Graphen, dann üben Kinder auf einem druckbaren Graph-Arbeitsblatt, an welcher Stelle ein einzelnes 'Stopp' die Kette bricht. Abschluss: Klassenregel 'Erst prüfen, dann teilen' als Aushang.",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "S",
+   "engine": "simulator",
+   "standards": [
+    "JuSchG",
+    "UN-KRK Art. 17",
+    "BzKJ-Gefährdungsatlas (Kettenbriefe)"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stundenentwurf \"Worte wie Fäuste\" (stark-im-chat)",
+   "typ": "unterricht",
+   "thema": "Cybermobbing, Hassrede, Zivilcourage im Chat",
+   "beschreibung": "Einheit mit dem Szenario-Trainer: Kinder bewerten Chat-Situationen in Kleingruppen am Gerät, danach Rollenspiel mit druckbaren Situationskarten und gemeinsame Chat-Klassenregeln als Poster. Enthält Lehrkraft-Hinweisblatt für den Umgang mit echten Mobbing-Verdachtsfällen (Verweis an Schulsozialarbeit, keine Fallbearbeitung in der App).",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "S",
+   "engine": "szenario",
+   "standards": [
+    "UN-KRK Art. 19",
+    "JMStV",
+    "BzKJ-Gefährdungsatlas (Cybermobbing, Hassrede)"
+   ],
+   "foerderfit": "Preise (klicksafe Preis, Dieter Baacke Preis)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stundenentwurf \"Datenschatz-Wächter\" (daten-schatz)",
+   "typ": "unterricht",
+   "thema": "Datensparsamkeit, Identitätsdiebstahl, Sharenting",
+   "beschreibung": "Einheit zum Szenario-Trainer daten-schatz: Kinder sortieren auf einem druckbaren 'Schatzkarten'-Arbeitsblatt, welche Angaben (Name, Adresse, Passwort, Lieblingsessen) sie preisgeben würden, und prüfen ihre Intuition dann in den App-Szenarien. Hausaufgabe: Familien-Gespräarbeitsblatt zu Fotos von Kindern im Netz (Sharenting).",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "S",
+   "engine": "szenario",
+   "standards": [
+    "DSGVO Art. 8",
+    "UN-KRK Art. 16",
+    "BzKJ-Gefährdungsatlas (Identitätsdiebstahl, Sharenting)"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stundenentwurf \"Echt oder Fake?\" (nachrichten-detektive)",
+   "typ": "unterricht",
+   "thema": "Desinformation, Fake News, Deepfakes",
+   "beschreibung": "Einheit zum vorhandenen Quiz nachrichten-detektive: Klassenrunde im Quiz, danach Offline-Arbeitsblatt 'Drei-Fragen-Check' (Wer sagt das? Woher weiß er das? Was sagen andere?) an ausgedruckten Beispielmeldungen. Erweiterung 13-15: Deepfake-Merkmale als Bildvergleichs-Arbeitsblatt.",
+   "alter": "8-12, Variante 13-15 (Lehrkräfte)",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "standards": [
+    "DSA",
+    "BzKJ-Gefährdungsatlas (Desinformation, Deepfakes)",
+    "KMK 'Bildung in der digitalen Welt'"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Demokratiefähigkeit)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stundenentwurf + Wochenprotokoll \"Meine Bildschirmwoche\" (takt-pause)",
+   "typ": "unterricht",
+   "thema": "FOMO, exzessive Nutzung, Selbstregulation",
+   "beschreibung": "Einwöchiges Miniprojekt: Auftaktstunde mit der Ampel-App takt-pause, dann führen Kinder ein druckbares Papier-Wochenprotokoll ihrer Mediennutzung (kein Datenupload, alles auf Papier oder lokal) und werten es in der Abschlussstunde anonym als Klassendiagramm an der Tafel aus.",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "S",
+   "engine": "planer",
+   "standards": [
+    "UN-KRK Art. 31",
+    "BzKJ-Gefährdungsatlas (FOMO/exzessive Nutzung)",
+    "DSGVO (Datenminimierung)"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Quiz-Klassenraum-Modus \"Alle raten mit\"",
+   "typ": "funktion",
+   "thema": "Gerätearme Klassennutzung der Quiz-Apps",
+   "beschreibung": "Neuer Modus im quiz-kern: ein Gerät am Beamer zeigt Frage groß an, die Klasse stimmt mit druckbaren A/B/C-Karten ab, die Lehrkraft tippt das Mehrheitsergebnis ein und die Erklärung erscheint für alle; Klassen-Punktestand statt Einzelwertung. Es entstehen keinerlei Schülerdaten - funktioniert in Schulen ganz ohne Schülergeräte.",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "M",
+   "engine": "quiz-kern",
+   "standards": [
+    "DSGVO (keine personenbezogenen Daten)",
+    "BFSG/EAA (große Beamer-Darstellung, Vorlesen)"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Teilhabe)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Klassen-Koffer-Auswertung für Lehrkräfte",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Lernstands-Überblick ohne Server und ohne Schülerdaten",
+   "beschreibung": "Dashboard nach dem vorhandenen Klassen-Koffer-Muster: Schülergeräte exportieren anonyme Ergebnisdateien (nur Antwortmuster, frei wählbare Tiernamen statt Klarnamen), die Lehrkraft importiert sie per Datei und sieht eine Heatmap 'Welche Frage/Welches Szenario fiel der Klasse schwer?' mit Druckansicht. Kein Server, keine Konten, DSGVO-seitig unkritisch, da nichts Personenbezogenes verarbeitet wird.",
+   "alter": "Lehrkräfte",
+   "aufwand": "M",
+   "engine": "katalog (Klassen-Koffer-Import aus mitmach-arena)",
+   "standards": [
+    "DSGVO Art. 5 (Datenminimierung)",
+    "DSGVO Art. 8",
+    "Seitenstark (Transparenz)"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Stations-Konfigurator für Lernstationen",
+   "typ": "funktion",
+   "thema": "Freiarbeit/Stationenlernen mit den vorhandenen Apps",
+   "beschreibung": "Kleine Konfig-Schicht (URL-Hash oder lokale Konfigdatei), mit der die Lehrkraft jede App auf genau ein Modul/eine Szenariogruppe festpinnt und Navigation sperrt - so wird jedes Tablet zur fertigen Lernstation, plus druckbarer Laufzettel pro Station. Komplett offline, keine neuen Datenflüsse.",
+   "alter": "Lehrkräfte (Kinder 8-12)",
+   "aufwand": "S",
+   "engine": "quiz-kern/szenario/simulator (gemeinsame Konfig-Schicht)",
+   "standards": [
+    "DSGVO (privacy by default)",
+    "Medienkompetenzrahmen NRW"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Ämtli-Rad für Klassendienste",
+   "typ": "funktion",
+   "thema": "Faire Aufgabenverteilung, Verantwortungsübernahme",
+   "beschreibung": "Rotations-Rad in der mitmach-arena: Klassendienste (Tafel, Blumen, Energie-Detektiv) werden per nachvollziehbar fairem Rotationsalgorithmus wöchentlich neu verteilt und als druckbarer Wochenplan ausgegeben. Lernziel: Fairness ist eine Regel, kein Zufall - der Algorithmus wird kindgerecht erklärt (Transparenz-Baustein).",
+   "alter": "6-8 und 8-12",
+   "aufwand": "S",
+   "engine": "mitmach-arena (Beteiligung)",
+   "standards": [
+    "UN-KRK Art. 12",
+    "EU AI Act (Transparenz von Algorithmen, propädeutisch)"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Wahlkabinen-Modus \"Geheime Wahl\"",
+   "typ": "funktion",
+   "thema": "Wahlgrundsätze erleben (frei, gleich, geheim)",
+   "beschreibung": "Abstimmungs-Modus der mitmach-arena, bei dem ein einzelnes Gerät als Wahlkabine herumgereicht wird: jede Stimme wird sofort versiegelt, erst nach der letzten Stimme zeigt die App das Ergebnis - Kinder erleben die Wahlgrundsätze am eigenen Klassensprecher-Votum. Keine Zuordnung Stimme-Person technisch möglich.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "mitmach-arena (Beteiligung)",
+   "standards": [
+    "UN-KRK Art. 12",
+    "KMK Demokratiebildung",
+    "DSGVO (privacy by design)"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Demokratiefähigkeit)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Projektwochen-Paket \"Sicher im Netz\"",
+   "typ": "content-pack",
+   "thema": "Curriculum über mehrere Gefährdungsatlas-Phänomene hinweg",
+   "beschreibung": "Fünf-Tage-Curriculum, das vorhandene Apps zu einem Bogen verbindet: Tag 1 Daten (daten-schatz), Tag 2 Miteinander (stark-im-chat), Tag 3 Algorithmen (feed-forscher), Tag 4 Nachrichten (nachrichten-detektive/kettenbrief-stopper), Tag 5 Abschluss mit Klassen-Netz-Charta per mitmach-arena-Abstimmung. Enthält Tagespläne, alle Arbeitsblätter druckbar und einen Laufzettel pro Kind.",
+   "alter": "8-12 (Lehrkräfte)",
+   "aufwand": "M",
+   "engine": "statisch (verbindet szenario, simulator, quiz-kern, mitmach-arena)",
+   "standards": [
+    "BzKJ-Gefährdungsatlas (mehrere Phänomene)",
+    "KMK 'Bildung in der digitalen Welt'",
+    "Medienkompetenzrahmen NRW",
+    "UN-KRK GC25"
+   ],
+   "foerderfit": "BzKJ; Preise (Dieter Baacke Preis, Pädagogischer Medienpreis)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Netz-Pass-Urkundendruck",
+   "typ": "funktion",
+   "thema": "Abschluss-Motivation für Projektwoche und Einzel-Apps",
+   "beschreibung": "Urkunden-Generator, der nach abgeschlossenen Modulen eine druckbare 'Netz-Pass'-Urkunde erzeugt; der Name wird nur ins Druckformular getippt und nie gespeichert (Print-only, kein localStorage-Eintrag). Motiviert Klassen, alle Stationen der Projektwoche zu absolvieren.",
+   "alter": "6-8 und 8-12",
+   "aufwand": "S",
+   "engine": "statisch (Druck-CSS, in alle Apps einbindbar)",
+   "standards": [
+    "DSGVO (Datenvermeidung)",
+    "Seitenstark (kindgerechte Gestaltung)"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Elternabend-Kit \"Digital daheim\"",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Elternarbeit zu Mediennutzung, Kostenfallen, Sharenting, Einstellungen",
+   "beschreibung": "Offline-Foliensatz (selbstenthaltenes HTML für den Beamer) plus druckbare Handouts und Diskussionskarten für einen 60-Minuten-Elternabend, mit Live-Demo-Drehbuch für zwei Apps und Modulen zu Kettenbriefen, Kostenfallen/Lootboxen, Sharenting und sicheren Geräte-Voreinstellungen. Handouts dreisprachig de/uk/ru über die vorhandene mini-i18n - erreicht auch Familien mit geringen Deutschkenntnissen.",
+   "alter": "Eltern (Lehrkräfte als Moderation)",
+   "aufwand": "M",
+   "engine": "statisch (kinder-ui-Tokens, mini-i18n)",
+   "standards": [
+    "JuSchG",
+    "DSGVO Art. 8",
+    "UN-KRK Art. 5/18",
+    "BzKJ-Gefährdungsatlas (Kostenfallen, Sharenting)"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Lehrkräfte-Szenariotraining \"Ernstfall Pausenhof-Chat\"",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Handlungssicherheit bei Gefährdungsatlas-Vorfällen in der Schule",
+   "beschreibung": "Szenario-Trainer-App für Lehrkräfte: realistische Schulsituationen (Kind zeigt Kettenbrief, Mobbing-Screenshot taucht auf, Klassenchat eskaliert, Lootbox-Schulden) mit je drei Handlungsoptionen, Wertung und rechtlich geprüfter Erklärung inkl. Verweis auf Meldewege (jugendschutz.net, Schulaufsicht). Bewusst ohne die Partner-pflichtigen Themen Cybergrooming/sexualisierte Ansprache - dort nur Verweiskarte auf Fachstellen.",
+   "alter": "Lehrkräfte",
+   "aufwand": "M",
+   "engine": "szenario",
+   "standards": [
+    "JuSchG",
+    "JMStV",
+    "BzKJ-Gefährdungsatlas",
+    "KMK Lehrkräftefortbildung/DigCompEdu"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "schule"
+  },
+  {
+   "titel": "Schulfreigabe-Dossier \"Null-Daten-Nachweis\"",
+   "typ": "doku",
+   "thema": "DSGVO-Freigabe durch Schulträger und Datenschutzbeauftragte beschleunigen",
+   "beschreibung": "Vorgefertigtes Prüfdossier für schulische Datenschutzbeauftragte: technische Erklärung (CSP self, keine externen Requests, kein Tracking, localStorage löschbar), Muster-Verfahrensbeschreibung 'keine Verarbeitung personenbezogener Daten', Checkliste nach den Schuldatenschutz-Anforderungen der Länder plus BFSG/EAA-Konformitätserklärung. Senkt die größte reale Einführungshürde von Software an Schulen.",
+   "alter": "Betreiber/Schulträger",
+   "aufwand": "S",
+   "engine": "statisch",
+   "standards": [
+    "DSGVO Art. 5/8/25",
+    "BFSG/EAA",
+    "WCAG 2.1 AA",
+    "Schuldatenschutzrecht der Länder"
+   ],
+   "foerderfit": "-",
+   "achse": "schule"
+  },
+  {
+   "titel": "Arbeitsblatt-Werkstatt in Leichter Sprache",
+   "typ": "content-pack",
+   "thema": "Barrierefreie Differenzierung für Förderschulen und Inklusionsklassen",
+   "beschreibung": "Zu jedem Stundenentwurf eine Arbeitsblatt-Variante in Leichter Sprache plus Vorlese-Fassung über die vorhandene Web-Speech-Funktion der kinder-ui, dazu Piktogramm-Versionen der Kernbegriffe (Kettenbrief, Passwort, Algorithmus). Macht die komplette Schul-Linie BFSG-konform auch für Kinder mit Lese- oder Lernbeeinträchtigung nutzbar.",
+   "alter": "6-8 und 8-12 (Inklusion)",
+   "aufwand": "M",
+   "engine": "statisch (kinder-ui Vorlesen, Druck-CSS)",
+   "standards": [
+    "BFSG/EAA",
+    "UN-KRK Art. 23",
+    "WCAG 2.1 AA",
+    "UN-BRK Art. 24"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Teilhabe)",
+   "achse": "schule"
+  },
+  {
+   "titel": "Familien-Medienvertrag",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Exzessive Nutzung/FOMO, ausgehandelte Familienregeln (UN-KRK Art. 12 Beteiligung)",
+   "beschreibung": "Eltern und Kind stellen aus Regel-Bausteinen (Bildschirmzeiten, Foto-Regeln, gerätefreie Zonen – mit Pflicht-Bausteinen auch für Eltern) gemeinsam einen Vertrag zusammen, der als Druckseite mit zwei Unterschriftsfeldern ausgegeben wird. Läuft rein lokal, Speicherung nur in localStorage, Export als Druck/PDF über den Browser.",
+   "alter": "Eltern+Kind 6-12",
+   "engine": "neu:Baustein-zu-Druckvorlage-Generator (rein lokal)",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "JuSchG",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (Teilhabe, sichere Voreinstellungen)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Berechtigungs-Safari",
+   "typ": "kinder-app",
+   "thema": "App-Berechtigungen, Datensparsamkeit, Identitätsdiebstahl (BzKJ-Gefährdungsatlas)",
+   "beschreibung": "Die Familie geht als Schnitzeljagd die Apps auf dem echten Handy durch: Zu jeder Berechtigung (Mikrofon, Standort, Kontakte) erklärt die App kindgerecht, was sie bedeutet, und die Familie entscheidet gemeinsam 'Braucht die App das wirklich?' mit Punkten für entdeckte Datenkraken. Reine Anleitungs-Checkliste ohne Auslesen des Geräts.",
+   "alter": "Eltern+Kind 8-12",
+   "engine": "katalog (kriterien-check-Muster)",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "DSA",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Erstes-Handy-Kompass",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Sichere Voreinstellungen beim ersten Smartphone (DSA-Minderjährigenschutz, DSGVO Art. 8)",
+   "beschreibung": "Interaktive Checkliste für die Handy-Übergabe: Jugendschutzfilter, Standort aus, Kaufsperren, Notfallkontakte, altersgerechte App-Auswahl – jede Position mit Hilfetext und Begründung, am Ende druckbare 'Übergabe-Urkunde' für das Kind. Fortschritt nur lokal gespeichert.",
+   "alter": "Eltern (Kind 8-12)",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "JuSchG",
+    "DSA",
+    "DSGVO",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "familie"
+  },
+  {
+   "titel": "Familienrat-Modus für mitmach-arena",
+   "typ": "funktion",
+   "thema": "Demokratische Beteiligung in der Familie (UN-KRK Art. 12, GC25)",
+   "beschreibung": "Die vorhandene mitmach-arena erhält ein Familien-Preset mit Abstimmungsvorlagen ('Handyfreie Essenszeiten?', 'Neues Spiel anschaffen?'), einem 'Familien-Koffer' als Datei-Export statt Server und einem druckbaren Familienbeschluss als Ergebnis. Kein neues Backend nötig, nur Vorlagen und Druckansicht.",
+   "alter": "Eltern+Kind 6-15",
+   "engine": "mitmach-arena (Beteiligungs-Engine)",
+   "aufwand": "S",
+   "standards": [
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Teilhabe, Demokratiefähigkeit)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Sharenting-Spiegel",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Sharenting (BzKJ-Gefährdungsatlas), Recht des Kindes auf Privatsphäre",
+   "beschreibung": "Szenario-Selbsttest für Eltern: typische Situationen (Einschulungsfoto in der Klassengruppe, Krankheitsdetails im Familienchat) mit drei Reaktionsoptionen, Wertung 2/1/0 und Erklärung inklusive Kinder-Perspektive und Recht am eigenen Bild. Am Ende Auswertung plus druckbare Familien-Foto-Regeln.",
+   "alter": "Eltern",
+   "engine": "szenario",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "foerderfit": "Preise (z.B. klicksafe Preis)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Foto-Ampel",
+   "typ": "kinder-app",
+   "thema": "Einwilligung und Recht am eigenen Bild aus Kindersicht (Gegenstück zum Sharenting-Spiegel)",
+   "beschreibung": "Vor dem Teilen eines Fotos geht die Familie gemeinsam eine Ampel-Entscheidungsstrecke durch (Wer ist drauf? Haben alle Ja gesagt? Was verrät der Hintergrund?) und erhält Grün/Gelb/Rot mit kindgerechter Begründung. Das Kind lernt Einwilligung als eigenes Recht kennen und darf auch bei Eltern-Fotos 'Rot' geben.",
+   "alter": "Eltern+Kind 6-12",
+   "engine": "szenario (Entscheidungsbaum-Variante)",
+   "aufwand": "M",
+   "standards": [
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "familie"
+  },
+  {
+   "titel": "Generationen-Quiz: Tricks & Fallen",
+   "typ": "kinder-app",
+   "thema": "Phishing, Enkeltrick, Kostenfallen, Identitätsdiebstahl – generationenübergreifend",
+   "beschreibung": "Quiz im Wechselmodus für Enkel und Großeltern: eine Frage aus der Kinderwelt (Fake-Gewinnspiel im Spiel, Kettenbrief), eine aus der Seniorenwelt (Enkeltrick-Anruf, Phishing-Mail) – beide raten beim jeweils anderen mit und erkennen, dass die Maschen identisch funktionieren. Erklärung nach jeder Antwort wie im quiz-kern üblich.",
+   "alter": "8-12 + Großeltern",
+   "engine": "quiz-kern (+ Wechselmodus)",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "DSGVO"
+   ],
+   "foerderfit": "Preise (Generationen-/Medienkompetenz-Preise)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Familien-Bildschirmzeit-Wette",
+   "typ": "funktion",
+   "thema": "Exzessive Nutzung/FOMO und Vorbildrolle der Eltern",
+   "beschreibung": "takt-pause erhält einen Familienmodus: Alle – ausdrücklich auch die Eltern – setzen sich eigene Ampel-Ziele, jedes Gerät zählt nur lokal, und beim wöchentlichen Familienrat werden die selbstberichteten Ergebnisse freiwillig verglichen. Keine Fernüberwachung: jeder sieht nur die eigenen Daten, Vergleich nur im gemeinsamen Gespräch.",
+   "alter": "Eltern+Kind 8-15",
+   "engine": "planer (takt-pause)",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen statt Überwachung)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Spiele-Kauf-Kompass",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "USK-Kennzeichen, In-Game-Kommunikation, Loot-Mechaniken vor Kauf/Installation",
+   "beschreibung": "Checkliste, die Eltern und Kind vor dem Kauf oder der Installation eines Spiels gemeinsam durchgehen: Alterskennzeichen und Zusatzhinweise, Chat abschaltbar?, Kaufsperren, Loot-Mechaniken – jede Position mit kindgerechter Erklärkarte, warum die Einstellung sinnvoll ist. Wiederverwendung des kriterien-check-Musters mit neuem Katalog.",
+   "alter": "Eltern+Kind 6-15",
+   "engine": "katalog",
+   "aufwand": "S",
+   "standards": [
+    "JuSchG",
+    "JMStV",
+    "DSA"
+   ],
+   "foerderfit": "-",
+   "achse": "familie"
+  },
+  {
+   "titel": "Familien-Notfall-Fahrplan",
+   "typ": "doku",
+   "thema": "Cybermobbing, verstörende Inhalte, Kettenbriefe – vereinbartes Vorgehen im Ernstfall",
+   "beschreibung": "Gemeinsam ausgefüllter, druckbarer Wenn-dann-Fahrplan für den Kühlschrank: 'Wem sage ich es zuerst? Screenshot ja/nein? Blockieren/Melden wie?' inklusive Nummer gegen Kummer 116111 und juuuport. Kleiner lokaler Ausfüll-Generator, keinerlei Datenübertragung.",
+   "alter": "Eltern+Kind 6-15",
+   "engine": "statisch (+ kleine Ausfüll-Logik)",
+   "aufwand": "S",
+   "standards": [
+    "JuSchG",
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ",
+   "achse": "familie"
+  },
+  {
+   "titel": "Familien-Datenschatz",
+   "typ": "content-pack",
+   "thema": "Datenschutz in der Familie: Smart Speaker, Ortungs-Apps, Klassenchats – und die Privatsphäre des Kindes gegenüber den Eltern",
+   "beschreibung": "Szenario-Pack für daten-schatz mit Familiensituationen (Smart Speaker im Kinderzimmer, Ortungs-App, Foto im Klassenchat), die Eltern und Kind nacheinander durchspielen und ihre Antworten vergleichen. Thematisiert bewusst auch elterliche Überwachung als Privatsphäre-Frage (UN-KRK Art. 16).",
+   "alter": "Eltern+Kind 8-12",
+   "engine": "szenario",
+   "aufwand": "S",
+   "standards": [
+    "DSGVO",
+    "UN-KRK"
+   ],
+   "foerderfit": "-",
+   "achse": "familie"
+  },
+  {
+   "titel": "Duett-Modus für quiz-kern",
+   "typ": "funktion",
+   "thema": "Ko-Nutzung Eltern+Kind statt Alleinnutzung (elterliche Begleitung, UN-KRK GC25)",
+   "beschreibung": "Der quiz-kern erhält einen Zwei-Spieler-Modus am selben Gerät (abwechselnd oder verdeckt antworten, dann vergleichen), wodurch alle bestehenden und künftigen Quiz-Apps automatisch als Familienduell spielbar werden. Ergebnisse bleiben wie bisher lokal, Modus per Toggle beim Start.",
+   "alter": "Eltern+Kind, alle Quiz-Apps",
+   "engine": "quiz-kern",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "BFSG/EAA"
+   ],
+   "foerderfit": "BzKJ (Interaktion)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Geschwister-Staffel",
+   "typ": "funktion",
+   "thema": "Altersgemischtes Lernen: großes und kleines Geschwisterkind als Team",
+   "beschreibung": "Quiz- und Szenario-Apps bekommen einen Staffel-Modus, in dem das ältere Kind die 8-12/13-15-Variante und das jüngere die 6-8-Variante derselben Frage löst und beide als Team punkten – das Große darf dem Kleinen nach dessen Antwort erklären. Nutzt die ohnehin vorgesehenen Altersvarianten der Inhalte, keine neuen Inhalte nötig.",
+   "alter": "6-8 + 8-12",
+   "engine": "quiz-kern / szenario",
+   "aufwand": "M",
+   "standards": [
+    "UN-KRK",
+    "BFSG/EAA"
+   ],
+   "foerderfit": "BzKJ (Interaktion, Teilhabe)",
+   "achse": "familie"
+  },
+  {
+   "titel": "Deepfake-Spürnase (nachrichten-detektive)",
+   "typ": "content-pack",
+   "thema": "Deepfakes / KI-generierte Bilder (Gefährdungsatlas)",
+   "beschreibung": "Neues Fallpaket im bestehenden Echt-oder-Fake-Quiz: 15 beschriebene Bild- und Video-Fälle mit typischen KI-Fehlern (Hände, Licht, fehlende Quelle). Das Kind lernt konkrete Prüfmerkmale und dass KI-Inhalte gekennzeichnet sein müssen.",
+   "alter": "8-12 (Variante 13-15)",
+   "engine": "quiz-kern",
+   "standards": [
+    "AI Act",
+    "JMStV",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ (Fokus KI)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Anzeige oder nicht? (nachrichten-detektive)",
+   "typ": "content-pack",
+   "thema": "Influencer-Werbung / Schleichwerbung (Gefährdungsatlas)",
+   "beschreibung": "Erweiterung des Werbe-Radars um 12 Influencer-Fälle: #anzeige, Merch-Verkauf, Produktplatzierung, Affiliate-Hinweise. Das Kind lernt Kennzeichnungspflichten zu erkennen und Werbeabsicht von Meinung zu trennen.",
+   "alter": "8-12",
+   "engine": "quiz-kern",
+   "standards": [
+    "JMStV",
+    "DSA",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Blasen-Duell: zwei Feeds nebeneinander (feed-forscher)",
+   "typ": "funktion",
+   "thema": "Algorithmen/Filterblase, Demokratiefähigkeit",
+   "beschreibung": "Split-Screen-Modus auf einem Gerät: zwei Kinder klicken unterschiedliche Interessen und sehen live, wie derselbe Algorithmus zwei völlig verschiedene Feeds erzeugt. Lernziel: Empfehlungssysteme personalisieren und trennen Sichtweisen.",
+   "alter": "8-12 (Variante 13-15)",
+   "engine": "simulator",
+   "standards": [
+    "DSA",
+    "AI Act",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefähigkeit)",
+   "aufwand": "M",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Wer bist du wirklich? (daten-schatz)",
+   "typ": "content-pack",
+   "thema": "Identitätsdiebstahl, Phishing, Passwörter (Gefährdungsatlas)",
+   "beschreibung": "Szenarienpaket zu geklauten Accounts: gefälschte Login-Seite, 'Freund' bittet um Passwort, fremdes Profil mit eigenem Foto. Lernziel: Passwörter sind privat, Verdachtsfälle Erwachsenen melden.",
+   "alter": "8-12",
+   "engine": "szenario",
+   "standards": [
+    "DSGVO",
+    "JuSchG",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Mutprobe? Nein danke! (kettenbrief-stopper)",
+   "typ": "content-pack",
+   "thema": "Gefährliche Challenges/Mutproben (Gefährdungsatlas)",
+   "beschreibung": "Neuer Nachrichtentyp im Ausbreitungs-Simulator: Challenge-Aufrufe verbreiten sich im Graph, das Kind entscheidet an jedem Knoten stoppen/weiterleiten/melden. Lernziel: Gruppendruck erkennen, Ketten aktiv brechen.",
+   "alter": "8-12",
+   "engine": "simulator",
+   "standards": [
+    "JuSchG",
+    "JMStV",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Gerüchte-Welle (kettenbrief-stopper)",
+   "typ": "content-pack",
+   "thema": "Verschwörungserzählungen / Desinformation (Gefährdungsatlas)",
+   "beschreibung": "Szenariopaket, in dem sich ein Gerücht bzw. eine Verschwörungserzählung statt eines Kettenbriefs ausbreitet; Stopp-Entscheidung plus Quellen-Frage vor dem Weiterleiten. Lernziel: erst prüfen, dann teilen — Grundbaustein Demokratiefähigkeit.",
+   "alter": "8-12 (Variante 13-15)",
+   "engine": "simulator",
+   "standards": [
+    "DSA",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefähigkeit)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Stopp Hassrede (stark-im-chat)",
+   "typ": "content-pack",
+   "thema": "Hassrede in Gruppenchats (Gefährdungsatlas, DSA-Meldewege)",
+   "beschreibung": "10 neue Zeugen-Szenarien zu Hasskommentaren: Melden, Blockieren, Betroffene stärken, Erwachsene einbeziehen — mit kindgerecht erklärten Meldewegen der Plattformen. Lernziel: Melden ist kein Petzen, sondern ein Recht.",
+   "alter": "8-12",
+   "engine": "szenario",
+   "standards": [
+    "DSA",
+    "JMStV",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ (Demokratiefähigkeit)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Game-Chat-Training (stark-im-chat)",
+   "typ": "content-pack",
+   "thema": "In-Game-Kommunikation (Gefährdungsatlas, JuSchG-Interaktionsrisiken)",
+   "beschreibung": "Szenarien aus Spiele-Chats: Beleidigungen im Voice-Chat, Fremde fragen nach dem echten Namen, Team-Druck. Das Kind lernt Chat-Einstellungen (stumm, nur Freunde) als Selbstschutz kennen.",
+   "alter": "8-12",
+   "engine": "szenario",
+   "standards": [
+    "JuSchG",
+    "DSA",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ (sichere Voreinstellungen)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Wochen-Rückblick (takt-pause)",
+   "typ": "funktion",
+   "thema": "FOMO/exzessive Nutzung, Selbstregulation (Gefährdungsatlas)",
+   "beschreibung": "Lokale Wochenkurve aus der Tagesstatistik plus drei Reflexionsfragen ('Wann war die Ampel rot?'); alles im localStorage, mit einem Tipp löschbar. Lernziel: eigene Muster erkennen statt fremdüberwacht werden.",
+   "alter": "8-12",
+   "engine": "planer",
+   "standards": [
+    "DSGVO",
+    "fragFINN",
+    "UN-KRK"
+   ],
+   "foerderfit": "BzKJ",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Klassenrat-Themenpaket (mitmach-arena)",
+   "typ": "content-pack",
+   "thema": "Teilhabe / UN-KRK Art. 12 (Berücksichtigung der Kindermeinung)",
+   "beschreibung": "Vorgefertigte Abstimmungsvorlagen für den Klassenrat: Klassenregeln, Pausenhof, Projektwoche, digitale Klassenregeln — sofort startbar mit dem vorhandenen Klassen-Koffer-Export. Kinder erleben demokratische Entscheidungsprozesse mit echtem Ergebnis.",
+   "alter": "8-12",
+   "engine": "katalog",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Teilhabe, Demokratiefähigkeit)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Ergebnis-Plakat (mitmach-arena)",
+   "typ": "funktion",
+   "thema": "Sichtbarmachen von Beteiligungsergebnissen",
+   "beschreibung": "Abstimmungsergebnis als großformatige Balkendiagramm-Druckansicht fürs Klassenzimmer, erzeugt rein clientseitig aus dem Klassen-Koffer. Lernziel: Ergebnisse gehören allen und werden transparent gemacht.",
+   "alter": "8-12",
+   "engine": "statisch",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark",
+    "DSGVO"
+   ],
+   "foerderfit": "BzKJ (Teilhabe)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "So denkt die Maschine (geschichten-werkstatt)",
+   "typ": "funktion",
+   "thema": "KI-Transparenz für Kinder (AI Act, Kinder als vulnerable Gruppe)",
+   "beschreibung": "Jede generierte Geschichte trägt sichtbar den Stempel 'Von der Maschine gebaut — mach sie zu deiner!', plus eine Mini-Erklärseite, die die Baustein-Generierung kindgerecht offenlegt. Lernziel: Maschinentext ist Entwurf und Mitautor, nicht Wahrheit.",
+   "alter": "8-12",
+   "engine": "statisch",
+   "standards": [
+    "AI Act",
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Fokus KI)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Bausteine-Paket Mut & Anderssein (geschichten-werkstatt)",
+   "typ": "content-pack",
+   "thema": "Kreative KI-Aneignung, Vielfalt/Empowerment",
+   "beschreibung": "Neue Helden, Orte und Wendungen zu Mut, Anderssein und Medien-Alltag plus 'Was-wäre-wenn'-Karten als Weiterschreib-Impulse mit Rollen-Vorlesen (Web Speech, Stimmwechsel je Figur). Das Kind übt Story-Struktur und verändert den Maschinenentwurf aktiv.",
+   "alter": "8-12",
+   "engine": "neu:Baustein-Generator der Werkstatt (vorhandene erzeugeGeschichte-Funktion)",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark",
+    "BFSG/EAA"
+   ],
+   "foerderfit": "BzKJ (Fokus KI)",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Prüfbericht-Export (kriterien-check)",
+   "typ": "funktion",
+   "thema": "Nachweisführung für fragFINN-/Seitenstark-Aufnahme",
+   "beschreibung": "Audit-Ergebnis als druckbare PDF-Ansicht plus JSON-Datei-Export (Muster Klassen-Koffer), direkt beilegbar zu fragFINN-Whitelist- oder Seitenstark-Anträgen. Spart Betreibern die manuelle Dokumentation.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "standards": [
+    "fragFINN",
+    "Seitenstark",
+    "DSGVO"
+   ],
+   "foerderfit": "-",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Preise-und-Wettbewerbe-Paket (foerder-navigator)",
+   "typ": "content-pack",
+   "thema": "Auszeichnungen als Förderkanal (TOMMI, mb21, Dieter Baacke Preis)",
+   "beschreibung": "Neue Programm-Karten für Kindermedien-Preise mit Einreichfristen, Kriterien und Passung zu den eigenen Apps, gefiltert über die vorhandene Kartenlogik. Macht den Kanal 'Preise' neben Grants systematisch nutzbar.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "standards": [
+    "Seitenstark",
+    "fragFINN"
+   ],
+   "foerderfit": "Preise",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Fristen-Radar mit ICS-Export (foerder-navigator)",
+   "typ": "funktion",
+   "thema": "Fristenmanagement für Förderanträge (u.a. NRW-Games-Fenster)",
+   "beschreibung": "Nach Deadline sortierte Radar-Ansicht aller Programme plus lokal generierte .ics-Kalenderdatei zum Download — kein Server, keine externen Requests. Betreiber verpassen keine Einreichfenster mehr.",
+   "alter": "Betreiber",
+   "engine": "katalog",
+   "standards": [
+    "DSGVO"
+   ],
+   "foerderfit": "NRW-Games 80%",
+   "aufwand": "S",
+   "achse": "ausbau-vorhandene"
+  },
+  {
+   "titel": "Ukrainisch/Russisch-Komplettierung",
+   "typ": "content-pack",
+   "thema": "Teilhabe geflüchteter Kinder / vorhandenes uk-ru-Muster auf alle Apps ausrollen",
+   "beschreibung": "Die bestehenden uk/ru-Übersetzungen werden per mini-i18n auf alle Kinder-Apps ausgerollt (zuerst kinderrechte-entdecker, nachrichten-detektive, takt-pause); der vorhandene Übersetzungs-Vollständigkeitstest sichert ab, dass kein String fehlt. Kinder üben in ihrer Erstsprache dieselben Schutzkompetenzen wie ihre Klasse auf Deutsch.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Teilhabe)",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Türkisch-Sprachpaket 'Kern-Drei'",
+   "typ": "content-pack",
+   "thema": "Größte nichtdeutsche Familiensprache in DE / Mehrsprachigkeit als Qualitätskriterium",
+   "beschreibung": "Türkische Strings für die drei textärmsten, wirkungsstärksten Apps zuerst (stark-im-chat, daten-schatz, kettenbrief-stopper), eingespeist über mini-i18n mit Vollständigkeitstest; Eltern-Kompass-Seiten werden mitübersetzt, damit auch türkischsprachige Eltern die Lernziele lesen können.",
+   "alter": "8-12, Eltern",
+   "aufwand": "S",
+   "engine": "szenario",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Teilhabe)",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Arabisch-Sprachpaket + RTL-Grundausbau",
+   "typ": "funktion",
+   "thema": "Rechts-nach-links-Fähigkeit des Baukastens / arabischsprachige Familien",
+   "beschreibung": "kinder-ui bekommt einmalig RTL-Fähigkeit (CSS logical properties, dir-Umschaltung in den Design-Tokens), pilotiert mit arabischen Strings für stark-im-chat und takt-pause; danach kostet jede weitere RTL-Sprache nur noch ein S-Content-Pack. Alles bleibt lokal gebündelt, keine externen Fonts oder Requests.",
+   "alter": "8-12",
+   "aufwand": "M",
+   "engine": "szenario",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Teilhabe)",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Englisch-Sprachpaket",
+   "typ": "content-pack",
+   "thema": "Internationale Nachnutzung der AGPL-Codebasis / bilingualer Unterricht",
+   "beschreibung": "Englische Strings zuerst für nachrichten-detektive und feed-forscher (Desinformation und Algorithmen sind international anschlussfähig), nutzbar im bilingualen Sachunterricht und als Referenzsprache für Übersetzer weiterer Sprachen. Öffnet die AGPL-Apps für Forks von Schulträgern in anderen EU-Ländern.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "quiz-kern",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "-",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Polnisch-Sprachpaket für Grenzregionen",
+   "typ": "content-pack",
+   "thema": "Deutsch-polnische Schulpartnerschaften / Grenzregionen Brandenburg, Sachsen, MV",
+   "beschreibung": "Polnische Strings zuerst für kinderrechte-entdecker und stark-im-chat, damit deutsch-polnische Partnerklassen dieselben Fälle parallel in beiden Sprachen bearbeiten und per Klassen-Koffer-Export ihre Abstimmungsergebnisse austauschen können — ohne Server, nur per Datei.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "szenario",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "Deutsch-Polnisches Jugendwerk (DPJW)",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Leichte-Sprache-Schalter in kinder-ui",
+   "typ": "funktion",
+   "thema": "Barrierefreiheit nach BFSG/EAA / kognitive Zugänglichkeit",
+   "beschreibung": "Leichte Sprache wird als Zusatz-Locale 'de-ls' in mini-i18n geführt: ein gut sichtbarer Schalter tauscht alle Texte einer App gegen die Leichte-Sprache-Variante, der vorhandene Vollständigkeitstest prüft die Abdeckung automatisch. Einmal gebaut, profitieren alle Apps; die Einstellung liegt löschbar im localStorage.",
+   "alter": "6-12",
+   "aufwand": "M",
+   "engine": "statisch",
+   "standards": [
+    "BFSG/EAA",
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "Aktion Mensch (Inklusion), falls beantragt",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Leichte-Sprache-Pack für stark-im-chat und daten-schatz",
+   "typ": "content-pack",
+   "thema": "Erste Inhalte für den de-ls-Schalter / DIN SPEC 33429",
+   "beschreibung": "Alle Szenarien, Erklärungen und Eltern-Kompass-Texte der beiden Szenario-Apps werden nach den Regeln des Netzwerks Leichte Sprache bzw. DIN SPEC 33429 umgeschrieben und idealerweise von einer Prüfgruppe getestet. Kinder mit Lernschwierigkeiten trainieren damit dieselben Chat- und Datenschutz-Situationen wie alle anderen.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "szenario",
+   "standards": [
+    "BFSG/EAA",
+    "UN-KRK",
+    "fragFINN"
+   ],
+   "foerderfit": "Aktion Mensch (Inklusion), falls beantragt",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "nachrichten-detektive junior (6-8)",
+   "typ": "kinder-app",
+   "thema": "Desinformation früh erkennen / bildbasiert statt textbasiert",
+   "beschreibung": "quiz-kern-Variante mit Bildpaaren statt Textmeldungen ('Echt oder ausgedacht?'), jede Erklärung wird automatisch vorgelesen, Ränge und Rekord bleiben erhalten. Vermittelt die Grundfrage 'Woher weiß das Bild das?' bevor Kinder eigenständig Videos schauen.",
+   "alter": "6-8",
+   "aufwand": "M",
+   "engine": "quiz-kern",
+   "standards": [
+    "JMStV",
+    "UN-KRK",
+    "fragFINN"
+   ],
+   "foerderfit": "BzKJ (Förderfokus Demokratiefähigkeit)",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "stark-im-chat 13+ (Jugendversion)",
+   "typ": "kinder-app",
+   "thema": "Hassrede, FOMO, Gruppendruck im Klassenchat / Melden und Blockieren nach DSA",
+   "beschreibung": "Szenario-Trainer mit realistischer Gruppenchat-Optik (Weiterleiten, Screenshots, Reaktions-Emojis) zu Hassrede, Bloßstellung und Ausgrenzung; jede Auflösung zeigt konkret die Melde- und Blockierwege, die Plattformen Minderjährigen nach dem DSA bereitstellen müssen. Kein echter Chat — alle Verläufe sind geskriptete Szenarien.",
+   "alter": "13-15",
+   "aufwand": "M",
+   "engine": "szenario",
+   "standards": [
+    "DSA",
+    "JMStV",
+    "JuSchG"
+   ],
+   "foerderfit": "BzKJ (Gefährdungsatlas: Hassrede, Cybermobbing)",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Quiz-Kartenspiel-PDFs zum Selbstdrucken",
+   "typ": "unterricht",
+   "thema": "Geräteloser Einsatz der Quiz-Fälle / Offline-Teilhabe",
+   "beschreibung": "Eine Druckansicht mit CSS-Print-Stylesheet erzeugt aus den vorhandenen Quiz-JSON-Daten Kartendecks (Vorderseite Frage, Rückseite Antwort plus Erklärung) direkt im Browser — kein Server, kein neues Werkzeug, mehrsprachig über mini-i18n. Klassen ohne Tablets spielen dieselben Fälle analog.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "statisch",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "-",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Poster 'Drei starke Züge'",
+   "typ": "unterricht",
+   "thema": "Merkposter aus den Szenario-Lösungen / Klassenzimmer-Präsenz",
+   "beschreibung": "A3-Poster-PDFs, die pro Themenfeld die jeweils beste Handlungsfolge aus den Szenario-Trainern verdichten (z. B. 'Stopp sagen — Beweis sichern — Hilfe holen'), generiert als Druckansicht aus den vorhandenen Szenario-Daten. Das Gelernte bleibt an der Klassenzimmerwand sichtbar, auch wenn kein Gerät läuft.",
+   "alter": "8-12",
+   "aufwand": "S",
+   "engine": "statisch",
+   "standards": [
+    "UN-KRK",
+    "Seitenstark"
+   ],
+   "foerderfit": "-",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Eltern-Kompass-Sammelband (mehrsprachig, druckbar)",
+   "typ": "erwachsenen-werkzeug",
+   "thema": "Elternarbeit / Lernziel-Transparenz für Elternabende",
+   "beschreibung": "Alle Eltern-Kompass-Seiten der Apps werden als eine druckbare Broschüren-Ansicht gebündelt (de/uk/ru, später tr/ar/pl über dieselben i18n-Pakete), damit Lehrkräfte am Elternabend ein einziges Dokument austeilen können. Reine Zusammenstellung vorhandener Texte, keine neuen Inhalte nötig.",
+   "alter": "Eltern",
+   "aufwand": "S",
+   "engine": "statisch",
+   "standards": [
+    "UN-KRK",
+    "JuSchG",
+    "Seitenstark"
+   ],
+   "foerderfit": "-",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Hoher-Kontrast-Theme + Schriftgrößen-Schalter",
+   "typ": "funktion",
+   "thema": "Sehbeeinträchtigung / WCAG-2.2-Kontraste als Design-Tokens",
+   "beschreibung": "Ein zweites Token-Set in kinder-ui mit AAA-Kontrasten und ein Schalter für zwei Schriftgrößen-Stufen, automatisch vorausgewählt über prefers-contrast und löschbar im localStorage gespeichert. Einmal in den Tokens umgesetzt, wirkt es in allen elf Apps gleichzeitig.",
+   "alter": "6-15",
+   "aufwand": "S",
+   "engine": "statisch",
+   "standards": [
+    "BFSG/EAA"
+   ],
+   "foerderfit": "-",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "Screenreader- und Tastatur-Audit-Pack",
+   "typ": "funktion",
+   "thema": "EN 301 549 / BFSG-Pflicht seit Juni 2025 systematisch abarbeiten",
+   "beschreibung": "Systematisches ARIA-, Fokus- und Tastatur-Audit aller Apps gegen WCAG 2.2 / EN 301 549 mit automatisierten axe-Tests im CI; Korrekturen landen zentral in den kinder-ui-Komponenten, sodass jede App den Fix erbt. Ergebnis ist zusätzlich eine dokumentierte Barrierefreiheitserklärung je App.",
+   "alter": "6-15",
+   "aufwand": "M",
+   "engine": "statisch",
+   "standards": [
+    "BFSG/EAA",
+    "Seitenstark"
+   ],
+   "foerderfit": "-",
+   "achse": "multiplikatoren"
+  },
+  {
+   "titel": "DGS-Gebärdensprache-Stufe (lokal gebündelte Videos)",
+   "typ": "content-pack",
+   "thema": "Gehörlose Kinder / Deutsche Gebärdensprache als spätere Ausbaustufe",
+   "beschreibung": "Lokal gebündelte DGS-Videos (webm, CSP self-konform, keine externen Player) zunächst für die Intro- und Anleitungstexte von stark-im-chat und kinderrechte-entdecker, produziert mit tauben Übersetzerinnen und Übersetzern. Der Videoschalter nutzt dieselbe Stelle in kinder-ui wie die Vorlese-Funktion; Aufwand L wegen externer Videoproduktion, nicht wegen Code.",
+   "alter": "8-12",
+   "aufwand": "L",
+   "engine": "statisch",
+   "standards": [
+    "BFSG/EAA",
+    "UN-KRK"
+   ],
+   "foerderfit": "Aktion Mensch (Inklusion), falls beantragt",
+   "achse": "multiplikatoren"
+  }
+ ]
+}

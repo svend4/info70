@@ -17,7 +17,9 @@ info70/
 │   ├── 05-ideen-pipeline.md     Пайплайн идей и переносимые методы
 │   ├── 06-verifikation-2.md     Верификация №2: премии, процессы fragFINN/Seitenstark, Gefährdungsatlas
 │   ├── 07-foerder-playbook.md   Плейбук грантовых заявок: механика 80/20, консультации, регионэффекты
-│   └── 08-partner-dossier.md    Партнёрская карта экосистемы для заявки BzKJ-2027
+│   ├── 08-partner-dossier.md    Партнёрская карта экосистемы для заявки BzKJ-2027
+│   ├── 09-baukasten-katalog.md  Каталог №1: 139 производных единиц из немецкого корпуса (+ ideen-katalog.json)
+│   └── vorlagen/kurz-gdd.md     Шаблон одностраничного GDD для каждой новой единицы
 ├── apps/                        Приложения (по одной подпапке на тему)
 │   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» + Werbe-Radar — MVP готов
 │   ├── kinderrechte-entdecker/  🕊️ Права ребёнка (UN-KRK, включая цифровые) — MVP готов
