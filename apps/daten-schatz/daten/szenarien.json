@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Schatzsucher*in", "emoji": "🗺️" },
+    { "ab": 8, "titel": "Schatzwächter*in", "emoji": "🛡️" },
+    { "ab": 14, "titel": "Meister-Wächter*in", "emoji": "🏰" },
+    { "ab": 19, "titel": "Legendäre*r Daten-Drache", "emoji": "🐉" }
+  ],
+  "szenarien": [
+    {
+      "id": "s01",
+      "situation": "Du lädst ein Mal-Spiel herunter. Beim ersten Start fragt es: „Darf diese App deinen Standort verwenden?“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Zum Malen braucht niemand deinen Standort! Wenn eine App mehr wissen will, als sie für ihre Aufgabe braucht, ist das ein Warnzeichen. Ablehnen – malen geht trotzdem."
+    },
+    {
+      "id": "s02",
+      "situation": "Eine Videoanruf-App braucht Kamera und Mikrofon, damit du mit Oma telefonieren kannst.",
+      "beste": "fragen",
+      "auchOk": [],
+      "erklaerung": "Für Videoanrufe sind Kamera und Mikrofon wirklich nötig – aber welche App vertrauenswürdig ist und wer dich anrufen darf, entscheidest du am besten zusammen mit Erwachsenen."
+    },
+    {
+      "id": "s03",
+      "situation": "Ein Gewinnspiel verspricht: „Gewinne ein Gratis-Tablet! Gib einfach deinen vollen Namen und deine Adresse ein.“",
+      "beste": "ablehnen",
+      "auchOk": [],
+      "erklaerung": "Klassische Daten-Falle: Der „Gewinn“ ist der Köder, deine Daten sind die Beute. Seriöse Gewinne verlangen nicht einfach so deine Adresse. Finger weg!"
+    },
+    {
+      "id": "s04",
+      "situation": "Eine Quiz-App möchte „Zugriff auf alle deine Fotos“, angeblich um dein Profilbild zu setzen.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Für ein Profilbild reicht EIN Foto, das du selbst auswählst – nicht der Zugriff auf alle. Viele Systeme können genau das: nur einzelne Fotos freigeben. Alles andere: nein."
+    },
+    {
+      "id": "s05",
+      "situation": "Eine neue Spiele-App fragt direkt nach dem Start: „Dürfen wir dir Benachrichtigungen schicken?“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Benachrichtigungen wollen dich zurück in die App holen – brauchen tust du sie fast nie. Du kannst sie später immer noch einschalten. Die sicherste Einstellung zuerst!"
+    },
+    {
+      "id": "s06",
+      "situation": "Ihr plant eine Wanderung. Die Karten-App fragt: „Standort verwenden, während du die App benutzt?“",
+      "beste": "fragen",
+      "auchOk": ["geben"],
+      "erklaerung": "Eine Karte braucht den Standort wirklich – „nur während der Nutzung“ ist die gute Variante. Besprich mit Erwachsenen, dass es NICHT „immer erlauben“ sein muss."
+    },
+    {
+      "id": "s07",
+      "situation": "Ein Spiel fragt nach deinem echten Vor- und Nachnamen für die Bestenliste.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "In Bestenlisten gehört ein Spitzname, nie dein echter Name! Ein guter Fantasiename schützt dich – und ist sowieso cooler: „Blitzfuchs99“ schlägt „Max Mustermann“."
+    },
+    {
+      "id": "s08",
+      "situation": "Eine Website zeigt ein Fenster: „Wir verwenden Cookies, um dir bessere Werbung zu zeigen. Alle akzeptieren?“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "„Bessere Werbung“ heißt: Die Seite will dein Verhalten beobachten. Suche den Knopf „Ablehnen“ oder „Nur notwendige“ – der ist manchmal versteckt, aber er muss da sein."
+    },
+    {
+      "id": "s09",
+      "situation": "Ein Online-Test verspricht: „Welcher Star bist du? Sag uns deinen Geburtstag und den Namen deiner Schule!“",
+      "beste": "ablehnen",
+      "auchOk": [],
+      "erklaerung": "Geburtstag + Schule = damit kann man dich finden und sich als Bekannte*r ausgeben. Solche „Tests“ sammeln Daten. Der Spaß ist es nie wert."
+    },
+    {
+      "id": "s10",
+      "situation": "Die Lern-App deiner Schule fragt nach dem Klassencode, den deine Lehrerin an die Tafel geschrieben hat.",
+      "beste": "geben",
+      "auchOk": ["fragen"],
+      "erklaerung": "Ein Klassencode verrät nichts über dich persönlich – er ordnet dich nur deiner Klasse zu und kommt von deiner Lehrerin. Solche Angaben sind okay. Merke: Es kommt darauf an, WAS gefragt wird und WER fragt."
+    },
+    {
+      "id": "s11",
+      "situation": "Beim Installieren fragt ein Taschenlampen-Spiel: „Zugriff auf deine Kontakte erlauben?“",
+      "beste": "ablehnen",
+      "auchOk": [],
+      "erklaerung": "Eine Taschenlampe braucht deine Freundesliste?! Niemals. Apps, die ohne Grund nach Kontakten fragen, wollen Daten über dich UND deine Freunde sammeln."
+    },
+    {
+      "id": "s12",
+      "situation": "Ein Spiel bietet an: „Verbinde dein Profil mit deinem Foto und deinem Alter, dann sehen andere Spieler, wer du bist!“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Fremde Mitspieler müssen nicht wissen, wie du aussiehst und wie alt du bist. Dein Gesicht und dein Alter gehören zu deinem Schatz – zeig sie nur Menschen, die du wirklich kennst."
+    }
+  ]
+}

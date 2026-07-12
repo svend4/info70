@@ -24,12 +24,13 @@ export function el(tag, attrs = {}, ...kinder) {
  * Text vorlesen (Web Speech API, läuft lokal im Browser, offline-fähig).
  * Für Kinder, die noch nicht sicher lesen. Bricht laufende Ausgabe ab.
  * @param {string} text
+ * @param {string} [lang] BCP-47-Code, z. B. 'de-DE', 'uk-UA', 'ru-RU'
  */
-export function vorlesen(text) {
+export function vorlesen(text, lang = 'de-DE') {
   if (!('speechSynthesis' in globalThis)) return false;
   speechSynthesis.cancel();
   const aeusserung = new SpeechSynthesisUtterance(text);
-  aeusserung.lang = 'de-DE';
+  aeusserung.lang = lang;
   aeusserung.rate = 0.9;
   speechSynthesis.speak(aeusserung);
   return true;

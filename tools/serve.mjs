@@ -47,7 +47,9 @@ createServer(async (req, res) => {
     res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' });
     res.end('404 – nicht gefunden');
   }
-}).listen(PORT, () => {
+}).listen(PORT, async () => {
   console.log(`Dev-Server läuft: http://localhost:${PORT}`);
-  console.log(`  Apps: /apps/nachrichten-detektive/  /apps/mitmach-arena/  /apps/geschichten-werkstatt/`);
+  const { readdir } = await import('node:fs/promises');
+  const apps = await readdir(join(ROOT, 'apps')).catch(() => []);
+  console.log(`  Apps: ${apps.map((a) => `/apps/${a}/`).join('  ')}`);
 });

@@ -13,11 +13,15 @@ info70/
 │   ├── 01-analyse.md            Анализ востребованности и выбор приложений
 │   ├── 02-anforderungen.md      Политика соответствия: fragFINN, BzKJ, DSGVO
 │   ├── 03-architektur.md        Архитектура монорепозитория
-│   └── 04-roadmap.md            Дорожная карта и окна финансирования
+│   ├── 04-roadmap.md            Дорожная карта и окна финансирования
+│   └── 05-ideen-pipeline.md     Пайплайн идей и переносимые методы
 ├── apps/                        Приложения (по одной подпапке на тему)
 │   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» (8–12 лет) — MVP готов
+│   ├── feed-forscher/           🔬 Алгоритмы и фильтр-пузырь: симулятор ленты (DE/UK/RU) — MVP готов
+│   ├── daten-schatz/            🗝️ Защита данных: сценарный тренажёр — MVP готов
 │   ├── mitmach-arena/           🗳️ Участие и демократия: голосования класса (прототип)
-│   └── geschichten-werkstatt/   ✍️ Творчество с ИИ: конструктор историй (прототип)
+│   ├── geschichten-werkstatt/   ✍️ Творчество с ИИ: конструктор историй (прототип)
+│   └── kriterien-check/         ✅ Self-audit оператора по критериям (для взрослых) — MVP готов
 ├── packages/                    Общий код
 │   ├── kinder-ui/               UI-компоненты и стили для детских интерфейсов
 │   └── kinderschutz/            Утилиты соответствия: блокировка внешних запросов, чек-лист критериев
@@ -35,17 +39,16 @@ npm run dev    # локальный сервер на http://localhost:8070
 npm test       # тесты (node --test)
 ```
 
-Приложения открываются по адресам:
-
-- http://localhost:8070/apps/nachrichten-detektive/
-- http://localhost:8070/apps/mitmach-arena/
-- http://localhost:8070/apps/geschichten-werkstatt/
+Приложения открываются по адресам `http://localhost:8070/apps/<имя>/`.
 
 ## Статус
 
 | Приложение | Тема | Статус |
 |---|---|---|
 | `nachrichten-detektive` | Nachrichtenkompetenz (медиаграмотность) | ✅ рабочий MVP |
+| `feed-forscher` | Алгоритмы, фильтр-пузырь · DE/UK/RU | ✅ рабочий MVP |
+| `daten-schatz` | Datenschutz, безопасные настройки | ✅ рабочий MVP |
+| `kriterien-check` | Self-audit оператора (для взрослых) | ✅ рабочий MVP |
 | `mitmach-arena` | Teilhabe / Demokratiefähigkeit | 🧪 прототип |
 | `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |
 

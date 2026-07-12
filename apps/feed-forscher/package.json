@@ -1,0 +1,8 @@
+{
+  "name": "@info70/feed-forscher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Feed-Forscher: Simulator zeigt Kindern, wie Empfehlungsalgorithmen eine Filterblase bauen - und wie man sie platzen laesst. Mehrsprachig (de/uk/ru).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

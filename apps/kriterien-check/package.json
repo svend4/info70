@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kriterien-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kriterien-Check: Selbst-Audit fuer Betreiber*innen von Kinderangeboten nach dem Monorepo-Kriterienkatalog (fragFINN/BzKJ/DSGVO). Zielgruppe: Erwachsene.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
