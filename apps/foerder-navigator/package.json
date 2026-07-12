@@ -1,0 +1,8 @@
+{
+  "name": "@info70/foerder-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Foerder-Navigator: Foerderprogramme, Preise und Guetesiegel fuer Kindermedien-Projekte in Deutschland - mit verifizierten Konditionen, Fristen und Eigenanteil-Rechner. Zielgruppe: Erwachsene.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

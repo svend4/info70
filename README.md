@@ -15,7 +15,8 @@ info70/
 │   ├── 03-architektur.md        Архитектура монорепозитория
 │   ├── 04-roadmap.md            Дорожная карта и окна финансирования
 │   ├── 05-ideen-pipeline.md     Пайплайн идей и переносимые методы
-│   └── 06-verifikation-2.md     Верификация №2: премии, процессы fragFINN/Seitenstark, Gefährdungsatlas
+│   ├── 06-verifikation-2.md     Верификация №2: премии, процессы fragFINN/Seitenstark, Gefährdungsatlas
+│   └── 07-foerder-playbook.md   Плейбук грантовых заявок: механика 80/20, консультации, регионэффекты
 ├── apps/                        Приложения (по одной подпапке на тему)
 │   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» + Werbe-Radar — MVP готов
 │   ├── kinderrechte-entdecker/  🕊️ Права ребёнка (UN-KRK, включая цифровые) — MVP готов
@@ -26,7 +27,8 @@ info70/
 │   ├── takt-pause/              🚦 Экранное время: светофор и паузы — MVP готов
 │   ├── mitmach-arena/           🗳️ Участие и демократия: голосования + Klassen-Koffer — MVP готов
 │   ├── geschichten-werkstatt/   ✍️ Творчество с ИИ: конструктор историй (прототип)
-│   └── kriterien-check/         ✅ Self-audit оператора по критериям (для взрослых) — MVP готов
+│   ├── kriterien-check/         ✅ Self-audit оператора по критериям (для взрослых) — MVP готов
+│   └── foerder-navigator/       🧭 Каталог программ поддержки с фильтрами и 80/20-калькулятором (для взрослых) — MVP готов
 ├── packages/                    Общий код
 │   ├── kinder-ui/               UI-компоненты, стили, мини-i18n
 │   ├── quiz-kern/               Общий квиз-движок и валидатор банков вопросов
@@ -60,6 +62,7 @@ npm test       # тесты (node --test)
 | `takt-pause` | Экранное время: самонаблюдение, паузы | ✅ рабочий MVP |
 | `mitmach-arena` | Teilhabe + Klassen-Koffer (сбор голосов файлом) | ✅ рабочий MVP |
 | `kriterien-check` | Self-audit оператора (для взрослых) | ✅ рабочий MVP |
+| `foerder-navigator` | Каталог грантов/премий + 80/20-калькулятор (для взрослых) | ✅ рабочий MVP |
 | `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
