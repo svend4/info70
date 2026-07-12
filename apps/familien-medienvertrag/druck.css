@@ -1,0 +1,34 @@
+/* Familien-Medienvertrag: Druckansicht. Auf dem Bildschirm ist der Vertrag als
+   Vorschau-Karte sichtbar; beim Drucken verschwindet alles Bedienbare
+   (.fmv-nur-bildschirm) und nur der Vertrag mit den Unterschriftslinien bleibt
+   übrig - so lässt sich der Vertrag sauber ausdrucken (oder als PDF speichern). */
+
+@media print {
+  .fmv-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .fmv-vertrag {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    break-inside: avoid;
+  }
+
+  .fmv-vertrag h2,
+  .fmv-vertrag h3 { color: #000; }
+}
+
+/* Unterschriftslinie: eine leere Zeile zum Eintragen von Hand. */
+.fmv-linie {
+  border-bottom: 2px solid var(--k-tinte);
+  height: 2.4rem;
+}

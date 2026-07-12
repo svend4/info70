@@ -1,0 +1,11 @@
+{
+  "name": "Stark und gesund",
+  "short_name": "Stark & gesund",
+  "description": "Entdecke, was deinem Körper guttut - Bewegung, Schlaf, Ernährung, Pausen. Werbefrei, ohne Anmeldung.",
+  "lang": "de",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0fdf4",
+  "theme_color": "#15803d",
+  "icons": []
+}

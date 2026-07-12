@@ -1,0 +1,501 @@
+{
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Ideensammlung fuer Bewegungsangebote in der Kita (Kinder 1-7). Alle Spielideen sind neu formuliert; Grundlage sind allgemeine Konzepte der sieben Bewegungsarten aus der Fachliteratur, keine uebernommenen Texte oder Liedtexte. Kein Ersatz fuer die fachliche Einschaetzung der Aufsichtspflicht vor Ort.",
+  "kategorien": [
+    { "id": "grundbewegungen", "name": "Grundbewegungen", "emoji": "🤸" },
+    { "id": "tanz-musik", "name": "Tanz + Musik", "emoji": "🎵" },
+    { "id": "kreis-ordnung", "name": "Kreis- & Ordnungsspiele", "emoji": "⭕" },
+    { "id": "gymnastik", "name": "Gymnastik & Ausgleich", "emoji": "🧘" },
+    { "id": "fangspiele", "name": "Fang- & Bewegungsspiele", "emoji": "🏃" },
+    { "id": "sportspiele", "name": "Kleine Sportspiele", "emoji": "⚽" },
+    { "id": "draussen-wald", "name": "Draußen & Wald", "emoji": "🌲" }
+  ],
+  "spiele": [
+    {
+      "id": "gb-wackelbruecke",
+      "kategorie": "grundbewegungen",
+      "titel": "Wackelbrücke",
+      "altersband": "3-5",
+      "dauer": "10-15 Min",
+      "material": "Seil oder lange Schnur, alternativ eine aufgemalte Linie",
+      "anleitung": [
+        "Lege ein Seil in einer leichten Kurve auf den Boden.",
+        "Die Kinder gehen nacheinander wie über eine schmale Brücke, immer einen Fuß direkt vor den anderen.",
+        "Die Arme dürfen zum Ausbalancieren seitlich ausgestreckt werden.",
+        "Wer sicher ist, versucht die Rückreise langsam rückwärts."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen mit einem Seil auf dem Teppich; draußen über eine Bordsteinkante oder einen liegenden Ast (nur mit direkter Begleitung).",
+      "inklusionsTipp": "Ein Kind, das noch unsicher steht, hält eine Hand der begleitenden Person und spürt so den geraden Weg mit."
+    },
+    {
+      "id": "gb-riesen-zwerge",
+      "kategorie": "grundbewegungen",
+      "titel": "Riesenschritte, Zwergenschritte",
+      "altersband": "1-3",
+      "dauer": "5-10 Min",
+      "material": "kein Material nötig",
+      "anleitung": [
+        "Alle stehen locker im Raum verteilt.",
+        "Auf das Wort „Riese“ macht ihr ganz große, langsame Schritte und streckt euch hoch.",
+        "Auf das Wort „Zwerg“ geht ihr in die Hocke und trippelt mit winzigen Schritten.",
+        "Wechselt das Tempo, mal schnell, mal ganz langsam."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen im Bewegungsraum; draußen auf der Wiese, wo die großen Schritte richtig weit werden dürfen.",
+      "inklusionsTipp": "Der Größenwechsel klappt auch im Sitzen: große Arme nach oben, kleine Arme eng am Körper."
+    },
+    {
+      "id": "gb-bach-springen",
+      "kategorie": "grundbewegungen",
+      "titel": "Über den Bach springen",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "zwei Seile oder zwei Kreidelinien",
+      "anleitung": [
+        "Lege zwei Seile parallel als „Bach“ auf den Boden, erst schmal.",
+        "Die Kinder springen mit beiden Füßen über den Bach, ohne hineinzutreten.",
+        "Nach jeder Runde rückt ihr die Seile ein Stück weiter auseinander.",
+        "Jedes Kind entscheidet selbst, bei welcher Breite es stehen bleibt."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen mit Seilen; draußen mit zwei Kreidelinien auf dem Hof oder einer flachen Pfütze.",
+      "inklusionsTipp": "Statt zu springen darf ein Kind mit einem großen Schritt oder Hüpfer über den schmalen Bach steigen."
+    },
+    {
+      "id": "gb-krabbeltunnel",
+      "kategorie": "grundbewegungen",
+      "titel": "Der Krabbeltunnel",
+      "altersband": "1-3",
+      "dauer": "10 Min",
+      "material": "Stofftunnel oder Tische mit Decken darüber",
+      "anleitung": [
+        "Baue aus Tischen und Decken einen kurzen, dunklen Tunnel.",
+        "Die Kinder krabbeln nacheinander hindurch, du wartest am anderen Ende.",
+        "Rufe freundlich, damit sie deine Stimme als Ziel hören.",
+        "Wer mag, schiebt einen Softball vor sich durch den Tunnel."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen mit Stofftunnel oder Tischen; im Freien geht auch ein Tunnel aus zwei gespannten Decken zwischen Stühlen unter Aufsicht.",
+      "inklusionsTipp": "Der Tunnel bleibt an beiden Enden offen und hell genug, damit kein Kind sich eingeengt fühlt."
+    },
+    {
+      "id": "tm-standbild-tanz",
+      "kategorie": "tanz-musik",
+      "titel": "Standbild-Tanz",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "Abspielgerät oder Trommel für den Takt",
+      "anleitung": [
+        "Solange Musik läuft, tanzen alle frei durch den Raum.",
+        "Stoppst du die Musik, frieren alle zu einem Standbild ein.",
+        "Wer möchte, zeigt sein Standbild, dann geht der Tanz weiter.",
+        "Gib manchmal ein Thema vor, zum Beispiel „so groß wie möglich“."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen im Bewegungsraum; draußen gibst du den Takt mit einer Trommel oder klatschend vor.",
+      "inklusionsTipp": "Ein Kind, das die Musik nicht gut hört, achtet auf dein Handzeichen als Stopp-Signal."
+    },
+    {
+      "id": "tm-baender-wind",
+      "kategorie": "tanz-musik",
+      "titel": "Bänder im Wind",
+      "altersband": "3-5",
+      "dauer": "10-15 Min",
+      "material": "leichte Tücher oder Krepp-Bänder an kurzen Stäben",
+      "anleitung": [
+        "Jedes Kind bekommt ein Tuch oder Band in die Hand.",
+        "Zu ruhiger Musik lasst ihr das Band langsam durch die Luft schweben.",
+        "Wird die Musik schneller, wirbelt das Band wie ein starker Wind.",
+        "Zum Schluss lasst ihr die Bänder ganz leise zu Boden sinken."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen im großen Raum; draußen weht der echte Wind mit und zeigt, wohin die Bänder fliegen.",
+      "inklusionsTipp": "Das Band lässt sich am Handgelenk festbinden, damit es auch ohne festen Griff mitschwingt."
+    },
+    {
+      "id": "tm-trommelschritte",
+      "kategorie": "tanz-musik",
+      "titel": "Trommelschritte",
+      "altersband": "5-7",
+      "dauer": "10 Min",
+      "material": "Trommel oder Klanghölzer",
+      "anleitung": [
+        "Schlage einen gleichmäßigen langsamen Takt auf der Trommel.",
+        "Die Kinder gehen genau im Takt durch den Raum, ein Schritt pro Schlag.",
+        "Schlägst du schneller, gehen die Füße schneller; bei einem lauten Schlag springen alle einmal hoch.",
+        "Bei Stille bleiben alle wie eingefroren stehen.",
+        "Ein Kind darf abwechselnd selbst die Trommel führen."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen als ruhiges Angebot; draußen auf dem Hof mit weiten Wegen zwischen den Schritten.",
+      "inklusionsTipp": "Den Takt zusätzlich mit dem Fuß auf den Boden stampfen, damit er auch über die Erschütterung spürbar wird."
+    },
+    {
+      "id": "tm-spiegeltanz",
+      "kategorie": "tanz-musik",
+      "titel": "Spiegeltanz",
+      "altersband": "5-7",
+      "dauer": "10-15 Min",
+      "material": "ruhige Musik",
+      "anleitung": [
+        "Immer zwei Kinder stehen sich gegenüber.",
+        "Ein Kind bewegt sich langsam, das andere macht wie ein Spiegel alles genau nach.",
+        "Nach einer Weile tauscht ihr die Rollen.",
+        "Wichtig ist langsam zu führen, damit das Spiegelbild gut folgen kann."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen mit Musik; draußen ohne Musik, dafür spiegelt ihr euch im Schatten auf dem Boden.",
+      "inklusionsTipp": "Die führende Person bewegt sich betont groß und langsam, so kann jedes Kind gut folgen."
+    },
+    {
+      "id": "ko-platzwechsel",
+      "kategorie": "kreis-ordnung",
+      "titel": "Der Platzwechsel-Kreis",
+      "altersband": "5-7",
+      "dauer": "10 Min",
+      "material": "ein Sitzkissen pro Kind",
+      "anleitung": [
+        "Alle sitzen auf Kissen im Kreis, ein Kissen bleibt frei.",
+        "Nennst du ein Merkmal, zum Beispiel „alle mit roten Schuhen“, wechseln diese Kinder auf einen anderen freien Platz.",
+        "Beim Wechseln wird gegangen, nicht gerannt, damit niemand zusammenstößt.",
+        "Wechselt die Merkmale, damit jedes Kind mehrmals dran ist."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen mit Kissen; draußen mit Reifen als Sitzplätze auf der Wiese.",
+      "inklusionsTipp": "Merkmale sichtbar wählen (Kleidungsfarbe, Tier auf dem T-Shirt), damit alle ohne genaues Zuhören mitmachen können."
+    },
+    {
+      "id": "ko-bewegung-wandert",
+      "kategorie": "kreis-ordnung",
+      "titel": "Bewegung wandert im Kreis",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "kein Material nötig",
+      "anleitung": [
+        "Alle stehen im Kreis und schauen zur Mitte.",
+        "Ein Kind macht eine kleine Bewegung, zum Beispiel in die Hände klatschen.",
+        "Der Reihe nach macht jedes Kind die Bewegung nach, so wandert sie einmal herum.",
+        "Ist sie wieder angekommen, denkt sich das nächste Kind eine neue Bewegung aus."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen im Sitzkreis; draußen im Stehkreis mit größeren Bewegungen wie Hüpfen oder Drehen.",
+      "inklusionsTipp": "Wer keine eigene Bewegung zeigen möchte, darf einfach die Bewegung des Nachbarkindes weitergeben."
+    },
+    {
+      "id": "ko-aufstellen-reihe",
+      "kategorie": "kreis-ordnung",
+      "titel": "Ordnung in der Reihe",
+      "altersband": "5-7",
+      "dauer": "10-15 Min",
+      "material": "kein Material nötig",
+      "anleitung": [
+        "Die Kinder bekommen die Aufgabe, sich in einer bestimmten Ordnung aufzustellen.",
+        "Zum Beispiel: der Größe nach, ohne dass ein Erwachsener hilft.",
+        "Die Gruppe muss sich dafür absprechen und gemeinsam sortieren.",
+        "Danach probiert ihr eine neue Ordnung, etwa nach Anfangsbuchstaben des Lieblingstiers.",
+        "Am Ende schaut ihr gemeinsam, ob die Reihe stimmt."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen in einer langen Reihe an der Wand; draußen entlang eines langen Seils auf dem Boden.",
+      "inklusionsTipp": "Eine sichtbare Vorlage hilft: ein Bild-Streifen zeigt, in welche Richtung „klein zu groß“ geht."
+    },
+    {
+      "id": "ko-ruhiger-kreis",
+      "kategorie": "kreis-ordnung",
+      "titel": "Der ruhige Kreis zum Ankommen",
+      "altersband": "1-3",
+      "dauer": "5 Min",
+      "material": "ein weiches Kuscheltier zum Weitergeben",
+      "anleitung": [
+        "Alle setzen sich eng in einen kleinen Kreis.",
+        "Ein weiches Tier wird ganz langsam von Hand zu Hand weitergegeben.",
+        "Wer das Tier hält, streichelt es einmal und gibt es dann weiter.",
+        "So kommt die Gruppe nach einem wilden Spiel wieder zur Ruhe."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen als Abschlussritual; draußen im Sitzkreis auf einer Picknickdecke.",
+      "inklusionsTipp": "Kein Kind muss das Tier annehmen; es darf es auch nur kurz ansehen und weiterreichen."
+    },
+    {
+      "id": "gy-katze-kuh",
+      "kategorie": "gymnastik",
+      "titel": "Katze und Kuh",
+      "altersband": "3-5",
+      "dauer": "5-10 Min",
+      "material": "Turnmatten oder Teppich",
+      "anleitung": [
+        "Alle gehen in den Vierfüßlerstand auf die Matte.",
+        "Wie eine Katze macht ihr den Rücken langsam rund und schaut zum Bauch.",
+        "Wie eine Kuh lasst ihr den Bauch sinken und schaut nach vorne.",
+        "Wechselt ein paar Mal ganz ruhig zwischen Katze und Kuh."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen auf Matten; draußen auf einer trockenen Decke im Schatten.",
+      "inklusionsTipp": "Die Bewegung geht auch im Sitzen: Rücken runden und wieder aufrichten, ganz langsam."
+    },
+    {
+      "id": "gy-langer-baum",
+      "kategorie": "gymnastik",
+      "titel": "Der lange Baum",
+      "altersband": "5-7",
+      "dauer": "5-10 Min",
+      "material": "kein Material nötig",
+      "anleitung": [
+        "Steht fest wie ein Baum mit den Füßen leicht auseinander.",
+        "Streckt euch langsam nach oben und macht euch ganz lang, als wolltet ihr die Wolken berühren.",
+        "Wiegt euch sanft wie im Wind mal nach links, mal nach rechts.",
+        "Kommt langsam wieder herunter und lasst die Arme locker fallen.",
+        "Atmet dabei ruhig ein und aus."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen als Ausgleich nach dem Toben; draußen neben einem echten Baum, den ihr nachahmt.",
+      "inklusionsTipp": "Zum sicheren Stehen darf ein Kind sich mit einer Hand an einer Wand oder Stuhllehne abstützen."
+    },
+    {
+      "id": "gy-igelrolle",
+      "kategorie": "gymnastik",
+      "titel": "Igelrolle",
+      "altersband": "1-3",
+      "dauer": "5 Min",
+      "material": "weiche Matte",
+      "anleitung": [
+        "Setzt euch auf die Matte und zieht die Knie eng an den Bauch.",
+        "Macht euch klein und rund wie ein Igel.",
+        "Wippt vorsichtig ein wenig hin und her.",
+        "Dann streckt euch langsam wieder lang aus und werdet ganz groß."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen auf der Matte; draußen auf einer dicken Decke auf ebenem Rasen.",
+      "inklusionsTipp": "Du hältst die Knie eines Kindes sanft, wenn ihm das Anziehen allein schwerfällt."
+    },
+    {
+      "id": "gy-ruhereise",
+      "kategorie": "gymnastik",
+      "titel": "Ruhekissen-Reise",
+      "altersband": "5-7",
+      "dauer": "10 Min",
+      "material": "ein kleines Kissen oder Kuscheltier pro Kind",
+      "anleitung": [
+        "Alle legen sich bequem auf den Rücken und stellen sich vor, sie liegen auf einer Wolke.",
+        "Legt das Kissen auf euren Bauch.",
+        "Atmet ruhig ein, das Kissen hebt sich; atmet aus, das Kissen sinkt wieder.",
+        "Beobachtet einige Atemzüge lang, wie das Kissen auf und ab fährt.",
+        "Zum Schluss streckt euch und setzt euch langsam wieder auf."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen im abgedunkelten Raum; draußen im Schatten unter einem Baum mit Blick in die Blätter.",
+      "inklusionsTipp": "Wer nicht liegen mag, macht die Atemübung mit dem Kissen auch im bequemen Sitzen."
+    },
+    {
+      "id": "fa-schattenfangen",
+      "kategorie": "fangspiele",
+      "titel": "Schattenfangen",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "kein Material nötig, sonniger Tag",
+      "anleitung": [
+        "Ein Kind ist Fängerin oder Fänger und versucht, auf den Schatten der anderen zu treten.",
+        "Berührt der Fuß deinen Schatten, bist du das nächste Fangkind.",
+        "Man darf sich in den Schatten von Bäumen oder Häusern retten, dort gibt es keinen eigenen Schatten.",
+        "Spielt in einem klar abgegrenzten Bereich."
+      ],
+      "ort": ["draussen"],
+      "variante": "Draußen bei Sonne; drinnen ersetzt ihr den Schatten durch ein Tuch, das hinten aus der Hose schaut.",
+      "inklusionsTipp": "Der Fangbereich bleibt klein und übersichtlich, so kann auch ein langsameres Kind mitfangen."
+    },
+    {
+      "id": "fa-versteinern",
+      "kategorie": "fangspiele",
+      "titel": "Versteinern und Befreien",
+      "altersband": "3-5",
+      "dauer": "10-15 Min",
+      "material": "kein Material nötig",
+      "anleitung": [
+        "Ein Kind fängt; wen es berührt, der bleibt wie versteinert stehen.",
+        "Die anderen können ein versteinertes Kind befreien, indem sie es kurz an der Hand berühren.",
+        "So spielen viele zusammen, statt dass jemand ausscheidet.",
+        "Nach ein paar Minuten wechselt das Fangkind."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen im Bewegungsraum mit klaren Grenzen; draußen auf dem Hof mit mehr Platz.",
+      "inklusionsTipp": "Zwei Fangkinder gleichzeitig einsetzen, damit das Tempo für alle passt und Pausen entstehen."
+    },
+    {
+      "id": "fa-farben-flitzer",
+      "kategorie": "fangspiele",
+      "titel": "Farben-Flitzer",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "bunte Reifen, Tücher oder Kreidefelder",
+      "anleitung": [
+        "Verteilt mehrere Farbfelder im Raum, zum Beispiel Reifen in Rot, Blau und Gelb.",
+        "Alle bewegen sich frei durch die Mitte.",
+        "Rufst du eine Farbe, flitzen alle schnell in ein Feld dieser Farbe.",
+        "Danach geht die Bewegung in der Mitte weiter."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen mit Reifen; draußen mit Kreidefeldern auf dem Hof.",
+      "inklusionsTipp": "Beim Rufen die Farbe auch hochhalten (farbiges Tuch), damit das Signal seh- und hörbar ist."
+    },
+    {
+      "id": "fa-wolke-sonne",
+      "kategorie": "fangspiele",
+      "titel": "Wolke und Sonne",
+      "altersband": "5-7",
+      "dauer": "15 Min",
+      "material": "zwei Linien als Häuser (Seile oder Kreide)",
+      "anleitung": [
+        "An zwei Seiten stehen die „Häuser“, in der Mitte steht das Fangkind, die Wolke.",
+        "Rufst du „Sonne“, laufen alle von einem Haus zum anderen.",
+        "Die Wolke versucht, unterwegs Kinder abzuschlagen; diese helfen dann als weitere Wolken mit.",
+        "Gespielt wird, bis nur noch wenige die Sonne bleiben.",
+        "Dann beginnt eine neue Runde."
+      ],
+      "ort": ["draussen"],
+      "variante": "Draußen auf großer Fläche; drinnen in der Turnhalle mit weichen Grenzen an den Wänden.",
+      "inklusionsTipp": "Ein sicherer Zwischenpunkt in der Mitte gibt schnelleren wie langsameren Kindern eine Verschnaufpause."
+    },
+    {
+      "id": "sp-zielwurf-klammern",
+      "kategorie": "sportspiele",
+      "titel": "Zielwurf mit Wäscheklammern",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "Eimer oder Korb, mehrere Wäscheklammern oder Söckchen-Bälle",
+      "anleitung": [
+        "Stellt einen Eimer als Ziel auf.",
+        "Jedes Kind versucht, seine Klammern oder Softbälle in den Eimer zu werfen.",
+        "Erst aus der Nähe, dann einen Schritt weiter zurück.",
+        "Gemeinsam zählt ihr, wie viele es zusammen in den Eimer geschafft haben."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen mit Eimer und Söckchen-Bällen; draußen mit einem Karton und Tannenzapfen.",
+      "inklusionsTipp": "Das Ziel darf ganz nah stehen; ein größerer Korb macht das erste Treffen leichter."
+    },
+    {
+      "id": "sp-ballon-hochhalten",
+      "kategorie": "sportspiele",
+      "titel": "Ballon in der Luft halten",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "ein Luftballon pro Kleingruppe",
+      "anleitung": [
+        "Werft einen Luftballon in die Luft.",
+        "Gemeinsam versucht ihr, ihn mit sanften Tupfern oben zu halten.",
+        "Der Ballon darf den Boden nicht berühren.",
+        "Als Steigerung zählt ihr, wie oft ihr ihn hintereinander antippt."
+      ],
+      "ort": ["drinnen"],
+      "variante": "Drinnen im windstillen Raum; draußen nur an einem windarmen Tag, sonst verweht der Ballon.",
+      "inklusionsTipp": "Ein langsamer, großer Ballon oder ein leichtes Chiffontuch gibt mehr Zeit zum Reagieren."
+    },
+    {
+      "id": "sp-kegel-umrollen",
+      "kategorie": "sportspiele",
+      "titel": "Kegel umrollen",
+      "altersband": "3-5",
+      "dauer": "10-15 Min",
+      "material": "leere Plastikflaschen als Kegel, ein weicher Ball",
+      "anleitung": [
+        "Stellt mehrere leere Flaschen als Kegel in einer Reihe auf.",
+        "Aus kurzer Entfernung rollt ihr einen Ball und versucht, Kegel umzuwerfen.",
+        "Nach jedem Wurf stellt ihr die Kegel gemeinsam wieder auf.",
+        "Rückt Schritt für Schritt weiter weg."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen auf glattem Boden; draußen auf ebenem Weg oder in der Sandkiste mit Sandeimern.",
+      "inklusionsTipp": "Eine kleine Rampe oder Rinne hilft, den Ball ohne kräftigen Wurf ins Ziel zu lenken."
+    },
+    {
+      "id": "sp-reifen-staffel",
+      "kategorie": "sportspiele",
+      "titel": "Reifen-Staffel",
+      "altersband": "5-7",
+      "dauer": "15 Min",
+      "material": "mehrere Gymnastikreifen",
+      "anleitung": [
+        "Bildet zwei kleine Gruppen ohne Sieger und Verlierer.",
+        "Legt für jede Gruppe eine Reihe Reifen als Weg auf den Boden.",
+        "Nacheinander hüpft jedes Kind von Reifen zu Reifen bis zum Ende und wieder zurück.",
+        "Ist ein Kind zurück, startet das nächste.",
+        "Ziel ist, dass alle den Weg schaffen, nicht wer schneller ist."
+      ],
+      "ort": ["drinnen", "draussen"],
+      "variante": "Drinnen in der Turnhalle; draußen auf dem Hof mit Kreidekreisen statt Reifen.",
+      "inklusionsTipp": "Wer nicht hüpfen möchte, geht mit großen Schritten von Reifen zu Reifen."
+    },
+    {
+      "id": "dw-baum-erkennen",
+      "kategorie": "draussen-wald",
+      "titel": "Mein Baum",
+      "altersband": "5-7",
+      "dauer": "15-20 Min",
+      "material": "Augenbinde oder die eigenen Hände zum Fühlen",
+      "anleitung": [
+        "Immer zwei Kinder gehen zusammen; eines schließt vorsichtig die Augen.",
+        "Das sehende Kind führt es behutsam zu einem Baum in der Nähe.",
+        "Das Kind mit geschlossenen Augen ertastet Rinde, Dicke und Wurzeln seines Baumes.",
+        "Zurück am Start öffnet es die Augen und sucht seinen Baum wieder.",
+        "Danach werden die Rollen getauscht."
+      ],
+      "ort": ["draussen"],
+      "variante": "Draußen im Wald oder Park; ohne Wald ertastet ihr verschiedene Naturmaterialien in einer Kiste.",
+      "inklusionsTipp": "Statt der Augen zu schließen darf ein Kind nur mit den Händen fühlen und dabei sehen."
+    },
+    {
+      "id": "dw-blatt-balancieren",
+      "kategorie": "draussen-wald",
+      "titel": "Blätter balancieren",
+      "altersband": "3-5",
+      "dauer": "10 Min",
+      "material": "gesammelte große Blätter",
+      "anleitung": [
+        "Jedes Kind sucht sich ein möglichst großes Blatt.",
+        "Legt das Blatt flach auf eine offene Hand.",
+        "Geht langsam ein Stück, ohne dass das Blatt herunterfällt.",
+        "Als Steigerung balanciert ihr das Blatt auf dem Handrücken oder Kopf."
+      ],
+      "ort": ["draussen"],
+      "variante": "Draußen mit echten Blättern; drinnen ersetzt ihr das Blatt durch ein leichtes Tuch.",
+      "inklusionsTipp": "Ein größeres, festeres Blatt oder ein kleines Tablett macht das Balancieren leichter."
+    },
+    {
+      "id": "dw-waldparcours",
+      "kategorie": "draussen-wald",
+      "titel": "Der Waldparcours",
+      "altersband": "3-5",
+      "dauer": "15-20 Min",
+      "material": "vorhandene Natur wie Baumstämme, Äste, Steine",
+      "anleitung": [
+        "Sucht mit den Kindern einen sicheren, überschaubaren Waldabschnitt.",
+        "Legt gemeinsam einen Weg fest: über einen liegenden Stamm steigen, um einen Baum herum, unter einem tiefen Ast hindurch.",
+        "Geht den Parcours zuerst langsam gemeinsam ab.",
+        "Dann darf jedes Kind ihn in seinem eigenen Tempo bewältigen.",
+        "Prüfe vorher jede Station auf Standsicherheit."
+      ],
+      "ort": ["draussen"],
+      "variante": "Draußen im Wald; auf dem Kita-Gelände baut ihr den Parcours aus Bänken, Kästen und Seilen nach.",
+      "inklusionsTipp": "Jede Station bekommt einen leichteren Nebenweg, den ein Kind statt der Kletterstelle nehmen kann."
+    },
+    {
+      "id": "dw-zapfen-weitwurf",
+      "kategorie": "draussen-wald",
+      "titel": "Zapfen-Weitwurf",
+      "altersband": "5-7",
+      "dauer": "10-15 Min",
+      "material": "gesammelte Tannenzapfen, ein Seil als Wurflinie",
+      "anleitung": [
+        "Legt ein Seil als Wurflinie auf den Boden, dahinter ist ein freies, sicheres Feld.",
+        "Sammelt gemeinsam ein paar Tannenzapfen.",
+        "Jedes Kind wirft seinen Zapfen von der Linie so weit es kann ins freie Feld.",
+        "Merkt euch mit einem Ast, wo der eigene Zapfen gelandet ist, und versucht es beim nächsten Mal weiter.",
+        "Werft nie in Richtung anderer Kinder."
+      ],
+      "ort": ["draussen"],
+      "variante": "Draußen mit Zapfen; auf dem Hof werft ihr weiche Söckchen-Bälle statt Zapfen.",
+      "inklusionsTipp": "Es geht um den eigenen Fortschritt, nicht um die weiteste Weite; jedes Kind vergleicht nur mit sich selbst."
+    }
+  ]
+}

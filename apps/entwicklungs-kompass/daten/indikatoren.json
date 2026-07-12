@@ -1,0 +1,83 @@
+{
+  "art": "entwicklungs-kompass-katalog",
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Lokaler Beobachtungsbogen fuer Fachkraefte. Kinder nur als Kuerzel (max 3 Zeichen), keine Namen. Beobachtung, keine Diagnose: dokumentiert wird je Kind einzeln, ohne Rangfolge und ohne Kinder gegeneinander zu stellen. Bei Fragen an Fruehfoerderstellen.",
+  "stufen": [
+    { "id": "noch-nicht", "text": "noch nicht" },
+    { "id": "manchmal", "text": "manchmal" },
+    { "id": "sicher", "text": "sicher" }
+  ],
+  "bereiche": [
+    {
+      "id": "bewegung",
+      "name": "Bewegung & Motorik",
+      "emoji": "🤸",
+      "fokus": "Grob- und Feinmotorik, Körpergefühl im Alltag",
+      "indikatoren": [
+        { "id": "bewegung-1", "text": "Läuft, rennt und stoppt sicher und weicht dabei Hindernissen aus." },
+        { "id": "bewegung-2", "text": "Hält beim Anziehen oder im Spiel kurz auf einem Bein das Gleichgewicht." },
+        { "id": "bewegung-3", "text": "Fängt einen zugeworfenen weichen Ball oder hält ihn zumindest auf." },
+        { "id": "bewegung-4", "text": "Steigt Treppen im Wechselschritt auf und ab, ohne sich festzuhalten." },
+        { "id": "bewegung-5", "text": "Führt Stift, Löffel oder Schere gezielt mit lockerem Griff." },
+        { "id": "bewegung-6", "text": "Fädelt Perlen auf oder öffnet und schließt große Knöpfe selbst." }
+      ]
+    },
+    {
+      "id": "sprache",
+      "name": "Sprache & Kommunikation",
+      "emoji": "💬",
+      "fokus": "Sprechen, Zuhören, Verstehen und Dialog",
+      "indikatoren": [
+        { "id": "sprache-1", "text": "Erzählt ein kleines Erlebnis so, dass Außenstehende es verstehen." },
+        { "id": "sprache-2", "text": "Stellt Fragen mit Wörtern wie warum, wie oder wann." },
+        { "id": "sprache-3", "text": "Gibt den Inhalt einer gehörten Geschichte in eigenen Worten wieder." },
+        { "id": "sprache-4", "text": "Benennt eigene Gefühle oder die anderer mit Worten (froh, wütend, traurig)." },
+        { "id": "sprache-5", "text": "Reimt, singt Lieder mit oder spielt hörbar mit Lauten und Wörtern." },
+        { "id": "sprache-6", "text": "Wartet im Gespräch ab, bis das Gegenüber zu Ende gesprochen hat." }
+      ]
+    },
+    {
+      "id": "sozial",
+      "name": "Sozial-emotional",
+      "emoji": "🤝",
+      "fokus": "Miteinander, Gefühle und Regeln",
+      "indikatoren": [
+        { "id": "sozial-1", "text": "Findet mit anderen Kindern ins gemeinsame Spiel und bleibt in seiner Rolle." },
+        { "id": "sozial-2", "text": "Bietet von sich aus Trost oder Hilfe an, wenn ein Kind traurig ist." },
+        { "id": "sozial-3", "text": "Trägt einen Streit mit Worten aus statt mit Schubsen oder Schreien." },
+        { "id": "sozial-4", "text": "Hält eine kurze Wartezeit aus, ohne die Fassung zu verlieren." },
+        { "id": "sozial-5", "text": "Hält vereinbarte Gruppenregeln auch ohne Erinnerung ein." },
+        { "id": "sozial-6", "text": "Freut sich sichtbar mit, wenn einem anderen Kind etwas gelingt." }
+      ]
+    },
+    {
+      "id": "denken",
+      "name": "Denken & Neugier",
+      "emoji": "🔍",
+      "fokus": "Forschen, Problemlösen und Ausdauer",
+      "indikatoren": [
+        { "id": "denken-1", "text": "Probiert bei einer Aufgabe einen anderen Weg, wenn der erste nicht klappt." },
+        { "id": "denken-2", "text": "Ordnet Dinge nach einem selbst gewählten Merkmal wie Farbe, Größe oder Form." },
+        { "id": "denken-3", "text": "Erzählt, was im Tagesablauf als Nächstes kommt, und stellt sich darauf ein." },
+        { "id": "denken-4", "text": "Äußert Vermutungen (Ich glaube, das schwimmt) und schaut nach, ob sie stimmen." },
+        { "id": "denken-5", "text": "Bleibt bei einer selbst gewählten Beschäftigung über längere Zeit dabei." },
+        { "id": "denken-6", "text": "Erkennt eine einfache Reihenfolge oder ein Muster und setzt es fort." }
+      ]
+    },
+    {
+      "id": "spiel",
+      "name": "Spiel & Selbstständigkeit",
+      "emoji": "🧩",
+      "fokus": "Selbst tun, dranbleiben und Verantwortung übernehmen",
+      "indikatoren": [
+        { "id": "spiel-1", "text": "Zieht Jacke, Schuhe oder Hausschuhe weitgehend allein an und aus." },
+        { "id": "spiel-2", "text": "Räumt benutztes Material nach dem Spiel ohne viel Aufforderung weg." },
+        { "id": "spiel-3", "text": "Wählt selbst eine Beschäftigung, wenn nichts vorgegeben ist." },
+        { "id": "spiel-4", "text": "Führt eine begonnene Bau- oder Bastelidee bis zu einem Ende." },
+        { "id": "spiel-5", "text": "Holt sich Hilfe, wenn etwas allein nicht gelingt, statt gleich aufzugeben." },
+        { "id": "spiel-6", "text": "Übernimmt kleine Aufgaben in der Gruppe verlässlich, zum Beispiel Tisch decken." }
+      ]
+    }
+  ]
+}

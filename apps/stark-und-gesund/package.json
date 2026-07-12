@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stark-und-gesund",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stark und gesund: Quiz zu gesundem Lebensstil (Bewegung, Schlaf, Ernaehrung, Hygiene) fuer 8-12 Jahre",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

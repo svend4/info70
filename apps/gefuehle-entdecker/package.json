@@ -1,0 +1,8 @@
+{
+  "name": "@info70/gefuehle-entdecker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gefühle-Entdecker: Reaktions-Wahl-Spiel zu sozialen Emotionen fuer 5-7 Jahre - troesten, teilen, mitfreuen, helfen, wuetend sein, ehrlich sein, Angst zeigen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

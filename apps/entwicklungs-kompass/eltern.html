@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+  <title>Für Träger &amp; Leitung – Entwicklungs-Kompass Kita</title>
+  <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" />
+</head>
+<body>
+  <main class="k-app">
+    <h1 class="k-titel">🏛️ Info für Träger &amp; Leitung: Entwicklungs-Kompass Kita</h1>
+
+    <section class="k-karte">
+      <h2>Worum geht es?</h2>
+      <p>Ein <strong>lokaler digitaler Beobachtungsbogen</strong> für pädagogische Fachkräfte: fünf Entwicklungsbereiche – <strong>Bewegung &amp; Motorik</strong>, <strong>Sprache &amp; Kommunikation</strong>, <strong>Sozial-emotional</strong>, <strong>Denken &amp; Neugier</strong> und <strong>Spiel &amp; Selbstständigkeit</strong> – mit je sechs beobachtbaren Indikatoren (30 insgesamt). Je Kind wird in drei Stufen dokumentiert: <em>noch nicht / manchmal / sicher</em>. Daraus entsteht je Kind ein rein textlicher Bericht als Grundlage für Bildungsdokumentation und Entwicklungsgespräch.</p>
+      <p>Herkunft: Konzept-Idee aus Katalog Nr. 2 des Projekts (docs/10, Praleska-Ableitung, Top-30 Platz 1 „Entwicklungs-Kompass Kita – digitaler Beobachtungsbogen“). Übernommen wurde ausschließlich das Konzept; sämtliche Bereiche, Indikatoren und Berichtstexte wurden neu formuliert.</p>
+    </section>
+
+    <section class="k-karte">
+      <h2>Das Grundprinzip: lokal statt Cloud – DSGVO by Design</h2>
+      <ul>
+        <li><strong>Keine personenbezogenen Kinderdaten:</strong> Kinder werden ausschließlich als <strong>Kürzel (höchstens 3 Zeichen)</strong> geführt – keine Namen, kein Geburtsdatum, kein Freitext über das Kind. Der Längen-Deckel ist technisch erzwungen; selbst ein Datei-Import lehnt längere Kürzel ab. Damit entstehen im Regelfall keine personenbezogenen Daten im Sinne der DSGVO.</li>
+        <li><strong>Alles bleibt auf dem Gerät:</strong> Der Stand wird nur lokal im Browser gespeichert (<code>ek.daten</code>). Es gibt keinen Server, kein Konto, keine Übertragung – anders als cloudbasierte Kita-Software entsteht keine Auftragsverarbeitung mit externem Anbieter.</li>
+        <li><strong>Technisch abgesichert:</strong> Content-Security-Policy <code>default-src 'self'</code> plus ein Netzwerk-Wächter blockieren jede Verbindung nach außen zur Laufzeit. Werbefrei, ohne Tracking, offline nutzbar.</li>
+        <li><strong>Übertragung nur als Datei:</strong> Für Backup, Gerätewechsel oder das Zusammenführen zweier Tablets gibt es einen lokalen JSON-Export/-Import – auf Wunsch der Einrichtung, in ihrer Hand. Ein Knopf „Alle Daten löschen“ entfernt alles vom Gerät.</li>
+      </ul>
+    </section>
+
+    <section class="k-karte">
+      <h2>Beobachtung, keine Diagnose – und kein KI-Scoring (EU AI Act)</h2>
+      <ul>
+        <li><strong>Reine Dokumentation:</strong> Das Werkzeug erzeugt <strong>keinen Punktestand, keine Rangfolge und keinen Vergleich zwischen Kindern</strong>. Es hält je Kind einzeln fest, was im Alltag beobachtet wurde – nicht mehr. Es gibt schlicht nichts, was Kinder gegeneinander bewertet.</li>
+        <li><strong>Kein KI-System:</strong> Es rechnet nichts, es schätzt nichts ein – es sammelt nur die Auswahl der Fachkraft und setzt sie zu Text zusammen. Kein automatisiertes Scoring, keine Prognose, keine Emotionserkennung.</li>
+        <li><strong>Fachkraft entscheidet:</strong> Die Deutung bleibt vollständig bei der pädagogischen Fachkraft. Jeder Bericht trägt den Hinweis „Beobachtung, keine Diagnose – bei Fragen an Frühförderstellen oder die Kinderärztin bzw. den Kinderarzt“.</li>
+      </ul>
+    </section>
+
+    <section class="k-karte">
+      <h2>Anschluss an Bildungspläne und Qualitätsentwicklung</h2>
+      <ul>
+        <li>Beobachtung und Dokumentation der kindlichen Entwicklung ist in allen 16 Landes-Bildungsplänen und in der Qualitätsentwicklung nach <strong>§ 22a SGB VIII</strong> verankert. Die fünf Bereiche lassen sich an die Bildungsbereiche Ihres Landes-Bildungsplans anknüpfen (z. B. Bewegung/Körper, Sprache/Kommunikation, soziale/emotionale Entwicklung, Naturwissenschaft/kognitive Entwicklung, Spiel/Selbstständigkeit).</li>
+        <li><strong>Bildungsplan-Mapping (Beispiele):</strong> „Bewegung &amp; Motorik“ → Bewegung/Gesundheit; „Sprache &amp; Kommunikation“ → Sprache/Kommunikation und Literacy; „Sozial-emotional“ → soziale und emotionale Bildung; „Denken &amp; Neugier“ → mathematische/naturwissenschaftliche Bildung, Lernmethodik; „Spiel &amp; Selbstständigkeit“ → Spiel als Grundform des Lernens, Partizipation und Selbstwirksamkeit.</li>
+        <li>Der textliche Bericht ist bewusst als Gesprächsgrundlage formuliert – für das jährliche Entwicklungsgespräch mit den Eltern und für die kollegiale Fallbesprechung, nicht als Ergebnis-Etikett.</li>
+        <li>Für die QM-Dokumentation genügt der Nachweis, <em>dass</em> strukturiert und datensparsam beobachtet wird; der Bogen ersetzt keine ärztliche oder heilpädagogische Diagnostik.</li>
+      </ul>
+    </section>
+
+    <section class="k-karte">
+      <h2>Rechtlicher Rahmen (Kurzüberblick)</h2>
+      <ul>
+        <li><strong>DSGVO:</strong> Datenminimierung nach Art. 5 – nur Kürzel, keine Namen, kein Freitext; Verarbeitung ausschließlich lokal im Verfügungsbereich der Einrichtung, keine Übermittlung an Dritte.</li>
+        <li><strong>EU AI Act:</strong> kein KI-System – rein regelbasierte Textbausteine, kein Scoring, keine Prognose, keine Emotionserkennung von Kindern.</li>
+        <li><strong>SGB VIII / Landes-Bildungspläne:</strong> unterstützt die gesetzlich verankerte Beobachtungs- und Dokumentationspflicht.</li>
+        <li><strong>Urheberrecht:</strong> Aus der Quellidee (Praleska) wurde nur das Konzept übernommen; alle Bereiche, Indikatoren und Texte sind Neuformulierungen dieses Projekts (AGPL-3.0-only).</li>
+      </ul>
+      <p style="font-size:0.9rem;color:#4b5563">Hinweis: Dies ist eine Orientierung, keine Rechtsberatung. Prüfen Sie die Einbettung mit Ihrem/Ihrer Datenschutzbeauftragten und dem Landes-Bildungsplan.</p>
+    </section>
+
+    <footer class="k-fuss"><a href="./">Zur App</a> · <a href="../../impressum.html">Impressum &amp; Datenschutz</a></footer>
+  </main>
+</body>
+</html>

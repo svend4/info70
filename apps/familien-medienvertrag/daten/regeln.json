@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "kategorien": [
+    {
+      "id": "kind",
+      "name": "Regeln für mich (Kind)",
+      "emoji": "🧒",
+      "regeln": [
+        { "id": "k1", "text": "Ich halte mich an unsere vereinbarten Bildschirmzeiten und höre auf, wenn die Zeit um ist." },
+        { "id": "k2", "text": "Bevor ich etwas herunterlade, eine App installiere oder etwas kaufe, frage ich zuerst nach." },
+        { "id": "k3", "text": "Nachts lade ich mein Gerät außerhalb des Schlafzimmers, damit ich in Ruhe schlafen kann." },
+        { "id": "k4", "text": "Wenn mich online etwas erschreckt oder sich komisch anfühlt, sage ich sofort Bescheid." },
+        { "id": "k5", "text": "Mit Menschen, die ich nur aus dem Internet kenne, verabrede ich mich nie ohne zu fragen." },
+        { "id": "k6", "text": "Im Chat behandle ich andere so freundlich, wie ich selbst behandelt werden möchte." },
+        { "id": "k7", "text": "Fotos oder Videos von anderen teile ich nur, wenn die Person damit einverstanden ist." }
+      ]
+    },
+    {
+      "id": "eltern",
+      "name": "Regeln für uns Eltern",
+      "emoji": "👪",
+      "regeln": [
+        { "id": "e1", "text": "Beim gemeinsamen Essen lege ich mein eigenes Handy weg und bin wirklich ganz da." },
+        { "id": "e2", "text": "Ich poste kein Foto von dir, ohne dich vorher zu fragen und dein Nein zu akzeptieren." },
+        { "id": "e3", "text": "Wenn online etwas schiefgeht, höre ich erst ruhig zu, bevor ich strafe oder verbiete." },
+        { "id": "e4", "text": "Ich mache selbst medienfreie Pausen und bin ein Vorbild, statt nur zu ermahnen." },
+        { "id": "e5", "text": "Ich interessiere mich für deine Lieblings-Apps und -Spiele, ohne sie schlechtzumachen." },
+        { "id": "e6", "text": "Ich schaue nicht heimlich auf dein Gerät, sondern spreche offen mit dir darüber." },
+        { "id": "e7", "text": "Ich erkläre dir unsere Regeln, statt sie nur zu bestimmen, und wir passen sie gemeinsam an." }
+      ]
+    },
+    {
+      "id": "gemeinsam",
+      "name": "Regeln für die ganze Familie",
+      "emoji": "🤝",
+      "regeln": [
+        { "id": "g1", "text": "Wir vereinbaren feste medienfreie Zeiten und Orte, zum Beispiel den Esstisch." },
+        { "id": "g2", "text": "Einmal in der Woche machen wir einen kurzen Check: Was lief gut, was ändern wir?" },
+        { "id": "g3", "text": "Sich Hilfe zu holen ist nie peinlich - Probleme lösen wir zusammen und ohne Ärger." },
+        { "id": "g4", "text": "Neue Apps und Spiele probieren wir erst einmal gemeinsam aus, bevor sie erlaubt sind." },
+        { "id": "g5", "text": "Passwörter bleiben geheim und werden nur für Notfälle bei den Eltern gut verwahrt." },
+        { "id": "g6", "text": "Wenn eine Regel nicht mehr passt, reden wir darüber und ändern sie zusammen fair ab." },
+        { "id": "g7", "text": "Wir loben einander, wenn das Aufhören oder eine Pause besonders gut geklappt hat." }
+      ]
+    }
+  ]
+}

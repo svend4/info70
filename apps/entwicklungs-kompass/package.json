@@ -1,0 +1,8 @@
+{
+  "name": "@info70/entwicklungs-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Entwicklungs-Kompass Kita: lokaler digitaler Beobachtungsbogen fuer paedagogische Fachkraefte. Kinder nur als Kuerzel, ohne Cloud, ohne Konto. Beobachtung, keine Diagnose. Zielgruppe: Fachkraefte.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

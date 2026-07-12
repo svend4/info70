@@ -1,0 +1,57 @@
+/* Bewegungs-Schatzkiste: Druckansicht der Kartei. Auf dem Bildschirm sind
+   .bsk-nur-druck-Elemente unsichtbar; beim Drucken verschwinden Kopf, Filter
+   und Werkzeuge (.bsk-nur-bildschirm). Uebrig bleiben die Spielkarten - jede
+   als kompakte Karteikarte, die nicht ueber einen Seitenumbruch zerrissen wird. */
+
+.bsk-nur-druck { display: none; }
+
+@media print {
+  .bsk-nur-bildschirm { display: none !important; }
+  .bsk-nur-druck { display: block; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+    display: block;
+  }
+
+  .k-titel { color: #000; }
+
+  /* Jede Spielidee ist eine Karteikarte: nie ueber einen Umbruch zerrissen. */
+  .bsk-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0 0.5rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .bsk-karte h2,
+  .bsk-karte h3 { color: #000; }
+
+  .bsk-marke {
+    border: 1pt solid #333;
+    color: #000;
+    background: #fff;
+  }
+}
+
+/* Kleine Merkmal-Marken (Altersband, Ort, Dauer) - auch am Bildschirm genutzt. */
+.bsk-marken { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.15rem 0 0.6rem; }
+.bsk-marke {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: var(--k-blau-dunkel);
+  border: 1px solid var(--k-blau);
+}

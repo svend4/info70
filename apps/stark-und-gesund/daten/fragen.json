@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Gesundheits-Neuling", "emoji": "🌱" },
+    { "ab": 5, "titel": "Fit-Forscher*in", "emoji": "🔎" },
+    { "ab": 9, "titel": "Energie-Profi", "emoji": "⚡" },
+    { "ab": 12, "titel": "Power-Kapitän*in", "emoji": "💪" }
+  ],
+  "fragen": [
+    {
+      "id": "g01",
+      "typ": "binaer",
+      "kategorie": "Bewegung",
+      "aussage": "Deinem Körper tut es gut, wenn du dich jeden Tag ungefähr eine Stunde richtig bewegst – so, dass du dabei ins Schwitzen oder außer Atem kommst.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Für Kinder werden rund 60 Minuten Bewegung am Tag empfohlen. Das muss kein Vereinssport sein – Rennen, Toben, Radfahren oder Tanzen zählt alles. Bewegung stärkt Herz, Muskeln und Knochen und macht sogar bessere Laune."
+    },
+    {
+      "id": "g02",
+      "typ": "wahl",
+      "kategorie": "Schlaf",
+      "frage": "Wie viel Schlaf brauchen die meisten Kinder zwischen 8 und 12 Jahren pro Nacht, damit Körper und Kopf sich richtig erholen?",
+      "antworten": [
+        "Ungefähr 9 bis 11 Stunden",
+        "Etwa 4 Stunden reichen völlig",
+        "So wenig wie möglich, Schlaf ist Zeitverschwendung"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Kinder in deinem Alter brauchen etwa 9 bis 11 Stunden Schlaf. Im Schlaf sortiert dein Gehirn das Gelernte, dein Körper wächst und tankt neue Kraft. Wer zu wenig schläft, kann sich schlechter konzentrieren und wird schneller wütend oder traurig."
+    },
+    {
+      "id": "g03",
+      "typ": "binaer",
+      "kategorie": "Ernährung",
+      "aussage": "Ein bunter Teller mit Gemüse und Obst in vielen Farben liefert deinem Körper besonders viele verschiedene wichtige Nährstoffe.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! „Iss bunt“ ist ein guter Merksatz: Rote Paprika, grüner Brokkoli, gelbe Banane, blaue Heidelbeeren – jede Farbe steckt voller anderer Vitamine. Am besten passt bei jeder Mahlzeit etwas Gemüse oder Obst auf den Teller."
+    },
+    {
+      "id": "g04",
+      "typ": "wahl",
+      "kategorie": "Trinken",
+      "frage": "Du hast beim Spielen richtig Durst bekommen. Welches Getränk ist der beste Durstlöscher für jeden Tag?",
+      "antworten": [
+        "Wasser oder ungesüßter Tee",
+        "Cola oder Limonade, weil sie schnell wach macht",
+        "Ein Energydrink für den Extra-Kick"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Wasser (oder ungesüßter Tee) ist der beste Durstlöscher – kostenlos und ohne Zucker. In Softdrinks, Limo und Energydrinks stecken oft viele Löffel Zucker, der auf Dauer den Zähnen und dem Körper schadet. Zum Durstlöschen brauchst du keinen Zucker."
+    },
+    {
+      "id": "g05",
+      "typ": "wahl",
+      "kategorie": "Ernährung",
+      "frage": "Warum lohnt es sich, bei verpackten Lebensmitteln einmal die Zutatenliste zu lesen?",
+      "antworten": [
+        "Weil dort steht, was wirklich drin ist – zum Beispiel wie viel Zucker",
+        "Weil die längste Zutatenliste immer die gesündeste ist",
+        "Weil man vom Lesen schneller rennen kann"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Auf der Zutatenliste steht ehrlich, was drin ist. Die Zutat ganz vorne ist am meisten enthalten. So merkst du, dass in manchem „Frühstücks-Müsli“ mehr Zucker steckt, als das bunte Bild verspricht. Selber nachschauen macht dich zum klugen Einkaufs-Detektiv."
+    },
+    {
+      "id": "g06",
+      "typ": "binaer",
+      "kategorie": "Draußen",
+      "aussage": "Draußen an der frischen Luft und im Tageslicht zu sein tut deinen Augen gut und hilft deinem Körper, sich gesund zu entwickeln.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Tageslicht draußen tut den Augen gut und hilft, kurzsichtig-Werden vorzubeugen. Mit Sonnenlicht auf der Haut kann dein Körper außerdem selbst Vitamin D bilden, das die Knochen stark macht. Ein täglicher Ausflug nach draußen ist Medizin zum Nulltarif."
+    },
+    {
+      "id": "g07",
+      "typ": "binaer",
+      "kategorie": "Bildschirm-Pausen",
+      "aussage": "Es macht deinen Augen gar nichts aus, wenn du stundenlang ohne Pause auf einen Bildschirm starrst.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch – lange ohne Pause auf einen Bildschirm zu schauen macht die Augen müde und trocken. Ein guter Trick: Schau alle 20 Minuten kurz in die Ferne und beweg dich ein bisschen. Genau solche Pausen übst du in unserer Werkstatt mit der Takt-Pause-App."
+    },
+    {
+      "id": "g08",
+      "typ": "wahl",
+      "kategorie": "Hygiene",
+      "frage": "Wann ist Händewaschen mit Seife besonders wichtig, um Krankheits-Keime loszuwerden?",
+      "antworten": [
+        "Vor dem Essen und nach dem Toilettengang",
+        "Nur einmal in der Woche reicht",
+        "Nur wenn die Hände sichtbar schmutzig sind"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Vor dem Essen, nach der Toilette und wenn du von draußen kommst: Dann sitzen die meisten Keime an den Händen. Wasch etwa so lange, wie du zweimal „Happy Birthday“ summst, mit Seife auch zwischen den Fingern. So bleiben viele Erkältungen und Bauchweh einfach weg."
+    },
+    {
+      "id": "g09",
+      "typ": "binaer",
+      "kategorie": "Abhärtung",
+      "aussage": "Wer bei Regen oder Kälte nach draußen geht, wird allein dadurch ganz sicher krank.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch – kaltes Wetter allein macht nicht krank, Erkältungen kommen von Viren. Mit passender Kleidung (Zwiebel-Look und Matschhose) tut Bewegung draußen deinem Körper auch bei Regen gut. Der Spruch stimmt: Es gibt kein schlechtes Wetter, nur die falsche Kleidung."
+    },
+    {
+      "id": "g10",
+      "typ": "wahl",
+      "kategorie": "Warnsignale",
+      "frage": "Dein Mund ist trocken, du bist müde und dein Kopf tut ein bisschen weh. Was will dein Körper dir vielleicht sagen?",
+      "antworten": [
+        "Vielleicht hast du zu wenig getrunken – Zeit für ein Glas Wasser",
+        "Dass du sofort ganz viele Süßigkeiten brauchst",
+        "Dass du nie wieder draußen spielen sollst"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Durst, Müdigkeit und Kopfweh können Warnsignale sein, dass du zu wenig getrunken hast. Dein Körper meldet sich, bevor es richtig unangenehm wird. Gut ist, über den Tag verteilt zu trinken, statt zu warten, bis der Durst riesig ist. Auf solche Körper-Signale zu hören ist eine echte Stärke."
+    },
+    {
+      "id": "g11",
+      "typ": "wahl",
+      "kategorie": "Bewegung",
+      "frage": "Du hast schon lange am Schreibtisch oder auf dem Sofa gesessen. Was ist eine gute Idee für zwischendurch?",
+      "antworten": [
+        "Kurz aufstehen, dich strecken und ein bisschen bewegen",
+        "Einfach noch viel länger sitzen bleiben",
+        "Die Beine am besten gar nicht mehr benutzen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Langes Sitzen am Stück tut dem Körper nicht gut. Steh zwischendurch auf, streck dich, hüpf ein bisschen oder hol dir ein Glas Wasser. Solche kleinen Bewegungs-Pausen bringen deinen Kreislauf in Schwung und helfen dir, dich danach wieder besser zu konzentrieren."
+    },
+    {
+      "id": "g12",
+      "typ": "binaer",
+      "kategorie": "Schlaf",
+      "aussage": "Direkt vor dem Einschlafen noch lange auf ein helles Handy oder Tablet zu schauen hilft deinem Körper, besonders schnell einzuschlafen.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch – das helle Bildschirmlicht und aufregende Videos halten dein Gehirn wach und machen das Einschlafen schwerer. Besser ist eine Bildschirm-Pause vor dem Schlafengehen: lesen, kuscheln oder leise Musik. So kommt dein Körper zur Ruhe und du schläfst leichter ein."
+    },
+    {
+      "id": "g13",
+      "typ": "binaer",
+      "kategorie": "Ernährung",
+      "aussage": "Ein Frühstück gibt deinem Körper und deinem Gehirn Energie für den Vormittag, damit du dich in der Schule besser konzentrieren kannst.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Nach der Nacht ist dein Energie-Tank leer. Ein Frühstück – zum Beispiel Brot mit Käse und etwas Obst – füllt ihn wieder auf. Wer mit leerem Magen in die Schule geht, wird schneller müde und unkonzentriert. Wenn du morgens noch keinen Hunger hast, hilft ein kleiner Snack für die Pause."
+    },
+    {
+      "id": "g14",
+      "typ": "wahl",
+      "kategorie": "Ernährung",
+      "frage": "Was gilt für Süßigkeiten, Kuchen, Chips und Schoko-Riegel?",
+      "antworten": [
+        "Kleine Mengen ab und zu sind okay, aber nicht jeden Tag in großen Portionen",
+        "Man sollte sie zu jeder Mahlzeit essen",
+        "Sie sollten das Wichtigste auf dem Teller sein"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Süßes und Salziges müssen nicht verboten sein – aber sie sind wie Deko, nicht wie das Hauptgericht. Eine kleine Menge ab und zu ist völlig in Ordnung. Den größten Teil vom Teller füllen am besten Gemüse, Obst, Vollkorn und etwas Eiweiß. Auf die Menge kommt es an."
+    },
+    {
+      "id": "g15",
+      "typ": "binaer",
+      "kategorie": "Hygiene",
+      "aussage": "Wenn du abends noch etwas Süßes gegessen hast, kannst du das Zähneputzen an diesem Abend ruhig weglassen.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch – gerade nach Süßem ist Putzen wichtig, denn Zucker füttert die Keime, die Löcher in die Zähne bohren. Am besten putzt du morgens und abends je etwa zwei Minuten. So bleiben deine Zähne stark und der Zahnarztbesuch bleibt entspannt."
+    },
+    {
+      "id": "g16",
+      "typ": "wahl",
+      "kategorie": "Bewegung",
+      "frage": "Was zählt alles als gute Bewegung für deinen Körper?",
+      "antworten": [
+        "Rennen, Radfahren, Tanzen, Toben und Treppensteigen – alles, was dich in Schwung bringt",
+        "Nur Sport im Verein mit richtigem Trikot",
+        "Nur, wenn ein Erwachsener dabei zuschaut"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Bewegung muss weder teuer noch kompliziert sein. Zu Fuß zur Schule, Treppe statt Aufzug, Tanzen im Wohnzimmer, Toben auf dem Spielplatz – all das bringt deinen Körper in Schwung. Am meisten Spaß macht die Bewegung, die du gern machst, denn die hältst du auch durch."
+    }
+  ]
+}

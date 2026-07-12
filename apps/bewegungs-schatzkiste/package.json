@@ -1,0 +1,8 @@
+{
+  "name": "@info70/bewegungs-schatzkiste",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bewegungs-Schatzkiste: filterbare Kartei mit 28 neu formulierten Bewegungsspiel-Ideen fuer die Kita (Kinder 1-7), sieben Bewegungsarten, druckbar als Karteikarten. Zielgruppe: Fachkraefte und Eltern.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

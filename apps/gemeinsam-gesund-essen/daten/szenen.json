@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5",
+  "kuecheIdeen": [
+    "Schnippelt zusammen ein lustiges Gemüse-Gesicht auf einen Teller.",
+    "Füllt zwei Gläser mit Wasser und stoßt miteinander an.",
+    "Macht einen kleinen Spaziergang und sucht drei grüne Dinge."
+  ],
+  "szenen": [
+    {
+      "id": "e1",
+      "thema": "kraft",
+      "frage": "Was gibt lange Kraft?",
+      "optionen": [
+        { "emoji": "🍎", "text": "Apfel" },
+        { "emoji": "🍬", "text": "Bonbon" }
+      ],
+      "gespraech": "Sprecht zusammen: Was macht euch beide lange satt und stark?"
+    },
+    {
+      "id": "e2",
+      "thema": "durst",
+      "frage": "Was trinkt ein durstiger Körper gern?",
+      "optionen": [
+        { "emoji": "💧", "text": "Wasser" },
+        { "emoji": "🥤", "text": "Limo" }
+      ],
+      "gespraech": "Überlegt gemeinsam: Wann habt ihr heute schon Wasser getrunken?"
+    },
+    {
+      "id": "e3",
+      "thema": "bewegung",
+      "frage": "Was macht den Körper richtig wach?",
+      "optionen": [
+        { "emoji": "🚶", "text": "Laufen" },
+        { "emoji": "🛋️", "text": "Sitzen" }
+      ],
+      "gespraech": "Redet darüber: Wo könnt ihr heute zusammen hüpfen oder laufen?"
+    },
+    {
+      "id": "e4",
+      "thema": "bunt",
+      "frage": "Was ist bunt und schön knackig?",
+      "optionen": [
+        { "emoji": "🥕", "text": "Möhre" },
+        { "emoji": "🍟", "text": "Pommes" }
+      ],
+      "gespraech": "Sprecht zusammen: Welche Farben hatte euer Essen heute?"
+    },
+    {
+      "id": "e5",
+      "thema": "fruehstueck",
+      "frage": "Womit startet ein guter Morgen?",
+      "optionen": [
+        { "emoji": "🥣", "text": "Müsli" },
+        { "emoji": "🍭", "text": "Lutscher" }
+      ],
+      "gespraech": "Erzählt euch: Was esst ihr morgens am liebsten zusammen?"
+    },
+    {
+      "id": "e6",
+      "thema": "obst",
+      "frage": "Was wächst am Baum?",
+      "optionen": [
+        { "emoji": "🍐", "text": "Birne" },
+        { "emoji": "🍩", "text": "Donut" }
+      ],
+      "gespraech": "Überlegt zusammen: Welches Obst mögt ihr beide gern?"
+    },
+    {
+      "id": "e7",
+      "thema": "gemuese",
+      "frage": "Was wächst unten in der Erde?",
+      "optionen": [
+        { "emoji": "🥔", "text": "Kartoffel" },
+        { "emoji": "🧁", "text": "Muffin" }
+      ],
+      "gespraech": "Sprecht darüber: Was könnt ihr zusammen in der Küche schnippeln?"
+    },
+    {
+      "id": "e8",
+      "thema": "bauch",
+      "frage": "Was tut dem Bauch gut?",
+      "optionen": [
+        { "emoji": "🍅", "text": "Tomate" },
+        { "emoji": "🍫", "text": "Schokolade" }
+      ],
+      "gespraech": "Redet gemeinsam: Wie fühlt sich euer Bauch nach dem Essen an?"
+    },
+    {
+      "id": "e9",
+      "thema": "draussen",
+      "frage": "Wo tankt der Körper frische Luft?",
+      "optionen": [
+        { "emoji": "🌳", "text": "Draußen" },
+        { "emoji": "📺", "text": "Vor dem Fernseher" }
+      ],
+      "gespraech": "Überlegt zusammen: Wann geht ihr heute noch nach draußen?"
+    }
+  ]
+}

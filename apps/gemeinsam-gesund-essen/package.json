@@ -1,0 +1,8 @@
+{
+  "name": "@info70/gemeinsam-gesund-essen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gemeinsam gesund essen: Bild-Entscheidungsspiel zu Essen, Trinken und Bewegung fuer 3-5 Jahre - ausschliesslich zur gemeinsamen Nutzung von Kind und Erwachsenem, als Gespraechsanlass.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
