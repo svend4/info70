@@ -14,7 +14,8 @@ info70/
 │   ├── 02-anforderungen.md      Политика соответствия: fragFINN, BzKJ, DSGVO
 │   ├── 03-architektur.md        Архитектура монорепозитория
 │   ├── 04-roadmap.md            Дорожная карта и окна финансирования
-│   └── 05-ideen-pipeline.md     Пайплайн идей и переносимые методы
+│   ├── 05-ideen-pipeline.md     Пайплайн идей и переносимые методы
+│   └── 06-verifikation-2.md     Верификация №2: премии, процессы fragFINN/Seitenstark, Gefährdungsatlas
 ├── apps/                        Приложения (по одной подпапке на тему)
 │   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» + Werbe-Radar — MVP готов
 │   ├── kinderrechte-entdecker/  🕊️ Права ребёнка (UN-KRK, включая цифровые) — MVP готов

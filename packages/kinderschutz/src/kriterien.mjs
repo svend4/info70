@@ -16,7 +16,8 @@ export const KRITERIEN = Object.freeze([
   { id: 'mobile-first', quelle: 'BzKJ 2026', text: 'Mobile First ab 360 px, Touch-Ziele >= 48 px' },
   { id: 'offline-faehig', quelle: 'Monorepo-Politik', text: 'Nach dem ersten Laden offline nutzbar' },
   { id: 'barrierearm', quelle: 'WCAG AA', text: 'Kontrast AA, Tastaturbedienung, Vorlesen-Funktion, prefers-reduced-motion' },
-  { id: 'impressum-datenschutz', quelle: 'fragFINN: formale Kriterien / TMG', text: 'Impressum und Datenschutzerklärung vor Veröffentlichung' },
+  { id: 'impressum-datenschutz', quelle: 'fragFINN: formale Kriterien / § 5 DDG', text: 'Impressum (Name, Ansprechpartner, Adresse, E-Mail, Telefon) und Datenschutzerklärung vor Veröffentlichung' },
+  { id: 'links-gepflegt', quelle: 'fragFINN: Pflege/Erreichbarkeit; Seitenstark-Qualitätskriterien', text: 'Seite wird gepflegt: externe Links regelmäßig geprüft, Angebot erreichbar und aktuell' },
   { id: 'kinder-einbeziehen', quelle: 'BzKJ 2026', text: 'Tests mit Kindern der Zielgruppe vor Major-Releases, dokumentiert in docs/' },
 ]);
 
