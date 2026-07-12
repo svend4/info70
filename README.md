@@ -19,6 +19,7 @@ info70/
 │   ├── 07-foerder-playbook.md   Плейбук грантовых заявок: механика 80/20, консультации, регионэффекты
 │   ├── 08-partner-dossier.md    Партнёрская карта экосистемы для заявки BzKJ-2027
 │   ├── 09-baukasten-katalog.md  Каталог №1: 139 производных единиц из немецкого корпуса (+ ideen-katalog.json)
+│   ├── 10-praleska-baukasten.md Каталог №2: 131 единица из PDF «Пралеска» (+ praleska-katalog.json)
 │   └── vorlagen/kurz-gdd.md     Шаблон одностраничного GDD для каждой новой единицы
 ├── apps/                        Приложения (по одной подпапке на тему)
 │   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» + Werbe-Radar — MVP готов
