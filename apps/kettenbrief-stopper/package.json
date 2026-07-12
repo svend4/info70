@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kettenbrief-stopper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kettenbrief-Stopper: Simulator zeigt, wie eine Kettennachricht durch die Klasse rast - und wie ein einziges Stopp sie bremst.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,5 +1,5 @@
 // Minimaler Service Worker: Cache-first für eigene Ressourcen -> offline nutzbar.
-const CACHE = 'nd-v2';
+const CACHE = 'nd-v3';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll([
@@ -8,6 +8,7 @@ self.addEventListener('install', (e) => {
     './app.mjs',
     './daten/fragen.json',
     './manifest.webmanifest',
+    './eltern.html',
     '../../packages/kinder-ui/css/kinder.css',
     '../../packages/kinder-ui/js/komponenten.mjs',
     '../../packages/quiz-kern/src/quiz.mjs',

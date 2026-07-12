@@ -1,8 +1,11 @@
-// Mitmach-Arena (Prototyp): Abstimmung nach dem "Handy-herumgeben"-Prinzip.
+// Mitmach-Arena: Abstimmung nach dem "Handy-herumgeben"-Prinzip.
 // Ein Erwachsener/die Klasse legt eine Frage an, das Gerät geht reihum,
 // jede*r tippt einmal. Keine Konten, kein Server - alles bleibt lokal.
+// Klassen-Koffer: Ergebnisse als Datei exportieren und auf dem Lehrkraft-
+// Gerät zusammenführen - Austausch ohne Server und ohne Chat-Risikozone.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { packeKoffer, pruefeKoffer, vereinigeKoffer } from './koffer.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -18,7 +21,8 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Deine Stimme zählt!'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Prototyp · werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('a', { href: 'eltern.html' }, '👪 Für Eltern & Lehrkräfte'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
 }
 
@@ -93,7 +97,7 @@ function dankeBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: ergebnisBildschirm }, '📊 Ergebnis zeigen'))));
 }
 
-function ergebnisBildschirm() {
+function ergebnisBildschirm(kofferMeldung = null) {
   const u = lade();
   if (!u) return startBildschirm();
   const gesamt = Math.max(1, u.stimmen.reduce((a, b) => a + b, 0));
@@ -110,7 +114,54 @@ function ergebnisBildschirm() {
       }),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: abstimmenBildschirm }, '▶️ Weiter abstimmen'),
-        el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))));
+        el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),
+    el('section', { class: 'k-karte' },
+      el('p', { style: 'font-weight:600;margin-top:0' }, '📦 Klassen-Koffer'),
+      el('p', { style: 'font-size:0.9rem' }, 'Stimmen von mehreren Geräten sammeln – ganz ohne Internet: Auf jedem Gerät exportieren, die Dateien z. B. per USB-Stick zum Lehrkraft-Gerät bringen und dort importieren. Gleiche Frage und Möglichkeiten werden zusammengezählt.'),
+      kofferMeldung
+        ? el('div', { class: `k-hinweis ${kofferMeldung.ok ? 'k-hinweis--richtig' : 'k-hinweis--falsch'}` }, el('p', { style: 'margin:0' }, kofferMeldung.text))
+        : '',
+      el('div', { class: 'k-antworten' },
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => exportiere(u) }, '📤 Ergebnis exportieren'),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: importiere }, '📥 Stimmen importieren'))));
+}
+
+function exportiere(u) {
+  const blob = new Blob([packeKoffer(u)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const anker = el('a', { href: url, download: 'mitmach-arena-abstimmung.json' });
+  document.body.append(anker);
+  anker.click();
+  anker.remove();
+  URL.revokeObjectURL(url);
+}
+
+function importiere() {
+  const eingabe = el('input', { type: 'file', accept: '.json,application/json', style: 'display:none' });
+  eingabe.addEventListener('change', async () => {
+    const datei = eingabe.files?.[0];
+    eingabe.remove();
+    if (!datei) return;
+    let inhalt;
+    try {
+      inhalt = JSON.parse(await datei.text());
+    } catch {
+      return ergebnisBildschirm({ ok: false, text: 'Die Datei ließ sich nicht lesen.' });
+    }
+    const fehler = pruefeKoffer(inhalt);
+    if (fehler.length > 0) {
+      return ergebnisBildschirm({ ok: false, text: `Import nicht möglich: ${fehler[0]}.` });
+    }
+    const vereinigt = vereinigeKoffer(lade(), inhalt);
+    if (!vereinigt) {
+      return ergebnisBildschirm({ ok: false, text: 'Import nicht möglich: Die Datei gehört zu einer anderen Abstimmung (Frage/Möglichkeiten unterscheiden sich).' });
+    }
+    speichere(vereinigt);
+    const summe = inhalt.stimmen.reduce((a, b) => a + b, 0);
+    ergebnisBildschirm({ ok: true, text: `${summe} Stimme${summe === 1 ? '' : 'n'} importiert und zusammengezählt. 🎉` });
+  });
+  document.body.append(eingabe);
+  eingabe.click();
 }
 
 startBildschirm();
