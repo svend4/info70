@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7",
+  "szenarien": [
+    {
+      "id": "g1",
+      "thema": "troesten",
+      "emoji": "😢",
+      "situation": "Dein Freund weint. Er ist ganz traurig.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich setze mich zu ihm und bin da.", "wert": 2 },
+        { "text": "Ich gehe schnell weg.", "wert": 0 }
+      ],
+      "lobRichtig": "Ja! Du bist für ihn da. Das tröstet.",
+      "lobFalsch": "Magst du dich zu ihm setzen? Das tut ihm gut.",
+      "tipp": "Ein trauriger Freund freut sich, wenn du bei ihm bleibst."
+    },
+    {
+      "id": "g2",
+      "thema": "teilen",
+      "emoji": "🧸",
+      "situation": "Ein Kind hat kein Spielzeug. Du hast zwei Bälle.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich gebe ihm einen Ball ab.", "wert": 2 },
+        { "text": "Ich behalte beide Bälle für mich.", "wert": 0 }
+      ],
+      "lobRichtig": "Toll! Teilen macht zwei Kinder froh.",
+      "lobFalsch": "Vielleicht magst du einen Ball teilen? Dann spielt ihr zusammen.",
+      "tipp": "Wenn du teilst, hat auch das andere Kind Spaß."
+    },
+    {
+      "id": "g3",
+      "thema": "mitfreuen",
+      "emoji": "🏅",
+      "situation": "Deine Freundin gewinnt beim Spiel. Sie strahlt.",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "Super gemacht! Ich freue mich für dich.", "wert": 2 },
+        { "text": "Ich sage gar nichts und bin sauer.", "wert": 0 }
+      ],
+      "lobRichtig": "Schön! Mitfreuen macht euch beide glücklich.",
+      "lobFalsch": "Verlieren ist okay. Du darfst dich trotzdem für sie freuen.",
+      "tipp": "Sich für andere zu freuen ist ein schönes Gefühl."
+    },
+    {
+      "id": "g4",
+      "thema": "helfen",
+      "emoji": "🤕",
+      "situation": "Ein Kind fällt hin. Es tut ihm weh.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich helfe ihm auf und frage: Alles gut?", "wert": 2 },
+        { "text": "Ich lache das Kind aus.", "wert": 0 }
+      ],
+      "lobRichtig": "Ja! Helfen ist besser als lachen.",
+      "lobFalsch": "Aua tut weh. Hilf dem Kind lieber auf.",
+      "tipp": "Wenn jemand hinfällt, freut er sich über Hilfe."
+    },
+    {
+      "id": "g5",
+      "thema": "einladen",
+      "emoji": "👋",
+      "situation": "Ein neues Kind steht allein da. Es kennt niemand.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich sage: Willst du mitspielen?", "wert": 2 },
+        { "text": "Ich spiele einfach weiter.", "wert": 0 }
+      ],
+      "lobRichtig": "Klasse! Jetzt ist das Kind nicht mehr allein.",
+      "lobFalsch": "Neu sein ist schwer. Lad das Kind doch zum Spielen ein.",
+      "tipp": "Ein nettes Wort holt ein neues Kind in die Gruppe."
+    },
+    {
+      "id": "g6",
+      "thema": "wut",
+      "emoji": "😠",
+      "situation": "Du bist ganz wütend. Die Wut kribbelt im Bauch.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich atme tief und sage, was mich ärgert.", "wert": 2 },
+        { "text": "Ich haue ganz fest zu.", "wert": 0 }
+      ],
+      "lobRichtig": "Stark! Atmen hilft. Worte sind besser als Hauen.",
+      "lobFalsch": "Hauen tut weh. Atme tief und sag es mit Worten.",
+      "tipp": "Bei Wut hilft: tief atmen und mit Worten reden."
+    },
+    {
+      "id": "g7",
+      "thema": "ehrlich",
+      "emoji": "🧩",
+      "situation": "Aus Versehen geht ein Spielzeug kaputt. Keiner hat es gesehen.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich sage ehrlich: Das war ich.", "wert": 2 },
+        { "text": "Ich sage nichts und laufe weg.", "wert": 0 }
+      ],
+      "lobRichtig": "Mutig! Ehrlich sein ist stark.",
+      "lobFalsch": "Fehler passieren. Sag ehrlich, was war. Das ist mutig.",
+      "tipp": "Ehrlich sein ist auch dann gut, wenn es schwer ist."
+    },
+    {
+      "id": "g8",
+      "thema": "angst",
+      "emoji": "🌙",
+      "situation": "Im Dunkeln hast du Angst. Dein Herz klopft schnell.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich sage einem Erwachsenen: Ich habe Angst.", "wert": 2 },
+        { "text": "Ich verstecke mich ganz allein.", "wert": 0 }
+      ],
+      "lobRichtig": "Gut gemacht! Erwachsene helfen bei Angst.",
+      "lobFalsch": "Angst darf man zeigen. Sag es einem Erwachsenen.",
+      "tipp": "Bei Angst hilft ein Erwachsener, dem du vertraust."
+    }
+  ]
+}
