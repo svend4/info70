@@ -1,0 +1,8 @@
+{
+  "name": "@info70/koeder-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Koeder-Quiz: Echt oder Koeder? Quiz gegen Phishing- und Betrugsnachrichten (Paket-SMS, Konto-Sperrung, Gratis-Skins) fuer 8-12 Jahre",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

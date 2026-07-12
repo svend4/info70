@@ -1,0 +1,8 @@
+{
+  "name": "@info70/bot-oder-buddy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bot oder Buddy?: fest geskripteter Demo-Chat fuer 8-12 Jahre - Kinder entlarven die 5 Tricks, mit denen ein Kumpel-Bot Freundschaft nur simuliert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

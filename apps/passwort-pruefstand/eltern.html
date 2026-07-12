@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+  <title>Für Eltern – Passwort-Prüfstand</title>
+  <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" />
+</head>
+<body>
+  <main class="k-app">
+    <h1 class="k-titel">👪 Eltern-Kompass: Passwort-Prüfstand</h1>
+    <section class="k-karte">
+      <h2>Worum geht es?</h2>
+      <p>Gestohlene Accounts beginnen fast immer mit schwachen Passwörtern – „1234“, der Name des Haustiers, dasselbe Passwort überall. Diese App macht die unsichtbare Mathematik dahinter erlebbar: Am <strong>Prüfstand</strong> tippt Ihr Kind ein <em>Quatsch-Passwort</em> ein und sieht sofort eine Ampel und eine anschauliche Knackzeit – von „eine Schildkröte knackt das beim Mittagsschlaf“ bis „länger, als das Universum alt ist“. In der <strong>Drei-Wörter-Werkstatt</strong> baut es aus Farbe + Tier + Zahl + Ding einen langen, merkbaren Passsatz wie „BlauerDachs42Regenschirm“. Kernbotschaft (wie sie auch das BSI und das britische NCSC empfehlen): <strong>Länge schlägt Komplexität</strong> – drei Wörter als Bild im Kopf sind stärker als jedes kurze Zeichen-Gewirr.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Daten &amp; Sicherheit</h2>
+      <ul>
+        <li>Die wichtigste Regel steht groß auf jedem Eingabe-Bildschirm und wird aktiv trainiert: <strong>Nie das echte Passwort eingeben</strong> – nicht hier und in keiner anderen Test- oder Chat-Seite. Genau diese Gewohnheit schützt später vor Phishing.</li>
+        <li>Alle Berechnungen laufen ausschließlich lokal auf dem Gerät. Eingaben leben nur im Arbeitsspeicher der Seite: Sie werden nirgends gespeichert und nirgends hingeschickt – beim Schließen sind sie weg.</li>
+        <li>Keine Verbindungen zu fremden Servern – technisch erzwungen (CSP <code>default-src 'self'</code> + Netzwerk-Wächter); ein automatischer Test prüft zusätzlich, dass der Code keinerlei Browser-Speicher anfasst.</li>
+        <li>Keine Werbung, keine Käufe, keine Anmeldung, keine personenbezogenen Daten.</li>
+      </ul>
+    </section>
+    <section class="k-karte">
+      <h2>So begleiten Sie Ihr Kind</h2>
+      <ul>
+        <li>Bauen Sie gemeinsam nach der Drei-Wörter-Methode ein <strong>neues</strong> echtes Passwort – im Kopf oder auf Papier, nicht das aus der App übernehmen (was auf einem Bildschirm stand, gilt als verbrannt).</li>
+        <li>Vereinbaren Sie die Familienregeln der App: Passwort niemandem verraten (außer Mama/Papa), für jedes Konto ein eigenes, bei „dein Account wird gesperrt!“-Nachrichten erst einen Erwachsenen fragen.</li>
+        <li>Wo verfügbar: Zwei-Faktor-Anmeldung aktivieren – sie fängt auch ein erratenes Passwort ab. Für viele Konten lohnt ein Passwort-Manager; für Kinder reicht oft ein gut versteckter Passwort-Zettel zu Hause.</li>
+        <li>Prüfen Sie gelegentlich gemeinsam, ob eine E-Mail-Adresse in bekannten Datenlecks auftaucht (z. B. über den „Identity Leak Checker“ des HPI) – und ändern Sie betroffene Passwörter.</li>
+      </ul>
+    </section>
+    <section class="k-karte">
+      <h2>🔢 Warum Länge schlägt Komplexität</h2>
+      <p>Ein Knack-Programm probiert stur alle Kombinationen durch. Bei Groß-/Kleinbuchstaben und Ziffern gibt es 62 Möglichkeiten <em>pro Stelle</em> – jedes zusätzliche Zeichen ver-62-facht also die Arbeit. Ein 8-Zeichen-Passwort fällt so in Stunden bis Tagen, ein 24-Zeichen-Passsatz erst nach einem Vielfachen des Universumsalters. Die App rechnet mit 10 Milliarden Versuchen pro Sekunde – konservativ für spezialisierte Hardware. Deshalb gilt: lieber lang und merkbar als kurz und kryptisch.</p>
+    </section>
+    <footer class="k-fuss"><a href="./">Zur App</a> · <a href="../../impressum.html">Impressum &amp; Datenschutz</a></footer>
+  </main>
+</body>
+</html>

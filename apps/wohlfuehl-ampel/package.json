@@ -1,0 +1,8 @@
+{
+  "name": "@info70/wohlfuehl-ampel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wohlfuehl-Ampel Gruppe: Tages-Ampel zum emotionalen Wohlbefinden je Kind (Kuerzel statt Namen) mit Wochenansicht und sanften Hinweis-Impulsen - Fachkraft-Werkzeug, rein lokal, Beobachtung statt Diagnose.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

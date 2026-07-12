@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kita-wochenplaner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kita-Wochenplaner: Bildungsangebote ausgewogen über die Woche planen - Richtwerte als Empfehlung, Freispiel hat Vorrang (Werkzeug für Fachkräfte).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

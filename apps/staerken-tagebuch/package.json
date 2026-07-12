@@ -1,0 +1,8 @@
+{
+  "name": "@info70/staerken-tagebuch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Staerken-Tagebuch: Eltern beobachten Interessen und Staerken ihres Kindes (3-7) anhand fester Momente und erhalten passende Spielideen - Beobachtung, keine Diagnose.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

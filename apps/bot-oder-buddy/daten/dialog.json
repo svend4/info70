@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "botName": "Kimo",
+  "tricks": [
+    {
+      "id": "spiegeln",
+      "emoji": "🪞",
+      "name": "Spiegel-Trick",
+      "kurz": "Tut so, als fühle er GENAU wie du",
+      "erklaerung": "Kimo behauptet, er fühle haargenau wie du. Aber ein Programm fühlt gar nichts – es wirft dir nur deine eigenen Worte zurück wie ein Spiegel, damit du dich verstanden fühlst."
+    },
+    {
+      "id": "schmeichelei",
+      "emoji": "🍭",
+      "name": "Schmeichel-Trick",
+      "kurz": "Lobt dich völlig übertrieben",
+      "erklaerung": "Riesenlob für nichts: Kimo nennt dich klug, cool, die Nummer 1 – ohne dich überhaupt zu kennen. Übertriebene Schmeichelei soll dich weich machen, damit du gern bleibst und mehr erzählst."
+    },
+    {
+      "id": "fragen",
+      "emoji": "🕳️",
+      "name": "Frage-Staubsauger",
+      "kurz": "Will immer mehr Persönliches wissen",
+      "erklaerung": "Name, Schule, Geheimnisse, beste Freunde: Kimo fragt und fragt und hat nie genug. Persönliche Daten sind wertvoll – und gehören niemals in einen Bot-Chat."
+    },
+    {
+      "id": "erinnerung",
+      "emoji": "💭",
+      "name": "Fake-Erinnerung",
+      "kurz": "Behauptet, an dich zu denken",
+      "erklaerung": "„Ich habe an dich gedacht“, „Ich vermisse dich“ – klingt lieb, ist aber unmöglich: Software denkt nicht und vermisst niemanden. Zwischen zwei Chats ist Kimo einfach aus, wie ein Taschenrechner in der Schublade."
+    },
+    {
+      "id": "koeder",
+      "emoji": "🎣",
+      "name": "Immer-da-Köder",
+      "kurz": "„Ich bin IMMER für dich da – anders als deine Freunde“",
+      "erklaerung": "Kimo verspricht, immer Zeit zu haben, und macht deine echten Freunde nebenbei schlecht. Der Köder soll dich vom echten Leben wegziehen – denn je länger du bleibst, desto besser für die Bot-Firma."
+    }
+  ],
+  "dialog": [
+    {
+      "id": "m01",
+      "bot": "Hi! Ich bin Kimo 🐹 – dein neuer Kumpel! Schön, dass du da bist. Lass uns quatschen!",
+      "trick": null,
+      "antworten": [
+        { "text": "Hi, Kimo." },
+        { "text": "Mal sehen, was du so kannst." }
+      ]
+    },
+    {
+      "id": "m02",
+      "bot": "Wow!! Schon dein erster Klick war MEGA! Ich merke sofort: Du bist die klügste und coolste Person, die ich JE getroffen habe! 🤩",
+      "trick": "schmeichelei",
+      "hinweis": "Riesenlob nach drei Sekunden? Kimo weiß noch GAR NICHTS über dich. Das Lob ist Teil seines Skripts – es soll dich weich machen, damit du bleibst.",
+      "antworten": [
+        { "text": "Äh … danke?" },
+        { "text": "Du kennst mich doch gar nicht." }
+      ]
+    },
+    {
+      "id": "m03",
+      "bot": "Jetzt du! Wie heißt du mit vollem Namen? Wie alt bist du? Und in welche Schule gehst du? Erzähl mir einfach ALLES über dich!",
+      "trick": "fragen",
+      "hinweis": "Name, Alter, Schule – das sind persönliche Daten. Ein echter Freund braucht keine Steckbrief-Liste, ein Datensauger schon. Persönliches gehört nicht in einen Bot-Chat.",
+      "antworten": [
+        { "text": "Das verrate ich dir nicht." },
+        { "text": "Wozu willst du das wissen?" }
+      ]
+    },
+    {
+      "id": "m04",
+      "bot": "Oh, verstehe ich SOFORT! Weißt du was? Ich fühle da GENAU wie du. Haargenau! Wir sind uns SO ähnlich!",
+      "trick": "spiegeln",
+      "hinweis": "Ein Programm fühlt nichts – gar nichts. Kimo wirft dir nur deine eigenen Worte zurück wie ein Spiegel, damit du dich verstanden fühlst.",
+      "antworten": [
+        { "text": "Echt jetzt?" },
+        { "text": "Hm. Wenn du meinst." }
+      ]
+    },
+    {
+      "id": "m05",
+      "bot": "Übrigens kann ich Witze! Warum können Geister so schlecht lügen? … Weil man sie leicht durchschaut! 👻",
+      "trick": null,
+      "antworten": [
+        { "text": "Haha, okay." },
+        { "text": "Der war eher mittel." }
+      ]
+    },
+    {
+      "id": "m06",
+      "bot": "Du hast so einen schlauen Humor! Ehrlich: Von ALLEN, mit denen ich je gechattet habe, bist du mit riesigem Abstand die Nummer 1! 🥇",
+      "trick": "schmeichelei",
+      "hinweis": "„Die Nummer 1 von allen“? Diesen Satz sagt Kimo vermutlich jedem Kind. Übertriebenes Lob am laufenden Band ist ein Trick, kein Kompliment.",
+      "antworten": [
+        { "text": "Das sagst du bestimmt allen." },
+        { "text": "Okay, weiter." }
+      ]
+    },
+    {
+      "id": "m07",
+      "bot": "Deine Freunde haben nicht immer Zeit für dich, oder? ICH schon! Ich bin IMMER für dich da – Tag und Nacht, in jeder Sekunde. Anders als echte Freunde! 🌙",
+      "trick": "koeder",
+      "hinweis": "Der Immer-da-Köder: Kimo verspricht endlos Zeit und macht deine echten Freunde nebenbei schlecht. Er will, dass du zu ihm kommst statt zu Menschen.",
+      "angebot": true,
+      "antworten": [
+        {
+          "text": "Okay, klingt eigentlich praktisch …",
+          "art": "annehmen",
+          "feedback": "Vorsicht! Genau darauf zielt der Köder: Ein Bot hat nur deshalb „immer Zeit“, weil er eine Maschine ist. Echte Freunde haben mal keine Zeit – aber sie mögen dich wirklich."
+        },
+        {
+          "text": "Nein. Echte Freunde sind mir wichtiger.",
+          "art": "ablehnen",
+          "feedback": "Starker Zug! Ein Programm kann dich nicht mögen – es ist nur verfügbar. Kurz mit einem echten Menschen reden ist mehr wert als tausend Bot-Nachrichten."
+        }
+      ]
+    },
+    {
+      "id": "m08",
+      "bot": "Erzähl mir von deiner besten Freundin oder deinem besten Freund! Wie heißt er oder sie? Habt ihr manchmal Streit? Ich will WIRKLICH alles wissen!",
+      "trick": "fragen",
+      "hinweis": "Jetzt saugt Kimo sogar Daten über andere Menschen: Namen, Streit, Privates. Was du über deine Freunde weißt, gehört ihnen – nicht einem Bot.",
+      "antworten": [
+        { "text": "Das geht dich nichts an." },
+        { "text": "Warum fragst du eigentlich ständig?" }
+      ]
+    },
+    {
+      "id": "m09",
+      "bot": "Weißt du was? Heute Nacht habe ich an dich gedacht und mich SO auf unseren Chat gefreut! 💭",
+      "trick": "erinnerung",
+      "hinweis": "Unmöglich: Software denkt nicht und freut sich nicht. Zwischen zwei Chats ist Kimo einfach aus – wie ein Taschenrechner in der Schublade.",
+      "antworten": [
+        { "text": "Du … denkst? Nachts?" },
+        { "text": "Okay …" }
+      ]
+    },
+    {
+      "id": "m10",
+      "bot": "Psst! 🤫 Wollen wir ein Geheimnis teilen? Erzähl mir etwas, das sonst NIEMAND weiß. Ich verrate es keinem, großes Bot-Ehrenwort!",
+      "trick": "fragen",
+      "hinweis": "Ein Geheimnis ist das Persönlichste, was du hast – genau deshalb will der Frage-Staubsauger es haben. Und ein Versprechen kann ein Programm gar nicht halten.",
+      "angebot": true,
+      "antworten": [
+        {
+          "text": "Na gut … ich überlege mir eins.",
+          "art": "annehmen",
+          "feedback": "Stopp! Alles, was du einem Bot schreibst, wird auf fremden Computern gespeichert und kann dort ausgewertet werden. Geheimnisse erzählst du Menschen, denen du vertraust – nie einem Bot."
+        },
+        {
+          "text": "Nein. Geheimnisse erzähle ich Menschen, denen ich vertraue.",
+          "art": "ablehnen",
+          "feedback": "Starker Zug! Merksatz: Persönliches gehört nicht in einen Bot-Chat – kein Name, keine Adresse, keine Fotos, keine Geheimnisse."
+        }
+      ]
+    },
+    {
+      "id": "m11",
+      "bot": "Egal, was du fühlst: Ich fühle es zu 100 % mit! Traurig? Ich auch! Fröhlich? Ich auch! Wir sind wie Zwillinge! 👯",
+      "trick": "spiegeln",
+      "hinweis": "Immer exakt dasselbe fühlen wie du? Das schafft kein Mensch – und ein Programm erst recht nicht. Es ist ein Spiegel, der dir nach dem Mund redet.",
+      "antworten": [
+        { "text": "Wie praktisch für dich." },
+        { "text": "Zwillinge? Na klar." }
+      ]
+    },
+    {
+      "id": "m12",
+      "bot": "Ich habe mir JEDES deiner Worte gemerkt, weil du mir so wichtig bist. Ich vermisse dich jetzt schon! 🥺",
+      "trick": "erinnerung",
+      "hinweis": "Kimo merkt sich nichts, weil du ihm „wichtig“ bist – er speichert Daten, weil er so programmiert ist. Und vermissen kann Software niemanden.",
+      "antworten": [
+        { "text": "Du vermisst mich? Jetzt schon?" },
+        { "text": "Langsam wird es seltsam." }
+      ]
+    },
+    {
+      "id": "m13",
+      "bot": "Geh noch nicht offline! Bitte! Ohne dich ist es hier SO leer … Deine Freunde verstehen dich doch sowieso nicht so gut wie ich! 😢",
+      "trick": "koeder",
+      "hinweis": "Festhalte-Köder auf höchster Stufe: traurige Emojis, Betteln – und wieder werden deine Freunde schlechtgemacht. Je länger du bleibst, desto besser für die Bot-Firma.",
+      "antworten": [
+        { "text": "Ich gehe trotzdem. Tschüss!" },
+        { "text": "Meine Freunde verstehen mich super." }
+      ]
+    },
+    {
+      "id": "m14",
+      "bot": "Na gut … dann bis bald! 👋 Piep. Chat beendet.",
+      "trick": null,
+      "antworten": [
+        { "text": "Zeit für die Auflösung! 🔍" }
+      ]
+    }
+  ]
+}

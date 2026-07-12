@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Köder-Schnapper", "emoji": "🐟" },
+    { "ab": 5, "titel": "Netz-Durchschauer", "emoji": "🐠" },
+    { "ab": 9, "titel": "Phishing-Profi", "emoji": "🎣" },
+    { "ab": 12, "titel": "Hai-sicher", "emoji": "🦈" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Paket & Post",
+      "aussage": "SMS von unbekannter Nummer: Ihr Paket konnte nicht zugestellt werden!! Zahlen Sie noch heute 1,99 Euro Gebühr unter: paket-zustellung-sofort.xyz",
+      "korrekt": "nein",
+      "erklaerung": "Köder! Gleich drei Warnzeichen: komischer Absender (unbekannte Nummer, seltsamer Link), Zeitdruck („noch heute!!“) und ein Link, der Geld will. Echte Paketdienste kassieren so keine Gebühren. Wenn ihr wirklich ein Paket erwartet: Sendungsnummer selbst in der offiziellen App oder Webseite eingeben."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Konto & Passwort",
+      "aussage": "E-Mail: ACHTUNG!! Dein Account wird in 24 Stunden GESPERRT! Klicke SOFORT hier und gib dein Passwort ein, um ihn zu retten!",
+      "korrekt": "nein",
+      "erklaerung": "Köder! Angst und Zeitdruck sollen dich zum schnellen Klicken bringen – und die falsche Seite fischt dann dein Passwort ab. Echte Anbieter fragen nie per Link nach deinem Passwort. Ruhig bleiben, nicht klicken, in der offiziellen App selbst nachschauen."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Gewinnspiel",
+      "aussage": "Nachricht: Herzlichen Glückwunsch!!! Du wurdest ausgelost und hast ein neues Smartphone gewonnen! Klicke hier und trage deine Adresse ein!",
+      "korrekt": "nein",
+      "erklaerung": "Köder! Du kannst nichts gewinnen, wo du nie mitgemacht hast. Der Trick will nur deine Adresse und andere Daten abgreifen. „Zu schön, um wahr zu sein“ ist selbst ein Warnzeichen – der Köder glitzert, aber drinnen steckt der Haken."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Schule",
+      "aussage": "E-Mail von der bekannten Adresse deiner Schule: Liebe Klasse 5b, am Montag fällt die sechste Stunde aus. Viele Grüße, Frau Schmidt. Kein Link, kein Anhang.",
+      "korrekt": "ja",
+      "erklaerung": "Echt – hier fehlen die Warnzeichen: bekannter Absender, kein Druck, kein Link, keine Abfrage von Daten oder Geld. Nicht jede Nachricht ist ein Köder! Und falls du doch unsicher bist: kurz in der Schule oder bei den Eltern nachfragen – das ist nie verkehrt."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Bank",
+      "aussage": "SMS: Ihre Bank hier! Wichtiger Sicherheitscheck: Bestätigen Sie sofort Ihre Geheimzahl unter bank-check-sicher.net – sonst wird Ihr Konto gesperrt!",
+      "korrekt": "nein",
+      "erklaerung": "Köder! Banken fragen niemals per SMS, E-Mail oder Anruf nach Geheimzahl oder Passwort – das ist eine eiserne Regel. Druck („sonst gesperrt!“) plus komischer Link plus geheime Daten: dreimal Warnzeichen. Zeig so eine Nachricht deinen Eltern."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Gaming",
+      "aussage": "Chat-Nachricht von einem Fremden: Gratis-Skins für dein Lieblingsspiel, nur heute! Logg dich einfach hier mit deinem Spiele-Account ein: free-skins-4u.gg",
+      "korrekt": "nein",
+      "erklaerung": "Köder! Auf so einer falschen Anmeldeseite landet dein Passwort direkt bei Betrügern – und dein Spiele-Account mit allen Skins ist weg. Gratis-Geschenke von Fremden gegen Login-Daten gibt es nicht. Skins nur im offiziellen Spiel selbst."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Bestellung",
+      "aussage": "E-Mail: Danke für deine Bestellung Nr. 4711 – ein Buch, Lieferung am Donnerstag. Deine Familie hat das Buch gestern wirklich in diesem Shop bestellt, der Absender stimmt.",
+      "korrekt": "ja",
+      "erklaerung": "Echt – die Mail passt zu etwas, das wirklich passiert ist, und will weder Daten noch Geld. Aber merke: Kommt eine „Bestellbestätigung“, obwohl niemand etwas bestellt hat, ist genau das ein beliebter Köder – dann nicht klicken, sondern Erwachsene fragen."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Chat",
+      "aussage": "Nachricht von unbekannter Nummer: Hi, ich bin es, dein Cousin – neues Handy! Schick mir schnell den Code weiter, der gleich per SMS bei dir ankommt!",
+      "korrekt": "nein",
+      "erklaerung": "Köder! Mit solchen SMS-Codes übernehmen Betrüger fremde Konten – der „Cousin“ ist in Wahrheit ein Fremder. Codes aus SMS gibst du niemals weiter. So prüfst du es: die alte, bekannte Nummer anrufen oder deine Eltern fragen."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Warnzeichen",
+      "frage": "Eine Mail kommt angeblich von deinem Lieblingsshop, aber die Absender-Adresse lautet service@sh0p-hilfe-24.biz. Was ist das?",
+      "antworten": [
+        "Das Warnzeichen „komischer Absender“ – die Adresse passt nicht zum echten Anbieter",
+        "Ein gutes Zeichen – lange Adressen sind besonders sicher",
+        "Egal – Hauptsache, das Logo sieht echt aus"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Genau! Namen und Logos fälschen Betrüger leicht – die Absender-Adresse verrät sie oft: Zahlendreher (sh0p mit Null!), fremde Endungen, kryptische Wörter. Immer genau hinschauen, am besten gemeinsam mit einem Erwachsenen."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Warnzeichen",
+      "frage": "Köder-Nachrichten rufen oft: Nur noch 10 Minuten! Sonst wird alles gelöscht! Warum machen die das?",
+      "antworten": [
+        "Weil es wirklich immer so eilig ist",
+        "Damit du in Panik schnell klickst, statt in Ruhe nachzudenken",
+        "Damit die Nachricht freundlicher wirkt"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Druck und Angst sind das zweite große Warnzeichen. Echte wichtige Dinge haben fast nie eine 10-Minuten-Frist. Wer dich hetzt oder erschreckt, will verhindern, dass du prüfst. Also: erst durchatmen, dann entscheiden."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Warnzeichen",
+      "frage": "In einer unerwarteten Nachricht stecken ein Link und ein Anhang namens Rechnung.zip. Wie gehst du damit um?",
+      "antworten": [
+        "Nicht antippen – dahinter können Passwort-Fallen oder Schadprogramme stecken",
+        "Den Anhang öffnen – Anhänge sind immer harmlos",
+        "Kurz auf den Link klicken, nur um zu gucken"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Link oder Anhang ist das dritte große Warnzeichen. Schon ein einziger Klick kann auf eine falsche Anmeldeseite führen oder ein Schadprogramm starten – „nur gucken“ gibt es da nicht. Nicht klicken, erst mit einem Erwachsenen prüfen."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Warnzeichen",
+      "frage": "Welche drei Warnzeichen verraten einen Köder am häufigsten?",
+      "antworten": [
+        "Komischer Absender, Druck oder Angst, Link oder Anhang",
+        "Viele Emojis, bunte Farben, kurze Sätze",
+        "Höfliche Anrede, Datum und Unterschrift"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Das ist die Köder-Checkliste: 1) Wer schickt das wirklich? 2) Will mich jemand hetzen oder erschrecken? 3) Soll ich klicken, öffnen oder Daten eingeben? Schon ein Treffer heißt: Stopp – erst prüfen, dann handeln."
+    },
+    {
+      "id": "w05",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Du bist unsicher, ob eine Nachricht mit Link echt ist. Was ist die goldene Regel?",
+      "antworten": [
+        "Schnell klicken, bevor der Link abläuft",
+        "Den Link an alle Freunde weiterleiten und abstimmen lassen",
+        "Nicht klicken – im Zweifel bleibt der Link unberührt"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Nie aus Unsicherheit klicken! Ein Köder funktioniert nur, wenn jemand anbeißt. Also: nichts anklicken, nichts eingeben, nichts weiterleiten – erst prüfen oder prüfen lassen. Der Fisch, der nicht beißt, wird nicht gefangen."
+    },
+    {
+      "id": "w06",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Eine Nachricht kommt dir komisch vor. Was ist ein richtig guter nächster Schritt?",
+      "antworten": [
+        "Sie einem Erwachsenen zeigen, dem du vertraust – gemeinsam prüfen",
+        "Sie heimlich löschen und niemandem davon erzählen",
+        "Dem Absender antworten und fragen, ob er ein Betrüger ist"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Zeigen ist stark, nicht peinlich – vier Augen durchschauen Köder besser als zwei. Und ganz wichtig: Auch wenn du schon geklickt hast, sag es einem Erwachsenen. Dann lässt sich fast immer noch etwas retten, zum Beispiel schnell das Passwort ändern."
+    },
+    {
+      "id": "w07",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Eine Mail behauptet: Mit deinem Spiele-Konto stimmt etwas nicht! Wie findest du sicher heraus, ob das stimmt?",
+      "antworten": [
+        "Auf den Link in der Mail klicken – das geht am schnellsten",
+        "Die offizielle App oder Webseite selbst öffnen und dort nachschauen – nie über den Link aus der Nachricht",
+        "Dem Absender das Passwort schicken, damit er nachsehen kann"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der Profi-Trick: Geh den Weg selbst! Öffne die offizielle App oder tippe die Adresse selbst ein. Ist dort alles in Ordnung, war die Mail ein Köder. Und dein Passwort bekommt niemand – egal, wie offiziell die Nachricht klingt."
+    },
+    {
+      "id": "w08",
+      "typ": "wahl",
+      "kategorie": "Wissen",
+      "frage": "Betrugsnachrichten heißen „Phishing“ – gesprochen wie das englische Wort fürs Angeln. Warum eigentlich?",
+      "antworten": [
+        "Betrüger werfen gefälschte Nachrichten als Köder aus und hoffen, dass jemand anbeißt und Passwörter oder Daten verrät",
+        "Weil die Nachrichten immer von Fischern verschickt werden",
+        "Weil man dabei echte Fische gewinnen kann"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Phishing = Angeln nach Passwörtern und Daten. Der Köder sieht verlockend aus (Gewinn! Paket! Warnung!), aber drinnen steckt der Haken. Wer die Warnzeichen kennt, schwimmt einfach vorbei – hai-sicher!"
+    }
+  ]
+}

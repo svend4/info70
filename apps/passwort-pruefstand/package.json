@@ -1,0 +1,8 @@
+{
+  "name": "@info70/passwort-pruefstand",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Passwort-Prüfstand: Knack-Simulator zeigt, in Sekunden oder Jahrhunderten, wie schnell ein Passwort fällt - und die Drei-Wörter-Werkstatt baut starke, merkbare Passsätze.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

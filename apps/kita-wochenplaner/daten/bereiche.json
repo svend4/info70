@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Konzept nach Katalog Nr. 2 (docs/10, Praleska-Ableitung); alle Texte neu formuliert. Richtwerte sind Empfehlungen, keine Vorschrift - Freispiel hat Vorrang.",
+  "bereiche": [
+    {
+      "id": "bewegung",
+      "name": "Bewegung & Körper",
+      "emoji": "🤸",
+      "beispiele": "Bewegungsbaustelle, Balancier-Parcours, Tanz-Stopp-Spiel"
+    },
+    {
+      "id": "sprache",
+      "name": "Sprache & Kommunikation",
+      "emoji": "💬",
+      "beispiele": "Bilderbuch-Kino, Reim- und Silbenspiele, Erzählkreis"
+    },
+    {
+      "id": "musik-kunst",
+      "name": "Musik & Kunst",
+      "emoji": "🎨",
+      "beispiele": "Singkreis, Klanggeschichte, Mal- und Matschwerkstatt"
+    },
+    {
+      "id": "natur-umwelt",
+      "name": "Natur & Umwelt",
+      "emoji": "🌳",
+      "beispiele": "Wetterbeobachtung, Hochbeet gießen, Spaziergang mit Sammelauftrag"
+    },
+    {
+      "id": "mathe-technik",
+      "name": "Mathe & Technik (frühes Lernen)",
+      "emoji": "🔢",
+      "beispiele": "Zähl- und Sortierspiele, Bauen mit Formen, Magnete erkunden"
+    },
+    {
+      "id": "sozial-gefuehle",
+      "name": "Soziales & Gefühle",
+      "emoji": "🤝",
+      "beispiele": "Gefühlsrunde, Regelspiele, Helfer-Aufgaben der Woche"
+    }
+  ],
+  "altersgruppen": [
+    {
+      "id": "1-3",
+      "name": "1-3 Jahre",
+      "maxMinutenProAngebot": 10,
+      "warntext": "Empfehlung für 1-3 Jahre: geplante Impulse möglichst kurz halten (etwa bis 10 Minuten). Die Jüngsten lernen vor allem im freien Spiel und in Alltagssituationen - ein kurzer Impuls reicht völlig."
+    },
+    {
+      "id": "3-5",
+      "name": "3-5 Jahre",
+      "maxMinutenProAngebot": 20,
+      "warntext": "Empfehlung für 3-5 Jahre: etwa bis 20 Minuten pro Angebot. Lieber ein kurzes Angebot mit viel Zeit zum Weiterspielen als ein langes Programm."
+    },
+    {
+      "id": "5-7",
+      "name": "5-7 Jahre",
+      "maxMinutenProAngebot": 25,
+      "warntext": "Empfehlung für 5-7 Jahre: etwa bis 25 Minuten pro Angebot - auch Vorschulkinder brauchen danach wieder Bewegung und freies Spiel."
+    }
+  ],
+  "tagesHinweis": {
+    "maxAngeboteProTag": 3,
+    "warntext": "Hier sind schon mehr als 3 Angebote geplant. Freispiel hat Vorrang - in der deutschen Kita-Praxis sind wenige, gut gewählte Impulse pro Tag genug. Lässt sich etwas auf einen anderen Tag schieben?"
+  },
+  "wochenHinweis": {
+    "warntext": "Der Bereich {bereich} kommt in dieser Woche noch nicht vor. Kein Muss - aber vielleicht passt noch ein kleiner Impuls hinein?"
+  }
+}

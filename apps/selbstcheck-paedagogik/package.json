@@ -1,0 +1,8 @@
+{
+  "name": "@info70/selbstcheck-paedagogik",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Selbstcheck paedagogisches Ich: anonyme Selbstreflexion fuer paedagogische Fachkraefte (Kommunikation mit Kindern und Eltern, emotionale Balance, paedagogischer Stil) mit privatem Bericht. Alles lokal, kein Arbeitgeber-Zugriff.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

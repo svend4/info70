@@ -1,0 +1,8 @@
+{
+  "name": "@info70/ich-schaff-das",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ich schaff das!: Szenario-Trainer fuer Selbstregulation und Dranbleiben (8-12 Jahre) - erst Pause, dann Plan, Hilfe holen ist stark.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

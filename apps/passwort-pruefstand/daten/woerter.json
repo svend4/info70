@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "hinweis": "Bewusst ohne Umlaute und Sonderzeichen: auf jeder Tastatur tippbar, Zeichenraum bleibt ehrlich (Gross/Klein/Ziffern).",
+  "listen": [
+    {
+      "id": "farbe",
+      "titel": "Farbe",
+      "emoji": "🎨",
+      "woerter": [
+        "Blauer",
+        "Roter",
+        "Gelber",
+        "Lila",
+        "Silberner",
+        "Goldener",
+        "Pinker",
+        "Oranger",
+        "Brauner",
+        "Bunter",
+        "Weisser",
+        "Schwarzer"
+      ]
+    },
+    {
+      "id": "tier",
+      "titel": "Tier",
+      "emoji": "🦊",
+      "woerter": [
+        "Dachs",
+        "Fuchs",
+        "Igel",
+        "Pinguin",
+        "Otter",
+        "Delfin",
+        "Koala",
+        "Biber",
+        "Panda",
+        "Hase",
+        "Frosch",
+        "Hamster"
+      ]
+    },
+    {
+      "id": "ding",
+      "titel": "Ding",
+      "emoji": "🎒",
+      "woerter": [
+        "Regenschirm",
+        "Raumschiff",
+        "Bleistift",
+        "Roller",
+        "Kissen",
+        "Luftballon",
+        "Teekanne",
+        "Rucksack",
+        "Trompete",
+        "Laterne",
+        "Muffin",
+        "Leuchtturm"
+      ]
+    }
+  ]
+}

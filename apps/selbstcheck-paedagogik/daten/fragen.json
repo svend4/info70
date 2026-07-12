@@ -1,0 +1,191 @@
+{
+  "stand": "2026-07-12",
+  "stufen": [
+    { "id": "voll", "text": "trifft zu" },
+    { "id": "eher", "text": "trifft eher zu" },
+    { "id": "eher-nicht", "text": "trifft eher nicht zu" },
+    { "id": "nicht", "text": "trifft nicht zu" }
+  ],
+  "bereiche": [
+    {
+      "id": "kinder",
+      "name": "Kommunikation mit Kindern",
+      "emoji": "🧒",
+      "fokus": "Augenhöhe, offene Fragen, echtes Zuhören",
+      "impulsWennStark": "Im Gespräch mit Kindern liegt offenbar eine deiner Stärken. Ein Impuls: Gib sie weiter - biete einer neuen Kollegin oder einem Kollegen an, dir eine Weile zuzuschauen und danach gemeinsam zu reflektieren.",
+      "aussagen": [
+        {
+          "id": "kinder-augenhoehe",
+          "text": "Ich begebe mich bei Gesprächen körperlich auf Augenhöhe der Kinder - ich gehe in die Hocke oder setze mich dazu.",
+          "staerke": "Du begegnest Kindern buchstäblich auf Augenhöhe - das zeigt Respekt und macht Gespräche leichter.",
+          "impuls": "Nimm dir für eine Woche vor, bei jedem längeren Gespräch bewusst auf Kinderhöhe zu gehen - und beobachte, wie sich der Ton verändert."
+        },
+        {
+          "id": "kinder-offene-fragen",
+          "text": "Ich stelle Kindern überwiegend offene Fragen (Wie war das für dich? Was meinst du?) statt Fragen, auf die es nur Ja oder Nein gibt.",
+          "staerke": "Deine offenen Fragen laden Kinder zum Denken und Erzählen ein - so entsteht echter Dialog statt Abfrage.",
+          "impuls": "Sammle drei offene Lieblingsfragen (etwa: Wie bist du darauf gekommen?) und probiere sie im Alltag gezielt aus."
+        },
+        {
+          "id": "kinder-aussprechen",
+          "text": "Ich lasse Kinder in Ruhe aussprechen - auch dann, wenn sie lange für ihre Gedanken brauchen.",
+          "staerke": "Du gibst Kindern Zeit zum Denken und Sprechen - ein großes Geschenk in einem vollen Alltag.",
+          "impuls": "Versuche, nach der Äußerung eines Kindes innerlich bis drei zu zählen, bevor du antwortest - Pausen sind Denkräume."
+        },
+        {
+          "id": "kinder-zuwendung",
+          "text": "Wenn ein Kind mir etwas erzählt, wende ich mich ihm wirklich zu, statt nebenbei weiterzuarbeiten.",
+          "staerke": "Kinder spüren deine echte Aufmerksamkeit - sie erleben bei dir: Was ich sage, ist wichtig.",
+          "impuls": "Wenn gerade keine Zeit ist, sage es ehrlich und hole das Gespräch später nach - das ist wertvoller als halbes Zuhören."
+        },
+        {
+          "id": "kinder-konflikte",
+          "text": "In Konflikten höre ich mir zuerst die Sichtweisen aller beteiligten Kinder an, bevor ich etwas entscheide.",
+          "staerke": "Du nimmst Kinder auch im Streit ernst - so lernen sie, dass ihre Sicht zählt und Konflikte lösbar sind.",
+          "impuls": "Probiere beim nächsten Streit die gleiche Frage an beide Seiten: Was ist aus deiner Sicht passiert? Erst danach gemeinsam eine Lösung suchen."
+        },
+        {
+          "id": "kinder-nicht-ueber",
+          "text": "Ich spreche mit Kindern und nicht über sie, wenn sie im Raum sind - auch im Gespräch mit Erwachsenen.",
+          "staerke": "Du wahrst die Würde der Kinder auch dann, wenn Erwachsene dabei sind - das ist gelebter Respekt.",
+          "impuls": "Achte einen Tag lang bewusst darauf, anwesende Kinder direkt einzubeziehen, wenn es um sie geht - schon ein kurzer Blickkontakt macht den Unterschied."
+        }
+      ]
+    },
+    {
+      "id": "eltern",
+      "name": "Kommunikation mit Eltern",
+      "emoji": "👪",
+      "fokus": "Partnerschaft auf Augenhöhe, schwierige Gespräche",
+      "impulsWennStark": "Die Zusammenarbeit mit Familien scheint dir gut zu gelingen. Ein Impuls: Teile deine Erfahrung im Team - zum Beispiel als kurzer Austausch darüber, was dir bei schwierigen Gesprächen hilft.",
+      "aussagen": [
+        {
+          "id": "eltern-partner",
+          "text": "Ich sehe Eltern als Fachleute für ihr eigenes Kind und begegne ihnen partnerschaftlich, nicht belehrend.",
+          "staerke": "Deine partnerschaftliche Haltung ist das Fundament jeder guten Erziehungspartnerschaft.",
+          "impuls": "Frage Eltern öfter zuerst nach ihrer Sicht (Wie erleben Sie das zu Hause?), bevor du deine Beobachtungen teilst."
+        },
+        {
+          "id": "eltern-positives",
+          "text": "Ich erzähle Eltern regelmäßig kleine gelungene Momente ihres Kindes - nicht nur, wenn es Schwierigkeiten gibt.",
+          "staerke": "Mit positiven Tür-und-Angel-Momenten baust du Vertrauen auf, von dem schwierige Gespräche später zehren.",
+          "impuls": "Nimm dir vor, jeder Familie mindestens einmal pro Woche einen kleinen gelungenen Moment mitzugeben - ein Satz genügt."
+        },
+        {
+          "id": "eltern-vorbereitung",
+          "text": "Auf schwierige Elterngespräche bereite ich mich gezielt vor: konkrete Beobachtungen, ein klares Ziel, ein ruhiger Rahmen.",
+          "staerke": "Deine Vorbereitung gibt schwierigen Gesprächen Halt - das schützt beide Seiten vor Missverständnissen.",
+          "impuls": "Notiere vor dem nächsten schwierigen Gespräch drei konkrete Beobachtungen und einen Wunsch - und plane bewusst einen ungestörten Ort ein."
+        },
+        {
+          "id": "eltern-kritik",
+          "text": "Wenn Eltern Kritik äußern, höre ich erst vollständig zu, bevor ich erkläre oder mich verteidige.",
+          "staerke": "Du hältst Kritik aus, ohne sofort in die Verteidigung zu gehen - so fühlen sich Eltern ernst genommen.",
+          "impuls": "Versuche beim nächsten kritischen Gespräch, das Gehörte erst in eigenen Worten zusammenzufassen, bevor du antwortest."
+        },
+        {
+          "id": "eltern-beschreibend",
+          "text": "Über Kinder spreche ich mit Eltern beschreibend statt wertend - ich schildere, was ich beobachte, nicht was das Kind angeblich ist.",
+          "staerke": "Deine beschreibende Sprache öffnet Gespräche, wo Etiketten sie verschließen würden.",
+          "impuls": "Übersetze Etiketten in Beobachtungen: statt eines Urteils lieber ein konkreter Moment - Mir ist heute aufgefallen, dass ..."
+        },
+        {
+          "id": "eltern-verstaendlich",
+          "text": "Ich achte darauf, dass alle Familien mich gut verstehen - klare Worte, wenig Fachbegriffe, bei Bedarf Beispiele oder Bilder.",
+          "staerke": "Du machst Zusammenarbeit für alle Familien zugänglich - unabhängig von Sprache und Vorwissen.",
+          "impuls": "Prüfe deinen nächsten Aushang oder Elternbrief: Würde ihn jemand ohne pädagogische Ausbildung sofort verstehen?"
+        }
+      ]
+    },
+    {
+      "id": "balance",
+      "name": "Emotionale Balance",
+      "emoji": "🧘",
+      "fokus": "Stress wahrnehmen, Grenzen setzen, Selbstfürsorge",
+      "impulsWennStark": "Du wirkst gut in deiner Balance - das ist wertvoll für dich und für die Kinder. Ein Impuls: Achte darauf, dass es so bleibt, gerade in dichten Zeiten wie Personalengpässen oder Eingewöhnungen.",
+      "aussagen": [
+        {
+          "id": "balance-signale",
+          "text": "Ich bemerke meine eigenen Stress-Signale meist früh - zum Beispiel einen gereizten Ton oder innere Anspannung.",
+          "staerke": "Du kennst deine Frühwarnzeichen - das ist der erste Schritt, um gut für dich zu sorgen.",
+          "impuls": "Beobachte dich eine Woche lang freundlich: Woran merkst du zuerst, dass es dir zu viel wird? Halte zwei, drei Signale für dich fest."
+        },
+        {
+          "id": "balance-durchatmen",
+          "text": "In aufgeladenen Situationen gelingt es mir, erst kurz durchzuatmen und dann zu reagieren.",
+          "staerke": "Deine kleine Pause vor der Reaktion schützt dich und die Kinder - Ruhe steckt genauso an wie Stress.",
+          "impuls": "Lege dir einen Mini-Anker zurecht (ein tiefer Atemzug, Schultern lockern), den du in hitzigen Momenten bewusst nutzt."
+        },
+        {
+          "id": "balance-nein",
+          "text": "Ich kann Nein sagen, wenn eine zusätzliche Aufgabe meine Kräfte übersteigen würde.",
+          "staerke": "Dein Nein schützt deine Kraft - und macht dein Ja umso glaubwürdiger.",
+          "impuls": "Übe ein freundliches, klares Nein mit Alternative: Diese Woche schaffe ich das nicht - ich kann es ab Montag übernehmen."
+        },
+        {
+          "id": "balance-auftanken",
+          "text": "Ich habe Gewohnheiten zum Auftanken nach anstrengenden Tagen, die mir wirklich guttun.",
+          "staerke": "Du sorgst aktiv für deinen Ausgleich - Selbstfürsorge ist Teil professioneller Arbeit, kein Luxus.",
+          "impuls": "Sammle drei kleine Dinge, die dich zuverlässig auftanken, und plane eines davon fest nach dem nächsten anstrengenden Tag ein."
+        },
+        {
+          "id": "balance-team",
+          "text": "Belastende Situationen aus dem Alltag bespreche ich mit Kolleginnen und Kollegen, statt sie allein mit mir herumzutragen.",
+          "staerke": "Du nutzt dein Team als Rückhalt - geteilte Last ist leichter, und oft entstehen dabei neue Ideen.",
+          "impuls": "Suche dir eine Kollegin oder einen Kollegen für einen regelmäßigen kurzen Austausch - fünf Minuten ehrliches Wie geht es dir wirklich? wirken."
+        },
+        {
+          "id": "balance-abschalten",
+          "text": "Nach Feierabend gelingt es mir meistens, gedanklich von der Arbeit abzuschalten.",
+          "staerke": "Du kannst die Arbeit auch loslassen - genau daraus entsteht die Energie für den nächsten Tag.",
+          "impuls": "Probiere ein kleines Abschluss-Ritual am Ende des Arbeitstags: drei Dinge festhalten, die heute gut waren, und dann bewusst die Tür schließen."
+        }
+      ]
+    },
+    {
+      "id": "stil",
+      "name": "Pädagogischer Stil",
+      "emoji": "🧭",
+      "fokus": "Partizipation, Individualität, eigene Reflexion",
+      "impulsWennStark": "Dein pädagogischer Stil wirkt reflektiert und lebendig. Ein Impuls: Halte einmal schriftlich fest, was dir in deiner Arbeit wirklich wichtig ist - so wird aus Haltung ein persönliches Profil, das dich durch turbulente Phasen trägt.",
+      "aussagen": [
+        {
+          "id": "stil-mitentscheiden",
+          "text": "Kinder entscheiden bei uns regelmäßig wirklich mit, wenn es um Dinge geht, die sie betreffen.",
+          "staerke": "Du nimmst Beteiligung ernst - Kinder erleben bei dir, dass ihre Stimme etwas bewirkt.",
+          "impuls": "Suche eine Entscheidung der nächsten Woche, die du ganz den Kindern übergeben kannst - und halte das Ergebnis aus."
+        },
+        {
+          "id": "stil-individuell",
+          "text": "Ich passe Angebote an die Interessen und das Tempo einzelner Kinder an, statt alle gleich zu behandeln.",
+          "staerke": "Dein Blick für das einzelne Kind macht aus einem Programm echte Pädagogik.",
+          "impuls": "Beobachte ein paar Tage lang, wofür sich einzelne Kinder gerade wirklich interessieren - und lass ein Angebot bewusst davon leiten statt vom Plan."
+        },
+        {
+          "id": "stil-warum",
+          "text": "Ich frage mich regelmäßig, warum ich pädagogisch so handle, wie ich handle - und woher meine Muster kommen.",
+          "staerke": "Du kennst die Gründe hinter deinem Handeln - genau das unterscheidet Profession von Routine.",
+          "impuls": "Nimm dir eine wiederkehrende Alltagssituation vor und frage dich: Mache ich das aus Überzeugung - oder aus Gewohnheit?"
+        },
+        {
+          "id": "stil-rueckmeldung",
+          "text": "Ich hole aktiv Rückmeldungen zu meiner Arbeit ein - von Kolleginnen und Kollegen und auch von den Kindern selbst.",
+          "staerke": "Du holst dir Spiegel von außen - das ist mutig und der schnellste Weg zu blinden Flecken.",
+          "impuls": "Frage die Kinder nach einem Angebot ganz einfach: Was hat euch gefallen, was war doof? Und nimm die Antworten ernst."
+        },
+        {
+          "id": "stil-zutrauen",
+          "text": "Ich traue Kindern etwas zu und lasse sie Dinge selbst versuchen - auch wenn es länger dauert oder schiefgehen kann.",
+          "staerke": "Dein Zutrauen lässt Kinder wachsen - Selbstständigkeit entsteht genau in solchen Momenten.",
+          "impuls": "Wähle eine Situation, in der du sonst schnell hilfst (Jacke, kleiner Streit, Aufräumen), und warte bewusst ab, was die Kinder allein schaffen."
+        },
+        {
+          "id": "stil-plan-aendern",
+          "text": "Wenn etwas nicht funktioniert, verändere ich mein Vorgehen, statt stur am Plan festzuhalten.",
+          "staerke": "Deine Flexibilität zeigt: Der Plan dient den Kindern - nicht umgekehrt.",
+          "impuls": "Erlaube dir beim nächsten stockenden Angebot einen bewussten Planwechsel - und halte danach kurz fest, was du daraus mitnimmst."
+        }
+      ]
+    }
+  ]
+}

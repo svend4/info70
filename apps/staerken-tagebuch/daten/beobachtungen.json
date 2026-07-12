@@ -1,0 +1,100 @@
+{
+  "art": "staerken-tagebuch-katalog",
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Beobachtungshilfe für Eltern (Kinder 3-7). Feste Momente statt Freitext - es entstehen keine persönlichen Daten über das Kind. Beobachtung ist keine Diagnose.",
+  "felder": [
+    {
+      "id": "denken",
+      "name": "Denken & Entdecken",
+      "emoji": "🔍",
+      "beschreibung": "Neugier, Ausdauer und Forschergeist im Alltag",
+      "momente": [
+        { "id": "denken-1", "text": "Baut lange und konzentriert an einer Sache, ohne sich ablenken zu lassen" },
+        { "id": "denken-2", "text": "Fragt oft nach dem Warum und gibt sich mit kurzen Antworten nicht zufrieden" },
+        { "id": "denken-3", "text": "Sortiert Dinge von sich aus nach eigenen Regeln (Farbe, Größe, Form)" },
+        { "id": "denken-4", "text": "Merkt sich Wege, Verstecke oder Abläufe erstaunlich genau" },
+        { "id": "denken-5", "text": "Will wissen, wie Dinge von innen funktionieren, und schaut genau nach" },
+        { "id": "denken-6", "text": "Zählt, misst oder vergleicht im Alltag aus eigenem Antrieb" },
+        { "id": "denken-7", "text": "Beobachtet Tiere, Pflanzen oder Wolken lange und geduldig" },
+        { "id": "denken-8", "text": "Knobelt mit großer Ausdauer an Puzzles oder kleinen Rätseln" }
+      ],
+      "impulse": [
+        "Küchen-Labor: Erst raten, ob ein Gegenstand schwimmt oder sinkt - dann in der Spülschüssel ausprobieren.",
+        "Sammel-Forschung: Auf dem Spaziergang Steine, Zapfen oder Blätter sammeln und zuhause nach eigenen Regeln sortieren.",
+        "Schätz-Spiel unterwegs: Wie viele Schritte sind es bis zur nächsten Laterne? Erst schätzen, dann gemeinsam zählen.",
+        "Warum-Runde beim Abendessen: Eine Kinderfrage aufgreifen (Warum ist der Mond mal rund, mal schmal?) und gemeinsam Vermutungen sammeln.",
+        "Schrauber-Werkstatt: Einen ausgedienten Wecker oder Kugelschreiber zusammen auseinandernehmen und hineinschauen."
+      ]
+    },
+    {
+      "id": "kreativ",
+      "name": "Kreativ & Kunst",
+      "emoji": "🎨",
+      "beschreibung": "Fantasie, Gestalten, Musik und Rollenspiel",
+      "momente": [
+        { "id": "kreativ-1", "text": "Denkt sich eigene Geschichten oder Fantasiefiguren aus" },
+        { "id": "kreativ-2", "text": "Malt, knetet oder bastelt aus eigenem Antrieb und vertieft sich dabei" },
+        { "id": "kreativ-3", "text": "Singt oder summt oft vor sich hin und erfindet eigene Melodien" },
+        { "id": "kreativ-4", "text": "Verwandelt Alltagsdinge im Spiel (der Stock wird zum Zauberstab)" },
+        { "id": "kreativ-5", "text": "Schlüpft gern in Rollen und spielt kleine Szenen nach" },
+        { "id": "kreativ-6", "text": "Entdeckt Farben, Muster oder Klänge, die anderen gar nicht auffallen" },
+        { "id": "kreativ-7", "text": "Erfindet Reime, Quatschwörter oder ganz eigene Ausdrücke" },
+        { "id": "kreativ-8", "text": "Gestaltet Dinge gern nach eigenen Ideen um (Bauwerke, Bilder, den Tisch)" }
+      ],
+      "impulse": [
+        "Weitererzähl-Geschichte: Einen Anfangssatz schenken (Ein kleiner Bär findet eine Tür im Baum ...) - das Kind erzählt weiter.",
+        "Kritzel-Tausch: Eine Person malt einen Schnörkel, die andere macht ein Bild daraus - dann wird getauscht.",
+        "Verkleidungskiste: Alte Tücher, Hüte und Taschen sammeln und daraus kleine Theaterszenen erfinden.",
+        "Küchen-Orchester: Töpfe, Holzlöffel und gefüllte Dosen werden zu Instrumenten für ein selbst erfundenes Lied.",
+        "Karton-Verwandlung: Aus einem großen Karton wird ein Haus, eine Rakete oder ein Kaufladen - bauen, bemalen, bespielen."
+      ]
+    },
+    {
+      "id": "sozial",
+      "name": "Sozial & Miteinander",
+      "emoji": "🤝",
+      "beschreibung": "Mitgefühl, Zusammenspiel und Verantwortung",
+      "momente": [
+        { "id": "sozial-1", "text": "Tröstet von sich aus, wenn jemand traurig ist" },
+        { "id": "sozial-2", "text": "Teilt freiwillig oder gibt anderen etwas ab" },
+        { "id": "sozial-3", "text": "Merkt schnell, wie es anderen geht, und spricht es an" },
+        { "id": "sozial-4", "text": "Hilft jüngeren Kindern geduldig, ohne dass jemand darum bittet" },
+        { "id": "sozial-5", "text": "Schlägt bei Streit eigene Lösungen vor (Wir wechseln uns ab!)" },
+        { "id": "sozial-6", "text": "Hört aufmerksam zu und lässt andere ausreden" },
+        { "id": "sozial-7", "text": "Lädt andere Kinder zum Mitspielen ein und verteilt Rollen fair" },
+        { "id": "sozial-8", "text": "Kümmert sich verlässlich um Pflanzen, Tiere oder kleine Aufgaben" }
+      ],
+      "impulse": [
+        "Kuscheltier-Krankenstation: Ein Stofftier ist krank und wird gemeinsam untersucht, getröstet und gesund gepflegt.",
+        "Eine echte Aufgabe: Das Kind übernimmt dauerhaft etwas Wichtiges - Tisch decken oder Blumen gießen - und bekommt dafür ein ehrliches Danke.",
+        "Gefühle-Rätsel: Freude, Wut oder Müdigkeit ohne Worte vorspielen - die anderen raten, dann wird getauscht.",
+        "Verschenk-Projekt: Gemeinsam Kekse backen oder ein Bild gestalten und es Nachbarn oder Großeltern vorbeibringen.",
+        "Team-Turm: Zu zweit bauen, aber streng abwechselnd - jede Person darf immer nur ein Teil setzen."
+      ]
+    },
+    {
+      "id": "bewegung",
+      "name": "Bewegung & Geschick",
+      "emoji": "🤸",
+      "beschreibung": "Körpergefühl, Ausdauer und Fingerspitzengefühl",
+      "momente": [
+        { "id": "bewegung-1", "text": "Klettert, balanciert oder hüpft sicher und probiert gern Neues" },
+        { "id": "bewegung-2", "text": "Fädelt, steckt oder baut geschickt mit kleinen Teilen" },
+        { "id": "bewegung-3", "text": "Wirft und fängt Bälle mit Freude und wachsender Sicherheit" },
+        { "id": "bewegung-4", "text": "Schneidet, faltet oder klebt sorgfältig mit den Händen" },
+        { "id": "bewegung-5", "text": "Bewegt sich gern zu Liedern und merkt sich Bewegungsfolgen" },
+        { "id": "bewegung-6", "text": "Hilft beim Kochen oder Backen und arbeitet dabei geschickt mit" },
+        { "id": "bewegung-7", "text": "Ist ausdauernd unterwegs - rennen, hüpfen, Laufrad - ohne schnell zu ermüden" },
+        { "id": "bewegung-8", "text": "Macht Purzelbäume, springt über Hindernisse oder erfindet Kunststücke" }
+      ],
+      "impulse": [
+        "Wohnzimmer-Parcours: Kissen, Stühle und Decken werden zur Balancier- und Kletterstrecke - barfuß macht es am meisten Spaß.",
+        "Socken-Zielwurf: Sockenbälle in den Wäschekorb werfen und den Abstand nach jedem Treffer ein Stück vergrößern.",
+        "Nudel-Schmuck: Röhrennudeln auf eine Schnur fädeln - fertig ist die Kette für die Verkleidungskiste.",
+        "Stopp-Tanz: Alle singen und klatschen, das Kind tanzt - bei plötzlicher Stille erstarrt es wie eine Statue.",
+        "Barfuß-Fühlpfad: Handtuch, Fußmatte und Kissen auslegen und mit geschlossenen Augen ertasten, worauf man steht."
+      ]
+    }
+  ]
+}

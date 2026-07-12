@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Anfänger-Mut", "emoji": "🌱" },
+    { "ab": 8, "titel": "Dranbleiber*in", "emoji": "🐢" },
+    { "ab": 14, "titel": "Plan-Profi", "emoji": "🗺️" },
+    { "ab": 19, "titel": "Durchhalte-Held*in", "emoji": "🦸" }
+  ],
+  "szenarien": [
+    {
+      "id": "i01",
+      "situation": "Die Mathe-Hausaufgaben sind heute richtig schwer. Nach der dritten Aufgabe, die nicht klappt, willst du das Heft am liebsten in die Ecke werfen.",
+      "optionen": [
+        { "text": "Kurze Pause machen – aufstehen, Wasser trinken – und danach mit einem Plan weitermachen: die leichteste Aufgabe zuerst", "wert": 2 },
+        { "text": "Mit Wut im Bauch weitermachen, bis irgendwas rauskommt", "wert": 1 },
+        { "text": "Heft zuklappen: „Mathe kann ich eben nicht – fertig.“", "wert": 0 }
+      ],
+      "erklaerung": "Frust ist normal, aber er denkt schlecht mit. Eine Mini-Pause beruhigt dein Gehirn, und ein kleiner Plan (leichteste Aufgabe zuerst) holt dir ein Erfolgserlebnis zurück. Und Achtung, Falle: „Kann ich nicht“ heißt fast immer nur „kann ich NOCH nicht“."
+    },
+    {
+      "id": "i02",
+      "situation": "In zwei Wochen musst du ein Referat über Vulkane halten. Das fühlt sich riesig an – du weißt gar nicht, wo du anfangen sollst.",
+      "optionen": [
+        { "text": "Das große Ziel in kleine Schritte teilen: heute Bücher suchen, morgen lesen, übermorgen Plakat anfangen – ein Schritt pro Tag", "wert": 2 },
+        { "text": "Erst mal abwarten – zwei Wochen sind ja noch lang", "wert": 1 },
+        { "text": "Alles am Abend vorher auf einmal machen, das ging letztes Mal ja auch … irgendwie", "wert": 0 }
+      ],
+      "erklaerung": "Große Ziele machen Angst, kleine Schritte nicht. Mit einem Schritte-Plan siehst du jeden Tag, dass du weiterkommst – das macht Mut statt Druck. Alles auf den letzten Abend zu schieben bedeutet Stress, wenig Schlaf und ein schlechteres Referat."
+    },
+    {
+      "id": "i03",
+      "situation": "Du lernst Gitarre. Das neue Lied klingt auch nach einer Woche noch schief, und dein kleiner Bruder hält sich die Ohren zu. Du überlegst aufzuhören.",
+      "optionen": [
+        { "text": "Dranbleiben, aber schlauer üben: jeden Tag zehn Minuten nur die schwere Stelle – dein erstes Lied klang anfangs auch schief", "wert": 2 },
+        { "text": "Nur noch die alten Lieder spielen, die du schon gut kannst", "wert": 1 },
+        { "text": "Die Gitarre in die Ecke stellen: „Ich habe eben kein Talent.“", "wert": 0 }
+      ],
+      "erklaerung": "Können wächst durch Üben, nicht durch Talent-Zauber. Jedes Lied, das du heute kannst, klang am Anfang schief. Kurze tägliche Übe-Häppchen genau an der schweren Stelle bringen mehr als seltene Riesen-Übestunden – und viel mehr als Aufgeben."
+    },
+    {
+      "id": "i04",
+      "situation": "Dein Team verliert das Fußballspiel 0:4, und ausgerechnet du hast die größte Chance verschossen. Am liebsten würdest du deine Trinkflasche quer über den Platz kicken.",
+      "optionen": [
+        { "text": "Erst den Körper beruhigen: dreimal tief durchatmen, kurz allein gehen – und später mit dem Team besprechen, was ihr nächstes Training übt", "wert": 2 },
+        { "text": "Schweigend einpacken und die Wut mit nach Hause nehmen", "wert": 1 },
+        { "text": "Die Flasche wegkicken und rufen, dass der Schiedsrichter an allem schuld war", "wert": 0 }
+      ],
+      "erklaerung": "Wut nach einer Niederlage ist okay – sie zeigt, dass dir das Spiel wichtig ist. Der Profi-Trick: erst den Körper beruhigen (atmen, kurz bewegen), dann denken. Wer die Schuld nur bei anderen sucht, lernt nichts fürs nächste Spiel."
+    },
+    {
+      "id": "i05",
+      "situation": "Du willst für den Vokabeltest lernen, aber dein Handy brummt alle zwei Minuten: neue Nachrichten in der Klassengruppe.",
+      "optionen": [
+        { "text": "Das Handy in einen anderen Raum legen und erst nach dem Lernen antworten", "wert": 2 },
+        { "text": "Das Handy umdrehen, aber neben dir liegen lassen – du willst ja nichts verpassen", "wert": 1 },
+        { "text": "Jede Nachricht kurz checken – dauert ja nur ein paar Sekunden", "wert": 0 }
+      ],
+      "erklaerung": "Jede Unterbrechung wirft dein Gehirn aus dem Lern-Modus, und es braucht mehrere Minuten, um wieder hineinzufinden. Ein Handy direkt neben dir lenkt schon durchs Daliegen ab. Stärkster Zug: raus damit aus dem Zimmer – die Nachrichten laufen nicht weg."
+    },
+    {
+      "id": "i06",
+      "situation": "Beim Toben zu Hause stößt du die Lieblingstasse deiner Mutter vom Tisch. Sie zerbricht. Niemand hat es gesehen.",
+      "optionen": [
+        { "text": "Es gleich sagen: „Das war ich, es tut mir leid“ – und anbieten, beim Aufräumen zu helfen und etwas vom Taschengeld dazuzugeben", "wert": 2 },
+        { "text": "Abwarten und es erst zugeben, wenn jemand danach fragt", "wert": 1 },
+        { "text": "Die Scherben verstecken und so tun, als wüsstest du von nichts", "wert": 0 }
+      ],
+      "erklaerung": "Einen Fehler zugeben braucht Mut – und genau dieser Mut macht dich stark. Vertuschen bedeutet Dauerstress, weil du das Geheimnis ständig mitschleppen musst. Wer ehrlich ist und mit anpackt, dem vertraut man beim nächsten Mal umso mehr."
+    },
+    {
+      "id": "i07",
+      "situation": "Seit Tagen verstehst du das Thema Brüche nicht. Im Unterricht melden sich alle – nur du traust dich nicht zu fragen, weil das dumm aussehen könnte.",
+      "optionen": [
+        { "text": "Um Hilfe bitten: nach der Stunde zur Lehrerin gehen oder eine Freundin fragen – Hilfe holen ist ein starker Zug, kein schwacher", "wert": 2 },
+        { "text": "Zu Hause allein weiterknobeln und hoffen, dass es irgendwann Klick macht", "wert": 1 },
+        { "text": "Nichts sagen, mitnicken und die Lücke einfach mitschleppen", "wert": 0 }
+      ],
+      "erklaerung": "Niemand versteht alles allein – auch Erwachsene fragen ständig um Rat. Wer fragt, wirkt nicht dumm, sondern zeigt, dass er wirklich verstehen will. Eine Lücke, die du versteckst, wird bis zur Klassenarbeit nur größer."
+    },
+    {
+      "id": "i08",
+      "situation": "Du sparst seit einem Monat auf ein Skateboard. Heute siehst du im Laden ein Spielzeug, das genau so viel kostet wie dein ganzes gespartes Geld.",
+      "optionen": [
+        { "text": "Weitersparen: zu Hause auf deinen Sparplan schauen und ausrechnen, wie viele Wochen noch fehlen – Vorfreude gehört zum Ziel dazu", "wert": 2 },
+        { "text": "Einen kleinen Teil ausgeben und den Rest weitersparen – dauert dann eben länger", "wert": 1 },
+        { "text": "Alles sofort ausgeben – wer weiß, ob du das Skateboard dann überhaupt noch willst", "wert": 0 }
+      ],
+      "erklaerung": "Warten können ist wie ein Muskel: Jedes Mal, wenn du der Sofort-Lust widerstehst, wird er stärker. Ein Blick auf den Sparplan hilft, weil du deinen Fortschritt schwarz auf weiß siehst. Und das Skateboard nach Wochen des Sparens fühlt sich doppelt gut an."
+    },
+    {
+      "id": "i09",
+      "situation": "Nächste Woche trittst du beim Schulfest mit einem Gedicht auf. Wenn du nur daran denkst, klopft dein Herz – und du überlegst, dich krankzumelden.",
+      "optionen": [
+        { "text": "Den Auftritt in kleinen Stufen üben: erst allein vorm Spiegel, dann vor der Familie – mit jedem Mal schrumpft das Lampenfieber", "wert": 2 },
+        { "text": "Einfach hoffen, dass es am Tag selbst schon irgendwie klappt", "wert": 1 },
+        { "text": "Dich krankmelden – dann bist du das Herzklopfen sofort los", "wert": 0 }
+      ],
+      "erklaerung": "Herzklopfen vor einem Auftritt haben sogar Profis – dein Körper macht sich startklar, das ist keine Schwäche. Was wirklich hilft, ist Üben in kleinen Stufen: Spiegel, Familie, Bühne. Kneifen nimmt die Angst nur kurz weg – beim nächsten Mal ist sie größer."
+    },
+    {
+      "id": "i10",
+      "situation": "Deine Schule sucht Kinder für die Theater-AG. Du würdest so gern mitmachen, aber du denkst: „Wenn ich schlecht bin, lachen alle.“",
+      "optionen": [
+        { "text": "Hingehen und es ausprobieren – Anfänger*innen dürfen Fehler machen, genau dafür ist eine AG da", "wert": 2 },
+        { "text": "Dieses Jahr nur zuschauen und vielleicht nächstes Jahr mitmachen", "wert": 1 },
+        { "text": "Gar nicht erst hingehen – dann kann wenigstens nichts schiefgehen", "wert": 0 }
+      ],
+      "erklaerung": "Wenn nichts schiefgehen kann, kann auch nichts Neues gelingen. Alle in der AG haben mal klein angefangen und Fehler gemacht – genau so lernt man. Der Satz „Ich probiere es“ ist mutiger als jedes perfekte Ergebnis."
+    }
+  ]
+}

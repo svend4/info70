@@ -1,0 +1,31 @@
+/* Kita-Wochenplaner: Druckansicht für den Aushang (Elternbrett).
+   Auf dem Bildschirm sind .kwp-nur-druck-Elemente unsichtbar; beim Drucken
+   verschwinden Formular, Check und Werkzeuge (.kwp-nur-bildschirm) und es
+   bleibt ein ruhiger Wochenplan Mo-Fr übrig. */
+
+.kwp-nur-druck { display: none; }
+
+@media print {
+  .kwp-nur-bildschirm { display: none !important; }
+  .kwp-nur-druck { display: block; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    break-inside: avoid;
+  }
+}
