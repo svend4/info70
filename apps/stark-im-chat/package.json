@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stark-im-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stark im Chat: Szenario-Training gegen Cybermobbing fuer 8-12 Jahre - hinschauen, nicht mitmachen, helfen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

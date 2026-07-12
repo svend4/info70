@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Chat-Neuling", "emoji": "🌱" },
+    { "ab": 8, "titel": "Aufpasser*in", "emoji": "👀" },
+    { "ab": 14, "titel": "Mutmacher*in", "emoji": "💪" },
+    { "ab": 19, "titel": "Chat-Held*in", "emoji": "🦸" }
+  ],
+  "szenarien": [
+    {
+      "id": "c01",
+      "situation": "In der Klassengruppe teilt jemand ein peinliches Foto von Mia. Alle schicken 😂-Smileys.",
+      "optionen": [
+        { "text": "Auch ein 😂 schicken – ist doch nur Spaß", "wert": 0 },
+        { "text": "Nichts schreiben und weiterscrollen", "wert": 1 },
+        { "text": "Nicht mitmachen – und Mia privat schreiben: „Ich finde das nicht okay. Ich bin auf deiner Seite.“", "wert": 2 }
+      ],
+      "erklaerung": "Jedes 😂 macht das Mobbing stärker. Schon EINE Nachricht an Mia ändert alles: Wer Unterstützung bekommt, fühlt sich nicht mehr allein. Das ist die Superkraft der Zuschauer*innen."
+    },
+    {
+      "id": "c02",
+      "situation": "Unter Bens Video schreibt jemand: „Du bist so peinlich, lösch dich!“ Andere liken den Kommentar.",
+      "optionen": [
+        { "text": "Den Kommentar melden (Melde-Funktion) und einem Erwachsenen davon erzählen", "wert": 2 },
+        { "text": "Den Kommentar liken – er ist ja irgendwie witzig", "wert": 0 },
+        { "text": "Zurückbeleidigen: „Du bist selbst peinlich!“", "wert": 0 }
+      ],
+      "erklaerung": "Melden ist nicht petzen – dafür gibt es die Funktion! Zurückbeleidigen macht dich selbst zum Mobber und den Streit größer. Melden + Bescheid sagen stoppt ihn."
+    },
+    {
+      "id": "c03",
+      "situation": "Du bekommst einen Screenshot: „Schau, was Lena über dich geschrieben hat!“ Du bist wütend und willst sofort zurückschlagen.",
+      "optionen": [
+        { "text": "Sofort eine richtig gemeine Antwort an Lena schicken", "wert": 0 },
+        { "text": "Erst mal Pause: Handy weglegen, durchatmen – im Zorn schreibt man Dinge, die man bereut", "wert": 2 },
+        { "text": "Den Screenshot der halben Klasse weiterleiten und fragen, was sie denken", "wert": 0 }
+      ],
+      "erklaerung": "Wut ist okay – aber im Zorn posten macht alles schlimmer. Profi-Trick: 30 Minuten warten, mit jemandem reden, DANN entscheiden. Und: Screenshots können auch gefälscht sein!"
+    },
+    {
+      "id": "c04",
+      "situation": "Du wirst in eine neue Gruppe eingeladen. Sie heißt „Alle gegen Tim 🤮“.",
+      "optionen": [
+        { "text": "Beitreten, nur um mitzulesen – du schreibst ja nichts Gemeines", "wert": 0 },
+        { "text": "Nicht beitreten", "wert": 1 },
+        { "text": "Nicht beitreten, Tim unterstützen und einem Erwachsenen von der Gruppe erzählen", "wert": 2 }
+      ],
+      "erklaerung": "Auch stille Mitglieder machen so eine Gruppe stark – jede*r in der Liste tut Tim weh. So eine Gruppe ist Mobbing und muss gestoppt werden: Erwachsene können das, du musst es nur melden."
+    },
+    {
+      "id": "c05",
+      "situation": "Dein Freund hat eine Idee: „Lass uns zum Spaß ein Fake-Profil von unserem Mitschüler anlegen, mit lustigen Sprüchen!“",
+      "optionen": [
+        { "text": "Mitmachen – ist doch nur ein Witz", "wert": 0 },
+        { "text": "Abraten: „Das fühlt sich für ihn nicht wie ein Witz an. Und Fake-Profile sind verboten.“", "wert": 2 },
+        { "text": "Nicht mitmachen, aber auch nichts sagen", "wert": 1 }
+      ],
+      "erklaerung": "Ein Fake-Profil ist Identitätsklau – verletzend und sogar strafbar. Ein guter Freund sagt STOPP, bevor etwas passiert. Das ist keine Spaßbremse, das ist Mut."
+    },
+    {
+      "id": "c06",
+      "situation": "Im Spiel-Chat wird ein Kind aus deiner Klasse immer wieder beleidigt, sobald es online kommt.",
+      "optionen": [
+        { "text": "Ausloggen – ist ja nicht dein Problem", "wert": 1 },
+        { "text": "Dem Kind zeigen, wie man Spieler blockiert und meldet – und dabei bleiben, bis es klappt", "wert": 2 },
+        { "text": "Mitlachen, damit du nicht selbst zur Zielscheibe wirst", "wert": 0 }
+      ],
+      "erklaerung": "Blockieren + Melden gibt es in jedem Spiel – aber viele Kinder kennen die Knöpfe nicht. Wer sie zeigt, ist praktische Hilfe. Und: Wer mitlacht, gehört zu den Mobbern, auch aus Angst."
+    },
+    {
+      "id": "c07",
+      "situation": "Du bekommst selbst seit Tagen gemeine Nachrichten von einer unbekannten Nummer.",
+      "optionen": [
+        { "text": "Screenshots machen (Beweise!), Nummer blockieren und alles einem Erwachsenen zeigen", "wert": 2 },
+        { "text": "Antworten und fragen, wer das ist und was das soll", "wert": 0 },
+        { "text": "Alles löschen und niemandem davon erzählen – ist zu peinlich", "wert": 0 }
+      ],
+      "erklaerung": "Merksatz: Sichern – Blockieren – Erzählen. Beweise helfen Erwachsenen zu handeln. Antworten belohnt die Täter. Und peinlich muss dir GAR NICHTS sein: Schuld hat, wer mobbt – niemals du."
+    },
+    {
+      "id": "c08",
+      "situation": "Jemand droht dir: „Wenn du nicht machst, was ich sage, poste ich das peinliche Video von dir!“",
+      "optionen": [
+        { "text": "Machen, was die Person sagt – dann ist Ruhe", "wert": 0 },
+        { "text": "Sofort Erwachsene einweihen und Beweise sichern – Erpressung ist eine Straftat, da helfen Große", "wert": 2 },
+        { "text": "Erst mal abwarten, vielleicht vergisst die Person es", "wert": 0 }
+      ],
+      "erklaerung": "Wer Forderungen erfüllt, bekommt meist neue. Erpressung ist strafbar – das regeln Erwachsene und notfalls die Polizei, nicht du allein. Sofort erzählen ist hier der einzige starke Zug."
+    },
+    {
+      "id": "c09",
+      "situation": "In der Klasse kursiert ein Umfrage-Link: „Stimme ab: Wer ist die nervigste Person der 5b?“",
+      "optionen": [
+        { "text": "Abstimmen – du willst ja sehen, wer gewinnt", "wert": 0 },
+        { "text": "Nicht abstimmen und den Link ignorieren", "wert": 1 },
+        { "text": "Nicht abstimmen und der Klassenlehrerin Bescheid geben – so eine „Umfrage“ ist Mobbing mit Stimmzettel", "wert": 2 }
+      ],
+      "erklaerung": "Solche Rankings sehen wie Spaß aus, sind aber organisiertes Fertigmachen. Jede Stimme tut weh. Erwachsene können die Umfrage stoppen, bevor das Ergebnis jemanden trifft."
+    },
+    {
+      "id": "c10",
+      "situation": "Deine Freundin traut sich nicht mehr in die Klassengruppe, weil sie dort ständig ausgelacht wird. Sie sagt: „Erzähl es bloß niemandem!“",
+      "optionen": [
+        { "text": "Versprechen zu schweigen – ein Versprechen ist ein Versprechen", "wert": 0 },
+        { "text": "Ihr sagen: „Ich bin bei dir. Aber das ist zu groß für uns zwei – wir holen zusammen Hilfe.“ Und die Nummer gegen Kummer zeigen: 116 111", "wert": 2 },
+        { "text": "Heimlich in der Gruppe alle anschreien, die gelacht haben", "wert": 1 }
+      ],
+      "erklaerung": "Bei Mobbing gilt: Hilfe holen bricht kein Versprechen – es ist Freundschaft. Gemeinsam zu Eltern oder Lehrkraft, oder erst anonym üben bei der Nummer gegen Kummer (116 111, kostenlos)."
+    }
+  ]
+}
