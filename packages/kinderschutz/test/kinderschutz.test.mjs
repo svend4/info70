@@ -7,6 +7,7 @@ test('Kriterienkatalog: IDs eindeutig, Pflichtfelder vorhanden', () => {
   assert.equal(new Set(ids).size, ids.length, 'doppelte Kriterien-IDs');
   for (const k of KRITERIEN) {
     assert.ok(k.id && k.quelle && k.text, `Kriterium unvollständig: ${JSON.stringify(k)}`);
+    assert.ok(k.hilfe?.length >= 80, `${k.id}: hilfe-Text fehlt oder zu kurz (Prüfpraxis-Destillat!)`);
   }
   assert.ok(istBekanntesKriterium('werbefrei'));
   assert.ok(!istBekanntesKriterium('gibt-es-nicht'));

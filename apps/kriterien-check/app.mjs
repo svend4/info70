@@ -61,11 +61,17 @@ function render() {
           speichereStatus(s);
           render();
         });
-        return el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start;padding:0.4rem 0' },
-          eingabe,
-          el('label', { for: `kc-${k.id}` },
-            el('span', {}, k.text),
-            el('small', { style: 'display:block;color:#4b5563' }, k.quelle)));
+        return el('div', { style: 'padding:0.4rem 0' },
+          el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
+            eingabe,
+            el('label', { for: `kc-${k.id}` },
+              el('span', {}, k.text),
+              el('small', { style: 'display:block;color:#4b5563' }, k.quelle))),
+          k.hilfe
+            ? el('details', { style: 'margin:0.25rem 0 0 2.1rem' },
+                el('summary', { style: 'cursor:pointer;font-size:0.85rem;color:var(--k-blau-dunkel)' }, '💡 So prüfst du das'),
+                el('p', { style: 'font-size:0.85rem;margin:0.3rem 0 0;color:#374151' }, k.hilfe))
+            : '');
       })));
 
   const berichtsFeld = el('textarea', {
