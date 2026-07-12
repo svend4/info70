@@ -1,22 +1,15 @@
 {
-  "name": "info70-kinder-netz-monorepo",
-  "private": true,
+  "name": "info70-kinder-netz-toolkit",
   "version": "0.1.0",
-  "description": "Monorepo prototypes for child-safe digital apps inspired by Germany's post-Ein-Netz-fuer-Kinder landscape.",
+  "private": true,
   "type": "module",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "description": "Four focused digital-safety prototypes built on a dependency-free shared foundation.",
   "scripts": {
+    "test": "node --test --test-isolation=none",
     "validate": "node scripts/validate-monorepo.mjs",
-    "start:safe-search": "node apps/safe-search/server.mjs",
-    "start:media-time": "node apps/media-time/server.mjs",
-    "start:help-bridge": "node apps/help-bridge/server.mjs",
-    "start:ai-literacy": "node apps/ai-literacy/server.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "smoke": "node scripts/browser-smoke.mjs"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
