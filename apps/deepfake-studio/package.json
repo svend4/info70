@@ -1,0 +1,8 @@
+{
+  "name": "@info70/deepfake-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deepfake-Studio: konstruktionistischer Simulator - Kinder bauen aus Bausteinen selbst eine Fake-Schlagzeile und lernen Erkennungs-Checkliste plus AI-Act-Kennzeichnungspflicht.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

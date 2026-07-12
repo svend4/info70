@@ -1,0 +1,8 @@
+{
+  "name": "@info70/dark-pattern-labyrinth",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dark-Pattern-Labyrinth: Simulator fuer 8-12 Jahre - durch eine Fake-App voller manipulativer Tricks zum ehrlichen Ausgang klicken und 7 Dark Patterns beim Namen kennenlernen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

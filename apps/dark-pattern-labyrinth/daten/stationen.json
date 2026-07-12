@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Neu im Labyrinth", "emoji": "🌀" },
+    { "ab": 3, "titel": "Augen auf!", "emoji": "👀" },
+    { "ab": 5, "titel": "Trick-Spürnase", "emoji": "🕵️" },
+    { "ab": 7, "titel": "Muster-Meister*in", "emoji": "🏆" }
+  ],
+  "stationen": [
+    {
+      "id": "s01",
+      "name": "Countdown-Trick (falscher Zeitdruck)",
+      "situation": "Kaum öffnest du die Glitzi-Sammel-App, blinkt ein riesiges Angebot: „🎁 MEGA-STARTERPAKET – nur noch 4:59 Minuten! Hol dir 100 Glitzi-Diamanten, bevor die Zeit abläuft!“ Eine Uhr tickt laut herunter.",
+      "optionen": [
+        { "text": "⚡ Schnell zugreifen – gleich ist das Angebot für immer weg!", "istFalle": true },
+        { "text": "🧘 Ruhig bleiben und erst mal in Ruhe umschauen – ein ehrliches Angebot läuft nicht weg", "istFalle": false },
+        { "text": "⏰ In Panik losrennen und jemanden holen, damit ihr es noch rechtzeitig schafft", "istFalle": true }
+      ],
+      "erklaerung": "Die tickende Uhr soll dich hetzen, damit du nicht nachdenkst. Das Geheimnis: Solche Countdowns starten meist einfach wieder von vorn – der Zeitdruck ist nur gespielt. Merke: Wenn dich etwas hetzt, ist das ein Warnsignal – kein Grund zur Eile."
+    },
+    {
+      "id": "s02",
+      "name": "Vorangekreuzte Häkchen",
+      "situation": "Vor dem ersten Spiel zeigt Glitzi eine Liste: ☑ „Glitzi darf dir jeden Tag Post schicken“ ☑ „Deine Punkte werden allen gezeigt“ ☑ „Extra-Angebote anzeigen“. Alle Häkchen sind schon gesetzt! Darunter leuchtet ein großer Knopf: „Weiter“.",
+      "optionen": [
+        { "text": "Einfach „Weiter“ tippen – die Häkchen waren ja schon drin", "istFalle": true },
+        { "text": "Stopp! Jedes Häkchen einzeln lesen und selbst entscheiden, was angekreuzt bleibt", "istFalle": false },
+        { "text": "Zur Sicherheit noch ein Häkchen MEHR setzen – viel hilft viel", "istFalle": true }
+      ],
+      "erklaerung": "Die App hat hier für dich entschieden – natürlich so, wie es IHR nützt, nicht dir. Faire Apps starten mit den sichersten Einstellungen, und DU kreuzt selbst an, was du möchtest. Merke: Was schon angekreuzt ist, verdient deinen genauesten Blick."
+    },
+    {
+      "id": "s03",
+      "name": "Confirmshaming (Beschämen beim Nein-Sagen)",
+      "situation": "Ein Fenster ploppt auf: „Willst du das Glitzi-Geschenkpaket abonnieren?“ Darunter zwei Knöpfe: „JA, ich liebe Geschenke! 🎁“ – und klein daneben: „Nein, ich mag keine Geschenke 😢“.",
+      "optionen": [
+        { "text": "„JA, ich liebe Geschenke!“ tippen – du willst ja nicht wie ein Geschenke-Hasser wirken", "istFalle": true },
+        { "text": "Trotzdem „Nein“ tippen – der traurige Satz ist nur ein Trick und sagt nichts über dich", "istFalle": false },
+        { "text": "Gar nichts tippen und das Fenster einfach ewig offen lassen", "istFalle": true }
+      ],
+      "erklaerung": "Der Nein-Knopf ist absichtlich so gemein formuliert, dass du dich beim Ablehnen schlecht fühlst. Natürlich magst du Geschenke – du magst nur dieses Abo nicht! Merke: Ein ehrliches Nein braucht keinen fiesen Satz. Du darfst immer Nein sagen, ohne dich zu schämen."
+    },
+    {
+      "id": "s04",
+      "name": "Versteckter Schließen-Knopf",
+      "situation": "Plötzlich füllt eine Riesen-Werbung den ganzen Bildschirm: „GLITZI-SUPER-DEAL – JETZT HOLEN!“ Du willst sie nur wegmachen. Aber wo ist bloß der Schließen-Knopf?",
+      "optionen": [
+        { "text": "🌟 JETZT HOLEN! (der riesige Glitzer-Knopf in der Mitte)", "istFalle": true },
+        { "text": "🎀 Mehr erfahren", "istFalle": true },
+        { "text": "✕ schließen (das winzige, blasse Kreuz in der Ecke)", "istFalle": false }
+      ],
+      "erklaerung": "Das ✕ ist absichtlich winzig, blass und in der Ecke versteckt, damit du „aus Versehen“ auf die Werbung tippst. Profi-Blick: Zuerst das Schließen-Kreuz suchen – meist oben in einer Ecke – und lieber genau zielen als schnell tippen. Ehrliche Apps verstecken das Schließen nicht."
+    },
+    {
+      "id": "s05",
+      "name": "Fake-Badge (falsche Benachrichtigung)",
+      "situation": "Auf der Glocke der Glitzi-App leuchtet eine rote 5 – als hättest du fünf ungelesene Nachrichten. Komisch: Du kennst hier doch niemanden, der dir schreiben könnte.",
+      "optionen": [
+        { "text": "Sofort drauftippen – bestimmt ist es etwas superwichtiges!", "istFalle": true },
+        { "text": "Kurz nachdenken: Wer sollte mir hier schreiben? Die rote Zahl kann warten", "istFalle": false },
+        { "text": "Die App ab jetzt ständig öffnen, damit nie wieder eine rote Zahl aufleuchtet", "istFalle": true }
+      ],
+      "erklaerung": "Die rote Zahl tut so, als hättest du etwas Wichtiges verpasst – dahinter steckt aber nur Werbung für Glitzi-Pakete. Solche Fake-Badges kitzeln das Gefühl „Ich verpasse etwas!“. Merke: Echte Nachrichten kommen von echten Menschen – nicht von einer App, die dir etwas verkaufen will."
+    },
+    {
+      "id": "s06",
+      "name": "Werbe-Schleife (Belohnung fürs Werbung-Schauen)",
+      "situation": "Level geschafft! Glitzi bietet an: „Nimm 10 Diamanten – ODER schau ein Werbevideo und bekomme 50! Danach wartet noch ein Video für 100! Und dann noch eins …“",
+      "optionen": [
+        { "text": "Video um Video schauen – mehr Diamanten sind mehr Diamanten!", "istFalle": true },
+        { "text": "Die normale Belohnung nehmen und weiterspielen – deine Zeit ist mehr wert als Glitzer-Zahlen", "istFalle": false },
+        { "text": "Das Handy weitergeben, damit jemand anderes die Videos für dich schaut", "istFalle": true }
+      ],
+      "erklaerung": "Die App verdient mit jedem Video echtes Geld – und bezahlt dich mit erfundenen Diamanten. Damit die Schleife nie endet, sind die Belohnungen absichtlich knapp. Merke: Hier bekommst du nichts geschenkt – hier wird deine Zeit und Aufmerksamkeit verkauft."
+    },
+    {
+      "id": "s07",
+      "name": "Kündigungs-Labyrinth (Abo-Falle beim Verlassen)",
+      "situation": "Du willst die Glitzi-Probewoche beenden, bevor sie Geld kostet. Die App jammert: „Wirklich gehen? 😭 Deine Glitzis vermissen dich!“ Dann: „Bist du GANZ sicher?“ Dann: „Bleib doch – hier sind 20 Geschenk-Diamanten!“ Und der Beenden-Knopf sitzt jedes Mal woanders.",
+      "optionen": [
+        { "text": "Aufgeben – das ist viel zu kompliziert, dann läuft das Abo eben weiter", "istFalle": true },
+        { "text": "Ruhig dranbleiben und jeden Bildschirm bis „Wirklich beenden“ durchklicken – und bei Geld-Sachen Erwachsene dazuholen", "istFalle": false },
+        { "text": "Die 20 Geschenk-Diamanten nehmen und doch bleiben", "istFalle": true }
+      ],
+      "erklaerung": "Anmelden geht mit einem Tipp, Abmelden dauert zehn – das ist Absicht, damit du müde wirst und aufgibst. In der EU ist dieser Trick sogar verboten: Aufhören muss so leicht sein wie Anfangen. Merke: Lass dich nicht zermürben – und hol bei allem, was Geld kostet, Erwachsene dazu."
+    }
+  ]
+}

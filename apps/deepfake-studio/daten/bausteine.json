@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "zeitung": "Wolkenstadt-Anzeiger",
+  "wer": [
+    { "id": "w01", "text": "der Bürgermeister von Wolkenstadt", "emoji": "🎩" },
+    { "id": "w02", "text": "eine berühmte Sport-Trainerin", "emoji": "🏅" },
+    { "id": "w03", "text": "ein Popstar", "emoji": "🎤" },
+    { "id": "w04", "text": "die Direktorin der Wolkenstadt-Schule", "emoji": "📚" },
+    { "id": "w05", "text": "ein Fernsehkoch aus Wolkenstadt", "emoji": "🍳" },
+    { "id": "w06", "text": "die Kapitänin der Wolkenstadt-Feuerwehr", "emoji": "🚒" }
+  ],
+  "was": [
+    { "id": "t01", "text": "hat den Stadtbrunnen heimlich mit Erdbeerpudding gefüllt", "emoji": "🍮" },
+    { "id": "t02", "text": "trainiert nachts ein Fußball-Team aus 20 Gummienten", "emoji": "🦆" },
+    { "id": "t03", "text": "ist beim Rathaus-Fest auf einem Riesen-Pfannkuchen eingeschlafen", "emoji": "🥞" },
+    { "id": "t04", "text": "fährt nur noch rückwärts Fahrrad – sogar zum Einkaufen", "emoji": "🚲" },
+    { "id": "t05", "text": "hat dem Rathaus-Papagei das Jodeln beigebracht", "emoji": "🦜" },
+    { "id": "t06", "text": "sammelt heimlich alle linken Socken der Stadt", "emoji": "🧦" }
+  ],
+  "augenzeugen": [
+    "„Ich habe ALLES mit eigenen Augen gesehen!“, behauptet eine Nachbarin.",
+    "„Hundertprozentig wahr, ich schwöre!“, sagt ein Mann an der Bushaltestelle.",
+    "„Alle in der Stadt reden schon davon!“, erzählt eine Schülerin."
+  ],
+  "kommentare": [
+    { "name": "WirbelWiesel99", "text": "Unglaublich!!! Sofort weitersagen! 😱" },
+    { "name": "PizzaPirat", "text": "Ich wusste es schon IMMER!" },
+    { "name": "Blitzmerker7", "text": "Warum zeigt das Fernsehen das nicht??" },
+    { "name": "GurkenGeist", "text": "Mein Cousin hat es auch gesehen!!" },
+    { "name": "SofaRakete", "text": "Teilen, bevor es gelöscht wird!!!" }
+  ]
+}

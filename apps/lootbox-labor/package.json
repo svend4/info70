@@ -1,0 +1,8 @@
+{
+  "name": "@info70/lootbox-labor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lootbox-Labor: Simulator mit offengelegten Wahrscheinlichkeiten - Kinder erleben, wie selten das Legendäre fällt und wie schnell das Taschengeld weg ist.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
