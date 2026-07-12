@@ -1,0 +1,8 @@
+{
+  "name": "@info70/takt-pause",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Takt-Pause: die Bildschirmzeit-Ampel - Kinder planen ihre Medienzeit und ihre Pausen selbst (Selbstbeobachtung statt Kontrolle).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

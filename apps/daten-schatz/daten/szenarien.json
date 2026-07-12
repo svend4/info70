@@ -91,6 +91,48 @@
       "beste": "ablehnen",
       "auchOk": ["fragen"],
       "erklaerung": "Fremde Mitspieler müssen nicht wissen, wie du aussiehst und wie alt du bist. Dein Gesicht und dein Alter gehören zu deinem Schatz – zeig sie nur Menschen, die du wirklich kennst."
+    },
+    {
+      "id": "s13",
+      "situation": "Kostenfalle? Ein Spiel bietet dir eine geheimnisvolle Glitzer-Truhe für 4,99 €. Was drin ist, siehst du erst NACH dem Kauf.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Das ist eine Lootbox – Kaufen ohne zu wissen, was man bekommt, funktioniert wie ein Glücksspielautomat. Meistens ist Enttäuschung drin. Echte Schätze kauft man nicht blind!"
+    },
+    {
+      "id": "s14",
+      "situation": "Eine App lockt: „Teste 30 Tage GRATIS! Einfach Zahlungsdaten eingeben – jederzeit kündbar.“",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "„Gratis testen“ mit Zahlungsdaten ist ein klassischer Abo-Trick: Wer das Kündigen vergisst, zahlt automatisch weiter. Das ist eine Entscheidung für Erwachsene – Zahlungsdaten gibst du nie selbst ein."
+    },
+    {
+      "id": "s15",
+      "situation": "Das Spiel verkauft „Juwelen“: 100 Stück für 0,99 €. Dein Traum-Skin kostet 1150 Juwelen. Kaufen?",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Rechne nach: 1150 Juwelen sind über 11 echte Euro! Fantasie-Währungen gibt es genau deshalb – damit man das echte Geld nicht mehr sieht. Rechne Spielwährung IMMER in Euro um, dann entscheidest du klüger."
+    },
+    {
+      "id": "s16",
+      "situation": "Im Spiel blinkt ein Countdown: „MEGA-DEAL! Nur noch 9:59 Minuten: Super-Paket 70 % billiger!“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Der Countdown ist ein Druck-Trick: Du sollst kaufen, bevor du nachdenkst. Kleiner Detektiv-Test: Warte, bis er abläuft – das „einmalige Angebot“ kommt fast immer wieder."
+    },
+    {
+      "id": "s17",
+      "situation": "Deine Lieblings-App kostet plötzlich: „Nur 2,99 € pro Woche – weniger als ein Eis!“",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "„Pro Woche“ klingt winzig, ist aber ein Trick: 2,99 € jede Woche sind über 150 € im Jahr – ein ganzes Fahrrad! Abos sind Dauerkosten und damit Familiensache. Immer aufs Jahr hochrechnen."
+    },
+    {
+      "id": "s18",
+      "situation": "Ein Freund schickt dir sein Spiel-Passwort: „Kauf für mich Diamanten, meine Eltern haben es mir gesperrt. Ich zahl es dir zurück!“",
+      "beste": "ablehnen",
+      "auchOk": [],
+      "erklaerung": "Doppelte Falle: Fremde Passwörter benutzt man nie (auch von Freunden!), und Geld-Deals unter Kindern enden in Streit. Seine Eltern haben das Kaufen mit Absicht gesperrt – hilf ihm nicht, sie auszutricksen."
     }
   ]
 }

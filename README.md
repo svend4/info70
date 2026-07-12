@@ -23,6 +23,7 @@ info70/
 │   ├── daten-schatz/            🗝️ Защита данных: сценарный тренажёр — MVP готов
 │   ├── kettenbrief-stopper/     🛑 Цепные сообщения: симулятор «останови волну» — MVP готов
 │   ├── stark-im-chat/           💪 Против кибербуллинга: тренажёр свидетеля — MVP готов
+│   ├── takt-pause/              🚦 Экранное время: светофор и паузы — MVP готов
 │   ├── mitmach-arena/           🗳️ Участие и демократия: голосования + Klassen-Koffer — MVP готов
 │   ├── geschichten-werkstatt/   ✍️ Творчество с ИИ: конструктор историй (прототип)
 │   └── kriterien-check/         ✅ Self-audit оператора по критериям (для взрослых) — MVP готов
@@ -53,9 +54,10 @@ npm test       # тесты (node --test)
 | `nachrichten-detektive` | Nachrichtenkompetenz + Werbe-Radar (22 дела) | ✅ рабочий MVP |
 | `kinderrechte-entdecker` | Права ребёнка, Demokratiefähigkeit | ✅ рабочий MVP |
 | `feed-forscher` | Алгоритмы, фильтр-пузырь · DE/UK/RU | ✅ рабочий MVP |
-| `daten-schatz` | Datenschutz, безопасные настройки | ✅ рабочий MVP |
+| `daten-schatz` | Datenschutz + Kostenfallen (18 сценариев) | ✅ рабочий MVP |
 | `kettenbrief-stopper` | Цепные сообщения, страхи в сети | ✅ рабочий MVP |
 | `stark-im-chat` | Кибербуллинг: роль свидетеля, помощь | ✅ рабочий MVP |
+| `takt-pause` | Экранное время: самонаблюдение, паузы | ✅ рабочий MVP |
 | `mitmach-arena` | Teilhabe + Klassen-Koffer (сбор голосов файлом) | ✅ рабочий MVP |
 | `kriterien-check` | Self-audit оператора (для взрослых) | ✅ рабочий MVP |
 | `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |

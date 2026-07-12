@@ -34,3 +34,11 @@ test('didaktische Balance: alle drei Antworttypen kommen als beste Antwort vor',
     assert.ok(beste.has(code), `"${code}" ist nie die beste Antwort - Kinder lernen sonst ein starres Muster statt Abwägen`);
   }
 });
+
+test('Kostenfallen-Paket vorhanden (Pipeline-Idee 11, Gefährdungsatlas-Kapitel)', () => {
+  const kostenfallen = daten.szenarien.filter((s) => /€|abo|juwel|lootbox|truhe|kauf/i.test(JSON.stringify(s)));
+  assert.ok(kostenfallen.length >= 5, 'mindestens 5 Kostenfallen-Szenarien');
+  const alles = JSON.stringify(daten.szenarien);
+  assert.ok(/lootbox/i.test(alles), 'Lootbox-Mechanik muss vorkommen');
+  assert.ok(/abo/i.test(alles), 'Abo-Trick muss vorkommen');
+});

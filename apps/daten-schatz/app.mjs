@@ -8,6 +8,7 @@ import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/ind
 installiereNetzwerkWaechter();
 
 const REKORD_SCHLUESSEL = 'ds.rekord';
+const RUNDE = 10;
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
@@ -39,8 +40,8 @@ function startBildschirm() {
   const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', {}, `Apps und Websites fragen ständig nach deinen Daten. In ${daten.szenarien.length} Situationen entscheidest du: erlauben, ablehnen – oder erst Erwachsene fragen?`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 💎`) : '',
+      el('p', {}, `Apps und Websites wollen deine Daten – und dein Geld. In ${RUNDE} Situationen aus einem Vorrat von ${daten.szenarien.length} (auch Kostenfallen wie Lootboxen und Abo-Tricks!) entscheidest du: erlauben, ablehnen – oder erst Erwachsene fragen?`),
+      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE * 2} 💎`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Wache übernehmen'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Apps und Websites fragen ständig nach deinen Daten. Du entscheidest: erlauben, ablehnen, oder erst Erwachsene fragen?') }, '🔊 Vorlesen'))),
@@ -50,7 +51,7 @@ function startBildschirm() {
 }
 
 function starteRunde() {
-  szenarien = mischen(daten.szenarien);
+  szenarien = mischen(daten.szenarien).slice(0, RUNDE);
   index = 0;
   punkte = 0;
   szenarioBildschirm();
