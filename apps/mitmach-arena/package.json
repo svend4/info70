@@ -1,0 +1,8 @@
+{
+  "name": "@info70/mitmach-arena",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Mitmach-Arena: Abstimmungen für Klassenrat und Familie - Teilhabe und Demokratie für Kinder (Prototyp)",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

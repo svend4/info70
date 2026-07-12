@@ -1,0 +1,8 @@
+{
+  "name": "@info70/nachrichten-detektive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nachrichten-Detektive: Spiel zur Nachrichtenkompetenz für Kinder von 8 bis 12 Jahren (echt oder fake?)",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

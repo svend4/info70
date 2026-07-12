@@ -1,0 +1,19 @@
+{
+  "name": "info70",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kindermedien-Monorepo: kindgerechte digitale Angebote (werbefrei, datensparsam, mobile-first)",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Spürnase in Ausbildung", "emoji": "🔍" },
+    { "ab": 5, "titel": "Nachwuchs-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 9, "titel": "Profi-Detektiv*in", "emoji": "🎖️" },
+    { "ab": 12, "titel": "Meister-Detektiv*in", "emoji": "🏆" }
+  ],
+  "fragen": [
+    {
+      "id": "f01",
+      "typ": "echt-fake",
+      "kategorie": "Fake News",
+      "meldung": "Schokolade macht schlau! Wer jeden Tag drei Tafeln isst, bekommt bessere Noten in Mathe.",
+      "korrekt": "fake",
+      "erklaerung": "Das klingt zu schön, um wahr zu sein – und genau das ist ein Warnzeichen. Es gibt keine Studie, die das zeigt. Große Behauptungen brauchen gute Beweise."
+    },
+    {
+      "id": "f02",
+      "typ": "wahl",
+      "kategorie": "Quellen-Check",
+      "frage": "Du liest eine spannende Nachricht. Woran erkennst du am besten, ob sie stimmt?",
+      "antworten": [
+        "Viele Leute haben sie geteilt",
+        "Sie steht auch auf mehreren bekannten Nachrichtenseiten",
+        "Sie hat ganz viele Ausrufezeichen!!!"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Echte Nachrichten findest du bei mehreren verlässlichen Quellen. Wie oft etwas geteilt wird, sagt nichts darüber, ob es stimmt."
+    },
+    {
+      "id": "f03",
+      "typ": "echt-fake",
+      "kategorie": "Fake News",
+      "meldung": "Forschende haben auf dem Mars gefrorenes Wasser gefunden.",
+      "korrekt": "echt",
+      "erklaerung": "Stimmt wirklich! Raumsonden haben Wassereis auf dem Mars nachgewiesen. Nicht alles Überraschende ist fake – deshalb: erst prüfen, dann urteilen."
+    },
+    {
+      "id": "f04",
+      "typ": "wahl",
+      "kategorie": "Werbung erkennen",
+      "frage": "Ein YouTuber sagt: „Diese Schuhe sind die besten der Welt! Link in der Beschreibung!“ Was ist das wahrscheinlich?",
+      "antworten": [
+        "Ein guter Tipp von einem Freund",
+        "Werbung – er bekommt vermutlich Geld dafür",
+        "Eine Nachricht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Wenn jemand ein Produkt in den Himmel lobt und einen Kauf-Link zeigt, ist das meistens Werbung. Werbung will verkaufen, nicht informieren."
+    },
+    {
+      "id": "f05",
+      "typ": "echt-fake",
+      "kategorie": "Kettennachricht",
+      "meldung": "WICHTIG! Schick diese Nachricht an 10 Freunde weiter, sonst wird dein Handy heute Nacht gesperrt!",
+      "korrekt": "fake",
+      "erklaerung": "Typische Kettennachricht: Sie macht Druck und Angst. Niemand kann dein Handy sperren, weil du eine Nachricht nicht weiterleitest. Einfach löschen!"
+    },
+    {
+      "id": "f06",
+      "typ": "wahl",
+      "kategorie": "Bilder-Check",
+      "frage": "Ein Foto zeigt einen Hai, der durch eine überschwemmte Stadt schwimmt. Was denkst du als Detektiv*in?",
+      "antworten": [
+        "Wow, das muss echt sein – es ist ja ein Foto!",
+        "Fotos können bearbeitet oder von einer KI erstellt sein – erst prüfen",
+        "Haie wohnen eben manchmal in Städten"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Genau dieses Hai-Foto taucht seit Jahren bei jedem Hochwasser auf – es ist eine Fälschung. Bilder beweisen nichts, sie lassen sich leicht verändern."
+    },
+    {
+      "id": "f07",
+      "typ": "wahl",
+      "kategorie": "Algorithmen",
+      "frage": "Du schaust ein Katzenvideo. Danach zeigt dir die App immer mehr Katzenvideos. Warum?",
+      "antworten": [
+        "Zufall – die App weiß nichts über dich",
+        "Ein Algorithmus merkt sich, was du anschaust, und zeigt dir mehr davon",
+        "Es gibt einfach nur noch Katzenvideos im Internet"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Apps benutzen Algorithmen: Programme, die sich merken, was dir gefällt, damit du länger dranbleibst. Deshalb sehen alle Menschen unterschiedliche Videos."
+    },
+    {
+      "id": "f08",
+      "typ": "echt-fake",
+      "kategorie": "Fake News",
+      "meldung": "Honig kann manchmal gegen Husten helfen – das haben Untersuchungen gezeigt.",
+      "korrekt": "echt",
+      "erklaerung": "Stimmt: Studien zeigen, dass ein Löffel Honig Husten lindern kann (aber nicht für Babys unter einem Jahr!). Vorsichtige Aussagen mit Quellen sind oft echt."
+    },
+    {
+      "id": "f09",
+      "typ": "wahl",
+      "kategorie": "Clickbait",
+      "frage": "„Du wirst NIE glauben, was dieser Junge im Garten gefunden hat!!!“ – Wie nennt man so eine Überschrift?",
+      "antworten": [
+        "Clickbait – sie will nur, dass du draufklickst",
+        "Eine Schlagzeile aus den Nachrichten",
+        "Eine Einladung"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Clickbait (Klick-Köder) verrät absichtlich nichts und übertreibt, damit du klickst. Gute Überschriften sagen dir, worum es wirklich geht."
+    },
+    {
+      "id": "f10",
+      "typ": "echt-fake",
+      "kategorie": "Daten-Falle",
+      "meldung": "GRATIS! Dieses Spiel schenkt dir 1000 Diamanten – gib einfach deinen vollen Namen, deine Adresse und dein Alter ein!",
+      "korrekt": "fake",
+      "erklaerung": "Das ist eine Daten-Falle. Deine Daten sind wertvoll – seriöse Spiele verlangen dafür keine Adresse. Gib nie persönliche Daten ein, ohne Erwachsene zu fragen."
+    },
+    {
+      "id": "f11",
+      "typ": "wahl",
+      "kategorie": "Detektiv-Trick",
+      "frage": "Du bist unsicher, ob eine Nachricht stimmt. Was ist der beste Detektiv-Trick?",
+      "antworten": [
+        "Sie schnell weiterschicken – andere wissen es bestimmt",
+        "Erwachsene fragen und in einer Kindersuchmaschine (z. B. fragFINN) nachprüfen",
+        "Einfach glauben, wenn das Bild dazu echt aussieht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Erst prüfen, dann teilen! Kindersuchmaschinen und Erwachsene helfen dir beim Faktencheck. Wer Unsicheres weiterschickt, verbreitet vielleicht Fakes."
+    },
+    {
+      "id": "f12",
+      "typ": "wahl",
+      "kategorie": "KI erkennen",
+      "frage": "Ein Bild sieht fast echt aus, wurde aber von einer KI erstellt. Woran kann man das manchmal erkennen?",
+      "antworten": [
+        "KI-Bilder sind immer schwarz-weiß",
+        "An seltsamen Details: komische Hände, verschwommene Schrift, schiefe Muster",
+        "Gar nicht – deshalb stimmt alles, was man sieht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "KI-Bilder verraten sich oft durch Kleinigkeiten: sechs Finger, unleserliche Schilder, seltsame Schatten. Und wenn nichts auffällt? Dann hilft der Quellen-Check!"
+    }
+  ]
+}

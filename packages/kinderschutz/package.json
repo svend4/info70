@@ -1,0 +1,12 @@
+{
+  "name": "@info70/kinderschutz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Compliance-Werkzeuge: Netzwerk-Wächter (keine externen Anfragen), Kriterienkatalog, Speicher-Audit",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./kriterien": "./src/kriterien.mjs"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Nachrichten-Detektive",
+  "short_name": "Detektive",
+  "description": "Echt oder Fake? Nachrichtenkompetenz-Spiel für Kinder von 8 bis 12 Jahren. Werbefrei, ohne Anmeldung.",
+  "lang": "de",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fffbeb",
+  "theme_color": "#1d4ed8",
+  "icons": []
+}

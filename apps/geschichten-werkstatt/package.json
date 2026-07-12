@@ -1,0 +1,8 @@
+{
+  "name": "@info70/geschichten-werkstatt",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Geschichten-Werkstatt: Kinder bauen eigene Geschichten - kreativ, offline, KI-bereit (Prototyp)",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

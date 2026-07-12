@@ -1,0 +1,130 @@
+/* kinder-ui: Design-Tokens und Basiskomponenten für 8-12 Jahre.
+   Mobile First (ab 360 px), Kontrast WCAG AA, Touch-Ziele >= 48 px. */
+
+:root {
+  --k-blau: #1d4ed8;
+  --k-blau-dunkel: #1e3a8a;
+  --k-gelb: #fbbf24;
+  --k-gruen: #15803d;
+  --k-rot: #b91c1c;
+  --k-papier: #fffbeb;
+  --k-tinte: #1f2937;
+  --k-karte: #ffffff;
+  --k-rand: #d1d5db;
+  --k-radius: 1rem;
+  --k-schatten: 0 2px 8px rgba(31, 41, 55, 0.15);
+  --k-schrift: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  font-family: var(--k-schrift);
+  background: var(--k-papier);
+  color: var(--k-tinte);
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+.k-app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.k-titel {
+  font-size: 1.6rem;
+  margin: 0;
+  text-align: center;
+  color: var(--k-blau-dunkel);
+}
+
+.k-untertitel {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.k-karte {
+  background: var(--k-karte);
+  border: 2px solid var(--k-rand);
+  border-radius: var(--k-radius);
+  box-shadow: var(--k-schatten);
+  padding: 1.25rem;
+}
+
+/* Touch-Ziele: mindestens 48px hoch */
+.k-knopf {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--k-blau);
+  border: none;
+  border-radius: var(--k-radius);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.k-knopf:hover { background: var(--k-blau-dunkel); }
+.k-knopf:focus-visible { outline: 4px solid var(--k-gelb); outline-offset: 2px; }
+.k-knopf:disabled { background: var(--k-rand); color: var(--k-tinte); cursor: default; }
+
+.k-knopf--neutral { background: #fff; color: var(--k-blau-dunkel); border: 2px solid var(--k-blau); }
+.k-knopf--neutral:hover { background: #eff6ff; }
+.k-knopf--richtig { background: var(--k-gruen); }
+.k-knopf--falsch { background: var(--k-rot); }
+.k-knopf--klein { display: inline-block; width: auto; font-size: 0.9rem; min-height: 3rem; }
+
+.k-antworten { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+
+.k-fortschritt {
+  height: 0.9rem;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.k-fortschritt > div {
+  height: 100%;
+  background: var(--k-gelb);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.k-hinweis {
+  border-left: 6px solid var(--k-gelb);
+  background: #fef9c3;
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--k-radius) var(--k-radius) 0;
+}
+.k-hinweis--richtig { border-color: var(--k-gruen); background: #dcfce7; }
+.k-hinweis--falsch { border-color: var(--k-rot); background: #fee2e2; }
+
+.k-fuss {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+.k-fuss a { color: inherit; }
+
+.k-gross { font-size: 2.5rem; text-align: center; margin: 0.5rem 0; }
+
+@media (min-width: 640px) {
+  html { font-size: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
