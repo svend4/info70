@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kinderrechte-entdecker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kinderrechte-Entdecker: Quiz zu den Rechten von Kindern (UN-Kinderrechtskonvention, auch im Digitalen) fuer 8-12 Jahre",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

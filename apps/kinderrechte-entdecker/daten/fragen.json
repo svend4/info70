@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Rechte-Entdecker*in", "emoji": "🌱" },
+    { "ab": 5, "titel": "Rechte-Kenner*in", "emoji": "🧭" },
+    { "ab": 9, "titel": "Rechte-Profi", "emoji": "🎖️" },
+    { "ab": 12, "titel": "Botschafter*in der Kinderrechte", "emoji": "🕊️" }
+  ],
+  "fragen": [
+    {
+      "id": "k01",
+      "typ": "binaer",
+      "kategorie": "Deine Rechte",
+      "aussage": "Kinder haben ein eigenes Recht auf Spielen, Ausruhen und Freizeit – das steht in einem echten Vertrag, den fast alle Länder der Welt unterschrieben haben.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Artikel 31 der UN-Kinderrechtskonvention. Spielen ist kein Luxus, sondern dein Recht – genauso wichtig wie Lernen."
+    },
+    {
+      "id": "k02",
+      "typ": "wahl",
+      "kategorie": "Deine Rechte",
+      "frage": "Was ist die UN-Kinderrechtskonvention?",
+      "antworten": [
+        "Ein Vertrag, in dem fast alle Länder Kindern eigene Rechte zusichern",
+        "Eine App für Kinder",
+        "Ein Gesetz, das nur in Deutschland gilt"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Die UN-Kinderrechtskonvention von 1989 ist der meistunterzeichnete Menschenrechtsvertrag der Welt. Deutschland hat ihn 1992 unterschrieben – deine Rechte stehen dort schwarz auf weiß."
+    },
+    {
+      "id": "k03",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Erwachsene dürfen alles allein entscheiden und müssen Kinder nie anhören – auch wenn es um die Kinder selbst geht.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch! Artikel 12: Du hast das Recht, deine Meinung zu sagen, und sie muss ernst genommen werden – in der Familie, in der Schule, sogar vor Gericht. Je älter du bist, desto mehr Gewicht hat sie."
+    },
+    {
+      "id": "k04",
+      "typ": "wahl",
+      "kategorie": "Mitbestimmung",
+      "frage": "Die Klasse plant ein Fest. Was passt zu deinem Recht auf Beteiligung?",
+      "antworten": [
+        "Die Lehrerin entscheidet alles, Kinder erfahren es am Ende",
+        "Kinder sagen ihre Meinung, stimmen ab – und das Ergebnis zählt",
+        "Nur die lautesten Kinder entscheiden"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Beteiligung heißt: Meinung sagen, gehört werden, mitentscheiden – zum Beispiel im Klassenrat. (Genau dafür gibt es in unserer Werkstatt die Mitmach-Arena!)"
+    },
+    {
+      "id": "k05",
+      "typ": "binaer",
+      "kategorie": "Privatsphäre",
+      "aussage": "Dein Tagebuch und deine Nachrichten sind privat – niemand darf einfach heimlich darin lesen.",
+      "korrekt": "ja",
+      "erklaerung": "Artikel 16: Kinder haben ein Recht auf Privatsphäre. Eltern haben zwar eine Schutzaufgabe – aber heimliches Lesen ohne guten Grund verletzt dein Recht. Darüber reden ist der bessere Weg."
+    },
+    {
+      "id": "k06",
+      "typ": "wahl",
+      "kategorie": "Gleichheit",
+      "frage": "Ein Kind kommt neu in die Klasse und spricht noch wenig Deutsch. Welche Aussage passt zu den Kinderrechten?",
+      "antworten": [
+        "Es hat genau die gleichen Rechte wie alle anderen Kinder",
+        "Es bekommt erst Rechte, wenn es gut Deutsch spricht",
+        "Rechte gelten nur im Land, in dem man geboren ist"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Artikel 2: Kinderrechte gelten für JEDES Kind – egal, woher es kommt, welche Sprache es spricht oder woran es glaubt. Kein Kind darf benachteiligt werden."
+    },
+    {
+      "id": "k07",
+      "typ": "binaer",
+      "kategorie": "Digital",
+      "aussage": "Kinderrechte gelten auch im Internet – zum Beispiel dein Recht auf Schutz und auf Privatsphäre.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Die UN haben 2021 klargestellt: Alle Kinderrechte gelten auch digital. Apps und Seiten müssen Kinder schützen – deshalb gibt es Regeln für Werbung, Daten und sichere Voreinstellungen."
+    },
+    {
+      "id": "k08",
+      "typ": "wahl",
+      "kategorie": "Information",
+      "frage": "Was bedeutet dein Recht auf Information?",
+      "antworten": [
+        "Du darfst dich informieren – und Medien sollen Informationen anbieten, die Kinder verstehen können",
+        "Du musst jeden Tag Nachrichten schauen",
+        "Erwachsene entscheiden, dass Kinder gar nichts erfahren"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Artikel 17: Du hast das Recht, dich aus Medien zu informieren – und einen Anspruch auf kindgerechte Informationen. Deshalb gibt es Kindernachrichten und Kindersuchmaschinen."
+    },
+    {
+      "id": "k09",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Wenn die Eltern es erlauben, darf ein Kind in Deutschland den ganzen Tag arbeiten, statt zur Schule zu gehen.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Du hast ein Recht auf Bildung (Artikel 28) und ein Recht auf Schutz vor ausbeuterischer Arbeit (Artikel 32). Das dürfen auch Eltern nicht außer Kraft setzen."
+    },
+    {
+      "id": "k10",
+      "typ": "wahl",
+      "kategorie": "Hilfe holen",
+      "frage": "Es geht dir schlecht und du kannst gerade mit niemandem in deiner Nähe reden. Wo bekommst du anonym und kostenlos Hilfe?",
+      "antworten": [
+        "Bei der „Nummer gegen Kummer“: 116 111 – kostenlos, auch ohne Namen",
+        "Nirgendwo – Kinder müssen damit allein klarkommen",
+        "Nur bei der Polizei"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Die Nummer gegen Kummer (116 111, montags bis samstags) ist kostenlos und anonym – du musst nicht mal deinen Namen sagen. Hilfe zu holen ist ein Zeichen von Stärke, nicht von Schwäche."
+    },
+    {
+      "id": "k11",
+      "typ": "binaer",
+      "kategorie": "Deine Rechte",
+      "aussage": "Jedes Kind hat von Geburt an das Recht auf einen Namen und eine Staatsangehörigkeit.",
+      "korrekt": "ja",
+      "erklaerung": "Artikel 7: Name und Staatsangehörigkeit gehören dir von der ersten Minute an. Sie machen dich offiziell sichtbar – ohne sie könntest du weder zur Schule noch zum Arzt."
+    },
+    {
+      "id": "k12",
+      "typ": "wahl",
+      "kategorie": "Digital",
+      "frage": "Eine App hat heimlich Daten über dich gesammelt. Was dürft ihr – du und deine Eltern – verlangen?",
+      "antworten": [
+        "Nichts – die Daten gehören jetzt der App",
+        "Dass die App zeigt, was sie gespeichert hat, und die Daten löscht",
+        "Höchstens ein Entschuldigungs-Video"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Das Datenschutzrecht (DSGVO) gibt euch starke Rechte: Auskunft, Berichtigung und Löschung – das „Recht auf Vergessenwerden“. Für Kinderdaten gelten sogar besonders strenge Regeln."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@info70/quiz-kern",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wiederverwendbarer Quiz-Ablauf (Start, Frage, Aufloesung, Ergebnis) und Fragen-Schema-Pruefung fuer die Lernspiele des Monorepos",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "exports": {
+    ".": "./src/quiz.mjs",
+    "./schema": "./src/schema.mjs"
+  }
+}

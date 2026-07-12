@@ -10,10 +10,10 @@
   "fragen": [
     {
       "id": "f01",
-      "typ": "echt-fake",
+      "typ": "binaer",
       "kategorie": "Fake News",
-      "meldung": "Schokolade macht schlau! Wer jeden Tag drei Tafeln isst, bekommt bessere Noten in Mathe.",
-      "korrekt": "fake",
+      "aussage": "Schokolade macht schlau! Wer jeden Tag drei Tafeln isst, bekommt bessere Noten in Mathe.",
+      "korrekt": "nein",
       "erklaerung": "Das klingt zu schön, um wahr zu sein – und genau das ist ein Warnzeichen. Es gibt keine Studie, die das zeigt. Große Behauptungen brauchen gute Beweise."
     },
     {
@@ -31,16 +31,16 @@
     },
     {
       "id": "f03",
-      "typ": "echt-fake",
+      "typ": "binaer",
       "kategorie": "Fake News",
-      "meldung": "Forschende haben auf dem Mars gefrorenes Wasser gefunden.",
-      "korrekt": "echt",
+      "aussage": "Forschende haben auf dem Mars gefrorenes Wasser gefunden.",
+      "korrekt": "ja",
       "erklaerung": "Stimmt wirklich! Raumsonden haben Wassereis auf dem Mars nachgewiesen. Nicht alles Überraschende ist fake – deshalb: erst prüfen, dann urteilen."
     },
     {
       "id": "f04",
       "typ": "wahl",
-      "kategorie": "Werbung erkennen",
+      "kategorie": "Werbe-Radar",
       "frage": "Ein YouTuber sagt: „Diese Schuhe sind die besten der Welt! Link in der Beschreibung!“ Was ist das wahrscheinlich?",
       "antworten": [
         "Ein guter Tipp von einem Freund",
@@ -52,10 +52,10 @@
     },
     {
       "id": "f05",
-      "typ": "echt-fake",
+      "typ": "binaer",
       "kategorie": "Kettennachricht",
-      "meldung": "WICHTIG! Schick diese Nachricht an 10 Freunde weiter, sonst wird dein Handy heute Nacht gesperrt!",
-      "korrekt": "fake",
+      "aussage": "WICHTIG! Schick diese Nachricht an 10 Freunde weiter, sonst wird dein Handy heute Nacht gesperrt!",
+      "korrekt": "nein",
       "erklaerung": "Typische Kettennachricht: Sie macht Druck und Angst. Niemand kann dein Handy sperren, weil du eine Nachricht nicht weiterleitest. Einfach löschen!"
     },
     {
@@ -82,14 +82,14 @@
         "Es gibt einfach nur noch Katzenvideos im Internet"
       ],
       "korrekt": 1,
-      "erklaerung": "Apps benutzen Algorithmen: Programme, die sich merken, was dir gefällt, damit du länger dranbleibst. Deshalb sehen alle Menschen unterschiedliche Videos."
+      "erklaerung": "Apps benutzen Algorithmen: Programme, die sich merken, was dir gefällt, damit du länger dranbleibst. Deshalb sehen alle Menschen unterschiedliche Videos. Probiere unseren Feed-Forscher aus!"
     },
     {
       "id": "f08",
-      "typ": "echt-fake",
+      "typ": "binaer",
       "kategorie": "Fake News",
-      "meldung": "Honig kann manchmal gegen Husten helfen – das haben Untersuchungen gezeigt.",
-      "korrekt": "echt",
+      "aussage": "Honig kann manchmal gegen Husten helfen – das haben Untersuchungen gezeigt.",
+      "korrekt": "ja",
       "erklaerung": "Stimmt: Studien zeigen, dass ein Löffel Honig Husten lindern kann (aber nicht für Babys unter einem Jahr!). Vorsichtige Aussagen mit Quellen sind oft echt."
     },
     {
@@ -107,10 +107,10 @@
     },
     {
       "id": "f10",
-      "typ": "echt-fake",
+      "typ": "binaer",
       "kategorie": "Daten-Falle",
-      "meldung": "GRATIS! Dieses Spiel schenkt dir 1000 Diamanten – gib einfach deinen vollen Namen, deine Adresse und dein Alter ein!",
-      "korrekt": "fake",
+      "aussage": "GRATIS! Dieses Spiel schenkt dir 1000 Diamanten – gib einfach deinen vollen Namen, deine Adresse und dein Alter ein!",
+      "korrekt": "nein",
       "erklaerung": "Das ist eine Daten-Falle. Deine Daten sind wertvoll – seriöse Spiele verlangen dafür keine Adresse. Gib nie persönliche Daten ein, ohne Erwachsene zu fragen."
     },
     {
@@ -138,6 +138,111 @@
       ],
       "korrekt": 1,
       "erklaerung": "KI-Bilder verraten sich oft durch Kleinigkeiten: sechs Finger, unleserliche Schilder, seltsame Schatten. Und wenn nichts auffällt? Dann hilft der Quellen-Check!"
+    },
+    {
+      "id": "w01",
+      "typ": "binaer",
+      "kategorie": "Werbe-Radar",
+      "aussage": "Wenn über einem Beitrag „Anzeige“ oder „Gesponsert“ steht, hat jemand Geld bezahlt, damit du ihn siehst.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Diese kleinen Wörter sind Pflicht-Hinweise: Der Beitrag ist Werbung. Trainiere deinen Blick – sie stehen oft ganz klein in der Ecke."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Werbe-Radar",
+      "frage": "Deine Lieblings-Streamerin packt ein Paket aus („Unboxing“) und ist von allem total begeistert. Was solltest du wissen?",
+      "antworten": [
+        "Sie hat die Sachen bestimmt alle selbst gekauft",
+        "Vielleicht wurden ihr die Sachen geschenkt oder sie wird bezahlt – such nach einer Kennzeichnung",
+        "Unboxing-Videos sind nie Werbung"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Viele Unboxing-Videos sind bezahlte Werbung oder zeigen Geschenke von Firmen. Detektiv-Frage: Steht irgendwo „Werbung“ oder „Anzeige“? Würde sie auch sagen, wenn etwas schlecht ist?"
+    },
+    {
+      "id": "w03",
+      "typ": "binaer",
+      "kategorie": "Werbe-Radar",
+      "aussage": "Der Diamanten-Shop in einem „Gratis“-Spiel ist nur Dekoration und will dir nichts verkaufen.",
+      "korrekt": "nein",
+      "erklaerung": "Der Shop ist das Geschäftsmodell! „Gratis“-Spiele verdienen oft mit In-App-Käufen: Erst ist alles kostenlos, dann locken Diamanten, Skins und „Angebote“. Kaufen nur mit Erwachsenen – oder gar nicht."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Werbe-Radar",
+      "frage": "Warum ist Werbung in Apps für Kinder oft als Mini-Spiel oder Belohnung verkleidet?",
+      "antworten": [
+        "Damit sie mehr Spaß macht – ein Geschenk der App",
+        "Damit du nicht merkst, dass es Werbung ist",
+        "Weil richtige Werbung verboten ist"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Getarnte Werbung wirkt wie Teil des Spiels – genau das ist der Trick. Wenn dir ein Spiel etwas „schenkt“, nachdem du ein Video angeschaut hast: Das Video war Werbung, und jemand hat dafür bezahlt."
+    },
+    {
+      "id": "w05",
+      "typ": "binaer",
+      "kategorie": "Werbe-Radar",
+      "aussage": "Influencer*innen in Deutschland müssen kennzeichnen, wenn sie für einen Beitrag bezahlt wurden.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt, das ist gesetzlich vorgeschrieben. Deshalb siehst du Wörter wie „Werbung“ oder „Anzeige“ in Videos und Posts. Fehlt die Kennzeichnung, obwohl es nach Werbung aussieht? Verdächtig!"
+    },
+    {
+      "id": "w06",
+      "typ": "wahl",
+      "kategorie": "Werbe-Radar",
+      "frage": "„Nur noch 2 Stück auf Lager! Kauf JETZT, sonst ist es weg!“ – Welcher Werbe-Trick ist das?",
+      "antworten": [
+        "Ein ehrlicher Hinweis, damit du nichts verpasst",
+        "Künstlicher Zeitdruck – du sollst kaufen, bevor du nachdenkst",
+        "Ein Rabatt"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Zeitdruck schaltet das Nachdenken aus – das wissen Verkäufer genau. Detektiv-Regel: Wer dich hetzt, will nicht dein Bestes. Gute Angebote laufen nicht in 5 Minuten weg."
+    },
+    {
+      "id": "w07",
+      "typ": "binaer",
+      "kategorie": "Werbe-Radar",
+      "aussage": "Ein „kostenloses“ Spiel kann trotzdem Geld verdienen wollen – zum Beispiel mit Käufen im Spiel oder mit Werbung.",
+      "korrekt": "ja",
+      "erklaerung": "Kostenlos heißt fast nie geschenkt. Die Detektiv-Frage bei jeder Gratis-App: Womit verdient sie ihr Geld? Mit Käufen, Werbung – oder mit Daten über dich?"
+    },
+    {
+      "id": "w08",
+      "typ": "wahl",
+      "kategorie": "Werbe-Radar",
+      "frage": "Ein YouTuber trinkt in jedem Video auffällig dieselbe Limonade, sagt aber nie etwas dazu. Wie heißt so etwas?",
+      "antworten": [
+        "Produktplatzierung – die Marke soll dir nebenbei ins Auge fallen",
+        "Zufall – irgendwas muss er ja trinken",
+        "Ein Rezept-Tipp"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Produktplatzierung ist Werbung ohne Werbespot: Die Marke steht „zufällig“ im Bild. Seriöse Kanäle kennzeichnen auch das – z. B. mit „unterstützt durch Produktplatzierung“."
+    },
+    {
+      "id": "w09",
+      "typ": "wahl",
+      "kategorie": "Werbe-Radar",
+      "frage": "Woran erkennt eine Detektivin auf einer guten Kinderseite die Werbung?",
+      "antworten": [
+        "Werbung und Inhalt sehen genau gleich aus",
+        "Werbung ist klar getrennt und gekennzeichnet – oder es gibt gar keine",
+        "Auf Kinderseiten gibt es immer besonders viel Werbung"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Gute Kinderseiten (etwa mit fragFINN-Siegel) trennen Werbung klar vom Inhalt oder verzichten ganz darauf. Wenn du Werbung nicht vom Inhalt unterscheiden kannst – Warnsignal!"
+    },
+    {
+      "id": "w10",
+      "typ": "binaer",
+      "kategorie": "Werbe-Radar",
+      "aussage": "Wenn ein Star ein Produkt toll findet, ist das ein Beweis, dass es wirklich gut ist.",
+      "korrekt": "nein",
+      "erklaerung": "Stars werden fürs Loben oft bezahlt – das nennt man Testimonial-Werbung. Ob ein Produkt gut ist, verraten unabhängige Tests (z. B. Stiftung Warentest), nicht die Werbung selbst."
     }
   ]
 }

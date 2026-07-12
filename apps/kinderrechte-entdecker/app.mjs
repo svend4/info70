@@ -1,0 +1,31 @@
+// Kinderrechte-Entdecker: Quiz zu den Rechten von Kindern (8-12 Jahre).
+// Ablauf kommt aus @info70/quiz-kern; hier bleiben nur Daten, Texte, Politik.
+import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
+import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+
+installiereNetzwerkWaechter();
+
+const daten = await fetch('daten/fragen.json').then((r) => r.json());
+
+starteQuiz({
+  wurzel: document.getElementById('app'),
+  daten,
+  rekordSchluessel: 'kre.rekord',
+  rundenGroesse: 12,
+  texte: {
+    titel: '🕊️ Kinderrechte-Entdecker',
+    untertitel: 'Du hast Rechte. Kennst du sie?',
+    intro: 'Fast alle Länder der Welt haben Kindern eigene Rechte versprochen – auf Papier und im Internet. Entdecke in 12 Fragen, was dir zusteht!',
+    startKnopf: '▶️ Entdeckungsreise starten',
+    fallWort: 'Frage',
+    binaerFrage: 'Stimmt das?',
+    binaerJa: '✅ Stimmt',
+    binaerNein: '❌ Stimmt nicht',
+    weiterKnopf: 'Nächste Frage ➡️',
+    fertigTitel: 'Entdeckungsreise geschafft!',
+    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Rechten entdeckt · Rekord: ${rekord}`,
+  },
+});
+
+// Offline-Fähigkeit nach dem ersten Laden
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

@@ -1,0 +1,11 @@
+{
+  "name": "Kinderrechte-Entdecker",
+  "short_name": "Kinderrechte",
+  "description": "Entdecke deine Rechte aus der UN-Kinderrechtskonvention - auch im Internet. Werbefrei, ohne Anmeldung.",
+  "lang": "de",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fffbeb",
+  "theme_color": "#1d4ed8",
+  "icons": []
+}

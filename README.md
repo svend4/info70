@@ -16,14 +16,16 @@ info70/
 │   ├── 04-roadmap.md            Дорожная карта и окна финансирования
 │   └── 05-ideen-pipeline.md     Пайплайн идей и переносимые методы
 ├── apps/                        Приложения (по одной подпапке на тему)
-│   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» (8–12 лет) — MVP готов
+│   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» + Werbe-Radar — MVP готов
+│   ├── kinderrechte-entdecker/  🕊️ Права ребёнка (UN-KRK, включая цифровые) — MVP готов
 │   ├── feed-forscher/           🔬 Алгоритмы и фильтр-пузырь: симулятор ленты (DE/UK/RU) — MVP готов
 │   ├── daten-schatz/            🗝️ Защита данных: сценарный тренажёр — MVP готов
 │   ├── mitmach-arena/           🗳️ Участие и демократия: голосования класса (прототип)
 │   ├── geschichten-werkstatt/   ✍️ Творчество с ИИ: конструктор историй (прототип)
 │   └── kriterien-check/         ✅ Self-audit оператора по критериям (для взрослых) — MVP готов
 ├── packages/                    Общий код
-│   ├── kinder-ui/               UI-компоненты и стили для детских интерфейсов
+│   ├── kinder-ui/               UI-компоненты, стили, мини-i18n
+│   ├── quiz-kern/               Общий квиз-движок и валидатор банков вопросов
 │   └── kinderschutz/            Утилиты соответствия: блокировка внешних запросов, чек-лист критериев
 └── tools/
     └── serve.mjs                Локальный dev-сервер без зависимостей
@@ -45,7 +47,8 @@ npm test       # тесты (node --test)
 
 | Приложение | Тема | Статус |
 |---|---|---|
-| `nachrichten-detektive` | Nachrichtenkompetenz (медиаграмотность) | ✅ рабочий MVP |
+| `nachrichten-detektive` | Nachrichtenkompetenz + Werbe-Radar (22 дела) | ✅ рабочий MVP |
+| `kinderrechte-entdecker` | Права ребёнка, Demokratiefähigkeit | ✅ рабочий MVP |
 | `feed-forscher` | Алгоритмы, фильтр-пузырь · DE/UK/RU | ✅ рабочий MVP |
 | `daten-schatz` | Datenschutz, безопасные настройки | ✅ рабочий MVP |
 | `kriterien-check` | Self-audit оператора (для взрослых) | ✅ рабочий MVP |
