@@ -2,10 +2,26 @@
   "version": 1,
   "zielgruppe": "8-12",
   "raenge": [
-    { "ab": 0, "titel": "Rechte-Entdecker*in", "emoji": "🌱" },
-    { "ab": 5, "titel": "Rechte-Kenner*in", "emoji": "🧭" },
-    { "ab": 9, "titel": "Rechte-Profi", "emoji": "🎖️" },
-    { "ab": 12, "titel": "Botschafter*in der Kinderrechte", "emoji": "🕊️" }
+    {
+      "ab": 0,
+      "titel": "Rechte-Entdecker*in",
+      "emoji": "🌱"
+    },
+    {
+      "ab": 5,
+      "titel": "Rechte-Kenner*in",
+      "emoji": "🧭"
+    },
+    {
+      "ab": 9,
+      "titel": "Rechte-Profi",
+      "emoji": "🎖️"
+    },
+    {
+      "ab": 12,
+      "titel": "Botschafter*in der Kinderrechte",
+      "emoji": "🕊️"
+    }
   ],
   "fragen": [
     {
@@ -133,6 +149,85 @@
       ],
       "korrekt": 1,
       "erklaerung": "Das Datenschutzrecht (DSGVO) gibt euch starke Rechte: Auskunft, Berichtigung und Löschung – das „Recht auf Vergessenwerden“. Für Kinderdaten gelten sogar besonders strenge Regeln."
+    },
+    {
+      "id": "k13",
+      "typ": "binaer",
+      "kategorie": "Digital",
+      "aussage": "Du darfst von einer App oder Webseite verlangen zu erfahren, welche Daten sie über dich gespeichert hat.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt – das ist dein Auskunftsrecht (DSGVO Artikel 15). Zusammen mit Erwachsenen kannst du fragen: Welche Daten habt ihr von mir? Ein gutes Kinderangebot antwortet klar und in einfacher Sprache."
+    },
+    {
+      "id": "k14",
+      "typ": "wahl",
+      "kategorie": "Digital",
+      "frage": "Eine App hat Daten über dich gesammelt, die du dort nicht mehr haben willst. Was ist dein Recht?",
+      "antworten": [
+        "Die Daten gehören jetzt für immer der App",
+        "Du darfst verlangen, dass die Daten gelöscht werden („Recht auf Vergessenwerden“)",
+        "Du müsstest die App verklagen, sonst geht nichts"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Du hast ein Recht auf Löschung (DSGVO Artikel 17). Gerade bei Kinderdaten gelten besonders strenge Regeln. Deine Eltern helfen dir, die Löschung zu verlangen."
+    },
+    {
+      "id": "k15",
+      "typ": "binaer",
+      "kategorie": "Digital",
+      "aussage": "Wenn du auf einer Plattform etwas Gemeines oder Gefährliches meldest, muss die Plattform deine Meldung ernst nehmen und bearbeiten.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig: Nach dem EU-Gesetz für digitale Dienste (DSA) müssen große Plattformen Meldewege anbieten und Meldungen bearbeiten. Melden ist dein Recht – und es hilft, das Netz für alle sicherer zu machen."
+    },
+    {
+      "id": "k16",
+      "typ": "binaer",
+      "kategorie": "Digital",
+      "aussage": "Wenn ein Bild oder Text von einer KI gemacht wurde, darfst du erwarten, dass das gekennzeichnet ist.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt: Das neue EU-KI-Gesetz verlangt für viele KI-Inhalte eine Kennzeichnung. Zu wissen, was echt und was künstlich ist, gehört zu deinem Recht auf verlässliche Information."
+    },
+    {
+      "id": "k17",
+      "typ": "wahl",
+      "kategorie": "Digital",
+      "frage": "Was bedeutet dein Recht auf „sichere Voreinstellungen“ bei Kinder-Apps?",
+      "antworten": [
+        "Die App muss von Anfang an möglichst sicher eingestellt sein, nicht du musst alles selbst absichern",
+        "Du musst zuerst alle Schutzfunktionen selbst suchen und anschalten",
+        "Sicherheit gibt es nur gegen Bezahlung"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Gute Kinderangebote sind von Haus aus sicher eingestellt (Privatsphäre an, Standort aus). Der Schutz ist die Voreinstellung – nicht deine Hausaufgabe. Das fordern auch die Förderregeln in Deutschland."
+    },
+    {
+      "id": "k18",
+      "typ": "binaer",
+      "kategorie": "Digital",
+      "aussage": "Plattformen dürfen Kindern personalisierte Werbung zeigen, die extra auf ihr Verhalten zugeschnitten ist.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Das EU-Gesetz für digitale Dienste (DSA) verbietet personalisierte Werbung, die auf die Daten von Minderjährigen zugeschnitten ist. Deine Daten dürfen nicht benutzt werden, um dir gezielt Werbung unterzuschieben."
+    },
+    {
+      "id": "k19",
+      "typ": "binaer",
+      "kategorie": "Digital",
+      "aussage": "Deine Kinderrechte gelten nur in der echten Welt, aber nicht im Internet.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch: Die Vereinten Nationen haben 2021 klargestellt (General Comment 25), dass ALLE deine Rechte auch digital gelten – Schutz, Beteiligung, Privatsphäre und Information, ob offline oder online."
+    },
+    {
+      "id": "k20",
+      "typ": "wahl",
+      "kategorie": "Digital",
+      "frage": "Deine Eltern helfen dir bei einer schwierigen Sache im Internet. Wie passt das zu deinen Rechten?",
+      "antworten": [
+        "Eltern entscheiden alles allein, deine Meinung zählt online nicht",
+        "Eltern begleiten und schützen dich – dein Recht, gehört zu werden, gilt trotzdem",
+        "Sobald du ein Handy hast, haben Eltern nichts mehr zu sagen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Beides gehört zusammen: Eltern haben die Aufgabe, dich zu schützen und zu begleiten (Artikel 5) – und du hast das Recht, gehört zu werden (Artikel 12). Gute Lösungen findet ihr gemeinsam, je älter du wirst, desto mehr entscheidest du mit."
     }
   ]
 }

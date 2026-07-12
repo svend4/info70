@@ -21,6 +21,15 @@ test('Werbe-Radar-Paket vorhanden (Pipeline-Idee 1)', () => {
   assert.ok(typen.has('binaer') && typen.has('wahl'), 'beide Fragetypen auch im Werbe-Paket');
 });
 
+test('KI-Radar-Paket vorhanden (Katalog Nr.1 Top-16)', () => {
+  const ki = daten.fragen.filter((f) => f.kategorie === 'KI-Radar');
+  assert.ok(ki.length >= 8, 'mindestens 8 KI-Radar-Fälle');
+  const typen = new Set(ki.map((f) => f.typ));
+  assert.ok(typen.has('binaer') && typen.has('wahl'), 'beide Fragetypen auch im KI-Paket');
+  const antworten = new Set(ki.filter((f) => f.typ === 'binaer').map((f) => f.korrekt));
+  assert.ok(antworten.has('ja') && antworten.has('nein'), 'Balance auch im KI-Paket');
+});
+
 test('Ränge sind mit einer 12er-Runde erreichbar', () => {
   const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
   assert.ok(maxAb <= 12, 'höchster Rang muss in einer Runde erreichbar sein');

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "hinweis": "Beobachtung des GRUPPENKLIMAS - keine kindbezogenen Daten, keine Soziogramme. Bewertet wird die Situation der Gruppe, nie einzelne Kinder.",
+  "bereiche": [
+    {
+      "id": "zugehoerigkeit",
+      "name": "Zugehörigkeit",
+      "aussagen": [
+        { "id": "zu1", "text": "Jedes Kind hat mindestens eine Spielpartnerin oder einen Spielpartner.", "impuls": "Beobachte im Freispiel gezielt Kinder, die oft allein bleiben, und schaffe kleine Anlässe (Tandem-Aufgaben, gemeinsame Rollen), ohne bloßzustellen." },
+        { "id": "zu2", "text": "Kein Kind wird beim Spielen oder in Gesprächen systematisch übergangen.", "impuls": "Wechsle bewusst die Sitz- und Gruppenzusammensetzung, damit sich immer wieder neue Konstellationen bilden und feste Ausschluss-Muster aufbrechen." },
+        { "id": "zu3", "text": "Neue Kinder werden von der Gruppe aufgenommen und begleitet.", "impuls": "Führe feste Willkommens-Rituale ein (Paten-Kind, Gruppen-Rundgang), damit Aufnahme nicht vom Zufall abhängt." },
+        { "id": "zu4", "text": "Unterschiede (Sprache, Herkunft, Fähigkeiten) werden als normal und bereichernd erlebt.", "impuls": "Mache Vielfalt sichtbar-positiv (mehrsprachige Begrüßung, Familienbräuche als Thema), statt sie zu übergehen." },
+        { "id": "zu5", "text": "Kinder trösten und helfen einander von sich aus.", "impuls": "Benenne und würdige prosoziales Verhalten laut, wenn es passiert - so wird es zum Vorbild für die Gruppe." }
+      ]
+    },
+    {
+      "id": "konfliktkultur",
+      "name": "Konfliktkultur",
+      "aussagen": [
+        { "id": "ko1", "text": "Kinder lösen kleinere Streitigkeiten zunehmend selbst.", "impuls": "Halte dich bei Mini-Konflikten kurz zurück und biete Sprach-Bausteine an („Ich möchte …“, „Mir gefällt nicht …“), statt sofort zu urteilen." },
+        { "id": "ko2", "text": "Erwachsene moderieren Konflikte, statt Schuldige zu bestimmen.", "impuls": "Nutze feste Konflikt-Fragen (Was ist passiert? Wie geht es euch? Was braucht ihr?) statt Schuldzuweisung." },
+        { "id": "ko3", "text": "Es gibt verständliche, gemeinsam getragene Gruppenregeln.", "impuls": "Erarbeite wenige, positiv formulierte Regeln MIT den Kindern und visualisiere sie mit Bildern." },
+        { "id": "ko4", "text": "Kinder dürfen Nein sagen, und ihr Nein wird respektiert.", "impuls": "Übe Grenzen-Setzen spielerisch (Stopp-Hand) und stärke Kinder, deren Nein oft übergangen wird." },
+        { "id": "ko5", "text": "Nach einem Streit finden Kinder wieder zueinander.", "impuls": "Biete Versöhnungs-Rituale an und dränge nie zur erzwungenen Entschuldigung - echte Wiedergutmachung braucht Zeit." }
+      ]
+    },
+    {
+      "id": "beteiligung",
+      "name": "Beteiligung",
+      "aussagen": [
+        { "id": "be1", "text": "Kinder entscheiden im Alltag echt mit (Themen, Abläufe, Projekte).", "impuls": "Gib echte Wahlmöglichkeiten mit spürbaren Folgen, nicht nur Schein-Abstimmungen (dazu passt die Mitmach-Arena)." },
+        { "id": "be2", "text": "Im Morgenkreis verteilt sich die Redezeit auf viele, nicht nur wenige Kinder.", "impuls": "Nutze Rede-Objekte und Methoden, die auch stille Kinder einbeziehen (Murmelrunde, Bildkarten zum Zeigen)." },
+        { "id": "be3", "text": "Kinder wissen, an wen sie sich mit einer Beschwerde wenden können.", "impuls": "Richte ein kindgerechtes Beschwerdeverfahren ein (Kummerkasten, feste Ansprechperson) - ein Kinderrecht nach SGB VIII." },
+        { "id": "be4", "text": "Die Interessen aller Kinder finden sich im Angebot wieder.", "impuls": "Frage regelmäßig die Interessen ab und greife auch Themen von leisen oder neuen Kindern auf." },
+        { "id": "be5", "text": "Kinder erleben, dass ihre Meinung etwas bewirkt.", "impuls": "Mache Entscheidungen sichtbar rückgekoppelt („Ihr habt X gewählt, deshalb machen wir X“)." }
+      ]
+    },
+    {
+      "id": "erfolg",
+      "name": "Erfolgs-Erleben",
+      "aussagen": [
+        { "id": "er1", "text": "Auch zurückhaltende Kinder bekommen sichtbare Erfolgs-Momente.", "impuls": "Plane bewusst Aufgaben, in denen stille Kinder glänzen können, und mache ihren Beitrag für die Gruppe sichtbar." },
+        { "id": "er2", "text": "Gemeinsame Projekte haben Rollen, in denen jedes Kind gebraucht wird.", "impuls": "Gestalte Projekte so, dass verschiedene Stärken (Bauen, Erzählen, Ordnen, Trösten) alle einen Platz haben." },
+        { "id": "er3", "text": "Anstrengung und Fortschritt werden gewürdigt, nicht nur das Ergebnis.", "impuls": "Lobe konkret den Weg („Du hast lange geübt“) statt pauschal das Talent - das stärkt das Durchhalten." },
+        { "id": "er4", "text": "Fehler gelten als Teil des Lernens, nicht als Blamage.", "impuls": "Reagiere auf Fehler ruhig und neugierig; erzähle auch von eigenen Missgeschicken, um Fehler zu entdramatisieren." },
+        { "id": "er5", "text": "Die Gruppe freut sich mit, wenn ein Kind etwas schafft.", "impuls": "Etabliere kleine Mitfreude-Rituale (Applaus-Regen, Erfolgs-Wand), damit Erfolg verbindet statt Neid zu wecken." }
+      ]
+    }
+  ]
+}

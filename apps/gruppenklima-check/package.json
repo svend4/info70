@@ -1,0 +1,8 @@
+{
+  "name": "@info70/gruppenklima-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gruppenklima-Check: Beobachtungs-Checkliste zum Klima der Kindergruppe (Fachkraefte), ohne kindbezogene Daten - abgeleitet aus der Praleska.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -15,7 +15,7 @@ starteQuiz({
   texte: {
     titel: '🕊️ Kinderrechte-Entdecker',
     untertitel: 'Du hast Rechte. Kennst du sie?',
-    intro: 'Fast alle Länder der Welt haben Kindern eigene Rechte versprochen – auf Papier und im Internet. Entdecke in 12 Fragen, was dir zusteht!',
+    intro: 'Fast alle Länder der Welt haben Kindern eigene Rechte versprochen – auf Papier und im Internet. Entdecke 12 Fragen aus einem Vorrat von 20, was dir zusteht!',
     startKnopf: '▶️ Entdeckungsreise starten',
     fallWort: 'Frage',
     binaerFrage: 'Stimmt das?',

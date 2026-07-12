@@ -55,22 +55,58 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-| Приложение | Тема | Статус |
+**29 приложений (28 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+описаны в docs/01–08; следующие 18 построены роями агентов из каталогов-
+конструкторов ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
+[docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Полный прогон: 223 теста.
+
+**Sicher im Netz — дети 8–12 (цифровые риски):**
+
+| Приложение | Тема | Из чего |
 |---|---|---|
-| `nachrichten-detektive` | Nachrichtenkompetenz + Werbe-Radar (22 дела) | ✅ рабочий MVP |
-| `kinderrechte-entdecker` | Права ребёнка, Demokratiefähigkeit | ✅ рабочий MVP |
-| `feed-forscher` | Алгоритмы, фильтр-пузырь · DE/UK/RU | ✅ рабочий MVP |
-| `daten-schatz` | Datenschutz + Kostenfallen (18 сценариев) | ✅ рабочий MVP |
-| `kettenbrief-stopper` | Цепные сообщения, страхи в сети | ✅ рабочий MVP |
-| `stark-im-chat` | Кибербуллинг: роль свидетеля, помощь | ✅ рабочий MVP |
-| `takt-pause` | Экранное время: самонаблюдение, паузы | ✅ рабочий MVP |
-| `mitmach-arena` | Teilhabe + Klassen-Koffer (сбор голосов файлом) | ✅ рабочий MVP |
-| `kriterien-check` | Self-audit оператора (для взрослых) | ✅ рабочий MVP |
-| `foerder-navigator` | Каталог грантов/премий + 80/20-калькулятор (для взрослых) | ✅ рабочий MVP |
+| `nachrichten-detektive` | Медиаграмотность + Werbe-Radar + KI-Radar (30 дел) | база |
+| `koeder-quiz` | Фишинг: «настоящее или наживка?» | кат.№1 |
+| `deepfake-studio` | Собери фейк — разоблачи его (AI Act) | кат.№1 |
+| `feed-forscher` | Алгоритмы, фильтр-пузырь · DE/UK/RU | база |
+| `dark-pattern-labyrinth` | Тёмные паттерны интерфейсов (DSA) | кат.№1 |
+| `lootbox-labor` | Лутбоксы с открытыми вероятностями | кат.№1 |
+| `bot-oder-buddy` | Приёмы «дружелюбного» ИИ-чат-бота | кат.№1 |
+| `daten-schatz` | Datenschutz + Kostenfallen (18 сценариев) | база |
+| `passwort-pruefstand` | Стойкость пароля, метод трёх слов | кат.№1 |
+| `kettenbrief-stopper` | Цепные сообщения | база |
+| `stark-im-chat` | Кибербуллинг: роль свидетеля | база |
+| `takt-pause` | Экранное время: самонаблюдение | база |
+
+**Stark werden / Familie — дети и семья:**
+
+| Приложение | Тема | Из чего |
+|---|---|---|
+| `kinderrechte-entdecker` | Права ребёнка + Digitale Rechte (20 вопр.) | база |
+| `mitmach-arena` | Teilhabe + Klassen-Koffer | база |
+| `ich-schaff-das` | Воля/самрегуляция (сценарии) | кат.№2 |
+| `stark-und-gesund` | Здоровый образ жизни (ВОЗ/DGE) | кат.№2 |
 | `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |
+| `gefuehle-entdecker` | Эмоции для 5–7 лет | кат.№2 |
+| `familien-medienvertrag` | Семейный медиадоговор (Eltern+Kind) | кат.№1 |
+| `gemeinsam-gesund-essen` | Ко-приложение 3–5 (со взрослым) | кат.№2 |
+
+**Kita & Fachkräfte / Betreiber — взрослые (локально, без детских данных):**
+
+| Приложение | Тема | Из чего |
+|---|---|---|
+| `entwicklungs-kompass` | Лист наблюдения развития (Kita) | кат.№2 |
+| `wohlfuehl-ampel` | Светофор эмоционального благополучия | кат.№2 |
+| `gruppenklima-check` | Климат группы (без социограмм) | кат.№2 |
+| `kita-wochenplaner` | Планировщик занятий + печать | кат.№2 |
+| `bewegungs-schatzkiste` | Картотека игр движения (печать) | кат.№2 |
+| `staerken-tagebuch` | Дневник сильных сторон (родители) | кат.№2 |
+| `selbstcheck-paedagogik` | Самрефлексия педагога | кат.№2 |
+| `kriterien-check` | Self-audit оператора | база |
+| `foerder-navigator` | Каталог грантов + 80/20-калькулятор | база |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
-метод «Eltern-Kompass») — ссылка «👪 Für Eltern» в подвале.
+метод «Eltern-Kompass») — ссылка «👪 Für Eltern» в подвале. Единая витрина —
+корневой `index.html`.
 
 ## Принципы разработки (кратко)
 

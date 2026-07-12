@@ -6,6 +6,9 @@
 (по 20 страниц) + семантический синтез, 12.07.2026. Машиночитаемая версия:
 [praleska-katalog.json](praleska-katalog.json).
 
+
+> **Статус сборки (12.07.2026):** роями агентов построено из этого каталога — Entwicklungs-Kompass, Wohlfühl-Ampel, Gruppenklima-Check, Kita-Wochenplaner, Bewegungs-Schatzkiste, Stärken-Tagebuch, Selbstcheck pädagogisches Ich, Ich schaff das!, Stark und gesund, Gefühle-Entdecker, Gemeinsam gesund essen. См. `apps/` и корневой `index.html`.
+
 ## Правовая и этическая рамка адаптации (обязательно)
 
 1. **Авторское право**: программа защищена (© НИО, 2007). Заимствуются только

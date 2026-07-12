@@ -6,7 +6,16 @@ import { pruefeFragen } from '../../../packages/quiz-kern/src/schema.mjs';
 const daten = JSON.parse(await readFile(new URL('../daten/fragen.json', import.meta.url), 'utf8'));
 
 test('Fragenbank: Schema gültig (quiz-kern)', () => {
-  assert.deepEqual(pruefeFragen(daten, { mindestFragen: 12 }), []);
+  assert.deepEqual(pruefeFragen(daten, { mindestFragen: 20 }), []);
+});
+
+test('Digitale-Rechte-Paket vorhanden (Katalog Nr.1 Top-17)', () => {
+  const digital = daten.fragen.filter((f) => f.kategorie === 'Digital');
+  assert.ok(digital.length >= 10, 'mindestens 10 Digital-Fragen (2 Basis + 8 Pack)');
+  const inhalt = JSON.stringify(digital);
+  assert.ok(/DSGVO|Auskunft|Löschung/.test(inhalt), 'Datenschutzrechte (DSGVO) abgedeckt');
+  assert.ok(/DSA|digitale Dienste|Werbung/.test(inhalt), 'DSA-Rechte (Melden/Werbeverbot) abgedeckt');
+  assert.ok(/KI|General Comment|2021/.test(inhalt), 'KI-Kennzeichnung / GC25 abgedeckt');
 });
 
 test('didaktische Balance: beide binaer-Antworten kommen vor', () => {

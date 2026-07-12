@@ -2,10 +2,26 @@
   "version": 1,
   "zielgruppe": "8-12",
   "raenge": [
-    { "ab": 0, "titel": "Spürnase in Ausbildung", "emoji": "🔍" },
-    { "ab": 5, "titel": "Nachwuchs-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 9, "titel": "Profi-Detektiv*in", "emoji": "🎖️" },
-    { "ab": 12, "titel": "Meister-Detektiv*in", "emoji": "🏆" }
+    {
+      "ab": 0,
+      "titel": "Spürnase in Ausbildung",
+      "emoji": "🔍"
+    },
+    {
+      "ab": 5,
+      "titel": "Nachwuchs-Detektiv*in",
+      "emoji": "🕵️"
+    },
+    {
+      "ab": 9,
+      "titel": "Profi-Detektiv*in",
+      "emoji": "🎖️"
+    },
+    {
+      "ab": 12,
+      "titel": "Meister-Detektiv*in",
+      "emoji": "🏆"
+    }
   ],
   "fragen": [
     {
@@ -243,6 +259,85 @@
       "aussage": "Wenn ein Star ein Produkt toll findet, ist das ein Beweis, dass es wirklich gut ist.",
       "korrekt": "nein",
       "erklaerung": "Stars werden fürs Loben oft bezahlt – das nennt man Testimonial-Werbung. Ob ein Produkt gut ist, verraten unabhängige Tests (z. B. Stiftung Warentest), nicht die Werbung selbst."
+    },
+    {
+      "id": "ki01",
+      "typ": "binaer",
+      "kategorie": "KI-Radar",
+      "aussage": "Auf einem Foto hat eine Person sechs Finger an einer Hand und die Schrift auf einem Schild ist verschwommen-krumm. Das ist ein Warnzeichen für ein KI-Bild.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! KI-Bildgeneratoren patzen oft bei Händen, Zähnen, Schrift und Mustern. Solche kleinen Fehler sind gute Detektiv-Hinweise – aber sie fehlen nicht immer, deshalb hilft zusätzlich der Quellen-Check."
+    },
+    {
+      "id": "ki02",
+      "typ": "wahl",
+      "kategorie": "KI-Radar",
+      "frage": "Am Telefon klingt eine Stimme genau wie deine Mama und bittet dich dringend um ein Passwort. Was tust du?",
+      "antworten": [
+        "Sofort das Passwort sagen – die Stimme klingt echt",
+        "Auflegen und Mama selbst über die gespeicherte Nummer zurückrufen",
+        "Die fremde Nummer als Kontakt speichern"
+      ],
+      "korrekt": 1,
+      "erklaerung": "KI kann Stimmen täuschend echt nachmachen. Deshalb gilt: Stimme allein ist kein Beweis. Leg auf und ruf die Person über die dir bekannte Nummer selbst an – Betrüger machen Druck, damit du nicht nachdenkst."
+    },
+    {
+      "id": "ki03",
+      "typ": "binaer",
+      "kategorie": "KI-Radar",
+      "aussage": "Ein Video zeigt einen berühmten Fußballstar, der allen Zuschauern teure Handys schenkt, wenn sie auf einen Link tippen. Solche Promi-Geschenk-Videos sind fast immer echte Aktionen.",
+      "korrekt": "nein",
+      "erklaerung": "Das sind Deepfake-Betrugsvideos: Gesicht und Stimme des Stars sind gefälscht, der Link führt in eine Falle. Kein echter Star verschenkt Handys über einen Link. Erst prüfen, ob seriöse Medien darüber berichten."
+    },
+    {
+      "id": "ki04",
+      "typ": "binaer",
+      "kategorie": "KI-Radar",
+      "aussage": "In der EU müssen viele KI-erzeugte Inhalte gekennzeichnet werden, damit du weißt, dass sie nicht echt sind.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt: Nach den neuen EU-Regeln (KI-Gesetz) muss vieles, was eine KI erstellt hat, als KI-Inhalt markiert sein. Achte auf Hinweise wie „Mit KI erstellt“ – fehlt so ein Hinweis, obwohl etwas künstlich wirkt, sei besonders vorsichtig."
+    },
+    {
+      "id": "ki05",
+      "typ": "wahl",
+      "kategorie": "KI-Radar",
+      "frage": "Ein KI-Chatbot antwortet dir super selbstbewusst auf eine Hausaufgaben-Frage. Was solltest du wissen?",
+      "antworten": [
+        "Ein Chatbot hat immer recht, weil er so viel weiß",
+        "Ein Chatbot kann Dinge frei erfinden – wichtige Fakten immer gegenprüfen",
+        "Was der Chatbot sagt, darf man ungeprüft abschreiben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "KI-Chatbots „halluzinieren“ manchmal: Sie erfinden Fakten, Namen oder Quellen, die überzeugend klingen, aber falsch sind. Nutze sie als Ideengeber und prüfe Wichtiges in verlässlichen Quellen nach."
+    },
+    {
+      "id": "ki06",
+      "typ": "binaer",
+      "kategorie": "KI-Radar",
+      "aussage": "Wenn du KI benutzt, um dir eine Geschichte auszudenken oder ein Bild für dein eigenes Projekt zu malen, und du ehrlich sagst, dass KI geholfen hat, ist das völlig in Ordnung.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! KI ist ein Werkzeug. Sie kreativ und ehrlich zu nutzen ist okay – Betrug ist nur, andere zu täuschen. Der Unterschied ist immer: Willst du etwas erschaffen oder jemanden reinlegen?"
+    },
+    {
+      "id": "ki07",
+      "typ": "wahl",
+      "kategorie": "KI-Radar",
+      "frage": "Du bist unsicher, ob ein Foto im Internet echt ist. Welcher Detektiv-Trick hilft am besten?",
+      "antworten": [
+        "Das Bild einfach glauben, wenn es scharf aussieht",
+        "Eine Bilder-Rückwärtssuche machen und schauen, wo das Bild sonst noch auftaucht",
+        "Die Anzahl der Likes zählen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Mit einer Bilder-Rückwärtssuche findest du heraus, ob ein Bild schon älter ist, aus einem anderen Zusammenhang stammt oder als Fälschung bekannt ist. Schärfe und Likes sagen nichts über die Echtheit."
+    },
+    {
+      "id": "ki08",
+      "typ": "binaer",
+      "kategorie": "KI-Radar",
+      "aussage": "Ein Anruf oder Video macht plötzlich Angst oder Druck und will, dass du sofort etwas tust. Am besten holst du eine erwachsene Person dazu.",
+      "korrekt": "ja",
+      "erklaerung": "Immer! Egal ob echt oder KI-Fälschung: Wer dich unter Druck setzt, will dein Nachdenken ausschalten. Ein Erwachsener hilft dir, in Ruhe zu prüfen – und du bekommst nie Ärger dafür, dass du fragst."
     }
   ]
 }
