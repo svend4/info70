@@ -1,0 +1,8 @@
+{
+  "name": "@info70/fomo-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FOMO-Kompass: Szenario-Trainer (2/1/0), der Kindern 8-12 hilft, Verpass-Aengste und Sog-Mechaniken (Streaks, Autoplay, Countdowns, Likes) zu durchschauen und Grenzen zu setzen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "f01",
+      "situation": "Es ist 21:30 Uhr, du liegst schon im Bett. Dein Handy vibriert: In der Klassengruppe geht gerade ein Witz-Wettbewerb los. „Wer jetzt nicht dabei ist, verpasst alles!“",
+      "mechanik": "Der Sofort-Sog: „Jetzt oder nie“ soll dich aus der Ruhe holen.",
+      "optionen": [
+        { "text": "Aufstehen und eine Stunde mitmachen – man will ja nichts verpassen", "wert": 0 },
+        { "text": "Kurz reinschauen, ob was Wichtiges dabei ist, dann weiterliegen", "wert": 1 },
+        { "text": "Handy stumm lassen: „Morgen lese ich in Ruhe nach. Ein Witz-Wettbewerb ist kein Notfall.“", "wert": 2 }
+      ],
+      "tipp": "Fast nichts im Chat ist wirklich „jetzt oder nie“. Nachts gehört dir – der Chat läuft morgen weiter, und die guten Witze kann man nachlesen."
+    },
+    {
+      "id": "f02",
+      "situation": "Du hast eine 40-Tage-Streak in einer App. Heute bist du hundemüde. Die App warnt: „Nur noch 2 Stunden, sonst ist deine Streak weg!“",
+      "mechanik": "Die Streak-Falle: Angst vor Verlust soll dich zurückholen, nicht Lust.",
+      "optionen": [
+        { "text": "Sich müde einloggen, nur um die Zahl zu retten", "wert": 0 },
+        { "text": "„Es ist nur eine Zahl. Wenn sie reißt, reißt sie. Ich schlaf jetzt.“", "wert": 2 },
+        { "text": "Schnell einloggen und dann noch „kurz“ weiterspielen", "wert": 1 }
+      ],
+      "tipp": "Eine Streak misst nicht, wie gut du bist – sie misst, wie oft die App dich zurückholt. Etwas nur aus Verlustangst zu tun, ist ein Warnzeichen, keine Motivation."
+    },
+    {
+      "id": "f03",
+      "situation": "Du siehst eine Story: Fast deine ganze Clique ist zusammen auf einem Ausflug – und du wurdest nicht gefragt. Es tut weh.",
+      "mechanik": "Der Highlight-Vergleich: Du siehst ihren besten Moment und dein normales Zuhause.",
+      "optionen": [
+        { "text": "Sofort eine bittere Nachricht schreiben: „Toll, ohne mich also.“", "wert": 0 },
+        { "text": "Stundenlang die Story anschauen und dich mies fühlen", "wert": 1 },
+        { "text": "Handy weglegen, den Schmerz zulassen – und morgen in Ruhe fragen: „Ich hab die Story gesehen. Sagt ihr mir nächstes Mal Bescheid?“", "wert": 2 }
+      ],
+      "tipp": "Ein Foto zeigt den besten Moment, nicht den ganzen Tag. Und nicht eingeladen zu sein tut echt weh – das darf es. Ruhig nachfragen bringt dich weiter als eine Nachricht aus Wut."
+    },
+    {
+      "id": "f04",
+      "situation": "Du schreibst deiner Freundin. Es steht sofort „Gelesen 20:14“ – aber sie antwortet nicht. Nach 10 Minuten denkst du: Ist sie sauer auf mich?",
+      "mechanik": "Der Lesebestätigungs-Druck: „gesehen“ macht aus Warten sofort Sorge.",
+      "optionen": [
+        { "text": "Drei weitere Nachrichten hinterherschicken: „?“ „Hallo?“ „Bist du sauer?“", "wert": 0 },
+        { "text": "Grübeln und alle 2 Minuten nachschauen, ob sie schon tippt", "wert": 1 },
+        { "text": "Denken: „Vielleicht isst sie gerade. ‚Gelesen‘ heißt nicht ‚hat Zeit‘.“ – und was anderes machen", "wert": 2 }
+      ],
+      "tipp": "„Gelesen“ sagt nur: Das Handy hat die Nachricht angezeigt. Es sagt nichts über Gefühle oder Zeit. Menschen dürfen antworten, wann es ihnen passt – du auch."
+    },
+    {
+      "id": "f05",
+      "situation": "Alle machen gerade dieselbe Challenge und posten ihre Videos. Du findest sie eigentlich albern, aber alle fragen: „Wo ist deins?“",
+      "mechanik": "Der Alle-machen-das-Sog: Dazugehören soll wichtiger sein als dein Gefühl.",
+      "optionen": [
+        { "text": "Mitmachen, obwohl du dich unwohl fühlst – Hauptsache dabei", "wert": 0 },
+        { "text": "„Challenges sind nicht mein Ding. Ich muss nicht bei allem mitmachen, um dazuzugehören.“", "wert": 2 },
+        { "text": "Ausreden erfinden, warum dein Video noch nicht fertig ist", "wert": 1 }
+      ],
+      "tipp": "„Alle machen das“ ist der älteste Trick. Echte Freund*innen bleiben, auch wenn du nicht bei jedem Trend mitmachst. Nein sagen zu dürfen, ist eine Stärke."
+    },
+    {
+      "id": "f06",
+      "situation": "Du wolltest nur kurz ein Video schauen. 45 Minuten später läuft immer noch Autoplay – du weißt nicht mehr, warum du überhaupt angefangen hast.",
+      "mechanik": "Der Endlos-Sog: Autoplay entscheidet weiter, damit du nicht aufhörst.",
+      "optionen": [
+        { "text": "„Noch eins“ denken – das nächste läuft ja schon von selbst", "wert": 0 },
+        { "text": "Weiterschauen, aber ein schlechtes Gewissen dabei haben", "wert": 1 },
+        { "text": "Bewusst stoppen: „Ich hab nicht entschieden weiterzuschauen – die App hat das entschieden.“ App zu, Autoplay in den Einstellungen aus", "wert": 2 }
+      ],
+      "tipp": "Wenn du nicht mehr weißt, warum du noch dranbleibst, hat das Design gewonnen. Autoplay ausschalten gibt dir die Entscheidung zurück – jedes Ende ist dann deins."
+    },
+    {
+      "id": "f07",
+      "situation": "Deine Lieblings-Influencerin zeigt ihr „perfektes Leben“: tolle Klamotten, tolle Reisen, immer glücklich. Danach findest du dein eigenes Zimmer plötzlich langweilig.",
+      "mechanik": "Der Werbe-Vergleich: Ein bezahltes Schaufenster wird mit deinem echten Leben verglichen.",
+      "optionen": [
+        { "text": "Dir eine Liste machen, was dir alles „fehlt“", "wert": 0 },
+        { "text": "Weiterscrollen und öfter unzufrieden sein", "wert": 1 },
+        { "text": "Kurz nachdenken: „Das ist ihr Job und oft bezahlt. Ich sehe ihr Schaufenster, nicht ihr Leben.“ – und Accounts entfolgen, die dich runterziehen", "wert": 2 }
+      ],
+      "tipp": "Viele „perfekte“ Posts sind Werbung, ausgesucht und gefiltert. Sich mit einem Schaufenster zu vergleichen, ist unfair zu dir. Entfolgen, was dich schlechter fühlen lässt, ist Selbstfürsorge."
+    },
+    {
+      "id": "f08",
+      "situation": "In einem Spiel gibt es heute ein Angebot: „Nur für die nächsten 30 Minuten! Danach für immer weg!“ Ein Countdown tickt rot.",
+      "mechanik": "Die künstliche Verknappung: Ein Countdown soll dich schnell und ohne Nachdenken kaufen lassen.",
+      "optionen": [
+        { "text": "Schnell kaufen, bevor die Zeit abläuft", "wert": 0 },
+        { "text": "Nervös den Countdown beobachten und hin- und herüberlegen", "wert": 1 },
+        { "text": "„Ein echter Countdown zwingt zum Denken-Aussetzen. Genau deshalb warte ich – und frage meine Eltern.“", "wert": 2 }
+      ],
+      "tipp": "Countdowns sollen dein Nachdenken ausschalten. Die meisten „einmaligen“ Angebote kommen wieder. Zeitdruck ist ein Verkaufstrick, kein Grund."
+    },
+    {
+      "id": "f09",
+      "situation": "Auf dein Ferienfoto gibt es nach einer Stunde nur 3 Likes. Bei anderen sind es viel mehr. Du überlegst, es wieder zu löschen.",
+      "mechanik": "Die Zahlen-Falle: Likes werden zum Maß dafür, wie viel du „wert“ bist.",
+      "optionen": [
+        { "text": "Das Foto löschen – so wenige Likes sind peinlich", "wert": 0 },
+        { "text": "Alle paar Minuten nachschauen, ob es mehr geworden sind", "wert": 1 },
+        { "text": "„Das Foto gefällt MIR. Likes sind eine Zahl, kein Zeugnis über mich.“ – und das Handy weglegen", "wert": 2 }
+      ],
+      "tipp": "Likes messen nicht deinen Wert, sondern nur, wer gerade online war und wie der Algorithmus dein Foto verteilt hat. Poste, was dir gefällt – nicht, was Zahlen bringt."
+    },
+    {
+      "id": "f10",
+      "situation": "Dein Akku ist bei 15 %, es ist spät, und du merkst: Du bist heute schon zum fünften Mal „nur kurz gucken, ob was Neues ist“ ins Handy gegangen. Etwas Neues war fast nie dabei.",
+      "mechanik": "Die Nachschau-Schleife: Die kleine Hoffnung auf „etwas Neues“ zieht dich immer wieder rein.",
+      "optionen": [
+        { "text": "Nochmal nachschauen – vielleicht ist DIESES Mal was Wichtiges da", "wert": 0 },
+        { "text": "Das Handy in die Hand nehmen, aber diesmal wirklich nur ganz kurz", "wert": 1 },
+        { "text": "Bewusst stoppen: Handy in einen anderen Raum, Nachrichten-Töne aus. „Wichtiges erreicht mich auch morgen.“", "wert": 2 }
+      ],
+      "tipp": "Dieses „nur kurz gucken“ ist kein Zufall, sondern ein Sog – wie bei einem Automaten. Der beste Gegenzug ist Abstand: Handy außer Reichweite, Benachrichtigungen aus."
+    },
+    {
+      "id": "f11",
+      "situation": "Eine App fragt: „Dürfen wir dir Benachrichtigungen schicken?“ Sie verspricht, du „verpasst dann nichts mehr“.",
+      "mechanik": "Die Aufmerksamkeits-Erlaubnis: Benachrichtigungen holen dich zurück, wann IMMER die App will.",
+      "optionen": [
+        { "text": "„Erlauben“ tippen – klar will ich nichts verpassen", "wert": 0 },
+        { "text": "Erst mal erlauben und später vielleicht ausschalten", "wert": 1 },
+        { "text": "„Nein danke“: „Ich schaue rein, wenn ICH will – nicht, wenn die App piept.“", "wert": 2 }
+      ],
+      "tipp": "Benachrichtigungen sind der Haupt-Weg, dich zurückzuholen. „Du verpasst nichts“ heißt in Wahrheit: „Wir wollen deine Aufmerksamkeit.“ Du darfst entscheiden, wann du erreichbar bist."
+    },
+    {
+      "id": "f12",
+      "situation": "Du hast dir vorgenommen, heute mit einem Freund draußen zu spielen. Dann poppt auf, dass in drei verschiedenen Chats gerade was läuft. Du stehst mit dem Handy in der Hand da.",
+      "mechanik": "Der Alles-gleichzeitig-Sog: Drei parallele „Events“ sollen dich vom echten Plan abhalten.",
+      "optionen": [
+        { "text": "Erst mal in alle drei Chats reinschauen, der Freund kann warten", "wert": 0 },
+        { "text": "Dem Freund schreiben, dass du dich „gleich“ meldest – und im Handy hängen bleiben", "wert": 1 },
+        { "text": "Handy in die Tasche: „Ich hab jetzt einen echten Plan mit einem echten Menschen. Die Chats laufen nicht weg.“", "wert": 2 }
+      ],
+      "tipp": "Online ist immer irgendwo „was los“ – das ist Absicht. Zeit mit echten Menschen ist wertvoller als jeder Chat. Der Chat wartet; der Nachmittag mit dem Freund kommt nicht wieder."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Sog-Spürnase", "emoji": "🧭" },
+    { "ab": 10, "titel": "Grenz-Zieher*in", "emoji": "✋" },
+    { "ab": 17, "titel": "Ruhe-Bewahrer*in", "emoji": "🌙" },
+    { "ab": 22, "titel": "FOMO-Kompass", "emoji": "🌟" }
+  ]
+}

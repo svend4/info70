@@ -1,0 +1,8 @@
+{
+  "name": "@info70/impressum-detektive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Impressum-Detektive: Quiz (quiz-kern) fuer 8-12 - wer betreibt eine Seite? Impressumspflicht (DDG 5/MStV 18), Impressum finden, Fake erkennen. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

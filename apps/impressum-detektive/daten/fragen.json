@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Spuren-Leser*in", "emoji": "🔍" },
+    { "ab": 5, "titel": "Impressum-Späher*in", "emoji": "🕵️" },
+    { "ab": 9, "titel": "Transparenz-Detektiv*in", "emoji": "🗂️" },
+    { "ab": 12, "titel": "Wer-steckt-dahinter-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Warum Pflicht?",
+      "aussage": "Jede professionelle Webseite in Deutschland muss ein Impressum haben – da steht drin, wer die Seite betreibt.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Das schreibt das Gesetz vor (Digitale-Dienste-Gesetz § 5, für redaktionelle Seiten auch Medienstaatsvertrag § 18). So kann man immer nachsehen, wer hinter einer Seite steckt – wichtig, wenn etwas schiefgeht."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Wo versteckt?",
+      "aussage": "Ein Impressum findet man fast immer ganz unten auf der Seite, im sogenannten Footer – oft als kleiner Link „Impressum“.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Ganz unten (im „Footer“) oder im Menü ist der übliche Platz. Der Link heißt meist „Impressum“, manchmal „Anbieterkennzeichnung“ oder „Kontakt/Impressum“. Runterscrollen lohnt sich."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Echt oder Fake?",
+      "aussage": "Ein Impressum, in dem nur „Max’s coole Seite“ steht – ohne echten Namen, ohne Adresse, ohne Kontakt – ist ein vollständiges Impressum.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Ein echtes Impressum braucht einen richtigen Namen (oder Firma), eine ladungsfähige Adresse und eine Kontaktmöglichkeit (z. B. E-Mail). Ein Spitzname allein reicht nicht – dann kann man niemanden erreichen."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Warum Pflicht?",
+      "aussage": "Wenn eine Verkaufs-Seite gar kein Impressum hat, ist das ein Warnzeichen – vielleicht will da jemand nicht erkannt werden.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Ein fehlendes Impressum ist bei einer Shop- oder Firmenseite ein echtes Warnsignal. Wer ehrlich verkauft, sagt, wer er ist. Fehlt das, sei besonders vorsichtig – und frag Erwachsene."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Wo versteckt?",
+      "aussage": "Rein private Seiten und viele Steckbriefe in sozialen Netzwerken brauchen kein Impressum – Pflicht ist es vor allem für geschäftliche und redaktionelle Angebote.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. Ein reines Familien-Fotoalbum ohne Geld-Absicht braucht keins. Sobald es geschäftlich wird oder regelmäßig Nachrichten/Meinungen veröffentlicht werden, greift die Impressumspflicht. Im Zweifel: lieber eins haben."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Echt oder Fake?",
+      "aussage": "Ein glänzendes „Geprüft & sicher“-Siegel auf einer Seite beweist, dass die Seite vertrauenswürdig ist.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! So ein Bildchen kann sich jeder selbst basteln. Echte Gütesiegel kann man anklicken und auf der Siegel-Seite überprüfen. Ein Siegel ersetzt außerdem nie das Impressum – such trotzdem, wer dahintersteckt."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Wo versteckt?",
+      "aussage": "Manche Seiten verstecken das Impressum absichtlich sehr tief – z. B. nur über einen winzigen Link ganz unten oder mehrere Klicks weit weg.",
+      "korrekt": "ja",
+      "erklaerung": "Leider ja. Das Gesetz sagt: Das Impressum muss „leicht erkennbar“ und mit wenigen Klicks erreichbar sein. Wer es stark versteckt, macht etwas falsch – und gibt dir schon damit einen Hinweis."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Echt oder Fake?",
+      "aussage": "Steht im Impressum eine Adresse mitten im Meer und eine Telefonnummer wie 000-000, ist das trotzdem in Ordnung.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – das ist ein Fake-Impressum. Die Angaben müssen echt und erreichbar sein. Erfundene Adressen oder Fantasie-Nummern sind ein starkes Warnzeichen, dass man dem Anbieter nicht trauen sollte."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Wo versteckt?",
+      "frage": "Du willst wissen, wer eine Webseite betreibt. Wo suchst du zuerst?",
+      "antworten": [
+        "Ganz nach unten scrollen und nach dem Link „Impressum“ schauen",
+        "Auf das größte bunte Werbebild klicken",
+        "Die Seite einfach schließen – das steht da nie",
+        "Nur die Startseite kurz überfliegen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Der Footer ganz unten ist der klassische Ort. Findest du dort nichts, schau ins Menü („Über uns“, „Kontakt“). Ein Werbebild führt woanders hin, und viele Seiten HABEN ein Impressum – man muss nur richtig suchen."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Warum Pflicht?",
+      "frage": "Wofür ist ein Impressum vor allem gut?",
+      "antworten": [
+        "Damit man weiß, wer verantwortlich ist – und ihn erreichen kann, wenn etwas nicht stimmt",
+        "Damit die Seite hübscher aussieht",
+        "Damit die Seite schneller lädt",
+        "Damit man Werbung bekommt"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Genau! Das Impressum sorgt für Transparenz: Wer steckt dahinter, und wie erreiche ich die Person? Das schützt dich – bei Problemen, falscher Ware oder unklaren Inhalten weißt du, an wen du dich wenden kannst."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Echt oder Fake?",
+      "frage": "Was gehört auf jeden Fall in ein echtes Impressum?",
+      "antworten": [
+        "Echter Name oder Firma, eine richtige Adresse und eine Kontaktmöglichkeit",
+        "Ein Lieblingsspruch und ein Emoji",
+        "Die Lieblingsfarbe des Betreibers",
+        "Möglichst viele glänzende Siegel-Bilder"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Richtig: Name/Firma, ladungsfähige Adresse, Kontakt (meist E-Mail) – bei Firmen oft noch Handelsregister und Umsatzsteuer-Nummer. Sprüche, Farben und Bild-Siegel sagen nichts darüber aus, wer wirklich verantwortlich ist."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Wo versteckt?",
+      "frage": "Auf einer Nachrichten-Seite für Kinder findest du unten die Links „Start“, „Themen“, „Impressum“, „Datenschutz“. Was bedeutet das?",
+      "antworten": [
+        "Gutes Zeichen – die Seite sagt offen, wer sie macht und wie sie mit Daten umgeht",
+        "Schlechtes Zeichen – so viele Links sind verdächtig",
+        "Das ist Werbung",
+        "Das heißt, die Seite ist kaputt"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein sichtbares Impressum UND eine Datenschutz-Erklärung sind Zeichen für eine seriöse Seite. Gerade gute Kinderseiten (z. B. mit fragFINN- oder Seitenstark-Qualität) legen Wert darauf, transparent zu sein."
+    },
+    {
+      "id": "w05",
+      "typ": "wahl",
+      "kategorie": "Echt oder Fake?",
+      "frage": "Ein Shop lockt mit Mega-Rabatten, hat aber KEIN Impressum und nur ein Kontaktformular ohne Namen. Was tust du?",
+      "antworten": [
+        "Nichts kaufen und Erwachsene fragen – fehlendes Impressum ist ein Warnzeichen",
+        "Schnell bestellen, bevor der Rabatt weg ist",
+        "Meine Adresse und Kontodaten eingeben, um den Rabatt zu sichern",
+        "Den Shop an alle Freunde weiterleiten"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Fehlt bei einem Shop das Impressum, ist Vorsicht angesagt – dann weiß niemand, wer da verkauft. Zusammen mit Zeitdruck („nur heute!“) ist das ein typisches Fake-Shop-Muster. Nicht kaufen, keine Daten eingeben, Erwachsene fragen."
+    },
+    {
+      "id": "w06",
+      "typ": "wahl",
+      "kategorie": "Warum Pflicht?",
+      "frage": "Bei einer Seite mit Nachrichten und Meinungen steht: „Verantwortlich im Sinne des Presserechts: …“. Was ist das?",
+      "antworten": [
+        "Die Person, die für die Inhalte geradesteht – Pflicht bei redaktionellen Angeboten",
+        "Ein Werbespruch ohne Bedeutung",
+        "Der Name des Computers",
+        "Eine Erfindung der Seite"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Bei Seiten mit journalistischen Inhalten muss zusätzlich eine verantwortliche Person genannt werden (Medienstaatsvertrag § 18). So weiß man, wer für Texte und Meinungen die Verantwortung trägt – das gehört zur Transparenz dazu."
+    },
+    {
+      "id": "w07",
+      "typ": "wahl",
+      "kategorie": "Wo versteckt?",
+      "frage": "Du findest auf einer Seite absolut kein Impressum – auch nicht im Menü oder ganz unten. Was ist die klügste Schlussfolgerung?",
+      "antworten": [
+        "Vorsichtig sein: Bei geschäftlichen Seiten ist ein fehlendes Impressum ein Warnzeichen",
+        "Die Seite ist bestimmt besonders sicher",
+        "Impressen gibt es sowieso nur zum Spaß",
+        "Ich muss meine Daten eingeben, dann erscheint es"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Kein Impressum bei einer Firmen- oder Shop-Seite heißt: Da will jemand vielleicht nicht erkannt werden. Niemals Daten eingeben, „damit etwas erscheint“ – das ist ein Trick. Im Zweifel Seite verlassen und Erwachsene fragen."
+    },
+    {
+      "id": "w08",
+      "typ": "wahl",
+      "kategorie": "Echt oder Fake?",
+      "frage": "Woran erkennst du am ehesten ein ECHTES Gütesiegel (z. B. für sichere Kinderseiten)?",
+      "antworten": [
+        "Man kann es anklicken und landet auf der Seite der Prüf-Organisation, wo die Seite gelistet ist",
+        "Es glänzt besonders schön",
+        "Es steht ganz groß auf der Startseite",
+        "Es hat viele Sterne"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Echte Siegel sind überprüfbar: anklicken, und man sieht beim Siegel-Geber, dass die Seite wirklich geprüft wurde. Glanz, Größe und Sterne sagen nichts – die kann man einfach ins Bild malen."
+    },
+    {
+      "id": "w09",
+      "typ": "wahl",
+      "kategorie": "Warum Pflicht?",
+      "frage": "Warum ist es fair, dass Seiten sagen müssen, wer sie betreibt?",
+      "antworten": [
+        "Weil man dann weiß, wem man vertraut – und sich bei Problemen wehren kann",
+        "Weil Namen einfach schön aussehen",
+        "Damit die Betreiber berühmt werden",
+        "Damit es mehr zu lesen gibt"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Transparenz ist Schutz: Wer für eine Seite verantwortlich ist, muss dazu stehen. Dann kannst du dich beschweren, etwas zurückgeben oder Hilfe holen. Anonyme Seiten machen genau das absichtlich schwer."
+    }
+  ]
+}
