@@ -20,7 +20,8 @@ export function istEigenerOrigin(url, eigenerOrigin = globalThis.location?.origi
  * Netzwerk-Wächter: blockiert in der Laufzeit jede Anfrage an fremde Hosts
  * (fetch, XMLHttpRequest, WebSocket) und meldet Verstöße. Damit wird die
  * Regel "keine externen Anfragen" nicht nur versprochen, sondern erzwungen.
- * Im Produktivbetrieb zusätzlich per CSP (default-src 'self') absichern.
+ * Im Produktivbetrieb zusätzlich per CSP absichern:
+ * default-src 'self'; style-src 'self' 'unsafe-inline' (Inline-Styles ja, Inline-Skripte nein).
  * @param {Window & typeof globalThis} win
  * @param {(url: string) => void} [beiVerstoss]
  * @returns {() => string[]} Funktion, die die Liste der Verstöße liefert

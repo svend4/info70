@@ -33,7 +33,7 @@ export const KRITERIEN = Object.freeze([
     id: 'keine-externen-anfragen',
     quelle: 'Monorepo-Politik',
     text: 'Keine Netzwerkanfragen an fremde Hosts (kein CDN, keine Web-Fonts, keine Dritt-APIs)',
-    hilfe: 'Jede Anfrage an fremde Server verrät IP-Adresse und Nutzungszeitpunkt des Kindes. Prüfe im DevTools-Netzwerk-Tab: ausschließlich die eigene Domain. Technisch erzwingen: CSP default-src \'self\' + kinderschutz.installiereNetzwerkWaechter(); Schriften und Bilder lokal ausliefern.',
+    hilfe: 'Jede Anfrage an fremde Server verrät IP-Adresse und Nutzungszeitpunkt des Kindes. Prüfe im DevTools-Netzwerk-Tab: ausschließlich die eigene Domain. Technisch erzwingen: CSP default-src \'self\'; style-src \'self\' \'unsafe-inline\' + kinderschutz.installiereNetzwerkWaechter(); Schriften und Bilder lokal ausliefern.',
   },
   {
     id: 'lokale-daten-loeschbar',

@@ -39,8 +39,9 @@ createServer(async (req, res) => {
     const body = await readFile(file);
     res.writeHead(200, {
       'content-type': TYPES[extname(file)] ?? 'application/octet-stream',
-      // Gleiche Politik wie im Produktivbetrieb: nur eigene Quellen
-      'content-security-policy': "default-src 'self'",
+      // Gleiche Politik wie im Produktivbetrieb: nur eigene Quellen;
+      // Inline-STYLES sind erlaubt (Teil der UI-Architektur), Inline-Skripte nicht.
+      'content-security-policy': "default-src 'self'; style-src 'self' 'unsafe-inline'",
     });
     res.end(body);
   } catch {

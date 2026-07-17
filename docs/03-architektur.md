@@ -50,4 +50,6 @@ geschichten-werkstatt), она добавляется локально в его
 ## Деплой (позже)
 
 Любой статический хостинг. Требования: HTTPS, заголовки CSP
-(`default-src 'self'`) — CSP дублирует NetzwerkWaechter на уровне платформы.
+(`default-src 'self'; style-src 'self' 'unsafe-inline'`) — CSP дублирует NetzwerkWaechter
+на уровне платформы; инлайн-стили разрешены сознательно (часть UI-архитектуры),
+инлайн-скрипты — нет.

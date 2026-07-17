@@ -45,6 +45,7 @@ function zeige(...knoten) {
     ...knoten,
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Prototyp · werbefrei · ohne Anmeldung · funktioniert ohne Internet · '),
+      el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
 }
 
