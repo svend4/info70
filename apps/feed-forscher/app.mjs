@@ -5,6 +5,7 @@
 // Politik: keine externen Anfragen, gespeichert wird nur die Sprachwahl.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { erstelleSprache } from '../../packages/kinder-ui/js/sprache.mjs';
+import { leichteSpracheSchalter, basisCode } from '../../packages/kinder-ui/js/leichte-sprache.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
 installiereNetzwerkWaechter();
@@ -26,7 +27,7 @@ let gewichte = {};
 let runde = 0;
 
 const themaName = (id) => t(`thema_${id}`);
-const stimme = () => STIMME[sprache.aktuelle()] ?? 'de-DE';
+const stimme = () => STIMME[basisCode(sprache.aktuelle())] ?? 'de-DE';
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -41,15 +42,20 @@ function zeige(...knoten) {
 }
 
 function sprachWahl() {
+  const basis = basisCode(sprache.aktuelle());
   return el('section', { class: 'k-karte' },
     el('p', { style: 'font-weight:600;margin-top:0' }, t('sprache_label')),
     el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap' },
       ...[['de', 'Deutsch'], ['uk', 'Українська'], ['ru', 'Русский']].map(([code, name]) =>
         el('button', {
-          class: `k-knopf k-knopf--klein ${sprache.aktuelle() === code ? '' : 'k-knopf--neutral'}`,
-          'aria-pressed': String(sprache.aktuelle() === code),
+          class: `k-knopf k-knopf--klein ${basis === code ? '' : 'k-knopf--neutral'}`,
+          'aria-pressed': String(basis === code),
           onclick: () => { sprache.setze(code); startBildschirm(); },
-        }, name))));
+        }, name))),
+    // Leichte-Sprache-Schalter (BFSG): erscheint nur, weil ein de-ls-Katalog
+    // existiert. Zentral in kinder-ui gebaut - jede App mit '-ls'-Fassung nutzt ihn.
+    el('div', { style: 'margin-top:0.5rem' },
+      leichteSpracheSchalter({ sprache, neuZeichnen: startBildschirm })));
 }
 
 function startBildschirm() {
