@@ -10,6 +10,8 @@
 > **Статус сборки (12.07.2026):** роями агентов построено из этого каталога — Dark-Pattern-Labyrinth, Deepfake-Studio, Lootbox-Labor, Bot oder Buddy?, Köder-Quiz, Passwort-Prüfstand, Familien-Medienvertrag + контент-паки KI-Radar и Digitale Rechte. Далее вручную: Spiral-Stopper, Challenge-Druck-Simulator, Beschwerde-Lotse, Klassen-Modus в quiz-kern (все квизы), Sog-Maschine, Daten-Radiergummi и Verschwörungs-Werkstatt (первая единица линейки 13-15). См. `apps/` и корневой `index.html`.
 >
 > **Дополнение (17.07.2026):** построены ещё три единицы топ-листа — **Filter-Spiegel** (№12, линейка 13-15: бьюти-фильтры на комикс-аватаре, сознательно без камеры), **Projektwoche „Sicher im Netz“** (№19, школьный формат: 5 дней × 90 минут из готовых приложений, печатная методичка) и **KRIA-Check** (№30, для взрослых: Kinderrechte-Folgenabschätzung по GC25 — 27 пунктов в 7 областях, отчёт файлом).
+>
+> **Дополнение 2 (17.07.2026):** волна 14 — **Feed-Forscher Profi** (№7, 13-15: спираль остроты рекомендаций, «лестница радикализации» с доказательством в тестах), **Stark im Chat 13+** (№9, оптика группового чата + конкретные пути по DSA Art. 16/20/23/28) и **Rechte-Kompass** (№14, 8-12: тренажёр «высказать право» с Mut-Sätzen по статьям KRK, absorbiert «Mein Bild gehört mir»).
 
 ## Арифметика «десятков и сотен»
 

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stark-im-chat-plus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stark im Chat 13+: Jugendversion des Bystander-Trainings mit Gruppenchat-Optik (Hassrede, Blossstellung, Ausschluss, Fake-Accounts, Doxxing) und konkreten DSA-Meldewegen. Kein echter Chat.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

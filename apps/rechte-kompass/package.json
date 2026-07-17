@@ -1,0 +1,8 @@
+{
+  "name": "@info70/rechte-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rechte-Kompass: Szenario-Trainer (2/1/0), der Kindern von 8-12 beibringt, ihre KRK-Rechte hoeflich AUSZUSPRECHEN - mit Mut-Saetzen zum Sammeln.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

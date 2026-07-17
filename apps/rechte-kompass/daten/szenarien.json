@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "r01",
+      "situation": "Mama will ein Foto von dir posten, auf dem du als Baby nackt in der Badewanne sitzt. „Das ist doch süß!“, sagt sie.",
+      "optionen": [
+        { "text": "Nichts sagen – sie ist ja die Mama, sie darf das", "wert": 1 },
+        { "text": "„Stopp – das ist MEIN Bild. Ich möchte nicht, dass du das postest. Können wir zusammen eins aussuchen, das okay ist?“", "wert": 2 },
+        { "text": "Heimlich ihr Handy verstecken, damit sie nicht posten kann", "wert": 0 }
+      ],
+      "artikel": 16,
+      "artikelName": "Schutz der Privatsphäre",
+      "satz": "Das ist mein Bild. Bitte frag mich, bevor du etwas von mir postest.",
+      "erklaerung": "Auch Eltern brauchen dein Okay: Artikel 16 der Kinderrechtskonvention schützt deine Privatsphäre – auch vor lieben Menschen. Fachleute nennen das Problem „Sharenting“. Ein ruhiger Satz wirkt besser als Heimlichkeit: Er zeigt, dass du dein Recht kennst."
+    },
+    {
+      "id": "r02",
+      "situation": "Eine neue Spiele-App fragt: „Dürfen wir immer deinen Standort sehen? Dann bekommst du 100 Extra-Münzen!“",
+      "optionen": [
+        { "text": "„Nein danke“ tippen – mein Standort geht die App nichts an, Münzen hin oder her", "wert": 2 },
+        { "text": "Zustimmen – 100 Münzen sind es wert", "wert": 0 },
+        { "text": "Erst mal zustimmen und es später vielleicht ausschalten", "wert": 1 }
+      ],
+      "artikel": 16,
+      "artikelName": "Schutz der Privatsphäre",
+      "satz": "Meine Daten gehören mir. Ein Spiel braucht meinen Standort nicht.",
+      "erklaerung": "Dein Aufenthaltsort ist besonders schützenswert. Eine gute Kinder-App fragt so etwas gar nicht erst ab – das steht auch in den Regeln für Kinderangebote (DSGVO Artikel 8). Belohnungen für Daten sind ein Tausch, der sich fast nie lohnt: Die Münzen sind virtuell, deine Daten echt."
+    },
+    {
+      "id": "r03",
+      "situation": "Deine Familie zieht um. Alle reden über die neue Wohnung, die neue Schule, den Umzugstermin – nur dich hat niemand gefragt, wie es dir damit geht.",
+      "optionen": [
+        { "text": "Beleidigt sein und tagelang nicht mit den Eltern reden", "wert": 0 },
+        { "text": "Denken: „Ich bin halt ein Kind, ich habe eh nichts zu sagen“", "wert": 1 },
+        { "text": "„Der Umzug betrifft mich auch. Ich möchte mitreden – zum Beispiel bei meinem neuen Zimmer und beim Abschied von meinen Freunden.“", "wert": 2 }
+      ],
+      "artikel": 12,
+      "artikelName": "Berücksichtigung des Kindeswillens",
+      "satz": "Das betrifft mich. Ich möchte gehört werden, bevor ihr entscheidet.",
+      "erklaerung": "Artikel 12 ist eines der stärksten Kinderrechte: Bei allem, was dich betrifft, muss deine Meinung angehört und ernst genommen werden. Das heißt nicht, dass du alles entscheidest – aber mitreden darfst du immer. Wer sein Recht ruhig ausspricht, wird öfter gehört als wer schweigt oder schmollt."
+    },
+    {
+      "id": "r04",
+      "situation": "Dein großer Bruder liest heimlich dein Tagebuch und zitiert beim Abendessen grinsend daraus.",
+      "optionen": [
+        { "text": "Zum Ausgleich sein Handy durchsuchen und seine Chats vorlesen", "wert": 0 },
+        { "text": "„Mein Tagebuch ist privat – genau wie deine Chats. Das ist mein Recht, und ich will, dass das respektiert wird.“ Und die Eltern um Unterstützung bitten", "wert": 2 },
+        { "text": "Das Tagebuch ab jetzt besser verstecken und nichts sagen", "wert": 1 }
+      ],
+      "artikel": 16,
+      "artikelName": "Schutz der Privatsphäre",
+      "satz": "Meine Briefe, mein Tagebuch und meine Nachrichten sind privat.",
+      "erklaerung": "Artikel 16 schützt ausdrücklich auch deine „Korrespondenz“ – früher Briefe, heute Tagebuch und Chats. Rache mit derselben Methode macht dich zum Regelbrecher. Stärker ist: das Recht benennen und Erwachsene einbeziehen. Verstecken hilft kurz, klärt aber nichts."
+    },
+    {
+      "id": "r05",
+      "situation": "In eurer Stadt soll der Spielplatz neu gebaut werden. Im Rathaus dürfen Erwachsene Wünsche abgeben – von Kindern will niemand etwas wissen.",
+      "optionen": [
+        { "text": "Mit der Klasse einen Brief ans Rathaus schreiben: „Wir nutzen den Spielplatz – wir möchten unsere Ideen einbringen.“", "wert": 2 },
+        { "text": "Denken: „Politik ist Erwachsenensache“", "wert": 1 },
+        { "text": "Aus Protest den Bauzaun bemalen", "wert": 0 }
+      ],
+      "artikel": 12,
+      "artikelName": "Berücksichtigung des Kindeswillens",
+      "satz": "Wir nutzen diesen Ort. Wir möchten bei der Planung mitreden.",
+      "erklaerung": "Artikel 12 gilt nicht nur zu Hause, sondern auch in der Stadt: Wenn etwas geplant wird, das Kinder betrifft, sollen Kinder beteiligt werden. Viele Städte haben dafür sogar Kinder- und Jugendbüros. Ein gemeinsamer Brief ist gehörte Meinung – ein bemalter Bauzaun ist Sachbeschädigung und wird als „die Kinder nerven“ abgeheftet."
+    },
+    {
+      "id": "r06",
+      "situation": "Deine Woche ist voll: Montag Geige, Dienstag Nachhilfe, Mittwoch Schwimmen, Donnerstag Chinesisch, Freitag Fußball. Du bist müde und möchtest einfach mal spielen.",
+      "optionen": [
+        { "text": "„Ich brauche freie Zeit zum Spielen und Ausruhen. Das ist sogar ein Kinderrecht. Können wir zusammen schauen, was wir streichen?“", "wert": 2 },
+        { "text": "Beim Geigenunterricht absichtlich schlecht spielen, bis es die Eltern aufgeben", "wert": 0 },
+        { "text": "Weitermachen und hoffen, dass es von selbst weniger wird", "wert": 1 }
+      ],
+      "artikel": 31,
+      "artikelName": "Ruhe, Freizeit und Spiel",
+      "satz": "Ich brauche auch freie Zeit. Spielen und Ausruhen sind ein Kinderrecht.",
+      "erklaerung": "Wirklich wahr: Artikel 31 macht Ruhe, Freizeit und Spiel zu einem eigenen Kinderrecht – so wichtig ist das für dein Wachsen. Viele Erwachsene kennen diesen Artikel gar nicht; ihn freundlich zu nennen, öffnet Gespräche. Absichtlich zu scheitern verletzt dagegen dich selbst."
+    },
+    {
+      "id": "r07",
+      "situation": "Beim Klassenfoto-Verkauf sagt die Fotografin: „Die Bilder kommen auch auf unsere Internetseite als Werbung.“ Dich hat niemand gefragt.",
+      "optionen": [
+        { "text": "„Moment – für die Internetseite braucht ihr meine Erlaubnis und die meiner Eltern. Ich möchte erst mit ihnen sprechen.“", "wert": 2 },
+        { "text": "Nichts sagen – die machen das schon richtig", "wert": 1 },
+        { "text": "Beim Foto absichtlich Grimassen schneiden, damit es unbrauchbar wird", "wert": 0 }
+      ],
+      "artikel": 16,
+      "artikelName": "Schutz der Privatsphäre",
+      "satz": "Für Fotos von mir im Internet braucht ihr meine Erlaubnis.",
+      "erklaerung": "Dein Bild darf nicht ohne Einwilligung veröffentlicht werden – das Recht am eigenen Bild gilt auch für Kinder, und die DSGVO verlangt bei Kindern die Zustimmung der Eltern. Nachfragen ist kein Ärger-Machen, sondern genau das, was das Gesetz vorsieht. Grimassen lösen das Problem nicht – beim nächsten Mal wirst du wieder nicht gefragt."
+    },
+    {
+      "id": "r08",
+      "situation": "Deine Eltern trennen sich. Beim Familiengericht soll entschieden werden, wo du wohnst. Du hast dazu eine klare Meinung – aber traust dich nicht, sie zu sagen.",
+      "optionen": [
+        { "text": "Der Richterin oder dem Verfahrensbeistand ehrlich sagen, was du dir wünschst – dafür sind sie da, und deine Meinung zählt", "wert": 2 },
+        { "text": "Sagen, was Papa hören will, damit er nicht traurig ist", "wert": 0 },
+        { "text": "Gar nichts sagen – die Erwachsenen entscheiden sowieso", "wert": 1 }
+      ],
+      "artikel": 12,
+      "artikelName": "Berücksichtigung des Kindeswillens",
+      "satz": "Ich möchte sagen, was ich mir wünsche – das Gericht muss mich anhören.",
+      "erklaerung": "In Deutschland muss das Familiengericht Kinder persönlich anhören – das folgt direkt aus Artikel 12. Es gibt sogar eine eigene Person nur für dich: den Verfahrensbeistand, „Anwalt des Kindes“. Deine ehrliche Meinung ist keine Entscheidung gegen ein Elternteil – entscheiden müssen die Erwachsenen, aber mit deiner Stimme im Ohr."
+    },
+    {
+      "id": "r09",
+      "situation": "Ein Mitschüler im Rollstuhl kommt nicht in den Schulclub im ersten Stock – es gibt nur Treppen. „Pech“, sagt jemand, „dann kann er halt nicht mitmachen.“",
+      "optionen": [
+        { "text": "Mit ihm zusammen zur Schulleitung gehen: „Alle haben das Recht mitzumachen. Der Club muss in einen Raum, den alle erreichen.“", "wert": 2 },
+        { "text": "Ihm vom Club erzählen, damit er wenigstens Bescheid weiß", "wert": 1 },
+        { "text": "Zustimmen – ist ja nicht dein Problem", "wert": 0 }
+      ],
+      "artikel": 2,
+      "artikelName": "Kein Kind darf benachteiligt werden",
+      "satz": "Alle haben das Recht mitzumachen – wir müssen es nur möglich machen.",
+      "erklaerung": "Artikel 2 verbietet jede Benachteiligung, und Artikel 23 sichert Kindern mit Behinderung volle Teilhabe zu. „Pech gehabt“ ist keine Antwort, sondern Diskriminierung durch Bequemlichkeit. Oft ist die Lösung einfach – ein anderer Raum –, aber jemand muss sie einfordern. Rechte werden stärker, wenn man sie auch für ANDERE ausspricht."
+    },
+    {
+      "id": "r10",
+      "situation": "Du willst wissen, was im Krieg in den Nachrichten passiert. Papa schaltet immer sofort um: „Das ist nichts für Kinder.“ Aber die Bilder siehst du sowieso überall.",
+      "optionen": [
+        { "text": "Heimlich nachts alles dazu anschauen, was du findest", "wert": 0 },
+        { "text": "„Ich bekomme das sowieso mit, und halbes Wissen macht mir mehr Angst. Können wir zusammen Kindernachrichten schauen?“", "wert": 2 },
+        { "text": "Aufhören zu fragen und mit der Angst allein bleiben", "wert": 1 }
+      ],
+      "artikel": 17,
+      "artikelName": "Zugang zu kindgerechten Informationen",
+      "satz": "Ich habe das Recht zu verstehen, was passiert – kindgerecht erklärt.",
+      "erklaerung": "Artikel 17 gibt dir ein Recht auf Information – in einer Form, die für dich passt. Dafür gibt es extra Kindernachrichten, die erklären statt zu schockieren. Verbote helfen nicht gegen Angst, Erklärungen schon. Heimliches Anschauen ohne Einordnung macht die Angst meist größer, nicht kleiner."
+    },
+    {
+      "id": "r11",
+      "situation": "In der Klassen-Abstimmung über das Ausflugsziel sagt der Klassensprecher: „Zeigt per Hand auf – ich will sehen, wer was wählt!“ Du willst anders stimmen als deine beste Freundin.",
+      "optionen": [
+        { "text": "„Lasst uns geheim abstimmen, mit Zetteln. Dann stimmt jeder ehrlich – das ist fair für alle.“", "wert": 2 },
+        { "text": "So stimmen wie die Freundin, um Streit zu vermeiden", "wert": 0 },
+        { "text": "Bei der Abstimmung einfach nicht mitmachen", "wert": 1 }
+      ],
+      "artikel": 12,
+      "artikelName": "Berücksichtigung des Kindeswillens",
+      "satz": "Meine Stimme ist frei – ich stimme für das, was ICH denke.",
+      "erklaerung": "Eine Meinung, die man sich nicht zu zeigen traut, ist keine gehörte Meinung. Geheime Abstimmung schützt genau davor – deshalb wählen auch Erwachsene geheim. Wer aus Angst mitstimmt, gibt sein Recht aus Artikel 12 freiwillig ab. Der Vorschlag „mit Zetteln“ hilft nicht nur dir, sondern allen Leisen in der Klasse."
+    },
+    {
+      "id": "r12",
+      "situation": "Beim Arzttermin reden die Ärztin und Mama die ganze Zeit ÜBER dich – was gemacht wird, wie es weitergeht. Dich fragt niemand, und verstanden hast du auch nichts.",
+      "optionen": [
+        { "text": "„Können Sie mir bitte erklären, was mit MIR gemacht wird? Ich möchte es verstehen – es ist ja mein Körper.“", "wert": 2 },
+        { "text": "Später Mama fragen, was da eigentlich besprochen wurde", "wert": 1 },
+        { "text": "Beim nächsten Termin einfach nicht mitkommen wollen und sich weigern", "wert": 0 }
+      ],
+      "artikel": 12,
+      "artikelName": "Berücksichtigung des Kindeswillens",
+      "satz": "Es geht um meinen Körper – bitte erklärt es MIR.",
+      "erklaerung": "Bei Gesundheit gilt Artikel 12 besonders: Es ist dein Körper, also hast du ein Recht auf Erklärungen, die du verstehst, und auf deine Fragen. Gute Ärzt*innen freuen sich über Kinder, die nachfragen. Mama später fragen ist okay – aber aus zweiter Hand verstehen ist schwerer. Verweigern schadet am Ende deiner Gesundheit."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Rechte-Entdecker*in", "emoji": "🧭" },
+    { "ab": 10, "titel": "Rechte-Kenner*in", "emoji": "📜" },
+    { "ab": 17, "titel": "Rechte-Stimme", "emoji": "📣" },
+    { "ab": 22, "titel": "Rechte-Kompass", "emoji": "🌟" }
+  ]
+}

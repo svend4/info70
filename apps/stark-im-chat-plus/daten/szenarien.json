@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "p01",
+      "gruppe": "Klasse 8b 🔥 (34 Mitglieder)",
+      "chat": [
+        { "von": "Jannik", "text": "habt ihr das video von lea beim sportfest 😂😂" },
+        { "von": "Jannik", "text": "[Video weitergeleitet]" },
+        { "von": "Selin", "text": "omg die fliegt voll hin 💀" },
+        { "von": "Tom", "text": "das schick ich in die parallelklasse" }
+      ],
+      "frage": "Das Video ist peinlich für Lea, und Tom will es weiterverbreiten. Was tust du?",
+      "optionen": [
+        { "text": "Nichts – ich hab’s ja nicht hochgeladen, nicht mein Problem", "wert": 1 },
+        { "text": "In die Gruppe: „Nicht weiterleiten – stellt euch vor, es wäre dein Video. Löscht es lieber.“ Und Lea privat schreiben, dass du auf ihrer Seite bist", "wert": 2 },
+        { "text": "Es auch weiterleiten, aber nur an EINE Person – das zählt ja kaum", "wert": 0 }
+      ],
+      "aufloesung": "Jede Weiterleitung vervielfacht die Bloßstellung – „nur an eine Person“ ist der Anfang jeder Verbreitungskette. Ein einzelner Stopp-Satz in der Gruppe bricht die Dynamik nachweislich öfter, als man denkt: Die meisten machen nur mit, weil alle mitmachen.",
+      "dsaWeg": "In der App: Video melden (Bloßstellung/Belästigung) – Plattformen müssen dir nach DSA Art. 16 einen leicht erreichbaren Meldeweg geben und dir antworten. Lea kann zusätzlich die Löschung des Videos verlangen (DSGVO Art. 17)."
+    },
+    {
+      "id": "p02",
+      "gruppe": "Klasse 8b 🔥 (34 Mitglieder)",
+      "chat": [
+        { "von": "Marco", "text": "seit samir da ist stinkt die klasse" },
+        { "von": "Marco", "text": "[Meme weitergeleitet]" },
+        { "von": "Julia", "text": "😂😂😂" },
+        { "von": "Marco", "text": "ist doch nur satire chillt mal" }
+      ],
+      "frage": "Das „Meme“ macht Samirs Herkunft runter, und Marco nennt es Satire. Was tust du?",
+      "optionen": [
+        { "text": "„Das ist keine Satire, das ist rassistisch. Satire trifft nach oben – das hier tritt nach unten. Lösch das.“", "wert": 2 },
+        { "text": "Mit 👎 reagieren und die Gruppe stumm schalten", "wert": 1 },
+        { "text": "„War doch klar, dass sowas kommt“ schreiben und Popcorn-Emoji", "wert": 0 }
+      ],
+      "aufloesung": "„Ist doch nur Spaß/Satire“ ist die Standard-Tarnung von Hassrede – sie funktioniert nur, solange die Gruppe schweigt oder lacht. Der Unterschied ist benennbar: Satire macht Mächtige lächerlich, Hassrede macht Schwächere fertig. Wer das einmal laut sagt, gibt allen Stillen in der Gruppe Rückendeckung.",
+      "dsaWeg": "Melden hilft doppelt: an die Plattform (Hassrede verstößt gegen die Regeln praktisch aller Dienste; Meldeweg nach DSA Art. 16) und bei strafbaren Inhalten (Volksverhetzung) an die Meldestelle REspect! oder jugendschutz.net – die leiten es an die Strafverfolgung weiter."
+    },
+    {
+      "id": "p03",
+      "gruppe": "nur du und Chiara 💬",
+      "chat": [
+        { "von": "Chiara", "text": "hey… ich muss dir was zeigen" },
+        { "von": "Chiara", "text": "jemand hat einen fake account mit meinen fotos gemacht" },
+        { "von": "Chiara", "text": "der schreibt leuten eklige sachen in meinem namen" },
+        { "von": "Chiara", "text": "ich trau mich nicht mehr online" }
+      ],
+      "frage": "Ein Fake-Account gibt sich als Chiara aus. Sie ist verzweifelt. Was rätst du ihr?",
+      "optionen": [
+        { "text": "„Screenshots machen mit Datum, den Account melden (Identitätsmissbrauch), deine echten Freunde warnen – und erzähl es einem Erwachsenen. Ich helfe dir dabei.“", "wert": 2 },
+        { "text": "„Schreib dem Fake-Account, dass er das lassen soll“", "wert": 0 },
+        { "text": "„Ignorier es, solche Accounts verschwinden von selbst“", "wert": 1 }
+      ],
+      "aufloesung": "Beweise sichern KOMMT VOR dem Melden: Screenshots mit sichtbarem Datum und Account-Namen. Identitätsmissbrauch ist bei allen Plattformen verboten und kann strafbar sein (§ 238 StGB Nachstellung, Recht am eigenen Bild). Den Fake-Account direkt anzuschreiben warnt den Täter nur – er macht mit frischem Namen weiter.",
+      "dsaWeg": "Meldeweg „Identitätsdiebstahl/Impersonation“ nach DSA Art. 16; die Plattform muss über die Entscheidung informieren. Wird abgelehnt: internes Widerspruchsverfahren nach DSA Art. 20. Bei Bedrohungen: Polizei (Online-Wache) mit den Screenshots."
+    },
+    {
+      "id": "p04",
+      "gruppe": "Volleyball-Team 🏐 (12 Mitglieder)",
+      "chat": [
+        { "von": "Nele", "text": "leute neue gruppe OHNE emma 🙈" },
+        { "von": "Nele", "text": "die nervt einfach" },
+        { "von": "Kim", "text": "endlich 😂" },
+        { "von": "Nele", "text": "[Einladung: Team ohne E 🏐]" }
+      ],
+      "frage": "Vor Emmas Augen (sie ist noch in DIESER Gruppe!) wird eine Ausschluss-Gruppe gegründet. Was tust du?",
+      "optionen": [
+        { "text": "Der neuen Gruppe nicht beitreten und schweigen – dann bin ich wenigstens nicht dabei", "wert": 1 },
+        { "text": "Beitreten, um mitzulesen, was dort über Emma geschrieben wird", "wert": 0 },
+        { "text": "„Ich bin raus – eine Gruppe, deren Zweck Ausschluss ist, mache ich nicht mit. Wenn es ein Problem mit Emma gibt, sagt es ihr ins Gesicht oder der Trainerin.“", "wert": 2 }
+      ],
+      "aufloesung": "Ausschluss-Gruppen sind Mobbing in Reinform – unsichtbar für Lehrkräfte, maximal sichtbar für das Opfer. „Nur mitlesen“ IST Beitritt: Die Mitgliederzahl der Ausschluss-Gruppe ist die Waffe. Der stärkste Zug benennt den Zweck der Gruppe laut – danach können alle anderen leichter „ich auch nicht“ sagen.",
+      "dsaWeg": "Gruppen-Mobbing lässt sich schlecht „melden“, weil es aus vielen kleinen legalen Nachrichten besteht – hier zählen Menschen: Vertrauenslehrkraft, Trainerin, Eltern. Für Betroffene: Nummer gegen Kummer 116 111 und die JUUUPORT-Scouts (junge Berater*innen, online, kostenlos)."
+    },
+    {
+      "id": "p05",
+      "gruppe": "Klasse 8b 🔥 (34 Mitglieder)",
+      "chat": [
+        { "von": "Tim", "text": "leute mal ehrlich zu frau berger" },
+        { "von": "Tim", "text": "wer die auch hasst 👊" },
+        { "von": "Aylin", "text": "👊👊👊" },
+        { "von": "Tim", "text": "ich hab ein foto von ihr aus der stadt, das machen wir zum sticker 😂" }
+      ],
+      "frage": "Jetzt trifft es eine Lehrerin: Hass-Emojis sammeln und ein heimliches Foto als Sticker. Was tust du?",
+      "optionen": [
+        { "text": "„Kritik an Frau Berger okay – aber ein heimliches Foto als Sticker ist nicht Kritik, das ist Bloßstellung. Lasst das, sonst geht’s zur Schulleitung.“", "wert": 2 },
+        { "text": "Mitmachen – Lehrer*innen sind Profis, die müssen das abkönnen", "wert": 0 },
+        { "text": "Nichts sagen, aber die Sticker später nicht benutzen", "wert": 1 }
+      ],
+      "aufloesung": "Auch Erwachsene haben das Recht am eigenen Bild – heimliche Fotos zu Stickern zu machen ist keine Meinungsfreiheit, sondern kann strafbar sein (§ 201a StGB, KunstUrhG § 22). Der stärkste Zug trennt sauber: Kritik am Unterricht ist legitim und hat Wege (Klassensprecher, Elternabend) – Bloßstellung einer Person hat keine.",
+      "dsaWeg": "Innerhalb der Schule: Klassenleitung/Vertrauenslehrkraft, notfalls Schulleitung. Auf der Plattform: Sticker/Bild melden (nicht einvernehmliche Bildnutzung, DSA Art. 16). Frau Berger selbst könnte Unterlassung und Löschung verlangen – auch Lehrkräfte nutzen dafür inzwischen HateAid-Beratung."
+    },
+    {
+      "id": "p06",
+      "gruppe": "nur du und Jonas 💬",
+      "chat": [
+        { "von": "Jonas", "text": "alter in der story von marie" },
+        { "von": "Jonas", "text": "da ist ein screenshot aus unserem privatchat" },
+        { "von": "Jonas", "text": "das was ich dir über meine eltern erzählt hab" },
+        { "von": "Jonas", "text": "WIE kommt die da dran" }
+      ],
+      "frage": "Etwas, das Jonas dir privat anvertraut hat, ist als Screenshot öffentlich. Er verdächtigt dich. Was tust du?",
+      "optionen": [
+        { "text": "Ehrlich klären: „Ich war’s nicht – lass uns rausfinden, wer den Screenshot hatte. Und egal wer: Marie muss die Story löschen, wir melden sie zusammen.“", "wert": 2 },
+        { "text": "Beleidigt abblocken – wie kann er DICH verdächtigen", "wert": 0 },
+        { "text": "„Keine Ahnung, sorry“ schreiben und das Thema wechseln", "wert": 1 }
+      ],
+      "aufloesung": "Private Chats sind Vertrauensräume: Ein Screenshot, der weitergegeben wird, bricht kein Gesetz der Technik, aber das Vertrauen – und bei sensiblen Inhalten (Familie, Gesundheit, Gefühle) verletzt er die Privatsphäre massiv. Der stärkste Zug trennt zwei Dinge: die Beziehung reparieren UND den Schaden stoppen. Beleidigt abzublocken lässt Jonas mit dem Leck allein.",
+      "dsaWeg": "Story melden: „Verletzung der Privatsphäre / persönliche Daten“ – DSA Art. 16 verpflichtet zu einem funktionierenden Meldeweg. Faustregel für alle: Screenshotte nie Privates weiter – und was du nicht am Schwarzen Brett aushängen würdest, schreib keinem, dem du nicht traust."
+    },
+    {
+      "id": "p07",
+      "gruppe": "Gaming-Squad 🎮 (8 Mitglieder)",
+      "chat": [
+        { "von": "xKillerZz", "text": "leon hat uns das ranked game gekostet" },
+        { "von": "xKillerZz", "text": "adresse hab ich schon, der wohnt bei mir um die ecke 😈" },
+        { "von": "Ben", "text": "schreib die mal in den chat" },
+        { "von": "xKillerZz", "text": "gleich. erst mal alle leon reporten, der soll gebannt werden" }
+      ],
+      "frage": "Es kippt von Ärger ins Bedrohliche: Adresse veröffentlichen und Massen-Reports. Was tust du?",
+      "optionen": [
+        { "text": "„Stopp. Adresse posten ist Doxxing – damit hört der Spaß auf, das ist gefährlich und strafbar. Wenn ihr Ärger mit Leon habt, klärt das im Spiel oder kickt ihn aus dem Squad.“", "wert": 2 },
+        { "text": "Beim Massen-Report mitmachen – bannen ist ja gewaltfrei", "wert": 0 },
+        { "text": "Den Chat verlassen, bevor die Adresse gepostet wird", "wert": 1 }
+      ],
+      "aufloesung": "Das Veröffentlichen von Wohnadressen (Doxxing) verwandelt Online-Streit in reale Gefahr – seit 2021 ist das Verbreiten solcher Daten in gefährdender Weise strafbar (§ 126a StGB). Auch Falsch-Reports im Schwarm sind Missbrauch des Meldesystems: DSA Art. 23 erlaubt Plattformen, notorische Falschmelder zu sperren. Gehen ist besser als Mitmachen – aber Stoppen ist besser als Gehen.",
+      "dsaWeg": "Droht die Adress-Veröffentlichung: Screenshot sichern, den Nutzer bei der Plattform melden (Bedrohung/Doxxing) und Leon warnen. Bei konkreter Gefahr: Polizei – Doxxing-Fälle nimmt jede Online-Wache auf. JUUUPORT und HateAid beraten kostenlos, auch für Jugendliche."
+    },
+    {
+      "id": "p08",
+      "gruppe": "Klasse 8b 🔥 (34 Mitglieder)",
+      "chat": [
+        { "von": "Selin", "text": "leute nicht böse gemeint aber lea war heute wieder so anstrengend" },
+        { "von": "Jannik", "text": "SO anstrengend. immer diese show" },
+        { "von": "Tom", "text": "vielleicht sollte sie einfach die klasse wechseln 🤷" },
+        { "von": "Selin", "text": "wär für alle besser ehrlich" }
+      ],
+      "frage": "Kein einzelner Satz ist „schlimm genug zum Melden“ – aber zusammen wird Lea rausgeekelt. Was tust du?",
+      "optionen": [
+        { "text": "Warten, ob es von allein aufhört – vielleicht ist morgen ein anderes Thema dran", "wert": 1 },
+        { "text": "„Merkt ihr, was hier passiert? 30 Leute lesen mit, wie ihr Lea rausekelt. Wenn euch was stört: sagt es IHR, nicht der Gruppe über sie.“", "wert": 2 },
+        { "text": "„wär für alle besser ehrlich“ liken – stimmt ja irgendwie", "wert": 0 }
+      ],
+      "aufloesung": "Das ist die gefährlichste Form von Gruppen-Mobbing: viele „harmlose“ Sätze, die zusammen ein Klima bauen, in dem sich das Opfer selbst entfernt. Melde-Systeme greifen hier kaum – aber Öffentlichkeit in der Gruppe wirkt: Der Satz „30 Leute lesen mit“ macht die stille Mehrheit sichtbar, und auf die kommt es an.",
+      "dsaWeg": "Wenn Melden nicht greift, greifen Menschen: Klassenrat als Format (mitmach-arena!), Vertrauenslehrkraft, Schulsozialarbeit. Für Lea: 116 111 oder die JUUUPORT-Scouts. Und für alle gilt DSA Art. 28: Plattformen müssen Minderjährige besonders schützen – aber das Klassenklima macht ihr selbst."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Mitleser*in", "emoji": "👀" },
+    { "ab": 7, "titel": "Stimme im Chat", "emoji": "💬" },
+    { "ab": 12, "titel": "Rückgrat der Gruppe", "emoji": "🦴" },
+    { "ab": 15, "titel": "Zivilcourage 13+", "emoji": "🛡️" }
+  ]
+}
