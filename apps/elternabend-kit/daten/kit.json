@@ -1,0 +1,94 @@
+{
+  "dauer": 60,
+  "agenda": [
+    { "minuten": 5, "punkt": "Ankommen – Handout liegt auf den Stühlen (de/uk/ru nach Bedarf)" },
+    { "minuten": 10, "punkt": "Einstieg ohne Belehrung: „Was hat Ihr Kind diese Woche im Netz begeistert – und was hat Sie gewundert?“ (Murmelrunde zu zweit)" },
+    { "minuten": 10, "punkt": "Modul Kettenbriefe – mit Live-Demo Kettenbrief-Stopper am Beamer" },
+    { "minuten": 10, "punkt": "Modul Kostenfallen & Lootboxen – mit Live-Demo Lootbox-Labor am Beamer" },
+    { "minuten": 10, "punkt": "Modul Sharenting + sichere Voreinstellungen (Folien, kein Demo – hier sind die Erwachsenen die Zielgruppe)" },
+    { "minuten": 10, "punkt": "Diskussionskarten in Kleingruppen (je Tisch eine Karte, 2 Ergebnisse ins Plenum)" },
+    { "minuten": 5, "punkt": "Abschluss: eine Sache, die ich diese Woche zu Hause ausprobiere + Hilfe-Nummern auf dem Handout" }
+  ],
+  "module": [
+    {
+      "id": "kettenbriefe",
+      "emoji": "🛑",
+      "titel": "Kettenbriefe & Angst-Nachrichten",
+      "kernbotschaft": "Kettenbriefe arbeiten mit Angst („Wenn du das nicht weiterschickst, passiert …“) oder mit Druck („Echte Freunde leiten das weiter“). Das Ziel ist immer dasselbe: Das Kind soll SOFORT weiterleiten, ohne nachzudenken.",
+      "folienPunkte": [
+        "Angst ist der Motor – nicht der Inhalt. Nichts davon passiert wirklich.",
+        "Kinder leiten weiter, um IHRE Freunde zu schützen. Das ist Fürsorge, kein Unsinn.",
+        "Die stärkste Elternreaktion: loben, dass das Kind es ZEIGT – nie schimpfen.",
+        "Gemeinsamer Familien-Satz: „Bei uns wird nichts weitergeleitet, was Angst macht – wir zeigen es einander.“"
+      ],
+      "demoApp": "kettenbrief-stopper",
+      "demoDrehbuch": [
+        "App am Beamer öffnen und einen Kettenbrief-Fall starten – die Eltern raten per Zuruf, was das Kind tun sollte.",
+        "Bewusst einmal „weiterleiten“ wählen und zeigen, wie die Angst-Welle in der Simulation wächst.",
+        "Dann „stoppen“ wählen: zeigen, wie EIN Kind die Welle brechen kann – das ist die Botschaft für zu Hause.",
+        "Abschluss-Satz an die Eltern: Genau diese Übung kann Ihr Kind zu Hause allein machen – kostenlos, ohne Konto, ohne Werbung."
+      ]
+    },
+    {
+      "id": "kostenfallen",
+      "emoji": "🎁",
+      "titel": "Kostenfallen & Lootboxen",
+      "kernbotschaft": "Viele „kostenlose“ Spiele verdienen an Überraschungs-Kisten: Man kauft nicht das Wunsch-Item, sondern nur eine CHANCE darauf. Zufall plus Echtgeld ist die Mechanik – und Kinder unterschätzen systematisch, wie klein die Chancen sind.",
+      "folienPunkte": [
+        "Lootbox = Los kaufen, nicht Gewinn kaufen. Die Wahrscheinlichkeiten sind winzig.",
+        "„Nur 99 Cent“ ist die Einstiegstür – die Summen entstehen durch Wiederholung.",
+        "Technischer Basisschutz: In-App-Käufe mit Passwort sperren, keine Zahlungsdaten im Kinder-Gerät hinterlegen.",
+        "Wichtiger als Technik: VOR dem Kauf-Wunsch über die Mechanik reden – dafür ist die Demo da."
+      ],
+      "demoApp": "lootbox-labor",
+      "demoDrehbuch": [
+        "App am Beamer öffnen; die Eltern tippen VOR dem Ziehen, welches Item kommt – die App zeigt danach die echten Wahrscheinlichkeiten.",
+        "Fünf- bis zehnmal ziehen und an der Tafel Strichliste führen: Wie oft kam das Wunsch-Item wirklich?",
+        "Die Kernfrage ans Plenum: Würden Sie ein Rubbellos kaufen, das so aussieht wie ein Spielzeug?",
+        "Abschluss-Satz: Ihr Kind kann dieses Labor selbst bedienen – wer die Mechanik EINMAL gesehen hat, kauft anders."
+      ]
+    },
+    {
+      "id": "sharenting",
+      "emoji": "📸",
+      "titel": "Sharenting – wenn WIR die Datenquelle sind",
+      "kernbotschaft": "Der Elternabend dreht die Blickrichtung: Nicht nur Kinder teilen zu viel – Erwachsene posten Einschulungsfotos, Krankheitsgeschichten und Strandbilder ihrer Kinder. Der BzKJ-Gefährdungsatlas führt Sharenting als eigenes Risiko-Phänomen.",
+      "folienPunkte": [
+        "Das Kind hat ein Recht am eigenen Bild – auch gegenüber den eigenen Eltern (Art. 16 UN-KRK).",
+        "Faustregeln: vorher fragen · nichts Peinliches, nichts in Badekleidung · Gesicht und Schule möglichst nicht erkennbar · im Zweifel privat statt öffentlich.",
+        "Einmal im Netz heißt: Kopien sind möglich – auch wenn das Original gelöscht wird.",
+        "Der stärkste Moment des Abends: Eltern, die ihr Kind um Erlaubnis fragen, erziehen ein Kind, das später auch fragt."
+      ],
+      "demoApp": null,
+      "demoDrehbuch": []
+    },
+    {
+      "id": "voreinstellungen",
+      "emoji": "🔒",
+      "titel": "Sichere Voreinstellungen – 15 Minuten, die bleiben",
+      "kernbotschaft": "Das Jugendschutzgesetz verpflichtet große Plattformen zu sicheren Voreinstellungen (§ 10b JuSchG) – aber die Grundeinstellungen des Geräts machen Familien selbst. Gemeinsam einrichten wirkt doppelt: Schutz plus Gespräch.",
+      "folienPunkte": [
+        "Profile privat stellen, Kontaktaufnahme nur nach Bestätigung, Standort-Freigaben aus.",
+        "In-App-Käufe sperren, Passwort-Pflicht für Installationen, Zahlungsdaten raus aus dem Kinder-Gerät.",
+        "Gemeinsam einrichten statt heimlich kontrollieren – Heimlichkeit zerstört genau das Vertrauen, das im Ernstfall gebraucht wird.",
+        "Regeln festhalten, die für ALLE gelten – dafür gibt es den Familien-Medienvertrag zum gemeinsamen Ausfüllen."
+      ],
+      "demoApp": null,
+      "demoDrehbuch": []
+    }
+  ],
+  "diskussionskarten": [
+    { "frage": "Ab wann darf mein Kind ein eigenes Smartphone haben – und woran machen wir das fest?", "hinweis": "Es gibt kein gesetzliches Mindestalter – Reife schlägt Geburtstag. Hilfsfrage: Kann das Kind Regeln aushandeln und einhalten?" },
+    { "frage": "Was tue ich, wenn mein Kind mir etwas Schlimmes aus einem Chat zeigt?", "hinweis": "Erst danken, dann helfen, NICHT das Handy wegnehmen – Angst vor dem Verbot ist der häufigste Grund, warum Kinder schweigen." },
+    { "frage": "Posten wir selbst zu viel über unsere Kinder?", "hinweis": "Ehrliche Runde: Wer hat sein Kind schon mal gefragt, bevor ein Foto online ging? Wie hat es reagiert?" },
+    { "frage": "Wie viel Bildschirmzeit ist okay – und ist Zeit überhaupt das richtige Maß?", "hinweis": "Inhalt schlägt Minuten: 30 Minuten Lernspiel ≠ 30 Minuten Sog-Videos. Gemeinsame Regeln wirken besser als Stoppuhren." },
+    { "frage": "Was machen wir, wenn andere Eltern ganz andere Regeln haben?", "hinweis": "Klassen-Elternabende wie dieser sind genau dafür da: gemeinsame Mindest-Regeln der Klasse entlasten jede einzelne Familie." },
+    { "frage": "Spielt Geld in den Spielen unserer Kinder eine Rolle – wissen wir das überhaupt?", "hinweis": "Einstieg: das Kind sein Lieblingsspiel zeigen lassen und ehrlich interessiert fragen, was man dort kaufen kann." }
+  ],
+  "hilfen": [
+    "Nummer gegen Kummer – Kinder und Jugendliche: 116 111 (kostenlos, anonym)",
+    "Elterntelefon: 0800 111 0 550 (kostenlos, anonym)",
+    "jugendschutz.net – Verstöße online melden",
+    "Klassenleitung und Schulsozialarbeit – die kurzen Wege zuerst"
+  ]
+}

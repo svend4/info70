@@ -1,0 +1,30 @@
+/* Eltern-Kompass-Sammelband: Broschueren-Druck.
+   Knoepfe und Inhaltsverzeichnis-Karte verschwinden (.esb-nur-bildschirm);
+   jedes Kapitel beginnt auf einer neuen Seite. */
+
+@media print {
+  .esb-nur-bildschirm { display: none !important; }
+
+  html { font-size: 10.5pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.4rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .esb-kapitel { break-before: page; }
+  .esb-kapitel:first-of-type { break-before: auto; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 1pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    break-inside: avoid;
+  }
+}

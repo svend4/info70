@@ -1,0 +1,27 @@
+/* Elternabend-Kit: Druckansicht fuer Moderations-Seite und Handout.
+   Beim Drucken verschwinden Knoepfe/Sprachwahl (.eak-nur-bildschirm);
+   uebrig bleibt ein ruhiges Blatt fuer Kopierer und Elternmappe. */
+
+@media print {
+  .eak-nur-bildschirm { display: none !important; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    break-inside: avoid;
+  }
+}

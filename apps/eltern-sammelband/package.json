@@ -1,0 +1,8 @@
+{
+  "name": "@info70/eltern-sammelband",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Eltern-Kompass-Sammelband: buendelt alle eltern.html-Seiten des Monorepos zur Laufzeit zu einer druckbaren Broschuere fuer Elternabende. Zielgruppe: Erwachsene.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
