@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kria-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KRIA-Check: Kinderrechte-Folgenabschaetzung (Child Rights Impact Assessment) nach UN-KRK General Comment 25 fuer Anbieter, Schulen und Traeger. Zielgruppe: Erwachsene.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

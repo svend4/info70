@@ -1,0 +1,85 @@
+{
+  "titel": "Projektwoche „Sicher im Netz“",
+  "zielgruppe": "3.–6. Klasse (8–12 Jahre)",
+  "rahmen": "Medienkompetenzrahmen NRW · KMK „Bildung in der digitalen Welt“ · UN-KRK GC25",
+  "technik": "Ein Beamer/Whiteboard genügt: Alle Quiz-Bausteine haben einen Klassen-Modus (eine Anzeige für alle, keine Geräte und keine Daten der Kinder). Für Stationsarbeit reichen 2–4 Geräte; alles läuft offline im Browser, ohne Konten.",
+  "tage": [
+    {
+      "nr": 1,
+      "titel": "Echt oder fake?",
+      "emoji": "🕵️",
+      "lernziel": "Die Kinder prüfen Nachrichten mit den Detektiv-Fragen (Wer sagt das? Woher weiß er das? Was wollen die von mir?) und erkennen Werbung und KI-Bilder als eigene Kategorien.",
+      "apps": ["nachrichten-detektive"],
+      "ablauf": [
+        { "minuten": 15, "phase": "Einstieg", "text": "Blitzrunde im Sitzkreis: „Was hast du diese Woche im Netz gesehen – und woher weißt du, dass es stimmt?“ Antworten unkommentiert an der Tafel sammeln." },
+        { "minuten": 40, "phase": "Erarbeitung", "text": "Nachrichten-Detektive im Klassen-Modus am Beamer: Klasse stimmt per Handzeichen ab (echt/fake), erst dann die Auflösung zeigen. Die drei Detektiv-Fragen als Plakat mitschreiben." },
+        { "minuten": 20, "phase": "Vertiefung", "text": "Gruppenarbeit: Jede Gruppe baut aus Zeitungs-Schnipseln eine „Schlagzeile mit Fehler“ und die Nachbargruppe findet ihn mit den Detektiv-Fragen." },
+        { "minuten": 15, "phase": "Abschluss", "text": "Detektiv-Fragen-Plakat fertigstellen und im Klassenraum aufhängen – es bleibt die ganze Woche der Prüf-Maßstab." }
+      ],
+      "material": ["Beamer/Whiteboard", "Plakat + Stifte", "Zeitungs-Schnipsel/alte Zeitschriften"],
+      "transfer": "Hausideen-Frage: „Finde bis morgen EIN Bild oder eine Meldung, bei der du die Detektiv-Fragen brauchst.“"
+    },
+    {
+      "nr": 2,
+      "titel": "Werbung, Kauf-Tricks & Zufall",
+      "emoji": "🎁",
+      "lernziel": "Die Kinder durchschauen, wie Lootboxen und Kauf-Tricks mit Zufall und Druck arbeiten, und kennen den Unterschied zwischen Wunsch und Wahrscheinlichkeit.",
+      "apps": ["lootbox-labor", "dark-pattern-labyrinth"],
+      "ablauf": [
+        { "minuten": 10, "phase": "Einstieg", "text": "Abfrage per Handzeichen: „Wer hat schon mal eine Überraschungs-Kiste in einem Spiel geöffnet?“ Kurze Erzählrunde ohne Bewertung." },
+        { "minuten": 35, "phase": "Erarbeitung", "text": "Lootbox-Labor am Beamer: Klasse tippt vor jedem Ziehen, was kommt – die App zeigt die echten Wahrscheinlichkeiten. Strichliste an der Tafel: Wie oft kam das Wunsch-Item wirklich?" },
+        { "minuten": 30, "phase": "Vertiefung", "text": "Stationsarbeit Dark-Pattern-Labyrinth (2–4 Geräte): Gruppen suchen den ehrlichen Ausgang und notieren jeden entdeckten Trick mit Namen auf Karteikarten." },
+        { "minuten": 15, "phase": "Abschluss", "text": "Trick-Karten an eine Wandzeitung „So will man uns lenken“ heften; Klasse wählt den fiesesten Trick der Stunde." }
+      ],
+      "material": ["Beamer/Whiteboard", "2–4 Geräte für Stationen", "Karteikarten", "Wandzeitung"],
+      "transfer": "Mini-Auftrag: Zu Hause einen Countdown- oder „Nur noch heute!“-Trick suchen (Prospekt, App, Werbung) und morgen mitbringen."
+    },
+    {
+      "nr": 3,
+      "titel": "Der Feed und der Sog",
+      "emoji": "🌀",
+      "lernziel": "Die Kinder erklären, dass ein Algorithmus Reaktionen misst statt Wahrheit, und benennen Sog-Mechaniken (Autoplay, Streaks, Belohnungs-Zufall) mit eigenen Stopp-Strategien.",
+      "apps": ["feed-forscher", "sog-maschine"],
+      "ablauf": [
+        { "minuten": 10, "phase": "Einstieg", "text": "Gedankenexperiment: „Woher weiß deine Video-App, was sie dir als Nächstes zeigt?“ Hypothesen an der Tafel sammeln." },
+        { "minuten": 35, "phase": "Erarbeitung", "text": "Feed-Forscher am Beamer: Klasse entscheidet gemeinsam, worauf geklickt wird, und beobachtet, wie der Feed kippt. Danach Hypothesen von der Tafel prüfen: Welche stimmte?" },
+        { "minuten": 30, "phase": "Vertiefung", "text": "Sog-Maschine in Partnerarbeit oder am Beamer: Sog-Mechaniken einschalten/ausschalten und spüren, was den Ausstieg schwer macht. Jedes Kind notiert seine stärkste „Klebe-Falle“." },
+        { "minuten": 15, "phase": "Abschluss", "text": "Stopp-Strategien sammeln (Ton aus, Autoplay aus, Wecker stellen, Gerät in anderen Raum) – jedes Kind wählt EINE für diese Woche." }
+      ],
+      "material": ["Beamer/Whiteboard", "ggf. 2–4 Geräte", "Notizzettel"],
+      "transfer": "Wochen-Experiment: Die gewählte Stopp-Strategie bis Tag 5 ausprobieren – am Freitag Blitz-Bericht."
+    },
+    {
+      "nr": 4,
+      "titel": "Stark füreinander im Chat",
+      "emoji": "💪",
+      "lernziel": "Die Kinder kennen ihre Macht als Zuschauende bei Cybermobbing (Gegenrede, Melden, Holen von Hilfe) und beschließen demokratisch erste Regeln für ihren Umgang.",
+      "apps": ["stark-im-chat", "spiral-stopper", "mitmach-arena"],
+      "ablauf": [
+        { "minuten": 10, "phase": "Einstieg", "text": "Stilles Stimmungsbild mit Klebepunkten: „Hast du schon mal Gemeinheiten in einem Chat gesehen?“ (anonym, keine Namen, keine Pflicht zu erzählen)." },
+        { "minuten": 35, "phase": "Erarbeitung", "text": "Stark im Chat am Beamer: Szenen gemeinsam durchspielen, vor jeder Auflösung Klassen-Abstimmung über die beste Zuschauer-Reaktion. Regel festhalten: Zuschauen ist auch eine Entscheidung." },
+        { "minuten": 30, "phase": "Vertiefung", "text": "Spiral-Stopper in Gruppen: den heißlaufenden Thread abkühlen. Jede Gruppe schreibt ihren besten Abkühl-Satz groß auf ein Blatt." },
+        { "minuten": 15, "phase": "Abschluss", "text": "Mitmach-Arena: Klasse stimmt über die drei wichtigsten Chat-Regeln ab (Vorschläge aus den Abkühl-Sätzen) – Ergebnis wird Entwurf für die Netz-Charta von Tag 5. Hinweis auf Hilfe: Nummer gegen Kummer 116 111." }
+      ],
+      "material": ["Beamer/Whiteboard", "Klebepunkte", "A3-Blätter + dicke Stifte"],
+      "transfer": "Abkühl-Sätze hängen neben der Wandzeitung – benutzbar ab sofort, auch auf dem Schulhof."
+    },
+    {
+      "nr": 5,
+      "titel": "Meine Daten, meine Rechte, unsere Charta",
+      "emoji": "🗝️",
+      "lernziel": "Die Kinder wenden die Daten-Schatz-Regeln an, kennen Löschrecht und Beschwerdewege und beschließen ihre Klassen-Netz-Charta als demokratisches Ergebnis der Woche.",
+      "apps": ["daten-schatz", "daten-radiergummi", "beschwerde-lotse", "mitmach-arena"],
+      "ablauf": [
+        { "minuten": 10, "phase": "Einstieg", "text": "Schatzkisten-Frage: „Was gehört alles zu DEINEN Daten?“ (Name, Fotos, Stimme, Standort, Lieblingssachen) – Sammlung an der Tafel." },
+        { "minuten": 30, "phase": "Erarbeitung", "text": "Daten-Schatz im Klassen-Modus: Szenen abstimmen und lösen. Danach kurz Daten-Radiergummi zeigen: Was kann Löschen – und wo sind seine Grenzen (Screenshots!)?" },
+        { "minuten": 20, "phase": "Vertiefung", "text": "Beschwerde-Lotse in Gruppen: Zu je einem Fall (fieses Bild, Kettenbrief, fremder Kontakt) den Hilfeweg herausfinden und als Wegweiser-Plakat zeichnen." },
+        { "minuten": 30, "phase": "Abschluss", "text": "Klassen-Netz-Charta: Regel-Kandidaten der Woche in der Mitmach-Arena final abstimmen, Charta abschreiben/ausdrucken, alle unterschreiben. Blitz-Bericht zum Stopp-Strategie-Experiment von Tag 3." }
+      ],
+      "material": ["Beamer/Whiteboard", "2–4 Geräte", "Plakate", "Charta-Blatt zum Unterschreiben"],
+      "transfer": "Die Charta hängt im Klassenraum; Eltern bekommen sie als Kopie mit nach Hause (Gesprächsanlass für den Familien-Medienvertrag)."
+    }
+  ],
+  "elternHinweis": "Elternabend-Baustein: Die Charta der Klasse plus 10 Minuten Live-Demo einer App wirkt stärker als jeder Vortrag. Für zu Hause: familien-medienvertrag als freiwillige Fortsetzung.",
+  "hilfe": "Bei belastenden Vorfällen, die in der Woche sichtbar werden: Nummer gegen Kummer 116 111 (für Kinder, kostenlos, anonym) · Schulsozialarbeit einbeziehen."
+}

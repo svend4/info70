@@ -1,0 +1,8 @@
+{
+  "name": "@info70/projektwoche",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Projektwoche 'Sicher im Netz': schulfertiges Fuenf-Tage-Format fuer Lehrkraefte, das vorhandene Apps des Monorepos zu 90-Minuten-Tagesplaenen buendelt. Druckbare Handreichung.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

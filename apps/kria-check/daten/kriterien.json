@@ -1,0 +1,217 @@
+{
+  "quelle": "UN-Kinderrechtskonvention (KRK) mit General Comment No. 25 (2021) zu Kinderrechten im digitalen Umfeld",
+  "hinweis": "Eine Kinderrechte-Folgenabschätzung (KRIA / Child Rights Impact Assessment) prüft VOR Start, Beschaffung oder Förderantrag, wie ein digitales Angebot auf Kinder wirkt. GC25 Rn. 23 fordert sie ausdrücklich von Staat UND Unternehmen.",
+  "bereiche": [
+    {
+      "id": "kindeswohl",
+      "name": "Kindeswohl-Vorrang & Zweck",
+      "emoji": "⚖️",
+      "kriterien": [
+        {
+          "id": "kw-zweck",
+          "text": "Wir können in einem Satz sagen, welchen konkreten Nutzen das Angebot für Kinder hat - und dieser Nutzen steht über wirtschaftlichen Zielen.",
+          "hilfe": "Schreibe den Satz tatsächlich auf. Wenn er nur mit Reichweite, Umsatz oder Datensammlung endet, ist Art. 3 KRK (Vorrang des Kindeswohls) verletzt. GC25 Rn. 12-13 verlangt, dass das Kindeswohl bei Gestaltung UND Betrieb leitend ist.",
+          "bezug": "Art. 3 KRK; GC25 Rn. 12-13"
+        },
+        {
+          "id": "kw-alter",
+          "text": "Die Zielaltersgruppe ist benannt, und Inhalte, Sprache und Bedienung sind nachweisbar für genau dieses Alter geeignet (Alterseignung, nicht nur Altersfreigabe).",
+          "hilfe": "Alterseignung ist mehr als eine USK/FSK-Zahl: Prüfe Textlänge, Lesestufe, Symbolik und Interaktionstempo gegen die Zielgruppe. Ein Angebot »ab 6« mit Fließtext-Wänden besteht die Prüfung nicht. Testlauf mit Kindern der Zielgruppe dokumentieren.",
+          "bezug": "Art. 5, 17 KRK; GC25 Rn. 19-21; JuSchG § 10a"
+        },
+        {
+          "id": "kw-kria",
+          "text": "Diese Folgenabschätzung wird VOR dem Start (bzw. vor der Beschaffung) durchgeführt und bei wesentlichen Änderungen wiederholt.",
+          "hilfe": "GC25 Rn. 23 nennt die Kinderrechte-Folgenabschätzung als laufende Pflicht, nicht als einmaliges Dokument. Lege einen Wiedervorlage-Termin fest (z. B. jedes Release mit neuen Funktionen) und archiviere jede Fassung des Berichts.",
+          "bezug": "GC25 Rn. 23; DSA Art. 34 (Risikobewertung)"
+        },
+        {
+          "id": "kw-abwaegung",
+          "text": "Wo Rechte kollidieren (z. B. Schutz vs. Teilhabe), ist die Abwägung schriftlich begründet - Schutz wird nicht pauschal als Ausschluss gelöst.",
+          "hilfe": "GC25 warnt vor Überbehütung als eigener Rechtsverletzung: Kinder pauschal auszusperren, statt Risiken kindgerecht zu entschärfen, verletzt Teilhabe- und Informationsrechte. Notiere pro Konflikt: welches Recht, welche Lösung, warum verhältnismäßig.",
+          "bezug": "Art. 3, 12, 13 KRK; GC25 Rn. 14, 62"
+        }
+      ]
+    },
+    {
+      "id": "schutz",
+      "name": "Schutz vor Gefährdung",
+      "emoji": "🛡️",
+      "kriterien": [
+        {
+          "id": "s-inhalte",
+          "text": "Alle Inhalte und (falls vorhanden) nutzergenerierten Beiträge sind gegen die Risikophänomene des BzKJ-Gefährdungsatlas geprüft.",
+          "hilfe": "Der Gefährdungsatlas der BzKJ beschreibt 43 Phänomene (u. a. Cybergrooming, Kostenfallen, dissoziale Communities). Gehe die Liste durch und notiere pro relevantem Phänomen: betrifft uns / betrifft uns nicht / Schutzmaßnahme X.",
+          "bezug": "Art. 19, 34, 36 KRK; GC25 Rn. 80-82; JuSchG § 10a-b"
+        },
+        {
+          "id": "s-kontakt",
+          "text": "Fremdkontakt-Risiken sind ausgeschlossen oder entschärft: keine offenen Chats, keine privaten Nachrichten von Unbekannten, sichere Voreinstellungen ab Werk.",
+          "hilfe": "Safety by default: Die schützendste Einstellung muss die Voreinstellung sein (JuSchG § 10b). Wenn es Kommunikationsfunktionen gibt: Moderation? Melden-Knopf? Kontakt nur nach beidseitiger Bestätigung? Ohne Antwort auf diese Fragen keinen Haken setzen.",
+          "bezug": "Art. 19 KRK; GC25 Rn. 82; JuSchG § 10b; DSA Art. 28"
+        },
+        {
+          "id": "s-druck",
+          "text": "Das Angebot erzeugt keinen Druck: keine Countdown-Verknappung, keine Streaks mit Verlustangst, kein Autoplay ohne Stopp, keine Beschämung beim Ausstieg.",
+          "hilfe": "Dark Patterns und Sog-Mechaniken sind für Minderjährige besonders wirksam - DSA Art. 25 verbietet manipulative Gestaltung generell. Klicke dich selbst durch jeden Ausstiegs- und Pausenweg: Geht Aufhören genauso leicht wie Weitermachen?",
+          "bezug": "Art. 31 KRK; GC25 Rn. 110-112; DSA Art. 25"
+        },
+        {
+          "id": "s-ki",
+          "text": "Setzt das Angebot KI ein, ist das gekennzeichnet, es gibt keine KI-Bewertung oder -Klassifizierung von Kindern, und Ausgaben sind kindgerecht abgesichert.",
+          "hilfe": "Die EU-KI-Verordnung verbietet Systeme, die die Schutzbedürftigkeit von Kindern ausnutzen (Art. 5). Emotionserkennung, Scoring oder verdeckte KI-Chatpartner haben in Kinderangeboten nichts verloren. Kein KI-Einsatz? Dann Haken setzen und im Bericht »keine KI« notieren.",
+          "bezug": "GC25 Rn. 40, 68; EU AI Act Art. 5, 50"
+        }
+      ]
+    },
+    {
+      "id": "daten",
+      "name": "Privatsphäre & Datenminimierung",
+      "emoji": "🔒",
+      "kriterien": [
+        {
+          "id": "d-minimierung",
+          "text": "Das Angebot funktioniert ohne Konto und erhebt keine personenbezogenen Daten von Kindern - oder nur das nachweisbar unvermeidbare Minimum.",
+          "hilfe": "Datenminimierung heißt für Kinderangebote: Beginne bei NULL Datenerhebung und begründe jede einzelne Ausnahme schriftlich (Zweck, Speicherdauer, Rechtsgrundlage). »Könnte später nützlich sein« ist keine Begründung im Sinne der DSGVO.",
+          "bezug": "Art. 16 KRK; GC25 Rn. 67-70; DSGVO Art. 5, 8, 25"
+        },
+        {
+          "id": "d-tracking",
+          "text": "Es gibt kein Tracking, keine Werbeprofile und keine Weitergabe an Dritte; Anfragen an fremde Server (CDN, Fonts, Analytics) sind ausgeschlossen oder vollständig gelistet.",
+          "hilfe": "Profiling von Kindern zu Werbezwecken ist nach DSA Art. 28 verboten. Öffne die App mit offenen Browser-Entwicklertools (Netzwerk-Tab): Jede Zeile zu einer fremden Domain muss erklärbar sein - besser ist, es gibt gar keine.",
+          "bezug": "GC25 Rn. 68; DSA Art. 26 (3), 28; DSGVO Art. 22"
+        },
+        {
+          "id": "d-loeschen",
+          "text": "Kinder (und Eltern) können alle gespeicherten Daten selbst einsehen und mit einem sichtbaren Weg vollständig löschen.",
+          "hilfe": "Auskunft (Art. 15) und Löschung (Art. 17) müssen kindertauglich bedienbar sein - ein »Meine Daten löschen«-Knopf in der App, nicht ein Brief an den Datenschutzbeauftragten. Teste den Weg selbst und stoppe die Zeit: mehr als eine Minute ist zu lang.",
+          "bezug": "DSGVO Art. 12 (1), 15, 17; GC25 Rn. 72"
+        },
+        {
+          "id": "d-verstaendlich",
+          "text": "Die Datenschutzinformation existiert in einer Fassung, die Kinder der Zielaltersgruppe selbst verstehen können.",
+          "hilfe": "DSGVO Art. 12 verlangt Information »in klarer und einfacher Sprache, insbesondere für Kinder«. Lies die Kinder-Fassung einem Kind der Zielgruppe vor und lass es erklären, was gespeichert wird - wenn das scheitert, neu schreiben.",
+          "bezug": "DSGVO Art. 12 (1); GC25 Rn. 39; Art. 17 KRK"
+        }
+      ]
+    },
+    {
+      "id": "teilhabe",
+      "name": "Teilhabe, Information & Gehör",
+      "emoji": "🗣️",
+      "kriterien": [
+        {
+          "id": "t-beteiligung",
+          "text": "Kinder der Zielgruppe wurden bei Konzeption oder Test tatsächlich beteiligt, und ihr Feedback hat das Angebot nachweisbar verändert.",
+          "hilfe": "Art. 12 KRK gibt Kindern das Recht, in allen sie berührenden Angelegenheiten gehört zu werden - GC25 Rn. 17 bezieht das ausdrücklich auf die Gestaltung digitaler Angebote. Dokumentiere: Wann getestet, was gesagt, was geändert. Ein Screenshot-Protokoll genügt.",
+          "bezug": "Art. 12 KRK; GC25 Rn. 16-18"
+        },
+        {
+          "id": "t-information",
+          "text": "Das Angebot erweitert den Zugang zu verlässlicher, altersgerechter Information, statt ihn zu verengen (keine reine Beschäftigungs-Schleife).",
+          "hilfe": "Art. 17 KRK verpflichtet auf Zugang zu Informationen »aus einer Vielfalt von Quellen«. Frage: Lernt, entdeckt oder gestaltet das Kind hier etwas - oder wird nur Zeit gebunden? Der Unterschied entscheidet auch über fragFINN- und Gütesiegel-Tauglichkeit.",
+          "bezug": "Art. 13, 17 KRK; GC25 Rn. 50-53"
+        },
+        {
+          "id": "t-mitbestimmen",
+          "text": "Kinder können im Angebot selbst Einstellungen verstehen und ändern (Tempo, Ton, Vorlesen, Pausen) - Selbstbestimmung ist Teil der Bedienung.",
+          "hilfe": "Handlungsfähigkeit (agency) ist ein Kernbegriff des GC25: Kinder sind Träger eigener Rechte, nicht Objekte von Einstellungen ihrer Eltern. Prüfe, ob das Kind selbst pausieren, Ton abstellen und Hilfen zuschalten kann - ohne Erwachsenen-Menü.",
+          "bezug": "Art. 5, 12 KRK; GC25 Rn. 19-21"
+        }
+      ]
+    },
+    {
+      "id": "zugang",
+      "name": "Nichtdiskriminierung & Zugänglichkeit",
+      "emoji": "🌈",
+      "kriterien": [
+        {
+          "id": "z-barrierefrei",
+          "text": "Das Angebot ist barrierearm nutzbar: ausreichende Kontraste, Tastaturbedienung, Alternativtexte, Vorlese-Tauglichkeit, verständliche Sprache.",
+          "hilfe": "Seit 28.06.2025 gilt das BFSG (europäischer European Accessibility Act) auch für viele digitale Verbraucherdienste. Mindest-Selbsttest: nur mit Tastatur durchklicken, Screenreader-Probelauf, Kontrast der Hauptfarben gegen WCAG-AA prüfen.",
+          "bezug": "Art. 2, 23 KRK; GC25 Rn. 89-91; BFSG/EAA; WCAG 2.1 AA"
+        },
+        {
+          "id": "z-geraete",
+          "text": "Das Angebot läuft auch auf älteren Geräten und schmalen Verbindungen - Teilhabe hängt nicht am neuesten Smartphone.",
+          "hilfe": "GC25 Rn. 9 benennt die digitale Spaltung als Diskriminierungsrisiko. Teste auf einem mindestens fünf Jahre alten Gerät und mit gedrosselter Verbindung; große Bundles, Pflicht-Downloads und Dauer-Online-Zwang schließen genau die Kinder aus, die öffentliche Förderung erreichen soll.",
+          "bezug": "Art. 2 KRK; GC25 Rn. 9-11; BzKJ-Förderkriterien"
+        },
+        {
+          "id": "z-vielfalt",
+          "text": "Darstellungen und Beispiele zeigen Vielfalt und reproduzieren keine Stereotype (Geschlecht, Herkunft, Behinderung, Familienformen).",
+          "hilfe": "Gehe Bilder, Namen und Rollen im Angebot systematisch durch: Wer handelt, wer wird gerettet, wer kommt gar nicht vor? Ein kurzer Diversity-Durchgang mit einer zweiten Person findet blinde Flecken schneller als Selbstprüfung.",
+          "bezug": "Art. 2 KRK; GC25 Rn. 10, 61; Seitenstark-Kriterien"
+        },
+        {
+          "id": "z-sprache",
+          "text": "Für Kinder mit anderer Familiensprache gibt es einen Zugangsweg (Mehrsprachigkeit, einfache Sprache oder sprachfreie Bedienung).",
+          "hilfe": "Vollübersetzung ist nicht immer nötig: Schon selbsterklärende Symbole, Vorlesen und eine Fassung in einfacher Sprache senken die Schwelle deutlich. Notiere im Bericht, welcher Weg gewählt wurde und für welche Sprachen.",
+          "bezug": "Art. 2, 30 KRK; GC25 Rn. 10; BFSG (Verständlichkeit)"
+        }
+      ]
+    },
+    {
+      "id": "wohl",
+      "name": "Wohlbefinden & Schutz vor kommerzieller Ausbeutung",
+      "emoji": "💛",
+      "kriterien": [
+        {
+          "id": "w-werbefrei",
+          "text": "Kinder sehen keine Werbung, keine Kaufaufforderungen und keine Kaufmöglichkeiten; Werbung und Inhalt sind nirgends vermischt.",
+          "hilfe": "An Kinder gerichtete direkte Kaufappelle sind nach UWG (Anhang Nr. 28) stets unzulässig; JMStV § 6 verbietet die Vermischung von Werbung und Inhalt. Prüfe auch Grauzonen: In-App-Käufe, »Premium«-Hinweise, Merchandising-Verlinkungen, gesponserte Figuren.",
+          "bezug": "Art. 32 KRK; GC25 Rn. 40-42, 112; JMStV § 6; UWG Anhang Nr. 28"
+        },
+        {
+          "id": "w-glueck",
+          "text": "Es gibt keine glücksspielähnlichen Mechaniken: keine Lootboxen, kein Pay-to-Win, keine Zufallsbelohnungen gegen Geld oder Zeitdruck.",
+          "hilfe": "GC25 Rn. 112 nennt glücksspielähnliche Gestaltung ausdrücklich als Risiko für Kinder. Simuliertes Glücksspiel wirkt auch ohne Echtgeld: Prüfe jede Belohnungsschleife darauf, ob der Zufall den Weiterspiel-Drang erzeugen soll.",
+          "bezug": "GC25 Rn. 112; JuSchG § 10b (ökonomische Risiken)"
+        },
+        {
+          "id": "w-pausen",
+          "text": "Das Angebot respektiert Ruhe, Spiel und Schlaf: klare Enden statt Endlos-Schleifen, keine Push-Rückholung, Pausen werden nicht bestraft.",
+          "hilfe": "Art. 31 KRK schützt Ruhe und freies Spiel - auch gegen Bildschirm-Dauerbindung. Prüfe: Hat jede Sitzung ein natürliches Ende? Verliert ein Kind etwas, wenn es drei Tage nicht öffnet? Push-Nachrichten am Abend sind ein klares Warnsignal.",
+          "bezug": "Art. 31 KRK; GC25 Rn. 95, 110"
+        },
+        {
+          "id": "w-vergleich",
+          "text": "Es gibt keine öffentlichen Ranglisten, Follower-Zahlen oder Schönheits-/Leistungsvergleiche zwischen Kindern.",
+          "hilfe": "Sozialer Aufwärtsvergleich ist einer der am besten belegten Belastungsfaktoren für das Wohlbefinden von Kindern in digitalen Diensten. Wettbewerb ist möglich - aber gegen die Aufgabe, nicht gegen die Sichtbarkeit anderer Kinder.",
+          "bezug": "Art. 3, 24 KRK; GC25 Rn. 62, 95"
+        }
+      ]
+    },
+    {
+      "id": "abhilfe",
+      "name": "Abhilfe & Beschwerdewege",
+      "emoji": "📮",
+      "kriterien": [
+        {
+          "id": "a-melden",
+          "text": "Es gibt einen für Kinder auffindbaren, kostenlosen und kindgerecht formulierten Weg, Probleme zu melden - mit zugesagter Reaktionszeit.",
+          "hilfe": "GC25 Rn. 43-49 verlangt für Kinder zugängliche Beschwerdewege. Kindgerecht heißt: vom Startbildschirm in höchstens zwei Schritten erreichbar, ohne Formulardeutsch, mit einer Antwort in Kindersprache. DSA Art. 20 fordert wirksame interne Beschwerdesysteme.",
+          "bezug": "Art. 4 KRK; GC25 Rn. 43-49; DSA Art. 16, 20"
+        },
+        {
+          "id": "a-extern",
+          "text": "Das Angebot nennt externe Hilfen (Nummer gegen Kummer 116 111, jugendschutz.net, Landesmedienanstalt), damit Kinder auch außerhalb des Anbieters Gehör finden.",
+          "hilfe": "Abhilfe darf nicht beim Anbieter enden, der selbst Teil des Problems sein kann. Verlinke bzw. nenne mindestens eine anbieterunabhängige Anlaufstelle gut sichtbar - die Nummer gegen Kummer 116 111 ist kostenlos und anonym.",
+          "bezug": "GC25 Rn. 44; JuSchG § 24a-b (Anbietervorsorge)"
+        },
+        {
+          "id": "a-verantwortlich",
+          "text": "Impressum und eine erreichbare verantwortliche Person sind vorhanden; Zuständigkeit für Kinderschutz ist intern benannt.",
+          "hilfe": "Ohne klare Verantwortlichkeit läuft jede Beschwerde ins Leere. Prüfe: vollständiges Impressum (DDG § 5), benannte Ansprechperson für Jugendschutzfragen, interner Vertretungsplan für Abwesenheiten.",
+          "bezug": "DDG § 5; JMStV § 7 (Jugendschutzbeauftragte*r)"
+        },
+        {
+          "id": "a-lernen",
+          "text": "Eingehende Beschwerden und Vorfälle werden ausgewertet und führen nachweisbar zu Verbesserungen (Abhilfe-Schleife statt Ticket-Grab).",
+          "hilfe": "Führe eine einfache Vorfalls-Liste: Datum, Problem, Maßnahme, erledigt am. Bei der nächsten Folgenabschätzung ist diese Liste die wichtigste Quelle - sie zeigt, wo das Angebot in der Praxis von der Selbstbeschreibung abweicht.",
+          "bezug": "Art. 4 KRK; GC25 Rn. 24; DSA Art. 20 (4)"
+        }
+      ]
+    }
+  ]
+}
