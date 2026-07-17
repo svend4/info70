@@ -7,7 +7,7 @@
 [vorlagen/kurz-gdd.md](vorlagen/kurz-gdd.md).
 
 
-> **Статус сборки (12.07.2026):** роями агентов построено из этого каталога — Dark-Pattern-Labyrinth, Deepfake-Studio, Lootbox-Labor, Bot oder Buddy?, Köder-Quiz, Passwort-Prüfstand, Familien-Medienvertrag + контент-паки KI-Radar и Digitale Rechte. См. `apps/` и корневой `index.html`.
+> **Статус сборки (12.07.2026):** роями агентов построено из этого каталога — Dark-Pattern-Labyrinth, Deepfake-Studio, Lootbox-Labor, Bot oder Buddy?, Köder-Quiz, Passwort-Prüfstand, Familien-Medienvertrag + контент-паки KI-Radar и Digitale Rechte. Далее вручную: Spiral-Stopper, Challenge-Druck-Simulator, Beschwerde-Lotse и Klassen-Modus в quiz-kern (все квизы). См. `apps/` и корневой `index.html`.
 
 ## Арифметика «десятков и сотен»
 

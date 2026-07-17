@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "szene": "Ayla hat ein Video von ihrem Tanz-Auftritt gepostet. Darunter geht es los …",
+  "runden": [
+    {
+      "id": "r1",
+      "ruhig": "User_Blitz: „Naja, so besonders ist das jetzt auch nicht.“",
+      "gereizt": "User_Blitz: „Das soll Tanzen sein? Ich musste lachen.“",
+      "heiss": "User_Blitz: „Peinlichster Auftritt ever. Warum lädt man sowas hoch?“"
+    },
+    {
+      "id": "r2",
+      "ruhig": "Randome123: „Fand's auch nur okay, ehrlich gesagt.“",
+      "gereizt": "Randome123: „Haha, endlich sagt's mal jemand!“",
+      "heiss": "Randome123: „Team Blitz! Die soll das Video löschen 😂“"
+    },
+    {
+      "id": "r3",
+      "ruhig": "Mia_M: „Also ich fand ein paar Stellen richtig gut.“",
+      "gereizt": "User_Blitz: „@Mia_M Musst du dich einmischen? War klar.“",
+      "heiss": "User_Blitz: „@Mia_M Dann bist du genauso peinlich wie sie.“"
+    },
+    {
+      "id": "r4",
+      "ruhig": "Neuer_Account_7: „Worum geht's hier überhaupt?“",
+      "gereizt": "Neuer_Account_7: „Boah, hier ist ja richtig was los 🍿“",
+      "heiss": "Neuer_Account_7: „Schickt das mal in die anderen Gruppen 😈“"
+    },
+    {
+      "id": "r5",
+      "ruhig": "User_Blitz: „Okay okay, war vielleicht etwas hart.“",
+      "gereizt": "User_Blitz: „Ich sag doch nur meine MEINUNG!!“",
+      "heiss": "User_Blitz: „Heul doch. Das Internet ist kein Ponyhof.“"
+    },
+    {
+      "id": "r6",
+      "ruhig": "Klassen_Chat: „Lasst uns wieder über den Auftritt reden - nächste Woche ist ja der zweite.“",
+      "gereizt": "Klassen_Chat: „Leute, das eskaliert hier gerade ganz schön …“",
+      "heiss": "Klassen_Chat: „STOPP mal alle! Das ist Aylas Video, nicht eure Arena.“"
+    }
+  ],
+  "lektionen": [
+    "🌡️ Hass eskaliert in Spiralen: Jede gemeine Antwort heizt den Thread für ALLE auf - auch für Ayla, die mitliest.",
+    "💬 Gegenrede ist stark: Ein einziger freundlicher Widerspruch verändert, was im Thread als normal gilt.",
+    "🚩 Melden ist kein Petzen: Nach dem EU-Gesetz für digitale Dienste (DSA) müssen Plattformen Meldungen bearbeiten.",
+    "💛 Und für die Betroffene zählt am meisten: eine private Nachricht an Ayla - „Ich fand's gut. Lass dich nicht ärgern.“"
+  ]
+}

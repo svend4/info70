@@ -1,0 +1,8 @@
+{
+  "name": "@info70/challenge-druck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Challenge-Druck-Simulator: Gruppendruck-Taktiken hinter riskanten Challenges erkennen und Nein-Sagen ueben (8-12).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

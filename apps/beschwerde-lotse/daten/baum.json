@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "start": "was",
+  "knoten": {
+    "was": {
+      "frage": "Was ist passiert?",
+      "optionen": [
+        { "text": "😢 Jemand ist gemein zu mir oder anderen (Nachrichten, Ausgrenzen, Bloßstellen)", "ziel": "gemein" },
+        { "text": "🕵️ Eine fremde Person schreibt mir komisch oder will sich treffen", "ziel": "fremde" },
+        { "text": "😱 Ich habe etwas Gruseliges oder Ekliges gesehen", "ziel": "gesehen" },
+        { "text": "💶 Eine App/Seite will Geld oder meine Daten", "ziel": "geld" },
+        { "text": "📸 Ein Foto oder Video von mir ist ohne Erlaubnis online", "ziel": "bild" },
+        { "text": "🤷 Ich weiß nicht genau – irgendwas fühlt sich falsch an", "ziel": "unklar" }
+      ]
+    },
+    "gemein": {
+      "frage": "Wo passiert das?",
+      "optionen": [
+        { "text": "In einer App oder auf einer Plattform (Chat, Spiel, Video-App)", "ziel": "blatt-mobbing-plattform" },
+        { "text": "In der Klasse oder Schule (auch im Klassenchat)", "ziel": "blatt-mobbing-schule" }
+      ]
+    },
+    "fremde": {
+      "frage": "Wie dringend fühlt es sich an?",
+      "optionen": [
+        { "text": "Die Person macht Druck, will Fotos oder ein Treffen", "ziel": "blatt-fremde-dringend" },
+        { "text": "Es ist „nur“ komisch – ich bin unsicher", "ziel": "blatt-fremde-unsicher" }
+      ]
+    },
+    "gesehen": {
+      "frage": "Was möchtest du jetzt am liebsten?",
+      "optionen": [
+        { "text": "Dass so etwas aus dem Netz verschwindet", "ziel": "blatt-melden-inhalt" },
+        { "text": "Erstmal mit jemandem darüber reden – es geht mir nach", "ziel": "blatt-reden" }
+      ]
+    },
+    "geld": {
+      "frage": "Was genau will die App oder Seite?",
+      "optionen": [
+        { "text": "Geld (Käufe, Abo, „Gewinn“ gegen Gebühr)", "ziel": "blatt-geldfalle" },
+        { "text": "Daten (Name, Adresse, Fotos, Kamera-Zugriff)", "ziel": "blatt-datenfalle" }
+      ]
+    },
+    "bild": {
+      "frage": "Wer hat es gepostet?",
+      "optionen": [
+        { "text": "Jemand, den ich kenne (Mitschüler*in, Bekannte)", "ziel": "blatt-bild-bekannt" },
+        { "text": "Fremde oder ich weiß es nicht", "ziel": "blatt-bild-fremd" }
+      ]
+    },
+    "unklar": {
+      "frage": "Magst du zuerst mit jemandem sprechen oder zuerst verstehen, was das war?",
+      "optionen": [
+        { "text": "Erst sprechen – anonym und kostenlos", "ziel": "blatt-reden" },
+        { "text": "Erst verstehen – zeig mir die Wege", "ziel": "blatt-wege" }
+      ]
+    }
+  },
+  "blaetter": {
+    "blatt-mobbing-plattform": {
+      "titel": "Dein Plan gegen Gemeinheiten in der App",
+      "schritte": [
+        "📸 Beweise sichern: Screenshots machen, BEVOR etwas gelöscht wird.",
+        "🚩 In der App melden: Jede große Plattform MUSS Meldungen bearbeiten (EU-Regel/DSA). Such das Fahnen- oder …-Menü.",
+        "🚫 Blockieren: Die Person verliert ihren Draht zu dir.",
+        "🗣️ Erwachsenen zeigen: Du bekommst keinen Ärger – wer mobbt, hat Schuld, nie du.",
+        "💛 Wenn du magst: Nummer gegen Kummer 116 111 (kostenlos, anonym, mo-sa)."
+      ]
+    },
+    "blatt-mobbing-schule": {
+      "titel": "Dein Plan bei Ärger in Klasse oder Schule",
+      "schritte": [
+        "📸 Beweise sichern (Screenshots vom Klassenchat).",
+        "🗣️ Einer erwachsenen Person an der Schule erzählen: Klassenleitung oder Vertrauenslehrer*in – dafür sind sie da.",
+        "👪 Zuhause Bescheid sagen: Gemeinsam seid ihr stärker.",
+        "🤝 Du musst dich NICHT allein wehren: Hol dir eine Freundin oder einen Freund als Verstärkung dazu.",
+        "💛 Zum Reden und Üben: Nummer gegen Kummer 116 111."
+      ]
+    },
+    "blatt-fremde-dringend": {
+      "titel": "Dein Plan: Fremde Person macht Druck",
+      "schritte": [
+        "🛑 NICHTS schicken, NICHT treffen, nicht weiter antworten – egal, was versprochen oder gedroht wird.",
+        "📸 Beweise sichern: Chatverlauf per Screenshot.",
+        "🚫 Blockieren und in der App melden.",
+        "🗣️ SOFORT einer erwachsenen Person erzählen – das ist zu groß für dich allein. Druck von Fremden kann eine Straftat sein; Erwachsene können die Polizei einschalten.",
+        "💛 Du hast NICHTS falsch gemacht. Falls das Reden schwerfällt: erst anonym üben bei 116 111."
+      ]
+    },
+    "blatt-fremde-unsicher": {
+      "titel": "Dein Plan: Komisches Gefühl bei einer fremden Person",
+      "schritte": [
+        "🧭 Deinem Gefühl trauen: Komisch ist Grund genug zu handeln.",
+        "🤐 Nichts Persönliches erzählen (Name, Schule, Adresse, Fotos).",
+        "🗣️ Einer erwachsenen Person davon erzählen und den Chat gemeinsam anschauen.",
+        "🚫 Im Zweifel blockieren – du schuldest Fremden keine Antwort.",
+        "💛 Reden hilft: Nummer gegen Kummer 116 111 (anonym)."
+      ]
+    },
+    "blatt-melden-inhalt": {
+      "titel": "Dein Plan: Schlimme Inhalte melden",
+      "schritte": [
+        "🙅 Nicht weiterschicken – auch nicht „zur Warnung“ (das verbreitet es nur).",
+        "🚩 Direkt in der App melden (Fahnen-Symbol).",
+        "🗣️ Erwachsene einweihen: Gemeinsam könnt ihr es zusätzlich bei der Beschwerdestelle jugendschutz.net melden – die kümmern sich um genau sowas.",
+        "🧹 Danach: Feed „auffrischen“ (nicht mehr draufklicken), damit der Algorithmus es nicht öfter zeigt.",
+        "💛 Wenn Bilder im Kopf bleiben: darüber reden hilft wirklich – 116 111."
+      ]
+    },
+    "blatt-reden": {
+      "titel": "Dein Plan: Erstmal reden",
+      "schritte": [
+        "💛 Nummer gegen Kummer: 116 111 – kostenlos vom Handy, anonym, montags bis samstags. Du musst nicht mal deinen Namen sagen.",
+        "🗣️ Oder such dir deine Vertrauensperson: Eltern, Oma, Trainer*in, Lehrkraft – wer sich gut anfühlt, ist richtig.",
+        "✍️ Tipp: Schreib vorher einen Satz auf („Ich will erzählen, was mir im Internet passiert ist“) – der Anfang ist das Schwerste.",
+        "⏰ Du darfst auch morgen anrufen. Aber ein Geheimnis, das dich belastet, sollte kein Geheimnis bleiben."
+      ]
+    },
+    "blatt-geldfalle": {
+      "titel": "Dein Plan gegen Geld-Fallen",
+      "schritte": [
+        "🛑 Nichts kaufen, nichts bestätigen, keine Handynummer eingeben.",
+        "🗣️ Eltern zeigen BEVOR etwas bezahlt wird – falls schon bezahlt: sofort sagen! Vieles lässt sich zurückholen (Kinderkäufe sind oft unwirksam).",
+        "📸 Screenshot vom Angebot machen (Beweis).",
+        "🧹 App gemeinsam prüfen: Braucht sie das wirklich? Sonst runter damit.",
+        "🎓 Werde Profi: Übe mit unserem Daten-Schatz und dem Lootbox-Labor."
+      ]
+    },
+    "blatt-datenfalle": {
+      "titel": "Dein Plan gegen Daten-Sammler",
+      "schritte": [
+        "🛑 Stopp: Name, Adresse, Schule und Fotos sind dein Schatz – nicht eingeben.",
+        "🗣️ Mit Erwachsenen die Berechtigungen prüfen: Braucht ein Malspiel wirklich dein Mikrofon?",
+        "🧽 Ihr dürft verlangen, dass gespeicherte Daten gelöscht werden (DSGVO – das ist dein Recht!).",
+        "🚩 Dreiste Daten-Abfragen in der App melden.",
+        "🎓 Übe den Daten-Blick mit unserem Daten-Schatz."
+      ]
+    },
+    "blatt-bild-bekannt": {
+      "titel": "Dein Plan: Bekannte haben dein Bild gepostet",
+      "schritte": [
+        "🧭 Dein Recht: Dein Bild gehört DIR (Recht am eigenen Bild). Niemand darf es ohne dein Okay posten – auch Freunde nicht.",
+        "🗣️ Direkt sagen: „Nimm das bitte runter. Ich will das nicht.“ Oft reicht das schon.",
+        "📸 Wenn nicht: Screenshot sichern und Erwachsene einschalten (bei Schulkontakten auch die Lehrkraft).",
+        "🚩 Zusätzlich in der App melden – Plattformen müssen reagieren.",
+        "💛 Bloßgestellt fühlen ist schlimm. Reden hilft: 116 111."
+      ]
+    },
+    "blatt-bild-fremd": {
+      "titel": "Dein Plan: Fremde haben dein Bild gepostet",
+      "schritte": [
+        "🗣️ SOFORT Erwachsene einweihen – das regelt ihr zusammen, nicht du allein.",
+        "📸 Beweise sichern: Link kopieren, Screenshots machen.",
+        "🚩 Gemeinsam bei der Plattform Löschung verlangen (Recht am eigenen Bild + DSGVO-Löschrecht) und melden.",
+        "🛡️ Hilft die Plattform nicht: Beschwerdestelle jugendschutz.net einschalten; bei Bedrohung können Erwachsene zur Polizei.",
+        "💛 Du hast nichts falsch gemacht – hol dir Unterstützung: 116 111."
+      ]
+    },
+    "blatt-wege": {
+      "titel": "Die 4 Wege im Überblick",
+      "schritte": [
+        "🚩 Weg 1 – In der App melden: für alles, was AUF einer Plattform passiert (Plattformen müssen reagieren, EU-Regel/DSA).",
+        "🗣️ Weg 2 – Erwachsene: für alles, was dich betrifft oder dir Angst macht. Zuhause, Schule, Verein – wer sich gut anfühlt.",
+        "🛡️ Weg 3 – Beschwerdestellen: jugendschutz.net für schlimme Inhalte (mit Erwachsenen zusammen).",
+        "💛 Weg 4 – Nummer gegen Kummer 116 111: reden, sortieren, Mut holen – anonym und kostenlos.",
+        "🧭 Merksatz: Melden ist kein Petzen. Petzen will jemanden reinreiten – Melden holt Hilfe."
+      ]
+    }
+  }
+}

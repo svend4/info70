@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "taktiken": {
+    "zeitdruck": { "name": "Zeitdruck", "emoji": "⏱️", "erklaerung": "„Sofort! Heute noch!“ – Druck aufs Tempo soll dein Nachdenken ausschalten." },
+    "alle": { "name": "„Alle machen mit“", "emoji": "👥", "erklaerung": "Der älteste Trick: Wenn angeblich alle mitmachen, fühlt sich Nein-Sagen einsam an. Stimmt aber fast nie." },
+    "ausschluss": { "name": "Ausschluss-Drohung", "emoji": "🚪", "erklaerung": "„Sonst bist du raus“ – Angst vor dem Rauswurf ist Druck, keine Freundschaft." },
+    "schmeichelei": { "name": "Schmeichelei", "emoji": "🍯", "erklaerung": "„Gerade DU schaffst das doch locker!“ – Honig ums Maul ist auch Druck, nur süßer." },
+    "verharmlosung": { "name": "Verharmlosung", "emoji": "🤏", "erklaerung": "„Ist doch nur Spaß, ist doch nichts dabei“ – wenn etwas verharmlost werden muss, ist meist etwas dabei." }
+  },
+  "ausstiege": [
+    "„Nein, ohne mich. Ich hab keinen Bock drauf.“ (kurz, ohne Erklärung – du schuldest keine!)",
+    "„Klingt gefährlich. Ich bin raus.“ (benennt den Grund, fertig)",
+    "„Wenn ihr Druck machen müsst, ist es wohl keine gute Idee.“ (dreht den Spieß um)",
+    "„Ich mach was Besseres: Wer kommt mit zum Bolzplatz?“ (Gegenangebot)",
+    "Nichts schreiben, rausgehen, Erwachsenen erzählen – auch das ist ein starker Ausstieg."
+  ],
+  "szenarien": [
+    {
+      "id": "c1",
+      "titel": "Die Dach-Mutprobe",
+      "chat": [
+        { "von": "Leon", "text": "Leute, neue Mutprobe: aufs Garagendach klettern und Beweisvideo! 😎", "taktik": null },
+        { "von": "Leon", "text": "Aber nur noch HEUTE, morgen zählt's nicht mehr!", "taktik": "zeitdruck" },
+        { "von": "Sam", "text": "Fast alle aus der Klasse haben's schon gemacht, echt jetzt.", "taktik": "alle" },
+        { "von": "Leon", "text": "Wer kneift, fliegt aus der Gruppe. Regeln sind Regeln.", "taktik": "ausschluss" },
+        { "von": "Sam", "text": "Komm, gerade du bist doch sportlich, für dich ist das easy!", "taktik": "schmeichelei" },
+        { "von": "Leon", "text": "Ist doch nur ein Dach, was soll da schon passieren 🙄", "taktik": "verharmlosung" }
+      ]
+    },
+    {
+      "id": "c2",
+      "titel": "Die Ekel-Ess-Challenge",
+      "chat": [
+        { "von": "Mika", "text": "Challenge: Wir mischen alles aus dem Kühlschrank und du trinkst es vor der Kamera! 🤢", "taktik": null },
+        { "von": "Mika", "text": "Los, die anderen warten schon, mach hin!", "taktik": "zeitdruck" },
+        { "von": "Jo", "text": "Alle Youtuber machen sowas, das ist voll normal.", "taktik": "alle" },
+        { "von": "Mika", "text": "Ohne dich ist das Video langweilig … wärst dann halt nicht mehr dabei.", "taktik": "ausschluss" },
+        { "von": "Jo", "text": "Du bist der Mutigste von uns, deshalb fragen wir DICH!", "taktik": "schmeichelei" },
+        { "von": "Mika", "text": "Ist ja nur Essen, davon stirbt man nicht 😂", "taktik": "verharmlosung" }
+      ]
+    },
+    {
+      "id": "c3",
+      "titel": "Der gefährliche Trend",
+      "chat": [
+        { "von": "Alex", "text": "Habt ihr den neuen Trend gesehen? Der, bei dem man die Luft anhält, bis einem schwindlig wird? Sollen wir?", "taktik": null },
+        { "von": "Alex", "text": "Jetzt oder nie, sonst ist der Trend vorbei!", "taktik": "zeitdruck" },
+        { "von": "Charlie", "text": "Das Video hat 2 Millionen Likes, ALLE machen das gerade.", "taktik": "alle" },
+        { "von": "Alex", "text": "Wenn du nicht mitmachst, bist du halt nicht Teil davon.", "taktik": "ausschluss" },
+        { "von": "Charlie", "text": "Du traust dich doch sonst alles, du Held!", "taktik": "schmeichelei" },
+        { "von": "Alex", "text": "Die übertreiben voll mit den Warnungen, ist harmlos.", "taktik": "verharmlosung" }
+      ]
+    }
+  ],
+  "lektionen": [
+    "🧲 Druck hat Muster: Zeitdruck, „alle machen mit“, Ausschluss-Drohung, Schmeichelei, Verharmlosung. Wer die Muster kennt, spürt den Magneten – und kann loslassen.",
+    "🛑 Eine Challenge, die Druck BRAUCHT, ist keine gute Idee. Gute Ideen überzeugen ohne Countdown.",
+    "🗣️ Nein ist ein ganzer Satz. Du schuldest niemandem eine Begründung.",
+    "💛 Echte Freund*innen bleiben, wenn du Nein sagst. Wer dich rauswirft, war Druck – nicht Freundschaft. Bei Angst oder Ärger: Nummer gegen Kummer 116 111 (kostenlos, anonym)."
+  ]
+}

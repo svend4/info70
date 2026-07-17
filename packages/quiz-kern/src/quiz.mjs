@@ -75,6 +75,10 @@ export function starteQuiz(konfig) {
           el('button', { class: 'k-knopf', onclick: starteRunde }, t.startKnopf),
           vorlesenKnopf(`${t.titel}. ${t.untertitel} ${t.intro}`))),
       el('section', { class: 'k-karte' },
+        el('p', { style: 'font-weight:600;margin-top:0' }, '👩‍🏫 Für den Unterricht'),
+        el('p', { style: 'font-size:0.9rem' }, 'Klassen-Modus: eine Anzeige für die ganze Klasse (Beamer/Tafel). Alle raten laut mit, dann wird gemeinsam aufgelöst – ohne Punkte, ohne Geräte der Kinder, ohne Daten.'),
+        el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteKlassenRunde }, '👩‍🏫 Klassen-Modus starten')),
+      el('section', { class: 'k-karte' },
         el('p', {}, t.datenHinweis),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); start(); } }, t.datenLoeschen)));
   }
@@ -84,6 +88,60 @@ export function starteQuiz(konfig) {
     index = 0;
     punkte = 0;
     frage();
+  }
+
+  // Klassen-Modus: eine Anzeige fuer alle, muendliches Raten, gemeinsame
+  // Aufloesung - keine Punkte, kein Rekord, keine Geraete der Kinder.
+  function starteKlassenRunde() {
+    fragen = mischen(daten.fragen).slice(0, rundenGroesse);
+    index = 0;
+    klassenFrage();
+  }
+
+  function klassenFrage() {
+    const f = fragen[index];
+    const istBinaer = f.typ === 'binaer';
+    const antwortListe = istBinaer ? [t.binaerJa, t.binaerNein] : mischen(f.antworten);
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('p', { class: 'k-untertitel' }, `👩‍🏫 Klassen-Modus · ${t.fallWort} ${index + 1} von ${fragen.length} · ${f.kategorie}`),
+        el('p', { style: 'font-weight:700;font-size:1.25rem' }, istBinaer ? `„${f.aussage}“` : f.frage),
+        istBinaer ? el('p', { style: 'font-weight:600' }, t.binaerFrage) : '',
+        el('ul', { style: 'padding-left:1.2rem' },
+          ...antwortListe.map((a) => el('li', { style: 'margin:0.4rem 0;font-size:1.1rem' }, a))),
+        vorlesenKnopf(istBinaer ? `${f.aussage}. ${t.binaerFrage}` : `${f.frage} Die Möglichkeiten sind: ${antwortListe.join('. Oder: ')}`),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: () => klassenAufloesung(f) }, '🔍 Auflösung zeigen'))));
+  }
+
+  function klassenAufloesung(f) {
+    const richtige = f.typ === 'binaer' ? (f.korrekt === 'ja' ? t.binaerJa : t.binaerNein) : f.antworten[f.korrekt];
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('p', { class: 'k-untertitel' }, `👩‍🏫 Klassen-Modus · ${t.fallWort} ${index + 1} von ${fragen.length}`),
+        el('div', { class: 'k-hinweis k-hinweis--richtig' },
+          el('p', { style: 'font-weight:700;margin-top:0' }, `Richtig ist: ${richtige}`),
+          el('p', { style: 'margin-bottom:0' }, f.erklaerung)),
+        vorlesenKnopf(`Richtig ist: ${richtige}. ${f.erklaerung}`),
+        el('div', { class: 'k-antworten' },
+          el('button', {
+            class: 'k-knopf',
+            onclick: () => {
+              index++;
+              if (index < fragen.length) klassenFrage();
+              else klassenEnde();
+            },
+          }, index + 1 < fragen.length ? t.weiterKnopf : 'Fertig 🏁'))));
+  }
+
+  function klassenEnde() {
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('p', { class: 'k-gross' }, '👩‍🏫'),
+        el('p', { style: 'text-align:center;font-weight:700' }, `Alle ${fragen.length} ${t.fallWort === 'Fall' ? 'Fälle' : 'Fragen'} gemeinsam besprochen!`),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: starteKlassenRunde }, '🔁 Neue Klassen-Runde'),
+          el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));
   }
 
   function kopf(f) {

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/beschwerde-lotse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Beschwerde-Lotse: kindgerechter Wegweiser von 'was ist passiert' zu konkreten Hilfe- und Meldewegen (DSA, Recht am eigenen Bild, 116 111).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
