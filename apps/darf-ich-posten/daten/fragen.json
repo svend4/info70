@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Poster-Neuling", "emoji": "🖊️" },
+    { "ab": 5, "titel": "Rücksicht-Kenner*in", "emoji": "🤝" },
+    { "ab": 9, "titel": "Rechte-Checker*in", "emoji": "✅" },
+    { "ab": 12, "titel": "Fair-Post-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Foto von anderen",
+      "aussage": "Du machst ein lustiges Foto, auf dem dein Freund blöd aussieht. Du darfst es einfach posten, weil DU es fotografiert hast.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Wer auf dem Foto zu sehen ist, entscheidet mit – das nennt man „Recht am eigenen Bild“. Auch wenn du der Fotograf bist: Vor dem Posten fragen. Und was den anderen blamiert, postet man gar nicht."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Foto von anderen",
+      "aussage": "Bevor du ein Foto von einer Freundin postest, fragst du sie: „Ist das okay für dich?“ Das ist eine gute Regel.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Kurz fragen ist die goldene Regel. So bestimmt jede*r selbst, welche Bilder von ihr oder ihm ins Netz kommen. Sagt sie nein, wird nicht gepostet – auch wenn du das Foto toll findest."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Fremde Inhalte",
+      "aussage": "Ein Meme, das jemand anderes gemacht hat, darfst du immer als dein eigenes ausgeben.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Auch Bilder, Videos und Memes haben Macher*innen. Sie als deine eigenen auszugeben ist unfair. Teilen ist oft okay – aber tu nicht so, als hättest du es selbst gemacht."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Musik & Video",
+      "aussage": "Du darfst jeden aktuellen Hit als Hintergrundmusik unter dein eigenes Video legen und überall hochladen.",
+      "korrekt": "nein",
+      "erklaerung": "Meistens nein. Musik gehört den Künstler*innen (Urheberrecht). Manche Plattformen haben Verträge, die kurze Ausschnitte erlauben – aber einfach jeden Song überallhin hochladen darf man nicht. Frag im Zweifel Erwachsene."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Peinliches & Gemeines",
+      "aussage": "Ein Foto, auf dem jemand weint oder gestürzt ist, postet man besser gar nicht – auch nicht „nur zum Spaß“.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig. Peinliche oder verletzende Bilder von anderen haben im Netz nichts verloren. „Nur Spaß“ ist für die betroffene Person oft gar nicht lustig. Frag dich: Würde ich wollen, dass jemand das von MIR postet?"
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Foto von anderen",
+      "aussage": "Auf einem Gruppenfoto ist auch ein kleines Kind, das du nicht kennst. Für dessen Bild bräuchtest du eigentlich die Erlaubnis der Eltern.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. Bei Kindern entscheiden die Eltern über Fotos. Wenn du fremde Kinder klar erkennbar posten willst, brauchst du deren Einverständnis. Am einfachsten: solche Fotos gar nicht öffentlich posten."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Fremde Inhalte",
+      "aussage": "Ein Bild, das du bei einer Suchmaschine findest, darfst du immer frei für dein Projekt benutzen.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Gefunden heißt nicht frei. Die meisten Bilder gehören jemandem. Für Projekte gibt es extra „freie“ Bilder (z. B. mit CC0-Lizenz) – oder du malst/fotografierst selbst. Im Zweifel: Quelle prüfen und Erwachsene fragen."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Peinliches & Gemeines",
+      "aussage": "Wenn jemand dich bittet, ein Foto von ihm wieder zu löschen, solltest du das tun.",
+      "korrekt": "ja",
+      "erklaerung": "Ja, unbedingt. Jede*r darf sagen: „Nimm das Bild von mir wieder runter.“ Das gehört zum Recht am eigenen Bild. Löschen ist dann fair – ohne Diskussion und ohne Beleidigtsein."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Foto von anderen",
+      "frage": "Du hast ein cooles Foto mit deiner ganzen Clique. Was machst du, bevor du es postest?",
+      "antworten": [
+        "Alle kurz fragen, ob sie mit dem Posten einverstanden sind",
+        "Einfach posten – ist ja ein schönes Foto",
+        "Nur die fragen, die gut getroffen sind",
+        "Erst posten, dann fragen, wer etwas dagegen hat"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Fragen kommt VOR dem Posten. Jede Person auf dem Bild entscheidet mit. „Erst posten, dann fragen“ ist zu spät – im Netz verbreitet sich ein Bild sofort. Sagt eine*r nein, postest du es nicht oder machst die Person unkenntlich."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Fremde Inhalte",
+      "frage": "Du willst das Meme von jemand anderem teilen. Was ist fair?",
+      "antworten": [
+        "Teilen, aber ehrlich bleiben: nicht so tun, als hättest du es selbst gemacht",
+        "Behaupten, du hast es erfunden – klingt cooler",
+        "Den Namen des Machers wegschneiden",
+        "Es als Werbung für dich benutzen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Teilen ist oft okay – aber ehrlich: Gib nicht vor, es sei von dir, und schneide keine Urheber-Hinweise weg. Fremde Sachen als eigene auszugeben oder für Werbung zu nutzen, ist unfair und oft nicht erlaubt."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Musik & Video",
+      "frage": "Du drehst ein Video und willst Musik darunterlegen. Was ist am sichersten?",
+      "antworten": [
+        "Musik nehmen, die ausdrücklich frei nutzbar ist – oder selbst welche machen",
+        "Den größten aktuellen Hit nehmen und überallhin hochladen",
+        "Die Musik nur etwas leiser drehen, dann fällt es nicht auf",
+        "Den Künstler einfach nicht nennen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Am sichersten ist frei nutzbare Musik (z. B. aus einer Gratis-Bibliothek) oder selbstgemachte. Fremde Hits gehören den Künstler*innen; leiser drehen oder nicht nennen ändert daran nichts. Manche Plattformen erlauben kurze Ausschnitte – die Regeln stehen dort."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Peinliches & Gemeines",
+      "frage": "In der Klassengruppe wird ein peinliches Foto von jemandem herumgeschickt. Was tust du?",
+      "antworten": [
+        "Nicht weiterleiten und der Person sagen, dass du auf ihrer Seite bist",
+        "Auch weiterschicken – machen ja alle",
+        "Ein lustiges Emoji drunter setzen",
+        "Es abspeichern für später"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Jedes Weiterleiten macht die Bloßstellung größer. Fair ist: nicht mitmachen und der betroffenen Person zeigen, dass sie nicht allein ist. Bei fiesen Bildern hilft außerdem: melden und Erwachsene einbeziehen (mehr dazu im Beschwerde-Lotsen)."
+    },
+    {
+      "id": "w05",
+      "typ": "wahl",
+      "kategorie": "Foto von anderen",
+      "frage": "Deine Freundin sagt: „Bitte lösch das Foto von mir wieder.“ Es hat schon 12 Likes. Was machst du?",
+      "antworten": [
+        "Löschen – es ist ihr Bild, ihre Entscheidung zählt, egal wie viele Likes",
+        "Behalten – 12 Likes wären sonst verschwendet",
+        "Sie überreden, es doch drinzulassen",
+        "Erst mal abwarten, ob sie es vergisst"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ihr Wunsch zählt sofort – Likes sind kein Grund, ein Bild gegen ihren Willen zu behalten. Das Recht am eigenen Bild bedeutet: Sie darf jederzeit sagen, dass ein Foto von ihr wieder verschwindet. Fair ist: ohne Diskussion löschen."
+    },
+    {
+      "id": "w06",
+      "typ": "wahl",
+      "kategorie": "Peinliches & Gemeines",
+      "frage": "Welche Frage hilft dir immer, bevor du etwas über eine andere Person postest?",
+      "antworten": [
+        "„Wäre es okay für mich, wenn jemand DAS von mir postet?“",
+        "„Wie viele Likes bekomme ich dafür?“",
+        "„Sieht es lustig genug aus?“",
+        "„Merkt die Person das überhaupt?“"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Der Perspektivwechsel ist die beste Regel: Was ich selbst nicht über mich im Netz haben möchte, poste ich auch nicht über andere. Likes, Lustigkeit oder „merkt sie eh nicht“ sind keine guten Maßstäbe – Rücksicht schon."
+    }
+  ]
+}

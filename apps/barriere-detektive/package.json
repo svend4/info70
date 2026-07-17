@@ -1,0 +1,8 @@
+{
+  "name": "@info70/barriere-detektive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Barriere-Detektive: Kinder pruefen Lieblings-Apps mit einer Kinder-Checkliste zur Barrierefreiheit und kueren die fairste App. Barrierefreiheit als Fairness. Zielgruppe 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

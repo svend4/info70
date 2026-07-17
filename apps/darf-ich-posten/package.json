@@ -1,0 +1,8 @@
+{
+  "name": "@info70/darf-ich-posten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Darf ich das posten? Quiz (quiz-kern) fuer 8-12 zu Recht am eigenen Bild, fremden Inhalten/Memes, Musik unter Videos und Ruecksicht. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

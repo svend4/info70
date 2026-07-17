@@ -1,10 +1,12 @@
 {
   "hinweis": "Alle Apps des Monorepos mit einer eltern.html-Seite. Der Test prüft beide Richtungen: jede gelistete App hat die Seite, und jede vorhandene Seite ist gelistet.",
   "apps": [
+    "barriere-detektive",
     "beschwerde-lotse",
     "bewegungs-schatzkiste",
     "bot-oder-buddy",
     "challenge-druck",
+    "darf-ich-posten",
     "dark-pattern-labyrinth",
     "daten-radiergummi",
     "daten-schatz",
@@ -34,6 +36,7 @@
     "selbstcheck-paedagogik",
     "sog-maschine",
     "spiral-stopper",
+    "spuren-lupe",
     "staerken-tagebuch",
     "stark-im-chat",
     "stark-im-chat-plus",
