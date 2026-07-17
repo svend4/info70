@@ -1,0 +1,8 @@
+{
+  "name": "@info70/sog-maschine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sog-Maschine: Bindungs-Mechaniken (Autoplay, Endlos-Scroll, Streak, Zufalls-Belohnung) erlebbar machen und benennen (8-12).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/verschwoerungs-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Verschwoerungs-Werkstatt: Prebunking durch Selberbauen - das universelle Baumuster von Verschwoerungserzaehlungen durchschauen (13-15).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

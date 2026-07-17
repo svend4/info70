@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "zielgruppe": "13-15",
+  "gruppen": [
+    "die geheime Bruderschaft der Gartenzwerge",
+    "der Weltverband der Stadttauben",
+    "das Socken-Kartell",
+    "die Liga der linkshändigen Zahnfeen",
+    "der Untergrund-Club der Parkbank-Enten",
+    "die Internationale der Quietsche-Enten",
+    "das Syndikat der verschwundenen Kugelschreiber",
+    "der Rat der uralten Kellerasseln"
+  ],
+  "ereignisse": [
+    "ständig verschwinden einzelne Socken aus der Waschmaschine",
+    "Montage fühlen sich doppelt so lang an wie Freitage",
+    "das WLAN wird abends immer langsamer",
+    "der Bus kommt genau dann, wenn man wegschaut",
+    "Kopfhörerkabel verknoten sich von selbst in der Tasche",
+    "die Bananen im Supermarkt sind nie genau richtig reif",
+    "beim Brötchen-Aufschneiden fällt die Marmeladenseite IMMER nach unten",
+    "der Drucker funktioniert nur, wenn man es nicht eilig hat"
+  ],
+  "wuerze": [
+    { "text": "Das ist KEIN Zufall!", "typ": "bruecke", "wirkung": "Die Zufalls-Verweigerung: Unser Gehirn hasst Zufälle - „kein Zufall“ fühlt sich immer wahrer an, als es ist." },
+    { "text": "Fragt euch mal: WEM nützt das?", "typ": "bruecke", "wirkung": "Die Nutznießer-Brücke: Irgendwer profitiert immer von irgendwas - das beweist nichts, klingt aber wie Logik." },
+    { "text": "Die Medien verschweigen es seit Jahren!", "typ": "immunisierung", "wirkung": "Die Schweige-Behauptung: Fehlende Berichte werden zum Beweis umgedeutet. Praktisch: Je weniger Belege, desto größer die Vertuschung." },
+    { "text": "Wer das leugnet, steckt selbst mit drin!", "typ": "immunisierung", "wirkung": "Die Immunisierung: Jeder Widerspruch wird Teil der Verschwörung. Damit ist die Erzählung unwiderlegbar - und genau das entlarvt sie." },
+    { "text": "Ich habe SELBST recherchiert - wacht endlich auf!", "typ": "rhetorik", "wirkung": "Die Recherche-Pose: „Selbst recherchiert“ klingt nach Arbeit, meint aber oft: 20 Minuten Videos geschaut. Echte Recherche zeigt Quellen." },
+    { "text": "Immer mehr Menschen erkennen die Wahrheit!", "typ": "rhetorik", "wirkung": "Der Schwarm-Beweis: Viele Glaubende machen nichts wahrer - Beliebtheit ist kein Beleg (siehe flache Erde)." }
+  ],
+  "checkliste": [
+    "🔬 Ist die Behauptung überprüfbar - und WÄRE sie widerlegbar? Eine Erzählung, die jeden Gegenbeweis schluckt, ist keine Erkenntnis, sondern ein Kreisverkehr.",
+    "💰 Wer verdient an der ERZÄHLUNG (Klicks, Views, Wut, verkaufte Wundermittel)? Das ist die ehrliche Version von „wem nützt es“.",
+    "🪒 Einfachheits-Check: Verschwundene Socken brauchen entweder eine Weltverschwörung - oder eine Waschmaschine mit Spalt hinter der Trommel. Die einfachere Erklärung gewinnt meistens.",
+    "📰 Echte Skandale (und die gibt es!) werden von Journalist*innen mit Dokumenten, Namen und Quellen aufgedeckt - nicht von anonymen Posts mit Ausrufezeichen.",
+    "🧠 Und der wichtigste Check: Merke, WANN die Erzählung dich packt - bei Wut und Angst glaubt das Gehirn am schnellsten."
+  ],
+  "stoppliste": ["jude", "juden", "muslim", "islam", "christ", "kirche", "regierung", "eliten", "ausländer", "migrant", "impf", "klima", "amerika", "russland", "china", "soros", "rothschild"]
+}
