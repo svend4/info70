@@ -1,0 +1,55 @@
+{
+  "art": "meilenstein-begleiter-katalog",
+  "version": 1,
+  "hinweis": "Lokale Beobachtungshilfe fuer Eltern im ersten Lebensjahr, angelehnt an die Frueherkennungsuntersuchungen U3–U6. KEINE Diagnose und KEIN Ersatz fuer die aerztlichen Untersuchungen. Die Zeitangaben sind Richtwerte – Kinder entwickeln sich sehr unterschiedlich. Diese Hilfe dient nur als Gespraechs-Vorbereitung fuer die Kinderaerztin bzw. den Kinderarzt. Es werden keine Namen und keine Daten des Kindes erhoben; alles bleibt lokal auf diesem Geraet.",
+  "fenster": [
+    {
+      "id": "u3",
+      "name": "U3 · etwa 4.–5. Lebenswoche",
+      "meilensteine": [
+        { "id": "u3-1", "bereich": "Motorik", "text": "Hebt in Bauchlage kurz den Kopf an." },
+        { "id": "u3-2", "bereich": "Sehen", "text": "Fixiert kurz ein Gesicht und folgt ihm ein Stück mit den Augen." },
+        { "id": "u3-3", "bereich": "Hören", "text": "Reagiert auf laute Geräusche (erschrickt oder hält inne)." },
+        { "id": "u3-4", "bereich": "Sozial", "text": "Beruhigt sich bei vertrauter Stimme oder Körperkontakt." },
+        { "id": "u3-5", "bereich": "Trinken", "text": "Trinkt kräftig und koordiniert (Saugen und Schlucken klappen zusammen)." },
+        { "id": "u3-6", "bereich": "Sprache", "text": "Gibt erste kleine Kehllaute von sich." }
+      ]
+    },
+    {
+      "id": "u4",
+      "name": "U4 · etwa 3.–4. Monat",
+      "meilensteine": [
+        { "id": "u4-1", "bereich": "Motorik", "text": "Hält in Bauchlage den Kopf sicher und stützt sich auf die Unterarme." },
+        { "id": "u4-2", "bereich": "Hände", "text": "Öffnet die Hände und führt sie in der Körpermitte zusammen." },
+        { "id": "u4-3", "bereich": "Sozial", "text": "Lächelt zurück (soziales Lächeln)." },
+        { "id": "u4-4", "bereich": "Sprache", "text": "Gurrt und quietscht und „antwortet“ im Wechsel auf Ansprache." },
+        { "id": "u4-5", "bereich": "Sehen", "text": "Verfolgt einen Gegenstand mit den Augen über die Körpermitte hinweg." },
+        { "id": "u4-6", "bereich": "Greifen", "text": "Greift nach einem angebotenen Gegenstand." }
+      ]
+    },
+    {
+      "id": "u5",
+      "name": "U5 · etwa 6.–7. Monat",
+      "meilensteine": [
+        { "id": "u5-1", "bereich": "Motorik", "text": "Dreht sich vom Rücken auf den Bauch." },
+        { "id": "u5-2", "bereich": "Greifen", "text": "Nimmt einen Gegenstand und gibt ihn von einer Hand in die andere." },
+        { "id": "u5-3", "bereich": "Sprache", "text": "Bildet Silbenketten (z. B. „dadada“, „bababa“)." },
+        { "id": "u5-4", "bereich": "Sozial", "text": "Unterscheidet vertraute und fremde Personen (beginnendes Fremdeln)." },
+        { "id": "u5-5", "bereich": "Sitzen", "text": "Sitzt mit etwas Unterstützung stabil." },
+        { "id": "u5-6", "bereich": "Hören", "text": "Wendet sich einer Geräuschquelle gezielt zu." }
+      ]
+    },
+    {
+      "id": "u6",
+      "name": "U6 · etwa 10.–12. Monat",
+      "meilensteine": [
+        { "id": "u6-1", "bereich": "Motorik", "text": "Robbt oder krabbelt bzw. zieht sich zum Stand hoch." },
+        { "id": "u6-2", "bereich": "Feinmotorik", "text": "Greift kleine Dinge mit Daumen und Zeigefinger (Pinzettengriff)." },
+        { "id": "u6-3", "bereich": "Sprache", "text": "Sagt erste sinnbezogene Wörter oder zeigt gezielt auf Dinge." },
+        { "id": "u6-4", "bereich": "Sozial", "text": "Spielt Wechselspiele mit (Winke-winke, Geben und Nehmen)." },
+        { "id": "u6-5", "bereich": "Verstehen", "text": "Reagiert auf den eigenen Namen und einfache Aufforderungen." },
+        { "id": "u6-6", "bereich": "Essen", "text": "Isst kleine weiche Stücke selbst mit den Fingern." }
+      ]
+    }
+  ]
+}

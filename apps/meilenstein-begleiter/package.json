@@ -1,0 +1,8 @@
+{
+  "name": "@info70/meilenstein-begleiter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Meilenstein-Begleiter 1. Lebensjahr: lokale Beobachtungshilfe fuer Eltern, angelehnt an die Frueherkennungsuntersuchungen U3–U6. Meilensteine (Motorik, Greifen, Sprache, Sozial, Sehen/Hoeren, Essen) abhaken und eine Gespraechs-Vorbereitung fuers Arzt-Gespraech (gelbes U-Heft) erzeugen. KEINE Diagnose und KEIN Ersatz fuer die U-Untersuchungen; Zeitangaben sind Richtwerte. Keine Namen, keine Kind-Daten, alles lokal. Praleska docs/10 (Top-30 Nr. 4). Zielgruppe: Eltern.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
