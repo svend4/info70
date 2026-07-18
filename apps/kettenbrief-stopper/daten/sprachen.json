@@ -120,5 +120,66 @@
       "🛑 If you are unsure, you do NOT share. Passing on the unverified can harm others.",
       "💬 Talk to an adult about rumours that worry you – or call the German helpline Nummer gegen Kummer: 116 111 (free)."
     ]
+  },
+  "de-ls": {
+    "titel": "🛑 Kettenbrief-Stopper",
+    "untertitel": "Eine Nachricht geht schnell durch die Klasse. Du kannst sie stoppen.",
+    "sprache_label": "Sprache · Language",
+    "start_hinweis": "Wähle ein Beispiel. Schau: Was passiert, wenn alle die Nachricht weiter-schicken? Und was passiert, wenn DU stoppst?",
+    "experiment_starten": "▶️ Beispiel {titel} starten",
+    "speichert_nichts": "💡 Diese App speichert nichts. Jedes Beispiel fängt neu an.",
+    "vorlesen": "🔊 Vorlesen",
+    "runde_status": "Runde {runde}. 😨 {n} von {gesamt} Kindern haben Angst.",
+    "naechste_runde": "⏩ Nächste Runde",
+    "erreicht_dich": "Runde {runde}. Jetzt kommt die Nachricht zu DIR. 📱",
+    "gemeldet_lob": "📣 Gut gemacht! Du hast es einer erwachsenen Person gesagt. Das hilft auch den anderen.",
+    "aktion_melden_stopp": "Melden und Stoppen",
+    "aktion_stopp": "Dein Stopp",
+    "ende_gestoppt": "{aktion} hat geholfen. Nur {n} statt {alle} Kinder haben die Nachricht bekommen. Du hast {gerettet} Kinder geschützt.",
+    "ende_alle": "Alle haben weiter-geschickt. {n} von {gesamt} Kindern haben die Nachricht bekommen. Probiere aus: Was macht dein Stopp?",
+    "noch_ein_experiment": "🔁 Noch ein Beispiel",
+    "zum_start": "🏠 Zum Start",
+    "fuss": "Ohne Werbung · ohne Anmeldung · diese App speichert nichts · ",
+    "fuer_eltern": "👪 Für Eltern",
+    "impressum": "Impressum & Datenschutz",
+    "typ_kettenbrief_titel": "Kettenbrief",
+    "typ_kettenbrief_intro": "In der Klasse kommt eine Ketten-Nachricht an:",
+    "typ_kettenbrief_nachricht": "⛓️😱 ACHTUNG! Schick diese Nachricht heute an 2 Freunde. Sonst hast du 10 Jahre Pech! Ein Junge hat es nicht gemacht. Und dann...",
+    "typ_kettenbrief_frage": "Dein Herz klopft. Was machst du?",
+    "typ_kettenbrief_weiter": "😰 An 2 Freunde weiter-schicken",
+    "typ_kettenbrief_stopp": "🛑 STOPP! Löschen und Freunden Bescheid sagen",
+    "typ_kettenbrief_lernpunkte": [
+      "🔍 Ketten-Nachrichten machen Angst. Sie machen Druck. So erkennst du sie.",
+      "🙅 Es passiert nichts, wenn du nicht weiter-schickst. Pech kann man nicht schicken.",
+      "🛑 Lösch die Nachricht. Sag den anderen: Das ist ein Kettenbrief. Das schützt deine Freunde.",
+      "💬 Hast du Angst? Sprich mit einer erwachsenen Person. Oder ruf an: 116 111. Das kostet nichts."
+    ],
+    "typ_mutprobe_titel": "Mutprobe",
+    "typ_mutprobe_intro": "In der Gruppe kommt eine Mutprobe:",
+    "typ_mutprobe_nachricht": "🔥😎 CHALLENGE! Trau dich! Mach das Video nach. Und markiere 3 Leute. Sonst bist du raus aus der Gruppe!",
+    "typ_mutprobe_frage": "Alle machen mit. Was machst du?",
+    "typ_mutprobe_weiter": "😬 Mitmachen und 3 Leute markieren",
+    "typ_mutprobe_stopp": "🛑 Nicht mitmachen. Sag: Nein danke.",
+    "typ_mutprobe_melden": "📣 Einer erwachsenen Person sagen",
+    "typ_mutprobe_lernpunkte": [
+      "🔥 Bei einer Mutprobe machen viele mit. Sie sagen: Alle machen mit. Aber das stimmt oft nicht.",
+      "💪 Mutig ist: Nein sagen. Manche Mutproben sind gefährlich. Dann ist Nein die starke Wahl.",
+      "📣 Melden ist nicht Petzen. Sag es einer erwachsenen Person. So schützt du auch andere.",
+      "💬 Fühlst du dich unter Druck? Ruf an: 116 111. Das kostet nichts."
+    ],
+    "typ_geruecht_titel": "Gerücht",
+    "typ_geruecht_intro": "In der Klasse geht ein Gerücht herum:",
+    "typ_geruecht_nachricht": "🗣️😲 Krass! Teil das schnell! An unserer Schule ist etwas passiert. Ein Kind hat es erzählt. Bestimmt stimmt es. Alle reden schon davon!",
+    "typ_geruecht_frage": "Willst du das wirklich weiter-sagen?",
+    "typ_geruecht_quellenHinweis": "Prüf zuerst: Wer sagt das? Woher weiß die Person das? Gibt es einen Beweis? Oder sagen es nur alle?",
+    "typ_geruecht_weiter": "😮 Schnell weiter-sagen",
+    "typ_geruecht_stopp": "🔎 Zuerst prüfen. Nichts weiter-sagen ohne Beweis.",
+    "typ_geruecht_melden": "📣 Eine erwachsene Person fragen",
+    "typ_geruecht_lernpunkte": [
+      "🔎 Prüf zuerst. Dann teile. „Alle sagen“ ist kein Beweis. Frag: Wer? Woher? Beweis?",
+      "🌊 Ein Gerücht wird durch Teilen lauter. Aber es wird nicht wahrer.",
+      "🛑 Bist du unsicher? Dann teile nicht. Falsche Sachen können anderen wehtun.",
+      "💬 Sprich mit einer erwachsenen Person über Gerüchte. Oder ruf an: 116 111. Das kostet nichts."
+    ]
   }
 }

@@ -8,6 +8,7 @@ import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/ind
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { erstelleSprache } from '../../packages/kinder-ui/js/sprache.mjs';
 import { setzeRichtung } from '../../packages/kinder-ui/js/richtung.mjs';
+import { leichteSpracheSchalter, basisCode } from '../../packages/kinder-ui/js/leichte-sprache.mjs';
 import { erstelleKlasse, vergleiche } from './sim.mjs';
 import { NACHRICHTEN_TYPEN, baueTyp } from './nachrichten.mjs';
 
@@ -47,15 +48,18 @@ function zeige(...knoten) {
 }
 
 function sprachWahl() {
-  const jetzt = sprache.aktuelle();
+  const basis = basisCode(sprache.aktuelle());
   return el('section', { class: 'k-karte' },
     el('p', { style: 'font-weight:600;margin-top:0' }, t('sprache_label')),
     el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap' },
       ...SPRACHEN.map(([code, name]) => el('button', {
-        class: `k-knopf k-knopf--klein ${jetzt === code ? '' : 'k-knopf--neutral'}`,
-        'aria-pressed': String(jetzt === code),
+        class: `k-knopf k-knopf--klein ${basis === code ? '' : 'k-knopf--neutral'}`,
+        'aria-pressed': String(basis === code),
         onclick: () => { sprache.setze(code); setzeRichtung(code); startBildschirm(); },
-      }, name))));
+      }, name))),
+    // Leichte-Sprache-Schalter (BFSG): erscheint nur, weil ein de-ls-Katalog existiert.
+    el('div', { style: 'margin-top:0.5rem' },
+      leichteSpracheSchalter({ sprache, neuZeichnen: startBildschirm })));
 }
 
 function gitter() {

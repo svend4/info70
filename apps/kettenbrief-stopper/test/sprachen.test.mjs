@@ -2,22 +2,31 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { NACHRICHTEN_TYPEN, baueTyp } from '../nachrichten.mjs';
+import { pruefeLeichteSpracheAbdeckung } from '../../../packages/kinder-ui/js/leichte-sprache.mjs';
 
 const kataloge = JSON.parse(await readFile(new URL('../daten/sprachen.json', import.meta.url), 'utf8'));
-const ALLE = ['de', 'en'];
+const BASIS = ['de', 'en'];
+const ALLE = ['de', 'en', 'de-ls']; // Basissprachen + Leichte Sprache
 
-test('Zwei Sprachen (de, en) vorhanden', () => {
-  assert.deepEqual(Object.keys(kataloge).sort(), ALLE);
+test('Sprachen vorhanden: de, en und Leichte Sprache (de-ls)', () => {
+  assert.deepEqual(Object.keys(kataloge).sort(), ['de', 'de-ls', 'en']);
 });
 
-test('Vollständigkeit: alle Kataloge haben exakt dieselben Schlüssel', () => {
+test('Vollständigkeit: alle Kataloge haben exakt dieselben Schlüssel wie de', () => {
   const referenz = Object.keys(kataloge.de).sort();
   for (const code of ALLE) {
     assert.deepEqual(Object.keys(kataloge[code]).sort(), referenz, `Katalog ${code} weicht ab`);
   }
 });
 
-test('Platzhalter bleiben in jeder Sprache konsistent', () => {
+test('Leichte Sprache (de-ls): vollständige Abdeckung des de-Katalogs (BFSG)', () => {
+  const bericht = pruefeLeichteSpracheAbdeckung(kataloge);
+  assert.deepEqual(Object.keys(bericht), ['de-ls'], 'genau eine Leichte-Sprache-Fassung');
+  assert.deepEqual(bericht['de-ls'].fehlend, [], 'kein Schlüssel darf in Leichter Sprache fehlen');
+  assert.deepEqual(bericht['de-ls'].ueberzaehlig, [], 'keine überzähligen Schlüssel');
+});
+
+test('Platzhalter bleiben in jeder Fassung konsistent (auch Leichte Sprache)', () => {
   const mitPlatzhalter = ['experiment_starten', 'runde_status', 'erreicht_dich', 'ende_gestoppt', 'ende_alle'];
   for (const schluessel of mitPlatzhalter) {
     const ref = [...String(kataloge.de[schluessel]).matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort();

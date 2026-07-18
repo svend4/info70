@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 746 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 747 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -100,7 +100,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `familien-notfall-fahrplan` | Семья: печатный Wenn-dann план (116 111, juuuport) | кат.№1 |
 | `sharenting-spiegel` | Родители: self-test про фото детей + Foto-Regeln | кат.№1 |
 | `passwort-pruefstand` | Стойкость пароля, метод трёх слов | кат.№1 |
-| `kettenbrief-stopper` | Цепные сообщения/челлендж/слух · DE/EN (mini-i18n) | база |
+| `kettenbrief-stopper` | Цепные сообщения/челлендж/слух · DE/EN + Leichte Sprache | база |
 | `stark-im-chat` | Кибербуллинг: свидетель + Rechte + Hassrede + Game-Chat (28 сцен.) | база |
 | `stark-im-chat-plus` | Свидетель 13+: групповой чат и пути DSA | кат.№1 |
 | `spiral-stopper` | Эскалация хейта: сила Gegenrede и Melden | кат.№1 |
