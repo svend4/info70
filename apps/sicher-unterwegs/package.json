@@ -1,0 +1,8 @@
+{
+  "name": "@info70/sicher-unterwegs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sicher unterwegs: Szenario-Trainer zu Alltags- und Verkehrssicherheit fuer 5-7 (Ko-Nutzung) mit Weiterfuehrung 8-12. Situationen zu Strasse/Ampel, fremden Personen, Feuer und Notruf (112/110), Medikamenten/Gift, fremden Tieren, Werkzeug, Wasser und Strom - je 3 Optionen (2/1/0) mit kindgerechter Erklaerung, Vorlesen und Rang. Praleska docs/10 (Top-30 Nr. 7). Alle Szenen Eigenproduktion, offline, werbefrei. Zielgruppe: Vorschule/Grundschule.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

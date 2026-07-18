@@ -56,7 +56,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**130 приложений (129 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**133 приложения (132 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -64,7 +64,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 818 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 834 теста. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -139,6 +139,9 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `stark-und-gesund` | Здоровый образ жизни (ВОЗ/DGE) | кат.№2 |
 | `geschichten-werkstatt` | Kreativität / KI + штамп + Bausteine «Mut & Anderssein» | 🧪 прототип |
 | `gefuehle-entdecker` | Эмоции для 5–7 лет | кат.№2 |
+| `reim-radar` | Фонологика 4–6 (рифмы/звуки/слоги), quiz-kern | кат.№2 |
+| `sicher-unterwegs` | Безопасность 5–7: улица/огонь/112/110, szenario 2/1/0 | кат.№2 |
+| `notruf-held` | Симулятор набора 112/110 (5–7), без реального звонка | кат.№2 |
 | `mini-rechte-entdecker` | Права для 6–8: ja/нет, озвучка (BFSG) | кат.№1 |
 | `plattform-rechte-13` | Права на платформах 13–15 (DSA/DSGVO/AI Act), 14 вопр. | кат.№1 |
 | `smarte-ohren` | Говорящие устройства (6–8, Leichte Sprache) | кат.№1 |

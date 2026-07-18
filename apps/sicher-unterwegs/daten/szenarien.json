@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 (Ko-Nutzung), Weiterführung 8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Sicherheits-Anfänger*in", "emoji": "🌱" },
+    { "ab": 8, "titel": "Sicherheits-Spürnase", "emoji": "👀" },
+    { "ab": 15, "titel": "Sicherheits-Held*in", "emoji": "🦸" },
+    { "ab": 21, "titel": "Sicherheits-Profi", "emoji": "🏅" }
+  ],
+  "szenarien": [
+    {
+      "id": "s01", "thema": "Straße", "emoji": "🚦",
+      "situation": "Du willst über die Straße. Die Ampel für Fußgänger ist rot.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Warten, bis die Ampel grün wird – und trotzdem nach links und rechts schauen.", "wert": 2 },
+        { "text": "Schnell rüberrennen, es kommt gerade kein Auto.", "wert": 0 },
+        { "text": "Bei Rot losgehen, aber langsam.", "wert": 0 }
+      ],
+      "erklaerung": "Bei Rot bleibt man stehen – immer. Erst bei Grün gehen und dabei nach links und rechts schauen. Autos können schneller kommen, als man denkt."
+    },
+    {
+      "id": "s02", "thema": "Straße", "emoji": "🚸",
+      "situation": "Es gibt keinen Zebrastreifen und keine Ampel. Du willst über die Straße.",
+      "frage": "Was ist am sichersten?",
+      "optionen": [
+        { "text": "Am Rand stehen bleiben: erst links, dann rechts, dann wieder links schauen – gehen, wenn nichts kommt.", "wert": 2 },
+        { "text": "Zwischen parkenden Autos durchhuschen.", "wert": 0 },
+        { "text": "Einfach loslaufen und dabei aufs Handy schauen.", "wert": 0 }
+      ],
+      "erklaerung": "Links – rechts – links schauen und nur gehen, wenn wirklich nichts kommt. Zwischen parkenden Autos sehen dich die Fahrer zu spät."
+    },
+    {
+      "id": "s03", "thema": "Fremde", "emoji": "🚗",
+      "situation": "Ein fremder Erwachsener im Auto sagt: „Steig ein, ich bring dich zu deiner Mama.“",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Nicht einsteigen, Abstand halten und zu einem Ort mit vielen Menschen gehen.", "wert": 2 },
+        { "text": "Einsteigen, wenn die Person nett aussieht.", "wert": 0 },
+        { "text": "Näher hingehen und fragen, wer das ist.", "wert": 1 }
+      ],
+      "erklaerung": "Nie zu Fremden ins Auto steigen – auch wenn sie nett sind oder deine Familie erwähnen. Abstand halten und zu Menschen oder nach Hause gehen. Deinen Eltern erzählen."
+    },
+    {
+      "id": "s04", "thema": "Fremde", "emoji": "🍬",
+      "situation": "Jemand, den du nicht kennst, bietet dir Süßigkeiten an, wenn du mitkommst.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "„Nein!“ sagen, weggehen und einem Erwachsenen Bescheid sagen, dem du vertraust.", "wert": 2 },
+        { "text": "Die Süßigkeit nehmen, aber nicht mitgehen.", "wert": 1 },
+        { "text": "Mitgehen – Süßigkeiten sind lecker.", "wert": 0 }
+      ],
+      "erklaerung": "Laut „Nein!“ sagen und weggehen. Mit Fremden geht man nirgends hin, egal was sie versprechen. Danach einem vertrauten Erwachsenen erzählen."
+    },
+    {
+      "id": "s05", "thema": "Feuer", "emoji": "🔥",
+      "situation": "Zu Hause riecht es stark nach Rauch und du siehst Flammen.",
+      "frage": "Was machst du zuerst?",
+      "optionen": [
+        { "text": "Rausgehen, andere warnen und von draußen die 112 anrufen.", "wert": 2 },
+        { "text": "Erst versuchen, das Feuer selbst zu löschen.", "wert": 0 },
+        { "text": "Sich verstecken und warten, bis es vorbei ist.", "wert": 0 }
+      ],
+      "erklaerung": "Raus aus der Wohnung, andere warnen, Tür zu und von einem sicheren Ort die 112 anrufen. Feuer nie selbst löschen – Rauch ist gefährlicher, als man denkt."
+    },
+    {
+      "id": "s06", "thema": "Notruf", "emoji": "📞",
+      "situation": "Du musst Hilfe holen, weil es brennt oder jemand schwer verletzt ist.",
+      "frage": "Welche Nummer rufst du an?",
+      "optionen": [
+        { "text": "112 – für Feuerwehr und Rettung.", "wert": 2 },
+        { "text": "Irgendeine Nummer, Hauptsache jemand geht ran.", "wert": 0 },
+        { "text": "110 – das ist die Polizei; geht auch, dauert aber einen Umweg.", "wert": 1 }
+      ],
+      "erklaerung": "112 ist der Notruf für Feuerwehr und Rettungsdienst. 110 ist die Polizei. Am Telefon ruhig sagen: Wer? Wo? Was ist passiert? – und Fragen abwarten."
+    },
+    {
+      "id": "s07", "thema": "Gift", "emoji": "💊",
+      "situation": "Du findest bunte Tabletten, die aussehen wie Bonbons.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Nichts davon essen und einem Erwachsenen zeigen.", "wert": 2 },
+        { "text": "Eine probieren, ob sie süß ist.", "wert": 0 },
+        { "text": "Sie einstecken und später fragen.", "wert": 1 }
+      ],
+      "erklaerung": "Medikamente sind keine Bonbons und können giftig sein. Nie probieren – einem Erwachsenen zeigen. Im Notfall hilft der Giftnotruf, den Erwachsene kennen."
+    },
+    {
+      "id": "s08", "thema": "Tiere", "emoji": "🐕",
+      "situation": "Ein fremder Hund läuft ohne Besitzer auf dich zu.",
+      "frage": "Was ist am sichersten?",
+      "optionen": [
+        { "text": "Ruhig stehen bleiben wie ein Baum, nicht anfassen, nicht wegrennen.", "wert": 2 },
+        { "text": "Schnell wegrennen und schreien.", "wert": 0 },
+        { "text": "Hinlaufen und ihn streicheln.", "wert": 0 }
+      ],
+      "erklaerung": "Bei einem fremden Hund ruhig stehen bleiben („Baum machen“). Ihn nicht anfassen und nicht wegrennen – Rennen weckt den Jagdtrieb. Ruhig bleiben, bis er weg ist."
+    },
+    {
+      "id": "s09", "thema": "Werkzeug", "emoji": "✂️",
+      "situation": "Du willst basteln und brauchst eine Schere.",
+      "frage": "Wie gehst du mit der Schere um?",
+      "optionen": [
+        { "text": "Vorsichtig schneiden, Spitze nach unten, nicht damit herumlaufen.", "wert": 2 },
+        { "text": "Mit der offenen Schere durchs Zimmer rennen.", "wert": 0 },
+        { "text": "Die Schere jemandem mit der Spitze voran geben.", "wert": 0 }
+      ],
+      "erklaerung": "Scharfe Sachen benutzt man in Ruhe im Sitzen. Nicht mit der Schere laufen und sie mit dem Griff voran weitergeben. So verletzt sich niemand."
+    },
+    {
+      "id": "s10", "thema": "Küche", "emoji": "🍳",
+      "situation": "Auf dem Herd steht ein heißer Topf, der Griff schaut über die Kante.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Nicht selbst anfassen und einem Erwachsenen Bescheid sagen.", "wert": 2 },
+        { "text": "Schnell mal reinschauen, was drin ist.", "wert": 0 },
+        { "text": "Den Griff selbst zur Seite drehen.", "wert": 1 }
+      ],
+      "erklaerung": "Der Herd und heiße Töpfe sind Sache der Erwachsenen. Nicht anfassen, nichts umstoßen, sondern einem Erwachsenen sagen, dass der Griff gefährlich steht."
+    },
+    {
+      "id": "s11", "thema": "Wasser", "emoji": "🌊",
+      "situation": "Am See willst du ins Wasser gehen. Kein Erwachsener passt gerade auf.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Warten, bis ein Erwachsener mitkommt und aufpasst.", "wert": 2 },
+        { "text": "Allein reingehen, du kannst ja ein bisschen schwimmen.", "wert": 0 },
+        { "text": "Nur kurz bis zu den Knien allein reingehen.", "wert": 1 }
+      ],
+      "erklaerung": "Ans oder ins Wasser nur mit einem Erwachsenen, der aufpasst. Wasser kann schnell tief werden. Lieber warten – Sicherheit geht vor."
+    },
+    {
+      "id": "s12", "thema": "Verlaufen", "emoji": "🛒",
+      "situation": "Im großen Supermarkt hast du deine Eltern verloren.",
+      "frage": "Was ist am besten?",
+      "optionen": [
+        { "text": "An Ort und Stelle bleiben oder eine Person mit Namensschild (Kasse) um Hilfe bitten.", "wert": 2 },
+        { "text": "Alleine rausgehen und draußen suchen.", "wert": 0 },
+        { "text": "Eine beliebige fremde Person bitten, dich mitzunehmen.", "wert": 0 }
+      ],
+      "erklaerung": "Stehen bleiben, damit dich deine Eltern finden – oder jemanden vom Personal (Kasse, Namensschild) um Hilfe bitten. Nicht mit Fremden mitgehen und nicht rausrennen."
+    },
+    {
+      "id": "s13", "thema": "Strom", "emoji": "🔌",
+      "situation": "Eine Steckdose ist frei und du hast einen Metallstift in der Hand.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Nichts in die Steckdose stecken – das ist lebensgefährlich.", "wert": 2 },
+        { "text": "Nur ganz kurz ausprobieren.", "wert": 0 },
+        { "text": "Erst den Finger reinhalten, ob es kribbelt.", "wert": 0 }
+      ],
+      "erklaerung": "In Steckdosen gehört nur der Stecker – nie Finger oder Gegenstände. Strom ist unsichtbar und lebensgefährlich. Finger weg!"
+    },
+    {
+      "id": "s14", "thema": "Fahrrad", "emoji": "🚲",
+      "situation": "Du fährst mit dem Fahrrad los. Der Helm liegt noch im Flur.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Zurückgehen und den Helm aufsetzen, bevor du losfährst.", "wert": 2 },
+        { "text": "Ohne Helm fahren, es ist ja nur kurz.", "wert": 0 },
+        { "text": "Den Helm an den Lenker hängen für alle Fälle.", "wert": 0 }
+      ],
+      "erklaerung": "Immer mit Helm fahren – auch auf kurzen Strecken. Ein Helm schützt den Kopf bei einem Sturz. Erst Helm auf, dann losfahren."
+    }
+  ]
+}

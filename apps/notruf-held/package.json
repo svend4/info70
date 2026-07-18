@@ -1,0 +1,8 @@
+{
+  "name": "@info70/notruf-held",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Notruf-Held: simulierter Waehltastatur-Trainer fuer 5-7. Die richtige Notrufnummer zur Situation erkennen (112 Feuerwehr/Rettung, 110 Polizei), sie auf einer Tastatur waehlen und ueben, was man am Telefon sagt (Name, Adresse, was passiert ist). KEIN echter Anruf, keine Datenerfassung (DSGVO Art. 8). Praleska docs/10 (Top-30 Nr. 8). Offline, werbefrei, Vorlesen. Zielgruppe: Vorschule.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

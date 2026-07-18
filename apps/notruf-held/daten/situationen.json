@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7",
+  "nummern": {
+    "112": "Feuerwehr und Rettungsdienst",
+    "110": "Polizei"
+  },
+  "notrufSchritte": [
+    "Sag deinen Namen.",
+    "Sag, wo du bist (Straße und Ort).",
+    "Sag, was passiert ist.",
+    "Warte auf Fragen und antworte ruhig.",
+    "Leg erst auf, wenn die Person am Telefon es sagt."
+  ],
+  "situationen": [
+    { "id": "n01", "emoji": "🔥", "situation": "In der Küche brennt es und es qualmt.", "nummer": "112", "warum": "Bei Feuer und Rauch hilft die Feuerwehr – die erreichst du unter 112." },
+    { "id": "n02", "emoji": "🤕", "situation": "Opa ist gestürzt und steht nicht mehr auf. Er hat große Schmerzen.", "nummer": "112", "warum": "Wenn jemand schwer verletzt ist oder Hilfe für den Körper braucht, rufst du den Rettungsdienst: 112." },
+    { "id": "n03", "emoji": "🚗", "situation": "Auf der Straße ist ein Unfall passiert. Jemand ist verletzt.", "nummer": "112", "warum": "Bei einem Unfall mit Verletzten zählt jede Minute – 112 ruft Rettung und Feuerwehr." },
+    { "id": "n04", "emoji": "😴", "situation": "Eine Person atmet nicht mehr richtig und wacht nicht auf.", "nummer": "112", "warum": "Wenn jemand bewusstlos ist oder schlecht atmet, ist das ein Notfall für den Rettungsdienst: 112." },
+    { "id": "n05", "emoji": "🦹", "situation": "Ein Fremder bricht bei euch ein und will etwas stehlen.", "nummer": "110", "warum": "Bei einem Einbruch oder Diebstahl hilft die Polizei – die erreichst du unter 110." },
+    { "id": "n06", "emoji": "😟", "situation": "Jemand bedroht dich auf dem Heimweg und du hast Angst.", "nummer": "110", "warum": "Wenn dich jemand bedroht, ist die Polizei zuständig: 110. Geh dabei zu einem sicheren Ort mit Menschen." },
+    { "id": "n07", "emoji": "🌫️", "situation": "Im Treppenhaus ist dichter Rauch, aber du siehst kein Feuer.", "nummer": "112", "warum": "Auch Rauch allein ist gefährlich. Raus gehen und von draußen die 112 rufen." },
+    { "id": "n08", "emoji": "🚲", "situation": "Ein Kind ist mit dem Fahrrad gestürzt und blutet stark am Kopf.", "nummer": "112", "warum": "Bei starken Verletzungen rufst du den Rettungsdienst 112 und bleibst beim Kind." }
+  ]
+}

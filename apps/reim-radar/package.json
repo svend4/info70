@@ -1,0 +1,8 @@
+{
+  "name": "@info70/reim-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reim-Radar: phonologische Bewusstheit als Vorlese-Quiz fuer 4-6 (mit Erwachsenem) auf @info70/quiz-kern. Reimpaare finden, Reime hoeren (ja/nein), Anlaute, Wortlaenge und Silben klatschen - die Vorlaeuferfaehigkeiten fuer Lesen und Schreiben. Alle Beispiele Eigenproduktion. Praleska docs/10 (Top-30 Nr. 5). Offline, werbefrei, keine Datenerhebung. Zielgruppe: Vorschule (Ko-Nutzung).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

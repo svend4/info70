@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "zielgruppe": "4-6 (mit Erwachsenem)",
+  "raenge": [
+    { "ab": 0, "titel": "Reim-Anfänger*in", "emoji": "🌱" },
+    { "ab": 2, "titel": "Reim-Spürnase", "emoji": "👂" },
+    { "ab": 5, "titel": "Reim-Meister*in", "emoji": "🎵" },
+    { "ab": 7, "titel": "Wort-Zauberer*in", "emoji": "✨" }
+  ],
+  "fragen": [
+    { "id": "r01", "typ": "binaer", "kategorie": "Reime hören", "aussage": "Hört mal: „Maus“ und „Haus“. Reimen sich diese zwei Wörter?", "korrekt": "ja", "erklaerung": "Ja! „Maus“ und „Haus“ klingen am Ende gleich: -aus. Wörter, die am Ende gleich klingen, reimen sich." },
+    { "id": "r02", "typ": "binaer", "kategorie": "Reime hören", "aussage": "Hört mal: „Sonne“ und „Banane“. Reimen sich diese zwei Wörter?", "korrekt": "nein", "erklaerung": "Nein, die enden verschieden: -onne und -ane. Sie reimen sich nicht. Reimen heißt: am Ende gleich klingen." },
+    { "id": "r03", "typ": "wahl", "kategorie": "Reimwort finden", "frage": "Welches Wort reimt sich auf „Katze“?", "antworten": ["Hund", "Tatze", "Blume"], "korrekt": 1, "erklaerung": "„Katze“ und „Tatze“ reimen sich: beide enden auf -atze. Eine Tatze ist die Pfote von einem Tier." },
+    { "id": "r04", "typ": "wahl", "kategorie": "Reimwort finden", "frage": "Welches Wort reimt sich auf „Baum“?", "antworten": ["Traum", "Blatt", "Wald"], "korrekt": 0, "erklaerung": "„Baum“ und „Traum“ reimen sich: beide enden auf -aum. Prima gehört!" },
+    { "id": "r05", "typ": "wahl", "kategorie": "Reimwort finden", "frage": "Welches Wort reimt sich auf „Fisch“?", "antworten": ["Wasser", "Tisch", "Meer"], "korrekt": 1, "erklaerung": "„Fisch“ und „Tisch“ reimen sich: beide enden auf -isch. Ein Tisch, an dem man isst!" },
+    { "id": "r06", "typ": "wahl", "kategorie": "Anlaute hören", "frage": "Womit fängt das Wort „Sonne“ an?", "antworten": ["mit S wie Ssss", "mit M wie Mmmm", "mit T wie T"], "korrekt": 0, "erklaerung": "„Sonne“ fängt mit dem S-Laut an: Sssssonne. Der erste Laut in einem Wort heißt Anlaut." },
+    { "id": "r07", "typ": "wahl", "kategorie": "Anlaute hören", "frage": "Womit fängt das Wort „Maus“ an?", "antworten": ["mit A", "mit M wie Mmmm", "mit L"], "korrekt": 1, "erklaerung": "„Maus“ fängt mit dem M-Laut an: Mmmmaus. Sprich es langsam, dann hörst du den ersten Laut." },
+    { "id": "r08", "typ": "wahl", "kategorie": "Anlaute hören", "frage": "Welches Wort fängt auch mit dem A-Laut an wie „Apfel“?", "antworten": ["Banane", "Ameise", "Kirsche"], "korrekt": 1, "erklaerung": "„Apfel“ und „Ameise“ fangen beide mit dem A-Laut an: Aaapfel, Aaameise." },
+    { "id": "r09", "typ": "wahl", "kategorie": "Wortlänge", "frage": "Welches Wort ist LÄNGER, wenn man es langsam spricht?", "antworten": ["Kuh", "Schmetterling", "Ball"], "korrekt": 1, "erklaerung": "„Schmet-ter-ling“ ist viel länger als „Kuh“. Lange Wörter haben mehr Silben – man kann sie klatschen." },
+    { "id": "r10", "typ": "wahl", "kategorie": "Wortlänge", "frage": "Welches Wort ist KÜRZER, wenn man es langsam spricht?", "antworten": ["Elefant", "Krokodil", "Baum"], "korrekt": 2, "erklaerung": "„Baum“ ist kurz – nur eine Silbe. „E-le-fant“ und „Kro-ko-dil“ sind lang." },
+    { "id": "r11", "typ": "wahl", "kategorie": "Silben klatschen", "frage": "Klatscht mit: „Ba-na-ne“. Wie oft habt ihr geklatscht?", "antworten": ["1 Mal", "2 Mal", "3 Mal"], "korrekt": 2, "erklaerung": "„Ba-na-ne“ hat 3 Silben – dreimal klatschen. Silben sind die Teile, in die man ein Wort klatschen kann." },
+    { "id": "r12", "typ": "wahl", "kategorie": "Silben klatschen", "frage": "Klatscht mit: „So-fa“. Wie oft habt ihr geklatscht?", "antworten": ["2 Mal", "3 Mal", "4 Mal"], "korrekt": 0, "erklaerung": "„So-fa“ hat 2 Silben – zweimal klatschen. Probiert es mit euren Namen!" },
+    { "id": "r13", "typ": "binaer", "kategorie": "Reime hören", "aussage": "Hört mal: „Hose“ und „Rose“. Reimen sich diese zwei Wörter?", "korrekt": "ja", "erklaerung": "Ja! „Hose“ und „Rose“ enden beide auf -ose. Sie reimen sich schön." },
+    { "id": "r14", "typ": "wahl", "kategorie": "Reimwort finden", "frage": "Welches Wort reimt sich auf „Herz“?", "antworten": ["Liebe", "Schmerz", "Bauch"], "korrekt": 1, "erklaerung": "„Herz“ und „Schmerz“ reimen sich: beide enden auf -erz." }
+  ]
+}
