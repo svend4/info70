@@ -6,6 +6,7 @@
 // fragFINN-Whitelist-Antrag oder Förder-Nachweis (BzKJ).
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter, KRITERIEN } from '../../packages/kinderschutz/src/index.mjs';
+import { gruppiere, baueBericht, baueJson } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -14,30 +15,16 @@ const app = document.getElementById('app');
 
 const ladeStatus = () => JSON.parse(localStorage.getItem(STATUS_SCHLUESSEL) ?? '{}');
 const speichereStatus = (s) => localStorage.setItem(STATUS_SCHLUESSEL, JSON.stringify(s));
+const stand = () => new Date().toLocaleDateString('de-DE');
 
-function gruppiert() {
-  const gruppen = new Map();
-  for (const k of KRITERIEN) {
-    const quelle = k.quelle.split(':')[0].trim();
-    if (!gruppen.has(quelle)) gruppen.set(quelle, []);
-    gruppen.get(quelle).push(k);
-  }
-  return gruppen;
-}
+const gruppiert = () => gruppiere(KRITERIEN);
+const bericht = (status) => baueBericht(KRITERIEN, status, { stand: stand() });
 
-function bericht(status) {
-  const zeilen = [
-    'Kriterien-Check - Selbst-Audit Kinderangebot',
-    `Stand: ${new Date().toLocaleDateString('de-DE')}`,
-    `Erfüllt: ${KRITERIEN.filter((k) => status[k.id]).length} von ${KRITERIEN.length}`,
-    '',
-  ];
-  for (const [quelle, liste] of gruppiert()) {
-    zeilen.push(`## ${quelle}`);
-    for (const k of liste) zeilen.push(`${status[k.id] ? '[x]' : '[ ]'} ${k.text} (${k.quelle})`);
-    zeilen.push('');
-  }
-  return zeilen.join('\n');
+function herunterladen(inhalt, name, typ) {
+  const url = URL.createObjectURL(new Blob([inhalt], { type: typ }));
+  const a = el('a', { href: url, download: name });
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 function render() {
@@ -102,6 +89,18 @@ function render() {
             ev.target.textContent = '✔️ Kopiert!';
           },
         }, '📋 Bericht kopieren'),
+        el('button', {
+          class: 'k-knopf k-knopf--klein',
+          onclick: () => herunterladen(berichtsFeld.value, 'kriterien-check-bericht.txt', 'text/plain;charset=utf-8'),
+        }, '💾 Als .txt'),
+        el('button', {
+          class: 'k-knopf k-knopf--klein',
+          onclick: () => herunterladen(JSON.stringify(baueJson(KRITERIEN, ladeStatus(), { stand: stand() }), null, 2), 'kriterien-check-bericht.json', 'application/json'),
+        }, '🧩 Als .json'),
+        el('button', {
+          class: 'k-knopf k-knopf--klein',
+          onclick: () => window.print(),
+        }, '🖨️ Drucken'),
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein',
           onclick: () => { localStorage.removeItem(STATUS_SCHLUESSEL); render(); },

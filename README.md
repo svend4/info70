@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**97 приложений (96 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**98 приложений (97 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 582 теста.
+Полный прогон: 598 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -124,7 +124,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `mitmach-arena` | Teilhabe + Klassen-Koffer | база |
 | `ich-schaff-das` | Воля/самрегуляция (сценарии) | кат.№2 |
 | `stark-und-gesund` | Здоровый образ жизни (ВОЗ/DGE) | кат.№2 |
-| `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |
+| `geschichten-werkstatt` | Kreativität / KI + «So denkt die Maschine» (штамп) | 🧪 прототип |
 | `gefuehle-entdecker` | Эмоции для 5–7 лет | кат.№2 |
 | `mini-rechte-entdecker` | Права для 6–8: ja/нет, озвучка (BFSG) | кат.№1 |
 | `plattform-rechte-13` | Права на платформах 13–15 (DSA/DSGVO/AI Act), 14 вопр. | кат.№1 |
@@ -151,7 +151,8 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `lehrkraefte-szenariotraining` | Тренажёр учителя: цифровые ЧП + Meldewege (2/1/0) | кат.№1 |
 | `projektwoche` | Проектная неделя «Sicher im Netz»: 5×90 мин (школа) | кат.№1 |
 | `elternabend-kit` | Родительский вечер 60 мин + раздатка de/uk/ru | кат.№1 |
-| `kriterien-check` | Self-audit оператора | база |
+| `kriterien-check` | Self-audit оператора + экспорт .txt/.json/печать | база |
+| `eltern-rechtebriefe` | Шаблоны писем DSGVO (Art. 15/17/7), имя не хранится | кат.№1 |
 | `fragfinn-selbsttest` | Критерии whitelist fragFINN + отчёт | кат.№1 |
 | `impressum-generator` | Форма→Impressum (Text/HTML), § 5 DDG/§18 MStV | кат.№1 |
 | `datenschutz-baukasten` | Форма→2 текста: DSGVO-декларация + детская версия (Art. 12) | кат.№1 |

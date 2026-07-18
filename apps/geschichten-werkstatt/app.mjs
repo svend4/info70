@@ -3,40 +3,15 @@
 // die Erzeugerfunktion ist bewusst gekapselt, damit später eine sichere
 // KI-Anbindung (ohne persönliche Daten, mit Inhaltsfilter, Eltern-Schalter)
 // an genau dieser Stelle andocken kann - siehe README und docs/02 §3.
-import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
+import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { HELDEN, ORTE, PROBLEME, STEMPEL, ERKLAER, erzeugeGeschichte } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
 
-const HELDEN = ['eine mutige Erfinderin', 'ein schüchterner Drache', 'zwei beste Freunde', 'eine neugierige Katze', 'ein kleiner Roboter'];
-const ORTE = ['auf einer Insel aus Süßigkeiten', 'in einer Stadt unter dem Meer', 'auf dem Dachboden der Schule', 'in einem Wald, der nachts leuchtet', 'auf einem fliegenden Markt'];
-const PROBLEME = ['hat den Schlüssel zur Heimat verloren', 'findet eine geheimnisvolle Landkarte', 'muss ein Gewitter aus Limonade stoppen', 'will den traurigen Mond zum Lachen bringen', 'entdeckt, dass die Farben verschwinden'];
-
 const wahl = { held: null, ort: null, problem: null };
-
-/**
- * Erzeugt die Geschichte. Bewusst eine reine Funktion (Auswahl -> Text):
- * die einzige Stelle, die später durch einen sicheren KI-Aufruf ersetzt wird.
- */
-function erzeugeGeschichte({ held, ort, problem }) {
-  const anfaenge = ['Es war einmal', 'An einem ganz gewöhnlichen Dienstag', 'Niemand hätte gedacht, dass'];
-  const wendungen = [
-    'Zuerst schien alles unmöglich. Doch dann kam eine Idee, so hell wie ein Blitz.',
-    'Ein sprechender Koffer bot seine Hilfe an - gegen drei gute Witze.',
-    'Da flüsterte der Wind einen Hinweis, den nur genaue Zuhörer verstehen konnten.',
-  ];
-  const enden = [
-    'Und wenn du heute genau hinschaust, findest du vielleicht eine Spur davon.',
-    'Seitdem feiern alle diesen Tag mit einem großen Pfannkuchenfest.',
-    'Und die Moral? Wer fragt und zuhört, findet immer einen Weg.',
-  ];
-  const [anfang] = mischen(anfaenge);
-  const [wendung] = mischen(wendungen);
-  const [ende] = mischen(enden);
-  return `${anfang}: ${held}, ${ort}. Eines Tages passierte es: ${held} ${problem}. ${wendung} Gemeinsam mit neuen Freunden wurde gesucht, probiert und gelacht - bis die Lösung gefunden war. ${ende}`;
-}
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -76,11 +51,17 @@ function geschichteBildschirm() {
   const text = erzeugeGeschichte(wahl);
   zeige(
     el('section', { class: 'k-karte' },
+      el('p', { style: 'margin:0 0 0.5rem;font-weight:700;color:var(--k-blau-dunkel)', role: 'note' }, STEMPEL),
       el('p', { style: 'font-size:1.1rem' }, text),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(text) }, '🔊 Vorlesen'),
         el('button', { class: 'k-knopf', onclick: geschichteBildschirm }, '🎲 Anders erzählen'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { wahl.held = wahl.ort = wahl.problem = null; bauBildschirm(); } }, '🧱 Neue Geschichte bauen'))),
+    el('section', { class: 'k-karte' },
+      el('details', {},
+        el('summary', { style: 'cursor:pointer;font-weight:600' }, '🤔 So denkt die Maschine'),
+        el('p', { style: 'margin:0.4rem 0 0' }, ERKLAER),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.4rem', onclick: () => vorlesen(ERKLAER) }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0' }, '💡 Weiter-Erzähl-Idee: Wie geht es danach weiter? Male ein Bild dazu oder erzähle das Ende ganz anders!')));
 }

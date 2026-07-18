@@ -1,0 +1,8 @@
+{
+  "name": "@info70/eltern-rechtebriefe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Eltern-Rechtebriefe: Musterbrief-Sammlung fuer Eltern und Fachkraefte zum Ausueben der DSGVO-Rechte des Kindes - Auskunftsersuchen (Art. 15), Loeschantrag (Art. 17, mit Hinweis auf das besonders starke Loeschrecht bei Kinderdaten, Erwaegungsgrund 65) und Widerruf der Einwilligung (Art. 7) - je Brief mit Ausfuellhilfe und Kopier-Funktion. Datenvermeidung: Angaben nur zum Ausdruck, nichts wird gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
