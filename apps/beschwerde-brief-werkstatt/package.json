@@ -1,0 +1,8 @@
+{
+  "name": "@info70/beschwerde-brief-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Beschwerde-Brief-Werkstatt (Kinder 8-12 mit Lehrkraft): Unterrichtseinheit mit Vorlagen, in der Kinder eine echte Beschwerde oder Petition an Schulleitung, Klassenrat, Petitionsausschuss oder Kinderkommission formulieren und einen fertig strukturierten Brief erhalten. Lernziel: Aufbau, Ton und Adressat einer wirksamen Eingabe (Art. 12/13 UN-KRK). Datensparsam: Absender-Name wird nicht gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

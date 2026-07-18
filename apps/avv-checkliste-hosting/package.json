@@ -1,0 +1,8 @@
+{
+  "name": "@info70/avv-checkliste-hosting",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AVV-Checkliste Hosting: Pruefung von Hosting-Anbietern und ihren Auftragsverarbeitungsvertraegen nach Art. 28 DSGVO (Pflichtinhalte, EU-Serverstandort/Drittlandtransfer, Subunternehmerkette, kinderspezifische Verschaerfungen) mit exportierbarem Luecken-Bericht als Entscheidungshilfe. Content-Pack auf der Kriterien-Check-Engine. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

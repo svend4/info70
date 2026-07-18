@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**84 приложения (83 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**87 приложений (86 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 510 тестов.
+Полный прогон: 528 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -156,6 +156,9 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `barrierefreiheitserklaerung-generator` | Форма/импорт BFSG → Erklärung zur Barrierefreiheit (md/html) | кат.№1 |
 | `vorsorge-check-juschg` | § 24a JuSchG: меры предосторожности, светофор + Ampel-Bericht | кат.№1 |
 | `eltern-kompass-generator` | Форма→готовая «Für Eltern»-страница (eltern.html) | кат.№1 |
+| `link-inventar-pruefer` | Импорт HTML → извлечение/проверка внешних ссылок (без сети) | кат.№1 |
+| `avv-checkliste-hosting` | Хостинг/AVV по Art. 28 DSGVO → Lücken-Bericht | кат.№1 |
+| `beschwerde-brief-werkstatt` | Дети 8–12: письмо/петиция (Schulleitung/Bundestag), имя не хранится | кат.№1 |
 | `barriere-spuernasen` | Дети 8–12: симулятор доступности (контраст/шрифт/озвучка/alt) | кат.№1 |
 | `werbekennzeichnung` | Предпросмотр маркировки рекламы + HTML | кат.№1 |
 | `kria-check` | Оценка последствий для прав ребёнка (GC25) | кат.№1 |

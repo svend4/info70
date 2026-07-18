@@ -1,0 +1,100 @@
+{
+  "quelle": "Auftragsverarbeitung nach Art. 28 DSGVO – Prüfung von Hosting-Anbietern und AV-Verträgen (sinngemäß, öffentlich recherchiert)",
+  "hinweis": "Checkliste zur Prüfung eines Hosting-Anbieters und seines Auftragsverarbeitungsvertrags (AVV), mit kinderspezifischen Verschärfungen. Kein offizielles Testat – Entscheidungshilfe vor Vertragsschluss. Diese App stellt keine externen Anfragen; Haken und Lücken-Bericht bleiben auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "pflichtinhalte",
+      "name": "Pflichtinhalte des AVV (Art. 28 Abs. 3)",
+      "emoji": "📑",
+      "kriterien": [
+        {
+          "id": "p-gegenstand",
+          "text": "Gegenstand, Dauer, Art und Zweck der Verarbeitung sowie Art der Daten und Kategorien Betroffener sind festgelegt.",
+          "hilfe": "Art. 28 Abs. 3 Satz 1 verlangt diese Eckdaten schriftlich. Bei Kinderangeboten: möglichst wenige Datenarten benennen.",
+          "bezug": "DSGVO Art. 28 Abs. 3 S. 1"
+        },
+        {
+          "id": "p-weisung",
+          "text": "Der Auftragnehmer verarbeitet Daten nur auf dokumentierte Weisung.",
+          "hilfe": "Art. 28 Abs. 3 lit. a. Keine Eigenverwendung der Daten durch den Hoster. Das ist zentral.",
+          "bezug": "DSGVO Art. 28 Abs. 3 lit. a"
+        },
+        {
+          "id": "p-vertraulichkeit",
+          "text": "Zur Vertraulichkeit verpflichtete Personen; technische und organisatorische Maßnahmen nach Art. 32 sind vereinbart.",
+          "hilfe": "lit. b und c: Verschwiegenheit der Mitarbeitenden und angemessene Sicherheit (Verschlüsselung, Zugriffskontrolle).",
+          "bezug": "DSGVO Art. 28 Abs. 3 lit. b, c; Art. 32"
+        },
+        {
+          "id": "p-unterstuetzung",
+          "text": "Unterstützung bei Betroffenenrechten und Meldepflichten sowie Löschung/Rückgabe der Daten nach Auftragsende sind geregelt.",
+          "hilfe": "lit. e, f, g: Hilfe bei Auskunft/Löschung, bei Datenpannen und die Rückgabe/Löschung am Vertragsende.",
+          "bezug": "DSGVO Art. 28 Abs. 3 lit. e–g"
+        },
+        {
+          "id": "p-nachweise",
+          "text": "Der Auftragnehmer ermöglicht Nachweise und Audits (Kontrollrechte).",
+          "hilfe": "lit. h: Nachweispflicht und Duldung/Unterstützung von Überprüfungen. Zertifikate (z. B. ISO 27001) helfen.",
+          "bezug": "DSGVO Art. 28 Abs. 3 lit. h"
+        }
+      ]
+    },
+    {
+      "id": "standort",
+      "name": "Serverstandort & Drittlandtransfer",
+      "emoji": "🌍",
+      "kriterien": [
+        {
+          "id": "s-eu",
+          "text": "Die Server stehen in der EU/im EWR; der Verarbeitungsort ist transparent benannt.",
+          "hilfe": "EU-Serverstandort vermeidet Drittland-Probleme. Lassen Sie sich die Rechenzentrumsstandorte schriftlich geben.",
+          "bezug": "DSGVO Art. 44 ff."
+        },
+        {
+          "id": "s-drittland",
+          "text": "Falls doch Drittlandbezug besteht: geeignete Garantien (z. B. Standardvertragsklauseln) liegen vor.",
+          "hilfe": "Ohne EU-Standort braucht es SCC plus ggf. Zusatzmaßnahmen. Für Kinderdaten besser ganz vermeiden.",
+          "bezug": "DSGVO Art. 46"
+        }
+      ]
+    },
+    {
+      "id": "subunternehmer",
+      "name": "Subunternehmerkette",
+      "emoji": "🔗",
+      "kriterien": [
+        {
+          "id": "u-genehmigung",
+          "text": "Der Einsatz weiterer Subunternehmer erfolgt nur mit Genehmigung/Information und ist dokumentiert.",
+          "hilfe": "Art. 28 Abs. 2/4: Subunternehmer brauchen Zustimmung und dieselben Datenschutzpflichten. Die Kette muss nachvollziehbar sein.",
+          "bezug": "DSGVO Art. 28 Abs. 2, 4"
+        },
+        {
+          "id": "u-weitergabe",
+          "text": "Alle Subunternehmer sind auf dieselben Pflichten verpflichtet.",
+          "hilfe": "Die Schutzpflichten müssen durchgereicht werden. Prüfen Sie die aktuelle Subunternehmerliste.",
+          "bezug": "DSGVO Art. 28 Abs. 4"
+        }
+      ]
+    },
+    {
+      "id": "kinder",
+      "name": "Kinderspezifische Verschärfung",
+      "emoji": "🧒",
+      "kriterien": [
+        {
+          "id": "k-datensparsam",
+          "text": "Es werden möglichst wenige Daten verarbeitet; keine Analyse-/Tracking-Dienste beim Hoster.",
+          "hilfe": "Datenminimierung (Art. 5, 25). Server-Logs und Analyse sind bei Kinderangeboten kritisch – möglichst abschalten.",
+          "bezug": "DSGVO Art. 5, 25"
+        },
+        {
+          "id": "k-logfristen",
+          "text": "Log-Speicherfristen sind kurz und dokumentiert; keine Nutzung der Daten für eigene Zwecke des Hosters.",
+          "hilfe": "Kurze, begründete Aufbewahrung. Keine Zweitverwertung (Werbung, Training). Schriftlich festhalten.",
+          "bezug": "DSGVO Art. 5 Abs. 1 lit. e"
+        }
+      ]
+    }
+  ]
+}
