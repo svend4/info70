@@ -1,0 +1,8 @@
+{
+  "name": "@info70/spiel-recht-balance",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Spiel-Recht-Balance: der Tag als Balance dreier Rechte (Spiel/Medien, Ruhe, Draussen/Freunde) statt Bildschirmzeit-Ampel - Selbstregulation nach Art. 31 UN-KRK. Zielgruppe 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

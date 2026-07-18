@@ -1,0 +1,62 @@
+{
+  "hinweis": "Anleitungs-Checkliste für die Handy-Übergabe an ein Kind. Diese App liest nichts vom Gerät aus – ihr richtet selbst ein und hakt ab.",
+  "punkte": [
+    {
+      "code": "jugendschutz",
+      "emoji": "🛡️",
+      "titel": "Jugendschutz-Filter eingerichtet",
+      "warum": "Ein Filter hält alterswidrige Inhalte (Gewalt, Pornografie, Kostenfallen) weitgehend fern – kein perfekter Schutz, aber eine wichtige Grundlage.",
+      "wie": "Android: Family Link einrichten. iPhone: Bildschirmzeit → Inhalt & Datenschutz. Zusätzlich kindgerechten Browser oder Suchfilter (SafeSearch) aktivieren."
+    },
+    {
+      "code": "standort",
+      "emoji": "📍",
+      "titel": "Standort-Freigaben aus (außer wo nötig)",
+      "warum": "Viele Apps wollen dauerhaft den Standort – das ist selten nötig und verrät, wo das Kind ist. Weniger ist sicherer.",
+      "wie": "In den Einstellungen jeder App den Standort auf „Nie“ oder „Beim Verwenden“ stellen. Standort-Verlauf ausschalten."
+    },
+    {
+      "code": "kaufsperre",
+      "emoji": "🔒",
+      "titel": "Kaufsperre & keine Zahlungsdaten",
+      "warum": "In-App-Käufe und Abos summieren sich schnell. Ohne hinterlegte Zahlungsdaten und mit Passwort-Sperre passiert kein Kauf aus Versehen.",
+      "wie": "Käufe mit Passwort/Fingerabdruck bestätigen lassen; keine Kreditkarte im Kinder-Konto hinterlegen; In-App-Käufe möglichst ganz sperren."
+    },
+    {
+      "code": "notfall",
+      "emoji": "🆘",
+      "titel": "Notfallkontakte eingespeichert",
+      "warum": "Im Ernstfall muss das Kind schnell Hilfe erreichen – auch, wenn das Handy gesperrt ist.",
+      "wie": "Eltern und eine zweite Vertrauensperson einspeichern; Notfallkontakt auf dem Sperrbildschirm aktivieren; Nummer gegen Kummer 116 111 gemeinsam abspeichern."
+    },
+    {
+      "code": "apps",
+      "emoji": "📱",
+      "titel": "Altersgerechte Apps ausgewählt",
+      "warum": "Nicht jede App ist für Kinder gemacht. Gemeinsam ausgewählte, geprüfte Apps sind sicherer als „alles, was Freunde haben“.",
+      "wie": "Alters-Kennzeichnung beachten; kindgerechte Angebote bevorzugen (z. B. fragFINN-geprüft); neue Apps zusammen anschauen, bevor sie installiert werden."
+    },
+    {
+      "code": "zeit",
+      "emoji": "🚦",
+      "titel": "Bildschirmzeit gemeinsam besprochen",
+      "warum": "Klare, gemeinsam vereinbarte Regeln wirken besser als starre Sperren – und beugen Streit vor.",
+      "wie": "Ruhezeiten (Essen, Nacht) festlegen; feste Absprachen statt Diskussion pro Tag; als Familie vorbildlich mitmachen. Idee: Familien-Medienvertrag ausfüllen."
+    },
+    {
+      "code": "sperre",
+      "emoji": "🔑",
+      "titel": "Bildschirmsperre & Updates aktiv",
+      "warum": "Eine Code-Sperre schützt bei Verlust; automatische Updates schließen Sicherheitslücken.",
+      "wie": "PIN oder Muster einrichten (nicht 1234); automatische System- und App-Updates aktivieren; „Mein Gerät finden“ einschalten."
+    },
+    {
+      "code": "reden",
+      "emoji": "💬",
+      "titel": "Offenes Reden vereinbart (Nicht-Ärger-Pakt)",
+      "warum": "Der wichtigste Schutz ist Vertrauen: Ein Kind, das bei Problemen ohne Angst vor Handyverbot zu Ihnen kommt, ist sicherer als jedes Filter-System.",
+      "wie": "Vereinbaren: „Wenn dir online etwas Angst macht oder komisch vorkommt, komm zu mir – ohne Ärger, ohne Handyverbot. Wir lösen das zusammen.“"
+    }
+  ],
+  "urkundeText": "hat gemeinsam mit den Eltern das erste Handy sicher eingerichtet und die wichtigsten Regeln besprochen."
+}

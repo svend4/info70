@@ -1,0 +1,23 @@
+/* Erstes-Handy-Kompass: Urkunden-Druck. Am Bildschirm ist .ehk-nur-druck
+   unsichtbar; beim Drucken verschwindet die Checkliste (.ehk-nur-bildschirm)
+   und es bleibt die Übergabe-Urkunde für das Kind. */
+
+.ehk-nur-druck { display: none; }
+
+@media print {
+  .ehk-nur-bildschirm { display: none !important; }
+  .ehk-nur-druck { display: block; }
+
+  html { font-size: 13pt; }
+  body { background: #fff; }
+
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 3pt double #333;
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    break-inside: avoid;
+  }
+}
