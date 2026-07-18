@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { pruefeLeichteSpracheAbdeckung } from '../../../packages/kinder-ui/js/leichte-sprache.mjs';
 
 const kataloge = JSON.parse(await readFile(new URL('../daten/sprachen.json', import.meta.url), 'utf8'));
-const ALLE = ['de', 'uk', 'ru', 'de-ls'];
+const ALLE = ['de', 'en', 'uk', 'ru', 'de-ls'];
 const THEMEN = ['katzen', 'fussball', 'weltraum', 'backen', 'dinos', 'musik'];
 
 test('drei Basissprachen plus Leichte Sprache (de-ls) vorhanden', () => {

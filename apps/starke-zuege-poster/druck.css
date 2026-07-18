@@ -1,0 +1,24 @@
+/* Poster „Drei starke Züge“: großformatige A3-Druckansicht.
+   Beim Drucken verschwinden Auswahl und Knöpfe (.sz-nur-bildschirm);
+   es bleibt ein großes, ruhiges Poster. */
+
+.sz-poster { text-align: center; }
+.sz-emoji { font-size: 3.5rem; margin: 0; }
+.sz-titel { font-size: 1.8rem; margin: 0.2rem 0 0; }
+.sz-unter { font-weight: 700; color: #4b5563; margin: 0.2rem 0 0.8rem; letter-spacing: 0.05em; }
+.sz-zug { display: flex; gap: 0.7rem; text-align: left; align-items: flex-start; padding: 0.5rem 0; border-top: 2px solid var(--k-rand); }
+.sz-nr { font-size: 1.8rem; font-weight: 800; color: var(--k-blau-dunkel); min-width: 1.6rem; }
+.sz-zug-titel { font-size: 1.25rem; font-weight: 700; margin: 0; }
+.sz-zug-text { margin: 0.15rem 0 0; }
+.sz-merk { font-size: 1.4rem; font-weight: 800; margin-top: 0.9rem; }
+
+@media print {
+  .sz-nur-bildschirm { display: none !important; }
+  @page { size: A3; margin: 1.5cm; }
+  html { font-size: 15pt; }
+  body { background: #fff; }
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+  .sz-poster { box-shadow: none; border: none; padding: 0; }
+  .sz-emoji { font-size: 5rem; }
+  .sz-titel { font-size: 2.6rem; }
+}

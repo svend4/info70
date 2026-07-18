@@ -17,7 +17,7 @@ const t = (k, e) => sprache.t(k, e);
 
 const THEMEN = ['katzen', 'fussball', 'weltraum', 'backen', 'dinos', 'musik'];
 const EMOJI = { katzen: '🐱', fussball: '⚽', weltraum: '🚀', backen: '🧁', dinos: '🦖', musik: '🎵' };
-const STIMME = { de: 'de-DE', uk: 'uk-UA', ru: 'ru-RU' };
+const STIMME = { de: 'de-DE', uk: 'uk-UA', ru: 'ru-RU', en: 'en-GB' };
 const RUNDEN = 10;
 const FEED_GROESSE = 4;
 const VERSTAERKUNG = 1.7; // so lernt "der Algorithmus"
@@ -46,7 +46,7 @@ function sprachWahl() {
   return el('section', { class: 'k-karte' },
     el('p', { style: 'font-weight:600;margin-top:0' }, t('sprache_label')),
     el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap' },
-      ...[['de', 'Deutsch'], ['uk', 'Українська'], ['ru', 'Русский']].map(([code, name]) =>
+      ...[['de', 'Deutsch'], ['uk', 'Українська'], ['ru', 'Русский'], ['en', 'English']].map(([code, name]) =>
         el('button', {
           class: `k-knopf k-knopf--klein ${basis === code ? '' : 'k-knopf--neutral'}`,
           'aria-pressed': String(basis === code),

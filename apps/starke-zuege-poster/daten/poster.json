@@ -1,0 +1,65 @@
+{
+  "hinweis": "Pro Themenfeld die beste Handlungsfolge aus den Szenario-Trainern, verdichtet auf drei starke Züge – für die Klassenzimmerwand (A3).",
+  "poster": [
+    {
+      "id": "cybermobbing",
+      "titel": "Wenn jemand fertiggemacht wird",
+      "emoji": "💪",
+      "quelle": "stark-im-chat",
+      "schritte": [
+        { "nr": 1, "zug": "Nicht mitmachen", "text": "Keine gemeinen Nachrichten liken oder weiterschicken. Wegschauen ist auch eine Entscheidung." },
+        { "nr": 2, "zug": "Betroffene stärken", "text": "Der Person privat schreiben: „Ich finde das nicht okay, ich bin für dich da.“" },
+        { "nr": 3, "zug": "Hilfe holen & melden", "text": "Erwachsene einbeziehen und den Melde-Knopf nutzen. Melden ist kein Petzen." }
+      ],
+      "merksatz": "Zuschauen ist auch eine Entscheidung."
+    },
+    {
+      "id": "kettenbrief",
+      "titel": "Kettenbrief oder Mutprobe",
+      "emoji": "🛑",
+      "quelle": "kettenbrief-stopper",
+      "schritte": [
+        { "nr": 1, "zug": "Nicht weiterleiten", "text": "Die Drohungen sind erfunden. Es passiert nichts, wenn du stoppst." },
+        { "nr": 2, "zug": "Löschen", "text": "Die Nachricht einfach löschen. Bei dir hört die Kette auf." },
+        { "nr": 3, "zug": "Bescheid sagen", "text": "Freund*innen warnen: „Das ist ein Kettenbrief, ignorier ihn.“" }
+      ],
+      "merksatz": "Erst prüfen, dann teilen."
+    },
+    {
+      "id": "datenschatz",
+      "titel": "Nach Daten gefragt?",
+      "emoji": "🔑",
+      "quelle": "daten-schatz",
+      "schritte": [
+        { "nr": 1, "zug": "Kurz stoppen", "text": "Nicht sofort alles ausfüllen. Ist diese Angabe wirklich nötig?" },
+        { "nr": 2, "zug": "Nein oder Nachfragen", "text": "„Nein“ und „Ich frage jemanden“ sind starke, erlaubte Antworten." },
+        { "nr": 3, "zug": "Erwachsene holen", "text": "Bei Passwörtern oder komischen Bitten eine Vertrauensperson fragen." }
+      ],
+      "merksatz": "Weniger teilen ist sicherer."
+    },
+    {
+      "id": "fake-news",
+      "titel": "Echt oder Fake?",
+      "emoji": "🕵️",
+      "quelle": "nachrichten-detektive",
+      "schritte": [
+        { "nr": 1, "zug": "Wer sagt das?", "text": "Wer ist die Quelle – eine seriöse Stelle oder „irgendwer“?" },
+        { "nr": 2, "zug": "Woher weiß die Person das?", "text": "Gibt es einen Beweis, oder nur „alle sagen“?" },
+        { "nr": 3, "zug": "Erst prüfen, dann teilen", "text": "Bei Unsicherheit nicht weiterleiten. Geteilt heißt nicht wahr." }
+      ],
+      "merksatz": "Geteilt heißt nicht wahr."
+    },
+    {
+      "id": "kaeltefalle",
+      "titel": "Kauf-Tricks & Lootboxen",
+      "emoji": "🎁",
+      "quelle": "lootbox-labor",
+      "schritte": [
+        { "nr": 1, "zug": "Trick erkennen", "text": "Countdown, „nur noch heute“, Zufalls-Kisten machen Druck und wollen dein Geld." },
+        { "nr": 2, "zug": "Durchatmen", "text": "Nicht sofort klicken. Wunsch ist nicht gleich Wahrscheinlichkeit." },
+        { "nr": 3, "zug": "Gemeinsam entscheiden", "text": "Mit Eltern absprechen: Kaufsperre an, echte Chancen anschauen." }
+      ],
+      "merksatz": "Zufall verkauft sich teuer."
+    }
+  ]
+}

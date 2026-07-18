@@ -1,0 +1,8 @@
+{
+  "name": "@info70/starke-zuege-poster",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Poster 'Drei starke Zuege' (8-12): pro Themenfeld die beste Handlungsfolge aus den Szenario-Trainern, verdichtet auf drei Zuege - als A3-Poster fuer die Klassenzimmerwand. Offline, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

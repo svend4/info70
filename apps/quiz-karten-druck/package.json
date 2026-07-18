@@ -1,0 +1,8 @@
+{
+  "name": "@info70/quiz-karten-druck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Quiz-Kartenspiel-Druck (8-12): aus vorhandenen Quiz-Daten ein druckbares Kartendeck (Vorderseite Frage, Rueckseite Antwort + Erklaerung). Klassen ohne Tablets spielen dieselben Faelle analog. Offline, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

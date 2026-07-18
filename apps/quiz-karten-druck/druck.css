@@ -1,0 +1,24 @@
+/* Quiz-Kartenspiel-Druck: Bildschirm-Vorschau + Druck-Layout der Karten.
+   Am Bildschirm kompakte Vorschau; beim Drucken ein sauberes Kartengitter
+   mit Schnitt- (durchgezogen) und Falz-Linie (gestrichelt). */
+
+.qk-blatt { margin-top: 0.5rem; }
+.qk-decktitel { font-weight: 700; text-align: center; }
+.qk-gitter { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
+.qk-karte { border: 1.5px solid #333; border-radius: 0.4rem; overflow: hidden; break-inside: avoid; }
+.qk-vorne { padding: 0.5rem 0.6rem; }
+.qk-hinten { padding: 0.5rem 0.6rem; border-top: 1.5px dashed #999; background: #f8fafc; }
+.qk-nr { margin: 0 0 0.3rem; font-size: 0.75rem; color: #4b5563; }
+.qk-frage { margin: 0; font-weight: 600; white-space: pre-line; }
+.qk-antwort { margin: 0; font-size: 0.92rem; }
+
+@media print {
+  .qk-nur-bildschirm { display: none !important; }
+  html { font-size: 10.5pt; }
+  body { background: #fff; }
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+  .qk-hinten {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
