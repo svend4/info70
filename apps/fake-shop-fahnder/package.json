@@ -1,0 +1,8 @@
+{
+  "name": "@info70/fake-shop-fahnder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fake-Shop-Fahnder: Quiz (quiz-kern) fuer 8-12 - echter Shop oder Fake? Warnsignale (zu billig, kein Impressum, nur Vorkasse, Fantasie-Siegel, Countdown) erkennen. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

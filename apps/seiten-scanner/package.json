@@ -1,0 +1,8 @@
+{
+  "name": "@info70/seiten-scanner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Seiten-Scanner: kindgerechte Checkliste (Impressum? Name? Werbung? Fremd-Chat?), die Kinder neben einer beliebigen Webseite durchgehen - mit Ampel-Einschaetzung. Zielgruppe 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

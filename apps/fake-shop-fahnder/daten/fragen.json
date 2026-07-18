@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Shop-Spürnase", "emoji": "🐽" },
+    { "ab": 5, "titel": "Fake-Finder*in", "emoji": "🔎" },
+    { "ab": 9, "titel": "Betrugs-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 12, "titel": "Fake-Shop-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Echt oder Fake",
+      "aussage": "Ein Shop bietet die neueste Spielkonsole für 39 Euro an – überall sonst kostet sie 400 Euro. „Nur heute, nur noch 2 Stück!“",
+      "korrekt": "nein",
+      "erklaerung": "Fake! Ein Preis, der viel zu günstig ist, plus Zeitdruck („nur heute“) und Verknappung („nur noch 2 Stück“) – das sind klassische Fake-Shop-Tricks. Wenn ein Angebot zu gut ist, um wahr zu sein, ist es meistens nicht wahr."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Warnsignale",
+      "aussage": "Ein Shop hat kein Impressum – man findet nirgends, wer ihn betreibt oder wie man ihn erreicht.",
+      "korrekt": "nein",
+      "erklaerung": "Warnsignal! Ein echter Shop sagt, wer dahintersteckt (Impressumspflicht, DDG § 5). Fehlt das Impressum ganz, weiß niemand, an wen man sich bei Problemen wendet. Finger weg."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Warnsignale",
+      "aussage": "Man kann nur per Vorkasse zahlen – also erst das ganze Geld überweisen, bevor irgendetwas verschickt wird. Andere Zahlwege gibt es nicht.",
+      "korrekt": "nein",
+      "erklaerung": "Warnsignal! „Nur Vorkasse“ heißt: Du zahlst zuerst und hast keine Sicherheit. Betrüger lieben das – die Ware kommt dann oft nie. Sichere Shops bieten mehrere Zahlwege (z. B. Kauf auf Rechnung)."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Echt oder Fake",
+      "aussage": "Ein Shop hat ein vollständiges Impressum, mehrere Zahlungsarten, echte Bewertungen und ein anklickbares, überprüfbares Gütesiegel.",
+      "korrekt": "ja",
+      "erklaerung": "Das klingt vertrauenswürdig! Vollständiges Impressum, Auswahl bei der Bezahlung und ein echtes (anklickbares!) Siegel sind gute Zeichen. Trotzdem gilt: bei teuren Käufen immer mit Erwachsenen zusammen."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Warnsignale",
+      "aussage": "Auf dem Shop glänzt ein Siegel „100 % geprüft & sicher“. Man kann es aber nicht anklicken und nirgends überprüfen.",
+      "korrekt": "nein",
+      "erklaerung": "Warnsignal! So ein Fantasie-Siegel kann sich jeder selbst basteln. Echte Gütesiegel kann man anklicken und beim Siegel-Geber nachprüfen. Ein Bildchen allein beweist gar nichts."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Warnsignale",
+      "aussage": "Die Produkttexte sind voller komischer Fehler und wirken wie schlecht übersetzt, und die Firmenadresse gibt es gar nicht.",
+      "korrekt": "nein",
+      "erklaerung": "Warnsignal! Viele merkwürdige Sprachfehler und eine erfundene Adresse sind typisch für schnell zusammengebaute Fake-Shops. Seriöse Händler achten auf ihre Texte und geben eine echte Adresse an."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Richtig handeln",
+      "aussage": "Wenn du dir bei einem Shop unsicher bist, ist es klug, vor dem Kaufen einen Erwachsenen zu fragen und den Shop-Namen mit „Erfahrungen“ zu suchen.",
+      "korrekt": "ja",
+      "erklaerung": "Genau richtig! Kurz innehalten, Erwachsene fragen und den Shop-Namen zusammen mit „Fake“ oder „Erfahrungen“ suchen – oft haben andere schon vor Betrug gewarnt. Diese zwei Minuten schützen dich."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Richtig handeln",
+      "aussage": "Ein toller Deal läuft in 9 Minuten ab – der Countdown tickt. Am besten kaufst du sofort, bevor die Zeit vorbei ist.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – der Countdown ist ein Trick, damit du nicht nachdenkst. Echte gute Angebote laufen nicht in Minuten weg. Zeitdruck ist ein Grund, MEHR zu prüfen, nicht schneller zu kaufen."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Warnsignale",
+      "frage": "Woran erkennst du am ehesten einen Fake-Shop?",
+      "antworten": [
+        "Preise viel zu günstig, kein Impressum, nur Vorkasse und Countdown-Druck",
+        "Es gibt viele bunte Produktbilder",
+        "Der Shop hat einen langen Namen",
+        "Man kann nach oben scrollen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Die Kombination macht's: unrealistisch billige Preise, fehlendes Impressum, nur Vorkasse und künstlicher Zeitdruck. Einzelne bunte Bilder oder ein langer Name sagen nichts – auf die Warnsignale kommt es an."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Ein Shop wirkt verdächtig. Was ist der beste erste Schritt?",
+      "antworten": [
+        "Nichts kaufen, Erwachsene fragen und den Shop im Netz nachschlagen",
+        "Schnell bestellen, bevor der Rabatt weg ist",
+        "Meine Adresse und Kontodaten eingeben, um den Preis zu sichern",
+        "Den Link an alle Freunde weiterschicken"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Erst prüfen, dann (vielleicht) kaufen. Keine Daten eingeben, um „den Preis zu sichern“ – das ist genau die Falle. Und einen verdächtigen Shop nicht weiterverbreiten, sondern mit Erwachsenen checken."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Warnsignale",
+      "frage": "Warum ist „nur Vorkasse“ ein Warnsignal?",
+      "antworten": [
+        "Du zahlst zuerst alles und bekommst vielleicht nie Ware – ohne jede Sicherheit",
+        "Vorkasse ist immer verboten",
+        "Vorkasse macht die Seite langsamer",
+        "Vorkasse bedeutet, dass die Ware teurer ist"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Bei „nur Vorkasse“ gehst du in Vorleistung und trägst das ganze Risiko. Seriöse Shops bieten Alternativen wie Kauf auf Rechnung. Ausschließlich Vorkasse – kein anderer Weg – ist ein deutliches Warnsignal."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Echt oder Fake",
+      "frage": "Welches Zeichen spricht am ehesten für einen ECHTEN, seriösen Shop?",
+      "antworten": [
+        "Vollständiges Impressum, mehrere Zahlwege und ein anklickbares, überprüfbares Siegel",
+        "Ein besonders großes Rabatt-Banner",
+        "Ein tickender Countdown",
+        "Sehr viele Ausrufezeichen im Text"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Impressum, echte Zahlungs-Auswahl und ein überprüfbares Siegel sind gute Zeichen. Rabatt-Banner, Countdowns und viele Ausrufezeichen sind dagegen oft Druckmittel – sie machen einen Shop nicht seriös."
+    }
+  ]
+}

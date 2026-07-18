@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "cc01",
+      "situation": "Eine Kinderseite hat ein Gästebuch. Bevor ein Eintrag erscheint, prüft ihn ein Erwachsener (Moderation). Es gibt einen Melde-Knopf.",
+      "schutzmerkmal": "✅ Moderation + Melde-Knopf",
+      "frage": "Wie schätzt du diese Funktion ein?",
+      "optionen": [
+        { "text": "Sicher – ein Erwachsener passt auf, und ich kann Probleme melden.", "wert": 2 },
+        { "text": "Egal – Hauptsache, ich kann schreiben.", "wert": 1 },
+        { "text": "Unsicher – Moderation nervt nur.", "wert": 0 }
+      ],
+      "erklaerung": "Das ist gut gemacht: Moderation (jemand prüft die Beiträge) und ein Melde-Knopf sind zwei starke Schutzmerkmale. So eine Funktion ist sicher für Kinder – genau das verlangen auch Gütesiegel wie fragFINN und Seitenstark."
+    },
+    {
+      "id": "cc02",
+      "situation": "In einem Spiel kannst du sofort mit wildfremden Erwachsenen privat chatten. Niemand passt auf, es gibt keinen Melde-Knopf.",
+      "schutzmerkmal": "🚨 offener Fremden-Chat ohne Aufsicht",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Nichts Privates schreiben, keine Fotos schicken – und Erwachsenen davon erzählen.", "wert": 2 },
+        { "text": "Ein bisschen chatten, aber vorsichtig sein.", "wert": 1 },
+        { "text": "Erzählen, wo ich wohne und zur Schule gehe – ist ja nur ein Spiel.", "wert": 0 }
+      ],
+      "erklaerung": "Ein offener Chat mit Fremden ohne Moderation und ohne Melde-Knopf ist ein Risiko. Die sichere Reaktion: nichts Privates verraten, keine Fotos, und Erwachsene einbeziehen. Fehlen die Schutzmerkmale, bist du selbst besonders vorsichtig."
+    },
+    {
+      "id": "cc03",
+      "situation": "Eine Seite verlangt, dass du dir einen Spitznamen ausdenkst – deinen echten Namen sollst du ausdrücklich NICHT verwenden.",
+      "schutzmerkmal": "✅ Spitzname-Pflicht",
+      "frage": "Gut oder schlecht?",
+      "optionen": [
+        { "text": "Gut – ein Spitzname schützt meinen echten Namen.", "wert": 2 },
+        { "text": "Schlecht – ich will meinen echten Namen zeigen.", "wert": 0 },
+        { "text": "Ist mir egal.", "wert": 1 }
+      ],
+      "erklaerung": "Spitzname-Pflicht ist ein Schutzmerkmal: Wenn du deinen echten Namen nicht angeben sollst, schützt die Seite deine Privatsphäre. Gute Kinderseiten wollen deinen echten Namen gar nicht wissen."
+    },
+    {
+      "id": "cc04",
+      "situation": "Unter Videos kann jeder Kommentare schreiben. Niemand prüft sie, und es stehen dort schon viele gemeine Sätze.",
+      "schutzmerkmal": "🚨 Kommentare ohne Aufsicht",
+      "frage": "Was ist die sichere Einschätzung?",
+      "optionen": [
+        { "text": "Unsicher – ohne Moderation sammeln sich Gemeinheiten. Nichts Persönliches posten.", "wert": 2 },
+        { "text": "Sicher – es sind ja nur Kommentare.", "wert": 0 },
+        { "text": "Ich schreibe selbst einen gemeinen Kommentar zurück.", "wert": 0 }
+      ],
+      "erklaerung": "Kommentare ohne Aufsicht sind ein Warnzeichen: Ohne Moderation häufen sich schnell Beleidigungen. Sicher heißt hier: nichts Persönliches posten und selbst nicht mitmachen. Ein Melde-Knopf würde helfen – fehlt er, ist Vorsicht angesagt."
+    },
+    {
+      "id": "cc05",
+      "situation": "In einer Lern-App kannst du nur aus fertigen, freundlichen Nachrichten auswählen („Gut gemacht!“, „Danke!“). Freien Text gibt es nicht.",
+      "schutzmerkmal": "✅ nur vorgegebene Nachrichten",
+      "frage": "Wie sicher ist das?",
+      "optionen": [
+        { "text": "Sehr sicher – so kann niemand Gemeinheiten oder private Daten schreiben.", "wert": 2 },
+        { "text": "Langweilig, aber okay.", "wert": 1 },
+        { "text": "Schlecht – ich will alles frei schreiben können.", "wert": 0 }
+      ],
+      "erklaerung": "Vorgegebene Nachrichten sind ein starkes Schutzmerkmal für jüngere Kinder: Wo man nur freundliche Bausteine auswählt, sind Beleidigungen und das Verraten privater Daten gar nicht möglich. Sicherheit vor maximaler Freiheit – gerade bei den Kleinen."
+    },
+    {
+      "id": "cc06",
+      "situation": "Ein Chat sagt: „Schicke ein Foto von dir, dann bekommst du einen Bonus.“ Es gibt keinen Melde-Knopf.",
+      "schutzmerkmal": "🚨 Foto-Aufforderung",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Kein Foto schicken und sofort einem Erwachsenen davon erzählen.", "wert": 2 },
+        { "text": "Ein harmloses Foto schicken, um den Bonus zu bekommen.", "wert": 0 },
+        { "text": "Erst mal ignorieren und weiterspielen.", "wert": 1 }
+      ],
+      "erklaerung": "Eine Aufforderung, ein Foto von dir zu schicken – noch dazu gegen „Bonus“ – ist ein klares Warnzeichen. Schick niemals Fotos an Unbekannte und erzähl es sofort einem Erwachsenen. Bei so etwas hilft auch die Nummer gegen Kummer 116 111."
+    },
+    {
+      "id": "cc07",
+      "situation": "Eine Seite hat einen Chat, aber du kannst nur mit Freunden schreiben, die du vorher beide bestätigt habt. Fremde kommen nicht rein.",
+      "schutzmerkmal": "✅ Kontakt nur nach Bestätigung",
+      "frage": "Wie schätzt du das ein?",
+      "optionen": [
+        { "text": "Gut – so schreiben nur Leute mit mir, die ich kenne und bestätigt habe.", "wert": 2 },
+        { "text": "Schade, ich würde gern mit allen schreiben.", "wert": 0 },
+        { "text": "Weiß nicht.", "wert": 1 }
+      ],
+      "erklaerung": "„Kontakt nur nach beidseitiger Bestätigung“ ist ein Schutzmerkmal: Fremde können dich nicht einfach anschreiben. Das ist die sichere Voreinstellung, die auch das Jugendschutzgesetz von großen Plattformen verlangt."
+    },
+    {
+      "id": "cc08",
+      "situation": "Du bist unsicher, ob ein Chat sicher ist. Welche drei Dinge suchst du?",
+      "schutzmerkmal": "🔎 die drei Schutzmerkmale",
+      "frage": "Worauf achtest du?",
+      "optionen": [
+        { "text": "Moderation (jemand passt auf), Melde-Knopf, und dass ich keinen echten Namen brauche.", "wert": 2 },
+        { "text": "Ob der Chat bunt aussieht.", "wert": 0 },
+        { "text": "Ob viele Leute dort schreiben.", "wert": 1 }
+      ],
+      "erklaerung": "Merke dir die drei Schutzmerkmale: Moderation (jemand prüft), Melde-Funktion (du kannst Probleme melden) und dass du keinen echten Namen angeben musst (Spitzname). Fehlen sie, ist besondere Vorsicht nötig – Aussehen und Beliebtheit sagen nichts über Sicherheit."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Chat-Prüfer*in", "emoji": "🔎" },
+    { "ab": 7, "titel": "Schutzmerkmal-Kenner*in", "emoji": "🛡️" },
+    { "ab": 12, "titel": "Sicherheits-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 15, "titel": "Chat-Check-Profi", "emoji": "🏅" }
+  ]
+}

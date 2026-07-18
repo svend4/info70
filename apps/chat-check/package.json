@@ -1,0 +1,8 @@
+{
+  "name": "@info70/chat-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chat-Check: Szenario-Pack (2/1/0) - Kinder bewerten Kommunikationsfunktionen und erkennen die Schutzmerkmale Moderation, Melde-Funktion, Spitzname. Kriterien-Training ohne Grooming-Inhalte. 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
