@@ -1,0 +1,26 @@
+/* Familienrat: Druckansicht als Familienbeschluss.
+   Beim Drucken verschwinden Formularfelder und Knöpfe (.fr-nur-bildschirm);
+   es bleibt der Beschluss mit Unterschriftszeile übrig. */
+
+@media print {
+  .fr-nur-bildschirm { display: none !important; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.9rem;
+  }
+}

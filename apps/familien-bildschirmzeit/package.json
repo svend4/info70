@@ -1,0 +1,8 @@
+{
+  "name": "@info70/familien-bildschirmzeit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Familien-Bildschirmzeit-Wette (Eltern+Kind 8-15): alle setzen sich eigene Ampel-Ziele und tragen selbst ein, wie die Woche lief - keine Fernueberwachung, Vergleich nur im Familienrat. Werbefrei, offline, lokal.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

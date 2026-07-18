@@ -1,0 +1,8 @@
+{
+  "name": "@info70/familienrat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Familienrat (Eltern+Kind 6-15): gemeinsam ueber Medienregeln abstimmen (Vorlagen), druckbarer Familienbeschluss, Familien-Koffer als Datei-Export statt Server. Werbefrei, offline, nur Zaehler lokal.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

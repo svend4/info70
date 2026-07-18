@@ -5,6 +5,7 @@
 // und Texte. Politik (docs/02) bleibt Sache der App: Netzwerk-Wächter und
 // CSP werden dort installiert; der Kern macht keine Netzwerkanfragen.
 import { el, vorlesen, mischen } from '../../kinder-ui/js/komponenten.mjs';
+import { duettWertung, duettSatz } from './duett.mjs';
 
 const STANDARD_TEXTE = {
   titel: 'Quiz',
@@ -47,6 +48,13 @@ export function starteQuiz(konfig) {
   let index = 0;
   let punkte = 0;
 
+  // Duett-Modus (Familie): zwei Spieler*innen nacheinander am selben Gerät.
+  let duettFragen = [];
+  let duettIndex = 0;
+  let duettSpieler = 1;
+  let antwortenA = [];
+  let antwortenB = [];
+
   const fuss = () =>
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
@@ -78,6 +86,10 @@ export function starteQuiz(konfig) {
         el('p', { style: 'font-weight:600;margin-top:0' }, '👩‍🏫 Für den Unterricht'),
         el('p', { style: 'font-size:0.9rem' }, 'Klassen-Modus: eine Anzeige für die ganze Klasse (Beamer/Tafel). Alle raten laut mit, dann wird gemeinsam aufgelöst – ohne Punkte, ohne Geräte der Kinder, ohne Daten.'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteKlassenRunde }, '👩‍🏫 Klassen-Modus starten')),
+      el('section', { class: 'k-karte' },
+        el('p', { style: 'font-weight:600;margin-top:0' }, '👪 Zu zweit spielen'),
+        el('p', { style: 'font-size:0.9rem' }, 'Duett-Modus: Zwei (z. B. Eltern und Kind, Enkel und Oma) antworten nacheinander verdeckt am selben Gerät – danach vergleicht ihr eure Antworten. Nichts wird gespeichert.'),
+        el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteDuett }, '👪 Duett-Modus starten')),
       el('section', { class: 'k-karte' },
         el('p', {}, t.datenHinweis),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); start(); } }, t.datenLoeschen)));
@@ -209,6 +221,95 @@ export function starteQuiz(konfig) {
         vorlesenKnopf(`${t.fertigTitel} ${t.ergebnisSatz(punkte, fragen.length, rekord)}. ${rang.titel}`),
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf', onclick: starteRunde }, t.nochmalKnopf),
+          el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));
+  }
+
+  // --- Duett-Modus (Familie): additiv, berührt den Einzel-/Klassen-Ablauf nicht.
+  function starteDuett() {
+    duettFragen = mischen(daten.fragen).slice(0, rundenGroesse);
+    antwortenA = [];
+    antwortenB = [];
+    duettSpielerStart(1);
+  }
+
+  function duettSpielerStart(spieler) {
+    duettSpieler = spieler;
+    duettIndex = 0;
+    zeige(
+      el('section', { class: 'k-karte', style: 'text-align:center' },
+        el('p', { class: 'k-gross' }, '🙈'),
+        el('p', { style: 'font-weight:700' }, `Spieler ${spieler} ist dran!`),
+        el('p', {}, spieler === 2 ? 'Gib das Gerät an die zweite Person. Die erste schaut jetzt bitte weg.' : 'Die zweite Person schaut bitte weg. Los geht’s!'),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: duettFrage }, '▶️ Los'))));
+  }
+
+  function duettKopf() {
+    return el('p', { class: 'k-untertitel' }, `👪 Duett · Spieler ${duettSpieler} · ${t.fallWort} ${duettIndex + 1} von ${duettFragen.length}`);
+  }
+
+  function duettFrage() {
+    const f = duettFragen[duettIndex];
+    if (f.typ === 'binaer') {
+      zeige(
+        el('section', { class: 'k-karte' },
+          duettKopf(),
+          el('p', { style: 'font-weight:600' }, `„${f.aussage}“`),
+          vorlesenKnopf(`${f.aussage}. ${t.binaerFrage}`),
+          el('div', { class: 'k-antworten' },
+            el('button', { class: 'k-knopf', onclick: () => duettAufloesung(f, f.korrekt === 'ja') }, t.binaerJa),
+            el('button', { class: 'k-knopf', onclick: () => duettAufloesung(f, f.korrekt === 'nein') }, t.binaerNein))));
+    } else {
+      const richtige = f.antworten[f.korrekt];
+      const gemischt = mischen(f.antworten);
+      zeige(
+        el('section', { class: 'k-karte' },
+          duettKopf(),
+          el('p', { style: 'font-weight:600' }, f.frage),
+          vorlesenKnopf(`${f.frage} Die Möglichkeiten sind: ${gemischt.join('. Oder: ')}`),
+          el('div', { class: 'k-antworten' },
+            ...gemischt.map((a) =>
+              el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => duettAufloesung(f, a === richtige) }, a)))));
+    }
+  }
+
+  function duettAufloesung(f, richtig) {
+    (duettSpieler === 1 ? antwortenA : antwortenB).push(richtig);
+    const titel = richtig ? t.richtigTitel : t.falschTitel;
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('div', { class: `k-hinweis ${richtig ? 'k-hinweis--richtig' : 'k-hinweis--falsch'}` },
+          el('p', { style: 'font-weight:700;margin-top:0' }, titel),
+          el('p', { style: 'margin-bottom:0' }, f.erklaerung)),
+        vorlesenKnopf(`${titel} ${f.erklaerung}`),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: duettWeiter }, duettIndex + 1 < duettFragen.length ? t.weiterKnopf : (duettSpieler === 1 ? '➡️ Fertig – nächste Person' : t.ergebnisKnopf)))));
+  }
+
+  function duettWeiter() {
+    duettIndex++;
+    if (duettIndex < duettFragen.length) duettFrage();
+    else if (duettSpieler === 1) duettSpielerStart(2);
+    else duettErgebnis();
+  }
+
+  function duettErgebnis() {
+    const w = duettWertung(antwortenA, antwortenB);
+    const zeile = (nr, ok) => el('span', { style: `display:inline-block;width:1.5rem;text-align:center` }, ok ? '✅' : '⬜');
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('p', { class: 'k-gross' }, w.fuehrung === 'gleich' ? '🤝' : '🏆'),
+        el('p', { style: 'text-align:center;font-weight:700' }, duettSatz(w)),
+        el('div', { style: 'margin:0.5rem 0' },
+          el('div', { style: 'display:flex;justify-content:space-between;font-weight:600' },
+            el('span', {}, `Spieler 1: ${w.punkteA}`), el('span', {}, `Spieler 2: ${w.punkteB}`)),
+          el('p', { style: 'margin:0.3rem 0;color:#4b5563' }, `Gemeinsam als Team: ${w.team} von ${w.gesamt} · beide richtig: ${w.beide}`)),
+        ...w.zeilen.map((z) => el('div', { style: 'display:flex;justify-content:space-between;border-bottom:1px solid var(--k-rand);padding:0.15rem 0' },
+          el('span', {}, `${t.fallWort} ${z.nr}`),
+          el('span', {}, zeile(z.nr, z.a), ' ', zeile(z.nr, z.b)))),
+        vorlesenKnopf(duettSatz(w)),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: starteDuett }, '🔁 Noch einmal zu zweit'),
           el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));
   }
 
