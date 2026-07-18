@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Bild-Prüfer*in", "emoji": "🔍" },
+    { "ab": 5, "titel": "KI-Späher*in", "emoji": "🤖" },
+    { "ab": 9, "titel": "Deepfake-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 12, "titel": "Deepfake-Spürnase-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "KI-Prüfmerkmale",
+      "aussage": "Auf einem Foto hat eine Person sechs Finger an einer Hand und die Finger sind seltsam verbogen. Das kann ein Hinweis auf ein KI-Bild sein.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! KI macht oft Fehler an Händen: zu viele oder verschmolzene Finger, komische Formen. Hände sind eine gute Stelle zum Prüfen. Ein solcher Fehler ist ein Hinweis – aber schau immer auch auf andere Merkmale."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "KI-Prüfmerkmale",
+      "aussage": "Ein Bild ist nur dann echt, wenn es besonders scharf und perfekt aussieht.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – im Gegenteil! Viele KI-Bilder sehen zu perfekt und glatt aus. „Perfekt“ ist kein Beweis für echt. Achte lieber auf Fehler in Details (Hände, Zähne, Hintergrund) und darauf, ob es eine Quelle gibt."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "KI-Prüfmerkmale",
+      "aussage": "Wenn das Licht und die Schatten auf einem Bild nicht zusammenpassen (z. B. Schatten zeigen in verschiedene Richtungen), kann das ein KI-Hinweis sein.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! KI patzt oft beim Licht: Schatten passen nicht zusammen, Spiegelungen fehlen oder stimmen nicht. Wenn dir das Licht komisch vorkommt, schau genauer hin – echte Fotos haben meist stimmiges Licht."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Quelle & Kennzeichnung",
+      "aussage": "Ein schockierendes Bild wird geteilt, aber niemand sagt, woher es stammt oder wer es gemacht hat. Das ist ein Grund, skeptisch zu sein.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Fehlt jede Quelle und will das Bild dich stark aufregen, ist Vorsicht angebracht – so verbreiten sich Fälschungen. Frag: Wer hat das gemacht? Woher stammt es? Gibt es das bei einer verlässlichen Quelle?"
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "KI-Prüfmerkmale",
+      "aussage": "Text auf einem KI-Bild (z. B. auf einem Schild) ist immer perfekt lesbar und richtig geschrieben.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – KI verhaspelt sich oft bei Text: Buchstaben ergeben Quatsch, Wörter sind verzerrt oder erfunden. Wirrer Text auf Schildern oder Kleidung ist ein häufiger KI-Fehler. Ein guter Ort zum Prüfen!"
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Quelle & Kennzeichnung",
+      "aussage": "Wenn Inhalte mit KI gemacht wurden, müssen sie oft gekennzeichnet werden – damit du weißt, dass sie nicht echt sind.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Die neue EU-KI-Verordnung verlangt, dass viele KI-Inhalte gekennzeichnet werden (z. B. „mit KI erstellt“). Eine solche Kennzeichnung hilft dir. Fehlt sie und wirkt etwas trotzdem künstlich, bleib skeptisch."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Richtig handeln",
+      "aussage": "Bei einem verdächtigen Bild oder Video ist es klug, es NICHT sofort weiterzuschicken, sondern erst zu prüfen.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Erst prüfen, dann (vielleicht) weiterschicken. Wer ein Fake weiterleitet, hilft ihm, sich zu verbreiten. Im Zweifel gar nicht teilen und Erwachsene fragen oder bei einer verlässlichen Quelle nachschauen."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "KI-Prüfmerkmale",
+      "frage": "Wo lohnt es sich bei einem verdächtigen Bild besonders, nach KI-Fehlern zu suchen?",
+      "antworten": [
+        "An Händen, Augen/Zähnen, Text auf Schildern und beim Licht/Schatten",
+        "Nur an der Bildgröße",
+        "Nur an der Farbe des Rahmens",
+        "Gar nicht, das sieht man nie"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Gute Prüfstellen sind Hände (Finger!), Augen und Zähne, Text auf Schildern/Kleidung und das Licht (Schatten, Spiegelungen). Dort macht KI oft Fehler. Mehrere Hinweise zusammen sind aussagekräftiger als ein einzelner."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Ein Video zeigt eine berühmte Person, die etwas Unglaubliches sagt. Was tust du?",
+      "antworten": [
+        "Skeptisch bleiben und bei einer verlässlichen Quelle nachschauen, ob das wirklich stimmt",
+        "Sofort glauben und an alle weiterschicken",
+        "Böse Kommentare darunter schreiben",
+        "Es abspeichern und als Beweis benutzen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Deepfake-Videos können Menschen Dinge sagen lassen, die sie nie gesagt haben. Bei etwas „Unglaublichem“: erst bei verlässlichen Nachrichten prüfen, nicht sofort glauben oder teilen. So fällst du nicht auf Fälschungen herein."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Quelle & Kennzeichnung",
+      "frage": "Was hilft dir am meisten, ein echtes von einem KI-Bild zu unterscheiden?",
+      "antworten": [
+        "Auf Detail-Fehler achten UND prüfen, ob es eine verlässliche Quelle gibt",
+        "Nur schauen, ob es schön aussieht",
+        "Zählen, wie viele Likes es hat",
+        "Die Uhrzeit ansehen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Zwei Dinge zusammen sind stark: kleine Fehler im Bild (Hände, Licht, Text) UND die Frage nach der Quelle (wer, woher?). Likes und Schönheit sagen nichts über echt oder gefälscht. Kombiniere die Merkmale."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "KI-Prüfmerkmale",
+      "frage": "Auf einem Foto hat eine Person drei Arme und im Hintergrund verschwimmen Menschen zu Matsch. Was ist das wahrscheinlich?",
+      "antworten": [
+        "Ein KI-Bild – solche Fehler an Körpern und im Hintergrund sind typisch",
+        "Ein besonders gutes echtes Foto",
+        "Ein Beweis, dass es Menschen mit drei Armen gibt",
+        "Ganz normal"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Zu viele Körperteile und ein „matschiger“ Hintergrund, in dem Dinge ineinander verschwimmen, sind typische KI-Fehler. Echte Kameras bilden Menschen und Hintergrund sauber ab. Solche Details entlarven viele Fälschungen."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Richtig handeln",
+      "aussage": "Auch wenn ein Bild echt AUSSIEHT, darf man ruhig eine zweite verlässliche Quelle suchen, bevor man es glaubt.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Ein zweiter Blick bei einer verlässlichen Quelle (z. B. Kindernachrichten) schadet nie. Gerade weil KI-Bilder echt aussehen können, ist Nachprüfen klug – nicht misstrauisch, sondern schlau."
+    }
+  ]
+}

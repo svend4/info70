@@ -15,6 +15,8 @@
 >
 > **Дополнение 3 (17.07.2026):** родительская волна 15 — **Elternabend-Kit „Digital daheim“** (№24: готовый вечер 60 минут — Folien-Modus для проектора, 2 демо-сценария, 6 дискуссионных карт, раздатка de/uk/ru через mini-i18n с тестом полноты переводов) и **Eltern-Kompass-Sammelband** (все 37 родительских страниц одной печатной брошюрой, сборка в рантайме без копий; двусторонний тест полноты — новое приложение забыть невозможно).
 >
+> **Дополнение 12 (17.07.2026):** волна 24 — **Dark-Pattern-Detektiv** (№52, сценарии: распознать И назвать манипулятивный паттерн, дополняет dark-pattern-labyrinth), **App-Rechte-Quiz** (№53, quiz: разрешение vs задача приложения, дополняет berechtigungs-safari) и **Deepfake-Spürnase** (№109, quiz: KI-фейки по признакам — руки/свет/текст/источник, KI-Kennzeichnungspflicht).
+>
 > **Дополнение 11 (17.07.2026):** волна 23 — **Formular-Falle** (№48, сценарии: какие данные не давать форме — Adresse/Telefon/Foto/Schule, Pflichtfeld/Häkchen/Abo как warning), **Link-Kompass** (№50, quiz: типы ссылок — intern/extern/Download/App-Store/Werbung — и проверка перед кликом) и **Wer steckt dahinter?** (№51, quiz: три признака прозрачности Autor/Datum/Quelle, nachprüfbarkeit).
 >
 > **Дополнение 10 (17.07.2026):** волна 22, блок распознавания угроз/качества — **Fake-Shop-Fahnder** (№46, quiz-kern: настоящий магазин или фейк, 5 warning-signals), **Seiten-Scanner** (№135, детский чек-лист рядом с любым сайтом → светофор; безопасный ответ не всегда «ja») и **Chat-Check** (№49, сценарии: функции общения → три Schutzmerkmale Moderation/Melden/Spitzname, без grooming-контента).

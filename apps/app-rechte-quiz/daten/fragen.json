@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Rechte-Prüfer*in", "emoji": "🔍" },
+    { "ab": 5, "titel": "Berechtigungs-Kenner*in", "emoji": "🔑" },
+    { "ab": 9, "titel": "App-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 12, "titel": "App-Rechte-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Eine Mal-App will auf dein Mikrofon zugreifen. Passt das zu einer App zum Malen?",
+      "korrekt": "nein",
+      "erklaerung": "Nein – zum Malen braucht eine App kein Mikrofon. Wenn eine Berechtigung nicht zur Aufgabe der App passt, darfst (und solltest) du „Nein“ sagen. Im Zweifel Erwachsene fragen."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Eine Foto-Kamera-App will auf die Kamera zugreifen. Passt das?",
+      "korrekt": "ja",
+      "erklaerung": "Ja – eine Kamera-App braucht natürlich die Kamera, sonst kann sie keine Fotos machen. Wenn die Berechtigung zur Aufgabe passt, ist sie sinnvoll. Wichtig bleibt: nur die Rechte geben, die wirklich nötig sind."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Ein einfaches Taschenlampen-Programm will deine Kontakte (dein ganzes Adressbuch) lesen. Passt das?",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Eine Taschenlampe braucht keine Kontakte. Wenn eine so einfache App dein Adressbuch will, ist das ein Warnzeichen – sie will vielleicht Daten sammeln. Ablehnen und Erwachsene fragen."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Eine Karten-/Navigations-App will deinen Standort wissen. Passt das?",
+      "korrekt": "ja",
+      "erklaerung": "Ja – eine Karte, die dir den Weg zeigt, muss wissen, wo du bist. Das passt zur Aufgabe. Tipp: Du kannst den Standort oft auf „nur während der Nutzung“ stellen, nicht „immer“."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Ein einfaches Puzzle-Spiel will deinen genauen Standort immer im Hintergrund wissen. Passt das?",
+      "korrekt": "nein",
+      "erklaerung": "Nein – ein Puzzle braucht deinen Standort nicht, schon gar nicht „immer im Hintergrund“. Solche übertriebenen Rechte lehnst du ab. Das Spiel funktioniert auch ohne."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Eine Sprachnachrichten-App will auf das Mikrofon zugreifen. Passt das?",
+      "korrekt": "ja",
+      "erklaerung": "Ja – für Sprachnachrichten braucht die App das Mikrofon, sonst kann sie deine Stimme nicht aufnehmen. Das passt zur Aufgabe. Trotzdem gilt: Sie sollte NUR zugreifen, wenn du wirklich eine Nachricht aufnimmst."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Passt das?",
+      "aussage": "Ein Wecker will Zugriff auf deine Fotos und dein Mikrofon. Passt das zu einem Wecker?",
+      "korrekt": "nein",
+      "erklaerung": "Nein – ein Wecker braucht weder deine Fotos noch dein Mikrofon. Wenn eine so simple App viele Rechte will, ist Vorsicht angesagt. Ablehnen – und falls sie dann nicht läuft, gibt es bessere Wecker-Apps."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Richtig handeln",
+      "aussage": "Wenn eine App mehr Rechte will, als sie für ihre Aufgabe braucht, ist es klug, „Nein“ zu wählen oder Erwachsene zu fragen.",
+      "korrekt": "ja",
+      "erklaerung": "Genau richtig! Die Faustregel lautet: Passt die Berechtigung zur Aufgabe der App? Wenn nicht, sag Nein. Viele Rechte kann man später einzeln erlauben, wenn man sie wirklich braucht."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Wie entscheidest du, ob eine Berechtigung okay ist?",
+      "antworten": [
+        "Ich frage: Passt die Berechtigung zur Aufgabe der App? Wenn nicht, sage ich Nein.",
+        "Ich erlaube immer alles, dann funktioniert es besser.",
+        "Ich tippe schnell auf „Ja, immer“, ohne zu lesen.",
+        "Ich schaue, welche Farbe der Knopf hat."
+      ],
+      "korrekt": 0,
+      "erklaerung": "Der Trick ist der Abgleich: Braucht die App diese Berechtigung für ihre Aufgabe? Eine Kamera-App braucht die Kamera – ein Taschenrechner nicht. Passt es nicht, lehnst du ab. „Immer alles erlauben“ ist das Gegenteil von sicher."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Passt das?",
+      "frage": "Ein Musik-Player will auf deine Kontakte, deinen Standort UND deine Kamera zugreifen. Was denkst du?",
+      "antworten": [
+        "Das sind viel zu viele Rechte für Musik – ablehnen und Erwachsene fragen",
+        "Super, dann kann die App mehr",
+        "Alles erlauben, Musik ist ja harmlos",
+        "Egal, Hauptsache die Musik spielt"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Zum Musikhören braucht eine App weder Kontakte noch Standort noch Kamera. So viele unnötige Rechte sind ein starkes Warnzeichen für Datensammeln. Ablehnen – und wenn die App dann nicht läuft, gibt es sicherere Alternativen."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Du hast einer App aus Versehen zu viele Rechte gegeben. Was kannst du tun?",
+      "antworten": [
+        "In den Einstellungen die Berechtigungen wieder wegnehmen – das geht jederzeit",
+        "Nichts, einmal erlaubt ist für immer erlaubt",
+        "Das Handy wegwerfen",
+        "Die App an alle weiterschicken"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Berechtigungen kann man jederzeit wieder wegnehmen – in den Geräte-Einstellungen bei der jeweiligen App. Nichts ist „für immer“ erlaubt. Am besten schaust du das gemeinsam mit Erwachsenen durch (siehe auch die Berechtigungs-Safari)."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Passt das?",
+      "frage": "Eine Lern-App fürs Rechnen will auf dein Mikrofon zugreifen. Wie gehst du vor?",
+      "antworten": [
+        "Überlegen, ob sie es braucht (z. B. für Sprachaufgaben) – im Zweifel Nein und Erwachsene fragen",
+        "Sofort alles erlauben",
+        "Sofort die App löschen ohne nachzudenken",
+        "Meine Adresse eingeben"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Manchmal ist es Ansichtssache: Eine Rechen-App mit gesprochenen Aufgaben KÖNNTE das Mikrofon brauchen – eine ohne nicht. Überleg, ob es zur Funktion passt, und frag im Zweifel Erwachsene. Nachdenken schlägt sowohl blindes Erlauben als auch blindes Löschen."
+    }
+  ]
+}

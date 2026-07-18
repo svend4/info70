@@ -1,0 +1,8 @@
+{
+  "name": "@info70/deepfake-spuernase",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deepfake-Spürnase: Quiz (quiz-kern) fuer 8-12 - KI-Bilder/-Videos durchschauen anhand konkreter Pruefmerkmale (Haende, Licht, Text, Quelle) und KI-Kennzeichnungspflicht. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

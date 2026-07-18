@@ -1,6 +1,7 @@
 {
   "hinweis": "Alle Apps des Monorepos mit einer eltern.html-Seite. Der Test prüft beide Richtungen: jede gelistete App hat die Seite, und jede vorhandene Seite ist gelistet.",
   "apps": [
+    "app-rechte-quiz",
     "barriere-detektive",
     "berechtigungs-safari",
     "beschwerde-lotse",
@@ -10,9 +11,11 @@
     "chat-check",
     "chat-rechte",
     "darf-ich-posten",
+    "dark-pattern-detektiv",
     "dark-pattern-labyrinth",
     "daten-radiergummi",
     "daten-schatz",
+    "deepfake-spuernase",
     "deepfake-studio",
     "entwicklungs-kompass",
     "fake-shop-fahnder",

@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "dp01",
+      "situation": "Ein Spiel zeigt: „⏰ NUR NOCH 4:59 Minuten! Danach ist das Angebot für IMMER weg!“ Ein roter Countdown tickt runter.",
+      "muster": "Countdown-Druck (künstlicher Zeitdruck)",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "In Ruhe weiterspielen – ein echter Countdown zwingt zum Nicht-Nachdenken. Die meisten „einmaligen“ Angebote kommen wieder.", "wert": 2 },
+        { "text": "Schnell zuschlagen, bevor die Zeit abläuft.", "wert": 0 },
+        { "text": "Nervös den Countdown anstarren und hin- und herüberlegen.", "wert": 1 }
+      ],
+      "erklaerung": "Das ist der „Countdown-Druck“: Ein tickender Timer soll dein Nachdenken ausschalten, damit du schnell kaufst oder klickst. Echte gute Angebote laufen nicht in Minuten weg. Zeitdruck ist ein Grund, langsamer zu machen, nicht schneller."
+    },
+    {
+      "id": "dp02",
+      "situation": "Beim Bestellen ist ein Häkchen schon gesetzt: „✅ Ja, ich möchte Werbung und ein Newsletter-Abo.“ Du hast es nicht angeklickt.",
+      "muster": "Vorangekreuztes Häkchen",
+      "frage": "Was ist klug?",
+      "optionen": [
+        { "text": "Das Häkchen wegklicken – ich entscheide selbst, nicht die Seite für mich.", "wert": 2 },
+        { "text": "Das Häkchen so lassen, ist bestimmt egal.", "wert": 0 },
+        { "text": "Noch mehr Häkchen setzen, um sicherzugehen.", "wert": 0 }
+      ],
+      "erklaerung": "Das „vorangekreuzte Häkchen“ ist ein Trick: Die Seite kreuzt heimlich für dich an, worauf du sonst vielleicht verzichtet hättest. Lies solche Häkchen immer und klick weg, was du nicht willst. Deine Zustimmung soll DEINE Entscheidung sein."
+    },
+    {
+      "id": "dp03",
+      "situation": "Eine Anzeige hat ein winziges, blasses „✕“ in der Ecke, das man kaum findet – aber einen riesigen bunten „JA!“-Knopf.",
+      "muster": "Versteckter Schließen-Knopf",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Geduldig den kleinen Schließen-Knopf suchen und die Anzeige wegklicken.", "wert": 2 },
+        { "text": "Auf den großen bunten Knopf tippen, der ist einfacher.", "wert": 0 },
+        { "text": "Aus Versehen irgendwo tippen und hoffen, dass es weggeht.", "wert": 1 }
+      ],
+      "erklaerung": "Der „versteckte Schließen-Knopf“ macht das Wegklicken absichtlich schwer und das Zustimmen leicht. Lass dich nicht in den großen Knopf drängen – such das kleine ✕. Wenn du es gar nicht findest, hilft ein Erwachsener oder du schließt die ganze Seite."
+    },
+    {
+      "id": "dp04",
+      "situation": "Du willst ein Abo kündigen. Da steht: „Willst du wirklich gehen? 😢 Nur Verlierer verpassen unsere tollen Angebote!“",
+      "muster": "Schäme-dich-Knopf (Confirmshaming)",
+      "frage": "Wie reagierst du?",
+      "optionen": [
+        { "text": "Trotzdem kündigen – so ein Spruch soll mir nur ein schlechtes Gewissen machen.", "wert": 2 },
+        { "text": "Doch bleiben, ich will ja kein „Verlierer“ sein.", "wert": 0 },
+        { "text": "Unsicher werden und lieber nichts tun.", "wert": 1 }
+      ],
+      "erklaerung": "Das ist „Confirmshaming“ – ein Schäme-dich-Knopf: Er versucht, dich mit einem blöden Spruch von deiner Entscheidung abzubringen. Deine Entscheidung geht niemanden etwas an. Lass dich nicht beschämen – kündigen ist dein gutes Recht."
+    },
+    {
+      "id": "dp05",
+      "situation": "Im Shop steht bei jedem Artikel: „🔥 Nur noch 2 übrig! 7 andere schauen sich das gerade an!“",
+      "muster": "Künstliche Verknappung",
+      "frage": "Was denkst du?",
+      "optionen": [
+        { "text": "Ruhig bleiben – „nur noch 2 übrig“ ist oft erfunden, um mich zum schnellen Kaufen zu drängen.", "wert": 2 },
+        { "text": "Sofort kaufen, sonst ist es weg!", "wert": 0 },
+        { "text": "In Panik geraten und schnell entscheiden.", "wert": 1 }
+      ],
+      "erklaerung": "„Nur noch 2 übrig“ und „7 schauen gerade“ ist „künstliche Verknappung“: Zahlen, die oft gar nicht stimmen, sollen Panik machen. Echte Knappheit ist selten so dramatisch. Bei solchen Sätzen erst recht in Ruhe prüfen."
+    },
+    {
+      "id": "dp06",
+      "situation": "Eine kostenlose App zeigt ständig: „Willst du WIRKLICH die Gratis-Version? Premium ist viel besser!“ und macht das Weiterspielen mit Gratis mühsam.",
+      "muster": "Nerv-Taktik (Nagging)",
+      "frage": "Was ist eine gute Reaktion?",
+      "optionen": [
+        { "text": "Bei der Gratis-Version bleiben, wenn sie reicht – das ständige Nerven ist Absicht, kein Grund zu zahlen.", "wert": 2 },
+        { "text": "Genervt Premium kaufen, damit die Frage aufhört.", "wert": 0 },
+        { "text": "Immer wieder wegklicken und mich ärgern.", "wert": 1 }
+      ],
+      "erklaerung": "Das ständige Nachfragen ist die „Nerv-Taktik“ (Nagging): Sie hofft, dass du irgendwann genervt zahlst. Genervt-Sein ist kein guter Kauf-Grund. Wenn die Gratis-Version reicht, bleib dabei – und bei echten Käufen entscheiden Erwachsene mit."
+    },
+    {
+      "id": "dp07",
+      "situation": "Beim Anmelden ist der Weg zu „Alle Cookies annehmen“ ein großer grüner Knopf. „Nur nötige Cookies“ ist ein winziger grauer Link ganz unten.",
+      "muster": "Getarnte Voreinstellung (versteckte Wahl)",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Den kleinen Link „Nur nötige“ suchen – weniger Datensammeln ist besser für mich.", "wert": 2 },
+        { "text": "Auf den großen grünen Knopf tippen, der ist ja hervorgehoben.", "wert": 0 },
+        { "text": "Egal was klicken, Hauptsache weiter.", "wert": 1 }
+      ],
+      "erklaerung": "Hier wird die datensparsame Wahl klein und grau versteckt, die Daten-Zustimmung groß und bunt. Das ist Absicht. Such den kleinen „Nur nötige“-Weg – deine Daten gehen die Seite nur so viel an, wie wirklich nötig ist."
+    },
+    {
+      "id": "dp08",
+      "situation": "Du hast gelernt, Tricks zu erkennen. Ein Freund sagt: „So ein Countdown ist doch echt, ich muss schnell kaufen!“",
+      "muster": "Wissen weitergeben",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "„Das ist ein Trick namens Countdown-Druck – lass uns in Ruhe schauen, das Angebot kommt bestimmt wieder.“", "wert": 2 },
+        { "text": "„Ja, kauf schnell!“", "wert": 0 },
+        { "text": "Nichts sagen, ist ja nicht mein Problem.", "wert": 1 }
+      ],
+      "erklaerung": "Wer die Muster kennt, kann auch anderen helfen. Einem Freund den Trick zu erklären – „das ist Countdown-Druck“ – schützt ihn vor einer übereilten Entscheidung. Namen für die Tricks zu haben macht euch beide stärker."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Muster-Späher*in", "emoji": "🔍" },
+    { "ab": 7, "titel": "Trick-Kenner*in", "emoji": "🧠" },
+    { "ab": 12, "titel": "Dark-Pattern-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 15, "titel": "Manipulations-Profi", "emoji": "🏅" }
+  ]
+}

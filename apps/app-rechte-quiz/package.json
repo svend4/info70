@@ -1,0 +1,8 @@
+{
+  "name": "@info70/app-rechte-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "App-Rechte-Quiz: Quiz (quiz-kern) fuer 8-12 - Berechtigungsanfragen (Kamera, Mikrofon, Standort, Kontakte) mit dem Zweck der App abgleichen und Nein sagen, wenn es nicht passt. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
