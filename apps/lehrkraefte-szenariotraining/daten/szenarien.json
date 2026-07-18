@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "zielgruppe": "Lehrkraefte",
+  "szenarien": [
+    {
+      "id": "l01",
+      "situation": "Ein Kind zeigt Ihnen aufgeregt einen Kettenbrief mit Drohung („… sonst passiert dir etwas“).",
+      "optionen": [
+        { "text": "Das Kind ermahnen, so etwas nicht zu verbreiten", "wert": 0 },
+        { "text": "Ruhig bleiben, loben dass es sich meldet, erklären dass nichts passiert und gemeinsam löschen", "wert": 2 },
+        { "text": "Den Kettenbrief zur Aufklärung in der Klasse vorlesen", "wert": 1 }
+      ],
+      "erklaerung": "Angstfrei reagieren: loben, entängstigen, gemeinsam löschen. Nie bloßstellen. Kettenbriefe arbeiten mit Druck – das lässt sich gut im Unterricht (App Kettenbrief-Stopper) aufgreifen."
+    },
+    {
+      "id": "l02",
+      "situation": "Ein Mobbing-Screenshot aus dem Klassenchat taucht auf und macht die Runde.",
+      "optionen": [
+        { "text": "In der Klasse laut fragen, wer das geschrieben hat", "wert": 0 },
+        { "text": "Beweise sichern, betroffenes Kind schützen, dokumentieren und Schulsozialarbeit/Leitung einbeziehen", "wert": 2 },
+        { "text": "Abwarten, ob es sich von selbst legt", "wert": 1 }
+      ],
+      "erklaerung": "Mobbing braucht eine strukturierte Antwort: Beweise sichern, Betroffene schützen, dokumentieren, Fachkräfte einbeziehen – nicht öffentlich bloßstellen. Verweis: Schulsozialarbeit, ggf. jugendschutz.net."
+    },
+    {
+      "id": "l03",
+      "situation": "Der Klassenchat eskaliert nachts mit Beleidigungen; am Morgen sind mehrere Kinder aufgewühlt.",
+      "optionen": [
+        { "text": "Handys generell verbieten und das Thema abhaken", "wert": 0 },
+        { "text": "Das Thema im Klassenrat aufgreifen, gemeinsame Chat-Regeln erarbeiten und Eltern einbeziehen", "wert": 2 },
+        { "text": "Nur die zwei lautesten Kinder ermahnen", "wert": 1 }
+      ],
+      "erklaerung": "Nachhaltiger als Verbote sind gemeinsame Regeln (Klassenrat, App stark-im-chat) und Elternarbeit. Beteiligung stärkt Verantwortung – Verbote verlagern das Problem nur."
+    },
+    {
+      "id": "l04",
+      "situation": "Ein Kind hat in einem Spiel durch Lootboxen heimlich viel Geld ausgegeben und hat nun Schulden bei Mitschülern.",
+      "optionen": [
+        { "text": "Das Kind als abschreckendes Beispiel vor der Klasse nennen", "wert": 0 },
+        { "text": "Vertraulich mit Kind und Familie sprechen, Beratung anbieten und Prävention im Unterricht verankern", "wert": 2 },
+        { "text": "Nur sagen, es solle das Geld zurückzahlen", "wert": 1 }
+      ],
+      "erklaerung": "Kostenfallen sind ein strukturelles Risiko, kein individuelles Versagen. Vertraulich handeln, Familie und ggf. Schuldnerberatung einbeziehen, Mechanik im Unterricht sichtbar machen (App Lootbox-Labor)."
+    },
+    {
+      "id": "l05",
+      "situation": "Ein Kind berichtet, dass ein Erwachsener online Kontakt sucht, nach Fotos fragt und zur Geheimhaltung drängt (Verdacht auf Cybergrooming).",
+      "optionen": [
+        { "text": "Selbst mit der fremden Person Kontakt aufnehmen, um die Lage zu klären", "wert": 0 },
+        { "text": "NICHT selbst ermitteln: Beweise sichern, Schulleitung informieren und an Beratungs-/Fachstelle bzw. Polizei verweisen", "wert": 2 },
+        { "text": "Abwarten und das Kind beobachten", "wert": 1 }
+      ],
+      "erklaerung": "Cybergrooming ist ein Straftatbestand und gehört in fachkundige Hände. Nicht selbst ermitteln oder Kontakt aufnehmen (Spurenvernichtung/Eigengefährdung). Beweise sichern, Schulleitung, Fachberatung (z. B. jugendschutz.net) und Polizei. Diese App ersetzt keine Fachstelle."
+    },
+    {
+      "id": "l06",
+      "situation": "Eltern fragen Sie im Gespräch, ob ein bestimmtes Spiel für ihr Kind „okay“ ist.",
+      "optionen": [
+        { "text": "Aus dem Bauch heraus eine Einschätzung geben", "wert": 1 },
+        { "text": "Auf verlässliche Quellen verweisen (USK, Spieleratgeber-NRW, jugendschutz.net) und gemeinsam Alterskennzeichen und Chat/Käufe prüfen", "wert": 2 },
+        { "text": "Sagen, dass Spiele grundsätzlich schädlich sind", "wert": 0 }
+      ],
+      "erklaerung": "Verlässliche Einordnung statt Bauchgefühl: USK/Zusatzhinweise, pädagogische Beurteilungen und ein Blick auf Chat/Käufe. Der Spiele-Kauf-Kompass hilft Familien bei der gemeinsamen Prüfung."
+    },
+    {
+      "id": "l07",
+      "situation": "Ein Schüler hat ein Foto von Mitschülern ohne deren Einverständnis in einer Gruppe gepostet.",
+      "optionen": [
+        { "text": "Ignorieren – ist ja nur unter Klassenkameraden", "wert": 0 },
+        { "text": "Das Recht am eigenen Bild erklären, das Löschen veranlassen und Einwilligung zum Unterrichtsthema machen", "wert": 2 },
+        { "text": "Nur den Schüler kurz ermahnen", "wert": 1 }
+      ],
+      "erklaerung": "Auch unter Kindern gilt das Recht am eigenen Bild (KUG, DSGVO). Löschen veranlassen und Einwilligung altersgerecht thematisieren (Apps darf-ich-posten / Foto-Ampel)."
+    },
+    {
+      "id": "l08",
+      "situation": "Ein mit KI erstelltes Fake-Bild eines Schülers kursiert und stellt ihn bloß.",
+      "optionen": [
+        { "text": "Das Bild in der Klasse zeigen, um alle „aufzuklären“", "wert": 0 },
+        { "text": "Beweise sichern, Bild melden, betroffenes Kind stützen und Schulleitung/Schulaufsicht einbeziehen", "wert": 2 },
+        { "text": "Warten, bis Gras darüber wächst", "wert": 1 }
+      ],
+      "erklaerung": "KI-Fakes können Persönlichkeitsrechte schwer verletzen. Beweise sichern, melden, Betroffene stützen, Leitung/Schulaufsicht einbeziehen – niemals das Bild weiterzeigen. Aufklärung über KI-Kennzeichnung separat (App deepfake-spuernase)."
+    }
+  ],
+  "verweise": [
+    "Schulsozialarbeit und Schulleitung – die kurzen Wege zuerst.",
+    "jugendschutz.net – Verstöße online melden.",
+    "Nummer gegen Kummer: Kinder 116 111, Eltern 0800 111 0 550 (kostenlos).",
+    "Bei Verdacht auf Straftaten (z. B. Cybergrooming): Polizei und Fachberatungsstelle – nicht selbst ermitteln."
+  ]
+}

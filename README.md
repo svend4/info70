@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**94 приложения (93 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**96 приложений (95 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 564 теста.
+Полный прогон: 574 теста.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -100,7 +100,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `sharenting-spiegel` | Родители: self-test про фото детей + Foto-Regeln | кат.№1 |
 | `passwort-pruefstand` | Стойкость пароля, метод трёх слов | кат.№1 |
 | `kettenbrief-stopper` | Цепные сообщения | база |
-| `stark-im-chat` | Кибербуллинг: роль свидетеля + Chat-Rechte-Pack (16 сцен.) | база |
+| `stark-im-chat` | Кибербуллинг: свидетель + Chat-Rechte + Stopp-Hassrede (22 сцен.) | база |
 | `stark-im-chat-plus` | Свидетель 13+: групповой чат и пути DSA | кат.№1 |
 | `spiral-stopper` | Эскалация хейта: сила Gegenrede и Melden | кат.№1 |
 | `challenge-druck` | Групповое давление: 5 тактик + фразы выхода | кат.№1 |
@@ -147,6 +147,8 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `bewegungs-schatzkiste` | Картотека игр движения (печать) | кат.№2 |
 | `staerken-tagebuch` | Дневник сильных сторон (родители) | кат.№2 |
 | `selbstcheck-paedagogik` | Самрефлексия педагога | кат.№2 |
+| `jugendschutz-quiz-fachkraefte` | Квиз для педагогов: USK/FSK, риски, § 24a (14 вопр.) | кат.№1 |
+| `lehrkraefte-szenariotraining` | Тренажёр учителя: цифровые ЧП + Meldewege (2/1/0) | кат.№1 |
 | `projektwoche` | Проектная неделя «Sicher im Netz»: 5×90 мин (школа) | кат.№1 |
 | `elternabend-kit` | Родительский вечер 60 мин + раздатка de/uk/ru | кат.№1 |
 | `kriterien-check` | Self-audit оператора | база |

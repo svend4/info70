@@ -1,0 +1,8 @@
+{
+  "name": "@info70/lehrkraefte-szenariotraining",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lehrkraefte-Szenariotraining 'Ernstfall Pausenhof-Chat': Szenario-Trainer (2/1/0) fuer Lehrkraefte - realistische Schulsituationen (Kettenbrief, Mobbing-Screenshot, Klassenchat-Eskalation, Lootbox-Schulden, KI-Fake) mit je drei Handlungsoptionen, Wertung und rechtlich orientierter Erklaerung inkl. Verweis auf Meldewege. Cybergrooming nur als Verweis auf Fachstellen, keine Fallbearbeitung.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

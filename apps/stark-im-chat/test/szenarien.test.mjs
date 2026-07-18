@@ -38,6 +38,15 @@ test('Chat-Rechte-Pack (Katalog Nr. 138): Chat-Situationen als Rechtsfragen', ()
   assert.ok(/Hassrede/.test(alles), 'Hassrede als meldbarer Fall');
 });
 
+test('Stopp-Hassrede-Pack (Katalog Nr. 237): Zeugen-Szenarien zu Hasskommentaren', () => {
+  assert.ok(daten.szenarien.length >= 22, 'Hassrede-Pack ergänzt (mindestens 22 Szenarien)');
+  const alles = JSON.stringify(daten.szenarien);
+  assert.ok(/Hasskommentar|Hassrede|angefeindet|anfeind/i.test(alles), 'Hasskommentare thematisiert');
+  assert.ok(/Hautfarbe|Religion|solche Leute/i.test(alles), 'gruppenbezogene Anfeindung');
+  assert.ok(/beistehen|beistand|auf deiner Seite|zuhören/i.test(alles), 'Betroffene stärken');
+  assert.ok(/Melde-Knopf|melden|Melde-\/Blockier/i.test(alles), 'kindgerecht erklärte Meldewege');
+});
+
 test('didaktische Schwerpunkte: Melden, Beweise sichern, Hilfe holen (116 111) kommen vor', () => {
   const alles = JSON.stringify(daten.szenarien);
   assert.ok(/melde/i.test(alles), 'Melde-Funktion muss vorkommen');

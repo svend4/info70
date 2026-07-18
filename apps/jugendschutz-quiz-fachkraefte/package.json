@@ -1,0 +1,8 @@
+{
+  "name": "@info70/jugendschutz-quiz-fachkraefte",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Jugendschutz-Wissens-Quiz fuer Fachkraefte: quiz-kern-Quiz fuer Lehrkraefte, OGS- und Medienpaedagogik-Fachkraefte - Bedeutung von USK/FSK, warum ein 'ab 6'-Spiel wegen Chat und Lootboxen riskant sein kann, Plattform-Pflichten nach Paragraf 24a JuSchG. Jede Antwort mit Erklaerung und Praxis-Tipp fuer den Elternabend. Mit Klassen-/Team-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

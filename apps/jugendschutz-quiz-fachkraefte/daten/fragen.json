@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkraefte",
+  "raenge": [
+    { "ab": 0, "titel": "Einsteiger*in", "emoji": "🌱" },
+    { "ab": 5, "titel": "Kundig", "emoji": "🧭" },
+    { "ab": 9, "titel": "Jugendschutz-Profi", "emoji": "🎖️" },
+    { "ab": 12, "titel": "Multiplikator*in", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "f01",
+      "typ": "wahl",
+      "kategorie": "Alterskennzeichen",
+      "frage": "Was bedeutet ein USK-Kennzeichen „ab 12“?",
+      "antworten": [
+        "Eine gesetzliche Freigabe ab 12 – für Jüngere nicht geeignet und nicht abzugeben",
+        "Eine unverbindliche Empfehlung, die man ignorieren kann",
+        "Dass das Spiel für 12-Jährige besonders empfohlen wird"
+      ],
+      "korrekt": 0,
+      "erklaerung": "USK-Kennzeichen sind gesetzliche Altersfreigaben (JuSchG), keine Empfehlungen. „Ab 12“ heißt: nicht an Jüngere abgeben. Praxis-Tipp: Eltern erklären, dass die Zahl eine Grenze ist, kein Vorschlag."
+    },
+    {
+      "id": "f02",
+      "typ": "binaer",
+      "kategorie": "Risiken",
+      "aussage": "Ein Spiel mit „USK ab 6“ kann trotzdem riskant sein – zum Beispiel durch Chat mit Fremden oder Lootboxen.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. Die USK-Zahl bewertet vor allem die Inhalte. Interaktionsrisiken (offener Chat) und Kostenmechaniken (Lootboxen) kommen oft dazu. Praxis-Tipp: immer die Zusatzhinweise und Online-Funktionen separat prüfen."
+    },
+    {
+      "id": "f03",
+      "typ": "wahl",
+      "kategorie": "Alterskennzeichen",
+      "frage": "Worin unterscheiden sich USK und PEGI?",
+      "antworten": [
+        "USK ist die deutsche gesetzliche Kennzeichnung, PEGI das europäische System – beide sind Alterskennzeichen",
+        "PEGI gilt nur für Filme, USK nur für Bücher",
+        "USK ist freiwillig, PEGI ist Pflicht"
+      ],
+      "korrekt": 0,
+      "erklaerung": "USK kennzeichnet Spiele in Deutschland gesetzlich; PEGI ist das europaweite System. Auf digitalen Plattformen begegnet man oft PEGI/IARC. Praxis-Tipp: Eltern beide Logos zeigen und einordnen."
+    },
+    {
+      "id": "f04",
+      "typ": "binaer",
+      "kategorie": "Alterskennzeichen",
+      "aussage": "Die reine USK-Alterszahl bewertet In-Game-Käufe und Chat-Risiken bereits vollständig mit.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Die Alterszahl beruht auf den Inhalten. Für Interaktion und Käufe gibt es zusätzliche Hinweise (IARC-Zusatzhinweise). Praxis-Tipp: Fachkräfte prüfen Chat, Käufe und Standort gesondert."
+    },
+    {
+      "id": "f05",
+      "typ": "wahl",
+      "kategorie": "Alterskennzeichen",
+      "frage": "Was sind die „Zusatzhinweise“ (IARC) neben der Alterszahl?",
+      "antworten": [
+        "Werbe-Sprüche des Herstellers",
+        "Hinweise auf Online-Interaktion, In-App-Käufe, Standortnutzung usw.",
+        "Die Spieldauer in Stunden"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Die Zusatzhinweise warnen vor Online-Interaktion, In-App-Käufen, Standortnutzung oder Nutzergenerierten Inhalten. Praxis-Tipp: gerade diese Hinweise entscheiden oft über die Eignung."
+    },
+    {
+      "id": "f06",
+      "typ": "binaer",
+      "kategorie": "Plattform-Pflichten",
+      "aussage": "Anbieter von Diensten mit Risiken für Minderjährige haben nach § 24a JuSchG Vorsorgepflichten (sichere Voreinstellungen, Melde- und Abhilfeverfahren).",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. § 24a JuSchG verlangt Vorsorgemaßnahmen: sichere Voreinstellungen, Melde-/Abhilfeverfahren, Einordnungs- und Elterninformationen. Praxis-Tipp: Eltern zeigen, wo diese Einstellungen liegen."
+    },
+    {
+      "id": "f07",
+      "typ": "wahl",
+      "kategorie": "Praxis",
+      "frage": "Ein Kind zeigt Ihnen einen angsteinflößenden Kettenbrief. Was ist ein guter erster Schritt?",
+      "antworten": [
+        "Das Kind ermahnen, so etwas nicht zu verbreiten",
+        "Ruhig bleiben, loben dass es sich zeigt, erklären dass nichts passiert – und ggf. Schulsozialarbeit einbeziehen",
+        "Den Kettenbrief an die Klasse weiterleiten zur Aufklärung"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Wichtig ist eine angstfreie Reaktion: loben, erklären, gemeinsam löschen. Nie bloßstellen. Bei Belastung an Schulsozialarbeit verweisen. Praxis-Tipp: als Elternabend-Thema die App Kettenbrief-Stopper zeigen."
+    },
+    {
+      "id": "f08",
+      "typ": "binaer",
+      "kategorie": "Alterskennzeichen",
+      "aussage": "FSK-Kennzeichen gelten für Filme, USK-Kennzeichen für Computerspiele.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig. FSK prüft Filme, USK Computerspiele – beide sind gesetzliche Alterskennzeichen nach dem JuSchG. Praxis-Tipp: Eltern die passenden Logos und ihre Bedeutung erklären."
+    },
+    {
+      "id": "f09",
+      "typ": "wahl",
+      "kategorie": "Risiken",
+      "frage": "Warum ist ein offener Chat mit Fremden in einem Kinderspiel besonders kritisch?",
+      "antworten": [
+        "Weil er den Akku schneller leert",
+        "Wegen des Risikos von unerwünschtem Fremdkontakt bis hin zu Cybergrooming",
+        "Weil er die Grafik verschlechtert"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Offener Fremdkontakt ist ein Kernrisiko (Cybergrooming). Chats sollten moderiert oder einschränkbar sein (nur Freunde). Praxis-Tipp: mit Eltern die Chat-Einstellungen gemeinsam absichern."
+    },
+    {
+      "id": "f10",
+      "typ": "binaer",
+      "kategorie": "Risiken",
+      "aussage": "Lootboxen sind unbedenklich, weil sie rechtlich kein Glücksspiel sind.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Auch wenn die Einordnung als Glücksspiel umstritten ist, wirken Lootboxen glücksspielähnlich und sind eine Kostenfalle. Praxis-Tipp: die Mechanik erlebbar machen (App Lootbox-Labor) und Kaufsperren empfehlen."
+    },
+    {
+      "id": "f11",
+      "typ": "wahl",
+      "kategorie": "Praxis",
+      "frage": "Welcher Praxis-Tipp gegen Kostenfallen gehört auf jeden Elternabend?",
+      "antworten": [
+        "Kindern das Spielen ganz verbieten",
+        "Kaufsperre/Passwort aktivieren, keine Zahlungsdaten auf dem Kindergerät, über die Mechanik reden",
+        "Nur teure Spiele kaufen, die sind sicherer"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Technische Sperren plus Gespräch wirken am besten: Kaufsperre, keine hinterlegten Zahlungsdaten, gemeinsame Regeln. Praxis-Tipp: den Spiele-Kauf-Kompass als Familien-Checkliste empfehlen."
+    },
+    {
+      "id": "f12",
+      "typ": "binaer",
+      "kategorie": "Alterskennzeichen",
+      "aussage": "Alterskennzeichen sind nur eine pädagogische Empfehlung, keine gesetzliche Grenze.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. USK/FSK sind gesetzliche Freigaben mit Abgabe- und Zugänglichkeitsregeln (JuSchG). Praxis-Tipp: das klarstellen – „ab 16“ ist keine Verhandlungssache."
+    },
+    {
+      "id": "f13",
+      "typ": "wahl",
+      "kategorie": "Praxis",
+      "frage": "Wo finden Fachkräfte verlässliche pädagogische Einschätzungen zu Spielen und Apps?",
+      "antworten": [
+        "In den Werbeanzeigen der Hersteller",
+        "Bei USK, Spieleratgeber-NRW und jugendschutz.net",
+        "In den App-Store-Sternebewertungen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "USK, Spieleratgeber-NRW und jugendschutz.net liefern fundierte Einschätzungen und pädagogische Beurteilungen. Praxis-Tipp: solche Quellen im Kollegium teilen, statt sich auf Store-Sterne zu verlassen."
+    },
+    {
+      "id": "f14",
+      "typ": "binaer",
+      "kategorie": "Risiken",
+      "aussage": "Auch ein „ab 0“- oder „ab 6“-Spiel mit Online-Funktionen kann Fremdkontakt ermöglichen – Interaktionsrisiken sind separat zu prüfen.",
+      "korrekt": "ja",
+      "erklaerung": "Genau. Die Alterszahl sagt nichts über offene Chats oder Nutzerinhalte. Praxis-Tipp: bei jedem Online-Spiel die Interaktions- und Melde-Funktionen anschauen und mit Eltern einstellen."
+    }
+  ]
+}

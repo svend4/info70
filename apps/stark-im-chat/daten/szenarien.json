@@ -167,6 +167,66 @@
         { "text": "Gar nichts sagen, obwohl es dich stört", "wert": 1 }
       ],
       "erklaerung": "Kritik ist erlaubt und wichtig (Artikel 12/13) – wenn sie sachlich bleibt. Ein guter Grund und ein konkreter Vorschlag werden viel eher gehört als eine Beleidigung. So wird aus Meckern Mitbestimmung."
+    },
+    {
+      "id": "c17",
+      "situation": "In einer Gruppe kursiert ein Hasskommentar gegen ein Kind wegen seiner Hautfarbe. Alle schweigen.",
+      "optionen": [
+        { "text": "Auch schweigen – ist ja nicht gegen dich gerichtet", "wert": 1 },
+        { "text": "Den Kommentar melden und dem betroffenen Kind privat schreiben: „Das ist nicht okay, ich bin auf deiner Seite.“", "wert": 2 },
+        { "text": "Mitlachen, damit du nicht selbst zur Zielscheibe wirst", "wert": 0 }
+      ],
+      "erklaerung": "Hassrede ist verboten und meldbar. Schweigen wirkt wie Zustimmung. Melden plus ein Zeichen der Unterstützung für die betroffene Person – das ist Zivilcourage im Netz."
+    },
+    {
+      "id": "c18",
+      "situation": "Jemand schreibt: „Solche Leute wie DICH sollte es gar nicht geben.“ – gerichtet an ein Kind in eurer Gruppe.",
+      "optionen": [
+        { "text": "Ignorieren, das legt sich schon", "wert": 1 },
+        { "text": "Screenshot als Beweis machen, melden und einer erwachsenen Person Bescheid sagen", "wert": 2 },
+        { "text": "Zurückschreiben mit einer ähnlichen Beleidigung", "wert": 0 }
+      ],
+      "erklaerung": "Das ist eine ernste Bedrohung, keine Meinung. Beweise sichern, melden, Hilfe holen. Zurückbeleidigen macht alles schlimmer und bringt dich selbst in Schwierigkeiten."
+    },
+    {
+      "id": "c19",
+      "situation": "In einem Spiele-Chat werden ständig Schimpfwörter gegen eine Gruppe (z. B. wegen Religion) benutzt. Du kennst den Melde-Knopf nicht.",
+      "optionen": [
+        { "text": "Einfach weiterspielen und den Chat ignorieren", "wert": 1 },
+        { "text": "In den Einstellungen den Melde-/Blockier-Weg suchen, melden und den Chat auf „nur Freunde“ stellen", "wert": 2 },
+        { "text": "Selbst ein paar Schimpfwörter dazuschreiben", "wert": 0 }
+      ],
+      "erklaerung": "Fast jede Plattform hat einen Melde-Weg – oft im Menü hinter den drei Punkten. Melden und Chat einschränken schützt dich und andere. Mitmachen ist nie die Lösung."
+    },
+    {
+      "id": "c20",
+      "situation": "Ein beliebtes Kind in der Klasse startet, andere zu einem Hass-Post gegen einen Mitschüler aufzustacheln („Wer ist dabei?“).",
+      "optionen": [
+        { "text": "Mitmachen – der Coole macht es ja auch", "wert": 0 },
+        { "text": "Nicht mitmachen, den Post melden und dem Mitschüler beistehen; im Zweifel die Klassenleitung einbeziehen", "wert": 2 },
+        { "text": "Nur zuschauen und hoffen, dass es aufhört", "wert": 1 }
+      ],
+      "erklaerung": "Gruppendruck macht Hass groß. Wer NICHT mitmacht und meldet, bricht die Welle. Beliebtheit ist kein Freifahrtschein – Mobbing bleibt Mobbing, auch von den „Coolen“."
+    },
+    {
+      "id": "c21",
+      "situation": "Du siehst einen Hasskommentar, bist dir aber unsicher, ob er „schlimm genug“ zum Melden ist.",
+      "optionen": [
+        { "text": "Lieber nicht melden, um niemanden zu nerven", "wert": 1 },
+        { "text": "Im Zweifel melden – die Plattform prüft, ob es gegen die Regeln verstößt", "wert": 2 },
+        { "text": "Den Kommentar teilen, damit andere ihn auch sehen", "wert": 0 }
+      ],
+      "erklaerung": "Melden im Zweifel ist richtig: Du entscheidest nicht über die Strafe, du gibst nur einen Hinweis. Teilen dagegen verbreitet den Hass weiter – genau das will man vermeiden."
+    },
+    {
+      "id": "c22",
+      "situation": "Ein Kind, das online oft angefeindet wird, zieht sich immer mehr zurück und wirkt traurig.",
+      "optionen": [
+        { "text": "Nichts sagen, ist ja seine Sache", "wert": 1 },
+        { "text": "Es ansprechen, ihm zuhören und gemeinsam Erwachsene einbeziehen – und auf Hilfe hinweisen (116 111)", "wert": 2 },
+        { "text": "In der Gruppe schreiben, dass es sich nicht so anstellen soll", "wert": 0 }
+      ],
+      "erklaerung": "Anfeindungen können richtig wehtun. Zuhören und Beistand helfen am meisten. Holt gemeinsam erwachsene Unterstützung; bei Kummer ist die Nummer gegen Kummer da: 116 111 (kostenlos, anonym)."
     }
   ]
 }
