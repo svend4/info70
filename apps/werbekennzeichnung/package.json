@@ -1,0 +1,8 @@
+{
+  "name": "@info70/werbekennzeichnung",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Werbekennzeichnungs-Vorschau: Betreiber sehen je Anzeigentyp (Banner, gesponserter Beitrag, Produktplatzierung) die korrekte Kennzeichnung nach JMStV/MStV als Live-Vorschau + Copy-Paste-HTML. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

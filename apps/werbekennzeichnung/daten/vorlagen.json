@@ -1,0 +1,51 @@
+{
+  "quelle": "Werbekennzeichnung nach JMStV § 6 und MStV § 22 (Trennungsgebot, Erkennbarkeit)",
+  "hinweis": "Vorschau und Copy-Paste-Vorlagen. Kennzeichnung muss klar, deutlich und unmittelbar erkennbar sein – gerade auf Kinderseiten. Hilfe zur Selbsthilfe, keine Rechtsberatung.",
+  "typen": [
+    {
+      "code": "banner",
+      "name": "Werbe-Banner",
+      "beschreibung": "Ein grafisches Anzeigen-Banner (z. B. oben oder in der Seitenleiste).",
+      "regeln": [
+        "Deutlich mit „Anzeige“ oder „Werbung“ beschriftet – gut lesbar, nicht winzig.",
+        "Die Kennzeichnung steht direkt am Banner (oben/darüber), nicht irgendwo weit weg.",
+        "Klarer Abstand und optische Trennung zum redaktionellen Inhalt."
+      ],
+      "richtigHtml": "<div style=\"border:1px solid #999;border-radius:6px;overflow:hidden;max-width:320px\"><div style=\"background:#eee;color:#333;font-size:12px;padding:2px 8px;font-weight:700\">Anzeige</div><div style=\"background:#cfe8ff;padding:24px;text-align:center;color:#333\">[ Werbe-Banner ]</div></div>",
+      "negativ": [
+        { "beispiel": "Banner ganz ohne Kennzeichnung", "warum": "Werbung muss immer als solche erkennbar sein (Trennungsgebot). Ohne Label ist es unzulässig." },
+        { "beispiel": "„Anzeige“ nur in winziger, grauer Schrift versteckt", "warum": "Die Kennzeichnung muss deutlich und gut lesbar sein – nicht praktisch unsichtbar." }
+      ]
+    },
+    {
+      "code": "beitrag",
+      "name": "Gesponserter Beitrag",
+      "beschreibung": "Ein Text-/Video-Beitrag, der von einer Firma bezahlt wurde.",
+      "regeln": [
+        "Am Anfang klar gekennzeichnet: „Anzeige“ oder „Werbung“ – nicht erst am Ende.",
+        "Nicht in einem Wust aus Hashtags verstecken.",
+        "Deutscher, klarer Begriff; englische oder unklare Wörter genügen oft nicht."
+      ],
+      "richtigHtml": "<div style=\"border:1px solid #999;border-radius:6px;padding:12px;max-width:340px\"><span style=\"background:#333;color:#fff;font-size:12px;padding:2px 8px;border-radius:4px;font-weight:700\">Werbung</span><h3 style=\"margin:8px 0 4px;color:#333\">Unser Test: Das neue Spiel</h3><p style=\"margin:0;color:#555;font-size:14px\">Dieser Beitrag wurde bezahlt. …</p></div>",
+      "negativ": [
+        { "beispiel": "„#ad“ oder „#sp“ klein zwischen 20 anderen Hashtags", "warum": "Versteckte oder unklare Kürzel erfüllen die Kennzeichnungspflicht nicht – erst recht nicht bei Kindern." },
+        { "beispiel": "Kennzeichnung erst ganz am Ende des Beitrags", "warum": "Die Werbung muss von Anfang an erkennbar sein, bevor man den Inhalt liest/sieht." }
+      ]
+    },
+    {
+      "code": "kooperation",
+      "name": "Produktplatzierung / Kooperation",
+      "beschreibung": "Ein Produkt wird gezeigt oder genannt, weil es eine Zusammenarbeit gibt (auch bei Gratis-Produkten).",
+      "regeln": [
+        "Klarer Hinweis wie „Werbung“ bzw. „unterstützt durch Produktplatzierung“.",
+        "Auch geschenkte Produkte sind ein Vorteil und müssen gekennzeichnet werden.",
+        "Der Hinweis ist gut sichtbar platziert, nicht nur in einer Infobox versteckt."
+      ],
+      "richtigHtml": "<div style=\"border:1px solid #999;border-radius:6px;padding:12px;max-width:340px\"><div style=\"background:#ffe6b3;color:#663c00;font-size:12px;padding:4px 8px;border-radius:4px;font-weight:700;margin-bottom:8px\">Werbung · Produktplatzierung</div><p style=\"margin:0;color:#555;font-size:14px\">In diesem Video seht ihr Produkte von [Marke]. …</p></div>",
+      "negativ": [
+        { "beispiel": "„Danke an [Marke] für die Unterstützung“ ohne das Wort Werbung", "warum": "Ein Dank allein ist keine ausreichende Werbekennzeichnung – der Werbecharakter muss klar benannt sein." },
+        { "beispiel": "Gratis-Produkte auspacken und loben ohne jede Kennzeichnung", "warum": "Geschenke sind ein geldwerter Vorteil; solche Beiträge sind Werbung und müssen gekennzeichnet werden." }
+      ]
+    }
+  ]
+}

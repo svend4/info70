@@ -1,0 +1,8 @@
+{
+  "name": "@info70/impressum-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Impressum-Generator fuer Kinderseiten: Offline-Formular (Rechtsform + Felder) erzeugt ein fertiges Impressum als Text/HTML inkl. MStV-Zusatzangabe. Formular-zu-Dokument-Engine. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

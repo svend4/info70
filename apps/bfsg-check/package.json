@@ -1,0 +1,8 @@
+{
+  "name": "@info70/bfsg-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BFSG-Check fuer Kinderseiten: kriterien-check-Pack (BFSG/WCAG: Kontrast, Tastatur, Alt-Texte, einfache Sprache, Vorlese-Tauglichkeit) mit eingebautem Offline-Kontrast-Rechner + Pruefprotokoll. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

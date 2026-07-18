@@ -1,0 +1,36 @@
+{
+  "quelle": "BFSG/EAA und WCAG 2.1 – die für Kinderseiten wichtigsten Anforderungen (sinngemäß)",
+  "hinweis": "Manuell prüfbare Schritte ohne externe Tools. Seit 28.06.2025 gilt das Barrierefreiheitsstärkungsgesetz (BFSG) für viele digitale Verbraucherdienste. Kein offizielles Testat; Haken und Protokoll bleiben lokal.",
+  "bereiche": [
+    {
+      "id": "wahrnehmung",
+      "name": "Wahrnehmbar",
+      "emoji": "👀",
+      "kriterien": [
+        { "id": "w-kontrast", "text": "Texte haben ausreichenden Farbkontrast zum Hintergrund (WCAG AA).", "hilfe": "Nutze den Kontrast-Rechner unten: normaler Text braucht mindestens 4,5:1, große Schrift 3:1. Prüfe auch Buttons und Links.", "bezug": "WCAG 1.4.3" },
+        { "id": "w-alt", "text": "Alle informativen Bilder haben einen Alternativtext (Alt-Text).", "hilfe": "Jedes Bild, das Information trägt, braucht ein beschreibendes alt-Attribut. Rein dekorative Bilder bekommen ein leeres alt=\"\".", "bezug": "WCAG 1.1.1" },
+        { "id": "w-ton", "text": "Videos/Audios sind auch ohne Ton verständlich (Untertitel oder Text).", "hilfe": "Untertitel oder eine Textfassung sorgen dafür, dass gehörlose Kinder und Kinder in lauter Umgebung mitkommen.", "bezug": "WCAG 1.2.2" }
+      ]
+    },
+    {
+      "id": "bedienung",
+      "name": "Bedienbar",
+      "emoji": "⌨️",
+      "kriterien": [
+        { "id": "b-tastatur", "text": "Alles ist auch nur mit der Tastatur bedienbar (Tab, Enter) – ohne Maus.", "hilfe": "Klick dich einmal nur mit der Tab-Taste durch die Seite: Erreichst du alle Knöpfe und Links? Ist der Fokus sichtbar?", "bezug": "WCAG 2.1.1" },
+        { "id": "b-fokus", "text": "Der Tastatur-Fokus ist immer gut sichtbar (Rahmen/Markierung).", "hilfe": "Beim Durchtabben muss man sehen, wo man gerade ist. Entferne niemals die Fokus-Markierung ohne Ersatz.", "bezug": "WCAG 2.4.7" },
+        { "id": "b-zeit", "text": "Es gibt keine unnötigen Zeitlimits; Bewegungen lassen sich stoppen.", "hilfe": "Automatische Karussells/Animationen brauchen einen Pause-Knopf. Zeitlimits (z. B. bei Aufgaben) sollten verlängerbar sein.", "bezug": "WCAG 2.2.1, 2.2.2" }
+      ]
+    },
+    {
+      "id": "verstehen",
+      "name": "Verständlich",
+      "emoji": "💬",
+      "kriterien": [
+        { "id": "v-sprache", "text": "Die Sprache ist einfach und altersgerecht; schwere Begriffe werden erklärt.", "hilfe": "Kurze Sätze, bekannte Wörter, ein Gedanke pro Satz. Für maximale Zugänglichkeit hilft eine Leichte-Sprache-Fassung.", "bezug": "WCAG 3.1.5; BFSG einfache Sprache" },
+        { "id": "v-vorlesen", "text": "Texte sind vorlese-tauglich (echter Text, nicht Text-im-Bild).", "hilfe": "Screenreader und Vorlese-Funktionen brauchen echten Text im HTML. Text als Bild kann nicht vorgelesen werden.", "bezug": "WCAG 1.4.5" },
+        { "id": "v-konsistent", "text": "Aufbau und Navigation sind auf allen Seiten gleich und vorhersehbar.", "hilfe": "Menü, Knöpfe und Wege sollten überall gleich funktionieren – das hilft besonders jüngeren Kindern und Menschen mit Lernschwierigkeiten.", "bezug": "WCAG 3.2.3" }
+      ]
+    }
+  ]
+}
