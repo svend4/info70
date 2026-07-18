@@ -1,0 +1,30 @@
+{
+  "titel": "Stopp die Kette",
+  "untertitel": "Wie ein Kettenbrief sich ausbreitet – und wo ein „Stopp“ ihn bricht",
+  "zielgruppe": "Klasse 4–6 (9–12 Jahre)",
+  "app": "kettenbrief-stopper",
+  "appName": "Kettenbrief-Stopper",
+  "lernziele": [
+    "Die Schüler*innen erkennen Kettenbriefe an ihren Merkmalen (Druck, Drohung, „an 10 Leute weiterleiten“, Belohnung/Strafe) und benennen, dass die Drohungen erfunden sind.",
+    "Sie verstehen an einem Ausbreitungs-Modell, dass jede*r Einzelne die Kette stoppen kann, und dass Weiterleiten den Druck an andere weitergibt.",
+    "Sie kennen die Regel „Erst prüfen, dann teilen“, wissen, dass Weiterleiten kein Muss ist, und kennen einen Hilfeweg bei belastenden Kettenbriefen (Erwachsene, Nummer gegen Kummer 116 111)."
+  ],
+  "ablauf": [
+    { "minuten": 8, "phase": "Einstieg", "text": "Anonymes Handzeichen: „Wer hat schon mal eine Nachricht bekommen, die sagt, man MUSS sie weiterschicken?“ Kurz sammeln, was in solchen Nachrichten oft drinsteht (Glück, Drohung, „sonst passiert dir was“) – ohne Namen, ohne Vorlesen echter Ketten." },
+    { "minuten": 15, "phase": "Erarbeitung", "text": "Kettenbrief-Stopper am Beamer: Das Modell zeigt, wie sich eine Kette im Klassen-Graphen ausbreitet, wenn alle weiterleiten. Gemeinsam beobachten: Wo würde ein einzelnes „Stopp“ ganze Zweige abschneiden? Kernsatz: Die Drohungen sind erfunden – Nicht-Weiterleiten ist sicher." },
+    { "minuten": 15, "phase": "Vertiefung", "text": "Druckbares Graph-Arbeitsblatt in Partnerarbeit: Kinder markieren eine Stelle, an der sie „Stopp“ setzen, und zeichnen ein, wie viele Weiterleitungen dadurch nicht passieren. Dann formulieren sie eine höfliche Stopp-Antwort („Ich leite Kettenbriefe nicht weiter.“)." },
+    { "minuten": 7, "phase": "Abschluss", "text": "Klassenregel als Aushang beschließen: „Erst prüfen, dann teilen – Kettenbriefe enden bei mir.“ Hilfewege ergänzen: bei angst­machenden Nachrichten einer erwachsenen Person zeigen oder Nummer gegen Kummer 116 111 anrufen." }
+  ],
+  "arbeitsblatt": [
+    "Kettenbrief-Merkmale: sechs Sätze ankreuzen, welche typisch für Kettenbriefe sind (Druck, Drohung, Weiterleit-Zwang, Belohnung), und in einem Satz begründen.",
+    "Graph-Arbeitsblatt: im vorgezeichneten Netz eine „Stopp“-Stelle markieren und zählen, wie viele Weiterleitungen dadurch wegfallen.",
+    "Meine Stopp-Antwort: einen freundlichen Satz aufschreiben, mit dem ich sage, dass ich nicht weiterleite – ohne die andere Person zu beschimpfen."
+  ],
+  "hinweise": [
+    "Keine echten Kettenbriefe mit konkreten Drohungen vorlesen oder verteilen – sie können Kinder ängstigen. Das Modell arbeitet abstrakt mit Punkten und Pfeilen.",
+    "Wenn ein Kind von einem belastenden oder bedrohlichen Kettenbrief berichtet: ernst nehmen, nicht im Plenum ausbreiten, bei Bedarf an Schulsozialarbeit / Beratungslehrkraft verweisen.",
+    "Kettenbrief-Stopper läuft offline im Browser, ohne Konten und ohne Datenspeicherung (Klassen-Modus) – es fallen keine Kinderdaten an.",
+    "Diese Einheit ist bewusst eine Einzelstunde (45 Min); sie lässt sich mit „Echt oder Fake?“ (nachrichten-detektive) zu einer Doppelstunde koppeln."
+  ],
+  "bezug": "JuSchG · UN-KRK Art. 17 (Informationszugang) & Art. 19 (Schutz) · JMStV · KMK „Bildung in der digitalen Welt“ · Medienkompetenzrahmen NRW"
+}

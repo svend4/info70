@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stundenentwurf-kettenbrief",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stundenentwurf 'Stopp die Kette' (45 Min, Klasse 4-6): druckbare Einzelstunde fuer Lehrkraefte zu Kettenbriefen und ihrer Ausbreitung rund um die App 'Kettenbrief-Stopper'. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

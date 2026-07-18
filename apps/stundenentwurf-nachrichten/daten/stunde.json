@@ -1,0 +1,31 @@
+{
+  "titel": "Echt oder Fake?",
+  "untertitel": "Nachrichten prüfen mit dem Drei-Fragen-Check",
+  "zielgruppe": "Klasse 5–7, Variante 7–9 (10–15 Jahre)",
+  "app": "nachrichten-detektive",
+  "appName": "Nachrichten-Detektive",
+  "lernziele": [
+    "Die Schüler*innen prüfen Meldungen und Bilder mit dem Drei-Fragen-Check (Wer sagt das? Woher weiß er/sie das? Was sagen andere / was wollen die von mir?) und begründen ihre Einschätzung.",
+    "Sie unterscheiden Nachricht, Meinung, Werbung und erfundene/KI-erzeugte Inhalte und erkennen, dass geteilt ≠ wahr bedeutet.",
+    "Ältere (Variante 7–9): Sie benennen typische Deepfake- und Fälschungs-Merkmale (unnatürliche Übergänge, fehlende Quelle, Bild passt nicht zum Text) und wissen, dass man Bilder rückwärts prüfen und Quellen vergleichen kann."
+  ],
+  "ablauf": [
+    { "minuten": 10, "phase": "Einstieg", "text": "Blitzrunde: „Was hast du diese Woche im Netz gesehen – und woher weißt du, dass es stimmt?“ Antworten ungewertet sammeln. Drei Detektiv-Fragen als Plakat einführen: Wer? Woher? Was sagen andere?" },
+    { "minuten": 30, "phase": "Erarbeitung", "text": "Nachrichten-Detektive am Beamer im Klassen-Modus: Die Klasse stimmt per Handzeichen ab (echt/fake), erst dann die Auflösung und Begründung der App zeigen. Nach jeder Runde die passende Detektiv-Frage benennen, die geholfen hätte." },
+    { "minuten": 30, "phase": "Vertiefung", "text": "Offline-Arbeitsblatt „Drei-Fragen-Check“ an ausgedruckten Beispielmeldungen in Gruppen. Variante 7–9: zusätzlich Bildvergleichs-Arbeitsblatt zu Deepfake-Merkmalen (was am gefälschten Bild verrät sich?) und Idee der Rückwärts-Bildsuche und des Quellenvergleichs." },
+    { "minuten": 10, "phase": "Sicherung", "text": "Merkplakat „Erst prüfen, dann glauben und teilen“ mit den drei Fragen fertigstellen. Festhalten: geteilt heißt nicht wahr; bei Unsicherheit fragen wir eine vertrauenswürdige Quelle oder eine erwachsene Person." },
+    { "minuten": 10, "phase": "Abschluss", "text": "Blitzlicht: Jedes Kind nennt eine Meldung oder ein Bild, bei dem es den Drei-Fragen-Check anwenden will. Das Detektiv-Plakat bleibt die Woche über als Prüf-Maßstab im Klassenraum." }
+  ],
+  "arbeitsblatt": [
+    "Drei-Fragen-Check: an drei Beispielmeldungen je Wer? / Woher? / Was sagen andere? ausfüllen und eine Einschätzung (echt/unsicher/fake) begründen.",
+    "Nachricht – Meinung – Werbung – erfunden: acht Ausschnitte den vier Feldern zuordnen.",
+    "Variante 7–9: Deepfake-Detektiv – an einem Bildpaar drei Merkmale markieren, die auf eine Fälschung hindeuten, und einen Prüf-Schritt (Rückwärtssuche, Quelle vergleichen) notieren."
+  ],
+  "hinweise": [
+    "Keine aktuellen, emotional aufgeladenen Falschmeldungen zu realen Personen verwenden – mit den neutralen Beispielen der App arbeiten, um niemanden bloßzustellen.",
+    "Nachrichten-Detektive läuft offline im Browser, ohne Konten und ohne Datenspeicherung (Klassen-Modus) – es fallen keine Kinderdaten an.",
+    "Brücke zur Filterblase: Wer nur die eigene Blase sieht, hält Einseitiges leicht für wahr – Anschluss an die Einheit „Mein Feed, deine Blase“ (feed-forscher).",
+    "Wenn ein Kind durch eine gesehene Meldung/ein Bild belastet wirkt, das Gespräch anbieten und ggf. an Schulsozialarbeit verweisen; Hilfe auch über die Nummer gegen Kummer 116 111."
+  ],
+  "bezug": "DSA (Desinformation, Minderjährigenschutz) · UN-KRK Art. 17 · EU AI Act (Kennzeichnung KI-Inhalte) · KMK „Bildung in der digitalen Welt“ · Medienkompetenzrahmen NRW"
+}

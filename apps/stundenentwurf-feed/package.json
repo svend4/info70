@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stundenentwurf-feed",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stundenentwurf 'Mein Feed, deine Blase' (90 Min, Klasse 5-7): druckbare Doppelstunde fuer Lehrkraefte zu Empfehlungs-Algorithmen und Filterblasen rund um die App 'Feed-Forscher'. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

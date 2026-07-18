@@ -1,0 +1,31 @@
+{
+  "titel": "Mein Feed, deine Blase",
+  "untertitel": "Wie ein Algorithmus entscheidet, was ich sehe",
+  "zielgruppe": "Klasse 5–7 (10–13 Jahre)",
+  "app": "feed-forscher",
+  "appName": "Feed-Forscher",
+  "lernziele": [
+    "Die Schüler*innen erklären, dass ein Algorithmus keine Wahrheit misst, sondern Reaktionen (Klicks, Verweildauer, Likes) – und daraus vorhersagt, was sie länger schauen lässt.",
+    "Sie beschreiben an eigenen Beispielen, wie eine „Filterblase“ entsteht: Wer viel von einer Sorte anschaut, bekommt mehr davon und sieht immer weniger anderes.",
+    "Sie kennen mindestens zwei Gegen-Strategien (bewusst Gegenteiliges suchen, Empfehlungen hinterfragen, Verlauf/Interessen zurücksetzen) und begründen, warum verschiedene Menschen völlig verschiedene Feeds sehen."
+  ],
+  "ablauf": [
+    { "minuten": 10, "phase": "Einstieg", "text": "Gedankenexperiment im Sitzkreis: „Woher weiß deine Video-App, was sie dir als Nächstes zeigt?“ Hypothesen ungewertet an der Tafel sammeln. Frage schärfen: Sieht meine Nachbarin dasselbe wie ich?" },
+    { "minuten": 30, "phase": "Erarbeitung", "text": "Feed-Forscher am Beamer im Klassen-Modus: Die Klasse entscheidet gemeinsam, worauf geklickt wird, und beobachtet, wie der Feed kippt (immer mehr vom Gleichen). Danach Hypothesen von der Tafel prüfen: Welche stimmte? Kernsatz festhalten: Der Algorithmus misst Reaktionen, nicht Wahrheit." },
+    { "minuten": 30, "phase": "Vertiefung", "text": "„Papier-Algorithmus“ ohne Gerät: Gruppen bekommen einen Stapel Nachrichtenkarten und eine Regel (z. B. „lege oben, was am meisten Herzen hat“). Sie sortieren, tauschen die Regel und sehen, wie dieselben Karten je nach Regel eine andere Reihenfolge – eine andere „Blase“ – ergeben." },
+    { "minuten": 10, "phase": "Sicherung", "text": "Gemeinsames Merkplakat „Warum sieht mein Feed anders aus als deiner?“: Reaktionen statt Wahrheit, mehr vom Gleichen, jede*r eine eigene Blase. Gegen-Strategien ergänzen: bewusst Anderes suchen, Empfehlungen hinterfragen, Interessen zurücksetzen." },
+    { "minuten": 10, "phase": "Abschluss", "text": "Blitzlicht im Kreis: Jedes Kind nennt eine Sache, die es ausprobieren will, um seine Blase aufzubrechen (ein neues Thema suchen, einem Kanal folgen, der anders denkt). Merkplakat bleibt im Klassenraum." }
+  ],
+  "arbeitsblatt": [
+    "„Reaktion oder Wahrheit?“: acht Aussagen ankreuzen, ob ein Feed sie belohnt, weil sie stimmen oder weil sie viele Klicks bringen – und einen Unterschied in eigenen Worten erklären.",
+    "Papier-Algorithmus: acht Nachrichtenkarten nach zwei verschiedenen Regeln sortieren und aufschreiben, wie sich die Reihenfolge ändert.",
+    "„Meine Blase aufbrechen“: drei Ideen notieren, wie ich bewusst auch andere Themen und Meinungen in meinen Feed hole."
+  ],
+  "hinweise": [
+    "Kein Bloßstellen einzelner Vorlieben: Es geht um den Mechanismus, nicht darum, wer „schlechte“ Videos schaut.",
+    "Feed-Forscher ist eine Simulation ohne echte Konten und ohne Datenübertragung – läuft offline im Browser (Klassen-Modus), es fallen keine Kinderdaten an.",
+    "Bezug zu Desinformation herstellen: Wer nur die eigene Blase sieht, hält Einseitiges leicht für die ganze Wahrheit – Brücke zur Einheit „Echt oder Fake?“ (nachrichten-detektive).",
+    "Transparenz-Idee altersgerecht einordnen: Plattformen müssen zunehmend offenlegen, wie empfohlen wird (EU AI Act, DSA) – Kinder dürfen fragen „Warum sehe ich das?“."
+  ],
+  "bezug": "EU AI Act (Transparenz von Empfehlungssystemen) · DSA (Minderjährigenschutz, kein Profiling-Werbetargeting) · UN-KRK Art. 17 · KMK „Bildung in der digitalen Welt“ · Medienkompetenzrahmen NRW"
+}

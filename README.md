@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**102 приложения (101 рабочий MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**105 приложений (104 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 624 теста.
+Полный прогон: 639 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -154,6 +154,9 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `wahlkabine` | Режим избирательной кабины: опечатанные голоса, ничья | кат.№205 |
 | `stundenentwurf-chat` | Разработка урока «Worte wie Fäuste»: буллинг, 90 мин (печать) | кат.№197 |
 | `stundenentwurf-datenschatz` | Разработка урока «Mein Datenschatz»: данные, 90 мин (печать) | кат.№198 |
+| `stundenentwurf-feed` | Разработка урока «Mein Feed, deine Blase»: алгоритмы, 90 мин | Ось E |
+| `stundenentwurf-kettenbrief` | Разработка урока «Stopp die Kette»: цепочки, 45 мин | Ось E |
+| `stundenentwurf-nachrichten` | Разработка урока «Echt oder Fake?»: новости/дипфейки, 90 мин | Ось E |
 | `elternabend-kit` | Родительский вечер 60 мин + раздатка de/uk/ru | кат.№1 |
 | `kriterien-check` | Self-audit оператора + экспорт .txt/.json/печать | база |
 | `eltern-rechtebriefe` | Шаблоны писем DSGVO (Art. 15/17/7), имя не хранится | кат.№1 |

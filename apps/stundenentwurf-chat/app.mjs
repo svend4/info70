@@ -23,7 +23,7 @@ function render() {
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🎯 Lernziele'),
       el('ul', {}, ...stunde.lernziele.map((z) => el('li', { style: 'margin:0.3rem 0' }, z)))),
     el('section', { class: 'k-karte' },
-      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🕒 Ablauf (90 Minuten)'),
+      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `🕒 Ablauf (${gesamt} Minuten)`),
       ...stunde.ablauf.map((a) => el('div', { style: 'padding:0.4rem 0;border-bottom:1px solid var(--k-rand)' },
         el('div', { style: 'display:flex;justify-content:space-between;gap:0.5rem' },
           el('span', { style: 'font-weight:600' }, `${a.phase}`),

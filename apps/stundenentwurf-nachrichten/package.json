@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stundenentwurf-nachrichten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stundenentwurf 'Echt oder Fake?' (90 Min, Klasse 5-7, Variante 7-9): druckbare Doppelstunde fuer Lehrkraefte zum Pruefen von Nachrichten und Deepfakes mit dem Drei-Fragen-Check rund um die App 'Nachrichten-Detektive'. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
