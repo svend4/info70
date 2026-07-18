@@ -1,0 +1,8 @@
+{
+  "name": "@info70/formular-falle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Formular-Falle: Szenario-Trainer (2/1/0) zu Anmelde-/Gewinnspiel-Formularen - welche Datenabfragen (Adresse, Telefon, Foto) in kein Kinder-Formular gehoeren und warum Pflichtfelder ein Warnsignal sind. 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/wer-dahinter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wer steckt dahinter? Quiz (quiz-kern) fuer 8-12 - die drei Transparenz-Merkmale Autor, Datum, Quelle finden und entscheiden, ob ein Beitrag nachpruefbar ist. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

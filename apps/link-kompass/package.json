@@ -1,0 +1,8 @@
+{
+  "name": "@info70/link-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Link-Kompass: Quiz (quiz-kern) fuer 8-12 - Links/Buttons einordnen (intern, gekennzeichnet extern, Download, App-Store, Werbelink) und vor dem Klicken pruefen. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

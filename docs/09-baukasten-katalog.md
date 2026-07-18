@@ -15,6 +15,8 @@
 >
 > **Дополнение 3 (17.07.2026):** родительская волна 15 — **Elternabend-Kit „Digital daheim“** (№24: готовый вечер 60 минут — Folien-Modus для проектора, 2 демо-сценария, 6 дискуссионных карт, раздатка de/uk/ru через mini-i18n с тестом полноты переводов) и **Eltern-Kompass-Sammelband** (все 37 родительских страниц одной печатной брошюрой, сборка в рантайме без копий; двусторонний тест полноты — новое приложение забыть невозможно).
 >
+> **Дополнение 11 (17.07.2026):** волна 23 — **Formular-Falle** (№48, сценарии: какие данные не давать форме — Adresse/Telefon/Foto/Schule, Pflichtfeld/Häkchen/Abo как warning), **Link-Kompass** (№50, quiz: типы ссылок — intern/extern/Download/App-Store/Werbung — и проверка перед кликом) и **Wer steckt dahinter?** (№51, quiz: три признака прозрачности Autor/Datum/Quelle, nachprüfbarkeit).
+>
 > **Дополнение 10 (17.07.2026):** волна 22, блок распознавания угроз/качества — **Fake-Shop-Fahnder** (№46, quiz-kern: настоящий магазин или фейк, 5 warning-signals), **Seiten-Scanner** (№135, детский чек-лист рядом с любым сайтом → светофор; безопасный ответ не всегда «ja») и **Chat-Check** (№49, сценарии: функции общения → три Schutzmerkmale Moderation/Melden/Spitzname, без grooming-контента).
 >
 > **Дополнение 9 (17.07.2026):** волна 21 — **Chat-Rechte** (№35, сценарии: ситуации в чате как правовые вопросы — Art. 13 vs оскорбление, «Melden ≠ Petzen» DSA Art. 20, свобода+ответственность), **Kinderrat** (№31, режим заседания: Tagesordnung, Redeliste, голосование с обоснованием, протокол-Koffer) и **Ombuds-Landkarte** (№38, для родителей: справочник инстанций — §9a SGB VIII, DSGVO Art. 77, DSA, jugendschutz.net — статичные данные, без запросов).

@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Link-Leser*in", "emoji": "🔗" },
+    { "ab": 5, "titel": "Link-Kenner*in", "emoji": "🧭" },
+    { "ab": 9, "titel": "Klick-Profi", "emoji": "🖱️" },
+    { "ab": 12, "titel": "Link-Kompass-Meister*in", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Link-Arten",
+      "frage": "Ein Link auf einer Kinderseite führt zu einer anderen Seite und ist mit einem kleinen Pfeil ↗ und dem Hinweis „externe Seite“ gekennzeichnet. Was bedeutet das?",
+      "antworten": [
+        "Ein gekennzeichneter externer Link – er führt weg von dieser Seite, und man sagt dir das ehrlich",
+        "Ein Fehler auf der Seite",
+        "Ein Link, der immer gefährlich ist",
+        "Werbung"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Gute Kinderseiten kennzeichnen Links, die woanders hinführen (z. B. mit ↗ oder „externe Seite“). So weißt du vorher: Jetzt verlasse ich die sichere Seite. Das ist ein Qualitätsmerkmal, kein Fehler."
+    },
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Vor dem Klicken",
+      "aussage": "Bevor du auf einen Link tippst, kannst du prüfen, wohin er führt – zum Beispiel an der Adresse (URL) oder am Hinweistext.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Ein Blick auf die Adresse (URL) oder den Hinweistext verrät oft, wohin ein Link geht. Kommt dir die Adresse komisch vor oder passt sie nicht zum Text, lieber nicht klicken und Erwachsene fragen."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Link-Arten",
+      "frage": "Ein Button heißt „Jetzt herunterladen“ und lädt eine Datei auf dein Gerät. Was ist das?",
+      "antworten": [
+        "Ein Download – dabei kommt etwas auf dein Gerät, das prüfst du besser mit Erwachsenen",
+        "Ein interner Link zur nächsten Seite",
+        "Immer ein Virus",
+        "Eine Suchmaschine"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein Download holt eine Datei auf dein Gerät. Das ist nicht automatisch schlecht – aber du solltest wissen, WAS du herunterlädst, und im Zweifel Erwachsene fragen. Unbekannte Downloads können Schadprogramme enthalten."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Werbung erkennen",
+      "aussage": "Ein blinkender Button „Du hast gewonnen! Hier klicken!!!“ ist meistens ein Werbe- oder Fallen-Link, kein normaler Link.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Bunte, blinkende „Gewonnen!“-Buttons sind fast immer Werbung oder eine Falle. Sie wollen, dass du ohne Nachdenken klickst. Echte Inhalte brauchen kein Geblinke und keine Ausrufezeichen-Flut."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Link-Arten",
+      "frage": "Ein Link öffnet den App-Store und will eine App installieren. Was tust du?",
+      "antworten": [
+        "Nicht einfach installieren – erst mit Erwachsenen anschauen, ob die App okay ist",
+        "Sofort installieren, Apps sind immer sicher",
+        "Alle Berechtigungen blind erlauben",
+        "Die App an alle Freunde weiterschicken"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein App-Store-Link will etwas installieren. Neue Apps schaut man gemeinsam mit Erwachsenen an: Ist sie altersgerecht? Was darf sie? Nicht jede App im Store ist für Kinder gemacht – und Installieren kann Geld kosten."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Vor dem Klicken",
+      "aussage": "Wenn ein Link-Text „lustiges Video“ heißt, die Adresse aber ganz woanders hinführt (z. B. zu einer Verkaufsseite), ist das ein Warnzeichen.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Wenn Text und Ziel-Adresse nicht zusammenpassen, ist Vorsicht angesagt – so werden Leute auf andere (oft unseriöse) Seiten gelockt. Immer schauen, ob der Hinweis zum Ziel passt."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Link-Arten",
+      "frage": "Du klickst einen Link und bleibst auf derselben Seite, nur bei einem anderen Abschnitt. Was war das?",
+      "antworten": [
+        "Ein interner Link – er führt innerhalb der gleichen Seite oder Kinderseite weiter",
+        "Ein Download",
+        "Ein externer Link ins Ausland",
+        "Ein Werbe-Link"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein interner Link bleibt auf derselben (Kinder-)Seite. Das ist die harmloseste Sorte – du verlässt den sicheren Bereich nicht. Externe Links dagegen führen weg und sollten gekennzeichnet sein."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Werbung erkennen",
+      "aussage": "Gute Kinderseiten kennzeichnen Werbung deutlich (z. B. mit dem Wort „Werbung“ oder „Anzeige“), damit du sie vom Inhalt unterscheiden kannst.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Werbung muss als Werbung erkennbar sein (das verlangt der Jugendmedienschutz). Steht „Werbung“ oder „Anzeige“ dran, kannst du bewusst entscheiden. Versteckte Werbung, die wie Inhalt aussieht, ist unfair."
+    },
+    {
+      "id": "w05",
+      "typ": "wahl",
+      "kategorie": "Vor dem Klicken",
+      "frage": "Was ist die beste Gewohnheit, bevor du einen unbekannten Link anklickst?",
+      "antworten": [
+        "Kurz schauen, wohin er führt (Adresse/Hinweis), und im Zweifel Erwachsene fragen",
+        "Immer sofort klicken, es wird schon nichts passieren",
+        "Den Link an alle weiterschicken und schauen, was passiert",
+        "Das Gerät neu starten"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Erst schauen, dann klicken: Passt die Adresse zum Text? Ist es ein Download oder eine externe Seite? Kommt es dir komisch vor? Diese zwei Sekunden Prüfung schützen dich vor den meisten Link-Fallen."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Vor dem Klicken",
+      "aussage": "Eine Adresse (URL), die aus vielen wirren Zeichen und Zahlen besteht und gar nicht zum Thema passt, ist immer vertrauenswürdig.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – eine wirre, kryptische Adresse, die nicht zum Thema passt, ist eher ein Warnzeichen. Seriöse Seiten haben meist lesbare Adressen. Bei komischen Links: nicht klicken und Erwachsene fragen."
+    },
+    {
+      "id": "w06",
+      "typ": "wahl",
+      "kategorie": "Werbung erkennen",
+      "frage": "Ein „Weiter“-Button ist in Wahrheit ein getarnter Werbe-Link zu einer Verkaufsseite. Woran hättest du das merken können?",
+      "antworten": [
+        "An der Adresse (URL) und daran, dass er woanders hinführt als erwartet",
+        "Gar nicht – so etwas kann man nie erkennen",
+        "An der Farbe des Buttons",
+        "An der Uhrzeit"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Getarnte Werbe-Buttons führen oft zu einer ganz anderen Adresse, als der Text verspricht. Wenn ein „Weiter“ plötzlich zu einer Verkaufsseite springt, war es Werbung. Kurz auf die Adresse schauen hilft, solche Tarnungen zu entlarven."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Vor dem Klicken",
+      "aussage": "Wenn du dir bei einem Link unsicher bist, ist es okay, ihn NICHT anzuklicken und stattdessen Erwachsene zu fragen.",
+      "korrekt": "ja",
+      "erklaerung": "Auf jeden Fall! Nicht klicken ist immer eine erlaubte Entscheidung. Kein Link ist so wichtig, dass du ihn sofort öffnen müsstest. Im Zweifel: Finger weg und Erwachsene fragen – das ist klug, nicht ängstlich."
+    }
+  ]
+}

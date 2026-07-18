@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "ff01",
+      "situation": "Ein Spiel will, dass du ein Konto machst. Das Formular fragt: Vorname, Nachname, genaue Adresse, Telefonnummer, Foto von dir. Alle Felder haben ein Sternchen (Pflicht).",
+      "warnung": "Adresse, Telefon und Foto – das braucht kein Spiel.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Nichts ausfüllen, das abbrechen und Eltern fragen – so viele echte Daten braucht kein Spiel.", "wert": 2 },
+        { "text": "Alles ausfüllen, sonst kann ich nicht spielen.", "wert": 0 },
+        { "text": "Nur den Vornamen ausfüllen und den Rest freilassen.", "wert": 1 }
+      ],
+      "erklaerung": "Adresse, Telefonnummer und ein Foto von dir gehören in kein Spiel-Formular. Wenn so etwas als Pflichtfeld (Sternchen!) verlangt wird, ist das ein Warnsignal. Sichere Reaktion: abbrechen und Erwachsene fragen. Gute Kinderangebote fragen so etwas gar nicht erst."
+    },
+    {
+      "id": "ff02",
+      "situation": "Eine Kinderseite fragt beim Anmelden nur nach einem Spitznamen und einem Passwort. Mehr nicht.",
+      "warnung": "Nur Spitzname – gutes Zeichen.",
+      "frage": "Wie ist das?",
+      "optionen": [
+        { "text": "Gut – ein Spitzname und ein Passwort reichen. Mein echter Name bleibt geheim.", "wert": 2 },
+        { "text": "Schlecht – ich will meinen echten Namen eingeben.", "wert": 0 },
+        { "text": "Ich gebe zur Sicherheit auch meine Adresse mit an.", "wert": 0 }
+      ],
+      "erklaerung": "So soll ein Kinderformular aussehen: Spitzname statt echtem Namen, kein Zwang zu Adresse oder Telefon. Gib freiwillig NICHTS zusätzlich an – je weniger Daten, desto besser. Das nennt man Datensparsamkeit."
+    },
+    {
+      "id": "ff03",
+      "situation": "Ein Gewinnspiel verspricht ein neues Handy. Zum „Mitmachen“ sollst du Name, Adresse, Handynummer und die E-Mail deiner Eltern eingeben.",
+      "warnung": "Gewinnspiel + viele Daten = oft eine Falle.",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Nicht mitmachen – Gewinnspiele, die viele echte Daten wollen, sind oft nur zum Datensammeln.", "wert": 2 },
+        { "text": "Alles eingeben, das Handy will ich gewinnen.", "wert": 0 },
+        { "text": "Die Daten meiner Eltern eingeben, ohne sie zu fragen.", "wert": 0 }
+      ],
+      "erklaerung": "Tolle Gewinne gegen viele persönliche Daten sind ein klassischer Trick, um an Adressen und Nummern zu kommen. Meist gewinnt niemand etwas. Und die Daten deiner Eltern gibst du NIE ohne sie ein. Finger weg – oder gemeinsam mit Erwachsenen prüfen."
+    },
+    {
+      "id": "ff04",
+      "situation": "Ein Formular hat ein schon vorangekreuztes Häkchen: „Ja, schickt mir Werbung und gebt meine Daten an Partner weiter.“",
+      "warnung": "Vorangekreuztes Häkchen – heimlich zugestimmt.",
+      "frage": "Was ist klug?",
+      "optionen": [
+        { "text": "Das Häkchen wegklicken – ich will keine Werbung und keine Weitergabe.", "wert": 2 },
+        { "text": "Das Häkchen einfach so lassen, ist bestimmt egal.", "wert": 0 },
+        { "text": "Noch mehr Häkchen setzen, um sicherzugehen.", "wert": 0 }
+      ],
+      "erklaerung": "Ein bereits gesetztes Häkchen ist ein Trick (ein „Dark Pattern“): Du sollst ohne Nachdenken zustimmen. Lies solche Häkchen und klick weg, was du nicht willst. Gute Seiten kreuzen so etwas nicht heimlich für dich an."
+    },
+    {
+      "id": "ff05",
+      "situation": "Beim Anmelden fragt eine Seite: „Wie alt bist du?“ und „In welche Schule gehst du?“ Die Schule ist ein Pflichtfeld.",
+      "warnung": "Schule als Pflichtfeld – zu viel.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Die Schule nicht angeben und abbrechen – wo ich zur Schule gehe, ist privat.", "wert": 2 },
+        { "text": "Die Schule eintragen, ist ja nur eine Frage.", "wert": 0 },
+        { "text": "Eine erfundene Schule eintragen und weitermachen.", "wert": 1 }
+      ],
+      "erklaerung": "Deine Schule zu kennen, hilft Fremden, dich zu finden – das ist privat und gehört in kein Anmelde-Formular. Sichere Reaktion: nicht angeben und abbrechen. Ein Altersbereich (ohne Schule/Adresse) kann okay sein, um kindgerechte Inhalte zu zeigen."
+    },
+    {
+      "id": "ff06",
+      "situation": "Ein Formular sieht seltsam aus: viele Rechtschreibfehler, und ganz unten steht winzig „Kostenpflichtiges Abo, 5 € pro Woche“.",
+      "warnung": "Versteckte Kosten im Kleingedruckten.",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Nichts abschicken und Eltern zeigen – da versteckt sich ein teures Abo.", "wert": 2 },
+        { "text": "Schnell abschicken, bevor ich es mir anders überlege.", "wert": 0 },
+        { "text": "Nur die Kosten-Zeile übersehen und trotzdem eintragen.", "wert": 0 }
+      ],
+      "erklaerung": "Viele Fehler plus klein versteckte Kosten sind Warnzeichen für eine Abo-Falle. Immer bis unten lesen! Bei „kostenpflichtig“ oder „Abo“: nichts abschicken und Erwachsene holen. Kinder sollten online gar keine Abos abschließen."
+    },
+    {
+      "id": "ff07",
+      "situation": "Eine App fragt beim Start: „Darf die App auf deine Kontakte, dein Mikrofon und deine Fotos zugreifen?“ – für ein einfaches Malprogramm.",
+      "warnung": "Ein Malprogramm braucht das nicht.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "„Nein“ wählen oder Erwachsene fragen – ein Malprogramm braucht Kontakte und Mikrofon nicht.", "wert": 2 },
+        { "text": "Alles erlauben, dann funktioniert es bestimmt besser.", "wert": 0 },
+        { "text": "Schnell auf „Ja, immer“ tippen.", "wert": 0 }
+      ],
+      "erklaerung": "Wenn eine App mehr Rechte will, als sie für ihre Aufgabe braucht (Malen braucht keine Kontakte!), ist Vorsicht angesagt. Solche Berechtigungen kann man ablehnen und später einzeln erlauben. Im Zweifel: mit Erwachsenen entscheiden."
+    },
+    {
+      "id": "ff08",
+      "situation": "Du willst dich abmelden/dein Konto löschen. Der „Löschen“-Knopf ist winzig und grau, der „Bleiben“-Knopf riesig und bunt.",
+      "warnung": "Absichtlich schwer gemachtes Löschen.",
+      "frage": "Was bedeutet das?",
+      "optionen": [
+        { "text": "Das ist ein Trick, damit ich nicht lösche. Ich suche trotzdem den kleinen Knopf – Löschen ist mein Recht.", "wert": 2 },
+        { "text": "Dann bleibe ich halt, der große Knopf ist einfacher.", "wert": 0 },
+        { "text": "Ich gebe auf und lasse das Konto, obwohl ich es nicht will.", "wert": 1 }
+      ],
+      "erklaerung": "Wenn Bleiben leicht und Löschen schwer gemacht wird, ist das ein Dark Pattern. Dein Recht auf Löschung bleibt trotzdem (DSGVO Art. 17). Such den kleinen Knopf – und wenn du nicht weiterkommst, hilft ein Erwachsener."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Formular-Prüfer*in", "emoji": "📝" },
+    { "ab": 7, "titel": "Daten-Wächter*in", "emoji": "🛡️" },
+    { "ab": 12, "titel": "Falle-Entlarver*in", "emoji": "🕵️" },
+    { "ab": 15, "titel": "Formular-Falle-Profi", "emoji": "🏅" }
+  ]
+}

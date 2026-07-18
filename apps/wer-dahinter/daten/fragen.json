@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Spuren-Sucher*in", "emoji": "🔎" },
+    { "ab": 5, "titel": "Quellen-Kenner*in", "emoji": "📰" },
+    { "ab": 9, "titel": "Transparenz-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 12, "titel": "Wer-steckt-dahinter-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Autor",
+      "aussage": "Ein guter Beitrag sagt, WER ihn geschrieben hat – zum Beispiel mit einem Autoren-Namen oder dem Namen der Redaktion.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Wenn du weißt, wer etwas geschrieben hat, kannst du es besser einschätzen. Fehlt jeder Autor und jede Redaktion, ist Vorsicht angebracht – dann steht niemand für den Inhalt gerade."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Datum",
+      "aussage": "Das Datum eines Beitrags ist egal – Hauptsache, der Text klingt gut.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Das Datum ist wichtig: Eine Meldung von vor fünf Jahren kann längst überholt sein. Gute Beiträge zeigen, WANN sie veröffentlicht wurden, damit du weißt, ob die Info noch aktuell ist."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Quelle",
+      "aussage": "Wenn ein Artikel behauptet „Forscher sagen …“, aber nirgends steht, WELCHE Forscher oder woher die Info stammt, kann man das schlecht nachprüfen.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! „Forscher sagen“ ohne Quelle ist nicht nachprüfbar. Gute Beiträge nennen die Quelle (z. B. eine Studie, eine Behörde, einen Namen), damit du selbst nachschauen könntest. Ohne Quelle: skeptisch bleiben."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Transparenz",
+      "frage": "Welche drei Dinge machen einen Beitrag am ehesten nachprüfbar?",
+      "antworten": [
+        "Autor (wer schreibt), Datum (wann), Quelle (woher die Info stammt)",
+        "Viele bunte Bilder, große Schrift und Emojis",
+        "Eine spannende Überschrift und viele Ausrufezeichen",
+        "Möglichst viele Werbe-Banner"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Autor, Datum und Quelle sind die drei Transparenz-Merkmale. Wer schreibt? Wann? Woher weiß er das? Beiträge, die alle drei zeigen, kannst du besser einschätzen. Bilder und Überschriften sagen nichts über die Verlässlichkeit."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Autor",
+      "aussage": "Ein Text ohne jeden Autor, ohne Datum und ohne Quelle, der dich sofort sehr wütend machen will, ist besonders vertrauenswürdig.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – das ist eher ein Warnzeichen! Kein Autor, kein Datum, keine Quelle, aber starke Gefühle wecken: So sehen oft Falschmeldungen aus. Je mehr etwas dich aufregen will und je weniger nachprüfbar es ist, desto vorsichtiger sei."
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Quelle",
+      "frage": "In einem Artikel steht: „Laut dem Robert-Koch-Institut …“ und es gibt einen Link zur Original-Meldung. Wie ist das?",
+      "antworten": [
+        "Gut – die Quelle ist genannt und man könnte sie sogar nachlesen",
+        "Schlecht – Quellen sind unwichtig",
+        "Das ist bestimmt erfunden",
+        "Egal, Hauptsache spannend"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Eine benannte Quelle, die man nachlesen kann, ist ein Qualitätsmerkmal. So kannst du prüfen, ob wirklich stimmt, was der Artikel behauptet. Gute Kinderseiten und seriöse Nachrichten arbeiten so."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Datum",
+      "aussage": "Ein Foto kann echt sein, aber zu einer ganz anderen, älteren Situation gehören – deshalb hilft es, auf Datum und Zusammenhang zu achten.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Oft sind Bilder echt, werden aber in einem falschen Zusammenhang gezeigt (altes Foto, neue Behauptung). Auf Datum und Kontext zu achten, hilft dir, solche Tricks zu durchschauen."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Transparenz",
+      "frage": "Du liest etwas Spannendes, aber es gibt keinen Autor, kein Datum und keine Quelle. Was tust du?",
+      "antworten": [
+        "Vorsichtig bleiben, nicht sofort glauben und bei einer verlässlichen Quelle nachschauen",
+        "Sofort glauben und an alle weiterschicken",
+        "Nur wegen der schönen Bilder glauben",
+        "Böse Kommentare darunter schreiben"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Fehlen Autor, Datum und Quelle, glaub nicht sofort und leite es nicht weiter. Schau bei einer verlässlichen Quelle nach (z. B. Kindernachrichten) oder frag Erwachsene. So verbreitest du keine Falschmeldung."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Autor",
+      "frage": "Warum sagen gute Kinderseiten immer, wer einen Beitrag geschrieben hat?",
+      "antworten": [
+        "Damit du weißt, wer verantwortlich ist, und den Beitrag besser einschätzen kannst",
+        "Damit die Seite voller aussieht",
+        "Damit es mehr Werbung gibt",
+        "Das machen sie gar nicht"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein genannter Autor oder eine Redaktion zeigt: Hier steht jemand für den Inhalt gerade. Das ist Transparenz – und ein Merkmal guter, kindgerechter Angebote (fragFINN, Seitenstark)."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Transparenz",
+      "aussage": "Bevor du eine aufregende Meldung weiterschickst, ist es klug zu prüfen: Wer sagt das, wann und woher weiß er es?",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Die drei Detektiv-Fragen – Wer? Wann? Woher? – schützen dich und andere vor Falschmeldungen. Erst prüfen, dann (vielleicht) weiterschicken. Bei Zweifel lieber gar nicht weiterleiten."
+    },
+    {
+      "id": "w05",
+      "typ": "wahl",
+      "kategorie": "Quelle",
+      "frage": "Zwei Artikel behaupten das Gegenteil voneinander. Wie findest du heraus, welcher eher stimmt?",
+      "antworten": [
+        "Schauen, welcher Autor, Datum und eine nachprüfbare Quelle nennt",
+        "Der mit den größeren Bildern hat recht",
+        "Der mit den meisten Ausrufezeichen hat recht",
+        "Beide einfach glauben"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Bei widersprüchlichen Aussagen hilft die Transparenz: Welcher Beitrag nennt Autor, Datum und eine Quelle, die du nachlesen kannst? Der ist eher verlässlich. Bilder und Ausrufezeichen sagen nichts über die Wahrheit."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Datum",
+      "aussage": "„Aktuell“ steht drüber, aber der Beitrag hat gar kein Datum. Da kann man ruhig glauben, dass es neu ist.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – „aktuell“ ohne echtes Datum ist kein Beweis. Ohne Datum weißt du nicht, ob die Info neu oder uralt ist. Ein fehlendes Datum ist ein Grund, genauer hinzuschauen, nicht blind zu vertrauen."
+    }
+  ]
+}
