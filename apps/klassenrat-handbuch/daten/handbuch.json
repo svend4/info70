@@ -1,0 +1,29 @@
+{
+  "titel": "Klassenrat-Handbuch",
+  "untertitel": "In wenigen Schritten einen wöchentlichen Klassenrat führen – mit Mitmach-Arena & Kinderrat",
+  "zielgruppe": "Lehrkräfte (Klasse 2–6)",
+  "zweck": "Der Klassenrat ist eine feste, wöchentliche Sitzung, in der die Klasse eigene Anliegen bespricht und demokratisch entscheidet. Er stärkt Beteiligung (UN-KRK Art. 12) und Demokratiefähigkeit – und lässt sich mit den werbefreien Apps des Baukastens ganz ohne Server dokumentieren.",
+  "rollen": [
+    { "rolle": "Leitung", "emoji": "🙋", "aufgabe": "ruft auf, achtet auf die Redeliste und die Gesprächsregeln, hält die Tagesordnung ein." },
+    { "rolle": "Zeitwächter*in", "emoji": "⏱️", "aufgabe": "behält die Zeit im Blick und sagt Bescheid, wenn ein Punkt zu lange dauert." },
+    { "rolle": "Protokoll", "emoji": "📝", "aufgabe": "hält Beschlüsse fest und exportiert das Ergebnis als Klassen-Koffer-Datei (kein Server)." },
+    { "rolle": "Regel-Wächter*in", "emoji": "🤝", "aufgabe": "erinnert freundlich an die Gesprächsregeln: ausreden lassen, sachlich bleiben, alle dürfen mitreden." }
+  ],
+  "ablauf": [
+    { "nr": 1, "phase": "Ankommen & Positives", "text": "Kurze Runde: Was lief diese Woche gut? So startet der Klassenrat freundlich." },
+    { "nr": 2, "phase": "Tagesordnung", "text": "Anliegen aus dem Klassenrat-Briefkasten vorlesen und die Reihenfolge festlegen." },
+    { "nr": 3, "phase": "Besprechung", "text": "Pro Punkt: Wer hat das Anliegen? Meinungen sammeln über die Redeliste (Leitung ruft auf)." },
+    { "nr": 4, "phase": "Abstimmung", "text": "Mit der Mitmach-Arena oder dem Kinderrat abstimmen. Ergebnis mit kurzer Begründung festhalten." },
+    { "nr": 5, "phase": "Beschluss & Protokoll", "text": "Beschluss notieren, Verantwortliche benennen, als Klassen-Koffer-Datei sichern und ggf. als Plakat drucken." },
+    { "nr": 6, "phase": "Abschluss", "text": "Nächste Sitzung ankündigen. Der Briefkasten bleibt die Woche über offen." }
+  ],
+  "koffer": "Das Protokoll wird als „Klassen-Koffer“-Datei exportiert (Mitmach-Arena) und lokal gespeichert oder gedruckt – kein Server, keine Konten, keine Schülerdaten. Beschlüsse lassen sich so über Wochen sammeln.",
+  "apps": ["mitmach-arena", "kinderrat"],
+  "bezug": "UN-KRK Art. 12 (Beteiligung) · KMK-Empfehlung Demokratiebildung (2018) · BzKJ-Förderfokus Demokratiefähigkeit · Nationaler Aktionsplan Kinder- und Jugendbeteiligung.",
+  "tipps": [
+    "Fester Termin, feste Rituale: Der Klassenrat wirkt durch Regelmäßigkeit, nicht durch Perfektion.",
+    "Rollen rotieren lassen, damit alle Kinder Verantwortung üben (siehe auch Ämtli-Rad).",
+    "Beschlüsse ernst nehmen und umsetzen – sonst verliert das Verfahren an Glaubwürdigkeit.",
+    "Alle Apps laufen offline im Klassen-Modus, ohne Daten der Kinder."
+  ]
+}

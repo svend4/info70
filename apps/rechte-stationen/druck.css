@@ -1,0 +1,11 @@
+/* Stationenlernen: Druckansicht als Handreichung für Lehrkräfte.
+   Beim Drucken verschwinden Knöpfe/App-Links (.rs-nur-bildschirm). */
+
+@media print {
+  .rs-nur-bildschirm { display: none !important; }
+  html { font-size: 11pt; }
+  body { background: #fff; }
+  .k-app { max-width: none; min-height: auto; padding: 0; gap: 0.5rem; }
+  .k-titel { color: #000; }
+  .k-karte { box-shadow: none; border: 1.5pt solid #333; border-radius: 0.4rem; padding: 0.5rem 0.8rem; break-inside: avoid; }
+}

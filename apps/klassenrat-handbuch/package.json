@@ -1,0 +1,8 @@
+{
+  "name": "@info70/klassenrat-handbuch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Klassenrat-Handbuch fuer Lehrkraefte: Rollenkarten, Ablaufplan und Klassen-Koffer-Workflow, um mit Mitmach-Arena und Kinderrat einen woechentlichen Klassenrat zu fuehren. Druckbare OER-Anleitung, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

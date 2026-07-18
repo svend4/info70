@@ -1,0 +1,8 @@
+{
+  "name": "@info70/rechte-lexikon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kinderrechte-Lexikon in Leichter Sprache: jeder Artikel der UN-KRK in kurzen Saetzen, nach Bereich filterbar, mit Vorlesen (BFSG). Werbefrei, offline, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

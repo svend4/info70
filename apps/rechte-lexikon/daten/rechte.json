@@ -1,0 +1,25 @@
+{
+  "hinweis": "Kinderrechte (UN-KRK) in Leichter Sprache: kurze Sätze, einfache Wörter, ein Gedanke pro Satz. Zum Nachschlagen und Vorlesen (BFSG).",
+  "bereiche": [
+    { "id": "schutz", "name": "Schutz", "emoji": "🛡️" },
+    { "id": "foerderung", "name": "Förderung", "emoji": "🌱" },
+    { "id": "mitbestimmung", "name": "Mitbestimmung", "emoji": "🗣️" },
+    { "id": "digital", "name": "Im Netz", "emoji": "📱" }
+  ],
+  "artikel": [
+    { "nr": 2, "titel": "Alle Kinder sind gleich viel wert", "emoji": "🤝", "bereich": "schutz", "leichteSprache": "Alle Kinder haben die gleichen Rechte. Egal, woher du kommst. Egal, wie du aussiehst. Egal, was du glaubst. Niemand darf dich schlechter behandeln." },
+    { "nr": 3, "titel": "Das Wohl des Kindes zählt zuerst", "emoji": "⭐", "bereich": "schutz", "leichteSprache": "Erwachsene müssen zuerst an dich denken. Bei allem, was sie für dich entscheiden. Sie fragen: Was ist das Beste für das Kind?" },
+    { "nr": 6, "titel": "Recht auf Leben und Entwicklung", "emoji": "🌟", "bereich": "foerderung", "leichteSprache": "Du hast ein Recht zu leben. Und ein Recht, dich gut zu entwickeln. Du sollst gesund groß werden." },
+    { "nr": 12, "titel": "Deine Meinung wird gehört", "emoji": "🗣️", "bereich": "mitbestimmung", "leichteSprache": "Du darfst deine Meinung sagen. Bei Sachen, die dich betreffen. Erwachsene müssen dir zuhören. Zum Beispiel in der Familie und in der Schule." },
+    { "nr": 13, "titel": "Meinungs- und Informationsfreiheit", "emoji": "💬", "bereich": "mitbestimmung", "leichteSprache": "Du darfst sagen, was du denkst. Und du darfst dich informieren. Beleidigen ist aber nicht erlaubt." },
+    { "nr": 16, "titel": "Recht auf Privatsphäre", "emoji": "🔒", "bereich": "digital", "leichteSprache": "Dein Leben ist privat. Niemand darf einfach dein Tagebuch lesen. Oder deine Nachrichten. Auch Fotos von dir sind privat." },
+    { "nr": 17, "titel": "Zugang zu guten Informationen", "emoji": "📚", "bereich": "foerderung", "leichteSprache": "Du hast ein Recht auf gute Infos. Zum Beispiel im Fernsehen oder im Netz. Vor schlechten Sachen sollst du geschützt sein." },
+    { "nr": 19, "titel": "Schutz vor Gewalt", "emoji": "🛡️", "bereich": "schutz", "leichteSprache": "Niemand darf dir wehtun. Nicht mit Worten. Nicht mit den Händen. Hast du Angst? Sag es einer erwachsenen Person. Oder ruf an: 116 111. Das kostet nichts." },
+    { "nr": 23, "titel": "Kinder mit Behinderung", "emoji": "♿", "bereich": "foerderung", "leichteSprache": "Kinder mit Behinderung haben die gleichen Rechte. Sie sollen überall mitmachen können. Zum Beispiel in der Schule und beim Spielen." },
+    { "nr": 24, "titel": "Recht auf Gesundheit", "emoji": "💚", "bereich": "foerderung", "leichteSprache": "Du hast ein Recht, gesund zu sein. Du sollst zum Arzt gehen können. Und gutes Essen bekommen." },
+    { "nr": 28, "titel": "Recht auf Bildung", "emoji": "🎒", "bereich": "foerderung", "leichteSprache": "Du hast ein Recht, in die Schule zu gehen. Und etwas zu lernen. In der Schule darf niemand gemein zu dir sein." },
+    { "nr": 31, "titel": "Recht auf Spiel und Erholung", "emoji": "🎈", "bereich": "foerderung", "leichteSprache": "Du hast ein Recht zu spielen. Und ein Recht, dich auszuruhen. Pause und Freizeit sind wichtig. Das ist keine Belohnung, das ist dein Recht." },
+    { "nr": 32, "titel": "Schutz vor Ausbeutung", "emoji": "✋", "bereich": "schutz", "leichteSprache": "Kinder müssen nicht wie Erwachsene arbeiten. Niemand darf dich ausnutzen. Deine Kindheit ist wichtig." },
+    { "nr": 500, "titel": "Deine Rechte gelten auch im Netz", "emoji": "📱", "bereich": "digital", "leichteSprache": "Alle deine Rechte gelten auch im Internet. Du darfst mitreden. Du sollst geschützt sein. Deine Daten gehören dir. Das haben Erwachsene extra für das Netz aufgeschrieben." }
+  ]
+}

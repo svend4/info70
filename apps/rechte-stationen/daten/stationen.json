@@ -1,0 +1,23 @@
+{
+  "titel": "Stationenlernen: Deine Rechte, dein Netz",
+  "zielgruppe": "Klasse 3–6 (8–12 Jahre)",
+  "dauer": "2 Doppelstunden (ca. 180 Minuten)",
+  "lernziele": [
+    "Die Schüler*innen ordnen Alltags- und Netz-Situationen den vier Rechte-Bereichen zu (Schutz, Förderung, Beteiligung, digitale Rechte) und benennen passende UN-KRK-Artikel.",
+    "Sie erleben an vier Stationen mit den werbefreien Apps des Baukastens, dass ihre Rechte auch im Netz gelten und dass es für Probleme einen ersten Schritt gibt (z. B. Melden, 116 111).",
+    "Sie halten ihr Wissen auf einem gemeinsamen Rechte-Plakat fest, das im Klassenraum sichtbar bleibt."
+  ],
+  "stationen": [
+    { "nr": 1, "bereich": "🛡️ Schutz", "titel": "Schutz vor Gewalt & Hilfe holen", "apps": ["stark-im-chat", "kettenbrief-stopper"], "aufgabe": "Spielt eine Szene aus „Stark im Chat“ oder „Kettenbrief-Stopper“ durch. Notiert: Welches Recht (Art. 19) ist betroffen? Wer hilft – und wie erreicht man die Nummer gegen Kummer 116 111?", "artikel": "UN-KRK Art. 19" },
+    { "nr": 2, "bereich": "🌱 Förderung", "titel": "Bildung, Spiel & Erholung", "apps": ["takt-pause", "kinderrechte-entdecker"], "aufgabe": "Nutzt „Takt-Pause“ und den Förderrechte-Teil des „Kinderrechte-Entdeckers“. Schreibt auf: Warum sind Pause, Spiel und Erholung ein Recht (Art. 31) – und keine Belohnung?", "artikel": "UN-KRK Art. 28 & 31" },
+    { "nr": 3, "bereich": "🗣️ Beteiligung", "titel": "Mitreden & abstimmen", "apps": ["mitmach-arena", "kinderrat"], "aufgabe": "Führt in der „Mitmach-Arena“ oder im „Kinderrat“ eine kleine Abstimmung durch. Haltet fest: Wo dürft ihr in Schule und Familie mitentscheiden (Art. 12)? Exportiert das Ergebnis als Klassen-Koffer.", "artikel": "UN-KRK Art. 12 & 13" },
+    { "nr": 4, "bereich": "📱 Im Netz", "titel": "Deine Rechte digital", "apps": ["daten-schatz", "rechte-lexikon"], "aufgabe": "Bearbeitet Situationen im „Daten-Schatz“ und schlagt im „Kinderrechte-Lexikon“ nach. Notiert drei digitale Rechte (z. B. Privatsphäre Art. 16, Datenlöschung, keine Profil-Werbung).", "artikel": "UN-KRK Art. 16 & GC 25" }
+  ],
+  "plakat": "Jede Gruppe bringt ihr Stationsergebnis auf ein gemeinsames Rechte-Plakat: pro Bereich ein Symbol, der wichtigste Satz und der passende Artikel. Das Plakat bleibt im Klassenraum.",
+  "kompetenzen": "Medienkompetenzrahmen NRW (Analysieren & Reflektieren, Kommunizieren & Kooperieren) · KMK „Bildung in der digitalen Welt“ · UN-KRK & General Comment 25.",
+  "hinweise": [
+    "Alle Apps laufen offline im Browser, ohne Konten und ohne Datenspeicherung der Kinder (Klassen-Modus bei den Quizzen nutzen).",
+    "Sensibel bleiben: Beim Schutz-Thema keine echten Fälle im Plenum ausbreiten; bei Bedarf an Schulsozialarbeit verweisen.",
+    "OER: unter AGPL frei nutzbar, teilbar und anpassbar (CC-BY-Geist), komplett offline."
+  ]
+}

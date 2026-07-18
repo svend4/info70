@@ -1,0 +1,8 @@
+{
+  "name": "@info70/rechte-stationen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stationenlernen 'Deine Rechte, dein Netz' (Klasse 3-6, 2 Doppelstunden): vier Stationen zu Schutz, Foerderung, Beteiligung und digitalen Rechten mit den Apps des Baukastens. Druckbare OER-Einheit, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

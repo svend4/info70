@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**121 приложение (120 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**124 приложения (123 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 759 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 771 тест. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -122,6 +122,9 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 |---|---|---|
 | `kinderrechte-entdecker` | Права ребёнка: Schutz/Förderung/Beteiligung/Digital (51 вопр.) | база |
 | `rechte-kompass` | Высказать своё право: Mut-Sätze по статьям KRK | кат.№1 |
+| `rechte-lexikon` | Kinderrechte в Leichte Sprache + Vorlesen (справочник) | Ось B |
+| `rechte-stationen` | Учителю: Stationenlernen «Deine Rechte, dein Netz» (печать) | Ось B |
+| `klassenrat-handbuch` | Учителю: как вести классный совет (роли, ход, Koffer) | Ось B |
 | `chat-rechte` | Права в чате: свобода И ответственность | кат.№1 |
 | `kinderrat` | Режим заседания: повестка, голосование, протокол | кат.№1 |
 | `barriere-detektive` | Доступность = честность: чек-лист + рейтинг | кат.№1 |
