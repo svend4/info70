@@ -1,0 +1,8 @@
+{
+  "name": "@info70/familienschatz-reime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Familienschatz: Reime, Kniereiter, Fingerspiele und Wiegenlieder fuer Bindung und Sprachfoerderung - ganz ohne Bildschirmzeit fuers Kind. Erklaert die Methode (warum/wie je Art), bietet eigene, frei verwendbare Beispieltexte (vorlesbar) und einen lokalen Familien-Liederschatz zum Selbstsammeln in jeder Familiensprache (de/uk/ru u. a.). Beispieltexte sind Eigenproduktion. Praleska docs/10 (Top-30 Nr. 13). Werkzeug fuer Eltern, offline, werbefrei. Zielgruppe: Eltern/Familie.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

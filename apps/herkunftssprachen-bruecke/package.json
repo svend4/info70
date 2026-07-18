@@ -1,0 +1,8 @@
+{
+  "name": "@info70/herkunftssprachen-bruecke",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Herkunftssprachen-Bruecke uk/ru: Vorlese-Quiz zum Sprachvergleich Deutsch-Russisch-Ukrainisch fuer 8-12 (auch Eltern) auf @info70/quiz-kern. Bruecken-Woerter (Kognate/Internationalismen wie Telefon/Musik/Doktor) UND falsche Freunde (z. B. Dom != dom = Haus, Familie != familija = Nachname) - die Herkunftssprache als Schatz; kyrillische Woerter mit Transliteration. Praleska docs/10 (Top-30 Nr. 12). Offline, werbefrei, keine Datenerhebung. Zielgruppe: Kinder/Familie.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

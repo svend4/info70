@@ -1,0 +1,8 @@
+{
+  "name": "@info70/vorlese-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vorlese-Kompass 1-3: Anleitung zum dialogischen Vorlesen fuer Eltern. 7-Schritte-Methode (Titelbild, langsam lesen, offene Fragen, erweitern, aufs Leben beziehen, Wiederholung), Altersfenster 1-3 (was passt, Tipps) und ein Kanon geeigneter Buchtypen (Alltag/Tiere/Reim/Gefuehle/mehrsprachig) statt konkreter Titel - kostenlos aus der Bibliothek. Vorlesen in jeder Familiensprache. Praleska docs/10 (Top-30 Nr. 14). Werkzeug fuer Eltern, offline, werbefrei. Zielgruppe: Eltern.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

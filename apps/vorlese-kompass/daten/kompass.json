@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "hinweis": "Vorlesen ist die beste Sprachförderung – und Bindungszeit. Schon wenige Minuten täglich zählen. Wichtig: Vorlesen in jeder Familiensprache ist wertvoll; lesen Sie ruhig in der Sprache vor, in der Sie sich wohlfühlen (Deutsch, Ukrainisch, Russisch …). Bücher gibt es kostenlos in jeder Bibliothek.",
+  "methode": {
+    "name": "In 7 Schritten dialogisch vorlesen",
+    "schritte": [
+      "Gemütlich sitzen, Handy weg, ganz beim Kind sein.",
+      "Erst das Titelbild anschauen: „Was siehst du? Was passiert hier wohl?“",
+      "Langsam vorlesen und mit der Stimme spielen (laut/leise, schnell/langsam).",
+      "Offene Fragen stellen: „Warum?“, „Was meinst du?“ – nicht nur Ja/Nein.",
+      "Die Antwort aufgreifen und ein bisschen erweitern (neue Wörter anbieten).",
+      "Aufs eigene Leben beziehen: „Kennst du das auch? Wann war das bei dir?“",
+      "Ruhig wieder und wieder dasselbe Buch – Wiederholung lieben Kinder und sie hilft."
+    ]
+  },
+  "altersstufen": [
+    { "id": "bis1", "name": "bis 1 Jahr", "was": "Feste Pappbilderbücher mit großen, klaren Bildern von Alltagsdingen; kurze Reime und Fingerspiele.", "tipp": "Kurz halten (1–2 Minuten), das Kind darf am Buch ziehen und „mitlesen“." },
+    { "id": "1-2", "name": "1–2 Jahre", "was": "Bücher mit Alltag (Essen, Anziehen, Tiere, Fahrzeuge); Bild zeigen und benennen lassen.", "tipp": "„Wo ist der Hund?“ – zeigen lassen. Wörter wiederholen und benennen." },
+    { "id": "2-3", "name": "2–3 Jahre", "was": "Kurze Geschichten mit einfachem roten Faden; Wimmel- und Reimbücher; Gefühle-Bücher.", "tipp": "Nacherzählen lassen: „Was ist zuerst passiert? Und dann?“" }
+  ],
+  "kanon": [
+    { "id": "alltag", "emoji": "🏠", "art": "Alltags-Pappbilderbuch", "warum": "Vertraute Dinge (Essen, Anziehen) geben Wörter für den Tag." },
+    { "id": "tiere", "emoji": "🐘", "art": "Tier- und Fahrzeugbuch", "warum": "Lieblingsthemen motivieren zum Schauen, Benennen und Nachmachen von Lauten." },
+    { "id": "reim", "emoji": "🎵", "art": "Reim- und Wimmelbuch", "warum": "Reime schulen das Hören auf Laute; Wimmelbilder laden zum Erzählen ein." },
+    { "id": "gefuehle", "emoji": "💛", "art": "Gefühle-Buch", "warum": "Hilft, Gefühle zu benennen und über sie zu sprechen." },
+    { "id": "mehrsprachig", "emoji": "🌍", "art": "Mehrsprachiges/zweisprachiges Buch", "warum": "Verbindet Familiensprache und Deutsch – ein Schatz für mehrsprachige Familien." }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hinweis": "Reime, Kniereiter, Fingerspiele und Wiegenlieder stärken Bindung und Sprache – ohne jede Bildschirmzeit fürs Kind. Diese Sammlung erklärt die Methode und bietet eigene, frei verwendbare Beispieltexte. Der größte Schatz ist Ihr eigener: Sammeln Sie die Verse und Lieder Ihrer Familie – gern in Deutsch, Ukrainisch, Russisch oder jeder anderen Familiensprache.",
+  "arten": [
+    { "id": "kniereiter", "emoji": "🐴", "name": "Kniereiter", "warum": "Rhythmus, Körpernähe und Vorfreude auf das „Ende“ – Bindung und Sprachmelodie zugleich.", "wie": "Kind auf dem Schoß, im Takt wippen und beim Schluss sanft „fallen“ lassen." },
+    { "id": "fingerspiel", "emoji": "✋", "name": "Fingerspiel", "warum": "Verknüpft Wörter mit Bewegung – gut für Wortschatz und Feinmotorik.", "wie": "Zu jedem Vers die passende Fingerbewegung zeigen, das Kind macht mit." },
+    { "id": "wiegenlied", "emoji": "🌙", "name": "Wiegenlied", "warum": "Beruhigt, schafft ein Einschlaf-Ritual und schenkt Geborgenheit.", "wie": "Leise und langsam singen oder summen, immer dieselbe Melodie zum Einschlafen." },
+    { "id": "reim", "emoji": "🎵", "name": "Reim & Quatschvers", "warum": "Reime schulen das Hören auf Laute (phonologische Bewusstheit) – ein Vorläufer des Lesens.", "wie": "Gemeinsam sprechen, Reimwörter suchen, ruhig auch Quatschwörter erfinden." }
+  ],
+  "beispiele": [
+    { "id": "b1", "artId": "kniereiter", "titel": "Das kleine Pony (eigener Text)", "text": "Tapp, tapp, tapp, das Pony läuft, / über Wiese, über Feld. / Tapp, tapp, tapp, es wird ganz schnell – / hui, jetzt purzelt’s in die Welt!" },
+    { "id": "b2", "artId": "fingerspiel", "titel": "Fünf kleine Schnecken (eigener Text)", "text": "Fünf kleine Schnecken kriechen sacht, / eine schläft schon – gute Nacht. / Vier sind wach und wandern weit, / bis auch sie sind müd’ und bereit." },
+    { "id": "b3", "artId": "wiegenlied", "titel": "Schlaf nun ein (eigener Text)", "text": "Schlaf nun ein, mein kleiner Stern, / draußen leuchtet’s nah und fern. / Ich bin da, die ganze Nacht, / hab auf dich ganz gut Acht." },
+    { "id": "b4", "artId": "reim", "titel": "Was reimt sich? (eigener Text)", "text": "Die Maus, die läuft ins kleine … Haus. / Der Fisch, der springt vom hohen … Tisch. / Der Baum, der steht in meinem … Traum." }
+  ]
+}

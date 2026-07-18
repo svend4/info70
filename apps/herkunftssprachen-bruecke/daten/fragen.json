@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12 (auch Eltern / Herkunftssprache)",
+  "raenge": [
+    { "ab": 0, "titel": "Sprach-Entdecker*in", "emoji": "🌱" },
+    { "ab": 4, "titel": "Brücken-Bauer*in", "emoji": "🌉" },
+    { "ab": 8, "titel": "Wort-Detektiv*in", "emoji": "🔍" },
+    { "ab": 11, "titel": "Sprachen-Schatzmeister*in", "emoji": "💎" }
+  ],
+  "fragen": [
+    { "id": "b01", "typ": "binaer", "kategorie": "Brücken-Wörter", "aussage": "Das Wort „Telefon“ klingt auf Russisch (телефон – telefon) und Ukrainisch (телефон – telefon) fast genau gleich wie auf Deutsch.", "korrekt": "ja", "erklaerung": "Stimmt! „Telefon“ ist ein Wort, das viele Sprachen teilen. Solche Brücken-Wörter helfen dir, eine neue Sprache schneller zu verstehen. Deine Sprache ist ein Schatz." },
+    { "id": "b02", "typ": "wahl", "kategorie": "Brücken-Wörter", "frage": "Auf Russisch heißt es „музыка“ (muzyka), auf Ukrainisch „музика“ (muzyka). Was ist das auf Deutsch?", "antworten": ["Museum", "Musik", "Maus"], "korrekt": 1, "erklaerung": "„Musik“! Das Wort ist in vielen Sprachen ähnlich. Wer solche Ähnlichkeiten sucht, baut Brücken zwischen seinen Sprachen." },
+    { "id": "b03", "typ": "binaer", "kategorie": "Falsche Freunde", "aussage": "Das deutsche Wort „Dom“ (eine große Kirche) und das russische Wort „дом“ (dom) bedeuten dasselbe.", "korrekt": "nein", "erklaerung": "Aufpassen – das ist ein „falscher Freund“! Deutsch „Dom“ ist eine große Kirche, aber russisch „дом“ (dom) heißt „Haus“. Sie klingen gleich, meinen aber Verschiedenes." },
+    { "id": "b04", "typ": "wahl", "kategorie": "Falsche Freunde", "frage": "Das russische Wort „фамилия“ (familija) klingt wie „Familie“. Was heißt es wirklich?", "antworten": ["Familie", "Nachname", "Freund"], "korrekt": 1, "erklaerung": "Ein falscher Freund! „фамилия“ (familija) heißt „Nachname“, nicht „Familie“. Solche Wörter muss man extra lernen – dann macht man weniger Fehler." },
+    { "id": "b05", "typ": "binaer", "kategorie": "Brücken-Wörter", "aussage": "„Krokodil“ heißt auf Russisch „крокодил“ (krokodil) – fast gleich.", "korrekt": "ja", "erklaerung": "Ja! Tiernamen wie „Krokodil“ oder „Tiger“ (тигр – tigr) sind oft Brücken-Wörter. Wenn du sie erkennst, verstehst du schon viel." },
+    { "id": "b06", "typ": "wahl", "kategorie": "Brücken-Wörter", "frage": "Auf Russisch „шоколад“ (schokolad). Was ist das?", "antworten": ["Schule", "Schokolade", "Schaukel"], "korrekt": 1, "erklaerung": "„Schokolade“! Viele leckere Wörter reisen um die Welt. Solche Ähnlichkeiten machen das Sprachenlernen leichter." },
+    { "id": "b07", "typ": "binaer", "kategorie": "Familie", "aussage": "„Mama“ heißt auf Deutsch, Russisch (мама) und Ukrainisch (мама) fast gleich.", "korrekt": "ja", "erklaerung": "Ja! „Mama“ ist in ganz vielen Sprachen ähnlich. Auf Ukrainisch sagt man zum Papa oft „тато“ (tato). Jede Sprache in deiner Familie ist wertvoll." },
+    { "id": "b08", "typ": "binaer", "kategorie": "Falsche Freunde", "aussage": "Deutsch „Angel“ (zum Fische fangen) und russisch „ангел“ (angel) meinen dasselbe.", "korrekt": "nein", "erklaerung": "Falscher Freund! Deutsch „Angel“ ist zum Fische fangen. Russisch „ангел“ (angel) heißt „Engel“. Gleicher Klang, andere Bedeutung." },
+    { "id": "b09", "typ": "wahl", "kategorie": "Brücken-Wörter", "frage": "Auf Russisch „доктор“ (doktor), auf Ukrainisch „доктор“ (doktor). Was ist das?", "antworten": ["Doktor / Arzt", "Dach", "Dose"], "korrekt": 0, "erklaerung": "„Doktor“! Berufe wie Doktor sind oft Brücken-Wörter. Zwei Sprachen zu können ist eine echte Stärke." },
+    { "id": "b10", "typ": "binaer", "kategorie": "Vielfalt", "aussage": "Wenn ein Kind in der Klasse eine andere Sprache spricht, kann es den anderen etwas beibringen.", "korrekt": "ja", "erklaerung": "Genau! Jede Sprache ist ein Schatz. Fragt euch gegenseitig: „Wie sagt man das bei dir?“ – so lernen alle dazu." },
+    { "id": "b11", "typ": "wahl", "kategorie": "Brücken-Wörter", "frage": "Auf Russisch „автобус“ (avtobus). Was heißt das auf Deutsch?", "antworten": ["Automat", "(Auto-)Bus", "August"], "korrekt": 1, "erklaerung": "Der „Bus“! Im Wort „автобус“ steckt „Bus“. Wenn du im fremden Wort ein bekanntes Stück findest, kommst du der Bedeutung näher." },
+    { "id": "b12", "typ": "binaer", "kategorie": "Falsche Freunde", "aussage": "Deutsch „Krawatte“ (trägt man am Hals) und russisch „кровать“ (krovat’) meinen dasselbe.", "korrekt": "nein", "erklaerung": "Falscher Freund! „Krawatte“ trägt man am Hals; russisch „кровать“ (krovat’) heißt „Bett“. Klingt ähnlich, ist aber ganz anders." },
+    { "id": "b13", "typ": "wahl", "kategorie": "Vielfalt", "frage": "Warum ist es gut, mehr als eine Sprache zu können?", "antworten": ["Man kann mit mehr Menschen reden und denkt flexibler", "Es bringt gar nichts", "Nur um anzugeben"], "korrekt": 0, "erklaerung": "Mehr Sprachen heißt: mit mehr Menschen sprechen, in mehreren Welten zu Hause sein und oft leichter noch eine Sprache lernen. Deine Herkunftssprache ist ein Gewinn." },
+    { "id": "b14", "typ": "binaer", "kategorie": "Brücken-Wörter", "aussage": "„Lampe“ heißt auf Russisch „лампа“ (lampa) – fast gleich.", "korrekt": "ja", "erklaerung": "Ja! Viele Dinge im Haus haben ähnliche Namen. Sammle solche Brücken-Wörter – das ist wie ein Schatz, der beim Lernen hilft." }
+  ]
+}
