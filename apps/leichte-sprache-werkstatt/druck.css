@@ -1,0 +1,27 @@
+/* Arbeitsblatt-Werkstatt in Leichter Sprache: Druckansicht als Arbeitsblatt.
+   Beim Drucken verschwinden Auswahl, Knöpfe und Fußzeile (.ls-nur-bildschirm);
+   es bleibt ein großzügiges Arbeitsblatt mit Piktogrammen und kurzen Sätzen. */
+
+@media print {
+  .ls-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.9rem;
+    break-inside: avoid;
+  }
+}

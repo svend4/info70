@@ -1,0 +1,27 @@
+/* Schulfreigabe-Dossier: Druckansicht als amtlich wirkendes Prüfdokument.
+   Beim Drucken verschwinden Formular und Knöpfe (.sd-nur-bildschirm);
+   es bleibt die Dossier-Vorschau als ruhiges Dokument übrig. */
+
+@media print {
+  .sd-nur-bildschirm { display: none !important; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .k-karte {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  #sd-preview { font-size: 10.5pt; }
+}

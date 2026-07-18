@@ -1,0 +1,113 @@
+{
+  "hinweis": "Leichte Sprache: kurze Sätze, ein Gedanke pro Satz, bekannte Wörter, Piktogramme. BFSG/EAA, für Kinder mit Lese- oder Lernbeeinträchtigung.",
+  "blaetter": [
+    {
+      "id": "kettenbrief",
+      "titel": "Kettenbrief",
+      "piktogramm": "🔗",
+      "bezug": "stundenentwurf-kettenbrief",
+      "begriffe": [
+        { "wort": "Kettenbrief", "piktogramm": "🔗", "erklaerung": "Eine Nachricht sagt: Schick mich an viele Leute weiter. Das ist ein Kettenbrief." },
+        { "wort": "Drohung", "piktogramm": "⚠️", "erklaerung": "Manche Kettenbriefe machen Angst. Sie sagen: Sonst passiert dir was. Das stimmt nicht." }
+      ],
+      "saetze": [
+        "Ein Kettenbrief will, dass du ihn weiter schickst.",
+        "Die Drohungen im Kettenbrief sind erfunden.",
+        "Du musst einen Kettenbrief nicht weiter schicken.",
+        "Bei mir hört der Kettenbrief auf.",
+        "Macht dir ein Kettenbrief Angst? Sag es einem Erwachsenen. Oder ruf an: 116 111."
+      ],
+      "aufgabe": "Male ein Bild: Der Kettenbrief hört bei dir auf."
+    },
+    {
+      "id": "passwort",
+      "titel": "Passwort",
+      "piktogramm": "🔑",
+      "bezug": "stundenentwurf-datenschatz",
+      "begriffe": [
+        { "wort": "Passwort", "piktogramm": "🔑", "erklaerung": "Ein Passwort ist ein geheimes Wort. Es schützt deine Sachen im Internet." },
+        { "wort": "Geheim", "piktogramm": "🤫", "erklaerung": "Geheim heißt: Nur du weißt es. Sonst niemand." }
+      ],
+      "saetze": [
+        "Dein Passwort ist geheim.",
+        "Sag dein Passwort niemandem. Auch keinem Freund.",
+        "Deine Eltern dürfen dir helfen.",
+        "Ein gutes Passwort ist lang und schwer zu raten.",
+        "Fragt dich jemand nach deinem Passwort? Sag Nein."
+      ],
+      "aufgabe": "Kreuze an: Wem sage ich mein Passwort? Niemandem."
+    },
+    {
+      "id": "algorithmus",
+      "titel": "Algorithmus",
+      "piktogramm": "🌀",
+      "bezug": "stundenentwurf-feed",
+      "begriffe": [
+        { "wort": "Algorithmus", "piktogramm": "🌀", "erklaerung": "Ein Algorithmus ist eine Regel für den Computer. Er wählt aus, was du siehst." },
+        { "wort": "Feed", "piktogramm": "📱", "erklaerung": "Der Feed ist die Liste von Videos oder Bildern in einer App." }
+      ],
+      "saetze": [
+        "Ein Algorithmus zeigt dir immer mehr vom Gleichen.",
+        "Der Algorithmus misst deine Klicks. Nicht die Wahrheit.",
+        "Jeder Mensch sieht einen anderen Feed.",
+        "Such auch mal etwas Neues. Dann wird dein Feed bunter.",
+        "Du entscheidest, wie lange du schaust."
+      ],
+      "aufgabe": "Schreibe auf: Ein neues Thema, das ich suchen will."
+    },
+    {
+      "id": "chat",
+      "titel": "Nett im Chat",
+      "piktogramm": "💬",
+      "bezug": "stundenentwurf-chat",
+      "begriffe": [
+        { "wort": "Chat", "piktogramm": "💬", "erklaerung": "Im Chat schreiben Menschen sich Nachrichten. Zum Beispiel im Spiel." },
+        { "wort": "Gemein sein", "piktogramm": "😢", "erklaerung": "Jemand wird immer wieder geärgert. Das nennt man auch Mobbing." }
+      ],
+      "saetze": [
+        "Sei nett im Chat.",
+        "Siehst du, dass jemand gemein ist? Du kannst helfen.",
+        "Schreib der Person: Ich mag das nicht.",
+        "Melde Gemeinheiten mit dem Melde-Knopf.",
+        "Hol einen Erwachsenen. Oder ruf an: 116 111."
+      ],
+      "aufgabe": "Übe einen netten Satz für den Chat."
+    },
+    {
+      "id": "echt-oder-fake",
+      "titel": "Echt oder Fake",
+      "piktogramm": "🕵️",
+      "bezug": "stundenentwurf-nachrichten",
+      "begriffe": [
+        { "wort": "Fake", "piktogramm": "🎭", "erklaerung": "Fake heißt: erfunden oder falsch. Es ist nicht echt." },
+        { "wort": "Quelle", "piktogramm": "🔍", "erklaerung": "Die Quelle ist: Wer sagt das? Woher weiß die Person das?" }
+      ],
+      "saetze": [
+        "Nicht alles im Internet ist echt.",
+        "Frag: Wer sagt das? Woher weiß die Person das?",
+        "Geteilt heißt nicht wahr.",
+        "Bei einem Bild frag: Kann das wirklich sein?",
+        "Bist du unsicher? Frag einen Erwachsenen."
+      ],
+      "aufgabe": "Prüfe eine Nachricht mit der Frage: Wer sagt das?"
+    },
+    {
+      "id": "bildschirm-zeit",
+      "titel": "Bildschirm-Zeit",
+      "piktogramm": "⏰",
+      "bezug": "stundenentwurf-bildschirmwoche",
+      "begriffe": [
+        { "wort": "Pause", "piktogramm": "⏸️", "erklaerung": "Eine Pause heißt: Du hörst kurz auf. Deine Augen ruhen sich aus." },
+        { "wort": "Bildschirm-Zeit", "piktogramm": "⏰", "erklaerung": "Bildschirm-Zeit ist: Wie lange du am Handy oder Tablet bist." }
+      ],
+      "saetze": [
+        "Mach Pausen am Bildschirm.",
+        "Merkst du, dass es zu viel ist? Dann hör auf.",
+        "Beweg dich und geh nach draußen.",
+        "Schlaf ist wichtig. Das Handy schläft woanders.",
+        "Du darfst selbst Stopp sagen."
+      ],
+      "aufgabe": "Wähle eine Pause-Idee für diese Woche."
+    }
+  ]
+}

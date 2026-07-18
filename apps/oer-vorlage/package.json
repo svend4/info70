@@ -1,0 +1,8 @@
+{
+  "name": "@info70/oer-vorlage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OER-Bausteinvorlage 'info70-Unterrichtsstunde': standardisierte CC-BY-Vorlage mit Phasenraster, Kompetenz-Mapping (NRW/KMK), JSON-Schema und druckbarem Blanko-Formular, aus der alle Stundenentwuerfe gebaut werden. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

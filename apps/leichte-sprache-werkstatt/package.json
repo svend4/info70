@@ -1,0 +1,8 @@
+{
+  "name": "@info70/leichte-sprache-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Arbeitsblatt-Werkstatt in Leichter Sprache: zu jedem Stundenentwurf ein Arbeitsblatt mit kurzen Saetzen, Piktogrammen und Vorlese-Funktion - BFSG-konform fuer Kinder mit Lese- oder Lernbeeintraechtigung. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

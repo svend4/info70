@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**108 приложений (107 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**111 приложений (110 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 658 тестов.
+Полный прогон: 676 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -160,6 +160,9 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `stundenentwurf-bildschirmwoche` | Разработка урока «Meine Bildschirmwoche»: медианеделя, 45 мин | Ось E |
 | `klassen-koffer-auswertung` | Учителю: импорт анонимных результатов → heatmap класса | Ось E |
 | `stations-konfigurator` | Учителю: учебные станции, deep-ссылки, маршрутный лист | Ось E |
+| `oer-vorlage` | OER-шаблон (CC-BY) конспекта: растр фаз, NRW/KMK, схема, бланк | Ось E |
+| `schulfreigabe-dossier` | DSB школы: досье «Null-Daten-Nachweis» (печать) | Ось E |
+| `leichte-sprache-werkstatt` | Инклюзия: рабочие листы на Лёгком языке + Vorlesen (BFSG) | Ось E |
 | `elternabend-kit` | Родительский вечер 60 мин + раздатка de/uk/ru | кат.№1 |
 | `kriterien-check` | Self-audit оператора + экспорт .txt/.json/печать | база |
 | `eltern-rechtebriefe` | Шаблоны писем DSGVO (Art. 15/17/7), имя не хранится | кат.№1 |

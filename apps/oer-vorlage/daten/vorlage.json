@@ -1,0 +1,39 @@
+{
+  "titel": "OER-Bausteinvorlage „info70-Unterrichtsstunde“",
+  "untertitel": "Standardisierte CC-BY-Vorlage für alle Stundenentwürfe",
+  "lizenz": "CC-BY 4.0 (OER – frei nutzbar, teilen und anpassen mit Namensnennung)",
+  "abschnitte": [
+    { "feld": "Titel & Untertitel", "hinweis": "Kurzer, einladender Titel plus ein Untertitel, der Thema und Kompetenz benennt." },
+    { "feld": "Zielgruppe", "hinweis": "Klassenstufe und Alter, z. B. „Klasse 5–7 (10–13 Jahre)“." },
+    { "feld": "Lernziele", "hinweis": "2–3 überprüfbare Ziele („Die Schüler*innen können …“), je ein Kompetenzbereich." },
+    { "feld": "Ablauf", "hinweis": "Phasen mit Minuten und Handlungsschritten, Summe 45 oder 90 Minuten." },
+    { "feld": "Arbeitsblatt / Sicherung", "hinweis": "Druckbare Aufgaben, die die Stunde sichern (offline nutzbar)." },
+    { "feld": "Differenzierung", "hinweis": "Leichter/schwerer, inkl. Leichte-Sprache-Variante und Vorlese-Option (BFSG)." },
+    { "feld": "Kompetenz-Mapping", "hinweis": "Zuordnung zu Medienkompetenzrahmen NRW und KMK-Strategie." },
+    { "feld": "Bezug", "hinweis": "Rechte-/Lehrplan-Bezug (UN-KRK, DSGVO, DSA, AI Act, JuSchG) und die genutzte App." }
+  ],
+  "phasen": [
+    { "phase": "Einstieg", "minuten": "8–15", "zweck": "Vorwissen aktivieren, Neugier wecken, Ziel transparent machen." },
+    { "phase": "Erarbeitung", "minuten": "15–30", "zweck": "Kern am Beamer/Klassen-Modus oder in Stationen erarbeiten." },
+    { "phase": "Vertiefung", "minuten": "15–30", "zweck": "Anwenden, üben, offline sichern (Gruppen-/Partnerarbeit)." },
+    { "phase": "Sicherung", "minuten": "0–10", "zweck": "Merkplakat/Regel festhalten, Hilfewege ergänzen." },
+    { "phase": "Abschluss", "minuten": "7–15", "zweck": "Blitzlicht, Transfer/Vorsatz, Ergebnis im Raum sichtbar machen." }
+  ],
+  "kompetenzrahmen": [
+    { "name": "Medienkompetenzrahmen NRW", "bereiche": ["Bedienen & Anwenden", "Informieren & Recherchieren", "Kommunizieren & Kooperieren", "Produzieren & Präsentieren", "Analysieren & Reflektieren", "Problemlösen & Modellieren"] },
+    { "name": "KMK „Bildung in der digitalen Welt“", "bereiche": ["Suchen, Verarbeiten & Aufbewahren", "Kommunizieren & Kooperieren", "Produzieren & Präsentieren", "Schützen & sicher Agieren", "Problemlösen & Handeln", "Analysieren & Reflektieren"] }
+  ],
+  "schema": {
+    "datei": "daten/stunde.json",
+    "felder": ["titel", "untertitel", "zielgruppe", "app", "appName", "lernziele[]", "ablauf[{minuten,phase,text}]", "arbeitsblatt[]", "hinweise[]", "bezug"],
+    "regeln": ["ablauf beginnt mit Einstieg und endet mit Abschluss", "Summe der Minuten = 45 oder 90", "Lernziele überprüfbar formuliert", "keine externen Links"]
+  },
+  "beispiele": [
+    { "app": "stundenentwurf-chat", "titel": "Worte wie Fäuste (Cybermobbing)" },
+    { "app": "stundenentwurf-datenschatz", "titel": "Mein Datenschatz (Datenschutz)" },
+    { "app": "stundenentwurf-feed", "titel": "Mein Feed, deine Blase (Algorithmen)" },
+    { "app": "stundenentwurf-kettenbrief", "titel": "Stopp die Kette (Kettenbriefe)" },
+    { "app": "stundenentwurf-nachrichten", "titel": "Echt oder Fake? (Nachrichten)" },
+    { "app": "stundenentwurf-bildschirmwoche", "titel": "Meine Bildschirmwoche (Mediennutzung)" }
+  ]
+}
