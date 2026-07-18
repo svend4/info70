@@ -1,0 +1,8 @@
+{
+  "name": "@info70/vorsorge-check-juschg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vorsorge-Check Paragraf 24a JuSchG fuer Kinderangebote: Selbstaudit entlang der Vorsorgemassnahmen (sichere Voreinstellungen, Melde- und Abhilfeverfahren, Einordnungs- und Elterninformationen, Verzicht auf Risiko-Features) mit AMPEL-Bewertung und exportierbarem Ampel-Bericht fuer BzKJ-Aufsicht und Foerderantraege. JuSchG/DSA. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

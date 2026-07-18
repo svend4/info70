@@ -1,0 +1,94 @@
+{
+  "quelle": "§ 24a JuSchG – Vorsorgemaßnahmen für Kinder und Jugendliche, ergänzt um DSA (sinngemäß, öffentlich recherchiert)",
+  "hinweis": "Selbstaudit entlang der Vorsorgemaßnahmen des § 24a JuSchG. Bewerte jedes Kriterium per Ampel: 🟢 erfüllt, 🔴 offen, ⚪ nicht anwendbar. Kein offizielles Ergebnis. Diese App stellt keine externen Anfragen; Bewertung und Bericht bleiben auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "voreinstellungen",
+      "name": "Sichere Voreinstellungen",
+      "emoji": "🔒",
+      "kriterien": [
+        {
+          "id": "v-default-privat",
+          "text": "Profile und Beiträge Minderjähriger sind standardmäßig privat bzw. nicht öffentlich auffindbar.",
+          "hilfe": "§ 24a Abs. 2 Nr. 1 JuSchG nennt voreingestellte Nutzungsrisiken minimierende Einstellungen. Sichere Defaults dürfen nicht erst aktiviert werden müssen.",
+          "bezug": "JuSchG § 24a Abs. 2 Nr. 1"
+        },
+        {
+          "id": "v-standort-aus",
+          "text": "Standortfreigabe ist standardmäßig ausgeschaltet.",
+          "hilfe": "Standortdaten von Kindern sind besonders sensibel. Voreinstellung: aus. Aktivierung nur bewusst und mit klarer Erklärung.",
+          "bezug": "JuSchG § 24a; DSGVO Art. 25"
+        },
+        {
+          "id": "v-kontakt-eingeschraenkt",
+          "text": "Kontaktaufnahme durch Fremde ist voreingestellt eingeschränkt (kein offener Fremdkontakt).",
+          "hilfe": "Voreingestellte Einschränkung von Kontakt- und Auffindbarkeitsfunktionen gehört zu den Vorsorgemaßnahmen. Kontakt nur nach Bestätigung.",
+          "bezug": "JuSchG § 24a Abs. 2"
+        }
+      ]
+    },
+    {
+      "id": "melden",
+      "name": "Melde- und Abhilfeverfahren",
+      "emoji": "📮",
+      "kriterien": [
+        {
+          "id": "m-melde",
+          "text": "Es gibt ein einfaches, gut auffindbares Melde- und Abhilfeverfahren.",
+          "hilfe": "§ 24a Abs. 2 Nr. 2 JuSchG verlangt Melde- und Abhilfeverfahren. Für Kinder niedrigschwellig, verständlich, mit spürbarer Reaktion. Siehe Meldewege-Planer.",
+          "bezug": "JuSchG § 24a Abs. 2 Nr. 2; DSA Art. 16"
+        },
+        {
+          "id": "m-reaktion",
+          "text": "Gemeldete Inhalte werden zeitnah gesichtet und bearbeitet; Wiederholungsfälle werden begrenzt.",
+          "hilfe": "Ein Meldeweg wirkt nur mit Reaktion. Lege Reaktionszeiten und Zuständigkeiten fest und dokumentiere sie.",
+          "bezug": "JuSchG § 24a; DSA Art. 16/20"
+        }
+      ]
+    },
+    {
+      "id": "information",
+      "name": "Einordnungs- & Elterninformationen",
+      "emoji": "ℹ️",
+      "kriterien": [
+        {
+          "id": "i-einordnung",
+          "text": "Es gibt Hilfen zur Einordnung von Inhalten (Alterskennzeichnung/Hinweise).",
+          "hilfe": "§ 24a Abs. 2 Nr. 4 JuSchG nennt Einordnungshilfen. Kinder und Eltern sollen einschätzen können, was sie erwartet.",
+          "bezug": "JuSchG § 24a Abs. 2 Nr. 4"
+        },
+        {
+          "id": "i-eltern",
+          "text": "Eltern erhalten verständliche Informationen (z. B. Eltern-Kompass) zum sicheren Umgang.",
+          "hilfe": "Elterninformationen und Begleitangebote sind Teil der Vorsorge. Ein Eltern-Kompass je Angebot erfüllt das gut (siehe Eltern-Kompass-Generator).",
+          "bezug": "JuSchG § 24a; UN-KRK"
+        },
+        {
+          "id": "i-beratung",
+          "text": "Es wird auf Beratungs- und Hilfeangebote hingewiesen (z. B. Nummer gegen Kummer 116 111).",
+          "hilfe": "Hinweise auf Hilfe- und Beschwerdemöglichkeiten gehören zur Vorsorge. 116 111 ist kostenlos und anonym.",
+          "bezug": "JuSchG § 24a Abs. 2"
+        }
+      ]
+    },
+    {
+      "id": "risiko",
+      "name": "Verzicht auf Risiko-Features",
+      "emoji": "🚫",
+      "kriterien": [
+        {
+          "id": "r-kein-offener-chat",
+          "text": "Auf offenen Chat mit Fremden wird verzichtet oder er ist wirksam moderiert/abgesichert.",
+          "hilfe": "Offener Fremdkontakt ist ein Kernrisiko (Grooming). Am sichersten: gar nicht anbieten; sonst nur moderiert und in geschützten Räumen.",
+          "bezug": "JuSchG § 24a; DSA Art. 28"
+        },
+        {
+          "id": "r-keine-sog-mechaniken",
+          "text": "Auf riskante Bindungs-/Kostenmechaniken (endloses Scrollen, Lootboxen, Druck-Features) wird verzichtet.",
+          "hilfe": "Vorsorge heißt auch, exzessive Nutzung und Kostenfallen zu vermeiden. Prüfe Autoplay, Streaks, glücksspielähnliche Elemente.",
+          "bezug": "JuSchG § 24a; DSA Art. 25"
+        }
+      ]
+    }
+  ]
+}

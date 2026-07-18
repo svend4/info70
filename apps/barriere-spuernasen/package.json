@@ -1,0 +1,8 @@
+{
+  "name": "@info70/barriere-spuernasen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Barriere-Spuernasen (Kinder 8-12): kleiner Simulator, in dem Kinder dieselbe Beispielseite mit und ohne Barrierefreiheit erleben (Kontrast, Schriftgroesse, Vorlese-Funktion, Bildbeschreibung) und die Merkmale einzeln einschalten. Lernziel: gute Kinderseiten funktionieren fuer ALLE Kinder (UN-KRK Art. 23, BFSG/EAA).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
