@@ -1,0 +1,8 @@
+{
+  "name": "@info70/app-shell",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/render.js"
+  }
+}
