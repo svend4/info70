@@ -43,9 +43,9 @@ test('Haltung: kein Verbots-Abend - loben statt schimpfen, gemeinsam statt heiml
 });
 
 test('Handout-i18n: uk und ru decken exakt dieselben Schlüssel ab wie de (Vollständigkeitstest)', () => {
-  assert.deepEqual(Object.keys(kataloge).sort(), ['de', 'ru', 'uk']);
+  assert.deepEqual(Object.keys(kataloge).sort(), ['de', 'en', 'ru', 'uk']);
   const deSchluessel = Object.keys(kataloge.de).sort();
-  for (const code of ['uk', 'ru']) {
+  for (const code of ['en', 'uk', 'ru']) {
     assert.deepEqual(Object.keys(kataloge[code]).sort(), deSchluessel, `${code}: Schlüssel weichen von de ab`);
     for (const [k, wert] of Object.entries(kataloge[code])) {
       if (Array.isArray(kataloge.de[k])) {
@@ -59,7 +59,7 @@ test('Handout-i18n: uk und ru decken exakt dieselben Schlüssel ab wie de (Volls
 });
 
 test('Handout-Substanz: alle 4 Module, Hilfe-Nummern und Eine-Sache-Regel in jeder Sprache', () => {
-  for (const code of ['de', 'uk', 'ru']) {
+  for (const code of ['de', 'en', 'uk', 'ru']) {
     const k = kataloge[code];
     for (const m of ['kettenbriefe', 'kostenfallen', 'sharenting', 'voreinstellungen']) {
       assert.ok(k[`m_${m}_titel`] && k[`m_${m}_text`], `${code}: Modul ${m} fehlt`);

@@ -22,7 +22,7 @@ function render() {
       el('section', { class: 'k-karte' },
         el('p', { style: 'font-weight:600;margin-top:0' }, 'Sprache · Мова · Язык:'),
         el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap' },
-          ...[['de', 'Deutsch'], ['uk', 'Українська'], ['ru', 'Русский']].map(([code, name]) =>
+          ...[['de', 'Deutsch'], ['en', 'English'], ['uk', 'Українська'], ['ru', 'Русский']].map(([code, name]) =>
             el('button', {
               class: `k-knopf k-knopf--klein ${sprache.aktuelle() === code ? '' : 'k-knopf--neutral'}`,
               'aria-pressed': String(sprache.aktuelle() === code),

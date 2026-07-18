@@ -8,6 +8,7 @@ import { erstelleSprache } from '../../packages/kinder-ui/js/sprache.mjs';
 import { leichteSpracheSchalter, basisCode } from '../../packages/kinder-ui/js/leichte-sprache.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { setzeRichtung } from '../../packages/kinder-ui/js/richtung.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
@@ -15,6 +16,7 @@ bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 const app = document.getElementById('app');
 const kataloge = await fetch('daten/sprachen.json').then((r) => r.json());
 const sprache = erstelleSprache({ kataloge, standard: 'de', speicherSchluessel: 'ff.sprache' });
+setzeRichtung(sprache.aktuelle()); // Schreibrichtung nach gespeicherter Sprache (RTL-tauglich)
 const t = (k, e) => sprache.t(k, e);
 
 const THEMEN = ['katzen', 'fussball', 'weltraum', 'backen', 'dinos', 'musik'];
@@ -52,7 +54,7 @@ function sprachWahl() {
         el('button', {
           class: `k-knopf k-knopf--klein ${basis === code ? '' : 'k-knopf--neutral'}`,
           'aria-pressed': String(basis === code),
-          onclick: () => { sprache.setze(code); startBildschirm(); },
+          onclick: () => { sprache.setze(code); setzeRichtung(code); startBildschirm(); },
         }, name))),
     // Leichte-Sprache-Schalter (BFSG): erscheint nur, weil ein de-ls-Katalog
     // existiert. Zentral in kinder-ui gebaut - jede App mit '-ls'-Fassung nutzt ihn.

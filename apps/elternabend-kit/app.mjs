@@ -42,7 +42,7 @@ function folien() {
     })),
     { titel: '🗣️ Ihre Runde', punkte: kit.diskussionskarten.slice(0, 3).map((k) => k.frage) },
     { titel: '💛 Wenn etwas passiert ist', punkte: kit.hilfen },
-    { titel: '🎯 Zum Mitnehmen', punkte: ['Eine Sache aussuchen und diese Woche ausprobieren.', 'Das Handout gibt es auf Deutsch, Ukrainisch und Russisch.', 'Danke, dass Sie da waren!'] },
+    { titel: '🎯 Zum Mitnehmen', punkte: ['Eine Sache aussuchen und diese Woche ausprobieren.', 'Das Handout gibt es auf Deutsch, Englisch, Ukrainisch und Russisch.', 'Danke, dass Sie da waren!'] },
   ];
   let i = 0;
 
@@ -76,7 +76,7 @@ function moderationsBildschirm() {
       el('p', { style: 'margin-top:0' }, 'Alles für einen Elternabend ohne Vorbereitung am Wochenende: Ablauf, Folien für den Beamer, zwei Live-Demos mit Drehbuch, Diskussionskarten und ein dreisprachiges Handout. Ein Beamer und dieser Browser genügen – alles läuft offline.'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: folien }, '📽️ Folien-Modus starten (Beamer)'),
-        el('a', { class: 'k-knopf k-knopf--neutral', style: 'text-decoration:none;text-align:center', href: 'handout.html' }, '📄 Handout ansehen & drucken (de/uk/ru)'),
+        el('a', { class: 'k-knopf k-knopf--neutral', style: 'text-decoration:none;text-align:center', href: 'handout.html' }, '📄 Handout ansehen & drucken (de/en/uk/ru)'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => window.print() }, '🖨️ Diese Moderations-Seite drucken'))),
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `🕐 Ablauf (${gesamt} Minuten)`),

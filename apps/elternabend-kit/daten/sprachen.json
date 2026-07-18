@@ -42,6 +42,49 @@
     ],
     "fussnote": "Dieses Handout gehört zum werbefreien Werkzeugkasten „Kinder-Werkstatt“: Lernspiele und Übungen ohne Anmeldung, ohne Werbung, ohne fremde Server."
   },
+  "en": {
+    "titel": "Digital at home – the key points from the parents' evening",
+    "untertitel": "Handout to take home · ad-free · handed out by the school",
+    "intro": "Four topics, four times three tips. Everything here you can do at home without prior knowledge – and the practice apps mentioned are free, ad-free and usable without any sign-up.",
+    "m_kettenbriefe_titel": "🛑 Chain letters & scare messages",
+    "m_kettenbriefe_text": "Chain letters threaten (“If you don't forward this, something bad will happen”) or lure. Their goal: the child should forward at once, without thinking. Children often forward to protect their friends – that is care, not nonsense.",
+    "m_kettenbriefe_tipps": [
+      "Stay calm and explain: the threat is a trick – none of it really happens.",
+      "Praise your child when they show you such a message. Never scold – otherwise they won't show you the next one.",
+      "Delete it together and write to the group: “Stop, this is a chain letter.” Your child can practise this in the app Kettenbrief-Stopper."
+    ],
+    "m_kostenfallen_titel": "🎁 Cost traps & loot boxes",
+    "m_kostenfallen_text": "Many “free” games earn money through surprise boxes: you don't buy the item you want, only a tiny chance of it. Small amounts add up through repetition.",
+    "m_kostenfallen_tipps": [
+      "Lock in-app purchases with a password and store no payment details on the child's device.",
+      "Before the first wish to buy, talk about the mechanics: a loot box is a lottery ticket, not a prize.",
+      "Ask your child to show you their favourite game and take an interest in what can be bought there. The app Lootbox-Labor lets you try out the mechanics."
+    ],
+    "m_sharenting_titel": "📸 Sharenting – photos of children online",
+    "m_sharenting_text": "Adults share children's data too: first-day-of-school photos, funny videos, illness stories. Your child has a right to their own image – even towards their own parents. Once online, copies are always possible.",
+    "m_sharenting_tipps": [
+      "Ask first – even small children understand: “May I post this?”",
+      "Nothing embarrassing, nothing in swimwear; keep face and school as unrecognisable as possible.",
+      "When in doubt share privately rather than publicly – or not at all."
+    ],
+    "m_voreinstellungen_titel": "🔒 Safe default settings in 15 minutes",
+    "m_voreinstellungen_text": "Families set up the device basics themselves – ideally together with the child. Setting up together protects twice over: it secures the device and opens up the conversation.",
+    "m_voreinstellungen_tipps": [
+      "Set profiles to private, allow contact only after confirmation, turn off location sharing.",
+      "Require a password for installations and purchases.",
+      "Write down rules that apply to everyone – for example with the Familien-Medienvertrag to fill in together."
+    ],
+    "probier_titel": "🎯 Try this week",
+    "probier_text": "Pick ONE thing from this sheet and put it into practice this week. One small thing actually done works better than ten good intentions.",
+    "hilfe_titel": "💛 If something has happened",
+    "hilfe_liste": [
+      "Nummer gegen Kummer for children and teens: 116 111 (free, anonymous)",
+      "Parents' helpline (Elterntelefon): 0800 111 0 550 (free, anonymous)",
+      "jugendschutz.net – report violations online",
+      "Class teacher and school social work – the short routes first"
+    ],
+    "fussnote": "This handout is part of the ad-free toolbox “Kinder-Werkstatt”: learning games and exercises with no sign-up, no ads, no third-party servers."
+  },
   "uk": {
     "titel": "Цифровий дім – головне з батьківських зборів",
     "untertitel": "Пам’ятка додому · без реклами · роздано школою",

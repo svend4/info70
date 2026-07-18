@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 739 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 743 теста. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -170,7 +170,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `oer-vorlage` | OER-шаблон (CC-BY) конспекта: растр фаз, NRW/KMK, схема, бланк | Ось E |
 | `schulfreigabe-dossier` | DSB школы: досье «Null-Daten-Nachweis» (печать) | Ось E |
 | `leichte-sprache-werkstatt` | Инклюзия: рабочие листы на Лёгком языке + Vorlesen (BFSG) | Ось E |
-| `elternabend-kit` | Родительский вечер 60 мин + раздатка de/uk/ru | кат.№1 |
+| `elternabend-kit` | Родительский вечер 60 мин + раздатка de/en/uk/ru | кат.№1 |
 | `kriterien-check` | Self-audit оператора + экспорт .txt/.json/печать | база |
 | `eltern-rechtebriefe` | Шаблоны писем DSGVO (Art. 15/17/7), имя не хранится | кат.№1 |
 | `fragfinn-selbsttest` | Критерии whitelist fragFINN + отчёт | кат.№1 |
