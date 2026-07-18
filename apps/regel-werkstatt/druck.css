@@ -1,0 +1,24 @@
+/* Regel-Werkstatt: Plakat-Druck. Am Bildschirm ist .pw-nur-druck unsichtbar;
+   beim Drucken verschwindet die ganze Werkstatt (.pw-nur-bildschirm) und es
+   bleibt ein ruhiges Regel-Plakat zum Aufhängen. */
+
+.pw-nur-druck { display: none; }
+
+@media print {
+  .pw-nur-bildschirm { display: none !important; }
+  .pw-nur-druck { display: block; }
+
+  html { font-size: 13pt; }
+  body { background: #fff; }
+
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+  .k-titel { display: none; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 2pt solid #333;
+    border-radius: 0.6rem;
+    padding: 1rem 1.4rem;
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/regel-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Regel-Werkstatt: die Klasse handelt eigene Medienregeln aus (Vorschlaege, Abstimmung), sichert sie als Klassen-Koffer-Datei und druckt sie als Plakat. Beteiligung ohne Server.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -2,6 +2,7 @@
   "hinweis": "Alle Apps des Monorepos mit einer eltern.html-Seite. Der Test prüft beide Richtungen: jede gelistete App hat die Seite, und jede vorhandene Seite ist gelistet.",
   "apps": [
     "barriere-detektive",
+    "berechtigungs-safari",
     "beschwerde-lotse",
     "bewegungs-schatzkiste",
     "bot-oder-buddy",
@@ -33,7 +34,9 @@
     "nachrichten-detektive",
     "passwort-pruefstand",
     "rechte-kompass",
+    "regel-werkstatt",
     "selbstcheck-paedagogik",
+    "smarte-ohren",
     "sog-maschine",
     "spiral-stopper",
     "spuren-lupe",

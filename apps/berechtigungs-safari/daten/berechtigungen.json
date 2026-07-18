@@ -1,0 +1,61 @@
+{
+  "hinweis": "Reine Anleitungs-Checkliste. Diese App liest NICHTS vom Gerät aus – ihr schaut selbst in den Einstellungen nach und entscheidet gemeinsam.",
+  "findenHinweis": "So findet ihr die Berechtigungen: Android: Einstellungen → Apps → (App wählen) → Berechtigungen. iPhone/iPad: Einstellungen → (App wählen) oder Einstellungen → Datenschutz & Sicherheit.",
+  "stationen": [
+    {
+      "code": "mikrofon",
+      "emoji": "🎤",
+      "name": "Mikrofon",
+      "was": "Die App darf hören, was ihr sagt.",
+      "brauchtWer": "Sinnvoll bei: Videoanrufe, Sprachnachrichten, Diktier-Apps.",
+      "verdaechtig": "Verdächtig bei: Taschenlampe, Malen, einfache Spiele, Taschenrechner.",
+      "frage": "Welche App darf mithören – und braucht sie das wirklich?"
+    },
+    {
+      "code": "standort",
+      "emoji": "📍",
+      "name": "Standort",
+      "was": "Die App darf sehen, wo ihr gerade seid.",
+      "brauchtWer": "Sinnvoll bei: Karten, Navigation, Wetter (grob).",
+      "verdaechtig": "Verdächtig bei: Spiele, Foto-Filter, Taschenlampe, Musik-Apps.",
+      "frage": "Welche App kennt euren Ort – und muss sie das?"
+    },
+    {
+      "code": "kontakte",
+      "emoji": "👥",
+      "name": "Kontakte",
+      "was": "Die App darf euer Adressbuch lesen (alle Namen und Nummern).",
+      "brauchtWer": "Sinnvoll bei: Telefon, Nachrichten-Apps (zum Finden von Freunden).",
+      "verdaechtig": "Verdächtig bei: Spiele, Taschenlampe, Foto-Apps, Wecker.",
+      "frage": "Welche App darf ins Adressbuch – und wozu eigentlich?"
+    },
+    {
+      "code": "kamera",
+      "emoji": "📷",
+      "name": "Kamera",
+      "was": "Die App darf Fotos und Videos machen.",
+      "brauchtWer": "Sinnvoll bei: Kamera, Video-Chat, QR-Code-Scanner.",
+      "verdaechtig": "Verdächtig bei: Taschenrechner, einfache Spiele, Notiz-Apps.",
+      "frage": "Welche App darf filmen – und passt das zu ihrer Aufgabe?"
+    },
+    {
+      "code": "fotos",
+      "emoji": "🖼️",
+      "name": "Fotos & Medien",
+      "was": "Die App darf eure gespeicherten Fotos ansehen.",
+      "brauchtWer": "Sinnvoll bei: Foto-Bearbeitung, wenn ihr ein Bild teilen wollt.",
+      "verdaechtig": "Verdächtig bei: Spiele, Taschenlampe, Wetter, Taschenrechner.",
+      "frage": "Welche App darf in eure Foto-Sammlung – und braucht sie ALLE Fotos?"
+    },
+    {
+      "code": "benachrichtigungen",
+      "emoji": "🔔",
+      "name": "Benachrichtigungen",
+      "was": "Die App darf euch jederzeit Meldungen schicken.",
+      "brauchtWer": "Sinnvoll bei: Nachrichten von Menschen, Wecker, Kalender.",
+      "verdaechtig": "Viel zu oft bei: Spiele und Shops, die euch zurückholen wollen.",
+      "frage": "Welche App piept am meisten – und holt sie euch nur zurück?"
+    }
+  ],
+  "abschluss": "Jetzt kommt der wichtigste Schritt: Schaltet gemeinsam die Berechtigungen aus, die eine App nicht braucht. Das geht fast immer mit einem Fingertipp – und man kann es jederzeit wieder anschalten."
+}

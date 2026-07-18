@@ -1,0 +1,8 @@
+{
+  "name": "@info70/smarte-ohren",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Smarte Ohren: Leichte-Sprache-Szenarien fuer 6-8 zu sprechenden Geraeten (Sprachassistent, Smart-Toy, Tablet) mit automatischem Vorlesen. Datensparsamkeit, ohne Punkte/Scham.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

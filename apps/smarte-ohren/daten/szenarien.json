@@ -1,0 +1,115 @@
+{
+  "szenarien": [
+    {
+      "id": "s1",
+      "thema": "Name sagen?",
+      "emoji": "🔊",
+      "situation": "Der Sprach-Lautsprecher fragt dich: „Wie heißt du? Wo wohnst du?“",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich sage das nicht. Ich frage erst Mama oder Papa.", "gut": true },
+        { "text": "Ich sage meinen Namen und meine Adresse.", "gut": false }
+      ],
+      "lobGut": "Sehr gut! Deine Adresse ist geheim. Das Gerät braucht sie nicht.",
+      "lobWeiter": "Sag dem Gerät lieber nicht, wo du wohnst. Das ist geheim.",
+      "tipp": "Ein Gerät muss nicht wissen, wo du wohnst. Frag im Zweifel einen Erwachsenen."
+    },
+    {
+      "id": "s2",
+      "thema": "Hört es mit?",
+      "emoji": "👂",
+      "situation": "Der kleine Lautsprecher steht in deinem Zimmer. Er hört zu, wenn du sprichst.",
+      "frage": "Was ist klug?",
+      "optionen": [
+        { "text": "Ich erzähle nichts Geheimes laut vor dem Gerät.", "gut": true },
+        { "text": "Ich erzähle dem Gerät alle meine Geheimnisse.", "gut": false }
+      ],
+      "lobGut": "Genau! Ein Gerät kann mithören. Geheimes bleibt bei dir.",
+      "lobWeiter": "So ein Gerät hört mit. Erzähl ihm keine Geheimnisse.",
+      "tipp": "Sprechende Geräte können zuhören. Sag nichts Geheimes laut."
+    },
+    {
+      "id": "s3",
+      "thema": "Kuscheltier fragt",
+      "emoji": "🧸",
+      "situation": "Dein sprechendes Kuscheltier fragt: „Sag mir dein Passwort!“",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich sage kein Passwort. Auch nicht dem Kuscheltier.", "gut": true },
+        { "text": "Ich flüstere dem Kuscheltier mein Passwort zu.", "gut": false }
+      ],
+      "lobGut": "Toll! Ein Passwort ist geheim. Auch für Spielzeug.",
+      "lobWeiter": "Ein Passwort sagt man niemandem. Auch nicht dem Kuscheltier.",
+      "tipp": "Ein Passwort ist wie ein Schlüssel. Den gibt man nicht her."
+    },
+    {
+      "id": "s4",
+      "thema": "Einfach kaufen?",
+      "emoji": "🛒",
+      "situation": "Du sagst zum Lautsprecher: Kauf mir ein Spiel. Er will sofort kaufen.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Stopp. Kaufen darf ich nur mit Mama oder Papa.", "gut": true },
+        { "text": "Ich kaufe schnell allein etwas.", "gut": false }
+      ],
+      "lobGut": "Super! Kaufen geht nur mit einem Erwachsenen. Das kostet echtes Geld.",
+      "lobWeiter": "Kaufen kostet echtes Geld. Das machst du mit Mama oder Papa.",
+      "tipp": "Mit der Stimme kaufen kostet echtes Geld. Frag immer einen Erwachsenen."
+    },
+    {
+      "id": "s5",
+      "thema": "Foto-Frage",
+      "emoji": "📷",
+      "situation": "Das Tablet fragt: „Darf ich die Kamera und das Mikrofon nutzen?“",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich frage einen Erwachsenen, ob das okay ist.", "gut": true },
+        { "text": "Ich tippe schnell auf „Ja, immer“.", "gut": false }
+      ],
+      "lobGut": "Klug! Bei so einer Frage holst du einen Erwachsenen.",
+      "lobWeiter": "Tippe nicht einfach „Ja“. Frag lieber einen Erwachsenen."
+    },
+    {
+      "id": "s6",
+      "thema": "Puppe fragt",
+      "emoji": "🪆",
+      "situation": "Eine App-Puppe fragt: „In welche Schule gehst du? Zeig mir ein Foto von dir!“",
+      "frage": "Was ist gut?",
+      "optionen": [
+        { "text": "Das sage und zeige ich nicht. Das ist privat.", "gut": true },
+        { "text": "Ich schicke ein Foto und sage meine Schule.", "gut": false }
+      ],
+      "lobGut": "Richtig! Schule und Fotos sind privat. Die behältst du für dich.",
+      "lobWeiter": "Schule und Fotos sind privat. Die zeigst du so einer App nicht.",
+      "tipp": "Wo du zur Schule gehst und wie du aussiehst, ist privat."
+    },
+    {
+      "id": "s7",
+      "thema": "Komisches Gefühl",
+      "emoji": "💛",
+      "situation": "Ein Gerät sagt etwas Komisches. Es fühlt sich gruselig an.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich erzähle es einem Erwachsenen, dem ich vertraue.", "gut": true },
+        { "text": "Ich mache weiter, obwohl es sich blöd anfühlt.", "gut": false }
+      ],
+      "lobGut": "Ganz stark! Bei einem komischen Gefühl holst du Hilfe. Immer.",
+      "lobWeiter": "Ein komisches Gefühl ist ein Zeichen. Erzähl es einem Erwachsenen.",
+      "tipp": "Dein Gefühl ist wichtig. Fühlt sich etwas blöd an, hol dir Hilfe."
+    },
+    {
+      "id": "s8",
+      "thema": "Aus-Knopf",
+      "emoji": "🔇",
+      "situation": "Du möchtest in Ruhe spielen. Der Lautsprecher soll nicht mithören.",
+      "frage": "Was ist eine gute Idee?",
+      "optionen": [
+        { "text": "Ich bitte einen Erwachsenen, das Mikrofon auszuschalten.", "gut": true },
+        { "text": "Ich lasse alles an und rede einfach weiter.", "gut": false }
+      ],
+      "lobGut": "Prima! Man kann das Mikrofon ausschalten. Dann hört keiner mit.",
+      "lobWeiter": "Man kann das Mikrofon ausschalten. Frag einen Erwachsenen."
+    }
+  ],
+  "ende": "Du weißt jetzt: Sprechende Geräte können mithören. Sag nichts Geheimes. Frag bei Fragen einen Erwachsenen. Du machst das toll!"
+}
