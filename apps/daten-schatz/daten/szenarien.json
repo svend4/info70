@@ -175,6 +175,48 @@
       "beste": "ablehnen",
       "auchOk": ["fragen"],
       "erklaerung": "Passwörter teilt man grundsätzlich nicht – erst recht nicht in einer fremden App. Wer deine Passwörter sammelt, kann in all deine Konten. Für jedes wichtige Konto ein eigenes, geheimes Passwort."
+    },
+    {
+      "id": "s25",
+      "situation": "In deinem Kinderzimmer steht ein Sprachassistent (Smart Speaker), der ständig zuhört, ob jemand etwas sagt.",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "Ein Gerät, das immer mithört, ist eine Privatsphäre-Frage – auch dein Zimmer ist dein Rückzugsort. Besprich mit deinen Eltern, ob das Mikrofon nachts oder ganz aus sein kann. Weniger Zuhören ist mehr Privatsphäre."
+    },
+    {
+      "id": "s26",
+      "situation": "Deine Eltern möchten eine App einrichten, die ihnen jederzeit zeigt, wo du gerade bist.",
+      "beste": "fragen",
+      "auchOk": [],
+      "erklaerung": "Auch Kinder haben ein Recht auf Privatsphäre – sogar gegenüber den eigenen Eltern (Artikel 16). Redet gemeinsam: Wozu ist die Ortung, wann ist sie an, wie wächst dein Freiraum mit dem Alter? Vertrauen und Absprache sind besser als heimliche Überwachung."
+    },
+    {
+      "id": "s27",
+      "situation": "Im Familienchat fragt ein entfernter Verwandter, den du kaum kennst, nach deiner genauen Adresse und deinem Stundenplan.",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "Adresse und Stundenplan zusammen verraten, wo du wann bist – das ist sensibel. Auch bei Verwandtschaft gilt: erst mit den Eltern klären, ob und was weitergegeben wird. Im Zweifel lieber nichts."
+    },
+    {
+      "id": "s28",
+      "situation": "Beim Einrichten fragt ein neuer Sprachassistent nach deinem vollen Namen, deinem Geburtsdatum und einem Foto von dir.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "So viele Daten braucht ein Lautsprecher nicht. Gib nur das Nötigste an – am besten richten Erwachsene das Gerät datensparsam ein. Name, Geburtsdatum und Foto zusammen sind viel zu viel."
+    },
+    {
+      "id": "s29",
+      "situation": "Eine lustige Foto-App verlangt Zugriff auf ALLE Fotos auf dem Familien-Handy – auch die privaten.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Eine App braucht selten alle Fotos. Wenn eine Spaß-App plötzlich Zugriff auf die ganze Galerie will, ist das ein Warnzeichen. Zugriff verweigern oder mit Erwachsenen nur einzelne Fotos freigeben."
+    },
+    {
+      "id": "s30",
+      "situation": "Deine Eltern posten im Familienchat viele Fotos von dir – auch welche, die dir peinlich sind.",
+      "beste": "fragen",
+      "auchOk": [],
+      "erklaerung": "Es ist okay, das anzusprechen: Auch Fotos von dir gehören zu deiner Privatsphäre (Recht am eigenen Bild, Artikel 16). Sag deinen Eltern in Ruhe, welche Bilder dir unangenehm sind – dein Nein darf zählen."
     }
   ]
 }

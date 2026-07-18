@@ -1,0 +1,8 @@
+{
+  "name": "@info70/fristen-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fristen-Radar mit ICS-Export fuer Betreiber: zeigt die geprueften Foerder- und Preis-Programme des Foerder-Navigators nach Einreichfrist sortiert und erzeugt lokal eine .ics-Kalenderdatei (RFC 5545) zum Download - kein Server, keine externen Requests. Datenquelle: gemeinsame programme.json.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

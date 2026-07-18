@@ -38,6 +38,15 @@ test('Chat-Rechte-Pack (Katalog Nr. 138): Chat-Situationen als Rechtsfragen', ()
   assert.ok(/Hassrede/.test(alles), 'Hassrede als meldbarer Fall');
 });
 
+test('Game-Chat-Training-Pack (Katalog Nr. 238): Szenarien aus Spiele-Chats', () => {
+  assert.ok(daten.szenarien.length >= 28, 'Game-Chat-Pack ergänzt (mindestens 28 Szenarien)');
+  const alles = JSON.stringify(daten.szenarien);
+  assert.ok(/Voice-Chat|Spiele-Chat|Game-Chat|Mitspieler|Team/i.test(alles), 'Spiele-Chat-Kontext');
+  assert.ok(/stummschalten|nur Freunde|blockier/i.test(alles), 'Chat-Einstellungen als Selbstschutz');
+  assert.ok(/echten Namen|Spitznamen|wo du wohnst/i.test(alles), 'keine echten Daten an Fremde');
+  assert.ok(/Kaufdruck|teuren Skin|Kaufdruck|Skin/i.test(alles), 'Team-/Kaufdruck');
+});
+
 test('Stopp-Hassrede-Pack (Katalog Nr. 237): Zeugen-Szenarien zu Hasskommentaren', () => {
   assert.ok(daten.szenarien.length >= 22, 'Hassrede-Pack ergänzt (mindestens 22 Szenarien)');
   const alles = JSON.stringify(daten.szenarien);

@@ -227,6 +227,66 @@
         { "text": "In der Gruppe schreiben, dass es sich nicht so anstellen soll", "wert": 0 }
       ],
       "erklaerung": "Anfeindungen können richtig wehtun. Zuhören und Beistand helfen am meisten. Holt gemeinsam erwachsene Unterstützung; bei Kummer ist die Nummer gegen Kummer da: 116 111 (kostenlos, anonym)."
+    },
+    {
+      "id": "c23",
+      "situation": "Im Voice-Chat eines Online-Spiels beschimpft dich ein Mitspieler ununterbrochen.",
+      "optionen": [
+        { "text": "Zurückbrüllen, bis er aufhört", "wert": 0 },
+        { "text": "Die Person stummschalten oder blockieren und – wenn es schlimm ist – melden", "wert": 2 },
+        { "text": "Weiterspielen und alles schlucken", "wert": 1 }
+      ],
+      "erklaerung": "Stummschalten und Blockieren sind dein Selbstschutz im Spiel – du musst dir Beleidigungen nicht anhören. Bei üblen Beschimpfungen zusätzlich melden. Zurückbrüllen zieht dich nur mit runter."
+    },
+    {
+      "id": "c24",
+      "situation": "Ein fremder Mitspieler fragt dich im Chat nach deinem echten Namen, deinem Alter und wo du wohnst.",
+      "optionen": [
+        { "text": "Alles ehrlich beantworten, er ist ja im selben Team", "wert": 0 },
+        { "text": "Nichts Persönliches verraten und beim Spitznamen bleiben", "wert": 2 },
+        { "text": "Nur den Vornamen und die Stadt sagen", "wert": 1 }
+      ],
+      "erklaerung": "Im Spiel bist du dein Spitzname – mehr muss niemand wissen. Echter Name, Alter und Wohnort gehen Fremde nichts an, auch nicht Teamkollegen. Wer im Spiel danach bohrt, hat oft andere Absichten."
+    },
+    {
+      "id": "c25",
+      "situation": "Dein Spiele-Chat ist offen für alle. Du weißt nicht, wie du Nachrichten von Fremden einschränkst.",
+      "optionen": [
+        { "text": "Einfach so weiterspielen, wird schon nichts passieren", "wert": 1 },
+        { "text": "In den Einstellungen den Chat auf „nur Freunde“ stellen (zusammen mit Erwachsenen, wenn nötig)", "wert": 2 },
+        { "text": "Deine Kontaktdaten in den Chat schreiben, damit dich echte Freunde finden", "wert": 0 }
+      ],
+      "erklaerung": "Sichere Voreinstellungen sind Selbstschutz: „Nur Freunde“ lässt keine fremden Nachrichten zu. Solche Einstellungen richtet man am besten einmal gemeinsam ein – dann ist Ruhe vor Fremden."
+    },
+    {
+      "id": "c26",
+      "situation": "Im Team heißt es: „Kauf dir den teuren Skin, sonst fliegst du raus.“",
+      "optionen": [
+        { "text": "Heimlich kaufen, um dazuzugehören", "wert": 0 },
+        { "text": "Standhaft bleiben – ein echtes Team drängt dich nicht zu Käufen; sonst neues Team suchen", "wert": 2 },
+        { "text": "Andere im Team auch unter Druck setzen", "wert": 1 }
+      ],
+      "erklaerung": "Kaufdruck ist unfair. Ein guter Skin macht dich nicht wertvoller. Wer dich zu Käufen drängt, ist kein echtes Team. Über Geld entscheidet ihr in der Familie, nicht der Gruppendruck."
+    },
+    {
+      "id": "c27",
+      "situation": "Ein netter „Freund“ aus dem Spiel will, dass ihr in einen anderen Chat wechselt, „wo die Eltern nicht mitlesen“.",
+      "optionen": [
+        { "text": "Mitgehen – klingt spannend und geheim", "wert": 0 },
+        { "text": "Ablehnen und einer erwachsenen Vertrauensperson davon erzählen", "wert": 2 },
+        { "text": "Erst mal hingehen und schauen, was da los ist", "wert": 1 }
+      ],
+      "erklaerung": "„Wechsel in einen geheimen Chat, wo keiner mitliest“ ist ein Warnzeichen für Grooming. Genau das wollen Erwachsene mitbekommen. Nicht wechseln, Bescheid sagen – im Zweifel Nummer gegen Kummer 116 111."
+    },
+    {
+      "id": "c28",
+      "situation": "Jemand im Game-Chat droht dir: „Ich weiß, wer du bist, und mach dich fertig.“",
+      "optionen": [
+        { "text": "Zurückdrohen, um keine Angst zu zeigen", "wert": 0 },
+        { "text": "Screenshot machen, blockieren, melden und einer erwachsenen Person Bescheid sagen", "wert": 2 },
+        { "text": "Den Chat schließen und hoffen, dass es aufhört", "wert": 1 }
+      ],
+      "erklaerung": "Drohungen sind ernst zu nehmen. Beweise sichern (Screenshot), blockieren, melden und Hilfe holen. Zurückdrohen macht alles schlimmer. Du musst das nicht allein aushalten: 116 111 ist für dich da."
     }
   ]
 }

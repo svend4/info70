@@ -43,6 +43,17 @@ test('Kostenfallen-Paket vorhanden (Pipeline-Idee 11, Gefährdungsatlas-Kapitel)
   assert.ok(/abo/i.test(alles), 'Abo-Trick muss vorkommen');
 });
 
+test('Familien-Datenschatz-Pack (Katalog Nr. 225): Familiensituationen inkl. Privatsphäre auch gegenüber Eltern', () => {
+  assert.ok(daten.szenarien.length >= 30, 'Familien-Pack ergänzt (mindestens 30 Szenarien)');
+  const alles = JSON.stringify(daten.szenarien);
+  assert.ok(/Sprachassistent|Smart Speaker|mithört|zuhört/i.test(alles), 'Smart Speaker im Kinderzimmer');
+  assert.ok(/wo du gerade bist|Ortung|Standort.*Eltern/i.test(alles), 'Ortungs-App');
+  assert.ok(/Artikel 16/.test(alles), 'Privatsphäre-Recht (Art. 16), auch gegenüber Eltern');
+  // elterliche Überwachung wird als Privatsphäre-Frage thematisiert (nicht blind verweigern -> beste = fragen)
+  const ortung = daten.szenarien.find((s) => /wo du gerade bist|Ortung/i.test(s.situation));
+  assert.equal(ortung.beste, 'fragen', 'Ortung: gemeinsam besprechen statt blind ablehnen');
+});
+
 test('Account-Diebstahl-Pack "Wer bist du wirklich?" (Katalog Nr. 234)', () => {
   assert.ok(daten.szenarien.length >= 24, 'Account-Pack ergänzt (mindestens 24 Szenarien)');
   const alles = JSON.stringify(daten.szenarien);

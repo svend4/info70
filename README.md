@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**96 приложений (95 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**97 приложений (96 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 574 теста.
+Полный прогон: 582 теста.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -91,7 +91,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `impressum-detektive` | Кто стоит за сайтом? (DDG §5/MStV §18) | кат.№1 |
 | `fomo-kompass` | Страх упустить: Streak/Autoplay/Likes | кат.№1 |
 | `bot-oder-buddy` | Приёмы «дружелюбного» ИИ-чат-бота | кат.№1 |
-| `daten-schatz` | Datenschutz + Kostenfallen + Account-Diebstahl (24 сцен.) | база |
+| `daten-schatz` | Datenschutz + Kostenfallen + Account + Familie (30 сцен.) | база |
 | `spuren-lupe` | Пассивный трекинг локально: следы без ввода | кат.№1 |
 | `darf-ich-posten` | Право на изображение и авторское право | кат.№1 |
 | `foto-ampel` | Семья: Ампель перед публикацией фото (согласие, фон) | кат.№1 |
@@ -100,7 +100,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `sharenting-spiegel` | Родители: self-test про фото детей + Foto-Regeln | кат.№1 |
 | `passwort-pruefstand` | Стойкость пароля, метод трёх слов | кат.№1 |
 | `kettenbrief-stopper` | Цепные сообщения | база |
-| `stark-im-chat` | Кибербуллинг: свидетель + Chat-Rechte + Stopp-Hassrede (22 сцен.) | база |
+| `stark-im-chat` | Кибербуллинг: свидетель + Rechte + Hassrede + Game-Chat (28 сцен.) | база |
 | `stark-im-chat-plus` | Свидетель 13+: групповой чат и пути DSA | кат.№1 |
 | `spiral-stopper` | Эскалация хейта: сила Gegenrede и Melden | кат.№1 |
 | `challenge-druck` | Групповое давление: 5 тактик + фразы выхода | кат.№1 |
@@ -175,6 +175,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `netz-pass-urkunde` | Станции безопасности + печать грамоты (6–12, имя не хранится) | кат.№1 |
 | `ombuds-landkarte` | Карта инстанций для родителей (§9a SGB VIII, DSA) | кат.№1 |
 | `foerder-navigator` | Каталог грантов + 80/20-калькулятор | база |
+| `fristen-radar` | Сроки подачи по датам + экспорт .ics (локально) | кат.№1 |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
 метод «Eltern-Kompass») — ссылка «👪 Für Eltern» в подвале. Единая витрина —
