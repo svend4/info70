@@ -1,0 +1,41 @@
+{
+  "quelle": "Regelbasierte Prüfung, angelehnt an Regeln der Leichten und Einfachen Sprache und an DIN SPEC 33429 (Empfehlungen für Deutsche Leichte Sprache). Keine KI, keine externen Anfragen – alle Regeln laufen lokal im Browser.",
+  "hinweis": "Text einfügen und messbare Regeln prüfen: Satzlänge, Wortlänge, Passiv-Signale, Nominalstil und Fremdwörter. Die Treffer sind Hinweise zum Prüfen, keine harten Fehler – Sprache bleibt Ermessenssache. Diese App speichert nichts dauerhaft und stellt keine externen Anfragen.",
+  "grenzwerte": {
+    "satzWoerterMax": 12,
+    "wortZeichenMax": 12
+  },
+  "nominalSuffixe": ["ung", "heit", "keit", "nis", "tion", "sion", "ismus", "ität", "ierung", "schaft"],
+  "fremdwoerter": [
+    { "wort": "Information", "einfach": "Nachricht oder Auskunft" },
+    { "wort": "Registrierung", "einfach": "Anmeldung" },
+    { "wort": "registrieren", "einfach": "anmelden" },
+    { "wort": "Account", "einfach": "Konto oder Zugang" },
+    { "wort": "Cookie", "einfach": "kleine Datei" },
+    { "wort": "Download", "einfach": "Herunterladen" },
+    { "wort": "Upload", "einfach": "Hochladen" },
+    { "wort": "Button", "einfach": "Knopf" },
+    { "wort": "Link", "einfach": "Verweis" },
+    { "wort": "Profil", "einfach": "Seite über dich" },
+    { "wort": "Feature", "einfach": "Funktion" },
+    { "wort": "Option", "einfach": "Wahl oder Möglichkeit" },
+    { "wort": "aktivieren", "einfach": "anschalten oder einschalten" },
+    { "wort": "deaktivieren", "einfach": "ausschalten" },
+    { "wort": "akzeptieren", "einfach": "zustimmen oder annehmen" },
+    { "wort": "konfigurieren", "einfach": "einstellen" },
+    { "wort": "Kommunikation", "einfach": "Gespräch oder Austausch" },
+    { "wort": "transparent", "einfach": "klar oder offen" },
+    { "wort": "generieren", "einfach": "erstellen oder machen" },
+    { "wort": "installieren", "einfach": "einrichten" },
+    { "wort": "Notifikation", "einfach": "Hinweis" },
+    { "wort": "Verifizierung", "einfach": "Prüfung" },
+    { "wort": "anonym", "einfach": "ohne Namen" }
+  ],
+  "hinweisTexte": {
+    "langeSaetze": "Schreibe kurze Sätze: möglichst ein Gedanke pro Satz (Richtwert höchstens {max} Wörter).",
+    "langeWoerter": "Vermeide lange Wörter oder trenne sie mit Bindestrich (Richtwert höchstens {max} Zeichen je Wortteil).",
+    "passiv": "Vermeide Passiv. Schreibe, wer etwas tut (Aktiv). „wird/werden/wurde …“ ist ein Signal – bitte prüfen.",
+    "nominalstil": "Löse Nominalstil auf: statt Hauptwörtern auf -ung/-heit lieber Tu-Wörter (Verben) benutzen.",
+    "fremdwoerter": "Erkläre Fremdwörter oder ersetze sie durch einfache Wörter."
+  }
+}

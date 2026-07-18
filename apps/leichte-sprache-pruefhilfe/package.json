@@ -1,0 +1,8 @@
+{
+  "name": "@info70/leichte-sprache-pruefhilfe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Leichte-Sprache-Pruefhilfe: regelbasierte lokale Textanalyse (Satzlaenge, Wortlaenge, Passiv-Signale, Nominalstil, Fremdwoerter) mit Umformulierungs-Hinweisen nach Regeln der Leichten/Einfachen Sprache und DIN SPEC 33429. Keine KI, keine externen Anfragen, alles regelbasiert im Browser. Zielgruppe: Betreiber/Redaktion.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

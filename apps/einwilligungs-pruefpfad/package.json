@@ -1,0 +1,8 @@
+{
+  "name": "@info70/einwilligungs-pruefpfad",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Einwilligungs-Pruefpfad Art. 8 DSGVO fuer Betreiber von Kinderangeboten: gefuehrter Frage-Pfad (Dienst der Informationsgesellschaft, Zielgruppe Kinder, Rechtsgrundlage Einwilligung, Altersgrenze 16 in DE, Eltern-Zustimmung, angemessene Verifikation, kindgerechte Sprache, Widerruf, Datenminimierung, Nachweis) mit exportierbarem Pruefbericht und Luecken-Liste. Kein Rechtsrat, offline, keine Datenerhebung. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

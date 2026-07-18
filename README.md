@@ -20,6 +20,7 @@ info70/
 │   ├── 08-partner-dossier.md    Партнёрская карта экосистемы для заявки BzKJ-2027
 │   ├── 09-baukasten-katalog.md  Каталог №1: 139 производных единиц из немецкого корпуса (+ ideen-katalog.json)
 │   ├── 10-praleska-baukasten.md Каталог №2: 131 единица из PDF «Пралеска» (+ praleska-katalog.json)
+│   ├── 11-kinderrechte-charta.md Хартия прав ребёнка: карта приложения→статьи UN-KRK/GC25 + само-KRIA (Nachweisbaustein)
 │   └── vorlagen/kurz-gdd.md     Шаблон одностраничного GDD для каждой новой единицы
 ├── apps/                        Приложения (по одной подпапке на тему)
 │   ├── nachrichten-detektive/   🕵️ Медиаграмотность: квиз «настоящее или фейк» + Werbe-Radar — MVP готов
@@ -55,7 +56,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**124 приложения (123 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**126 приложений (125 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +64,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 771 тест. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 791 тест. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -188,8 +189,10 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `seitenstark-qualitaets-check` | Критерии качества Seitenstark → Maßnahmenplan | кат.№1 |
 | `interaktions-konzept-assistent` | Функция взаимодействия → требования + Moderationskonzept | кат.№1 |
 | `dsa-selbstaudit` | Защита несовершеннолетних по DSA, светофор + Ampel-Bericht | кат.№1 |
+| `einwilligungs-pruefpfad` | Прошагово согласие по Art. 8 DSGVO (16 лет, родители, верификация) → Prüfbericht + Lücken | кат.№1 |
 | `bfsg-check` | Доступность + офлайн-калькулятор контраста WCAG | кат.№1 |
 | `barrierefreiheitserklaerung-generator` | Форма/импорт BFSG → Erklärung zur Barrierefreiheit (md/html) | кат.№1 |
+| `leichte-sprache-pruefhilfe` | Правило-анализ текста (длина, пассив, номин., иностр.) → подсказки, DIN SPEC 33429, без ИИ | кат.№1 |
 | `vorsorge-check-juschg` | § 24a JuSchG: меры предосторожности, светофор + Ampel-Bericht | кат.№1 |
 | `eltern-kompass-generator` | Форма→готовая «Für Eltern»-страница (eltern.html) | кат.№1 |
 | `link-inventar-pruefer` | Импорт HTML → извлечение/проверка внешних ссылок (без сети) | кат.№1 |

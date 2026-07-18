@@ -1,0 +1,136 @@
+{
+  "quelle": "DSGVO Art. 8 (Einwilligung eines Kindes bei Diensten der Informationsgesellschaft), i.V.m. Art. 6, 7, 5 und Erwägungsgründen 38/58/65. Deutschland: Altersgrenze bleibt bei 16 Jahren (keine Absenkung durch nationales Recht). Öffentlich recherchiert, kein Rechtsrat.",
+  "hinweis": "Geführter Prüfpfad für Betreiber: Beantworten Sie die Schritte der Reihe nach. Am Ende entsteht ein Prüfbericht mit einer Lücken-Liste. Kein offizielles Konformitätsergebnis und kein Rechtsrat – prüfen Sie im Zweifel mit einer Datenschutz-Fachkraft. Diese App stellt keine externen Anfragen; alle Angaben bleiben auf diesem Gerät.",
+  "schritte": [
+    {
+      "id": "s1-dienst",
+      "titel": "1. Dienst der Informationsgesellschaft?",
+      "frage": "Ist Ihr Angebot ein „Dienst der Informationsgesellschaft“ (in der Regel online, aus der Ferne, auf individuellen Abruf erbracht)?",
+      "bezug": "DSGVO Art. 8 Abs. 1",
+      "hilfe": "Art. 8 gilt nur für Dienste der Informationsgesellschaft, die einem Kind direkt angeboten werden. Reine Offline-Angebote fallen nicht darunter – dort greifen die allgemeinen Regeln (Art. 6).",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, Online-/Abruf-Dienst", "luecke": false },
+        { "wert": "nein", "text": "Nein, kein Online-Dienst", "luecke": false, "hinweis": "Art. 8 ist dann nicht einschlägig. Prüfen Sie trotzdem Rechtsgrundlage (Art. 6) und Datenminimierung (Art. 5)." }
+      ]
+    },
+    {
+      "id": "s2-adressat",
+      "titel": "2. Richtet sich das Angebot an Kinder?",
+      "frage": "Wird der Dienst Kindern direkt angeboten oder erkennbar auch von Kindern genutzt?",
+      "bezug": "DSGVO Art. 8 Abs. 1, ErwG 38",
+      "hilfe": "Kinder verdienen bei ihren personenbezogenen Daten besonderen Schutz (ErwG 38). Wenn Kinder faktisch mitnutzen, sollten Sie Art. 8 anwenden, auch wenn das Angebot nicht nur für Kinder gedacht ist.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, (auch) an Kinder gerichtet/genutzt", "luecke": false },
+        { "wert": "nein", "text": "Nein, reines Erwachsenen-Angebot mit Alterssicherung", "luecke": false, "hinweis": "Dokumentieren Sie, wie Kinder wirksam ausgeschlossen werden (datensparsame Alterssicherung)." },
+        { "wert": "unklar", "text": "Unklar", "luecke": true, "hinweis": "Klären Sie die Zielgruppe verbindlich – davon hängt die Anwendbarkeit von Art. 8 ab." }
+      ]
+    },
+    {
+      "id": "s3-grundlage",
+      "titel": "3. Ist Einwilligung die Rechtsgrundlage?",
+      "frage": "Stützen Sie die Verarbeitung (auch) auf Einwilligung nach Art. 6 Abs. 1 lit. a?",
+      "bezug": "DSGVO Art. 6, Art. 8",
+      "hilfe": "Art. 8 greift nur, wenn Einwilligung die Rechtsgrundlage ist. Für die reine Vertragserfüllung (lit. b) braucht es keine Einwilligung – dann besonders auf Datenminimierung achten und keine Einwilligung „vortäuschen“.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, Einwilligung ist (Teil der) Grundlage", "luecke": false },
+        { "wert": "nein", "text": "Nein, andere Grundlage (Vertrag / berechtigtes Interesse)", "luecke": false, "hinweis": "Art. 8 ist dann für diese Verarbeitung nicht einschlägig. Prüfen Sie, ob die gewählte Grundlage wirklich trägt, und minimieren Sie die Daten." },
+        { "wert": "gemischt", "text": "Teils Einwilligung, teils andere Grundlage", "luecke": true, "hinweis": "Trennen Sie die Verarbeitungszwecke sauber: Für die einwilligungsbasierten Teile gilt Art. 8 vollständig." }
+      ]
+    },
+    {
+      "id": "s4-alter",
+      "titel": "4. Altersgrenze 16 Jahre (Deutschland) beachtet?",
+      "frage": "Setzen Sie die in Deutschland geltende Altersgrenze von 16 Jahren um (unter 16 ist die Einwilligung nur mit Zustimmung der Eltern rechtmäßig)?",
+      "bezug": "DSGVO Art. 8 Abs. 1 (DE: 16 Jahre)",
+      "hilfe": "Art. 8 erlaubt Mitgliedstaaten eine Absenkung bis 13 Jahre. Deutschland hat NICHT abgesenkt – es gilt 16. Unter 16 braucht es die Zustimmung des Trägers der elterlichen Verantwortung.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, 16-Jahre-Grenze umgesetzt", "luecke": false },
+        { "wert": "teils", "text": "Teilweise / nicht eindeutig", "luecke": true, "hinweis": "Legen Sie die Altersgrenze eindeutig auf 16 fest und dokumentieren Sie, wie Sie darunterliegende Nutzende erkennen." },
+        { "wert": "nein", "text": "Nein, nicht umgesetzt", "luecke": true, "hinweis": "Lücke: Ohne Altersgrenze kann die Einwilligung Minderjähriger unwirksam sein. 16-Jahre-Grenze festlegen." }
+      ]
+    },
+    {
+      "id": "s5-altersfeststellung",
+      "titel": "5. Altersfeststellung datensparsam?",
+      "frage": "Erheben Sie das Alter (oder die Altersstufe) datensparsam und ohne unnötige sensible Daten (kein Ausweis-Upload auf Vorrat)?",
+      "bezug": "DSGVO Art. 5 (Datenminimierung), Art. 25",
+      "hilfe": "Die Altersfeststellung darf nicht selbst zur Datensammelstelle werden. Verhältnismäßige, datensparsame Verfahren wählen (z. B. Selbstauskunft mit Plausibilisierung), keine Ausweiskopien auf Vorrat.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, datensparsam", "luecke": false },
+        { "wert": "teils", "text": "Mehr Daten als nötig", "luecke": true, "hinweis": "Reduzieren Sie die erhobenen Daten auf das für die Altersfeststellung Erforderliche." },
+        { "wert": "na", "text": "Nicht anwendbar", "luecke": false }
+      ]
+    },
+    {
+      "id": "s6-eltern-einholung",
+      "titel": "6. Zustimmung der Eltern eingeholt?",
+      "frage": "Holen Sie bei Kindern unter 16 die Einwilligung/Zustimmung des Trägers der elterlichen Verantwortung ein?",
+      "bezug": "DSGVO Art. 8 Abs. 1 UAbs. 2",
+      "hilfe": "Unter der Altersgrenze ist die Verarbeitung nur rechtmäßig, soweit die Einwilligung durch den Träger der elterlichen Verantwortung oder mit dessen Zustimmung erteilt wird.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, Eltern-Zustimmung wird eingeholt", "luecke": false },
+        { "wert": "nein", "text": "Nein", "luecke": true, "hinweis": "Lücke: Für unter 16-Jährige ist die Einwilligung ohne Eltern-Zustimmung nicht rechtmäßig." },
+        { "wert": "na", "text": "Nicht anwendbar (nur ab 16)", "luecke": false }
+      ]
+    },
+    {
+      "id": "s7-verifikation",
+      "titel": "7. „Angemessene Anstrengungen“ zur Verifikation dokumentiert?",
+      "frage": "Haben Sie dokumentiert, mit welchen angemessenen Anstrengungen Sie – unter Berücksichtigung der verfügbaren Technik – die Eltern-Zustimmung überprüfen?",
+      "bezug": "DSGVO Art. 8 Abs. 2",
+      "hilfe": "Art. 8 Abs. 2 verlangt „angemessene Anstrengungen“ zur Verifikation der Eltern-Zustimmung unter Berücksichtigung der verfügbaren Technik. Das Verfahren muss verhältnismäßig und datensparsam sein – und nachweisbar dokumentiert.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, Verfahren dokumentiert", "luecke": false },
+        { "wert": "teils", "text": "Verfahren vorhanden, aber nicht dokumentiert", "luecke": true, "hinweis": "Dokumentieren Sie das Verifikationsverfahren nachvollziehbar (Rechenschaftspflicht)." },
+        { "wert": "nein", "text": "Kein Verfahren", "luecke": true, "hinweis": "Lücke: Legen Sie ein verhältnismäßiges Verfahren zur Verifikation der Eltern-Zustimmung fest und dokumentieren Sie es." },
+        { "wert": "na", "text": "Nicht anwendbar (nur ab 16)", "luecke": false }
+      ]
+    },
+    {
+      "id": "s8-sprache",
+      "titel": "8. Einwilligung kindgerecht und klar?",
+      "frage": "Ist die Einwilligung freiwillig, informiert und in klarer, einfacher – bei Kindern kindgerechter – Sprache formuliert?",
+      "bezug": "DSGVO Art. 7, Art. 12, ErwG 58",
+      "hilfe": "ErwG 58: Informationen, die sich an Kinder richten, sollen in einer klaren, einfachen Sprache erfolgen, die das Kind versteht. Die Einwilligung muss freiwillig und informiert sein (Art. 7). Siehe auch die Leichte-Sprache-Prüfhilfe.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, klar und kindgerecht", "luecke": false },
+        { "wert": "teils", "text": "Teilweise verständlich", "luecke": true, "hinweis": "Überarbeiten Sie den Einwilligungstext kindgerecht (kurze Sätze, keine Fremdwörter)." },
+        { "wert": "nein", "text": "Juristisch/kompliziert", "luecke": true, "hinweis": "Lücke: Formulieren Sie die Einwilligung in klarer, einfacher Sprache neu." }
+      ]
+    },
+    {
+      "id": "s9-widerruf",
+      "titel": "9. Widerruf so einfach wie die Erteilung?",
+      "frage": "Kann die Einwilligung jederzeit und so einfach widerrufen werden, wie sie erteilt wurde?",
+      "bezug": "DSGVO Art. 7 Abs. 3",
+      "hilfe": "Der Widerruf muss so einfach sein wie die Erteilung. Kinder und Eltern müssen die Einwilligung ohne Hürden zurücknehmen können; darüber ist vorab zu informieren.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, einfacher Widerruf möglich", "luecke": false },
+        { "wert": "nein", "text": "Nein / umständlich", "luecke": true, "hinweis": "Lücke: Widerruf so niedrigschwellig gestalten wie die Erteilung." }
+      ]
+    },
+    {
+      "id": "s10-minimierung",
+      "titel": "10. Datenminimierung und starkes Löschrecht?",
+      "frage": "Erheben Sie nur die für den Zweck nötigen Daten und berücksichtigen Sie das besonders starke Löschrecht bei Kinderdaten?",
+      "bezug": "DSGVO Art. 5 (Datenminimierung), Art. 17, ErwG 65",
+      "hilfe": "ErwG 65 betont ein besonders starkes Löschrecht bei Daten, die als Kind gegeben wurden. Keine Kopplung an nicht erforderliche Verarbeitung; Daten sparsam erheben und einfach löschbar halten.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, datensparsam und löschbar", "luecke": false },
+        { "wert": "teils", "text": "Teilweise", "luecke": true, "hinweis": "Reduzieren Sie die Datenerhebung und stellen Sie eine einfache Löschung sicher." },
+        { "wert": "nein", "text": "Nein", "luecke": true, "hinweis": "Lücke: Datenminimierung und einfaches Löschen umsetzen (ErwG 65)." }
+      ]
+    },
+    {
+      "id": "s11-nachweis",
+      "titel": "11. Einwilligung nachweisbar dokumentiert?",
+      "frage": "Können Sie nachweisen, dass eine wirksame Einwilligung (bzw. Eltern-Zustimmung) vorlag (Rechenschaftspflicht)?",
+      "bezug": "DSGVO Art. 5 Abs. 2, Art. 7 Abs. 1",
+      "hilfe": "Der Verantwortliche muss nachweisen können, dass die betroffene Person eingewilligt hat. Dokumentieren Sie Zeitpunkt, Umfang und – bei Minderjährigen – die Eltern-Zustimmung datensparsam.",
+      "antworten": [
+        { "wert": "ja", "text": "Ja, Nachweis vorhanden", "luecke": false },
+        { "wert": "nein", "text": "Nein", "luecke": true, "hinweis": "Lücke: Nachweisbare, datensparsame Dokumentation der Einwilligung einrichten." }
+      ]
+    }
+  ]
+}
