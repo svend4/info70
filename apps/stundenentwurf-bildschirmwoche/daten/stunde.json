@@ -1,0 +1,30 @@
+{
+  "titel": "Meine Bildschirmwoche",
+  "untertitel": "Auftaktstunde zum einwöchigen Medien-Protokoll (Projekt)",
+  "zielgruppe": "Klasse 5–7 (10–13 Jahre)",
+  "app": "takt-pause",
+  "appName": "Takt-Pause",
+  "lernziele": [
+    "Die Schüler*innen beobachten ihre eigene Mediennutzung eine Woche lang bewusst und halten sie auf einem Papier-Protokoll fest (kein Upload, alles auf Papier oder lokal).",
+    "Sie erkennen mit der Ampel-App Takt-Pause, wie Pausen und bewusste Stopps helfen, und formulieren eine persönliche Vorsatz-Frage für die Woche.",
+    "Sie werten ihre Beobachtungen am Ende anonym als Klassendiagramm aus und leiten gemeinsam Regeln für gute Pausen und genug Schlaf/Bewegung ab (UN-KRK Art. 31: Recht auf Spiel und Erholung)."
+  ],
+  "ablauf": [
+    { "minuten": 8, "phase": "Einstieg", "text": "Handzeichen-Blitz: „Was machst du am liebsten am Bildschirm?“ und „Wann merkst du, dass es zu viel war?“ Ungewertet sammeln. Ziel der Woche ankündigen: nichts verbieten, nur beobachten." },
+    { "minuten": 12, "phase": "Erarbeitung", "text": "Takt-Pause am Beamer im Klassen-Modus: gemeinsam die Ampel und eine bewusste Pause ausprobieren, spüren, was einen Stopp schwer macht (Autoplay, „nur noch eins“). Jedes Kind wählt EINE Pausen-Strategie für die Woche." },
+    { "minuten": 15, "phase": "Vertiefung", "text": "Papier-Wochenprotokoll austeilen und erklären: pro Tag ankreuzen, wie lange/wobei am Bildschirm, wie man sich danach gefühlt hat und ob eine Pause geklappt hat. Betonen: bleibt privat, keine Handykontrolle, keine Daten werden hochgeladen." },
+    { "minuten": 10, "phase": "Abschluss", "text": "Vorsatz-Karte ausfüllen („Diese Woche probiere ich …“). Ausblick auf die Abschlussstunde: Die Klasse trägt ihre Zahlen ANONYM zusammen und malt ein gemeinsames Klassendiagramm an die Tafel – niemand muss sein eigenes Protokoll zeigen." }
+  ],
+  "arbeitsblatt": [
+    "Papier-Wochenprotokoll (Mo–So): pro Tag Felder für „womit“, „wie lange (kurz/mittel/lang)“, „wie ich mich danach fühlte“ und „Pause geklappt? ja/nein“.",
+    "Vorsatz-Karte: eine Pausen-Strategie für die Woche auswählen und aufschreiben (z. B. Autoplay aus, Wecker stellen, Gerät in anderen Raum).",
+    "Abschluss-Auswertung: Strichliste für das anonyme Klassendiagramm (an der Tafel) – niemand nennt seinen Namen oder zeigt sein Protokoll."
+  ],
+  "hinweise": [
+    "Kein Bloßstellen, kein Wettbewerb: Es gibt kein „zu viel“ an der Tafel mit Namen. Das Protokoll bleibt beim Kind, nur anonyme Zahlen kommen zusammen.",
+    "Datensparsamkeit als Prinzip vorleben: Alles läuft auf Papier oder lokal, Takt-Pause speichert höchstens lokal im Browser und ist löschbar – nichts wird hochgeladen.",
+    "Projekt-Struktur: Auftaktstunde (dieser Entwurf, ca. 45 Min), dann eine Woche Protokoll zu Hause, dann eine Abschlussstunde mit anonymer Klassendiagramm-Auswertung und Regel-Ableitung.",
+    "Sensibel bleiben: Wenn Kinder von Schlafproblemen oder Streit ums Handy berichten, Gesprächsangebot machen und ggf. an Schulsozialarbeit / Beratung verweisen; Hilfe auch über die Nummer gegen Kummer 116 111."
+  ],
+  "bezug": "UN-KRK Art. 31 (Spiel & Erholung) · DSGVO (Datenminimierung) · KMK „Bildung in der digitalen Welt“ · Medienkompetenzrahmen NRW"
+}

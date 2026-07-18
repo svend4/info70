@@ -1,0 +1,33 @@
+/* Klassen-Koffer-Auswertung: Druckansicht als Klassen-Report.
+   Beim Drucken verschwinden Import-Feld und Knöpfe (.kk-nur-bildschirm),
+   es bleibt die Heatmap-Tabelle als ruhiger Report übrig. Hintergrund-
+   farben der Stufen werden gedruckt (print-color-adjust). */
+
+@media print {
+  .kk-nur-bildschirm { display: none !important; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .k-titel { color: #000; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    break-inside: avoid;
+  }
+
+  table tr {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

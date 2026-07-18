@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stundenentwurf-bildschirmwoche",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stundenentwurf 'Meine Bildschirmwoche' (Auftaktstunde 45 Min, Klasse 5-7): einwoechiges Medien-Protokoll-Projekt fuer Lehrkraefte rund um die App 'Takt-Pause', mit anonymer Klassendiagramm-Auswertung. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

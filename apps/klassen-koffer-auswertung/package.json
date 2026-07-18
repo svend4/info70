@@ -1,0 +1,8 @@
+{
+  "name": "@info70/klassen-koffer-auswertung",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Klassen-Koffer-Auswertung fuer Lehrkraefte: anonyme Ergebnis-Dateien (Tiernamen statt Klarnamen) importieren und als Heatmap sehen, welche Frage der Klasse schwerfiel. Kein Server, keine personenbezogenen Daten.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stations-konfigurator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stations-Konfigurator fuer Lehrkraefte: Lernstationen zusammenstellen, Deep-Links auf einzelne Module erzeugen, druckbaren Laufzettel und teilbaren Konfig-Link (URL-Hash) ausgeben. Rein lokal, keine externen Anfragen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
