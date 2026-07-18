@@ -1,0 +1,83 @@
+{
+  "hinweis": "Geht diese Punkte vor dem Kauf oder der Installation gemeinsam durch. Zu jedem Punkt gibt es eine Erklärkarte. Am Ende bekommt ihr eine Empfehlung. Nichts wird gesendet – alles bleibt auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "alter",
+      "name": "Alter & Kennzeichen",
+      "emoji": "🔞",
+      "punkte": [
+        {
+          "id": "a-usk",
+          "frage": "Passt das Alterskennzeichen (USK/PEGI) zum Alter des Kindes?",
+          "warum": "USK- und PEGI-Zahlen sagen, ab welchem Alter ein Spiel freigegeben ist. „Ab 12“ heißt: für Jüngere nicht geeignet. Die Zahl ist eine Grenze, kein Vorschlag."
+        },
+        {
+          "id": "a-hinweise",
+          "frage": "Habt ihr die Zusatzhinweise beachtet (z. B. „Online-Interaktionen“, „In-App-Käufe“)?",
+          "warum": "Auch ein „ab 6“-Spiel kann Chat mit Fremden oder Kostenfallen haben. Die kleinen Zusatzhinweise auf der Packung oder im Store verraten das."
+        }
+      ]
+    },
+    {
+      "id": "kommunikation",
+      "name": "Chatten & Kontakt",
+      "emoji": "💬",
+      "punkte": [
+        {
+          "id": "k-chat",
+          "frage": "Wisst ihr, ob es einen Chat mit fremden Spieler*innen gibt?",
+          "warum": "Offener Chat mit Fremden ist das größte Risiko in Spielen. Prüft, ob es Text- oder Voice-Chat gibt und wer schreiben darf."
+        },
+        {
+          "id": "k-abschaltbar",
+          "frage": "Lässt sich der Chat einschränken (nur Freunde) oder ganz abschalten?",
+          "warum": "Gute Spiele lassen euch den Chat auf „nur Freunde“ stellen oder ausschalten. Das ist Selbstschutz – kein Kind muss mit Fremden reden."
+        },
+        {
+          "id": "k-melden",
+          "frage": "Gibt es eine Melde- und Blockier-Funktion?",
+          "warum": "Melden und Blockieren sind wichtig, falls jemand gemein wird. Ein Spiel ohne Melde-Knopf ist ein Warnzeichen."
+        }
+      ]
+    },
+    {
+      "id": "kosten",
+      "name": "Kosten & Lootboxen",
+      "emoji": "💶",
+      "punkte": [
+        {
+          "id": "c-kaufsperre",
+          "frage": "Sind Käufe durch ein Passwort oder eine Kaufsperre geschützt?",
+          "warum": "Ohne Kaufsperre ist ein teurer Klick schnell passiert. Richtet eine Passwort-Abfrage für Käufe ein – am besten auf dem Konto der Eltern."
+        },
+        {
+          "id": "c-lootbox",
+          "frage": "Habt ihr geprüft, ob es Lootboxen oder Zufalls-Käufe gibt?",
+          "warum": "Lootboxen sind wie Lose: Man kauft eine Chance, nicht das Wunsch-Item. Kleine Beträge summieren sich – das ist eine typische Kostenfalle."
+        },
+        {
+          "id": "c-echtgeld",
+          "frage": "Ist klar, was das Spiel wirklich kostet (auch versteckte In-App-Käufe)?",
+          "warum": "„Kostenlos“ heißt oft: gratis starten, drinnen zahlen. Rechnet Spielwährungen (Gems, Münzen) in echtes Geld um, bevor ihr kauft."
+        }
+      ]
+    },
+    {
+      "id": "daten",
+      "name": "Anmeldung & Daten",
+      "emoji": "🔒",
+      "punkte": [
+        {
+          "id": "d-anmeldung",
+          "frage": "Ist klar, ob eine Anmeldung nötig ist und welche Daten abgefragt werden?",
+          "warum": "Fragt: Braucht das Spiel einen echten Namen, eine Adresse oder ein Foto? Für ein Spiel reicht meist ein Spitzname. Weniger Daten ist besser (Datensparsamkeit)."
+        },
+        {
+          "id": "d-werbung",
+          "frage": "Habt ihr auf Werbung im Spiel geachtet (und ob sie zu Käufen drängt)?",
+          "warum": "Viele „kostenlose“ Spiele zeigen Werbung. An Kinder gerichtete Kaufaufforderungen sind unzulässig. Ständige Werbung, die drängelt, ist ein Warnzeichen."
+        }
+      ]
+    }
+  ]
+}

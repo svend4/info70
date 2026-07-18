@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**87 приложений (86 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**89 приложений (88 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 530 тестов.
+Полный прогон: 538 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -95,7 +95,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `darf-ich-posten` | Право на изображение и авторское право | кат.№1 |
 | `passwort-pruefstand` | Стойкость пароля, метод трёх слов | кат.№1 |
 | `kettenbrief-stopper` | Цепные сообщения | база |
-| `stark-im-chat` | Кибербуллинг: роль свидетеля | база |
+| `stark-im-chat` | Кибербуллинг: роль свидетеля + Chat-Rechte-Pack (16 сцен.) | база |
 | `stark-im-chat-plus` | Свидетель 13+: групповой чат и пути DSA | кат.№1 |
 | `spiral-stopper` | Эскалация хейта: сила Gegenrede и Melden | кат.№1 |
 | `challenge-druck` | Групповое давление: 5 тактик + фразы выхода | кат.№1 |
@@ -122,11 +122,13 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |
 | `gefuehle-entdecker` | Эмоции для 5–7 лет | кат.№2 |
 | `mini-rechte-entdecker` | Права для 6–8: ja/нет, озвучка (BFSG) | кат.№1 |
+| `plattform-rechte-13` | Права на платформах 13–15 (DSA/DSGVO/AI Act), 14 вопр. | кат.№1 |
 | `smarte-ohren` | Говорящие устройства (6–8, Leichte Sprache) | кат.№1 |
 | `regel-werkstatt` | Класс сам делает медиаправила (печать/Koffer) | кат.№1 |
 | `familien-medienvertrag` | Семейный медиадоговор (Eltern+Kind) | кат.№1 |
 | `gemeinsam-gesund-essen` | Ко-приложение 3–5 (со взрослым) | кат.№2 |
 | `berechtigungs-safari` | Семейная охота по разрешениям приложений | кат.№1 |
+| `spiele-kauf-kompass` | Семья: чек-лист перед покупкой игры (USK/чат/лутбокс) | кат.№1 |
 | `eltern-sammelband` | Все Eltern-Kompass одной брошюрой (печать) | кат.№1 |
 
 **Kita & Fachkräfte / Betreiber — взрослые (локально, без детских данных):**

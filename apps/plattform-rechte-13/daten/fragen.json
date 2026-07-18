@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "zielgruppe": "13-15",
+  "raenge": [
+    { "ab": 0, "titel": "Plattform-Neuling", "emoji": "🌱" },
+    { "ab": 5, "titel": "Rechte-Kenner*in", "emoji": "🧭" },
+    { "ab": 9, "titel": "Rechte-Profi", "emoji": "🎖️" },
+    { "ab": 12, "titel": "Digital-Mündig", "emoji": "⚖️" }
+  ],
+  "fragen": [
+    {
+      "id": "p01",
+      "typ": "binaer",
+      "kategorie": "Plattform-Rechte",
+      "aussage": "Wenn eine Plattform deinen Beitrag löscht oder sperrt, muss sie dir den Grund nennen.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. Der EU Digital Services Act (DSA, Artikel 17) verpflichtet Plattformen zu einer nachvollziehbaren Begründung von Moderationsentscheidungen. Willkürliches Löschen ohne Erklärung ist nicht erlaubt."
+    },
+    {
+      "id": "p02",
+      "typ": "wahl",
+      "kategorie": "Plattform-Rechte",
+      "frage": "Deine Plattform sperrt deinen Account und du hältst das für falsch. Was ist dein Recht?",
+      "antworten": [
+        "Nichts – die Plattform entscheidet endgültig",
+        "Du kannst intern Beschwerde einlegen (Widerspruch), die Plattform muss sie prüfen",
+        "Du müsstest sofort einen Anwalt bezahlen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der DSA (Artikel 20) verlangt ein internes Beschwerdemanagement: Du kannst gegen Entscheidungen Widerspruch einlegen, und die Plattform muss ihn ernsthaft bearbeiten – kostenlos."
+    },
+    {
+      "id": "p03",
+      "typ": "binaer",
+      "kategorie": "Datenschutz",
+      "aussage": "Du darfst von einer Plattform verlangen zu erfahren, welche Daten sie über dich gespeichert hat.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig – das ist dein Auskunftsrecht (DSGVO Artikel 15). Du kannst eine Kopie deiner Daten anfordern und erfahren, wofür sie verarbeitet werden. Die Plattform muss meist innerhalb eines Monats antworten."
+    },
+    {
+      "id": "p04",
+      "typ": "wahl",
+      "kategorie": "Datenschutz",
+      "frage": "Ab welchem Alter kannst du in Deutschland in vielen Online-Diensten allein (ohne Eltern) in die Datenverarbeitung einwilligen?",
+      "antworten": [
+        "Ab 13",
+        "Ab 16",
+        "Ab 18"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Die DSGVO (Artikel 8) legt 16 als Grenze fest; Deutschland ist dabei geblieben. Darunter brauchen viele Dienste die Zustimmung der Eltern. Das schützt Jüngere vor unüberlegter Datenpreisgabe."
+    },
+    {
+      "id": "p05",
+      "typ": "binaer",
+      "kategorie": "Werbung & KI",
+      "aussage": "Plattformen dürfen dir als minderjähriger Person personalisierte Werbung auf Basis deiner Daten (Profiling) zeigen.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Der DSA (Artikel 28) verbietet auf Profiling gestützte Werbung gegenüber Minderjährigen. Deine Daten dürfen nicht benutzt werden, um dir gezielt Werbung zuzuschneiden."
+    },
+    {
+      "id": "p06",
+      "typ": "wahl",
+      "kategorie": "Datenschutz",
+      "frage": "Du willst, dass ein Dienst Daten über dich löscht. Was gilt?",
+      "antworten": [
+        "Einmal gespeichert, gehören die Daten für immer dem Dienst",
+        "Du hast ein Recht auf Löschung („Recht auf Vergessenwerden“)",
+        "Löschen geht nur gegen Gebühr"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Die DSGVO (Artikel 17) gibt dir ein Recht auf Löschung. Für Daten, die du als Kind oder Jugendliche*r hinterlassen hast, gelten sogar besonders starke Löschrechte."
+    },
+    {
+      "id": "p07",
+      "typ": "binaer",
+      "kategorie": "Plattform-Rechte",
+      "aussage": "Eine große Plattform muss dir erklären, nach welchen Hauptkriterien sie dir Inhalte empfiehlt.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. Der DSA (Artikel 27) verlangt Transparenz über die Hauptparameter von Empfehlungssystemen. Bei sehr großen Plattformen muss es außerdem eine Option ohne Profiling geben."
+    },
+    {
+      "id": "p08",
+      "typ": "binaer",
+      "kategorie": "Werbung & KI",
+      "aussage": "Wenn ein Video mit KI erstellt oder verändert wurde, darf das unmarkiert bleiben.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Die EU-KI-Verordnung (AI Act, Artikel 50) verlangt, dass KI-erzeugte oder -veränderte Inhalte wie Deepfakes gekennzeichnet werden. Zu wissen, was echt ist, gehört zu deinem Recht auf verlässliche Information."
+    },
+    {
+      "id": "p09",
+      "typ": "wahl",
+      "kategorie": "Plattform-Rechte",
+      "frage": "Was ist ein „Meldeverfahren“ nach dem DSA?",
+      "antworten": [
+        "Eine Pflicht, dich mit Klarnamen anzumelden",
+        "Ein Weg, rechtswidrige Inhalte zu melden, den die Plattform bearbeiten muss",
+        "Eine Funktion, um Freunde einzuladen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der DSA (Artikel 16) verpflichtet Plattformen zu Melde- und Abhilfeverfahren: Du kannst rechtswidrige Inhalte melden, und die Plattform muss darauf reagieren. Melden ist ein Recht, kein Petzen."
+    },
+    {
+      "id": "p10",
+      "typ": "binaer",
+      "kategorie": "Datenschutz",
+      "aussage": "Du hast das Recht, deine Daten von einem Dienst mitzunehmen und zu einem anderen zu übertragen.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig – das ist die Datenübertragbarkeit (DSGVO Artikel 20). Du kannst deine Daten in einem gängigen Format anfordern, um nicht an einen Anbieter „gefesselt“ zu sein."
+    },
+    {
+      "id": "p11",
+      "typ": "wahl",
+      "kategorie": "Datenschutz",
+      "frage": "Eine neue App verlangt bei der Anmeldung deinen echten Namen, deine Adresse und einen Ausweis-Scan. Was ist klug?",
+      "antworten": [
+        "Alles hochladen, damit die App funktioniert",
+        "Prüfen, ob die App das wirklich braucht – nur das Nötigste angeben (Datenminimierung)",
+        "Die Daten eines Freundes eintragen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Datenminimierung (DSGVO Artikel 5) heißt: Ein Dienst darf nur erheben, was er wirklich braucht. Ein Ausweis-Scan auf Vorrat ist ein Warnsignal – frag dich, warum eine Chat- oder Spiele-App so etwas will."
+    },
+    {
+      "id": "p12",
+      "typ": "binaer",
+      "kategorie": "Datenschutz",
+      "aussage": "Eine einmal gegebene Einwilligung in die Datenverarbeitung kannst du jederzeit wieder widerrufen.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt. Nach der DSGVO (Artikel 7) ist Einwilligung freiwillig und jederzeit widerrufbar – der Widerruf muss so einfach sein wie das Zustimmen. Danach müssen die betroffenen Daten grundsätzlich gelöscht werden."
+    },
+    {
+      "id": "p13",
+      "typ": "wahl",
+      "kategorie": "Plattform-Rechte",
+      "frage": "Die Plattform lehnt deine Beschwerde ab. Was kannst du noch tun?",
+      "antworten": [
+        "Aufgeben – mehr geht nicht",
+        "Dich an eine außergerichtliche Streitbeilegungsstelle oder eine Behörde (z. B. Datenschutz) wenden",
+        "Den Account einfach neu erstellen und hoffen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der DSA (Artikel 21) sieht außergerichtliche Streitbeilegung vor; bei Datenthemen kannst du dich an eine Datenschutz-Aufsichtsbehörde wenden (DSGVO Artikel 77). Es gibt also Wege über die Plattform hinaus."
+    },
+    {
+      "id": "p14",
+      "typ": "binaer",
+      "kategorie": "Werbung & KI",
+      "aussage": "Auch mit 14 hast du ein Recht auf Privatsphäre – gegenüber Plattformen, Werbetreibenden und sogar den eigenen Eltern.",
+      "korrekt": "ja",
+      "erklaerung": "Ja. Das Recht auf Privatsphäre (UN-Kinderrechtskonvention Artikel 16, DSGVO) gilt in jedem Alter. Mit den Jahren entscheidest du mehr selbst – Schutz und Selbstbestimmung wachsen zusammen."
+    }
+  ]
+}

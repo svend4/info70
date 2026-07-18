@@ -1,0 +1,8 @@
+{
+  "name": "@info70/plattform-rechte-13",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plattform-Rechte-Pack 13+ (Jugendliche 13-15): quiz-kern-Quiz zu den konkreten Rechten auf Plattformen - Begruendungspflicht bei Moderation (DSA Art. 17), interner Widerspruch (Art. 20), Datenauskunft/-loeschung (DSGVO Art. 15/17), Einwilligungsalter (Art. 8, DE 16), Werbeverbot fuer Minderjaehrige (DSA Art. 28), KI-Kennzeichnung (AI Act Art. 50). Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

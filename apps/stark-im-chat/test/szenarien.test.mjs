@@ -28,6 +28,16 @@ test('jedes Szenario: Situation, Erklärung, genau ein stärkster Zug (wert 2), 
   }
 });
 
+test('Chat-Rechte-Pack (Katalog Nr. 138): Chat-Situationen als Rechtsfragen', () => {
+  assert.ok(daten.szenarien.length >= 16, 'Rechte-Pack ergänzt (mindestens 16 Szenarien)');
+  const alles = JSON.stringify(daten.szenarien);
+  assert.ok(/Artikel 13|Meinungsfreiheit/.test(alles), 'Meinung sagen ist Art. 13 – beleidigen nicht');
+  assert.ok(/DSA|digitale Dienste/.test(alles), 'Melden als Recht (DSA Art. 16/20)');
+  assert.ok(/kein Petzen/.test(alles), 'Melden ist kein Petzen');
+  assert.ok(/Artikel 12|gehört zu werden|gehört werden/.test(alles), 'Recht auf Gehört-werden (Art. 12)');
+  assert.ok(/Hassrede/.test(alles), 'Hassrede als meldbarer Fall');
+});
+
 test('didaktische Schwerpunkte: Melden, Beweise sichern, Hilfe holen (116 111) kommen vor', () => {
   const alles = JSON.stringify(daten.szenarien);
   assert.ok(/melde/i.test(alles), 'Melde-Funktion muss vorkommen');

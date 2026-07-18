@@ -107,6 +107,66 @@
         { "text": "Heimlich in der Gruppe alle anschreien, die gelacht haben", "wert": 1 }
       ],
       "erklaerung": "Bei Mobbing gilt: Hilfe holen bricht kein Versprechen – es ist Freundschaft. Gemeinsam zu Eltern oder Lehrkraft, oder erst anonym üben bei der Nummer gegen Kummer (116 111, kostenlos)."
+    },
+    {
+      "id": "c11",
+      "situation": "Im Klassenchat wird über ein Thema gestritten. Du bist anderer Meinung als die meisten.",
+      "optionen": [
+        { "text": "Lieber nichts sagen – nachher lachen alle über dich", "wert": 1 },
+        { "text": "Deine Meinung ruhig und mit einem Grund schreiben – ohne jemanden zu beleidigen", "wert": 2 },
+        { "text": "Die anderen als „dumm“ beschimpfen, weil sie es nicht kapieren", "wert": 0 }
+      ],
+      "erklaerung": "Deine Meinung zu sagen ist dein Recht (Artikel 13 der Kinderrechte). Beleidigen gehört aber nicht dazu. Meinungsfreiheit heißt: sagen, was du denkst – fair und mit Respekt vor den anderen."
+    },
+    {
+      "id": "c12",
+      "situation": "Jemand verbreitet in einer großen Gruppe eine gemeine Lüge über dich.",
+      "optionen": [
+        { "text": "Nichts tun und dich tagelang ärgern", "wert": 1 },
+        { "text": "Die Nachricht über den Melde-Knopf der App melden und einer Vertrauensperson Bescheid sagen", "wert": 2 },
+        { "text": "Eine noch gemeinere Lüge über die Person zurückposten", "wert": 0 }
+      ],
+      "erklaerung": "Melden ist dein Recht: Das EU-Gesetz für digitale Dienste (DSA, Artikel 20) verpflichtet Plattformen zu Melde- und Beschwerdewegen. Melden ist kein Petzen – es schützt dich und andere."
+    },
+    {
+      "id": "c13",
+      "situation": "Ein Freund sagt: „Etwas zu melden ist voll das Petzen. Das macht man nicht.“",
+      "optionen": [
+        { "text": "Ihm recht geben und nie etwas melden", "wert": 0 },
+        { "text": "Erklären: Melden schützt Betroffene und ist ein Recht – Petzen will schaden, Melden will helfen", "wert": 2 },
+        { "text": "Nichts sagen, aber heimlich trotzdem unsicher bleiben", "wert": 1 }
+      ],
+      "erklaerung": "Petzen will jemandem schaden. Melden will schützen. Der Melde-Knopf ist ein Recht (DSA Artikel 16/20), damit gefährliche oder gemeine Inhalte weggehen. Das ist mutig, nicht gemein."
+    },
+    {
+      "id": "c14",
+      "situation": "In der Klassengruppe wird abgestimmt, wohin der Ausflug geht – aber deine Idee wird gar nicht gefragt.",
+      "optionen": [
+        { "text": "Beleidigt aus der Gruppe gehen und schmollen", "wert": 1 },
+        { "text": "Freundlich schreiben: „Ich möchte auch gehört werden – ich hätte einen anderen Vorschlag.“", "wert": 2 },
+        { "text": "Die Abstimmung mit Spam-Nachrichten kaputtmachen", "wert": 0 }
+      ],
+      "erklaerung": "Du hast das Recht, gehört zu werden (Artikel 12). Gehört werden heißt nicht immer recht bekommen – aber deine Idee darf auf den Tisch. Höflich einfordern wirkt am besten."
+    },
+    {
+      "id": "c15",
+      "situation": "Jemand postet einen Kommentar, der eine ganze Gruppe wegen ihrer Herkunft beleidigt. Viele liken es.",
+      "optionen": [
+        { "text": "Auch liken, damit du dazugehörst", "wert": 0 },
+        { "text": "Den Kommentar melden und den Betroffenen zeigen, dass du auf ihrer Seite bist", "wert": 2 },
+        { "text": "Wegscrollen und so tun, als hättest du nichts gesehen", "wert": 1 }
+      ],
+      "erklaerung": "Das ist Hassrede – sie ist verboten und meldbar (DSA). Kein Mensch darf wegen seiner Herkunft beleidigt werden (Artikel 2). Melden und Betroffene stärken ist Zivilcourage im Netz."
+    },
+    {
+      "id": "c16",
+      "situation": "Du willst im Chat kritisieren, dass eine Regel in der Klasse unfair ist.",
+      "optionen": [
+        { "text": "Die Lehrerin persönlich beleidigen, damit es alle sehen", "wert": 0 },
+        { "text": "Sachlich schreiben, WARUM du die Regel unfair findest, und einen besseren Vorschlag machen", "wert": 2 },
+        { "text": "Gar nichts sagen, obwohl es dich stört", "wert": 1 }
+      ],
+      "erklaerung": "Kritik ist erlaubt und wichtig (Artikel 12/13) – wenn sie sachlich bleibt. Ein guter Grund und ein konkreter Vorschlag werden viel eher gehört als eine Beleidigung. So wird aus Meckern Mitbestimmung."
     }
   ]
 }

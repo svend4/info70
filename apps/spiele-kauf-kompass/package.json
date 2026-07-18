@@ -1,0 +1,8 @@
+{
+  "name": "@info70/spiele-kauf-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Spiele-Kauf-Kompass (Familie, Eltern+Kind 6-15): Checkliste, die Eltern und Kind vor dem Kauf oder der Installation eines Spiels gemeinsam durchgehen - Alterskennzeichen (USK/PEGI) und Zusatzhinweise, Chat abschaltbar, Kaufsperren, Loot-Mechaniken, Anmeldung/Daten - jede Position mit kindgerechter Erklaerkarte und Vorlesen. kriterien-check-Muster mit neuem Katalog.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
