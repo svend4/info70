@@ -1,0 +1,96 @@
+{
+  "art": "schulstart-begleiter-katalog",
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Lokaler Beobachtungsbogen zur Schulfaehigkeit fuer Fachkraefte. Kinder nur als Kuerzel (max 3 Zeichen), keine Namen. Beobachtung, keine Diagnose und KEIN Ersatz fuer das aerztliche Schuleingangsverfahren. Dokumentiert wird je Kind einzeln, ohne Rangfolge und ohne Schulreife-Note. Bei Fragen an Fruehfoerderstellen, Grundschule (Kooperationslehrkraft) und Schulaerztlichen Dienst.",
+  "berichtKopf": "Schulstart-Begleiter – Beobachtungs-Dokumentation zur Schulfähigkeit",
+  "berichtHinweis": [
+    "Beobachtung, keine Diagnose und kein Ersatz für das Schuleingangsverfahren.",
+    "Diese Dokumentation hält fest, was im Kita-Alltag beobachtet wurde. Sie",
+    "vergibt keine Schulreife-Note und vergleicht kein Kind mit anderen; jedes",
+    "Kind entwickelt sich in seinem eigenen Tempo. Grundlage für das Übergangs-",
+    "und Elterngespräch. Bei Fragen an Frühförderstellen, Kooperationslehrkraft",
+    "der Grundschule und den Schulärztlichen Dienst."
+  ],
+  "berichtFuss": [
+    "Diese Doku gehört in die Bildungsdokumentation der Einrichtung und dient dem",
+    "Übergangsgespräch Kita–Grundschule – nicht als Urteil über die Schulreife."
+  ],
+  "stufen": [
+    { "id": "noch-nicht", "text": "noch nicht" },
+    { "id": "manchmal", "text": "in Ansätzen" },
+    { "id": "sicher", "text": "sicher" }
+  ],
+  "bereiche": [
+    {
+      "id": "sprache",
+      "name": "Sprache & phonologische Bewusstheit",
+      "emoji": "💬",
+      "fokus": "Sprechen, Zuhören, Reime und Laute – Vorläufer des Lesens und Schreibens",
+      "indikatoren": [
+        { "id": "sprache-1", "text": "Spricht in vollständigen, verständlichen Sätzen über eigene Erlebnisse." },
+        { "id": "sprache-2", "text": "Hört bei einer Geschichte aufmerksam zu und gibt den Inhalt sinngemäß wieder." },
+        { "id": "sprache-3", "text": "Erkennt und bildet Reime (z. B. Katze – Tatze)." },
+        { "id": "sprache-4", "text": "Hört den Anlaut eines Wortes heraus (Mit welchem Laut beginnt „Sonne“?)." },
+        { "id": "sprache-5", "text": "Zerlegt kurze Wörter klatschend in Silben." },
+        { "id": "sprache-6", "text": "Verfügt über einen altersgemäßen Wortschatz und fragt nach unbekannten Wörtern." }
+      ]
+    },
+    {
+      "id": "mathe",
+      "name": "Mengen & frühe Mathematik",
+      "emoji": "🔢",
+      "fokus": "Zahlen, Mengen, Formen und Muster – mathematische Vorläuferfähigkeiten",
+      "indikatoren": [
+        { "id": "mathe-1", "text": "Zählt kleine Mengen sicher ab und nennt die Anzahl." },
+        { "id": "mathe-2", "text": "Vergleicht Mengen (mehr, weniger, gleich viel) durch Zuordnen." },
+        { "id": "mathe-3", "text": "Benennt und unterscheidet Grundformen (Kreis, Dreieck, Viereck)." },
+        { "id": "mathe-4", "text": "Setzt ein einfaches Muster (Reihe) folgerichtig fort." },
+        { "id": "mathe-5", "text": "Ordnet nach Größe (klein–groß) und beschreibt Lagebeziehungen (oben/unten, vor/hinter)." },
+        { "id": "mathe-6", "text": "Erkennt Ziffern im Alltag wieder und ordnet ihnen Mengen zu." }
+      ]
+    },
+    {
+      "id": "motorik",
+      "name": "Fein- & Graphomotorik",
+      "emoji": "✏️",
+      "fokus": "Hand, Stift und Werkzeug – Grundlage fürs Schreiben",
+      "indikatoren": [
+        { "id": "motorik-1", "text": "Hält den Stift mit lockerem Dreipunktgriff und malt mit angemessenem Druck." },
+        { "id": "motorik-2", "text": "Malt Formen aus und bleibt dabei weitgehend in der Linie." },
+        { "id": "motorik-3", "text": "Spurt Linien, Bögen und einfache Formen nach." },
+        { "id": "motorik-4", "text": "Schneidet mit der Schere einer vorgegebenen Linie entlang." },
+        { "id": "motorik-5", "text": "Fädelt Perlen auf oder knöpft selbstständig zu." },
+        { "id": "motorik-6", "text": "Zeichnet einen erkennbaren Menschen mit mehreren Körperteilen." }
+      ]
+    },
+    {
+      "id": "arbeit",
+      "name": "Konzentration & Arbeitsverhalten",
+      "emoji": "🎯",
+      "fokus": "Ausdauer, Regeln und Aufgaben zu Ende bringen",
+      "indikatoren": [
+        { "id": "arbeit-1", "text": "Bleibt bei einer selbst gewählten Aufgabe über einige Minuten konzentriert dabei." },
+        { "id": "arbeit-2", "text": "Führt eine vorgegebene Aufgabe bis zum Ende, auch wenn sie anstrengt." },
+        { "id": "arbeit-3", "text": "Hört eine mehrteilige Anweisung und setzt sie in der richtigen Reihenfolge um." },
+        { "id": "arbeit-4", "text": "Hält vereinbarte Regeln ein und wartet, bis es an der Reihe ist." },
+        { "id": "arbeit-5", "text": "Hält kurze Sitz- und Arbeitsphasen im Kreis oder am Tisch aus." },
+        { "id": "arbeit-6", "text": "Geht mit Fehlern und Anstrengung um, ohne sofort aufzugeben." }
+      ]
+    },
+    {
+      "id": "sozial",
+      "name": "Soziale & emotionale Reife / Selbstständigkeit",
+      "emoji": "🤝",
+      "fokus": "In der Gruppe zurechtkommen, sich selbst versorgen, Gefühle regulieren",
+      "indikatoren": [
+        { "id": "sozial-1", "text": "Findet in einer Gruppe Kontakt und arbeitet mit anderen Kindern zusammen." },
+        { "id": "sozial-2", "text": "Löst kleine Konflikte zunehmend mit Worten statt mit Streit." },
+        { "id": "sozial-3", "text": "Zieht sich weitgehend selbstständig an und geht allein zur Toilette." },
+        { "id": "sozial-4", "text": "Trennt sich morgens ohne große Belastung von den Eltern." },
+        { "id": "sozial-5", "text": "Benennt eigene Gefühle und beruhigt sich nach Aufregung wieder." },
+        { "id": "sozial-6", "text": "Bittet bei Schwierigkeiten von sich aus um Hilfe." }
+      ]
+    }
+  ]
+}
