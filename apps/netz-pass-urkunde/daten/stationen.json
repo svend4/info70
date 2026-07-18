@@ -1,0 +1,89 @@
+{
+  "einleitung": "Der Netz-Pass zeigt: Du kennst dich im Internet aus und passt gut auf dich auf. Geh die Stationen mit einem Erwachsenen durch. Wenn du eine kannst, mach ein Häkchen. Am Ende darfst du deinen Netz-Pass ausdrucken.",
+  "stufen": [
+    {
+      "id": "junior",
+      "name": "Netz-Pass Junior",
+      "alter": "6–8 Jahre",
+      "emoji": "🐣",
+      "urkundeText": "hat alle Stationen vom Netz-Pass Junior geschafft und weiß schon richtig gut, wie man im Internet auf sich aufpasst.",
+      "stationen": [
+        {
+          "id": "j-fragen",
+          "emoji": "🙋",
+          "text": "Ich frage einen Erwachsenen, bevor ich etwas Neues im Internet mache.",
+          "tipp": "Neue App, neue Seite, anmelden? Erst fragen. Erwachsene helfen gern und werden nicht böse."
+        },
+        {
+          "id": "j-geheim",
+          "emoji": "🤫",
+          "text": "Meinen echten Namen, wo ich wohne und meine Telefonnummer sage ich Fremden im Internet nicht.",
+          "tipp": "Das sind deine Geheimnisse. Im Netz reicht ein Spitzname. Kein Fremder muss wissen, wo du wohnst."
+        },
+        {
+          "id": "j-stopp",
+          "emoji": "🛑",
+          "text": "Wenn etwas komisch, gruselig oder gemein ist, höre ich auf und hole einen Erwachsenen.",
+          "tipp": "Du musst nichts allein aushalten. Weg vom Bildschirm, Bescheid sagen – das ist stark, nicht peinlich."
+        },
+        {
+          "id": "j-werbung",
+          "emoji": "🍭",
+          "text": "Ich weiß, dass bunte „Klick hier!“-Knöpfe oft Werbung sind, die etwas verkaufen will.",
+          "tipp": "Blinkt, verspricht ein Geschenk oder drängelt? Meist Werbung. Nicht klicken, lieber fragen."
+        },
+        {
+          "id": "j-hilfe",
+          "emoji": "☎️",
+          "text": "Ich weiß, dass es Hilfe gibt: einen Erwachsenen, dem ich vertraue, und die Nummer gegen Kummer 116 111.",
+          "tipp": "116 111 ist kostenlos und geheim. Da hört dir jemand zu, wenn dich etwas traurig oder wütend macht."
+        }
+      ]
+    },
+    {
+      "id": "profi",
+      "name": "Netz-Pass",
+      "alter": "8–12 Jahre",
+      "emoji": "🚀",
+      "urkundeText": "hat alle Stationen vom Netz-Pass geschafft und geht klug, freundlich und sicher mit dem Internet um.",
+      "stationen": [
+        {
+          "id": "p-daten",
+          "emoji": "🔒",
+          "text": "Ich gebe so wenig wie möglich von mir preis und poste keine persönlichen Daten oder Adressen.",
+          "tipp": "Datensparsam sein heißt: nur das Nötigste verraten. Was einmal online ist, bekommst du kaum wieder weg."
+        },
+        {
+          "id": "p-passwort",
+          "emoji": "🔑",
+          "text": "Ich benutze gute Passwörter und behalte sie für mich – außer bei meinen Eltern.",
+          "tipp": "Ein gutes Passwort ist lang, z. B. ein Satz. Für jede wichtige Sache ein anderes. Nie an Freunde weitergeben."
+        },
+        {
+          "id": "p-fake",
+          "emoji": "🕵️",
+          "text": "Ich weiß, dass nicht alles im Internet echt ist – Bilder, Videos und Nachrichten können erfunden sein.",
+          "tipp": "Prüfen statt glauben: Wer sagt das? Steht es auch woanders? Bei „zu schön/zu schlimm um wahr zu sein“ misstrauisch werden."
+        },
+        {
+          "id": "p-bot",
+          "emoji": "🤖",
+          "text": "Ich merke, wenn ich mit einem Computer-Programm (Bot/KI) schreibe, und weiß, dass es kein echter Freund ist.",
+          "tipp": "Ein Bot ist kein Mensch und kann sich irren. Persönliche Geheimnisse gehören nicht in einen Chat mit einer Maschine."
+        },
+        {
+          "id": "p-respekt",
+          "emoji": "💚",
+          "text": "Ich bleibe im Netz freundlich und melde gemeine Nachrichten, statt zurück gemein zu sein.",
+          "tipp": "Schreib nur, was du auch ins Gesicht sagen würdest. Bei Mobbing: nicht mitmachen, Beweise sichern, Hilfe holen."
+        },
+        {
+          "id": "p-hilfe",
+          "emoji": "☎️",
+          "text": "Ich weiß genau, wo ich Hilfe finde: Vertrauensperson, Melden-Knopf und die Nummer gegen Kummer 116 111.",
+          "tipp": "Fast überall gibt es einen Melden-Knopf. Und 116 111 ist kostenlos, geheim und für dich da."
+        }
+      ]
+    }
+  ]
+}

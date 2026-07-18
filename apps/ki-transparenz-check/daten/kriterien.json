@@ -1,0 +1,106 @@
+{
+  "quelle": "EU-KI-Verordnung (AI Act, VO (EU) 2024/1689) – Pflichten für KI in Kinderangeboten (sinngemäß, öffentlich recherchiert)",
+  "hinweis": "Selbst-Check für Betreiber, die KI in einem Kinderangebot einsetzen (Chatbot, Empfehlungen, Bild-/Text-Generatoren, Alterseinschätzung). Kein offizielles Konformitätsergebnis – die verbindliche Bewertung macht eine Rechtsberatung bzw. die zuständige Behörde. Diese App stellt keine externen Anfragen; Haken und Bericht bleiben auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "verbote",
+      "name": "Verbotsprüfung (Art. 5 AI Act)",
+      "emoji": "⛔",
+      "kriterien": [
+        {
+          "id": "v-schwaeche",
+          "text": "Die KI nutzt keine altersbedingte Schutzbedürftigkeit von Kindern aus, um ihr Verhalten wesentlich zu beeinflussen.",
+          "hilfe": "Art. 5 Abs. 1 lit. b verbietet KI, die die Verletzlichkeit von Kindern (z. B. Leichtgläubigkeit, Wunsch nach Belohnung) ausnutzt, um sie zu Handlungen zu bringen, die ihnen schaden können. Prüfe: Drängt der Bot zu Käufen, längerer Nutzung oder zur Preisgabe von Daten?",
+          "bezug": "AI Act Art. 5 Abs. 1 lit. b"
+        },
+        {
+          "id": "v-manipulation",
+          "text": "Es kommen keine unterschwelligen oder manipulativen Techniken zum Einsatz, die eine informierte Entscheidung untergraben.",
+          "hilfe": "Art. 5 Abs. 1 lit. a verbietet unterschwellige oder täuschende Techniken, die das Verhalten verzerren. Bei Kindern besonders kritisch: künstliche Dringlichkeit, manipulative Bot-„Freundschaft“, Dark Patterns kombiniert mit KI.",
+          "bezug": "AI Act Art. 5 Abs. 1 lit. a"
+        },
+        {
+          "id": "v-emotion",
+          "text": "Es findet keine unzulässige Emotionserkennung oder biometrische Kategorisierung von Kindern statt.",
+          "hilfe": "Emotionserkennung in Bildung ist stark eingeschränkt (Art. 5 Abs. 1 lit. f); biometrische Kategorisierung nach sensiblen Merkmalen ist verboten (lit. g). Setzt du Kamera/Mikrofon zur Gefühls- oder Merkmalserkennung ein? Dann meist unzulässig.",
+          "bezug": "AI Act Art. 5 Abs. 1 lit. f, g"
+        }
+      ]
+    },
+    {
+      "id": "einstufung",
+      "name": "Risiko-Einstufung",
+      "emoji": "📊",
+      "kriterien": [
+        {
+          "id": "r-zweck",
+          "text": "Der Einsatzzweck des KI-Systems ist dokumentiert und einer Risikoklasse (verboten / hoch / begrenzt / minimal) zugeordnet.",
+          "hilfe": "Schreibe auf, was die KI genau tut. Danach ordnest du ein: Fällt sie unter ein Verbot (Art. 5), ist sie Hochrisiko (Anhang III, z. B. Bildungs-/Prüfungsentscheidungen), nur transparenzpflichtig (Art. 50) oder minimal? Die Klasse bestimmt alle weiteren Pflichten.",
+          "bezug": "AI Act Art. 6, Anhang III"
+        },
+        {
+          "id": "r-hochrisiko",
+          "text": "Falls Hochrisiko (z. B. KI bewertet Lernstand oder Zugang zu Bildung): Risikomanagement, Datenqualität und menschliche Aufsicht sind geplant.",
+          "hilfe": "Trifft KI Entscheidungen über Bildung, Prüfungen oder Zugang, ist sie meist Hochrisiko (Anhang III Nr. 3). Dann gelten Art. 9–15: Risikomanagement, Daten-Governance, technische Dokumentation, menschliche Aufsicht. Nicht zutreffend? Trotzdem bewusst ausschließen und notieren.",
+          "bezug": "AI Act Anhang III Nr. 3; Art. 9–15"
+        },
+        {
+          "id": "r-kinderfolgen",
+          "text": "Die möglichen Auswirkungen speziell auf Kinder wurden bewertet (Kindeswohl-Folgenabschätzung).",
+          "hilfe": "Über den AI Act hinaus verlangt die UN-KRK (General Comment Nr. 25) und der DSA, die Folgen für Kinder zu bedenken. Frage: Was passiert im schlechtesten Fall für ein Kind? Wer haftet, wer greift ein? Halte die Abwägung schriftlich fest.",
+          "bezug": "UN-KRK GC 25; DSA Art. 28; DSGVO Art. 35"
+        }
+      ]
+    },
+    {
+      "id": "transparenz",
+      "name": "Transparenzpflichten (Art. 50 AI Act)",
+      "emoji": "💬",
+      "kriterien": [
+        {
+          "id": "t-chatbot",
+          "text": "Kinder erkennen klar, dass sie mit einer KI und nicht mit einem Menschen sprechen.",
+          "hilfe": "Art. 50 Abs. 1 verlangt: Bei Chatbots muss offengelegt sein, dass es eine Maschine ist. Für Kinder besonders deutlich und altersgerecht kennzeichnen (z. B. „Ich bin ein Roboter-Helfer, kein echter Mensch“) – dauerhaft sichtbar, nicht nur einmal.",
+          "bezug": "AI Act Art. 50 Abs. 1"
+        },
+        {
+          "id": "t-kikennzeichnung",
+          "text": "KI-erzeugte oder -bearbeitete Inhalte (Bilder, Audio, Video, Text) sind als künstlich gekennzeichnet.",
+          "hilfe": "Art. 50 Abs. 2 und 4: Synthetische Inhalte und Deepfakes müssen maschinenlesbar und für Menschen erkennbar markiert sein. Auf Kinderseiten am besten zusätzlich in einfacher Sprache: „Dieses Bild hat ein Computer gemalt.“",
+          "bezug": "AI Act Art. 50 Abs. 2, 4"
+        },
+        {
+          "id": "t-grenzen",
+          "text": "Es ist klar und kindgerecht erklärt, was die KI nicht kann und dass sie sich irren kann.",
+          "hilfe": "Kinder überschätzen KI leicht. Erkläre einfach, dass Antworten falsch sein können und die KI kein Freund, kein Arzt und keine Vertrauensperson ist. Verweise bei Sorgen auf einen Menschen (z. B. Nummer gegen Kummer 116 111).",
+          "bezug": "AI Act Art. 50; UN-KRK GC 25"
+        }
+      ]
+    },
+    {
+      "id": "dokumentation",
+      "name": "Dokumentation & Datenschutz",
+      "emoji": "📋",
+      "kriterien": [
+        {
+          "id": "dok-anbieter",
+          "text": "Ein eingekauftes KI-System (z. B. Chatbot-API) ist benannt und dessen Konformität/Zweckbindung ist geklärt.",
+          "hilfe": "Nutzt du einen Fremd-Dienst, brauchst du dessen Angaben zu erlaubtem Einsatz und Konformität. Kläre auch, ob dabei Daten das Gerät verlassen – auf Kinderseiten möglichst vermeiden (siehe Datensparsamkeit).",
+          "bezug": "AI Act Art. 25, 53"
+        },
+        {
+          "id": "dok-daten",
+          "text": "Es werden möglichst wenige Kinderdaten an die KI übergeben; keine Eingaben von Kindern werden ungefragt zum Training verwendet.",
+          "hilfe": "Datensparsamkeit (DSGVO Art. 5, 25): Gib der KI nur, was nötig ist. Kinder-Eingaben dürfen nicht ohne Rechtsgrundlage zum Training genutzt werden. Prüfe die AGB des Anbieters und schalte Trainings-Nutzung ab, wo möglich.",
+          "bezug": "DSGVO Art. 5, 8, 25"
+        },
+        {
+          "id": "dok-melde",
+          "text": "Es gibt einen einfachen Melde- und Ansprechweg, wenn die KI etwas Ungeeignetes ausgibt.",
+          "hilfe": "Kinder und Eltern brauchen einen leicht auffindbaren Weg, Probleme zu melden. Lege fest, wer reagiert und wie schnell. Das ergänzt die DSA-Pflichten zu Melde- und Abhilfeverfahren.",
+          "bezug": "DSA Art. 16, 28"
+        }
+      ]
+    }
+  ]
+}

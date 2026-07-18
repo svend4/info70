@@ -1,0 +1,24 @@
+/* Netz-Pass-Urkunde: Urkunden-Druck. Am Bildschirm ist .npu-nur-druck
+   unsichtbar; beim Drucken verschwindet die Bedienung (.npu-nur-bildschirm)
+   und es bleibt nur der Netz-Pass mit dem eingetippten Namen übrig.
+   Der Name lebt nur in der Seite und wird nirgends gespeichert. */
+
+.npu-nur-druck { display: none; }
+
+@media print {
+  .npu-nur-bildschirm { display: none !important; }
+  .npu-nur-druck { display: block; }
+
+  html { font-size: 13pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+
+  .k-karte {
+    box-shadow: none;
+    border: 3pt double #333;
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    break-inside: avoid;
+  }
+}

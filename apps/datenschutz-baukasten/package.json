@@ -1,0 +1,8 @@
+{
+  "name": "@info70/datenschutz-baukasten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Datenschutzerklärung-Baukasten fuer Kinderseiten: Bausteine ankreuzen erzeugt offline ZWEI abgestimmte Texte - eine juristische Datenschutzerklaerung (DSGVO) und eine Kinder-Version in einfacher Sprache (Art. 12 DSGVO). Formular-zu-Dokument-Engine. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

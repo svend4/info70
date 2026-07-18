@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**72 приложения (71 рабочий MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**75 приложений (74 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 440 тестов.
+Полный прогон: 455 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -145,10 +145,13 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `kriterien-check` | Self-audit оператора | база |
 | `fragfinn-selbsttest` | Критерии whitelist fragFINN + отчёт | кат.№1 |
 | `impressum-generator` | Форма→Impressum (Text/HTML), § 5 DDG/§18 MStV | кат.№1 |
+| `datenschutz-baukasten` | Форма→2 текста: DSGVO-декларация + детская версия (Art. 12) | кат.№1 |
+| `ki-transparenz-check` | Self-check по AI Act (Art. 5/50) + отчёт | кат.№1 |
 | `bfsg-check` | Доступность + офлайн-калькулятор контраста WCAG | кат.№1 |
 | `werbekennzeichnung` | Предпросмотр маркировки рекламы + HTML | кат.№1 |
 | `kria-check` | Оценка последствий для прав ребёнка (GC25) | кат.№1 |
 | `erstes-handy-kompass` | Чек-лист передачи телефона + грамота | кат.№1 |
+| `netz-pass-urkunde` | Станции безопасности + печать грамоты (6–12, имя не хранится) | кат.№1 |
 | `ombuds-landkarte` | Карта инстанций для родителей (§9a SGB VIII, DSA) | кат.№1 |
 | `foerder-navigator` | Каталог грантов + 80/20-калькулятор | база |
 

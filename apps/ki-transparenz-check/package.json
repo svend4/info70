@@ -1,0 +1,8 @@
+{
+  "name": "@info70/ki-transparenz-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KI-Transparenz-Check fuer Kinderangebote: Selbst-Check entlang der EU-KI-Verordnung (AI Act) - Verbotspruefung (Art. 5), Risikoeinstufung, Transparenzpflichten (Art. 50), Dokumentation. Content-Pack auf der Kriterien-Check-Engine. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

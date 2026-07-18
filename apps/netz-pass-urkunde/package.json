@@ -1,0 +1,8 @@
+{
+  "name": "@info70/netz-pass-urkunde",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Netz-Pass-Urkunde: Urkunden-Generator fuer Kinder (Stufen 6-8 und 8-12). Stationen zur Internet-Sicherheit abhaken, dann die eigene Urkunde drucken. Datenvermeidung: Der Name wird nur ins Druckformular getippt und nie gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
