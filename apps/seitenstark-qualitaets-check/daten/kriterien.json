@@ -1,0 +1,119 @@
+{
+  "quelle": "Seitenstark-Qualitätskriterien für gute Kinderseiten (sinngemäß, öffentlich recherchiert)",
+  "hinweis": "Selbst-Check entlang der Seitenstark-Qualitätsmerkmale. Kein offizielles Aufnahme-Ergebnis – die verbindliche Prüfung macht Seitenstark. Diese App stellt keine externen Anfragen; Haken und Maßnahmenplan bleiben auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "transparenz",
+      "name": "Transparenz",
+      "emoji": "🔎",
+      "kriterien": [
+        {
+          "id": "t-impressum",
+          "text": "Es gibt ein vollständiges, leicht auffindbares Impressum mit verantwortlicher Person.",
+          "hilfe": "Seitenstark-Mitgliedsseiten machen klar, wer hinter dem Angebot steht (DDG § 5, MStV § 18). Impressum-Generator hilft beim Erstellen.",
+          "bezug": "Seitenstark-Transparenz; DDG § 5"
+        },
+        {
+          "id": "t-datenschutz",
+          "text": "Eine verständliche Datenschutzerklärung liegt vor – möglichst auch in einer Kinder-Version.",
+          "hilfe": "Art. 12 DSGVO verlangt Verständlichkeit für Kinder. Gute Kinderseiten erklären in einfacher Sprache, welche Daten (nicht) anfallen. Siehe Datenschutz-Baukasten.",
+          "bezug": "Seitenstark; DSGVO Art. 12"
+        },
+        {
+          "id": "t-ziel",
+          "text": "Zielgruppe, Ziele und Träger des Angebots sind klar erkennbar.",
+          "hilfe": "Für wen ist die Seite, was will sie, wer finanziert sie? Seitenstark-Seiten benennen das offen – das schafft Vertrauen bei Kindern und Eltern.",
+          "bezug": "Seitenstark-Qualitätsmerkmale"
+        }
+      ]
+    },
+    {
+      "id": "redaktion",
+      "name": "Redaktionelle Qualität",
+      "emoji": "✍️",
+      "kriterien": [
+        {
+          "id": "r-verantwortung",
+          "text": "Inhalte werden redaktionell betreut und regelmäßig aktualisiert; eine verantwortliche Redaktion ist benannt.",
+          "hilfe": "Gute Kinderseiten pflegen ihre Inhalte aktiv und benennen eine redaktionelle Verantwortung (MStV § 18). Veraltete oder unbetreute Inhalte sind ein Warnsignal.",
+          "bezug": "Seitenstark-Redaktion; MStV § 18"
+        },
+        {
+          "id": "r-kindgerecht",
+          "text": "Sprache, Themen und Gestaltung sind altersgerecht und kindgerecht aufbereitet.",
+          "hilfe": "Kurze Sätze, klare Bilder, nachvollziehbare Navigation. Teste mit Kindern der Zielgruppe, ob sie sich allein zurechtfinden.",
+          "bezug": "Seitenstark-Qualitätsmerkmale"
+        },
+        {
+          "id": "r-richtig",
+          "text": "Informationen sind sachlich richtig, Quellen werden genannt, Meinung und Fakt sind unterscheidbar.",
+          "hilfe": "Kinder lernen Medienkompetenz am Vorbild: Autor, Datum und Quelle sind sichtbar; Werbung/Meinung ist als solche erkennbar. Vgl. „Wer steckt dahinter?“.",
+          "bezug": "Seitenstark; journalistische Sorgfalt"
+        }
+      ]
+    },
+    {
+      "id": "interaktion",
+      "name": "Interaktionsschutz",
+      "emoji": "🛡️",
+      "kriterien": [
+        {
+          "id": "i-moderation",
+          "text": "Kommunikationsfunktionen (Chat, Kommentare, Foren) sind moderiert und ohne offenen Fremdkontakt.",
+          "hilfe": "Interaktion nur mit Schutz: Vormoderation oder Nachmoderation, klare Netiquette, keine offenen Privatnachrichten mit Fremden (JuSchG § 24a, DSA).",
+          "bezug": "Seitenstark-Interaktion; JuSchG § 24a"
+        },
+        {
+          "id": "i-melden",
+          "text": "Es gibt einen kindgerechten, leicht auffindbaren Melde- und Hilfeweg.",
+          "hilfe": "Ein niedrigschwelliger Melde-Knopf plus Verweis auf Hilfe (z. B. Nummer gegen Kummer 116 111). Der Meldewege-Planer unterstützt beim Aufbau.",
+          "bezug": "Seitenstark; DSA Art. 16"
+        },
+        {
+          "id": "i-keine-klarnamen",
+          "text": "Es werden keine Klarnamen verlangt; ein Spitzname genügt (Datensparsamkeit).",
+          "hilfe": "Gute Kinderseiten kommen mit möglichst wenig Daten aus (DSGVO Art. 5, 8, 25). Pflicht-Abfragen von echtem Namen, Adresse oder Telefon sind ein Ausschlussgrund.",
+          "bezug": "Seitenstark; DSGVO Art. 5, 8, 25"
+        }
+      ]
+    },
+    {
+      "id": "werbung",
+      "name": "Werbefreiheit / -kennzeichnung",
+      "emoji": "🏷️",
+      "kriterien": [
+        {
+          "id": "w-werbefrei",
+          "text": "Das Angebot ist möglichst werbefrei; kommerzielle Interessen dominieren nicht.",
+          "hilfe": "Seitenstark bevorzugt werbefreie Angebote. Wo Werbung nötig ist, darf sie Kinder nicht ausnutzen oder zu Käufen drängen.",
+          "bezug": "Seitenstark; JMStV § 6"
+        },
+        {
+          "id": "w-getrennt",
+          "text": "Falls Werbung vorhanden ist, ist sie klar getrennt und als Werbung gekennzeichnet.",
+          "hilfe": "Werbung darf nicht wie Inhalt aussehen (JMStV § 6, Trennungsgebot). Die Werbekennzeichnungs-Vorschau zeigt, wie es korrekt aussieht.",
+          "bezug": "Seitenstark; JMStV § 6"
+        }
+      ]
+    },
+    {
+      "id": "barrierefreiheit",
+      "name": "Barrierefreiheit",
+      "emoji": "♿",
+      "kriterien": [
+        {
+          "id": "b-technik",
+          "text": "Die Seite ist technisch barrierearm (Kontrast, Tastaturbedienung, Alternativtexte).",
+          "hilfe": "BFSG/EAA gilt seit 2025 auch für viele Angebote. Der BFSG-Check mit Kontrast-Rechner hilft bei der Prüfung.",
+          "bezug": "Seitenstark; BFSG/EAA, WCAG 2.1 AA"
+        },
+        {
+          "id": "b-sprache",
+          "text": "Inhalte sind gut verständlich; Vorlese-Funktion und/oder einfache Sprache werden angeboten.",
+          "hilfe": "Für alle Kinder nutzbar: Vorlesen, einfache Sprache, klare Struktur. Das hilft auch Kindern mit Migrationsgeschichte oder Leseschwäche (UN-KRK Art. 23).",
+          "bezug": "Seitenstark; BFSG/EAA, UN-KRK Art. 23"
+        }
+      ]
+    }
+  ]
+}

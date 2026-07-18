@@ -1,0 +1,8 @@
+{
+  "name": "@info70/ki-kennzeichnungs-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KI-Kennzeichnungs-Generator fuer Kinderangebote: Typ (Chatbot/Bild/Text/Deepfake) + Altersstufe (6-8/8-12/13-15) + Sprache (de/uk/ru) erzeugen einen fertigen kindgerechten Kennzeichnungstext und ein einbindbares HTML/CSS-Badge nach Art. 50 AI Act. Formular-zu-Text-Engine. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

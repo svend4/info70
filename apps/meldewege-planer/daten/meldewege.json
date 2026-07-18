@@ -1,0 +1,41 @@
+{
+  "ausloeser": [
+    { "id": "mobbing", "name": "Beleidigung, Mobbing, Bloßstellen", "kinder": "Jemand ist gemein zu dir oder zu anderen." },
+    { "id": "kontakt", "name": "Unerwünschter Fremdkontakt / Grooming-Verdacht", "kinder": "Ein Fremder schreibt dir oder will Geheimnisse/Fotos." },
+    { "id": "inhalt", "name": "Verstörende oder unangemessene Inhalte", "kinder": "Du siehst etwas Gruseliges, Gemeines oder Ekliges." },
+    { "id": "betrug", "name": "Abzocke, Kostenfalle, Fake", "kinder": "Etwas will dich reinlegen oder Geld locken." },
+    { "id": "daten", "name": "Datenschutz-Problem (falsche/private Daten sichtbar)", "kinder": "Über dich steht etwas online, das da nicht hingehört." },
+    { "id": "technik", "name": "Technisches Problem / Fehler", "kinder": "Etwas funktioniert nicht richtig." }
+  ],
+  "reaktionszeiten": [
+    { "id": "sofort", "name": "sofort / am selben Tag", "doku": "Meldungen werden am selben Tag gesichtet." },
+    { "id": "24h", "name": "innerhalb von 24 Stunden", "doku": "Meldungen werden innerhalb von 24 Stunden gesichtet." },
+    { "id": "werktag", "name": "am nächsten Werktag", "doku": "Meldungen werden spätestens am nächsten Werktag gesichtet." }
+  ],
+  "melde_texte": {
+    "de": {
+      "knopf": "Etwas melden",
+      "einleitung": "Hier kannst du uns Bescheid sagen, wenn etwas nicht stimmt. Du musst nichts allein aushalten.",
+      "kein_petzen": "Melden ist kein Petzen. Du hilfst damit dir und anderen – das ist mutig und richtig.",
+      "eingang": "Danke! Wir haben deine Meldung bekommen.",
+      "was_passiert": "Ein echter Mensch schaut sich das in Ruhe an und kümmert sich darum.",
+      "hilfe": "Wenn es dir gerade schlecht geht, ruf die Nummer gegen Kummer an: 116 111 (kostenlos und geheim)."
+    },
+    "uk": {
+      "knopf": "Повідомити",
+      "einleitung": "Тут ти можеш сказати нам, якщо щось не так. Тобі не треба справлятися самому.",
+      "kein_petzen": "Повідомити — це не ябедництво. Так ти допомагаєш собі та іншим, і це сміливо й правильно.",
+      "eingang": "Дякуємо! Ми отримали твоє повідомлення.",
+      "was_passiert": "Справжня людина спокійно все перегляне і подбає про це.",
+      "hilfe": "Якщо тобі зараз погано, подзвони на дитячу лінію довіри: 116 111 (безплатно й анонімно)."
+    },
+    "ru": {
+      "knopf": "Пожаловаться",
+      "einleitung": "Здесь ты можешь сказать нам, если что-то не так. Тебе не нужно справляться в одиночку.",
+      "kein_petzen": "Пожаловаться — не значит наябедничать. Так ты помогаешь себе и другим, это смело и правильно.",
+      "eingang": "Спасибо! Мы получили твоё сообщение.",
+      "was_passiert": "Настоящий человек спокойно всё посмотрит и позаботится об этом.",
+      "hilfe": "Если тебе сейчас плохо, позвони на детский телефон доверия: 116 111 (бесплатно и анонимно)."
+    }
+  }
+}

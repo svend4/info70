@@ -1,0 +1,8 @@
+{
+  "name": "@info70/seitenstark-qualitaets-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Seitenstark-Qualitaets-Check fuer Kinderseiten: Selbst-Check entlang der Seitenstark-Qualitaetsmerkmale (Transparenz, Redaktion, Interaktionsschutz, Werbefreiheit/-kennzeichnung, Barrierefreiheit) als gefuehrte Checkliste. Ergebnis als exportierbarer Massnahmenplan. Content-Pack auf der Kriterien-Check-Engine. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

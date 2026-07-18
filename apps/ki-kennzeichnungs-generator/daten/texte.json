@@ -1,0 +1,57 @@
+{
+  "typen": [
+    { "id": "chatbot", "emoji": "🤖", "name": "Chatbot / KI-Assistent", "hinweis": "Art. 50 Abs. 1 AI Act: Nutzer müssen erkennen, dass sie mit einer Maschine sprechen. Für Kinder besonders deutlich und dauerhaft sichtbar." },
+    { "id": "bild", "emoji": "🖼️", "name": "KI-erzeugtes Bild", "hinweis": "Art. 50 Abs. 2/4 AI Act: Künstlich erzeugte Bilder als solche kennzeichnen – für Kinder in einfacher Sprache." },
+    { "id": "text", "emoji": "📝", "name": "KI-erzeugter Text", "hinweis": "Transparenz nach Art. 50: KI-Texte können Fehler enthalten. Kinder sollen wissen, dass kein Mensch das geschrieben hat." },
+    { "id": "medien", "emoji": "🎬", "name": "KI-Audio/Video (Deepfake)", "hinweis": "Art. 50 Abs. 4 AI Act: Deepfakes müssen erkennbar markiert sein. Bei Kindern zusätzlich einfach erklärt." }
+  ],
+  "stufen": [
+    { "id": "klein", "name": "6–8 Jahre", "emoji": "🐣" },
+    { "id": "mittel", "name": "8–12 Jahre", "emoji": "🚀" },
+    { "id": "gross", "name": "13–15 Jahre", "emoji": "🎧" }
+  ],
+  "texte": {
+    "de": {
+      "chatbot_klein": "Hier antwortet ein Roboter, kein echter Mensch.",
+      "chatbot_mittel": "Hier antwortet eine Maschine (KI), kein Mensch. Sie kann sich irren – erzähl ihr keine Geheimnisse.",
+      "chatbot_gross": "Dieser Chat wird von einer KI beantwortet, nicht von einem Menschen. Antworten können falsch sein; teile keine persönlichen Daten.",
+      "bild_klein": "Dieses Bild hat ein Computer gemalt.",
+      "bild_mittel": "Dieses Bild ist nicht echt – es wurde von einer KI erzeugt.",
+      "bild_gross": "Dieses Bild wurde mit KI erzeugt und zeigt keine echte Aufnahme.",
+      "text_klein": "Diesen Text hat ein Computer geschrieben.",
+      "text_mittel": "Diesen Text hat eine KI geschrieben. Er kann Fehler enthalten.",
+      "text_gross": "Dieser Text wurde von einer KI erstellt und kann Fehler oder erfundene Angaben enthalten.",
+      "medien_klein": "Das ist nicht echt – ein Computer hat es gemacht.",
+      "medien_mittel": "Achtung: Diese Aufnahme ist von einer KI gemacht (Deepfake) und nicht echt.",
+      "medien_gross": "Dieses Audio/Video ist ein KI-Deepfake und zeigt kein echtes Ereignis."
+    },
+    "uk": {
+      "chatbot_klein": "Тут відповідає робот, а не справжня людина.",
+      "chatbot_mittel": "Тут відповідає машина (ШІ), а не людина. Вона може помилятися – не розповідай їй секретів.",
+      "chatbot_gross": "У цьому чаті відповідає ШІ, а не людина. Відповіді можуть бути хибними; не діліться особистими даними.",
+      "bild_klein": "Це зображення намалював комп’ютер.",
+      "bild_mittel": "Це зображення несправжнє – його створив ШІ.",
+      "bild_gross": "Це зображення створене за допомогою ШІ й не є справжнім знімком.",
+      "text_klein": "Цей текст написав комп’ютер.",
+      "text_mittel": "Цей текст написав ШІ. Він може містити помилки.",
+      "text_gross": "Цей текст створено ШІ, і він може містити помилки чи вигадані відомості.",
+      "medien_klein": "Це несправжнє – це зробив комп’ютер.",
+      "medien_mittel": "Увага: цей запис зроблено ШІ (дипфейк) і він несправжній.",
+      "medien_gross": "Це аудіо/відео є ШІ-дипфейком і не показує справжньої події."
+    },
+    "ru": {
+      "chatbot_klein": "Здесь отвечает робот, а не настоящий человек.",
+      "chatbot_mittel": "Здесь отвечает машина (ИИ), а не человек. Она может ошибаться – не рассказывай ей секретов.",
+      "chatbot_gross": "В этом чате отвечает ИИ, а не человек. Ответы могут быть неверными; не делись личными данными.",
+      "bild_klein": "Эту картинку нарисовал компьютер.",
+      "bild_mittel": "Эта картинка ненастоящая – её создал ИИ.",
+      "bild_gross": "Это изображение создано с помощью ИИ и не является настоящим снимком.",
+      "text_klein": "Этот текст написал компьютер.",
+      "text_mittel": "Этот текст написал ИИ. В нём могут быть ошибки.",
+      "text_gross": "Этот текст создан ИИ и может содержать ошибки или выдуманные сведения.",
+      "medien_klein": "Это ненастоящее – это сделал компьютер.",
+      "medien_mittel": "Внимание: эта запись сделана ИИ (дипфейк) и она ненастоящая.",
+      "medien_gross": "Это аудио/видео — ИИ-дипфейк и не показывает настоящего события."
+    }
+  }
+}
