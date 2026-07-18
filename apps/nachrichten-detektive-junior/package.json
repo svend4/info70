@@ -1,0 +1,8 @@
+{
+  "name": "@info70/nachrichten-detektive-junior",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nachrichten-Detektive junior (Kinder 6-8): quiz-kern-Variante mit per Emoji dargestellten Bildern statt Textmeldungen - 'Echt oder ausgedacht?'. Fuer die Kleinen alle Fragen (keine Auswahl), komplett vorlesbar (BFSG). Vermittelt die Grundfrage 'Kann das wirklich sein?'. Mit Klassen-Modus, Raengen und Rekord.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

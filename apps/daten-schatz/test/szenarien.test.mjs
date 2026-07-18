@@ -42,3 +42,14 @@ test('Kostenfallen-Paket vorhanden (Pipeline-Idee 11, Gefährdungsatlas-Kapitel)
   assert.ok(/lootbox/i.test(alles), 'Lootbox-Mechanik muss vorkommen');
   assert.ok(/abo/i.test(alles), 'Abo-Trick muss vorkommen');
 });
+
+test('Account-Diebstahl-Pack "Wer bist du wirklich?" (Katalog Nr. 234)', () => {
+  assert.ok(daten.szenarien.length >= 24, 'Account-Pack ergänzt (mindestens 24 Szenarien)');
+  const alles = JSON.stringify(daten.szenarien);
+  assert.ok(/Phishing|Fake-Login|komisch aus/i.test(alles), 'gefälschte Login-Seite / Phishing');
+  assert.ok(/Passwort/i.test(alles), 'Passwörter sind privat');
+  assert.ok(/Identitätsdiebstahl|Profil mit deinem Foto|tut so, als wärst du/i.test(alles), 'fremdes Profil mit eigenem Foto');
+  // Verdachtsfälle: mindestens ein Account-Szenario verweist auf Erwachsene (beste = fragen)
+  const meldeFaelle = daten.szenarien.filter((s) => s.beste === 'fragen' && /Profil|Konto|Account|Nachrichten/i.test(s.situation));
+  assert.ok(meldeFaelle.length >= 1, 'Verdachtsfälle Erwachsenen melden');
+});

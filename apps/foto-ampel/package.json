@@ -1,0 +1,8 @@
+{
+  "name": "@info70/foto-ampel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Foto-Ampel (Familie, Eltern+Kind 6-12): Vor dem Teilen eines Fotos geht die Familie eine Ampel-Entscheidungsstrecke durch (Wer ist drauf? Haben alle Ja gesagt? Was verraet der Hintergrund? Etwas Peinliches?) und erhaelt Gruen/Gelb/Rot mit kindgerechter Begruendung. Das Kind lernt Einwilligung als eigenes Recht und darf auch bei Eltern-Fotos Rot geben. Keine Foto-Uploads.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

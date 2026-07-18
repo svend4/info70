@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "zielgruppe": "6-8",
+  "raenge": [
+    { "ab": 0, "titel": "Spür-Nase", "emoji": "🐽" },
+    { "ab": 4, "titel": "Bild-Checker*in", "emoji": "🔍" },
+    { "ab": 8, "titel": "Echt-Fake-Profi", "emoji": "🎖️" },
+    { "ab": 12, "titel": "Detektiv-Meister*in", "emoji": "🕵️" }
+  ],
+  "fragen": [
+    {
+      "id": "j01",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🐱🚗 Ein Bild zeigt eine Katze, die ganz allein ein Auto fährt.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Katzen können kein Auto fahren. So ein Bild ist gemalt oder mit dem Computer gemacht. Frag dich immer: Kann das wirklich sein?"
+    },
+    {
+      "id": "j02",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🧒🌳 Ein Bild zeigt Kinder, die im Park spielen.",
+      "korrekt": "ja",
+      "erklaerung": "Echt! Kinder, die im Park spielen, gibt es wirklich. So ein Foto kann echt sein."
+    },
+    {
+      "id": "j03",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🐷✈️ Ein Bild zeigt ein Schwein, das wie ein Flugzeug durch die Wolken fliegt.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Schweine können nicht fliegen. Wenn ein Tier etwas macht, das es gar nicht kann, ist das Bild erfunden."
+    },
+    {
+      "id": "j04",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🌧️☂️ Ein Bild zeigt ein Kind mit Regenschirm im Regen.",
+      "korrekt": "ja",
+      "erklaerung": "Echt! Ein Kind mit Regenschirm im Regen – das gibt es oft. So ein Foto kann echt sein."
+    },
+    {
+      "id": "j05",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🦕🏙️ Ein Foto zeigt einen echten, lebenden Dinosaurier mitten in der Stadt.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Echte Dinosaurier gibt es schon seit sehr, sehr langer Zeit nicht mehr. So ein Bild ist am Computer gemacht."
+    },
+    {
+      "id": "j06",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🍎🌳 Ein Bild zeigt rote Äpfel, die an einem Baum wachsen.",
+      "korrekt": "ja",
+      "erklaerung": "Echt! Äpfel wachsen wirklich an Bäumen. So ein Foto kann echt sein."
+    },
+    {
+      "id": "j07",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🦄🌈 Ein Foto zeigt ein echtes, lebendes Einhorn auf einer Wiese.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Einhörner sind erfunden – aus Geschichten und Filmen. In echt gibt es sie nicht."
+    },
+    {
+      "id": "j08",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🐶🦴 Ein Bild zeigt einen Hund mit einem Knochen im Maul.",
+      "korrekt": "ja",
+      "erklaerung": "Echt! Ein Hund mit einem Knochen – das gibt es wirklich. So ein Foto kann echt sein."
+    },
+    {
+      "id": "j09",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🐘🖐️ Ein Bild zeigt einen winzigen Elefanten, so klein wie eine Maus, auf einer Hand.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Echte Elefanten sind riesig – die größten Tiere an Land. So klein wären sie nie. Das Bild ist ein Trick."
+    },
+    {
+      "id": "j10",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "☀️🏖️ Ein Bild zeigt Menschen am Strand in der Sonne.",
+      "korrekt": "ja",
+      "erklaerung": "Echt! Menschen am Strand in der Sonne – das gibt es wirklich. So ein Foto kann echt sein."
+    },
+    {
+      "id": "j11",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🔥🖐️ Ein Bild zeigt ein Kind, das echtes Feuer aus den Händen zaubert.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Menschen können kein Feuer aus den Händen zaubern. So etwas gibt es nur in Filmen mit Computer-Tricks."
+    },
+    {
+      "id": "j12",
+      "typ": "binaer",
+      "kategorie": "Echt oder ausgedacht",
+      "aussage": "🚲🧒 Ein Bild zeigt ein Kind, das Fahrrad fährt.",
+      "korrekt": "ja",
+      "erklaerung": "Echt! Ein Kind auf dem Fahrrad – das gibt es jeden Tag. So ein Foto kann echt sein. Super, du wirst ein richtiger Bild-Detektiv!"
+    }
+  ]
+}

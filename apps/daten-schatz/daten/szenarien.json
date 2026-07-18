@@ -133,6 +133,48 @@
       "beste": "ablehnen",
       "auchOk": [],
       "erklaerung": "Doppelte Falle: Fremde Passwörter benutzt man nie (auch von Freunden!), und Geld-Deals unter Kindern enden in Streit. Seine Eltern haben das Kaufen mit Absicht gesperrt – hilf ihm nicht, sie auszutricksen."
+    },
+    {
+      "id": "s19",
+      "situation": "Eine Seite sieht genau aus wie dein Lieblingsspiel und will Login und Passwort – aber die Internet-Adresse oben sieht komisch aus (viele Zahlen, falscher Name).",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Das ist eine Fake-Login-Seite (Phishing). Sie will dein Passwort klauen. Nie eingeben! Öffne das echte Spiel über die richtige App und prüfe die Adresse. Im Zweifel Erwachsene fragen."
+    },
+    {
+      "id": "s20",
+      "situation": "Im Chat schreibt ein „Freund“: „Sag mir mal schnell dein Passwort, ich will dir eine Überraschung in dein Konto legen.“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Passwörter sind wie ein Haustürschlüssel – die teilt man mit niemandem, auch nicht mit Freunden. Wer dein Passwort will, will Zugriff auf DICH. Eine echte Überraschung braucht dein Passwort nie."
+    },
+    {
+      "id": "s21",
+      "situation": "Du entdeckst ein Profil mit deinem Foto und deinem Namen, das du gar nicht erstellt hast. Jemand tut so, als wärst du das.",
+      "beste": "fragen",
+      "auchOk": [],
+      "erklaerung": "Das ist Identitätsdiebstahl. Das schaffst du nicht allein: Sag es sofort einer erwachsenen Vertrauensperson, macht Screenshots als Beweis und meldet das Profil der Plattform. Es ist nicht deine Schuld."
+    },
+    {
+      "id": "s22",
+      "situation": "Eine Nachricht warnt: „Dein Account wird in 24 Stunden gelöscht! Klicke hier und logge dich ein, um das zu stoppen.“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Panikmache mit Countdown ist ein typischer Phishing-Trick: Du sollst schnell und ohne Nachdenken dein Passwort eingeben. Nicht klicken. Echte Anbieter drohen dir nicht so. Im Zweifel Erwachsene fragen."
+    },
+    {
+      "id": "s23",
+      "situation": "Plötzlich sind in deinem Account Nachrichten, die du nie geschrieben hast. Es sieht so aus, als hätte jemand dein Passwort.",
+      "beste": "fragen",
+      "auchOk": [],
+      "erklaerung": "Wenn jemand in deinem Konto ist, hilft ein Erwachsener: gemeinsam das Passwort ändern (ein neues, das nur du kennst), den Vorfall melden und prüfen, wo das alte Passwort noch benutzt wird."
+    },
+    {
+      "id": "s24",
+      "situation": "Eine App bietet an: „Speichere hier all deine Passwörter und teile sie mit deinen besten Freunden!“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Passwörter teilt man grundsätzlich nicht – erst recht nicht in einer fremden App. Wer deine Passwörter sammelt, kann in all deine Konten. Für jedes wichtige Konto ein eigenes, geheimes Passwort."
     }
   ]
 }
