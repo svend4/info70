@@ -1,0 +1,70 @@
+{
+  "hinweis": "Wähle die geplanten Interaktionsfunktionen. Der Assistent zeigt die jeweils geltenden Schutz-Anforderungen und erzeugt eine ausfüllbare Moderationskonzept-Vorlage. Kein offizielles Testat; keine externen Anfragen.",
+  "basis": [
+    { "text": "Ein leicht auffindbarer, kindgerechter Melde-Weg ist vorhanden.", "bezug": "DSA Art. 16" },
+    { "text": "Eine klare Netiquette in einfacher Sprache liegt vor und ist sichtbar.", "bezug": "fragFINN, UN-KRK" },
+    { "text": "Keine Klarnamenpflicht – ein Spitzname genügt (Datensparsamkeit).", "bezug": "DSGVO Art. 5, 8, 25" },
+    { "text": "Auf Hilfe wird verwiesen (z. B. Nummer gegen Kummer 116 111).", "bezug": "UN-KRK; JuSchG" },
+    { "text": "Keine Weitergabe von Kinderdaten an Dritte; kein Werbe-Tracking.", "bezug": "DSGVO; DSA Art. 28" }
+  ],
+  "funktionen": [
+    {
+      "id": "kommentare",
+      "name": "Kommentare",
+      "emoji": "💬",
+      "risiko": "mittel",
+      "beschreibung": "Kinder können Beiträge kommentieren.",
+      "anforderungen": [
+        { "text": "Vor- oder Nachmoderation aller Kommentare ist eingerichtet.", "bezug": "JMStV; DSA" },
+        { "text": "Beleidigungen/Mobbing werden erkannt und entfernt; Wiederholungstäter werden begrenzt.", "bezug": "DSA Art. 16/20" },
+        { "text": "Keine offenen personenbezogenen Angaben in Kommentaren (Adresse, Telefon).", "bezug": "DSGVO Art. 5" }
+      ]
+    },
+    {
+      "id": "gaestebuch",
+      "name": "Gästebuch",
+      "emoji": "📖",
+      "risiko": "mittel",
+      "beschreibung": "Öffentliche Einträge auf einer gemeinsamen Seite.",
+      "anforderungen": [
+        { "text": "Nachmoderation mit zeitnaher Sichtung ist organisiert.", "bezug": "JMStV" },
+        { "text": "Spam-Schutz ohne Tracking (z. B. einfache Prüf-Frage statt externem Captcha).", "bezug": "DSGVO; docs/02" }
+      ]
+    },
+    {
+      "id": "upload",
+      "name": "Upload (Bilder/Texte)",
+      "emoji": "🖼️",
+      "risiko": "hoch",
+      "beschreibung": "Kinder laden eigene Inhalte hoch.",
+      "anforderungen": [
+        { "text": "Vormoderation ist zwingend – nichts geht ungeprüft online.", "bezug": "JuSchG § 24a; JMStV" },
+        { "text": "Recht am eigenen Bild wird beachtet; keine erkennbaren Dritten ohne Einwilligung.", "bezug": "KUG § 22; DSGVO" },
+        { "text": "Standort-/Metadaten (EXIF) werden entfernt; keine personenbezogenen Daten im Inhalt.", "bezug": "DSGVO Art. 5, 25" }
+      ]
+    },
+    {
+      "id": "abstimmung",
+      "name": "Abstimmung / Umfrage",
+      "emoji": "🗳️",
+      "risiko": "niedrig",
+      "beschreibung": "Kinder stimmen ab oder beantworten kurze Umfragen.",
+      "anforderungen": [
+        { "text": "Keine personenbezogene Datenerhebung; Teilnahme ohne Konto.", "bezug": "DSGVO Art. 5, 25" },
+        { "text": "Mehrfach-Schutz ohne Nutzer-Tracking (z. B. lokal, nicht serverseitige Profile).", "bezug": "docs/02" }
+      ]
+    },
+    {
+      "id": "chat",
+      "name": "Chat / Direktnachrichten",
+      "emoji": "📨",
+      "risiko": "sehr hoch",
+      "beschreibung": "Kinder schreiben einander (oder Fremden) direkt.",
+      "anforderungen": [
+        { "text": "Kein offener Fremdkontakt; Kontakt nur nach Bestätigung / in geschützten Gruppen.", "bezug": "JuSchG § 24a; DSA Art. 28" },
+        { "text": "Aktive Moderation/Filter und Grooming-Prävention sind vorhanden.", "bezug": "JuSchG; DSA" },
+        { "text": "Melden ist jederzeit ein Klick entfernt; Hinweis auf Hilfe ist sichtbar.", "bezug": "DSA Art. 16; UN-KRK" }
+      ]
+    }
+  ]
+}

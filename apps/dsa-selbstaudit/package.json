@@ -1,0 +1,8 @@
+{
+  "name": "@info70/dsa-selbstaudit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSA-Selbstaudit Minderjaehrigenschutz fuer Kinderangebote: Selbstaudit-Checkliste (Schutz durch Gestaltung, kein profilbasiertes Werbe-Targeting Minderjaehriger, Melde-/Beschwerdewege, kindverstaendliche AGB) mit AMPEL-Bewertung (erfuellt/offen/nicht anwendbar) und exportierbarem Ampel-Bericht. DSA/JuSchG. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

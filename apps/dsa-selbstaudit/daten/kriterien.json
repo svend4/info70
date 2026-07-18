@@ -1,0 +1,88 @@
+{
+  "quelle": "Digital Services Act (DSA, VO (EU) 2022/2065) – Minderjährigenschutz, ergänzt um JuSchG (sinngemäß, öffentlich recherchiert)",
+  "hinweis": "Selbstaudit zum Minderjährigenschutz nach DSA. Bewerte jedes Kriterium per Ampel: 🟢 erfüllt, 🔴 offen, ⚪ nicht anwendbar. Kein offizielles Konformitätsergebnis. Diese App stellt keine externen Anfragen; Bewertung und Bericht bleiben auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "designschutz",
+      "name": "Schutz durch Gestaltung",
+      "emoji": "🛡️",
+      "kriterien": [
+        {
+          "id": "d-privacy-default",
+          "text": "Für Minderjährige gelten von Haus aus hohe Privatsphäre- und Sicherheitseinstellungen (Privacy/Safety by Default).",
+          "hilfe": "DSA Art. 28 Abs. 1 verlangt ein hohes Maß an Privatsphäre, Sicherheit und Schutz für Minderjährige. Sichere Voreinstellungen dürfen nicht erst mühsam aktiviert werden müssen.",
+          "bezug": "DSA Art. 28 Abs. 1"
+        },
+        {
+          "id": "d-keine-darkpatterns",
+          "text": "Die Oberfläche nutzt keine manipulativen Designs (Dark Patterns), die Minderjährige zu unerwünschten Entscheidungen drängen.",
+          "hilfe": "DSA Art. 25 verbietet irreführende/manipulative Gestaltung. Prüfe künstliche Dringlichkeit, versteckte Kosten, erschwerte Abmeldung, Bestätigungs-Shaming.",
+          "bezug": "DSA Art. 25"
+        },
+        {
+          "id": "d-risikofeatures",
+          "text": "Auf riskante Funktionen (offener Fremdkontakt, Standortfreigabe, öffentliche Profile) wird verzichtet oder sie sind für Minderjährige abgeschaltet.",
+          "hilfe": "§ 24a JuSchG verlangt Vorsorgemaßnahmen. Riskante Features sollten für Kinder gar nicht erst verfügbar oder standardmäßig aus sein.",
+          "bezug": "JuSchG § 24a; DSA Art. 28"
+        }
+      ]
+    },
+    {
+      "id": "werbung",
+      "name": "Werbung & Empfehlungen",
+      "emoji": "🎯",
+      "kriterien": [
+        {
+          "id": "w-kein-targeting",
+          "text": "Es findet kein auf Profiling gestütztes Werbe-Targeting gegenüber Minderjährigen statt.",
+          "hilfe": "DSA Art. 28 Abs. 2 untersagt personalisierte Werbung auf Basis von Profiling, wenn bekannt ist, dass die Person minderjährig ist. Am sichersten: gar keine profilbasierte Werbung.",
+          "bezug": "DSA Art. 28 Abs. 2"
+        },
+        {
+          "id": "w-empfehlung-transparent",
+          "text": "Empfehlungssysteme sind transparent erklärt; es gibt möglichst eine nicht auf Profiling beruhende Option.",
+          "hilfe": "DSA Art. 27 verlangt, die Hauptparameter von Empfehlungssystemen verständlich offenzulegen. Für Kinder besonders wichtig, um Sog-Mechaniken zu begrenzen.",
+          "bezug": "DSA Art. 27"
+        }
+      ]
+    },
+    {
+      "id": "melden",
+      "name": "Melden & Beschwerde",
+      "emoji": "📮",
+      "kriterien": [
+        {
+          "id": "m-meldeweg",
+          "text": "Es gibt einen leicht zugänglichen, kindgerechten Melde-Mechanismus für rechtswidrige Inhalte.",
+          "hilfe": "DSA Art. 16 verlangt ein Melde- und Abhilfeverfahren. Für Kinder niedrigschwellig, in einfacher Sprache, mit Verweis auf Hilfe (116 111). Siehe Meldewege-Planer.",
+          "bezug": "DSA Art. 16"
+        },
+        {
+          "id": "m-beschwerde",
+          "text": "Betroffene können sich gegen Moderationsentscheidungen beschweren (internes Beschwerdemanagement).",
+          "hilfe": "DSA Art. 20 sieht ein internes Beschwerdemanagement vor. Auch für Kinder verständlich erklären, wie man Widerspruch einlegt.",
+          "bezug": "DSA Art. 20"
+        }
+      ]
+    },
+    {
+      "id": "transparenz",
+      "name": "Transparenz & AGB",
+      "emoji": "📄",
+      "kriterien": [
+        {
+          "id": "t-agb-kindgerecht",
+          "text": "Die Nutzungsbedingungen sind – soweit sich das Angebot an Minderjährige richtet – in kindverständlicher Sprache erklärt.",
+          "hilfe": "DSA Art. 14 Abs. 3 verlangt AGB in klarer, verständlicher Sprache; bei Kinderangeboten so, dass Minderjährige sie verstehen. Kurze Zusammenfassung in Leichter Sprache anbieten.",
+          "bezug": "DSA Art. 14 Abs. 3"
+        },
+        {
+          "id": "t-datensparsam-alter",
+          "text": "Eine etwaige Alterssicherung erfolgt datensparsam und ohne unnötige Erhebung sensibler Daten.",
+          "hilfe": "Altersprüfung darf nicht zur Datensammelstelle werden (DSGVO Art. 5, 25). Verhältnismäßige, datensparsame Verfahren wählen; keine Ausweis-Uploads auf Vorrat.",
+          "bezug": "DSA Art. 28; DSGVO Art. 5, 25"
+        }
+      ]
+    }
+  ]
+}

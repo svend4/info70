@@ -1,0 +1,8 @@
+{
+  "name": "@info70/interaktions-konzept-assistent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interaktions-Konzept-Assistent fuer Kinderseiten: geplante Interaktionsfunktion (Kommentare, Gaestebuch, Upload, Abstimmung, Chat) waehlen und die jeweils geltenden Schutz-Anforderungen (Vor-/Nachmoderation, Melde-Weg, Netiquette, keine Klarnamen) als Checkliste plus eine ausfuellbare Moderationskonzept-Vorlage erhalten. fragFINN/DSA/JMStV/UN-KRK. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
