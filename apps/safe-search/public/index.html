@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KinderSafe Search Companion</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-app="safe-search">
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+  <main class="shell" id="main-content">
+    <nav class="topbar" aria-label="Prototype navigation">
+      <strong>info70 Kinder-Netz</strong>
+      <span>Sichere Suche</span>
+    </nav>
+
+    <section class="hero">
+      <p class="kicker">Sichere Suche</p>
+      <h1 id="title">KinderSafe Search Companion</h1>
+      <p class="audience" id="audience"></p>
+      <p class="lede" id="promise"></p>
+      <button id="primary-action" type="button"></button>
+    </section>
+
+    <section class="scorecard" aria-labelledby="score-heading">
+      <h2 id="score-heading">Warum dieses Produkt?</h2>
+      <p id="app-rationale">Loading demand analysis…</p>
+    </section>
+
+    <section class="grid" id="feature-cards" aria-label="MVP features"></section>
+
+    <section class="two-column">
+      <article class="panel">
+        <h2>Safety checklist</h2>
+        <ul id="checklist"></ul>
+      </article>
+      <article class="panel">
+        <h2>Nächster Sprint</h2>
+        <ol id="next-sprint"></ol>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="panel">
+        <h2>Flow-Prototyp</h2>
+        <ol id="flow-steps"></ol>
+      </article>
+      <article class="panel">
+        <h2>Interaktive Demo</h2>
+        <div class="demo-panel" id="demo-panel"></div>
+        <p class="demo-output" id="demo-output" aria-live="polite">Wähle eine Demo-Situation.</p>
+      </article>
+    </section>
+
+    <section class="domain-section">
+      <h2 id="domain-title"></h2>
+      <div class="domain-grid" id="domain-items"></div>
+    </section>
+
+    <section class="metrics-section" aria-labelledby="metrics-heading">
+      <h2 id="metrics-heading">Wirkungsmetriken für Pilotierung</h2>
+      <div class="metrics-grid" id="impact-metrics"></div>
+    </section>
+
+    <section class="age-section" aria-labelledby="age-heading">
+      <h2 id="age-heading">Altersgerechte Nutzung</h2>
+      <div class="age-grid" id="age-guidance"></div>
+    </section>
+
+    <section class="locale-section" aria-labelledby="locale-heading">
+      <h2 id="locale-heading">Mehrsprachige Kurzbeschreibung</h2>
+      <div class="locale-switcher" id="locale-switcher" role="group" aria-label="Language selection"></div>
+      <p class="localized-summary" id="localized-summary" aria-live="polite"></p>
+    </section>
+
+    <section class="privacy-section" aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">Privacy-by-default MVP</h2>
+      <ul id="privacy-commitments"></ul>
+    </section>
+
+    <section class="resources">
+      <h2>Vertrauenswürdige Ressourcen</h2>
+      <div id="resources"></div>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
