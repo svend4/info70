@@ -1,0 +1,8 @@
+{
+  "name": "@info70/anzeige-einstellungen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Anzeige-Einstellungen (BFSG): Hoher Kontrast und Schriftgroesse zentral einstellen. Die Wahl gilt fuer alle Apps auf diesem Geraet, wird nur lokal gespeichert und ist loeschbar.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

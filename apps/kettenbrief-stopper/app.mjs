@@ -4,10 +4,12 @@
 // Politik: keine externen Anfragen; diese App speichert GAR NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { erstelleKlasse, simuliere, vergleiche } from './sim.mjs';
 import { NACHRICHTEN_TYPEN, typNach } from './nachrichten.mjs';
 
 installiereNetzwerkWaechter();
+bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const app = document.getElementById('app');
 

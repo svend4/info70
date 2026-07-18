@@ -5,6 +5,7 @@
 // und Texte. Politik (docs/02) bleibt Sache der App: Netzwerk-Wächter und
 // CSP werden dort installiert; der Kern macht keine Netzwerkanfragen.
 import { el, vorlesen, mischen } from '../../kinder-ui/js/komponenten.mjs';
+import { boot as bootAnzeige } from '../../kinder-ui/js/anzeige.mjs';
 import { duettWertung, duettSatz } from './duett.mjs';
 import { amZug, staffelWertung, staffelSatz } from './staffel.mjs';
 
@@ -41,6 +42,7 @@ const STANDARD_TEXTE = {
  * }} konfig
  */
 export function starteQuiz(konfig) {
+  bootAnzeige(); // gespeicherte Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
   const { wurzel, daten, rekordSchluessel } = konfig;
   const rundenGroesse = Math.min(konfig.rundenGroesse ?? daten.fragen.length, daten.fragen.length);
   const t = { ...STANDARD_TEXTE, ...konfig.texte };

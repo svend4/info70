@@ -128,3 +128,24 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* --- Anzeige-Einstellungen (BFSG): Schriftgröße + Hoher Kontrast ---
+   Werden über data-Attribute am <html> gesteuert (js/anzeige.mjs).
+   Höhere Spezifität als die Basis-Regeln, wirken daher in allen Apps. */
+html[data-schrift="gross"] { font-size: 21px; }
+html[data-schrift="sehr-gross"] { font-size: 24px; }
+
+:root[data-kontrast="hoch"] {
+  --k-papier: #ffffff;
+  --k-tinte: #000000;
+  --k-karte: #ffffff;
+  --k-rand: #000000;
+  --k-blau: #0b3d91;
+  --k-blau-dunkel: #06266a;
+  --k-gruen: #0a5d1e;
+  --k-rot: #8a0b0b;
+  --k-schatten: none;
+}
+:root[data-kontrast="hoch"] .k-karte { border: 2px solid #000; }
+:root[data-kontrast="hoch"] .k-knopf { border: 2px solid #000; }
+:root[data-kontrast="hoch"] a { color: var(--k-blau-dunkel); }

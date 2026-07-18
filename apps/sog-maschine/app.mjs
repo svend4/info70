@@ -5,9 +5,11 @@
 // schrumpfen). Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { MECHANIKEN, mechanik, bewerteSchaetzung, formatSekunden, VIDEOS } from './sog.mjs';
 
 installiereNetzwerkWaechter();
+bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const app = document.getElementById('app');
 const OHNE_SOG_ENDE = 6;

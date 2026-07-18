@@ -7,8 +7,10 @@ import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.m
 import { erstelleSprache } from '../../packages/kinder-ui/js/sprache.mjs';
 import { leichteSpracheSchalter, basisCode } from '../../packages/kinder-ui/js/leichte-sprache.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 
 installiereNetzwerkWaechter();
+bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const app = document.getElementById('app');
 const kataloge = await fetch('daten/sprachen.json').then((r) => r.json());

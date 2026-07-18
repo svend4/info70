@@ -6,9 +6,11 @@
 // Politik: keine externen Anfragen; localStorage nur Tagesstatistik + laufende Sitzung.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { ampelFarbe, formatZeit, aktualisiereTag, mergeWoche, wochenStatistik } from './logik.mjs';
 
 installiereNetzwerkWaechter();
+bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const TAG_SCHLUESSEL = 'tp.heute';
 const LAUFEND_SCHLUESSEL = 'tp.laufend';

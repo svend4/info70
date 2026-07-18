@@ -6,8 +6,10 @@
 // Politik: keine externen Anfragen, nur Rekord in localStorage.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 
 installiereNetzwerkWaechter();
+bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const REKORD_SCHLUESSEL = 'sic.rekord';
 const app = document.getElementById('app');
