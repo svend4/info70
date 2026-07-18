@@ -228,6 +228,314 @@
       ],
       "korrekt": 1,
       "erklaerung": "Beides gehört zusammen: Eltern haben die Aufgabe, dich zu schützen und zu begleiten (Artikel 5) – und du hast das Recht, gehört zu werden (Artikel 12). Gute Lösungen findet ihr gemeinsam, je älter du wirst, desto mehr entscheidest du mit."
+    },
+    {
+      "id": "k21",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Niemand darf dich schlagen oder dir wehtun – auch nicht zur „Erziehung“.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Artikel 19 schützt dich vor jeder Gewalt. In Deutschland steht sogar im Gesetz: Kinder haben ein Recht auf gewaltfreie Erziehung. Wenn dir jemand wehtut, hol dir Hilfe – zum Beispiel bei der Nummer gegen Kummer 116 111."
+    },
+    {
+      "id": "k22",
+      "typ": "wahl",
+      "kategorie": "Schutz",
+      "frage": "Jemand ärgert dich immer wieder gemein im Chat (Cybermobbing). Was ist klug?",
+      "antworten": [
+        "Zurück gemein sein, damit es aufhört",
+        "Beweise sichern (Screenshots), einen Erwachsenen holen und melden",
+        "Niemandem etwas sagen und alles allein aushalten"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Beweise sichern, Hilfe holen, melden – so stoppt Mobbing am besten. Du hast ein Recht auf Schutz (Artikel 19). Es ist kein Petzen, sondern mutig, sich Hilfe zu holen."
+    },
+    {
+      "id": "k23",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Hilfe zu holen, wenn dir jemand wehtut, ist Petzen.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Hilfe holen ist kein Petzen, sondern klug und stark. Petzen will jemandem schaden – Hilfe holen will schützen. Du hast ein Recht darauf (Artikel 19), und 116 111 ist immer für dich da."
+    },
+    {
+      "id": "k24",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Dein Recht auf Schutz vor Gewalt gilt überall – zu Hause, in der Schule und auch im Internet.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Artikel 19 gilt an jedem Ort. Die UN haben 2021 klargestellt, dass dein Schutz auch digital gilt: vor gemeinen Nachrichten, Bedrohungen und gefährlichen Kontakten."
+    },
+    {
+      "id": "k25",
+      "typ": "wahl",
+      "kategorie": "Schutz",
+      "frage": "Ein Fremder im Chat will heimlich Fotos von dir und dass du Geheimnisse für dich behältst. Was tust du?",
+      "antworten": [
+        "Fotos schicken, damit er nicht sauer wird",
+        "Nichts schicken, sofort einen Erwachsenen holen und den Kontakt melden",
+        "Das Geheimnis für immer behalten"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Genau richtig. Kein Fremder darf dich zu Fotos oder Geheimnissen drängen. Ein Erwachsener, dem du vertraust, hilft dir – und der Melden-Knopf ist dein Recht. Bei Sorgen: 116 111."
+    },
+    {
+      "id": "k26",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Erwachsene dürfen Kinder für harte Arbeit ausnutzen, solange sie dafür Geld bezahlen.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Artikel 32 schützt dich vor ausbeuterischer Arbeit. Kein Geld macht das erlaubt. Du hast ein Recht auf Schule, Spiel und Erholung – nicht auf einen Arbeitstag."
+    },
+    {
+      "id": "k27",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Ein Geheimnis, das dir Angst macht, darfst du einem Erwachsenen erzählen – auch wenn du „versprochen“ hast zu schweigen.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Es gibt gute und schlechte Geheimnisse. Ein Geheimnis, das dir Bauchweh oder Angst macht, darfst du immer weitererzählen. Kein Versprechen ist wichtiger als dein Schutz (Artikel 19)."
+    },
+    {
+      "id": "k28",
+      "typ": "wahl",
+      "kategorie": "Schutz",
+      "frage": "In deiner Klasse wird ein Kind ständig fertiggemacht. Was passt zum Schutzrecht?",
+      "antworten": [
+        "Mitlachen, damit man selbst nicht dran ist",
+        "Nicht mitmachen, dem Kind beistehen und einer erwachsenen Person Bescheid sagen",
+        "Wegschauen – geht dich nichts an"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Jedes Kind hat ein Recht auf Schutz (Artikel 19). Nicht mitmachen, helfen und Bescheid sagen ist stark. Zuschauen macht Mobbing größer – Hinschauen stoppt es."
+    },
+    {
+      "id": "k29",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Auch im Internet hast du ein Recht darauf, vor gemeinen und gefährlichen Inhalten geschützt zu werden.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Gute Kinderseiten sind moderiert und haben einen Melde-Knopf. Wenn dich etwas verstört, ist das nicht dein Fehler – weg vom Bildschirm und einer Vertrauensperson sagen."
+    },
+    {
+      "id": "k30",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Wenn dir online etwas Angst macht, ist das deine Schuld und du musst es für dich behalten.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Es ist nie deine Schuld, wenn dir jemand Angst macht. Du darfst und sollst es erzählen – einer Vertrauensperson oder der Nummer gegen Kummer 116 111 (kostenlos und anonym)."
+    },
+    {
+      "id": "k31",
+      "typ": "binaer",
+      "kategorie": "Förderung",
+      "aussage": "Jedes Kind hat ein Recht auf Bildung – Schule ist nicht nur Pflicht, sondern auch dein Recht.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Artikel 28: Bildung ist dein Recht. Die Grundschule ist für alle da und kostenlos. Lernen öffnet dir Türen – deshalb ist es als Recht geschützt, nicht nur als Pflicht."
+    },
+    {
+      "id": "k32",
+      "typ": "wahl",
+      "kategorie": "Förderung",
+      "frage": "Was gehört zu deinem Recht auf Gesundheit?",
+      "antworten": [
+        "Zugang zu Ärztinnen, gesundem Essen und sauberem Wasser",
+        "Nur teure Medikamente kaufen können",
+        "Gesundheit ist Privatsache, kein Recht"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Artikel 24: Du hast ein Recht auf das erreichbar beste Maß an Gesundheit – dazu gehören ärztliche Hilfe, gesunde Ernährung und sauberes Wasser. Kein Kind soll krank bleiben, weil Hilfe fehlt."
+    },
+    {
+      "id": "k33",
+      "typ": "binaer",
+      "kategorie": "Förderung",
+      "aussage": "Spielen und Ausruhen sind nur eine Belohnung – kein echtes Recht.",
+      "korrekt": "nein",
+      "erklaerung": "Falsch! Artikel 31: Spiel, Ruhe und Freizeit sind eigene Rechte, keine Belohnung fürs Bravsein. Dein Körper und dein Kopf brauchen Pausen – probier es mit takt-pause aus."
+    },
+    {
+      "id": "k34",
+      "typ": "binaer",
+      "kategorie": "Förderung",
+      "aussage": "Auch Pausen und Freizeit gehören zu deinen Rechten, nicht nur Lernen.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Erholung ist ein eigenes Recht (Artikel 31). Ein guter Tag hat Balance aus Lernen, Spielen und Ausruhen. Genau das übt die App Spiel-Recht-Balance."
+    },
+    {
+      "id": "k35",
+      "typ": "wahl",
+      "kategorie": "Förderung",
+      "frage": "Warum ist Erholung wichtig genug für ein eigenes Kinderrecht?",
+      "antworten": [
+        "Damit Erwachsene ihre Ruhe haben",
+        "Weil Körper und Kopf Pausen brauchen, um zu wachsen und gut zu lernen",
+        "Erholung ist eigentlich Zeitverschwendung"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Pausen sind keine verlorene Zeit: Beim Ausruhen verarbeitet dein Gehirn das Gelernte, und dein Körper wächst. Deshalb schützt Artikel 31 deine Erholung als Recht."
+    },
+    {
+      "id": "k36",
+      "typ": "binaer",
+      "kategorie": "Förderung",
+      "aussage": "Kinder mit Behinderung haben ein Recht auf besondere Förderung und volle Teilhabe.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Artikel 23: Kinder mit Behinderung haben ein Recht auf Unterstützung, damit sie überall dabei sein können – in der Schule, beim Spielen und im Netz. Teilhabe ist ein Recht für alle."
+    },
+    {
+      "id": "k37",
+      "typ": "wahl",
+      "kategorie": "Förderung",
+      "frage": "Dein Tag ist nur Schule und Hausaufgaben, nie Zeit zum Spielen. Was sagt dein Recht?",
+      "antworten": [
+        "So muss es sein, Spielen ist unwichtig",
+        "Auch Spiel und Erholung sind wichtig – ein Tag braucht Balance",
+        "Erst mit 18 darf man Freizeit haben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Artikel 31 schützt Spiel und Erholung. Ein gesunder Tag hat Balance: Lernen, Bewegung, Ruhe und Freunde. Wenn ein Teil ständig zu kurz kommt, darfst du das ansprechen."
+    },
+    {
+      "id": "k38",
+      "typ": "binaer",
+      "kategorie": "Förderung",
+      "aussage": "Gute, kindgerechte Medien und Informationen gehören zu deinem Recht auf Bildung und Information.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Artikel 17: Du hast ein Recht auf Zugang zu Informationen, die für Kinder gemacht sind – Kindernachrichten, Kindersuchmaschinen, gute Lern-Apps. Bildung passiert nicht nur in der Schule."
+    },
+    {
+      "id": "k39",
+      "typ": "wahl",
+      "kategorie": "Förderung",
+      "frage": "Was bedeutet dein „Recht auf Entwicklung“?",
+      "antworten": [
+        "Dass du möglichst schnell erwachsen sein musst",
+        "Dass du lernen, spielen, gesund aufwachsen und deine Talente entfalten darfst",
+        "Dass nur Noten zählen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Entwicklung heißt: alle deine Fähigkeiten dürfen wachsen – Kopf, Körper, Gefühle und Talente. Deshalb hängen Bildung, Gesundheit und Spiel zusammen (Artikel 6, 28, 29, 31)."
+    },
+    {
+      "id": "k40",
+      "typ": "binaer",
+      "kategorie": "Förderung",
+      "aussage": "Kinder haben ein Recht auf gesundes Essen und sauberes Trinkwasser.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Das gehört zum Recht auf Gesundheit (Artikel 24). Gutes Essen und sauberes Wasser sind die Basis, damit du wachsen, lernen und spielen kannst."
+    },
+    {
+      "id": "k41",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Du darfst deine Meinung frei sagen, solange du andere damit nicht verletzt.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Artikel 13 gibt dir Meinungsfreiheit. Deine Meinung sagen ist dein Recht – beleidigen gehört aber nicht dazu. Freiheit und Rücksicht gehören zusammen."
+    },
+    {
+      "id": "k42",
+      "typ": "wahl",
+      "kategorie": "Mitbestimmung",
+      "frage": "Was ist ein Klassenrat?",
+      "antworten": [
+        "Eine Strafe für laute Kinder",
+        "Ein regelmäßiges Treffen, in dem die Klasse gemeinsam Regeln und Probleme bespricht und abstimmt",
+        "Eine Liste mit Hausaufgaben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Im Klassenrat übt ihr Beteiligung: Themen sammeln, reden, abstimmen, Ergebnis festhalten. Genau das kannst du mit der Mitmach-Arena und dem Kinderrat ausprobieren (Artikel 12)."
+    },
+    {
+      "id": "k43",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Je älter und reifer du wirst, desto mehr Gewicht bekommt deine Meinung bei Entscheidungen.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Artikel 12: Deine Meinung muss ihrem Alter und ihrer Reife entsprechend berücksichtigt werden. Gehört werden gilt in jedem Alter – dein Wort wiegt mit den Jahren schwerer."
+    },
+    {
+      "id": "k44",
+      "typ": "wahl",
+      "kategorie": "Mitbestimmung",
+      "frage": "In deiner Stadt wird ein neuer Spielplatz geplant. Wie kannst du mitbestimmen?",
+      "antworten": [
+        "Gar nicht – das dürfen nur Erwachsene",
+        "Über ein Kinder- oder Jugendparlament, eine Beteiligungsrunde oder mit Vorschlägen an die Stadt",
+        "Nur wenn du schon wählen darfst"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Auch ohne Wahlrecht darfst du mitreden (Artikel 12). Viele Städte haben Kinder- und Jugendparlamente oder Beteiligungsrunden – dort bringst du deine Ideen ein."
+    },
+    {
+      "id": "k45",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Erwachsene müssen Kinder anhören, bevor sie Entscheidungen treffen, die die Kinder betreffen.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Artikel 12 verlangt, dass Kinder in Angelegenheiten, die sie betreffen, gehört werden – in Familie, Schule und Behörde. Anhören heißt nicht immer nachgeben, aber ernst nehmen."
+    },
+    {
+      "id": "k46",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Mitbestimmen heißt, dass immer genau das passiert, was du willst.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Gehört werden bedeutet nicht automatisch recht bekommen. Beteiligung heißt: mitreden, gute Gründe nennen, gemeinsam abwägen – auch mit anderen Meinungen (Artikel 12)."
+    },
+    {
+      "id": "k47",
+      "typ": "wahl",
+      "kategorie": "Mitbestimmung",
+      "frage": "Was gehört NICHT zu einer fairen Abstimmung?",
+      "antworten": [
+        "Alle dürfen ihre Meinung sagen",
+        "Nur die lautesten Kinder entscheiden über alle",
+        "Am Ende wird gemeinsam abgestimmt"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Fair heißt: alle kommen zu Wort, dann wird abgestimmt und das Ergebnis zählt. Wenn nur die Lautesten bestimmen, ist es keine echte Beteiligung."
+    },
+    {
+      "id": "k48",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Du hast ein Recht, dich zu informieren, um dir eine eigene Meinung bilden zu können.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Artikel 17: Informationszugang gehört zur Beteiligung. Nur wer sich informieren darf, kann mitreden. Deshalb gibt es Kindernachrichten und kindgerechte Quellen."
+    },
+    {
+      "id": "k49",
+      "typ": "wahl",
+      "kategorie": "Mitbestimmung",
+      "frage": "Was ist ein Jugendparlament?",
+      "antworten": [
+        "Ein Spielverein",
+        "Eine gewählte Gruppe von Kindern und Jugendlichen, die gegenüber der Stadt mitredet",
+        "Ein Fach in der Schule"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Ein Jugendparlament vertritt die Interessen junger Menschen gegenüber der Stadt oder Gemeinde. Es ist ein Ort, an dem euer Recht auf Beteiligung (Artikel 12) echt wird."
+    },
+    {
+      "id": "k50",
+      "typ": "binaer",
+      "kategorie": "Mitbestimmung",
+      "aussage": "Beteiligung lernt man am besten, indem man sie ausprobiert – zum Beispiel im Klassenrat.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Mitreden, abstimmen und Verantwortung übernehmen übt man durchs Tun. Die Mitmach-Arena und der Kinderrat sind kleine Übungsplätze für dein Beteiligungsrecht (Artikel 12)."
+    },
+    {
+      "id": "k51",
+      "typ": "wahl",
+      "kategorie": "Mitbestimmung",
+      "frage": "Deine Meinung wird in der Familie nie gehört. Was sagt dein Recht?",
+      "antworten": [
+        "Kinder haben in der Familie kein Mitspracherecht",
+        "Du darfst gehört werden – am besten sucht ihr gemeinsam Lösungen",
+        "Erst als Erwachsener darf man mitreden"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Artikel 12 gilt auch zu Hause: Du darfst deine Meinung sagen und ernst genommen werden. Gehört werden heißt nicht immer bekommen, was du willst – aber gemeinsam Lösungen finden."
     }
   ]
 }

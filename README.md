@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 528 тестов.
+Полный прогон: 530 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -111,7 +111,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 
 | Приложение | Тема | Из чего |
 |---|---|---|
-| `kinderrechte-entdecker` | Права ребёнка + Digitale Rechte (20 вопр.) | база |
+| `kinderrechte-entdecker` | Права ребёнка: Schutz/Förderung/Beteiligung/Digital (51 вопр.) | база |
 | `rechte-kompass` | Высказать своё право: Mut-Sätze по статьям KRK | кат.№1 |
 | `chat-rechte` | Права в чате: свобода И ответственность | кат.№1 |
 | `kinderrat` | Режим заседания: повестка, голосование, протокол | кат.№1 |

@@ -6,7 +6,33 @@ import { pruefeFragen } from '../../../packages/quiz-kern/src/schema.mjs';
 const daten = JSON.parse(await readFile(new URL('../daten/fragen.json', import.meta.url), 'utf8'));
 
 test('Fragenbank: Schema gültig (quiz-kern)', () => {
-  assert.deepEqual(pruefeFragen(daten, { mindestFragen: 20 }), []);
+  assert.deepEqual(pruefeFragen(daten, { mindestFragen: 50 }), []);
+});
+
+test('Rechte-Packs vorhanden: Schutz, Förderung, Beteiligung (Katalog Nr. 128–130)', () => {
+  const zaehle = (k) => daten.fragen.filter((f) => f.kategorie === k).length;
+  // Pack Schutzrechte (№128)
+  assert.ok(zaehle('Schutz') >= 10, `Schutz-Pack (ist: ${zaehle('Schutz')})`);
+  // Pack Förderrechte (№129) – neue Kategorie
+  assert.ok(zaehle('Förderung') >= 10, `Förder-Pack (ist: ${zaehle('Förderung')})`);
+  // Pack Beteiligungsrechte (№130)
+  assert.ok(zaehle('Mitbestimmung') >= 10, `Beteiligungs-Pack (ist: ${zaehle('Mitbestimmung')})`);
+});
+
+test('Pack-Inhalte treffen die Katalog-Themen', () => {
+  const text = (k) => JSON.stringify(daten.fragen.filter((f) => f.kategorie === k));
+  const schutz = text('Schutz');
+  assert.ok(/Gewalt|schlagen|wehtun/.test(schutz), 'Schutz vor Gewalt (Art. 19)');
+  assert.ok(/Ausbeut|ausnutzen|Arbeit/.test(schutz), 'Schutz vor Ausbeutung (Art. 32)');
+  assert.ok(/Mobbing|gemein/.test(schutz), 'Mobbing/Cybermobbing');
+  assert.ok(/116 111|kein Petzen|Hilfe/.test(schutz), 'Hilfe holen ist kein Petzen');
+  const foerder = text('Förderung');
+  assert.ok(/Bildung|Schule/.test(foerder), 'Recht auf Bildung (Art. 28)');
+  assert.ok(/Gesundheit/.test(foerder), 'Recht auf Gesundheit (Art. 24)');
+  assert.ok(/Spiel|Erholung|Pause|takt-pause/.test(foerder), 'Spiel/Erholung (Art. 31)');
+  const beteiligung = text('Mitbestimmung');
+  assert.ok(/Meinung/.test(beteiligung), 'Meinungsfreiheit (Art. 12/13)');
+  assert.ok(/Klassenrat|Jugendparlament|Mitmach-Arena/.test(beteiligung), 'Beteiligungsorte');
 });
 
 test('Digitale-Rechte-Paket vorhanden (Katalog Nr.1 Top-17)', () => {
