@@ -5,7 +5,7 @@
 // an genau dieser Stelle andocken kann - siehe README und docs/02 §3.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { HELDEN, ORTE, PROBLEME, STEMPEL, ERKLAER, erzeugeGeschichte } from './logik.mjs';
+import { HELDEN, ORTE, PROBLEME, STEMPEL, ERKLAER, WAS_WAERE_WENN, erzeugeGeschichte } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -62,6 +62,12 @@ function geschichteBildschirm() {
         el('summary', { style: 'cursor:pointer;font-weight:600' }, '🤔 So denkt die Maschine'),
         el('p', { style: 'margin:0.4rem 0 0' }, ERKLAER),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.4rem', onclick: () => vorlesen(ERKLAER) }, '🔊 Vorlesen'))),
+    el('section', { class: 'k-karte' },
+      el('p', { style: 'margin:0 0 0.4rem;font-weight:600' }, '🃏 Was-wäre-wenn-Karte'),
+      el('p', { id: 'gw-karte', style: 'margin:0' }, WAS_WAERE_WENN[0]),
+      el('div', { class: 'k-antworten', style: 'margin-top:0.4rem' },
+        el('button', { class: 'k-knopf k-knopf--klein', onclick: () => { const z = app.querySelector('#gw-karte'); if (z) z.textContent = WAS_WAERE_WENN[Math.floor(Math.random() * WAS_WAERE_WENN.length)]; } }, '🔀 Neue Karte'),
+        el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => vorlesen(app.querySelector('#gw-karte').textContent) }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0' }, '💡 Weiter-Erzähl-Idee: Wie geht es danach weiter? Male ein Bild dazu oder erzähle das Ende ganz anders!')));
 }

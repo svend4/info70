@@ -1,0 +1,10 @@
+/* Ämtli-Rad: Druckansicht. Beim Drucken verschwindet die Bedienung
+   (.aemtli-nur-bildschirm), nur der Wochenplan (die Zuteilungs-Karte) bleibt. */
+@media print {
+  .aemtli-nur-bildschirm { display: none !important; }
+  html { font-size: 13pt; }
+  body { background: #fff; color: #000; }
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+  .k-karte { box-shadow: none; border: 2pt solid #333; border-radius: 0.4rem; break-inside: avoid; }
+  .aemtli-zeile { border-bottom: 1pt solid #333; }
+}

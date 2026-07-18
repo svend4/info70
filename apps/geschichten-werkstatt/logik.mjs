@@ -3,9 +3,30 @@
 // „Von der Maschine gebaut – mach sie zu deiner!“, plus eine Mini-Erklärung,
 // die die Baustein-Generierung kindgerecht offenlegt (KI-Kompetenz, AI Act).
 
-export const HELDEN = Object.freeze(['eine mutige Erfinderin', 'ein schüchterner Drache', 'zwei beste Freunde', 'eine neugierige Katze', 'ein kleiner Roboter']);
-export const ORTE = Object.freeze(['auf einer Insel aus Süßigkeiten', 'in einer Stadt unter dem Meer', 'auf dem Dachboden der Schule', 'in einem Wald, der nachts leuchtet', 'auf einem fliegenden Markt']);
-export const PROBLEME = Object.freeze(['hat den Schlüssel zur Heimat verloren', 'findet eine geheimnisvolle Landkarte', 'muss ein Gewitter aus Limonade stoppen', 'will den traurigen Mond zum Lachen bringen', 'entdeckt, dass die Farben verschwinden']);
+export const HELDEN = Object.freeze([
+  'eine mutige Erfinderin', 'ein schüchterner Drache', 'zwei beste Freunde', 'eine neugierige Katze', 'ein kleiner Roboter',
+  // Pack "Mut & Anderssein" (docs/09 Nr. 243)
+  'ein Kind, das ganz anders ist als alle anderen', 'eine Heldin, die im Rollstuhl unterwegs ist', 'jemand, der neu in der Klasse ist und niemanden kennt', 'ein Kind mit einer geheimen, leisen Stärke',
+]);
+export const ORTE = Object.freeze([
+  'auf einer Insel aus Süßigkeiten', 'in einer Stadt unter dem Meer', 'auf dem Dachboden der Schule', 'in einem Wald, der nachts leuchtet', 'auf einem fliegenden Markt',
+  // Pack "Mut & Anderssein"
+  'in einer neuen Schule, in der alles fremd ist', 'auf einer großen Bühne vor der ganzen Klasse', 'im Chat einer Klassengruppe',
+]);
+export const PROBLEME = Object.freeze([
+  'hat den Schlüssel zur Heimat verloren', 'findet eine geheimnisvolle Landkarte', 'muss ein Gewitter aus Limonade stoppen', 'will den traurigen Mond zum Lachen bringen', 'entdeckt, dass die Farben verschwinden',
+  // Pack "Mut & Anderssein"
+  'traut sich zum ersten Mal, laut Nein zu sagen', 'wird ausgelacht und findet trotzdem einen eigenen Weg', 'entdeckt, dass Anderssein eine Superkraft ist', 'steht einem Freund bei, den alle ärgern',
+]);
+
+/** "Was-wäre-wenn"-Karten als Weiterschreib-Impulse (Pack Mut & Anderssein). */
+export const WAS_WAERE_WENN = Object.freeze([
+  'Was wäre, wenn dein Held zuerst ganz allein dasteht – und dann Hilfe bekommt?',
+  'Was wäre, wenn alle deine Idee zuerst blöd finden und sie am Ende doch super ist?',
+  'Was wäre, wenn dein Held eine Sache besonders gut kann, die niemand erwartet?',
+  'Was wäre, wenn dein Held sich traut, das zu sagen, was alle nur denken?',
+  'Was wäre, wenn zwei, die sich gar nicht mögen, plötzlich zusammenhalten müssen?',
+]);
 
 const ANFAENGE = ['Es war einmal', 'An einem ganz gewöhnlichen Dienstag', 'Niemand hätte gedacht, dass'];
 const WENDUNGEN = [

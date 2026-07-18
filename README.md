@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**98 приложений (97 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**99 приложений (98 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 598 тестов.
+Полный прогон: 609 тестов.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -109,7 +109,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `daten-radiergummi` | Право на удаление: сила и граница (Art. 17) | кат.№1 |
 | `verschwoerungs-werkstatt` | Prebunking теорий заговора (13–15) | кат.№1 |
 | `filter-spiegel` | Бьюти-фильтры: комикс-аватар без камеры (13–15) | кат.№1 |
-| `takt-pause` | Экранное время: самонаблюдение | база |
+| `takt-pause` | Экранное время: самонаблюдение + Wochen-Rückblick | база |
 | `spiel-recht-balance` | Баланс трёх прав (Art. 31), самрегуляция | кат.№1 |
 
 **Stark werden / Familie — дети и семья:**
@@ -124,7 +124,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `mitmach-arena` | Teilhabe + Klassen-Koffer | база |
 | `ich-schaff-das` | Воля/самрегуляция (сценарии) | кат.№2 |
 | `stark-und-gesund` | Здоровый образ жизни (ВОЗ/DGE) | кат.№2 |
-| `geschichten-werkstatt` | Kreativität / KI + «So denkt die Maschine» (штамп) | 🧪 прототип |
+| `geschichten-werkstatt` | Kreativität / KI + штамп + Bausteine «Mut & Anderssein» | 🧪 прототип |
 | `gefuehle-entdecker` | Эмоции для 5–7 лет | кат.№2 |
 | `mini-rechte-entdecker` | Права для 6–8: ja/нет, озвучка (BFSG) | кат.№1 |
 | `plattform-rechte-13` | Права на платформах 13–15 (DSA/DSGVO/AI Act), 14 вопр. | кат.№1 |
@@ -147,6 +147,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `bewegungs-schatzkiste` | Картотека игр движения (печать) | кат.№2 |
 | `staerken-tagebuch` | Дневник сильных сторон (родители) | кат.№2 |
 | `selbstcheck-paedagogik` | Самрефлексия педагога | кат.№2 |
+| `aemtli-rad` | Школа: честная ротация дежурств (прозрачный алгоритм) | кат.№1 |
 | `jugendschutz-quiz-fachkraefte` | Квиз для педагогов: USK/FSK, риски, § 24a (14 вопр.) | кат.№1 |
 | `lehrkraefte-szenariotraining` | Тренажёр учителя: цифровые ЧП + Meldewege (2/1/0) | кат.№1 |
 | `projektwoche` | Проектная неделя «Sicher im Netz»: 5×90 мин (школа) | кат.№1 |

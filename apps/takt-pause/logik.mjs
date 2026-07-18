@@ -46,3 +46,27 @@ export function aktualisiereTag(bisher, delta, heute = tagesSchluessel()) {
     pausen: basis.pausen + (delta.pausen ?? 0),
   };
 }
+
+/**
+ * Führt die Tagesstatistik in die Wochen-Historie ein (Upsert nach Datum,
+ * sortiert, nur die letzten `maxTage`). Lokale Wochenkurve für den Rückblick.
+ * @param {{datum:string, geplantMin:number, pausen:number}[]} woche
+ * @param {{datum:string, geplantMin:number, pausen:number}|null} tag
+ */
+export function mergeWoche(woche = [], tag, maxTage = 7) {
+  if (!tag || !tag.datum) return [...(woche ?? [])];
+  const ohne = (woche ?? []).filter((t) => t.datum !== tag.datum);
+  const neu = [...ohne, { datum: tag.datum, geplantMin: tag.geplantMin ?? 0, pausen: tag.pausen ?? 0 }];
+  neu.sort((a, b) => a.datum.localeCompare(b.datum));
+  return neu.slice(-maxTage);
+}
+
+/** Kennzahlen für den Wochen-Rückblick. */
+export function wochenStatistik(woche = []) {
+  const w = woche ?? [];
+  return {
+    tage: w.length,
+    pausenGesamt: w.reduce((s, t) => s + (t.pausen ?? 0), 0),
+    maxPausen: w.reduce((m, t) => Math.max(m, t.pausen ?? 0), 0),
+  };
+}

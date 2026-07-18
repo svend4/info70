@@ -6,7 +6,7 @@
 // Politik: keine externen Anfragen; localStorage nur Tagesstatistik + laufende Sitzung.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { ampelFarbe, formatZeit, aktualisiereTag } from './logik.mjs';
+import { ampelFarbe, formatZeit, aktualisiereTag, mergeWoche, wochenStatistik } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -37,8 +37,10 @@ const FARBEN = { gruen: '#15803d', gelb: '#f59e0b', rot: '#b91c1c' };
 let tickTimer = null;
 let rotGemeldet = false;
 
+const WOCHE_SCHLUESSEL = 'tp.woche';
 const ladeTag = () => JSON.parse(localStorage.getItem(TAG_SCHLUESSEL) ?? 'null');
 const ladeLaufend = () => JSON.parse(localStorage.getItem(LAUFEND_SCHLUESSEL) ?? 'null');
+const ladeWoche = () => JSON.parse(localStorage.getItem(WOCHE_SCHLUESSEL) ?? '[]');
 
 function zeige(...knoten) {
   clearInterval(tickTimer);
@@ -55,6 +57,8 @@ function zeige(...knoten) {
 
 function startBildschirm() {
   const tag = aktualisiereTag(ladeTag(), {});
+  // Tagesstand in die lokale Wochen-Historie einpflegen (für den Rückblick)
+  localStorage.setItem(WOCHE_SCHLUESSEL, JSON.stringify(mergeWoche(ladeWoche(), tag)));
   const wahl = { aktivitaet: null, dauer: null };
 
   const render = () => {
@@ -85,9 +89,42 @@ function startBildschirm() {
       el('section', { class: 'k-karte' },
         el('p', { style: 'margin-top:0' }, `Heute: ${tag.geplantMin} Minuten geplant · ${tag.pausen} Pause${tag.pausen === 1 ? '' : 'n'} geschafft ${tag.pausen >= 3 ? '🏆' : tag.pausen >= 1 ? '💪' : ''}`),
         el('p', { style: 'font-size:0.9rem' }, '💡 Takt-Regel: Erst planen, dann losschauen – und die Pause gehört dazu wie das Ausatmen zum Atmen.'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); startBildschirm(); } }, 'Meine Daten löschen')));
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: rueckblickBildschirm }, '📅 Wochen-Rückblick'),
+          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); startBildschirm(); } }, 'Meine Daten löschen'))));
   };
   render();
+}
+
+function rueckblickBildschirm() {
+  const woche = ladeWoche();
+  const stat = wochenStatistik(woche);
+  const balken = (t) => {
+    const hoehe = stat.maxPausen > 0 ? Math.round((t.pausen / stat.maxPausen) * 100) : 0;
+    return el('div', { style: 'display:flex;flex-direction:column;align-items:center;gap:0.2rem;flex:1' },
+      el('div', { style: 'display:flex;align-items:flex-end;height:5rem' },
+        el('div', { style: `width:1.6rem;background:var(--k-blau-dunkel);border-radius:0.3rem 0.3rem 0 0;height:${Math.max(6, hoehe)}%`, title: `${t.pausen} Pausen`, 'aria-label': `${t.datum}: ${t.pausen} Pausen` })),
+      el('span', { style: 'font-size:0.7rem' }, `${t.pausen}`),
+      el('span', { style: 'font-size:0.6rem;color:#4b5563' }, t.datum.slice(5)));
+  };
+  zeige(
+    el('section', { class: 'k-karte' },
+      el('h2', { style: 'margin-top:0;font-size:1.15rem' }, '📅 Deine Woche'),
+      woche.length
+        ? el('div', { style: 'display:flex;gap:0.4rem;align-items:flex-end' }, ...woche.map(balken))
+        : el('p', { style: 'color:#4b5563' }, 'Noch keine Tage aufgezeichnet – plane heute deinen ersten Takt!'),
+      el('p', { style: 'margin-bottom:0' }, `Zusammen: ${stat.pausenGesamt} Pause${stat.pausenGesamt === 1 ? '' : 'n'} an ${stat.tage} Tag${stat.tage === 1 ? '' : 'en'}.`)),
+    el('section', { class: 'k-karte' },
+      el('p', { style: 'font-weight:600;margin-top:0' }, '🤔 Denk mal nach:'),
+      el('ul', { style: 'margin:0' },
+        el('li', {}, 'Wann war die Ampel rot – und wie hat sich das angefühlt?'),
+        el('li', {}, 'An welchem Tag ging es dir richtig gut?'),
+        el('li', {}, 'Was nimmst du dir für nächste Woche vor?')),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.5rem', onclick: () => vorlesen('Wann war die Ampel rot? An welchem Tag ging es dir gut? Was nimmst du dir für nächste Woche vor?') }, '🔊 Vorlesen')),
+    el('section', { class: 'k-karte' },
+      el('div', { class: 'k-antworten' },
+        el('button', { class: 'k-knopf', onclick: startBildschirm }, '← Zurück'),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(WOCHE_SCHLUESSEL); rueckblickBildschirm(); } }, '🧹 Woche löschen'))));
 }
 
 function starteTakt(aktivitaet, dauerMin) {
