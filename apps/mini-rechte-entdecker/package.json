@@ -1,0 +1,8 @@
+{
+  "name": "@info70/mini-rechte-entdecker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mini-Rechte-Entdecker: Binaer-Quiz (quiz-kern) fuer 6-8 zu den wichtigsten Kinderrechten - sehr kurze Ja/Nein-Fragen, komplett vorlesbar. Ergaenzt kinderrechte-entdecker fuer die Kleinen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

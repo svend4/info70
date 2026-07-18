@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**66 приложений (65 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**69 приложений (68 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 408 тестов.
+Полный прогон: 423 теста.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -84,6 +84,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `dark-pattern-detektiv` | Назвать манипулятивный паттерн | кат.№1 |
 | `app-rechte-quiz` | Разрешение vs задача приложения | кат.№1 |
 | `deepfake-spuernase` | KI-фейки: руки/свет/текст/источник | кат.№1 |
+| `anzeige-oder-nicht` | Инфлюенсер-реклама: #anzeige/Merch/Affiliate | кат.№1 |
 | `lootbox-labor` | Лутбоксы с открытыми вероятностями | кат.№1 |
 | `muenz-trick` | Игровая валюта: настоящая цена и «остаток» | кат.№1 |
 | `impressum-detektive` | Кто стоит за сайтом? (DDG §5/MStV §18) | кат.№1 |
@@ -120,6 +121,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `stark-und-gesund` | Здоровый образ жизни (ВОЗ/DGE) | кат.№2 |
 | `geschichten-werkstatt` | Kreativität / KI | 🧪 прототип |
 | `gefuehle-entdecker` | Эмоции для 5–7 лет | кат.№2 |
+| `mini-rechte-entdecker` | Права для 6–8: ja/нет, озвучка (BFSG) | кат.№1 |
 | `smarte-ohren` | Говорящие устройства (6–8, Leichte Sprache) | кат.№1 |
 | `regel-werkstatt` | Класс сам делает медиаправила (печать/Koffer) | кат.№1 |
 | `familien-medienvertrag` | Семейный медиадоговор (Eltern+Kind) | кат.№1 |
@@ -141,6 +143,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `projektwoche` | Проектная неделя «Sicher im Netz»: 5×90 мин (школа) | кат.№1 |
 | `elternabend-kit` | Родительский вечер 60 мин + раздатка de/uk/ru | кат.№1 |
 | `kriterien-check` | Self-audit оператора | база |
+| `fragfinn-selbsttest` | Критерии whitelist fragFINN + отчёт | кат.№1 |
 | `kria-check` | Оценка последствий для прав ребёнка (GC25) | кат.№1 |
 | `erstes-handy-kompass` | Чек-лист передачи телефона + грамота | кат.№1 |
 | `ombuds-landkarte` | Карта инстанций для родителей (§9a SGB VIII, DSA) | кат.№1 |

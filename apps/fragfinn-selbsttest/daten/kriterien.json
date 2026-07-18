@@ -1,0 +1,100 @@
+{
+  "quelle": "fragFINN-Aufnahmekriterien für die Kinder-Whitelist (sinngemäß, öffentlich recherchiert)",
+  "hinweis": "Selbsttest zur Vorbereitung eines fragFINN-Antrags. Kein offizielles Prüfergebnis – die verbindliche Prüfung macht fragFINN. Diese App stellt keine externen Anfragen; Haken und Bericht bleiben auf diesem Gerät.",
+  "bereiche": [
+    {
+      "id": "eignung",
+      "name": "Kindeignung der Inhalte",
+      "emoji": "🧒",
+      "kriterien": [
+        {
+          "id": "e-zielgruppe",
+          "text": "Das Angebot richtet sich erkennbar an Kinder (bis ca. 12 Jahre) und ist inhaltlich für diese Altersgruppe geeignet.",
+          "hilfe": "Prüfe Sprache, Themen und Gestaltung: Sind sie für Kinder gemacht, nicht nur „auch für Kinder geeignet“? Ein klar benanntes Zielalter und altersgerechte Aufbereitung sind die Basis der fragFINN-Aufnahme.",
+          "bezug": "fragFINN-Kriterium Kindeignung"
+        },
+        {
+          "id": "e-unbedenklich",
+          "text": "Es gibt keine ängstigenden, gewalthaltigen, sexualisierten oder anderweitig für Kinder ungeeigneten Inhalte.",
+          "hilfe": "Gehe alle Inhalte (auch verlinkte, Bilder, Kommentare) durch. Schon einzelne ungeeignete Elemente können die Aufnahme verhindern. Der BzKJ-Gefährdungsatlas hilft beim systematischen Prüfen.",
+          "bezug": "JMStV § 5; fragFINN-Unbedenklichkeit"
+        },
+        {
+          "id": "e-verstaendlich",
+          "text": "Inhalte und Navigation sind kindgerecht verständlich und altersgerecht aufbereitet.",
+          "hilfe": "Kurze Texte, klare Symbole, einfache Wege. Teste mit Kindern der Zielgruppe: Finden sie sich allein zurecht? Verstehen sie die Sprache?",
+          "bezug": "fragFINN-Kriterium kindgerechte Gestaltung"
+        }
+      ]
+    },
+    {
+      "id": "sicherheit",
+      "name": "Sicherheit & Interaktion",
+      "emoji": "🛡️",
+      "kriterien": [
+        {
+          "id": "s-interaktion",
+          "text": "Kommunikationsfunktionen (Chat, Kommentare, Foren) sind moderiert oder sicher gestaltet – kein unmoderierter Fremdkontakt.",
+          "hilfe": "Gibt es Chat/Kommentare? Dann müssen sie moderiert sein, einen Melde-Weg haben und dürfen keinen offenen Fremdkontakt zulassen. Ohne solche Schutzmaßnahmen ist eine Aufnahme schwierig.",
+          "bezug": "fragFINN-Interaktionskriterien; JuSchG § 10b"
+        },
+        {
+          "id": "s-links",
+          "text": "Verlinkungen führen nur zu ebenfalls kindgeeigneten Zielen; externe Links sind gekennzeichnet.",
+          "hilfe": "Prüfe jeden ausgehenden Link: Ist das Ziel kindgeeignet? Externe Links sollten als solche erkennbar sein (z. B. Hinweis „externe Seite“). Ein Link zu ungeeigneten Inhalten gefährdet die Aufnahme.",
+          "bezug": "fragFINN-Linkkriterien"
+        },
+        {
+          "id": "s-technik",
+          "text": "Die Seite ist technisch sicher (aktuelles HTTPS) und enthält keine Schadsoftware oder aufdringlichen Weiterleitungen.",
+          "hilfe": "HTTPS aktiv, keine unerwarteten Pop-ups oder Weiterleitungen, keine dubiosen Downloads. Technische Sauberkeit ist Grundvoraussetzung.",
+          "bezug": "fragFINN-Technikkriterien"
+        }
+      ]
+    },
+    {
+      "id": "werbung",
+      "name": "Werbung & Kommerz",
+      "emoji": "🏷️",
+      "kriterien": [
+        {
+          "id": "w-trennung",
+          "text": "Werbung ist – falls vorhanden – klar vom Inhalt getrennt und als Werbung gekennzeichnet.",
+          "hilfe": "Werbung darf nicht wie Inhalt aussehen. Sie muss deutlich gekennzeichnet und getrennt sein (JMStV § 6). Am besten für Kinderangebote: ganz werbefrei.",
+          "bezug": "JMStV § 6; fragFINN-Werbekriterien"
+        },
+        {
+          "id": "w-keine-ausnutzung",
+          "text": "Es gibt keine an Kinder gerichteten Kaufaufforderungen, Kostenfallen, Lootboxen oder unklaren In-App-Käufe.",
+          "hilfe": "Direkte Kaufappelle an Kinder sind unzulässig (UWG). Prüfe auch versteckte Kosten, Abo-Fallen und glücksspielähnliche Elemente – all das schließt eine Aufnahme aus.",
+          "bezug": "UWG Anhang Nr. 28; JuSchG § 10b"
+        }
+      ]
+    },
+    {
+      "id": "daten",
+      "name": "Datenschutz",
+      "emoji": "🔒",
+      "kriterien": [
+        {
+          "id": "d-datensparsam",
+          "text": "Das Angebot erhebt möglichst wenige personenbezogene Daten von Kindern; unnötige Abfragen (Klarname, Adresse) fehlen.",
+          "hilfe": "Beginne bei null Datenerhebung. Keine Pflicht-Abfragen von echtem Namen, Adresse oder Telefon. Ein Spitzname genügt. Datensparsamkeit ist zentral (DSGVO Art. 5, 8, 25).",
+          "bezug": "DSGVO Art. 5, 8, 25; fragFINN-Datenschutz"
+        },
+        {
+          "id": "d-transparenz",
+          "text": "Es gibt ein vollständiges Impressum und eine verständliche Datenschutzerklärung.",
+          "hilfe": "Impressum nach DDG § 5 und eine Datenschutzerklärung, die auch für Kinder verständlich formuliert ist (DSGVO Art. 12). Beides muss leicht auffindbar sein.",
+          "bezug": "DDG § 5; DSGVO Art. 12, 13"
+        },
+        {
+          "id": "d-tracking",
+          "text": "Es findet kein Tracking zu Werbezwecken statt; keine Weitergabe von Kinderdaten an Dritte.",
+          "hilfe": "Kein Werbe-Tracking, keine Profilbildung, keine Weitergabe. Prüfe eingebundene Dienste (Fonts, Analytics, Social-Buttons) – sie können unbemerkt Daten abfließen lassen.",
+          "bezug": "DSA Art. 28; DSGVO Art. 22"
+        }
+      ]
+    }
+  ]
+}

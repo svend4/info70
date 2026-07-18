@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "zielgruppe": "6-8",
+  "raenge": [
+    { "ab": 0, "titel": "Rechte-Küken", "emoji": "🐣" },
+    { "ab": 4, "titel": "Rechte-Freund*in", "emoji": "🌟" },
+    { "ab": 8, "titel": "Rechte-Held*in", "emoji": "🦸" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Jedes Kind hat ein Recht auf Schutz. Niemand darf dir wehtun.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Du hast ein Recht auf Schutz. Kein Mensch darf dir wehtun. Wenn doch, erzähl es einem Erwachsenen, dem du vertraust."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Privat",
+      "aussage": "Ein anderes Kind darf einfach dein Tagebuch lesen, auch wenn du das nicht willst.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Dein Tagebuch ist privat. Das darf niemand ohne deine Erlaubnis lesen. Deine Geheimnisse gehören dir."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Spiel",
+      "aussage": "Jedes Kind hat ein Recht zu spielen und sich auszuruhen.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Spielen ist wichtig – und es ist dein Recht. Auch Ausruhen und Faulenzen gehören dazu. Das brauchst du zum Großwerden."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Meinung",
+      "aussage": "Deine Meinung ist egal, weil du noch ein Kind bist.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Deine Meinung zählt. Bei Dingen, die dich betreffen, darfst du mitreden und gehört werden. Trau dich, zu sagen, was du denkst."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Lernen",
+      "aussage": "Jedes Kind hat ein Recht, in die Schule zu gehen und zu lernen.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Lernen ist dein Recht. In der Schule lernst du viele Dinge. Das hilft dir, deine Träume zu erreichen."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Wenn dir etwas Angst macht, darfst du einen Erwachsenen um Hilfe bitten.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Hilfe holen ist stark, nicht peinlich. Wenn dir etwas Angst macht, erzähl es einem Erwachsenen, dem du vertraust. Du bist nie allein."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Privat",
+      "aussage": "Ein Fremder darf einfach ein Foto von dir machen und es herzeigen.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Über Fotos von dir bestimmst du. Ein Fremder darf das nicht einfach. Fühlt sich etwas komisch an, sag Bescheid."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Gleich",
+      "aussage": "Alle Kinder haben die gleichen Rechte – egal wie sie aussehen oder woher sie kommen.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Alle Kinder haben die gleichen Rechte. Egal welche Sprache, welche Farbe, welches Land. Jedes Kind ist gleich viel wert."
+    },
+    {
+      "id": "b09",
+      "typ": "binaer",
+      "kategorie": "Meinung",
+      "aussage": "Wenn dir bei einem Spiel etwas nicht gefällt, darfst du „Stopp“ oder „Nein“ sagen.",
+      "korrekt": "ja",
+      "erklaerung": "Ja! Du darfst immer „Nein“ oder „Stopp“ sagen, wenn dir etwas nicht gefällt. Dein Gefühl ist wichtig. Andere sollen das achten."
+    },
+    {
+      "id": "b10",
+      "typ": "binaer",
+      "kategorie": "Schutz",
+      "aussage": "Kinder müssen alles alleine schaffen und dürfen nie um Hilfe bitten.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Niemand muss alles alleine schaffen. Um Hilfe zu bitten ist klug und stark. Dafür sind Erwachsene da."
+    }
+  ]
+}

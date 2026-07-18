@@ -1,6 +1,7 @@
 {
   "hinweis": "Alle Apps des Monorepos mit einer eltern.html-Seite. Der Test prüft beide Richtungen: jede gelistete App hat die Seite, und jede vorhandene Seite ist gelistet.",
   "apps": [
+    "anzeige-oder-nicht",
     "app-rechte-quiz",
     "barriere-detektive",
     "berechtigungs-safari",
@@ -38,6 +39,7 @@
     "koeder-quiz",
     "link-kompass",
     "lootbox-labor",
+    "mini-rechte-entdecker",
     "mitmach-arena",
     "muenz-trick",
     "nachrichten-detektive",

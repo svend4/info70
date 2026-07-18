@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Werbe-Späher*in", "emoji": "🔍" },
+    { "ab": 5, "titel": "Anzeige-Kenner*in", "emoji": "🏷️" },
+    { "ab": 9, "titel": "Werbe-Detektiv*in", "emoji": "🕵️" },
+    { "ab": 12, "titel": "Anzeige-oder-nicht-Profi", "emoji": "🏅" }
+  ],
+  "fragen": [
+    {
+      "id": "b01",
+      "typ": "binaer",
+      "kategorie": "Kennzeichnung",
+      "aussage": "Eine Influencerin zeigt ein Getränk und schreibt „#Anzeige“ dazu. Damit sagt sie ehrlich: Das ist Werbung.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! „#Anzeige“ oder „Werbung“ zeigt: Hier wird bezahlt oder es gibt einen Vorteil dafür. Das MUSS gekennzeichnet werden. Gut, wenn jemand ehrlich „Anzeige“ dranschreibt – dann weißt du, woran du bist."
+    },
+    {
+      "id": "b02",
+      "typ": "binaer",
+      "kategorie": "Werbung erkennen",
+      "aussage": "Ein Youtuber sagt begeistert „Diese Kopfhörer sind der Hammer, kauft die alle!“ und verlinkt einen Shop – aber nirgends steht „Werbung“. Das ist trotzdem völlig in Ordnung.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – wenn jemand ein Produkt anpreist und dazu einen Kauf-Link setzt, ist das Werbung und muss gekennzeichnet werden. Fehlt „Anzeige/Werbung“, ist das ein Regelverstoß. Sei skeptisch bei überschwänglichem Lob mit Kauf-Link."
+    },
+    {
+      "id": "b03",
+      "typ": "binaer",
+      "kategorie": "Werbeformen",
+      "aussage": "Ein Influencer verkauft eigene T-Shirts mit seinem Logo (Merch). Auch das ist eine Form von Werbung/Verkauf.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt! Merch (eigene Produkte wie T-Shirts, Tassen) verkaufen heißt: Der Influencer will, dass du Geld ausgibst. Das ist Verkauf und sollte klar erkennbar sein. „Meins ist am coolsten, kauf mein Merch!“ ist Werbung in eigener Sache."
+    },
+    {
+      "id": "b04",
+      "typ": "binaer",
+      "kategorie": "Werbeformen",
+      "aussage": "In einem Video steht ganz nebenbei immer eine bestimmte Limo-Dose gut sichtbar im Bild. Das kann bezahlte Produktplatzierung sein.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig! Wenn ein Produkt auffällig „zufällig“ im Bild steht, kann das bezahlte Produktplatzierung sein – Werbung, die so tut, als wäre sie keine. Auch das muss gekennzeichnet werden. Achte auf Marken, die immer wieder ins Bild rücken."
+    },
+    {
+      "id": "b05",
+      "typ": "binaer",
+      "kategorie": "Werbeformen",
+      "aussage": "„Mit meinem Code SPARE10 bekommst du Rabatt!“ – solche Rabattcodes und Links bringen dem Influencer oft selbst Geld (Affiliate). Das ist Werbung.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Bei einem persönlichen Rabattcode oder Affiliate-Link verdient der Influencer mit, wenn du kaufst. Das ist ein Werbe-Vorteil und muss gekennzeichnet sein. „Nutzt meinen Code“ heißt fast immer: Ich verdiene daran."
+    },
+    {
+      "id": "b06",
+      "typ": "binaer",
+      "kategorie": "Meinung vs. Werbung",
+      "aussage": "Eine Person sagt: „Mir gefällt dieses Buch, weil die Geschichte spannend ist“ – ohne Kauf-Link, ohne Rabattcode, ohne Bezahlung. Das ist eher eine Meinung als Werbung.",
+      "korrekt": "ja",
+      "erklaerung": "Ja – eine ehrliche Meinung ohne Bezahlung, ohne Kauf-Link und ohne Vorteil ist keine Werbung. Der Unterschied ist die Absicht: Teilt jemand nur seine Meinung, oder will er, dass du kaufst und verdient daran? Beides zu unterscheiden ist die Kunst."
+    },
+    {
+      "id": "b07",
+      "typ": "binaer",
+      "kategorie": "Kennzeichnung",
+      "aussage": "Werbung nur ganz klein, versteckt in vielen Hashtags am Ende zu kennzeichnen, ist ein fairer Weg.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – Werbung muss klar und gut erkennbar gekennzeichnet sein, nicht in einem Hashtag-Wust versteckt. Wer „#anzeige“ zwischen 30 anderen Hashtags verbirgt, umgeht die Regel. Gute Kennzeichnung ist deutlich und leicht zu finden."
+    },
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Werbung erkennen",
+      "frage": "Woran erkennst du am ehesten, dass ein Post Werbung ist?",
+      "antworten": [
+        "Ein Produkt wird angepriesen, es gibt einen Kauf-Link, Code oder eine „Anzeige“-Kennzeichnung",
+        "Der Post hat viele bunte Farben",
+        "Die Person lacht im Video",
+        "Es sind Tiere zu sehen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Werbe-Signale sind: ein angepriesenes Produkt, ein Kauf-Link oder Rabattcode und/oder eine Kennzeichnung wie „Anzeige“. Farben, Lachen oder Tiere sagen nichts aus. Frag dich: Will dieser Post, dass ich etwas kaufe?"
+    },
+    {
+      "id": "w02",
+      "typ": "wahl",
+      "kategorie": "Meinung vs. Werbung",
+      "frage": "Warum ist es wichtig, Werbung von echter Meinung zu unterscheiden?",
+      "antworten": [
+        "Weil bezahlte Werbung dich beeinflussen will – eine ehrliche Meinung nicht auf die gleiche Art",
+        "Weil Werbung immer bunter ist",
+        "Damit man mehr Videos schaut",
+        "Das ist gar nicht wichtig"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Bei bezahlter Werbung wird jemand dafür belohnt, dass du kaufst – das Lob ist dann nicht unbedingt ehrlich. Eine echte Meinung ohne Bezahlung ist etwas anderes. Wer den Unterschied kennt, lässt sich schwerer beeinflussen."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Richtig handeln",
+      "frage": "Dein Lieblings-Influencer sagt: „Kauft unbedingt dieses teure Spiel!“ – mit Rabattcode. Was tust du?",
+      "antworten": [
+        "Erkennen, dass das Werbung ist, nicht sofort kaufen und mit Erwachsenen über den Kauf entscheiden",
+        "Sofort mit dem Code kaufen, er empfiehlt es ja",
+        "Den Code an alle weiterschicken",
+        "Meine Eltern-Kreditkarte heimlich nehmen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein Rabattcode ist ein Werbe-Signal – der Influencer verdient mit. „Er empfiehlt es“ ist kein Grund zu kaufen, sondern bezahlte Werbung. Käufe entscheidest du mit Erwachsenen, nie heimlich mit fremdem Geld."
+    },
+    {
+      "id": "w04",
+      "typ": "wahl",
+      "kategorie": "Kennzeichnung",
+      "frage": "Warum müssen Influencer Werbung kennzeichnen?",
+      "antworten": [
+        "Damit du weißt, dass es bezahlt ist, und ehrliche Empfehlung von Werbung unterscheiden kannst",
+        "Damit die Videos länger werden",
+        "Weil bunte Buchstaben schön aussehen",
+        "Das müssen sie gar nicht"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Die Kennzeichnungspflicht (im Jugendmedienschutz und Wettbewerbsrecht) sorgt für Ehrlichkeit: Du sollst erkennen können, ob jemand für das Lob bezahlt wurde. Getarnte Werbung, die wie eine echte Empfehlung aussieht, ist unfair – gerade gegenüber Kindern."
+    },
+    {
+      "id": "b08",
+      "typ": "binaer",
+      "kategorie": "Werbeformen",
+      "aussage": "Ein „Haul“, in dem jemand viele geschenkte Produkte einer Firma auspackt und lobt, ist unabhängig und keine Werbung.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – wenn eine Firma die Produkte geschenkt hat, ist das ein Vorteil, und das Lob ist nicht unabhängig. Solche „Hauls“ mit Gratis-Produkten müssen als Werbung gekennzeichnet werden. Geschenke sind ein Werbe-Signal, kein Zufall."
+    }
+  ]
+}

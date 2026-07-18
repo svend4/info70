@@ -1,0 +1,8 @@
+{
+  "name": "@info70/anzeige-oder-nicht",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Anzeige oder nicht? Quiz (quiz-kern) fuer 8-12 - Influencer-Werbung erkennen (#anzeige, Merch, Produktplatzierung, Affiliate) und Werbeabsicht von echter Meinung trennen. Mit Klassen-Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
