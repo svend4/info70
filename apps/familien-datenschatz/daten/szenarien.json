@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "zielgruppe": "Eltern+Kind 8-12",
+  "hinweis": "Familien-Szenarien zum Datenschatz. Kind und Eltern antworten getrennt und vergleichen. Auch elterliche Überwachung ist hier eine Privatsphäre-Frage (UN-KRK Art. 16): Kinder haben ein eigenes Recht auf Privatsphäre.",
+  "antworten": [
+    { "code": "geben", "text": "✅ Okay / erlauben" },
+    { "code": "ablehnen", "text": "🚫 Nein / nicht machen" },
+    { "code": "fragen", "text": "🗣️ Erst zusammen besprechen" }
+  ],
+  "szenarien": [
+    {
+      "id": "f01",
+      "situation": "Im Kinderzimmer soll ein smarter Lautsprecher stehen, der immer zuhört, um Musik zu starten.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Ein Gerät, das dauernd zuhört, gehört nicht ins Kinderzimmer. Zuhören ist die Voreinstellung – abschalten oft versteckt. Für Musik reicht ein Gerät, das man selbst startet.",
+      "gespraech": "Wo im Zuhause ist ein Mikrofon okay – und wo lieber nicht?"
+    },
+    {
+      "id": "f02",
+      "situation": "Papa möchte eine Ortungs-App auf dein Handy setzen, damit er jederzeit sieht, wo du bist.",
+      "beste": "fragen",
+      "auchOk": ["geben"],
+      "erklaerung": "Sicherheit ist wichtig – aber heimliches Dauer-Orten verletzt dein Recht auf Privatsphäre (Art. 16). Fair ist: gemeinsam besprechen, wann und wie geortet wird, und dass du es weißt.",
+      "gespraech": "Wann ist Orten Schutz – und wann fühlt es sich nach Kontrolle an? Was ist für beide okay?"
+    },
+    {
+      "id": "f03",
+      "situation": "Deine große Schwester will heimlich in deinem Klassenchat mitlesen.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Heimlich mitlesen ist nicht fair – dein Chat ist privat (Art. 16). Wenn jemand sich Sorgen macht, ist offen reden besser als heimlich mitlesen.",
+      "gespraech": "Was tun, wenn sich jemand Sorgen macht – ohne heimlich zu spionieren?"
+    },
+    {
+      "id": "f04",
+      "situation": "Oma möchte ein Foto von dir in die große Familien-Chatgruppe stellen.",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "Auch bei netten Fotos entscheidest du mit, ob und wo dein Bild geteilt wird (Recht am eigenen Bild). Einmal in einer großen Gruppe, sind Kopien möglich.",
+      "gespraech": "Welche Fotos von dir dürfen geteilt werden – und welche bleiben in der Familie?"
+    },
+    {
+      "id": "f05",
+      "situation": "Eine Spiele-App will Zugriff auf alle Kontakte der Familie, um „Freunde zu finden“.",
+      "beste": "ablehnen",
+      "auchOk": [],
+      "erklaerung": "Für ein Spiel braucht niemand euer ganzes Adressbuch. Kontakte sind auch die Daten anderer Leute – die habt ihr nicht zu verschenken.",
+      "gespraech": "Welche Berechtigungen sind für ein Spiel wirklich nötig?"
+    },
+    {
+      "id": "f06",
+      "situation": "Mama will ein lustiges Video von dir öffentlich posten, in dem du weinst.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Peinliche Momente öffentlich zu posten (Sharenting) kann dir schaden und bleibt im Netz. Du darfst „Nein“ sagen – auch zu Eltern-Posts.",
+      "gespraech": "Woran merkt man, ob ein Foto/Video später peinlich sein könnte?"
+    },
+    {
+      "id": "f07",
+      "situation": "Eine Wetter-App will deinen genauen Standort dauerhaft im Hintergrund.",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Wetter braucht höchstens die Stadt, nicht deinen genauen Dauer-Standort. „Nur beim Benutzen“ oder Ort-Eingabe reicht.",
+      "gespraech": "Bei welchen Apps ist Standort sinnvoll – bei welchen nicht?"
+    },
+    {
+      "id": "f08",
+      "situation": "Ihr wollt zusammen ein neues Familienkonto einrichten. Es fragt nach dem echten Geburtsdatum des Kindes.",
+      "beste": "fragen",
+      "auchOk": [],
+      "erklaerung": "Manche Angaben sind nötig (z. B. für den Jugendschutz), andere nicht. Gemeinsam prüfen: Was ist Pflicht, was freiwillig? Sparsam bleiben.",
+      "gespraech": "Welche Angaben sind Pflicht – und welche lasst ihr besser weg?"
+    },
+    {
+      "id": "f09",
+      "situation": "Ein Sprachassistent fragt: „Darf ich deine Aufnahmen speichern, um besser zu werden?“",
+      "beste": "ablehnen",
+      "auchOk": ["fragen"],
+      "erklaerung": "Aufnahmen von Kinderstimmen müssen nicht gespeichert werden. „Nein“ ist die datensparsame Wahl; die App funktioniert trotzdem.",
+      "gespraech": "Warum ist es gut, so wenig wie möglich speichern zu lassen?"
+    },
+    {
+      "id": "f10",
+      "situation": "Deine Freundin schickt dir ein Foto von euch beiden und fragt, ob sie es posten darf.",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "Vorbildlich, dass sie fragt! Wenn du drauf bist, entscheidest du mit. Besprich, ob es online darf – und wenn ja, wo.",
+      "gespraech": "Wie fragt man selbst gut nach, bevor man ein Foto von anderen teilt?"
+    },
+    {
+      "id": "f11",
+      "situation": "Ein Gratis-Spiel schenkt Extra-Leben, wenn ihr die Handynummer eines Elternteils eingebt.",
+      "beste": "ablehnen",
+      "auchOk": [],
+      "erklaerung": "Daten gegen „Geschenke“ ist eine Falle. Eine Handynummer ist wertvoll – für Extra-Leben gibt man sie nicht her.",
+      "gespraech": "Was könnte mit der Nummer passieren, wenn man sie einfach eingibt?"
+    },
+    {
+      "id": "f12",
+      "situation": "Die Schul-App möchte Push-Nachrichten auch spät abends schicken.",
+      "beste": "fragen",
+      "auchOk": ["ablehnen"],
+      "erklaerung": "Abends stören Push-Nachrichten die Ruhe (Art. 31). Gemeinsam entscheiden: Benachrichtigungen aus oder nur tagsüber.",
+      "gespraech": "Welche Ruhezeiten wollt ihr fürs Handy in der Familie vereinbaren?"
+    }
+  ]
+}
