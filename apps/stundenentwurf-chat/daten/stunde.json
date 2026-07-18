@@ -1,0 +1,31 @@
+{
+  "titel": "Worte wie Fäuste",
+  "untertitel": "Cybermobbing & die Macht der Zuschauer*innen",
+  "zielgruppe": "Klasse 5–7 (10–13 Jahre)",
+  "app": "stark-im-chat",
+  "appName": "Stark im Chat",
+  "lernziele": [
+    "Die Schüler*innen unterscheiden Streit, Spaß und gezieltes Fertigmachen (Cybermobbing) an konkreten Chat-Szenen und benennen, was Mobbing zu Mobbing macht (Absicht, Wiederholung, Machtgefälle).",
+    "Sie erkennen ihre eigene Rolle als Zuschauende (Bystander) und kennen drei Handlungswege: sichtbare Gegenrede, Betroffene privat stärken, Erwachsene/Meldewege einschalten.",
+    "Sie kennen mindestens einen realen Hilfeweg (Nummer gegen Kummer 116 111, Vertrauenslehrkraft, Schulsozialarbeit) und wissen, dass Melden kein Petzen ist."
+  ],
+  "ablauf": [
+    { "minuten": 15, "phase": "Einstieg", "text": "Stilles Stimmungsbild mit Klebepunkten an der Tafel: „Hast du im Netz schon mal erlebt, dass jemand fertiggemacht wurde?“ (anonym, keine Namen, keine Pflicht zu erzählen). Kurz sammeln, was den Unterschied zwischen Spaß, Streit und Fertigmachen ausmacht." },
+    { "minuten": 30, "phase": "Erarbeitung", "text": "„Stark im Chat“ am Beamer im Klassen-Modus: Szenen gemeinsam durchspielen. Vor jeder Auflösung stimmt die Klasse per Handzeichen über die beste Zuschauer-Reaktion ab, danach die Begründung der App lesen. Kernsatz festhalten: Zuschauen ist auch eine Entscheidung." },
+    { "minuten": 25, "phase": "Vertiefung", "text": "Gruppenarbeit (2–4 Geräte oder Rollenkarten): Jede Gruppe bekommt eine Chat-Szene und findet drei Wege, der betroffenen Person zu helfen, ohne selbst zur Angreiferin zu werden. Ergebnisse als „Helfer-Tricks“ auf Karten schreiben." },
+    { "minuten": 10, "phase": "Sicherung", "text": "Gemeinsame Plakat-Sammlung „Was wir tun, wenn wir Gemeinheiten sehen“. Hilfewege ergänzen: Nummer gegen Kummer 116 111, Vertrauenslehrkraft, Schulsozialarbeit, Melden-Knopf der App. Melden = Hilfe holen, nicht Petzen." },
+    { "minuten": 10, "phase": "Abschluss", "text": "Blitzlicht im Kreis: Jedes Kind nennt einen Satz oder eine Handlung, die es ausprobieren will, wenn es das nächste Mal etwas Gemeines im Chat sieht. Plakat bleibt im Klassenraum." }
+  ],
+  "arbeitsblatt": [
+    "Streit – Spaß – Mobbing: drei Chat-Beispiele den richtigen Feldern zuordnen und in einem Satz begründen, woran man es erkennt.",
+    "„Mein Zuschauer-Plan“: drei Dinge notieren, die ich tun kann, wenn jemand fertiggemacht wird (eine Gegenrede, eine private Nachricht an die Betroffene, ein Erwachsener/Meldeweg).",
+    "Hilfe-Adressen ausfüllen: Nummer gegen Kummer 116 111, Name der Vertrauenslehrkraft, Weg zur Schulsozialarbeit."
+  ],
+  "hinweise": [
+    "Trigger-Sensibel: Manche Kinder sind selbst betroffen. Keine Fallbesprechung im Plenum, keine Namen. Auf privates Nachfragen und Vertraulichkeit hinweisen.",
+    "Konkreten Mobbing-Verdacht NICHT in der App oder im Unterricht „bearbeiten“, sondern an Schulsozialarbeit / Beratungslehrkraft weitergeben – die App übt Haltung, sie ersetzt keine Intervention.",
+    "Klassen-Modus nutzen, damit keine Kinderdaten anfallen: „Stark im Chat“ läuft offline im Browser, ohne Konten und ohne Datenspeicherung.",
+    "Anschlussmöglichkeit nach Hause: familien-medienvertrag / eltern.html der App, damit das Thema auch in den Familien ankommt."
+  ],
+  "bezug": "UN-KRK Art. 19 (Schutz vor Gewalt) & Art. 12 (Beteiligung) · KMK „Bildung in der digitalen Welt“ · JMStV / Schutz vor Cybermobbing · Medienkompetenzrahmen NRW"
+}

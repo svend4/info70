@@ -1,0 +1,8 @@
+{
+  "name": "@info70/wahlkabine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wahlkabinen-Modus 'Geheime Wahl' (Schule/Beteiligung 8-12): ein Geraet wird herumgereicht, jede Stimme wird sofort als bloszer Zaehler versiegelt (technisch keine Zuordnung Stimme->Person), das Ergebnis erscheint erst nach der letzten Stimme. Kinder erleben die Wahlgrundsaetze am eigenen Klassensprecher-Votum. privacy by design.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

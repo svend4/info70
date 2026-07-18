@@ -1,0 +1,31 @@
+{
+  "titel": "Mein Datenschatz",
+  "untertitel": "Was gebe ich preis – und wer will das eigentlich?",
+  "zielgruppe": "Klasse 4–6 (9–12 Jahre)",
+  "app": "daten-schatz",
+  "appName": "Datenschatz",
+  "lernziele": [
+    "Die Schüler*innen begreifen persönliche Daten (Name, Adresse, Fotos, Standort, Passwörter) als wertvollen „Schatz“ und unterscheiden, welche Daten harmlos und welche schützenswert sind.",
+    "Sie entscheiden in Alltagssituationen begründet zwischen geben, ablehnen und erst nachfragen und erkennen, dass „nein“ und „ich frage jemanden“ starke, erlaubte Antworten sind.",
+    "Sie kennen ihr Recht am eigenen Bild und an der eigenen Privatsphäre (UN-KRK Art. 16, DSGVO Art. 8) und wissen, dass sie mitbestimmen dürfen, was von ihnen ins Netz kommt – auch durch Erwachsene (Sharenting)."
+  ],
+  "ablauf": [
+    { "minuten": 15, "phase": "Einstieg", "text": "Schatzkisten-Bild an der Tafel: „Was gehört zu deinem Datenschatz?“ Die Klasse sortiert Karten (Name, Lieblingsfarbe, Adresse, Selfie, Passwort, Schulname) laut in „darf jeder wissen“ und „gut aufpassen“. Erste Begründungen sammeln." },
+    { "minuten": 30, "phase": "Erarbeitung", "text": "„Datenschatz“ am Beamer im Klassen-Modus: Situationen gemeinsam durchspielen. Vor jeder Auflösung stimmt die Klasse ab: geben, ablehnen oder erst fragen? Danach die Begründung der App lesen. Kernsatz festhalten: Nachfragen ist immer erlaubt." },
+    { "minuten": 25, "phase": "Vertiefung", "text": "Gruppenarbeit (2–4 Geräte oder Rollenkarten): Jede Gruppe bekommt eine App/Spiel-Situation und entscheidet, welche Daten wirklich nötig sind. „Weniger ist sicherer“ (Datensparsamkeit) als Faustregel entdecken und je einen guten Nein-/Nachfrage-Satz formulieren." },
+    { "minuten": 10, "phase": "Sicherung", "text": "Plakat „Meine drei Antworten: geben – nein – ich frage“. Recht am eigenen Bild kurz einordnen (auch Eltern sollen fragen, bevor sie Fotos posten – Sharenting). Hilfewege ergänzen: Vertrauensperson, Schulsozialarbeit, Nummer gegen Kummer 116 111." },
+    { "minuten": 10, "phase": "Abschluss", "text": "Blitzlicht im Kreis: Jedes Kind nennt einen Datenschatz, den es künftig besser schützt, oder eine Situation, in der es erst nachfragen will. Plakat bleibt im Klassenraum." }
+  ],
+  "arbeitsblatt": [
+    "Datenschatz sortieren: acht Daten in „darf jeder wissen“ oder „gut aufpassen“ einordnen und bei einem begründen, warum.",
+    "„geben – nein – ich frage“: drei Situationen bekommen, je die passende Antwort ankreuzen und einen höflichen Nein-/Nachfrage-Satz aufschreiben.",
+    "Sharenting-Auftrag für zu Hause (freiwillig): Mit den Eltern besprechen, welche Fotos von mir ins Netz dürfen – und einen gemeinsamen „Frag mich zuerst“-Satz vereinbaren."
+  ],
+  "hinweise": [
+    "Kein Bloßstellen: Nicht abfragen, welche Daten einzelne Kinder oder Familien schon geteilt haben. Es geht um Handlungswissen, nicht um Schuld.",
+    "Wenn ein Kind von einem konkreten Vorfall berichtet (Foto verbreitet, fremde Kontaktaufnahme, Erpressung): NICHT im Plenum bearbeiten, sondern vertraulich an Schulsozialarbeit / Beratungslehrkraft weitergeben. Die App übt Haltung, sie ersetzt keine Intervention.",
+    "Klassen-Modus nutzen, damit keine Kinderdaten anfallen: „Datenschatz“ läuft offline im Browser, ohne Konten und ohne Datenspeicherung – das passt zur Botschaft der Stunde.",
+    "Anschluss nach Hause: familien-medienvertrag / sharenting-spiegel, damit auch Eltern das Recht der Kinder am eigenen Bild mitdenken."
+  ],
+  "bezug": "UN-KRK Art. 16 (Privatsphäre) · DSGVO Art. 8 (Einwilligung von Kindern) · KMK „Bildung in der digitalen Welt“ · Medienkompetenzrahmen NRW"
+}

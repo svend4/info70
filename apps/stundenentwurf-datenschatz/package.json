@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stundenentwurf-datenschatz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stundenentwurf 'Mein Datenschatz' (90 Min, Klasse 4-6): druckbare Doppelstunde fuer Lehrkraefte zu persoenlichen Daten, Datensparsamkeit und Recht am eigenen Bild rund um die App 'Datenschatz'. Speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
