@@ -1,19 +1,28 @@
-// Kettenbrief-Stopper: erlebbare Simulation (8-12 Jahre).
-// Eine Kettennachricht rast durch die Klasse; das Kind erlebt den Moment,
-// in dem sie es selbst erreicht - und was sein "Stopp" verändert.
-// Politik: keine externen Anfragen; diese App speichert GAR NICHTS.
+// Kettenbrief-Stopper: erlebbare Simulation (8-12 Jahre), mehrsprachig (mini-i18n).
+// Eine Kettennachricht/Mutprobe/Gerücht rast durch die Klasse; das Kind erlebt
+// den Moment, in dem sie es selbst erreicht - und was sein "Stopp" verändert.
+// Politik: keine externen Anfragen; diese App speichert GAR NICHTS (außer der
+// Sprachwahl). Texte in daten/sprachen.json.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { erstelleKlasse, simuliere, vergleiche } from './sim.mjs';
-import { NACHRICHTEN_TYPEN, typNach } from './nachrichten.mjs';
+import { erstelleSprache } from '../../packages/kinder-ui/js/sprache.mjs';
+import { setzeRichtung } from '../../packages/kinder-ui/js/richtung.mjs';
+import { erstelleKlasse, vergleiche } from './sim.mjs';
+import { NACHRICHTEN_TYPEN, baueTyp } from './nachrichten.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const app = document.getElementById('app');
+const kataloge = await fetch('daten/sprachen.json').then((r) => r.json());
+const sprache = erstelleSprache({ kataloge, standard: 'de', speicherSchluessel: 'ks.sprache' });
+const t = (k, e) => sprache.t(k, e);
+setzeRichtung(sprache.aktuelle());
 
-let aktiverTyp = NACHRICHTEN_TYPEN[0];
+const SPRACHEN = [['de', 'Deutsch'], ['en', 'English']];
+
+let aktiverTyp = NACHRICHTEN_TYPEN[0]; // Struktur; Text via baueTyp(…, t)
 let gemeldet = false;
 let klasse;
 let erhalten;
@@ -23,16 +32,30 @@ let entscheidungGefallen;
 let stopper;
 let immun;
 
+const aktiv = () => baueTyp(aktiverTyp, t);
+
 function zeige(...knoten) {
   app.replaceChildren(
-    el('h1', { class: 'k-titel' }, '🛑 Kettenbrief-Stopper'),
-    el('p', { class: 'k-untertitel' }, 'Eine Nachricht rast durch die Klasse. Du kannst sie stoppen!'),
+    el('h1', { class: 'k-titel' }, t('titel')),
+    el('p', { class: 'k-untertitel' }, t('untertitel')),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · diese App speichert nichts · '),
-      el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
+      el('span', {}, t('fuss')),
+      el('a', { href: 'eltern.html' }, t('fuer_eltern')), el('span', {}, ' · '),
+      el('a', { href: '../../impressum.html' }, t('impressum'))));
   app.querySelector('button')?.focus();
+}
+
+function sprachWahl() {
+  const jetzt = sprache.aktuelle();
+  return el('section', { class: 'k-karte' },
+    el('p', { style: 'font-weight:600;margin-top:0' }, t('sprache_label')),
+    el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap' },
+      ...SPRACHEN.map(([code, name]) => el('button', {
+        class: `k-knopf k-knopf--klein ${jetzt === code ? '' : 'k-knopf--neutral'}`,
+        'aria-pressed': String(jetzt === code),
+        onclick: () => { sprache.setze(code); setzeRichtung(code); startBildschirm(); },
+      }, name))));
 }
 
 function gitter() {
@@ -46,27 +69,33 @@ function gitter() {
     zellen.push(el('div', {
       style: `font-size:1.6rem;text-align:center;padding:0.15rem;border-radius:0.5rem;${istSpieler ? 'outline:3px solid var(--k-blau);' : ''}`,
       'aria-label': istSpieler ? 'Das bist du' : undefined,
-    }, istSpieler ? `${gesicht}` : gesicht));
+    }, gesicht));
   }
   return el('div', { style: 'display:grid;grid-template-columns:repeat(6,1fr);gap:0.25rem' }, ...zellen);
 }
 
 function startBildschirm() {
   zeige(
+    sprachWahl(),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, 'Wähle ein Experiment. Beobachte: Was passiert, wenn alle weiterleiten – und was, wenn DU stoppst?'),
-      ...NACHRICHTEN_TYPEN.map((typ) => el('div', { style: 'border:1px solid var(--k-rand);border-radius:0.6rem;padding:0.6rem;margin:0.5rem 0' },
-        el('p', { style: 'font-weight:700;margin:0 0 0.3rem' }, `${typ.emoji} ${typ.titel}`),
-        el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, typ.nachricht)),
-        el('div', { class: 'k-antworten' },
-          el('button', { class: 'k-knopf', onclick: () => starteExperiment(typ) }, `▶️ ${typ.titel}-Experiment starten`),
-          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${typ.intro} ${typ.nachricht}`) }, '🔊 Vorlesen'))))),
+      el('p', { style: 'margin-top:0' }, t('start_hinweis')),
+      ...NACHRICHTEN_TYPEN.map((struktur) => {
+        const typ = baueTyp(struktur, t);
+        return el('div', { style: 'border:1px solid var(--k-rand);border-radius:0.6rem;padding:0.6rem;margin:0.5rem 0' },
+          el('p', { style: 'font-weight:700;margin:0 0 0.3rem' }, `${typ.emoji} ${typ.titel}`),
+          el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, typ.nachricht)),
+          el('div', { class: 'k-antworten' },
+            el('button', { class: 'k-knopf', onclick: () => starteExperiment(struktur) }, t('experiment_starten', { titel: typ.titel })),
+            el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${typ.intro} ${typ.nachricht}`, stimme()) }, t('vorlesen'))));
+      })),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Diese App speichert nichts – gar nichts. Jedes Experiment startet frisch.')));
+      el('p', { style: 'margin:0' }, t('speichert_nichts'))));
 }
 
-function starteExperiment(typ = aktiverTyp) {
-  aktiverTyp = typ;
+const stimme = () => (sprache.aktuelle() === 'en' ? 'en-GB' : 'de-DE');
+
+function starteExperiment(struktur) {
+  aktiverTyp = struktur;
   gemeldet = false;
   klasse = erstelleKlasse();
   erhalten = new Set([klasse.start]);
@@ -89,22 +118,18 @@ function naechsteRunde() {
   for (const kind of neu) erhalten.add(kind);
   front = [...neu];
   runde++;
-  if (neu.has(klasse.spieler) && !entscheidungGefallen) {
-    entscheidungsBildschirm();
-  } else if (neu.size === 0) {
-    endBildschirm();
-  } else {
-    simulationsBildschirm();
-  }
+  if (neu.has(klasse.spieler) && !entscheidungGefallen) entscheidungsBildschirm();
+  else if (neu.size === 0) endBildschirm();
+  else simulationsBildschirm();
 }
 
 function simulationsBildschirm() {
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `Runde ${runde} · 😨 ${erhalten.size} von ${klasse.groesse} Kindern erschreckt`),
+      el('p', { class: 'k-untertitel', style: 'margin-top:0' }, t('runde_status', { runde, n: erhalten.size, gesamt: klasse.groesse })),
       gitter(),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: naechsteRunde }, '⏩ Nächste Runde'))));
+        el('button', { class: 'k-knopf', onclick: naechsteRunde }, t('naechste_runde')))));
 }
 
 function stoppeAusbreitung() {
@@ -116,52 +141,45 @@ function stoppeAusbreitung() {
 }
 
 function entscheidungsBildschirm() {
+  const typ = aktiv();
   const optionen = [
-    el('button', {
-      class: 'k-knopf',
-      onclick: () => { entscheidungGefallen = true; simulationsBildschirm(); },
-    }, aktiverTyp.weiter),
-    el('button', {
-      class: 'k-knopf k-knopf--richtig',
-      onclick: () => { entscheidungGefallen = true; stoppeAusbreitung(); simulationsBildschirm(); },
-    }, aktiverTyp.stopp),
+    el('button', { class: 'k-knopf', onclick: () => { entscheidungGefallen = true; simulationsBildschirm(); } }, typ.weiter),
+    el('button', { class: 'k-knopf k-knopf--richtig', onclick: () => { entscheidungGefallen = true; stoppeAusbreitung(); simulationsBildschirm(); } }, typ.stopp),
   ];
-  if (aktiverTyp.melden) {
-    optionen.push(el('button', {
-      class: 'k-knopf k-knopf--richtig',
-      onclick: () => { entscheidungGefallen = true; gemeldet = true; stoppeAusbreitung(); simulationsBildschirm(); },
-    }, aktiverTyp.melden));
+  if (typ.melden) {
+    optionen.push(el('button', { class: 'k-knopf k-knopf--richtig', onclick: () => { entscheidungGefallen = true; gemeldet = true; stoppeAusbreitung(); simulationsBildschirm(); } }, typ.melden));
   }
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `Runde ${runde} · Die Nachricht hat DICH erreicht! 📱`),
-      el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, aktiverTyp.nachricht)),
-      aktiverTyp.quellenHinweis ? el('p', { style: 'background:#eff6ff;border-radius:0.5rem;padding:0.5rem;margin:0.4rem 0' }, `🔎 ${aktiverTyp.quellenHinweis}`) : '',
-      el('p', { style: 'font-weight:600' }, aktiverTyp.frage),
+      el('p', { class: 'k-untertitel', style: 'margin-top:0' }, t('erreicht_dich', { runde })),
+      el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, typ.nachricht)),
+      typ.quellenHinweis ? el('p', { style: 'background:#eff6ff;border-radius:0.5rem;padding:0.5rem;margin:0.4rem 0' }, `🔎 ${typ.quellenHinweis}`) : '',
+      el('p', { style: 'font-weight:600' }, typ.frage),
       el('div', { class: 'k-antworten' },
         ...optionen,
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${aktiverTyp.nachricht}. ${aktiverTyp.frage}`) }, '🔊 Vorlesen'))));
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${typ.nachricht}. ${typ.frage}`, stimme()) }, t('vorlesen')))));
 }
 
 function endBildschirm() {
+  const typ = aktiv();
   const { alleLeitenWeiter } = vergleiche(klasse);
   const gestoppt = stopper.has(klasse.spieler);
   const gerettet = Math.max(0, alleLeitenWeiter - erhalten.size);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, gestoppt ? (gemeldet ? '📣' : '🦸') : aktiverTyp.emoji),
+      el('p', { class: 'k-gross' }, gestoppt ? (gemeldet ? '📣' : '🦸') : typ.emoji),
       el('p', { style: 'text-align:center;font-weight:700' },
         gestoppt
-          ? `${gemeldet ? 'Melden und Stoppen' : 'Dein Stopp'} hat gewirkt: ${erhalten.size} statt ${alleLeitenWeiter} Kinder erreicht – du hast ${gerettet} Kinder geschützt!`
-          : `Alle haben mitgemacht: ${erhalten.size} von ${klasse.groesse} Kindern erreicht. Probiere aus, was dein Stopp verändert!`),
+          ? t('ende_gestoppt', { aktion: gemeldet ? t('aktion_melden_stopp') : t('aktion_stopp'), n: erhalten.size, alle: alleLeitenWeiter, gerettet })
+          : t('ende_alle', { n: erhalten.size, gesamt: klasse.groesse })),
       gitter()),
     el('section', { class: 'k-karte' },
-      gemeldet ? el('p', { style: 'font-weight:600' }, '📣 Stark: Du hast es einer erwachsenen Person / der App gemeldet – das schützt auch die anderen.') : '',
-      ...aktiverTyp.lernpunkte.map((p) => el('p', {}, p)),
+      gemeldet ? el('p', { style: 'font-weight:600' }, t('gemeldet_lob')) : '',
+      ...typ.lernpunkte.map((p) => el('p', {}, p)),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(aktiverTyp.lernpunkte.join(' ')) }, '🔊 Vorlesen'),
-        el('button', { class: 'k-knopf', onclick: () => starteExperiment(aktiverTyp) }, '🔁 Noch ein Experiment'),
-        el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))));
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(typ.lernpunkte.join(' '), stimme()) }, t('vorlesen')),
+        el('button', { class: 'k-knopf', onclick: () => starteExperiment(aktiverTyp) }, t('noch_ein_experiment')),
+        el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, t('zum_start')))));
 }
 
 startBildschirm();

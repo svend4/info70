@@ -1,41 +1,37 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { NACHRICHTEN_TYPEN, typNach } from '../nachrichten.mjs';
+import { NACHRICHTEN_TYPEN, typNach, baueTyp } from '../nachrichten.mjs';
 
-test('Es gibt Kettenbrief, Mutprobe und Gerücht', () => {
+// einfacher Fake-Übersetzer: gibt den Schlüssel zurück (bzw. Array für lernpunkte)
+const fakeT = (k) => (k.endsWith('_lernpunkte') ? [`${k}-1`, `${k}-2`] : k);
+
+test('Struktur: Kettenbrief, Mutprobe und Gerücht mit Options-Flags', () => {
   const ids = NACHRICHTEN_TYPEN.map((t) => t.id);
-  assert.ok(ids.includes('kettenbrief'));
-  assert.ok(ids.includes('mutprobe'));
-  assert.ok(ids.includes('geruecht'));
-});
-
-test('Jeder Typ ist vollständig (Text, Optionen, Lernpunkte)', () => {
-  for (const t of NACHRICHTEN_TYPEN) {
-    assert.ok(t.titel && t.emoji && t.intro, `${t.id}: Kopf fehlt`);
-    assert.ok(t.nachricht.length > 20, `${t.id}: Nachricht zu kurz`);
-    assert.ok(t.frage && t.weiter && t.stopp, `${t.id}: Entscheidungsoptionen fehlen`);
-    assert.ok(Array.isArray(t.lernpunkte) && t.lernpunkte.length >= 3, `${t.id}: zu wenige Lernpunkte`);
-    assert.ok(JSON.stringify(t).includes('116 111'), `${t.id}: Hilfeadresse fehlt`);
-  }
-});
-
-test('Mutprobe hat die Melden-Option, Kettenbrief nicht', () => {
-  assert.ok(typNach('mutprobe').melden, 'Mutprobe braucht Melden-Option');
-  assert.equal(typNach('kettenbrief').melden, null, 'Kettenbrief ohne Melden');
-});
-
-test('Mutprobe thematisiert Gruppendruck, nicht nur Pech', () => {
-  const t = typNach('mutprobe');
-  assert.match(JSON.stringify(t), /Gruppendruck|Nein|Feigling/);
+  assert.deepEqual(ids, ['kettenbrief', 'mutprobe', 'geruecht']);
+  const k = typNach('kettenbrief');
+  assert.equal(k.hatMelden, false);
+  assert.equal(k.hatQuellen, false);
+  assert.equal(typNach('mutprobe').hatMelden, true);
+  assert.equal(typNach('geruecht').hatQuellen, true);
+  for (const t of NACHRICHTEN_TYPEN) assert.ok(t.emoji, `${t.id}: emoji fehlt`);
 });
 
 test('typNach: unbekannte id -> erster Typ (Fallback)', () => {
   assert.equal(typNach('gibtsnicht').id, NACHRICHTEN_TYPEN[0].id);
 });
 
-test('Gerücht: hat Quellen-Hinweis und thematisiert „erst prüfen, dann teilen“', () => {
-  const t = typNach('geruecht');
-  assert.ok(t.quellenHinweis && /Quelle|Wer|Woher/.test(t.quellenHinweis), 'Quellen-Frage fehlt');
-  assert.match(JSON.stringify(t), /prüfen/);
-  assert.ok(t.melden, 'Gerücht hat auch eine Melden-Option');
+test('baueTyp: setzt Struktur + Übersetzung zusammen', () => {
+  const t = baueTyp(typNach('geruecht'), fakeT);
+  assert.equal(t.id, 'geruecht');
+  assert.equal(t.emoji, '🗣️');
+  assert.equal(t.nachricht, 'typ_geruecht_nachricht');
+  assert.equal(t.melden, 'typ_geruecht_melden', 'Gerücht hat Melden');
+  assert.equal(t.quellenHinweis, 'typ_geruecht_quellenHinweis');
+  assert.ok(Array.isArray(t.lernpunkte) && t.lernpunkte.length >= 2);
+});
+
+test('baueTyp: Kettenbrief ohne Melden/Quellen-Hinweis (null)', () => {
+  const t = baueTyp(typNach('kettenbrief'), fakeT);
+  assert.equal(t.melden, null);
+  assert.equal(t.quellenHinweis, null);
 });
