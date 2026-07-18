@@ -1,0 +1,8 @@
+{
+  "name": "@info70/stark-im-chat-mini",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stark im Chat Mini (6-8): erste Regeln gegen Gemeinheiten im Chat - nett sein, Stopp sagen, Erwachsene holen. Leichte Sprache, grosse Piktogramme, Vorlesen, nur zwei Antworten. Werbefrei, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

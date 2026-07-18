@@ -1,0 +1,8 @@
+{
+  "name": "@info70/nachrichten-detektive-profi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nachrichten-Detektive Profi (13-15): schwerere Quiz-Faelle zu Deepfakes, KI-Texten und systematischem Quellencheck (Wer? Wo noch? Wie alt?). Werbefrei, ohne Anmeldung, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

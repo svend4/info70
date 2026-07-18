@@ -55,7 +55,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**118 приложений (117 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**121 приложение (120 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -63,7 +63,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 747 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 759 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -71,6 +71,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 |---|---|---|
 | `nachrichten-detektive` | Медиаграмотность + Werbe-Radar + KI-Radar (30 дел) | база |
 | `nachrichten-detektive-junior` | «Echt oder ausgedacht?» для 6–8, озвучка (BFSG) | кат.№1 |
+| `nachrichten-detektive-profi` | 13–15: дипфейки, KI-тексты, Quellencheck (quiz-kern) | Ось A |
 | `koeder-quiz` | Фишинг: «настоящее или наживка?» | кат.№1 |
 | `fake-shop-fahnder` | Фейк-магазины: 5 warning-signals | кат.№1 |
 | `seiten-scanner` | Детский чек-лист сайта со светофором | кат.№1 |
@@ -93,6 +94,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `fomo-kompass` | Страх упустить: Streak/Autoplay/Likes | кат.№1 |
 | `bot-oder-buddy` | Приёмы «дружелюбного» ИИ-чат-бота | кат.№1 |
 | `daten-schatz` | Datenschutz + Kostenfallen + Account + Familie (30 сцен.) | база |
+| `daten-schatz-mini` | 6–8: «geheim или öffentlich?», пиктограммы, озвучка | Ось A |
 | `spuren-lupe` | Пассивный трекинг локально: следы без ввода | кат.№1 |
 | `darf-ich-posten` | Право на изображение и авторское право | кат.№1 |
 | `foto-ampel` | Семья: Ампель перед публикацией фото (согласие, фон) | кат.№1 |
@@ -103,6 +105,7 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `kettenbrief-stopper` | Цепные сообщения/челлендж/слух · DE/EN + Leichte Sprache | база |
 | `stark-im-chat` | Кибербуллинг: свидетель + Rechte + Hassrede + Game-Chat (28 сцен.) | база |
 | `stark-im-chat-plus` | Свидетель 13+: групповой чат и пути DSA | кат.№1 |
+| `stark-im-chat-mini` | 6–8: нежность в чате, Leichte Sprache, 2 ответа | Ось A |
 | `spiral-stopper` | Эскалация хейта: сила Gegenrede и Melden | кат.№1 |
 | `challenge-druck` | Групповое давление: 5 тактик + фразы выхода | кат.№1 |
 | `beschwerde-lotse` | «Что случилось → куда обращаться» (DSA/116 111) | кат.№1 |

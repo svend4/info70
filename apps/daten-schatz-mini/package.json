@@ -1,0 +1,8 @@
+{
+  "name": "@info70/daten-schatz-mini",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Daten-Schatz Mini (6-8): Was darf jeder wissen, was bleibt geheim? Grosse Piktogramme, Vorlesen, nur zwei Antworten - erste Datensparsamkeit fuer die Kleinen. Werbefrei, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "zielgruppe": "6-8",
+  "szenarien": [
+    {
+      "id": "c01",
+      "piktogramm": "😢",
+      "situation": "Ein Kind schreibt zu deiner Freundin: „Du bist doof!“",
+      "optionen": [
+        { "text": "🛑 Ich schreibe: Hör auf. Das ist gemein.", "wert": 2 },
+        { "text": "😐 Ich mache mit und lache.", "wert": 0 }
+      ],
+      "erklaerung": "Gemein sein tut weh. Du kannst helfen. Sag Stopp. Oder sag es einer erwachsenen Person. Das ist mutig."
+    },
+    {
+      "id": "c02",
+      "piktogramm": "📷",
+      "situation": "Jemand schickt ein peinliches Foto von einem Kind an alle.",
+      "optionen": [
+        { "text": "🙅 Ich schicke es nicht weiter. Ich sage einer erwachsenen Person Bescheid.", "wert": 2 },
+        { "text": "📤 Ich schicke es auch weiter.", "wert": 0 }
+      ],
+      "erklaerung": "Ein peinliches Foto schickst du nicht weiter. Sonst sehen es noch mehr Leute. Hol eine erwachsene Person."
+    },
+    {
+      "id": "c03",
+      "piktogramm": "💬",
+      "situation": "Ein Kind ist ganz allein und darf bei einem Spiel nicht mitmachen.",
+      "optionen": [
+        { "text": "🤝 Ich schreibe: Komm, spiel mit uns!", "wert": 2 },
+        { "text": "🤐 Ich sage nichts.", "wert": 0 }
+      ],
+      "erklaerung": "Alle sollen mitmachen dürfen. Du kannst nett sein und das Kind einladen. Das macht froh."
+    },
+    {
+      "id": "c04",
+      "piktogramm": "😠",
+      "situation": "Jemand ärgert dich mit gemeinen Nachrichten. Immer wieder.",
+      "optionen": [
+        { "text": "🧑‍🦱 Ich sage es Mama, Papa oder einer Lehrkraft.", "wert": 2 },
+        { "text": "😤 Ich schreibe etwas noch Gemeineres zurück.", "wert": 0 }
+      ],
+      "erklaerung": "Wenn dich jemand immer ärgert, hol dir Hilfe. Sag es einer erwachsenen Person. Zurück-Ärgern macht es schlimmer."
+    },
+    {
+      "id": "c05",
+      "piktogramm": "🥺",
+      "situation": "Ein Kind schreibt dir: Mir geht es schlecht. Niemand mag mich.",
+      "optionen": [
+        { "text": "💛 Ich schreibe etwas Nettes und sage es einer erwachsenen Person.", "wert": 2 },
+        { "text": "🙈 Ich lese es und mache nichts.", "wert": 0 }
+      ],
+      "erklaerung": "Wenn es einem Kind schlecht geht, sei nett. Und hol eine erwachsene Person dazu. So bekommt das Kind Hilfe."
+    },
+    {
+      "id": "c06",
+      "piktogramm": "😀",
+      "situation": "In der Gruppe schreiben alle nette Sachen und Witze.",
+      "optionen": [
+        { "text": "😄 Ich mache mit und bin auch nett.", "wert": 2 },
+        { "text": "😒 Ich schreibe etwas Gemeines dazwischen.", "wert": 0 }
+      ],
+      "erklaerung": "Nett sein ist toll. Du darfst mitlachen und nett schreiben. So macht der Chat allen Spaß."
+    },
+    {
+      "id": "c07",
+      "piktogramm": "❓",
+      "situation": "Ein Kind schreibt viele böse Wörter über ein anderes Kind.",
+      "optionen": [
+        { "text": "🛑 Ich mache nicht mit. Ich sage einer erwachsenen Person Bescheid.", "wert": 2 },
+        { "text": "👍 Ich finde das lustig und schreibe: Ja, genau!", "wert": 0 }
+      ],
+      "erklaerung": "Böse Wörter über andere sind gemein. Mach nicht mit. Sag es einer erwachsenen Person. Das hilft."
+    },
+    {
+      "id": "c08",
+      "piktogramm": "🔒",
+      "situation": "Ein fremdes Kind im Chat fragt: Wie heißt du und wo wohnst du?",
+      "optionen": [
+        { "text": "🙅 Ich sage es nicht. Ich frage eine erwachsene Person.", "wert": 2 },
+        { "text": "🏠 Ich schreibe meine Adresse.", "wert": 0 }
+      ],
+      "erklaerung": "Deinen Namen und wo du wohnst sagst du Fremden nicht. Frag zuerst eine erwachsene Person."
+    }
+  ]
+}

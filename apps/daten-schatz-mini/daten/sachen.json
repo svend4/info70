@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "zielgruppe": "6-8",
+  "sachen": [
+    { "id": "m01", "piktogramm": "🎨", "sache": "Deine Lieblings-Farbe", "geheim": false, "erklaerung": "Deine Lieblings-Farbe darf jeder wissen. Das ist nicht geheim." },
+    { "id": "m02", "piktogramm": "🏠", "sache": "Wo du genau wohnst – deine Adresse", "geheim": true, "erklaerung": "Deine Adresse bleibt geheim. Die geht nur die Familie und gute Freunde etwas an." },
+    { "id": "m03", "piktogramm": "🐶", "sache": "Dein Lieblings-Tier", "geheim": false, "erklaerung": "Dein Lieblings-Tier darf jeder wissen. Das ist nicht geheim." },
+    { "id": "m04", "piktogramm": "🔑", "sache": "Dein Passwort für ein Spiel", "geheim": true, "erklaerung": "Dein Passwort ist geheim. Sag es niemandem. Nur die Eltern dürfen helfen." },
+    { "id": "m05", "piktogramm": "🍕", "sache": "Dein Lieblings-Essen", "geheim": false, "erklaerung": "Dein Lieblings-Essen darf jeder wissen. Das ist nicht geheim." },
+    { "id": "m06", "piktogramm": "📞", "sache": "Deine Telefon-Nummer", "geheim": true, "erklaerung": "Deine Telefon-Nummer bleibt geheim. Fremde brauchen sie nicht." },
+    { "id": "m07", "piktogramm": "⚽", "sache": "Dein Hobby, zum Beispiel Fußball", "geheim": false, "erklaerung": "Dein Hobby darf jeder wissen. Das ist nicht geheim." },
+    { "id": "m08", "piktogramm": "🏫", "sache": "In welche Schule du gehst", "geheim": true, "erklaerung": "Deine Schule sagst du Fremden nicht. So wissen sie nicht, wo sie dich finden." },
+    { "id": "m09", "piktogramm": "🕐", "sache": "Dass du oft allein zu Hause bist", "geheim": true, "erklaerung": "Das bleibt geheim. Fremde müssen nicht wissen, wann du allein bist." },
+    { "id": "m10", "piktogramm": "😀", "sache": "Dein Alter, zum Beispiel 7 Jahre", "geheim": false, "erklaerung": "Dein Alter darf man wissen. Aber deinen Namen UND wo du wohnst zusammen – das bleibt geheim." },
+    { "id": "m11", "piktogramm": "📸", "sache": "Ein Foto von dir in der Badewanne", "geheim": true, "erklaerung": "So ein Foto bleibt geheim. Bilder ohne Kleidung teilt man nicht. Sag einer erwachsenen Person Bescheid." },
+    { "id": "m12", "piktogramm": "🎮", "sache": "Welches Spiel du gerne spielst", "geheim": false, "erklaerung": "Welches Spiel du magst, darf jeder wissen. Das ist nicht geheim." }
+  ]
+}
