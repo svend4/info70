@@ -6,6 +6,7 @@
 // CSP werden dort installiert; der Kern macht keine Netzwerkanfragen.
 import { el, vorlesen, mischen } from '../../kinder-ui/js/komponenten.mjs';
 import { duettWertung, duettSatz } from './duett.mjs';
+import { amZug, staffelWertung, staffelSatz } from './staffel.mjs';
 
 const STANDARD_TEXTE = {
   titel: 'Quiz',
@@ -55,6 +56,11 @@ export function starteQuiz(konfig) {
   let antwortenA = [];
   let antwortenB = [];
 
+  // Geschwister-Staffel (kooperativ): zwei Geschwister abwechselnd, ein Team.
+  let staffelFragen = [];
+  let staffelIndex = 0;
+  let staffelEintraege = [];
+
   const fuss = () =>
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
@@ -90,6 +96,10 @@ export function starteQuiz(konfig) {
         el('p', { style: 'font-weight:600;margin-top:0' }, '👪 Zu zweit spielen'),
         el('p', { style: 'font-size:0.9rem' }, 'Duett-Modus: Zwei (z. B. Eltern und Kind, Enkel und Oma) antworten nacheinander verdeckt am selben Gerät – danach vergleicht ihr eure Antworten. Nichts wird gespeichert.'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteDuett }, '👪 Duett-Modus starten')),
+      el('section', { class: 'k-karte' },
+        el('p', { style: 'font-weight:600;margin-top:0' }, '🧑‍🤝‍🧒 Für Geschwister'),
+        el('p', { style: 'font-size:0.9rem' }, 'Staffel-Modus: Ihr löst abwechselnd Fragen und punktet als EIN Team. Nach der Frage des jüngeren Kindes darf das ältere kurz erklären. Kooperativ, nichts wird gespeichert.'),
+        el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteStaffel }, '🧑‍🤝‍🧒 Geschwister-Staffel starten')),
       el('section', { class: 'k-karte' },
         el('p', {}, t.datenHinweis),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); start(); } }, t.datenLoeschen)));
@@ -310,6 +320,76 @@ export function starteQuiz(konfig) {
         vorlesenKnopf(duettSatz(w)),
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf', onclick: starteDuett }, '🔁 Noch einmal zu zweit'),
+          el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));
+  }
+
+  // --- Geschwister-Staffel (kooperativ): additiv, berührt Einzel-/Klassen-/Duett nicht.
+  const staffelName = (seite) => (seite === 'jung' ? 'jüngeres Kind' : 'älteres Kind');
+
+  function starteStaffel() {
+    staffelFragen = mischen(daten.fragen).slice(0, rundenGroesse);
+    staffelIndex = 0;
+    staffelEintraege = [];
+    staffelFrage();
+  }
+
+  function staffelFrage() {
+    const f = staffelFragen[staffelIndex];
+    const seite = amZug(staffelIndex);
+    const kopfEl = el('p', { class: 'k-untertitel' }, `🧑‍🤝‍🧒 Staffel · ${staffelName(seite)} ist dran · ${t.fallWort} ${staffelIndex + 1} von ${staffelFragen.length}`);
+    if (f.typ === 'binaer') {
+      zeige(
+        el('section', { class: 'k-karte' },
+          kopfEl,
+          el('p', { style: 'font-weight:600' }, `„${f.aussage}“`),
+          vorlesenKnopf(`${f.aussage}. ${t.binaerFrage}`),
+          el('div', { class: 'k-antworten' },
+            el('button', { class: 'k-knopf', onclick: () => staffelAufloesung(f, f.korrekt === 'ja', seite) }, t.binaerJa),
+            el('button', { class: 'k-knopf', onclick: () => staffelAufloesung(f, f.korrekt === 'nein', seite) }, t.binaerNein))));
+    } else {
+      const richtige = f.antworten[f.korrekt];
+      const gemischt = mischen(f.antworten);
+      zeige(
+        el('section', { class: 'k-karte' },
+          kopfEl,
+          el('p', { style: 'font-weight:600' }, f.frage),
+          vorlesenKnopf(`${f.frage} Die Möglichkeiten sind: ${gemischt.join('. Oder: ')}`),
+          el('div', { class: 'k-antworten' },
+            ...gemischt.map((a) =>
+              el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => staffelAufloesung(f, a === richtige, seite) }, a)))));
+    }
+  }
+
+  function staffelAufloesung(f, richtig, seite) {
+    staffelEintraege.push({ spieler: seite, richtig });
+    const titel = richtig ? t.richtigTitel : t.falschTitel;
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('div', { class: `k-hinweis ${richtig ? 'k-hinweis--richtig' : 'k-hinweis--falsch'}` },
+          el('p', { style: 'font-weight:700;margin-top:0' }, titel),
+          el('p', { style: 'margin-bottom:0' }, f.erklaerung)),
+        seite === 'jung' ? el('p', { style: 'font-weight:600' }, '🧑 Große*r, erkläre es kurz mit eigenen Worten!') : '',
+        vorlesenKnopf(`${titel} ${f.erklaerung}`),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: staffelWeiter }, staffelIndex + 1 < staffelFragen.length ? t.weiterKnopf : t.ergebnisKnopf))));
+  }
+
+  function staffelWeiter() {
+    staffelIndex++;
+    if (staffelIndex < staffelFragen.length) staffelFrage();
+    else staffelErgebnis();
+  }
+
+  function staffelErgebnis() {
+    const w = staffelWertung(staffelEintraege);
+    zeige(
+      el('section', { class: 'k-karte' },
+        el('p', { class: 'k-gross' }, '🧑‍🤝‍🧒'),
+        el('p', { style: 'text-align:center;font-weight:700' }, staffelSatz(w)),
+        el('p', { style: 'text-align:center;color:#4b5563' }, 'Zusammen seid ihr stark – als Team gewinnt ihr immer!'),
+        vorlesenKnopf(staffelSatz(w)),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: starteStaffel }, '🔁 Noch eine Staffel'),
           el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));
   }
 

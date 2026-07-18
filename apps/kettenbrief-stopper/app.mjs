@@ -5,13 +5,14 @@
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { erstelleKlasse, simuliere, vergleiche } from './sim.mjs';
+import { NACHRICHTEN_TYPEN, typNach } from './nachrichten.mjs';
 
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
 
-const NACHRICHT = '⛓️😱 ACHTUNG! Schick diese Nachricht noch HEUTE an 2 Freunde weiter, sonst hast du 10 Jahre Pech!!! Ein Junge hat nicht weitergeleitet und dann...';
-
+let aktiverTyp = NACHRICHTEN_TYPEN[0];
+let gemeldet = false;
 let klasse;
 let erhalten;
 let front;
@@ -51,17 +52,20 @@ function gitter() {
 function startBildschirm() {
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, 'In der Klasse taucht diese Nachricht auf:'),
-      el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, NACHRICHT)),
-      el('p', {}, 'Was passiert, wenn alle weiterleiten? Und was, wenn DU stoppst? Finde es im Experiment heraus – Runde für Runde.'),
-      el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: starteExperiment }, '▶️ Experiment starten'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('In der Klasse taucht eine Kettennachricht auf. Was passiert, wenn alle weiterleiten? Und was, wenn du stoppst? Finde es im Experiment heraus.') }, '🔊 Vorlesen'))),
+      el('p', { style: 'margin-top:0' }, 'Wähle ein Experiment. Beobachte: Was passiert, wenn alle weiterleiten – und was, wenn DU stoppst?'),
+      ...NACHRICHTEN_TYPEN.map((typ) => el('div', { style: 'border:1px solid var(--k-rand);border-radius:0.6rem;padding:0.6rem;margin:0.5rem 0' },
+        el('p', { style: 'font-weight:700;margin:0 0 0.3rem' }, `${typ.emoji} ${typ.titel}`),
+        el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, typ.nachricht)),
+        el('div', { class: 'k-antworten' },
+          el('button', { class: 'k-knopf', onclick: () => starteExperiment(typ) }, `▶️ ${typ.titel}-Experiment starten`),
+          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${typ.intro} ${typ.nachricht}`) }, '🔊 Vorlesen'))))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Diese App speichert nichts – gar nichts. Jedes Experiment startet frisch.')));
 }
 
-function starteExperiment() {
+function starteExperiment(typ = aktiverTyp) {
+  aktiverTyp = typ;
+  gemeldet = false;
   klasse = erstelleKlasse();
   erhalten = new Set([klasse.start]);
   front = [klasse.start];
@@ -101,33 +105,39 @@ function simulationsBildschirm() {
         el('button', { class: 'k-knopf', onclick: naechsteRunde }, '⏩ Nächste Runde'))));
 }
 
+function stoppeAusbreitung() {
+  stopper.add(klasse.spieler);
+  for (const ziel of klasse.ziele[klasse.spieler]) immun.add(ziel);
+  for (let kind = 0; kind < klasse.groesse && immun.size < klasse.ziele[klasse.spieler].length + 1; kind++) {
+    if (kind !== klasse.spieler && !erhalten.has(kind)) immun.add(kind);
+  }
+}
+
 function entscheidungsBildschirm() {
+  const optionen = [
+    el('button', {
+      class: 'k-knopf',
+      onclick: () => { entscheidungGefallen = true; simulationsBildschirm(); },
+    }, aktiverTyp.weiter),
+    el('button', {
+      class: 'k-knopf k-knopf--richtig',
+      onclick: () => { entscheidungGefallen = true; stoppeAusbreitung(); simulationsBildschirm(); },
+    }, aktiverTyp.stopp),
+  ];
+  if (aktiverTyp.melden) {
+    optionen.push(el('button', {
+      class: 'k-knopf k-knopf--richtig',
+      onclick: () => { entscheidungGefallen = true; gemeldet = true; stoppeAusbreitung(); simulationsBildschirm(); },
+    }, aktiverTyp.melden));
+  }
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `Runde ${runde} · Die Nachricht hat DICH erreicht! 📱`),
-      el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, NACHRICHT)),
-      el('p', { style: 'font-weight:600' }, 'Dein Herz klopft. Was machst du?'),
+      el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, aktiverTyp.nachricht)),
+      el('p', { style: 'font-weight:600' }, aktiverTyp.frage),
       el('div', { class: 'k-antworten' },
-        el('button', {
-          class: 'k-knopf',
-          onclick: () => {
-            entscheidungGefallen = true;
-            simulationsBildschirm();
-          },
-        }, '😰 An 2 Freunde weiterleiten – sicher ist sicher'),
-        el('button', {
-          class: 'k-knopf k-knopf--richtig',
-          onclick: () => {
-            entscheidungGefallen = true;
-            stopper.add(klasse.spieler);
-            for (const ziel of klasse.ziele[klasse.spieler]) immun.add(ziel);
-            for (let kind = 0; kind < klasse.groesse && immun.size < klasse.ziele[klasse.spieler].length + 1; kind++) {
-              if (kind !== klasse.spieler && !erhalten.has(kind)) immun.add(kind);
-            }
-            simulationsBildschirm();
-          },
-        }, '🛑 STOPP! Löschen und Freund*innen warnen'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${NACHRICHT}. Dein Herz klopft. Was machst du? Weiterleiten, oder stopp: löschen und Freundinnen und Freunde warnen?`) }, '🔊 Vorlesen'))));
+        ...optionen,
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${aktiverTyp.nachricht}. ${aktiverTyp.frage}`) }, '🔊 Vorlesen'))));
 }
 
 function endBildschirm() {
@@ -136,20 +146,18 @@ function endBildschirm() {
   const gerettet = Math.max(0, alleLeitenWeiter - erhalten.size);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, gestoppt ? '🦸' : '⛓️'),
+      el('p', { class: 'k-gross' }, gestoppt ? (gemeldet ? '📣' : '🦸') : aktiverTyp.emoji),
       el('p', { style: 'text-align:center;font-weight:700' },
         gestoppt
-          ? `Dein Stopp hat gewirkt: ${erhalten.size} statt ${alleLeitenWeiter} Kinder erschreckt – du hast ${gerettet} Kinder geschützt!`
-          : `Alle haben weitergeleitet: ${erhalten.size} von ${klasse.groesse} Kindern erschreckt. Probiere aus, was dein Stopp verändert!`),
+          ? `${gemeldet ? 'Melden und Stoppen' : 'Dein Stopp'} hat gewirkt: ${erhalten.size} statt ${alleLeitenWeiter} Kinder erreicht – du hast ${gerettet} Kinder geschützt!`
+          : `Alle haben mitgemacht: ${erhalten.size} von ${klasse.groesse} Kindern erreicht. Probiere aus, was dein Stopp verändert!`),
       gitter()),
     el('section', { class: 'k-karte' },
-      el('p', {}, '🔍 Kettennachrichten arbeiten mit Angst und Zeitdruck – genau daran erkennst du sie.'),
-      el('p', {}, '🙅 Es passiert NICHTS, wenn du nicht weiterleitest. Pech kann man nicht verschicken.'),
-      el('p', {}, '🛑 Löschen + Bescheid sagen („Das ist ein Kettenbrief, ignorier ihn!“) schützt deine Freund*innen.'),
-      el('p', {}, '💬 Macht dir eine Nachricht Angst? Sprich mit Erwachsenen – oder ruf die Nummer gegen Kummer an: 116 111 (kostenlos).'),
+      gemeldet ? el('p', { style: 'font-weight:600' }, '📣 Stark: Du hast es einer erwachsenen Person / der App gemeldet – das schützt auch die anderen.') : '',
+      ...aktiverTyp.lernpunkte.map((p) => el('p', {}, p)),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Kettennachrichten arbeiten mit Angst und Zeitdruck. Es passiert nichts, wenn du nicht weiterleitest. Löschen und Bescheid sagen schützt deine Freundinnen und Freunde.') }, '🔊 Vorlesen'),
-        el('button', { class: 'k-knopf', onclick: starteExperiment }, '🔁 Noch ein Experiment'),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(aktiverTyp.lernpunkte.join(' ')) }, '🔊 Vorlesen'),
+        el('button', { class: 'k-knopf', onclick: () => starteExperiment(aktiverTyp) }, '🔁 Noch ein Experiment'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))));
 }
 

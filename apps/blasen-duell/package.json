@@ -1,0 +1,8 @@
+{
+  "name": "@info70/blasen-duell",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Blasen-Duell (8-12, zu feed-forscher): Split-Screen auf einem Geraet - zwei Kinder tippen unterschiedliche Interessen an und sehen live, wie derselbe Algorithmus zwei voellig verschiedene Feeds erzeugt. Werbefrei, offline, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
