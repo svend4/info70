@@ -1,0 +1,69 @@
+{
+  "quelle": "Jugendmedienschutz-Staatsvertrag (JMStV) i.V.m. JuSchG. Altersstufen ab 0/6/12/16/18. Das age-de.xml-Label ist ein technisches Alterskennzeichen, das anerkannte Jugendschutzprogramme auslesen. Öffentlich recherchiert, kein Rechtsrat.",
+  "hinweis": "Geführter Prüfpfad: Kreuze die zutreffenden Inhaltsmerkmale und Interaktionsrisiken an. Der Helfer empfiehlt eine Altersstufe, listet die technischen Mittel des JMStV auf und erzeugt ein age-de.xml-Label plus Meta-Tag zum Download. Selbsteinschätzung, kein offizielles Konformitätsergebnis. Diese App stellt keine externen Anfragen; alles bleibt auf diesem Gerät.",
+  "altersstufen": [
+    { "stufe": 0, "label": "ab 0 – ohne Altersbeschränkung", "emoji": "🟢" },
+    { "stufe": 6, "label": "ab 6", "emoji": "🟡" },
+    { "stufe": 12, "label": "ab 12", "emoji": "🟠" },
+    { "stufe": 16, "label": "ab 16", "emoji": "🔴" },
+    { "stufe": 18, "label": "ab 18 – nur Erwachsene", "emoji": "⛔" }
+  ],
+  "merkmale": [
+    {
+      "id": "m-harmlos",
+      "text": "Nur harmlose, kindgerechte Inhalte (Lernen, Spielen, Basteln, Musik)",
+      "minStufe": 0,
+      "hilfe": "Inhalte, die selbst für die Jüngsten unbedenklich sind. Löst allein keine Kennzeichnungspflicht aus."
+    },
+    {
+      "id": "m-spannung",
+      "text": "Leichte Spannung, milde Gruselelemente, Konflikte mit gutem Ausgang",
+      "minStufe": 6,
+      "hilfe": "Aufregung, die jüngere Kinder überfordern, ältere aber gut verarbeiten können (comichafte Bedrohung, kurze Spannungsbögen)."
+    },
+    {
+      "id": "m-angst",
+      "text": "Angstauslösende Szenen, Gewaltandeutungen, bedrohliche Grundstimmung",
+      "minStufe": 12,
+      "hilfe": "Inhalte, die die Entwicklung jüngerer Kinder beeinträchtigen können (§ 5 JMStV: entwicklungsbeeinträchtigend)."
+    },
+    {
+      "id": "m-gewalt",
+      "text": "Explizite Gewalt, Drogen, verstörende oder desorientierende Darstellungen",
+      "minStufe": 16,
+      "hilfe": "Deutlich belastende Inhalte, die erst für ältere Jugendliche geeignet sind."
+    },
+    {
+      "id": "m-jugendgef",
+      "text": "Offensichtlich jugendgefährdend (Pornografie, schwere/verherrlichende Gewalt)",
+      "minStufe": 18,
+      "hilfe": "Absolut oder relativ unzulässige Inhalte nach § 4 JMStV – für Kinderangebote grundsätzlich ausgeschlossen. Dringend rechtlich prüfen."
+    }
+  ],
+  "interaktion": [
+    {
+      "id": "i-chat",
+      "text": "Offener Chat oder Kontakt zu Unbekannten möglich",
+      "hebtAuf": 12,
+      "mittel": "Vormoderation oder Nachmoderation, kindgerechter Meldeweg, sichere Voreinstellungen (kein Fremdkontakt ab Werk). Interaktionsrisiko hebt die faktische Einstufung auf mindestens ab 12."
+    },
+    {
+      "id": "i-kauf",
+      "text": "In-App-Käufe, Lootboxen oder Glücksspielelemente",
+      "hebtAuf": 0,
+      "mittel": "Klare Kostenangabe, Kaufhürde/Elternfreigabe, Verzicht auf glücksspielähnliche Mechaniken (JuSchG § 10b – ökonomische Risiken)."
+    },
+    {
+      "id": "i-daten",
+      "text": "Es werden personenbezogene Daten von Kindern erhoben",
+      "hebtAuf": 0,
+      "mittel": "Datenminimierung und Einwilligung nach Art. 8 DSGVO (siehe Einwilligungs-Prüfpfad)."
+    }
+  ],
+  "mittelJeStufe": {
+    "6": "age-de.xml-Label mit der Stufe hinterlegen (von Jugendschutzprogrammen auslesbar).",
+    "12": "Alterskennzeichnung deutlich sichtbar; age-de.xml=12; Verweis auf Elterninformation.",
+    "16": "Technische Zugangsbeschränkung oder Sendezeitbegrenzung (22–6 Uhr) UND anerkanntes Jugendschutzprogramm; age-de.xml=16.",
+    "18": "Geschlossene Benutzergruppe / Altersverifikation (AV-System); Sendezeit 23–6 Uhr; age-de.xml=18. Für Kinderangebote i. d. R. ausgeschlossen."
+  }
+}

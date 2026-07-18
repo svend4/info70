@@ -1,0 +1,123 @@
+{
+  "quelle": "Manipulative Designmuster (Dark Patterns) und ihre kindbezogene Wirkung. Grundlagen: DSA Art. 25 (Verbot manipulativer Gestaltung), JuSchG § 10b, UN-KRK Art. 31/32 und GC25. Öffentlich recherchiert, kein Rechtsrat.",
+  "hinweis": "Selbstinspektion: Gehe dein Angebot Screen für Screen durch und markiere jedes Muster als ⚪ ungeprüft, 🔴 gefunden, 🟢 frei oder 🔵 behoben. Der Bericht dokumentiert Befunde und Abstellmaßnahmen (die faire Alternative). Kein offizielles Ergebnis. Diese App stellt keine externen Anfragen; alles bleibt auf diesem Gerät.",
+  "kategorien": [
+    {
+      "id": "druck",
+      "name": "Zeit- & Druck-Muster",
+      "emoji": "⏱️",
+      "muster": [
+        {
+          "id": "countdown",
+          "name": "Countdown / künstliche Verknappung",
+          "beispiel": "„Nur noch 2 Minuten!“, „Nur noch 3 Stück verfügbar!“ ohne echten Grund.",
+          "kindWirkung": "Kinder können Zeitdruck schlecht einordnen und handeln überstürzt, um nichts zu „verpassen“.",
+          "faireAlternative": "Keine künstlichen Fristen. Echte Fristen klar und ohne Panik-Ton nennen.",
+          "bezug": "DSA Art. 25; UN-KRK Art. 31"
+        },
+        {
+          "id": "endlos",
+          "name": "Endlos-Feed / Autoplay",
+          "beispiel": "Inhalte laden unendlich nach; das nächste Video startet automatisch.",
+          "kindWirkung": "Kein natürliches Ende – Kinder bleiben länger als gewollt, Selbstregulation wird erschwert.",
+          "faireAlternative": "Klare Sitzungs-Enden, „Weiter?“-Nachfrage, Autoplay standardmäßig aus.",
+          "bezug": "GC25 Rn. 110-112; UN-KRK Art. 31"
+        },
+        {
+          "id": "streak",
+          "name": "Streak- / Verlustdruck",
+          "beispiel": "„Deine 7-Tage-Serie geht verloren, wenn du heute nicht spielst!“",
+          "kindWirkung": "Verlustangst bindet Kinder an tägliche Nutzung, auch gegen ihr Bedürfnis nach Pause.",
+          "faireAlternative": "Keine Bestrafung für Pausen; Fortschritt bleibt erhalten, kein Rückhol-Druck.",
+          "bezug": "GC25 Rn. 110; UN-KRK Art. 31"
+        },
+        {
+          "id": "nagging",
+          "name": "Nagging (wiederholtes Nachfragen)",
+          "beispiel": "Immer wieder Pop-ups „Jetzt Benachrichtigungen erlauben?“ bis man zustimmt.",
+          "kindWirkung": "Kinder geben dem wiederholten Drängen eher nach als Erwachsene.",
+          "faireAlternative": "Einmal fragen, Entscheidung respektieren, später nur auf aktive Nachfrage.",
+          "bezug": "DSA Art. 25"
+        }
+      ]
+    },
+    {
+      "id": "geld",
+      "name": "Geld- & Kauf-Muster",
+      "emoji": "💸",
+      "muster": [
+        {
+          "id": "versteckte-kosten",
+          "name": "Versteckte Kosten",
+          "beispiel": "Kosten erscheinen erst im letzten Schritt oder im Kleingedruckten.",
+          "kindWirkung": "Kinder überblicken Folgekosten nicht und lösen ungewollt Käufe aus.",
+          "faireAlternative": "Alle Kosten früh, vollständig und in klarer Sprache anzeigen.",
+          "bezug": "DSA Art. 25; JuSchG § 10b"
+        },
+        {
+          "id": "sneaking",
+          "name": "Sneaking (heimliches Hinzufügen)",
+          "beispiel": "Ein Zusatz-Abo oder Artikel liegt schon vorausgewählt im Warenkorb.",
+          "kindWirkung": "Vorausgewählte Extras werden übernommen, ohne dass das Kind es merkt.",
+          "faireAlternative": "Nichts vorauswählen; jede Option aktiv bestätigen lassen (Opt-in).",
+          "bezug": "DSA Art. 25"
+        },
+        {
+          "id": "lootbox",
+          "name": "Lootbox- / Glücksspiel-Druck",
+          "beispiel": "Zufallskisten gegen Geld oder Zeit, „fast gewonnen“-Effekte.",
+          "kindWirkung": "Glücksspiel-Mechaniken erzeugen Weiterspiel-Drang und Ausgaben.",
+          "faireAlternative": "Kein Zufall gegen Geld; transparente, feste Preise, keine Zufallsbelohnung.",
+          "bezug": "GC25 Rn. 112; JuSchG § 10b"
+        },
+        {
+          "id": "getarnte-werbung",
+          "name": "Getarnte Werbung (Disguised Ads)",
+          "beispiel": "Werbung sieht aus wie Spiel-Inhalt oder ein „Weiter“-Knopf.",
+          "kindWirkung": "Kinder unterscheiden Werbung und Inhalt noch nicht sicher – sie klicken arglos.",
+          "faireAlternative": "Werbung klar kennzeichnen und trennen (JMStV § 6); besser: keine Werbung.",
+          "bezug": "JMStV § 6; UN-KRK Art. 32"
+        }
+      ]
+    },
+    {
+      "id": "entscheidung",
+      "name": "Entscheidungs-Manipulation",
+      "emoji": "🎭",
+      "muster": [
+        {
+          "id": "confirmshaming",
+          "name": "Confirmshaming (Bestätigungs-Beschämung)",
+          "beispiel": "Ablehn-Knopf beschämt: „Nein danke, ich will nichts lernen.“",
+          "kindWirkung": "Kinder fühlen sich schuldig und wählen die vom Anbieter gewünschte Option.",
+          "faireAlternative": "Neutrale, gleichwertige Optionen ohne Wertung oder Schuldgefühl.",
+          "bezug": "DSA Art. 25"
+        },
+        {
+          "id": "roach-motel",
+          "name": "Roach Motel (erschwerter Ausstieg)",
+          "beispiel": "Anmelden mit einem Klick, Kündigen nur über versteckte Menüs.",
+          "kindWirkung": "Kinder finden den Ausweg nicht und bleiben ungewollt gebunden.",
+          "faireAlternative": "Aufhören/Abmelden genauso leicht wie Anmelden gestalten.",
+          "bezug": "DSA Art. 25"
+        },
+        {
+          "id": "trick-frage",
+          "name": "Trickfragen / verwirrende Formulierung",
+          "beispiel": "Doppelte Verneinung: „Ich möchte KEINE Nachrichten nicht erhalten.“",
+          "kindWirkung": "Kinder verstehen die Frage falsch und stimmen ungewollt zu.",
+          "faireAlternative": "Einfache, eindeutige Sätze; Voreinstellung datenschutzfreundlich.",
+          "bezug": "DSA Art. 25; DSGVO Art. 12"
+        },
+        {
+          "id": "privacy-zucker",
+          "name": "Privacy Zuckering (Datenpreisgabe durch Design)",
+          "beispiel": "Öffentliches Profil ist Voreinstellung; „privat“ ist versteckt.",
+          "kindWirkung": "Kinder geben unbeabsichtigt Daten preis, weil das Design es nahelegt.",
+          "faireAlternative": "Datenschutzfreundliche Voreinstellung (privacy by default), sichtbare Optionen.",
+          "bezug": "DSGVO Art. 25; DSA Art. 28; GC25 Rn. 68"
+        }
+      ]
+    }
+  ]
+}

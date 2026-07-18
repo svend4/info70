@@ -1,0 +1,8 @@
+{
+  "name": "@info70/jmstv-einstufungs-helfer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JMStV-Einstufungs-Helfer fuer Betreiber: gefuehrter Pruefpfad zur Alterskennzeichnung (ab 0/6/12/16/18) anhand von Inhaltsmerkmalen und Interaktionsrisiken, mit Liste der technischen Mittel (Label, Zeitsteuerung, Altersverifikation) und Erzeugung eines age-de.xml-Labels plus Meta-Tag zum Download. JMStV/JuSchG. Kein Rechtsrat, offline, keine Datenerhebung. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

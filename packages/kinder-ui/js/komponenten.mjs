@@ -16,7 +16,10 @@ export function el(tag, attrs = {}, ...kinder) {
       knoten.setAttribute(name, String(wert));
     }
   }
-  knoten.append(...kinder);
+  // Falsy Kinder (null/undefined/false) überspringen – erlaubt bedingtes
+  // Rendern per `bedingung && el(...)` bzw. `bedingung ? el(...) : null`,
+  // ohne dass ein "null"/"false"-Textknoten erscheint.
+  knoten.append(...kinder.filter((k) => k != null && k !== false));
   return knoten;
 }
 

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/dark-pattern-selbstinspektion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dark-Pattern-Selbstinspektion fuer Betreiber und Designer: UI-Pruefliste, mit der das eigene Angebot Screen fuer Screen auf manipulative Muster (Countdown-Druck, versteckte Kosten, Confirmshaming, Endlos-Feeds, Lootbox-Druck, getarnte Werbung u. a.) geprueft wird - jedes Muster mit Beispiel, Kind-Wirkung und fairer Alternative; vier Zustaende (ungeprueft/gefunden/frei/behoben) und ein Bericht, der Befunde und Abstellmassnahmen dokumentiert. DSA/JuSchG/UN-KRK. Offline. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -56,7 +56,7 @@ npm test       # тесты (node --test)
 
 ## Статус
 
-**126 приложений (125 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+**129 приложений (128 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»). Все 4 квиза имеют
@@ -64,7 +64,7 @@ npm test       # тесты (node --test)
 Пакет `kinder-ui` содержит **переключатель Leichte Sprache** (локаль `de-ls`,
 BFSG) — включён в `feed-forscher`; любое приложение получает его, добавив
 `-ls`-каталог. Также есть общий блок **Hilfe-Insel** (116 111) в `kinder-ui`.
-Полный прогон: 791 тест. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
+Полный прогон: 812 тестов. Есть **Anzeige-Einstellungen** (hoher Kontrast + размер шрифта, BFSG) в `kinder-ui` — применяется во всех квизах и flagship-приложениях; a11y-аудит всех страниц в CI. `kinder-ui` **RTL-готов** (логические CSS-свойства + `richtung.mjs`, dir из кода языка). `kettenbrief-stopper` переведён на **mini-i18n (de/en + Leichte Sprache)** — образец конвертации szenario-приложения (разблокирует языковые паки). Все квизы имеют **Duett-Modus** (семейный дуэт: двое отвечают по очереди, затем сравнение) и **Geschwister-Staffel** (кооперативная эстафета: двое как одна команда) — в `quiz-kern`.
 
 **Sicher im Netz — дети 8–12 (цифровые риски):**
 
@@ -197,6 +197,9 @@ BFSG) — включён в `feed-forscher`; любое приложение п�
 | `eltern-kompass-generator` | Форма→готовая «Für Eltern»-страница (eltern.html) | кат.№1 |
 | `link-inventar-pruefer` | Импорт HTML → извлечение/проверка внешних ссылок (без сети) | кат.№1 |
 | `avv-checkliste-hosting` | Хостинг/AVV по Art. 28 DSGVO → Lücken-Bericht | кат.№1 |
+| `jmstv-einstufungs-helfer` | Возрастная ступень по JMStV (ab 0/6/12/16/18) + генерация age-de.xml-Label | кат.№1 |
+| `dark-pattern-selbstinspektion` | Проверка своего UI на тёмные паттерны (12 шт.): находка→мера устранения | кат.№1 |
+| `compliance-koffer` | Сбор отчётов всех проверок в одну аудит-папку (.json) + общий отчёт, Klassen-Koffer | кат.№1 |
 | `beschwerde-brief-werkstatt` | Дети 8–12: письмо/петиция (Schulleitung/Bundestag), имя не хранится | кат.№1 |
 | `barriere-spuernasen` | Дети 8–12: симулятор доступности (контраст/шрифт/озвучка/alt) | кат.№1 |
 | `werbekennzeichnung` | Предпросмотр маркировки рекламы + HTML | кат.№1 |

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/compliance-koffer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Compliance-Koffer fuer Betreiber: Export/Import-Funktion nach dem Klassen-Koffer-Muster, die die Berichte aller Pruefwerkzeuge (Art. 8, DSA, BFSG, AI Act, Paragraf 24a JuSchG, KRIA, JMStV, Dark-Pattern) in EINE versionierte Audit-Datei buendelt und als druckbaren Gesamtbericht ausgibt - als Nachweis-Mappe fuer Foerdergeber, Aufsicht und Traeger, ganz ohne Server. Offline. Zielgruppe: Betreiber.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
