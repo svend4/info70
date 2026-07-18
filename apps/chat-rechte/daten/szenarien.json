@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "szenarien": [
+    {
+      "id": "cr01",
+      "situation": "In der Klassengruppe schreibt jemand: „Der Film war langweilig, ich fand ihn doof.“ Ein anderer antwortet: „Das darfst du nicht sagen!“",
+      "recht": "Art. 13 KRK: Meinungsfreiheit",
+      "frage": "Wer hat recht?",
+      "optionen": [
+        { "text": "Seine Meinung sagen ist erlaubt – „langweilig“ ist eine Meinung, keine Beleidigung.", "wert": 2 },
+        { "text": "Stimmt, über Filme darf man nichts Schlechtes sagen.", "wert": 0 },
+        { "text": "Lieber gar nichts mehr schreiben, um Streit zu vermeiden.", "wert": 1 }
+      ],
+      "erklaerung": "Du hast das Recht, deine Meinung zu sagen (Artikel 13). „Der Film war langweilig“ ist eine Meinung über eine Sache – völlig okay. Meinungsfreiheit heißt: Man darf verschiedener Ansicht sein, ohne dass es verboten ist.",
+      "merksatz": "Meinung über eine Sache sagen = mein Recht."
+    },
+    {
+      "id": "cr02",
+      "situation": "Jemand schreibt in den Chat: „Du bist hässlich und dumm.“",
+      "recht": "Art. 13 KRK: Meinungsfreiheit hat eine Grenze",
+      "frage": "Ist das noch Meinungsfreiheit?",
+      "optionen": [
+        { "text": "Nein – das ist eine Beleidigung. Meinungsfreiheit endet, wo man andere herabwürdigt.", "wert": 2 },
+        { "text": "Ja, jeder darf sagen, was er denkt – auch das.", "wert": 0 },
+        { "text": "Das ist zwar gemein, aber man kann nichts machen.", "wert": 1 }
+      ],
+      "erklaerung": "Meinungsfreiheit hat eine wichtige Grenze: Sie schützt Meinungen über Sachen – nicht das Herabwürdigen von Menschen. „Du bist dumm“ ist keine Meinung, sondern eine Beleidigung. Rechte haben immer auch Verantwortung: Meine Freiheit endet da, wo ich andere verletze.",
+      "merksatz": "Meinung ja – Menschen beleidigen nein."
+    },
+    {
+      "id": "cr03",
+      "situation": "Du siehst, dass jemand im Chat übel beleidigt wird. Es gibt einen „Melden“-Knopf. Ein anderer sagt: „Melden ist Petzen!“",
+      "recht": "DSA Art. 16/20: Melderecht",
+      "frage": "Was stimmt?",
+      "optionen": [
+        { "text": "Melden ist mein Recht, kein Petzen – Plattformen MÜSSEN einen Meldeweg anbieten.", "wert": 2 },
+        { "text": "Stimmt, melden macht man nicht, das ist Verrat.", "wert": 0 },
+        { "text": "Melden bringt sowieso nichts, also lieber lassen.", "wert": 1 }
+      ],
+      "erklaerung": "Melden ist kein Petzen, sondern ein Recht: Der Digital Services Act verpflichtet Plattformen, dir einen einfachen Melde-Knopf zu geben (Art. 16) und deine Meldung ernst zu nehmen (Art. 20). Petzen will jemandem schaden – Melden schützt jemanden. Das ist ein großer Unterschied.",
+      "merksatz": "Melden schützt – Petzen schadet. Melden ist mein Recht."
+    },
+    {
+      "id": "cr04",
+      "situation": "In einer Gruppe stimmen alle ab, welches Spiel gespielt wird. Deine Idee bekommt nur zwei Stimmen und verliert.",
+      "recht": "Art. 12 KRK: gehört werden – nicht: immer gewinnen",
+      "frage": "Wurde dein Recht verletzt?",
+      "optionen": [
+        { "text": "Nein – ich durfte mitreden und abstimmen. Gehört werden heißt nicht, immer zu gewinnen.", "wert": 2 },
+        { "text": "Ja, meine Idee hätte gewinnen müssen.", "wert": 0 },
+        { "text": "Beim nächsten Mal stimme ich einfach nicht mehr mit.", "wert": 1 }
+      ],
+      "erklaerung": "Dein Recht auf Mitreden (Artikel 12) bedeutet: Deine Stimme zählt und wird gehört – nicht, dass du immer recht bekommst. Eine faire Abstimmung, bei der du mitmachen durftest, hat dein Recht geachtet, auch wenn deine Idee verloren hat. Dazuzugehören heißt auch, Ergebnisse mitzutragen.",
+      "merksatz": "Mitreden dürfen ≠ immer gewinnen."
+    },
+    {
+      "id": "cr05",
+      "situation": "Jemand postet in der Gruppe ein privates Foto von dir, das du peinlich findest – ohne zu fragen.",
+      "recht": "Recht am eigenen Bild",
+      "frage": "Was ist dein gutes Recht?",
+      "optionen": [
+        { "text": "Ich darf verlangen, dass es gelöscht wird – über mein Bild entscheide ich.", "wert": 2 },
+        { "text": "Nichts – wer ein Foto hat, darf es posten.", "wert": 0 },
+        { "text": "Ich poste zur Rache ein peinliches Foto von ihm.", "wert": 0 }
+      ],
+      "erklaerung": "Über Bilder von dir entscheidest du (Recht am eigenen Bild). Du darfst verlangen, dass das Foto gelöscht wird. Rache mit einem anderen Foto macht dich selbst zum Regelbrecher – dann verletzt du das Recht des anderen. Stark ist: das Löschen einfordern, notfalls melden und Erwachsene einbeziehen.",
+      "merksatz": "Über mein Bild entscheide ich – über deins du."
+    },
+    {
+      "id": "cr06",
+      "situation": "Du möchtest in der Gruppe zu einem ernsten Thema (Streit in der Klasse) etwas sagen, traust dich aber nicht, weil andere immer sofort dazwischenreden.",
+      "recht": "Art. 12 + 13 KRK: sagen dürfen UND gehört werden",
+      "frage": "Was ist ein starker Zug?",
+      "optionen": [
+        { "text": "Vorschlagen: „Lasst uns eine Redeliste machen – jede*r darf ausreden.“", "wert": 2 },
+        { "text": "Ganz schweigen, meine Meinung ist eh egal.", "wert": 1 },
+        { "text": "Einfach lauter schreiben als alle anderen.", "wert": 0 }
+      ],
+      "erklaerung": "Deine Meinung zu sagen (Art. 13) und gehört zu werden (Art. 12) gehören zusammen – aber alle gleichzeitig funktioniert nicht. Eine Redeliste sorgt dafür, dass jede*r ausreden darf, auch die Leiseren. Lauter schreien ist kein Recht, sondern verdrängt die anderen. So üben Gruppen faire Beteiligung.",
+      "merksatz": "Faire Regeln geben ALLEN eine Stimme."
+    },
+    {
+      "id": "cr07",
+      "situation": "Ein neues Kind kommt in die Gruppe und versteht die Sprache noch nicht so gut. Manche machen sich über seine Nachrichten lustig.",
+      "recht": "Art. 2 KRK: kein Kind darf benachteiligt werden",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Ich schreibe: „Hört auf – jede*r darf hier mitreden, egal wie gut das Deutsch ist.“", "wert": 2 },
+        { "text": "Mitlachen, ist ja nur Spaß.", "wert": 0 },
+        { "text": "Nichts tun, geht mich nichts an.", "wert": 1 }
+      ],
+      "erklaerung": "Kein Kind darf wegen Sprache, Herkunft oder sonst etwas benachteiligt werden (Artikel 2). Sich über jemandes Sprache lustig zu machen ist Ausgrenzung, kein Spaß. Rechte werden stärker, wenn man sie auch für andere einfordert – ein einziger Satz kann die Gruppe drehen.",
+      "merksatz": "Beteiligungsrechte gelten für ALLE Kinder."
+    },
+    {
+      "id": "cr08",
+      "situation": "Du hast im Chat aus Wut etwas Gemeines geschrieben. Jetzt tut es dir leid.",
+      "recht": "Verantwortung: Rechte haben zwei Seiten",
+      "frage": "Was ist ein starker Umgang damit?",
+      "optionen": [
+        { "text": "Mich entschuldigen und die Nachricht, wenn möglich, zurücknehmen.", "wert": 2 },
+        { "text": "So tun, als wäre nichts gewesen.", "wert": 1 },
+        { "text": "Behaupten, der andere hat angefangen, also ist es okay.", "wert": 0 }
+      ],
+      "erklaerung": "Beteiligungsrechte haben zwei Seiten: Freiheit UND Verantwortung. Auch wer ein Recht hat, kann Fehler machen. Stark ist nicht, nie einen Fehler zu machen – stark ist, ihn zuzugeben und sich zu entschuldigen. Das gehört zu einem fairen Miteinander dazu.",
+      "merksatz": "Freiheit + Verantwortung = faires Miteinander."
+    }
+  ],
+  "raenge": [
+    { "ab": 0, "titel": "Rechte-Lerner*in", "emoji": "📘" },
+    { "ab": 7, "titel": "Fair-Chat-Kenner*in", "emoji": "💬" },
+    { "ab": 12, "titel": "Beteiligungs-Profi", "emoji": "⚖️" },
+    { "ab": 15, "titel": "Chat-Rechte-Meister*in", "emoji": "🏅" }
+  ]
+}

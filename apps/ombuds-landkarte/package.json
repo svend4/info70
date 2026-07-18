@@ -1,0 +1,8 @@
+{
+  "name": "@info70/ombuds-landkarte",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ombuds-Landkarte: Wegweiser fuer Eltern zu Beschwerde- und Ombudsstellen (SGB VIII 9a, DSGVO 77, DSA, jugendschutz.net/KJM, UN-KRK). Statisch gepflegt, keine externen Anfragen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Wegweiser zu Beschwerde- und Ombudsstellen. Angaben aus öffentlicher Recherche, ohne Gewähr – im Ernstfall die genannte Stelle direkt aufsuchen. Diese App stellt keine externen Anfragen; sie nennt nur, wer wofür zuständig ist und wie man die Stelle erreicht.",
+  "stellen": [
+    {
+      "id": "ombudsstelle-jugendhilfe",
+      "name": "Ombudsstelle Jugendhilfe (im Bundesland)",
+      "themen": ["jugendhilfe", "amt"],
+      "wofuer": "Streit oder Probleme mit dem Jugendamt oder einer Einrichtung der Kinder- und Jugendhilfe (z. B. Hilfeplanung, Heim, Pflegefamilie).",
+      "grundlage": "§ 9a SGB VIII (seit 2021 verpflichtend in jedem Bundesland)",
+      "soFindenSie": "Nach „Ombudsstelle Jugendhilfe“ plus Ihrem Bundesland suchen; die Länder-Ombudsstellen sind unabhängig und für Familien kostenlos.",
+      "ebene": "Land"
+    },
+    {
+      "id": "kinderbeauftragte",
+      "name": "Landes-Kinderbeauftragte*r / Kinderkommission",
+      "themen": ["rechte", "politik"],
+      "wofuer": "Allgemeine Fragen zu Kinderrechten, Beteiligung und Beschwerden über Missstände, die viele Kinder betreffen.",
+      "grundlage": "UN-Kinderrechtskonvention; Landesrecht",
+      "soFindenSie": "Nach „Kinderbeauftragte“ oder „Kinderkommission“ plus Bundesland suchen; im Bundestag gibt es zusätzlich die Kinderkommission (KiKo).",
+      "ebene": "Land/Bund"
+    },
+    {
+      "id": "datenschutz",
+      "name": "Datenschutzbeauftragte*r (Land) / BfDI (Bund)",
+      "themen": ["daten", "internet"],
+      "wofuer": "Beschwerde, wenn ein Dienst persönliche Daten des Kindes falsch nutzt, nicht löscht oder unrechtmäßig sammelt.",
+      "grundlage": "DSGVO Art. 77 (Recht auf Beschwerde bei einer Aufsichtsbehörde)",
+      "soFindenSie": "Landes-Datenschutzbehörde des eigenen Bundeslandes; für bundesweite/Telekommunikations-Dienste die BfDI. Beschwerde ist kostenlos.",
+      "ebene": "Land/Bund"
+    },
+    {
+      "id": "jugendschutznet",
+      "name": "jugendschutz.net",
+      "themen": ["internet", "gefahr"],
+      "wofuer": "Melden von jugendgefährdenden oder illegalen Inhalten im Netz (Gewalt, Pornografie, Hass, Cybergrooming).",
+      "grundlage": "Gemeinsames Kompetenzzentrum von Bund und Ländern (Anbindung an die KJM)",
+      "soFindenSie": "Online-Meldeformular von jugendschutz.net; Meldungen werden geprüft und weitergeleitet.",
+      "ebene": "Bund/Land"
+    },
+    {
+      "id": "kjm",
+      "name": "Kommission für Jugendmedienschutz (KJM) / Landesmedienanstalt",
+      "themen": ["internet", "medien"],
+      "wofuer": "Verstöße von Rundfunk- und Telemedien-Anbietern gegen den Jugendmedienschutz (z. B. Alterskennzeichnung, Werbung).",
+      "grundlage": "Jugendmedienschutz-Staatsvertrag (JMStV)",
+      "soFindenSie": "Über die Landesmedienanstalt des eigenen Bundeslandes; die KJM ist das zentrale Aufsichtsorgan.",
+      "ebene": "Land"
+    },
+    {
+      "id": "bnetza-dsc",
+      "name": "Bundesnetzagentur – Digital Services Coordinator",
+      "themen": ["internet", "plattform"],
+      "wofuer": "Beschwerden über große Online-Plattformen, die ihre Pflichten aus dem Digital Services Act nicht erfüllen (z. B. Meldewege, Minderjährigenschutz).",
+      "grundlage": "Digital Services Act (DSA); Digitale-Dienste-Gesetz",
+      "soFindenSie": "Die Bundesnetzagentur ist der deutsche DSA-Koordinator; sie hat eine Beschwerde-/Kontaktstelle für DSA-Anliegen.",
+      "ebene": "Bund/EU"
+    },
+    {
+      "id": "nummer-gegen-kummer",
+      "name": "Nummer gegen Kummer",
+      "themen": ["notlage", "beratung"],
+      "wofuer": "Sofortige, kostenlose und anonyme Beratung für Kinder (116 111) und Eltern (0800 111 0 550) bei Sorgen, Angst, Mobbing oder Gewalt.",
+      "grundlage": "Bundesweites Beratungsnetz (kein Amt, sondern Hilfe & Wegweisung)",
+      "soFindenSie": "Kinder & Jugendliche: 116 111 · Eltern: 0800 111 0 550. Auch Online-Beratung. Kostenlos und anonym.",
+      "ebene": "Bund"
+    },
+    {
+      "id": "dimr",
+      "name": "Monitoring-Stelle UN-Kinderrechtskonvention (DIMR)",
+      "themen": ["rechte", "politik"],
+      "wofuer": "Beobachtet, ob Deutschland die Kinderrechtskonvention einhält – Ansprechpartner für strukturelle Kinderrechts-Fragen (keine Einzelfall-Beschwerde).",
+      "grundlage": "UN-KRK; Deutsches Institut für Menschenrechte",
+      "soFindenSie": "Deutsches Institut für Menschenrechte (DIMR), Monitoring-Stelle UN-KRK – vor allem für Fachfragen und Politik.",
+      "ebene": "Bund"
+    },
+    {
+      "id": "verbraucherzentrale",
+      "name": "Verbraucherzentrale",
+      "themen": ["daten", "kosten"],
+      "wofuer": "Hilfe bei Kostenfallen, Abo-Fallen, unberechtigten Abbuchungen und unklaren Verträgen rund um Apps und Spiele.",
+      "grundlage": "Verbraucherschutzrecht; UWG",
+      "soFindenSie": "Verbraucherzentrale des eigenen Bundeslandes; teils kostenlose, teils kostenpflichtige Beratung.",
+      "ebene": "Land"
+    }
+  ],
+  "themen": [
+    { "code": "amt", "label": "🏛️ Streit mit Jugendamt/Einrichtung" },
+    { "code": "rechte", "label": "📜 Kinderrechte allgemein" },
+    { "code": "daten", "label": "🔒 Daten & Datenschutz" },
+    { "code": "internet", "label": "🌐 Inhalte & Plattformen im Netz" },
+    { "code": "kosten", "label": "💶 Kostenfallen & Abos" },
+    { "code": "notlage", "label": "🆘 Akute Sorge / Notlage" }
+  ]
+}

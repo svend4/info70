@@ -1,0 +1,8 @@
+{
+  "name": "@info70/chat-rechte",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chat-Rechte: Szenario-Trainer (2/1/0), der Chat-Situationen als Beteiligungsrechte rahmt - Meinung sagen (Art. 13) vs. beleidigen, Melden (DSA Art. 20) als Recht. Zielgruppe 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
