@@ -6,6 +6,7 @@
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { packeKoffer, pruefeKoffer, vereinigeKoffer } from './koffer.mjs';
+import { KLASSENRAT_VORLAGEN, ausVorlage } from './vorlagen.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -35,7 +36,12 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: anlegenBildschirm }, '📝 Neue Abstimmung'),
         umfrage ? el('button', { class: 'k-knopf k-knopf--neutral', onclick: abstimmenBildschirm }, `▶️ Weiter abstimmen: „${umfrage.frage}“`) : '',
         umfrage ? el('button', { class: 'k-knopf k-knopf--neutral', onclick: ergebnisBildschirm }, '📊 Ergebnis ansehen') : '',
-        umfrage ? el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); startBildschirm(); } }, '🧹 Abstimmung löschen') : '')));
+        umfrage ? el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); startBildschirm(); } }, '🧹 Abstimmung löschen') : '')),
+    el('section', { class: 'k-karte' },
+      el('p', { style: 'font-weight:600;margin-top:0' }, '🏫 Klassenrat-Vorlagen'),
+      el('p', { style: 'font-size:0.9rem;margin-top:0' }, 'Sofort startklar – für die Klassenrat-Sitzung. Ergebnis lässt sich wie immer als Klassen-Koffer teilen.'),
+      el('div', { class: 'k-antworten' },
+        ...KLASSENRAT_VORLAGEN.map((v) => el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { speichere(ausVorlage(v)); abstimmenBildschirm(); } }, `🗳️ ${v.titel}`)))));
 }
 
 function anlegenBildschirm() {

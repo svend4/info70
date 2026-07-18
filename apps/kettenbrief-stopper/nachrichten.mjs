@@ -38,6 +38,24 @@ export const NACHRICHTEN_TYPEN = Object.freeze([
       '💬 Fühlst du dich unter Druck? Ruf die Nummer gegen Kummer an: 116 111 (kostenlos).',
     ],
   },
+  {
+    id: 'geruecht',
+    titel: 'Gerücht / Verschwörung',
+    emoji: '🗣️',
+    intro: 'In der Klasse verbreitet sich ein Gerücht:',
+    nachricht: '🗣️😲 Krass, teil das schnell! Angeblich ist an unserer Schule etwas Geheimes passiert – „ein Kind hat erzählt, dass...“. Ganz sicher wahr, alle reden schon davon!',
+    frage: 'Willst du das wirklich weitersagen?',
+    quellenHinweis: 'Erst die Quelle prüfen: Wer sagt das? Woher weiß die Person das? Gibt es einen Beweis – oder nur „alle sagen“?',
+    weiter: '😮 Schnell weitersagen, ist bestimmt wahr',
+    stopp: '🔎 Erst prüfen – ungeprüft nicht teilen',
+    melden: '📣 Erwachsene fragen / bei Bedarf melden',
+    lernpunkte: [
+      '🔎 Erst prüfen, dann teilen: „Alle sagen“ ist kein Beweis. Frag nach der Quelle (Wer? Woher? Beweis?).',
+      '🌊 Gerüchte und Verschwörungserzählungen werden mit jedem Teilen „lauter“ – aber nicht wahrer.',
+      '🛑 Wenn du unsicher bist, teilst du NICHT. Ungeprüftes weiterzugeben kann anderen schaden.',
+      '💬 Sprich mit Erwachsenen über Gerüchte, die dich beunruhigen – oder ruf die Nummer gegen Kummer an: 116 111 (kostenlos).',
+    ],
+  },
 ]);
 
 /** Findet einen Nachrichtentyp per id (Fallback: der erste). */

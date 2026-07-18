@@ -1,0 +1,27 @@
+/* Ergebnis-Plakat: Druckansicht als großformatiges Klassenplakat.
+   Beim Drucken verschwinden Import und Knöpfe (.ep-nur-bildschirm);
+   es bleibt nur das große Balkendiagramm. Balkenfarben werden gedruckt. */
+
+.ep-plakat { text-align: center; }
+.ep-frage { font-size: 1.6rem; font-weight: 800; margin: 0 0 1rem; }
+.ep-fuss { font-size: 1.2rem; font-weight: 700; margin-top: 1rem; }
+
+@media print {
+  .ep-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; }
+
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+
+  .ep-plakat {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+  .ep-frage { font-size: 26pt; }
+  .ep-balken {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

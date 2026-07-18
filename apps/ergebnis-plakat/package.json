@@ -1,0 +1,8 @@
+{
+  "name": "@info70/ergebnis-plakat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ergebnis-Plakat (zu mitmach-arena): aus einer Abstimmung (Klassen-Koffer) ein grossformatiges Balkendiagramm fuers Klassenzimmer erzeugen und drucken. Rein clientseitig, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

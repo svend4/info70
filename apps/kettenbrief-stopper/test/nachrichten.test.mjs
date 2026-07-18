@@ -2,10 +2,11 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { NACHRICHTEN_TYPEN, typNach } from '../nachrichten.mjs';
 
-test('Es gibt mindestens Kettenbrief und Mutprobe', () => {
+test('Es gibt Kettenbrief, Mutprobe und Gerücht', () => {
   const ids = NACHRICHTEN_TYPEN.map((t) => t.id);
   assert.ok(ids.includes('kettenbrief'));
   assert.ok(ids.includes('mutprobe'));
+  assert.ok(ids.includes('geruecht'));
 });
 
 test('Jeder Typ ist vollständig (Text, Optionen, Lernpunkte)', () => {
@@ -30,4 +31,11 @@ test('Mutprobe thematisiert Gruppendruck, nicht nur Pech', () => {
 
 test('typNach: unbekannte id -> erster Typ (Fallback)', () => {
   assert.equal(typNach('gibtsnicht').id, NACHRICHTEN_TYPEN[0].id);
+});
+
+test('Gerücht: hat Quellen-Hinweis und thematisiert „erst prüfen, dann teilen“', () => {
+  const t = typNach('geruecht');
+  assert.ok(t.quellenHinweis && /Quelle|Wer|Woher/.test(t.quellenHinweis), 'Quellen-Frage fehlt');
+  assert.match(JSON.stringify(t), /prüfen/);
+  assert.ok(t.melden, 'Gerücht hat auch eine Melden-Option');
 });

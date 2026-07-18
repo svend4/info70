@@ -134,6 +134,7 @@ function entscheidungsBildschirm() {
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `Runde ${runde} · Die Nachricht hat DICH erreicht! 📱`),
       el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0;font-weight:600' }, aktiverTyp.nachricht)),
+      aktiverTyp.quellenHinweis ? el('p', { style: 'background:#eff6ff;border-radius:0.5rem;padding:0.5rem;margin:0.4rem 0' }, `🔎 ${aktiverTyp.quellenHinweis}`) : '',
       el('p', { style: 'font-weight:600' }, aktiverTyp.frage),
       el('div', { class: 'k-antworten' },
         ...optionen,
