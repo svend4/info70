@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "zielgruppe": "Eltern von Kindern ca. 1,5-4 Jahre (Autonomiephase)",
+  "hinweis": "Selbst-Training für Eltern in der Autonomiephase („Trotzphase“). Grundgedanke: die Balance aus klarer Anforderung UND liebevoller Zuwendung. Kein Rezept und keine Bewertung Ihres Kindes – Situationen sind Beispiele. Bei anhaltenden Belastungen helfen Familienberatungsstellen und die „Nummer gegen Kummer“ für Eltern (0800 111 0 550).",
+  "raenge": [
+    { "ab": 0, "titel": "auf dem Weg", "emoji": "🌱" },
+    { "ab": 7, "titel": "gut im Gefühl", "emoji": "🌤️" },
+    { "ab": 13, "titel": "sicher begleitend", "emoji": "🧭" },
+    { "ab": 18, "titel": "gelassen & klar", "emoji": "🌟" }
+  ],
+  "szenarien": [
+    {
+      "id": "a01", "thema": "Machtkampf", "emoji": "🧦",
+      "situation": "Morgens will Ihr Kind partout die Schuhe nicht anziehen und schreit „Nein!“. Sie sind spät dran.",
+      "frage": "Was hilft am ehesten?",
+      "optionen": [
+        { "text": "Ruhig bleiben und eine begrenzte Wahl geben: „Rote oder blaue Schuhe?“", "wert": 2 },
+        { "text": "Die Schuhe schnell selbst anziehen und das Geschrei ignorieren.", "wert": 1 },
+        { "text": "Lauter werden und mit Strafe drohen, damit es schneller geht.", "wert": 0 }
+      ],
+      "erklaerung": "In der Autonomiephase will das Kind selbst entscheiden. Eine begrenzte Wahl gibt Autonomie im klaren Rahmen – das entschärft den Machtkampf, ohne die Grenze aufzugeben."
+    },
+    {
+      "id": "a02", "thema": "Wutanfall", "emoji": "😭",
+      "situation": "Im Supermarkt wirft sich Ihr Kind schreiend auf den Boden, weil es Süßigkeiten will.",
+      "frage": "Wie reagieren Sie?",
+      "optionen": [
+        { "text": "In die Hocke gehen, Gefühl benennen („Du bist wütend“) und ruhig bei der Grenze bleiben.", "wert": 2 },
+        { "text": "Die Süßigkeit kaufen, damit endlich Ruhe ist.", "wert": 0 },
+        { "text": "Kurz warten, bis der stärkste Sturm vorbei ist, dann weitergehen.", "wert": 1 }
+      ],
+      "erklaerung": "Ein Wutanfall ist Überforderung, kein Angriff. Gefühle anerkennen und ruhig bei der Grenze bleiben gibt Halt. Nachgeben lehrt: Schreien lohnt sich."
+    },
+    {
+      "id": "a03", "thema": "Selbst machen", "emoji": "🥄",
+      "situation": "Ihr Kind will unbedingt allein essen und kleckert dabei stark. Es dauert ewig.",
+      "frage": "Was ist entwicklungsförderlich?",
+      "optionen": [
+        { "text": "Es allein probieren lassen und die Kleckerei einplanen (Unterlage, Zeit).", "wert": 2 },
+        { "text": "Nur helfen, wenn es von selbst darum bittet – sonst zuschauen.", "wert": 1 },
+        { "text": "Aus Zeitgründen selbst füttern.", "wert": 0 }
+      ],
+      "erklaerung": "„Selber machen“ ist der Motor dieser Phase. Wer üben darf, wird selbstständig und stolz. Die Balance: Anforderung (selbst tun) plus Zuwendung (Rahmen und Geduld)."
+    },
+    {
+      "id": "a04", "thema": "Grenze", "emoji": "📺",
+      "situation": "Nach der abgemachten Folge will Ihr Kind „noch eine“ und beginnt zu quengeln.",
+      "frage": "Wie halten Sie die Grenze?",
+      "optionen": [
+        { "text": "Freundlich, aber klar bei der Abmachung bleiben und eine Alternative anbieten.", "wert": 2 },
+        { "text": "Diskutieren und je nach Laune doch noch eine erlauben.", "wert": 0 },
+        { "text": "Den Fernseher wortlos ausschalten und weggehen.", "wert": 1 }
+      ],
+      "erklaerung": "Verlässliche Grenzen geben Sicherheit. Freundlich UND klar – mit einer attraktiven Alternative – wirkt besser als Diskutieren (Grenze wackelt) oder schroffes Abbrechen (kränkt)."
+    },
+    {
+      "id": "a05", "thema": "Übergang", "emoji": "🏗️",
+      "situation": "Das Kind spielt vertieft und soll jetzt zum Essen kommen – es will nicht aufhören.",
+      "frage": "Was erleichtert den Übergang?",
+      "optionen": [
+        { "text": "Vorwarnung und ein Ritual: „Noch zweimal Rutschen, dann räumen wir zusammen.“", "wert": 2 },
+        { "text": "Sofort und bestimmt: „Jetzt ist Schluss, komm!“", "wert": 1 },
+        { "text": "Mehrfach rufen und dann genervt selbst wegtragen.", "wert": 0 }
+      ],
+      "erklaerung": "Kinder brauchen Zeit zum Umschalten. Vorwarnung und ein kleines Ritual überbrücken den Übergang. Abruptes Beenden trifft mitten ins vertiefte Spiel."
+    },
+    {
+      "id": "a06", "thema": "Zähneputzen", "emoji": "🪥",
+      "situation": "Ihr Kind verweigert das Zähneputzen und presst den Mund zu.",
+      "frage": "Was ist sinnvoll?",
+      "optionen": [
+        { "text": "Spielerisch machen (Zähne „zählen“, abwechselnd putzen) – Grenze bleibt: geputzt wird.", "wert": 2 },
+        { "text": "Heute ausnahmsweise ausfallen lassen.", "wert": 0 },
+        { "text": "Festhalten und schnell durchputzen.", "wert": 1 }
+      ],
+      "erklaerung": "Notwendiges (Gesundheit) bleibt Grenze – das WIE darf spielerisch sein. Spiel senkt den Widerstand; Auslassen untergräbt die Verlässlichkeit, Zwang erzeugt Angst."
+    },
+    {
+      "id": "a07", "thema": "Nein-Phase", "emoji": "🙅",
+      "situation": "Ihr Kind sagt zu fast allem reflexhaft „Nein“ – auch zu Dingen, die es eigentlich mag.",
+      "frage": "Wie gehen Sie damit um?",
+      "optionen": [
+        { "text": "Das „Nein“ als Übung von Selbstbestimmung sehen und öfter echte kleine Entscheidungen anbieten.", "wert": 2 },
+        { "text": "Jedes „Nein“ ausdiskutieren, bis es „Ja“ sagt.", "wert": 0 },
+        { "text": "Fragen vermeiden und Dinge einfach ansagen.", "wert": 1 }
+      ],
+      "erklaerung": "Das „Nein“ ist ein Entwicklungsschritt: Ich bin ich. Echte kleine Wahlmöglichkeiten geben dem Bedürfnis Raum. Dauer-Diskussion erschöpft beide."
+    },
+    {
+      "id": "a08", "thema": "Aggression", "emoji": "✋",
+      "situation": "Ihr Kind haut in der Wut nach Ihnen oder einem anderen Kind.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Die Hand ruhig stoppen, klar „Hauen tut weh, das erlaube ich nicht“ und Gefühl benennen.", "wert": 2 },
+        { "text": "Zurückhauen, damit es merkt, wie es sich anfühlt.", "wert": 0 },
+        { "text": "Wortlos wegdrehen und das Kind kurz allein lassen.", "wert": 1 }
+      ],
+      "erklaerung": "Grenze bei Gewalt sofort und klar – aber ohne Gegengewalt. Das Kind lernt: Wut ist okay, Hauen nicht. Zurückhauen lehrt genau das Falsche."
+    },
+    {
+      "id": "a09", "thema": "Selbstfürsorge", "emoji": "🫁",
+      "situation": "Sie merken, dass Sie selbst kurz vor dem Ausrasten sind.",
+      "frage": "Was hilft in dem Moment?",
+      "optionen": [
+        { "text": "Kurz durchatmen, wenn möglich einen Moment Abstand nehmen, dann ruhig weitermachen.", "wert": 2 },
+        { "text": "Die Anspannung rauslassen und lauter werden.", "wert": 0 },
+        { "text": "Weitermachen und die eigene Wut hinunterschlucken.", "wert": 1 }
+      ],
+      "erklaerung": "Eltern sind Vorbild für Selbstregulation. Kurz durchatmen oder Abstand nehmen ist kein Versagen, sondern Modell. Bei häufiger Überlastung: Beratung holen (0800 111 0 550)."
+    },
+    {
+      "id": "a10", "thema": "Nach dem Sturm", "emoji": "🤗",
+      "situation": "Der Wutanfall ist vorbei, das Kind ist erschöpft und sucht Nähe.",
+      "frage": "Wie schließen Sie die Situation ab?",
+      "optionen": [
+        { "text": "Nähe geben, kurz benennen, was war, und dann positiv weitermachen – ohne Nachtreten.", "wert": 2 },
+        { "text": "Jetzt noch mal erklären, was alles falsch war.", "wert": 1 },
+        { "text": "Beleidigt bleiben, damit es „etwas lernt“.", "wert": 0 }
+      ],
+      "erklaerung": "Nach dem Sturm braucht das Kind Versöhnung, nicht Strafe. Die Beziehung wieder herstellen (Zuwendung) festigt Sicherheit – daraus wächst Kooperation."
+    },
+    {
+      "id": "a11", "thema": "Anziehen", "emoji": "🧥",
+      "situation": "Draußen ist es kalt, Ihr Kind will die Jacke nicht anziehen.",
+      "frage": "Was ist eine gute Balance?",
+      "optionen": [
+        { "text": "Jacke mitnehmen, kurze harmlose Erfahrung zulassen („kalt?“) – Grenze bei echter Gefahr.", "wert": 2 },
+        { "text": "Die Jacke mit Nachdruck sofort durchsetzen.", "wert": 1 },
+        { "text": "Ganz ohne Jacke bei Frost losziehen, um Streit zu vermeiden.", "wert": 0 }
+      ],
+      "erklaerung": "Kinder lernen aus harmlosen Konsequenzen (kurz frieren). Bei echter Gefahr gilt die Grenze. So verbindet sich Autonomie mit Fürsorge – die Kernbalance dieser Phase."
+    },
+    {
+      "id": "a12", "thema": "Geschwister", "emoji": "👶",
+      "situation": "Seit dem Baby ist Ihr großes Kind besonders trotzig und klammert zugleich.",
+      "frage": "Was steckt oft dahinter?",
+      "optionen": [
+        { "text": "Es braucht Bestätigung, weiter wichtig zu sein – gezielte Extra-Zeit nur für das große Kind.", "wert": 2 },
+        { "text": "Es soll sich zusammenreißen, jetzt ist es doch groß.", "wert": 0 },
+        { "text": "Abwarten, das gibt sich von allein.", "wert": 1 }
+      ],
+      "erklaerung": "Trotz plus Klammern ist oft Eifersucht und Verunsicherung. Verlässliche Extra-Zeit füllt das „Beziehungskonto“ – daraus wird Kooperation, nicht aus Ermahnung."
+    }
+  ]
+}

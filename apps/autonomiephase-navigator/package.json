@@ -1,0 +1,8 @@
+{
+  "name": "@info70/autonomiephase-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Autonomiephase-Navigator: Szenario-Selbsttraining fuer Eltern zur Autonomiephase (Trotzphase, ca. 1,5-4 Jahre). Alltagssituationen (Machtkampf, Wutanfall, Selber-machen, Grenzen, Uebergaenge, Zaehneputzen, Nein-Phase, Aggression, Selbstfuersorge, Versoehnung) mit je 3 Elternreaktionen (2/1/0) nach der Balance aus klarer Anforderung UND liebevoller Zuwendung, mit Erklaerung. Kein Rezept, keine Bewertung des Kindes. Praleska docs/10 (Top-30 Nr. 11). Werkzeug fuer Erwachsene, offline, werbefrei. Zielgruppe: Eltern.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

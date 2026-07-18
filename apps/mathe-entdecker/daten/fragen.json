@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 (kurze Einheiten, 4-5 in Ko-Nutzung)",
+  "raenge": [
+    { "ab": 0, "titel": "Zahlen-Entdecker*in", "emoji": "🌱" },
+    { "ab": 3, "titel": "Formen-Finder*in", "emoji": "🔺" },
+    { "ab": 6, "titel": "Mengen-Meister*in", "emoji": "🔢" },
+    { "ab": 9, "titel": "Mathe-Zauberer*in", "emoji": "✨" }
+  ],
+  "fragen": [
+    { "id": "m01", "typ": "wahl", "kategorie": "Mengen", "frage": "Hier sind 🍎🍎🍎 und da 🍎🍎. Wo sind MEHR Äpfel?", "antworten": ["Bei den drei Äpfeln", "Bei den zwei Äpfeln", "Gleich viele"], "korrekt": 0, "erklaerung": "Drei ist mehr als zwei. Man kann die Äpfel nebeneinanderlegen und zuordnen – dann sieht man, wo einer übrig bleibt." },
+    { "id": "m02", "typ": "wahl", "kategorie": "Zählen", "frage": "Zähle mit: 🐟🐟🐟🐟. Wie viele Fische sind das?", "antworten": ["Drei", "Vier", "Fünf"], "korrekt": 1, "erklaerung": "Eins – zwei – drei – vier. Beim Zählen tippt man jeden Fisch genau einmal an. Das Letzte, das du sagst, ist die Anzahl: vier." },
+    { "id": "m03", "typ": "binaer", "kategorie": "Mengen", "aussage": "🌸🌸 und 🌷🌷 – sind das gleich viele Blumen?", "korrekt": "ja", "erklaerung": "Ja! Zwei und zwei sind gleich viele. Man kann sie paarweise zuordnen, dann bleibt keine übrig." },
+    { "id": "m04", "typ": "wahl", "kategorie": "Formen", "frage": "Welche Form hat DREI Ecken?", "antworten": ["Der Kreis", "Das Dreieck", "Das Viereck"], "korrekt": 1, "erklaerung": "Das Dreieck hat drei Ecken und drei Seiten – darum heißt es Drei-Eck. Der Kreis hat gar keine Ecke." },
+    { "id": "m05", "typ": "wahl", "kategorie": "Formen", "frage": "Wie viele Ecken hat ein Viereck?", "antworten": ["Drei", "Vier", "Keine"], "korrekt": 1, "erklaerung": "Ein Viereck hat vier Ecken und vier Seiten. Ein Fenster oder ein Buch ist oft ein Viereck." },
+    { "id": "m06", "typ": "binaer", "kategorie": "Formen", "aussage": "Ein Kreis hat Ecken.", "korrekt": "nein", "erklaerung": "Nein. Ein Kreis ist ganz rund und hat keine Ecke. Ein Ball oder ein Teller ist rund wie ein Kreis." },
+    { "id": "m07", "typ": "wahl", "kategorie": "Reihen", "frage": "Die Reihe geht: 🔴🔵🔴🔵🔴… Welche Farbe kommt als Nächstes?", "antworten": ["🔴 Rot", "🔵 Blau", "🟢 Grün"], "korrekt": 1, "erklaerung": "Rot – Blau – Rot – Blau. Das Muster wiederholt sich immer. Nach Rot kommt wieder Blau." },
+    { "id": "m08", "typ": "wahl", "kategorie": "Reihen", "frage": "Die Reihe geht: klein – groß – klein – groß – … Was kommt jetzt?", "antworten": ["klein", "groß", "mittel"], "korrekt": 0, "erklaerung": "Klein – groß – klein – groß. Nach „groß“ fängt das Muster wieder von vorn an: „klein“." },
+    { "id": "m09", "typ": "wahl", "kategorie": "Vergleichen", "frage": "Was ist am längsten? 🐍 Schlange, 🐛 Raupe, 🐜 Ameise?", "antworten": ["Die Ameise", "Die Raupe", "Die Schlange"], "korrekt": 2, "erklaerung": "Die Schlange ist am längsten, die Ameise am kürzesten. Zum Vergleichen legt man die Dinge nebeneinander an eine Linie." },
+    { "id": "m10", "typ": "wahl", "kategorie": "Reihenfolge", "frage": "Die Kinder stehen in einer Reihe. Wer ist das ERSTE Kind?", "antworten": ["Das ganz vorne", "Das in der Mitte", "Das ganz hinten"], "korrekt": 0, "erklaerung": "Das erste Kind steht ganz vorne. Danach kommt das zweite, das dritte … Das letzte steht ganz hinten." },
+    { "id": "m11", "typ": "wahl", "kategorie": "Raumrichtung", "frage": "Der Vogel sitzt OBEN im Baum. Wo sitzt er?", "antworten": ["Ganz unten am Boden", "Ganz oben in der Krone", "Neben dem Baum"], "korrekt": 1, "erklaerung": "Oben ist da, wo die Baumkrone ist – nach dem Himmel zu. Unten ist der Boden. Oben und unten helfen beim Beschreiben, wo etwas ist." },
+    { "id": "m12", "typ": "binaer", "kategorie": "Teilen", "aussage": "Du hast 2 Kekse und teilst gerecht mit einem Freund. Bekommt dann jeder 1 Keks?", "korrekt": "ja", "erklaerung": "Ja! 2 Kekse für 2 Kinder – jeder bekommt einen. Gerecht teilen heißt: alle bekommen gleich viel. Das ist die Hälfte." },
+    { "id": "m13", "typ": "wahl", "kategorie": "Zählen", "frage": "Was kommt beim Zählen NACH der 5?", "antworten": ["Die 4", "Die 6", "Die 7"], "korrekt": 1, "erklaerung": "Eins, zwei, drei, vier, fünf, SECHS. Nach der 5 kommt die 6. Vor der 5 kommt die 4." },
+    { "id": "m14", "typ": "wahl", "kategorie": "Formen", "frage": "Welche Form rollt am besten?", "antworten": ["Das Viereck", "Der Kreis (die Kugel)", "Das Dreieck"], "korrekt": 1, "erklaerung": "Rundes rollt gut, weil es keine Ecken hat, die stoppen. Ein Ball (Kugel) rollt, ein Würfel (Viereck) bleibt liegen." },
+    { "id": "m15", "typ": "wahl", "kategorie": "Zeit", "frage": "Wann gehst du meistens schlafen?", "antworten": ["Am Morgen", "Am Mittag", "Am Abend"], "korrekt": 2, "erklaerung": "Am Abend wird es dunkel und man geht schlafen. Der Tag hat Morgen, Mittag, Abend und Nacht – das ist die Tageszeit." },
+    { "id": "m16", "typ": "wahl", "kategorie": "Mengen", "frage": "In welcher Gruppe sind WENIGER Sterne? ⭐⭐⭐⭐⭐ oder ⭐⭐?", "antworten": ["Bei den fünf Sternen", "Bei den zwei Sternen", "Gleich viele"], "korrekt": 1, "erklaerung": "Zwei ist weniger als fünf. „Weniger“ heißt: nicht so viele. Man kann zuordnen – bei fünf bleiben drei übrig." }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 (Ko-Nutzung), Weiterführung 8-12",
+  "raenge": [
+    { "ab": 0, "titel": "Gruppen-Anfänger*in", "emoji": "🌱" },
+    { "ab": 8, "titel": "Gute*r Freund*in", "emoji": "🤝" },
+    { "ab": 15, "titel": "Streit-Schlichter*in", "emoji": "🕊️" },
+    { "ab": 21, "titel": "Gruppen-Held*in", "emoji": "🌟" }
+  ],
+  "szenarien": [
+    {
+      "id": "f01", "thema": "Mitspielen", "emoji": "🧒",
+      "situation": "Ein Kind steht am Rand und schaut euch beim Spielen zu. Es spielt allein niemand mit.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich frage: „Willst du mitspielen?“", "wert": 2 },
+        { "text": "Ich schaue weg und spiele weiter.", "wert": 1 },
+        { "text": "Ich sage: „Du darfst hier nicht mitspielen.“", "wert": 0 }
+      ],
+      "erklaerung": "Alle dürfen mitmachen. Ein Kind einzuladen ist leicht und macht froh. Niemanden auszuschließen ist eine wichtige Gruppen-Regel."
+    },
+    {
+      "id": "f02", "thema": "Teilen", "emoji": "🧸",
+      "situation": "Du hast zwei Bälle. Ein Kind hat keinen und möchte auch spielen.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich gebe ihm einen Ball ab.", "wert": 2 },
+        { "text": "Ich behalte beide, sage aber „vielleicht später“.", "wert": 1 },
+        { "text": "Ich behalte beide und sage nichts.", "wert": 0 }
+      ],
+      "erklaerung": "Teilen macht das Spiel für alle schöner. Wer teilt, findet leichter Freunde. Du verlierst nichts – ihr habt zusammen mehr Spaß."
+    },
+    {
+      "id": "f03", "thema": "Streit", "emoji": "🧩",
+      "situation": "Du und ein Kind wollt beide dasselbe Puzzle. Ihr fangt an zu streiten.",
+      "frage": "Wie löst ihr das fair?",
+      "optionen": [
+        { "text": "Wir machen es abwechselnd oder puzzeln zusammen.", "wert": 2 },
+        { "text": "Ich lasse los und bin traurig.", "wert": 1 },
+        { "text": "Ich reiße es an mich – ich war zuerst da.", "wert": 0 }
+      ],
+      "erklaerung": "Bei Streit hilft: abwechseln oder zusammen machen. Reden statt reißen. So bekommen beide etwas und niemand ist der Verlierer."
+    },
+    {
+      "id": "f04", "thema": "Trösten", "emoji": "😢",
+      "situation": "Ein Kind ist hingefallen und weint. Die anderen lachen.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich helfe ihm auf und frage, ob alles okay ist.", "wert": 2 },
+        { "text": "Ich gehe einfach weiter.", "wert": 1 },
+        { "text": "Ich lache mit den anderen mit.", "wert": 0 }
+      ],
+      "erklaerung": "Wer traurig ist, braucht Hilfe, kein Lachen. Aufhelfen und fragen zeigt Mitgefühl. So möchtest du auch behandelt werden."
+    },
+    {
+      "id": "f05", "thema": "Entschuldigen", "emoji": "🙈",
+      "situation": "Du hast aus Versehen den Turm von einem Kind umgeworfen. Es ist traurig.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich sage „Entschuldigung“ und helfe, ihn neu zu bauen.", "wert": 2 },
+        { "text": "Ich sage schnell „war nicht meine Schuld“.", "wert": 1 },
+        { "text": "Ich laufe einfach weg.", "wert": 0 }
+      ],
+      "erklaerung": "Fehler passieren. „Entschuldigung“ sagen und helfen macht vieles wieder gut. Das ist mutig und fair."
+    },
+    {
+      "id": "f06", "thema": "Verlieren", "emoji": "🎲",
+      "situation": "Ihr spielt ein Spiel und du verlierst.",
+      "frage": "Wie reagierst du?",
+      "optionen": [
+        { "text": "Ich bleibe fair und sage „gut gespielt“.", "wert": 2 },
+        { "text": "Ich bin kurz sauer, mache aber weiter.", "wert": 1 },
+        { "text": "Ich werfe wütend die Spielsteine um.", "wert": 0 }
+      ],
+      "erklaerung": "Mal gewinnt man, mal verliert man – das gehört zum Spiel. Fair bleiben und dem anderen gönnen macht dich zu einem guten Mitspieler."
+    },
+    {
+      "id": "f07", "thema": "Warten", "emoji": "🛝",
+      "situation": "An der Rutsche stehen schon Kinder an. Du kommst dazu.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Ich stelle mich hinten an und warte, bis ich dran bin.", "wert": 2 },
+        { "text": "Ich frage, ob ich vor darf, weil ich es eilig habe.", "wert": 1 },
+        { "text": "Ich dränge mich einfach vor.", "wert": 0 }
+      ],
+      "erklaerung": "Anstellen und warten ist fair – jeder kommt dran. Vordrängeln ärgert die anderen. Warten kann man üben."
+    },
+    {
+      "id": "f08", "thema": "Rollen", "emoji": "🦸",
+      "situation": "Ihr spielt Fangen und alle wollen die Heldin sein.",
+      "frage": "Wie einigt ihr euch?",
+      "optionen": [
+        { "text": "Wir zählen ab oder wechseln uns ab.", "wert": 2 },
+        { "text": "Wir spielen erst mal ohne Heldin.", "wert": 1 },
+        { "text": "Ich bestimme, dass immer ich die Heldin bin.", "wert": 0 }
+      ],
+      "erklaerung": "Wenn alle dasselbe wollen, hilft abzählen oder abwechseln. So ist es gerecht und niemand kommt immer zu kurz."
+    },
+    {
+      "id": "f09", "thema": "Gefühle erkennen", "emoji": "😠",
+      "situation": "Ein Kind ballt die Fäuste, macht ein böses Gesicht und sagt nichts.",
+      "frage": "Was fühlt das Kind wohl?",
+      "optionen": [
+        { "text": "Es ist wütend – ich frage ruhig, was los ist.", "wert": 2 },
+        { "text": "Es will spielen – ich ziehe es einfach mit.", "wert": 1 },
+        { "text": "Es ist mir egal, ich mache weiter.", "wert": 0 }
+      ],
+      "erklaerung": "Gefühle sieht man am Gesicht und am Körper. Fäuste und böser Blick heißen oft: wütend. Ruhig fragen hilft mehr als drängen."
+    },
+    {
+      "id": "f10", "thema": "Helfen", "emoji": "🤝",
+      "situation": "Ein Kind kann seinen Reißverschluss nicht zumachen und wird ärgerlich.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich frage: „Soll ich dir helfen?“", "wert": 2 },
+        { "text": "Ich mache es einfach schnell selbst, ohne zu fragen.", "wert": 1 },
+        { "text": "Ich sage „selber schuld“ und gehe.", "wert": 0 }
+      ],
+      "erklaerung": "Erst fragen, dann helfen – so entscheidet das andere Kind mit. Helfen tut gut, aufgedrängt wird es aber schnell blöd."
+    },
+    {
+      "id": "f11", "thema": "Danke", "emoji": "💛",
+      "situation": "Ein Kind hat dir beim Aufräumen geholfen.",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "„Danke, das war lieb von dir!“", "wert": 2 },
+        { "text": "Nichts – ist doch normal.", "wert": 1 },
+        { "text": "„War ja nur ein bisschen.“", "wert": 0 }
+      ],
+      "erklaerung": "Danke sagen zeigt, dass du dich freust. Das macht dem anderen Lust, wieder zu helfen. Kleine Worte, große Wirkung."
+    },
+    {
+      "id": "f12", "thema": "Petzen vs. Hilfe holen", "emoji": "🆘",
+      "situation": "Ein großes Kind ärgert ein kleineres immer wieder und es hört nicht auf.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Ich hole eine Erwachsene dazu – das ist kein Petzen, sondern Hilfe holen.", "wert": 2 },
+        { "text": "Ich schaue zu und hoffe, dass es aufhört.", "wert": 1 },
+        { "text": "Ich ärgere mit, damit ich nicht dran bin.", "wert": 0 }
+      ],
+      "erklaerung": "Wenn jemandem wehgetan wird, ist Hilfe holen richtig – das ist kein Petzen. Zusehen oder mitmachen macht es schlimmer."
+    },
+    {
+      "id": "f13", "thema": "Kompromiss", "emoji": "🤔",
+      "situation": "Du willst Fangen spielen, dein Freund lieber Verstecken.",
+      "frage": "Wie einigt ihr euch?",
+      "optionen": [
+        { "text": "Erst das eine, dann das andere – wir machen beides.", "wert": 2 },
+        { "text": "Ich gebe nach und spiele nur Verstecken.", "wert": 1 },
+        { "text": "Dann spiele ich eben allein.", "wert": 0 }
+      ],
+      "erklaerung": "Ein Kompromiss heißt: jeder bekommt etwas. Erst das eine, dann das andere. So bleibt ihr zusammen und beide haben Spaß."
+    },
+    {
+      "id": "f14", "thema": "Freude teilen", "emoji": "🎉",
+      "situation": "Ein Kind hat im Wettrennen gewonnen und freut sich sehr. Du bist Zweiter.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich freue mich mit und sage „super gemacht!“", "wert": 2 },
+        { "text": "Ich sage nichts und bin still enttäuscht.", "wert": 1 },
+        { "text": "Ich sage „das zählt nicht“.", "wert": 0 }
+      ],
+      "erklaerung": "Sich mit anderen mitzufreuen ist eine schöne Stärke. Es tut dem anderen gut und dir selbst auch. Neid macht nur mürrisch."
+    }
+  ]
+}

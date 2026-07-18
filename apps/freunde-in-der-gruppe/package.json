@@ -1,0 +1,8 @@
+{
+  "name": "@info70/freunde-in-der-gruppe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Freunde in der Gruppe: Sozial-Trainer zu Konfliktloesung und Peer-Kompetenz fuer 5-7 (Ko-Nutzung) mit Weiterfuehrung 8-12. Situationen aus der Kindergruppe (mitspielen lassen, teilen, Streit fair loesen, troesten, entschuldigen, fair verlieren, warten, Rollen aushandeln, Gefuehle erkennen, Hilfe holen) - je 3 Optionen (2/1/0) mit kindgerechter Erklaerung, Vorlesen und Rang. Praleska docs/10 (Top-30 Nr. 10). Alle Szenen Eigenproduktion, keine Kindernamen, offline, werbefrei. Zielgruppe: Vorschule/Grundschule.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
