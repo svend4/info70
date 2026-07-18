@@ -1,0 +1,8 @@
+{
+  "name": "@info70/generationen-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Generationen-Quiz: Tricks & Fallen (Enkel 8-12 + Grosseltern). quiz-kern-Quiz im Wechsel aus Kinderwelt-Maschen (Fake-Gewinnspiel, Kettenbrief) und Seniorenwelt-Maschen (Enkeltrick, Phishing-Mail); beide raten mit und erkennen, dass die Tricks identisch funktionieren. Mit Klassen-/Familien-tauglichem Modus.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

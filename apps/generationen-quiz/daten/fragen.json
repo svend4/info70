@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12+Großeltern",
+  "raenge": [
+    { "ab": 0, "titel": "Maschen-Neuling", "emoji": "🌱" },
+    { "ab": 5, "titel": "Trick-Erkenner*in", "emoji": "🔍" },
+    { "ab": 9, "titel": "Betrugs-Profi", "emoji": "🎖️" },
+    { "ab": 12, "titel": "Familien-Wächter*in", "emoji": "🛡️" }
+  ],
+  "fragen": [
+    {
+      "id": "g01",
+      "typ": "binaer",
+      "kategorie": "Kinderwelt",
+      "aussage": "In einem Spiel poppt auf: „Glückwunsch! Du hast ein Handy gewonnen! Klicke hier!“ – so ein Gewinn ist echt.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Niemand verschenkt einfach so ein Handy. Solche „Gewinne“ wollen dich zum Klicken bringen, um Daten oder Geld zu holen. Genau wie beim Enkeltrick bei Oma: erst der große Gewinn, dann die Falle."
+    },
+    {
+      "id": "g02",
+      "typ": "wahl",
+      "kategorie": "Seniorenwelt",
+      "frage": "Am Telefon: „Hallo Oma, ich bin's, dein Enkel! Ich hatte einen Unfall und brauche schnell Geld.“ Was ist richtig?",
+      "antworten": [
+        "Sofort Geld überweisen, das Kind braucht ja Hilfe",
+        "Auflegen und den echten Enkel oder die Eltern unter der bekannten Nummer anrufen",
+        "Am Telefon die Kontonummer durchgeben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Das ist der Enkeltrick. Betrüger machen Druck mit Gefühlen und Eile. Immer auflegen und über die echte, bekannte Nummer nachfragen – genau wie ein Kind bei einem Fake-Gewinnspiel erst Erwachsene fragt."
+    },
+    {
+      "id": "g03",
+      "typ": "wahl",
+      "kategorie": "Kinderwelt",
+      "frage": "Ein Kettenbrief droht: „Schick das an 10 Leute, sonst hast du Pech!“ Was tust du?",
+      "antworten": [
+        "Schnell an 10 Leute weiterschicken – sicher ist sicher",
+        "Nicht weiterleiten, löschen und einer Vertrauensperson zeigen",
+        "An genau 5 Leute schicken, dann passiert die Hälfte"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Kettenbriefe arbeiten mit Angst und Druck – wie Betrugsanrufe bei Älteren. Es passiert nichts, wenn du nicht weiterleitest. Löschen und Bescheid sagen schützt dich und deine Freunde."
+    },
+    {
+      "id": "g04",
+      "typ": "binaer",
+      "kategorie": "Seniorenwelt",
+      "aussage": "Eine E-Mail von der „Bank“ bittet, unter einem Link die Kontodaten zu bestätigen. Am besten sofort auf den Link klicken.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – das ist Phishing. Echte Banken bitten nie per E-Mail-Link um Daten. Nicht klicken, die Bank über die bekannte Nummer anrufen. Kinder kennen den gleichen Trick als Fake-Login-Seite im Spiel."
+    },
+    {
+      "id": "g05",
+      "typ": "binaer",
+      "kategorie": "Kinderwelt",
+      "aussage": "Ein Bild verspricht gratis Spiel-Geld, wenn du dein Passwort eingibst. Das ist ein sicheres Angebot.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Gratis-Spiel-Geld gegen dein Passwort ist immer eine Falle – die wollen dein Konto klauen. Passwörter gibt man nie ein, um etwas „geschenkt“ zu bekommen."
+    },
+    {
+      "id": "g06",
+      "typ": "wahl",
+      "kategorie": "Seniorenwelt",
+      "frage": "Ein Anruf: „Ihr Computer ist mit einem Virus infiziert. Geben Sie uns Fernzugriff, wir reparieren das.“ Was ist richtig?",
+      "antworten": [
+        "Fernzugriff erlauben, die helfen ja",
+        "Auflegen – kein echter Support ruft ungefragt an und verlangt Fernzugriff",
+        "Die Kreditkartennummer durchgeben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Das ist der falsche Support-Trick. Niemand ruft ungefragt an, um deinen Computer zu „retten“. Auflegen. Betrüger setzen Ältere unter Druck – dieselbe Masche wie „Dein Account wird gelöscht!“ bei Kindern."
+    },
+    {
+      "id": "g07",
+      "typ": "binaer",
+      "kategorie": "Kinderwelt",
+      "aussage": "Ein Countdown im Spiel drängt: „Nur noch 2 Minuten für dieses Super-Angebot!“ Der Zeitdruck ist echt und wichtig.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – der Countdown ist ein Trick, damit du ohne Nachdenken kaufst oder klickst. Echte gute Entscheidungen brauchen keine Stoppuhr. Auch am Telefon drängen Betrüger Ältere: „Sie müssen JETZT handeln!“"
+    },
+    {
+      "id": "g08",
+      "typ": "binaer",
+      "kategorie": "Seniorenwelt",
+      "aussage": "Eine Nachricht: „Sie haben 100.000 € gewonnen! Zahlen Sie nur vorab eine kleine Gebühr.“ Das ist ein echter Gewinn.",
+      "korrekt": "nein",
+      "erklaerung": "Ausgedacht! Bei einem echten Gewinn zahlt man nie vorab. „Erst Gebühr, dann Gewinn“ ist immer Betrug – die gleiche Falle wie das gewonnene Handy im Kinderspiel."
+    },
+    {
+      "id": "g09",
+      "typ": "wahl",
+      "kategorie": "Seniorenwelt",
+      "frage": "Eine SMS: „Ihr Paket wartet. Zahlen Sie 2 € Zollgebühr über diesen Link.“ Was ist richtig?",
+      "antworten": [
+        "Schnell die 2 € zahlen, ist ja wenig",
+        "Nicht klicken – kleine Beträge und Links in SMS sind eine typische Falle",
+        "Die Kontodaten auf der Seite eingeben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Das ist eine Paket-SMS-Falle. Der kleine Betrag soll dich unvorsichtig machen; über den Link greifen Betrüger deine Daten ab. Kinder kennen das als „nur 2 € für den Bonus“-Trick im Spiel."
+    },
+    {
+      "id": "g10",
+      "typ": "binaer",
+      "kategorie": "Kinderwelt",
+      "aussage": "Ein „Mitspieler“ fragt nach deinem echten Namen, deiner Adresse und deiner Schule. Das gibst du ihm.",
+      "korrekt": "nein",
+      "erklaerung": "Nein! Fremde im Spiel müssen nichts über dich wissen. Persönliche Daten sind privat. Wer im Netz danach fragt, will meist etwas anderes – melde es und sag einer Vertrauensperson Bescheid."
+    },
+    {
+      "id": "g11",
+      "typ": "wahl",
+      "kategorie": "Seniorenwelt",
+      "frage": "Am Telefon macht jemand Druck: „Sie müssen SOFORT handeln, sonst ist Ihr Geld weg!“ Was hilft?",
+      "antworten": [
+        "Schnell tun, was die Person sagt",
+        "Auflegen, tief durchatmen und in Ruhe eine vertraute Person fragen",
+        "Die Geheimzahl durchgeben, damit nichts passiert"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Druck und Eile sind das wichtigste Warnzeichen – bei Alt und Jung. Auflegen, durchatmen, nachfragen. Kein echtes Amt und keine echte Bank verlangt sofortiges Handeln am Telefon."
+    },
+    {
+      "id": "g12",
+      "typ": "binaer",
+      "kategorie": "Beide Welten",
+      "aussage": "Der Enkeltrick bei Großeltern und das Fake-Gewinnspiel bei Kindern benutzen denselben Trick: Druck und Gefühle statt Nachdenken.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Ob Gewinn, Drohung oder Zeitdruck – Betrug funktioniert bei Jung und Alt gleich: Er schaltet das Nachdenken aus. Wer die Masche kennt, hilft der ganzen Familie."
+    },
+    {
+      "id": "g13",
+      "typ": "wahl",
+      "kategorie": "Beide Welten",
+      "frage": "Was ist das beste gemeinsame Gegenmittel für Enkel und Großeltern?",
+      "antworten": [
+        "Immer schnell reagieren",
+        "Innehalten, prüfen und miteinander reden, bevor man klickt, zahlt oder weiterleitet",
+        "Alles glauben, was am Bildschirm steht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Innehalten und miteinander reden schützt am besten. Erzählt euch gegenseitig von Maschen – Enkel warnen Großeltern vor Phishing, Großeltern warnen Enkel vor Abzocke. Zusammen erkennt ihr jede Falle."
+    },
+    {
+      "id": "g14",
+      "typ": "binaer",
+      "kategorie": "Kinderwelt",
+      "aussage": "Eine Nachricht sagt: „Dein Spiel-Account wird in 24 Stunden gelöscht! Logge dich schnell hier ein.“ Am besten sofort klicken.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – Panik mit Countdown ist ein Phishing-Trick, um dein Passwort zu stehlen. Nicht klicken, das echte Spiel direkt öffnen. Genau dieselbe Angst-Masche trifft Großeltern per „Ihr Konto ist gesperrt“-Mail."
+    }
+  ]
+}

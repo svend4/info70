@@ -1,0 +1,8 @@
+{
+  "name": "@info70/familien-notfall-fahrplan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Familien-Notfall-Fahrplan (Familie, Eltern+Kind 6-15): gemeinsam ausgefuellter, druckbarer Wenn-dann-Fahrplan fuer den Kuehlschrank - nicht antworten, Screenshot als Beweis, blockieren/melden, Bescheid sagen, Hilfe (116 111, juuuport). Kleiner lokaler Ausfuell-Generator; Kontakte werden nur ausgedruckt und NICHT gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

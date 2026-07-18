@@ -1,0 +1,8 @@
+{
+  "name": "@info70/sharenting-spiegel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sharenting-Spiegel (fuer Eltern): Szenario-Selbsttest zum Teilen von Kinder-Fotos - typische Situationen (Einschulungsfoto, Krankheitsdetails, Badekleidung, Loeschwunsch des Kindes) mit drei Reaktionen (2/1/0), Erklaerung inkl. Kinder-Perspektive und Recht am eigenen Bild. Am Ende Auswertung plus druckbare Familien-Foto-Regeln. Nichts wird gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

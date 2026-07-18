@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "zielgruppe": "Eltern",
+  "szenarien": [
+    {
+      "id": "sh01",
+      "situation": "Erster Schultag: Sie möchten das Einschulungsfoto mit dem Schulschild in die WhatsApp-Klassengruppe posten.",
+      "optionen": [
+        { "text": "Öffentlich mit Schulname und Gesicht posten – die Freude soll jeder sehen", "wert": 0 },
+        { "text": "Nur in der kleinen, vertrauten Gruppe teilen", "wert": 1 },
+        { "text": "Ohne erkennbares Schulschild und ohne offenes Gesicht – oder lieber nur privat an die Familie", "wert": 2 }
+      ],
+      "erklaerung": "Schulname plus Gesicht plus Ort verraten Fremden viel über Ihr Kind. Weniger ist mehr: zuschneiden, privat teilen, sparsam sein.",
+      "kinderperspektive": "„Jetzt weiß jeder, in welche Schule ich gehe.“"
+    },
+    {
+      "id": "sh02",
+      "situation": "Ihr Kind weint herzzerreißend und sieht dabei „süß“ aus. Sie überlegen, ein Video davon öffentlich zu posten.",
+      "optionen": [
+        { "text": "Öffentlich posten – so lustig!", "wert": 0 },
+        { "text": "Nur privat an die Großeltern schicken", "wert": 1 },
+        { "text": "Gar nicht posten – peinliche oder verletzliche Momente bleiben privat", "wert": 2 }
+      ],
+      "erklaerung": "Was heute süß wirkt, kann Ihrem Kind später peinlich sein – und bleibt im Netz auffindbar. Der Bloßstell-Faktor zählt aus Kindersicht, nicht aus Erwachsenensicht.",
+      "kinderperspektive": "„Das schauen sich Fremde an, wenn ich weine?“"
+    },
+    {
+      "id": "sh03",
+      "situation": "Ihr Kind ist krank. Im offenen Familien-Status posten Sie Details zur Diagnose und ein Foto aus dem Krankenhaus.",
+      "optionen": [
+        { "text": "Alle Details und das Foto öffentlich teilen – man will ja informieren", "wert": 0 },
+        { "text": "Nur knapp und in einem kleinen Kreis informieren, ohne Foto", "wert": 2 },
+        { "text": "Ein Foto, aber ohne Diagnose", "wert": 1 }
+      ],
+      "erklaerung": "Gesundheitsdaten sind besonders sensibel und gehen niemanden etwas an. Informieren Sie sparsam und nur, wen es wirklich betrifft.",
+      "kinderperspektive": "„Muss jeder wissen, dass ich krank war?“"
+    },
+    {
+      "id": "sh04",
+      "situation": "Im Sommerurlaub gibt es ein fröhliches Foto Ihres Kindes in Badekleidung am Pool.",
+      "optionen": [
+        { "text": "Öffentlich posten – ist doch harmlos", "wert": 0 },
+        { "text": "Nur an enge Familie privat", "wert": 1 },
+        { "text": "Solche Fotos gar nicht online stellen", "wert": 2 }
+      ],
+      "erklaerung": "Fotos in Badekleidung können in falsche Hände geraten und aus dem Zusammenhang gerissen werden. Für das Netz gilt: lieber gar nicht.",
+      "kinderperspektive": "„So ein Foto von mir soll nicht im Internet sein.“"
+    },
+    {
+      "id": "sh05",
+      "situation": "Ihr Kind sieht ein Bild von sich, das Sie gepostet haben, und sagt: „Bitte lösch das, das ist mir unangenehm.“",
+      "optionen": [
+        { "text": "Ignorieren – es ist doch ein süßes Bild und Sie haben es gemacht", "wert": 0 },
+        { "text": "Diskutieren, aber vorerst online lassen", "wert": 1 },
+        { "text": "Ernst nehmen und löschen – Ihr Kind hat ein Recht am eigenen Bild", "wert": 2 }
+      ],
+      "erklaerung": "Auch gegenüber den eigenen Eltern hat Ihr Kind ein Recht am eigenen Bild (UN-KRK Art. 16). Ein „Nein“ zu respektieren, stärkt das Vertrauen.",
+      "kinderperspektive": "„Zählt mein Nein, wenn es um Bilder von MIR geht?“"
+    },
+    {
+      "id": "sh06",
+      "situation": "Sie wollen ein Foto posten. Ihr Kind ist alt genug, um gefragt zu werden.",
+      "optionen": [
+        { "text": "Einfach posten – Kinder müssen da nicht mitreden", "wert": 0 },
+        { "text": "Manchmal fragen, wenn Sie dran denken", "wert": 1 },
+        { "text": "Immer vorher fragen: „Darf ich das posten?“", "wert": 2 }
+      ],
+      "erklaerung": "Fragen ist der einfachste und stärkste Schutz. Es übt Einwilligung – und Ihr Kind lernt, dass es auch andere fragen soll, bevor es Fotos teilt.",
+      "kinderperspektive": "„Schön, dass ich gefragt werde.“"
+    },
+    {
+      "id": "sh07",
+      "situation": "Auf dem Geburtstagsfoto sind im Hintergrund die Hausnummer und der Straßenname gut lesbar.",
+      "optionen": [
+        { "text": "So posten – wen interessiert schon der Hintergrund", "wert": 0 },
+        { "text": "Nur an Bekannte schicken", "wert": 1 },
+        { "text": "Den Hintergrund zuschneiden oder ein anderes Foto nehmen", "wert": 2 }
+      ],
+      "erklaerung": "Der Hintergrund verrät oft mehr als das Motiv – Adresse, Schule, Alltagsorte. Ein kurzer Blick und Zuschnitt schützen die Privatsphäre.",
+      "kinderperspektive": "„Dann wissen Fremde ja, wo ich wohne.“"
+    },
+    {
+      "id": "sh08",
+      "situation": "Auf dem Foto sind auch die Freundinnen und Freunde Ihres Kindes zu sehen.",
+      "optionen": [
+        { "text": "Einfach posten – die sind ja nur im Hintergrund", "wert": 0 },
+        { "text": "Gesichter der anderen unkenntlich machen", "wert": 1 },
+        { "text": "Vorher die Eltern der anderen Kinder fragen", "wert": 2 }
+      ],
+      "erklaerung": "Auch andere Kinder haben ein Recht am eigenen Bild. Fragen Sie deren Eltern – so, wie Sie es sich für Ihr eigenes Kind wünschen.",
+      "kinderperspektive": "„Meine Freunde wollen das vielleicht auch nicht.“"
+    }
+  ],
+  "fotoregeln": [
+    "Vor dem Posten das Kind fragen: „Darf ich das?“ – und ein Nein akzeptieren.",
+    "Nichts Peinliches, nichts in/ohne Badekleidung, keine Krankheits- oder Notlagen.",
+    "Gesicht, Schule und Adresse möglichst nicht erkennbar (Hintergrund prüfen).",
+    "Im Zweifel privat teilen statt öffentlich – oder gar nicht.",
+    "Andere Kinder nur mit Einverständnis ihrer Eltern zeigen.",
+    "Weniger ist mehr: Was einmal online ist, bekommt man kaum wieder weg."
+  ]
+}

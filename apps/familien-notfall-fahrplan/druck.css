@@ -1,0 +1,11 @@
+/* Familien-Notfall-Fahrplan: Druckansicht. Am Bildschirm ist alles sichtbar;
+   beim Drucken verschwindet die Bedienung (.fnf-nur-bildschirm) und nur der
+   ausgefüllte Fahrplan (die Vorschau) bleibt übrig – zum Aufhängen. */
+
+@media print {
+  .fnf-nur-bildschirm { display: none !important; }
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+  .k-karte { box-shadow: none; border: 2pt solid #333; border-radius: 0.4rem; break-inside: avoid; }
+}
