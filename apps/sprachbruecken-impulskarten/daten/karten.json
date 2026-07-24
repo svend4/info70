@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "hinweis": "Gesprächs-Impulskarten für alltagsintegrierte Sprachbildung in der Kita – dreisprachig Deutsch/Ukrainisch/Russisch, mit Aussprachehilfe in Klammern. Zum Ausdrucken und Aufhängen an der Situation (Garderobe, Esstisch, Bauecke). Bewusst kurze, sehr gebräuchliche Sätze; die Aussprachehilfe ist eine Annäherung für deutschsprachige Fachkräfte, kein Ersatz für Muttersprachler*innen. Jede Familiensprache ist willkommen – die Karten sind eine Einladung, keine Übersetzungspflicht.",
+  "methode": "Alltagsintegrierte Sprachbildung heißt: an die Handlung des Kindes anknüpfen, offene Impulse statt Abfragen, die Antwort aufgreifen und erweitern. Ein Satz in der Familiensprache öffnet Türen – besonders in der Eingewöhnung.",
+  "situationen": [
+    { "id": "ankommen", "emoji": "🚪", "name": "Ankommen & Begrüßen", "tipp": "Ein Gruß in der Familiensprache macht das Ankommen leichter – besonders in der Eingewöhnung." },
+    { "id": "essen", "emoji": "🍽️", "name": "Am Esstisch", "tipp": "Essenszeit ist Sprachzeit: benennen, was auf dem Teller ist, und auf Antworten warten." },
+    { "id": "anziehen", "emoji": "🧥", "name": "Garderobe & Anziehen", "tipp": "Reihenfolgen versprachlichen („zuerst … dann …“) – das strukturiert Handlung und Sprache." },
+    { "id": "spielen", "emoji": "🧱", "name": "Spielen & Bauen", "tipp": "Offene Impulse statt Abfragen: „Was baust du?“ lädt zum Erzählen ein, „Welche Farbe ist das?“ prüft nur ab." },
+    { "id": "draussen", "emoji": "🌳", "name": "Draußen & Natur", "tipp": "Gemeinsam staunen („Schau mal!“) ist der stärkste Sprechanlass." },
+    { "id": "troesten", "emoji": "💛", "name": "Trösten & Gefühle", "tipp": "In starken Gefühlen trägt die Familiensprache am meisten – ein Satz genügt." },
+    { "id": "abschied", "emoji": "👋", "name": "Aufräumen & Abschied", "tipp": "Rituale mit festen Sätzen geben Sicherheit – jeden Tag gleich." }
+  ],
+  "karten": [
+    { "id": "k01", "situation": "ankommen", "de": "Schön, dass du da bist!", "uk": "Як добре, що ти тут!", "ukLat": "Jak dobre, schtscho ty tut!", "ru": "Как хорошо, что ты здесь!", "ruLat": "Kak choroscho, schto ty sdes!" },
+    { "id": "k02", "situation": "ankommen", "de": "Guten Morgen!", "uk": "Доброго ранку!", "ukLat": "Dobroho ranku!", "ru": "Доброе утро!", "ruLat": "Dobroje utro!" },
+    { "id": "k03", "situation": "essen", "de": "Guten Appetit!", "uk": "Смачного!", "ukLat": "Smatschnoho!", "ru": "Приятного аппетита!", "ruLat": "Prijatnowo appetita!" },
+    { "id": "k04", "situation": "essen", "de": "Schmeckt es dir?", "uk": "Тобі смачно?", "ukLat": "Tobi smatschno?", "ru": "Тебе вкусно?", "ruLat": "Tebe wkusno?" },
+    { "id": "k05", "situation": "anziehen", "de": "Wo ist deine Jacke?", "uk": "Де твоя куртка?", "ukLat": "De twoja kurtka?", "ru": "Где твоя куртка?", "ruLat": "Gde twoja kurtka?" },
+    { "id": "k06", "situation": "anziehen", "de": "Was ziehen wir zuerst an?", "uk": "Що одягнемо спочатку?", "ukLat": "Schtscho odjahnemo spotschatku?", "ru": "Что наденем сначала?", "ruLat": "Schto nadenem snatschala?" },
+    { "id": "k07", "situation": "spielen", "de": "Was baust du?", "uk": "Що ти будуєш?", "ukLat": "Schtscho ty budujesch?", "ru": "Что ты строишь?", "ruLat": "Schto ty stroisch?" },
+    { "id": "k08", "situation": "spielen", "de": "Darf ich mitspielen?", "uk": "Можна з тобою пограти?", "ukLat": "Moschna s toboju pohraty?", "ru": "Можно с тобой поиграть?", "ruLat": "Moschno s toboj poigrat?" },
+    { "id": "k09", "situation": "draussen", "de": "Was siehst du?", "uk": "Що ти бачиш?", "ukLat": "Schtscho ty batschysch?", "ru": "Что ты видишь?", "ruLat": "Schto ty widisch?" },
+    { "id": "k10", "situation": "draussen", "de": "Schau, ein Vogel!", "uk": "Дивись, пташка!", "ukLat": "Dywys, ptaschka!", "ru": "Смотри, птица!", "ruLat": "Smotri, ptiza!" },
+    { "id": "k11", "situation": "troesten", "de": "Ich bin bei dir.", "uk": "Я з тобою.", "ukLat": "Ja s toboju.", "ru": "Я с тобой.", "ruLat": "Ja s toboj." },
+    { "id": "k12", "situation": "troesten", "de": "Alles ist gut.", "uk": "Все добре.", "ukLat": "Wse dobre.", "ru": "Всё хорошо.", "ruLat": "Wsjo choroscho." },
+    { "id": "k13", "situation": "abschied", "de": "Wohin gehört das?", "uk": "Куди це покласти?", "ukLat": "Kudy ze poklasty?", "ru": "Куда это положить?", "ruLat": "Kuda eto poloschit?" },
+    { "id": "k14", "situation": "abschied", "de": "Bis morgen!", "uk": "До завтра!", "ukLat": "Do sawtra!", "ru": "До завтра!", "ruLat": "Do sawtra!" }
+  ]
+}

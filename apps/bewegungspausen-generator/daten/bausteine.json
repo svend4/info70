@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "stand": "2026-07",
+  "hinweis": "Generator für Bewegungspausen (7–10 Minuten) in Kita und Grundschule ('Bewegte Schule'). Alle Übungen und Verse sind Eigenproduktion – keine übernommenen Texte oder Liedtexte. Die Pause braucht keinerlei Material und funktioniert am Platz bzw. neben dem Tisch. Kein Ersatz für die Aufsichts- und Sicherheitseinschätzung vor Ort.",
+  "phasen": [
+    { "id": "aufwachen", "name": "Aufwachen & Auflockern", "emoji": "🌞", "ziel": "Kreislauf sanft wecken, Gelenke mobilisieren" },
+    { "id": "power", "name": "Power-Teil", "emoji": "⚡", "ziel": "Große Muskelgruppen, Energie rauslassen" },
+    { "id": "koordination", "name": "Koordination & Konzentration", "emoji": "🎯", "ziel": "Gleichgewicht, Überkreuzbewegungen, Fokus zurückholen" },
+    { "id": "ruhe", "name": "Ruhig werden", "emoji": "🌙", "ziel": "Atmung beruhigen, in die Arbeitshaltung zurückfinden" }
+  ],
+  "bausteine": [
+    {
+      "id": "auf-himmel-erde",
+      "phase": "aufwachen",
+      "titel": "Himmel und Erde",
+      "minuten": 2,
+      "anleitung": [
+        "Aufstehen, Füße hüftbreit.",
+        "Beide Arme langsam zum „Himmel“ strecken und auf die Zehenspitzen kommen.",
+        "Dann tief zur „Erde“ beugen und die Finger Richtung Boden baumeln lassen.",
+        "Fünfmal langsam wechseln."
+      ],
+      "vers": "Hoch zum Himmel, tief zur Erde, / dass ich richtig wach jetzt werde!"
+    },
+    {
+      "id": "auf-schulterkreise",
+      "phase": "aufwachen",
+      "titel": "Schulter-Karussell",
+      "minuten": 2,
+      "anleitung": [
+        "Im Stehen oder Sitzen die Schultern hochziehen, nach hinten rollen und fallen lassen.",
+        "Fünf Kreise nach hinten, fünf nach vorn.",
+        "Dazu die Arme ausschütteln wie nasse Hände."
+      ],
+      "vers": "Rundherum im Karussell, / Schultern kreisen, gar nicht schnell."
+    },
+    {
+      "id": "auf-weckdehnen",
+      "phase": "aufwachen",
+      "titel": "Katzen-Strecken",
+      "minuten": 2,
+      "anleitung": [
+        "Wie eine Katze nach dem Schlaf ganz lang strecken: Arme weit nach vorn, Rücken lang machen.",
+        "Dann einen runden „Katzenbuckel“ machen.",
+        "Dreimal wechseln, dabei hörbar ein- und ausatmen."
+      ],
+      "vers": "Wie die Katze streck ich mich, / lang und rund – so wecke ich mich!"
+    },
+    {
+      "id": "pow-hampelmann",
+      "phase": "power",
+      "titel": "Hampelmann-Zähler",
+      "minuten": 2,
+      "anleitung": [
+        "Zehn Hampelmann-Sprünge, gemeinsam laut mitzählen.",
+        "Kurze Pause: einmal tief atmen.",
+        "Noch einmal zehn – wer mag, diesmal leise auf Zehenspitzen landen."
+      ],
+      "vers": "Eins, zwei, drei – spring hinterher, / Hampelmann, das ist nicht schwer!"
+    },
+    {
+      "id": "pow-stampfen",
+      "phase": "power",
+      "titel": "Gewitter-Trommel",
+      "minuten": 2,
+      "anleitung": [
+        "Mit den Füßen am Platz trommeln: erst leise Regentropfen, dann stärker, dann Gewitter!",
+        "Auf das Zeichen „Sonne!“ ist das Gewitter sofort vorbei und alle stehen still.",
+        "Zwei bis drei Runden spielen."
+      ],
+      "vers": "Tripp, tripp, tropp, der Regen fällt, / stampf, stampf, stampf – ein Blitz erhellt die Welt!"
+    },
+    {
+      "id": "pow-kniehebel",
+      "phase": "power",
+      "titel": "Marsch auf der Stelle",
+      "minuten": 3,
+      "anleitung": [
+        "Am Platz marschieren und die Knie richtig hoch heben.",
+        "Die Arme schwingen kräftig mit.",
+        "Tempo wechseln: Zeitlupe, normal, schnell – und zurück."
+      ],
+      "vers": "Knie hoch und Arme schwingen, / so kann uns die Pause gelingen!"
+    },
+    {
+      "id": "pow-luftboxen",
+      "phase": "power",
+      "titel": "Wolken-Boxen",
+      "minuten": 2,
+      "anleitung": [
+        "Stabil stehen, Fäuste locker heben.",
+        "Abwechselnd mit rechts und links sanft „Wolken“ aus der Luft schieben – ohne Partner, nur in die Luft.",
+        "Zum Schluss beide Arme lang ausschütteln."
+      ],
+      "vers": "Schieb die Wolken aus dem Raum, / Platz für einen Sonnentraum!"
+    },
+    {
+      "id": "koo-storch",
+      "phase": "koordination",
+      "titel": "Storchen-Stand",
+      "minuten": 2,
+      "anleitung": [
+        "Auf ein Bein stellen, das andere Knie heben – wie ein Storch im Nest.",
+        "Bis fünf zählen, dann Bein wechseln.",
+        "Wer mag: dabei die Arme wie Flügel ausbreiten oder die Augen kurz schließen."
+      ],
+      "vers": "Steh wie der Storch auf einem Bein, / ganz still und stolz – das kann ich fein!"
+    },
+    {
+      "id": "koo-ueberkreuz",
+      "phase": "koordination",
+      "titel": "Knie trifft Ellbogen",
+      "minuten": 2,
+      "anleitung": [
+        "Im Stehen den rechten Ellbogen zum linken Knie führen, dann links zu rechts.",
+        "Zehnmal im Wechsel, ruhig und genau.",
+        "Danach dasselbe ganz langsam mit geschlossenen Augen probieren."
+      ],
+      "vers": "Kreuz und quer, das trainiert, / dass mein Kopf gut kombiniert!"
+    },
+    {
+      "id": "koo-dirigent",
+      "phase": "koordination",
+      "titel": "Stiller Dirigent",
+      "minuten": 2,
+      "anleitung": [
+        "Eine Person macht langsame Bewegungen vor – ohne Worte.",
+        "Alle spiegeln die Bewegungen so genau wie möglich.",
+        "Nach einer Minute wechselt die Dirigenten-Rolle."
+      ],
+      "vers": "Ohne Worte, nur mit Blick, / folgen wir dem Takt der Musik."
+    },
+    {
+      "id": "ruh-atmen",
+      "phase": "ruhe",
+      "titel": "Blumen-Atmung",
+      "minuten": 1,
+      "anleitung": [
+        "Hinsetzen, Hände liegen locker im Schoß.",
+        "Durch die Nase einatmen, als würdet ihr an einer Blume riechen.",
+        "Durch den Mund ausatmen, als würdet ihr eine Kerze ganz sanft flackern lassen.",
+        "Fünf ruhige Atemzüge."
+      ],
+      "vers": "Riech die Blume, puste sacht, / bis die Ruhe ist erwacht."
+    },
+    {
+      "id": "ruh-schwere-arme",
+      "phase": "ruhe",
+      "titel": "Schwere Arme",
+      "minuten": 2,
+      "anleitung": [
+        "Im Sitzen die Arme einmal fest anspannen und bis drei zählen.",
+        "Dann ganz locker fallen lassen – die Arme werden schwer wie Säcke.",
+        "Dreimal wiederholen, zum Schluss die Augen kurz schließen und nachspüren."
+      ],
+      "vers": "Erst ganz stark und dann ganz schwer, / jetzt sind alle ruhig – bitte sehr!"
+    },
+    {
+      "id": "ruh-wetterbericht",
+      "phase": "ruhe",
+      "titel": "Wetterbericht auf dem Rücken",
+      "minuten": 2,
+      "anleitung": [
+        "Paarweise: ein Kind malt dem anderen sanft „Wetter“ auf den Rücken – Sonnenkreise, Regentropfen, leichte Wolken.",
+        "Nach einer Minute wird getauscht.",
+        "Nur so fest, wie es angenehm ist – jedes Kind darf „Stopp“ sagen."
+      ],
+      "vers": "Sonne, Regen, sanfter Wind, / streicheln leise, bis wir fertig sind."
+    }
+  ]
+}

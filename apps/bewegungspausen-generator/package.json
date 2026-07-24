@@ -1,0 +1,8 @@
+{
+  "name": "@info70/bewegungspausen-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bewegungspausen-Generator (Fiskultminutki): wuerfelt aus einer Baustein-Kartei sofort einsetzbare 7-10-Minuten-Bewegungspausen fuer Kita und Bewegte Schule - fester Ablauf Aufwachen/Power/Koordination/Ruhe, jede Uebung mit Anleitung und eigenem Vers, ohne Material, am Platz. Druckansicht und Text-Export; das Geraet ist nur Impulsgeber, die Pause selbst ist bildschirmfrei. Alle Uebungen/Verse Eigenproduktion. Praleska docs/10 (Top-30 Nr. 16). Offline, werbefrei, speichert nichts. Zielgruppe: Fachkraefte/Familie.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

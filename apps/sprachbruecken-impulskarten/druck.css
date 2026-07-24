@@ -1,0 +1,30 @@
+/* Sprachbrücken-Impulskarten: Druckansicht. Beim Drucken verschwinden Kopf,
+   Filter und Knöpfe (.sbi-nur-bildschirm); übrig bleiben die Impulskarten –
+   groß genug zum Aufhängen an der jeweiligen Situation, nie über einen
+   Seitenumbruch zerrissen. */
+
+@media print {
+  .sbi-nur-bildschirm { display: none !important; }
+
+  html { font-size: 13pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+    display: block;
+  }
+
+  .k-titel { color: #000; font-size: 1.2rem; }
+
+  .sbi-karte {
+    box-shadow: none;
+    border: 2pt solid #333;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin: 0 0 0.8rem;
+    break-inside: avoid;
+  }
+}

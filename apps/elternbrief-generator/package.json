@@ -1,0 +1,8 @@
+{
+  "name": "@info70/elternbrief-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Elternbrief-Generator Krippenjahr: Formular-zu-Text-Generator fuer Fachkraefte (1-3 Jahre). Monat, Altersband (1-2/2-3) und Themen (Bewegung, Sprache, Selbststaendigkeit, Miteinander, Sinne) waehlen - fertiger Elternbrief 'Was Ihr Kind jetzt lernt' plus bildschirmfreie Spielideen fuer zu Hause, zum Kopieren/Speichern. Immer ueber die Gruppe, nie ueber einzelne Kinder (keine Kindernamen). Praleska docs/10 (Top-30 Nr. 17). Offline, werbefrei, Auswahl nur lokal. Zielgruppe: Fachkraefte.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,30 @@
+/* Bewegungspausen-Generator: Druckansicht des gewürfelten Skripts. Beim
+   Drucken verschwinden Kopf, Knöpfe und Hinweise (.bpg-nur-bildschirm);
+   übrig bleibt der Ablauf als kompakte Karten, die nicht über einen
+   Seitenumbruch zerrissen werden. */
+
+@media print {
+  .bpg-nur-bildschirm { display: none !important; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0.5rem;
+    display: block;
+  }
+
+  .k-titel { color: #000; }
+
+  .bpg-karte {
+    box-shadow: none;
+    border: 1.5pt solid #333;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0 0.5rem;
+    break-inside: avoid;
+  }
+}

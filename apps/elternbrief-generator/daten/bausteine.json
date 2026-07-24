@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "hinweis": "Generator für Elternbriefe im Krippenjahr (1–3 Jahre): 'Was Ihr Kind jetzt lernt' plus bildschirmfreie Spielideen für zu Hause. Der Brief betrifft immer die ganze Gruppe – keine Namen und keine Angaben zu einzelnen Kindern. Entwicklungsangaben sind Richtwerte; jedes Kind hat sein eigenes Tempo.",
+  "altersbaender": [
+    { "id": "1-2", "name": "1–2 Jahre" },
+    { "id": "2-3", "name": "2–3 Jahre" }
+  ],
+  "monate": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+  "themen": [
+    {
+      "id": "bewegung",
+      "emoji": "🤸",
+      "name": "Bewegung",
+      "lernt": {
+        "1-2": "Ihr Kind erobert gerade den Raum: sicherer laufen, klettern, sich bücken und wieder aufstehen. Jede Wiederholung macht die Bewegungen runder und das Gleichgewicht sicherer.",
+        "2-3": "Ihr Kind wird zum Bewegungs-Profi: rennen und stoppen, Treppen steigen, auf Mauern balancieren, einen Ball kicken. Es probiert bewusst aus, was der Körper schon kann."
+      },
+      "spielidee": {
+        "1-2": "Bauen Sie aus Kissen und einer Decke eine kleine Kletterlandschaft auf dem Boden – drüberkrabbeln, drunterdurch, wieder zurück. Sie bleiben dabei in Reichweite.",
+        "2-3": "Malen Sie mit Kreide eine Linie auf den Gehweg (oder legen Sie drinnen ein Seil): balancieren, drüberspringen, rückwärts gehen – wer schafft alle drei?"
+      }
+    },
+    {
+      "id": "sprache",
+      "emoji": "💬",
+      "name": "Sprache",
+      "lernt": {
+        "1-2": "Aus einzelnen Wörtern werden erste Zwei-Wort-Sätze („Mama da!“). Ihr Kind versteht schon viel mehr, als es sagen kann – und sammelt jeden Tag neue Wörter.",
+        "2-3": "Ihr Kind baut richtige kleine Sätze, fragt „Was ist das?“ und erzählt erste Mini-Geschichten. Die Warum-Fragen kündigen sich an."
+      },
+      "spielidee": {
+        "1-2": "Alltag mit Worten begleiten: Beim Anziehen, Kochen und Einkaufen benennen, was Sie tun („Jetzt die rote Socke!“). Bilderbuch anschauen und Ihr Kind zeigen lassen.",
+        "2-3": "Beim Vorlesen Fragen stellen: „Was passiert wohl als Nächstes?“ – und die Antwort Ihres Kindes aufgreifen und ein bisschen erweitern. In jeder Familiensprache wertvoll!"
+      }
+    },
+    {
+      "id": "selbststaendig",
+      "emoji": "🧦",
+      "name": "Selbstständigkeit",
+      "lernt": {
+        "1-2": "„Selber machen!“ beginnt: mit dem Löffel essen, aus dem Becher trinken, die Mütze abnehmen. Dabei kleckert und dauert vieles – genau so wird es gelernt.",
+        "2-3": "Ihr Kind übt Anziehen, Hände waschen, Aufräumen und kleine Aufgaben („Trägst du den Brotkorb?“). Es will gebraucht werden und Verantwortung übernehmen."
+      },
+      "spielidee": {
+        "1-2": "Planen Sie beim Essen und Anziehen ein paar Minuten mehr ein und lassen Sie Ihr Kind selbst probieren – Unterlage drunter, Geduld dazu, fertig.",
+        "2-3": "Geben Sie Ihrem Kind ein festes kleines Amt zu Hause: Servietten verteilen, Blumen gießen, Wäsche in die Trommel werfen. Danach gemeinsam freuen: „Das hast du gemacht!“"
+      }
+    },
+    {
+      "id": "miteinander",
+      "emoji": "🤝",
+      "name": "Miteinander",
+      "lernt": {
+        "1-2": "Ihr Kind spielt noch viel nebeneinander statt miteinander – und beobachtet andere Kinder dabei ganz genau. Erste kleine Kontakte (anlächeln, etwas reichen) entstehen.",
+        "2-3": "Erste gemeinsame Spiele entstehen – und damit auch erste Konflikte um Spielzeug. Ihr Kind übt Warten, Abwechseln und tröstet manchmal schon andere."
+      },
+      "spielidee": {
+        "1-2": "Rollen Sie zu Hause einen Ball hin und her: Geben und Nehmen im Wechsel ist das erste „Gespräch“ ohne Worte.",
+        "2-3": "Einfache Wechselspiele spielen: abwechselnd einen Turm bauen, abwechselnd Seiten im Buch umblättern. Das Warten fällt leichter, wenn es kurz und vorhersehbar ist."
+      }
+    },
+    {
+      "id": "sinne",
+      "emoji": "🔍",
+      "name": "Sinne & Entdecken",
+      "lernt": {
+        "1-2": "Ihr Kind begreift die Welt im Wortsinn: anfassen, umfüllen, stapeln, ausräumen. Jedes „Experiment“ (auch das zehnte Umkippen des Bechers) ist Forschung.",
+        "2-3": "Ihr Kind sortiert, vergleicht und entdeckt Zusammenhänge: groß/klein, nass/trocken, „Wo ist es hin?“. Es erinnert sich an Abläufe und liebt kleine Rituale."
+      },
+      "spielidee": {
+        "1-2": "Eine Schüssel, ein Becher, etwas Wasser (oder trockene Nudeln): umfüllen, schütten, wieder einsammeln – am besten dort, wo Kleckern erlaubt ist. Sie bleiben dabei und schauen mit, damit nichts im Mund landet.",
+        "2-3": "Sammeln Sie draußen Naturschätze (Kastanien, Blätter, Steine) und sortieren Sie sie zu Hause nach Größe oder Farbe – ein Forscherspiel ganz ohne Bildschirm."
+      }
+    }
+  ],
+  "schluss": "Kommen Sie bei Fragen gern auf uns zu – zwischen Tür und Angel oder mit einem festen Gesprächstermin. Jedes Kind entwickelt sich in seinem eigenen Tempo; die Beispiele oben sind Anregungen, keine Messlatte."
+}

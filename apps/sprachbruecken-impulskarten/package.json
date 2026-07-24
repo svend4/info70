@@ -1,0 +1,8 @@
+{
+  "name": "@info70/sprachbruecken-impulskarten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sprachbruecken-Impulskarten: dreisprachige Gespraechs-Impulse (Deutsch/Ukrainisch/Russisch mit Aussprachehilfe fuer deutschsprachige Fachkraefte) fuer alltagsintegrierte Sprachbildung in der Kita. Nach Situation filterbar (Ankommen, Essen, Anziehen, Spielen, Draussen, Troesten, Abschied) und druckbar zum Aufhaengen an der jeweiligen Situation; je Situation ein Praxis-Tipp. Kurze, sehr gebraeuchliche Saetze; Aussprachehilfe als Annaeherung gekennzeichnet. Praleska docs/10 (Top-30 Nr. 18). Offline, werbefrei, speichert nichts. Zielgruppe: Kita-Teams.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
