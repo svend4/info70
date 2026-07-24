@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "hinweis": "Erlebe, wie in einer Lebensgemeinschaft alles zusammenhängt. Verändere eine Art und schau, was als Nächstes passiert. Das ist ein stark vereinfachtes Modell (ein Schritt in die Zukunft), keine echte Vorhersage der Natur – die ist noch viel komplizierter. Arten mit 🛡️ stehen in Deutschland unter besonderem Schutz (Rote Liste / geschützt).",
+  "startBestand": 3,
+  "maxBestand": 5,
+  "netze": [
+    {
+      "id": "wald",
+      "name": "Der Wald",
+      "emoji": "🌲",
+      "arten": [
+        { "id": "pflanze", "name": "Eicheln & Bucheckern", "emoji": "🌰", "ebene": "produzent" },
+        { "id": "maus", "name": "Waldmaus", "emoji": "🐭", "ebene": "pflanzenfresser" },
+        { "id": "reh", "name": "Reh", "emoji": "🦌", "ebene": "pflanzenfresser" },
+        { "id": "fuchs", "name": "Fuchs", "emoji": "🦊", "ebene": "fleischfresser" },
+        { "id": "wolf", "name": "Wolf", "emoji": "🐺", "ebene": "fleischfresser", "geschuetzt": true }
+      ],
+      "ketten": [
+        { "fresser": "maus", "beute": "pflanze" },
+        { "fresser": "reh", "beute": "pflanze" },
+        { "fresser": "fuchs", "beute": "maus" },
+        { "fresser": "wolf", "beute": "reh" }
+      ]
+    },
+    {
+      "id": "wiese",
+      "name": "Die Wiese",
+      "emoji": "🌼",
+      "arten": [
+        { "id": "gras", "name": "Gras & Klee", "emoji": "🌱", "ebene": "produzent" },
+        { "id": "heuschrecke", "name": "Heuschrecke", "emoji": "🦗", "ebene": "pflanzenfresser" },
+        { "id": "feldmaus", "name": "Feldmaus", "emoji": "🐁", "ebene": "pflanzenfresser" },
+        { "id": "frosch", "name": "Frosch", "emoji": "🐸", "ebene": "fleischfresser" },
+        { "id": "storch", "name": "Storch", "emoji": "🕊️", "ebene": "fleischfresser", "geschuetzt": true }
+      ],
+      "ketten": [
+        { "fresser": "heuschrecke", "beute": "gras" },
+        { "fresser": "feldmaus", "beute": "gras" },
+        { "fresser": "frosch", "beute": "heuschrecke" },
+        { "fresser": "storch", "beute": "frosch" },
+        { "fresser": "storch", "beute": "feldmaus" }
+      ]
+    },
+    {
+      "id": "teich",
+      "name": "Der Teich",
+      "emoji": "💧",
+      "arten": [
+        { "id": "alge", "name": "Algen", "emoji": "🟢", "ebene": "produzent" },
+        { "id": "wasserfloh", "name": "Wasserfloh", "emoji": "🦐", "ebene": "pflanzenfresser" },
+        { "id": "kleinfisch", "name": "kleiner Fisch", "emoji": "🐟", "ebene": "fleischfresser" },
+        { "id": "hecht", "name": "Hecht", "emoji": "🐊", "ebene": "fleischfresser" },
+        { "id": "reiher", "name": "Graureiher", "emoji": "🦤", "ebene": "fleischfresser" }
+      ],
+      "ketten": [
+        { "fresser": "wasserfloh", "beute": "alge" },
+        { "fresser": "kleinfisch", "beute": "wasserfloh" },
+        { "fresser": "hecht", "beute": "kleinfisch" },
+        { "fresser": "reiher", "beute": "kleinfisch" }
+      ]
+    }
+  ]
+}

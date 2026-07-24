@@ -1,0 +1,8 @@
+{
+  "name": "@info70/erzaehl-bruecke",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Erzaehl-Bruecke: Erzaehl-Geruest zum freien MUeNDLICHEN Erzaehlen (5-8, gern gemeinsam). Held + Ort + Problem wuerfeln, dann die vier Stufen der Erzaehl-Treppe (Es war einmal / Eines Tages / Aber dann / Am Ende) als Impulse plus Ueberraschungs-Karten - das Kind erzaehlt laut selbst, die App liefert nur das Geruest. KEIN Mikrofon, KEINE Aufnahme, nichts wird gespeichert (datenschutz-vorbildlich). Foerdert Erzaehlfaehigkeit/Bildungssprache. Alle Bausteine Eigenproduktion. Praleska docs/10 (Top-30 Nr. 19). Offline, werbefrei. Zielgruppe: Kinder/Familie.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

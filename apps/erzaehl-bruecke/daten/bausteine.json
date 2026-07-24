@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "hinweis": "Erzähl-Brücke hilft Kindern beim freien Erzählen. Das Kind erzählt LAUT – die App liefert nur das Gerüst und ein paar Impulse. Es wird NICHTS aufgenommen und NICHTS gespeichert (kein Mikrofon, kein Ton). Am schönsten gemeinsam mit einem großen Menschen, der zuhört. Erzählen in jeder Familiensprache ist wertvoll.",
+  "helden": [
+    "ein mutiger kleiner Igel",
+    "eine neugierige Katze",
+    "ein schüchterner Drache",
+    "zwei beste Freunde",
+    "ein Roboter, der Gefühle lernt",
+    "ein Mädchen mit einer geheimen Stärke",
+    "ein alter, kluger Bär",
+    "ein Kind, das gerade neu in der Stadt ist"
+  ],
+  "orte": [
+    "in einem tiefen Wald",
+    "auf einem großen Spielplatz",
+    "in einer verzauberten Bibliothek",
+    "am Ufer eines glitzernden Sees",
+    "in einer Stadt aus Bonbons",
+    "hoch oben auf einem Wolkenberg",
+    "in einer kleinen, gemütlichen Höhle",
+    "auf einem Bauernhof im Regen"
+  ],
+  "probleme": [
+    "hat plötzlich etwas Wichtiges verloren",
+    "traut sich zuerst nicht, Nein zu sagen",
+    "findet einen geheimnisvollen Schlüssel",
+    "soll einem anderen helfen, der traurig ist",
+    "hat sich verlaufen und findet den Weg nicht",
+    "möchte unbedingt einen neuen Freund finden",
+    "muss eine schwierige Aufgabe lösen",
+    "entdeckt, dass Anderssein eine Superkraft ist"
+  ],
+  "treppe": [
+    { "id": "anfang", "emoji": "1️⃣", "titel": "Es war einmal …", "impuls": "Wer ist dein Held? Wo ist er? Wie sieht es dort aus – was hörst und riechst du?" },
+    { "id": "los", "emoji": "2️⃣", "titel": "Eines Tages …", "impuls": "Was passiert plötzlich? Wie fühlt sich dein Held dabei?" },
+    { "id": "aber", "emoji": "3️⃣", "titel": "Aber dann …", "impuls": "Was wird schwierig? Was probiert dein Held? Wer hilft vielleicht?" },
+    { "id": "ende", "emoji": "4️⃣", "titel": "Am Ende …", "impuls": "Wie geht die Geschichte aus? Was hat dein Held gelernt oder gefühlt?" }
+  ],
+  "extraImpulse": [
+    "Was wäre, wenn plötzlich ein Gewitter kommt?",
+    "Was wäre, wenn dein Held etwas Lustiges sagt?",
+    "Was wäre, wenn jemand ein Geheimnis verrät?",
+    "Was wäre, wenn ein Tier sprechen könnte?",
+    "Was wäre, wenn dein Held mutig „Stopp!“ ruft?"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/klang-detektive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Klang-Detektive: Hoer-Quiz zur Gehoerbildung fuer 3-5 (Ko-Nutzung) und 5-7. Fuenf Merkmale: hoch/tief, laut/leise, schnell/langsam, rauf/runter (Glissando), weich/scharf (Wellenform). Alle Klaenge werden lokal per WebAudio im Browser synthetisiert - keine fremden Audiodateien, keine externen Requests, keine Musikrechte-Probleme. Fragenbank ist per Test selbstkonsistent (korrekte Antwort passt zu Parametern und Wortlaut). Praleska docs/10 (Top-30 Nr. 20). Offline, werbefrei, nur Rekord lokal. Zielgruppe: Vorschule.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

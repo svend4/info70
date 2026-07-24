@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5 (Ko-Nutzung) / 5-7",
+  "raenge": [
+    { "ab": 0, "titel": "Hör-Anfänger*in", "emoji": "🌱" },
+    { "ab": 3, "titel": "Klang-Spürnase", "emoji": "👂" },
+    { "ab": 6, "titel": "Klang-Detektiv*in", "emoji": "🔎" },
+    { "ab": 8, "titel": "Ohren-Meister*in", "emoji": "🎧" }
+  ],
+  "fragen": [
+    { "id": "q01", "typ": "hoch-tief", "frage": "Welcher Ton war höher?", "toene": [{ "hz": 300 }, { "hz": 600 }], "optionen": ["🔊 Der erste", "🔊 Der zweite"], "korrekt": 1, "erklaerung": "Der zweite Ton war höher. Hohe Töne klingen wie ein Vögelchen, tiefe wie ein Brummbär." },
+    { "id": "q02", "typ": "hoch-tief", "frage": "Welcher Ton war höher?", "toene": [{ "hz": 700 }, { "hz": 350 }], "optionen": ["🔊 Der erste", "🔊 Der zweite"], "korrekt": 0, "erklaerung": "Der erste Ton war höher. Höher heißt: es klingt heller und dünner." },
+    { "id": "q03", "typ": "laut-leise", "frage": "Welcher Ton war lauter?", "toene": [{ "hz": 440, "gain": 0.06 }, { "hz": 440, "gain": 0.24 }], "optionen": ["🔊 Der erste", "🔊 Der zweite"], "korrekt": 1, "erklaerung": "Der zweite Ton war lauter. Laut heißt: das Ohr spürt mehr. Zu laut tut aber weh – schütze deine Ohren!" },
+    { "id": "q04", "typ": "laut-leise", "frage": "Welcher Ton war leiser?", "toene": [{ "hz": 440, "gain": 0.05 }, { "hz": 440, "gain": 0.22 }], "optionen": ["🔊 Der erste", "🔊 Der zweite"], "korrekt": 0, "erklaerung": "Der erste Ton war leiser – ganz sanft und fein." },
+    { "id": "q05", "typ": "schnell-langsam", "frage": "Welches Klopfen war schneller?", "rhythmen": [{ "schlaege": 3 }, { "schlaege": 7 }], "optionen": ["🥁 Das erste", "🥁 Das zweite"], "korrekt": 1, "erklaerung": "Das zweite Klopfen war schneller – viele Schläge dicht hintereinander." },
+    { "id": "q06", "typ": "schnell-langsam", "frage": "Welches Klopfen war langsamer?", "rhythmen": [{ "schlaege": 8 }, { "schlaege": 3 }], "optionen": ["🥁 Das erste", "🥁 Das zweite"], "korrekt": 1, "erklaerung": "Das zweite Klopfen war langsamer – große Pausen zwischen den Schlägen." },
+    { "id": "q07", "typ": "hoch-runter", "frage": "Ging der Ton nach oben oder nach unten?", "glide": { "von": 250, "bis": 700 }, "optionen": ["⬆️ Nach oben", "⬇️ Nach unten"], "korrekt": 0, "erklaerung": "Der Ton ist nach oben geklettert – wie eine Rakete, die startet." },
+    { "id": "q08", "typ": "hoch-runter", "frage": "Ging der Ton nach oben oder nach unten?", "glide": { "von": 700, "bis": 250 }, "optionen": ["⬆️ Nach oben", "⬇️ Nach unten"], "korrekt": 1, "erklaerung": "Der Ton ist nach unten gerutscht – wie eine Rutsche." },
+    { "id": "q09", "typ": "weich-scharf", "frage": "Klang es weich oder scharf?", "klang": { "hz": 330, "wellenform": "sine" }, "optionen": ["🫧 Weich", "⚡ Scharf"], "korrekt": 0, "erklaerung": "Das war ein weicher Ton – rund und sanft, wie Summen." },
+    { "id": "q10", "typ": "weich-scharf", "frage": "Klang es weich oder scharf?", "klang": { "hz": 330, "wellenform": "sawtooth" }, "optionen": ["🫧 Weich", "⚡ Scharf"], "korrekt": 1, "erklaerung": "Das war ein scharfer Ton – kratzig, wie ein Summer an der Tür." },
+    { "id": "q11", "typ": "hoch-tief", "frage": "Welcher Ton war tiefer?", "toene": [{ "hz": 500 }, { "hz": 200 }], "optionen": ["🔊 Der erste", "🔊 Der zweite"], "korrekt": 1, "erklaerung": "Der zweite Ton war tiefer – wie ein Brummbär tief unten." },
+    { "id": "q12", "typ": "schnell-langsam", "frage": "Welches Klopfen war schneller?", "rhythmen": [{ "schlaege": 6 }, { "schlaege": 2 }], "optionen": ["🥁 Das erste", "🥁 Das zweite"], "korrekt": 0, "erklaerung": "Das erste Klopfen war schneller. Zähl mit den Fingern mit!" }
+  ]
+}
