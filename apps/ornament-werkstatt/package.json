@@ -1,0 +1,8 @@
+{
+  "name": "@info70/ornament-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ornament-Werkstatt - Muster und Symmetrie zum Anfassen: Muster nach vier Regeln fortsetzen (Wiederholung, Wechsel, Rhythmus 2+1, Spiegel) und eigene Ornamente auf fuenf Vorlagen legen (Borduere, Teppich, Teller, Hemd, Osterei) - sechs Formen, vier Farben, Spiegel-Schalter fuer beide Seiten gleichzeitig und eine Symmetrie-Probe. Muster fortsetzen als Vorstufe algebraischen Denkens; alle Formen und Vorlagen eigens entworfen, kein zitiertes Stickmotiv. Vorlesen fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 8). Offline, werbefrei, speichert nichts. Zielgruppe: 5-7 kurz, 8-12 Vertiefung.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

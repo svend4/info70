@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "vorlagen": [
+    {
+      "id": "borduere",
+      "name": "Bordüre",
+      "emoji": "📏",
+      "spalten": 10,
+      "idee": "Ein langes Band für den Rand eines Bildes: Hier zählt der Rhythmus – such dir eine Regel und halte sie durch.",
+      "raster": ["##########"]
+    },
+    {
+      "id": "teppich",
+      "name": "Teppich",
+      "emoji": "🟫",
+      "spalten": 6,
+      "idee": "Ein Teppich hat oft einen Rand und eine Mitte. Leg zuerst den Rand ringsum, dann füll die Mitte.",
+      "raster": ["######", "######", "######", "######", "######"]
+    },
+    {
+      "id": "teller",
+      "name": "Teller",
+      "emoji": "🍽️",
+      "spalten": 7,
+      "idee": "Runde Formen bekommen oft Ringe: außen ein Kranz, innen ein Stern oder eine Blume.",
+      "raster": ["..###..", ".#####.", "#######", "#######", "#######", ".#####.", "..###.."]
+    },
+    {
+      "id": "hemd",
+      "name": "Hemd",
+      "emoji": "👕",
+      "spalten": 7,
+      "idee": "Bestickt wird meist am Kragen und an den Ärmeln – probier links und rechts genau dasselbe Muster.",
+      "raster": ["###.###", "#######", ".#####.", ".#####.", ".#####.", ".#####."]
+    },
+    {
+      "id": "osterei",
+      "name": "Osterei",
+      "emoji": "🥚",
+      "spalten": 5,
+      "idee": "Ein Ei wird rundherum bemalt: Streifen quer, Zacken längs oder kleine Sterne überall.",
+      "raster": [".###.", "#####", "#####", "#####", "#####", "#####", ".###."]
+    }
+  ]
+}

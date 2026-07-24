@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
+  "raenge": [
+    {
+      "ab": 0,
+      "titel": "Natur-Neuling",
+      "emoji": "🌱"
+    },
+    {
+      "ab": 4,
+      "titel": "Lebens-Spürnase",
+      "emoji": "🔎"
+    },
+    {
+      "ab": 8,
+      "titel": "Natur-Forscher*in",
+      "emoji": "🔬"
+    },
+    {
+      "ab": 12,
+      "titel": "Lebens-Expert*in",
+      "emoji": "🌍"
+    }
+  ],
+  "fragen": [
+    {
+      "id": "m01",
+      "typ": "binaer",
+      "kategorie": "Lebenszeichen",
+      "aussage": "Menschen, Tiere und Pflanzen sind alle lebendig: Sie atmen, ernähren sich, wachsen, reagieren auf ihre Umgebung und bekommen Nachwuchs.",
+      "korrekt": "ja",
+      "erklaerung": "Genau! Das sind die Lebenszeichen. Ein Mensch, ein Regenwurm und eine Buche sehen völlig verschieden aus – und trotzdem tun sie dieselben fünf Dinge. Wer das einmal weiß, erkennt Lebendiges überall: im Wald, im Teich und im Blumentopf auf der Fensterbank."
+    },
+    {
+      "id": "m02",
+      "typ": "binaer",
+      "kategorie": "Atmen",
+      "aussage": "Pflanzen atmen nur tagsüber. Nachts atmen sie gar nicht.",
+      "korrekt": "nein",
+      "erklaerung": "Nein – Pflanzen atmen Tag und Nacht, genau wie du. Am Tag machen sie zusätzlich noch etwas, das du nicht kannst: Aus Licht, Wasser und Luft stellen sie sich ihr Essen selbst her und geben dabei Sauerstoff ab. Atmen und Essen-Herstellen sind bei Pflanzen zwei verschiedene Sachen."
+    },
+    {
+      "id": "m03",
+      "typ": "wahl",
+      "kategorie": "Atmen",
+      "frage": "Womit atmet ein Fisch unter Wasser?",
+      "antworten": [
+        "Mit Kiemen – sie holen die Luft aus dem Wasser",
+        "Mit einer Lunge, genau wie du",
+        "Mit den Flossen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Fische haben Kiemen und holen sich damit den Sauerstoff aus dem Wasser. Wale und Delfine sind zwar auch im Meer zu Hause, haben aber eine Lunge – deshalb müssen sie zum Luftholen immer wieder auftauchen. Atmen müssen sie alle, nur mit unterschiedlichen Werkzeugen."
+    },
+    {
+      "id": "m04",
+      "typ": "wahl",
+      "kategorie": "Trinken",
+      "frage": "Wie kommt das Wasser von den Wurzeln bis ganz oben in das höchste Blatt eines Baumes?",
+      "antworten": [
+        "Die Blätter klettern nachts nach unten zum Wasser",
+        "Durch feine Leitungsbahnen im Stamm – wie ganz viele dünne Trinkhalme",
+        "Der Baum saugt das Wasser mit den Blüten aus der Luft"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Im Stamm und in jedem Zweig verlaufen winzige Röhrchen – lauter kleine Trinkhalme. Die Wurzeln saugen Wasser aus der Erde, und oben verdunsten die Blätter Wasser; dadurch wird von unten immer neues nachgezogen. Bei einem großen Baum sind das an einem heißen Tag mehrere Eimer voll."
+    },
+    {
+      "id": "m05",
+      "typ": "binaer",
+      "kategorie": "Essen",
+      "aussage": "Eine Pflanze kann sich ihr Essen selbst herstellen – aus Wasser, Luft und Licht.",
+      "korrekt": "ja",
+      "erklaerung": "Stimmt, und das ist ihr größtes Kunststück. Aus dem Boden holt sie dazu noch Nährsalze, so etwas wie Gewürze. Menschen und Tiere können das nicht: Wir müssen essen, was schon da ist. Deshalb hängen am Ende alle an den Pflanzen."
+    },
+    {
+      "id": "m06",
+      "typ": "wahl",
+      "kategorie": "Bewegen",
+      "frage": "Bewegen sich Pflanzen?",
+      "antworten": [
+        "Nein, Pflanzen bewegen sich nie",
+        "Nur dann, wenn der Wind sie schiebt",
+        "Ja, aber so langsam, dass man genau hinsehen muss"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Junge Sonnenblumen-Knospen drehen sich mit der Sonne mit, ein Gänseblümchen schließt am Abend seine Blüte, und eine Bohnenranke wickelt sich um jeden Stab, den sie zu fassen bekommt. Nur geht das alles sehr langsam – im Zeitraffer-Film sieht man es sofort."
+    },
+    {
+      "id": "m07",
+      "typ": "binaer",
+      "kategorie": "Herz und Blut",
+      "aussage": "Auch eine Pflanze hat ein Herz, das Blut durch den Stamm pumpt.",
+      "korrekt": "nein",
+      "erklaerung": "Nein. Ein Herz und Blut haben nur Menschen und viele Tiere – lege eine Hand auf deine Brust, dann spürst du deine Pumpe. Bei der Pflanze fließt Wasser durch die Leitungsbahnen ganz ohne Pumpe: Oben verdunsten die Blätter, unten drücken die Wurzeln nach."
+    },
+    {
+      "id": "m08",
+      "typ": "wahl",
+      "kategorie": "Wachsen",
+      "frage": "Was stimmt über das Wachsen?",
+      "antworten": [
+        "Bäume wachsen ihr ganzes Leben lang, Menschen nur bis ungefähr 18 bis 20 Jahre",
+        "Menschen wachsen ihr ganzes Leben, Bäume hören nach einem Jahr auf",
+        "Nach der Geburt wächst nichts Lebendiges mehr weiter"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ein Baum legt jedes Jahr einen neuen Ring zu – deshalb kann man an einem Baumstumpf die Ringe zählen und weiß, wie alt er wurde. Du wächst nur bis Anfang zwanzig, dafür heilen deine Knochen und deine Haut ein Leben lang nach. Wachsen ist ein Lebenszeichen bei allen dreien."
+    },
+    {
+      "id": "m09",
+      "typ": "wahl",
+      "kategorie": "Nachwuchs",
+      "frage": "Woraus wird ein neuer Löwenzahn?",
+      "antworten": [
+        "Aus einem Ei, das jemand in die Erde legt",
+        "Aus einem Samen, den der Wind wegträgt",
+        "Aus einem kleinen Stück Stein"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Jedes Schirmchen einer Pusteblume trägt einen Samen – und wo er landet, kann ein neuer Löwenzahn wachsen. Vögel und Fische legen Eier, Hunde und Menschen bekommen Junge beziehungsweise Kinder. Alle drei sorgen für Nachwuchs, nur auf sehr verschiedene Weise."
+    },
+    {
+      "id": "m10",
+      "typ": "binaer",
+      "kategorie": "Lebendig oder nicht",
+      "aussage": "Ein Stein wächst, atmet und bekommt Nachwuchs – er ist also lebendig.",
+      "korrekt": "nein",
+      "erklaerung": "Ein Stein tut nichts davon: Er atmet nicht, isst nicht, wächst nicht und bekommt keine kleinen Steine. Er ist nicht lebendig. Die fünf Lebenszeichen sind eine gute Checkliste – geh sie durch, wenn du dir bei etwas nicht sicher bist."
+    },
+    {
+      "id": "m11",
+      "typ": "wahl",
+      "kategorie": "Lebendig oder nicht",
+      "frage": "Woran erkennst du am sichersten, ob etwas lebendig ist?",
+      "antworten": [
+        "Es kann sich von der Stelle bewegen",
+        "Es ist grün oder hat Fell",
+        "Es wächst, ernährt sich, atmet, reagiert und bekommt Nachwuchs"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Nur die ganze Liste hilft weiter. „Bewegt sich“ reicht nicht: Ein Auto fährt und ist trotzdem nicht lebendig, ein Baum steht still und ist es sehr wohl. Und Farbe oder Fell sagen gar nichts – ein Pilz hat beides nicht und lebt."
+    },
+    {
+      "id": "m12",
+      "typ": "binaer",
+      "kategorie": "Reagieren",
+      "aussage": "Pflanzen merken nichts von ihrer Umgebung, weil sie kein Gehirn haben.",
+      "korrekt": "nein",
+      "erklaerung": "Ein Gehirn und Gefühle wie du haben Pflanzen wirklich nicht. Aber merken tun sie eine Menge: Sie wachsen dem Licht entgegen, die Wurzel findet auch im Dunkeln nach unten, und eine Ranke greift zu, sobald sie etwas berührt. Reagieren gehört zu den Lebenszeichen – bei Mensch, Tier und Pflanze."
+    },
+    {
+      "id": "m13",
+      "typ": "wahl",
+      "kategorie": "Licht",
+      "frage": "Was passiert mit einer Zimmerpflanze, die wochenlang im dunklen Schrank steht – auch wenn sie Wasser bekommt?",
+      "antworten": [
+        "Sie wird blass und schwach, weil sie ohne Licht kein Essen herstellen kann",
+        "Sie wächst besonders gut, weil sie sich ausruhen darf",
+        "Das macht ihr nichts aus, Wasser allein reicht ihr"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ohne Licht kann die Pflanze ihr Essen nicht mehr herstellen – sie zehrt von ihrem Vorrat, wird blass und geht schließlich ein. Licht ist für sie wie das Frühstück für dich. Wer das ausprobieren möchte: eine Kresseschale hell, eine dunkel stellen und eine Woche lang vergleichen."
+    },
+    {
+      "id": "m14",
+      "typ": "binaer",
+      "kategorie": "Bausteine",
+      "aussage": "Mensch, Tier und Pflanze bestehen alle aus winzigen Bausteinen, die man Zellen nennt.",
+      "korrekt": "ja",
+      "erklaerung": "Ja – und sie sind so klein, dass man ein Mikroskop braucht, um sie zu sehen. Pflanzenzellen haben zusätzlich eine feste Wand, deshalb steht ein Grashalm von allein aufrecht. Deine Zellen haben keine solche Wand; dich hält dein Skelett."
+    },
+    {
+      "id": "m15",
+      "typ": "wahl",
+      "kategorie": "Wer braucht wen",
+      "frage": "Warum brauchen Menschen und Tiere die Pflanzen?",
+      "antworten": [
+        "Pflanzen sehen nur hübsch aus, gebraucht werden sie nicht",
+        "Pflanzen liefern Nahrung und den Sauerstoff zum Atmen",
+        "Menschen und Tiere brauchen Pflanzen überhaupt nicht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Alles, was du isst, kommt von Pflanzen – oder von Tieren, die Pflanzen gefressen haben. Und der Sauerstoff in jedem deiner Atemzüge stammt von Pflanzen und den winzigen grünen Lebewesen im Wasser. Umgekehrt bringen Tiere den Blütenstaub weiter und tragen Samen fort: Alle drei brauchen einander."
+    },
+    {
+      "id": "m16",
+      "typ": "binaer",
+      "kategorie": "Wasser",
+      "aussage": "Wasser brauchen Menschen, Tiere und Pflanzen gleichermaßen zum Leben.",
+      "korrekt": "ja",
+      "erklaerung": "Richtig. Du trinkst, viele Tiere trinken ebenfalls oder holen sich das Wasser aus ihrem Futter, und die Pflanze saugt es mit den Wurzeln aus der Erde. Ohne Wasser hält es keiner lange aus – das ist eines der Dinge, die alle Lebewesen gemeinsam haben."
+    }
+  ]
+}

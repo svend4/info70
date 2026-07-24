@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "verse": [
+    {
+      "id": "regen",
+      "titel": "Regen-Vers",
+      "emoji": "🌧️",
+      "bewegung": "Mit den Fingerspitzen auf die Oberschenkel trommeln – erst leise, dann immer lauter.",
+      "takte": [
+        {
+          "bausteine": ["titi", "titi", "titi", "ta"],
+          "silben": ["Ei", "ne", "Wol", "ke,", "dun", "kel,", "schwer,"]
+        },
+        {
+          "bausteine": ["titi", "titi", "titi", "ta"],
+          "silben": ["reg", "net,", "reg", "net", "im", "mer", "mehr."]
+        }
+      ]
+    },
+    {
+      "id": "koerper",
+      "titel": "Körper-Musik",
+      "emoji": "👏",
+      "bewegung": "Genau das tun, was der Vers sagt: klatschen, stampfen, schnipsen – erst einzeln, dann alles hintereinander.",
+      "takte": [
+        {
+          "bausteine": ["titi", "titi", "titi", "ta"],
+          "silben": ["Hän", "de", "klat", "schen,", "Fü", "ße", "stampf!"]
+        },
+        {
+          "bausteine": ["titi", "titi", "titi", "ta"],
+          "silben": ["Fin", "ger", "schnip", "sen", "al", "le", "mit!"]
+        }
+      ]
+    },
+    {
+      "id": "zaehlvers",
+      "titel": "Zähl-Vers mit Pause",
+      "emoji": "🔢",
+      "bewegung": "Auf jeden Schlag ein Schritt auf der Stelle – in der Pause stehen bleiben und nicht wackeln.",
+      "takte": [
+        {
+          "bausteine": ["ta", "ta", "ta", "ta"],
+          "silben": ["Eins,", "zwei,", "drei,", "vier"]
+        },
+        {
+          "bausteine": ["titi", "ta", "ta", "pause"],
+          "silben": ["al", "le", "sind", "hier"]
+        }
+      ]
+    },
+    {
+      "id": "katze",
+      "titel": "Katzen-Vers",
+      "emoji": "🐈",
+      "bewegung": "Auf Zehenspitzen schleichen, in der Pause einfrieren und beim letzten Wort einmal hochspringen.",
+      "takte": [
+        {
+          "bausteine": ["titi", "ta", "titi", "ta"],
+          "silben": ["Ka", "tze", "schleicht", "lei", "se", "fort,"]
+        },
+        {
+          "bausteine": ["pause", "titi", "titi", "ta"],
+          "silben": ["war", "tet,", "lau", "ert,", "springt!"]
+        }
+      ]
+    },
+    {
+      "id": "hammer",
+      "titel": "Hammer-Vers",
+      "emoji": "🔨",
+      "bewegung": "Eine Faust ist der Hammer, die andere Hand das Holz: auf jeden Schlag einmal klopfen.",
+      "takte": [
+        {
+          "bausteine": ["titi", "ta", "ta", "titi"],
+          "silben": ["Ham", "mer", "klopft", "den", "Na", "gel"]
+        },
+        {
+          "bausteine": ["ta", "ta", "titi", "ta"],
+          "silben": ["Holz", "liegt", "stil", "le", "da."]
+        }
+      ]
+    }
+  ],
+  "stimmen": [
+    {
+      "id": "stampfen",
+      "name": "Stampfen",
+      "emoji": "🦶",
+      "klang": "stampfen",
+      "muster": ["ta", "pause", "ta", "pause"],
+      "einsatz": 1
+    },
+    {
+      "id": "klatschen",
+      "name": "Klatschen",
+      "emoji": "👏",
+      "klang": "klatschen",
+      "muster": ["pause", "ta", "pause", "ta"],
+      "einsatz": 2
+    },
+    {
+      "id": "schnipsen",
+      "name": "Schnipsen",
+      "emoji": "🤏",
+      "klang": "schnipsen",
+      "muster": ["pause", "titi", "pause", "titi"],
+      "einsatz": 3
+    }
+  ]
+}

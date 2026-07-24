@@ -1,0 +1,8 @@
+{
+  "name": "@info70/rhythmus-orchester",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rhythmus-Orchester - Rhythmus mit der Silbensprache der Elementarmusikpaedagogik (ta / ti-ti / Pause): fuenf eigene Sprechverse sprechen, klatschen, stampfen und schnipsen, gehoerte Vier-Schlag-Rhythmen aus Bausteinen nachbauen und als Koerper-Percussion-Orchester in drei Stimmen (Stampfen, Klatschen, Schnipsen) nacheinander einsetzen. Visuelles Metronom als Mitmach-Bruecke ohne Hoeren (BFSG), Tempo 60/80/100, Bewegungsidee zu jedem Vers, Vorlesen fuer Nichtleser. Alle Klaenge lokal per WebAudio, kein Mikrofon. Praleska docs/10 (Kinder-Apps Nr. 7). Offline, werbefrei, speichert nichts. Zielgruppe: 5-7 kurz, 8-12 Vertiefung.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
