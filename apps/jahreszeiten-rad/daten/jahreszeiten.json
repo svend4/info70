@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "hinweis": "Dreh am Jahreszeiten-Rad und entdecke, wie Tageslänge, Temperatur, Pflanzen, Tiere und Menschen sich durchs Jahr verändern. Die Angaben gelten ungefähr für Deutschland/Mitteleuropa – jedes Jahr ist ein bisschen anders. Zeiten nach den Kalender-Jahreszeiten (meteorologisch).",
+  "jahreszeiten": [
+    {
+      "id": "fruehling",
+      "name": "Frühling",
+      "emoji": "🌸",
+      "monate": [3, 4, 5],
+      "tageslaengeStunden": 13,
+      "temperatur": "kühl bis mild (etwa 5–18 °C)",
+      "himmel": "Die Tage werden schnell länger – jeden Tag ein paar Minuten mehr Licht.",
+      "pflanzen": "Knospen platzen auf: erst Schneeglöckchen und Krokusse, dann grünen die Bäume und die Obstbäume blühen.",
+      "menschen": "Dünnere Jacken, raus auf den Spielplatz und in den Garten – viele Familien feiern Frühlingsfeste wie Ostern.",
+      "tiere": {
+        "igel": "Der Igel wacht aus dem Winterschlaf auf – hungrig! Er sucht Käfer und Würmer.",
+        "schwalbe": "Die Schwalben kommen aus dem Süden zurück und bauen ihre Nester.",
+        "eichhoernchen": "Das Eichhörnchen ist wieder viel unterwegs; jetzt kommen die Jungen zur Welt."
+      }
+    },
+    {
+      "id": "sommer",
+      "name": "Sommer",
+      "emoji": "☀️",
+      "monate": [6, 7, 8],
+      "tageslaengeStunden": 16,
+      "temperatur": "warm bis heiß (etwa 15–30 °C)",
+      "himmel": "Die längsten Tage des Jahres – abends bleibt es lange hell (Sommersonnenwende im Juni).",
+      "pflanzen": "Alles wächst und blüht; Beeren und erstes Obst werden reif, die Wiesen stehen hoch.",
+      "menschen": "T-Shirt-Zeit: baden, Eis essen, Sommerferien – und abends lange draußen bleiben.",
+      "tiere": {
+        "igel": "Der Igel frisst sich satt an Insekten – nachts ist er auf leisen Sohlen unterwegs.",
+        "schwalbe": "Die Schwalben füttern ihre Jungen und jagen Mücken am Abendhimmel.",
+        "eichhoernchen": "Das Eichhörnchen turnt durch die Bäume – Futter gibt es jetzt überall."
+      }
+    },
+    {
+      "id": "herbst",
+      "name": "Herbst",
+      "emoji": "🍂",
+      "monate": [9, 10, 11],
+      "tageslaengeStunden": 11,
+      "temperatur": "mild bis kühl (etwa 3–15 °C)",
+      "himmel": "Die Tage werden deutlich kürzer, oft ist es windig – Drachenwetter!",
+      "pflanzen": "Die Blätter färben sich bunt und fallen; Kastanien, Eicheln und Äpfel werden reif (Erntezeit).",
+      "menschen": "Jacke und Gummistiefel, Drachen steigen lassen, Kastanien sammeln – viele feiern Erntedank und Laternenfeste.",
+      "tiere": {
+        "igel": "Der Igel frisst sich eine Fettschicht an und sucht einen Laubhaufen für den Winterschlaf.",
+        "schwalbe": "Die Schwalben sammeln sich auf Leitungen und ziehen in den warmen Süden (Vogelzug).",
+        "eichhoernchen": "Das Eichhörnchen versteckt Nüsse als Wintervorrat – und vergisst manche (daraus wachsen Bäume!)."
+      }
+    },
+    {
+      "id": "winter",
+      "name": "Winter",
+      "emoji": "❄️",
+      "monate": [12, 1, 2],
+      "tageslaengeStunden": 8,
+      "temperatur": "kalt (etwa −5 bis 5 °C)",
+      "himmel": "Die kürzesten Tage – es wird früh dunkel (Wintersonnenwende im Dezember). Manchmal fällt Schnee.",
+      "pflanzen": "Die meisten Bäume sind kahl und ruhen; unter Schnee und Laub warten die Knospen aufs Frühjahr.",
+      "menschen": "Mütze, Schal und Handschuhe; Schlitten fahren – und gemütliche Feste mit Lichtern, zum Beispiel Weihnachten.",
+      "tiere": {
+        "igel": "Der Igel hält Winterschlaf: Herz und Atmung laufen ganz langsam, er zehrt vom Fett.",
+        "schwalbe": "Die Schwalben sind weit weg im warmen Süden – im Frühling kommen sie zurück.",
+        "eichhoernchen": "Das Eichhörnchen hält keinen Winterschlaf: Es trägt Winterfell und holt seine versteckten Nüsse."
+      }
+    }
+  ],
+  "tiere": [
+    { "id": "igel", "name": "Igel", "emoji": "🦔", "strategie": "Winterschlaf" },
+    { "id": "schwalbe", "name": "Schwalbe", "emoji": "🐦", "strategie": "Vogelzug" },
+    { "id": "eichhoernchen", "name": "Eichhörnchen", "emoji": "🐿️", "strategie": "Winterfell + Vorrat" }
+  ],
+  "quiz": [
+    { "id": "z1", "frage": "In welcher Jahreszeit hält der Igel Winterschlaf?", "antworten": ["Im Sommer", "Im Winter", "Im Frühling"], "korrekt": 1, "erklaerung": "Im Winter gibt es kaum Insekten – darum schläft der Igel und zehrt von seinem Fett." },
+    { "id": "z2", "frage": "Wann sind die Tage am längsten?", "antworten": ["Im Sommer", "Im Herbst", "Im Winter"], "korrekt": 0, "erklaerung": "Im Sommer bleibt es am längsten hell – rund um die Sommersonnenwende im Juni." },
+    { "id": "z3", "frage": "Was machen die Schwalben im Herbst?", "antworten": ["Sie bauen Nester", "Sie ziehen in den Süden", "Sie halten Winterschlaf"], "korrekt": 1, "erklaerung": "Schwalben sind Zugvögel: Im Herbst fliegen sie in warme Länder, im Frühling kommen sie zurück." },
+    { "id": "z4", "frage": "Hält das Eichhörnchen Winterschlaf?", "antworten": ["Ja, den ganzen Winter", "Nein – es hat Winterfell und Vorräte", "Es fliegt in den Süden"], "korrekt": 1, "erklaerung": "Das Eichhörnchen bleibt wach: Es trägt dichtes Winterfell und holt die Nüsse, die es im Herbst versteckt hat." },
+    { "id": "z5", "frage": "In welcher Jahreszeit färben sich die Blätter bunt?", "antworten": ["Im Frühling", "Im Sommer", "Im Herbst"], "korrekt": 2, "erklaerung": "Im Herbst holen die Bäume das Grün aus den Blättern zurück – dann leuchten sie gelb, orange und rot und fallen ab." },
+    { "id": "z6", "frage": "Was passiert im Frühling mit den Tagen?", "antworten": ["Sie werden länger", "Sie werden kürzer", "Sie bleiben gleich"], "korrekt": 0, "erklaerung": "Im Frühling wird es jeden Tag ein paar Minuten länger hell – bis zum längsten Tag im Sommer." }
+  ]
+}

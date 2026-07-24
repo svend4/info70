@@ -1,0 +1,8 @@
+{
+  "name": "@info70/familien-budget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Familien-Budget: einfacher Einnahmen/Ausgaben-Simulator fuer 8-12 (finanzielle Grundbildung). Erst die festen Kosten der Familie verstehen (Miete, Essen, Strom ...), dann mit dem freien Rest Beduerfnisse, Wuensche und Sparen abwaegen - inkl. der Beduerfnisse anderer Familienmitglieder. Spielgeld in Euro, KEINE echten Kaeufe, keine Werbung, keine realen Produkte. Bewertung: Beduerfnisse zuerst, Sparen ist klug, Ueberziehen geht nicht. Praleska docs/10 (Top-30 Nr. 23). Offline, speichert nichts. Zielgruppe: Kinder 8-12.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

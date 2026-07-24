@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "hinweis": "Ein Spiel mit Spielgeld in Euro – hier wird nichts wirklich gekauft. Du planst mit, was eine Familie mit dem übrigen Geld eines Monats macht: Erst kommen die Dinge, die wirklich gebraucht werden (Bedürfnisse), dann die Wünsche – und etwas sparen ist immer klug. Jede echte Familie hat andere Zahlen; das hier ist ein vereinfachtes Beispiel.",
+  "einkommen": 2200,
+  "festeKosten": [
+    { "name": "Miete", "emoji": "🏠", "betrag": 950 },
+    { "name": "Essen & Einkaufen", "emoji": "🛒", "betrag": 450 },
+    { "name": "Strom & Heizung", "emoji": "💡", "betrag": 180 },
+    { "name": "Versicherungen", "emoji": "🛡️", "betrag": 130 },
+    { "name": "Handy & Internet", "emoji": "📶", "betrag": 60 },
+    { "name": "Bus & Bahn", "emoji": "🚌", "betrag": 90 },
+    { "name": "Verein & Musikschule", "emoji": "⚽", "betrag": 40 }
+  ],
+  "posten": [
+    { "id": "winterjacke", "name": "Neue Winterjacke für dich (die alte ist zu klein)", "emoji": "🧥", "preis": 60, "art": "beduerfnis" },
+    { "id": "sportschuhe", "name": "Sportschuhe für deinen Bruder (drücken schon)", "emoji": "👟", "preis": 45, "art": "beduerfnis" },
+    { "id": "klassenfahrt", "name": "Rate für deine Klassenfahrt", "emoji": "🎒", "preis": 50, "art": "beduerfnis" },
+    { "id": "fahrrad", "name": "Fahrradreparatur (Bremse kaputt)", "emoji": "🚲", "preis": 35, "art": "beduerfnis" },
+    { "id": "videospiel", "name": "Neues Videospiel", "emoji": "🎮", "preis": 60, "art": "wunsch" },
+    { "id": "kino", "name": "Kino für die ganze Familie", "emoji": "🎬", "preis": 40, "art": "wunsch" },
+    { "id": "eis", "name": "Eis essen für alle", "emoji": "🍦", "preis": 12, "art": "wunsch" },
+    { "id": "comic", "name": "Neuer Comic", "emoji": "📚", "preis": 8, "art": "wunsch" },
+    { "id": "deko", "name": "Neue Deko fürs Wohnzimmer", "emoji": "🖼️", "preis": 30, "art": "wunsch" },
+    { "id": "sparen", "name": "In den Familien-Spartopf legen (für Notfälle und große Träume)", "emoji": "🐷", "preis": 50, "art": "sparen" }
+  ]
+}
