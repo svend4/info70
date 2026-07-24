@@ -1,0 +1,8 @@
+{
+  "name": "@info70/hoeflich-fair",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hoeflich & Fair - Sprach-Etikette: Szenario-Trainer 2/1/0 mit zwoelf Alltagsszenen, 10 pro Runde, Erklaerung zu jeder Szene und vier Raengen. Danken ohne zu luegen, sich richtig entschuldigen, gratulieren obwohl man selbst verloren hat, Mitgefuehl zeigen ohne abzuwiegeln, konkret bewundern, bitten statt befehlen, gruessen und siezen, hoeflich unterbrechen (im Notfall sofort), am Telefon freundlich bleiben ohne Adresse zu verraten, im Bus Platz anbieten statt zuweisen, ein Lob annehmen. Zentrale Szene: Hoeflichkeit ist kein Gehorsam - ein freundliches Nein zur Umarmung ist die beste Antwort, das stumme Mitmachen die schlechteste. Vorlesefunktion fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 13). Offline, werbefrei, nur der Rekord liegt loeschbar auf dem Geraet. Zielgruppe: 5-7 in Ko-Nutzung, 8-12 eigenstaendig.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

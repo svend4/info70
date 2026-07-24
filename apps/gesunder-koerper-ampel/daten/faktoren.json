@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12 eigenständig, 5-7 in Ko-Nutzung",
+  "stufen": [
+    { "id": "viel", "emoji": "🟢", "text": "heute viel" },
+    { "id": "etwas", "emoji": "🟡", "text": "ein bisschen" },
+    { "id": "nochNicht", "emoji": "⚪", "text": "heute noch nicht" }
+  ],
+  "faktoren": [
+    {
+      "id": "bewegung",
+      "name": "Bewegung",
+      "emoji": "🏃",
+      "frage": "Hast du dich heute richtig bewegt – gerannt, geklettert, getanzt, Rad gefahren?",
+      "impuls": "Muskeln, Knochen und Herz werden stärker, wenn sie gefordert werden. Es muss kein Sportverein sein: Treppe statt Aufzug, der Weg zur Schule zu Fuß, zwischendurch albern durch die Wohnung springen – das zählt alles."
+    },
+    {
+      "id": "ruhe",
+      "name": "Ruhe & Schlaf",
+      "emoji": "😴",
+      "frage": "Hattest du heute genug Ruhe – und letzte Nacht genug Schlaf?",
+      "impuls": "Im Schlaf sortiert dein Gehirn, was du gelernt hast, und dein Körper wächst. Ruhe heißt aber nicht nur schlafen: auch mal nichts tun, aus dem Fenster schauen, in Ruhe lesen. Kinder in deinem Alter brauchen meistens neun bis elf Stunden Schlaf."
+    },
+    {
+      "id": "essen",
+      "name": "Essen & Trinken",
+      "emoji": "🍎",
+      "frage": "Hattest du heute etwas Buntes auf dem Teller – und genug Wasser?",
+      "impuls": "Bunt heißt: verschiedene Farben bei Obst und Gemüse, denn jede Farbe bringt etwas anderes mit. Und Wasser ist das Getränk, das dein Körper am besten gebrauchen kann. Kein Essen ist verboten – es kommt darauf an, was oft auf dem Teller liegt, nicht was einmal."
+    },
+    {
+      "id": "luft",
+      "name": "Frische Luft",
+      "emoji": "🌤️",
+      "frage": "Warst du heute draußen an der frischen Luft?",
+      "impuls": "Draußen bekommt dein Körper Tageslicht, und davon braucht er jeden Tag etwas – auch wenn es bewölkt ist, sogar bei Regen. Tageslicht hilft deinen Knochen und deiner inneren Uhr, die weiß, wann du müde werden sollst."
+    },
+    {
+      "id": "sauberkeit",
+      "name": "Sauberkeit",
+      "emoji": "🧼",
+      "frage": "Hast du heute an Händewaschen und Zähneputzen gedacht?",
+      "impuls": "Hände waschen vor dem Essen und nach der Toilette hält die meisten Krankheitserreger fern – gründlich heißt ungefähr so lange, wie du zweimal langsam bis zehn zählst. Und zweimal am Tag Zähne putzen, morgens und abends, damit deine bleibenden Zähne es später leichter haben."
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
+  "raenge": [
+    { "ab": 0, "titel": "Auf dem Weg", "emoji": "🌱" },
+    { "ab": 8, "titel": "Freundlich unterwegs", "emoji": "🙂" },
+    { "ab": 14, "titel": "Höflichkeits-Profi", "emoji": "🤝" },
+    { "ab": 18, "titel": "Wort-Künstler*in", "emoji": "✨" }
+  ],
+  "szenarien": [
+    {
+      "id": "h01",
+      "kategorie": "Danken",
+      "emoji": "🧣",
+      "situation": "Deine Oma hat dir einen Schal gestrickt. Die Farbe gefällt dir überhaupt nicht.",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "„Danke, dass du den extra für mich gemacht hast!“", "wert": 2 },
+        { "text": "„Danke.“ – und schnell weiterreden", "wert": 1 },
+        { "text": "„Den ziehe ich nie an, der ist hässlich.“", "wert": 0 }
+      ],
+      "erklaerung": "Du musst nicht lügen und „wunderschön“ sagen. Aber die Mühe ist echt: Jemand hat viele Abende für dich gestrickt – dafür kannst du ehrlich danken. Ein kurzes „Danke“ ist nicht falsch, es kommt nur kaum an. Wenn du später allein mit Oma bist, darfst du auch sagen, welche Farbe du am liebsten magst."
+    },
+    {
+      "id": "h02",
+      "kategorie": "Entschuldigen",
+      "emoji": "🖼️",
+      "situation": "Beim Rennen durch den Klassenraum reißt du das Bild von Merve ein, das auf dem Tisch lag.",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "„Das tut mir leid, ich habe nicht aufgepasst. Soll ich helfen, es zu kleben?“", "wert": 2 },
+        { "text": "„Sorry!“ – im Weitergehen gerufen", "wert": 1 },
+        { "text": "„Selbst schuld, warum liegt das auch mitten auf dem Tisch.“", "wert": 0 }
+      ],
+      "erklaerung": "Eine echte Entschuldigung hat drei Teile: Sie sagt, was passiert ist, sie schiebt die Schuld nicht weg, und sie bietet an, etwas gutzumachen. Ein „Sorry“ im Vorbeigehen ist immerhin ein Anfang, aber Merve merkt daran nicht, dass es dir wirklich leidtut. Und die Schuld umzudrehen macht aus einem Missgeschick einen Streit."
+    },
+    {
+      "id": "h03",
+      "kategorie": "Gratulieren",
+      "emoji": "🏅",
+      "situation": "Beim Wettkampf gewinnt dein Freund Jonas. Du bist Letzter geworden und bist traurig.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "„Glückwunsch, du bist echt schnell gelaufen!“", "wert": 2 },
+        { "text": "Du sagst erst mal nichts, weil du traurig bist – abends schreibst du ihm.", "wert": 1 },
+        { "text": "„Da hattest du nur Glück, die anderen waren halt langsam.“", "wert": 0 }
+      ],
+      "erklaerung": "Sich mitzufreuen, obwohl man selbst enttäuscht ist, ist schwer – und genau deshalb zählt es. Traurig sein darfst du trotzdem: Wer erst mal Abstand braucht und später gratuliert, macht nichts falsch, es kommt nur nicht im richtigen Moment an. Den Sieg kleinzureden nimmt Jonas seine Freude weg und ändert an deinem Ergebnis nichts."
+    },
+    {
+      "id": "h04",
+      "kategorie": "Mitgefühl",
+      "emoji": "🐕",
+      "situation": "In der Pause weint Lina. Ihr Hund ist gestorben.",
+      "frage": "Wie reagierst du?",
+      "optionen": [
+        { "text": "„Das tut mir leid. Magst du erzählen – oder soll ich einfach bei dir sitzen?“", "wert": 2 },
+        { "text": "„Nicht weinen, ihr holt euch bestimmt bald einen neuen.“", "wert": 1 },
+        { "text": "„Ist doch nur ein Hund gewesen.“", "wert": 0 }
+      ],
+      "erklaerung": "Trösten heißt nicht, das Traurigsein wegzureden. Am besten wirkt: sagen, dass es dir leidtut, und der anderen Person die Wahl lassen, ob sie reden oder lieber still sitzen will. „Ihr holt euch einen neuen“ ist gut gemeint, aber es klingt, als wäre der Hund austauschbar. Und den Verlust kleinzumachen tut zusätzlich weh."
+    },
+    {
+      "id": "h05",
+      "kategorie": "Bewundern",
+      "emoji": "🎨",
+      "situation": "Ali zeigt dir ein Bild, an dem er lange gearbeitet hat. Es gefällt dir wirklich gut.",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "„Cool.“", "wert": 1 },
+        { "text": "„Wie hast du den Schatten hinbekommen? Das sieht richtig echt aus.“", "wert": 2 },
+        { "text": "„Das hat bestimmt jemand für dich gemalt.“", "wert": 0 }
+      ],
+      "erklaerung": "Bewunderung wirkt, wenn man merkt, dass wirklich hingeschaut wurde: Sag, was genau dir gefällt, oder frag nach, wie es gemacht wurde. „Cool“ ist freundlich, aber austauschbar – das sagt man auch zu einem Turnschuh. Zu unterstellen, dass es nicht von ihm ist, nimmt Ali die ganze Arbeit weg."
+    },
+    {
+      "id": "h06",
+      "kategorie": "Grüßen",
+      "emoji": "🚪",
+      "situation": "Im Treppenhaus kommt dir eure Nachbarin entgegen, Frau Kowal.",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Du schaust auf den Boden und gehst schnell vorbei.", "wert": 0 },
+        { "text": "Du nickst kurz, sagst aber nichts.", "wert": 1 },
+        { "text": "„Guten Tag, Frau Kowal!“", "wert": 2 }
+      ],
+      "erklaerung": "Ein Gruß mit Namen zeigt: Ich sehe dich. Erwachsene, die du nicht gut kennst, siezt man dabei und nennt sie mit Nachnamen – „Guten Tag, Frau Kowal“ statt „Hallo“. Ein Nicken ist besser als nichts und reicht, wenn du gerade nicht sprechen magst. Wegschauen wirkt schnell so, als wärst du sauer, auch wenn du nur schüchtern bist."
+    },
+    {
+      "id": "h07",
+      "kategorie": "Bitten",
+      "emoji": "✂️",
+      "situation": "Du brauchst den Klebestift, den Nele gerade benutzt.",
+      "frage": "Wie fragst du?",
+      "optionen": [
+        { "text": "„Kannst du mir den Kleber geben, wenn du fertig bist?“", "wert": 2 },
+        { "text": "„Gib mal den Kleber.“", "wert": 1 },
+        { "text": "Du nimmst ihn dir einfach, sie hat ja gerade nicht hingeschaut.", "wert": 0 }
+      ],
+      "erklaerung": "Aus einem Befehl wird eine Bitte, wenn eine Frage daraus wird und die andere Person entscheiden darf, wann. „Gib mal“ verstehen alle, es klingt nur nach Anweisung. Sich etwas einfach zu nehmen ist keine Frage der Höflichkeit mehr: Das Ding gehört gerade jemand anderem, und genau daran entzünden sich die meisten Streits."
+    },
+    {
+      "id": "h08",
+      "kategorie": "Unterbrechen",
+      "emoji": "🗣️",
+      "situation": "Dein Vater telefoniert. Du willst ihn etwas fragen, das bis nachher warten könnte.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Du sagst „Entschuldigung, darf ich kurz etwas fragen?“ und wartest, bis er nickt.", "wert": 2 },
+        { "text": "Du rufst deine Frage einfach dazwischen.", "wert": 1 },
+        { "text": "Du ziehst immer wieder an seinem Arm und wirst dabei lauter.", "wert": 0 }
+      ],
+      "erklaerung": "Unterbrechen ist erlaubt – man kündigt es nur an und wartet kurz ab. Dazwischenrufen bringt dein Anliegen zwar an, reißt aber das andere Gespräch mittendrin auseinander. Ziehen und Lauterwerden bringt dich am langsamsten ans Ziel. Wichtig: Wenn wirklich etwas passiert ist, jemand sich verletzt hat oder Gefahr besteht, unterbrichst du sofort und laut. Dann gilt keine Regel."
+    },
+    {
+      "id": "h09",
+      "kategorie": "Grenze setzen",
+      "emoji": "🤝",
+      "situation": "Ein Onkel, den du selten siehst, will dich zur Begrüßung umarmen und küssen. Du magst das nicht.",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Du sagst freundlich: „Ich gebe dir lieber die Hand.“", "wert": 2 },
+        { "text": "Du weichst aus und sagst nichts dazu.", "wert": 1 },
+        { "text": "Du machst mit, obwohl du dich unwohl fühlst, und erzählst niemandem davon.", "wert": 0 }
+      ],
+      "erklaerung": "Höflich sein heißt nie, alles mit deinem Körper geschehen zu lassen. Wie du jemanden begrüßt, entscheidest du: Hand, Winken, Faustgruß – alles in Ordnung. Freundlich gesagt versteht das jeder Erwachsene, und wer es nicht versteht, hat trotzdem unrecht. Ausweichen funktioniert auch, sagt es aber nicht deutlich. Und wenn du etwas mitmachst, das sich falsch anfühlt, erzähl es einem Erwachsenen, dem du vertraust."
+    },
+    {
+      "id": "h10",
+      "kategorie": "Am Telefon",
+      "emoji": "📞",
+      "situation": "Das Telefon klingelt. Eine fremde Stimme fragt nach deinen Eltern, die gerade nicht da sind.",
+      "frage": "Was antwortest du?",
+      "optionen": [
+        { "text": "„Meine Eltern können gerade nicht ans Telefon. Soll ich etwas ausrichten?“", "wert": 2 },
+        { "text": "Du legst sofort wortlos auf.", "wert": 1 },
+        { "text": "„Ich bin ganz allein zu Hause, wir wohnen in der Lindenstraße 4.“", "wert": 0 }
+      ],
+      "erklaerung": "Freundlich bleiben und trotzdem nichts verraten geht gut zusammen: „Können gerade nicht“ stimmt immer und sagt nicht, dass du allein bist. Adresse, Nachname und „ich bin allein“ gehören nie ans Telefon, egal wie nett die Stimme klingt. Auflegen ist erlaubt, wenn dir etwas komisch vorkommt – das ist dann keine Unhöflichkeit, sondern Vorsicht."
+    },
+    {
+      "id": "h11",
+      "kategorie": "Rücksicht",
+      "emoji": "🚌",
+      "situation": "Der Bus ist voll. Du sitzt. An der Haltestelle steigt eine ältere Frau mit Gehstock ein.",
+      "frage": "Was tust du?",
+      "optionen": [
+        { "text": "Du stehst auf und gehst wortlos nach hinten.", "wert": 1 },
+        { "text": "Du bleibst sitzen und schaust aus dem Fenster.", "wert": 0 },
+        { "text": "„Möchten Sie sich hier hinsetzen?“", "wert": 2 }
+      ],
+      "erklaerung": "Fragen ist besser als einfach aufspringen: Manche Menschen möchten lieber stehen, weil sie gleich aussteigen, und werden nicht gern behandelt, als wären sie hilflos. Deshalb bietest du den Platz an, statt ihn zuzuweisen – und siezt dabei. Wortlos aufstehen wirkt trotzdem freundlich, es ist nur nicht ganz klar, ob der Platz gemeint war."
+    },
+    {
+      "id": "h12",
+      "kategorie": "Lob annehmen",
+      "emoji": "🌟",
+      "situation": "Deine Lehrerin sagt vor der Klasse: „Das hast du wirklich gut vorgetragen.“",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "„Danke, das freut mich!“", "wert": 2 },
+        { "text": "„War doch nichts Besonderes.“", "wert": 1 },
+        { "text": "„Quatsch, das stimmt doch gar nicht.“", "wert": 0 }
+      ],
+      "erklaerung": "Ein Lob anzunehmen gehört auch zur Höflichkeit: Wer es wegwischt, weist die andere Person ein kleines bisschen ab. „War nichts Besonderes“ sagen viele aus Verlegenheit – das ist verständlich, macht deine Arbeit aber kleiner, als sie war. Ein einfaches „Danke“ reicht völlig; angeben musst du deswegen nicht."
+    }
+  ]
+}

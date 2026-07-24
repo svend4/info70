@@ -1,0 +1,8 @@
+{
+  "name": "@info70/koerper-entdecker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Der Koerper-Entdecker - Was in dir steckt: Quiz zum inneren Koerperbau mit 18 Fragen, 12 pro Runde, Erklaerung zu jeder Frage und vier Raengen. Herz (etwa faustgross, schlaegt lebenslang ohne Pause), Atmung (Nase als Klimaanlage, ungleiche Lungenfluegel, Zwerchfell statt Lungenmuskel), Verdauung (beginnt im Mund, Duenndarm fuenf bis sechs Meter), Skelett (etwa 206 Knochen, Babys ueber 300), Muskeln im Gegenspieler-Paar, Gehirn im Schlaf, Haut als groesstes Organ, Wachsen in der Nacht, Milchzaehne als Platzhalter. Gesundheitsbotschaft schlicht gehalten - bewegen, frische Luft, Wasser, Schlaf - ohne Koerperbewertung, ohne Diagnosen, ohne Medikamente. Vorlesefunktion fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 10). Offline, werbefrei, nur der Rekord liegt loeschbar auf dem Geraet. Zielgruppe: 5-7 in Ko-Nutzung, 8-12 eigenstaendig.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

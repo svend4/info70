@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
+  "raenge": [
+    { "ab": 0, "titel": "Körper-Neugierige*r", "emoji": "🌱" },
+    { "ab": 4, "titel": "Innen-Spürnase", "emoji": "🔎" },
+    { "ab": 8, "titel": "Körper-Forscher*in", "emoji": "🔬" },
+    { "ab": 12, "titel": "Körper-Expert*in", "emoji": "🫀" }
+  ],
+  "fragen": [
+    {
+      "id": "k01",
+      "typ": "binaer",
+      "kategorie": "Herz",
+      "aussage": "Dein Herz ist ungefähr so groß wie deine eigene Faust.",
+      "korrekt": "ja",
+      "erklaerung": "Balle einmal die Hand zur Faust – so groß ist dein Herz etwa, und es sitzt hinter dem Brustbein ungefähr in der Mitte, nur ein bisschen nach links gerückt. Weil es mit dir mitwächst, passt der Vergleich dein Leben lang: Deine Faust wird größer, dein Herz auch."
+    },
+    {
+      "id": "k02",
+      "typ": "wahl",
+      "kategorie": "Herz",
+      "frage": "Wie oft schlägt das Herz eines Kindes ungefähr in einer Minute, wenn es ruhig sitzt?",
+      "antworten": [
+        "Etwa 80- bis 100-mal",
+        "Etwa 10-mal",
+        "Etwa 500-mal"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ruhig sitzend schlägt ein Kinderherz etwa 80- bis 100-mal pro Minute, bei Erwachsenen sind es eher 60- bis 80-mal. Beim Rennen wird es deutlich schneller, weil die Muskeln mehr Sauerstoff brauchen. Leg zwei Finger seitlich an dein Handgelenk – dann kannst du selbst zählen."
+    },
+    {
+      "id": "k03",
+      "typ": "binaer",
+      "kategorie": "Herz",
+      "aussage": "Nachts macht das Herz eine Pause und hört eine Weile auf zu schlagen.",
+      "korrekt": "nein",
+      "erklaerung": "Das Herz schlägt dein Leben lang ohne Pause weiter, auch im tiefsten Schlaf – sonst käme kein Blut mehr zum Gehirn. Es wird nachts nur langsamer und ruhiger. Seine Erholung holt sich das Herz zwischen zwei Schlägen: Diese winzigen Pausen ergeben zusammengezählt viele Stunden am Tag."
+    },
+    {
+      "id": "k04",
+      "typ": "wahl",
+      "kategorie": "Atmen",
+      "frage": "Warum ist es besser, durch die Nase zu atmen als durch den Mund?",
+      "antworten": [
+        "Weil in die Nase mehr Luft hineinpasst als in den Mund",
+        "Die Nase wärmt die Luft an, macht sie feucht und fängt Staub in kleinen Härchen ab",
+        "Weil man durch den Mund gar keine Luft bekommt"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Die Nase ist eine kleine Klimaanlage: Sie wärmt die Luft auf dem Weg nach unten an, gibt Feuchtigkeit dazu und fängt Staub in feinen Härchen und im Schleim ab. Deshalb kommt die Luft angenehmer in der Lunge an. Durch den Mund geht es natürlich auch – beim Sport brauchst du das sogar."
+    },
+    {
+      "id": "k05",
+      "typ": "binaer",
+      "kategorie": "Atmen",
+      "aussage": "Beide Lungenflügel sind genau gleich groß.",
+      "korrekt": "nein",
+      "erklaerung": "Der linke Lungenflügel ist etwas kleiner als der rechte, weil das Herz links Platz braucht und sich eine kleine Nische in die Lunge drückt. Der rechte Flügel hat drei Abschnitte, der linke nur zwei. Dein Körper ist innen also nicht spiegelgleich, auch wenn er von außen fast so aussieht."
+    },
+    {
+      "id": "k06",
+      "typ": "wahl",
+      "kategorie": "Atmen",
+      "frage": "Welcher Muskel hilft dir am meisten beim Einatmen?",
+      "antworten": [
+        "Die Rippen ziehen sich von selbst zusammen, Muskeln braucht es nicht",
+        "Die Lunge ist selbst ein Muskel und pumpt sich voll",
+        "Das Zwerchfell, ein flacher Muskel unter der Lunge"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Die Lunge hat keinen eigenen Muskel – sie wird bewegt. Das Zwerchfell liegt wie ein flaches Zelt unter der Lunge: Zieht es sich nach unten, wird der Brustkorb größer und die Luft strömt von allein hinein. Leg die Hand auf den Bauch und atme tief ein, dann spürst du es arbeiten."
+    },
+    {
+      "id": "k07",
+      "typ": "wahl",
+      "kategorie": "Verdauung",
+      "frage": "Wo beginnt die Verdauung, wenn du in einen Apfel beißt?",
+      "antworten": [
+        "Schon im Mund",
+        "Erst im Magen",
+        "Erst ganz unten im Darm"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Die Verdauung fängt im Mund an: Die Zähne zerkleinern den Apfel, und der Speichel macht ihn gleitfähig und beginnt schon damit, ihn aufzuspalten. Deshalb lohnt sich gründliches Kauen – der Magen bekommt dann kleine Stücke statt großer Brocken und muss weniger arbeiten."
+    },
+    {
+      "id": "k08",
+      "typ": "binaer",
+      "kategorie": "Verdauung",
+      "aussage": "Der Dünndarm eines Erwachsenen ist ausgestreckt mehrere Meter lang.",
+      "korrekt": "ja",
+      "erklaerung": "Der Dünndarm eines Erwachsenen misst etwa fünf bis sechs Meter – länger als die meisten Zimmer. Er liegt in vielen Schlingen zusammengefaltet im Bauch. So viel Länge braucht der Körper, weil er dort aus dem Essen die Bausteine herausholt, die ins Blut übergehen sollen."
+    },
+    {
+      "id": "k09",
+      "typ": "wahl",
+      "kategorie": "Skelett",
+      "frage": "Wie viele Knochen hat ein erwachsener Mensch ungefähr?",
+      "antworten": [
+        "Etwa 20",
+        "Etwa 2000",
+        "Etwa 206"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Ein Erwachsener hat etwa 206 Knochen. Mehr als die Hälfte davon steckt in Händen und Füßen – allein eine Hand hat 27. Die Knochen sind kein starres Gerüst, sondern lebendig: Sie wachsen, heilen nach einem Bruch wieder zusammen und stellen im Inneren sogar Blutzellen her."
+    },
+    {
+      "id": "k10",
+      "typ": "binaer",
+      "kategorie": "Skelett",
+      "aussage": "Babys haben weniger Knochen als Erwachsene.",
+      "korrekt": "nein",
+      "erklaerung": "Babys haben mehr Knochen als Erwachsene – über 300. Beim Wachsen wachsen viele davon zusammen, zum Beispiel am Schädel und am Becken, bis am Ende etwa 206 übrig sind. Deshalb hat ein Baby am Kopf noch weiche Stellen: Dort sind die Schädelknochen noch nicht verbunden."
+    },
+    {
+      "id": "k11",
+      "typ": "wahl",
+      "kategorie": "Muskeln",
+      "frage": "Wie kommt es, dass du deinen Arm anwinkeln kannst?",
+      "antworten": [
+        "Der Knochen selbst biegt sich an einer weichen Stelle",
+        "Muskeln ziehen an den Knochen – im Team: einer zieht, der andere lässt locker",
+        "Das Blut drückt den Arm von innen nach oben"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Muskeln können nur ziehen, nicht schieben. Deshalb arbeiten sie immer paarweise: Beim Anwinkeln zieht der Muskel auf der Vorderseite des Oberarms, der auf der Rückseite lässt locker – beim Strecken ist es umgekehrt. Über Sehnen sind die Muskeln fest mit den Knochen verbunden."
+    },
+    {
+      "id": "k12",
+      "typ": "binaer",
+      "kategorie": "Gehirn",
+      "aussage": "Dein Gehirn arbeitet auch dann, wenn du tief schläfst.",
+      "korrekt": "ja",
+      "erklaerung": "Im Schlaf ist das Gehirn alles andere als abgeschaltet: Es sortiert, was du am Tag erlebt und gelernt hast, und legt Wichtiges ab, damit du es morgen noch weißt. Gleichzeitig steuert es Atmung und Herzschlag einfach weiter. Deshalb hilft Schlaf beim Lernen so viel wie Üben."
+    },
+    {
+      "id": "k13",
+      "typ": "wahl",
+      "kategorie": "Schlaf",
+      "frage": "Wie viel Schlaf braucht ein Kind zwischen 6 und 12 Jahren ungefähr pro Nacht?",
+      "antworten": [
+        "Etwa 4 Stunden",
+        "Etwa 9 bis 11 Stunden",
+        "Etwa 15 bis 16 Stunden"
+      ],
+      "korrekt": 1,
+      "erklaerung": "In diesem Alter sind meist neun bis elf Stunden richtig – manche Kinder brauchen etwas mehr, manche etwas weniger, und beides ist normal. Babys schlafen deutlich länger, Erwachsene kürzer. Ein guter Hinweis: Wer morgens von allein wach wird, hat meistens genug bekommen."
+    },
+    {
+      "id": "k14",
+      "typ": "binaer",
+      "kategorie": "Haut",
+      "aussage": "Die Haut ist das größte Organ des Menschen.",
+      "korrekt": "ja",
+      "erklaerung": "Die Haut umhüllt dich vollständig und ist damit dein größtes Organ. Sie hält Krankheitserreger draußen, hält Wasser drinnen, meldet dem Gehirn warm, kalt und spitz, und sie kühlt dich mit Schweiß, wenn dir heiß wird. Und sie erneuert sich ständig selbst – ganz ohne dein Zutun."
+    },
+    {
+      "id": "k15",
+      "typ": "wahl",
+      "kategorie": "Gut für den Körper",
+      "frage": "Was tut deinem Körper an einem ganz gewöhnlichen Tag am meisten gut?",
+      "antworten": [
+        "Möglichst lange still sitzen, damit er sich schont",
+        "Statt Wasser lieber viele süße Getränke",
+        "Dich bewegen, an die frische Luft gehen, Wasser trinken und genug schlafen"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Bewegung, Tageslicht, Wasser und Schlaf sind das, worauf Herz, Muskeln, Knochen und Gehirn zusammen am besten reagieren. Schonen hilft dem Körper nur, wenn er krank ist – sonst wird er stärker, gerade weil er gefordert wird. Und Pausen gehören genauso dazu wie das Toben."
+    },
+    {
+      "id": "k16",
+      "typ": "binaer",
+      "kategorie": "Gut für den Körper",
+      "aussage": "Wasser ist das beste Getränk für deinen Körper.",
+      "korrekt": "ja",
+      "erklaerung": "Dein Körper besteht zum größten Teil aus Wasser und verliert ständig welches – beim Atmen, beim Schwitzen, auf der Toilette. Wasser füllt das ohne Umwege wieder auf. Süße Getränke geben dem Körper mehr Zucker, als er gerade braucht, und sind deshalb eher etwas für besondere Gelegenheiten."
+    },
+    {
+      "id": "k17",
+      "typ": "wahl",
+      "kategorie": "Wachsen",
+      "frage": "Wann wächst dein Körper am meisten?",
+      "antworten": [
+        "Vor allem nachts, während du schläfst",
+        "Nur an den Tagen, an denen du Sport machst",
+        "Nur direkt nach dem Essen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Wachsen passiert vor allem im Schlaf: Nachts schüttet der Körper besonders viel von dem Botenstoff aus, der die Knochen länger werden lässt. Gewachsen wird an den Enden der langen Knochen, in den sogenannten Wachstumsfugen. Spüren kann man das übrigens nicht – das Ziehen in den Beinen, das manche Kinder abends haben, kommt nicht vom Wachsen, auch wenn es oft so genannt wird."
+    },
+    {
+      "id": "k18",
+      "typ": "binaer",
+      "kategorie": "Zähne",
+      "aussage": "Milchzähne sind ziemlich egal, weil sie sowieso wieder ausfallen.",
+      "korrekt": "nein",
+      "erklaerung": "Milchzähne halten den Platz für die bleibenden Zähne frei und zeigen ihnen den Weg – geht ein Milchzahn zu früh verloren, wird es für den nachfolgenden Zahn eng. Außerdem brauchst du sie jeden Tag zum Kauen und zum Sprechen. Zwanzig Milchzähne werden später zu bis zu 32 bleibenden Zähnen."
+    }
+  ]
+}
