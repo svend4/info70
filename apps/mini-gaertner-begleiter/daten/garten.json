@@ -1,0 +1,191 @@
+{
+  "hinweis": "Saison-Planer für Hochbeet/Kita-Garten mit Kindern (4–7). Kulturenliste an deutsches Klima und Kita-Praxis angepasst (Praleska docs/10, Top-30 Nr. 29; Quelle: Arbeit in der Natur – Konzept adaptiert, alle Texte Eigenproduktion). Monate als Zahlen 1–12. Sicherheits-Hinweise (giftig/bitter) sind Pflicht und testgeprüft.",
+  "kulturen": [
+    {
+      "id": "kresse",
+      "name": "Gartenkresse",
+      "emoji": "🌱",
+      "standort": "Fensterbank (ganzjährig), Schale mit Küchenpapier oder Erde",
+      "saatMonate": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "ernteMonate": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "wartezeitWochen": 1,
+      "schwierigkeit": 1,
+      "kinderTipp": "Das perfekte erste Projekt: Samen dicht streuen, mit der Sprühflasche feucht halten – nach etwa einer Woche mit der Kinderschere ernten und aufs Butterbrot streuen.",
+      "hinweis": ""
+    },
+    {
+      "id": "radieschen",
+      "name": "Radieschen",
+      "emoji": "🔴",
+      "standort": "Beet oder Balkonkasten, sonnig",
+      "saatMonate": [3, 4, 5, 6, 7, 8],
+      "ernteMonate": [4, 5, 6, 7, 8, 9],
+      "wartezeitWochen": 5,
+      "schwierigkeit": 1,
+      "kinderTipp": "Die kleinen Samen mit etwas Sand mischen, dann rieseln sie besser aus der Kinderhand. Ernten, wenn der rote Kopf oben so dick wie ein Daumen aus der Erde schaut – ziehen dürfen die Kinder selbst!",
+      "hinweis": ""
+    },
+    {
+      "id": "kapuzinerkresse",
+      "name": "Kapuzinerkresse",
+      "emoji": "🌺",
+      "standort": "Beet, Kübel oder Ampel, sonnig",
+      "saatMonate": [4, 5],
+      "ernteMonate": [6, 7, 8, 9, 10],
+      "wartezeitWochen": 8,
+      "schwierigkeit": 1,
+      "kinderTipp": "Große Samen – ideal für kleine Hände. Ab April drinnen vorziehen, nach den Eisheiligen (Mitte Mai) nach draußen. Blüten und junge Blätter sind essbar und schmecken pfeffrig-scharf wie Kresse.",
+      "hinweis": "Nur ernten und probieren, was Erwachsene freigegeben haben – im Garten gilt immer: erst fragen, dann kosten."
+    },
+    {
+      "id": "sonnenblume",
+      "name": "Sonnenblume",
+      "emoji": "🌻",
+      "standort": "Beet oder großer Kübel, sonnig, Stab zum Anbinden",
+      "saatMonate": [4, 5],
+      "ernteMonate": [7, 8, 9],
+      "wartezeitWochen": 8,
+      "schwierigkeit": 1,
+      "kinderTipp": "Große Samen, riesiges Ergebnis: Wer wird größer – die Blume oder das Kind? Regelmäßig messen und ins Pflanztagebuch eintragen. Im Herbst die Blütenköpfe stehen lassen: ein Vogelbuffet!",
+      "hinweis": ""
+    },
+    {
+      "id": "erbse",
+      "name": "Zuckererbse",
+      "emoji": "🫛",
+      "standort": "Beet, Rankhilfe aus Zweigen",
+      "saatMonate": [3, 4, 5],
+      "ernteMonate": [6, 7],
+      "wartezeitWochen": 10,
+      "schwierigkeit": 1,
+      "kinderTipp": "Dicke Samen, die man einzeln in die Rille legen kann – gut zum Zählen. Zuckererbsen-Schoten dürfen direkt vom Strauch genascht werden (vorher waschen oder abwischen).",
+      "hinweis": "Zum Naschen nur Zuckererbsen (Kaiserschoten) anbauen – so ist klar: Diese Schoten sind zum Roh-Essen gedacht."
+    },
+    {
+      "id": "buschbohne",
+      "name": "Buschbohne",
+      "emoji": "🫘",
+      "standort": "Beet, warm, erst nach den Eisheiligen",
+      "saatMonate": [5, 6, 7],
+      "ernteMonate": [7, 8, 9],
+      "wartezeitWochen": 8,
+      "schwierigkeit": 2,
+      "kinderTipp": "Große Samen, schnelle Keimung – das Klassiker-Experiment: eine Bohne im Glas mit feuchtem Küchenpapier keimen lassen und täglich beobachten.",
+      "hinweis": "Wichtig: Rohe Bohnen sind giftig (Phasin) – immer kochen! Beim Ernten mit den Kindern klar vereinbaren: Bohnen werden nicht genascht, sondern kommen in den Topf."
+    },
+    {
+      "id": "kartoffel",
+      "name": "Kartoffel",
+      "emoji": "🥔",
+      "standort": "Beet, Pflanzsack oder großer Eimer mit Löchern",
+      "saatMonate": [4, 5],
+      "ernteMonate": [7, 8, 9],
+      "wartezeitWochen": 14,
+      "schwierigkeit": 2,
+      "kinderTipp": "Ab März auf der hellen Fensterbank vorkeimen lassen, ab April legen. Die Ernte ist das Highlight des Gartenjahres: Wie eine Schatzsuche in der Erde – zählen, wiegen, dann gemeinsam kochen.",
+      "hinweis": "Die grünen Beeren an der Pflanze sind giftig und dürfen nie gegessen werden – auch nicht gekocht. Grüne Stellen an Knollen großzügig wegschneiden; Kartoffeln nur gekocht essen."
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "emoji": "🥒",
+      "standort": "Beet oder großer Kübel, viel Platz, viel Wasser",
+      "saatMonate": [4, 5, 6],
+      "ernteMonate": [7, 8, 9, 10],
+      "wartezeitWochen": 9,
+      "schwierigkeit": 2,
+      "kinderTipp": "Im April drinnen vorziehen, nach den Eisheiligen (Mitte Mai) nach draußen pflanzen. Riesige Samen, riesige Blätter, fast beim Zuschauen wachsende Früchte – regelmäßig ernten, solange die Früchte klein sind, dann trägt die Pflanze den ganzen Sommer.",
+      "hinweis": "Nur gekauftes Saatgut verwenden und niemals bittere Zucchini essen (Bitterstoffe können giftig sein) – mit den Kindern vereinbaren: Schmeckt etwas bitter, wird es ausgespuckt und einem Erwachsenen gesagt."
+    }
+  ],
+  "monatsaufgaben": {
+    "1": [
+      "Vogelfutter nachfüllen und die Vögel am Futterplatz beobachten – wer kommt zu Besuch?",
+      "Kresse auf der Fensterbank säen: frisches Grün mitten im Winter.",
+      "Anzuchttöpfe aus Zeitungspapier falten und die Saatgut-Schatzkiste sortieren."
+    ],
+    "2": [
+      "Beet-Plan malen: Was wollen wir dieses Jahr säen – und wo bekommt es seinen Platz?",
+      "Vogelfutter weiter nachfüllen, Trinkstelle eisfrei halten.",
+      "Kresse-Nachschub auf der Fensterbank säen."
+    ],
+    "3": [
+      "Beet vorbereiten: Erde lockern, Kompost einharken – Regenwürmer vorsichtig zurücksetzen.",
+      "Kartoffeln zum Vorkeimen auf die helle Fensterbank legen.",
+      "Erste Aussaat draußen: Radieschen und Zuckererbsen (bei Frost mit Vlies abdecken)."
+    ],
+    "4": [
+      "Draußen säen: Radieschen und Zuckererbsen nachlegen.",
+      "Drinnen vorziehen: Zucchini, Sonnenblume und Kapuzinerkresse in Anzuchttöpfen.",
+      "Gießdienst einteilen und die Regentonne startklar machen."
+    ],
+    "5": [
+      "Nach den Eisheiligen (Mitte Mai): Zucchini und Kapuzinerkresse nach draußen pflanzen.",
+      "Buschbohnen säen und Kartoffeln legen.",
+      "Gießen nach der Fingerprobe: erst fühlen, ob die Erde trocken ist – dann gießen."
+    ],
+    "6": [
+      "Morgens gießen, Beet mulchen und gemeinsam jäten (Beikraut-Bildkarte hilft beim Unterscheiden).",
+      "Erste Ernte: Radieschen ziehen und Zuckererbsen naschen.",
+      "Blattläuse mit der Lupe anschauen: Marienkäfer und ihre Larven sind unsere Helfer."
+    ],
+    "7": [
+      "Ernten: Zuckererbsen, erste Buschbohnen (immer kochen!) und die ersten Zucchini.",
+      "Im Sommer ist Gießen besonders wichtig – am besten morgens, an die Wurzeln.",
+      "Kartoffel-Probegrabung: Vorsichtig nachschauen, wie dick die Knollen schon sind."
+    ],
+    "8": [
+      "Ernte-Hochsaison: Bohnen, Zucchini und erste Kartoffeln.",
+      "Samen der Kapuzinerkresse sammeln und trocknen – Saatgut fürs nächste Jahr.",
+      "Urlaubs-Gießplan mit den Familien absprechen."
+    ],
+    "9": [
+      "Kartoffelfest: ernten, zählen, wiegen – und gemeinsam kochen.",
+      "Letzte Bohnen ernten.",
+      "Sonnenblumen stehen lassen: Die Kerne sind ein Vogelbuffet für den Herbst."
+    ],
+    "10": [
+      "Die letzten Zucchini ernten, dann Beet abräumen und den Kompost füttern – was wird daraus im nächsten Jahr?",
+      "Laub sammeln und in einer ruhigen Ecke einen Haufen für den Igel liegen lassen.",
+      "Insektenhotel bauen oder ausbessern und an einen sonnigen, regengeschützten Platz hängen."
+    ],
+    "11": [
+      "Beet mit Laub oder Mulch zudecken – die Winterdecke für den Boden.",
+      "Futterstelle für Vögel einrichten und einen Futterplan vereinbaren.",
+      "Gartengeräte putzen, trocknen und einräumen – Aufräumen gehört zum Gärtnern."
+    ],
+    "12": [
+      "Vogelfutter selbst machen (z. B. Meisenknödel) und aufhängen.",
+      "Kresse aufs Fensterbrett säen – Grün und Ernte auch im Winter.",
+      "Jahresrückblick mit dem Pflanztagebuch: Was hat geschmeckt? Was probieren wir nächstes Jahr?"
+    ]
+  },
+  "stufen": [
+    {
+      "id": "kleine",
+      "name": "Kleine Gärtner (ca. 4–5 Jahre)",
+      "emoji": "🧒",
+      "aufgaben": [
+        "Große Samen legen: Erbse, Bohne, Kapuzinerkresse, Sonnenblume – ein Samen pro Loch.",
+        "Gießen mit der kleinen Kanne (ein Erwachsener füllt sie nur halb voll).",
+        "Beim Ernten mitmachen: Radieschen ziehen, Schoten pflücken, Kartoffeln aus der Erde sammeln.",
+        "Erde fühlen, riechen, sieben – und Regenwürmer beobachten (danach vorsichtig zurücksetzen).",
+        "Werkzeug zurückräumen: Jedes Gerät hat seinen Platz."
+      ],
+      "begleitung": "Kurze Aufgaben, immer gemeinsam mit Erwachsenen, viel benennen und beschreiben lassen. Das Tun zählt, nicht das Ergebnis – ein schief gesätes Beet ist ein richtig gesätes Beet."
+    },
+    {
+      "id": "grosse",
+      "name": "Große Gärtner (ca. 5–7 Jahre)",
+      "emoji": "🧑‍🌾",
+      "aufgaben": [
+        "In Rillen säen – auch kleine Samen (mit Sand gemischt) und den Abstand mit der Handspanne messen.",
+        "Gießen nach Bodenzustand: erst die Fingerprobe (ist die Erde unter der Oberfläche trocken?), dann entscheiden, ob gegossen wird.",
+        "Boden lockern und jäten – Beikraut und Keimling mit der Bildkarte unterscheiden.",
+        "Ernten und dokumentieren: zählen, wiegen, messen und ins Pflanztagebuch eintragen.",
+        "Einen Gießdienst mit Partnerkind übernehmen und an den Plan denken."
+      ],
+      "begleitung": "Echte Verantwortung in kleinen Portionen: Dienste, Entscheidungen (gießen oder nicht?), Dokumentation. Fehler sind Forschungsergebnisse – vertrocknet oder ertränkt wird besprochen, nicht getadelt."
+    }
+  ]
+}

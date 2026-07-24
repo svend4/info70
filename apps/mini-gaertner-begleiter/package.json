@@ -1,0 +1,8 @@
+{
+  "name": "@info70/mini-gaertner-begleiter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mini-Gaertner-Begleiter: Saison-Planer fuer Hochbeet/Kita-Garten mit Kindern (4-7). Pflanzkalender fuer 8 kindgeeignete Kulturen (Kresse, Radieschen, Kapuzinerkresse, Sonnenblume, Zuckererbse, Buschbohne, Kartoffel-Projekt, Zucchini), Monatsaufgaben inkl. BNE (Insektenhotel, Vogelfutter, Kompost), Aufgaben-Checklisten je Entwicklungsstufe (saeen, giessen nach Bodenzustand/Fingerprobe, lockern, ernten) und druckbares Pflanztagebuch. Sicherheits-Hinweise (rohe Bohnen giftig, gruene Kartoffelstellen, bittere Zucchini) testgeprueft. Gegaertnert wird draussen - der Bildschirm plant nur. Praleska docs/10 (Top-30 Nr. 29). Offline, werbefrei, speichert nichts. Zielgruppe: Fachkraefte/Eltern.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

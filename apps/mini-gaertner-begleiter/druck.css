@@ -1,0 +1,23 @@
+/* Mini-Gärtner-Begleiter: Druckansicht. Beim Drucken verschwinden Planer und
+   Bedienelemente (.mgb-nur-bildschirm); übrig bleibt das Pflanztagebuch der
+   gewählten Kultur – zum Ausfüllen mit Stift auf Papier. */
+
+@media print {
+  .mgb-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .mgb-blatt {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}

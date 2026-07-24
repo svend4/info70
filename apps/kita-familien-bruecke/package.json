@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kita-familien-bruecke",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kita-Familien-Bruecke: Team-Selbstcheck Erziehungspartnerschaft fuer Kita-Teams (Erzieher/Leitung). 12 Aussagen in 4 Bereichen (Kennen & Vertrauen, Informieren & Transparenz, Beteiligen & Mitwirken, Haltung & Augenhoehe) mit Skala Trifft zu/Teilweise/Noch nicht, Ampel-Auswertung je Bereich und gesamt, Massnahmen-Vorschlaegen fuer alles unter 'Trifft zu' und druckbarem Team-Bericht (Verantwortliche/Termine auf Papier). Bewertet ausschliesslich Teampraxis - niemals einzelne Familien, Eltern oder Kinder. Praleska docs/10 (Top-30 Nr. 30). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

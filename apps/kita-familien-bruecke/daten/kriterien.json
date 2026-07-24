@@ -1,0 +1,110 @@
+{
+  "hinweis": "Team-Selbstcheck Erziehungspartnerschaft für Kita-Teams (Praleska docs/10, Top-30 Nr. 30; Quelle: Kooperationsziele des Familienkapitels – Struktur adaptiert, alle Texte Eigenproduktion, übersetzt in den deutschen Fachbegriff Erziehungspartnerschaft). Bewertet wird AUSSCHLIESSLICH die eigene Teampraxis – niemals einzelne Familien, Eltern oder Kinder.",
+  "skala": [
+    { "wert": 2, "text": "Trifft zu", "emoji": "✅" },
+    { "wert": 1, "text": "Teilweise", "emoji": "🟡" },
+    { "wert": 0, "text": "Noch nicht", "emoji": "⬜" }
+  ],
+  "bereiche": [
+    {
+      "id": "kennen",
+      "name": "Kennen & Vertrauen",
+      "emoji": "🤝",
+      "kriterien": [
+        {
+          "id": "lebenswelten",
+          "these": "Wir kennen die Lebenssituationen und Familiensprachen unserer Familien – nicht nur die Abholzeiten.",
+          "woran": ["Wir wissen, welche Sprachen zu Hause gesprochen werden.", "Neue Familien werden aktiv nach Gewohnheiten, Ritualen und Wünschen gefragt."],
+          "massnahmen": ["Aufnahmegespräch um Fragen zu Familiensprachen, Ritualen und Erwartungen erweitern.", "Familien zu freiwilligen, selbst gestalteten Familien-Steckbriefen fürs Gruppenbrett einladen."]
+        },
+        {
+          "id": "eingewoehnung",
+          "these": "Aufnahme und Eingewöhnung gestalten wir gemeinsam mit den Eltern – als Partner, nicht als Zuschauer.",
+          "woran": ["Eltern wissen vor dem Start, wie die Eingewöhnung abläuft und welche Rolle sie haben.", "Das Tempo richtet sich nach dem Kind, und das besprechen wir täglich mit den Eltern."],
+          "massnahmen": ["Eingewöhnungs-Ablauf als einfachen Eltern-Fahrplan aushändigen (mehrsprachig, wo nötig).", "Tägliche Kurz-Rückmeldung in der Eingewöhnungszeit fest einplanen (5 Minuten reichen)."]
+        },
+        {
+          "id": "tuer_und_angel",
+          "these": "Tür-und-Angel-Gespräche haben bei uns Raum und Wertschätzung – sie sind Beziehungsarbeit, kein Störfaktor.",
+          "woran": ["Beim Bringen und Abholen ist eine Fachkraft ansprechbar.", "Kurze Alltagsinfos (gegessen, geschlafen, erlebt) kommen bei den Eltern an."],
+          "massnahmen": ["Bring- und Abholzeiten personell so planen, dass eine Fachkraft für Eltern ansprechbar ist.", "Team-Absprache: Wer heute Tür-und-Angel übernimmt, wird morgens festgelegt."]
+        }
+      ]
+    },
+    {
+      "id": "informieren",
+      "name": "Informieren & Transparenz",
+      "emoji": "📣",
+      "kriterien": [
+        {
+          "id": "alltag_sichtbar",
+          "these": "Familien erfahren regelmäßig, was ihr Kind bei uns erlebt und lernt – der Kita-Alltag ist sichtbar.",
+          "woran": ["Aushänge, Elternbriefe oder Wochenrückblicke erscheinen verlässlich.", "Projekte und Bildungsanlässe werden erklärt (warum wir das tun), nicht nur angekündigt."],
+          "massnahmen": ["Festen Wochenrückblick einführen (drei Sätze + ein Foto der Aktivität ohne erkennbare Kinder genügen).", "Zu jedem Projekt einen Mini-Aushang: Was tun wir? Was lernen die Kinder dabei?"]
+        },
+        {
+          "id": "entwicklungsgespraeche",
+          "these": "Entwicklungsgespräche finden regelmäßig statt und beginnen mit den Stärken des Kindes – die Eltern-Sicht gehört fest dazu.",
+          "woran": ["Jede Familie bekommt mindestens einmal im Jahr ein Gespräch angeboten.", "Eltern werden vorab eingeladen, eigene Beobachtungen und Fragen mitzubringen."],
+          "massnahmen": ["Gesprächs-Jahresplan anlegen, damit keine Familie durchrutscht.", "Einladung mit zwei Vorbereitungsfragen an die Eltern verschicken („Was macht Ihr Kind zu Hause gern? Was beschäftigt Sie?“)."]
+        },
+        {
+          "id": "verstaendlich",
+          "these": "Unsere Informationen sind für alle Familien verständlich – einfache Sprache, mehrsprachig, wo es nötig ist.",
+          "woran": ["Wichtige Elternbriefe sind kurz, konkret und ohne Fachjargon.", "Für Familien mit wenig Deutsch gibt es Übersetzungen, Piktogramme oder persönliche Erklärung."],
+          "massnahmen": ["Die drei wichtigsten Standard-Briefe (Aufnahme, Krankheit, Ausflug) in einfache Sprache umschreiben.", "Piktogramm-Aushänge für Alltagsinfos nutzen; Eltern als Sprachbrücken gewinnen (freiwillig)."]
+        }
+      ]
+    },
+    {
+      "id": "beteiligen",
+      "name": "Beteiligen & Mitwirken",
+      "emoji": "🙋",
+      "kriterien": [
+        {
+          "id": "mitgestalten",
+          "these": "Eltern können bei uns wirklich mitgestalten – im Elternbeirat, bei Festen, Projekten und mit ihren Alltagskompetenzen.",
+          "woran": ["Es gibt konkrete, freiwillige Mitmach-Angebote in unterschiedlicher Größe (eine Stunde bis Beirat).", "Kompetenzen der Familien (Beruf, Handwerk, Sprachen, Musik) werden aktiv einbezogen."],
+          "massnahmen": ["Mitmach-Börse aushängen: kleine, klar umrissene Aufgaben statt pauschaler Aufrufe.", "Familien gezielt fragen, was sie gern zeigen oder beitragen würden (Vorlesen, Gärtnern, Beruf vorstellen)."]
+        },
+        {
+          "id": "beschwerden",
+          "these": "Kritik und Beschwerden von Eltern haben einen klaren, angstfreien Weg – und bekommen eine Rückmeldung.",
+          "woran": ["Eltern wissen, an wen sie sich mit Anliegen wenden können.", "Beschwerden werden dokumentiert, im Team besprochen und beantwortet – ohne Nachteile fürs Kind."],
+          "massnahmen": ["Beschwerdeweg sichtbar aushängen (Ansprechperson, Weg, Reaktionszeit).", "Team-Regel einführen: Jede Beschwerde bekommt innerhalb einer Woche eine Rückmeldung."]
+        },
+        {
+          "id": "familienkulturen",
+          "these": "Familienkulturen und -sprachen sind in unserem Alltag sichtbar und willkommen – nicht nur an Festtagen.",
+          "woran": ["Begrüßungen, Lieder oder Bücher in Familiensprachen kommen im Alltag vor.", "Feste und Essgewohnheiten verschiedener Familien finden respektvoll Platz."],
+          "massnahmen": ["Willkommensschild und Grundwörter in allen Familiensprachen der Gruppe anbringen.", "Familien einladen, ein Lied, ein Buch oder ein Rezept aus ihrer Familie beizusteuern."]
+        }
+      ]
+    },
+    {
+      "id": "haltung",
+      "name": "Haltung & Augenhöhe",
+      "emoji": "⚖️",
+      "kriterien": [
+        {
+          "id": "eltern_experten",
+          "these": "Wir sehen Eltern als Experten für ihr Kind – wir beraten auf Augenhöhe, statt zu belehren.",
+          "woran": ["Gespräche beginnen mit Fragen („Wie erleben Sie das zu Hause?“), nicht mit Urteilen.", "Empfehlungen werden als Angebote formuliert, nicht als Anweisungen."],
+          "massnahmen": ["Gesprächsleitfäden umstellen: erst Eltern-Sicht erfragen, dann eigene Beobachtung teilen.", "Im Team Formulierungen üben: Fragen und Angebote statt Ratschläge von oben."]
+        },
+        {
+          "id": "respekt_intern",
+          "these": "Wir sprechen im Team über Familien so, wie wir es in ihrer Gegenwart tun würden.",
+          "woran": ["Auch bei anstrengenden Situationen bleibt die Sprache im Teamzimmer respektvoll.", "Wir unterscheiden Beobachtung („kommt oft nach 9 Uhr“) von Etikett („denen ist alles egal“)."],
+          "massnahmen": ["Team-Vereinbarung zur Sprache über Familien schriftlich festhalten.", "Bei Etiketten freundlich gegensteuern: „Was haben wir beobachtet? Was wissen wir wirklich?“"]
+        },
+        {
+          "id": "reflexion",
+          "these": "Wir reflektieren regelmäßig im Team, wie die Zusammenarbeit mit den Familien gelingt – dieser Check ist kein Einzelfall.",
+          "woran": ["Erziehungspartnerschaft ist wiederkehrender Punkt in Teamsitzungen, nicht nur Konzept-Papier.", "Aus Reflexionen entstehen konkrete, terminierte Schritte mit Verantwortlichen."],
+          "massnahmen": ["Diesen Selbstcheck fest in den Jahreskalender aufnehmen (z. B. zweimal jährlich).", "Je Runde höchstens zwei bis drei Maßnahmen auswählen und mit Namen und Datum versehen."]
+        }
+      ]
+    }
+  ]
+}

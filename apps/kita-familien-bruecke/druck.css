@@ -1,0 +1,27 @@
+/* Kita-Familien-Brücke: Druckansicht. Beim Drucken verschwinden Check und
+   Bedienelemente (.kfb-nur-bildschirm); übrig bleibt der Team-Bericht mit
+   Ampeln und Maßnahmen-Ankreuzliste – Verantwortliche und Termine werden
+   auf dem Papier eingetragen. */
+
+.kfb-nur-druck { display: none; }
+
+@media print {
+  .kfb-nur-bildschirm { display: none !important; }
+  .kfb-nur-druck { display: block !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .kfb-blatt {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}
