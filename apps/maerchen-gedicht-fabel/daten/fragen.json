@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "zielgruppe": "6-10",
+  "hinweis": "Alle Beispieltexte sind Eigenproduktion. Ausnahme: die beiden Sprichwörter sind altes deutsches Sprachgut (gemeinfrei) – ein erfundenes Sprichwort wäre keines.",
+  "raenge": [
+    { "ab": 0, "titel": "Geschichten-Neuling", "emoji": "🌱" },
+    { "ab": 4, "titel": "Wörter-Spürnase", "emoji": "🔎" },
+    { "ab": 8, "titel": "Gattungs-Kenner*in", "emoji": "📚" },
+    { "ab": 12, "titel": "Sprach-Expert*in", "emoji": "🏆" }
+  ],
+  "fragen": [
+    {
+      "id": "g01",
+      "typ": "wahl",
+      "kategorie": "Märchen",
+      "frage": "„Es war einmal ein Müllerskind, das besaß nichts als einen rostigen Schlüssel. Drei Tage und drei Nächte wanderte es, bis am siebten Berg eine Tür im Fels stand. Der rostige Schlüssel passte – und dahinter wartete ein Garten, in dem die Äpfel aus Silber waren.“ Was ist das?",
+      "antworten": ["Ein Märchen", "Eine Erzählung", "Eine Fabel"],
+      "korrekt": 0,
+      "erklaerung": "Drei Zeichen verraten das Märchen: der Anfang „Es war einmal“ ohne feste Zeit und ohne festen Ort, das Wunder (eine Tür im Fels, Äpfel aus Silber) und die Zahlen drei und sieben. So etwas kann nicht wirklich passiert sein – und das soll es auch gar nicht."
+    },
+    {
+      "id": "g02",
+      "typ": "wahl",
+      "kategorie": "Erzählung",
+      "frage": "„Mila merkte erst an der Haltestelle, dass ihr Busticket weg war. Sie suchte in beiden Jackentaschen, dann im Ranzen. Der Bus kam. Mila stieg ein und sagte der Fahrerin die Wahrheit. Die Fahrerin nickte nur und ließ sie mitfahren.“ Was ist das?",
+      "antworten": ["Ein Märchen", "Eine Erzählung", "Ein Rätsel"],
+      "korrekt": 1,
+      "erklaerung": "Hier passiert nichts Unmögliches: Genau so könnte es gestern gewesen sein. Eine Erzählung berichtet von einem Ereignis aus der wirklichen Welt – ohne Zauber, ohne sprechende Tiere und ohne eine Lehre am Schluss. Erfunden sein darf sie trotzdem."
+    },
+    {
+      "id": "g03",
+      "typ": "wahl",
+      "kategorie": "Fabel",
+      "frage": "„Die Elster zeigte dem Spatz ihr Nest: ‚Sieh, lauter Glitzerdinge!‘ Der Spatz schaute sich um und fragte: ‚Und wo ist dein Futter?‘ Die Elster schwieg. – Wer nur sammelt, was glänzt, hat am Abend nichts im Bauch.“ Was ist das?",
+      "antworten": ["Eine Erzählung", "Ein Märchen", "Eine Fabel"],
+      "korrekt": 2,
+      "erklaerung": "In der Fabel stehen Tiere für Menschen: Die Elster ist die Angeberin, der Spatz der Nüchterne. Entscheidend ist der letzte Satz – die Lehre. Eine Fabel will dir etwas beibringen, und deshalb sagt sie es am Ende direkt."
+    },
+    {
+      "id": "g04",
+      "typ": "wahl",
+      "kategorie": "Gedicht",
+      "frage": "„Der Regen trommelt auf das Dach, / die Katze wird vom Trommeln wach, / sie streckt sich einmal, gähnt und schaut / und schläft beim nächsten Trommeln laut.“ Was ist das?",
+      "antworten": ["Ein Sprichwort", "Ein Gedicht", "Eine Fabel"],
+      "korrekt": 1,
+      "erklaerung": "Ein Gedicht steht in Zeilen, den Versen, und hat einen Takt, den man beim Lesen mitklopfen kann. Hier reimt es sich zusätzlich: Dach – wach, schaut – laut. Der Reim ist schön, aber er ist nicht das Wichtigste; die Zeilen und der Rhythmus sind es."
+    },
+    {
+      "id": "g05",
+      "typ": "wahl",
+      "kategorie": "Gedicht",
+      "frage": "„Schnee. / Der Hof ist ein weißes Blatt. / Ich gehe als Erster hinaus / und schreibe mit meinen Schuhen.“ Was ist das?",
+      "antworten": ["Ein Gedicht", "Eine Erzählung", "Ein Zungenbrecher"],
+      "korrekt": 0,
+      "erklaerung": "Auch das ist ein Gedicht, obwohl sich nichts reimt. Es steht in kurzen Zeilen, jede Zeile setzt einen eigenen Gedanken, und es entsteht ein Bild: Fußspuren im Schnee wie Schrift auf Papier. Gedichte ohne Reim gibt es sehr viele."
+    },
+    {
+      "id": "g06",
+      "typ": "wahl",
+      "kategorie": "Rätsel",
+      "frage": "„Ich habe viele Zähne und beiße doch nie. Am Morgen fahre ich durch dein Haar und lasse es ordentlich zurück. Was bin ich?“ Was ist das?",
+      "antworten": ["Ein Zungenbrecher", "Ein Gedicht", "Ein Rätsel"],
+      "korrekt": 2,
+      "erklaerung": "Ein Rätsel beschreibt einen Gegenstand, ohne seinen Namen zu nennen, und stellt am Ende die Frage. Die Beschreibung passt absichtlich auf zwei Dinge gleichzeitig – Zähne hat auch ein Mund. Gemeint ist hier der Kamm."
+    },
+    {
+      "id": "g07",
+      "typ": "wahl",
+      "kategorie": "Sprichwort",
+      "frage": "„Morgenstund hat Gold im Mund.“ Was ist das?",
+      "antworten": ["Ein Rätsel", "Ein Sprichwort", "Ein Gedicht"],
+      "korrekt": 1,
+      "erklaerung": "Ein Sprichwort ist ein einziger kurzer Satz, den viele Menschen kennen und weitersagen. Er nennt keine Namen und erzählt keine Geschichte, sondern gibt eine Lebensweisheit weiter – hier: Wer früh anfängt, schafft mehr. Sprichwörter sind sehr alt, niemand weiß mehr, wer sie erfunden hat."
+    },
+    {
+      "id": "g08",
+      "typ": "wahl",
+      "kategorie": "Zungenbrecher",
+      "frage": "„Sieben schnelle Schnecken schleichen schweigend durch schmale Schneckenspalten.“ Was ist das?",
+      "antworten": ["Ein Zungenbrecher", "Ein Sprichwort", "Eine Fabel"],
+      "korrekt": 0,
+      "erklaerung": "Beim Zungenbrecher geht es gar nicht um den Inhalt, sondern ums Sprechen: Immer wieder derselbe Laut, hier das „schn“ und „schl“, damit die Zunge stolpert. Sag ihn dreimal schnell hintereinander – dann merkst du, wozu er gemacht ist."
+    },
+    {
+      "id": "g09",
+      "typ": "wahl",
+      "kategorie": "Erzählung",
+      "frage": "„Der Kater saß auf der Fensterbank und beobachtete die Amseln im Kirschbaum. Als die Sonne wanderte, rutschte er in den Schatten, stand auf, drehte sich um sich selbst und legte sich wieder in die Wärme.“ Was ist das?",
+      "antworten": ["Eine Fabel", "Eine Erzählung", "Ein Märchen"],
+      "korrekt": 1,
+      "erklaerung": "Hier kommt ein Tier vor – trotzdem ist es keine Fabel. Der Kater spricht nicht, er steht für niemanden, und am Ende steht keine Lehre. Er benimmt sich einfach wie ein Kater. Nicht jede Tiergeschichte ist eine Fabel; die meisten sind Erzählungen."
+    },
+    {
+      "id": "g10",
+      "typ": "wahl",
+      "kategorie": "Märchen",
+      "frage": "„Der Wolf klopfte höflich an und bat um Salz. Die Bäuerin gab ihm welches, und weil sie freundlich gewesen war, fand sie am nächsten Morgen zwölf Goldstücke im Salzfass.“ Was ist das?",
+      "antworten": ["Eine Fabel", "Ein Märchen", "Eine Erzählung"],
+      "korrekt": 1,
+      "erklaerung": "Der Wolf spricht – das allein macht noch keine Fabel. Es fehlt die Lehre am Ende, dafür gibt es ein Wunder: Aus Freundlichkeit wird über Nacht Gold. Sprechende Tiere plus Zauber und keine ausgesprochene Lehre: Das ist ein Märchen."
+    },
+    {
+      "id": "g11",
+      "typ": "binaer",
+      "kategorie": "Gedicht",
+      "aussage": "Ein Gedicht muss sich immer reimen.",
+      "korrekt": "nein",
+      "erklaerung": "Viele Gedichte reimen sich, aber nötig ist es nicht. Was ein Gedicht ausmacht, sind die Zeilen und der Rhythmus – dass jemand entschieden hat, wo eine Zeile endet. Gerade moderne Gedichte kommen oft ganz ohne Reim aus und wirken trotzdem."
+    },
+    {
+      "id": "g12",
+      "typ": "binaer",
+      "kategorie": "Fabel",
+      "aussage": "Am Ende einer Fabel steht meistens eine Lehre.",
+      "korrekt": "ja",
+      "erklaerung": "Die Lehre ist das Ziel der ganzen Fabel: ein kurzer Satz, der sagt, was man aus der Geschichte mitnehmen soll. Manchmal steht sie direkt da, manchmal spricht eine Figur sie aus. Ohne diesen Schluss fehlt der Fabel ihr wichtigstes Merkmal."
+    },
+    {
+      "id": "g13",
+      "typ": "binaer",
+      "kategorie": "Märchen",
+      "aussage": "Ein Märchen könnte genau so wirklich passiert sein.",
+      "korrekt": "nein",
+      "erklaerung": "Im Märchen ist Zauber selbstverständlich: Tiere sprechen, Gegenstände erfüllen Wünsche, aus Stroh wird Gold. Niemand im Märchen wundert sich darüber. Genau daran erkennst du den Unterschied zur Erzählung, die auch wirklich hätte geschehen können."
+    },
+    {
+      "id": "g14",
+      "typ": "binaer",
+      "kategorie": "Rätsel",
+      "aussage": "Ein Rätsel beschreibt etwas, ohne seinen Namen zu nennen.",
+      "korrekt": "ja",
+      "erklaerung": "Das ist der ganze Trick: Das Rätsel nennt lauter Eigenschaften – Farbe, Form, was das Ding tut – und verschweigt genau das eine Wort, das du finden sollst. Oft klingt die Beschreibung absichtlich so, als ginge es um etwas Lebendiges."
+    },
+    {
+      "id": "g15",
+      "typ": "binaer",
+      "kategorie": "Zungenbrecher",
+      "aussage": "Ein Zungenbrecher will vor allem eine spannende Geschichte erzählen.",
+      "korrekt": "nein",
+      "erklaerung": "Beim Zungenbrecher ist die Geschichte fast egal, oft ergibt sie kaum Sinn. Er ist gebaut wie eine Turnübung für den Mund: Dieselben schwierigen Laute kommen dicht hintereinander, damit sich die Zunge verhaspelt. Der Spaß entsteht beim Sprechen, nicht beim Zuhören."
+    },
+    {
+      "id": "g16",
+      "typ": "binaer",
+      "kategorie": "Sprichwort",
+      "aussage": "Sprichwörter sind kurze Sätze, die eine Lebensweisheit weitergeben.",
+      "korrekt": "ja",
+      "erklaerung": "Ein Sprichwort passt in einen Satz, wird seit vielen Generationen weitergesagt und hat keinen bekannten Verfasser. Es erzählt nichts, sondern rät etwas – zum Beispiel „Übung macht den Meister“. Deshalb steht es nie am Anfang einer Geschichte, sondern für sich allein."
+    },
+    {
+      "id": "g17",
+      "typ": "binaer",
+      "kategorie": "Märchen",
+      "aussage": "In Märchen kommen die Zahlen drei und sieben besonders oft vor.",
+      "korrekt": "ja",
+      "erklaerung": "Drei Wünsche, drei Brüder, drei Aufgaben – und sieben Berge, sieben Jahre, sieben Zwerge. Diese Zahlen geben dem Märchen seinen Takt: Beim dritten Mal geht es aus. Wenn du sie hörst, bist du fast sicher in einem Märchen gelandet."
+    },
+    {
+      "id": "g18",
+      "typ": "binaer",
+      "kategorie": "Fabel",
+      "aussage": "Jede Geschichte, in der Tiere vorkommen, ist eine Fabel.",
+      "korrekt": "nein",
+      "erklaerung": "Zur Fabel gehört mehr als ein Tier: Die Tiere müssen für menschliche Eigenschaften stehen – der Fuchs für die Schlauheit, der Esel für die Sturheit – und am Ende muss eine Lehre stehen. Fehlt das, ist es eine Erzählung oder ein Märchen."
+    }
+  ]
+}

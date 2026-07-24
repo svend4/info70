@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
+  "groesse": 5,
+  "orte": [
+    { "id": "bibliothek", "name": "die Bücherei", "wo": "an der Bücherei", "emoji": "📚", "zeile": 0, "spalte": 1 },
+    { "id": "see", "name": "der Teich", "wo": "am Teich", "emoji": "🦆", "zeile": 0, "spalte": 3 },
+    { "id": "schule", "name": "die Schule", "wo": "an der Schule", "emoji": "🏫", "zeile": 1, "spalte": 1 },
+    { "id": "baecker", "name": "die Bäckerei", "wo": "an der Bäckerei", "emoji": "🥐", "zeile": 1, "spalte": 3 },
+    { "id": "park", "name": "der Park", "wo": "im Park", "emoji": "🌳", "zeile": 2, "spalte": 2 },
+    { "id": "spielplatz", "name": "der Spielplatz", "wo": "auf dem Spielplatz", "emoji": "🛝", "zeile": 3, "spalte": 1 },
+    { "id": "sporthalle", "name": "die Turnhalle", "wo": "an der Turnhalle", "emoji": "🏐", "zeile": 3, "spalte": 3 },
+    { "id": "bahnhof", "name": "der Bahnhof", "wo": "am Bahnhof", "emoji": "🚉", "zeile": 4, "spalte": 2 }
+  ],
+  "quiz": [
+    {
+      "id": "d01",
+      "bereich": "himmelsrichtungen",
+      "frage": "Wohin zeigt die Nadel eines Kompasses?",
+      "antworten": ["Immer nach Norden", "Immer dorthin, wohin du läufst", "Immer zur Sonne"],
+      "korrekt": 0,
+      "erklaerung": "Die farbige Spitze der Kompassnadel zeigt nach Norden, egal wie du dich drehst. Deshalb dreht man nicht die Nadel, sondern sich selbst und die Karte, bis beides zusammenpasst. Erst dann stimmen alle anderen Richtungen auch."
+    },
+    {
+      "id": "d02",
+      "bereich": "himmelsrichtungen",
+      "frage": "In welcher Richtung geht die Sonne morgens auf?",
+      "antworten": ["Im Westen", "Im Norden", "Im Osten"],
+      "korrekt": 2,
+      "erklaerung": "Die Sonne geht im Osten auf und im Westen unter – mittags steht sie bei uns im Süden. Damit hast du auch ohne Kompass eine Richtung: Wenn du morgens auf die Sonne zugehst, läufst du nach Osten."
+    },
+    {
+      "id": "d03",
+      "bereich": "himmelsrichtungen",
+      "frage": "Du schaust nach Norden. Welche Richtung liegt dann rechts von dir?",
+      "antworten": ["Osten", "Westen", "Süden"],
+      "korrekt": 0,
+      "erklaerung": "Im Uhrzeigersinn folgen die Richtungen aufeinander: Norden, Osten, Süden, Westen. Wer nach Norden schaut, hat Osten rechts, Süden im Rücken und Westen links. Ein Merksatz dafür ist „Nie ohne Seife waschen“."
+    },
+    {
+      "id": "d04",
+      "bereich": "deutschland",
+      "frage": "Wie viele Bundesländer hat Deutschland?",
+      "antworten": ["Neun", "Sechzehn", "Dreißig"],
+      "korrekt": 1,
+      "erklaerung": "Deutschland besteht aus 16 Bundesländern. Drei davon sind Stadtstaaten – Berlin, Hamburg und Bremen –, das sind Städte, die zugleich ein eigenes Bundesland bilden. Jedes Bundesland hat eine eigene Regierung und macht zum Beispiel seine Schulgesetze selbst."
+    },
+    {
+      "id": "d05",
+      "bereich": "deutschland",
+      "frage": "Welche zwei Meere liegen im Norden Deutschlands?",
+      "antworten": ["Nordsee und Ostsee", "Mittelmeer und Nordsee", "Schwarzes Meer und Ostsee"],
+      "korrekt": 0,
+      "erklaerung": "Im Nordwesten liegt die Nordsee, im Nordosten die Ostsee. Beide gehören zum Atlantik, sind aber sehr verschieden: In der Nordsee gibt es Ebbe und Flut mit dem Wattenmeer, in der Ostsee ist das Wasser viel weniger salzig."
+    },
+    {
+      "id": "d06",
+      "bereich": "deutschland",
+      "frage": "Wie viele Nachbarländer hat Deutschland?",
+      "antworten": ["Vier", "Neun", "Fünfzehn"],
+      "korrekt": 1,
+      "erklaerung": "Neun Länder grenzen an Deutschland: Dänemark, die Niederlande, Belgien, Luxemburg, Frankreich, die Schweiz, Österreich, Tschechien und Polen. So viele hat sonst kein Land, das ganz in Europa liegt – nur Russland hat mehr Nachbarn, und das liegt zum größten Teil in Asien."
+    },
+    {
+      "id": "d07",
+      "bereich": "deutschland",
+      "frage": "Welches Land grenzt NICHT an Deutschland?",
+      "antworten": ["Polen", "Österreich", "Italien"],
+      "korrekt": 2,
+      "erklaerung": "Italien liegt südlich der Alpen und grenzt nicht an Deutschland – dazwischen liegen die Schweiz und Österreich. Polen im Osten und Österreich im Südosten sind dagegen echte Nachbarn."
+    },
+    {
+      "id": "d08",
+      "bereich": "deutschland",
+      "frage": "Welcher große Fluss fließt nicht nach Norden zum Meer, sondern nach Osten?",
+      "antworten": ["Der Rhein", "Die Elbe", "Die Donau"],
+      "korrekt": 2,
+      "erklaerung": "Rhein und Elbe fließen nach Norden in die Nordsee. Die Donau macht es umgekehrt: Sie entspringt im Schwarzwald und fließt quer durch Europa nach Osten bis ins Schwarze Meer. Auf dem Weg kommt sie an Wien, Bratislava und Budapest vorbei."
+    },
+    {
+      "id": "d09",
+      "bereich": "deutschland",
+      "frage": "Wo liegen die Alpen in Deutschland?",
+      "antworten": ["Ganz im Süden", "Ganz im Norden", "In der Mitte"],
+      "korrekt": 0,
+      "erklaerung": "Die Alpen bilden den südlichen Rand Deutschlands. Dort steht auch der höchste Berg des Landes, die Zugspitze mit 2962 Metern. Nach Norden hin wird das Land immer flacher, bis zur Küste ist es fast eben."
+    },
+    {
+      "id": "d10",
+      "bereich": "welt",
+      "frage": "Wie viele Kontinente gibt es?",
+      "antworten": ["Drei", "Sieben", "Zwölf"],
+      "korrekt": 1,
+      "erklaerung": "Sieben: Europa, Asien, Afrika, Nordamerika, Südamerika, Australien mit Ozeanien und die Antarktis. Deutschland liegt in Europa – und Europa und Asien hängen zusammen, werden aber trotzdem getrennt gezählt."
+    },
+    {
+      "id": "d11",
+      "bereich": "welt",
+      "frage": "Was ist der große Unterschied zwischen Nordpol und Südpol?",
+      "antworten": [
+        "Am Nordpol ist Eis auf dem Meer, am Südpol liegt Eis auf einem Festland",
+        "Am Nordpol ist es warm, am Südpol kalt",
+        "Am Südpol gibt es kein Eis"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Der Nordpol liegt mitten im Meer: Dort schwimmt eine Eisdecke auf dem Wasser. Der Südpol liegt dagegen auf der Antarktis, einem richtigen Kontinent mit Fels darunter. Deshalb leben Pinguine am Südpol und Eisbären im Norden – sie treffen sich nie."
+    },
+    {
+      "id": "d12",
+      "bereich": "welt",
+      "frage": "Was ist der Äquator?",
+      "antworten": [
+        "Eine gedachte Linie, die die Erde in Nord- und Südhalbkugel teilt",
+        "Ein sehr langer Fluss in Afrika",
+        "Die Grenze zwischen zwei Ländern"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Der Äquator ist keine Linie, die man sehen könnte, sondern eine gedachte: Er läuft rund um die Erde und teilt sie in die Nordhalbkugel und die Südhalbkugel. Auf der Südhalbkugel ist Sommer, wenn bei uns Winter ist."
+    },
+    {
+      "id": "d13",
+      "bereich": "welt",
+      "frage": "Auf welcher Halbkugel liegt Deutschland?",
+      "antworten": ["Auf der Südhalbkugel", "Auf der Nordhalbkugel", "Genau auf dem Äquator"],
+      "korrekt": 1,
+      "erklaerung": "Deutschland liegt deutlich nördlich des Äquators, also auf der Nordhalbkugel. Deshalb steht die Sonne bei uns mittags im Süden und kommt nie senkrecht von oben – und deshalb sind unsere Jahreszeiten genau umgekehrt zu denen in Australien."
+    }
+  ],
+  "laender": [
+    {
+      "id": "deutschland",
+      "name": "Deutschland",
+      "emoji": "🇩🇪",
+      "einleitung": "Mitten in Europa, mit neun Nachbarn – so viele hat sonst kein Land, das ganz in Europa liegt.",
+      "fakten": [
+        "Hauptstadt: Berlin. Sie ist zugleich die größte Stadt des Landes.",
+        "16 Bundesländer, darunter die drei Stadtstaaten Berlin, Hamburg und Bremen.",
+        "Im Norden zwei Meere: die Nordsee im Nordwesten, die Ostsee im Nordosten.",
+        "Im Süden die Alpen mit der Zugspitze, 2962 Meter hoch.",
+        "Große Flüsse: Rhein, Elbe und Weser fließen nach Norden, die Donau nach Osten."
+      ]
+    },
+    {
+      "id": "ukraine",
+      "name": "Die Ukraine",
+      "emoji": "🇺🇦",
+      "einleitung": "Von Deutschland aus: erst Polen, dann die Ukraine. Für Kinder, die dort geboren sind – oder die wissen wollen, wo das Land ihrer Freundin liegt.",
+      "fakten": [
+        "Hauptstadt: Kyjiw, im Norden des Landes am Fluss Dnipro.",
+        "Der Dnipro durchquert das Land von Norden nach Süden und mündet ins Schwarze Meer.",
+        "Im Süden liegt das Schwarze Meer – dasselbe, in das auch die Donau mündet.",
+        "Im Westen grenzt die Ukraine unter anderem an Polen, das wiederum an Deutschland grenzt.",
+        "Es ist das größte Land, das vollständig in Europa liegt."
+      ]
+    }
+  ]
+}

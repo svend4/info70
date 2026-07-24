@@ -1,0 +1,8 @@
+{
+  "name": "@info70/deutschland-kompass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deutschland-Kompass: Karten-Quiz und Plan-Simulator. Drei Modi. Erstens Plan und Kompass - ein Ortsplan als 5x5-Raster mit Windrose, in dem das Kind Wege in den vier Himmelsrichtungen abgeht; jede Aufgabe wird aus der Liste aller wirklich aufgehenden Wege gezogen und ist damit loesbar per Konstruktion. Zweitens ein Karten-Quiz aus 13 Fragen zu Himmelsrichtungen (Kompassnadel, Sonnenlauf, Uhrzeigersinn mit dem Merksatz Nie ohne Seife waschen), zu Deutschland (16 Bundeslaender, neun Nachbarn namentlich, Nord- und Ostsee, Donau als einziger grosser Fluss nach Osten, Alpen im Sueden) und zur Welt (sieben Kontinente, Nordpol als Meereis gegenueber dem Festland-Suedpol, Aequator, Nordhalbkugel). Drittens Laenderkarten zum Nachschlagen - Deutschland und die Ukraine, letztere als Angebot fuer Kinder mit Herkunftsbezug, rein geografisch und ohne Kriegsinhalte (per Test abgesichert). Praleska docs/10 (Kinder-Apps Nr. 18). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "zielgruppe": "8-12 eigenständig",
+  "gegenstaende": [
+    { "id": "tisch", "artikel": "der", "name": "Tisch", "emoji": "🪑", "alltag": "Man legt Sachen darauf und sitzt daran." },
+    { "id": "loeffel", "artikel": "der", "name": "Löffel", "emoji": "🥄", "alltag": "Man schöpft damit Flüssiges und Weiches." },
+    { "id": "tasche", "artikel": "die", "name": "Tasche", "emoji": "🎒", "alltag": "Man trägt Sachen darin von einem Ort zum anderen." },
+    { "id": "lampe", "artikel": "die", "name": "Lampe", "emoji": "💡", "alltag": "Sie macht einen Platz hell." },
+    { "id": "schirm", "artikel": "der", "name": "Regenschirm", "emoji": "☂️", "alltag": "Er hält Regen von oben ab." },
+    { "id": "becher", "artikel": "der", "name": "Becher", "emoji": "🥤", "alltag": "Er hält Getränke, ohne auszulaufen." },
+    { "id": "uhr", "artikel": "die", "name": "Uhr", "emoji": "⏰", "alltag": "Sie zeigt, wie spät es ist." },
+    { "id": "buerste", "artikel": "die", "name": "Zahnbürste", "emoji": "🪥", "alltag": "Sie kommt in jede Ecke im Mund." },
+    { "id": "schuh", "artikel": "der", "name": "Schuh", "emoji": "👟", "alltag": "Er schützt den Fuß beim Gehen." },
+    { "id": "spielzeug", "artikel": "das", "name": "Spielzeug", "emoji": "🧸", "alltag": "Man spielt damit – allein oder zusammen." },
+    { "id": "fahrrad", "artikel": "das", "name": "Fahrrad", "emoji": "🚲", "alltag": "Man kommt damit schneller voran als zu Fuß." },
+    { "id": "buch", "artikel": "das", "name": "Buch", "emoji": "📖", "alltag": "Es bewahrt Geschichten und Wissen auf." }
+  ],
+  "karten": [
+    {
+      "id": "groesser",
+      "name": "Mach es riesig oder winzig",
+      "emoji": "🔍",
+      "anweisung": "Verändere nur die Größe – zehnmal größer oder so klein, dass es in die Hosentasche passt.",
+      "beispiel": "Ein winziger Regenschirm für einen einzigen Finger: Wofür wäre der gut?"
+    },
+    {
+      "id": "material",
+      "name": "Tausch das Material",
+      "emoji": "🧱",
+      "anweisung": "Bau es aus etwas ganz anderem – aus Papier, aus Stoff, aus Eis, aus Gummi, aus Holz.",
+      "beispiel": "Ein Becher aus Eis: Er hält kalt, aber nicht lange. Wann wäre das genau richtig?"
+    },
+    {
+      "id": "weglassen",
+      "name": "Lass ein Teil weg",
+      "emoji": "✂️",
+      "anweisung": "Nimm ein Teil weg, das alle für unverzichtbar halten. Wie muss der Rest sich ändern?",
+      "beispiel": "Ein Tisch ohne Beine: Er hängt an Seilen von der Decke – und schwingt."
+    },
+    {
+      "id": "dazu",
+      "name": "Bau etwas dazu",
+      "emoji": "➕",
+      "anweisung": "Gib ihm eine zweite Aufgabe, die er bisher nicht hatte.",
+      "beispiel": "Eine Zahnbürste, die beim Putzen die Zeit anzeigt."
+    },
+    {
+      "id": "falten",
+      "name": "Mach es zusammenklappbar",
+      "emoji": "🪗",
+      "anweisung": "Es soll sich falten, rollen oder stapeln lassen. Wo sind die Knicke?",
+      "beispiel": "Ein Fahrrad, das man wie eine Landkarte zusammenlegt – wo müsste es brechen dürfen?"
+    },
+    {
+      "id": "andere",
+      "name": "Bau es für jemand anderen",
+      "emoji": "🫱",
+      "anweisung": "Es soll für jemanden passen, für den es bisher nicht gemacht ist – für eine Hand, die nicht greifen kann, für jemanden, der nichts sieht, für ein Kind im Rollstuhl, für einen Riesen.",
+      "beispiel": "Ein Buch für jemanden, der nichts sieht: Was fühlt man, was hört man?"
+    },
+    {
+      "id": "umdrehen",
+      "name": "Dreh es um",
+      "emoji": "🔄",
+      "anweisung": "Stell es auf den Kopf oder lass es das Gegenteil tun.",
+      "beispiel": "Eine Lampe, die Schatten macht statt Licht: Wozu könnte man die brauchen?"
+    },
+    {
+      "id": "leise",
+      "name": "Mach es leise oder laut",
+      "emoji": "🔊",
+      "anweisung": "Es soll ein Geräusch machen, das es bisher nicht macht – oder gar keins mehr.",
+      "beispiel": "Ein Löffel, der beim Umrühren summt, solange die Suppe zu heiß ist."
+    }
+  ],
+  "fragen": [
+    "Wer soll {akkusativ} benutzen?",
+    "Woraus baust du {akkusativ}?",
+    "Was kann dein neuer Entwurf, was der alte nicht konnte?",
+    "Was daran könnte schiefgehen – und wie löst du das?"
+  ],
+  "bionik": [
+    {
+      "id": "b01",
+      "erfindung": "Der Klettverschluss",
+      "emoji": "🥾",
+      "vorbild": "Die Frucht der Klette",
+      "andere": ["Der Igel", "Die Fichtenzapfen"],
+      "art": "abgeschaut",
+      "beleg": "Der Schweizer Ingenieur George de Mestral fand nach einem Spaziergang Klettenfrüchte im Fell seines Hundes, sah sich ihre Widerhaken unter dem Mikroskop an und meldete daraus in den 1950er-Jahren den Klettverschluss zum Patent an.",
+      "erklaerung": "Das ist echtes Abschauen: Die Klettenfrucht hängt sich mit winzigen Häkchen in Fell und Wolle. Genau diese Häkchen sitzen auf der harten Seite des Klettverschlusses, die weiche Seite ist die Wolle. Erfunden hat es ein Ingenieur, dem die Kletten am Hund nicht mehr aus dem Kopf gingen."
+    },
+    {
+      "id": "b02",
+      "erfindung": "Die selbstreinigende Hausfassade",
+      "emoji": "🏠",
+      "vorbild": "Das Blatt der Lotosblume",
+      "andere": ["Der Regenwurm", "Die Birkenrinde"],
+      "art": "abgeschaut",
+      "beleg": "Der Botaniker Wilhelm Barthlott beschrieb in den 1970er- und 1990er-Jahren, warum Lotosblätter sauber bleiben: winzige Noppen auf der Oberfläche. Aus dieser Beobachtung entstanden Fassadenfarben, an denen Schmutz nicht haftet.",
+      "erklaerung": "Auf dem Lotosblatt sitzen so winzige Noppen, dass Wassertropfen kaum aufliegen: Sie kugeln ab und nehmen den Schmutz mit. Wer eine Hauswand mit derselben Struktur streicht, bekommt eine Wand, die der Regen putzt. Auch das ist wirklich von der Natur abgeschaut."
+    },
+    {
+      "id": "b03",
+      "erfindung": "Die Rillenfolie auf dem Flugzeug",
+      "emoji": "✈️",
+      "vorbild": "Die Haut des Hais",
+      "andere": ["Die Schuppen des Karpfens", "Der Panzer der Schildkröte"],
+      "art": "abgeschaut",
+      "beleg": "Haihaut ist nicht glatt, sondern trägt feine Längsrillen. Nach diesem Vorbild entwickelte Folien mit winzigen Rillen verringern den Widerstand; seit den 2020er-Jahren bringen Fluggesellschaften solche Folien auf Flugzeugrümpfe auf, um Treibstoff zu sparen.",
+      "erklaerung": "Man würde denken: Je glatter, desto besser. Bei strömender Luft und bei Wasser stimmt das nicht – feine Rillen in Strömungsrichtung bremsen weniger als eine glatte Fläche. Übrigens: Die superschnellen Schwimmanzüge, die im Wettkampf verboten wurden, haben damit nichts zu tun. Die wurden verboten, weil ihr Material den Körper zusammenpresste und Auftrieb gab – nicht wegen einer Haihaut-Struktur."
+    },
+    {
+      "id": "b04",
+      "erfindung": "Der Gleiter von Otto Lilienthal",
+      "emoji": "🪂",
+      "vorbild": "Der Flügel des Storchs",
+      "andere": ["Der Flügel der Fledermaus", "Die Flosse des Delfins"],
+      "art": "abgeschaut",
+      "beleg": "Otto Lilienthal beobachtete jahrelang Störche und veröffentlichte 1889 sein Buch über den Vogelflug als Grundlage der Fliegekunst. Seine Gleitflugzeuge trugen die gewölbte Flügelform, die er dort beschrieben hatte.",
+      "erklaerung": "Lilienthal hat nicht geraten, sondern gemessen: Ein Vogelflügel ist oben gewölbt und unten flach, und genau diese Form trägt in der Luft. Er baute sie nach und flog damit. Fast alle Flugzeugflügel haben diese Wölbung bis heute."
+    },
+    {
+      "id": "b05",
+      "erfindung": "Der Hubschrauber",
+      "emoji": "🚁",
+      "vorbild": "Niemand – er sieht der Libelle nur ähnlich",
+      "andere": ["Die Libelle", "Der Kolibri"],
+      "art": "aehnlich",
+      "erklaerung": "Ein Hubschrauber und eine Libelle können beide in der Luft stehen bleiben, und das sieht sich verblüffend ähnlich. Trotzdem ist der Hubschrauber nicht abgeschaut: Die Libelle bewegt vier Flügel einzeln auf und ab, der Hubschrauber dreht einen starren Rotor im Kreis. Ähnlich aussehen und abgeschaut sein ist eben nicht dasselbe."
+    },
+    {
+      "id": "b06",
+      "erfindung": "Das U-Boot",
+      "emoji": "🛥️",
+      "vorbild": "Niemand – es erinnert nur an einen Fisch",
+      "andere": ["Der Wal", "Der Tintenfisch"],
+      "art": "aehnlich",
+      "erklaerung": "Ein U-Boot ist geformt wie ein Fisch und taucht wie einer, aber es ist nicht abgeschaut. Fische steigen und sinken mit einer Schwimmblase voller Gas, U-Boote lassen Wasser in Tanks ein und wieder heraus. Zwei verschiedene Lösungen für dieselbe Aufgabe – das kommt oft vor."
+    },
+    {
+      "id": "b07",
+      "erfindung": "Das Ultraschallgerät beim Arzt",
+      "emoji": "🔊",
+      "vorbild": "Niemand – es arbeitet nur wie eine Fledermaus",
+      "andere": ["Die Fledermaus", "Die Eule"],
+      "art": "aehnlich",
+      "erklaerung": "Beide arbeiten mit demselben Prinzip: Töne aussenden, die zu hoch für unsere Ohren sind, und aus dem Echo ein Bild bauen. Die Fledermaus konnte das lange vor uns. Dass die Erfinder wirklich bei ihr abgeschaut hätten, ist aber nicht belegt – gleiches Prinzip, trotzdem nicht abgeschaut."
+    },
+    {
+      "id": "b08",
+      "erfindung": "Die Wabenplatte im Leichtbau",
+      "emoji": "🐝",
+      "vorbild": "Die Bienenwabe",
+      "andere": ["Das Spinnennetz", "Der Ameisenhaufen"],
+      "art": "abgeschaut",
+      "beleg": "Sechseckige Wabenkerne zwischen zwei dünnen Platten sind ein Standardbauteil im Flugzeug- und Möbelbau; die Form ist der Bienenwabe entnommen und heißt im Deutschen genauso.",
+      "erklaerung": "Sechsecke lassen sich ohne Lücke aneinanderlegen und brauchen dafür am wenigsten Wand. Die Biene baut so ihre Waben, und Leichtbauplatten sind innen genauso aufgebaut: außen dünn, innen sechseckig, dadurch leicht und trotzdem stabil. Sogar der Name ist geblieben."
+    },
+    {
+      "id": "b09",
+      "erfindung": "Das Rad",
+      "emoji": "🛞",
+      "vorbild": "Niemand – in der Natur gibt es kein Rad",
+      "andere": ["Der Mistkäfer", "Die Schnecke"],
+      "art": "aehnlich",
+      "erklaerung": "Hier gibt es nichts abzuschauen: Kein Tier hat ein Rad, weil sich ein Körperteil nicht endlos drehen kann – Blutgefäße und Nerven würden sich verdrehen. Das Rad ist eine Erfindung, auf die nur Menschen gekommen sind. Manchmal ist die Natur eben kein Vorbild."
+    },
+    {
+      "id": "b10",
+      "erfindung": "Die Pinzette",
+      "emoji": "🦀",
+      "vorbild": "Niemand – sie erinnert nur an eine Krebsschere",
+      "andere": ["Die Krebsschere", "Der Schnabel des Storchs"],
+      "art": "aehnlich",
+      "erklaerung": "Eine Pinzette greift wie eine Krebsschere, aber gebaut ist sie ganz anders: Die Schere hat ein Gelenk und zwei Muskeln, die Pinzette ist ein einziges gebogenes Blech, das von allein wieder aufgeht. Gleiche Aufgabe, andere Lösung – und keine Kopie."
+    }
+  ]
+}

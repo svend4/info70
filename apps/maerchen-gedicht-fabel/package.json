@@ -1,0 +1,8 @@
+{
+  "name": "@info70/maerchen-gedicht-fabel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Maerchen, Gedicht oder Fabel? Gattungs-Quiz mit 18 Fragen, 12 pro Runde, Erklaerung zu jeder Frage und vier Raengen. Zu jeder der sieben Textsorten - Maerchen, Erzaehlung, Gedicht, Fabel, Raetsel, Sprichwort, Zungenbrecher - gibt es einen kurzen Beispieltext zum Einordnen plus Aussagen ueber die Merkmale. Loest die vier klassischen Verwechslungen auf: ein Gedicht muss sich nicht reimen (mit reimlosem Beispiel), nicht jede Tiergeschichte ist eine Fabel, zur Fabel gehoert die Lehre, und Maerchen erkennt man am Wunder statt am sprechenden Tier. Alle Beispieltexte Eigenproduktion; die beiden Sprichwoerter sind gemeinfreies altes Sprachgut. Vorlesefunktion fuer Nichtleser (BFSG). Praleska docs/10 (Kinder-Apps Nr. 19). Offline, werbefrei, nur der Rekord liegt loeschbar auf dem Geraet. Zielgruppe: 6-10.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

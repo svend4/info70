@@ -1,0 +1,8 @@
+{
+  "name": "@info70/erfinder-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Erfinder-Werkstatt: Neue Dinge gestalten. Zwei Modi fuer Kinder von 8 bis 12. Erstens ein Auftrags-Generator aus zwoelf Alltagsgegenstaenden und acht Veraenderungskarten (Groesse aendern, Material tauschen, ein Teil weglassen, etwas dazubauen, zusammenklappbar machen, umdrehen, leiser oder lauter, fuer jemand anderen bauen) mit vier Leitfragen - 96 moegliche Auftraege, gezeichnet wird auf Papier. Zweitens zehn Natur-Technik-Paare mit der Unterscheidung, die sonst verschwimmt: wirklich abgeschaut (Klettverschluss von der Klettenfrucht, selbstreinigende Fassade vom Lotosblatt, Rillenfolie am Flugzeug von der Haihaut, Wabenplatte von der Bienenwabe, Lilienthals Gleiter vom Storchenfluegel - jeweils mit konkretem Beleg) gegenueber sieht nur aehnlich aus (Hubschrauber und Libelle, U-Boot und Fisch, Ultraschall und Fledermaus, Pinzette und Krebsschere - dort lautet die richtige Antwort immer Niemand) und dem Rad, fuer das es in der Natur ueberhaupt kein Vorbild gibt. Der Validator erzwingt diese Trennung. Praleska docs/10 (Kinder-Apps Nr. 16). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
