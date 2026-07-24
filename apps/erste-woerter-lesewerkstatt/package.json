@@ -1,0 +1,8 @@
+{
+  "name": "@info70/erste-woerter-lesewerkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Erste-Woerter-Lesewerkstatt: erstes Lesen fuer 5-7 nach der Silbenmethode des deutschen Anfangsunterrichts. Drei Stufen: Vokale hoeren, offene Silben hoeren (KV aus 8 haeufigen Konsonanten), lautgetreue Woerter lesen (OMA, SOFA, TOMATE - ohne Dehnungs-h, ohne Doppelbuchstaben, per Test gesichert) mit Silbenboegen und Bild-Selbstkontrolle. Bewusst kurze Runden (8 Aufgaben, dann Lese-Pause). Praleska docs/10 (Top-30 Nr. 25). Offline, werbefrei, nur Rekord lokal. Zielgruppe: Vorschule/Klasse 1.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

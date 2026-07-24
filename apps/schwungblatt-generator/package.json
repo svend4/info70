@@ -1,0 +1,8 @@
+{
+  "name": "@info70/schwungblatt-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Schwungblatt-Generator: Graphomotorik-Uebungsblaetter mit waehlbarer Progression (Stufe 1 grosse Boegen aus dem Arm, Stufe 2 Zickzack/Girlanden aus dem Handgelenk, Stufe 3 Schleifen/Kreise aus den Fingern als Vorform der Schrift) selbst zusammenstellen und drucken. SVG-Muster werden lokal erzeugt (gepunkteter Nachspur-Strich + gruener Startpunkt); geuebt wird mit Stift auf PAPIER - der Bildschirm ist nur die Druckerei. Ersetzt Kopiervorlagen-Hefte (OER). Praleska docs/10 (Top-30 Nr. 28). Offline, werbefrei, speichert nichts. Zielgruppe: Fachkraefte/Eltern (Vorschule).",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

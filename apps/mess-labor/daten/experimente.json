@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "hinweis": "Das Mess-Labor ist ein Sprungbrett: Die App stellt die Frage und sammelt deine Vermutung – das echte Experiment machst du DRAUSSEN am Tisch, in der Küche oder im Zimmer, mit richtigen Händen und echten Dingen. Danach kommst du zurück und schaust, was du herausgefunden hast. Vermutungen dürfen falsch sein – genau dafür forscht man! Bei Wasser und Küche hilft ein großer Mensch mit.",
+  "schritte": ["Vermuten", "Ausprobieren", "Schlussfolgern"],
+  "experimente": [
+    {
+      "id": "fuss-hand",
+      "titel": "Fuß gegen Unterarm",
+      "emoji": "🦶",
+      "frage": "Was ist länger: dein Fuß oder dein Unterarm (vom Ellbogen bis zum Handgelenk)?",
+      "material": "eine Schnur oder ein Wollfaden",
+      "anleitung": [
+        "Lege die Schnur an deinen Fuß und schneide oder markiere die Länge.",
+        "Halte die Fuß-Schnur an deinen Unterarm.",
+        "Vergleiche: Was ist länger – oder sind sie gleich?"
+      ],
+      "vermutungen": ["Der Fuß", "Der Unterarm", "Ungefähr gleich"],
+      "ergebnisse": ["Der Fuß war länger", "Der Unterarm war länger", "Ungefähr gleich"],
+      "erkenntnis": "Bei den meisten Menschen sind Fuß und Unterarm fast genau gleich lang! Der Körper steckt voller solcher Überraschungen. Mit einer Schnur kannst du alles vergleichen, ohne Zahlen zu kennen."
+    },
+    {
+      "id": "orange",
+      "titel": "Die Orangen-Frage",
+      "emoji": "🍊",
+      "frage": "Schwimmt eine Orange MIT Schale? Und was passiert OHNE Schale?",
+      "material": "eine Orange, eine große Schüssel mit Wasser (mit einem großen Menschen)",
+      "anleitung": [
+        "Lege die Orange mit Schale ins Wasser. Schwimmt sie?",
+        "Schäle die Orange und lege sie noch einmal hinein.",
+        "Beobachte genau, was jetzt passiert."
+      ],
+      "vermutungen": ["Beide schwimmen", "Beide gehen unter", "Mit Schale schwimmt sie, ohne geht sie unter"],
+      "ergebnisse": ["Beide schwammen", "Beide gingen unter", "Mit Schale schwamm sie, ohne ging sie unter"],
+      "erkenntnis": "Die Schale ist wie eine Schwimmweste: In ihr stecken viele winzige Luftpolster. Ohne Schale sinkt die Orange. Luft hilft beim Schwimmen – darum haben Schwimmflügel Luft in sich."
+    },
+    {
+      "id": "apfel-kartoffel",
+      "titel": "Apfel gegen Kartoffel",
+      "emoji": "🍎",
+      "frage": "Was ist schwerer: der größte Apfel oder die größte Kartoffel bei euch zu Hause?",
+      "material": "ein Apfel, eine Kartoffel, deine Hände als Waage (oder eine Küchenwaage)",
+      "anleitung": [
+        "Nimm in jede Hand eins und wiege mit den Armen wie eine Waage.",
+        "Wenn ihr eine Küchenwaage habt: wiege beide nacheinander.",
+        "Merke dir, was schwerer war."
+      ],
+      "vermutungen": ["Der Apfel", "Die Kartoffel", "Ungefähr gleich"],
+      "ergebnisse": ["Der Apfel war schwerer", "Die Kartoffel war schwerer", "Ungefähr gleich"],
+      "erkenntnis": "Größer heißt nicht immer schwerer! Es kommt darauf an, wie dicht etwas ist. Deine Hände sind schon eine gute Waage – eine echte Waage macht es genau."
+    },
+    {
+      "id": "becher-flasche",
+      "titel": "Wie viel passt hinein?",
+      "emoji": "🥛",
+      "frage": "Wie viele kleine Becher Wasser passen in die große Flasche?",
+      "material": "ein kleiner Becher, eine große Flasche, Wasser (am Waschbecken, mit einem großen Menschen)",
+      "anleitung": [
+        "Rate zuerst deine Zahl!",
+        "Fülle den Becher und gieße ihn durch einen Trichter oder vorsichtig in die Flasche.",
+        "Zähle laut mit, bis die Flasche voll ist."
+      ],
+      "vermutungen": ["Weniger als 3 Becher", "3 bis 6 Becher", "Mehr als 6 Becher"],
+      "ergebnisse": ["Weniger als 3 Becher", "3 bis 6 Becher", "Mehr als 6 Becher"],
+      "erkenntnis": "Du hast Volumen gemessen – mit dem Becher als Mess-Einheit! Genau so machen es Forscher*innen: Sie wählen eine Einheit und zählen, wie oft sie hineinpasst."
+    },
+    {
+      "id": "schritte",
+      "titel": "Zimmer in Schritten",
+      "emoji": "👣",
+      "frage": "Wie viele deiner Schritte ist dein Zimmer lang? Und wie viele Riesenschritte eines Erwachsenen?",
+      "material": "nur deine Füße – und ein großer Mensch zum Vergleichen",
+      "anleitung": [
+        "Geh dein Zimmer von Wand zu Wand ab und zähle deine Schritte.",
+        "Lass einen großen Menschen dieselbe Strecke abgehen.",
+        "Vergleicht eure Zahlen."
+      ],
+      "vermutungen": ["Ich brauche mehr Schritte", "Der große Mensch braucht mehr", "Wir brauchen gleich viele"],
+      "ergebnisse": ["Ich brauchte mehr Schritte", "Der große Mensch brauchte mehr", "Wir brauchten gleich viele"],
+      "erkenntnis": "Kleine Füße, mehr Schritte – große Füße, weniger Schritte. Darum haben sich die Menschen auf feste Einheiten wie den Meter geeinigt: Damit alle dasselbe messen."
+    },
+    {
+      "id": "rampe",
+      "titel": "Das große Rollrennen",
+      "emoji": "🏁",
+      "frage": "Was rollt von einer schrägen Rampe weiter: eine Dose oder ein Ball?",
+      "material": "ein Brett oder fester Karton als Rampe, eine Dose, ein Ball",
+      "anleitung": [
+        "Lehne das Brett an ein dickes Buch – fertig ist die Rampe.",
+        "Lass erst die Dose, dann den Ball vom selben Punkt losrollen (nicht anschieben!).",
+        "Markiere, wo jedes liegen bleibt."
+      ],
+      "vermutungen": ["Die Dose rollt weiter", "Der Ball rollt weiter", "Beide gleich weit"],
+      "ergebnisse": ["Die Dose rollte weiter", "Der Ball rollte weiter", "Beide ungefähr gleich"],
+      "erkenntnis": "Faire Messung heißt: gleicher Startpunkt, kein Anschieben! Was weiter rollt, hängt von Form, Gewicht und Boden ab – probier es auf Teppich und glattem Boden, das Ergebnis kann sich ändern."
+    },
+    {
+      "id": "eis",
+      "titel": "Das Schmelz-Duell",
+      "emoji": "🧊",
+      "frage": "Wo schmilzt ein Eiswürfel schneller: im Wasserglas oder auf dem Teller?",
+      "material": "zwei Eiswürfel, ein Glas mit Wasser, ein Teller (mit einem großen Menschen)",
+      "anleitung": [
+        "Lege gleichzeitig einen Eiswürfel ins Wasserglas und einen auf den Teller.",
+        "Schau alle paar Minuten nach.",
+        "Welcher ist zuerst ganz verschwunden?"
+      ],
+      "vermutungen": ["Im Wasserglas", "Auf dem Teller", "Beide gleich schnell"],
+      "ergebnisse": ["Im Wasserglas", "Auf dem Teller", "Beide ungefähr gleich"],
+      "erkenntnis": "Meistens gewinnt das Wasserglas: Wasser umschließt den Würfel von allen Seiten und bringt ständig Wärme heran – Luft wärmt viel langsamer. Zeit messen kann man übrigens auch mit einem Lied: Wie oft hast du es gesungen?"
+    },
+    {
+      "id": "fenster-boden",
+      "titel": "Warm und kalt im Zimmer",
+      "emoji": "🌡️",
+      "frage": "Wo fühlt es sich im Winter kälter an: unten am Boden oder oben am Fenster?",
+      "material": "deine Hände (oder ein Thermometer, wenn ihr eins habt)",
+      "anleitung": [
+        "Halte deine Hand eine Weile dicht über den Boden.",
+        "Halte sie dann ans geschlossene Fenster.",
+        "Wo hat es sich kälter angefühlt? (Mit Thermometer: miss an beiden Stellen.)"
+      ],
+      "vermutungen": ["Am Boden", "Am Fenster", "Überall gleich"],
+      "ergebnisse": ["Am Boden", "Am Fenster", "Überall gleich"],
+      "erkenntnis": "Am Fenster ist es im Winter oft am kältesten – dort kommt die Kälte von draußen durch. Und warme Luft steigt nach oben! Die Haut ist ein Gefühls-Messgerät; ein Thermometer misst genauer."
+    }
+  ]
+}

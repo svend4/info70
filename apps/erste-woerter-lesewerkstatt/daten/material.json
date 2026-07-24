@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 (kurze Sessions)",
+  "hinweis": "Erstes Lesen in drei Stufen nach der Silbenmethode: erst Selbstlaute hören, dann offene Silben, dann lautgetreue Wörter mit Bild-Selbstkontrolle. Kurze Runden mit klarem Ende – lieber öfter kurz als einmal lang. Alle Wörter sind lautgetreu (man schreibt sie, wie man sie spricht – ohne Dehnungs-h und ohne Doppelbuchstaben).",
+  "vokale": ["A", "E", "I", "O", "U"],
+  "konsonanten": ["M", "L", "S", "N", "R", "T", "P", "F"],
+  "silben": ["MA", "ME", "MO", "MU", "LA", "LO", "SO", "SU", "NA", "NO", "RA", "RO", "TA", "TO", "PU", "FA"],
+  "woerter": [
+    { "wort": "OMA", "emoji": "👵" },
+    { "wort": "OPA", "emoji": "👴" },
+    { "wort": "MAMA", "emoji": "👩" },
+    { "wort": "PAPA", "emoji": "👨" },
+    { "wort": "SOFA", "emoji": "🛋️" },
+    { "wort": "NASE", "emoji": "👃" },
+    { "wort": "ROSE", "emoji": "🌹" },
+    { "wort": "DOSE", "emoji": "🥫" },
+    { "wort": "HOSE", "emoji": "👖" },
+    { "wort": "HASE", "emoji": "🐰" },
+    { "wort": "ESEL", "emoji": "🫏" },
+    { "wort": "IGEL", "emoji": "🦔" },
+    { "wort": "MOND", "emoji": "🌙" },
+    { "wort": "SALAT", "emoji": "🥗" },
+    { "wort": "TOMATE", "emoji": "🍅" },
+    { "wort": "BANANE", "emoji": "🍌" }
+  ]
+}

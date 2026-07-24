@@ -1,0 +1,26 @@
+/* Schwungblatt-Generator: Druckansicht. Beim Drucken verschwinden Kopf und
+   Bedienelemente (.sbg-nur-bildschirm); übrig bleibt das Schwungblatt in
+   voller Seitenbreite mit kräftigen, gut nachspurbaren Linien. */
+
+@media print {
+  .sbg-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .sbg-blatt {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    break-inside: avoid;
+  }
+
+  .sbg-blatt svg { height: 90px; }
+}
