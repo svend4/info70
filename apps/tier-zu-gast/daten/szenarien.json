@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 und 8-12",
+  "hinweis": "Ein Tier zu Gast – Verantwortungs-Trainer (Praleska docs/10, Kinder-Apps Nr. 4; Struktur adaptiert, alle Szenen Eigenproduktion). Botschaften ausgerichtet an deutschem Tierschutz-Alltagswissen und Heimtier-Empfehlungen: Meerschweinchen, Kaninchen und Wellensittiche nie einzeln halten; Hamster sind nachtaktiv; Kaninchen am Boden streicheln; kranke Tiere zum Tierarzt.",
+  "raenge": [
+    { "ab": 0, "titel": "Tierfreund-Anfänger*in", "emoji": "🌱" },
+    { "ab": 8, "titel": "Tier-Kenner*in", "emoji": "🐾" },
+    { "ab": 14, "titel": "Tier-Versteher*in", "emoji": "💚" },
+    { "ab": 18, "titel": "Verantwortungs-Profi", "emoji": "🏅" }
+  ],
+  "szenarien": [
+    {
+      "id": "t01", "thema": "Meerschweinchen", "emoji": "🐹",
+      "situation": "Ihr wollt Meerschweinchen anschaffen. Im Laden sitzt ein einzelnes Tier ganz allein.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Meerschweinchen brauchen Artgenossen – wir nehmen nie nur eins allein.", "wert": 2 },
+        { "text": "Eins reicht, ich spiele ja jeden Tag mit ihm.", "wert": 0 },
+        { "text": "Eins mit einem Spiegel im Gehege, dann denkt es, es ist nicht allein.", "wert": 0 }
+      ],
+      "erklaerung": "Meerschweinchen sind Rudeltiere: Sie brauchen mindestens einen Artgenossen, um sich wohlzufühlen. Ein Mensch oder ein Spiegel kann das nicht ersetzen."
+    },
+    {
+      "id": "t02", "thema": "Hamster", "emoji": "🐹",
+      "situation": "Es ist Nachmittag. Der Hamster schläft in seinem Häuschen – und du möchtest ihn gern zeigen.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Ich lasse ihn schlafen und zeige ihn am Abend, wenn er von selbst wach ist.", "wert": 2 },
+        { "text": "Ich wecke ihn vorsichtig – nur ganz kurz.", "wert": 0 },
+        { "text": "Ich hole ihn aus dem Häuschen, er kann ja später weiterschlafen.", "wert": 0 }
+      ],
+      "erklaerung": "Hamster sind nachtaktiv: Wer sie am Tag weckt, raubt ihnen den Schlaf und macht ihnen großen Stress – das macht sie auf Dauer krank. Abends kommt er von selbst heraus, dann ist Beobachtungszeit."
+    },
+    {
+      "id": "t03", "thema": "Kaninchen", "emoji": "🐇",
+      "situation": "Das Kaninchen sitzt im Gehege. Du möchtest es so gern streicheln.",
+      "frage": "Wie machst du es richtig?",
+      "optionen": [
+        { "text": "Ich setze mich ruhig auf den Boden, biete etwas Futter an und warte, bis es zu mir kommt.", "wert": 2 },
+        { "text": "Ich hebe es schnell hoch und drücke es an mich.", "wert": 0 },
+        { "text": "Ich laufe hinterher, bis ich es fangen kann.", "wert": 0 }
+      ],
+      "erklaerung": "Kaninchen sind Fluchttiere: Hochheben und Festhalten macht ihnen Angst. Am Boden sitzen, Futter anbieten, abwarten – so kommt es freiwillig."
+    },
+    {
+      "id": "t04", "thema": "Wellensittich", "emoji": "🦜",
+      "situation": "Ein Wellensittich sitzt allein im kleinen Käfig. Die Tür ist immer zu.",
+      "frage": "Was braucht er wirklich?",
+      "optionen": [
+        { "text": "Einen Artgenossen und jeden Tag Zeit zum Fliegen außerhalb des Käfigs.", "wert": 2 },
+        { "text": "Einen Spiegel und eine Glocke, dann ist ihm nicht langweilig.", "wert": 0 },
+        { "text": "Nichts – Vögel sitzen gern den ganzen Tag im Käfig.", "wert": 0 }
+      ],
+      "erklaerung": "Wellensittiche leben in Schwärmen und fliegen viel: Sie brauchen mindestens einen Artgenossen und täglichen Freiflug im Zimmer. Ein Spiegel ist kein Freund."
+    },
+    {
+      "id": "t05", "thema": "Füttern", "emoji": "🥬",
+      "situation": "Du darfst die Meerschweinchen füttern. Auf dem Tisch liegen Heu, Gurke – und dein Schokoriegel.",
+      "frage": "Was kommt ins Gehege?",
+      "optionen": [
+        { "text": "Heu und ein Stück Gurke – Schokolade ist für Tiere giftig.", "wert": 2 },
+        { "text": "Nur ein kleines Stückchen Schokolade als Belohnung.", "wert": 0 },
+        { "text": "Alles zusammen, dann können sie sich aussuchen, was sie fressen.", "wert": 0 }
+      ],
+      "erklaerung": "Heu muss immer da sein, dazu frisches Gemüse. Süßigkeiten, Brot und Essensreste machen kleine Tiere krank – Schokolade ist sogar giftig."
+    },
+    {
+      "id": "t06", "thema": "Ruhe", "emoji": "🔇",
+      "situation": "Neben dem Gehege läuft Musik. Dein Freund will die Box noch lauter drehen, um zu sehen, was das Tier macht.",
+      "frage": "Was sagst du?",
+      "optionen": [
+        { "text": "„Lass uns die Musik leise machen – Tiere haben feine Ohren und Lärm macht ihnen Stress.“", "wert": 2 },
+        { "text": "„Nur ganz kurz laut, dann wieder leise.“", "wert": 1 },
+        { "text": "„Au ja, mal sehen, ob es erschrickt!“", "wert": 0 }
+      ],
+      "erklaerung": "Tiere hören viel feiner als wir. Lärm bedeutet für sie Gefahr und Stress. Ein guter Tierfreund schützt die Ruhe am Gehege."
+    },
+    {
+      "id": "t07", "thema": "Sauberkeit", "emoji": "🧹",
+      "situation": "Das Gehege riecht schon streng, das Wasser sieht trüb aus. Aber dein Lieblingsfilm fängt gleich an.",
+      "frage": "Was machst du?",
+      "optionen": [
+        { "text": "Erst frisches Wasser geben und mit einem Erwachsenen das Gehege sauber machen – dann Film.", "wert": 2 },
+        { "text": "Nur schnell das Wasser wechseln, der Rest hat Zeit bis morgen.", "wert": 1 },
+        { "text": "Das merkt das Tier doch nicht – erst mal Film schauen.", "wert": 0 }
+      ],
+      "erklaerung": "Frisches Wasser und ein sauberes Gehege sind wie Essen und ein sauberes Bett für dich: Das Tier kann nicht selbst putzen – es verlässt sich auf dich."
+    },
+    {
+      "id": "t08", "thema": "Krankheit", "emoji": "🩺",
+      "situation": "Das Kaninchen frisst seit gestern nicht und sitzt ganz still in der Ecke.",
+      "frage": "Was ist richtig?",
+      "optionen": [
+        { "text": "Sofort einem Erwachsenen sagen – es muss schnell zum Tierarzt.", "wert": 2 },
+        { "text": "Noch ein paar Tage abwarten, vielleicht wird es von allein besser.", "wert": 0 },
+        { "text": "Ihm heimlich Medizin aus dem Schrank geben.", "wert": 0 }
+      ],
+      "erklaerung": "Wenn ein Kaninchen nicht frisst, ist das ein Notfall – kleine Tiere können schnell schwer krank werden. Nur die Tierärztin weiß, welche Medizin hilft."
+    },
+    {
+      "id": "t09", "thema": "Zu Gast in der Gruppe", "emoji": "🏫",
+      "situation": "Ein Kaninchen ist zu Gast in eurer Gruppe. Alle Kinder wollen es sofort streicheln.",
+      "frage": "Wie geht ihr vor?",
+      "optionen": [
+        { "text": "Abwechseln, leise sein – und wenn es sich versteckt, lassen wir es in Ruhe.", "wert": 2 },
+        { "text": "Alle stellen sich drumherum und strecken die Hände hin.", "wert": 0 },
+        { "text": "Wer am schnellsten ist, darf es zuerst hochheben.", "wert": 0 }
+      ],
+      "erklaerung": "Viele Hände und viele Stimmen auf einmal sind für ein kleines Tier beängstigend. Abwechseln, leise sein, Rückzugsort respektieren – so fühlt sich der Gast wohl."
+    },
+    {
+      "id": "t10", "thema": "Sommerhitze", "emoji": "☀️",
+      "situation": "Ein heißer Sommertag. Das Kaninchengehege steht draußen in der prallen Sonne.",
+      "frage": "Was ist jetzt wichtig?",
+      "optionen": [
+        { "text": "Mit einem Erwachsenen das Gehege in den Schatten stellen und frisches Wasser geben.", "wert": 2 },
+        { "text": "Nichts – Tiere mögen Sonne.", "wert": 0 },
+        { "text": "Das Kaninchen mit kaltem Wasser abduschen.", "wert": 0 }
+      ],
+      "erklaerung": "Hitze ist für Kaninchen und Meerschweinchen richtig gefährlich – sie können nicht schwitzen. Schatten, frisches Wasser und Ruhe helfen; kaltes Abduschen wäre ein Schock."
+    }
+  ]
+}

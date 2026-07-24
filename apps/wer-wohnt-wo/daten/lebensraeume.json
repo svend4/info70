@@ -1,0 +1,99 @@
+{
+  "hinweis": "Wer wohnt wo? – vier heimische Lebensräume als Häuser (Praleska docs/10, Kinder-Apps Nr. 3; Struktur adaptiert, alle Texte Eigenproduktion). Heimische Arten statt belarussischer Fauna; Stockwerke des Waldes nach dem deutschen Sachunterrichts-Klassiker; Verhaltensregeln nach Alltagsverständnis des Naturschutzes (inkl. Handstraußregel, Brut- und Setzzeit). Die Artikel-Tabelle sorgt für grammatisch saubere Fragen und Vorlese-Sätze.",
+  "artikel": {
+    "Reh": "das", "Specht": "der", "Eichhörnchen": "das", "Buchfink": "der",
+    "Amsel": "die", "Haselmaus": "die", "Waldameise": "die", "Waldmaus": "die",
+    "Pilz": "der", "Regenwurm": "der", "Fuchs": "der", "Grashüpfer": "der",
+    "Schmetterling": "der", "Maulwurf": "der", "Stockente": "die", "Frosch": "der",
+    "Libelle": "die", "Igel": "der", "Feldhase": "der", "Marienkäfer": "der"
+  },
+  "lebensraeume": [
+    {
+      "id": "wald",
+      "name": "Wald",
+      "emoji": "🌳",
+      "wo": "im Wald",
+      "beschreibung": "Der Wald ist wie ein Hochhaus: Er hat Stockwerke – von den Baumkronen ganz oben bis zu den Wurzeln unter der Erde. In jedem Stockwerk wohnen andere Tiere und Pflanzen.",
+      "jahreszeiten": {
+        "fruehling": "Die Bäume bekommen frische Blätter, Buschwindröschen blühen, die Vögel bauen Nester und singen um die Wette.",
+        "sommer": "Das Blätterdach ist dicht und spendet kühlen Schatten. Junge Tiere üben, was sie zum Leben brauchen.",
+        "herbst": "Die Blätter färben sich bunt und fallen. Das Eichhörnchen versteckt Nüsse als Wintervorrat, Pilze schieben sich aus dem Boden.",
+        "winter": "Viele Bäume sind kahl. Die Haselmaus hält ihren Winterschlaf in einem kugelrunden Nest, das Reh trägt ein dichtes Winterfell."
+      },
+      "stockwerke": [
+        { "id": "baumschicht", "name": "Baumschicht (ganz oben)", "kurz": "Baumschicht", "emoji": "🌲", "bewohner": ["Specht", "Eichhörnchen", "Buchfink"], "info": "In den Baumkronen wird geklettert, geklopft und genistet – der Specht zimmert seine Höhle in den Stamm." },
+        { "id": "strauchschicht", "name": "Strauchschicht", "kurz": "Strauchschicht", "emoji": "🌿", "bewohner": ["Amsel", "Haselmaus"], "info": "In Holunder, Hasel und Brombeere verstecken Vögel ihre Nester – und es gibt Beeren zu holen." },
+        { "id": "krautschicht", "name": "Krautschicht", "kurz": "Krautschicht", "emoji": "🌱", "bewohner": ["Reh", "Waldameise"], "info": "Hier wachsen Farn, Gräser und Kräuter – das Reh kommt zum Fressen vorbei, Ameisen sind auf Futtersuche." },
+        { "id": "bodenschicht", "name": "Boden- und Moosschicht", "kurz": "Boden- und Moosschicht", "emoji": "🍄", "bewohner": ["Waldmaus", "Pilz"], "info": "Zwischen Moos und Laub raschelt es: Die Waldmaus sucht Samen und Käfer, Pilze zersetzen altes Holz." },
+        { "id": "wurzelschicht", "name": "Wurzelschicht (unter der Erde)", "kurz": "Wurzelschicht", "emoji": "🪱", "bewohner": ["Regenwurm", "Fuchs"], "info": "Unter der Erde lockert der Regenwurm den Boden – und der Fuchs hat hier seinen Bau." }
+      ]
+    },
+    {
+      "id": "wiese",
+      "name": "Wiese",
+      "emoji": "🌼",
+      "wo": "auf der Wiese",
+      "beschreibung": "Die Wiese ist ein Blüten-Dschungel im Kleinen: Zwischen Gräsern und Blumen summt, hüpft und krabbelt es überall.",
+      "jahreszeiten": {
+        "fruehling": "Löwenzahn und Gänseblümchen blühen, die ersten Hummeln brummen von Blüte zu Blüte.",
+        "sommer": "Die Wiese steht hoch und ist voller Leben: Grashüpfer zirpen, Schmetterlinge tanzen über den Blüten.",
+        "herbst": "Die Wiese wird still, Samen fliegen davon, der Maulwurf wirft frische Erdhügel auf.",
+        "winter": "Die Wiese ruht unter Raureif oder Schnee. Insekten überwintern gut versteckt – als Ei, als Larve, als Puppe oder als fertiges Tier wie der Marienkäfer."
+      },
+      "stockwerke": []
+    },
+    {
+      "id": "teich",
+      "name": "Teich",
+      "emoji": "🐸",
+      "wo": "am Teich",
+      "beschreibung": "Der Teich hat Zimmer über und unter Wasser: Am Ufer, auf dem Wasser und im Wasser wohnen ganz verschiedene Tiere.",
+      "jahreszeiten": {
+        "fruehling": "Frösche legen Laich ins Wasser, aus dem Kaulquappen schlüpfen. Die Stockenten führen bald ihre Küken.",
+        "sommer": "Libellen jagen über dem Wasser, Seerosen blühen, am Ufer quakt es am Abend.",
+        "herbst": "Es wird kühler und ruhiger am Teich. Der Frosch sucht sich ein Winterversteck im Schlamm und im Laub.",
+        "winter": "Auf dem Teich liegt manchmal Eis. Unten am Grund ist das Wasser am wärmsten – dort überdauern die Teichtiere starr und still."
+      },
+      "stockwerke": []
+    },
+    {
+      "id": "garten",
+      "name": "Garten & Feld",
+      "emoji": "🥕",
+      "wo": "im Garten und auf dem Feld",
+      "beschreibung": "Im Garten und auf dem Feld arbeiten Menschen mit der Natur zusammen: Hier wachsen Gemüse und Getreide – und viele Tiere wohnen gleich mit.",
+      "jahreszeiten": {
+        "fruehling": "Beete werden vorbereitet und Samen gesät. Der Feldhase flitzt über die noch niedrigen Felder.",
+        "sommer": "Alles wächst: Auf dem Feld wird das Getreide gelb, im Garten reifen Beeren – Marienkäfer vertilgen Blattläuse.",
+        "herbst": "Erntezeit! Kartoffeln, Äpfel und Kürbisse werden eingesammelt. Der Igel sucht sich einen Laubhaufen zum Schlafen.",
+        "winter": "Beete und Felder ruhen. Ein wilder Gartenrest mit Laub und Reisig ist jetzt das beste Winterquartier für kleine Tiere."
+      },
+      "stockwerke": []
+    }
+  ],
+  "bewohner": [
+    { "name": "Reh", "emoji": "🦌", "lebensraum": "wald", "tipp": "Am liebsten frisst es Kräuter, Knospen und Blätter – meist in der Dämmerung am Waldrand." },
+    { "name": "Specht", "emoji": "🐦", "lebensraum": "wald", "tipp": "Er klopft am Baumstamm und zimmert sich seine Höhle in alte Bäume." },
+    { "name": "Eichhörnchen", "emoji": "🐿️", "lebensraum": "wald", "tipp": "Es turnt durch die Baumkronen und versteckt im Herbst Nüsse als Wintervorrat." },
+    { "name": "Fuchs", "emoji": "🦊", "lebensraum": "wald", "tipp": "Seinen Bau hat er unter der Erde – unterwegs ist er oft in der Dämmerung." },
+    { "name": "Grashüpfer", "emoji": "🦗", "lebensraum": "wiese", "tipp": "Er zirpt im hohen Gras und springt mit seinen langen Hinterbeinen davon." },
+    { "name": "Schmetterling", "emoji": "🦋", "lebensraum": "wiese", "tipp": "Schmetterlinge wie das Tagpfauenauge trinken Nektar an den Wiesenblumen." },
+    { "name": "Maulwurf", "emoji": "🐾", "lebensraum": "wiese", "tipp": "Die kleinen Erdhügel verraten ihn: Darunter gräbt er seine Gänge." },
+    { "name": "Stockente", "emoji": "🦆", "lebensraum": "teich", "tipp": "Sie schwimmt auf dem Wasser und gründelt kopfüber nach Futter." },
+    { "name": "Frosch", "emoji": "🐸", "lebensraum": "teich", "tipp": "Der Teichfrosch sonnt sich am Ufer und springt bei Gefahr blitzschnell ins Wasser." },
+    { "name": "Libelle", "emoji": "🪰", "lebensraum": "teich", "tipp": "Sie jagt über dem Wasser – ihre Larven leben sogar unten im Teich." },
+    { "name": "Igel", "emoji": "🦔", "lebensraum": "garten", "tipp": "Am liebsten mag er Hecken und Laubhaufen – dort findet er Käfer und ein Winterquartier." },
+    { "name": "Feldhase", "emoji": "🐇", "lebensraum": "garten", "tipp": "Er wohnt draußen im Freien in einer flachen Mulde – der Sasse." },
+    { "name": "Marienkäfer", "emoji": "🐞", "lebensraum": "garten", "tipp": "Er ist der Gärtner-Helfer: Er und seine Larven fressen Blattläuse." }
+  ],
+  "gastRegeln": [
+    { "id": "wege", "aussage": "Im Wald bleiben wir auf den Wegen.", "richtig": true, "erklaerung": "Auf den Wegen stören wir die Tiere am wenigsten – abseits davon liegen Nester, Baue und Verstecke." },
+    { "id": "musik", "aussage": "Laute Musik im Wald ist okay – die Tiere gewöhnen sich daran.", "richtig": false, "erklaerung": "Lärm erschreckt die Tiere und verscheucht sie. Wer leise ist, ist ein guter Gast – und sieht sogar mehr Tiere." },
+    { "id": "kaulquappe", "aussage": "Eine Kaulquappe darf ich in einem Glas mit nach Hause nehmen.", "richtig": false, "erklaerung": "Wildtiere bleiben in ihrem Zuhause – zu Hause können Kaulquappen nicht richtig leben. Frösche und ihr Laich sind außerdem geschützt. Beobachten: ja, mitnehmen: nein." },
+    { "id": "muell", "aussage": "Unseren Müll nehmen wir wieder mit nach Hause.", "richtig": true, "erklaerung": "Müll kann Tiere verletzen oder krank machen. Ein guter Gast lässt nichts zurück – gern auch fremden Müll einsammeln." },
+    { "id": "blumen", "aussage": "Ich pflücke auf der Wiese so viele Blumen, wie ich tragen kann.", "richtig": false, "erklaerung": "Ein kleiner Strauß Gänseblümchen für zu Hause ist erlaubt – aber kein ganzer Armvoll, und geschützte Blumen gar nicht. Die Blüten brauchen auch die Bienen und Schmetterlinge." },
+    { "id": "nest", "aussage": "Junge Vögel im Nest schaue ich nur aus der Ferne an.", "richtig": true, "erklaerung": "Wer dem Nest zu nahe kommt, kann die Vogeleltern verscheuchen. Aus der Ferne beobachten stört niemanden." },
+    { "id": "fuettern", "aussage": "Enten am Teich füttere ich am besten mit viel Brot.", "richtig": false, "erklaerung": "Brot ist schlecht für Enten und macht das Wasser schmutzig. Enten finden ihr Futter selbst – zuschauen macht genauso viel Spaß." },
+    { "id": "leine", "aussage": "Im Frühling bleibt der Hund auf Wiesen und am Waldrand an der Leine.", "richtig": true, "erklaerung": "Im Frühling und Frühsommer (Brut- und Setzzeit) haben viele Tiere Junge im Gras und Gebüsch. Ein angeleinter Hund kann sie nicht aufscheuchen." }
+  ]
+}

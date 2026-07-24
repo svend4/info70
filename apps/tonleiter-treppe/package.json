@@ -1,0 +1,8 @@
+{
+  "name": "@info70/tonleiter-treppe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tonleiter-Treppe: spielerisches Notenlern-Modul nach dem Treppen-Prinzip (Lesenka) fuer 5-7 und 8-12. Erst der erste Tetrachord Do-Re-Mi-Fa, dann Sol-La-Si-Do; Toene auf einer visuellen, beim Spielen aufleuchtenden Treppe hoeren, benennen und nachbauen. Relative Solmisation plus deutsche Tonnamen c-c' parallel (Elementarmusikpaedagogik); Hoer-Quiz (welcher Ton ist hoeher? geht die Treppe rauf oder runter?) und Nachbau-Aufgaben (2-4 Toene im Tetrachord). Alle Toene lokal per WebAudio (Dreieckswelle, sanfte Huellkurve) - keine Audiodateien, kein Mikrofon. Praleska docs/10 (Kinder-Apps Nr. 6). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
