@@ -1,0 +1,8 @@
+{
+  "name": "@info70/fuenf-helfer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Meine fuenf Helfer - Koerper-Entdecker: Ko-Nutzungs-App fuer 3-5, ausschliesslich gemeinsam mit einem Erwachsenen. Die fuenf Sinne als Helfer - Augen, Nase, Ohren, Zunge, Haut - mit je einer Karte zum Anschauen (was der Helfer kann, wie er gesund bleibt, was man zusammen ausprobieren kann) und zwoelf Zuordnungsfragen, bei denen immer alle fuenf Helfer zur Wahl stehen, damit die Auswahl nichts verraet. Hygiene nach den ueblichen Alltagsempfehlungen (Haende waschen, Zaehne putzen, nichts in Ohr oder Nase stecken, nie in die Sonne schauen). Eigener Inklusionsteil zu Brille, Hoergeraet, Gebaerdensprache und Langstock: Hilfsmittel werden nie als Mangel beschrieben, die Gebaerdensprache ausdruecklich als richtige Sprache benannt, und die Regel lautet nicht anstarren, sondern freundlich fragen - wer nicht antworten will, darf Nein sagen. Kein Rekord, keine Punkte, hoechstens fuenf Fragen pro Sitzung. Praleska docs/10 (Ko-Nutzung Nr. 4). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

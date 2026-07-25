@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5 in Ko-Nutzung, erweiterbar 5-7",
+  "hinweis": "Fünf Sinne als „Helfer“. Der Inklusionsteil ist Absicht: Hilfsmittel werden als normal beschrieben, nie als Mangel – und die Regel lautet fragen statt starren.",
+  "helfer": [
+    {
+      "id": "augen", "name": "Die Augen", "emoji": "👀",
+      "kann": "Mit den Augen siehst du Farben, Formen und alles, was sich bewegt.",
+      "pflege": "Nicht mit schmutzigen Händen ins Auge fassen. Und nie in die Sonne schauen, auch nicht kurz.",
+      "spiel": "Macht die Augen zu. Was hört ihr jetzt, das ihr vorher nicht bemerkt habt?"
+    },
+    {
+      "id": "nase", "name": "Die Nase", "emoji": "👃",
+      "kann": "Mit der Nase riechst du – und du merkst sogar, ob etwas noch gut ist oder schon schlecht.",
+      "pflege": "In die Nase gehört nichts hinein außer Luft. Beim Schnupfen hilft ein Taschentuch.",
+      "spiel": "Riecht zusammen an einer Orange und an einer Zwiebel. Was ist der Unterschied?"
+    },
+    {
+      "id": "ohren", "name": "Die Ohren", "emoji": "👂",
+      "kann": "Mit den Ohren hörst du Stimmen, Musik und das Auto, das um die Ecke kommt.",
+      "pflege": "Leise ist besser als laut. Und in die Ohren steckt man nichts hinein – auch keine Wattestäbchen.",
+      "spiel": "Seid ganz still und zählt, wie viele verschiedene Geräusche ihr hört."
+    },
+    {
+      "id": "zunge", "name": "Die Zunge", "emoji": "👅",
+      "kann": "Mit der Zunge schmeckst du süß, sauer, salzig und bitter. Und beim Sprechen hilft sie auch mit.",
+      "pflege": "Zweimal am Tag Zähne putzen, morgens und abends. Und nichts in den Mund nehmen, was ihr draußen findet.",
+      "spiel": "Was schmeckt süß, was schmeckt sauer? Findet zusammen je ein Beispiel."
+    },
+    {
+      "id": "haut", "name": "Die Haut", "emoji": "✋",
+      "kann": "Mit der Haut fühlst du warm und kalt, weich und spitz. Sie ist überall an dir.",
+      "pflege": "Vor dem Essen Hände waschen. In der Sonne Hut und Sonnencreme.",
+      "spiel": "Fühlt mit geschlossenen Augen drei Sachen. Erratet ihr, was es ist?"
+    }
+  ],
+  "aufgaben": [
+    { "id": "f01", "helfer": "ohren", "frage": "Womit hörst du die Musik?", "erklaerung": "Mit den Ohren. Sie fangen alle Geräusche auf, auch wenn du gar nicht hinhörst.", "gespraech": "Welches Geräusch magst du am liebsten?" },
+    { "id": "f02", "helfer": "nase", "frage": "Womit riechst du den Kuchen?", "erklaerung": "Mit der Nase. Sie merkt den Kuchen schon, bevor du ihn siehst.", "gespraech": "Was riecht bei euch zu Hause am besten?" },
+    { "id": "f03", "helfer": "augen", "frage": "Womit siehst du, welche Farbe der Ball hat?", "erklaerung": "Mit den Augen. Sie erkennen Farben und Formen.", "gespraech": "Welche Farbe suchst du dir aus, wenn du malen darfst?" },
+    { "id": "f04", "helfer": "zunge", "frage": "Womit schmeckst du, ob die Zitrone sauer ist?", "erklaerung": "Mit der Zunge. Sie schmeckt süß, sauer, salzig und bitter.", "gespraech": "Was schmeckt dir gut – und was gar nicht?" },
+    { "id": "f05", "helfer": "haut", "frage": "Womit fühlst du, dass das Wasser warm ist?", "erklaerung": "Mit der Haut. Sie fühlt warm und kalt, weich und spitz.", "gespraech": "Fühlt mal an eurer Jacke und an der Fensterscheibe. Was ist kälter?" },
+    { "id": "f06", "helfer": "ohren", "frage": "Womit merkst du, dass ein Auto kommt, bevor du es siehst?", "erklaerung": "Mit den Ohren. Deshalb ist es an der Straße wichtig, keine Kopfhörer aufzuhaben.", "gespraech": "Warum sollte man an der Straße gut hören können?" },
+    { "id": "f07", "helfer": "augen", "frage": "Womit siehst du, ob die Ampel rot ist?", "erklaerung": "Mit den Augen. An der Ampel schaut man erst hin und geht dann.", "gespraech": "Was macht ihr an der Ampel, wenn sie rot ist?" },
+    { "id": "f08", "helfer": "haut", "frage": "Womit merkst du, dass der Topf heiß ist?", "erklaerung": "Mit der Haut. Sie warnt dich sofort – dann Hand weg und einem Erwachsenen Bescheid sagen.", "gespraech": "Was macht ihr, wenn sich jemand die Hand verbrannt hat?" },
+    { "id": "f09", "helfer": "nase", "frage": "Womit merkst du, dass die Milch nicht mehr gut ist?", "erklaerung": "Mit der Nase. Sie merkt schlechtes Essen, bevor man davon krank wird.", "gespraech": "Riecht zusammen an etwas aus dem Kühlschrank. Ist es noch gut?" },
+    { "id": "f10", "helfer": "zunge", "frage": "Womit sprichst du deinen Namen?", "erklaerung": "Mit der Zunge und den Lippen zusammen. Probier mal zu sprechen, ohne die Zunge zu bewegen.", "gespraech": "Sagt euren Namen ganz langsam. Wo ist die Zunge dabei?" },
+    { "id": "f11", "helfer": "augen", "frage": "Was ist gut für deine Augen?", "erklaerung": "Draußen spielen bei Tageslicht. Die Augen mögen es hell, aber nie direkt in die Sonne.", "gespraech": "Wie lange wart ihr heute schon draußen?" },
+    { "id": "f12", "helfer": "ohren", "frage": "Was ist gut für deine Ohren?", "erklaerung": "Leise Musik ist gut, ganz laute tut ihnen weh. Und in die Ohren steckt man nichts hinein.", "gespraech": "Ist es euch manchmal zu laut? Wo denn?" }
+  ],
+  "hilfen": [
+    { "id": "brille", "emoji": "👓", "name": "Die Brille", "text": "Manche Augen sehen schärfer mit einer Brille. Das ist ganz normal – so wie manche Füße feste Schuhe brauchen." },
+    { "id": "hoergeraet", "emoji": "🦻", "name": "Das Hörgerät", "text": "Ein Hörgerät macht Geräusche lauter. Wer eines trägt, hört damit gut mit." },
+    { "id": "gebaerden", "emoji": "🤟", "name": "Die Gebärdensprache", "text": "Manche Menschen sprechen mit den Händen. Die Gebärdensprache ist eine richtige Sprache, mit eigenen Wörtern und eigener Grammatik." },
+    { "id": "stock", "emoji": "🦯", "name": "Der Langstock", "text": "Wer nicht sehen kann, ertastet den Weg mit einem langen weißen Stock. Der Stock ist die Verlängerung der Hand." }
+  ],
+  "hilfenRegel": "Nicht anstarren. Wer etwas wissen will, darf freundlich fragen – und wer gerade keine Lust auf Fragen hat, darf auch Nein sagen.",
+  "schlussIdeen": [
+    "Geht durch die Wohnung und findet für jeden Helfer eine Sache: etwas zum Sehen, Riechen, Hören, Schmecken, Fühlen.",
+    "Spielt Blinde Kuh mit einem Tuch – aber nur dort, wo nichts im Weg steht.",
+    "Legt drei Sachen in eine Tüte. Wer errät sie nur durchs Fühlen?"
+  ]
+}

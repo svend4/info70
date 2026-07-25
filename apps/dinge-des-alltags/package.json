@@ -1,0 +1,8 @@
+{
+  "name": "@info70/dinge-des-alltags",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dinge des Alltags: Ko-Nutzungs-App fuer 3-5, ausschliesslich gemeinsam mit einem Erwachsenen. 19 kurze Bildaufgaben zur Dingwelt in sechs Typen - Kategorien (Moebel, Geschirr, Kleidung), Teile (Was gehoert zum Stuhl?), Materialien (Papier, Wolle, Glas), Funktionen (Womit isst man Suppe?), Fahrzeuge (Strassenbahn, Bus, Lastwagen) und die Sortierfrage von Menschen gemacht oder gewachsen. Bewusst NICHT auf quiz-kern gebaut: kein Rekord, keine Punkte, keine Raenge - fuer Dreijaehrige waere das ein Wettbewerb um eine Zahl, die sie nicht deuten koennen. Richtig und falsch gibt es trotzdem, aber freundlich und folgenlos; nach jeder Antwort steht ein Gespraechsimpuls fuer den Erwachsenen, denn das Gespraech ist der Lernstoff. Erwachsenen-Gate vor dem Start, hoechstens sechs Aufgaben pro Sitzung, danach zwingend Schluss mit drei Ideen fuer die echte Wohnung. Praleska docs/10 (Ko-Nutzung Nr. 2). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

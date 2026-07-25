@@ -1,0 +1,8 @@
+{
+  "name": "@info70/wetter-forscher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wetter- und Jahreszeiten-Forscher: taegliches Wetterprotokoll fuer Kinder ab 5 und fuer den Kita-Morgenkreis. Sechs Wettersorten (sonnig, bewoelkt, Regen, Wind, Schnee, Nebel), jede mit einer Wenn-dann-Beobachtung, die nach draussen schickt - Regen fuehrt zu Pfuetzen, Sonne zu Schatten, Schnee zum Schmelzversuch. Rueckblick ueber 28 Tage als Kalenderraster mit Auszaehlung und haeufigstem Wetter, dazu die Merkmale der gerade laufenden Jahreszeit zum Suchen (meteorologische Einteilung: Fruehling ab Maerz, Sommer ab Juni, Herbst ab September, Winter ab Dezember). Die Planer-Engine dient hier als Naturbeobachtungs-Tagebuch: Gezaehlt wird das Wetter, nie das Kind - deshalb sind Statistiken erlaubt, aber es gibt keine Punkte und keine Note. Gespeichert werden nur die letzten 28 Tage, loeschbar auf dem Geraet. Praleska docs/10 (Ko-Nutzung Nr. 5). Offline, werbefrei.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

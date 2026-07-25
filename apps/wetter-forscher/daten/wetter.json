@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7, auch als Kita-Morgenkreis-Werkzeug",
+  "hinweis": "Gezählt wird das Wetter, nie das Kind. Jede Wettersorte trägt eine Wenn-dann-Beobachtung, damit aus dem Antippen ein Hinausgehen wird.",
+  "wetter": [
+    {
+      "id": "sonne",
+      "name": "Sonnig",
+      "emoji": "☀️",
+      "beobachtung": "Bei Sonne gibt es Schatten. Stellt euch nach draußen: Wo ist euer Schatten – vorne, hinten oder neben euch? Und wird er später länger oder kürzer?"
+    },
+    {
+      "id": "wolken",
+      "name": "Bewölkt",
+      "emoji": "☁️",
+      "beobachtung": "Wolken haben Formen. Sucht eine, die aussieht wie ein Tier. Zieht sie schnell oder langsam über den Himmel?"
+    },
+    {
+      "id": "regen",
+      "name": "Regen",
+      "emoji": "🌧️",
+      "beobachtung": "Wenn es regnet, sammelt sich Wasser. Wo entstehen bei euch Pfützen – und warum ausgerechnet dort?"
+    },
+    {
+      "id": "wind",
+      "name": "Windig",
+      "emoji": "🌬️",
+      "beobachtung": "Wind sieht man nicht, aber man sieht, was er tut. Was bewegt sich gerade draußen? Und aus welcher Richtung kommt er?"
+    },
+    {
+      "id": "schnee",
+      "name": "Schnee",
+      "emoji": "❄️",
+      "beobachtung": "Schnee ist gefrorenes Wasser. Nehmt eine Handvoll mit ins warme Zimmer: Wie lange dauert es, bis daraus Wasser wird?"
+    },
+    {
+      "id": "nebel",
+      "name": "Nebel",
+      "emoji": "🌫️",
+      "beobachtung": "Nebel ist eine Wolke, die am Boden liegt. Wie weit könnt ihr heute sehen – bis zum nächsten Baum oder weiter?"
+    }
+  ],
+  "jahreszeiten": [
+    {
+      "id": "fruehling",
+      "impuls": "Was war heute draußen anders als letzte Woche?",
+      "merkmale": [
+        "Die Tage werden länger als die Nächte.",
+        "Schneeglöckchen und Krokusse blühen als Erste.",
+        "An den Bäumen platzen die Knospen auf.",
+        "Vögel bauen Nester und singen früh am Morgen.",
+        "Es regnet oft – und dann kommt gleich wieder die Sonne."
+      ]
+    },
+    {
+      "id": "sommer",
+      "impuls": "Wo war es heute am kühlsten – und warum ausgerechnet dort?",
+      "merkmale": [
+        "Die Sonne steht mittags hoch und der Schatten ist kurz.",
+        "Es ist abends noch lange hell.",
+        "Wiesen blühen, Bienen und Schmetterlinge sind unterwegs.",
+        "Nach einem heißen Tag kommt manchmal ein Gewitter.",
+        "Erdbeeren und Kirschen sind reif."
+      ]
+    },
+    {
+      "id": "herbst",
+      "impuls": "Wie viele verschiedene Blattfarben findet ihr auf einem Weg?",
+      "merkmale": [
+        "Die Blätter färben sich gelb, orange und rot und fallen ab.",
+        "Es wird jeden Tag ein bisschen früher dunkel.",
+        "Kastanien, Eicheln und Bucheckern liegen auf dem Boden.",
+        "Zugvögel sammeln sich und fliegen nach Süden.",
+        "Morgens liegt oft Nebel über den Wiesen."
+      ]
+    },
+    {
+      "id": "winter",
+      "impuls": "Welche Tierspuren findet ihr im Schnee oder im Matsch?",
+      "merkmale": [
+        "Die Tage sind kurz, die Nächte lang.",
+        "Pfützen frieren zu, manchmal fällt Schnee.",
+        "Die Laubbäume sind kahl, Tannen bleiben grün.",
+        "Manche Tiere halten Winterschlaf, andere suchen Futter.",
+        "Man sieht seinen eigenen Atem in der Luft."
+      ]
+    }
+  ]
+}

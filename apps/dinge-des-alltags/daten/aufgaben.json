@@ -1,0 +1,448 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5, nur gemeinsam mit einem Erwachsenen",
+  "hinweis": "Alltagsgegenstände aus dem deutschen Kita-Alltag. Jede Aufgabe endet mit einem Gesprächsimpuls für den Erwachsenen – das Gespräch ist der Lernstoff, nicht das Antippen.",
+  "aufgaben": [
+    {
+      "id": "d01",
+      "typ": "kategorie",
+      "frage": "Was ist ein Möbelstück?",
+      "optionen": [
+        {
+          "emoji": "🪑",
+          "text": "Stuhl",
+          "richtig": true
+        },
+        {
+          "emoji": "🍎",
+          "text": "Apfel",
+          "richtig": false
+        },
+        {
+          "emoji": "👟",
+          "text": "Schuh",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Der Stuhl ist ein Möbelstück. Möbel stehen in der Wohnung, und man sitzt, liegt oder legt etwas darauf.",
+      "gespraech": "Welche Möbel stehen bei euch im Zimmer?"
+    },
+    {
+      "id": "d02",
+      "typ": "kategorie",
+      "frage": "Was ist Geschirr?",
+      "optionen": [
+        {
+          "emoji": "🍽️",
+          "text": "Teller",
+          "richtig": true
+        },
+        {
+          "emoji": "🧦",
+          "text": "Socke",
+          "richtig": false
+        },
+        {
+          "emoji": "🌳",
+          "text": "Baum",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Der Teller ist Geschirr. Geschirr braucht man zum Essen und Trinken: Teller, Tasse, Schüssel.",
+      "gespraech": "Was steht bei euch auf dem Tisch, wenn ihr esst?"
+    },
+    {
+      "id": "d03",
+      "typ": "kategorie",
+      "frage": "Was zieht man an?",
+      "optionen": [
+        {
+          "emoji": "🧥",
+          "text": "Jacke",
+          "richtig": true
+        },
+        {
+          "emoji": "🥄",
+          "text": "Löffel",
+          "richtig": false
+        },
+        {
+          "emoji": "🚗",
+          "text": "Auto",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Die Jacke ist Kleidung. Kleidung zieht man an, damit einem warm bleibt und der Regen nicht durchkommt.",
+      "gespraech": "Was ziehst du an, wenn es draußen kalt ist?"
+    },
+    {
+      "id": "d04",
+      "typ": "teil",
+      "frage": "Was gehört zum Stuhl?",
+      "optionen": [
+        {
+          "emoji": "🦵",
+          "text": "Beine",
+          "richtig": true
+        },
+        {
+          "emoji": "🌿",
+          "text": "Blätter",
+          "richtig": false
+        },
+        {
+          "emoji": "🪶",
+          "text": "Federn",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Ein Stuhl hat Beine, eine Sitzfläche und meistens eine Lehne. Auf den Beinen steht er sicher.",
+      "gespraech": "Zählt zusammen: Wie viele Beine hat euer Stuhl?"
+    },
+    {
+      "id": "d05",
+      "typ": "teil",
+      "frage": "Was hat ein Auto?",
+      "optionen": [
+        {
+          "emoji": "🛞",
+          "text": "Räder",
+          "richtig": true
+        },
+        {
+          "emoji": "🪶",
+          "text": "Flügel",
+          "richtig": false
+        },
+        {
+          "emoji": "🌸",
+          "text": "Blüten",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Ein Auto hat Räder. Sie drehen sich, und dadurch rollt das Auto vorwärts.",
+      "gespraech": "Sucht zusammen: Was hat bei euch noch Räder?"
+    },
+    {
+      "id": "d06",
+      "typ": "teil",
+      "frage": "Was gehört zur Tasse?",
+      "optionen": [
+        {
+          "emoji": "🫖",
+          "text": "Henkel",
+          "richtig": true
+        },
+        {
+          "emoji": "🪟",
+          "text": "Fenster",
+          "richtig": false
+        },
+        {
+          "emoji": "🔑",
+          "text": "Schlüssel",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Am Henkel hält man die Tasse fest. Das ist praktisch, wenn der Tee heiß ist.",
+      "gespraech": "Warum ist der Henkel gut, wenn etwas heiß ist?"
+    },
+    {
+      "id": "d07",
+      "typ": "material",
+      "frage": "Woraus ist ein Buch?",
+      "optionen": [
+        {
+          "emoji": "📄",
+          "text": "Papier",
+          "richtig": true
+        },
+        {
+          "emoji": "🪨",
+          "text": "Stein",
+          "richtig": false
+        },
+        {
+          "emoji": "💧",
+          "text": "Wasser",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Ein Buch ist aus Papier. Papier ist dünn, man kann es knicken – und deshalb geht es auch leicht kaputt.",
+      "gespraech": "Was ist bei euch noch aus Papier?"
+    },
+    {
+      "id": "d08",
+      "typ": "material",
+      "frage": "Woraus ist ein Pullover?",
+      "optionen": [
+        {
+          "emoji": "🧶",
+          "text": "Wolle",
+          "richtig": true
+        },
+        {
+          "emoji": "🪵",
+          "text": "Holz",
+          "richtig": false
+        },
+        {
+          "emoji": "🧊",
+          "text": "Eis",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Ein Pullover ist aus Wolle oder Stoff. Beides ist weich und hält warm.",
+      "gespraech": "Fühlt mal: Was ist weich, was ist hart?"
+    },
+    {
+      "id": "d09",
+      "typ": "material",
+      "frage": "Woraus ist ein Fenster?",
+      "optionen": [
+        {
+          "emoji": "🪟",
+          "text": "Glas",
+          "richtig": true
+        },
+        {
+          "emoji": "🧻",
+          "text": "Papier",
+          "richtig": false
+        },
+        {
+          "emoji": "🧶",
+          "text": "Wolle",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Ein Fenster ist aus Glas. Durch Glas kann man hindurchsehen – und es zerbricht leicht.",
+      "gespraech": "Wo seht ihr noch Glas? Und warum muss man vorsichtig damit sein?"
+    },
+    {
+      "id": "d10",
+      "typ": "funktion",
+      "frage": "Womit isst man Suppe?",
+      "optionen": [
+        {
+          "emoji": "🥄",
+          "text": "Löffel",
+          "richtig": true
+        },
+        {
+          "emoji": "🍴",
+          "text": "Gabel",
+          "richtig": false
+        },
+        {
+          "emoji": "✂️",
+          "text": "Schere",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Mit dem Löffel. Er ist vorne rund und tief – da bleibt die Suppe drin liegen.",
+      "gespraech": "Warum geht Suppe nicht mit der Gabel?"
+    },
+    {
+      "id": "d11",
+      "typ": "funktion",
+      "frage": "Womit schneidet man Papier?",
+      "optionen": [
+        {
+          "emoji": "✂️",
+          "text": "Schere",
+          "richtig": true
+        },
+        {
+          "emoji": "🖍️",
+          "text": "Stift",
+          "richtig": false
+        },
+        {
+          "emoji": "🥄",
+          "text": "Löffel",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Mit der Schere. Eine Schere ist scharf – deshalb benutzt man sie im Sitzen und gibt sie mit dem Griff nach vorn weiter.",
+      "gespraech": "Zeigt euch gegenseitig: Wie gibt man eine Schere sicher weiter?"
+    },
+    {
+      "id": "d12",
+      "typ": "funktion",
+      "frage": "Worin kocht man Nudeln?",
+      "optionen": [
+        {
+          "emoji": "🍲",
+          "text": "Topf",
+          "richtig": true
+        },
+        {
+          "emoji": "👜",
+          "text": "Tasche",
+          "richtig": false
+        },
+        {
+          "emoji": "📚",
+          "text": "Buch",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Im Topf. Er ist aus Metall, denn Metall darf heiß werden, ohne kaputtzugehen.",
+      "gespraech": "Ein heißer Topf ist nichts für Kinderhände. Wer nimmt ihn bei euch vom Herd?"
+    },
+    {
+      "id": "d13",
+      "typ": "gemacht",
+      "frage": "Der Stuhl – gemacht oder gewachsen?",
+      "optionen": [
+        {
+          "emoji": "🔨",
+          "text": "Von Menschen gemacht",
+          "richtig": true
+        },
+        {
+          "emoji": "🌱",
+          "text": "Gewachsen",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Den Stuhl hat jemand gebaut. Das Holz dafür ist gewachsen – der Stuhl selbst nicht.",
+      "gespraech": "Wer könnte den Stuhl gebaut haben?"
+    },
+    {
+      "id": "d14",
+      "typ": "gemacht",
+      "frage": "Der Baum – gemacht oder gewachsen?",
+      "optionen": [
+        {
+          "emoji": "🔨",
+          "text": "Von Menschen gemacht",
+          "richtig": false
+        },
+        {
+          "emoji": "🌱",
+          "text": "Gewachsen",
+          "richtig": true
+        }
+      ],
+      "erklaerung": "Der Baum ist gewachsen, ganz von allein aus einem Samen. Menschen können ihn pflanzen, aber nicht bauen.",
+      "gespraech": "Was wächst bei euch draußen?"
+    },
+    {
+      "id": "d15",
+      "typ": "gemacht",
+      "frage": "Der Löffel – gemacht oder gewachsen?",
+      "optionen": [
+        {
+          "emoji": "🔨",
+          "text": "Von Menschen gemacht",
+          "richtig": true
+        },
+        {
+          "emoji": "🌱",
+          "text": "Gewachsen",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Den Löffel hat jemand geformt, aus Metall oder Holz. Löffel wachsen nicht am Strauch.",
+      "gespraech": "Sucht in der Küche: Was ist gemacht, was ist gewachsen?"
+    },
+    {
+      "id": "d16",
+      "typ": "gemacht",
+      "frage": "Der Apfel – gemacht oder gewachsen?",
+      "optionen": [
+        {
+          "emoji": "🔨",
+          "text": "Von Menschen gemacht",
+          "richtig": false
+        },
+        {
+          "emoji": "🌱",
+          "text": "Gewachsen",
+          "richtig": true
+        }
+      ],
+      "erklaerung": "Der Apfel ist am Baum gewachsen. Gepflückt haben ihn Menschen – gemacht haben sie ihn nicht.",
+      "gespraech": "Wo war der Apfel, bevor er im Korb lag?"
+    },
+    {
+      "id": "d17",
+      "typ": "fahrzeug",
+      "frage": "Was fährt auf Schienen?",
+      "optionen": [
+        {
+          "emoji": "🚊",
+          "text": "Straßenbahn",
+          "richtig": true
+        },
+        {
+          "emoji": "🚌",
+          "text": "Bus",
+          "richtig": false
+        },
+        {
+          "emoji": "🚗",
+          "text": "Auto",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Die Straßenbahn fährt auf Schienen. Deshalb kann sie nicht ausweichen – wir müssen ihr Platz machen.",
+      "gespraech": "Habt ihr schon Schienen in eurer Stadt gesehen?"
+    },
+    {
+      "id": "d18",
+      "typ": "fahrzeug",
+      "frage": "Womit fahren viele Menschen zusammen?",
+      "optionen": [
+        {
+          "emoji": "🚌",
+          "text": "Bus",
+          "richtig": true
+        },
+        {
+          "emoji": "🚲",
+          "text": "Fahrrad",
+          "richtig": false
+        },
+        {
+          "emoji": "🛴",
+          "text": "Roller",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Im Bus haben viele Menschen zusammen Platz. Auf dem Fahrrad und dem Roller ist meistens nur einer.",
+      "gespraech": "Womit seid ihr das letzte Mal gefahren?"
+    },
+    {
+      "id": "d19",
+      "typ": "fahrzeug",
+      "frage": "Was bringt schwere Sachen?",
+      "optionen": [
+        {
+          "emoji": "🚚",
+          "text": "Lastwagen",
+          "richtig": true
+        },
+        {
+          "emoji": "🚗",
+          "text": "Auto",
+          "richtig": false
+        },
+        {
+          "emoji": "🚲",
+          "text": "Fahrrad",
+          "richtig": false
+        }
+      ],
+      "erklaerung": "Der Lastwagen. Er hat hinten einen großen Kasten – da passt viel mehr hinein als in ein Auto.",
+      "gespraech": "Was könnte in einem Lastwagen sein?"
+    }
+  ],
+  "schlussIdeen": [
+    "Sucht in der Wohnung drei Dinge aus Holz und drei aus Stoff.",
+    "Deckt zusammen den Tisch: Was ist Geschirr, was ist Besteck?",
+    "Schaut aus dem Fenster und zählt, wie viele verschiedene Fahrzeuge vorbeikommen."
+  ]
+}
