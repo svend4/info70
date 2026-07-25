@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5, nur gemeinsam mit einem Erwachsenen",
+  "hinweis": "Vier Aha-Regeln vom Körperbau zur Bewegung. Wo eine Regel nicht greift, steht das ausdrücklich als Ausnahme dabei – eine Regel ohne Ausnahme wäre gelogen.",
+  "bewegungen": [
+    {
+      "id": "laufen",
+      "name": "Laufen",
+      "emoji": "🏃"
+    },
+    {
+      "id": "springen",
+      "name": "Springen",
+      "emoji": "🦘"
+    },
+    {
+      "id": "kriechen",
+      "name": "Kriechen",
+      "emoji": "〰️"
+    },
+    {
+      "id": "fliegen",
+      "name": "Fliegen",
+      "emoji": "🕊️"
+    },
+    {
+      "id": "schwimmen",
+      "name": "Schwimmen",
+      "emoji": "🌊"
+    }
+  ],
+  "regeln": [
+    {
+      "id": "gleich",
+      "bewegung": "laufen",
+      "emoji": "🦌",
+      "koerper": "Vier Beine, alle ungefähr gleich lang",
+      "regel": "Wer vier gleich lange Beine hat, läuft.",
+      "beispiel": "Das Reh setzt einen Fuß vor den anderen – so kommt es weit, ohne müde zu werden."
+    },
+    {
+      "id": "hinterbeine",
+      "bewegung": "springen",
+      "emoji": "🐰",
+      "koerper": "Die hinteren Beine sind viel länger",
+      "regel": "Wer lange Hinterbeine hat, springt.",
+      "beispiel": "Der Hase drückt sich mit den langen Hinterbeinen ab und fliegt ein Stück durch die Luft."
+    },
+    {
+      "id": "keine",
+      "bewegung": "kriechen",
+      "emoji": "🐌",
+      "koerper": "Gar keine Beine",
+      "regel": "Wer keine Beine hat, kriecht über den Boden.",
+      "beispiel": "Die Schnecke schiebt sich auf einem einzigen großen Fuß voran."
+    },
+    {
+      "id": "fluegel",
+      "bewegung": "fliegen",
+      "emoji": "🐦",
+      "koerper": "Flügel",
+      "regel": "Wer Flügel hat, kann fliegen.",
+      "beispiel": "Die Amsel schlägt mit den Flügeln und hebt vom Boden ab."
+    }
+  ],
+  "tiere": [
+    {
+      "id": "reh",
+      "name": "Das Reh",
+      "emoji": "🦌",
+      "koerperbau": "gleich",
+      "bewegung": "laufen",
+      "erklaerung": "Das Reh hat vier gleich lange Beine – damit läuft es. Wenn es erschrickt, macht es aber auch große Sprünge.",
+      "gespraech": "Wie viele Beine hat das Reh?"
+    },
+    {
+      "id": "hase",
+      "name": "Der Hase",
+      "emoji": "🐰",
+      "koerperbau": "hinterbeine",
+      "bewegung": "springen",
+      "erklaerung": "Schau dir die Hinterbeine an: Sie sind viel länger als die vorderen. Damit drückt sich der Hase ab und springt.",
+      "gespraech": "Könnt ihr aus der Hocke weit springen?"
+    },
+    {
+      "id": "frosch",
+      "name": "Der Frosch",
+      "emoji": "🐸",
+      "koerperbau": "hinterbeine",
+      "bewegung": "springen",
+      "erklaerung": "Auch der Frosch hat lange Hinterbeine – gefaltet wie eine Feder. Deshalb springt er, statt zu laufen.",
+      "gespraech": "Wer springt bei euch weiter – mit oder ohne Anlauf?"
+    },
+    {
+      "id": "eichhoernchen",
+      "name": "Das Eichhörnchen",
+      "emoji": "🐿️",
+      "koerperbau": "hinterbeine",
+      "bewegung": "springen",
+      "erklaerung": "Das Eichhörnchen springt von Ast zu Ast. Der buschige Schwanz hilft ihm dabei, in der Luft die Richtung zu halten.",
+      "gespraech": "Wozu könnte der große Schwanz noch gut sein?"
+    },
+    {
+      "id": "regenwurm",
+      "name": "Der Regenwurm",
+      "emoji": "🪱",
+      "koerperbau": "keine",
+      "bewegung": "kriechen",
+      "erklaerung": "Der Regenwurm hat gar keine Beine. Er macht sich abwechselnd lang und kurz und schiebt sich so durch die Erde.",
+      "gespraech": "Macht euch lang und kurz wie ein Wurm: Kommt ihr so vorwärts?"
+    },
+    {
+      "id": "schnecke",
+      "name": "Die Schnecke",
+      "emoji": "🐌",
+      "koerperbau": "keine",
+      "bewegung": "kriechen",
+      "erklaerung": "Die Schnecke hat keine Beine, sondern einen einzigen großen Fuß. Damit kriecht sie – langsam, aber sie kommt überall hin.",
+      "gespraech": "Warum hat die Schnecke es wohl nie eilig?"
+    },
+    {
+      "id": "blindschleiche",
+      "name": "Die Blindschleiche",
+      "emoji": "🦎",
+      "koerperbau": "keine",
+      "bewegung": "kriechen",
+      "erklaerung": "Sie sieht aus wie eine kleine Schlange, ist aber eine Echse ohne Beine – und blind ist sie auch nicht. Ohne Beine bleibt ihr nur das Kriechen.",
+      "gespraech": "Sieht so aus wie – ist aber nicht. Kennt ihr noch so ein Tier?"
+    },
+    {
+      "id": "amsel",
+      "name": "Die Amsel",
+      "emoji": "🐦",
+      "koerperbau": "fluegel",
+      "bewegung": "fliegen",
+      "erklaerung": "Die Amsel hat Flügel und fliegt. Auf dem Rasen hüpft sie aber lieber, statt zu laufen – schau mal genau hin.",
+      "gespraech": "Habt ihr schon einmal eine Amsel hüpfen sehen? Wo denn?"
+    },
+    {
+      "id": "schmetterling",
+      "name": "Der Schmetterling",
+      "emoji": "🦋",
+      "koerperbau": "fluegel",
+      "bewegung": "fliegen",
+      "erklaerung": "Vier große Flügel, ganz leicht – damit taumelt der Schmetterling durch die Luft. Er fliegt nicht geradeaus wie ein Vogel.",
+      "gespraech": "Fliegt der Schmetterling geradeaus oder im Zickzack?"
+    },
+    {
+      "id": "ente",
+      "name": "Die Ente",
+      "emoji": "🦆",
+      "koerperbau": "fluegel",
+      "bewegung": "fliegen",
+      "erklaerung": "Die Ente hat Flügel und kann fliegen. Sie kann außerdem schwimmen und watscheln – manche Tiere können mehr als eine Sache.",
+      "gespraech": "Was kann die Ente alles – fliegen, schwimmen, watscheln?"
+    },
+    {
+      "id": "fisch",
+      "name": "Der Fisch",
+      "emoji": "🐟",
+      "koerperbau": "keine",
+      "bewegung": "schwimmen",
+      "ausnahme": true,
+      "erklaerung": "Hier passt die Regel nicht: Der Fisch hat keine Beine, kriecht aber nicht. Im Wasser braucht man keine Beine – er schwimmt mit Flossen und Schwanz. Regeln gelten fast immer, aber eben nicht überall.",
+      "gespraech": "Wo gilt die Regel „keine Beine – also kriechen“ nicht? Warum wohl?",
+      "ausnahmeGrund": "Im Wasser ist alles anders: Dort kommt man ohne Beine am besten voran."
+    }
+  ],
+  "pflanzen": [
+    {
+      "id": "sonnenblume",
+      "name": "Die Sonnenblume",
+      "emoji": "🌻",
+      "bewegung": "Solange die Sonnenblume noch jung ist, dreht sich ihre Knospe mit der Sonne mit: morgens nach Osten, abends nach Westen. Ist die Blüte fertig aufgeblüht, bleibt sie nach Osten stehen.",
+      "versuch": "Stellt eine Topfpflanze ans Fenster und dreht sie nach einer Woche um. Schaut zwei Tage später noch einmal hin – was ist passiert?"
+    },
+    {
+      "id": "gaensebluemchen",
+      "name": "Das Gänseblümchen",
+      "emoji": "🌼",
+      "bewegung": "Am Abend macht das Gänseblümchen seine Blüte zu und am Morgen wieder auf. Bei Regen bleibt sie oft geschlossen.",
+      "versuch": "Sucht abends und noch einmal morgens dasselbe Gänseblümchen auf der Wiese. Sieht es gleich aus?"
+    },
+    {
+      "id": "bohnenranke",
+      "name": "Die Bohnenranke",
+      "emoji": "🌱",
+      "bewegung": "Die Ranke tastet mit der Spitze in der Luft herum. Findet sie einen Stock, wickelt sie sich darum und zieht sich nach oben.",
+      "versuch": "Steckt einen Stock neben eine Bohne im Topf. Nach ein paar Tagen seht ihr, wohin sie gewachsen ist."
+    }
+  ],
+  "schlussIdeen": [
+    "Geht nach draußen und sucht ein Tier. Schaut zuerst auf die Beine – und ratet dann, wie es sich bewegt.",
+    "Macht die Bewegungen zusammen nach: laufen wie ein Reh, springen wie ein Hase, kriechen wie ein Wurm.",
+    "Sucht eine Pflanze am Fenster und merkt euch, wohin ihre Blätter zeigen. Schaut in drei Tagen noch einmal nach."
+  ]
+}

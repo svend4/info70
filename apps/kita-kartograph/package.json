@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kita-kartograph",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kita-Kartograph: Wir zeichnen unseren Raum. Kinder ab 5 legen auf einem 6x6-Raster mit zwoelf Symbolen einen Plan ihres Gruppenraums oder Kinderzimmers - Tuer, Fenster, Tisch, Teppich, Bauecke, Leseecke, Waschbecken, Garderobe, Pflanze, Spielzeugregal, Maltisch, Musikecke. Der eigentliche kartographische Gedanke ist die Zeichenerklaerung: Ein Plan funktioniert nur, wenn danebensteht, wofuer die Zeichen stehen - deshalb baut sie sich automatisch aus dem auf, was wirklich liegt, samt Anzahl. Jedes Zeichen ist nur einmal vergeben, sonst waere der Plan mehrdeutig; der Validator prueft das. Dazu die Himmelsrichtung (Norden an eine der vier Kanten legen, bestimmt ueber den Sonnenaufgang), eine Vorlesefunktion, die den Plan von oben links nach unten rechts aufsagt, und Begleitfragen fuer Erwachsene. Abgrenzung zu deutschland-kompass: dort wird ein fertiger Plan gelesen, hier wird einer gebaut. Praleska docs/10 (Ko-Nutzung Nr. 10). Offline, werbefrei; nur der letzte Plan liegt loeschbar auf dem Geraet, keine Namen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

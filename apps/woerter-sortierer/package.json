@@ -1,0 +1,8 @@
+{
+  "name": "@info70/woerter-sortierer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Woerter-Sortierer: Ko-Nutzungs-App fuer 4-6, ausschliesslich gemeinsam mit einem Erwachsenen. Drei Sortierungen mit 17 Aufgaben - Oberbegriffe (Gehoert die Gurke zum Gemuese?), Gegensatzpaare (gross und klein, heiss und kalt, laut und leise, nass und trocken, schnell und langsam) und Woerter mit zwei Bedeutungen (Bank, Birne, Maus, Blatt), darunter bewusst auch falsche Paare, damit das Kind nicht immer auf ja tippt. Der Validator erzwingt bei den binaeren Typen beide Antworten und bei den Gegenteilen genau eine richtige Option; ein Test prueft zusaetzlich, dass kein Ablenker selbst ein Gegenteil der gefragten Eigenschaft ist. Bei Obst und Gemuese gilt die Alltagseinteilung, die botanische steht in eltern.html. Erwachsenen-Gate, hoechstens sechs Woerter pro Sitzung, keine Punkte, kein Rekord. Praleska docs/10 (Ko-Nutzung Nr. 12). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

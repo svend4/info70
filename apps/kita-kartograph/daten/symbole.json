@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7, in der Kita und zu Hause",
+  "hinweis": "Jedes Ding bekommt ein eigenes Zeichen. Zwei Dinge mit demselben Zeichen wären auf dem Plan nicht auseinanderzuhalten – deshalb prüft der Validator, dass jedes Zeichen nur einmal vergeben ist.",
+  "symbole": [
+    {
+      "id": "tuer",
+      "name": "Tür",
+      "emoji": "🚪"
+    },
+    {
+      "id": "fenster",
+      "name": "Fenster",
+      "emoji": "🪟"
+    },
+    {
+      "id": "tisch",
+      "name": "Tisch",
+      "emoji": "🪑"
+    },
+    {
+      "id": "teppich",
+      "name": "Teppich",
+      "emoji": "🟦"
+    },
+    {
+      "id": "bauecke",
+      "name": "Bauecke",
+      "emoji": "🧱"
+    },
+    {
+      "id": "leseecke",
+      "name": "Leseecke",
+      "emoji": "📚"
+    },
+    {
+      "id": "waschbecken",
+      "name": "Waschbecken",
+      "emoji": "🚰"
+    },
+    {
+      "id": "garderobe",
+      "name": "Garderobe",
+      "emoji": "🧥"
+    },
+    {
+      "id": "pflanze",
+      "name": "Pflanze",
+      "emoji": "🪴"
+    },
+    {
+      "id": "spielzeug",
+      "name": "Spielzeugregal",
+      "emoji": "🧸"
+    },
+    {
+      "id": "malecke",
+      "name": "Maltisch",
+      "emoji": "🖍️"
+    },
+    {
+      "id": "musik",
+      "name": "Musikecke",
+      "emoji": "🥁"
+    }
+  ],
+  "fragen": [
+    "Wo sitzt du am liebsten – legt das Zeichen dorthin?",
+    "Wie kommt man von der Tür zur Leseecke?",
+    "Was liegt neben dem Fenster – und was gegenüber?",
+    "Wenn ihr euren Plan jemandem gebt, der den Raum nicht kennt: Findet er sich zurecht?",
+    "Welche Ecke fehlt noch auf eurem Plan?"
+  ],
+  "schritte": [
+    "Schaut euch zuerst im echten Raum um. Was ist da alles?",
+    "Sucht ein Zeichen aus und tippt dann auf das Feld, wo das Ding steht.",
+    "Wenn etwas nicht stimmt: Tippt es noch einmal an, dann ist es wieder weg.",
+    "Legt zuletzt fest, wo Norden ist – dort, wo morgens die Sonne aufgeht, ist Osten."
+  ]
+}

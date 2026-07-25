@@ -1,0 +1,8 @@
+{
+  "name": "@info70/wie-bewegt-sich",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wie bewegen sich Tiere und Pflanzen? Ko-Nutzungs-App fuer 3-5, ausschliesslich gemeinsam mit einem Erwachsenen. Vier Aha-Regeln vom Koerperbau zur Bewegung: vier gleich lange Beine bedeuten laufen, lange Hinterbeine bedeuten springen, keine Beine bedeuten kriechen, Fluegel bedeuten fliegen. Elf heimische Tiere (Reh, Hase, Frosch, Eichhoernchen, Regenwurm, Schnecke, Blindschleiche, Amsel, Schmetterling, Ente, Fisch) - die Blindschleiche wird ausdruecklich als beinlose Echse und nicht als Schlange erklaert. Der Fisch ist die eine erklaerte Ausnahme: keine Beine, kriecht aber nicht, weil im Wasser andere Regeln gelten. Der Validator erzwingt beides - jedes Tier muss zu seiner Regel passen oder als Ausnahme markiert und begruendet sein, und ohne jede Ausnahme meldet er einen Fehler, denn eine Regel ohne Gegenbeispiel wirkt groesser als sie ist. Dazu die Ueberraschung, dass auch Pflanzen sich bewegen (Sonnenblume, Gaensebluemchen, Bohnenranke) mit je einem Versuch zum Selbermachen. Erwachsenen-Gate, hoechstens fuenf Tiere pro Sitzung, keine Punkte, kein Rekord. Praleska docs/10 (Ko-Nutzung Nr. 6). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
