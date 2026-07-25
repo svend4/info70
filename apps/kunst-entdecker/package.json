@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kunst-entdecker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kunst-Entdecker: Gattungen und Genres an neun echten Museumswerken erkennen. Galerie zum Anschauen mit Hinsehen-Text zu jedem Werk, dazu zwei Ratemodi - welche Gattung (Malerei, Grafik, Skulptur) und welches Genre (Portraet, Landschaft, Stillleben). Mit Duerer (Das Rhinozeros, Kopf einer jungen Frau), van Gogh (Selbstbildnis mit Strohhut, Zypressen), Cezanne, Joseph Anton Koch, Fantin-Latour, Pajou und Schinkel. Alle Bilder stammen aus der Open-Access-Sammlung des Metropolitan Museum of Art unter CC0 und liegen verkleinert als data-URI in den Daten - die App laedt nichts nach und stellt keine einzige Anfrage. Rechtlich zwingend waere das seit 2021 nicht mehr - Paragraf 68 UrhG stellt klar, dass originalgetreue Reproduktionen gemeinfreier visueller Werke keinen eigenen Schutz geniessen und hat die fruehere Rechtsprechung (BGH 2018, Reiss-Engelhorn) ueberholt. CC0 bleibt trotzdem die Wahl, weil damit auch die Nutzungsbedingungen der Einrichtung geklaert sind und jedes Werk eine pruefbare Herkunft traegt. Zwei Ehrlichkeiten sind eingebaut: Duerers Rhinozeros passt in keines der drei Genres und wird dort nicht abgefragt, und die vierte Gattung Architektur wird zwar gezeigt (Schinkels Fassadenzeichnung), aber nicht abgefragt, weil das Blatt zugleich Grafik ist. Praleska docs/10 (Kinder-Apps Nr. 21). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

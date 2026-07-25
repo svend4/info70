@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
+  "hinweis": "Namen, die halten was sie versprechen, stehen neben Namen, die in die Irre führen. Beide Sorten kommen vor – sonst lernt das Kind, dem Namen blind zu glauben.",
+  "raenge": [
+    { "ab": 0, "titel": "Wort-Neugierige*r", "emoji": "🌱" },
+    { "ab": 4, "titel": "Namen-Spürnase", "emoji": "🔎" },
+    { "ab": 8, "titel": "Wort-Forscher*in", "emoji": "📖" },
+    { "ab": 12, "titel": "Sprach-Expert*in", "emoji": "🏆" }
+  ],
+  "fragen": [
+    {
+      "id": "w01",
+      "typ": "wahl",
+      "kategorie": "Pflanzen",
+      "art": "stimmt",
+      "frage": "Warum heißt der Löwenzahn Löwenzahn?",
+      "antworten": [
+        "Weil Löwen ihn besonders gern fressen",
+        "Weil seine Blätter am Rand gezackt sind wie Zähne",
+        "Weil seine Blüte so gelb ist wie eine Löwenmähne"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Schau dir ein Blatt vom Löwenzahn genau an: Der Rand ist tief eingeschnitten, spitze Zacken zeigen nach hinten wie eine Reihe Zähne. Daher der Name. Die gelbe Blüte hat damit nichts zu tun, und Löwen fressen ihn schon gar nicht."
+    },
+    {
+      "id": "w02",
+      "typ": "binaer",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "aussage": "Ein Tausendfüßer hat wirklich tausend Füße.",
+      "korrekt": "nein",
+      "erklaerung": "Die allermeisten Tausendfüßer haben zwischen dreißig und zweihundert Beine – tausend schafft fast keiner. Erst vor wenigen Jahren wurde in Australien eine einzige Art entdeckt, die tatsächlich über tausend Beine hat. Der Name ist also eher ein Staunen als eine Zählung."
+    },
+    {
+      "id": "w03",
+      "typ": "wahl",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "frage": "Warum heißt der Maulwurf Maulwurf?",
+      "antworten": [
+        "Weil er die Erde mit seinen Schaufelhänden auswirft und „Wurf“ von werfen kommt",
+        "Weil er die Erde mit dem Maul nach oben wirft",
+        "Weil er beim Graben ständig sein Maul aufreißt"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Hier täuscht der Name gleich doppelt. Der erste Teil kommt von einem alten Wort für Erde, nicht vom Maul – „Maulwurf“ heißt eigentlich Erdwerfer. Und geworfen wird mit den breiten Schaufelhänden, nie mit dem Maul. Die kleinen Hügel im Rasen sind genau diese Erde."
+    },
+    {
+      "id": "w04",
+      "typ": "binaer",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "aussage": "Ein Ohrwurm kriecht Menschen nachts ins Ohr.",
+      "korrekt": "nein",
+      "erklaerung": "Das ist ein alter Aberglaube, mehr nicht. Ohrwürmer verstecken sich gern in engen, dunklen Spalten – unter Blumentöpfen, in Blüten, in einem zusammengeknüllten Tuch. In Ohren haben sie nichts zu suchen und tun das auch nicht. Im Garten sind sie sogar nützlich, weil sie Blattläuse fressen."
+    },
+    {
+      "id": "w05",
+      "typ": "wahl",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "frage": "Warum heißt das Meerschweinchen Meerschweinchen?",
+      "antworten": [
+        "Weil es im Meer schwimmen kann",
+        "Weil es mit dem Schwein verwandt ist",
+        "Weil es übers Meer zu uns kam und quiekt wie ein kleines Schwein"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Beide Teile des Namens führen in die Irre. Meerschweinchen stammen aus Südamerika und kamen mit Schiffen über das Meer nach Europa – schwimmen können sie kaum. Und mit Schweinen sind sie überhaupt nicht verwandt, sie sind Nagetiere. Geblieben ist der Name wegen ihres Quiekens."
+    },
+    {
+      "id": "w06",
+      "typ": "binaer",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "aussage": "Das Flusspferd ist nahe mit dem Pferd verwandt.",
+      "korrekt": "nein",
+      "erklaerung": "Der Name kommt aus dem Griechischen und heißt wörtlich „Flusspferd“, weil das Tier groß ist und im Wasser lebt. Verwandt ist es mit Pferden aber nicht. Seine nächsten lebenden Verwandten sind – so überraschend das klingt – die Wale und Delfine."
+    },
+    {
+      "id": "w07",
+      "typ": "binaer",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "aussage": "Die Fledermaus ist eine Mäuseart.",
+      "korrekt": "nein",
+      "erklaerung": "Fledermäuse sind keine Mäuse und auch keine Nagetiere. Der erste Teil des Namens kommt von „flattern“ – man hat sie einfach als flatternde Mäuse beschrieben. Tatsächlich sind sie die einzigen Säugetiere, die wirklich fliegen können, nicht nur gleiten."
+    },
+    {
+      "id": "w08",
+      "typ": "wahl",
+      "kategorie": "Tiere",
+      "art": "stimmt",
+      "frage": "Warum heißt das Nashorn Nashorn?",
+      "antworten": [
+        "Weil sein Horn auf der Nase sitzt",
+        "Weil es mit der Nase Löcher in Bäume bohrt",
+        "Weil seine Nase so lang ist wie ein Horn"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Dieser Name hält, was er verspricht: Das Horn wächst mitten auf der Nase. Es besteht nicht aus Knochen, sondern aus demselben Stoff wie deine Fingernägel und Haare, und es wächst ein Leben lang nach. Manche Arten haben ein Horn, manche zwei."
+    },
+    {
+      "id": "w09",
+      "typ": "wahl",
+      "kategorie": "Tiere",
+      "art": "stimmt",
+      "frage": "Warum heißt die Ringelnatter Ringelnatter?",
+      "antworten": [
+        "Weil sie sich beim Schlafen zu einem Ring ringelt",
+        "Weil sie hinter dem Kopf zwei helle, ringförmige Flecken trägt",
+        "Weil ihre Haut aus lauter kleinen Ringen besteht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Die beiden hellen Mondflecken direkt hinter dem Kopf sehen aus wie ein halber Ring – daran erkennt man die Ringelnatter sofort. Sie ist ungiftig, schwimmt gern und flieht, wenn ein Mensch kommt. In Deutschland steht sie unter Schutz."
+    },
+    {
+      "id": "w10",
+      "typ": "wahl",
+      "kategorie": "Pflanzen",
+      "art": "stimmt",
+      "frage": "Warum heißt der Fingerhut Fingerhut?",
+      "antworten": [
+        "Weil man ihn früher als Hut für Puppen benutzt hat",
+        "Weil er genau einen Finger hoch wächst",
+        "Weil seine Blüten aussehen wie der Hut, den man beim Nähen über den Finger stülpt"
+      ],
+      "korrekt": 2,
+      "erklaerung": "Die Blüten sind längliche Glocken, in die genau ein Finger passt – so wie der Fingerhut beim Nähen. Wichtig: Die Pflanze ist stark giftig, in allen Teilen. Anschauen ja, anfassen und in den Mund nehmen auf keinen Fall."
+    },
+    {
+      "id": "w11",
+      "typ": "wahl",
+      "kategorie": "Pflanzen",
+      "art": "stimmt",
+      "frage": "Warum heißt das Schneeglöckchen Schneeglöckchen?",
+      "antworten": [
+        "Weil seine weiße Blüte wie ein Glöckchen hängt und es blüht, wenn noch Schnee liegt",
+        "Weil es beim Blühen leise klingelt",
+        "Weil es nur wächst, wenn es vorher geschneit hat"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Beide Teile des Namens beschreiben genau, was man sieht: eine weiße Blüte, die wie ein Glöckchen nach unten hängt, und eine Blütezeit im Spätwinter, wenn oft noch Schnee liegt. Klingeln kann sie natürlich nicht – Glöckchen meint hier nur die Form."
+    },
+    {
+      "id": "w12",
+      "typ": "binaer",
+      "kategorie": "Tiere",
+      "art": "stimmt",
+      "aussage": "Die Nacktschnecke heißt so, weil ihr das Schneckenhaus fehlt.",
+      "korrekt": "ja",
+      "erklaerung": "Genau darum geht es: „Nackt“ heißt hier ohne Haus. Gehäuseschnecken können sich hineinziehen, Nacktschnecken nicht – dafür kommen sie in engste Spalten, wo ein Haus im Weg wäre. Ganz ohne ist die Nacktschnecke übrigens nicht: Bei vielen Arten steckt ein winziger Rest des Hauses unter der Haut."
+    },
+    {
+      "id": "w13",
+      "typ": "wahl",
+      "kategorie": "Tiere",
+      "art": "stimmt",
+      "frage": "Warum heißt das Seepferdchen Seepferdchen?",
+      "antworten": [
+        "Weil es so schnell schwimmt wie ein Pferd läuft",
+        "Weil sein Kopf aussieht wie ein winziger Pferdekopf",
+        "Weil Meerespferde es als Reittier benutzen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der Kopf mit der langen Schnauze sieht tatsächlich aus wie ein Pferdekopf im Kleinformat. In Wirklichkeit ist das Seepferdchen ein Fisch. Er schwimmt aufrecht und ziemlich langsam und hält sich mit dem Ringelschwanz an Pflanzen fest, damit ihn die Strömung nicht mitnimmt."
+    },
+    {
+      "id": "w14",
+      "typ": "wahl",
+      "kategorie": "Dinge",
+      "art": "stimmt",
+      "frage": "Warum heißt der Handschuh Handschuh?",
+      "antworten": [
+        "Weil man ihn früher aus alten Schuhen gemacht hat",
+        "Weil er ein Schuh für die Hand ist",
+        "Weil man ihn mit der Hand anzieht"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der Name sagt es geradeheraus: ein Schuh, aber für die Hand. Deutsche Wörter sind oft so gebaut – zwei bekannte Wörter werden zusammengesetzt, und das Ergebnis erklärt sich selbst. Genauso funktionieren Staubsauger, Kühlschrank und Regenschirm."
+    },
+    {
+      "id": "w15",
+      "typ": "binaer",
+      "kategorie": "Dinge",
+      "art": "stimmt",
+      "aussage": "Der Zebrastreifen heißt so, weil er gestreift ist wie ein Zebra.",
+      "korrekt": "ja",
+      "erklaerung": "Die weißen Balken auf der dunklen Straße sehen aus wie das Fell eines Zebras – deshalb der Name. Er ist noch nicht besonders alt: Erst als es viele Autos gab, brauchte man solche Übergänge. Zebras selbst gibt es in Deutschland natürlich keine, den Namen aber schon."
+    },
+    {
+      "id": "w16",
+      "typ": "wahl",
+      "kategorie": "Tiere",
+      "art": "stimmt",
+      "frage": "Woher hat der Schmetterling seinen Namen?",
+      "antworten": [
+        "Von „schmettern“, weil er laut gegen Fensterscheiben fliegt",
+        "Von einem alten Wort für Sahne, weil man glaubte, er sei hinter der Milch her",
+        "Von „Schmetter“, dem Geräusch seiner Flügel"
+      ],
+      "korrekt": 1,
+      "erklaerung": "„Schmetten“ ist ein altes Wort für Rahm oder Sahne. Früher dachte man, Schmetterlinge seien hinter Milch und Sahne her, weil man sie oft in der Nähe von Milchkammern sah. Mit Schmettern im Sinne von Krachmachen hat der Name nichts zu tun."
+    },
+    {
+      "id": "w17",
+      "typ": "binaer",
+      "kategorie": "Namen, die täuschen",
+      "art": "irrefuehrend",
+      "aussage": "Wenn ein Name etwas beschreibt, ist die Beschreibung immer richtig.",
+      "korrekt": "nein",
+      "erklaerung": "Namen sind Ideen von Menschen, die vor langer Zeit etwas gesehen und benannt haben – manchmal richtig, manchmal daneben. Der Tausendfüßer hat keine tausend Füße, das Flusspferd ist kein Pferd, der Ohrwurm geht nicht ins Ohr. Ein Name ist ein guter Hinweis, aber kein Beweis."
+    },
+    {
+      "id": "w18",
+      "typ": "wahl",
+      "kategorie": "Dinge",
+      "art": "stimmt",
+      "frage": "Wie ist das Wort „Staubsauger“ gebaut?",
+      "antworten": [
+        "Aus zwei Wörtern, die zusammen sagen, was das Gerät tut",
+        "Aus dem Namen seines Erfinders",
+        "Aus einem Wort, das früher etwas ganz anderes bedeutet hat"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Staub und saugen – fertig ist das Wort, und jeder versteht es sofort. Im Deutschen darf man solche Wörter beliebig weiterbauen: aus Staubsauger wird Staubsaugerbeutel und daraus Staubsaugerbeutelfach. Das ist einer der Gründe, warum deutsche Wörter so lang werden können."
+    }
+  ]
+}

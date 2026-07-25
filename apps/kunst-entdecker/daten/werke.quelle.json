@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "zielgruppe": "5-7 in Ko-Nutzung, Ausbau 8-12",
+  "hinweis": "Alle Bilder stammen aus der Open-Access-Sammlung des Metropolitan Museum of Art und stehen unter CC0. Rechtlich zwingend wäre das seit 2021 nicht mehr: § 68 UrhG stellt klar, dass originalgetreue Reproduktionen gemeinfreier visueller Werke keinen eigenen Schutz genießen – der Gesetzgeber hat damit die frühere Rechtsprechung (BGH 2018, Reiss-Engelhorn) überholt. Wir bleiben trotzdem bei CC0, weil damit auch die Nutzungsbedingungen der Einrichtung geklärt sind und jedes Werk eine prüfbare Herkunft trägt. Erzeugt mit werkzeug/bilder-bauen.mjs.",
+  "gattungen": [
+    {
+      "id": "malerei",
+      "name": "Malerei",
+      "emoji": "🖼️",
+      "merkmal": "Mit Farbe auf Leinwand, Holz oder Papier gemalt. Man sieht oft die Pinselstriche."
+    },
+    {
+      "id": "grafik",
+      "name": "Grafik",
+      "emoji": "✒️",
+      "merkmal": "Gezeichnet oder gedruckt, meist auf Papier und meist ohne viele Farben. Von einem Druck gibt es viele gleiche Blätter."
+    },
+    {
+      "id": "skulptur",
+      "name": "Skulptur",
+      "emoji": "🗿",
+      "merkmal": "Aus Stein, Holz oder Metall geformt. Man kann herumgehen und sie von allen Seiten ansehen."
+    }
+  ],
+  "genres": [
+    {
+      "id": "portraet",
+      "name": "Porträt",
+      "emoji": "🙂",
+      "merkmal": "Ein Mensch ist abgebildet. Es geht darum, wie er aussieht und wie er wirkt."
+    },
+    {
+      "id": "landschaft",
+      "name": "Landschaft",
+      "emoji": "🏞️",
+      "merkmal": "Die Gegend ist die Hauptsache: Felder, Berge, Bäume, Himmel."
+    },
+    {
+      "id": "stillleben",
+      "name": "Stillleben",
+      "emoji": "🍎",
+      "merkmal": "Dinge, die sich nicht bewegen: Obst, Blumen, Geschirr – ordentlich hingestellt und genau angeschaut."
+    }
+  ],
+  "werke": [
+    {
+      "id": "vangogh-selbst",
+      "metId": 436532,
+      "titel": "Selbstbildnis mit Strohhut",
+      "gattung": "malerei",
+      "genre": "portraet",
+      "hinsehen": "Geh näher heran: Das Bild besteht aus lauter kurzen Strichen, die in verschiedene Richtungen laufen. Van Gogh hat sich selbst gemalt – dafür braucht man einen Spiegel und viel Geduld.",
+      "frageBild": "Wer ist hier zu sehen?"
+    },
+    {
+      "id": "vangogh-zypressen",
+      "metId": 437980,
+      "titel": "Zypressen",
+      "gattung": "malerei",
+      "genre": "landschaft",
+      "hinsehen": "Die dunklen Bäume drehen sich wie Flammen nach oben, und der Himmel wirbelt mit. Van Gogh hat nicht gemalt, wie es fotografiert aussieht, sondern wie es sich anfühlt.",
+      "frageBild": "Was ist hier die Hauptsache?"
+    },
+    {
+      "id": "koch-regenbogen",
+      "metId": 439844,
+      "titel": "Heroische Landschaft mit Regenbogen",
+      "gattung": "malerei",
+      "genre": "landschaft",
+      "hinsehen": "Ganz vorne stehen kleine Menschen, dahinter türmt sich das Gebirge, und über allem steht der Regenbogen. Die Menschen sind winzig – das soll so sein: Die Landschaft ist der Star.",
+      "frageBild": "Warum sind die Menschen so klein gemalt?"
+    },
+    {
+      "id": "cezanne-aepfel",
+      "metId": 435882,
+      "titel": "Stillleben mit Äpfeln und einem Topf Primeln",
+      "gattung": "malerei",
+      "genre": "stillleben",
+      "hinsehen": "Sieht der Tisch richtig aus? Cézanne hat die Dinge von leicht verschiedenen Seiten gemalt, als wäre er beim Malen um den Tisch herumgegangen. Deshalb wirkt die Platte ein bisschen gekippt.",
+      "frageBild": "Bewegt sich auf diesem Bild irgendetwas?"
+    },
+    {
+      "id": "fantin-blumen",
+      "metId": 436293,
+      "titel": "Stillleben mit Blumen und Früchten",
+      "gattung": "malerei",
+      "genre": "stillleben",
+      "hinsehen": "Blumen welken, Obst wird schlecht – gemalt bleiben beide für immer frisch. Genau darum ging es beim Stillleben oft: festhalten, was nicht bleibt.",
+      "frageBild": "Wie lange hätte dieser Strauß in echt so ausgesehen?"
+    },
+    {
+      "id": "duerer-rhinozeros",
+      "metId": 356497,
+      "titel": "Das Rhinozeros",
+      "gattung": "grafik",
+      "genre": null,
+      "hinsehen": "Dürer hat nie ein Nashorn gesehen. Er hat nur gelesen, wie eines aussehen soll, und einen fremden Entwurf gehabt – deshalb trägt sein Tier Schuppen und Platten wie eine Ritterrüstung und ein zusätzliches Hörnchen auf dem Rücken, das es gar nicht gibt.",
+      "frageBild": "Was stimmt an diesem Tier nicht?"
+    },
+    {
+      "id": "duerer-kopf",
+      "metId": 459211,
+      "titel": "Kopf einer jungen Frau",
+      "gattung": "grafik",
+      "genre": "portraet",
+      "hinsehen": "Nur Linien, keine Farbe – und trotzdem sieht man, wohin sie schaut. Bei einer Zeichnung erkennt man jeden einzelnen Strich; nichts ist übermalt.",
+      "frageBild": "Womit ist das gemacht?"
+    },
+    {
+      "id": "pajou-buste",
+      "metId": 201895,
+      "titel": "Bildnisbüste der Madame de Wailly",
+      "gattung": "skulptur",
+      "genre": "portraet",
+      "hinsehen": "Eine Büste zeigt nur Kopf und Schultern. Im Museum kannst du um sie herumgehen und sie von hinten ansehen – das geht bei einem Gemälde nie.",
+      "frageBild": "Was könntest du hier tun, was bei einem Bild nicht geht?"
+    },
+    {
+      "id": "schinkel-fassade",
+      "metId": 359450,
+      "titel": "Aufriss und Grundriss der Fassade eines Gebäudes",
+      "gattung": "architektur-tafel",
+      "genre": null,
+      "hinsehen": "Architektur kann man schlecht ins Museum tragen. Was man zeigen kann, ist der Anfang: die Zeichnung. Karl Friedrich Schinkel hat viele Häuser in Berlin gebaut, und jedes begann als so ein Blatt. Oben sieht man das Haus von vorn, unten von oben – wie ein Plan, in den man hineinschauen kann.",
+      "frageBild": null
+    }
+  ],
+  "architektur": {
+    "metId": 359450,
+    "name": "Architektur",
+    "emoji": "🏛️",
+    "titel": "Aufriss und Grundriss der Fassade eines Gebäudes",
+    "merkmal": "Die vierte Gattung sind Gebäude. Sie hängen nicht an der Wand – man geht in sie hinein.",
+    "hinweis": "Achtung, das ist ein Sonderfall: Das Blatt selbst ist eine Zeichnung, also Grafik. Gezeigt wird darauf Architektur. Deshalb kommt es im Ratespiel nicht vor – es hätte zwei richtige Antworten.",
+    "text": "Architektur kann man schlecht ins Museum tragen. Was man zeigen kann, ist der Anfang: die Zeichnung. Karl Friedrich Schinkel hat viele Häuser in Berlin gebaut, und jedes begann als so ein Blatt. Oben sieht man das Haus von vorn, unten von oben – wie ein Plan, in den man hineinschauen kann."
+  }
+}

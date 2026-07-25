@@ -41,7 +41,10 @@ createServer(async (req, res) => {
       'content-type': TYPES[extname(file)] ?? 'application/octet-stream',
       // Gleiche Politik wie im Produktivbetrieb: nur eigene Quellen;
       // Inline-STYLES sind erlaubt (Teil der UI-Architektur), Inline-Skripte nicht.
-      'content-security-policy': "default-src 'self'; style-src 'self' 'unsafe-inline'",
+      // data: nur für Bilder – kunst-entdecker trägt seine gemeinfreien Werke
+      // als data-URI in den Daten, damit die App nichts nachladen muss.
+      // Bilder können keinen Code ausführen, die Ausnahme bleibt also eng.
+      'content-security-policy': "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:",
     });
     res.end(body);
   } catch {

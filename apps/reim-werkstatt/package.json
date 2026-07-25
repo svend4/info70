@@ -1,0 +1,8 @@
+{
+  "name": "@info70/reim-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reim-Werkstatt: Spiel mit Reimen und Wortschoepfung in drei Modi. Elf Reimfamilien zum Erkunden (die -aus-Familie mit Maus, Haus, Laus, Klaus, raus, Schmaus), acht Reimraetsel mit fehlendem Schlusswort und drei Antworten, von denen sich nur eine reimt, und ein Quatschreim-Generator, nach dem das Kind selbst eine Reimzeile erfindet. Foerdert die phonologische Bewusstheit, den wichtigsten Vorlaeufer des Schriftspracherwerbs. Der Validator rechnet jede Reimbeziehung nach: jedes Wort muss auf die Endung seiner Familie ausgehen, die erste Raetselzeile muss den Reim vorgeben, die Loesung darf nirgends schon im Text stehen, und kein Ablenker darf sich ebenfalls reimen. Abgrenzung zu reim-radar: dort wird geprueft (reimt sich das?), hier wird selbst gereimt und gebaut. Alle Woerter gebraeuchliches Deutsch, alle Verszeilen Eigenproduktion, nichts erfunden. Praleska docs/10 (Kinder-Apps Nr. 20). Offline, werbefrei, speichert nichts. Zielgruppe: 5-8, mit 5-6 in Ko-Nutzung.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

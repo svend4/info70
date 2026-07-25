@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "zielgruppe": "5-8 (5-6 in Ko-Nutzung)",
+  "hinweis": "Alle Reimwörter sind gebräuchliche deutsche Wörter, alle Verszeilen Eigenproduktion. Es werden keine Wörter erfunden.",
+  "familien": [
+    {
+      "id": "aus",
+      "endung": "aus",
+      "emoji": "🐭",
+      "woerter": [
+        "Maus",
+        "Haus",
+        "Laus",
+        "Klaus",
+        "raus",
+        "Schmaus"
+      ]
+    },
+    {
+      "id": "atze",
+      "endung": "atze",
+      "emoji": "🐱",
+      "woerter": [
+        "Katze",
+        "Tatze",
+        "Glatze",
+        "Matratze"
+      ]
+    },
+    {
+      "id": "acht",
+      "endung": "acht",
+      "emoji": "🌙",
+      "woerter": [
+        "Nacht",
+        "acht",
+        "macht",
+        "lacht",
+        "sacht",
+        "Pracht"
+      ]
+    },
+    {
+      "id": "aum",
+      "endung": "aum",
+      "emoji": "🌳",
+      "woerter": [
+        "Baum",
+        "Traum",
+        "Schaum",
+        "Raum",
+        "kaum",
+        "Saum"
+      ]
+    },
+    {
+      "id": "ein",
+      "endung": "ein",
+      "emoji": "🪨",
+      "woerter": [
+        "klein",
+        "Stein",
+        "Bein",
+        "allein",
+        "fein",
+        "rein"
+      ]
+    },
+    {
+      "id": "onne",
+      "endung": "onne",
+      "emoji": "☀️",
+      "woerter": [
+        "Sonne",
+        "Tonne",
+        "Wonne",
+        "Nonne"
+      ]
+    },
+    {
+      "id": "icht",
+      "endung": "icht",
+      "emoji": "💡",
+      "woerter": [
+        "Licht",
+        "Gedicht",
+        "Gesicht",
+        "nicht",
+        "dicht",
+        "Schicht"
+      ]
+    },
+    {
+      "id": "isch",
+      "endung": "isch",
+      "emoji": "🐟",
+      "woerter": [
+        "Fisch",
+        "Tisch",
+        "frisch",
+        "Wisch"
+      ]
+    },
+    {
+      "id": "and",
+      "endung": "and",
+      "emoji": "✋",
+      "woerter": [
+        "Hand",
+        "Land",
+        "Sand",
+        "Band",
+        "Rand",
+        "Wand",
+        "Strand"
+      ]
+    },
+    {
+      "id": "eller",
+      "endung": "eller",
+      "emoji": "🍽️",
+      "woerter": [
+        "Teller",
+        "Keller",
+        "heller",
+        "schneller"
+      ]
+    },
+    {
+      "id": "ann",
+      "endung": "ann",
+      "emoji": "👴",
+      "woerter": [
+        "Mann",
+        "dann",
+        "wann",
+        "kann"
+      ]
+    }
+  ],
+  "raetsel": [
+    {
+      "id": "r1",
+      "familie": "aus",
+      "zeile1": "Es wohnt eine kleine graue Maus",
+      "zeile2Vor": "ganz mucksmäuschenstill in ihrem",
+      "loesung": "Haus",
+      "ablenker": [
+        "Baum",
+        "Fisch"
+      ]
+    },
+    {
+      "id": "r2",
+      "familie": "acht",
+      "zeile1": "Der Mond geht auf, der Himmel lacht",
+      "zeile2Vor": "und alle Kinder schlafen diese",
+      "loesung": "Nacht",
+      "ablenker": [
+        "Tag",
+        "Wald"
+      ]
+    },
+    {
+      "id": "r3",
+      "familie": "isch",
+      "zeile1": "Im Teich, da schwimmt ein bunter Fisch",
+      "zeile2Vor": "sein Bild, das hängt bei uns am",
+      "loesung": "Tisch",
+      "ablenker": [
+        "Stuhl",
+        "Boden"
+      ]
+    },
+    {
+      "id": "r4",
+      "familie": "ein",
+      "zeile1": "Am Weg, da liegt ein glatter Stein",
+      "zeile2Vor": "er ist nicht groß, er ist ganz",
+      "loesung": "klein",
+      "ablenker": [
+        "dick",
+        "schwer"
+      ]
+    },
+    {
+      "id": "r5",
+      "familie": "onne",
+      "zeile1": "Im Garten steht die Regentonne",
+      "zeile2Vor": "und über ihr scheint hell die",
+      "loesung": "Sonne",
+      "ablenker": [
+        "Wolke",
+        "Mond"
+      ]
+    },
+    {
+      "id": "r6",
+      "familie": "and",
+      "zeile1": "Wir laufen barfuß durch das Land",
+      "zeile2Vor": "und graben Burgen in den",
+      "loesung": "Sand",
+      "ablenker": [
+        "Gras",
+        "Wald"
+      ]
+    },
+    {
+      "id": "r7",
+      "familie": "aum",
+      "zeile1": "Ich hatte nachts den schönsten Traum",
+      "zeile2Vor": "ich kletterte auf einen",
+      "loesung": "Baum",
+      "ablenker": [
+        "Busch",
+        "Nest"
+      ]
+    },
+    {
+      "id": "r8",
+      "familie": "atze",
+      "zeile1": "Sie streckt sich lang auf der Matratze",
+      "zeile2Vor": "und schnurrt dabei, die kleine",
+      "loesung": "Katze",
+      "ablenker": [
+        "Maus",
+        "Ente"
+      ]
+    }
+  ],
+  "quatschRahmen": [
+    {
+      "id": "q1",
+      "familie": "aus",
+      "zeile1": "Eine Maus mit einem Hut",
+      "endungen": [
+        "baut sich mitten in der Nacht ein Haus.",
+        "geht spazieren und trifft eine Laus.",
+        "ruft ganz laut: Jetzt komm ich raus!",
+        "lädt die Freunde ein zum großen Schmaus."
+      ]
+    },
+    {
+      "id": "q2",
+      "familie": "isch",
+      "zeile1": "Ein dicker Fisch aus Timbuktu",
+      "endungen": [
+        "sitzt am Abend gern am Tisch.",
+        "bleibt im kühlen Wasser frisch.",
+        "liest die Zeitung, so ein Wisch!"
+      ]
+    },
+    {
+      "id": "q3",
+      "familie": "acht",
+      "zeile1": "Ein müder Bär im Winterwald",
+      "endungen": [
+        "gähnt und schläft die ganze Nacht.",
+        "träumt vom Honig, bis er lacht.",
+        "schnarcht so leise, ganz, ganz sacht."
+      ]
+    },
+    {
+      "id": "q4",
+      "familie": "onne",
+      "zeile1": "Ein Schneemann steht im weißen Feld",
+      "endungen": [
+        "und wartet gar nicht gern auf Sonne.",
+        "trägt als Hut die alte Tonne.",
+        "grinst vor lauter Winterwonne."
+      ]
+    },
+    {
+      "id": "q5",
+      "familie": "ein",
+      "zeile1": "Ein Zwerg, so winzig und so nett",
+      "endungen": [
+        "ist wirklich winzig, zart und klein.",
+        "steht auf einem runden Stein.",
+        "wandert durch den Wald allein."
+      ]
+    }
+  ]
+}
