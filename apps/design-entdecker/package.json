@@ -1,0 +1,8 @@
+{
+  "name": "@info70/design-entdecker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design-Entdecker - praktisch und schoen: Ko-Nutzungs-App fuer 3-5 gemeinsam mit einem Erwachsenen, 5-7 kurz auch allein. Warum hat diese Tasse einen Henkel? Woraus ist der Kochloeffel? Woran erkennt man ein Fachwerkhaus? Tragend ist eine Unterscheidung, die im Schema steht und nicht in der Redaktion: pruefbar (man kann es ausprobieren), ausgemacht (Menschen haben es so vereinbart, und der Kindertext muss sagen, wo das gilt) und geschmack (hat gar keine Antwort). Eine Geschmacksfrage darf technisch kein Feld richtig tragen, nicht einmal auf false, wird nie bewertet und nie gezaehlt. Jede pruefbare Frage braucht mindestens zwei Gruende, eine ungefaehrliche Probe mit erwartetem Ergebnis und einen Satz fuer den Fall, dass etwas anderes herauskommt. Materialaussagen nennen auch, was das Material schlecht kann. Bei den Gebaeuden wird nur abgefragt, was man wirklich an der Bauform erkennt; Kita und Bahnhof werden ausdruecklich gezeigt und ausdruecklich nicht abgefragt, weil das Ortskenntnis und Ausstattung waeren. Keine Jahreszahlen, keine Ritter-Erzaehlungen, kein heisses Wasser. Erwachsenen-Gate, hoechstens sechs Fragen pro Sitzung, keine Punkte, kein Rekord. Praleska docs/10 (Ko-Nutzung Nr. 16). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

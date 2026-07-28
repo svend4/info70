@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5 gemeinsam mit einem Erwachsenen, 5-7 kurz auch allein",
+  "hinweis": "Drei Sorten von Fragen. Manches kann man ausprobieren – das hat eine Antwort. Manches haben Menschen so ausgemacht – das hat auch eine Antwort, aber nur hier bei uns. Und manches ist Geschmack – das hat gar keine Antwort, und diese App bewertet es nie und zählt es nie.",
+  "geltungTexte": {
+    "pruefbar": "🔬 Das könnt ihr ausprobieren",
+    "ausgemacht": "🤝 Das haben Menschen so ausgemacht",
+    "geschmack": "💛 Das ist Geschmack – hier gibt es keine richtige Antwort"
+  },
+  "fragen": [
+    {
+      "id": "f-henkel", "geltung": "pruefbar", "emoji": "☕",
+      "frage": "Warum hat diese Tasse einen Henkel?",
+      "optionen": [
+        { "text": "Damit die Hand nicht an die warme Wand muss", "richtig": true },
+        { "text": "Damit mehr hineinpasst", "richtig": false },
+        { "text": "Damit sie schwerer wird", "richtig": false }
+      ],
+      "antwortText": "Der Henkel hält die Hand ein Stück weg von der Wand der Tasse.",
+      "gruende": [
+        "Der Henkel hält die Hand weg von der warmen Wand.",
+        "Man kann die Tasse gut festhalten, ohne sie ganz zu umfassen."
+      ],
+      "typologie": true,
+      "gegenbeispiel": "Ein Becher hat keinen Henkel – und ist trotzdem zum Trinken da. Nicht jedes Trinkgefäß braucht einen.",
+      "probe": "Füllt eine Tasse mit handwarmem Wasser. Fasst sie einmal am Henkel an und einmal an der Wand.",
+      "maxGrad": 40,
+      "erwartet": "Die Wand fühlt sich wärmer an als der Henkel.",
+      "wennAnders": "Wenn ihr keinen Unterschied merkt, war das Wasser zu kühl. Das ist auch ein Ergebnis – erzählt euch, was ihr gespürt habt.",
+      "gespraech": "Welche Tassen habt ihr zu Hause – mit Henkel oder ohne?"
+    },
+    {
+      "id": "f-loeffel", "geltung": "pruefbar", "emoji": "🥄", "material": "Holz",
+      "frage": "Warum ist dieser Kochlöffel aus Holz?",
+      "optionen": [
+        { "text": "Weil der Griff angenehm zum Anfassen bleibt", "richtig": true },
+        { "text": "Weil Holz schwerer ist als Metall", "richtig": false },
+        { "text": "Weil Holz besser schmeckt", "richtig": false }
+      ],
+      "antwortText": "Der Griff bleibt angenehm zum Anfassen, auch wenn das andere Ende lange im Topf steckt.",
+      "gruende": [
+        "Der Griff bleibt angenehm zum Anfassen, auch wenn das andere Ende im Topf steckt.",
+        "Holz ist weicher als Metall und macht die Pfanne innen nicht kaputt."
+      ],
+      "grenze": "Holz saugt Wasser auf und kann irgendwann reißen. In die Spülmaschine gehört es nicht.",
+      "probe": "Stellt einen Holzlöffel und einen Metalllöffel zusammen in eine Tasse mit handwarmem Wasser. Wartet kurz und fasst dann beide Griffe an.",
+      "maxGrad": 40,
+      "erwartet": "Der Metallgriff fühlt sich wärmer an als der Holzgriff.",
+      "wennAnders": "Wenn ihr beide gleich findet, sagt das ruhig. Dann probiert es später noch einmal mit mehr Wartezeit.",
+      "gespraech": "Woraus sind eure Löffel zu Hause?"
+    },
+    {
+      "id": "f-suppe", "geltung": "pruefbar", "emoji": "🍽️",
+      "frage": "Womit isst man Suppe besser: mit dem Löffel oder mit der Gabel?",
+      "optionen": [
+        { "text": "Mit der Gabel", "richtig": false },
+        { "text": "Mit dem Löffel", "richtig": true }
+      ],
+      "antwortText": "Mit dem Löffel. Er hat eine Mulde, darin bleibt die Suppe liegen.",
+      "gruende": [
+        "Der Löffel hat eine Mulde, darin bleibt Flüssiges liegen.",
+        "Die Gabel hat Lücken zwischen den Zinken – dafür kann sie feste Sachen aufspießen."
+      ],
+      "probe": "Versucht einmal, ein bisschen Wasser mit einer Gabel von einer Schüssel in die andere zu tragen. Dann mit einem Löffel.",
+      "maxGrad": 30,
+      "erwartet": "Mit der Gabel kommt fast nichts an, mit dem Löffel schon.",
+      "wennAnders": "Falls doch etwas an der Gabel hängen bleibt: Das sind Tropfen. Schaut, wie viel weniger es ist.",
+      "gespraech": "Was esst ihr mit der Gabel und was mit dem Löffel?"
+    },
+    {
+      "id": "f-regen", "geltung": "pruefbar", "emoji": "🧥", "material": "Regenjackenstoff",
+      "frage": "Warum ist ein Regenmantel nicht aus Papier?",
+      "optionen": [
+        { "text": "Weil nasses Papier reißt", "richtig": true },
+        { "text": "Weil Papier zu schwer ist", "richtig": false },
+        { "text": "Weil Papier zu warm ist", "richtig": false }
+      ],
+      "antwortText": "Der Jackenstoff bleibt heil, auch wenn er nass wird – nasses Papier reißt schon beim leichten Ziehen.",
+      "gruende": [
+        "Der Jackenstoff bleibt heil, auch wenn er nass wird.",
+        "Man kann ihn immer wieder anziehen, viele Male."
+      ],
+      "grenze": "Der Stoff lässt kaum Luft durch. Wenn man rennt, wird einem darunter schnell warm.",
+      "probe": "Macht ein Blatt Papier nass und zieht ganz vorsichtig daran. Zieht danach genauso vorsichtig an einer Regenjacke.",
+      "maxGrad": 30,
+      "erwartet": "Das nasse Papier reißt leicht, der Jackenstoff nicht.",
+      "wennAnders": "Wenn das Papier hält, war es vielleicht ein dickes. Nehmt ein dünneres und probiert noch einmal.",
+      "gespraech": "Was zieht ihr an, wenn es regnet?"
+    },
+    {
+      "id": "f-stuhl", "geltung": "pruefbar", "emoji": "🪑",
+      "frage": "Woran merkst du, dass ein Stuhl zu dir passt?",
+      "optionen": [
+        { "text": "Der Stuhl hat deine Lieblingsfarbe", "richtig": false },
+        { "text": "Die Füße kommen flach auf den Boden", "richtig": true },
+        { "text": "Der Stuhl ist ganz weich", "richtig": false }
+      ],
+      "antwortText": "Die Füße sollen flach auf den Boden kommen. Wenn die Beine baumeln, ist der Stuhl zu hoch.",
+      "gruende": [
+        "Die Füße kommen flach auf den Boden und haben Halt.",
+        "Der Rücken findet hinten eine Lehne, die zu deiner Größe passt."
+      ],
+      "typologie": true,
+      "gegenbeispiel": "Ein Kinderstuhl ist kein kleiner Erwachsenenstuhl: Auch die Sitzfläche und die Lehne sind anders, nicht nur die Höhe.",
+      "probe": "Setzt euch beide nacheinander auf denselben Stuhl. Wessen Füße kommen auf den Boden, wessen baumeln?",
+      "erwartet": "Beim Erwachsenen kommen die Füße auf den Boden, beim Kind baumeln sie – bei einem Kinderstuhl umgekehrt.",
+      "wennAnders": "Wenn bei euch beiden die Füße hinkommen, sucht einen anderen Stuhl zum Vergleichen.",
+      "gespraech": "Passen bei euch alle Stühle zu allen?"
+    },
+    {
+      "id": "f-klinke", "geltung": "pruefbar", "emoji": "🚪",
+      "frage": "Wo drückst du die Türklinke leichter herunter?",
+      "optionen": [
+        { "text": "Ganz vorne, am äußersten Ende", "richtig": true },
+        { "text": "Ganz hinten, nah am Schild", "richtig": false }
+      ],
+      "antwortText": "Ganz vorne. Je weiter vorne du drückst, desto leichter geht es – deshalb ist die Klinke lang.",
+      "gruende": [
+        "Vorne braucht man weniger Kraft, weil der Hebel länger ist.",
+        "Man kann die Klinke mit der ganzen Hand bedienen, auch mit vollen Armen."
+      ],
+      "probe": "Drückt die Klinke einmal ganz vorne herunter und einmal ganz nah am Schild. Passt dabei auf eure Finger auf.",
+      "erwartet": "Vorne geht es deutlich leichter.",
+      "wennAnders": "Wenn ihr keinen Unterschied merkt, probiert es an einer schwergängigen Tür – dort fällt es mehr auf.",
+      "gespraech": "Welche Türen könnt ihr schon allein öffnen?"
+    },
+    {
+      "id": "f-feuerwehr", "geltung": "ausgemacht", "emoji": "🚒",
+      "frage": "Warum ist das Feuerwehrauto rot?",
+      "optionen": [
+        { "text": "Weil Menschen das bei uns so ausgemacht haben", "richtig": true },
+        { "text": "Weil Rot die Farbe ist, die man am weitesten sieht", "richtig": false },
+        { "text": "Weil Feuer rot ist", "richtig": false }
+      ],
+      "antwortText": "Weil Menschen das bei uns so ausgemacht haben. Dann erkennt jeder das Auto sofort – darum geht es.",
+      "geltungsbereich": "In Deutschland ist Feuerrot für Feuerwehrfahrzeuge festgelegt. Rettungswagen und Fahrzeuge auf Flughäfen sind anders lackiert, und in anderen Ländern sind Feuerwehrautos gelb oder weiß.",
+      "gespraech": "Welche Fahrzeuge erkennt ihr auch schon an der Farbe?"
+    },
+    {
+      "id": "f-briefkasten", "geltung": "ausgemacht", "emoji": "📮",
+      "frage": "Warum ist der Briefkasten gelb?",
+      "optionen": [
+        { "text": "Weil Briefe gelb sind", "richtig": false },
+        { "text": "Weil Gelb vor Regen schützt", "richtig": false },
+        { "text": "Weil das bei uns so ausgemacht ist", "richtig": true }
+      ],
+      "antwortText": "Weil das bei uns so ausgemacht ist. Woanders sind Briefkästen blau, rot oder grün – dort haben Menschen es anders vereinbart.",
+      "geltungsbereich": "Die Farbe ist eine Festlegung des Postunternehmens, kein Naturgesetz. In anderen Ländern gelten andere Farben.",
+      "gespraech": "Wo steht bei euch in der Nähe ein Briefkasten?"
+    },
+    {
+      "id": "f-tasse-geschmack", "geltung": "geschmack", "emoji": "🎨",
+      "frage": "Welche Tasse würdest du nehmen: die gestreifte oder die einfarbige?",
+      "optionen": [{ "text": "🟦 Die gestreifte" }, { "text": "⬜ Die einfarbige" }, { "text": "🤷 Mal so, mal so" }],
+      "gespraech": "Warum gefällt dir die besser?"
+    },
+    {
+      "id": "f-haus-geschmack", "geltung": "geschmack", "emoji": "🏘️",
+      "frage": "Welches Dach gefällt dir besser: das spitze oder das flache?",
+      "optionen": [{ "text": "🔺 Das spitze" }, { "text": "▬ Das flache" }, { "text": "🤷 Beide" }],
+      "gespraech": "Warum magst du das lieber – kannst du es genau erzählen?"
+    },
+    {
+      "id": "f-farbe-geschmack", "geltung": "geschmack", "emoji": "🖍️",
+      "frage": "Welche Farbe würdest du deinem Regenschirm geben?",
+      "optionen": [{ "text": "🌈 Bunt" }, { "text": "⚫ Einfarbig" }, { "text": "✨ Mit Muster" }],
+      "gespraech": "Warum ausgerechnet die? Und würdest du sie auch im Winter nehmen?"
+    }
+  ],
+  "gebaeude": [
+    {
+      "id": "g-fachwerk", "merkmalsart": "bauform", "name": "Fachwerkhaus", "emoji": "🏠",
+      "merkmal": "Bei diesem Haus sieht man von außen, wie es zusammengebaut ist: Die Holzbalken bleiben sichtbar, und die Felder dazwischen sind gefüllt.",
+      "optionen": [
+        { "text": "An den Holzbalken, die man von außen sieht", "richtig": true },
+        { "text": "An der Farbe", "richtig": false },
+        { "text": "An der Zahl der Fenster", "richtig": false }
+      ],
+      "gegenbeispiel": "Die Balken sind nicht immer dunkel und die Felder nicht immer weiß. Es gibt sie auch rot, gelb oder grün – erkennen kann man das Haus trotzdem an den sichtbaren Balken.",
+      "vertiefung": "Manche Balken stehen schräg. Die machen aus einem Viereck zwei Dreiecke – und ein Dreieck lässt sich nicht zusammenschieben. Deshalb wackelt das Haus nicht.",
+      "suchauftrag": "Sucht draußen ein Haus mit sichtbaren Balken. Findet ihr einen schrägen Balken? Zeigt ihn euch gegenseitig.",
+      "gespraech": "Kennt ihr solche Häuser auch von woanders?"
+    },
+    {
+      "id": "g-backstein", "merkmalsart": "bauform", "name": "Backsteinhaus", "emoji": "🧱",
+      "merkmal": "Lauter gleich große Steine, in Reihen übereinander – und immer ein Stück versetzt, nie genau übereinander.",
+      "optionen": [
+        { "text": "An den vielen gleich großen Steinen in Reihen", "richtig": true },
+        { "text": "Daran, dass es rot ist", "richtig": false },
+        { "text": "An der Haustür", "richtig": false }
+      ],
+      "gegenbeispiel": "Backsteine sind meistens rotbraun, aber es gibt auch gelbe und ganz dunkle glänzende. An der Farbe erkennt man sie also nicht – an der Reihung schon.",
+      "vertiefung": "Backsteine macht man aus Lehm: formen, dann im Feuer brennen, dann sind sie hart. Weil sie geformt werden, sind sie alle fast gleich groß. In manchen Gegenden liegt viel Lehm in der Erde, aber es gibt dort keine Berge zum Steinebrechen – deshalb stehen dort besonders viele Häuser und Kirchen aus Backstein.",
+      "suchauftrag": "Legt ein paar gleich große Bauklötze einmal genau übereinander und einmal versetzt. Schiebt beide Mauern vorsichtig an. Welche hält länger?",
+      "gespraech": "Findet ihr auf dem Weg zur Kita eine Backsteinwand?"
+    },
+    {
+      "id": "g-laden", "merkmalsart": "bauform", "name": "Laden", "emoji": "🏪",
+      "merkmal": "Unten ist eine große Glasscheibe, durch die man hineinsehen kann. Dahinter liegt oder hängt etwas, das man kaufen kann.",
+      "optionen": [
+        { "text": "Am Dach", "richtig": false },
+        { "text": "An der großen Scheibe, durch die man hineinsieht", "richtig": true },
+        { "text": "An der Farbe der Wand", "richtig": false }
+      ],
+      "gegenbeispiel": "Manche Läden liegen in einem Wohnhaus, andere in einer großen Halle. Das Schaufenster ist aber fast immer da.",
+      "gespraech": "Welchen Laden erkennt ihr schon von weitem?"
+    },
+    {
+      "id": "g-kirche", "merkmalsart": "bauform", "name": "Kirche", "emoji": "⛪",
+      "merkmal": "Ein hoher Turm, oft mit einer Glocke oder einem Kreuz oben, und hohe schmale Fenster.",
+      "optionen": [
+        { "text": "Am hohen Turm", "richtig": true },
+        { "text": "An den Mülltonnen davor", "richtig": false },
+        { "text": "Am Garten", "richtig": false }
+      ],
+      "gegenbeispiel": "Manche Kirchen haben gar keinen Turm – und sind trotzdem Kirchen. Der Turm ist ein häufiges Zeichen, kein Muss.",
+      "vertiefung": "In einer Kirche treffen sich Menschen, die zusammen beten. Es gibt auch andere Häuser dafür, die anders aussehen – manche haben eine Kuppel, manche einen ganz schmalen hohen Turm.",
+      "gespraech": "Welche hohen Häuser gibt es bei euch in der Nähe?"
+    },
+    {
+      "id": "g-bahnhof", "merkmalsart": "ortskenntnis", "name": "Bahnhof", "emoji": "🚉",
+      "merkmal": "Gleise, ein Bahnsteig, ein Dach über dem Bahnsteig – und Züge.",
+      "warumNicht": "Einen Bahnhof erkennt man an den Gleisen und am Bahnsteig, nicht am Haus. Bahnhofshäuser sehen überall anders aus, manche Haltestellen haben gar kein Haus. Deshalb fragt diese App nicht danach.",
+      "gespraech": "Woran habt ihr zuletzt gemerkt, dass ihr an einem Bahnhof seid?"
+    },
+    {
+      "id": "g-kita", "merkmalsart": "ausstattung", "name": "Kita", "emoji": "🧸",
+      "merkmal": "Spielgeräte draußen, ein niedriger Zaun, Bilder in den Fenstern, Plätze für Kinderwagen.",
+      "warumNicht": "Ob ein Haus eine Kita ist, sieht man dem Haus nicht an: Es kann ein Neubau sein, ein umgebautes Wohnhaus oder das Erdgeschoss von einem großen Haus. Man erkennt es an den Sachen drumherum. Deshalb fragt diese App nicht danach.",
+      "gespraech": "Woran würde ein fremdes Kind merken, dass hier eine Kita ist?"
+    }
+  ],
+  "schlussIdeen": [
+    "Sucht zu Hause drei Dinge mit einem Griff und überlegt zusammen, wozu der Griff da ist.",
+    "Geht ein Stück spazieren und sucht ein Haus, bei dem man von außen sieht, wie es gebaut ist.",
+    "Legt drei Löffel nebeneinander – Holz, Metall, Plastik – und erzählt euch, was jeder gut kann und was nicht."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/musik-detektive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Musik-Detektive: Ko-Nutzungs-App fuer 4-6, ausschliesslich gemeinsam mit einem Erwachsenen. Lied, Marsch und Tanz heraushoeren und Stimmungen vergleichen. Alle Melodien sind Eigenproduktion aus Dreiklangs- und Skalenfiguren und werden im Browser mit Oszillatoren erzeugt - keine fremden Aufnahmen, keine fremden Melodien, keine externen Anfragen. Entschieden wird ueber die Puls-Gruppierung (in Zweiern oder in Dreiern), nicht ueber das Tempo: Ein zweiter, sehr langsamer Marsch zeigt das ausdruecklich. Drei Invarianten stehen im Validator: es MUSS ein Stueck geben, das zu zwei Sorten gehoert (ein Marschlied), und es wird nie abgefragt; Stimmungsfragen duerfen keine hinterlegte Loesung haben; ein Vergleichspaar darf sich in genau einem Merkmal unterscheiden, sonst behauptet die App eine Ursache, die sie nicht gezeigt hat. Mitlaufende Puls-Punkte machen die Takt-Aufgaben auch ohne Hoeren loesbar - sie wachsen, statt zu blinken. Erwachsenen-Gate, hoechstens fuenf Aufgaben pro Sitzung, keine Punkte, kein Rekord. Praleska docs/10 (Ko-Nutzung Nr. 15). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <title>Für Eltern – Design-Entdecker</title>
+  <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" />
+</head>
+<body>
+  <main class="k-app">
+    <h1 class="k-titel">👪 Eltern-Kompass: Design-Entdecker</h1>
+    <section class="k-karte">
+      <h2>Für wen und wie lange</h2>
+      <p>Für Kinder von etwa 3 bis 5 <strong>gemeinsam mit einem Erwachsenen</strong>, für 5- bis 7-Jährige auch einmal kurz allein. <strong>Höchstens sechs Fragen</strong> pro Sitzung, danach drei Ideen ohne Bildschirm. Jeder Text ist ein Vorlesetext.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Die drei Sorten von Fragen</h2>
+      <p>Der ganze Aufbau hängt an einer Unterscheidung, die vor jeder Frage sichtbar ist:</p>
+      <ul>
+        <li><strong>🔬 Prüfbar</strong> – man kann es ausprobieren. Hat eine Antwort. Beispiel: Warum hat die Tasse einen Henkel?</li>
+        <li><strong>🤝 Ausgemacht</strong> – Menschen haben es vereinbart. Hat auch eine Antwort, aber nur hier. Beispiel: Warum ist das Feuerwehrauto rot?</li>
+        <li><strong>💛 Geschmack</strong> – hat <em>keine</em> Antwort. Wird nie bewertet und nie gezählt.</li>
+      </ul>
+      <p>Die verbreitete Zweiteilung „Wissen oder Meinung“ ist zu grob. Konventionen fielen sonst in die falsche Schublade: Dass Feuerwehrautos rot sind, ist keine Optimierung der Sichtbarkeit (unter dem Gesichtspunkt schneiden gelbgrüne Töne eher besser ab) – es ist eine <strong>Festlegung</strong>, und genau darin liegt ihr Nutzen: Jeder erkennt das Fahrzeug sofort. Die App bietet „weil man Rot am weitesten sieht“ deshalb ausdrücklich als Ablenker an.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Geschmack wird nicht bewertet – und kann es nicht werden</h2>
+      <p>Geschmacksfragen laufen über einen <strong>eigenen Bildschirm</strong>, nicht über denselben mit einem Schalter. Im Datensatz darf eine Geschmacksfrage kein Feld <code>richtig</code> tragen – nicht einmal auf <code>false</code> – und keine hinterlegte Lösung haben; der Validator weist sie sonst zurück. Es gibt keine Zählung, keine Mehrheitsanzeige, kein „die meisten Kinder finden …“. Eine Mehrheitsanzeige wäre besonders schädlich: Sie erzeugt Konformitätsdruck und wertet die Minderheitsmeinung sichtbar ab.</p>
+      <p>Der Gesprächsimpuls fragt bei diesen Fragen immer nach dem <strong>Warum</strong>, nie nach der Wahl. Das Begründen ist der Lerninhalt, nicht der Geschmack.</p>
+      <p>Warum das wichtig ist: Fragen wie „Welches Haus ist schöner?“ treffen regelmäßig die reale Wohnsituation einzelner Kinder. Genauso das Spitzdach – es ist ein kultureller Prototyp, keine Bestimmung. Viele Kinder wohnen in Häusern ohne Spitzdach, und ihr Zuhause darf nicht implizit als Abweichung markiert werden.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Nie nur ein Grund</h2>
+      <p>„Der Kochlöffel ist aus Holz, weil Holz die Wärme schlecht leitet“ ist physikalisch richtig und trotzdem irreführend: Mindestens ebenso tragend ist, dass Holz weich genug ist, um die Pfannenbeschichtung nicht zu zerkratzen. Der bestimmte Artikel („der Grund“) suggeriert, es gebe genau eine Ursache – Design funktioniert aber über <strong>konkurrierende Anforderungen</strong>.</p>
+      <p>Der Validator verlangt deshalb bei jeder prüfbaren Frage <strong>mindestens zwei Gründe</strong>, und die App formuliert „Ein Grund ist … und noch einer ist …“. Bei Materialfragen kommt ein Pflichtfeld dazu: Was kann dieses Material <em>schlecht</em>? Holz saugt Feuchtigkeit auf und kann reißen. Materialien haben Eigenschaften, keine Tugenden – „Holz ist besser als Plastik“ ist keine Materialkunde, sondern eine Mischung aus Ökobilanzfrage und Milieugeschmack.</p>
+      <p>Der erste Grund muss außerdem <strong>positiv</strong> formuliert sein („bleibt angenehm zum Anfassen“ statt „wird nicht heiß“). Verneinte Kriterien drehen Kinder in diesem Alter beim Wiedergeben regelmäßig ins Gegenteil.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Die Proben – und was passiert, wenn etwas anderes herauskommt</h2>
+      <p>Jede prüfbare Aussage hat eine <strong>Probe</strong>: die konkrete Handlung, mit der Sie und Ihr Kind sie am realen Gegenstand nachprüfen. Zwei Sicherungen gehören dazu:</p>
+      <ul>
+        <li><strong>Nichts Heißes.</strong> Der Validator weist Proben mit heißem Wasser, Herd, Backofen, Kerze oder Messer zurück. Wasserversuche tragen eine Temperaturgrenze von höchstens 40 °C – der Wärmeleitungsunterschied zwischen Holz und Metall ist so groß, dass handwarmes Wasser vollkommen genügt.</li>
+        <li><strong>Ein Satz für den anderen Ausgang.</strong> Versuche gehen schief. Wenn Ihr Kind etwas anderes beobachtet als erwartet, ist das ein Ergebnis und kein Fehler – die schädlichste Wendung wäre, die richtige Beobachtung eines Kindes als falsch zu korrigieren. Jede Probe bringt diesen Satz mit; der Validator verlangt ihn.</li>
+      </ul>
+    </section>
+    <section class="k-karte">
+      <h2>Gebäude: was man sieht und was nicht</h2>
+      <p>Die Katalogliste mischt zwei Ordnungen: Kita, Theater, Laden und Bahnhof sind <em>Nutzungsarten</em>, Fachwerkhaus und Backsteinkirche <em>Bauweisen</em>. Nur die zweite Frage lässt sich am Bild beantworten.</p>
+      <p>Abgefragt wird deshalb nur, was wirklich an der Bauform hängt: die sichtbaren Balken beim Fachwerk, die Reihung gleich großer Steine beim Backstein, das Schaufenster beim Laden, der Turm bei der Kirche. <strong>Kita und Bahnhof werden ausdrücklich gezeigt – und ausdrücklich nicht abgefragt</strong>, mit dem Satz, warum: Eine Kita erkennt man an Spielgeräten, Zäunen und Fensterbildern (Ausstattung), einen Bahnhof an Gleisen und Bahnsteig (nicht am Haus). Ein Kind erkennt außerdem meist „seine“ Kita – das ist Ortskenntnis und darf nicht als Formwissen gepunktet werden.</p>
+      <p>Jedes Erkennungsmerkmal bringt sein <strong>Gegenbeispiel</strong> mit: Manche Kirchen haben keinen Turm. Fachwerk ist nicht schwarz-weiß – regional gab und gibt es rote, ockerfarbene und grüne Fassungen, und die dunklen Balken gehen oft auf spätere Anstriche zurück. Backsteine sind nicht nur rot, sondern auch gelb oder dunkel gesintert; das tragfähige Merkmal ist die Reihung, nicht die Farbe.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Was die App über Baugeschichte nicht sagt</h2>
+      <p>Im Kindertext sind Jahreszahlen, Epochenbegriffe und Ritter-Erzählungen technisch gesperrt – der Validator lehnt sie ab. Der Grund ist einfach: Fachwerkbau reicht vom Mittelalter bis ins 20. Jahrhundert und wird bis heute ausgeführt, und Fachwerk gibt es ebenso in England, Frankreich, den Niederlanden, Skandinavien und der Schweiz. „So haben die Ritter gewohnt“ und „typisch deutsch“ sind beide falsch, und das zweite trifft in mehrsprachigen Gruppen Kinder, die solche Häuser aus dem Herkunftsland kennen. Fragen Sie stattdessen: „Kennst du solche Häuser auch von woanders?“</p>
+      <p>Ebenfalls nicht in der App: warum bei manchen alten Fachwerkhäusern das obere Stockwerk vorsteht. Dafür kursieren griffige Erklärungen (Grundsteuer), belegt ist keine davon – diskutiert werden konstruktive und bauphysikalische Gründe. Wenn Ihr Kind fragt: „Das weiß man nicht genau, da sind sich die Fachleute nicht einig.“ Auch das ist eine gute Antwort.</p>
+      <p>Zum Backstein reicht die materialbedingte Erklärung vollständig: In manchen Gegenden liegt viel Lehm im Boden und es gibt keine Steinbrüche – Steine zum Bauen musste man also selbst machen. Eine Ursprungsgeschichte („Mönche brachten die Technik mit“) wäre erfundene Baugeschichte.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Statt „schön“: genau hinsehen</h2>
+      <p>Ästhetische Bildung im Elementarbereich heißt <em>differenziert wahrnehmen</em>, nicht bewerten. Nützliche Wortpaare zum Vergleichen: rau/glatt, hell/dunkel, rund/eckig, gemustert/einfarbig, hoch/breit, viele gleiche Teile/lauter verschiedene. Über die kann man sich einigen – darüber, ob eine Wand schön ist, nicht. Fahren Sie mit der Hand über eine Backsteinwand und über eine Fensterscheibe und lassen Sie Ihr Kind erzählen.</p>
+    </section>
+    <section class="k-karte">
+      <h2>Datenschutz</h2>
+      <p>Keine Werbung, keine Konten, keine fremden Server, keine Namen. Die App speichert <strong>nichts</strong>. Vorlesefunktion über die Stimme des Geräts (Web Speech, BFSG).</p>
+    </section>
+    <footer class="k-fuss"><a href="./">Zur App</a> · <a href="../../impressum.html">Impressum &amp; Datenschutz</a></footer>
+  </main>
+</body>
+</html>

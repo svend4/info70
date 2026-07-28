@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "zielgruppe": "4-6, nur gemeinsam mit einem Erwachsenen",
+  "hinweis": "Alle Melodien sind selbst geschrieben und werden im Browser aus Dreiklangs- und Skalenfiguren erzeugt. Es sind Muster, keine echten Musikstücke: Trommeln, Trompeten und Singstimmen kann diese App nicht.",
+  "barrierefreiheit": "Diese App arbeitet mit Hören. Zu jedem Klang laufen Puls-Punkte mit, die zeigen, ob in Zweiern oder in Dreiern gezählt wird – die Takt-Aufgaben gehen deshalb auch ohne Hören. Welches Muster es ist und wie es sich anfühlt, hört man dagegen wirklich nur. Die App ist kein Hörtest und misst keine Musikalität.",
+  "stuecke": [
+    {
+      "id": "marsch", "name": "Muster A", "zweck": "raetsel", "kategorien": ["marsch"],
+      "schlaegeProTakt": 2, "bpm": 112, "artikulation": "kurz", "begleitung": "oompah", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "C4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "G4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "G4", "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "marsch-langsam", "name": "Muster D", "zweck": "raetsel", "kategorien": ["marsch"],
+      "schlaegeProTakt": 2, "bpm": 60, "artikulation": "kurz", "begleitung": "oompah", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "C4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "G4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "G4", "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "walzer", "name": "Muster B", "zweck": "raetsel", "kategorien": ["tanz"],
+      "schlaegeProTakt": 3, "bpm": 150, "artikulation": "gebunden", "begleitung": "oompahpah", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "A4", "schlaege": 2 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "F4", "schlaege": 2 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "D4", "schlaege": 2 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "F4", "schlaege": 3 }
+      ]
+    },
+    {
+      "id": "lied", "name": "Muster C", "zweck": "raetsel", "kategorien": ["lied"],
+      "schlaegeProTakt": 4, "bpm": 96, "artikulation": "gebunden", "begleitung": "liegend", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "G4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 }, { "ton": "A4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "E4", "schlaege": 2 }, { "pause": true, "schlaege": 2 },
+        { "ton": "F4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 }, { "ton": "D4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 2 }, { "pause": true, "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "marschlied", "name": "Muster E", "zweck": "zeigen", "kategorien": ["lied", "marsch"],
+      "schlaegeProTakt": 4, "bpm": 112, "artikulation": "gebunden", "begleitung": "oompah", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "G4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 }, { "ton": "A4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "E4", "schlaege": 2 }, { "pause": true, "schlaege": 2 },
+        { "ton": "F4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 }, { "ton": "D4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 2 }, { "pause": true, "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "lied-langsam", "name": "Muster C, langsam", "zweck": "stimmung", "kategorien": [],
+      "schlaegeProTakt": 4, "bpm": 60, "artikulation": "gebunden", "begleitung": "liegend", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "G4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 }, { "ton": "A4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "E4", "schlaege": 2 }, { "pause": true, "schlaege": 2 },
+        { "ton": "F4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 }, { "ton": "D4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 2 }, { "pause": true, "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "lied-kurz", "name": "Muster C, mit Stupsern", "zweck": "stimmung", "kategorien": [],
+      "schlaegeProTakt": 4, "bpm": 96, "artikulation": "kurz", "begleitung": "liegend", "tonart": "dur", "lage": 0,
+      "melodie": [
+        { "ton": "G4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 }, { "ton": "A4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "E4", "schlaege": 2 }, { "pause": true, "schlaege": 2 },
+        { "ton": "F4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 }, { "ton": "D4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 2 }, { "pause": true, "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "lied-tief", "name": "Muster C, tiefer", "zweck": "stimmung", "kategorien": [],
+      "schlaegeProTakt": 4, "bpm": 96, "artikulation": "gebunden", "begleitung": "liegend", "tonart": "dur", "lage": -1,
+      "melodie": [
+        { "ton": "G4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 }, { "ton": "A4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "E4", "schlaege": 2 }, { "pause": true, "schlaege": 2 },
+        { "ton": "F4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 }, { "ton": "D4", "schlaege": 1 }, { "ton": "E4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 2 }, { "pause": true, "schlaege": 2 }
+      ]
+    },
+    {
+      "id": "lied-moll", "name": "Muster C, anders eingefärbt", "zweck": "stimmung", "kategorien": [],
+      "schlaegeProTakt": 4, "bpm": 96, "artikulation": "gebunden", "begleitung": "liegend", "tonart": "moll", "lage": 0,
+      "melodie": [
+        { "ton": "G4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 }, { "ton": "As4", "schlaege": 1 }, { "ton": "G4", "schlaege": 1 },
+        { "ton": "Es4", "schlaege": 2 }, { "pause": true, "schlaege": 2 },
+        { "ton": "F4", "schlaege": 1 }, { "ton": "Es4", "schlaege": 1 }, { "ton": "D4", "schlaege": 1 }, { "ton": "Es4", "schlaege": 1 },
+        { "ton": "C4", "schlaege": 2 }, { "pause": true, "schlaege": 2 }
+      ]
+    }
+  ],
+  "raetsel": [
+    {
+      "id": "q1", "typ": "muster", "stueck": "marsch", "ohneHoerenLoesbar": false,
+      "frage": "Wozu passt dieses Muster: marschieren, tanzen oder singen?",
+      "optionen": [
+        { "text": "🥾 Marschieren", "wert": "marsch", "richtig": true },
+        { "text": "💃 Tanzen", "wert": "tanz", "richtig": false },
+        { "text": "🎤 Singen", "wert": "lied", "richtig": false }
+      ],
+      "erklaerung": "Zum Marschieren. Man zählt in Zweiern: eins-zwei, eins-zwei – genau wie beim Gehen, links-rechts.",
+      "gespraech": "Könnt ihr zusammen dazu durch das Zimmer marschieren?"
+    },
+    {
+      "id": "q2", "typ": "muster", "stueck": "walzer", "ohneHoerenLoesbar": false,
+      "frage": "Wozu passt dieses Muster: marschieren, tanzen oder singen?",
+      "optionen": [
+        { "text": "💃 Tanzen", "wert": "tanz", "richtig": true },
+        { "text": "🥾 Marschieren", "wert": "marsch", "richtig": false },
+        { "text": "🎤 Singen", "wert": "lied", "richtig": false }
+      ],
+      "erklaerung": "Zum Tanzen. Hier zählt man in Dreiern: eins-zwei-drei. Beim Gehen geht das nicht – zum Drehen aber gut.",
+      "gespraech": "Wer traut sich, sich dazu einmal im Kreis zu drehen?"
+    },
+    {
+      "id": "q3", "typ": "muster", "stueck": "lied", "ohneHoerenLoesbar": false,
+      "frage": "Wozu passt dieses Muster: marschieren, tanzen oder singen?",
+      "optionen": [
+        { "text": "🎤 Singen", "wert": "lied", "richtig": true },
+        { "text": "🥾 Marschieren", "wert": "marsch", "richtig": false },
+        { "text": "💃 Tanzen", "wert": "tanz", "richtig": false }
+      ],
+      "nachvollziehbar": "marsch",
+      "nachvollziehbarText": "Du hast in Zweiern gezählt – das stimmt, hier zählt man wirklich eins-zwei. Zum Marschieren fehlt aber der Schwung: Es gibt Pausen, und nichts treibt weiter.",
+      "erklaerung": "Zum Singen. Die Töne liegen nah beieinander, und zwischendurch sind Pausen – da kann man Luft holen.",
+      "gespraech": "Könnt ihr das Muster zusammen mitsummen?"
+    },
+    {
+      "id": "q4", "typ": "muster", "stueck": "marsch-langsam", "ohneHoerenLoesbar": false,
+      "frage": "Und dieses hier – marschieren, tanzen oder singen?",
+      "optionen": [
+        { "text": "🥾 Marschieren", "wert": "marsch", "richtig": true },
+        { "text": "💃 Tanzen", "wert": "tanz", "richtig": false },
+        { "text": "🎤 Singen", "wert": "lied", "richtig": false }
+      ],
+      "erklaerung": "Auch zum Marschieren – nur ganz langsam. Am Tempo erkennt man einen Marsch nicht. Es zählt, dass man in Zweiern zählt.",
+      "gespraech": "Könnt ihr einmal in Zeitlupe marschieren?"
+    },
+    {
+      "id": "q5", "typ": "gruppierung", "stueck": "walzer", "ohneHoerenLoesbar": true,
+      "frage": "Zählst du mit: in Zweiern oder in Dreiern?",
+      "optionen": [
+        { "text": "1-2-3", "wert": "dreier", "richtig": true },
+        { "text": "1-2", "wert": "zweier", "richtig": false }
+      ],
+      "erklaerung": "In Dreiern: eins-zwei-drei, eins-zwei-drei. Der erste Punkt ist immer der größte – das ist der schwere Schlag.",
+      "gespraech": "Klatscht ihr den ersten Schlag und tippt die anderen nur leicht?"
+    },
+    {
+      "id": "q6", "typ": "gruppierung", "stueck": "marsch", "ohneHoerenLoesbar": true,
+      "frage": "Zählst du mit: in Zweiern oder in Dreiern?",
+      "optionen": [
+        { "text": "1-2", "wert": "zweier", "richtig": true },
+        { "text": "1-2-3", "wert": "dreier", "richtig": false }
+      ],
+      "erklaerung": "In Zweiern: eins-zwei, eins-zwei. Deshalb passt es zum Gehen – ein Fuß, der andere Fuß.",
+      "gespraech": "Geht ihr zusammen im Zimmer herum und zählt laut mit?"
+    }
+  ],
+  "paare": [
+    { "id": "p-tempo", "a": "lied", "b": "lied-langsam", "geaendert": "bpm", "wasAnders": "Nur das Tempo ist anders. Die Töne sind dieselben." },
+    { "id": "p-artikulation", "a": "lied", "b": "lied-kurz", "geaendert": "artikulation", "wasAnders": "Nur die Töne sind kürzer. Sonst ist alles gleich." },
+    { "id": "p-lage", "a": "lied", "b": "lied-tief", "geaendert": "lage", "wasAnders": "Nur die Tonhöhe ist anders. Es ist dieselbe Melodie, weiter unten." },
+    { "id": "p-tongeschlecht", "a": "lied", "b": "lied-moll", "geaendert": "tonart", "wasAnders": "Nur zwei Töne sind ein kleines Stück tiefer. Das färbt das ganze Muster um." }
+  ],
+  "stimmung": [
+    {
+      "id": "s1", "paar": "p-tempo",
+      "frage": "Wie klingt das zweite für dich?",
+      "antworten": [{ "text": "🐢 Ruhiger" }, { "text": "🐇 Aufgeregter" }, { "text": "🤷 Gleich" }],
+      "erklaerung": "Danke – das ist deine Antwort. Sehr viele Menschen hören ein langsames Stück ruhiger. Aber niemand muss das so hören.",
+      "gespraech": "Und wie ist es für dich – wobei würdest du das schnelle hören wollen?"
+    },
+    {
+      "id": "s2", "paar": "p-artikulation",
+      "frage": "Wie klingt das zweite für dich?",
+      "antworten": [{ "text": "🌊 Weicher" }, { "text": "✨ Zappeliger" }, { "text": "🤷 Gleich" }],
+      "erklaerung": "Danke – das ist deine Antwort. Kurze Töne nennen wir hier Stupser-Töne, lange Schleif-Töne. Wie sich das anfühlt, entscheidest du.",
+      "gespraech": "Welche Bewegung passt zu den Stupser-Tönen?"
+    },
+    {
+      "id": "s3", "paar": "p-lage",
+      "frage": "Wie klingt das zweite für dich?",
+      "antworten": [{ "text": "🐻 Dunkler" }, { "text": "🐦 Heller" }, { "text": "🤷 Gleich" }],
+      "erklaerung": "Danke – das ist deine Antwort. Tiefe Töne nennen viele Menschen dunkel, hohe hell. Ob das gemütlich oder unheimlich klingt, hört jeder anders.",
+      "gespraech": "Welches Tier würde so singen, wie das zweite Muster klingt?"
+    },
+    {
+      "id": "s4", "paar": "p-tongeschlecht",
+      "frage": "Wie klingt das zweite für dich?",
+      "antworten": [{ "text": "🙂 Eher fröhlich" }, { "text": "😌 Eher ernst" }, { "text": "🤷 Gleich" }],
+      "erklaerung": "Danke – das ist deine Antwort. Viele Menschen bei uns finden das zweite ernster. Das haben wir so gelernt; anderswo auf der Welt hört man es anders. Bei Musik dürfen wir verschieden fühlen.",
+      "gespraech": "Erzählt euch: Wann habt ihr zuletzt Musik gehört, die euch gut gefallen hat?"
+    }
+  ],
+  "regeln": [
+    {
+      "id": "r-marsch", "typ": "regel",
+      "text": "Zu einem Marsch zählt man in Zweiern: eins-zwei, eins-zwei – und es geht ohne Pause durch, wie beim Gehen.",
+      "gilt": "Das Tempo verrät nichts: Es gibt schnelle Märsche und ganz langsame. Erkennen kann man einen Marsch nur am Zählen in Zweiern.",
+      "bpmVon": 60, "bpmBis": 140
+    },
+    {
+      "id": "r-tanz", "typ": "regel",
+      "text": "Zu einem Walzer zählt man in Dreiern: eins-zwei-drei. Dazu dreht man sich, statt zu gehen.",
+      "gilt": "Nicht jeder Tanz zählt in Dreiern – es gibt viele Tänze, die in Zweiern zählen. In Dreiern zählt der Walzer.",
+      "bpmVon": 90, "bpmBis": 180
+    },
+    {
+      "id": "r-lied", "typ": "regel",
+      "text": "Ein Lied erkennt man nicht am Zählen, sondern daran, dass man es mitsingen kann: Die Töne liegen nah beieinander, und zwischendurch ist eine Pause zum Luftholen.",
+      "gilt": "Ein Lied kann in Zweiern oder in Dreiern zählen – beides gibt es. Deshalb ist Singbarkeit das Merkmal und nicht der Takt."
+    },
+    {
+      "id": "r-mischform", "typ": "regel",
+      "text": "Ein Stück kann zu zwei Sorten gehören: Ein Marschlied ist ein Lied UND ein Marsch.",
+      "gilt": "Deshalb wird Muster E in dieser App nie abgefragt. Bei ihm wären zwei Antworten richtig, und keine davon dürfte als verkehrt gelten."
+    },
+    {
+      "id": "r-stimmung", "typ": "meinung",
+      "text": "Wie sich Musik anfühlt, hören Menschen verschieden. Darauf gibt es keine richtige Antwort.",
+      "gilt": "Schneller oder langsamer, höher oder tiefer – das kann man prüfen. Fröhlich oder traurig ist dagegen eine Empfindung, und die zählt diese App nicht mit."
+    }
+  ],
+  "schlussIdeen": [
+    "Marschiert zusammen durch die Wohnung und zählt laut mit: eins-zwei, eins-zwei. Wer findet den schweren Schlag zuerst?",
+    "Sucht draußen echte Musik: eine Blaskapelle, ein Karussell, ein Radio im Laden. Zählt ihr in Zweiern oder in Dreiern?",
+    "Singt zusammen ein Lied, das ihr beide kennt, und klatscht dabei nur den ersten Schlag von jedem Takt."
+  ]
+}

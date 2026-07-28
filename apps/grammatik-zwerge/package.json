@@ -1,0 +1,8 @@
+{
+  "name": "@info70/grammatik-zwerge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Grammatik-Zwerge: Ko-Nutzungs-App fuer 4-6, ausschliesslich gemeinsam mit einem Erwachsenen, ausdruecklich auch fuer Kinder, die Deutsch als zweite Sprache lernen. Drei Sprachspiele mit 27 Aufgaben: Ortswoerter (auf, unter, in, neben, zwischen), Mehrzahl (der Hund - die Hunde) und zusammengesetzte Woerter (Zucker + Dose = Zuckerdose). Die Ortswoerter vor und hinter fehlen mit Absicht: In einer flachen Szene ohne Verdeckung haengen beide davon ab, wo der Betrachter steht, es gaebe also zwei richtige Antworten - der Validator sperrt sie. Die Szenen werden gezeichnet statt mit Emoji dargestellt, damit in und auf unterscheidbar bleiben. Der Validator erzwingt ausserdem mehrere Mehrzahl-Arten, mindestens ein Wort mit Fugenlaut (Sonnenblume) als Gegenbeispiel zu Wort-plus-Wort, die Rechenprobe Teil plus Fuge plus Teil und dass jede Regel ihre eigene Grenze mitliefert. Eine regelhaft gedachte Mehrzahl wie die Balls gilt nicht als Fehler, sondern wird gelobt. Erwachsenen-Gate, hoechstens sechs Aufgaben pro Sitzung, keine Punkte, kein Rekord. Praleska docs/10 (Ko-Nutzung Nr. 14). Offline, werbefrei, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
