@@ -1,0 +1,38 @@
+/* Tischdienst-Trainer: Druckansicht des Platzsets. Beim Drucken
+   verschwinden Kopf, Bedienung und alle Hinweise (.tdt-nur-bildschirm);
+   übrig bleibt die Schablone allein auf der Seite, in kräftigem
+   Schwarz auf Weiß und ohne Rahmen – so lassen sich die echten Teile
+   darauflegen. */
+
+.tdt-platzset { margin-top: 1rem; }
+
+@media print {
+  .tdt-nur-bildschirm { display: none !important; }
+
+  html { font-size: 13pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .tdt-platzset {
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    break-inside: avoid;
+  }
+
+  /* Die Felder sollen in Teller- und Besteckgröße kommen, nicht in
+     Bildschirmgröße – deshalb hier echte Zentimeter. */
+  .tdt-feld {
+    min-height: 3.2cm !important;
+    border-width: 2pt !important;
+    border-color: #000 !important;
+  }
+}

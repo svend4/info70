@@ -12,6 +12,20 @@ export const TAGE_IM_RUECKBLICK = 7;
 /** Die drei Selbstauskunfts-Stufen in fester Reihenfolge. */
 export const STUFEN_IDS = ['viel', 'etwas', 'nochNicht'];
 
+/**
+ * Die Skala läuft in EINE Richtung: 🟢 „heute viel“ ist das Ende, an dem
+ * ein Kind zufrieden sein darf, ⚪ „heute noch nicht“ ist stillschweigend
+ * in Ordnung. Jeder Faktor muss deshalb nach etwas fragen, von dem mehr
+ * besser ist. Bildschirmzeit ist das Gegenteil davon: würde die App fragen,
+ * wie lange heute ein Gerät an war, wäre 🟢 „viel“ plötzlich die schlechte
+ * Antwort – die Skala würde ihre Bedeutung umdrehen, und das Kind würde
+ * seinen eigenen Medienkonsum benoten. Genau das soll hier nicht passieren.
+ * Darum wird die bildschirmfreie Zeit gefragt, nicht die Bildschirmzeit.
+ */
+const GERAETE = /Bildschirm|Handy|Tablet|Fernseh|Konsole|Computer|Smartphone/i;
+const OHNE_GERAET = /ohne Bildschirm|ohne Gerät|bildschirmfrei/i;
+const MENGENFRAGE = /wie (lange|viel|oft|häufig)/i;
+
 /** Lokales Datum als 'JJJJ-MM-TT' (nicht UTC, sonst kippt der Tag abends). */
 export function datumsSchluessel(datum) {
   const j = datum.getFullYear();
@@ -83,6 +97,16 @@ export function pruefeFaktoren(daten) {
     ids.add(f.id);
     if (!f.name || !f.emoji || !f.frage || !f.impuls) fehler.push(`${wo}: name/emoji/frage/impuls fehlt`);
     if (f.frage && !f.frage.includes('?')) fehler.push(`${wo}: frage ist keine Frage`);
+    // Siehe GERAETE oben: ein Geräte-Faktor darf nur nach der Zeit OHNE Gerät
+    // fragen, sonst kippt die Bedeutung der Ampel.
+    if (f.frage && GERAETE.test(f.frage)) {
+      if (!OHNE_GERAET.test(f.frage)) {
+        fehler.push(`${wo}: fragt nach dem Gerät statt nach der Zeit ohne Gerät – dann wäre „heute viel“ die schlechte Antwort`);
+      }
+      if (MENGENFRAGE.test(f.frage)) {
+        fehler.push(`${wo}: diese App misst keine Bildschirmzeit und fragt nicht nach Dauer`);
+      }
+    }
   }
   const stufen = daten?.stufen;
   if (!Array.isArray(stufen) || stufen.length !== 3) {

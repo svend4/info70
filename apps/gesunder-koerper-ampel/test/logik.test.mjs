@@ -10,13 +10,13 @@ const daten = JSON.parse(await readFile(new URL('../daten/faktoren.json', import
 
 test('Faktor-Daten sind gültig', () => {
   assert.deepEqual(pruefeFaktoren(daten), []);
-  assert.equal(daten.faktoren.length, 5);
+  assert.equal(daten.faktoren.length, 6);
   assert.deepEqual(daten.stufen.map((s) => s.id), STUFEN_IDS);
 });
 
 test('die Katalog-Faktoren sind vollständig abgebildet', () => {
   const ids = daten.faktoren.map((f) => f.id);
-  for (const noetig of ['bewegung', 'ruhe', 'essen', 'luft', 'sauberkeit']) {
+  for (const noetig of ['bewegung', 'ruhe', 'essen', 'luft', 'sauberkeit', 'bildschirmfrei']) {
     assert.ok(ids.includes(noetig), `Faktor fehlt: ${noetig}`);
   }
   for (const f of daten.faktoren) {
@@ -111,4 +111,33 @@ test('Ton: keine Beschämung, keine Diät- oder Körperbewertung, keine Diagnose
   }
   // Essen wird ausdrücklich nicht in gut und böse geteilt
   assert.match(daten.faktoren.find((f) => f.id === 'essen').impuls, /Kein Essen ist verboten/);
+});
+
+test('der Bildschirm-Faktor fragt nach der freien Zeit, nicht nach der Bildschirmzeit', () => {
+  // Tragend: Die Ampel läuft in eine Richtung – 🟢 „heute viel“ ist das gute
+  // Ende. Eine Frage nach der Bildschirm-DAUER würde diese Richtung umdrehen
+  // und das Kind seinen Medienkonsum benoten lassen. Deshalb steht die Regel
+  // im Validator und nicht nur in der Redaktion.
+  const f = daten.faktoren.find((x) => x.id === 'bildschirmfrei');
+  assert.ok(f, 'Faktor bildschirmfrei fehlt');
+  assert.match(f.frage, /ohne Bildschirm/);
+  assert.doesNotMatch(f.frage, /wie (lange|viel|oft)/i);
+  assert.match(f.impuls, /zählt keine Minuten/);
+
+  // Umgedrehte Frage: muss abgelehnt werden.
+  const gedreht = JSON.parse(JSON.stringify(daten));
+  gedreht.faktoren.find((x) => x.id === 'bildschirmfrei').frage = 'Wie lange warst du heute am Tablet?';
+  const fehler = pruefeFaktoren(gedreht);
+  assert.ok(fehler.some((e) => /fragt nach dem Gerät/.test(e)), fehler.join(' | '));
+  assert.ok(fehler.some((e) => /fragt nicht nach Dauer/.test(e)), fehler.join(' | '));
+
+  // Und eine Geräte-Frage ohne „ohne“ ebenso.
+  const nurGeraet = JSON.parse(JSON.stringify(daten));
+  nurGeraet.faktoren.find((x) => x.id === 'bildschirmfrei').frage = 'Hattest du heute Fernsehen?';
+  assert.ok(pruefeFaktoren(nurGeraet).some((e) => /fragt nach dem Gerät/.test(e)));
+
+  // Die anderen Faktoren dürfen von der Regel nicht erfasst werden.
+  for (const andere of daten.faktoren.filter((x) => x.id !== 'bildschirmfrei')) {
+    assert.doesNotMatch(andere.frage, /Bildschirm|Handy|Tablet|Fernseh|Konsole/i, `${andere.id}`);
+  }
 });

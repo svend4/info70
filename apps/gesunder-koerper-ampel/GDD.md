@@ -7,8 +7,8 @@ eigenständig, 5–7 in Ko-Nutzung.
 
 ## 1. Kernaussage
 
-Ein Tag lässt sich an fünf Dingen beschreiben: Bewegung, Ruhe und Schlaf,
-Essen und Trinken, frische Luft, Sauberkeit. Das Kind beschreibt seinen
+Ein Tag lässt sich an sechs Dingen beschreiben: Bewegung, Ruhe und Schlaf,
+Essen und Trinken, frische Luft, Sauberkeit und Zeit ohne Bildschirm. Das Kind beschreibt seinen
 eigenen Tag — und sieht über eine Woche hinweg ein Muster, das ihm sonst
 niemand zeigt. Die Leistung liegt im Hinsehen, nicht im Abschneiden.
 
@@ -31,6 +31,7 @@ bewusst weggelassen und im Validator festgeschrieben:
 | Punkte / Summe | macht aus Selbstbeobachtung eine Note | `pruefeFaktoren` lehnt `punkte`/`wert` an einer Stufe ab |
 | Rot | ein ruhiger Tag ist kein Fehler | `pruefeFaktoren` lehnt 🔴 und ❌ ab |
 | Ränge | ordnet Kinder in eine Reihenfolge | `pruefeFaktoren` lehnt ein `raenge`-Feld ab |
+| Frage nach der Bildschirm-Dauer | dreht die Richtung der Ampel um und lässt das Kind seinen Medienkonsum benoten | `pruefeFaktoren` verlangt bei Geräte-Fragen „ohne Bildschirm“ und lehnt „wie lange/viel/oft“ ab |
 | Serie / Streak | erzeugt Druck statt Aufmerksamkeit | kommt im Code nicht vor |
 | Vorschlag der App | wäre eine Ableitung über das Kind | Vorhaben wählt ausschließlich das Kind |
 
@@ -84,7 +85,7 @@ verweist auf die kinderärztliche Praxis.
 
 ## 8. Tests
 
-`test/logik.test.mjs` (9): Faktor-Daten gültig; die fünf Katalog-Faktoren
+`test/logik.test.mjs` (10): Faktor-Daten gültig; die sechs Katalog-Faktoren
 sind vollständig, jeder Impuls ≥150 Zeichen und jede Frage endet mit
 Fragezeichen; **kein Scoring** — Punkte, Rot und Ränge werden vom
 Validator aktiv abgelehnt und kommen im echten Datensatz nicht vor;

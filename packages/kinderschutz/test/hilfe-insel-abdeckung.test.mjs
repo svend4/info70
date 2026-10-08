@@ -59,6 +59,8 @@ export const BEWUSST_OHNE = Object.freeze({
   'fuenf-helfer': 'Ko-Nutzung 3-5, Erwachsener ist dabei',
   'wie-bewegt-sich': 'Ko-Nutzung 3-5, Erwachsener ist dabei',
   'design-entdecker': 'Ko-Nutzung 3-7, Erwachsener ist dabei',
+  'farb-labor': 'Fachlernen Farbe, Ko-Nutzung 5-7, Erwachsener ist dabei',
+  'tischdienst-trainer': 'Lebenspraxis, Ko-Nutzung 4-7, nur gemeinsam',
   'kita-kartograph': 'Ko-Nutzung 5-7, Sachthema Plan',
   'reim-radar': 'Fachlernen Phonologie, Ko-Nutzung',
   'reim-werkstatt': 'Fachlernen Reim',

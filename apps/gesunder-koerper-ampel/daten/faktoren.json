@@ -41,6 +41,13 @@
       "emoji": "🧼",
       "frage": "Hast du heute an Händewaschen und Zähneputzen gedacht?",
       "impuls": "Hände waschen vor dem Essen und nach der Toilette hält die meisten Krankheitserreger fern – gründlich heißt ungefähr so lange, wie du zweimal langsam bis zehn zählst. Und zweimal am Tag Zähne putzen, morgens und abends, damit deine bleibenden Zähne es später leichter haben."
+    },
+    {
+      "id": "bildschirmfrei",
+      "name": "Zeit ohne Bildschirm",
+      "emoji": "📵",
+      "frage": "Hattest du heute auch Zeit ohne Bildschirm – ohne Handy, Tablet, Fernseher und Spielekonsole?",
+      "impuls": "Diese App zählt keine Minuten und weiß auch nicht, was du am Gerät gemacht hast – sie fragt nur nach der anderen Hälfte. Entscheidend ist nämlich nicht, wie lange ein Bildschirm an war, sondern ob daneben noch etwas anderes Platz hatte: draußen sein, bauen, lesen, mit jemandem reden, sich langweilen. Langeweile ist kein Mangel, aus ihr kommen die eigenen Einfälle."
     }
   ]
 }

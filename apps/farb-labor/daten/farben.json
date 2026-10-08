@@ -1,0 +1,144 @@
+{
+  "version": 2,
+  "zielgruppe": "5-7, nur gemeinsam mit einem Erwachsenen",
+  "hinweis": "Zwei Orte, zwei Ergebnisse. Lichtmischungen (traeger licht) sind exakt die geklammerte Summe im linearen Licht – der Validator rechnet sie nach. Pigmentmischungen (traeger pigment) werden NICHT gerechnet, sondern sind Redaktionswerte mit Mengenhinweis und einem Satz für den Fall, dass am Tisch etwas anderes herauskommt.",
+  "herkunftDerWerte": "Die Pigment-Werte sind nach dem bekannten Verhalten von Schulmalfarben gewählt. Sie sind eine Richtung, keine Messung: niemand hat sie mit einem Farbmessgerät an einem bestimmten Kasten abgenommen. Jeder Kasten, jedes Papier und jedes Licht im Zimmer verschiebt das Ergebnis. Deshalb steht an jeder Mischung, wofür sie gilt und was zu sagen ist, wenn es anders aussieht.",
+  "ehrlichkeit": "Dieser Bildschirm leuchtet – er mischt Licht, und Licht wird beim Mischen heller. Dein Farbkasten leuchtet nicht – er mischt Farbe, und zwei Buntfarben werden beim Mischen dunkler. Darum kommt bei denselben zwei Farben an zwei Orten etwas Verschiedenes heraus. Diese App zeigt beides und rechnet bei der Farbe nichts aus. Genau siehst du es erst auf dem Papier.",
+  "farben": [
+    { "id": "gelb", "traeger": "pigment", "farbton": "gelb", "name": "Gelb", "hex": "#F2C300", "ukName": "жовтий", "ruName": "жёлтый" },
+    { "id": "rot", "traeger": "pigment", "farbton": "rot", "name": "Rot", "hex": "#D6301F", "ukName": "червоний", "ruName": "красный" },
+    { "id": "blau", "traeger": "pigment", "farbton": "blau", "name": "Blau", "hex": "#14459B", "ukName": "синій", "ruName": "синий",
+      "sprachHinweis": "Im Ukrainischen und im Russischen gibt es für Blau zwei eigene Farbwörter: ein dunkles (синій / синий) und ein helles (блакитний / голубой). Ein helles Himmelblau heißt dort nicht einfach „blau“ – die Sprache schneidet die Farben anders als das Deutsche." },
+    { "id": "gruen", "traeger": "pigment", "farbton": "gruen", "name": "Grün", "hex": "#2E7D32", "ukName": "зелений", "ruName": "зелёный" },
+    { "id": "orange", "traeger": "pigment", "farbton": "orange", "name": "Orange", "hex": "#E2700C", "ukName": "оранжевий", "ruName": "оранжевый" },
+    { "id": "violett", "traeger": "pigment", "farbton": "violett", "name": "Violett", "hex": "#5E3A78", "ukName": "фіолетовий", "ruName": "фиолетовый",
+      "sprachHinweis": "Auch hier schneidet die Sprache anders: im Russischen steht neben фиолетовый noch лиловый und сиреневый für Töne, die das Deutsche alle „violett“ oder „lila“ nennt." },
+    { "id": "braun", "traeger": "pigment", "farbton": "braun", "name": "Braun", "hex": "#6B4226", "ukName": "коричневий", "ruName": "коричневый" },
+    { "id": "licht-rot", "traeger": "licht", "farbton": "rot", "name": "rotes Licht", "hex": "#FF0000" },
+    { "id": "licht-gruen", "traeger": "licht", "farbton": "gruen", "name": "grünes Licht", "hex": "#00FF00" },
+    { "id": "licht-blau", "traeger": "licht", "farbton": "blau", "name": "blaues Licht", "hex": "#0000FF" },
+    { "id": "licht-gelb", "traeger": "licht", "farbton": "gelb", "name": "gelbes Licht", "hex": "#FFFF00" },
+    { "id": "licht-magenta", "traeger": "licht", "farbton": "magenta", "name": "pinkes Licht", "hex": "#FF00FF" },
+    { "id": "licht-cyan", "traeger": "licht", "farbton": "cyan", "name": "türkises Licht", "hex": "#00FFFF" }
+  ],
+  "grundfarben": ["gelb", "rot", "blau"],
+  "lichtGrundfarben": ["licht-rot", "licht-gruen", "licht-blau"],
+  "mischungen": [
+    {
+      "id": "p-gruen", "traeger": "pigment", "aus": ["gelb", "blau"], "ergebnis": "gruen",
+      "wasPassiert": "Gelb und Blau geben Grün. Nimmst du mehr Gelb, wird es ein helles Wiesengrün; nimmst du mehr Blau, wird es ein dunkles Tannengrün.",
+      "mengeAendert": "ein bisschen Blau macht helles Grün, viel Blau macht dunkles Grün",
+      "giltFuer": "Schulmalfarben aus dem Deckfarbkasten",
+      "wennAnders": "Sieht dein Grün anders aus als hier? Dann stimmt dein Grün. Jeder Kasten mischt ein eigenes Grün – schau lieber auf dein Papier als auf den Bildschirm.",
+      "suchauftrag": "Findet draußen zwei verschiedene Grüns – ein helles und ein dunkles.",
+      "gespraech": "Welches Grün magst du lieber – das helle oder das dunkle?"
+    },
+    {
+      "id": "p-orange", "traeger": "pigment", "aus": ["gelb", "rot"], "ergebnis": "orange",
+      "wasPassiert": "Gelb und Rot geben Orange. Ein Tropfen Rot in viel Gelb macht schon Aprikose; viel Rot macht es fast ziegelrot.",
+      "mengeAendert": "ein bisschen Rot macht helles Orange, viel Rot macht dunkles Orange",
+      "giltFuer": "Schulmalfarben aus dem Deckfarbkasten",
+      "wennAnders": "Wird dein Orange blasser oder dunkler als hier? Das ist normal – es hängt am Kasten und daran, wie viel Wasser am Pinsel ist.",
+      "suchauftrag": "Sucht in der Küche etwas Orangenes.",
+      "gespraech": "Wo ist bei euch etwas Orangenes?"
+    },
+    {
+      "id": "p-violett", "traeger": "pigment", "aus": ["rot", "blau"], "ergebnis": "violett",
+      "wasPassiert": "Rot und Blau geben Violett. Nimmst du mehr Rot, wird es ein warmes Beerenviolett; mit mehr Blau wird es fast dunkelblau.",
+      "mengeAendert": "ein bisschen Blau macht warmes Violett, viel Blau macht dunkles Violett",
+      "giltFuer": "Schulmalfarben aus dem Deckfarbkasten",
+      "wennAnders": "Im Farbkasten wird Violett oft stumpf und gar nicht leuchtend. Das ist normal und nicht dein Fehler – diese Farbe ist aus Rot und Blau einfach schwer zu mischen.",
+      "suchauftrag": "Sucht eine violette Blüte – Veilchen, Lavendel oder Flieder.",
+      "gespraech": "Kennst du eine Blume, die violett ist?"
+    },
+    {
+      "id": "p-braun", "traeger": "pigment", "aus": ["rot", "gruen"], "ergebnis": "braun",
+      "wasPassiert": "Rot und Grün geben Braun – kein Rot mehr und kein Grün mehr, sondern Erde. Wenn du zwei Buntfarben mischst, wird es dunkler und stumpfer. (Weiß ist keine Buntfarbe: damit wird es heller, aber blasser.)",
+      "mengeAendert": "ein bisschen anders gemischt gibt ein anderes Braun – dunkel bleibt es immer",
+      "giltFuer": "Schulmalfarben aus dem Deckfarbkasten",
+      "wennAnders": "Wird es bei dir eher grau oder eher olivgrün? Beides passiert und beides ist richtig – es kommt darauf an, wie viel von welcher Farbe im Pinsel war.",
+      "suchauftrag": "Rührt zum Schluss alle Farbreste zusammen und schaut, was herauskommt.",
+      "gespraech": "Was ist bei euch zu Hause braun?"
+    },
+    {
+      "id": "l-gelb", "traeger": "licht", "aus": ["licht-rot", "licht-gruen"], "ergebnis": "licht-gelb",
+      "wasPassiert": "Rotes und grünes Licht zusammen geben Gelb. Licht wird beim Mischen heller, weil Licht dazukommt."
+    },
+    {
+      "id": "l-magenta", "traeger": "licht", "aus": ["licht-rot", "licht-blau"], "ergebnis": "licht-magenta",
+      "wasPassiert": "Rotes und blaues Licht zusammen geben Pink. Auch hier wird es heller, nicht dunkler."
+    },
+    {
+      "id": "l-cyan", "traeger": "licht", "aus": ["licht-gruen", "licht-blau"], "ergebnis": "licht-cyan",
+      "wasPassiert": "Grünes und blaues Licht zusammen geben Türkis. So ein Türkis kannst du im Farbkasten nicht mischen – es gibt Farben, die nur Licht kann."
+    }
+  ],
+  "zweiOrte": [
+    {
+      "id": "o-rot-gruen", "farbtoene": ["rot", "gruen"], "lichtMischung": "l-gelb", "pigmentMischung": "p-braun",
+      "frage": "Rot und Grün – was kommt heraus?",
+      "aufloesung": "Beides ist richtig, es kommt auf den Ort an: Auf dem Bildschirm sind es zwei Lichter, die zusammen heller werden – das gibt Gelb. Im Farbkasten sind es zwei Farben, die beide Licht wegnehmen – das gibt Braun.",
+      "gespraech": "Wo würdest du nachschauen, wenn du wissen willst, was auf deinem Papier passiert?"
+    },
+    {
+      "id": "o-rot-blau", "farbtoene": ["rot", "blau"], "lichtMischung": "l-magenta", "pigmentMischung": "p-violett",
+      "frage": "Rot und Blau – was kommt heraus?",
+      "aufloesung": "Am Bildschirm ein leuchtendes Pink, im Farbkasten ein stumpfes Violett. Dieselben zwei Farben, zwei Orte, zwei Ergebnisse.",
+      "gespraech": "Welches von beiden gefällt dir besser?"
+    }
+  ],
+  "hellDunkel": [
+    {
+      "id": "h-weiss", "richtung": "heller", "mittel": "Deckweiß",
+      "titel": "Heller mit Weiß", "nurBei": "Deckfarben",
+      "wasPassiert": "Ein Klecks Weiß in Rot macht Rosa. Mit Weiß wird jede Farbe heller – aber auch blasser. Aufhellen kostet Leuchtkraft.",
+      "gespraech": "Wie nennt man Rot mit viel Weiß?"
+    },
+    {
+      "id": "h-wasser", "richtung": "heller", "mittel": "mehr Wasser",
+      "titel": "Heller mit Wasser", "nurBei": "Wasserfarben",
+      "wasPassiert": "Bei Wasserfarben nimmt man mehr Wasser statt Weiß. Das ist etwas völlig anderes: es kommt nichts Weißes dazu, sondern es liegt weniger Farbe auf dem Papier – und das weiße Papier scheint durch. Auf dunklem Papier hellt Wasser darum gar nicht auf.",
+      "gespraech": "Scheint das Papier bei dir durch?"
+    },
+    {
+      "id": "h-schwarz", "richtung": "dunkler", "mittel": "ein winziges bisschen Schwarz",
+      "titel": "Dunkler mit Schwarz", "nurBei": "Deckfarben",
+      "wasPassiert": "Schwarz macht dunkler, aber sehr schnell zu viel – ein Hauch genügt. Oft wird eine Farbe schöner dunkel, wenn man etwas Blau nimmt statt Schwarz.",
+      "gespraech": "Was passiert, wenn du zu viel Schwarz nimmst?"
+    }
+  ],
+  "warmKalt": {
+    "geltung": "ausgemacht",
+    "erklaerung": "Warm und kalt sind keine Messwerte. Rot ist nicht wärmer als Blau – man kann es nicht nachmessen, und eine blaue Flamme ist sogar heißer als eine gelbe. Es ist eine Abmachung: bei uns nennt man die Farben von Feuer und Sonne „warm“ und die von Wasser, Eis und Schatten „kalt“. Fast alle hier verstehen das – anderswo sortiert man Farben auch anders.",
+    "warm": ["rot", "orange", "gelb"],
+    "kalt": ["blau"],
+    "strittig": "Grün und Violett liegen dazwischen: Grün kann kalt wirken (Tannen im Schnee) oder warm (Frühlingswiese in der Sonne), und ob Violett warm oder kalt ist, hängt davon ab, wie viel Rot darin steckt. Wer sie anders einordnet, hat nicht unrecht.",
+    "strittigeFarben": ["gruen", "violett"],
+    "gespraech": "Welche Farbe fühlt sich für dich warm an? Und warum?"
+  },
+  "nichtMischbar": {
+    "satz": "Mit Gelb, Rot und Blau kann man viele Farben mischen – aber nicht alle.",
+    "beispiele": [
+      "Weiß kann man nicht mischen. Weiß muss im Kasten liegen oder das Papier sein.",
+      "Ein richtig leuchtendes Türkis geht nicht. Dafür bräuchtest du eine eigene Farbe.",
+      "Gold und Silber gehen nicht – die glänzen, und Glanz kann man nicht mischen.",
+      "Neonfarben gehen nicht. Die leuchten, und leuchten kann Farbe von sich aus nicht."
+    ],
+    "gespraech": "Was glaubst du: kann man Gold mischen?"
+  },
+  "malauftraege": [
+    "Mischt drei verschiedene Grüns und malt damit einen Baum: hell oben, dunkel unten.",
+    "Malt einen Regenbogen – so viele Farben, wie ihr aus Gelb, Rot und Blau mischen könnt. Welche fehlt euch? Die könnt ihr nicht mischen, und das ist in Ordnung.",
+    "Malt ein Bild nur mit warmen Farben und daneben eines nur mit kalten. Hängt beide nebeneinander.",
+    "Nehmt einen Pinsel voll Rot und macht daraus fünf Rosa-Töne – von fast weiß bis fast rot.",
+    "Rührt zum Schluss alle Farbreste zusammen und malt damit den Boden oder einen Baumstamm."
+  ],
+  "sicherheit": [
+    "Legt das Gerät weg, bevor das Wasser auf den Tisch kommt. Sonst endet der Nachmittag mit einem nassen Tablet statt mit einem Bild.",
+    "Pinselwasser in ein Schraubglas, auf die andere Tischseite – nie in einen Becher, der wie ein Trinkbecher aussieht.",
+    "Nur Kinderfarben mit CE-Kennzeichen (Schulmalfarben nach EN 71-3, Fingerfarben nach EN 71-7). Künstleracryl, Tusche und Lebensmittelfarbe gehören nicht an diesen Tisch.",
+    "Nicht ins Gesicht und nicht auf die Haut malen, und keine Farbe durch einen Strohhalm pusten.",
+    "Kleinere Geschwister unter drei Jahren bekommen etwas Eigenes – Farbnäpfe, Deckel und kleine Teile sind für sie nichts.",
+    "Hände waschen, bevor es Essen gibt."
+  ]
+}

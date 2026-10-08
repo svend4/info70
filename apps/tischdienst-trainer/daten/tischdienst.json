@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "zielgruppe": "4-7, nur gemeinsam mit einem Erwachsenen",
+  "blickrichtung": "vom Platz aus gesehen – der Platz liegt immer unten am Bildschirm, und links und rechts gehören zu dem Kind, das dort sitzt",
+  "rahmenSatz": "So ist das bei uns in Deutschland ausgemacht. Bei dir zu Hause kann es anders sein – und dann ist es dort richtig.",
+  "ehrlichkeit": "Diese App übt das Planen: Was kommt wohin, und hat jeder eins? Das Tragen und das vorsichtige Hinstellen von echtem Geschirr kann ein Bildschirm nicht üben – das geht nur am echten Tisch. Darum ist der Bildschirm hier der kurze Teil.",
+  "fuerAndere": "Der Tischdienst deckt nicht für sich, sondern für die anderen. Darum geht es hier auch nicht um deinen Platz, sondern um den Platz von jemand anderem.",
+  "nurGemeinsam": "Diese App gibt es nur zum gemeinsamen Anschauen. Sie sagt an mehreren Stellen „bei uns ist das so ausgemacht“ – und wer bei euch weiß, wie es bei euch gemacht wird, ist der Erwachsene. Allein gelassen würde aus der Abmachung für das Kind doch wieder „so ist es richtig“.",
+  "zonen": [
+    { "id": "unterlage", "name": "unter das Gedeck", "frage": "Was kommt unter das Gedeck?" },
+    { "id": "mitte", "name": "direkt vor das Kind", "frage": "Was kommt direkt vor das Kind, das hier sitzt?" },
+    { "id": "neben", "name": "daneben", "frage": "Was kommt daneben?" },
+    { "id": "nebenLinks", "name": "links von dem Kind, das hier sitzt", "anker": "links von dem Kind, das hier sitzt", "frage": "Was kommt links von dem Kind, das hier sitzt?" },
+    { "id": "nebenRechts", "name": "rechts von dem Kind, das hier sitzt", "anker": "rechts von dem Kind, das hier sitzt", "frage": "Was kommt rechts von dem Kind, das hier sitzt?" },
+    { "id": "weiterWeg", "name": "weiter weg von dem Kind", "frage": "Was kommt weiter weg von dem Kind, das hier sitzt?" }
+  ],
+  "varianten": [
+    {
+      "id": "kita",
+      "name": "Frühstück in der Kita",
+      "emoji": "🥪",
+      "ab": "4-5",
+      "hinweis": "So ist ein Frühstückstisch in vielen Kitas gedeckt. Das ist vollständig und richtig.",
+      "schritte": [
+        { "id": "set", "name": "Das Tischset", "emoji": "🟫", "geltung": "pruefbar", "zone": "unterlage",
+          "liegtUnter": ["brettchen", "becher", "loeffel"],
+          "grund": "Das Tischset liegt unter dem Gedeck. Probier mal, es unter dem Brettchen herauszuziehen – das geht nicht.",
+          "spaeterText": "Das Tischset gehört unter das Gedeck. Schau – ich hebe die Sachen kurz an und schiebe es drunter. Am echten Tisch geht das genauso.",
+          "kindText": "Das Tischset liegt unter dem Gedeck." },
+        { "id": "brettchen", "name": "Das Frühstücksbrettchen", "emoji": "🪵", "geltung": "ausgemacht", "zone": "mitte",
+          "kindText": "Das Brettchen kommt direkt vor das Kind, das hier sitzt.",
+          "geltungsbereich": "In manchen Kitas gibt es Teller statt Brettchen. Fragt nach, wie es bei euch gemacht wird." },
+        { "id": "becher", "name": "Der Becher", "emoji": "🥛", "geltung": "ausgemacht", "zone": "neben",
+          "kindText": "Der Becher kommt neben das Brettchen.",
+          "geltungsbereich": "Üblich ist die rechte Seite, weil die meisten Menschen mit der rechten Hand trinken. Für Vier- und Fünfjährige ist „neben“ das richtige Wort: links und rechts sitzen in diesem Alter noch nicht sicher. Manche Familien stellen den Becher bewusst auf die andere Seite – auch gut." },
+        { "id": "loeffel", "name": "Der Löffel", "emoji": "🥄", "geltung": "ausgemacht", "zone": "neben",
+          "kindText": "Der Löffel kommt neben das Brettchen.",
+          "geltungsbereich": "Viele Kitagruppen teilen an Vier- und Fünfjährige gar kein Messer aus. Ein Gedeck ohne Messer ist kein unvollständiges Gedeck." },
+        { "id": "serviette-kita", "name": "Die Serviette", "emoji": "🧻", "geltung": "geschmack",
+          "kindText": "Die Serviette darf hin, wo du magst.",
+          "geltungsbereich": "Die Serviette hat mehrere gleichwertige Plätze: daneben, auf das Brettchen, gefaltet oder nicht. Hier gibt es kein Richtig." }
+      ]
+    },
+    {
+      "id": "zuhause",
+      "name": "Mittagessen zu Hause",
+      "emoji": "🍽️",
+      "ab": "5-7",
+      "hinweis": "So wird zu Hause oft ein Platz gedeckt, wenn es warmes Essen gibt. Hier kommen links und rechts dazu.",
+      "schritte": [
+        { "id": "decke", "name": "Die Tischdecke", "emoji": "🟨", "geltung": "pruefbar", "zone": "unterlage",
+          "liegtUnter": ["teller", "gabel", "messer", "glas"],
+          "grund": "Die Tischdecke liegt unter dem Gedeck. Probier mal, sie unter dem Teller herauszuziehen – das geht nicht.",
+          "spaeterText": "Die Decke gehört unter das Gedeck. Schau – ich hebe die Sachen kurz an und schiebe sie drunter. Am echten Tisch geht das genauso.",
+          "kindText": "Die Tischdecke liegt unter dem Gedeck." },
+        { "id": "teller", "name": "Der Teller", "emoji": "🍽️", "geltung": "ausgemacht", "zone": "mitte",
+          "kindText": "Der Teller kommt direkt vor das Kind, das hier sitzt.",
+          "geltungsbereich": "Der Teller steht etwa eine Daumenbreite vom Tischrand. Genau treffen muss ein Kind das nicht – darauf kommt es hier nicht an." },
+        { "id": "gabel", "name": "Die Gabel", "emoji": "🍴", "geltung": "ausgemacht", "zone": "nebenLinks",
+          "kindText": "Die Gabel liegt links von dem Kind, das hier sitzt.",
+          "geltungsbereich": "In anderen Ländern ist anderes ausgemacht. Wie die Gabel dabei liegt, ist für einen Familientisch ohne Bedeutung und kommt hier nicht vor." },
+        { "id": "messer", "name": "Das Messer", "emoji": "🔪", "geltung": "ausgemacht", "zone": "nebenRechts",
+          "kindText": "Das Messer liegt rechts von dem Kind, das hier sitzt. Die Schneide schaut zum Teller.",
+          "geltungsbereich": "Die Schneide zum Teller hat einen echten Grund: so greift niemand in die Schneide, und sie zeigt nicht auf den Nachbarn. Dass das Messer rechts liegt, kommt dagegen nur von der Rechtshänder-Mehrheit – es folgt nicht daraus. Wer links schneidet, darf tauschen." },
+        { "id": "glas", "name": "Das Glas", "emoji": "🥛", "geltung": "ausgemacht", "zone": "weiterWeg",
+          "kindText": "Das Glas steht weiter weg von dem Kind, neben dem Messer.",
+          "geltungsbereich": "Am echten Tisch steht das Glas nicht „über“ dem Teller, sondern weiter von der sitzenden Person entfernt – aus ihrer Sicht gibt es kein Oben. Deshalb heißt die Zone hier „weiter weg“." },
+        { "id": "serviette", "name": "Die Serviette", "emoji": "🧻", "geltung": "geschmack",
+          "kindText": "Die Serviette darf hin, wo du magst.",
+          "geltungsbereich": "Daneben, auf den Teller, gefaltet oder nicht – alles üblich und gleichwertig. Ins Glas gesteckt war früher verbreitet und gilt heute als unschön; falsch ist es nicht." }
+      ]
+    }
+  ],
+  "austeilen": {
+    "titel": "Hat jeder eins?",
+    "aufgabe": "Gib jedem Kind ein Brettchen. Tipp auf ein Kind – dann bekommt es eins.",
+    "erklaerung": "Jedes Kind braucht genau eins. Nicht mehr und nicht weniger.",
+    "hinweis": "Heute sind nicht alle da. Darum sieht der Tisch heute anders aus als gestern – deshalb schaut der Tischdienst jeden Tag neu.",
+    "fertigText": "Jedes Kind hat eins, und es ist keins übrig. Genau so geht Tischdienst.",
+    "gespraech": "Wer fehlt heute bei euch in der Gruppe?",
+    "gegenstand": { "name": "das Brettchen", "emoji": "🪵" },
+    "lagen": [
+      { "id": "a3", "figuren": 3, "leer": 1 },
+      { "id": "a4", "figuren": 4, "leer": 1 },
+      { "id": "a5", "figuren": 5, "leer": 2 },
+      { "id": "a4b", "figuren": 4, "leer": 2 }
+    ]
+  },
+  "ohneRichtig": [
+    "Wohin die Serviette kommt. Daneben, auf den Teller, gefaltet – alles üblich.",
+    "Ob Blumen auf dem Tisch stehen. In vielen Kitas stehen sie nicht, wegen Allergien und weil sie umfallen.",
+    "Wie die Serviette gefaltet ist. Das ist Schmuck, kein Gedeck.",
+    "Mit welcher Hand du etwas hinlegst. Das ist allein deine Sache und wird hier nie gefragt.",
+    "In welcher Reihenfolge du deckst. Nur die Decke gehört unter das Gedeck – sonst ist alles erlaubt."
+  ],
+  "woerter": [
+    { "de": "der Teller", "uk": "тарілка", "ru": "тарелка" },
+    { "de": "die Gabel", "uk": "виделка", "ru": "вилка" },
+    { "de": "der Löffel", "uk": "ложка", "ru": "ложка" },
+    { "de": "das Messer", "uk": "ніж", "ru": "нож" },
+    { "de": "die Serviette", "uk": "серветка", "ru": "салфетка" }
+  ],
+  "schlussIdeen": [
+    "Deckt zusammen einen echten Platz – und zwar für jemand anderen. Der Tischdienst deckt nie für sich selbst.",
+    "Verteilt vor dem Essen Brettchen oder Teller: eins für jeden, der heute mitisst. Bleibt eins übrig?",
+    "Räumt nach dem Essen zusammen ab und wischt den Tisch. Das Abräumen ist die zweite Hälfte vom Tischdienst.",
+    "Druckt das Platzset aus und legt die echten Teile darauf. Danach einmal ohne Platzset – geht es auch so?"
+  ],
+  "sicherheit": [
+    "Stumpfes Butter- oder Kindermesser legt das Kind auf. Scharfe Messer und spitze Gabeln legt der Erwachsene hin.",
+    "Ein Teil mit zwei Händen, Becher einzeln – nie stapeln, nie Glas und Teller gleichzeitig.",
+    "Nichts Heißes und nichts Volles: keine gefüllten Suppenteller, keine Kannen, keine heißen Getränke.",
+    "Nicht auf Stuhl oder Tisch steigen und nicht auf dem Stuhl knien. Geschirr reicht der Erwachsene aus dem Schrank herunter.",
+    "Keine Kerze. Offene Flamme und ein Papier-Platzset gehören nicht zusammen.",
+    "Sitzt ein Geschwisterkind unter drei Jahren mit am Tisch: keine überhängende Tischdecke (die lässt sich herunterziehen), keine heißen Getränke in Reichweite, keine Streudeko und keine kleinen Dekosteine.",
+    "Hände waschen vor dem Decken. Heruntergefallenes Besteck geht in die Küche zurück.",
+    "Ein zerbrochener Teller ist kein Scheitern. Scherben räumt der Erwachsene weg, das Kind geht einen Schritt zurück.",
+    "Das Platzset auf normalem Papier drucken und nur abwischen – es ist keine Unterlage für heißes Geschirr. Ausgeschnitten wird, wenn überhaupt, von einem Erwachsenen."
+  ]
+}
