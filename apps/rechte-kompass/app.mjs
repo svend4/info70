@@ -6,6 +6,8 @@
 // Politik: keine externen Anfragen, nur Rekord in localStorage.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -43,7 +45,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('In zwölf Situationen entscheidest du, wie du dein Recht vertrittst. Für jede starke Antwort sammelst du einen Mut-Satz zum Mitnehmen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, '📜 Deine Rechte stehen in der UN-Kinderrechtskonvention – sie gilt für ALLE Kinder. Mehr entdecken? Spiel den ', el('a', { href: '../kinderrechte-entdecker/' }, '🕊️ Kinderrechte-Entdecker'), '. Wird ein Recht bei dir ernsthaft verletzt: Nummer gegen Kummer 116 111 (kostenlos, anonym).'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); startBildschirm(); } }, 'Meine Daten löschen')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteRunde() {

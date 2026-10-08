@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen; diese App speichert NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { REAKTIONEN, stufe, reagiere, bewertung } from './eskalation.mjs';
 
 installiereNetzwerkWaechter();
@@ -47,7 +48,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Thread öffnen'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${daten.szene} Deine Reaktion verändert die Temperatur des Threads. Schaffst du es, die Spirale zu stoppen?`) }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Diese App speichert nichts – jedes Experiment startet frisch.')));
+      el('p', { style: 'margin:0' }, '💡 Diese App speichert nichts – jedes Experiment startet frisch.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteRunde() {

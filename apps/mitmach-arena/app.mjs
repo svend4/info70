@@ -5,6 +5,7 @@
 // Gerät zusammenführen - Austausch ohne Server und ohne Chat-Risikozone.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { packeKoffer, pruefeKoffer, vereinigeKoffer } from './koffer.mjs';
 import { KLASSENRAT_VORLAGEN, ausVorlage } from './vorlagen.mjs';
 
@@ -41,7 +42,9 @@ function startBildschirm() {
       el('p', { style: 'font-weight:600;margin-top:0' }, '🏫 Klassenrat-Vorlagen'),
       el('p', { style: 'font-size:0.9rem;margin-top:0' }, 'Sofort startklar – für die Klassenrat-Sitzung. Ergebnis lässt sich wie immer als Klassen-Koffer teilen.'),
       el('div', { class: 'k-antworten' },
-        ...KLASSENRAT_VORLAGEN.map((v) => el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { speichere(ausVorlage(v)); abstimmenBildschirm(); } }, `🗳️ ${v.titel}`)))));
+        ...KLASSENRAT_VORLAGEN.map((v) => el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { speichere(ausVorlage(v)); abstimmenBildschirm(); } }, `🗳️ ${v.titel}`)))),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function anlegenBildschirm() {

@@ -6,6 +6,8 @@
 // Politik: keine externen Anfragen, nur Rekord in localStorage.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -42,7 +44,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('FOMO heißt: die Angst, etwas zu verpassen. Apps benutzen sie mit Absicht. Du kannst sie durchschauen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, '💛 Wenn dich das Handy oft unruhig oder traurig macht: Das liegt nicht an dir – das ist eingebaut. Reden hilft: mit Eltern, Freund*innen – oder kostenlos und anonym bei der Nummer gegen Kummer 116 111.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); startBildschirm(); } }, 'Meine Daten löschen')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteRunde() {

@@ -6,6 +6,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { maxPunkte, rangFuer, ergebnisSatz } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -39,7 +40,8 @@ function start() {
       el('p', { style: 'font-size:0.9rem;color:#4b5563' }, daten.hinweis),
       rekord > 0 ? el('p', {}, `Ihr bisher bester Durchgang: ${rekord} von ${RUNDE * 2}`) : '',
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))));
+        el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))),
+    datenKarte({ schluessel: REKORD, was: 'euer Rekord', nachLoeschen: start }));
 }
 
 function starteRunde() {

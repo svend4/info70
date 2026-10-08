@@ -5,6 +5,7 @@
 // in logik.mjs. Politik docs/02: keine externen Anfragen; Fortschritt lokal.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { CHECKLISTE, MAX_PUNKTE, punkte, einordnung, rangliste, LEKTIONEN } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -59,7 +60,9 @@ function render() {
     apps.length > 0 ? el('section', { class: 'k-karte' },
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); render(); } }, '🧹 Alles löschen')) : '',
     el('section', { class: 'k-karte' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: lektionBildschirm }, '🎓 Warum ist das wichtig?')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: lektionBildschirm }, '🎓 Warum ist das wichtig?')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: render })))));
 }
 
 function appKarte(a, index) {

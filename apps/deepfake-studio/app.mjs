@@ -6,6 +6,7 @@
 // Politik: keine externen Anfragen; diese App speichert GAR NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { baueKarte, naechsterTeilenWert, dauerText, KENNZEICHNUNG } from './studio.mjs';
 
 installiereNetzwerkWaechter();
@@ -48,7 +49,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: starteStudio }, '🎬 Studio öffnen'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Im Internet sehen manche Nachrichten täuschend echt aus und sind trotzdem komplett erfunden. Heute baust du selbst so einen Fake. Denn wer einmal selbst gefälscht hat, erkennt Fälschungen viel schneller. Eine Stoppuhr läuft mit.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Wichtig: Hier gibt es nur Spaßfiguren aus der erfundenen Wolkenstadt. Über echte Menschen baut man KEINE Fakes – das verletzt und kann verboten sein. Und: Diese App speichert nichts – gar nichts.')));
+      el('p', { style: 'margin:0' }, '💡 Wichtig: Hier gibt es nur Spaßfiguren aus der erfundenen Wolkenstadt. Über echte Menschen baut man KEINE Fakes – das verletzt und kann verboten sein. Und: Diese App speichert nichts – gar nichts.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteStudio() {

@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen; nur die laufende Wahl bleibt lokal.
 import { el, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { neueWahl, stimmeAb, fertig, offen, ergebnis } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -42,6 +43,7 @@ function startBildschirm() {
         const w = neueWahl(frage, optionen, Number(anzahlFeld.value));
         speichere(w); wahlgang();
       } }, '🗳️ Wahl starten')),
+    hilfeInsel(),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'für die Schule · werbefrei · läuft offline · keine Zuordnung Stimme→Person · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));

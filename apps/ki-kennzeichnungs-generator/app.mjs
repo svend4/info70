@@ -4,6 +4,7 @@
 // Engine auf kinder-ui + mini-i18n. Politik docs/02: keine externen Anfragen.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { baueKennzeichnung } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -66,6 +67,7 @@ function render() {
         el('button', { class: 'k-knopf k-knopf--klein', onclick: () => herunterladen(html, `ki-hinweis-${wahl.typ}-${wahl.sprache}.html`, 'text/html;charset=utf-8') }, '💾 Als .html speichern'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-size:0.85rem;color:#4b5563;margin:0' }, 'Die Kennzeichnung ersetzt nicht die inhaltliche Prüfung nach dem AI Act – siehe KI-Transparenz-Check. Hilfe zur Selbsthilfe, keine Rechtsberatung.')),
+    datenKarte({ schluessel: SCHLUESSEL, was: 'eure Auswahl in diesem Formular', nachLoeschen: render }),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werkzeug für Erwachsene · läuft offline · Auswahl bleibt auf diesem Gerät · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));

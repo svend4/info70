@@ -7,6 +7,7 @@
 // Politik: keine externen Anfragen; diese App speichert GAR NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { nachrichtenMitTrick, angebote, bewerteZuordnung, bewertung } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -70,7 +71,9 @@ function startBildschirm() {
       el('p', { style: 'margin-top:0;font-weight:700' }, '🔎 Halte Ausschau nach diesen 5 Tricks:'),
       ...daten.tricks.map((t) => el('p', { style: 'margin:0.4rem 0' }, `${t.emoji} `, el('strong', {}, t.name), ` – ${t.kurz}`))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Diese App speichert nichts – gar nichts. Es gibt keinen echten Chatbot und keine KI, alle Nachrichten sind vorgeschrieben.')));
+      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Diese App speichert nichts – gar nichts. Es gibt keinen echten Chatbot und keine KI, alle Nachrichten sind vorgeschrieben.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function trickBereich(nachricht) {

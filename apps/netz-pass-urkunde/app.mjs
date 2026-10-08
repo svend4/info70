@@ -7,6 +7,7 @@
 // Politik docs/02: keine externen Anfragen, werbefrei, Vorlesen.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -97,6 +98,7 @@ function render() {
         el('button', { class: 'k-knopf', onclick: () => window.print() }, '🖨️ Netz-Pass drucken'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { kindName = ''; localStorage.removeItem(STATUS_SCHLUESSEL); render(); } }, '🧹 Zurücksetzen')),
       el('p', { style: 'font-size:0.85rem;color:#4b5563;margin-bottom:0' }, 'Beim Drucken erscheint nur der Netz-Pass. Dein Name wird nirgends gespeichert – nur die Häkchen bleiben auf diesem Gerät.')),
+    hilfeInsel({ klasse: 'npu-nur-bildschirm' }),
     el('footer', { class: 'k-fuss npu-nur-bildschirm' },
       el('span', {}, 'werbefrei · läuft offline · dein Name wird nicht gespeichert · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));

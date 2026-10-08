@@ -9,6 +9,8 @@ import { leichteSpracheSchalter, basisCode } from '../../packages/kinder-ui/js/l
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { setzeRichtung } from '../../packages/kinder-ui/js/richtung.mjs';
+import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
@@ -72,7 +74,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(t('start_intro'), stimme()) }, t('vorlesen_knopf')))),
     el('section', { class: 'k-karte' },
       el('p', {}, t('daten_hinweis')),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); startBildschirm(); } }, t('daten_loeschen'))));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten('ff.sprache'); startBildschirm(); } }, t('daten_loeschen'))),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteExperiment() {

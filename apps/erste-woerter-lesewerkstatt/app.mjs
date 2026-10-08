@@ -5,6 +5,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { pruefeMaterial, hoerOptionen, bildOptionen, silbenTeilen } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -51,7 +52,8 @@ function start() {
       el('p', {}, 'Eine kleine Lese-Runde: erst Buchstaben hören, dann Silben, dann echte Wörter lesen. Acht Aufgaben – dann ist Pause!'),
       rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von 8 ⭐`) : null,
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: () => { aufgaben = baueRunde(); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))));
+        el('button', { class: 'k-knopf', onclick: () => { aufgaben = baueRunde(); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))),
+    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }));
 }
 
 function frage() {

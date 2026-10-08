@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { PAKETE, ITEMS, preisPro100, wahrerPreis, cent, LEKTIONEN } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -58,7 +59,9 @@ function render() {
       el('p', { style: 'font-size:0.85rem;margin-bottom:0;color:#4b5563' }, 'Fällt dir auf? Je größer das Paket, desto „billiger“ pro Juwel – so sollst du mehr kaufen, als du brauchst.')),
     aufgedeckt ? el('section', { class: 'k-karte' },
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: lektionBildschirm }, '🎓 Warum ist das so? (Auflösung)'))) : '');
+        el('button', { class: 'k-knopf', onclick: lektionBildschirm }, '🎓 Warum ist das so? (Auflösung)'))) : '',
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: render })))));
 }
 
 function echtpreisKarte(item) {

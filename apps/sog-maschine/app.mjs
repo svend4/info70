@@ -6,6 +6,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { MECHANIKEN, mechanik, bewerteSchaetzung, formatSekunden, VIDEOS } from './sog.mjs';
 
 installiereNetzwerkWaechter();
@@ -43,7 +44,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => starte(false) }, '🧘 Ohne Sog starten (zum Vergleich)'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Video-Apps benutzen Sog-Tricks, damit du länger bleibst. Hier kannst du sie gefahrlos erleben. Ein Panel verrät dir, welcher Trick gerade an dir zieht.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Die „Videos“ hier sind nur Karten mit Fantasie-Titeln – es wird nichts geladen, nichts gemessen, nichts gespeichert.')));
+      el('p', { style: 'margin:0' }, '💡 Die „Videos“ hier sind nur Karten mit Fantasie-Titeln – es wird nichts geladen, nichts gemessen, nichts gespeichert.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starte(mitSog) {

@@ -5,6 +5,7 @@
 // externen Anfragen.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -33,6 +34,7 @@ function render() {
     karte('🖼️ Sicherung: Rechte-Plakat', el('p', { style: 'margin:0' }, d.plakat)),
     karte('🎓 Kompetenz-Bezug', el('p', { style: 'margin:0' }, d.kompetenzen)),
     karte('⚠️ Hinweise für die Lehrkraft', el('ul', {}, ...d.hinweise.map((h) => el('li', { style: 'margin:0.3rem 0' }, h)))),
+    hilfeInsel({ klasse: 'rs-nur-bildschirm' }),
     el('footer', { class: 'k-fuss rs-nur-bildschirm' },
       el('span', {}, 'für Lehrkräfte · OER (AGPL) · werbefrei · läuft offline · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));

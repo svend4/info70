@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { STUFEN, THEMEN, START_PROFIL, neuesProfil, gegensteuern, feedStufen, blasenLage, LEKTIONEN } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -35,7 +36,9 @@ function startBildschirm() {
       el('div', { class: 'k-antworten' },
         ...Object.entries(THEMEN).map(([code, t]) =>
           el('button', { class: 'k-knopf', onclick: () => starteLauf(code) }, `${t.emoji} ${t.name}`))),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.5rem', onclick: () => vorlesen('Der simulierte Algorithmus lernt nicht nur, was dich interessiert. Er lernt, wie scharf du es magst. Und er bietet dir immer eine Spur mehr an.') }, '🔊 Vorlesen')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.5rem', onclick: () => vorlesen('Der simulierte Algorithmus lernt nicht nur, was dich interessiert. Er lernt, wie scharf du es magst. Und er bietet dir immer eine Spur mehr an.') }, '🔊 Vorlesen')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteLauf(code) {

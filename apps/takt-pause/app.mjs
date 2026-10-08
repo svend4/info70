@@ -7,6 +7,8 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { ampelFarbe, formatZeit, aktualisiereTag, mergeWoche, wochenStatistik } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -93,7 +95,9 @@ function startBildschirm() {
         el('p', { style: 'font-size:0.9rem' }, '💡 Takt-Regel: Erst planen, dann losschauen – und die Pause gehört dazu wie das Ausatmen zum Atmen.'),
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: rueckblickBildschirm }, '📅 Wochen-Rückblick'),
-          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); startBildschirm(); } }, 'Meine Daten löschen'))));
+          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten([TAG_SCHLUESSEL, LAUFEND_SCHLUESSEL, WOCHE_SCHLUESSEL]); startBildschirm(); } }, 'Meine Daten löschen'))),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
   };
   render();
 }

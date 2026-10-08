@@ -1,0 +1,56 @@
+# Alles, was dieses Repo an Prüfungen hat, in einem Lauf. Ohne Netz, ohne
+# Abhängigkeiten: `npm ci` gibt es nicht, weil es keine Laufzeit-Pakete gibt.
+#
+# Die Läufe prüfen nicht nur Logik, sondern auch Zusagen: das a11y-Audit über
+# alle Seiten (packages/kinder-ui/test/a11y-audit.test.mjs), die
+# Datenschutz-Zusagen des Impressums und die Abdeckung des Hilfe-Bausteins
+# (packages/kinderschutz/test/).
+name: Tests
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Node-Version festhalten
+        run: node --version
+
+      - name: Gesamter Testlauf
+        run: npm test
+
+      - name: Keine externen Laufzeit-Abhängigkeiten
+        run: |
+          if [ -d node_modules ] && [ -n "$(ls -A node_modules 2>/dev/null | grep -v '^@info70$' || true)" ]; then
+            echo "node_modules enthält Fremdpakete – das Monorepo soll ohne Laufzeit-Abhängigkeiten laufen."
+            exit 1
+          fi
+          echo "keine Fremdpakete"
+
+      - name: Keine externen URLs im ausgelieferten Code
+        run: |
+          treffer=$(grep -rnoE "https?://[a-zA-Z0-9._/-]+" apps packages \
+            --include='*.mjs' --include='*.html' --include='*.css' \
+            | grep -v '/test/' \
+            | grep -v 'werkzeug/' \
+            | grep -vE 'w3\.org|schema\.org|localhost' \
+            | grep -vE 'example\.org|\.example' || true)
+          if [ -n "$treffer" ]; then
+            echo "$treffer"
+            echo "Externe URL im Laufzeit-Code gefunden (docs/02: keine externen Anfragen)."
+            exit 1
+          fi
+          echo "keine externen URLs"

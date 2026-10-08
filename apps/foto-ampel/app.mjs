@@ -5,6 +5,7 @@
 // Es werden KEINE Fotos hochgeladen oder gespeichert – nur Ja/Nein-Fragen.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { FRAGEN, relevanteFragen, fertig, bewerte } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -38,6 +39,7 @@ function render() {
           el('button', { class: 'k-knopf', onclick: () => { antworten[frage.id] = false; render(); } }, '👎 Nein'),
           el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(frage.text) }, '🔊 Vorlesen')),
         nummer > 1 ? el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.5rem', onclick: () => { antworten = {}; render(); } }, '↩️ Von vorne') : ''),
+      hilfeInsel(),
       el('footer', { class: 'k-fuss' },
         el('a', { href: 'eltern.html' }, '👪 Für Eltern'),
         el('span', {}, ' · es werden keine Fotos hochgeladen · '),

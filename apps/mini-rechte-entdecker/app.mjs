@@ -14,6 +14,7 @@ const RUNDE = daten.fragen.length; // fuer die Kleinen: alle Fragen, keine Auswa
 starteQuiz({
   wurzel: document.getElementById('app'),
   daten,
+  hilfeInsel: true, // Safeguarding-Baustein (docs/09 Ось B Nr. 113)
   rekordSchluessel: 'mre.rekord',
   rundenGroesse: RUNDE,
   texte: {

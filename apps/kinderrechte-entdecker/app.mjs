@@ -10,6 +10,7 @@ const daten = await fetch('daten/fragen.json').then((r) => r.json());
 starteQuiz({
   wurzel: document.getElementById('app'),
   daten,
+  hilfeInsel: true, // Safeguarding-Baustein (docs/09 Ось B Nr. 113)
   rekordSchluessel: 'kre.rekord',
   rundenGroesse: 12,
   texte: {

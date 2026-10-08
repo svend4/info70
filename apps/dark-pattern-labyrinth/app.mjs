@@ -5,6 +5,7 @@
 // Politik: keine externen Anfragen, nur Rekord (dpl.rekord) in localStorage.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { neuesSpiel, waehle, istVorbei, ehrlicheOption, rang, lexikon } from './spiel.mjs';
 
 installiereNetzwerkWaechter();
@@ -43,7 +44,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Die Glitzi-Sammel-App sieht niedlich aus, aber sie steckt voller Tricks. Klick dich durch sieben Stationen zum ehrlichen Ausgang. Jeder Trick, den du durchschaust, gibt einen Punkt. Keine Sorge: Alles ist nur nachgebaut, es gibt keine echte Werbung und nichts zu kaufen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, '💡 Solche Tricks heißen „Dark Patterns“. Für große Plattformen sind sie in der EU sogar verboten – trotzdem triffst du sie überall. Wer sie beim Namen kennt, tappt nicht mehr hinein.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteLauf() {

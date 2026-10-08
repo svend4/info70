@@ -8,6 +8,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -43,7 +44,8 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Formulare wollen oft mehr Daten, als sie brauchen. Adresse, Telefon und Foto gehören in kein Kinder-Formular.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')),
+    datenKarte({ schluessel: REKORD_SCHLUESSEL, was: 'dein Rekord', nachLoeschen: startBildschirm }));
 }
 
 function starteRunde() {

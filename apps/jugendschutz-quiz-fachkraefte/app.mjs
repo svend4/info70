@@ -15,6 +15,9 @@ starteQuiz({
   daten,
   rekordSchluessel: 'jsqf.rekord',
   rundenGroesse: 12,
+  // Reines Fachkräfte-Werkzeug: es gibt hier keine eltern.html, der
+  // Eltern-Link im Fuß wäre ein toter Link.
+  elternSeite: false,
   texte: {
     titel: '🏫 Jugendschutz-Wissens-Quiz',
     untertitel: 'Für Lehrkräfte & Fachkräfte: USK/FSK, Risiken, Plattform-Pflichten',

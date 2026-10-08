@@ -13,6 +13,7 @@ const RUNDE = 12;
 starteQuiz({
   wurzel: document.getElementById('app'),
   daten,
+  hilfeInsel: true, // Safeguarding-Baustein (docs/09 Ось B Nr. 113)
   rekordSchluessel: 'fsf.rekord',
   rundenGroesse: RUNDE,
   texte: {

@@ -5,6 +5,7 @@
 // Politik docs/02: keine Texteingabe, keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -48,7 +49,9 @@ function startBildschirm() {
           el('button', { class: 'k-knopf', onclick: () => starteSzenario(s) }, `▶️ ${s.titel}`)),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Im Gruppenchat taucht eine riskante Challenge auf. Erkenne bei jeder Nachricht, welcher Trick gerade an dir zieht.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Kein echter Chat, keine Eingabe, nichts wird gespeichert. Und klar: Die Challenges hier sind Beispiele fürs NEIN-Üben – nicht zum Nachmachen.')));
+      el('p', { style: 'margin:0' }, '💡 Kein echter Chat, keine Eingabe, nichts wird gespeichert. Und klar: Die Challenges hier sind Beispiele fürs NEIN-Üben – nicht zum Nachmachen.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteSzenario(s) {

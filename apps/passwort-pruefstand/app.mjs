@@ -6,6 +6,7 @@
 // jede Eingabe lebt nur im Arbeitsspeicher und ist beim Schließen weg.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { entropieBits, knackzeitText, kombiniere, VERSUCHE_PRO_SEKUNDE } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -79,7 +80,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: werkstattBildschirm }, '🛠️ Zur Werkstatt: Bau einen starken Passsatz'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Willkommen am Passwort-Prüfstand! Ganz wichtig: Tippe hier nie dein echtes Passwort ein, nimm ein Quatsch-Passwort. Diese App sendet nichts und speichert nichts. Am Prüfstand siehst du, wie schnell ein Computer ein Passwort knackt. In der Werkstatt baust du aus drei Wörtern und einer Zahl einen starken Passsatz.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Alles wird nur auf deinem Gerät ausgerechnet. Diese App speichert nichts – beim Schließen ist jede Eingabe weg.')));
+      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Alles wird nur auf deinem Gerät ausgerechnet. Diese App speichert nichts – beim Schließen ist jede Eingabe weg.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function pruefstandBildschirm() {

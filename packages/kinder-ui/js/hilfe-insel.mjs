@@ -21,14 +21,16 @@ export const HILFE_TEXTE = Object.freeze({
 
 /**
  * Baut die Hilfe-Insel als ruhige Karte (section.k-karte). Optional ein
- * Zurueck-Knopf, der zum Aufrufer zurueckfuehrt.
- * @param {{ zurueck?: () => void }} [optionen]
+ * Zurueck-Knopf, der zum Aufrufer zurueckfuehrt, und eine Zusatzklasse:
+ * Apps mit Druckansicht haengen ihre eigene "nur am Bildschirm"-Klasse an,
+ * damit die Hilfe-Nummer nicht auf einer Urkunde oder Stationskarte landet.
+ * @param {{ zurueck?: () => void, klasse?: string }} [optionen]
  * @returns {HTMLElement}
  */
-export function hilfeInsel({ zurueck } = {}) {
+export function hilfeInsel({ zurueck, klasse = '' } = {}) {
   const t = HILFE_TEXTE;
   const vorleseText = `${t.ermutigung} ${t.wasTun} ${t.nummerName}: ${t.nummer}. ${t.hinweis}`;
-  return el('section', { class: 'k-karte', style: 'text-align:center' },
+  return el('section', { class: `k-karte${klasse ? ` ${klasse}` : ''}`, style: 'text-align:center' },
     el('p', { style: 'font-size:2rem;margin:0', 'aria-hidden': 'true' }, '💛'),
     el('p', { style: 'font-weight:700;font-size:1.15rem;margin:0.25rem 0' }, t.ermutigung),
     el('p', { style: 'margin:0.5rem 0' }, t.wasTun),

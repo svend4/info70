@@ -6,6 +6,8 @@
 // CSP werden dort installiert; der Kern macht keine Netzwerkanfragen.
 import { el, vorlesen, mischen } from '../../kinder-ui/js/komponenten.mjs';
 import { boot as bootAnzeige } from '../../kinder-ui/js/anzeige.mjs';
+import { loescheDaten } from '../../kinder-ui/js/daten-karte.mjs';
+import { hilfeInsel } from '../../kinder-ui/js/hilfe-insel.mjs';
 import { duettWertung, duettSatz } from './duett.mjs';
 import { amZug, staffelWertung, staffelSatz } from './staffel.mjs';
 
@@ -17,6 +19,7 @@ const STANDARD_TEXTE = {
   vorlesenKnopf: '🔊 Vorlesen',
   datenHinweis: '🧹 Hier gibt es keine Werbung und keine Anmeldung. Gespeichert wird nur dein Rekord – auf diesem Gerät.',
   datenLoeschen: 'Meine Daten löschen',
+  hilfeKnopf: '🆘 Ich brauche Hilfe',
   fallWort: 'Frage',
   binaerFrage: 'Stimmt das?',
   binaerJa: '✅ Stimmt',
@@ -39,11 +42,16 @@ const STANDARD_TEXTE = {
  *   rekordSchluessel: string,
  *   rundenGroesse?: number,
  *   texte?: Partial<typeof STANDARD_TEXTE>,
+ *   elternSeite?: boolean,
+ *   hilfeInsel?: boolean,
  * }} konfig
  */
 export function starteQuiz(konfig) {
   bootAnzeige(); // gespeicherte Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
-  const { wurzel, daten, rekordSchluessel } = konfig;
+  // Fachkräfte-Quizze haben keine eltern.html. Der Eltern-Link ist deshalb
+  // abschaltbar – sonst stünde im Fuß ein Link, der ins Nichts führt.
+  const { wurzel, daten, rekordSchluessel, elternSeite = true,
+    hilfeInsel: mitHilfeInsel = false } = konfig;
   const rundenGroesse = Math.min(konfig.rundenGroesse ?? daten.fragen.length, daten.fragen.length);
   const t = { ...STANDARD_TEXTE, ...konfig.texte };
 
@@ -65,16 +73,22 @@ export function starteQuiz(konfig) {
 
   const fuss = () =>
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
-      el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz'));
+      ...[
+        el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+        elternSeite ? el('a', { href: 'eltern.html' }, '👪 Für Eltern') : null,
+        elternSeite ? el('span', {}, ' · ') : null,
+        el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz'),
+      ].filter(Boolean));
 
   const zeige = (...knoten) => {
-    wurzel.replaceChildren(
+    // replaceChildren filtert NICHT: ein null aus einem Ternär (etwa eine
+    // abgeschaltete Karte) würde einen TypeError werfen. Deshalb hier.
+    wurzel.replaceChildren(...[
       el('h1', { class: 'k-titel' }, t.titel),
       el('p', { class: 'k-untertitel' }, t.untertitel),
       ...knoten,
-      fuss());
+      fuss(),
+    ].filter((k) => k != null));
     wurzel.querySelector('button')?.focus();
   };
 
@@ -102,9 +116,23 @@ export function starteQuiz(konfig) {
         el('p', { style: 'font-weight:600;margin-top:0' }, '🧑‍🤝‍🧒 Für Geschwister'),
         el('p', { style: 'font-size:0.9rem' }, 'Staffel-Modus: Ihr löst abwechselnd Fragen und punktet als EIN Team. Nach der Frage des jüngeren Kindes darf das ältere kurz erklären. Kooperativ, nichts wird gespeichert.'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteStaffel }, '🧑‍🤝‍🧒 Geschwister-Staffel starten')),
+      mitHilfeInsel
+        ? el('section', { class: 'k-karte' },
+          el('button', {
+            class: 'k-knopf k-knopf--neutral k-knopf--klein',
+            onclick: () => zeige(hilfeInsel({ zurueck: start })),
+          }, t.hilfeKnopf))
+        : null,
       el('section', { class: 'k-karte' },
         el('p', {}, t.datenHinweis),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.clear(); start(); } }, t.datenLoeschen)));
+        el('button', {
+          class: 'k-knopf k-knopf--neutral k-knopf--klein',
+          // Gezielt nur den eigenen Rekord. localStorage.clear() würde auch
+          // die Anzeige-Einstellungen (hoher Kontrast, Schriftgröße) und die
+          // Daten der Nachbar-Apps wegwerfen – für ein Kind, das Kontrast
+          // braucht, mitten im Spiel ein Rückschritt.
+          onclick: () => { loescheDaten(rekordSchluessel); start(); },
+        }, t.datenLoeschen)));
   }
 
   function starteRunde() {

@@ -5,6 +5,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { pruefeFragen, uhrText, uhrOptionen, zeigerWinkel, rangFuer } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -61,7 +62,8 @@ function start() {
       el('p', {}, `Der kleine Zeiger zeigt die Stunde, der große die Minuten. In ${RUNDE} Rätseln liest du die Uhr und knackst Kalender-Fragen.`),
       rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE} ⏰`) : null,
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))));
+        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))),
+    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }));
 }
 
 function frage() {

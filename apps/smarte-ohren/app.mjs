@@ -6,6 +6,7 @@
 // Nichts wird gespeichert. Politik docs/02: keine externen Anfragen.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -32,7 +33,9 @@ function startBildschirm() {
       el('p', { style: 'font-size:1.1rem' }, 'Manche Geräte können zuhören. Zum Beispiel Lautsprecher, Tablets oder sprechende Kuscheltiere. Was ist okay? Was sagst du lieber nicht? Wir üben das zusammen.'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starte }, '▶️ Los geht’s'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Manche Geräte können zuhören. Zum Beispiel Lautsprecher, Tablets oder sprechende Kuscheltiere. Was ist okay? Was sagst du lieber nicht? Wir üben das zusammen.') }, '🔊 Vorlesen'))));
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Manche Geräte können zuhören. Zum Beispiel Lautsprecher, Tablets oder sprechende Kuscheltiere. Was ist okay? Was sagst du lieber nicht? Wir üben das zusammen.') }, '🔊 Vorlesen'))),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starte() {

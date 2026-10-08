@@ -6,6 +6,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { pruefeFragen, rangFuer } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -104,7 +105,8 @@ function start() {
       el('p', { style: 'font-size:0.9rem;color:#4b5563' }, 'Am besten mit einem großen Menschen zusammen. Nicht zu laut stellen – schütze deine Ohren!'),
       rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE} 🎧`) : null,
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))));
+        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))),
+    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }));
 }
 
 function frage() {

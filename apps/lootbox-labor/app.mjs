@@ -5,6 +5,7 @@
 // Politik: keine externen Anfragen; diese App speichert GAR NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { wahrscheinlichkeiten, ziehe, erwartungswert, pechQuantil, TRUHEN_PREIS, START_TASCHENGELD } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -80,7 +81,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: starteLabor }, '▶️ Labor starten'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Willkommen im Lootbox-Labor! Du bekommst ${START_TASCHENGELD} Euro Spiel-Taschengeld. Eine Glitzer-Truhe kostet ${TRUHEN_PREIS} Euro. Legendär fällt mit 1 Prozent, Selten mit 9 Prozent, Häufig mit 90 Prozent. Duplikate sind möglich. Findest du den Galaxie-Drachen, bevor dein Taschengeld weg ist?`) }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Hier ist alles nur Spiel-Geld – und diese App speichert nichts. Jedes Experiment startet frisch.')));
+      el('p', { style: 'margin:0' }, '💡 Gut zu wissen: Hier ist alles nur Spiel-Geld – und diese App speichert nichts. Jedes Experiment startet frisch.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteLabor() {

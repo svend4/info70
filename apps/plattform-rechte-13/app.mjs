@@ -13,6 +13,7 @@ const daten = await fetch('daten/fragen.json').then((r) => r.json());
 starteQuiz({
   wurzel: document.getElementById('app'),
   daten,
+  hilfeInsel: true, // Safeguarding-Baustein (docs/09 Ось B Nr. 113)
   rekordSchluessel: 'pr13.rekord',
   rundenGroesse: 12,
   texte: {

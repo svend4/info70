@@ -6,6 +6,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { maxPunkte, rangFuer, ergebnisSatz, pruefeSzenarien } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -52,7 +53,9 @@ function start() {
       el('p', { style: 'margin:0' }, 'Freundlich sein und Nein sagen sind kein Widerspruch. Wie du jemanden begrüßt und wer dich anfassen darf, entscheidest du – auch bei Erwachsenen, die du gern hast.')),
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.05rem' }, '🗺️ Sprachbrücke'),
-      el('p', { style: 'margin:0' }, 'Wenn ihr zu Hause noch eine andere Sprache sprecht: Sagt euch gegenseitig, wie „Danke“, „Bitte“, „Entschuldigung“ und der Gruß am Morgen bei euch heißen. Wer beides kann, hat doppelt so viele Worte für denselben Moment.')));
+      el('p', { style: 'margin:0' }, 'Wenn ihr zu Hause noch eine andere Sprache sprecht: Sagt euch gegenseitig, wie „Danke“, „Bitte“, „Entschuldigung“ und der Gruß am Morgen bei euch heißen. Wer beides kann, hat doppelt so viele Worte für denselben Moment.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: start })))));
 }
 
 function starteRunde() {

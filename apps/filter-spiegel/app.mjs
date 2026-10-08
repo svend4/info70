@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { FILTER, abstandGesamt, einordnung, LEKTIONEN } from './filter.mjs';
 
 installiereNetzwerkWaechter();
@@ -97,7 +98,9 @@ function render() {
       letzteWahrheit ? el('div', { class: 'k-hinweis k-hinweis--falsch', style: 'margin-top:0.5rem' },
         el('p', { style: 'margin:0;font-size:0.9rem' }, `🔍 Was ${letzteWahrheit.name} WIRKLICH tut: ${letzteWahrheit.wahrheit}`)) : '',
       abstand >= 80 ? el('div', { class: 'k-antworten', style: 'margin-top:0.5rem' },
-        el('button', { class: 'k-knopf', onclick: lektionBildschirm }, '🪞 Und was heißt das für meinen Feed?')) : ''));
+        el('button', { class: 'k-knopf', onclick: lektionBildschirm }, '🪞 Und was heißt das für meinen Feed?')) : ''),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: render })))));
 }
 
 function lektionBildschirm() {

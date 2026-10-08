@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -36,7 +37,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: schritt1 }, '🔧 Werkstatt öffnen'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Hier baust du in drei Schritten eine absichtlich absurde Verschwörung und siehst danach: Echte funktionieren nach genau demselben Muster.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Alle Bausteine sind bewusst albern und erfunden – es geht ums Muster, nicht um echte Gruppen oder Themen.')));
+      el('p', { style: 'margin:0' }, '💡 Alle Bausteine sind bewusst albern und erfunden – es geht ums Muster, nicht um echte Gruppen oder Themen.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function auswahlSchritt(titel, optionen, istGewaehlt, beiKlick, weiterWenn, weiterAktion) {

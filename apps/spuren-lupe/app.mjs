@@ -5,6 +5,7 @@
 // entstehen auch ohne Eingabe. Politik docs/02: keine externen Anfragen.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { dauerText, geraeteEinschaetzung, SIGNALE, LEKTIONEN } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -64,7 +65,9 @@ function render() {
     el('section', { class: 'k-karte' },
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Du tippst nichts ein, und trotzdem sieht diese Seite schon dein Gerät, deine Sprache, deine Zeitzone und wie lange du bleibst.') }, '🔊 Vorlesen'),
-        el('button', { class: 'k-knopf', onclick: lektionBildschirm }, '🎓 Was heißt das? (Auflösung)'))));
+        el('button', { class: 'k-knopf', onclick: lektionBildschirm }, '🎓 Was heißt das? (Auflösung)'))),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: render })))));
   // Live-Aktualisierung: Dauer und Klicks zählen sichtbar hoch (nur Anzeige,
   // nichts wird gespeichert oder gesendet). Die Signal-Karte ist die zweite
   // Karte (nach dem Hinweis) und wird an Ort und Stelle neu gezeichnet.

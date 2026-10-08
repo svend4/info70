@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf, HILFE_NUMMER } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -27,7 +28,7 @@ function zeige(...knoten) {
 
 function notfallLeiste() {
   return el('div', { class: 'k-hinweis', style: 'margin-top:0.75rem' },
-    el('p', { style: 'margin:0;font-size:0.9rem' }, '🚨 Ist gerade etwas RICHTIG Schlimmes los? Hol sofort eine erwachsene Person dazu. Zum Reden: Nummer gegen Kummer 116 111 (kostenlos, anonym).'));
+    el('p', { style: 'margin:0;font-size:0.9rem' }, `🚨 Ist gerade etwas RICHTIG Schlimmes los? Hol sofort eine erwachsene Person dazu. Zum Reden: Nummer gegen Kummer ${HILFE_NUMMER} (kostenlos, anonym).`));
 }
 
 function knotenBildschirm(id) {
@@ -49,7 +50,11 @@ function knotenBildschirm(id) {
               else knotenBildschirm(o.ziel);
             },
           }, o.text))),
-      notfallLeiste()));
+      notfallLeiste()),
+    el('section', { class: 'k-karte' },
+      // `id` festhalten: knotenBildschirm erwartet einen Knoten, ohne die
+      // Bindung bekäme es das Klick-Ereignis und würde ins Leere laufen.
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: () => knotenBildschirm(id) })))));
 }
 
 function blattBildschirm(id) {

@@ -5,6 +5,7 @@
 // Speichert nichts, keine externen Anfragen (NetzwerkWaechter).
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { THEMEN, neueBlase, tippe, dominant, ziehe, verschieden } from './blase.mjs';
 
 installiereNetzwerkWaechter();
@@ -66,6 +67,7 @@ function render() {
     el('p', { class: 'k-untertitel' }, 'Zwei Kinder, ein Gerät, ein Algorithmus – zwei ganz verschiedene Feeds.'),
     el('div', { style: 'display:flex;gap:0.6rem;flex-wrap:wrap' }, spalte('A'), spalte('B')),
     vergleich(),
+    hilfeInsel(),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'werbefrei · läuft offline · es wird nichts gespeichert · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),

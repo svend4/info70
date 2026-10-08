@@ -5,6 +5,8 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { nurZiffern, pruefeAnruf, rueckmeldung, bewerteRunde } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -44,7 +46,10 @@ function start() {
       rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE} 🏅`) : '',
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(intro) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))));
+        el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))),
+    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: start })))));
 }
 
 function starteRunde() {

@@ -5,6 +5,7 @@
 // Anfragen; alles bleibt lokal (localStorage) und in Dateien.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { sortiere, packeKoffer, pruefeKoffer, vereinigeKoffer, VORSCHLAEGE } from './koffer.mjs';
 
 installiereNetzwerkWaechter();
@@ -82,7 +83,9 @@ function render() {
           el('input', { type: 'file', accept: 'application/json', style: 'display:none', onchange: importiere })))),
     el('section', { class: 'k-karte pw-nur-bildschirm' },
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { if (confirm('Alle Regeln und Stimmen löschen?')) { localStorage.removeItem(SCHLUESSEL); render(); } } }, '🧹 Neu anfangen')),
-    fuss());
+    fuss(),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: render })))));
 }
 
 function stimmZeile(r, maxStimmen) {

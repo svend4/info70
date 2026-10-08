@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { AUSBREITUNG, kopienZahl, radiere, LEKTIONEN, MUSTER_SATZ } from './radiergummi.mjs';
 
 installiereNetzwerkWaechter();
@@ -47,7 +48,9 @@ function startBildschirm() {
         el('button', { class: 'k-knopf', onclick: () => { schritt = 0; ausbreitungBildschirm(); } }, '📸 Foto posten (nur hier im Spiel!)'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Stell dir vor: Du postest ein Foto. Schau zu, wohin es wandert, und teste dann dein Löschrecht.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '💡 Alles hier ist Simulation: kein echtes Foto, keine echte App, nichts wird gespeichert.')));
+      el('p', { style: 'margin:0' }, '💡 Alles hier ist Simulation: kein echtes Foto, keine echte App, nichts wird gespeichert.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function ausbreitungBildschirm() {

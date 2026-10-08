@@ -5,6 +5,7 @@
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
@@ -40,6 +41,7 @@ function render() {
         el('button', { class: `k-knopf k-knopf--klein ${filter === 'alle' ? '' : 'k-knopf--neutral'}`, 'aria-pressed': String(filter === 'alle'), onclick: () => { filter = 'alle'; render(); } }, '⭐ Alle'),
         ...daten.bereiche.map((b) => el('button', { class: `k-knopf k-knopf--klein ${filter === b.id ? '' : 'k-knopf--neutral'}`, 'aria-pressed': String(filter === b.id), onclick: () => { filter = b.id; render(); } }, `${b.emoji} ${b.name}`)))),
     ...liste.map(karte),
+    hilfeInsel(),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'werbefrei · läuft offline · Leichte Sprache & Vorlesen (BFSG) · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),

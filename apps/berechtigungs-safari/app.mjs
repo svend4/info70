@@ -7,6 +7,7 @@
 // Politik docs/02: keine externen Anfragen; Fortschritt nur lokal.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -42,7 +43,9 @@ function render() {
     el('section', { class: 'k-karte k-hinweis--richtig' },
       el('p', { style: 'margin:0' }, `✅ ${daten.abschluss}`)),
     el('section', { class: 'k-karte' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); render(); } }, '🧹 Safari zurücksetzen')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); render(); } }, '🧹 Safari zurücksetzen')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: render })))));
 }
 
 function stationKarte(s, gefunden) {

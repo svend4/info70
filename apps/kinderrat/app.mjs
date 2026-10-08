@@ -5,6 +5,7 @@
 // Politik docs/02: keine externen Anfragen; alles lokal + in Dateien.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { ergebnis, packeProtokoll, protokollText, pruefeProtokoll, TOP_VORSCHLAEGE } from './koffer.mjs';
 
 installiereNetzwerkWaechter();
@@ -48,6 +49,7 @@ function render() {
     s.tops.length ? protokollKarte(s) : '',
     el('section', { class: 'k-karte' },
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { if (confirm('Neue Sitzung starten? Die alte wird gelöscht.')) { localStorage.removeItem(SCHLUESSEL); render(); } } }, '🧹 Neue Sitzung')),
+    hilfeInsel(),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
       el('a', { href: 'eltern.html' }, '👪 Für Lehrkräfte'), el('span', {}, ' · '),

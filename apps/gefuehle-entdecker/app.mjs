@@ -8,6 +8,7 @@
 // Politik docs/02: keine externen Anfragen (CSP + Netzwerk-Wächter).
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -42,7 +43,9 @@ function startBildschirm() {
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '👉 Am besten spielst du das mit einem Erwachsenen zusammen.')));
+      el('p', { style: 'margin:0' }, '👉 Am besten spielst du das mit einem Erwachsenen zusammen.')),
+    el('section', { class: 'k-karte' },
+      hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
 
 function starteRunde() {

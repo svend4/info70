@@ -7,6 +7,7 @@
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -44,7 +45,8 @@ function startBildschirm() {
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Beteiligungsrechte haben zwei Seiten: Freiheit und Verantwortung. In acht Chat-Situationen entscheidest du und lernst das Recht dahinter.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, 'Mehr zu deinen Rechten? Spiel den ', el('a', { href: '../rechte-kompass/' }, '🧭 Rechte-Kompass'), ' oder ', el('a', { href: '../stark-im-chat/' }, '💪 Stark im Chat'), '.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')),
+    datenKarte({ schluessel: REKORD_SCHLUESSEL, was: 'dein Rekord', nachLoeschen: startBildschirm }));
 }
 
 function starteRunde() {

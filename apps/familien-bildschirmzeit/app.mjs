@@ -5,6 +5,7 @@
 // Anfragen.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
+import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { TAGE, AMPEL, neueWette, fuegeMitglied, entferneMitglied, setzeTag, wochenBilanz, bewertung } from './wette.mjs';
 
 installiereNetzwerkWaechter();
@@ -82,6 +83,7 @@ function render() {
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Familienrat-Übersicht drucken'),
         el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => { if (confirm('Neue Woche starten (alle Einträge löschen)?')) { wette = neueWette(); speichere(wette); render(); } } }, '🔁 Neue Woche'))) : '',
+    hilfeInsel({ klasse: 'fbz-nur-bildschirm' }),
     el('footer', { class: 'k-fuss fbz-nur-bildschirm' },
       el('span', {}, 'für die Familie · werbefrei · läuft offline · nur Selbstauskunft, keine Fernüberwachung · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),

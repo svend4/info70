@@ -52,7 +52,7 @@ function render() {
     ...daten.interaktion.map((i) => checkbox(s.interaktion.includes(i.id), i.text, i.mittel, () => toggle('interaktion', i.id))));
 
   const urlFeld = el('input', {
-    type: 'text', value: s.url ?? '', placeholder: 'https://meine-kinderseite.de',
+    type: 'text', value: s.url ?? '', placeholder: 'https://meine-kinderseite.example',
     'aria-label': 'URL des Angebots (für das age-de.xml-Label)',
     style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem',
     oninput: (ev) => { const cur = lade(); cur.url = ev.target.value; speichere(cur); ergebnisNeu(); },
