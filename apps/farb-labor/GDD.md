@@ -93,12 +93,17 @@ Und: **„aus drei Grundfarben kann man alle Farben mischen“ ist falsch** in
 beiden Systemen. `nichtMischbar` ist Pflichtfeld, muss „nicht alle“ sagen und
 nennt Beispiele (Weiß, leuchtendes Türkis, Gold, Neon).
 
-## 6. Kein Quiz bei warm/kalt
+## 6. Kein Quiz bei warm/kalt — und keine zweite Wahrheit
 
 Wie die Geschmacksfragen im Design-Entdecker ist `warmKaltBildschirm()` ein
 eigener Bildschirm **ohne jeden Begriff von „richtig“**. Es gibt nichts
 anzuklicken; gezeigt werden beide Listen, die Grenzfälle und ein
 Gesprächsimpuls.
+
+Die Zuordnung kommt dabei aus **einer** Quelle: `warmKaltEinordnung()`. Vorher
+baute der Anzeigecode drei Reihen direkt aus `wk.warm`, `wk.kalt` und
+`wk.strittigeFarben` — Anzeige und Logik hätten auseinanderlaufen können, und
+die Funktion war toter Code, den nur der Test anfasste.
 
 Es gibt auch **keinen Entmischen-Knopf**: Mischen ist nicht umkehrbar, und ein
 Schritt-zurück würde das Gegenteil des Wasserglases lehren. Erlaubt ist nur
@@ -158,9 +163,22 @@ ist Pflichtfeld mit mindestens vier Hinweisen.
   bestimmten Kasten gemessen. Mit Aquarell, Acryl oder Fingerfarben sehen
   dieselben Mischungen anders aus.
 
-## 12. Tests
+## 12. Nachträge aus dem Review
 
-`test/logik.test.mjs` (20): Daten gültig; zwei Orte mit verschiedenem
+Ebenfalls entfernt: `waehleMischungen()`. Die Funktion wählte Mischungen
+zufällig aus, aber die App bildet sie interaktiv aus zwei getippten Farben —
+der Test zur Sitzungsgrenze bewachte also eine Funktion, die nie aufgerufen
+wurde. Er prüft jetzt den wirklichen Weg: den Zähler `fertigeMischungen` und
+die Anzeige `Mischung X von PRO_SESSION`.
+
+`herkunftDerWerte` war Pflichtfeld und wurde nie angezeigt; der Satz steht
+jetzt in der Erwachsenen-Karte jedes Ergebnisses, direkt neben `giltFuer`.
+Und der Suchauftrag ist als „für später, wenn der Bildschirm aus ist“
+gekennzeichnet, damit er die Sitzung nicht mitten im Ablauf aufreißt.
+
+## 13. Tests
+
+`test/logik.test.mjs` (21): Daten gültig; zwei Orte mit verschiedenem
 Ergebnis (plus Gegenprobe ohne gemeinsames Paar); Pigment subtraktiv (plus
 addiertes Hex); Licht nachgerechnet (plus verdrehtes Hex); die App rechnet
 keine Pigment-Mischung; Licht und Pigment nie gemischt; `zweiOrte` vergleicht

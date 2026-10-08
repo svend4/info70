@@ -10,7 +10,7 @@ import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.m
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
   PRO_SESSION, farbeVon, mischungVon, mischungFuer,
-  offeneFarben, partnerFuer, pruefeDaten,
+  offeneFarben, partnerFuer, warmKaltEinordnung, pruefeDaten,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -103,19 +103,25 @@ function waehlBildschirm() {
       el('p', { class: 'k-untertitel' }, `Mischung ${fertigeMischungen + 1} von ${PRO_SESSION}`),
       el('p', { style: 'font-weight:700;font-size:1.25em;text-align:center' }, frage),
       el('p', { style: 'text-align:center;margin-top:0' },
-        erreicht.length
-          ? 'Deine gemischten Farben liegen jetzt mit im Kasten.'
+        // Nur behaupten, was stimmt: Orange und Violett wandern NICHT in
+        // den Kasten (mit ihnen wird hier nicht weitergemischt). Geprüft
+        // wird also der Kasten selbst, nicht die Zahl der Mischungen.
+        kasten.length > daten.grundfarben.length
+          ? 'Eine selbst gemischte Farbe liegt jetzt mit im Kasten.'
           : 'Diese drei liegen im Kasten – aus ihnen machst du viele andere.'),
       el('div', {
         role: 'group', 'aria-label': 'Farbe wählen',
         style: 'display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin:1rem 0',
       }, ...kasten.map((f) => {
-        const aus = ersteWahl ? !moeglich.has(f.id) : false;
+        const schonGewaehlt = gewaehlt.includes(f.id);
+        const aus = ersteWahl ? (schonGewaehlt || !moeglich.has(f.id)) : false;
         return el('button', {
           class: 'k-knopf k-knopf--neutral',
           style: 'min-height:4.5rem;display:flex;align-items:center;gap:0.6rem',
           disabled: aus ? '' : null,
-          'aria-label': aus ? `${f.name} – dafür gibt es hier keine Mischung` : f.name,
+          // Zwei verschiedene Gründe, zwei verschiedene Sätze.
+          'aria-label': !aus ? f.name
+            : (schonGewaehlt ? `${f.name} – die hast du schon` : `${f.name} – dafür gibt es hier keine Mischung`),
           onclick: () => waehle(f.id),
         }, el('span', {
           role: 'img', 'aria-label': f.name,
@@ -185,8 +191,8 @@ function ergebnisBildschirm(m) {
         el('p', { style: 'margin:0' }, `Mischt ${ergebnis.name} aus ${zutaten.map((f) => f.name).join(' und ')}.`),
         el('p', { style: 'margin:0.3rem 0 0' }, m.wennAnders)),
       el('div', { class: 'k-hinweis', style: 'margin-top:0.6rem' },
-        el('p', { style: 'margin:0' }, `🔎 ${m.suchauftrag}`)),
-      erwachsenenKarte(`${m.gespraech} (Der Wert hier gilt für ${m.giltFuer}.)`),
+        el('p', { style: 'margin:0' }, `🔎 Für später, wenn der Bildschirm aus ist: ${m.suchauftrag}`)),
+      erwachsenenKarte(`${m.gespraech} (Der Wert hier gilt für ${m.giltFuer}. ${daten.herkunftDerWerte})`),
       el('div', { style: 'margin-top:0.6rem' },
         el('p', { style: 'margin:0;font-size:0.95em' },
           `🗣️ ${ergebnis.name} · ${ergebnis.ukName} (uk) · ${ergebnis.ruName} (ru)`),
@@ -274,10 +280,19 @@ function hellDunkelBildschirm() {
 // Design-Entdecker.
 function warmKaltBildschirm() {
   const wk = daten.warmKalt;
-  const reihe = (ids, titel, zeichen) => el('div', { style: 'margin:0.8rem 0' },
-    el('p', { style: 'font-weight:700;margin:0 0 0.4rem' }, `${zeichen} ${titel}`),
-    el('div', { style: 'display:flex;gap:0.6rem;flex-wrap:wrap' },
-      ...ids.map((id) => fleck(farbeVon(daten, id), '2.6rem'))));
+  // Die Zuordnung kommt aus EINER Funktion, nicht aus drei Listen im
+  // Anzeigecode: so koennen Anzeige und Logik nicht auseinanderlaufen.
+  const nach = (art) => daten.farben
+    .filter((f) => f.traeger === 'pigment' && warmKaltEinordnung(daten, f.id) === art);
+  const reihe = (art, titel, zeichen) => {
+    const farben = nach(art);
+    return farben.length
+      ? el('div', { style: 'margin:0.8rem 0' },
+        el('p', { style: 'font-weight:700;margin:0 0 0.4rem' }, `${zeichen} ${titel}`),
+        el('div', { style: 'display:flex;gap:0.6rem;flex-wrap:wrap' },
+          ...farben.map((f) => fleck(f, '2.6rem'))))
+      : null;
+  };
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '🔥❄️'),
@@ -285,9 +300,9 @@ function warmKaltBildschirm() {
       el('div', { class: 'k-hinweis' },
         el('p', { style: 'font-weight:700;margin-top:0' }, '🤝 Das haben Menschen so ausgemacht:'),
         el('p', { style: 'margin-bottom:0' }, wk.erklaerung)),
-      reihe(wk.warm, 'Nennt man warm', '🔥'),
-      reihe(wk.kalt, 'Nennt man kalt', '❄️'),
-      reihe(wk.strittigeFarben, 'Darüber ist man sich nicht einig', '🤔'),
+      reihe('warm', 'Nennt man warm', '🔥'),
+      reihe('kalt', 'Nennt man kalt', '❄️'),
+      reihe('strittig', 'Darüber ist man sich nicht einig', '🤔'),
       el('div', { class: 'k-hinweis' },
         el('p', { style: 'margin:0' }, wk.strittig)),
       erwachsenenKarte(wk.gespraech),

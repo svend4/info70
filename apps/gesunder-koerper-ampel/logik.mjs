@@ -22,7 +22,7 @@ export const STUFEN_IDS = ['viel', 'etwas', 'nochNicht'];
  * seinen eigenen Medienkonsum benoten. Genau das soll hier nicht passieren.
  * Darum wird die bildschirmfreie Zeit gefragt, nicht die Bildschirmzeit.
  */
-const GERAETE = /Bildschirm|Handy|Tablet|Fernseh|Konsole|Computer|Smartphone/i;
+const GERAETE = /Bildschirm|Handy|Tablet|Fernseh|Konsole|Computer|Smartphone|Gerät|Display|Laptop|Monitor|Serie|Video|Youtube|TikTok/i;
 const OHNE_GERAET = /ohne Bildschirm|ohne Gerät|bildschirmfrei/i;
 const MENGENFRAGE = /wie (lange|viel|oft|häufig)/i;
 
@@ -99,12 +99,20 @@ export function pruefeFaktoren(daten) {
     if (f.frage && !f.frage.includes('?')) fehler.push(`${wo}: frage ist keine Frage`);
     // Siehe GERAETE oben: ein Geräte-Faktor darf nur nach der Zeit OHNE Gerät
     // fragen, sonst kippt die Bedeutung der Ampel.
-    if (f.frage && GERAETE.test(f.frage)) {
-      if (!OHNE_GERAET.test(f.frage)) {
-        fehler.push(`${wo}: fragt nach dem Gerät statt nach der Zeit ohne Gerät – dann wäre „heute viel“ die schlechte Antwort`);
+    // Geprüft werden die Felder, die die AUFGABE tragen: `frage` setzt die
+    // Richtung der Ampel, `name` beschriftet die Spalte im
+    // Wochenrückblick – ein „Bildschirmzeit“ dort hätte dieselbe
+    // Wirkung wie in der Frage. Der `impuls` ist dagegen der erklärende
+    // Text und muss benennen dürfen, was die App gerade NICHT tut
+    // („sie zählt keine Minuten … nicht, wie lange ein Bildschirm an war“).
+    for (const feld of ['frage', 'name']) {
+      const text = f[feld];
+      if (!text || !GERAETE.test(text)) continue;
+      if (!OHNE_GERAET.test(text)) {
+        fehler.push(`${wo}.${feld}: nennt das Gerät statt die Zeit ohne Gerät – dann wäre „heute viel“ die schlechte Antwort`);
       }
-      if (MENGENFRAGE.test(f.frage)) {
-        fehler.push(`${wo}: diese App misst keine Bildschirmzeit und fragt nicht nach Dauer`);
+      if (MENGENFRAGE.test(text)) {
+        fehler.push(`${wo}.${feld}: diese App misst keine Bildschirmzeit und fragt nicht nach Dauer`);
       }
     }
   }

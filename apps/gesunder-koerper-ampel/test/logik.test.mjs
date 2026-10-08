@@ -128,13 +128,31 @@ test('der Bildschirm-Faktor fragt nach der freien Zeit, nicht nach der Bildschir
   const gedreht = JSON.parse(JSON.stringify(daten));
   gedreht.faktoren.find((x) => x.id === 'bildschirmfrei').frage = 'Wie lange warst du heute am Tablet?';
   const fehler = pruefeFaktoren(gedreht);
-  assert.ok(fehler.some((e) => /fragt nach dem Gerät/.test(e)), fehler.join(' | '));
+  assert.ok(fehler.some((e) => /nennt das Gerät/.test(e)), fehler.join(' | '));
   assert.ok(fehler.some((e) => /fragt nicht nach Dauer/.test(e)), fehler.join(' | '));
 
   // Und eine Geräte-Frage ohne „ohne“ ebenso.
   const nurGeraet = JSON.parse(JSON.stringify(daten));
   nurGeraet.faktoren.find((x) => x.id === 'bildschirmfrei').frage = 'Hattest du heute Fernsehen?';
-  assert.ok(pruefeFaktoren(nurGeraet).some((e) => /fragt nach dem Gerät/.test(e)));
+  assert.ok(pruefeFaktoren(nurGeraet).some((e) => /nennt das Gerät/.test(e)));
+
+  // Das Wort „Gerät“ selbst stand erst nicht auf der Liste – eine
+  // umgedrehte Frage rutschte damit vollständig durch.
+  const ueberGeraet = JSON.parse(JSON.stringify(daten));
+  ueberGeraet.faktoren.find((x) => x.id === 'bildschirmfrei').frage = 'Wie lange warst du heute am Gerät?';
+  assert.ok(pruefeFaktoren(ueberGeraet).some((e) => /nennt das Gerät/.test(e)));
+
+  // Und geprüft wird auch `name`: der beschriftet die Spalte im
+  // Wochenrückblick, ein „Bildschirmzeit“ dort hätte dieselbe Wirkung.
+  for (const wert of ['Bildschirmzeit', 'Zeit am Tablet']) {
+    const spalte = JSON.parse(JSON.stringify(daten));
+    spalte.faktoren.find((x) => x.id === 'bildschirmfrei').name = wert;
+    assert.ok(pruefeFaktoren(spalte).some((e) => /\.name: nennt das Gerät/.test(e)), wert);
+  }
+
+  // Der `impuls` darf dagegen benennen, was die App NICHT tut.
+  assert.match(f.impuls, /wie lange ein Bildschirm an war/);
+  assert.deepEqual(pruefeFaktoren(daten), []);
 
   // Die anderen Faktoren dürfen von der Regel nicht erfasst werden.
   for (const andere of daten.faktoren.filter((x) => x.id !== 'bildschirmfrei')) {

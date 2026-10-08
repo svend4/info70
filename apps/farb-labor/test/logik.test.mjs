@@ -5,7 +5,7 @@ import {
   PRO_SESSION, GRUNDFARBEN_ANZAHL, TRAEGER, WARM_KALT_GELTUNG,
   farbeVon, mischungVon, kanaele, relativeHelligkeit, lichtSumme,
   istSubtraktiv, istAdditiv, farbtonPaar, vomTraeger,
-  waehleMischungen, mischungFuer, mischbareFarben, offeneFarben,
+  mischungFuer, mischbareFarben, offeneFarben,
   partnerFuer, erreichbareMischungen, warmKaltEinordnung, pruefeDaten,
 } from '../logik.mjs';
 
@@ -261,19 +261,31 @@ test('Farbnamen dreisprachig – und die App sagt, wo die Sprachen anders schnei
   assert.ok(pruefeDaten(ohneHinweis).some((f) => /anders einteilen/.test(f)));
 });
 
-test('Sitzungsgrenze: höchstens drei Mischungen, mit Rotation', () => {
+test('Sitzungsgrenze: der Zähler in der App begrenzt, nicht eine Auswahlfunktion', () => {
+  // Frueher stand hier ein Test auf waehleMischungen() – eine Funktion,
+  // die die App gar nicht aufrief: die Mischungen entstehen interaktiv
+  // aus zwei getippten Farben. Der Test bewachte also toten Code.
   assert.ok(PRO_SESSION <= 4);
-  const gesehen = new Set();
-  for (let i = 0; i < 80; i++) {
-    const runde = waehleMischungen(daten);
-    assert.equal(runde.length, PRO_SESSION);
-    assert.equal(new Set(runde.map((m) => m.id)).size, PRO_SESSION);
-    for (const m of runde) {
-      assert.equal(m.traeger, 'pigment', 'eine Lichtmischung im Maltisch-Teil');
-      gesehen.add(m.id);
-    }
+  assert.match(app, /fertigeMischungen \+= 1/);
+  assert.match(app, /const fertig = fertigeMischungen >= PRO_SESSION/);
+  assert.match(app, /Mischung \$\{fertigeMischungen \+ 1\} von \$\{PRO_SESSION\}/);
+  // Und die Lichtmischungen landen nie im Maltisch-Teil.
+  for (const a of offeneFarben(daten, mischbareFarben(daten))) {
+    assert.equal(farbeVon(daten, a).traeger, 'pigment', a);
   }
-  assert.equal(gesehen.size, vomTraeger(daten, 'pigment').length, 'keine Rotation');
+  // Alle Pigment-Mischungen sind in PRO_SESSION Schritten erreichbar:
+  // Braun braucht Gruen, also zwei Mischungen vorher.
+  assert.ok(vomTraeger(daten, 'pigment').length >= PRO_SESSION);
+  assert.ok(erreichbareMischungen(daten).length === vomTraeger(daten, 'pigment').length);
+});
+
+test('die warm/kalt-Anzeige kommt aus warmKaltEinordnung, nicht aus drei Listen', () => {
+  // Sonst koennten Anzeige und Logik auseinanderlaufen – und
+  // warmKaltEinordnung waere toter Code, den nur der Test anfasst.
+  assert.match(app, /warmKaltEinordnung\(daten, f\.id\) === art/);
+  assert.match(app, /reihe\('warm'/);
+  assert.match(app, /reihe\('kalt'/);
+  assert.match(app, /reihe\('strittig'/);
 });
 
 test('Ton, Sicherheit und Abschluss am Papier', () => {

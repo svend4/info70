@@ -70,10 +70,30 @@ export const MAX_HANDLUNGEN = 6;
 export const ANKER = 'von dem Kind, das hier sitzt';
 
 /**
- * Als Raumwort gesperrt (siehe Entscheidung 3). `über`/`oben` werden in
- * einer flachen Draufsicht zwei verteidigbare Antworten haben.
+ * Als Raumwort gesperrt (siehe Entscheidung 3). `über`/`oben` haben in
+ * einer flachen Draufsicht zwei verteidigbare Antworten; `hinter` steht
+ * aus demselben Grund in apps/grammatik-zwerge auf der Sperrliste.
+ *
+ * Jedes Wort steht hier mit eigenem Muster, weil `\b` an einem Umlaut
+ * NICHT greift: `\w` ist in JavaScript nur [A-Za-z0-9_], also ist „ü“
+ * ein Nicht-Wortzeichen. `/\büber\b/` trifft „über“ am Satzanfang nie –
+ * und schlägt in „darüber“ falsch an, weil zwischen „r“ und „ü“ sehr wohl
+ * eine Grenze liegt. Darum wird vorne über Nicht-Buchstaben abgegrenzt.
  */
-export const GESPERRTE_RAUMWOERTER = ['oben', 'über', 'ueber', 'unten drüber'];
+export const GESPERRTE_RAUMWOERTER = Object.freeze([
+  { wort: 'oben', muster: /(^|[^a-zäöüß])oben($|[^a-zäöüß])/i },
+  { wort: 'über', muster: /(^|[^a-zäöüß])über($|[^a-zäöüß])/i },
+  { wort: 'drüber', muster: /(^|[^a-zäöüß])drüber($|[^a-zäöüß])/i },
+  { wort: 'hinter', muster: /(^|[^a-zäöüß])hinter($|[^a-zäöüß])/i },
+]);
+
+/**
+ * `vor` ist erlaubt – aber nur personenbezogen: eine Person hat eine
+ * Vorderseite, ein Teller nicht. Genau darauf stützt sich die Sperre in
+ * apps/grammatik-zwerge.
+ */
+const VOR_PERSONENBEZOGEN = /vor (das|dem) Kind/i;
+const VOR_IRGENDWO = /(^|[^a-zäöüß])vor($|[^a-zäöüß])/i;
 
 /** Bewertungsvokabular, das in einem Kindertext nichts zu suchen hat. */
 const BEWERTUNG = /\b(richtig|falsch|schön|schöner|schlecht|besser|gut gemacht)\b/i;
@@ -192,11 +212,32 @@ export function waehleLage(daten) {
   return mischen(daten?.austeilen?.lagen ?? [])[0] ?? null;
 }
 
-/** Hat jede Figur genau eins, und ist nichts übrig? Ohne Zahlen. */
+/**
+ * Der Vorrat: so viele, wie Stühle am Tisch stehen – also für die ganze
+ * Gruppe. Dass heute jemand fehlt, zeigt sich daran, dass am Ende etwas
+ * ÜBRIG bleibt. Ohne diesen Vorrat könnte „nichts bleibt übrig“ nie
+ * eintreten, und die Eins-zu-eins-Zuordnung wäre gar nicht geprüft:
+ * wer nur auf Kinder tippen kann, kann sich nicht verzählen.
+ */
+export function vorratVon(lage) {
+  return Number(lage?.figuren ?? 0) + Number(lage?.leer ?? 0);
+}
+
+/** Wie viele liegen noch auf dem Stapel? */
+export function restVorrat(lage, verteiltAn) {
+  return Math.max(0, vorratVon(lage) - new Set(verteiltAn ?? []).size);
+}
+
+/** Hat jede Figur genau eins? Ohne Zahlen, nur Paarbildung. */
 export function austeilenFertig(lage, verteiltAn) {
   const figuren = Number(lage?.figuren ?? 0);
   const gegeben = new Set(verteiltAn ?? []);
   return figuren > 0 && gegeben.size === figuren;
+}
+
+/** Bleibt am Ende wirklich etwas übrig? (Nur zum Validieren.) */
+export function bleibtUebrig(lage) {
+  return vorratVon(lage) - Number(lage?.figuren ?? 0) > 0;
 }
 
 /** Die Schritte einer Variante in zufälliger Anbietungsreihenfolge. */
@@ -205,18 +246,25 @@ export function angeboteneSchritte(variante, gelegt) {
 }
 
 /** Nennt der Text eine Seite ohne den Anker? */
+/** Auch die flektierten Formen: „die linke Seite“, „rechter Hand“. */
+const SEITE = /(^|[^a-zäöüß])(links|rechts|linke[nrms]?|rechte[nrms]?)($|[^a-zäöüß])/i;
+
 export function seiteOhneAnker(text) {
   const satz = String(text ?? '');
-  if (!/\b(links|rechts)\b/i.test(satz)) return false;
+  if (!SEITE.test(satz)) return false;
   // Jeder Satz, der eine Seite nennt, muss den Anker selbst tragen.
   return satz.split(/(?<=[.!?])\s+/)
-    .some((teil) => /\b(links|rechts)\b/i.test(teil) && !teil.includes(ANKER));
+    .some((teil) => SEITE.test(teil) && !teil.includes(ANKER));
 }
 
 /** Nennt der Text ein gesperrtes Raumwort? */
 export function gesperrtesRaumwort(text) {
-  const satz = String(text ?? '').toLowerCase();
-  return GESPERRTE_RAUMWOERTER.find((w) => new RegExp(`\\b${w}\\b`).test(satz)) ?? null;
+  const satz = String(text ?? '');
+  const treffer = GESPERRTE_RAUMWOERTER.find((w) => w.muster.test(satz));
+  if (treffer) return treffer.wort;
+  // `vor` nur personenbezogen.
+  if (VOR_IRGENDWO.test(satz) && !VOR_PERSONENBEZOGEN.test(satz)) return 'vor (nicht personenbezogen)';
+  return null;
 }
 
 /**
@@ -228,6 +276,20 @@ export function pruefeDaten(daten) {
 
   if (!/immer unten am Bildschirm/.test(daten?.blickrichtung ?? '')) {
     fehler.push('blickrichtung: der Sitzplatz muss immer unten am Bildschirm liegen – sonst braucht das Kind Perspektivübernahme');
+  }
+  // Dieser Satz steht auch auf dem Ausdruck und muss sich darum an seine
+  // eigene Regel halten. Die erste Fassung tat es nicht („dort sitzt“).
+  if (seiteOhneAnker(daten?.blickrichtung)) {
+    fehler.push(`blickrichtung: nennt eine Seite ohne den Anker „${ANKER}“ – und steht auch auf dem Platzset`);
+  }
+  if (gesperrtesRaumwort(daten?.blickrichtung)) {
+    fehler.push(`blickrichtung: „${gesperrtesRaumwort(daten.blickrichtung)}“ ist als Raumwort gesperrt`);
+  }
+  for (const feld of ['rahmenSatz', 'ehrlichkeit', 'fuerAndere']) {
+    if (seiteOhneAnker(daten?.[feld])) fehler.push(`${feld}: nennt eine Seite ohne den Anker`);
+  }
+  for (const satz of daten?.ohneRichtig ?? []) {
+    if (seiteOhneAnker(satz)) fehler.push(`ohneRichtig: nennt eine Seite ohne den Anker – „${satz}“`);
   }
   if (!/nicht üben|kann ein Bildschirm nicht/.test(daten?.ehrlichkeit ?? '')) {
     fehler.push('ehrlichkeit: die App muss sagen, was ein Bildschirm hier NICHT üben kann');
@@ -320,6 +382,12 @@ export function pruefeDaten(daten) {
         if (!schritte.some((x) => x.id === unten)) fehler.push(`${so}: liegtUnter nennt ${unten}, das es nicht gibt`);
       }
     }
+    // Jede Variante braucht genau einen pruefbaren Schritt: die Anzeige
+    // leitet die Unterlage daraus ab, und ohne sie liefe sie auf null.
+    const pruefbare = schritte.filter((x) => x.geltung === 'pruefbar');
+    if (pruefbare.length !== 1) {
+      fehler.push(`${wo}: genau EIN pruefbarer Schritt erwartet (die Unterlage), gefunden ${pruefbare.length}`);
+    }
     // Regel 1 als Strukturgleichheit: genau ALLE Reihenfolgen, keine
     // einzige zusätzliche Einschränkung.
     const wege = anzahlReihenfolgen(v);
@@ -352,6 +420,10 @@ export function pruefeDaten(daten) {
       fehler.push('austeilen: titel/aufgabe/erklaerung/gespraech/fertigText fehlt');
     }
     if (!a.gegenstand?.name || !a.gegenstand?.emoji) fehler.push('austeilen.gegenstand fehlt');
+    // Ohne Vorrat und Übrig-Text koennte „es bleibt etwas uebrig“ nie
+    // eintreten, und die Zuordnung waere nicht pruefbar.
+    if (!a.vorratText) fehler.push('austeilen.vorratText fehlt – woher die Brettchen kommen, muss dastehen');
+    if (!a.uebrigText) fehler.push('austeilen.uebrigText fehlt – das Übrigbleiben ist der eigentliche Punkt');
     // Der mathematische Gehalt ist die WECHSELNDE Anzahl.
     if (!/heute|jeden Tag/.test(a.hinweis ?? '')) fehler.push('austeilen: der Hinweis muss sagen, dass es heute anders ist als gestern');
     // Und es wird NICHT gerechnet: keine Zahlenantwort, kein „eins
@@ -368,6 +440,7 @@ export function pruefeDaten(daten) {
       }
       if (!Number.isInteger(l.leer) || l.leer < 1) fehler.push(`${wo}: leer muss mindestens 1 sein`);
       if ('ablenker' in l || 'da' in l) fehler.push(`${wo}: Zahlen-Antwortfelder gehören nicht hierher`);
+      if (!bleibtUebrig(l)) fehler.push(`${wo}: hier bleibt nichts übrig – dann ist die Zuordnung nicht geprüft`);
       if (Number(l.figuren) > MAX_HANDLUNGEN) fehler.push(`${wo}: mehr als ${MAX_HANDLUNGEN} Handlungen`);
     }
     if (new Set((lagen ?? []).map((l) => l.figuren)).size < 2) {

@@ -29,8 +29,6 @@
 // Und mindestens ein Farbton-Paar muss in BEIDEN Trägern vorkommen und
 // dort verschieden ausgehen – sonst behauptet die App stillschweigend
 // doch eine einzige Mischregel.
-import { mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
-
 /** Höchstens so viele Pigment-Mischungen pro Sitzung. */
 export const PRO_SESSION = 3;
 
@@ -123,11 +121,6 @@ export function farbtonPaar(daten, mischung) {
 /** Alle Mischungen eines Trägers. */
 export function vomTraeger(daten, traeger) {
   return (daten?.mischungen ?? []).filter((m) => m.traeger === traeger);
-}
-
-/** Bis zu `limit` Pigment-Mischungen je Sitzung, gemischt. */
-export function waehleMischungen(daten, limit = PRO_SESSION) {
-  return mischen(vomTraeger(daten, 'pigment')).slice(0, limit);
 }
 
 /** Die Pigment-Mischung zu zwei gewählten Farben – Reihenfolge egal. */

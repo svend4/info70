@@ -6,6 +6,7 @@ import {
   varianteVon, schrittVon, unterlageVon, zonenVon, brauchtSeiten,
   darfJetzt, unterlageFehlt, anzahlReihenfolgen, allePermutationen,
   positionenJeSchritt, istAmPlatz, waehleLage, austeilenFertig,
+  vorratVon, restVorrat, bleibtUebrig,
   angeboteneSchritte, seiteOhneAnker, gesperrtesRaumwort, pruefeDaten,
 } from '../logik.mjs';
 
@@ -169,32 +170,89 @@ test('links und rechts stehen nie ohne den Anker – in KEINEM Text', () => {
   assert.doesNotMatch(app, /gegenüber|spiegel/i);
 });
 
-test('„oben“ und „über“ sind gesperrt – wie in grammatik-zwerge', () => {
-  // In einer flachen Draufsicht gibt es zwei verteidigbare Antworten:
-  // aus Sicht der sitzenden Person ist das Glas nicht über dem Teller,
-  // sondern weiter weg. Zwei Apps derselben Reihe dürfen sich nicht
-  // widersprechen.
-  assert.ok(GESPERRTE_RAUMWOERTER.includes('oben'));
-  assert.ok(GESPERRTE_RAUMWOERTER.includes('über'));
+test('„oben“, „über“ und „hinter“ sind wirklich gesperrt – auch am Umlaut', () => {
+  // In einer flachen Draufsicht gibt es dafür zwei verteidigbare
+  // Antworten: aus Sicht der sitzenden Person ist das Glas nicht über
+  // dem Teller, sondern weiter weg. Zwei Apps derselben Reihe dürfen
+  // sich nicht widersprechen (grammatik-zwerge sperrt dieselben Wörter).
+  assert.deepEqual(GESPERRTE_RAUMWOERTER.map((w) => w.wort), ['oben', 'über', 'drüber', 'hinter']);
+
+  // Die erste Fassung benutzte /\büber\b/. Das ist doppelt falsch: in
+  // JavaScript ist \w nur [A-Za-z0-9_], also ist „ü“ ein
+  // Nicht-Wortzeichen – „über“ am Satzanfang wurde nie erkannt, und in
+  // „darüber“ schlug die Regel falsch an.
+  assert.equal(/\büber\b/.test('über'), false, 'Vorbedingung des Befunds');
+  assert.equal(/\büber\b/.test('darüber'), true, 'Vorbedingung des Befunds');
+  assert.equal(gesperrtesRaumwort('über dem Teller'), 'über');
+  assert.equal(gesperrtesRaumwort('Über dem Teller'), 'über');
+  assert.equal(gesperrtesRaumwort('darüber nachdenken'), null, 'Fehlalarm in „darüber“');
   assert.equal(gesperrtesRaumwort('Der Becher steht oben rechts.'), 'oben');
+  assert.equal(gesperrtesRaumwort('hinter dem Teller'), 'hinter');
   assert.equal(gesperrtesRaumwort('Das Glas steht weiter weg.'), null);
+  assert.equal(gesperrtesRaumwort('Obendrein schmeckt es gut.'), null, 'kein Teilwort-Treffer');
+
+  // `vor` ist erlaubt, aber nur personenbezogen: eine Person hat eine
+  // Vorderseite, ein Teller nicht.
+  assert.equal(gesperrtesRaumwort('direkt vor das Kind, das hier sitzt'), null);
+  assert.equal(gesperrtesRaumwort('vor dem Teller'), 'vor (nicht personenbezogen)');
+
   for (const z of daten.zonen) {
     for (const feld of ['name', 'frage', 'anker']) {
-      assert.equal(gesperrtesRaumwort(z[feld]), null, `Zone ${z.id}.${feld}`);
+      assert.equal(gesperrtesRaumwort(z[feld]), null, `Zone ${z.id}.${feld}: ${z[feld]}`);
     }
   }
   for (const v of daten.varianten) {
-    for (const s of v.schritte) {
+    for (const st of v.schritte) {
       for (const feld of ['name', 'kindText', 'grund', 'spaeterText']) {
-        assert.equal(gesperrtesRaumwort(s[feld]), null, `${v.id}/${s.id}.${feld}: ${s[feld]}`);
+        assert.equal(gesperrtesRaumwort(st[feld]), null, `${v.id}/${st.id}.${feld}: ${st[feld]}`);
       }
     }
   }
+  assert.equal(gesperrtesRaumwort(daten.blickrichtung), null);
+
   const mitOben = kopie();
-  varianteVon(mitOben, 'zuhause').schritte.find((s) => s.id === 'glas').kindText = 'Das Glas steht oben.';
+  varianteVon(mitOben, 'zuhause').schritte.find((st) => st.id === 'glas').kindText = 'Das Glas steht über dem Teller.';
   assert.ok(pruefeDaten(mitOben).some((f) => /als Raumwort gesperrt/.test(f)));
-  // Und die Zone heißt entsprechend.
   assert.ok(daten.zonen.some((z) => z.id === 'weiterWeg'));
+});
+
+test('der Anker gilt für jeden ausgelieferten Text, auch für blickrichtung', () => {
+  // blickrichtung steht auch auf dem gedruckten Platzset und verletzte in
+  // der ersten Fassung die eigene Regel („dort sitzt“ statt des Ankers).
+  assert.equal(seiteOhneAnker(daten.blickrichtung), false, daten.blickrichtung);
+  assert.ok(daten.blickrichtung.includes(ANKER));
+  for (const feld of ['rahmenSatz', 'ehrlichkeit', 'fuerAndere', 'nurGemeinsam']) {
+    assert.equal(seiteOhneAnker(daten[feld]), false, feld);
+  }
+  for (const satz of daten.ohneRichtig) assert.equal(seiteOhneAnker(satz), false, satz);
+  for (const satz of daten.schlussIdeen) assert.equal(seiteOhneAnker(satz), false, satz);
+
+  // Auch die flektierten Formen: „die linke Seite“ wurde vorher nicht erkannt.
+  assert.equal(seiteOhneAnker('die linke Seite'), true);
+  assert.equal(seiteOhneAnker('rechter Hand'), true);
+  assert.equal(seiteOhneAnker('Die Gabel liegt links von dem Kind, das hier sitzt.'), false);
+
+  const kaputt = kopie();
+  kaputt.blickrichtung = 'links und rechts gehören zu dem Kind, das dort sitzt';
+  assert.ok(pruefeDaten(kaputt).some((f) => /blickrichtung: nennt eine Seite/.test(f)));
+});
+
+test('jede Variante hat genau einen prüfbaren Schritt', () => {
+  // Sonst gibt unterlageVon() null zurück, und der Deck-Bildschirm
+  // dereferenziert es – gültige Daten, die die App zum Absturz bringen.
+  for (const v of daten.varianten) {
+    assert.ok(unterlageVon(v), `${v.id}: keine Unterlage`);
+    assert.equal(v.schritte.filter((st) => st.geltung === 'pruefbar').length, 1, v.id);
+  }
+  const ohne = kopie();
+  const v = varianteVon(ohne, 'kita');
+  v.schritte = v.schritte.filter((st) => st.geltung !== 'pruefbar');
+  assert.equal(unterlageVon(v), null);
+  assert.ok(pruefeDaten(ohne).some((f) => /genau EIN pruefbarer Schritt/.test(f)));
+  // Und die App leitet die Unterlage-Zone aus den Daten ab, nicht per
+  // Zeichenkette.
+  assert.doesNotMatch(app, /z\.id !== 'unterlage'/);
+  assert.match(app, /z\.id !== u\.zone/);
 });
 
 test('die 4-5-Schiene braucht kein links/rechts', () => {
@@ -265,8 +323,102 @@ test('Austeilen ordnet zu und zählt NICHT', () => {
   const gerechnet = kopie();
   gerechnet.austeilen.aufgabe = 'Wie viele Brettchen brauchst du?';
   assert.ok(pruefeDaten(gerechnet).some((f) => /nicht gezählt/.test(f)));
-  // Die App zeigt keine Zahlenknöpfe.
   assert.doesNotMatch(app, /String\(n\)|antwortZahlen/);
+});
+
+test('der Vorrat macht das Übrigbleiben erst möglich', () => {
+  // Vorher waren nur Kinder antippbar, und mehr als nötig konnte man gar
+  // nicht verteilen: „es bleibt nichts übrig“ trat immer ein, und die
+  // Eins-zu-eins-Zuordnung war nicht geprüft – wer sich nicht verzählen
+  // kann, lernt am Zuordnen nichts.
+  const a = daten.austeilen;
+  assert.ok(a.vorratText, 'vorratText fehlt');
+  assert.ok(a.uebrigText, 'uebrigText fehlt');
+  for (const l of a.lagen) {
+    assert.equal(vorratVon(l), l.figuren + l.leer, l.id);
+    assert.ok(bleibtUebrig(l), `${l.id}: hier bleibt nichts übrig`);
+    assert.equal(restVorrat(l, []), vorratVon(l), l.id);
+    const alleKinder = Array.from({ length: l.figuren }, (_, i) => i);
+    assert.equal(restVorrat(l, alleKinder), l.leer, `${l.id}: am Ende bleibt genau leer übrig`);
+    assert.ok(restVorrat(l, alleKinder) >= 1, l.id);
+  }
+  // Der Stapel begrenzt: ist er leer, nimmt kein Kind mehr etwas.
+  assert.match(app, /rest === 0\) \? '' : null/);
+  assert.match(app, /!verteiltAn\.includes\(p\.i\) && rest > 0/);
+  assert.match(app, /a\.uebrigText/);
+  assert.match(app, /a\.vorratText/);
+
+  const ohneUebrig = kopie();
+  ohneUebrig.austeilen.lagen = ohneUebrig.austeilen.lagen.map((l) => ({ ...l, leer: 0 }));
+  const f = pruefeDaten(ohneUebrig);
+  assert.ok(f.some((x) => /nichts übrig/.test(x)), f.join(' | '));
+  const ohneText = kopie();
+  delete ohneText.austeilen.uebrigText;
+  assert.ok(pruefeDaten(ohneText).some((x) => /uebrigText fehlt/.test(x)));
+});
+
+test('kein Belohnungsstern – auch nicht im Erfolgsmoment', () => {
+  // Die Buchvorlage arbeitet beim Tischdienst mit einem Sternchen-Ziel,
+  // und die App sagt im Gate „keine Punkte und keine Sterne“ zu. Ein 🌟
+  // genau beim Fertigsein wäre die Belohnung, die sie ausschließt.
+  assert.ok(!app.includes('🌟'), 'Stern im Anwendungscode');
+  assert.ok(!app.includes('⭐'), 'Stern im Anwendungscode');
+  assert.doesNotMatch(JSON.stringify(daten), /🌟|⭐|Stern/);
+  assert.match(app, /🤝 \$\{a\.fertigText\}/);
+  assert.match(app, /Es gibt keine Punkte und keine Sterne/);
+});
+
+test('die Knopf-Reihenfolge wird einmal pro Sitzung gemischt', () => {
+  // Vorher rief deckBildschirm() angeboteneSchritte() bei jeder
+  // Darstellung auf – die Knöpfe sprangen unter dem Finger eines
+  // Vierjährigen bei jedem Tipp neu durcheinander.
+  assert.match(app, /angebot = angeboteneSchritte\(variante, \[\]\)/);
+  assert.match(app, /const offen = angebot\.filter\(\(x\) => !gelegt\.has\(x\.id\)\)/);
+  assert.equal((app.match(/angeboteneSchritte\(/g) ?? []).length, 1, 'genau ein Aufruf, beim Start der Sitzung');
+  // Und die Funktion selbst mischt weiterhin, damit nicht immer dasselbe
+  // Teil oben liegt.
+  const ersten = new Set();
+  for (let i = 0; i < 60; i++) ersten.add(angeboteneSchritte(kita, [])[0].id);
+  assert.ok(ersten.size > 1, 'keine Rotation im Angebot');
+});
+
+test('das Platzset zeigt dieselbe Raumlage wie der Bildschirm', () => {
+  // Vorher kam die Druckreihenfolge aus der Zonen-Liste: die Schablone
+  // zeigte Teller und Gabel vertauscht – eine Vorlage, die das Kind
+  // genau falsch legen lässt. Geprüft wird die GERENDERTE Reihenfolge,
+  // nicht die Reihenfolge der Deklarationen.
+  const reihenfolgeAus = (quelle, name) => {
+    const i = quelle.indexOf(`const ${name} = [`);
+    assert.ok(i >= 0, `${name} nicht gefunden`);
+    const block = quelle.slice(i, quelle.indexOf('].filter(Boolean)', i));
+    return ['nebenLinks', 'mitte', 'nebenRechts', 'neben']
+      .map((z) => [z, block.indexOf(`'${z}'`)])
+      .filter(([, pos]) => pos >= 0)
+      .sort((a, b) => a[1] - b[1])
+      .map(([z]) => z);
+  };
+  const bildschirm = reihenfolgeAus(app.slice(app.indexOf('function gedeckFlaeche')), 'mittelreihe');
+  const druck = reihenfolgeAus(app.slice(app.indexOf('function platzset')), 'reihe');
+  assert.deepEqual(druck, bildschirm, 'Druck und Bildschirm ordnen die Zonen verschieden');
+  assert.deepEqual(bildschirm, ['nebenLinks', 'mitte', 'nebenRechts', 'neben']);
+});
+
+test('geltungsbereich erreicht die Erwachsenen wirklich', () => {
+  // Pflichtfeld und getestet, aber nie angezeigt – dann erreicht die
+  // Einschränkung der Abmachung niemanden.
+  assert.match(app, /fuerErwachsene: s\.geltungsbereich/);
+  assert.match(app, /👪 \$\{meldung\.fuerErwachsene\}/);
+  assert.equal((app.match(/fuerErwachsene: s\.geltungsbereich/g) ?? []).length, 3,
+    'für alle drei Geltungsarten');
+});
+
+test('die Zonen bleiben hörbar, auch mit einem Teil in der Hand', () => {
+  // Sonst wäre links und rechts genau dann nur über Schrift
+  // unterscheidbar, wenn es darauf ankommt – und in diesem Alter liest
+  // niemand.
+  assert.match(app, /Diese Felder gibt es: \$\{zonenVon\(daten, variante\)/);
+  assert.match(app, /onclick: \(\) => \(inDerHand \? legeAb\(z\.id\) : vorlesen\(z\.frage\)\)/);
+  for (const z of daten.zonen) assert.ok(z.frage.endsWith('?'), z.id);
 });
 
 test('zwei vollständige Gedecke – das Kita-Frühstück ist kein kleineres', () => {

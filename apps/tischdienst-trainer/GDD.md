@@ -48,20 +48,30 @@ Deshalb liegt der **Sitzplatz immer unten am Bildschirm**: Bildschirm-links
 = Figur-links = Kind-links. Keine zweite Sitzrichtung, auch nicht als Stufe.
 `blickrichtung` muss „immer unten am Bildschirm“ enthalten.
 
-`seiteOhneAnker()` prüft **jeden Text** (`name`, `kindText`, `grund`,
-`spaeterText`, Zonen-Felder) satzweise: `links`/`rechts` darf nur vorkommen,
-wenn im selben Satz `von dem Kind, das hier sitzt` steht. Die erste Fassung
-hatte hier drei Verstöße, weil nur die Zonen-Objekte geprüft wurden.
+`seiteOhneAnker()` prüft **jeden ausgelieferten Text** satzweise — Schritte,
+Zonen, `rahmenSatz`, `ehrlichkeit`, `fuerAndere`, `ohneRichtig` und
+`blickrichtung`: `links`/`rechts` (auch die flektierten Formen „linke“,
+„rechter“) darf nur vorkommen, wenn im selben Satz `von dem Kind, das hier
+sitzt` steht. Die erste Fassung hatte drei Verstöße, weil nur die
+Zonen-Objekte geprüft wurden — und `blickrichtung` selbst verletzte die
+Regel („dort sitzt“), obwohl der Satz auch auf dem gedruckten Platzset steht.
 
-## 4. `oben` und `über` sind gesperrt
+## 4. `oben`, `über` und `hinter` sind gesperrt
 
 Wie `GESPERRTE_PRAEPOSITIONEN` in `apps/grammatik-zwerge` (Ko-Nutzung Nr. 14,
 dieselbe Altersgruppe): in einer flachen Draufsicht gibt es zwei
 verteidigbare Antworten — aus Sicht der sitzenden Person steht das Glas nicht
 über dem Teller, sondern weiter weg. Zwei Apps derselben Reihe dürfen sich
 hier nicht widersprechen. Die Zone heißt `weiterWeg`. Erlaubt: auf, unter,
-in, neben; `vor` nur personenbezogen (eine Person hat eine Vorderseite, ein
-Teller nicht).
+in, neben; `vor` **nur personenbezogen** (eine Person hat eine Vorderseite,
+ein Teller nicht) — `VOR_PERSONENBEZOGEN` setzt das durch.
+
+**`\b` greift an einem Umlaut nicht.** Die erste Fassung benutzte
+`/\büber\b/`. In JavaScript ist `\w` nur `[A-Za-z0-9_]`, also ist „ü“ ein
+Nicht-Wortzeichen: „über“ am Satzanfang wurde **nie** erkannt, und in
+„darüber“ schlug die Regel **falsch** an. Jedes gesperrte Wort hat deshalb
+jetzt ein eigenes Muster, das vorne und hinten über Nicht-Buchstaben
+abgrenzt. Ein Test hält beide Fehlfälle als Vorbedingung fest.
 
 ## 5. Zwei Sitzungstypen, getrennte Budgets
 
@@ -75,10 +85,19 @@ Erwachsene wählt am Anfang.
 
 **Beim Austeilen wird nicht gezählt.** „Heute fehlt eines, also brauchst du
 eins weniger“ ist Subtraktion und mit 4–5 nicht verfügbar; eine Zahlenfrage
-wäre eine andere, schwerere Aufgabe. Geprüft wird nur „jede Figur hat eins,
-nichts bleibt übrig“. `pruefeDaten` lehnt `wie viele`, `eins weniger` und
-Zahlen-Antwortfelder in den Lagen ab. Die wechselnde Anzahl entsteht rein
-sichtbar (heute vier Figuren, nächstes Mal drei).
+wäre eine andere, schwerere Aufgabe. `pruefeDaten` lehnt `wie viele`,
+`eins weniger` und Zahlen-Antwortfelder in den Lagen ab. Die wechselnde
+Anzahl entsteht rein sichtbar (heute vier Figuren, nächstes Mal drei).
+
+**Und es gibt einen sichtbaren Vorrat.** Die erste Fassung ließ nur Kinder
+antippen; mehr als nötig konnte man gar nicht verteilen, „es bleibt nichts
+übrig“ trat immer ein, und damit war die Eins-zu-eins-Zuordnung überhaupt
+nicht geprüft — wer sich nicht verzählen kann, lernt am Zuordnen nichts.
+Jetzt holt das Kind einen Stapel für die **ganze Gruppe** (`vorratVon` =
+`figuren + leer`, so viele wie Stühle am Tisch). Am Ende hat jedes Kind eins
+und der Rest liegt sichtbar daneben: *das* ist die Erfahrung „heute sind
+nicht alle da“. Gezählt wird dabei nichts — man sieht es. `bleibtUebrig()`
+ist Validator-Bedingung: eine Lage ohne Rest wird abgelehnt.
 
 ## 6. Rückmeldung nach Geltungsart gestaffelt
 
@@ -135,18 +154,41 @@ oder Tagesfelder, keine Namenszeile, keine Urkunde. Sonst wäre es das
 Belohnungs- und Vergleichssystem auf Papier, mit Kindernamen an der Wand.
 Ein Test prüft das Druck-Markup.
 
+Und es zeigt **dieselbe** Raumlage wie der Bildschirm. Die erste Fassung nahm
+die Reihenfolge aus der Zonen-Liste und druckte Teller und Gabel vertauscht —
+eine Schablone, die das Kind genau falsch legen lässt. Jetzt stehen beide
+Reihen explizit als `[nebenLinks, mitte, nebenRechts, neben]`, und ein Test
+vergleicht die gerenderte Reihenfolge beider Stellen.
+
+Im ganzen Anwendungscode kommt **kein Stern** vor (Test). Die erste Fassung
+setzte ein 🌟 genau auf den Fertig-Bildschirm des Austeilens — in einer App,
+die zwei Bildschirme vorher „keine Punkte und keine Sterne“ zusagt und deren
+Buchvorlage an genau dieser Stelle mit einem Sternchen-Ziel arbeitet. Jetzt
+markiert 🤝 das Fertigsein, ohne zu belohnen.
+
 ## 11. Tippen statt Ziehen
 
 Zwei Tipper: Teil wählen, Zone wählen. Ziehen ist für Vierjährige
 unzuverlässig (Hand verdeckt das Ziel, Scrollen fängt die Gestur ab), mit
 Tastatur nicht bedienbar und bricht bei Bildschirmlupe; im ganzen Korpus
 benutzt kein `app.mjs` `draggable`. Zonen sind **immer** echte Knöpfe mit
-`aria-label`, ≥ 48 px; ohne Teil in der Hand lesen sie ihre Frage vor.
-Präzision geht nie in die Prüfung ein.
+`aria-label`, ≥ 48 px; ohne Teil in der Hand lesen sie ihre Frage vor, und
+**mit** Teil in der Hand zählt der Vorlese-Knopf alle Felder auf — sonst wäre
+links und rechts genau dann nur über Schrift unterscheidbar, wenn es darauf
+ankommt. Präzision geht nie in die Prüfung ein.
+
+Die Reihenfolge der Sachen-Knöpfe wird **einmal pro Sitzung** gemischt. Vorher
+rief `deckBildschirm()` `angeboteneSchritte()` bei jeder Darstellung auf, und
+die Knöpfe sprangen bei jedem Tipp neu durcheinander.
+
+`geltungsbereich` ist Pflichtfeld — und wird jetzt auch angezeigt: nach jeder
+Ablage steht die Einschränkung der Abmachung als `👪`-Zeile unter der
+Rückmeldung. Vorher war das Feld getestet, aber unsichtbar, und die
+Einschränkung erreichte niemanden.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (19): Daten gültig; `liegtUnter` als Endzustand (alle
+`test/logik.test.mjs` (27): Daten gültig; `liegtUnter` als Endzustand (alle
 n! Reihenfolgen, Unterlage auch zuletzt); Strukturgleichheit statt Schwelle
 samt Gegenrechnung und Quellprüfung von `darfJetzt`; später gelegte Decke
 wird untergeschoben; Geltungsnamen wie design-entdecker; Abmachungen ohne
