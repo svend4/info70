@@ -15,7 +15,7 @@
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
-  FILTER, istGemeinfrei, freiAbSatz, werkVon, werkZeile,
+  FILTER, istGemeinfrei, freiAbSatz, werkVon, werkZeile, massgeblicheTodesjahre,
   werkeZumMoment, momenteFuer, vorleseText, pruefeDaten,
 } from './logik.mjs';
 
@@ -189,6 +189,16 @@ function render() {
             w.art === 'komposition' ? ` · gestorben ${w.todesjahr}`
               : w.art === 'unbekannter-urheber' ? ` · erschienen ${w.erscheinungsjahr}`
                 : ' · Volksweise ohne benannten Satz'),
+          // Bei einem Lied zaehlt der Laengstlebende von Komponist und
+          // Textdichter (§ 65 Abs. 3 UrhG) - darum steht der Text mit da.
+          typeof w.textlage === 'object'
+            ? el('span', { style: 'font-size:0.9rem;color:#4b5563' },
+              ` · Text: ${w.textlage.dichter}, gestorben ${w.textlage.todesjahr}`)
+            : w.textlage === 'volksgut'
+              ? el('span', { style: 'font-size:0.9rem;color:#4b5563' }, ' · Text: Volksgut')
+              : null,
+          el('span', { style: 'font-size:0.9rem;color:#4b5563' },
+            ` · maßgeblich ${massgeblicheTodesjahre(w).length ? Math.max(...massgeblicheTodesjahre(w)) : '–'}`),
           // Die Angabe wird GERECHNET. Ein Werk, das die App nicht als frei
           // ausrechnen kann, laedt gar nicht erst (siehe pruefeDaten).
           el('span', { style: 'font-size:0.9rem' }, istGemeinfrei(w, daten) ? ' · gemeinfrei ✔️' : ' · NICHT frei ❌')))),

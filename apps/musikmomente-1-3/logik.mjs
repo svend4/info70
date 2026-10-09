@@ -33,6 +33,9 @@ export const GATTUNGEN = Object.freeze(['marsch', 'tanz', 'lied', 'wiegenlied', 
 /** Wie ein Werk rechtlich zustande kommt - geschlossene Liste. */
 export const WERKARTEN = Object.freeze(['komposition', 'volksweise', 'unbekannter-urheber']);
 
+/** Gattungen, die notwendig einen Text haben. Ein Lied ohne Text gibt es nicht. */
+export const GATTUNGEN_MIT_TEXT = Object.freeze(['lied', 'wiegenlied']);
+
 /**
  * Altersbänder als Feld, nicht als Satz (docs/02).
  *
@@ -110,6 +113,15 @@ export const TAKT_FORDERUNG = /(soll|sollte|muss|müsste|möglichst|am besten)\s
  */
 export const ABZAEHLEN = /(^|[^a-zäöüß])(\d|(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn)mal|Minute|Sekunde|Durchgang|Wiederholung)/i;
 
+/**
+ * Eine Dezibelzahl als VORGABE. Gezielt auf die Konstruktion, nicht auf die
+ * Zahl: das Feld, das die umlaufenden Zahlen (85 dB, 75 dB) als
+ * unzutreffend zurückweist, MUSS sie nennen können - sonst trifft die
+ * Regel ihre eigene Ausnahmeklausel. Das ist in diesem Projekt der achte
+ * Fall derselben Falle.
+ */
+export const DB_ALS_VORGABE = /(nicht (über|mehr als)|maximal|höchstens|max\.|bis zu?|stell\w* .{0,20}auf)\s*\d+\s*(dB|Dezibel)/i;
+
 /** Werbung, Produkt, Bezugsquelle. Nur in den Anweisungsfeldern verboten. */
 export const BEZUGSQUELLE = /(Label|Interpret|Einspielung von|Spotify|Apple Music|YouTube|Amazon|Deezer|Tidal|CD kaufen|bestellen|Shop|Abo)/i;
 
@@ -138,15 +150,60 @@ export function istGemeinfrei(werk, daten) {
   const dauer = stand(daten).schutzdauerJahre;
   if (!Number.isInteger(jahr) || !Number.isInteger(dauer)) return false;
   if (!werk) return false;
+  // Eine ungeklärte Textlage ist keine Freigabe: bei einem Lied hängt die
+  // Frist auch am Textdichter (§ 65 Abs. 3 UrhG).
+  if (!textlageGeklaert(werk)) return false;
+  const jahre = massgeblicheTodesjahre(werk);
+  const nachTod = jahre.length ? Math.max(...jahre) + dauer < jahr : null;
   if (werk.art === 'komposition') {
-    return Number.isInteger(werk.todesjahr) && werk.todesjahr + dauer < jahr;
+    return Number.isInteger(werk.todesjahr) && nachTod === true;
   }
   if (werk.art === 'unbekannter-urheber') {
-    return Number.isInteger(werk.erscheinungsjahr) && werk.erscheinungsjahr + dauer < jahr;
+    if (!Number.isInteger(werk.erscheinungsjahr)) return false;
+    if (werk.erscheinungsjahr + dauer >= jahr) return false;
+    // Der Komponist ist ungesichert, der Textdichter kann bekannt sein -
+    // dann muss auch dessen Frist abgelaufen sein.
+    return nachTod === null ? true : nachTod;
   }
   if (werk.art === 'volksweise') {
-    return werk.komponist == null && werk.bearbeiter == null;
+    if (werk.komponist != null || werk.bearbeiter != null) return false;
+    return nachTod === null ? true : nachTod;
   }
+  return false;
+}
+
+/**
+ * ALLE Todesjahre, die die Frist bestimmen. § 65 Abs. 1 UrhG: bei
+ * Miturhebern läuft sie ab dem Tod des LÄNGSTLEBENDEN. § 65 Abs. 3 UrhG:
+ * bei einer Musikkomposition mit Text ab dem Tod des Längstlebenden von
+ * Textdichter und Komponist, sofern beide Beiträge eigens für dieses Werk
+ * geschaffen wurden - unabhängig davon, ob sie als Miturheber ausgewiesen
+ * sind.
+ *
+ * Folge, und das war beim ersten Bau dieser App übersehen: die MELODIE
+ * kann rechnerisch frei sein und das LIED als Ganzes trotzdem nicht. Eine
+ * App, die Wiegenlieder auflistet, listet Musikkompositionen mit Text.
+ */
+export function massgeblicheTodesjahre(werk) {
+  const jahre = [];
+  if (Number.isInteger(werk?.todesjahr)) jahre.push(werk.todesjahr);
+  for (const j of werk?.weitereUrheberTodesjahre ?? []) if (Number.isInteger(j)) jahre.push(j);
+  const t = werk?.textlage;
+  if (t && typeof t === 'object' && Number.isInteger(t.todesjahr)) jahre.push(t.todesjahr);
+  return jahre;
+}
+
+/**
+ * Die Textlage muss dastehen: `'ohne'` für Instrumentalmusik, `'volksgut'`
+ * für einen Text ohne benannten Urheber, oder `{ dichter, todesjahr }`.
+ * Ein Lied darf nicht `'ohne'` tragen, und ein Instrumentalstück nicht
+ * stillschweigend offenlassen, ob ein Text dazugehört.
+ */
+export function textlageGeklaert(werk) {
+  const t = werk?.textlage;
+  if (t === 'ohne') return !GATTUNGEN_MIT_TEXT.includes(werk?.gattung);
+  if (t === 'volksgut') return true;
+  if (t && typeof t === 'object') return Boolean(t.dichter) && Number.isInteger(t.todesjahr);
   return false;
 }
 
@@ -255,6 +312,12 @@ export function pruefeDaten(daten) {
     if (w.art === 'volksweise' && w.komponist) fehler.push(`${wo}: eine Volksweise hat keinen Komponisten`);
     if (w.art === 'unbekannter-urheber' && !Number.isInteger(w.erscheinungsjahr)) fehler.push(`${wo}: ohne Erscheinungsjahr ist die Schutzdauer nicht zu rechnen`);
     if (w.bearbeiter) fehler.push(`${wo}: ein namentlich genannter Satz ist ein eigenes Werk – diese App nennt keine Bearbeitungen`);
+    if (!textlageGeklaert(w)) {
+      fehler.push(`${wo}: die Textlage ist nicht geklärt – bei einer Musikkomposition mit Text läuft die Frist auch ab dem Tod des Textdichters (§ 65 Abs. 3 UrhG)`);
+    }
+    if (GATTUNGEN_MIT_TEXT.includes(w.gattung) && w.textlage === 'ohne') {
+      fehler.push(`${wo}: Gattung „${w.gattung}“ hat notwendig einen Text – „ohne“ ist dort falsch`);
+    }
     if ('liedtext' in w || 'text' in w || 'strophe' in w) fehler.push(`${wo}: kein Liedtext in dieser App`);
     if (!istGemeinfrei(w, daten)) fehler.push(`${wo}: nicht als gemeinfrei ausrechenbar – nicht verwendbar`);
     if (!w.woran) fehler.push(`${wo}: woran fehlt – ohne Hinhörhilfe ist ein Titel nur ein Titel`);
@@ -365,11 +428,21 @@ export function pruefeDaten(daten) {
     ['abbruch', /Aufhören ist die Regel/, 'das Aufhören muss ausdrücklich erlaubt sein'],
     ['lautstaerke', /[Kk]eine Kopfhörer/, 'Kopfhörer müssen ausgeschlossen sein'],
     ['lautstaerke', /Zimmerstimme/, 'die Lautstärke braucht eine Regel ohne Messgerät'],
+    ['lautstaerke', /ansprechbar/, 'der belegbare Grund für offene Lautsprecher muss dastehen'],
+    ['lautstaerke', /keine Zahl|keinen Grenzwert|kein Grenzwert/, 'dass es keinen belegten Kinder-Grenzwert gibt, muss ausgesprochen sein'],
+    ['keineAufnahme', /Textdichter|Text/, 'der Text als eigenes Werk muss benannt sein'],
     ['quelleAnmerkung', /Ё/, 'die Differenzierung der Quelle muss beim Zeichen genannt werden'],
     ['quelleAnmerkung', /nicht übernommen/, 'und ausdrücklich als nicht übernommen'],
   ];
   for (const [feld, muster, warum] of pflicht) {
     if (!muster.test(String(daten?.[feld] ?? ''))) fehler.push(`${feld}: ${warum}`);
+  }
+  // Eine Dezibelzahl darf genannt und zurückgewiesen, aber nirgends als
+  // Vorgabe gesetzt werden - es gibt keinen belegten Kinder-Grenzwert.
+  for (const feld of ['lautstaerke', 'hinweis', 'abbruch', 'keinVersprechen']) {
+    if (DB_ALS_VORGABE.test(String(daten?.[feld] ?? ''))) {
+      fehler.push(`${feld}: eine Dezibelzahl als Vorgabe – für Kleinkinder ist keine belegt`);
+    }
   }
 
   // --- Quellbilanz: das Dokument darf nicht mehr behaupten als die Daten tragen

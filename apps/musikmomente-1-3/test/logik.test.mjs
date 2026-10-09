@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  BAENDER, FILTER, GATTUNGEN, WERKARTEN, ACHSEN,
+  BAENDER, FILTER, GATTUNGEN, WERKARTEN, ACHSEN, GATTUNGEN_MIT_TEXT, DB_ALS_VORGABE,
+  massgeblicheTodesjahre, textlageGeklaert,
   PRUEFUNG, TAKT, TAKT_FORDERUNG, ABZAEHLEN, BEZUGSQUELLE, WIRKVERSPRECHEN,
   istGemeinfrei, freiAbSatz, werkVon, momentVon, werkZeile, werkeZumMoment,
   momenteFuer, vorleseText, pruefeDaten,
@@ -63,16 +64,70 @@ test('die Grenze liegt genau bei 1955 – und der Satz sagt es auch', () => {
   // (1956) steht in der Quellliste und ist am Stand 2026 NICHT frei.
   assert.equal(daten.stand.jahr, 2026);
   assert.equal(daten.stand.schutzdauerJahre, 70);
-  const probe = (todesjahr) => istGemeinfrei({ art: 'komposition', komponist: 'X', todesjahr }, daten);
+  const probe = (todesjahr) => istGemeinfrei(
+    { art: 'komposition', komponist: 'X', todesjahr, gattung: 'marsch', textlage: 'ohne' }, daten);
   assert.equal(probe(1955), true);
   assert.equal(probe(1956), false);
   assert.equal(probe(1921), true);
   assert.match(freiAbSatz(daten), /1955 oder früher/);
   // Ohne Stand keine Rechnung – und damit keine Freigabe.
-  assert.equal(istGemeinfrei({ art: 'komposition', todesjahr: 1800 }, {}), false);
+  assert.equal(istGemeinfrei({ art: 'komposition', todesjahr: 1800, gattung: 'marsch', textlage: 'ohne' }, {}), false);
   assert.equal(istGemeinfrei(null, daten), false);
-  assert.equal(istGemeinfrei({ art: 'erfunden' }, daten), false);
+  assert.equal(istGemeinfrei({ art: 'erfunden', gattung: 'marsch', textlage: 'ohne' }, daten), false);
   assert.equal(freiAbSatz({}), '');
+});
+
+test('bei einem Lied zählt der Längstlebende – auch der Textdichter', () => {
+  // § 65 Abs. 3 UrhG: bei einer Musikkomposition mit Text läuft die Frist ab
+  // dem Tod des Längstlebenden von Textdichter und Komponist. Beim ersten Bau
+  // dieser App war das übersehen – gerechnet wurde nur über den Komponisten.
+  // Die MELODIE kann frei sein und das LIED als Ganzes nicht, und eine App,
+  // die Wiegenlieder auflistet, listet Musikkompositionen mit Text.
+  const brahms = werkVon(daten, 'w-wiegenlied-brahms');
+  assert.deepEqual(massgeblicheTodesjahre(brahms), [1897, 1909]);
+  assert.equal(Math.max(...massgeblicheTodesjahre(brahms)), 1909, 'der Textdichter ist hier der Spätere');
+  assert.ok(istGemeinfrei(brahms, daten));
+
+  // Jedes Werk erklärt seine Textlage, und ein Lied darf nicht „ohne“ sein.
+  for (const w of daten.werke) assert.ok(textlageGeklaert(w), `${w.id}: Textlage unklar`);
+  for (const w of daten.werke) {
+    if (GATTUNGEN_MIT_TEXT.includes(w.gattung)) assert.notEqual(w.textlage, 'ohne', w.id);
+  }
+
+  // Gegenprobe: ein Textdichter, der noch nicht lange genug tot ist, macht
+  // das Lied unfrei – obwohl der Komponist längst frei ist.
+  const spaet = kopie();
+  const w = spaet.werke.find((x) => x.id === 'w-mond');
+  w.textlage = { dichter: 'Noch Geschützt', todesjahr: 1980 };
+  assert.equal(istGemeinfrei(w, spaet), false, 'Melodie von 1800 frei, Text von 1980 nicht');
+  assert.ok(pruefeDaten(spaet).some((f) => /nicht als gemeinfrei ausrechenbar/.test(f)));
+
+  // Und eine fehlende Textlage ist keine Freigabe.
+  const ohne = kopie();
+  delete ohne.werke[0].textlage;
+  const f = pruefeDaten(ohne);
+  assert.ok(f.some((x) => /Textlage ist nicht geklärt/.test(x)));
+  assert.ok(f.some((x) => /nicht als gemeinfrei ausrechenbar/.test(x)));
+
+  // Ein Lied als „ohne Text“ auszugeben wird abgewiesen.
+  const falsch = kopie();
+  falsch.werke.find((x) => x.gattung === 'wiegenlied').textlage = 'ohne';
+  assert.ok(pruefeDaten(falsch).some((x) => /hat notwendig einen Text/.test(x)));
+
+  // § 65 Abs. 1: Miturheber zählen mit.
+  assert.deepEqual(massgeblicheTodesjahre({ todesjahr: 1900, weitereUrheberTodesjahre: [1970] }), [1900, 1970]);
+  assert.equal(istGemeinfrei({ art: 'komposition', komponist: 'A', todesjahr: 1900, weitereUrheberTodesjahre: [1970], gattung: 'marsch', textlage: 'ohne' }, daten), false);
+  assert.deepEqual(massgeblicheTodesjahre(null), []);
+  assert.equal(textlageGeklaert({ gattung: 'marsch' }), false);
+  assert.equal(textlageGeklaert({ gattung: 'marsch', textlage: 'ohne' }), true);
+  assert.equal(textlageGeklaert({ gattung: 'lied', textlage: 'ohne' }), false);
+  assert.equal(textlageGeklaert({ gattung: 'lied', textlage: 'volksgut' }), true);
+  assert.equal(textlageGeklaert({ gattung: 'lied', textlage: { dichter: 'X' } }), false);
+
+  // Und die Zusage erreicht den Bildschirm: der Textdichter wird angezeigt.
+  assert.match(code, /textlage\.dichter/);
+  assert.match(code, /massgeblicheTodesjahre/);
+  assert.match(daten.keineAufnahme, /Längstlebenden von Textdichter und Komponist/);
 });
 
 test('die falsche Zuschreibung wird genannt, nicht übernommen', () => {
@@ -314,12 +369,30 @@ test('jeder Moment lässt das Kind offen und erlaubt das Aufhören', () => {
   assert.ok(pruefeDaten(ohneAbbruch).some((f) => /abbruchzeichen fehlt/.test(f)));
 });
 
-test('Lautstärke ohne Messgerät, keine Kopfhörer, Kleinteile benannt', () => {
+test('Lautstärke: die Beleglage wird gesagt, nicht überzogen', () => {
   assert.match(daten.lautstaerke, /Zimmerstimme/);
   assert.match(daten.lautstaerke, /[Kk]eine Kopfhörer/);
-  // Keine dB-Zahl: eine Zahl, die man ohne Messgerät nicht prüfen kann,
-  // ist auf einem Elternzettel keine Hilfe.
-  assert.doesNotMatch(daten.lautstaerke, /\d+\s*(dB|Dezibel)/);
+  // Es gibt KEINEN belegten Dezibel-Grenzwert für Kleinkinder. Die
+  // umlaufende Zahl 85 dB ist ein Arbeitsschutzwert für Erwachsene bei acht
+  // Stunden; die einzige internationale Kinderangabe (75 dB) ist ein
+  // Wochenmittel für persönliche Audiogeräte mit Dosiszählung. Beides darf
+  // nicht als Wohnzimmer-Obergrenze gedruckt werden - also steht keine Zahl
+  // als Grenzwert da, und die App sagt, dass es keine gibt.
+  assert.match(daten.lautstaerke, /keine Zahl|keinen Grenzwert|kein Grenzwert/);
+  assert.match(daten.lautstaerke, /Arbeitsschutzwert/);
+  // Der Kopfhörer-Verzicht wird NICHT mit einem belegten Hörschaden
+  // begründet - dazu gibt es für unter Dreijährige keine Leitlinie -,
+  // sondern mit dem, was belegbar ist: in der Nähe und ansprechbar bleiben.
+  assert.match(daten.lautstaerke, /ansprechbar/);
+  assert.doesNotMatch(daten.lautstaerke, /Hörschaden ist belegt|schädigt das Gehör/);
+  // Eine dB-Zahl darf hier STEHEN, weil sie zurückgewiesen wird; sie darf
+  // nur keine Vorgabe sein. Ein Netz auf die nackte Zahl hätte genau den
+  // Satz verboten, der die falschen Zahlen entkräftet.
+  assert.doesNotMatch(daten.lautstaerke, DB_ALS_VORGABE);
+  assert.match(daten.lautstaerke, /85 dB/, 'die umlaufende Zahl wird beim Namen genannt');
+  const vorgabe = kopie();
+  vorgabe.lautstaerke = `${daten.lautstaerke} Stellen Sie höchstens 70 dB ein.`;
+  assert.ok(pruefeDaten(vorgabe).some((x) => /Dezibelzahl als Vorgabe/.test(x)));
   for (const p of daten.instrumentenPaare) {
     assert.ok(p.sicherheit, p.id);
     assert.match(p.sicherheit, /Kleinteil|klein|Stab|Schnur|Mundstück/i, p.id);
@@ -329,6 +402,8 @@ test('Lautstärke ohne Messgerät, keine Kopfhörer, Kleinteile benannt', () => 
   const f = pruefeDaten(ohne);
   assert.ok(f.some((x) => /Kopfhörer müssen ausgeschlossen sein/.test(x)));
   assert.ok(f.some((x) => /Regel ohne Messgerät/.test(x)));
+  assert.ok(f.some((x) => /keinen belegten Kinder-Grenzwert/.test(x)));
+  assert.ok(f.some((x) => /belegbare Grund für offene Lautsprecher/.test(x)));
 });
 
 test('Druckblatt und Politik', () => {

@@ -2,15 +2,15 @@
   "stand": {
     "jahr": 2026,
     "schutzdauerJahre": 70,
-    "regel": "In Deutschland und der EU endet das Urheberrecht an einer Komposition 70 Jahre nach dem Tod des Komponisten, gerechnet ab dem Ende des Todesjahres. Diese App rechnet das selbst nach und behauptet Gemeinfreiheit nie von Hand."
+    "regel": "In Deutschland und der EU endet das Urheberrecht an einer Komposition 70 Jahre nach dem Tod des Komponisten, gerechnet ab dem Ende des Todesjahres (§§ 64, 69 UrhG) – der Schutz endet also immer am 31. Dezember, frei wird das Werk am 1. Januar. Bei mehreren Urhebern und bei einem Lied mit Text zählt der Längstlebende (§ 65 UrhG). Diese App rechnet das selbst nach und behauptet Gemeinfreiheit nie von Hand."
   },
   "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Kind sieht keinen Bildschirm – es hört Musik und Sie hören mit.",
   "keinVersprechen": "Diese Seite verspricht keine Wirkung. Dass Musikhören kleine Kinder klüger oder sprachgewandter macht, ist nicht belegt; der sogenannte Mozart-Effekt hat sich nicht halten lassen. Gemeinsam hören ist schön, und das ist Grund genug.",
   "keinQuiz": "Hier wird nichts abgefragt. Kein richtig, kein falsch, keine Punkte: ein Kind, das ein Genre nicht erkennt, hat nichts verfehlt. Wenn Ihr Kind später selbst raten will, steht dafür eine eigene App bereit.",
-  "keineAufnahme": "Was hier steht, sind Werke – nicht Aufnahmen. Dass eine Komposition gemeinfrei ist, macht eine Einspielung davon nicht frei: an einer Aufnahme haben das Tonstudio und die Musikerinnen und Musiker eigene Rechte. Suchen Sie die Stücke in der Bibliothek, im Rundfunk oder in Ihrer eigenen Sammlung.",
+  "keineAufnahme": "Was hier steht, sind Werke – nicht Aufnahmen. Dass eine Komposition gemeinfrei ist, macht eine Einspielung davon nicht frei: an einer Aufnahme haben das Tonstudio und die Musikerinnen und Musiker eigene Rechte. Und bei einem Lied hängt die Frist nicht nur am Komponisten: der Text ist ein eigenes Werk, und bei einer Musikkomposition mit Text läuft die Schutzdauer ab dem Tod des Längstlebenden von Textdichter und Komponist. Die Melodie kann also frei sein und das Lied als Ganzes nicht – darum steht bei jedem Lied hier, wer den Text geschrieben hat. Suchen Sie die Stücke in der Bibliothek, im Rundfunk oder in Ihrer eigenen Sammlung.",
   "keineEmpfehlung": "Es steht hier kein Label, kein Interpret, kein Shop und kein Streaming-Dienst. Nur Werk und Komponist – damit Sie selbst suchen und nichts kaufen müssen.",
   "abbruch": "Aufhören ist die Regel, nicht die Ausnahme. Dreht sich Ihr Kind weg, hält es sich die Ohren zu, wird es unruhig oder quengelig: aus. Das ist keine Ablehnung von Musik, sondern eine Antwort, und sie zählt.",
-  "lautstaerke": "Leise ist richtig. Richten Sie die Lautstärke so ein, dass Sie sich im selben Raum in normaler Zimmerstimme unterhalten können, ohne die Stimme zu heben – dann ist sie für ein kleines Kind in Ordnung. Keine Kopfhörer: über Kopfhörer liegt der Schall direkt am Ohr, und ein Kleinkind kann nicht sagen, dass es zu laut ist.",
+  "lautstaerke": "Leise ist richtig – aber es gibt keine Zahl, die man hier guten Gewissens hinschreiben kann. Einen belegten Dezibel-Grenzwert für Kleinkinder gibt es nicht: die Zahl 85 dB, die oft als „medizinischer Grenzwert für Kinder“ herumgeht, ist ein Arbeitsschutzwert für Erwachsene bei acht Stunden am Tag, und die einzige Kinderangabe eines internationalen Standards (75 dB) ist ein Wochenmittel für persönliche Audiogeräte mit Dosiszählung, nicht eine Obergrenze im Wohnzimmer. Darum eine Regel ohne Messgerät: Richten Sie die Lautstärke so ein, dass Sie sich im selben Raum in normaler Zimmerstimme unterhalten können, ohne die Stimme zu heben. Und keine Kopfhörer – nicht, weil ein Hörschaden belegt wäre (dazu gibt es für unter Dreijährige keine Leitlinie in die eine oder andere Richtung), sondern weil die Empfehlung für dieses Alter lautet, in der Nähe und jederzeit ansprechbar zu bleiben: Sie sollen hören, was Ihr Kind hört.",
   "quelle": {
     "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Kapitel «Музыкальная деятельность», S. 78–80",
     "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik (Gattungen, Kontrastpaare, die Idee der Vertiefung). Alle Texte dieser App sind Eigenproduktion.",
@@ -119,7 +119,8 @@
       "eigenschaft": [
         "tief",
         "langsam"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-tabakdose",
@@ -134,7 +135,8 @@
       "eigenschaft": [
         "hoch",
         "leise"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-schachtel",
@@ -149,7 +151,8 @@
       "eigenschaft": [
         "hoch",
         "kurz"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-soldatenmarsch",
@@ -163,7 +166,8 @@
       "eigenschaft": [
         "laut",
         "gleichmaessig"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-polka",
@@ -177,7 +181,8 @@
       "eigenschaft": [
         "schnell",
         "huepfend"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-kamarinskaja",
@@ -192,7 +197,8 @@
       "eigenschaft": [
         "schnell",
         "treibend"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-murmeltier",
@@ -206,7 +212,11 @@
       "eigenschaft": [
         "ruhig",
         "singbar"
-      ]
+      ],
+      "textlage": {
+        "dichter": "Johann Wolfgang von Goethe",
+        "todesjahr": 1832
+      }
     },
     {
       "id": "w-ecossaise",
@@ -220,7 +230,8 @@
       "eigenschaft": [
         "schnell",
         "kurz"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-wiegenlied-brahms",
@@ -234,7 +245,11 @@
       "eigenschaft": [
         "leise",
         "wiegend"
-      ]
+      ],
+      "textlage": {
+        "dichter": "Georg Scherer (2. Strophe); 1. Strophe aus „Des Knaben Wunderhorn“",
+        "todesjahr": 1909
+      }
     },
     {
       "id": "w-mond",
@@ -248,7 +263,11 @@
       "eigenschaft": [
         "leise",
         "lang"
-      ]
+      ],
+      "textlage": {
+        "dichter": "Matthias Claudius",
+        "todesjahr": 1815
+      }
     },
     {
       "id": "w-schlaf-kindlein",
@@ -262,7 +281,8 @@
       "eigenschaft": [
         "leise",
         "wiegend"
-      ]
+      ],
+      "textlage": "volksgut"
     },
     {
       "id": "w-prinzchen",
@@ -278,7 +298,11 @@
         "leise",
         "wiegend"
       ],
-      "zuschreibung": "Die Quelle führt dieses Wiegenlied als «Колыбельная песня» von Mozart. Das gilt heute als falsche Zuschreibung: in Mozarts Werkverzeichnis steht es nur im Anhang der zweifelhaften Stücke. Als Urheber wird meist Bernhard Flies genannt, zeitweise auch Friedrich Fleischmann; sicher ist es nicht. Darum steht hier kein Komponistenname, sondern das Erscheinungsjahr."
+      "zuschreibung": "Die Quelle führt dieses Wiegenlied als «Колыбельная песня» von Mozart. Das gilt heute als falsche Zuschreibung: in Mozarts Werkverzeichnis steht es nur im Anhang der zweifelhaften Stücke. Als Urheber wird meist Bernhard Flies genannt, zeitweise auch Friedrich Fleischmann; sicher ist es nicht. Darum steht hier kein Komponistenname, sondern das Erscheinungsjahr.",
+      "textlage": {
+        "dichter": "Friedrich Wilhelm Gotter",
+        "todesjahr": 1797
+      }
     },
     {
       "id": "w-kolo",
@@ -294,7 +318,8 @@
       "eigenschaft": [
         "schnell",
         "kreisend"
-      ]
+      ],
+      "textlage": "ohne"
     },
     {
       "id": "w-menuett-haydn",
@@ -308,7 +333,8 @@
       "eigenschaft": [
         "langsam",
         "wiegend"
-      ]
+      ],
+      "textlage": "ohne"
     }
   ],
   "kontraste": [
@@ -376,7 +402,7 @@
       "hoch": "Triangel",
       "tief": "Trommel",
       "warum": "Hell und klingend gegen dumpf und kurz. Das zweite Paar der Quelle.",
-      "sicherheit": "Der Triangelschläger ist ein Stab und der Triangel selbst hat eine Schnur. Beides bleibt in Erwachsenenhand – ein Stab im Mund und eine Schnur am Hals sind die zwei Gefahren, die hier zählen."
+      "sicherheit": "Der Triangelschläger ist ein Stab und der Triangel selbst hängt an einer Schnur. Beides bleibt in Erwachsenenhand – ein Stab im Mund und eine Schnur am Hals sind die zwei Gefahren, die hier zählen. Dazu kommt die Lautstärke: für Perkussionsspielzeug lässt die Spielzeugnorm Spitzenwerte zu, die weit über dem liegen, was man einem Ohr dicht daneben zumuten will – ein Warnhinweis ist dort erst ab einem sehr hohen Spitzenwert vorgeschrieben. Also nicht neben dem Kopf des Kindes anschlagen."
     },
     {
       "id": "i-glockenspiel-kiste",

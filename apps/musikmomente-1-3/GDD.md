@@ -209,7 +209,7 @@ dass die App dazu keine Liste führt.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (19): Daten gültig; Gemeinfreiheit gerechnet statt
+`test/logik.test.mjs` (20): Daten gültig; Gemeinfreiheit gerechnet statt
 behauptet (mit vier Gegenproben: Feld `gemeinfrei`, Todesjahr 1956, fehlendes
 Todesjahr, Volksweise mit Bearbeiter); die Grenze liegt genau bei 1955 und der
 Satz sagt es; die falsche Zuschreibung ist genannt und Mozart steht nicht als

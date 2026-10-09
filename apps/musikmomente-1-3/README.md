@@ -155,7 +155,7 @@ Kind`), и требует, чтобы каждое углубление само
 
 ```sh
 npm run dev
-node --test apps/musikmomente-1-3/test/*.test.mjs   # 19 тестов
+node --test apps/musikmomente-1-3/test/*.test.mjs   # 20 тестов
 ```
 
 Тестами закреплены не только функции, но и обещания: что гемейнфрайность
