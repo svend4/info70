@@ -35,6 +35,10 @@ test('geordnet nach Signal, nicht nach Lebenswoche', () => {
   mut.impulse[0].erwachsenenText = `In der 12. Woche gilt: ${mut.impulse[0].erwachsenenText}`;
   assert.ok(pruefeDaten(mut).some((f) => /Lebenswoche/.test(f)));
   assert.match(daten.hinweis, /kein Geburtsdatum/);
+  // `abbruch` war ein Pflichtfeld des Validators und stand auf keinem
+  // Bildschirm: eine geprüfte Zusage, die niemand liest.
+  assert.match(daten.abbruch, /jederzeit aufhören/);
+  assert.match(code, /daten\.abbruch/);
   assert.match(daten.hinweis, /nicht nach Lebenswoche/);
 });
 
@@ -90,6 +94,14 @@ test('angekreuzt wird ein eigenes Vorhaben, nie ein Zustand des Kindes', () => {
   assert.match(code, /'möchte ich'/);
   assert.match(code, /'schon probiert'/);
   assert.match(code, /'aria-pressed'/);
+  // Der Stand liegt im Arbeitsspeicher und der Speicher ist die Kopie –
+  // sonst tut jedes Antippen bei gesperrtem localStorage sichtbar nichts.
+  assert.match(code, /let merkStand =/);
+  assert.match(code, /speicherSperre/);
+  assert.match(code, /kann gerade nichts behalten/);
+  // Und der Fokus bleibt auf der getippten Zeile.
+  assert.match(code, /render\(m\.id\)/);
+  assert.match(code, /getElementById\(`smm-\$\{fokusId\}`\)\?\.focus\(\)/);
   const merkTeil = code.slice(code.indexOf('function merkKarte('), code.indexOf('function render('));
   assert.doesNotMatch(merkTeil, /Status: \$\{stand\}/, 'der Enum-Wert darf nicht vorgelesen werden');
   for (const roh of MERK_STATUS) {
@@ -121,6 +133,11 @@ test('kein Rat, zu Hause Deutsch zu sprechen – auch nicht zum Widerlegen', () 
   assert.ok(pruefeDaten(mut).some((f) => /in keiner Form vorkommen/.test(f)));
   // Positiv formuliert kommt die Botschaft trotzdem an.
   assert.match(daten.bloecke.mehrsprachig.text, /Sprich mit deinem Baby in der Sprache/);
+  // Neugeborene sehen bei etwa zwanzig bis dreißig Zentimetern scharf – eine
+  // Armlänge ist das Doppelte, und die Begründung „da sieht ein Baby am
+  // besten scharf“ war damit falsch.
+  assert.doesNotMatch(JSON.stringify(daten), /Armlänge/);
+  assert.match(impulsVon(daten, 'i01').erwachsenenText, /zwanzig bis dreißig Zentimeter/);
 });
 
 test('keine erfundenen Wortlisten – kyrillisch nur in der Quellenangabe', () => {
@@ -154,7 +171,12 @@ test('der Warnzeichen-Block ist fest, nicht ausblendbar und ohne Beruhigung', ()
   assert.ok(w.punkte.some((p) => /nicht auf Stimmen/.test(p)));
   assert.ok(w.punkte.some((p) => /verliert/.test(p)));
   assert.match(w.wasTun, /Kinderarztpraxis|U-Untersuchung/);
-  assert.match(w.wasTun, /Sprachmittlung/);
+  // In der gesetzlichen Versorgung besteht kein Anspruch auf Sprachmittlung.
+  // Als Recht behauptet setzt der Satz Eltern genau der Abweisung aus, die
+  // dieser Abschnitt verhindern soll – gesagt wird darum, was wirklich geht.
+  assert.doesNotMatch(w.wasTun, /Recht auf Sprachmittlung|Anspruch auf Sprachmittlung/);
+  assert.match(w.wasTun, /Du darfst jemanden mitbringen/);
+  assert.match(w.wasTun, /verlassen kannst du dich darauf nicht/);
   const warnText = [w.vorspann, ...w.punkte, w.wasTun].join(' ');
   assert.ok(!BERUHIGUNG.test(warnText));
   // `nichtBeruhigen` MUSS die Formulierung nennen, um sie auszuschließen –

@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import * as logik from '../logik.mjs';
 import {
-  PROFILE, ARTEN, kriteriumVon, giltFuer, kriterienFuer, istAbhakbar,
-  bereicheInReihenfolge, offenePunkte, dauerregeln, bericht, pruefeDaten,
+  PROFILE, ARTEN, LEITER, kriteriumVon, giltFuer, kriterienFuer, istAbhakbar,
+  stufenBis, bereicheInReihenfolge, offenePunkte, dauerregeln, bericht, pruefeDaten,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/kriterien.json', import.meta.url), 'utf8'));
@@ -255,6 +255,19 @@ test('ein Schlüssel, löschbar, kein Kind-Datum', () => {
   assert.match(code, /localStorage\.removeItem\(SCHLUESSEL\)/);
   assert.doesNotMatch(code, /localStorage\.clear/);
   assert.match(code, /Haken löschen/);
+  // Die Haken liegen JE PROFIL in demselben einen Schlüssel: 33 von 34
+  // Zeilen gelten für alle drei Profile, und vorher sah eine nie
+  // besichtigte Krippe als erledigt aus, wenn zuhause abgehakt war.
+  assert.match(code, /stand\[profil\]/);
+  assert.match(code, /\[profil\]: e/);
+  // Der Stand liegt im Arbeitsspeicher, der Speicher ist die Kopie – sonst
+  // tut jedes Antippen bei gesperrtem localStorage sichtbar nichts.
+  assert.match(code, /let stand =/);
+  assert.match(code, /speicherSperre/);
+  assert.match(code, /kann gerade nichts behalten/);
+  // Und der Fokus bleibt auf der getippten Zeile.
+  assert.match(code, /render\(id\)/);
+  assert.match(code, /getElementById\(`skc-\$\{fokusId\}`\)\?\.focus\(\)/);
   assert.doesNotMatch(code, /Geburtsdatum|new Date|Date\.now/);
   assert.doesNotMatch(code, /<input|<textarea/);
   assert.match(code, /el\('textarea'/, 'das Berichtsfeld ist readonly und kein Eingabefeld');
@@ -271,6 +284,17 @@ test('Druckblatt und Politik', () => {
   for (const verboten of ['Name', 'Woche', 'Stern', 'Prozent']) {
     assert.ok(!druckTeil.includes(verboten), `Druck enthält ${verboten}`);
   }
+  // Auf dem Papier steht die Offen-Liste als Text, und das Häkchen-Zeichen
+  // der Klickliste ist aus: ein Haken auf einem Druckblatt ist nach docs/02
+  // verboten, und vorher trug jede Zeile eines.
+  assert.match(druck, /\.skc-marke \{ display: none/);
+  assert.match(druck, /\.skc-nur-druck \{ display: block/);
+  assert.match(code, /class: 'skc-marke'/);
+  assert.match(code, /skc-nur-druck/);
+  const druckBlock = code.slice(code.indexOf('skc-nur-druck'), code.indexOf("skc-block skc-nur-bildschirm"));
+  assert.match(druckBlock, /Offene Punkte/);
+  assert.match(druckBlock, /Regeln für jedes Mal/);
+  assert.match(druckBlock, /daten\.nichtFertig/);
   assert.match(seite, /lang="de"/);
   assert.match(seite, /<title>/);
   assert.match(seite, /width=device-width/);
@@ -283,6 +307,54 @@ test('Druckblatt und Politik', () => {
   assert.doesNotMatch(JSON.stringify(daten), /https?:\/\//);
   assert.match(code, /bewegungs-kartei-erstes-jahr/);
   assert.match(code, /meilenstein-begleiter/);
+});
+
+test('die Fähigkeiten sind eine kumulative Leiter', () => {
+  // Der schwerste Fehler der Welle: der Filter verglich exakt. Ein Kind, das
+  // schon an Möbeln läuft, bekam EINE zusätzliche Zeile statt aller
+  // darunter – kein Treppengitter, kein Herdschutz, keine Fenstersicherung.
+  // Wer eine Stufe nennt, hat die darunter hinter sich.
+  assert.deepEqual(stufenBis([]), ['immer']);
+  assert.deepEqual(stufenBis(['dreht-sich']), ['immer', 'dreht-sich']);
+  assert.deepEqual(stufenBis(['laeuft-an-moebeln']), ['immer', ...LEITER]);
+  // Die oberste Stufe allein schaltet jede Stufe darunter mit.
+  assert.deepEqual(stufenBis(['laeuft-an-moebeln']), stufenBis([...LEITER]));
+  // Eine unbekannte Angabe senkt die Leiter nicht.
+  assert.deepEqual(stufenBis(['fliegt']), ['immer']);
+  assert.deepEqual(stufenBis(['fliegt', 'sitzt-frei']), ['immer', 'dreht-sich', 'robbt-kriecht', 'sitzt-frei']);
+
+  for (const profil of PROFILE) {
+    // 1. Monoton: eine höhere Stufe zeigt nie weniger als eine niedrigere.
+    let vorher = kriterienFuer(daten, profil, []).length;
+    for (const stufe of LEITER) {
+      const jetzt = kriterienFuer(daten, profil, [stufe]).length;
+      assert.ok(jetzt >= vorher, `${profil}/${stufe}: ${jetzt} < ${vorher}`);
+      vorher = jetzt;
+    }
+    // 2. Die oberste Stufe zeigt alles, was das Profil überhaupt hat.
+    const alles = daten.kriterien.filter((k) => giltFuer(k, profil));
+    assert.equal(kriterienFuer(daten, profil, ['laeuft-an-moebeln']).length, alles.length, profil);
+    // 3. Jede angebotene Fähigkeit schaltet in mindestens einem Profil
+    //    etwas frei – ein Filter ohne Wirkung wäre eine Frage zum Kind,
+    //    auf die nichts folgt.
+  }
+  for (const stufe of LEITER) {
+    const wirkt = PROFILE.some((profil) => {
+      const ohne = new Set(kriterienFuer(daten, profil, [stufe]).map((k) => k.id));
+      const davor = kriterienFuer(daten, profil, LEITER.slice(0, LEITER.indexOf(stufe)));
+      return davor.length < ohne.size;
+    });
+    assert.ok(wirkt, `${stufe} schaltet nichts frei`);
+  }
+  // Die Zeilen, die erst mit Mobilität dazukommen, sind namentlich da.
+  const laeuft = kriterienFuer(daten, 'zuhause', ['laeuft-an-moebeln']).map((k) => k.was).join(' ');
+  for (const pflicht of ['Schutzgitter', 'Fenster und Balkontüren', 'Herd und Backofen', 'Pflanzen', 'Eimer']) {
+    assert.match(laeuft, new RegExp(pflicht), pflicht);
+  }
+  // Was immer gilt, hängt an keiner Stufe: eine robbende Hand erreicht die
+  // Steckdose vor jedem Hochziehen.
+  assert.equal(kriteriumVon(daten, 'g04').ausloeser, 'immer');
+  assert.match(kriterienFuer(daten, 'zuhause', []).map((k) => k.was).join(' '), /Steckdosen/);
 });
 
 test('Hilfsfunktionen', () => {

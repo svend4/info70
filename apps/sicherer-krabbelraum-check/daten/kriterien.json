@@ -102,14 +102,14 @@
     {
       "id": "s01",
       "bereich": "schlafen",
-      "art": "einmal",
+      "art": "immer",
       "ausloeser": "immer",
       "kritisch": true,
       "quelle": {
         "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
         "geprueft": false
       },
-      "was": "Der Schlafplatz ist so eingerichtet, dass dein Kind auf dem Rücken liegt – bei jedem Schlafen, Tag und Nacht.",
+      "was": "Zu jedem Schlafen wird dein Kind auf den Rücken gelegt – Tag und Nacht, auch zum Mittagsschlaf, und auch von Besuch und Vertretung.",
       "warum": "Die Rückenlage im Schlaf ist die wirksamste einzelne Maßnahme gegen den plötzlichen Kindstod. Die Seitenlage zählt nicht als Alternative, weil ein Kind von dort auf den Bauch rollt.",
       "giltFuer": [
         "zuhause",
@@ -148,8 +148,7 @@
       "was": "Das eigene Bett steht im Schlafzimmer der Eltern – im ersten Jahr.",
       "warum": "Eigenes Bett und gleicher Raum zusammen: die Nähe hilft, die eigene Liegefläche schützt.",
       "giltFuer": [
-        "zuhause",
-        "tagespflege"
+        "zuhause"
       ]
     },
     {
@@ -221,6 +220,24 @@
       ]
     },
     {
+      "id": "s08",
+      "bereich": "schlafen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "Am Schlafplatz liegen keine Positionierungskissen, Keile oder Lagerungshilfen, die eine Lage erzwingen.",
+      "warum": "Was eine Lage erzwingt, nimmt dem Kind die Möglichkeit, sie zu verlassen. Wenn eine Lagerung medizinisch nötig ist, verordnet und erklärt sie die Kinderärztin – nicht ein Zubehörkatalog.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
       "id": "f01",
       "bereich": "stuerzen",
       "art": "immer",
@@ -259,7 +276,7 @@
       "id": "f03",
       "bereich": "stuerzen",
       "art": "einmal",
-      "ausloeser": "robbt-kriecht",
+      "ausloeser": "dreht-sich",
       "kritisch": true,
       "quelle": {
         "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
@@ -327,6 +344,24 @@
       ]
     },
     {
+      "id": "f07",
+      "bereich": "stuerzen",
+      "art": "einmal",
+      "ausloeser": "laeuft-an-moebeln",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Die Türen zu Treppe, Bad und Küche sind geschlossen oder gesichert, und der Weg an den Möbeln entlang endet nicht an einer Kante oder Stufe.",
+      "warum": "Beim Entlanglaufen schaut ein Kind auf seine Hände, nicht auf den Boden. Wo die Möbelreihe aufhört, hört der Halt auf – und eine offene Tür ist dann der nächste Griff.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
       "id": "e01",
       "bereich": "ersticken",
       "art": "einmal",
@@ -366,7 +401,7 @@
       "id": "e03",
       "bereich": "ersticken",
       "art": "einmal",
-      "ausloeser": "robbt-kriecht",
+      "ausloeser": "immer",
       "kritisch": true,
       "quelle": {
         "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
@@ -487,7 +522,7 @@
       "id": "g01",
       "bereich": "vergiften",
       "art": "einmal",
-      "ausloeser": "robbt-kriecht",
+      "ausloeser": "immer",
       "kritisch": true,
       "quelle": {
         "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
@@ -505,7 +540,7 @@
       "id": "g02",
       "bereich": "vergiften",
       "art": "einmal",
-      "ausloeser": "robbt-kriecht",
+      "ausloeser": "immer",
       "kritisch": true,
       "quelle": {
         "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
@@ -523,7 +558,7 @@
       "id": "g03",
       "bereich": "vergiften",
       "art": "einmal",
-      "ausloeser": "robbt-kriecht",
+      "ausloeser": "sitzt-frei",
       "quelle": {
         "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
         "geprueft": false
@@ -540,7 +575,7 @@
       "id": "g04",
       "bereich": "vergiften",
       "art": "einmal",
-      "ausloeser": "zieht-sich-hoch",
+      "ausloeser": "immer",
       "quelle": {
         "gremium": "DIN VDE 0620 (Steckdosen mit erhöhtem Berührungsschutz), Fassung 2021-02",
         "geprueft": true

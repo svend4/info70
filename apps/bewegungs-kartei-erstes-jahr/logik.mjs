@@ -2,9 +2,14 @@
 // Werkzeug für ERWACHSENE. Praleska docs/10 (Eltern-Werkzeuge Nr. 49),
 // Quellabschnitte S. 34-36.
 //
-// Tragende Entscheidung: KEINE Karte beschreibt einen Handgriff am Kind.
-// Beschrieben wird, was der Erwachsene an der UMGEBUNG vorbereitet – die
-// Bewegung macht das Kind. Der Gymnastik-Teil der Quelle besteht aus
+// Tragende Entscheidung: diese Kartei beschreibt KEINE Säuglingsgymnastik –
+// kein passives Durchbewegen, keine Reflexauslösung, kein Hochziehen zum
+// Sitzen, kein Führen an den Händen oder unter den Achseln. Was der
+// Erwachsene tut, ist die UMGEBUNG vorbereiten, tragen und ablegen, und auf
+// genau einer Karte flächig streichen als Kontakt. Die Bewegung macht das
+// Kind. (Die erste Fassung sagte „keine Karte beschreibt einen Handgriff am
+// Kind“ – das war zu stark: Tragen und Streichen sind Handlungen am Kind,
+// und `auf-dem-arm` ist eine gehaltene Lage.) Der Gymnastik-Teil der Quelle besteht aus
 // passivem Durchbewegen, Reflexauslösung, Hochziehen an den Händen und
 // geführtem Schreiten; davon ist nichts übernommen, und das ist hier nicht
 // redaktionell vermieden, sondern strukturell ausgeschlossen:
@@ -61,7 +66,27 @@ export const GESPERRTES_VOKABULAR = Object.freeze([
 export const GESPERRTE_WIRKUNG = /(bessere|besserer|mehr|weniger)\s+(Verdauung|Schlaf|Gewichtszunahme|Koliken)|schläft (dann )?besser|hilft gegen Koliken/i;
 
 /** Abzählen im Kindtext – die Zahl trägt die Umgebung, nicht die Anweisung. */
-const ABZAEHLEN = /(^|[^a-zäöüß])(\d|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|einmal|zweimal|dreimal|viermal)/i;
+// Hinten MUSS eine Grenze stehen: ohne sie traf der „drei“-Zweig auch
+// „dreißig“, und ein Maß wie „zwanzig bis dreißig Zentimeter“ wäre
+// unschreibbar geworden. Die -mal-Formen stehen eigens in der Liste.
+// `-mal` ist ein SUFFIX am Zahlstamm, keine eigene Liste: eine Liste hätte
+// immer die Form vergessen, die jemand schreibt („Zehnmal“ fehlte und kam
+// durch). `ein` steht nur mit dem Suffix, sonst träfe das Muster den
+// Artikel in „ein Tuch“.
+const ABZAEHLEN = /(^|[^a-zäöüß])(\d|einmal|(?:zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn)(?:mal)?)($|[^a-zäöüß])/i;
+
+/** Alter in einer Können-Stufe – Komposita absichtlich mitgemeint. */
+const ALTER_IN_STUFE = /(monat|woche|lebensjahr|\d)/i;
+
+/**
+ * Säuglingsgefährliche Zubereitungen. Nur die verneinte Form ist zulässig –
+ * der Sicherheitssatz MUSS sie nennen können, um sie auszuschließen. Bewusst
+ * NICHT das bloße „Öl“: der Verweis „welches Öl geht, sagt dir Hebamme,
+ * Apotheke oder Kinderärztin“ ist richtig und bleibt erlaubt. Vorher gab es
+ * dazu überhaupt keine Validator-Regel – nur einen Test über drei Felder,
+ * dessen Kommentar mehr behauptete, als er prüfte.
+ */
+export const GEFAEHRLICHE_ZUBEREITUNG = /(Kampfer|Menthol|Eukalyptus|ätherisch\w*|Erkältungsbad|Senfwickel|Nussöl)/i;
 
 /** Seitigkeit – vor der Schule nicht verfügbar, und hier ohnehin sinnlos. */
 const SEITE = /(^|[^a-zäöüß])(links|rechts|linke[nrms]?|rechte[nrms]?)($|[^a-zäöüß])/i;
@@ -125,7 +150,11 @@ export function pruefeDaten(daten) {
   const koennenIds = new Set((daten?.koennen ?? []).map((k) => k.id));
   if (koennenIds.size < 5) fehler.push('koennen: mindestens 5 beobachtbare Stufen erwartet');
   for (const k of daten?.koennen ?? []) {
-    if (/\bMonat|\bWoche|\d/.test(`${k.name} ${k.beschreibung}`)) {
+    // Komposita sind hier absichtlich mitgemeint, darum KEINE Anfangsgrenze
+    // und das `i`-Flag: „Lebensmonat“ und „Lebenswoche“ tragen den Stamm
+    // klein und hinter einem Wortzeichen und entgingen `/\bMonat|\bWoche/`
+    // doppelt. apps/sprich-mit-mir macht es richtig, hier war es falsch.
+    if (ALTER_IN_STUFE.test(`${k.name} ${k.beschreibung}`)) {
       fehler.push(`koennen ${k.id}: nennt ein Alter – die Kartei ist nach Können geordnet, nicht nach Monaten`);
     }
   }
@@ -172,6 +201,26 @@ export function pruefeDaten(daten) {
       fehler.push(`${wo}: Wirkversprechen – bei gesunden reifen Säuglingen nicht belegt`);
     }
 
+    // Gefährliche Zubereitungen: in den Anweisungsfeldern gar nicht, in den
+    // übrigen nur verneint („kein Kampfer“, „nichts ins Gesicht“).
+    for (const feld of ANWEISUNGS_FELDER) {
+      const wert = Array.isArray(k[feld]) ? k[feld].join(' ') : String(k[feld] ?? '');
+      if (GEFAEHRLICHE_ZUBEREITUNG.test(wert)) {
+        fehler.push(`${wo}.${feld}: nennt eine für Säuglinge ungeeignete Zubereitung in einem Anweisungsfeld`);
+      }
+    }
+    for (const feld of Object.keys(k)) {
+      if (ANWEISUNGS_FELDER.includes(feld)) continue;
+      const wert = Array.isArray(k[feld]) ? k[feld].join(' ') : String(k[feld] ?? '');
+      for (const treffer of wert.match(new RegExp(GEFAEHRLICHE_ZUBEREITUNG, 'gi')) ?? []) {
+        const i = wert.indexOf(treffer);
+        const davor = wert.slice(Math.max(0, i - 40), i);
+        if (!/\bkein\w*\s*$|\bnicht\w*\s*$|\bohne\s*$/i.test(davor)) {
+          fehler.push(`${wo}.${feld}: „${treffer}“ steht nicht verneint – erlaubt ist nur der Ausschluss`);
+        }
+      }
+    }
+
     // Jede Karte sagt, aus welchem Quellziel sie kommt.
     if (!Array.isArray(k.quellZiel) || !k.quellZiel.length) fehler.push(`${wo}: quellZiel fehlt`);
     for (const z of k.quellZiel ?? []) {
@@ -207,6 +256,27 @@ export function pruefeDaten(daten) {
     fehler.push('quelle.uebernommen muss „Eigenproduktion“ aussprechen');
   }
 
+  // Die Bilanz 16 = übernommen + nicht übernommen muss in den DATEN
+  // nachvollziehbar sein, nicht nur in der Zahl: jede der 16 Maßnahmen ist
+  // entweder einer Karte zugeordnet oder in der Ausschlussliste genannt.
+  // Vorher fehlten zwei (g04 und g15) ganz, und die Zahl stimmte trotzdem.
+  const gUebernommen = new Set((karten ?? []).flatMap((k) => (k.quellZiel ?? []).filter((z) => typeof z === 'string')));
+  const gAusgeschlossen = new Set((aus ?? []).flatMap((a) => String(a.quellNr ?? '').match(/g\d{2}/g) ?? []));
+  const fehlende = [];
+  for (let i = 1; i <= z.gymnastikMassnahmenQuelle; i++) {
+    const id = `g${String(i).padStart(2, '0')}`;
+    if (!gUebernommen.has(id) && !gAusgeschlossen.has(id)) fehlende.push(id);
+  }
+  if (fehlende.length) {
+    fehler.push(`Gymnastik-Bilanz: ${fehlende.join(', ')} ist weder einer Karte zugeordnet noch in der Ausschlussliste genannt`);
+  }
+  if (gUebernommen.size !== z.gymnastikUebernommen) {
+    fehler.push(`quelle.zahlen: ${z.gymnastikUebernommen} übernommene Maßnahmen behauptet, die Karten belegen ${gUebernommen.size}`);
+  }
+  if (gAusgeschlossen.size !== z.gymnastikNichtUebernommen) {
+    fehler.push(`quelle.zahlen: ${z.gymnastikNichtUebernommen} ausgeschlossene Maßnahmen behauptet, die Liste nennt ${gAusgeschlossen.size}`);
+  }
+
   // WHO-Spannen: Zahlen nur mit Quelle, und nie als Ziel.
   const f = daten?.whoFenster;
   if (!f || !Array.isArray(f.schritte) || f.schritte.length < 5) fehler.push('whoFenster: mindestens 5 Spannen erwartet');
@@ -221,8 +291,9 @@ export function pruefeDaten(daten) {
 
   // Pflichtsätze.
   for (const [feld, muster, was] of [
-    ['hinweis', /Handgriff am Kind/, 'der Kernsatz muss dastehen'],
+    ['hinweis', /keine Säuglingsgymnastik/, 'der Kernsatz muss dastehen – und nur so weit gehen, wie er stimmt'],
     ['hinweis', /Boden/, 'der Boden als Ort muss im Vorwort stehen'],
+    ['bodenregel', /nie auf Wickeltisch/, 'die Bodenregel braucht eine eigene Fassung für das Druckblatt'],
     ['geraet', /Ihrer Hand|in Ihrer Hand/, 'das Gerät gehört dem Erwachsenen'],
     ['keinPlan', /speichert nichts/, 'es muss dastehen, dass nichts gespeichert wird'],
     ['abbruch', /Aufhören ist die Regel/, 'das Aufhören muss als Regel benannt sein'],

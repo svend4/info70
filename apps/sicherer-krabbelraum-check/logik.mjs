@@ -6,7 +6,7 @@
 // Tragende Entscheidung: dieser Check schaut auf den RAUM. Jedes Kriterium
 // hat einen Raum, einen Gegenstand oder eine Handlung daran als Gegenstand –
 // keines beschreibt, was das Kind kann, und keines bewertet den Erwachsenen.
-// Das vierte Quellziel («psychische Geborgenheit») ist deshalb in prüfbare
+// Das DRITTE Quellziel («psychische Geborgenheit») ist deshalb in prüfbare
 // Raum-Eigenschaften übersetzt: ruhige Ecke, Blickachse, Abdunkelbarkeit,
 // Zugluftfreiheit. Eine Checkbox „mein Kind fühlt sich geborgen“ wäre eine
 // Beurteilung von Person und Bindung.
@@ -41,8 +41,18 @@ const UEBERWACHUNG = /Babyphone|Sensormatte|Atemmonitor|Wearable|Pulsoximeter|Ü
 /** Ausnahmeklausel – im Schlaf-Abschnitt lebensgefährlich. */
 const AUSNAHME = /\bsobald\b|\bsolange\b|\bab dem\b|ist (okay|in Ordnung), (wenn|sobald)|spätestens wenn/i;
 
-/** Eine Telefonnummer, die nicht 112 ist, wird nicht aus dem Gedächtnis gedruckt. */
-const FREMDE_NUMMER = /(^|[^\d])(0\d{2,5}[\s/-]?\d{3,})/;
+/**
+ * Eine Telefonnummer, die nicht 112 ist, wird nicht aus dem Gedächtnis
+ * gedruckt. Der Kandidat fasst die GANZE Nummer (mehrere Trenner erlaubt)
+ * und wird auf Ziffern normalisiert verglichen – die erste Fassung brach
+ * nach der ersten Gruppe ab, traf von „0800 111 0 550“ nur „0800 111“ und
+ * machte damit die Ausnahme für das Elterntelefon zu totem Code. Die
+ * Längenschranke hält Datums- und Regelnummern (07/2019, 102-602) heraus.
+ */
+const FREMDE_NUMMER = /(?:\+49|0)[\d\s/-]{7,}\d/g;
+/** Nummern, die hier stehen dürfen. Normalisiert verglichen. */
+const ERLAUBTE_NUMMERN = Object.freeze(['112', '08001110550']);
+const nurZiffern = (s) => String(s).replace(/\D/g, '');
 
 /** Ein Kriterium holen. */
 export function kriteriumVon(daten, id) {
@@ -55,13 +65,34 @@ export function giltFuer(kriterium, profil) {
 }
 
 /**
- * Die Kriterien für ein Profil und die bereits beobachteten Fähigkeiten.
- * Die Auslöser sind beobachtbare Fähigkeiten, keine Monate: ein
+ * Die Fähigkeiten sind eine LEITER, kein Satz unabhängiger Schalter: wer
+ * läuft, erreicht alles, was ein robbendes Kind erreicht.
+ *
+ * Die erste Fassung filterte mit `an.has(k.ausloeser)`, also auf genaue
+ * Übereinstimmung – und damit zeigte die höchste Stufe die WENIGSTEN
+ * Zeilen. Gemessen: ein Kind, das an Möbeln läuft, bekam 20 Zeilen ohne
+ * Treppenschutzgitter, ohne Knopfzellen und ohne Steckdosen, während ein
+ * robbendes 26 bekam. Das ist der schlimmste Fehler, den eine Gefahrenliste
+ * machen kann, und er war unsichtbar, weil jede einzelne Zeile stimmte.
+ */
+export const LEITER = Object.freeze([
+  'dreht-sich', 'robbt-kriecht', 'sitzt-frei', 'zieht-sich-hoch', 'laeuft-an-moebeln',
+]);
+
+/** Alle Stufen bis zur höchsten gewählten – einschließlich. */
+export function stufenBis(ausloeser = []) {
+  const hoechste = Math.max(-1, ...ausloeser.map((a) => LEITER.indexOf(a)));
+  return ['immer', ...LEITER.slice(0, hoechste + 1)];
+}
+
+/**
+ * Die Kriterien für ein Profil und die beobachteten Fähigkeiten. Die
+ * Auslöser sind beobachtbare Fähigkeiten, keine Monate: ein
  * Treppenschutzgitter ist für ein Neugeborenes irrelevant und für ein
- * robbendes Kind dringend.
+ * robbendes Kind dringend – aber für ein laufendes erst recht.
  */
 export function kriterienFuer(daten, profil, ausloeser = ['immer']) {
-  const an = new Set(['immer', ...ausloeser]);
+  const an = new Set([...stufenBis(ausloeser), ...ausloeser]);
   return (daten?.kriterien ?? []).filter((k) => giltFuer(k, profil) && an.has(k.ausloeser));
 }
 
@@ -169,6 +200,34 @@ export function pruefeDaten(daten) {
     }
   }
 
+  // Eine Zeile, die ihre eigene Wiederkehr ausspricht, ist eine Dauerregel –
+  // egal in welchem Bereich. „bei jedem Schlafen, Tag und Nacht“ als
+  // `einmal` zu führen heißt, die wirksamste Einzelmaßnahme gegen den
+  // plötzlichen Kindstod abhakbar zu machen und sie danach aus dem Bericht
+  // zu nehmen. Das war so gebaut und ist beim Review aufgefallen.
+  const WIEDERKEHR = /bei jedem|zu jedem|jedes Mal|Tag und Nacht|jedes? Schlafen|immer wieder/i;
+  for (const k of kriterien ?? []) {
+    if (k.art === 'einmal' && WIEDERKEHR.test(k.was ?? '')) {
+      fehler.push(`${k.id}: der Text spricht die Wiederkehr aus („bei jedem …“) – das ist eine Dauerregel und darf nicht abhakbar sein`);
+    }
+  }
+
+  // Jede angebotene Fähigkeit muss mindestens eine Zeile auslösen, sonst
+  // ist die Frage eine Attrappe: drei der sechs Schalter taten gar nichts.
+  const benutzt = new Set((kriterien ?? []).map((k) => k.ausloeser));
+  for (const a of daten?.ausloeser ?? []) {
+    if (!benutzt.has(a.id)) fehler.push(`ausloeser ${a.id}: löst kein einziges Kriterium aus – die Frage wäre eine Attrappe`);
+  }
+
+  // Und keine kritische Zeile darf erst auf einer späten Stufe erscheinen,
+  // wenn ihre Gefahr schon früher besteht: Verschlucken kommt vom Greifen,
+  // nicht vom Fortbewegen.
+  for (const k of (kriterien ?? []).filter((x) => x.kritisch && x.bereich === 'vergiften')) {
+    if (k.ausloeser !== 'immer') {
+      fehler.push(`${k.id}: eine kritische Verschluckens-Zeile hinter einer Fähigkeit – Greifen kommt vor dem Krabbeln`);
+    }
+  }
+
   // Der Schlaf-Abschnitt steht ohne Ausnahmeklausel.
   for (const k of (kriterien ?? []).filter((x) => x.bereich === 'schlafen')) {
     if (AUSNAHME.test(`${k.was} ${k.warum}`)) {
@@ -192,9 +251,10 @@ export function pruefeDaten(daten) {
   const alles = JSON.stringify(kriterien ?? []);
   if (ERSTE_HILFE.test(alles)) fehler.push('ein Kriterium enthält Erste-Hilfe-Anweisungen – die gehören in einen Kurs, nicht in eine Raum-Checkliste');
   if (UEBERWACHUNG.test(alles)) fehler.push('ein Kriterium nennt Überwachungstechnik – sie ist kein Sicherheitsmerkmal eines Raums');
-  const nummern = JSON.stringify(daten ?? {}).match(new RegExp(FREMDE_NUMMER, 'g')) ?? [];
-  for (const n of nummern) {
-    if (!/0800 111 0 550/.test(n)) fehler.push(`eine Telefonnummer steht in den Daten („${n.trim()}“) – außer 112 wird hier keine gedruckt`);
+  for (const n of JSON.stringify(daten ?? {}).match(FREMDE_NUMMER) ?? []) {
+    if (!ERLAUBTE_NUMMERN.includes(nurZiffern(n))) {
+      fehler.push(`eine Telefonnummer steht in den Daten („${n.trim()}“) – außer 112 und dem Elterntelefon wird hier keine gedruckt`);
+    }
   }
   if (!/112/.test(daten?.keineErsteHilfe ?? '')) fehler.push('keineErsteHilfe muss die 112 nennen');
   if (!/gibt es nicht/.test(daten?.gift ?? '')) fehler.push('gift: es muss dastehen, dass es keine bundesweite Giftnotruf-Nummer gibt');

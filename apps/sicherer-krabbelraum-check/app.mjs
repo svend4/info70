@@ -20,14 +20,48 @@ const daten = await fetch('daten/kriterien.json').then((r) => r.json());
 let profil = null;
 let koennen = new Set();
 
-const lade = () => { try { return JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}'); } catch { return {}; } };
-const speichere = (e) => { try { localStorage.setItem(SCHLUESSEL, JSON.stringify(e)); } catch { /* privater Modus */ } };
+// Der Stand liegt im Arbeitsspeicher und localStorage ist nur die Kopie.
+// Vorher lasen und schrieben alle Wege direkt in den Speicher: war er
+// gesperrt (privater Modus, blockierte Website-Daten), schluckte `speichere`
+// den Fehler, `render` las wieder aus dem Speicher – und jedes Antippen tat
+// sichtbar nichts, ohne zu sagen warum.
+//
+// Und die Haken liegen JE PROFIL. Vorher war es eine flache Liste, und 31
+// von 32 Zeilen gelten für alle drei Profile: wer zuhause abgehakt hatte,
+// sah eine nie besichtigte Krippe als erledigt.
+let stand = (() => {
+  try {
+    const roh = JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}');
+    // Altbestand ohne Profil-Ebene: unter „zuhause“ einsortieren.
+    return roh && typeof roh === 'object' && Object.values(roh).every((v) => v === true)
+      ? { zuhause: roh } : (roh ?? {});
+  } catch { return {}; }
+})();
+let speicherSperre = false;
+
+const lade = () => stand[profil] ?? {};
+
+function speichere() {
+  try {
+    // Bleibt nach dem Löschen nichts übrig, verschwindet auch der Schlüssel –
+    // sonst läge ein leeres Objekt im Speicher und die Zusage „löschbar“
+    // wäre nur halb wahr (docs/02).
+    const leer = Object.values(stand).every((e) => !e || !Object.keys(e).length);
+    if (leer) localStorage.removeItem(SCHLUESSEL);
+    else localStorage.setItem(SCHLUESSEL, JSON.stringify(stand));
+    speicherSperre = false;
+  } catch { speicherSperre = true; }
+}
 
 function umschalten(id) {
-  const e = lade();
+  const e = { ...lade() };
   if (e[id]) delete e[id]; else e[id] = true;
-  speichere(e);
-  render();
+  stand = { ...stand, [profil]: e };
+  speichere();
+  // Mit dem Fokus zurück auf die eben getippte Zeile: ohne das landet er
+  // nach jedem Haken auf <body>, und eine Liste mit über zwanzig Zeilen
+  // müsste per Tastatur jedes Mal neu durchgetabbt werden.
+  render(id);
 }
 
 function lokaleStimme() {
@@ -53,9 +87,12 @@ function kriteriumZeile(k, erledigt) {
       ? el('button', {
         class: `k-knopf k-knopf--klein ${an ? '' : 'k-knopf--neutral'}`,
         role: 'checkbox', 'aria-checked': String(an),
+        id: `skc-${k.id}`,
         style: 'text-align:start;width:100%;min-height:3rem',
         onclick: () => umschalten(k.id),
-      }, `${an ? '☑' : '☐'} ${k.kritisch ? '❗ ' : ''}${k.was}`)
+        // Das Häkchen-Zeichen gehört nicht aufs Papier (docs/02: kein Haken
+        // auf einem Druckblatt) – darum eine eigene Klasse dafür.
+      }, el('span', { class: 'skc-marke' }, an ? '☑ ' : '☐ '), `${k.kritisch ? '❗ ' : ''}${k.was}`)
       // Dauerregeln sind nicht abhakbar: ein Haken würde eine Regel für
       // jedes Mal als erledigt ausgeben.
       : el('p', { style: 'margin:0;font-weight:600' }, `🔁 ${k.kritisch ? '❗ ' : ''}${k.was}`),
@@ -64,7 +101,7 @@ function kriteriumZeile(k, erledigt) {
       `${abhakbar ? 'Einmal erledigen' : 'Regel für jedes Mal'} · ${k.quelle.gremium}`));
 }
 
-function render() {
+function render(fokusId = null) {
   const erledigt = lade();
   const ausloeser = [...koennen];
 
@@ -123,8 +160,35 @@ function render() {
         ...drin.map((k) => kriteriumZeile(k, erledigt)),
         vorleseKnopf(drin.map((k) => `${k.was} ${k.warum}`).join(' '), `🔊 ${b.name} vorlesen`));
     }),
-    el('section', { class: 'k-karte skc-block' },
+    // Auf dem Papier steht die Offen-Liste als Text. Die Klickliste oben
+    // trägt Häkchen-Zeichen, und die haben auf einem Druckblatt nichts zu
+    // suchen (docs/02) – gedruckt wird darum dieser Block hier.
+    el('section', { class: 'k-karte skc-block skc-nur-druck' },
+      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📋 Offene Punkte'),
+      offen.filter((x) => x.kritisch).length
+        ? el('div', {},
+          el('p', { style: 'margin:0 0 0.2rem;font-weight:700' }, 'Das zuerst:'),
+          el('ul', { style: 'margin:0 0 0.5rem;padding-left:1.2rem' },
+            ...offen.filter((x) => x.kritisch).map((x) => el('li', {}, x.was))))
+        : null,
+      offen.filter((x) => !x.kritisch).length
+        ? el('div', {},
+          el('p', { style: 'margin:0 0 0.2rem;font-weight:700' }, 'Noch offen:'),
+          el('ul', { style: 'margin:0 0 0.5rem;padding-left:1.2rem' },
+            ...offen.filter((x) => !x.kritisch).map((x) => el('li', {}, x.was))))
+        : null,
+      el('p', { style: 'margin:0 0 0.2rem;font-weight:700' }, 'Regeln für jedes Mal (nicht abhakbar):'),
+      el('ul', { style: 'margin:0 0 0.5rem;padding-left:1.2rem' },
+        ...regeln.map((x) => el('li', {}, x.was))),
+      el('p', { style: 'margin:0' }, daten.nichtFertig)),
+    el('section', { class: 'k-karte skc-block skc-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📋 Was noch offen ist'),
+      speicherSperre
+        ? el('div', { class: 'k-hinweis k-hinweis--falsch' },
+          el('p', { style: 'margin:0' },
+            '⚠️ Dieser Browser kann gerade nichts behalten (privater Modus oder blockierte Website-Daten). '
+            + 'Die Haken gelten, solange die Seite offen bleibt – druck die Liste aus, bevor du sie schließt.'))
+        : null,
       // Kein Zähler über die Gesamtmenge: die Zahl sagt, wie viele Zeilen
       // noch offen sind, nie „x von y erledigt“.
       el('p', { style: 'margin:0 0 0.4rem' },
@@ -147,8 +211,9 @@ function render() {
           el('button', {
             class: 'k-knopf k-knopf--neutral k-knopf--klein',
             onclick: () => {
-              if (globalThis.confirm?.('Alle Haken auf diesem Gerät löschen?')) {
-                try { localStorage.removeItem(SCHLUESSEL); } catch { /* egal */ }
+              if (globalThis.confirm?.(`Alle Haken für „${(daten.profile.find((x) => x.id === profil) ?? {}).name}“ auf diesem Gerät löschen?`)) {
+                stand = { ...stand, [profil]: {} };
+                speichere();
                 render();
               }
             },
@@ -165,6 +230,8 @@ function render() {
       el('span', {}, 'Werkzeug für Erwachsene · keine Gesamtwertung · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
+
+  if (fokusId) document.getElementById(`skc-${fokusId}`)?.focus();
 }
 
 const fehler = pruefeDaten(daten);

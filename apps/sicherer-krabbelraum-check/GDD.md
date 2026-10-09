@@ -33,9 +33,9 @@ Das ist die wahrscheinlichste Abdrift dieser App, weil
 `apps/meilenstein-begleiter` dieselbe Zielgruppe hat. Die harte Grenze:
 `meilenstein-begleiter` beobachtet das Kind, Nr. 50 beobachtet den Raum.
 
-## 2. Das vierte Ziel ist übersetzt, nicht übernommen
+## 2. Das dritte Ziel ist übersetzt, nicht übernommen
 
-«Psychische Geborgenheit» als Kriterium wäre eine Beurteilung von Person und
+Das dritte der vier Quellziele – «psychische Geborgenheit» – als Kriterium wäre eine Beurteilung von Person und
 Bindung — gegen die Projektregel und fachlich nicht prüfbar. Übersetzt ist es
 in prüfbare **Raum-Eigenschaften**: eine ruhige Ecke ohne
 Durchgangsverkehr; kein laufender Bildschirm und kein Dauerradio im
@@ -186,7 +186,7 @@ Touch-Ziele ≥ 48 px, Impressum im Fuß.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (16): Daten gültig; keine Gesamtwertung (Exportnamen,
+`test/logik.test.mjs` (17): Daten gültig; keine Gesamtwertung (Exportnamen,
 Rechenteil, Bericht — mit `gesamtAnteil` als Gegenprobe); eine leere Liste ist
 keine Freigabe; Dauerregeln nicht abhakbar und nie in der Offen-Liste; der
 Raum als Gegenstand (mit drei Kind-Subjekt-Gegenproben); „psychische
@@ -196,4 +196,7 @@ Profil; Stelle statt Fundstelle (mit Gegenprobe); keine Erste Hilfe, keine
 Überwachungstechnik, keine erfundene Nummer; kritische Zeilen zuerst und in
 jedem Lebensgefahr-Bereich; Steckdosen ohne „kindersicher“ und ohne
 unbelegte Gegenbehauptung; ein Schlüssel, löschbar, kein Kind-Datum;
-Druckblatt und Politik; Hilfsfunktionen.
+die Fähigkeiten als kumulative Leiter (`stufenBis` namentlich, Monotonie je
+Profil, die oberste Stufe zeigt alles, jede angebotene Fähigkeit schaltet
+etwas frei, und die Steckdose hängt an keiner Stufe); Druckblatt und
+Politik; Hilfsfunktionen.

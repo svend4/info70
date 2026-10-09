@@ -17,7 +17,7 @@ Sicherheitsziele — genau die Zahlen, die der Katalogeintrag nennt. Das ist
 wichtig, weil die tragende Entscheidung unten ohne gelesene Quelle nur eine
 Vermutung wäre.
 
-## 1. Keine Karte beschreibt einen Handgriff am Kind
+## 1. Keine Säuglingsgymnastik
 
 Der Gymnastik-Teil der Quelle besteht aus: **passivem** Kreuzen und
 Ausbreiten der Arme, passivem Beugen und Strecken der Arme im Schulter- und
@@ -30,7 +30,14 @@ Achseln**.
 
 Das ist kein Nebenbefund, sondern der Kern des Abschnitts. Nichts davon ist
 übernommen. Und das ist hier **nicht redaktionell vermieden, sondern
-strukturell ausgeschlossen**:
+strukturell ausgeschlossen**.
+
+Der Anspruch geht genau so weit und nicht weiter. Die erste Fassung sagte
+„keine Karte beschreibt einen Handgriff am Kind“ — das war zu stark und ist im
+Review gefallen: Tragen ist eine Handlung am Kind, `auf-dem-arm` ist eine
+gehaltene Lage, und eine Karte beschreibt flächiges Streichen. Richtig ist:
+keine Säuglingsgymnastik, und sonst Umgebung, Tragen, Ablegen und auf genau
+einer Karte Kontakt.
 
 - `ausgangslage` ist eine geschlossene Liste — `rueckenlage`, `seitlage`,
   `bauchlage-wach`, `boden`, `auf-dem-arm`, `sitzt-aus-eigener-kraft`. Es gibt
@@ -185,13 +192,18 @@ Schüttel-Hinweis. Mobile-first, Touch-Ziele ≥ 48 px, Impressum im Fuß.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (17): Daten gültig; kein Handgriff am Kind (mit fünf
-Erwachsenen-Formulierungen als Gegenprobe **und** der Gegenprobe, dass das
-Kind sich selbst hochziehen darf); „Übung“ trifft in der Zusammensetzung;
+`test/logik.test.mjs` (24): Daten gültig; keine Säuglingsgymnastik und der
+Anspruch nicht weiter als wahr (mit fünf Erwachsenen-Formulierungen als
+Gegenprobe **und** der Gegenprobe, dass das Kind sich selbst hochziehen
+darf); „Übung“ trifft in der Zusammensetzung;
 Bauchlage ohne Schlafsatz nicht ausdrückbar; nach Können statt nach Monaten
 geordnet; keine Zahl im Anweisungstext; kein Wirkversprechen; Ausschlussliste
 in den Daten und deckt die Quelle ab; Quellbilanz gegen die Karten
 nachgerechnet; speichert nichts (auf kommentarfreiem Code); kein Kind-Screen
 und kein Scoring; Vorlesen nur mit Gerätestimme; Druckblatt ohne Protokoll;
 Abgrenzung zu den Nachbar-Apps; Sicherheit und Aufhören auf jeder Karte;
-Seite und Politik; `karteText`.
+Seite und Politik; `karteText`; dazu aus dem Review: der Anspruch geht nur
+so weit, wie er stimmt; die Bodenregel steht auch auf dem Papier; gefährliche
+Zubereitungen nur verneint und nie in einer Anweisung; alle sechzehn
+Gymnastik-Maßnahmen zugeordnet; Maße schreibbar und Wiederholungszahlen
+nicht; die WHO-Beispiele sind die der WHO; Altersangaben auch in Komposita.

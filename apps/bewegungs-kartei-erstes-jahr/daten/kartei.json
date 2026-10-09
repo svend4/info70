@@ -2,7 +2,7 @@
   "art": "bewegungs-kartei-erstes-jahr",
   "version": 1,
   "zielgruppe": "Eltern und Kindertagespflege, Kinder im ersten Lebensjahr",
-  "hinweis": "Diese Kartei beschreibt keinen einzigen Handgriff am Kind. Sie beschreibt, was Sie an der Umgebung vorbereiten – Unterlage, Platz, Kleidung, was in Reichweite liegt, wo Sie sitzen. Die Bewegung macht Ihr Kind selbst. Alles auf einer festen Decke auf dem Boden, nie auf Wickeltisch, Sofa, Bett oder Tisch: ein Baby kann sich zum ersten Mal drehen, ohne dass es das vorher je getan hat.",
+  "hinweis": "Diese Kartei beschreibt keine Säuglingsgymnastik: kein passives Durchbewegen, keine Reflexauslösung, kein Hochziehen zum Sitzen, kein Führen an den Händen oder unter den Achseln. Was du tust, ist die Umgebung vorbereiten – Unterlage, Platz, Kleidung, was in Reichweite liegt, wo du sitzt –, dein Kind tragen oder ablegen, und auf genau einer Karte: flächig streichen als Kontakt. Die Bewegung macht dein Kind selbst. Alles auf einer festen Decke auf dem Boden, nie auf Wickeltisch, Sofa, Bett oder Tisch: ein Baby kann sich zum ersten Mal drehen, ohne dass es das vorher je getan hat.",
   "geraet": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Baby sieht keinen Bildschirm.",
   "keinPlan": "Das ist kein Übungsplan und kein Protokoll. Es gibt hier nichts abzuhaken, nichts zu zählen und nichts zu schaffen. Die App speichert nichts.",
   "abbruch": "Wenn Ihr Kind quengelt, den Kopf wegdreht, die Arme steif macht oder zu weinen beginnt, ist es fertig – nicht faul. Aufhören ist die Regel, nicht die Ausnahme.",
@@ -26,8 +26,8 @@
   "ausgeschlossen": [
     {
       "id": "x01",
-      "quellNr": "g03, g05, g06",
-      "was": "Reflexe als Übung auslösen: reflektorisches Kriechen über den Fußsohlenreiz, reflektorisches Aufrichten der Wirbelsäule, Beinstreckung im Griff unter den Achseln.",
+      "quellNr": "g03, g04, g05, g06",
+      "was": "Reflexe als Übung auslösen: reflektorisches Kriechen über den Fußsohlenreiz, das Abstoßen der Beine von einer Unterlage im Griff, reflektorisches Aufrichten der Wirbelsäule, Beinstreckung im Griff unter den Achseln.",
       "grund": "Reflexauslösung als Training hat keinen belegten Nutzen bei gesunden reifen Säuglingen. Ein Seitenunterschied oder eine Kopfschiefhaltung ist ein Befund für die Kinderärztin, kein Übungsanlass – und Üben kann die nötige Abklärung verzögern."
     },
     {
@@ -210,7 +210,7 @@
       "ort": "auf-dem-arm",
       "wasDuVorbereitest": [
         "Setz dich hin und nimm dein Kind aufrecht auf den Arm, den Kopf an deiner Schulter oder in deiner Hand.",
-        "Halte dein Gesicht etwa eine Armlänge entfernt – da kann ein Baby am besten scharf sehen.",
+        "Halte dein Gesicht so nah, wie es beim Füttern ist – etwa eine Handspanne: weiter weg kann ein Baby noch nicht scharf sehen.",
         "Sprich oder summe und warte zwischendurch."
       ],
       "wasDeinKindTut": "Es hebt den Kopf ein Stück, sucht dein Gesicht und hält es eine Weile fest.",
@@ -267,13 +267,13 @@
       "rolle": "begleiten",
       "ort": "boden",
       "wasDuVorbereitest": [
-        "Warmes Zimmer, dein Kind wach und zufrieden, dein Handy weg.",
+        "Warmes Zimmer, eine feste Decke auf dem Boden, dein Kind wach und zufrieden, dein Handy weg.",
         "Mit der ganzen, flachen Hand langsam über Arme, Beine, Rücken streichen, am Bauch im Uhrzeigersinn.",
         "Sag vorher, dass du anfängst, und hör auf, wenn dein Kind das sagt."
       ],
-      "wasDeinKindTut": "Es wird ruhig, hält Blickkontakt oder schläft darüber ein.",
+      "wasDeinKindTut": "Es wird ruhig und hält Blickkontakt. Manche Kinder werden dabei müde – dann ist Schluss.",
       "sicherheit": "Nur streichen – nicht kneten, nicht klopfen, nichts an Wirbelsäule, Hals oder Kopf. Kein ätherisches Öl, kein Kampfer, kein Menthol, kein Nussöl, nichts ins Gesicht. Welches Öl geht, sagt dir Hebamme, Apotheke oder Kinderärztin.",
-      "abbruchzeichen": "Weggucken, Hände vors Gesicht, Quengeln.",
+      "abbruchzeichen": "Weggucken, Hände vors Gesicht, Quengeln – oder Müdigkeit: wer einschläft, gehört auf den Rücken ins eigene Bett, nicht auf die Decke.",
       "ohneWirkung": "Babymassage ist gemeinsame Zeit und Hautkontakt. Dass sie Verdauung, Schlaf oder Gewicht verbessert, ist bei gesunden reifen Säuglingen nicht gut belegt – das muss sie auch nicht."
     },
     {
@@ -374,7 +374,7 @@
         "Autositz nur im Auto."
       ],
       "wasDeinKindTut": "Auf dem Boden kann es alles: drehen, strecken, robben, ausruhen, wieder anfangen.",
-      "sicherheit": "Die WHO empfiehlt für Kinder unter einem Jahr, sie nicht länger als eine Stunde am Stück festgelegt zu lassen – genannt sind Kinderwagen, Buggy und Hochstuhl.",
+      "sicherheit": "Die WHO empfiehlt für Kinder unter einem Jahr, sie nicht länger als eine Stunde am Stück festgelegt zu lassen – als Beispiele nennt sie Kinderwagen, Hochstuhl und das festgebundene Tragen am Körper des Erwachsenen.",
       "abbruchzeichen": "Auf dem Boden gibt es keinen Abbruch – dein Kind hört selbst auf, wenn es genug hat."
     },
     {
@@ -383,7 +383,8 @@
       "quellZiel": [
         12,
         15,
-        19
+        19,
+        "g15"
       ],
       "titel": "Das Interessante ein Stück weiter",
       "ausgangslage": "boden",
@@ -516,5 +517,6 @@
       "sicherheit": "Keine Aufträge, die eine Haltung verlangen, die dein Kind noch nicht von allein findet. Und kein Abfragen vor anderen.",
       "abbruchzeichen": "Es reagiert nicht mehr: nichts wiederholen, nichts nachfordern."
     }
-  ]
+  ],
+  "bodenregel": "Alles auf einer festen Decke auf dem Boden – nie auf Wickeltisch, Sofa, Bett oder Tisch. Ein Baby kann sich zum ersten Mal drehen, ohne dass es das vorher je getan hat."
 }

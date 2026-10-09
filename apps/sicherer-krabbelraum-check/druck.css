@@ -1,7 +1,14 @@
 /* Druck: die offenen Punkte als Zettel. Kein Haken, kein Name, kein Wert –
    und die Dauerregeln stehen mit, weil sie nie erledigt sind. */
+/* Der Nur-Druck-Block ist am Bildschirm aus und auf dem Papier an. */
+.skc-nur-druck { display: none; }
+
 @media print {
   .skc-nur-bildschirm { display: none !important; }
+  .skc-nur-druck { display: block !important; }
+  /* Kein Haken auf dem Papier (docs/02): das Zeichen gehört zum Knopf,
+     nicht zur Zeile. */
+  .skc-marke { display: none !important; }
   body { background: #fff; }
   .k-app { max-width: none; padding: 0; }
   .skc-block { break-inside: avoid; page-break-inside: avoid; border: 1pt solid #333; border-radius: 0; margin: 0 0 5mm; padding: 3mm; box-shadow: none; }

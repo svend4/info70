@@ -24,8 +24,22 @@ let periode = null;
 let signal = null;
 let impuls = null;
 
-const lade = () => { try { return JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}'); } catch { return {}; } };
-const speichere = (m) => { try { localStorage.setItem(SCHLUESSEL, JSON.stringify(m)); } catch { /* privater Modus */ } };
+// Der Stand liegt im Arbeitsspeicher, localStorage ist die Kopie. Vorher
+// lasen und schrieben alle Wege direkt in den Speicher: war er gesperrt
+// (privater Modus, blockierte Website-Daten), tat jedes Antippen sichtbar
+// nichts, ohne zu sagen warum.
+let merkStand = (() => { try { return JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}') ?? {}; } catch { return {}; } })();
+let speicherSperre = false;
+
+const lade = () => merkStand;
+function speichere(m) {
+  merkStand = m;
+  try {
+    if (!Object.keys(m).length) localStorage.removeItem(SCHLUESSEL);
+    else localStorage.setItem(SCHLUESSEL, JSON.stringify(m));
+    speicherSperre = false;
+  } catch { speicherSperre = true; }
+}
 
 /** Nur eine Stimme, die auf dem Gerät liegt – siehe Kommentar in Nr. 49. */
 function lokaleStimme() {
@@ -86,55 +100,68 @@ function impulsKarte() {
         : null,
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { signal = null; impuls = null; render(); } },
         '↩️ Anderes Signal')),
-    el('p', { style: 'margin:0.5rem 0 0;font-size:0.9rem' }, daten.einImpuls));
+    el('p', { style: 'margin:0.5rem 0 0;font-size:0.9rem' }, daten.einImpuls),
+    // `abbruch` war ein Pflichtfeld im Validator und stand auf keinem
+    // Bildschirm: eine Zusage, die geprüft wird und die niemand liest.
+    el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.abbruch));
 }
 
 function merkKarte() {
   const merk = lade();
   return el('section', { class: 'k-karte' },
     el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📝 Was ich mir vornehme'),
+    speicherSperre
+      ? el('div', { class: 'k-hinweis k-hinweis--falsch' },
+        el('p', { style: 'margin:0' },
+          '⚠️ Dieser Browser kann gerade nichts behalten (privater Modus oder blockierte Website-Daten). '
+          + 'Deine Auswahl gilt, solange die Seite offen bleibt.'))
+      : null,
     el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' },
       'Hier steht nichts über dein Kind. Jeder Satz ist ein Vorhaben von dir – und du kannst ihn jederzeit wieder abwählen.'),
     ...daten.merkliste.map((m) => {
-      const stand = merk[m.id];
-      const naechster = stand === undefined ? MERK_STATUS[0]
-        : stand === MERK_STATUS[0] ? MERK_STATUS[1] : undefined;
-      const zeichen = stand === MERK_STATUS[0] ? '🔖' : stand === MERK_STATUS[1] ? '✔️' : '☐';
+      const gewaehlt = merk[m.id];
+      const naechster = gewaehlt === undefined ? MERK_STATUS[0]
+        : gewaehlt === MERK_STATUS[0] ? MERK_STATUS[1] : undefined;
+      const zeichen = gewaehlt === MERK_STATUS[0] ? '🔖' : gewaehlt === MERK_STATUS[1] ? '✔️' : '☐';
       // Der zugängliche Name nennt den Stand auf DEUTSCH. Vorher stand hier
       // der rohe Enum-Wert, und eine Sprachausgabe las „moechte-ich“ vor.
-      const wort = stand === MERK_STATUS[0] ? 'möchte ich' : stand === MERK_STATUS[1] ? 'schon probiert' : 'nicht gewählt';
+      const wort = gewaehlt === MERK_STATUS[0] ? 'möchte ich' : gewaehlt === MERK_STATUS[1] ? 'schon probiert' : 'nicht gewählt';
       return el('div', { style: 'padding:0.4rem 0;border-top:1px solid var(--k-rand)' },
         el('button', {
-          class: `k-knopf k-knopf--klein ${stand ? '' : 'k-knopf--neutral'}`,
+          class: `k-knopf k-knopf--klein ${gewaehlt ? '' : 'k-knopf--neutral'}`,
           style: 'text-align:start;width:100%;min-height:3rem',
+          id: `smm-${m.id}`,
           // Drei Zustände, darum `aria-pressed` und kein `role="checkbox"`:
           // eine Checkbox kennt nur an und aus, und der Stand steht dazu im
           // Namen. Nächster Schritt wird mitgesagt, damit klar ist, was ein
           // Antippen tut.
-          'aria-pressed': String(Boolean(stand)),
+          'aria-pressed': String(Boolean(gewaehlt)),
           'aria-label': `${m.satz} – ${wort}. Antippen: `
             + `${naechster === MERK_STATUS[0] ? 'möchte ich' : naechster === MERK_STATUS[1] ? 'schon probiert' : 'abwählen'}`,
           onclick: () => {
-            const n = lade();
+            const n = { ...lade() };
             if (naechster === undefined) delete n[m.id]; else n[m.id] = naechster;
-            speichere(n); render();
+            speichere(n);
+            // Mit dem Fokus zurück auf die getippte Zeile – sonst landet er
+            // nach jedem Antippen auf <body>.
+            render(m.id);
           },
         }, `${zeichen} ${m.satz}`),
-        stand ? el('small', { style: 'color:#4b5563' }, wort) : null);
+        gewaehlt ? el('small', { style: 'color:#4b5563' }, wort) : null);
     }),
     el('div', { class: 'k-antworten' },
       el('button', {
         class: 'k-knopf k-knopf--neutral k-knopf--klein',
         onclick: () => {
           if (globalThis.confirm?.('Alle eigenen Vorhaben auf diesem Gerät löschen?')) {
-            try { localStorage.removeItem(SCHLUESSEL); } catch { /* egal */ }
+            speichere({});
             render();
           }
         },
       }, '🧹 Meine Vorhaben löschen')));
 }
 
-function render() {
+function render(fokusId = null) {
   const p = periode ? periodeVon(daten, periode) : null;
 
   app.replaceChildren(...[
@@ -192,6 +219,8 @@ function render() {
       el('a', { href: '../meilenstein-begleiter/' }, 'Meilensteine beobachten'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
+
+  if (fokusId) document.getElementById(`smm-${fokusId}`)?.focus();
 }
 
 const fehler = pruefeDaten(daten);

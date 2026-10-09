@@ -1,7 +1,11 @@
 /* Druck: ein Karteikärtchen je Idee. Kein Haken, kein Name, kein Stern –
    das wäre ein Protokoll über ein Kind (docs/02). */
+/* Nur auf dem Papier: die Regeln, die für jede Karte gelten. */
+.bk-nur-druck { display: none; }
+
 @media print {
   .bk-nur-bildschirm { display: none !important; }
+  .bk-nur-druck { display: block !important; }
   body { background: #fff; }
   .k-app { max-width: none; padding: 0; }
 

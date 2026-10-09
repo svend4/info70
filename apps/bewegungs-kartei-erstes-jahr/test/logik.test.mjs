@@ -22,7 +22,98 @@ test('Daten sind gültig', () => {
   assert.ok(daten.karten.length >= 10);
 });
 
-test('keine Karte beschreibt einen Handgriff am Kind', () => {
+test('keine Säuglingsgymnastik – und der Anspruch geht nur so weit', () => {
+  // Die erste Fassung versprach „keine Karte beschreibt einen Handgriff am
+  // Kind“. Das war zu stark und ist im Review gefallen: Tragen ist eine
+  // Handlung am Kind, `auf-dem-arm` ist eine gehaltene Lage, und b04
+  // beschreibt flächiges Streichen. Der Anspruch ist auf das Wahre verengt.
+  assert.match(daten.hinweis, /keine Säuglingsgymnastik/);
+  assert.doesNotMatch(daten.hinweis, /keinen? Handgriff am Kind/);
+  assert.match(daten.hinweis, /flächig streichen als Kontakt/);
+  assert.ok(daten.karten.some((k) => k.ausgangslage === 'auf-dem-arm'), 'Tragen kommt vor und wird nicht geleugnet');
+  const mut = kopie();
+  mut.hinweis = 'Diese Kartei beschreibt keinen Handgriff am Kind.';
+  assert.ok(pruefeDaten(mut).some((f) => /nur so weit gehen, wie er stimmt/.test(f)));
+});
+
+test('die Bodenregel steht auch auf dem Papier', () => {
+  // Sie gilt für JEDE Karte und stand nur im Vorwort, das nicht mitgedruckt
+  // wird – auf dem Papier fehlte sie damit ganz.
+  assert.match(daten.bodenregel, /nie auf Wickeltisch/);
+  assert.match(code, /bk-nur-druck/);
+  assert.match(code, /daten\.bodenregel/);
+  assert.match(druck, /\.bk-nur-druck \{ display: block/);
+  const mut = kopie();
+  mut.bodenregel = 'Auf einer Decke.';
+  assert.ok(pruefeDaten(mut).some((f) => /bodenregel/.test(f)));
+});
+
+test('gefährliche Zubereitungen nur verneint, und nie in einer Anweisung', () => {
+  // Vorher gab es dazu überhaupt keine Validator-Regel – nur einen Test über
+  // drei Felder, dessen Kommentar mehr behauptete, als er prüfte.
+  for (const [feld, text] of [['sicherheit', 'Nimm ätherisches Öl zum Streichen.'], ['ohneWirkung', 'Kampfersalbe hilft beim Einschlafen.']]) {
+    const mut = kopie();
+    mut.karten[3][feld] = text;
+    assert.ok(pruefeDaten(mut).some((f) => /nicht verneint/.test(f)), text);
+  }
+  const anweisung = kopie();
+  anweisung.karten[3].wasDuVorbereitest[0] = 'Nimm Eukalyptusöl.';
+  assert.ok(pruefeDaten(anweisung).some((f) => /Anweisungsfeld/.test(f)));
+  // Der Verweis „welches Öl geht, sagt dir die Hebamme“ bleibt erlaubt: das
+  // bloße „Öl“ steht absichtlich nicht im Muster.
+  assert.match(karteVon(daten, 'b04').sicherheit, /Welches Öl geht/);
+});
+
+test('alle sechzehn Gymnastik-Maßnahmen sind zugeordnet', () => {
+  // Die Zahl 16 = 3 + 13 stimmte, war aber in den Daten nicht
+  // nachvollziehbar: zwei Maßnahmen (g04, g15) fehlten ganz.
+  const uebernommen = new Set(daten.karten.flatMap((k) => k.quellZiel.filter((z) => typeof z === 'string')));
+  const ausgeschlossen = new Set(daten.ausgeschlossen.flatMap((a) => String(a.quellNr ?? '').match(/g\d{2}/g) ?? []));
+  for (let i = 1; i <= 16; i++) {
+    const id = `g${String(i).padStart(2, '0')}`;
+    assert.ok(uebernommen.has(id) || ausgeschlossen.has(id), `${id} ist nirgends zugeordnet`);
+  }
+  assert.equal(uebernommen.size, daten.quelle.zahlen.gymnastikUebernommen);
+  assert.equal(ausgeschlossen.size, daten.quelle.zahlen.gymnastikNichtUebernommen);
+  const mut = kopie();
+  mut.karten.find((k) => k.id === 'b10').quellZiel = [12, 15, 19];
+  assert.ok(pruefeDaten(mut).some((f) => /nirgends|weder einer Karte/.test(f)));
+});
+
+test('Zahlwörter: Maße sind schreibbar, Wiederholungszahlen nicht', () => {
+  // Die erste Fassung ohne Schlussgrenze traf „dreißig“ im Maß; mit einer
+  // Liste von -mal-Formen fehlte „Zehnmal“. Jetzt ist `-mal` ein Suffix.
+  const mut = (text) => { const k = kopie(); k.karten[0].wasDuVorbereitest[1] = text; return pruefeDaten(k); };
+  assert.deepEqual(mut('Etwa zwanzig bis dreißig Zentimeter.'), [], 'ein Maß muss schreibbar sein');
+  assert.deepEqual(mut('Leg ein Tuch hin.'), [], 'der Artikel ist keine Zahl');
+  for (const text of ['Zehnmal auf jeder Seite.', 'Hüpf dreimal.', 'Fünf Minuten.', '3 Wiederholungen.']) {
+    assert.ok(mut(text).some((f) => /Zahl im Anweisungstext/.test(f)), text);
+  }
+  // Und die Nahdistanz steht statt der Armlänge.
+  assert.doesNotMatch(JSON.stringify(daten), /Armlänge/);
+  assert.match(karteVon(daten, 'b01').wasDuVorbereitest.join(' '), /Handspanne/);
+});
+
+test('die WHO-Beispiele sind die der WHO', () => {
+  // Genannt sind Kinderwagen, Hochstuhl und das Tragen am Körper – nicht
+  // „Buggy“ als zweites Wort für den Wagen.
+  const b09 = karteVon(daten, 'b09');
+  assert.match(b09.sicherheit, /als Beispiele nennt sie/);
+  assert.match(b09.sicherheit, /Tragen am Körper/);
+  assert.match(b09.sicherheit, /eine Stunde am Stück/);
+});
+
+test('Altersangaben: Komposita werden mitgefangen', () => {
+  // `/\bMonat|\bWoche/` scheiterte an „Lebensmonat“ doppelt: der Stamm steht
+  // klein und hinter einem Wortzeichen.
+  for (const text of ['Ab dem zweiten Lebensmonat.', 'In der ersten Lebenswoche.', 'Im ersten Lebensjahr.']) {
+    const mut = kopie();
+    mut.koennen[0].beschreibung = text;
+    assert.ok(pruefeDaten(mut).some((f) => /nennt ein Alter/.test(f)), text);
+  }
+});
+
+test('der Handgriff-Teil: Erwachsenen-Formen gesperrt, kindliche erlaubt', () => {
   // Das ist die tragende Entscheidung. Strukturell abgesichert, nicht
   // redaktionell: `rolle` hat keinen Wert „ueben“, `ausgangslage` keinen
   // für eine gehaltene Haltung, `ort` nur Boden und Arm.

@@ -2,8 +2,11 @@
 // Praleska docs/10 (Eltern-Werkzeuge Nr. 49), Quelle S. 34-36.
 //
 // Das Gerät ist in der Hand des Erwachsenen; das Baby sieht keinen
-// Bildschirm. Keine Karte beschreibt einen Handgriff am Kind – beschrieben
-// wird die Umgebung, die Bewegung macht das Kind (siehe logik.mjs).
+// Bildschirm. Keine Karte beschreibt Säuglingsgymnastik – beschrieben wird
+// die Umgebung, die Bewegung macht das Kind (siehe logik.mjs). Tragen,
+// Ablegen und auf einer Karte flächiges Streichen kommen vor und werden
+// nicht geleugnet: der weitere Anspruch „kein Handgriff am Kind“ ist im
+// Review gefallen, weil er nicht stimmte.
 //
 // Die App speichert NICHTS: kein Haken, kein Zähler, kein Fortschritt und
 // kein localStorage-Schlüssel. Vorbild apps/bewegungs-schatzkiste, nicht
@@ -107,6 +110,12 @@ function render() {
       ? el('div', {},
         el('p', { class: 'k-untertitel bk-nur-bildschirm', style: 'margin-bottom:0.2rem' },
           `${liste.length} ${liste.length === 1 ? 'Idee' : 'Ideen'} dazu`),
+        // Die Bodenregel gilt für JEDE Karte und stand nur im Vorwort, das
+        // nicht mitgedruckt wird – auf dem Papier fehlte sie damit ganz.
+        el('section', { class: 'k-karte bk-karte bk-nur-druck' },
+          el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '⚠️ Gilt für jede Karte'),
+          el('p', { style: 'margin:0' }, daten.bodenregel),
+          el('p', { style: 'margin:0.3rem 0 0' }, daten.abbruch)),
         ...liste.map(karteKnoten),
         el('section', { class: 'k-karte bk-nur-bildschirm' },
           el('div', { class: 'k-antworten' },
