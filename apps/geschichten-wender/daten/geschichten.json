@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "zielgruppe": "ko-nutzung 5-7",
+  "keineKi": "Diese App benutzt keine KI. Sie setzt nichts zusammen und erfindet nichts: die Geschichten stehen fertig im Gerät, und erfunden wird von deinem Kind. Es gibt keine Verbindung nach außen.",
+  "nichtsGespeichert": "Es wird nichts gespeichert und nichts aufgenommen – kein Mikrofon, keine Datei, kein Textfeld. Die einzige dauerhafte Form ist das Blatt, das ihr ausdruckt und mit dem Stift ausfüllt.",
+  "wirSchreiben": "Schreiben kostet in diesem Alter fast die ganze Aufmerksamkeit – für die Geschichte bliebe nichts übrig. Darum erzählt dein Kind, und du schreibst mit. Danach liest DU vor, was dasteht: so hört dein Kind seine eigene Geschichte, und es kann prüfen, ob es so gemeint war.",
+  "keinZiel": "Es gibt kein Ziel, das erreicht werden muss. Bleibt das Ende traurig oder wird es wild, ist das die Geschichte deines Kindes – sie wird nicht eingeordnet, nicht verbessert und nicht noch einmal eingefordert.",
+  "abbruch": "Ihr dürft jederzeit aufhören. Das ist kein Abbruch und nichts bleibt unerledigt.",
+  "arten": [
+    {
+      "id": "umdrehen",
+      "stufe": 1,
+      "name": "Anders ausgehen lassen",
+      "fuerErwachsene": "Fangt hiermit an. Dein Kind braucht nur einen neuen Ausgang zu erfinden – das gelingt in diesem Alter am leichtesten.",
+      "kindFrage": "Was könnte passieren, damit es anders ausgeht?"
+    },
+    {
+      "id": "luecke",
+      "stufe": 2,
+      "name": "Ein Stück fehlt",
+      "fuerErwachsene": "Nimm das, wenn das Umdrehen leicht fiel. Hier muss dein Kind Anfang UND Ausgang gleichzeitig im Kopf behalten und dazwischen eine Brücke erfinden – das ist deutlich schwerer.",
+      "kindFrage": "Hier fehlt ein Stück. Was ist da passiert?"
+    },
+    {
+      "id": "tausch",
+      "stufe": 3,
+      "name": "Von hinten nach vorn",
+      "fuerErwachsene": "Das ist die schwerste Art, und die App macht den Tausch selbst – dein Kind muss nichts verschieben. Viele Kinder erzählen dabei lieber eine ganz neue Geschichte. Das ist der normale Entwicklungsstand und kein Fehlversuch; fordere das Umbauen nicht noch einmal ein.",
+      "kindFrage": "So geht die Geschichte jetzt. Wie kam es dazu?"
+    }
+  ],
+  "vorlagen": [
+    {
+      "id": "v-schlitten",
+      "art": "umdrehen",
+      "ausgangsstimmung": "traurig",
+      "titel": "Der Schlitten ohne Schnee",
+      "herkunft": "Eigenproduktion. Muster: jemand wartet vergeblich auf etwas, das nicht kommt – im internationalen Märchentyp-Verzeichnis (Uther 2004) gibt es dafür keine eigene Nummer; es ist ein Alltagsmuster.",
+      "teile": [
+        {
+          "zeichen": "🛷",
+          "satz": "Ein Kind hat einen alten Holzschlitten vom Dachboden geholt."
+        },
+        {
+          "satz": "Es hat den ganzen Tag am Fenster gewartet, aber es fiel kein Schnee."
+        },
+        {
+          "satz": "Am Abend stellte es den Schlitten wieder in die Ecke."
+        },
+        {
+          "satz": "Das Kind war traurig, weil der Schlitten noch nie gefahren war."
+        }
+      ],
+      "moeglichkeiten": [
+        {
+          "art": "helfer-kommt",
+          "impuls": "Wer könnte dem Kind etwas zeigen, was auch ohne Schnee geht?"
+        },
+        {
+          "art": "etwas-wird-geteilt",
+          "impuls": "Was könnte das Kind mit jemandem zusammen machen?"
+        },
+        {
+          "art": "figur-aendert-sich",
+          "impuls": "Was könnte das Kind über den Schlitten herausfinden?"
+        }
+      ]
+    },
+    {
+      "id": "v-hund",
+      "art": "umdrehen",
+      "ausgangsstimmung": "traurig",
+      "titel": "Der Hund im Regen",
+      "herkunft": "Eigenproduktion. Muster: ein Tier wird ausgeschlossen und bleibt draußen – ein Alltagsmuster, keine Märchentyp-Nummer.",
+      "teile": [
+        {
+          "zeichen": "🐕",
+          "satz": "Vor dem Laden saß ein Hund und wartete auf jemanden."
+        },
+        {
+          "satz": "Es fing an zu regnen, und alle gingen schnell nach Hause."
+        },
+        {
+          "satz": "Der Hund rückte unter das Vordach, aber das war schmal."
+        },
+        {
+          "satz": "Der Hund fror und war allein."
+        }
+      ],
+      "moeglichkeiten": [
+        {
+          "art": "helfer-kommt",
+          "impuls": "Wer könnte vorbeikommen und den Hund sehen?"
+        },
+        {
+          "art": "verlorenes-wird-gefunden",
+          "impuls": "Wen könnte der Hund wiederfinden?"
+        },
+        {
+          "art": "etwas-wird-geteilt",
+          "impuls": "Was könnte jemand mit dem Hund teilen?"
+        }
+      ]
+    },
+    {
+      "id": "v-turm",
+      "art": "luecke",
+      "ausgangsstimmung": "spannend",
+      "titel": "Der Turm am Morgen",
+      "herkunft": "Eigenproduktion. Muster: etwas Gebautes ist am nächsten Tag verändert – verwandt mit den Erzählungen von heimlichen Helfern (Uther 2004, ATU 503-Umfeld), aber ohne jeden übernommenen Wortlaut.",
+      "teile": [
+        {
+          "zeichen": "🧱",
+          "satz": "Zwei Kinder hatten im Hof einen Turm aus Steinen gebaut."
+        },
+        {
+          "satz": "Am Abend war der Turm so hoch wie ein Stuhl."
+        },
+        {
+          "luecke": true,
+          "satz": "Hier fehlt ein Stück."
+        },
+        {
+          "satz": "Am nächsten Morgen stand der Turm noch – aber er war aus ganz anderen Steinen."
+        }
+      ],
+      "moeglichkeiten": [
+        {
+          "art": "helfer-kommt",
+          "impuls": "Wer könnte in der Nacht im Hof gewesen sein?"
+        },
+        {
+          "art": "missverstaendnis-klaert-sich",
+          "impuls": "Was könnte jemand gedacht haben, als er den Turm sah?"
+        },
+        {
+          "art": "etwas-wird-geteilt",
+          "impuls": "Woher könnten die anderen Steine gekommen sein?"
+        }
+      ]
+    },
+    {
+      "id": "v-schluessel",
+      "art": "luecke",
+      "ausgangsstimmung": "aufgeregt",
+      "titel": "Der Schlüssel in der Pfütze",
+      "herkunft": "Eigenproduktion. Muster: ein Verlorenes kommt auf unerwartetem Weg zurück (Uther 2004, Umfeld der Erzählungen vom wiedergefundenen Ring), ohne übernommenen Wortlaut.",
+      "teile": [
+        {
+          "zeichen": "🔑",
+          "satz": "Eine alte Frau hatte ihren Schlüssel verloren und suchte überall."
+        },
+        {
+          "satz": "Ein Kind sah etwas in einer Pfütze blinken."
+        },
+        {
+          "luecke": true,
+          "satz": "Hier fehlt ein Stück."
+        },
+        {
+          "satz": "Am Ende konnte die alte Frau ihre Tür aufschließen und lachte."
+        }
+      ],
+      "moeglichkeiten": [
+        {
+          "art": "verlorenes-wird-gefunden",
+          "impuls": "Wie könnte der Schlüssel in die Pfütze gekommen sein?"
+        },
+        {
+          "art": "helfer-kommt",
+          "impuls": "Wer könnte dem Kind beim Herausholen geholfen haben?"
+        },
+        {
+          "art": "missverstaendnis-klaert-sich",
+          "impuls": "Was könnte das Kind zuerst gedacht haben, was da blinkt?"
+        }
+      ]
+    },
+    {
+      "id": "v-vogel",
+      "art": "tausch",
+      "ausgangsstimmung": "gemütlich",
+      "titel": "Der Vogel auf dem Fensterbrett",
+      "herkunft": "Eigenproduktion. Muster: ein Tier kommt wieder und wieder, bis etwas daraus wird – ein Kettenmuster (Uther 2004 ordnet Kettenmärchen als Cumulative Tales bei ATU 2000–2100 ein, innerhalb der Formula Tales 2000–2399), ohne übernommenen Wortlaut.",
+      "teile": [
+        {
+          "zeichen": "🐦",
+          "satz": "Jeden Morgen saß ein Vogel auf dem Fensterbrett."
+        },
+        {
+          "satz": "Ein Kind legte ihm jeden Tag ein paar Körner hin."
+        },
+        {
+          "satz": "Eines Tages brachte der Vogel etwas Glänzendes mit."
+        },
+        {
+          "satz": "Am Ende hatte das Kind eine ganze Sammlung auf der Fensterbank."
+        }
+      ],
+      "tauschTeile": [
+        {
+          "zeichen": "✨",
+          "satz": "Auf einer Fensterbank lag eine ganze Sammlung von glänzenden Sachen."
+        },
+        {
+          "satz": "Ein Kind hatte sie von einem Vogel bekommen, Stück für Stück."
+        },
+        {
+          "satz": "Der Vogel saß jeden Morgen auf dem Fensterbrett."
+        },
+        {
+          "satz": "Und jeden Tag legte das Kind ihm ein paar Körner hin."
+        }
+      ],
+      "moeglichkeiten": [
+        {
+          "art": "figur-aendert-sich",
+          "impuls": "Was könnte zuerst gewesen sein, als noch keine Sammlung da war?"
+        },
+        {
+          "art": "verlorenes-wird-gefunden",
+          "impuls": "Wem könnte das Glänzende vorher gehört haben?"
+        },
+        {
+          "art": "etwas-wird-geteilt",
+          "impuls": "Mit wem könnte das Kind die Sammlung angeschaut haben?"
+        }
+      ]
+    },
+    {
+      "id": "v-brot",
+      "art": "tausch",
+      "ausgangsstimmung": "traurig",
+      "titel": "Das letzte Brot",
+      "herkunft": "Eigenproduktion. Muster: wer wenig hat und abgibt, bekommt unerwartet etwas zurück (Uther 2004, Umfeld der Erzählungen von der belohnten Freundlichkeit), ohne übernommenen Wortlaut.",
+      "teile": [
+        {
+          "zeichen": "🍞",
+          "satz": "Ein Kind hatte nur noch ein Stück Brot in der Tasche."
+        },
+        {
+          "satz": "Am Weg saß jemand, der noch gar nichts gegessen hatte."
+        },
+        {
+          "satz": "Das Kind gab die Hälfte ab und ging weiter."
+        },
+        {
+          "satz": "Am Ende stand vor seiner Tür ein Korb, und niemand wusste, von wem."
+        }
+      ],
+      "tauschTeile": [
+        {
+          "zeichen": "🧺",
+          "satz": "Vor einer Haustür stand ein Korb, und niemand wusste, von wem."
+        },
+        {
+          "satz": "In dem Haus wohnte ein Kind, das selbst fast nichts mehr hatte."
+        },
+        {
+          "satz": "Am Weg war ihm jemand begegnet, der noch gar nichts gegessen hatte."
+        },
+        {
+          "satz": "Und das Kind hatte die Hälfte von seinem letzten Brot abgegeben."
+        }
+      ],
+      "moeglichkeiten": [
+        {
+          "art": "jemand-entschuldigt-sich",
+          "impuls": "Was könnte vorher zwischen den beiden gewesen sein?"
+        },
+        {
+          "art": "helfer-kommt",
+          "impuls": "Wer könnte den Korb hingestellt haben?"
+        },
+        {
+          "art": "etwas-wird-geteilt",
+          "impuls": "Was könnte in dem Korb gewesen sein und für wen?"
+        }
+      ]
+    }
+  ],
+  "erwachseneImpulse": [
+    "Und dann?",
+    "Wie kam es dazu?",
+    "Erzähl noch einmal von vorn.",
+    "Was war da zuerst?"
+  ],
+  "schlussIdeen": [
+    "Erzählt die Geschichte beim Abendessen noch einmal jemand anderem – dein Kind erzählt, du hörst zu.",
+    "Malt zu der neuen Stelle ein Bild und legt es zu dem Blatt dazu.",
+    "Spielt die Geschichte mit Stofftieren nach. Wer spielt wen?",
+    "Denkt euch morgen eine eigene Geschichte aus, ganz ohne Gerät – ein Satz von dir, ein Satz von deinem Kind."
+  ],
+  "sicherheit": [
+    "Schattenspiel nur mit LED-Lampe oder Taschenlampe. Keine Kerze, kein offenes Feuer, keine heiße Lampe – und nichts über eine Lampe legen.",
+    "Beim Verkleiden keine Kordeln, Schals, Bänder oder Ketten um den Hals. Umhänge mit Klett statt Knoten.",
+    "Masken, die das Sehfeld verdecken, nicht beim Laufen und nicht auf Treppen tragen.",
+    "Figuren basteln nur mit Kinderschere und am Tisch. Wackelaugen, Knöpfe und Perlen danach vollständig einsammeln – für Geschwister unter drei sind sie gefährlich.",
+    "Gruselige Geschichten nicht als letztes vor dem Schlafen. Licht an lassen und freundlich aufhören.",
+    "Geschichten sind keine Aussagen über Erlebtes. Wenn du dir Sorgen machst, sprich mit einem Menschen – in der Kita, bei der Kinderärztin oder in einer Beratungsstelle.",
+    "Das ausgedruckte Blatt ist ein Familiendokument. Bitte nicht ins Netz stellen: Kinder haben ein Recht darauf, gefragt zu werden, bevor Erwachsene ihre Geschichten zeigen."
+  ]
+}

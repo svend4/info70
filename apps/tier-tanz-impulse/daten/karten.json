@@ -1,0 +1,523 @@
+{
+  "version": 1,
+  "zielgruppe": "3-5 und 5-7, nur gemeinsam – der Erwachsene bedient das Gerät",
+  "ehrlichkeit": "Der Bildschirm gibt nur den Impuls. Er macht nichts vor, und er bewertet nichts: wie dein Kind sich bewegt, ist nicht richtig oder falsch. Wahr oder falsch kann nur sein, was die Karte über das Tier behauptet – und genau das steht an jeder Karte dabei.",
+  "ohneTon": "Diese App geht vollständig ohne Ton. Jede Karte sagt, was der Erwachsene sprechen oder klatschen kann – das ist der gleichwertige Weg, nicht der Notfall. Ohne Ton braucht es kein Gerät auf dem Boden und keine Lautstärke-Frage.",
+  "keineMelodie": "Die Motive sind Rhythmus, nicht Melodie: höchstens zwei Tonhöhen. Eine erkennbare Melodie braucht mehr – und damit könnte sie versehentlich ein bekanntes Lied treffen. Für Bewegung trägt der Rhythmus die Qualität ohnehin vollständig.",
+  "tempi": [
+    {
+      "id": "langsam",
+      "name": "langsam",
+      "bpm": 66
+    },
+    {
+      "id": "mittel",
+      "name": "mittelschnell",
+      "bpm": 96
+    },
+    {
+      "id": "schnell",
+      "name": "schnell",
+      "bpm": 138
+    }
+  ],
+  "dynamiken": [
+    {
+      "id": "leise",
+      "name": "leise",
+      "staerke": 0.3
+    },
+    {
+      "id": "mittel",
+      "name": "mittel",
+      "staerke": 0.5
+    },
+    {
+      "id": "laut",
+      "name": "deutlich",
+      "staerke": 0.8
+    }
+  ],
+  "artikulationen": [
+    {
+      "id": "getrennt",
+      "name": "abgehackt",
+      "kindWort": "jeder Schritt einzeln"
+    },
+    {
+      "id": "gebunden",
+      "name": "in einem Stück",
+      "kindWort": "ohne anzuhalten"
+    }
+  ],
+  "orte": [
+    {
+      "id": "am-platz",
+      "name": "am Platz",
+      "hinweis": "Geht auf einem Teppich, auch im kleinsten Zimmer."
+    },
+    {
+      "id": "zimmer",
+      "name": "ein Zimmer",
+      "hinweis": "Braucht eine freie Fläche – etwa Armspannweite plus Reserve pro Kind."
+    },
+    {
+      "id": "draussen",
+      "name": "draußen",
+      "hinweis": "Gehört nach draußen oder in den Flur: hier wird gerannt."
+    }
+  ],
+  "jahreszeiten": [
+    {
+      "id": "fruehling",
+      "name": "Frühling",
+      "emoji": "🌱"
+    },
+    {
+      "id": "sommer",
+      "name": "Sommer",
+      "emoji": "☀️"
+    },
+    {
+      "id": "herbst",
+      "name": "Herbst",
+      "emoji": "🍂"
+    },
+    {
+      "id": "winter",
+      "name": "Winter",
+      "emoji": "❄️"
+    }
+  ],
+  "tiere": [
+    {
+      "id": "storch",
+      "name": "der Storch",
+      "zeichen": "👣",
+      "zeichenArt": "bewegung",
+      "belegteBewegungen": [
+        "schreiten",
+        "staksen",
+        "segeln",
+        "klappern"
+      ],
+      "zeichenGrund": "Für den Storch gibt es kein Zeichen. 🦩 wäre ein Flamingo – ein anderes Tier. Darum steht hier das Zeichen für seine Bewegung."
+    },
+    {
+      "id": "igel",
+      "name": "der Igel",
+      "zeichen": "🦔",
+      "zeichenArt": "tier",
+      "belegteBewegungen": [
+        "trippeln",
+        "schnüffeln",
+        "einrollen",
+        "laufen"
+      ]
+    },
+    {
+      "id": "fuchs",
+      "name": "der Fuchs",
+      "zeichen": "🦊",
+      "zeichenArt": "tier",
+      "belegteBewegungen": [
+        "schleichen",
+        "schnüren",
+        "traben",
+        "lauschen"
+      ]
+    },
+    {
+      "id": "eichhoernchen",
+      "name": "das Eichhörnchen",
+      "zeichen": "🤸",
+      "zeichenArt": "bewegung",
+      "belegteBewegungen": [
+        "galoppieren",
+        "klettern",
+        "springen",
+        "sitzen"
+      ],
+      "zeichenGrund": "Für das Eichhörnchen gibt es kein Zeichen. 🐿️ ist ein Streifenhörnchen – ein anderes Tier. Darum steht hier das Zeichen für seine Bewegung."
+    },
+    {
+      "id": "schnecke",
+      "name": "die Schnecke",
+      "zeichen": "🐌",
+      "zeichenArt": "tier",
+      "belegteBewegungen": [
+        "kriechen",
+        "gleiten",
+        "einziehen"
+      ]
+    },
+    {
+      "id": "amsel",
+      "name": "die Amsel",
+      "zeichen": "🐦",
+      "zeichenArt": "tier",
+      "belegteBewegungen": [
+        "hüpfen",
+        "scharren",
+        "horchen",
+        "fliegen"
+      ]
+    }
+  ],
+  "karten": [
+    {
+      "id": "k-storch-schreitet",
+      "geltung": "naturgetreu",
+      "tier": "storch",
+      "verb": "schreiten",
+      "titel": "Der Storch schreitet",
+      "zeichen": "👣",
+      "woran": "Er hat sehr lange Beine, und jeden Schritt setzt er einzeln ab – dazwischen hält er an.",
+      "bewegungsAuftrag": "Setz einen Fuß ganz langsam vor den anderen.",
+      "wortImpuls": "Ein Schritt … und halt. Noch ein Schritt … und halt.",
+      "klatschImpuls": "Einmal klatschen, lange warten, wieder klatschen.",
+      "tempo": "langsam",
+      "dynamik": "leise",
+      "artikulation": "getrennt",
+      "ort": "am-platz",
+      "jahreszeit": [
+        "fruehling",
+        "sommer"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "A3"
+        ],
+        "muster": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Beim Schreiten wackeln Vierjährige – langsam und kontrolliert ist schwerer als schnell. Das ist normal und kein Scheitern."
+    },
+    {
+      "id": "k-storch-klappert",
+      "geltung": "naturgetreu",
+      "tier": "storch",
+      "verb": "klappern",
+      "titel": "Der Storch klappert",
+      "zeichen": "👐",
+      "woran": "Ein großer Storch singt nicht – er ist fast stumm. Er klappert mit dem Schnabel. Davon kommt der Name Klapperstorch.",
+      "bewegungsAuftrag": "Klappere mit den Händen über dem Kopf.",
+      "wortImpuls": "Klapp – klapp – klapp. Laut und deutlich.",
+      "klatschImpuls": "Mit flachen Händen hart zusammenschlagen, einzeln.",
+      "tempo": "langsam",
+      "dynamik": "laut",
+      "artikulation": "getrennt",
+      "ort": "am-platz",
+      "jahreszeit": [
+        "fruehling",
+        "sommer"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "A3",
+          "E4"
+        ],
+        "muster": [
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      "erwachsenenHinweis": "Dass der Klapperstorch Kinder bringt, ist eine alte Erzählung und keine Tatsache – falls die Frage kommt."
+    },
+    {
+      "id": "k-igel-schleicht",
+      "geltung": "ausgemacht",
+      "tier": "igel",
+      "verb": "schleichen",
+      "titel": "Der Igel schleicht – im Spiel",
+      "zeichen": "🦔",
+      "kindText": "Im Spiel machen wir aus: der Igel schleicht ganz leise.",
+      "wirklich": "Ein echter Igel schleicht nicht. Er trippelt mit der Nase am Boden, hält an und schnüffelt – und dabei hört man ihn rascheln und schnaufen. Schleichen kann der Fuchs: er duckt sich und setzt die Pfoten ganz langsam, bevor er auf eine Maus springt.",
+      "bewegungsAuftrag": "Schleich ganz leise auf Zehenspitzen.",
+      "wortImpuls": "Ganz leise … ganz leise … niemand soll dich hören.",
+      "klatschImpuls": "Mit den Fingerspitzen leise auf den Handrücken tippen.",
+      "tempo": "langsam",
+      "dynamik": "leise",
+      "artikulation": "gebunden",
+      "ort": "zimmer",
+      "jahreszeit": [
+        "fruehling",
+        "sommer",
+        "herbst"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "C3"
+        ],
+        "muster": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Diese Karte ist eine Spielabmachung, keine Tierbeobachtung. Draußen klingt ein Igel genau umgekehrt: er ist gut zu hören."
+    },
+    {
+      "id": "k-fuchs-schnuert",
+      "geltung": "naturgetreu",
+      "tier": "fuchs",
+      "verb": "schnüren",
+      "titel": "Der Fuchs schnürt",
+      "zeichen": "🦊",
+      "woran": "Er setzt die Pfoten fast in eine Linie – darum sieht seine Spur im Schnee aus wie eine Schnur. Das nennt man schnüren, und er ist dabei zügig unterwegs, nicht langsam.",
+      "bewegungsAuftrag": "Setz die Füße ganz dicht hintereinander, wie auf einer Linie.",
+      "wortImpuls": "Ein Fuß vor den anderen, ganz dicht – wie auf einem Seil.",
+      "klatschImpuls": "Leise und gleichmäßig mit einer Hand auf den Oberschenkel tippen.",
+      "tempo": "mittel",
+      "dynamik": "leise",
+      "artikulation": "gebunden",
+      "ort": "zimmer",
+      "jahreszeit": [
+        "fruehling",
+        "sommer",
+        "herbst",
+        "winter"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "D3"
+        ],
+        "muster": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Die Fuchsspur ist im Schnee gut zu sehen – eine schöne Offline-Idee, ohne das Tier zu suchen."
+    },
+    {
+      "id": "k-eichhoernchen-galoppiert",
+      "geltung": "naturgetreu",
+      "tier": "eichhoernchen",
+      "verb": "galoppieren",
+      "titel": "Das Eichhörnchen galoppiert",
+      "zeichen": "🤸",
+      "woran": "Am Boden setzt es beide Hinterbeine gleichzeitig auf – es läuft nicht, es hüpft in kleinen Sprüngen. Am Baum kann es kopfvoran abwärts, weil es die Hinterfüße drehen kann.",
+      "bewegungsAuftrag": "Hüpf mit beiden Füßen zugleich, schnell und leicht.",
+      "wortImpuls": "Hupf-hupf-hupf-hupf – ganz leicht, fast ohne Geräusch.",
+      "klatschImpuls": "Schnell und leise mit den Fingern auf den Tisch trommeln.",
+      "tempo": "schnell",
+      "dynamik": "leise",
+      "artikulation": "getrennt",
+      "ort": "zimmer",
+      "jahreszeit": [
+        "fruehling",
+        "sommer",
+        "herbst",
+        "winter"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "A3",
+          "C4"
+        ],
+        "muster": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "erwachsenenHinweis": "Eichhörnchen halten keinen Winterschlaf – man sieht sie auch im Schnee."
+    },
+    {
+      "id": "k-schnecke-kriecht",
+      "geltung": "naturgetreu",
+      "tier": "schnecke",
+      "verb": "kriechen",
+      "titel": "Die Schnecke kriecht",
+      "zeichen": "🐌",
+      "woran": "Sie hat nur einen einzigen Fuß. Darüber laufen kleine Wellen – damit schiebt sie sich vorwärts, Millimeter für Millimeter.",
+      "bewegungsAuftrag": "Rutsch auf dem Bauch ganz langsam vorwärts.",
+      "wortImpuls": "Ganz langsam … immer weiter … ohne anzuhalten.",
+      "klatschImpuls": "Mit der flachen Hand langsam über den Tisch streichen.",
+      "tempo": "langsam",
+      "dynamik": "leise",
+      "artikulation": "gebunden",
+      "ort": "am-platz",
+      "jahreszeit": [
+        "fruehling",
+        "sommer",
+        "herbst"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "G2"
+        ],
+        "muster": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Auf dem Bauch rutschen braucht Teppich oder Decke – nicht auf Fliesen."
+    },
+    {
+      "id": "k-amsel-huepft",
+      "geltung": "naturgetreu",
+      "tier": "amsel",
+      "verb": "hüpfen",
+      "titel": "Die Amsel hüpft",
+      "zeichen": "🐦",
+      "woran": "Sie macht zwei, drei Hüpfer, bleibt stehen und legt den Kopf schräg. Dann horcht sie – Würmer findet sie mit den Ohren und den Augen, nicht mit der Nase.",
+      "bewegungsAuftrag": "Hüpf, bis die Pause kommt – dann bleib stehen.",
+      "wortImpuls": "Hupf – hupf – hupf – und horchen.",
+      "klatschImpuls": "Dreimal schnell klatschen, dann Stille.",
+      "tempo": "schnell",
+      "dynamik": "mittel",
+      "artikulation": "getrennt",
+      "ort": "zimmer",
+      "jahreszeit": [
+        "fruehling",
+        "sommer",
+        "herbst",
+        "winter"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "E4"
+        ],
+        "muster": [
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Das Stehenbleiben ist der eigentliche Teil: Musik aus heißt stehen. Das können schon Dreijährige. Beim Stehenbleiben beide Füße am Boden – auf einem Bein einfrieren erzeugt den Sturz genau im Stillstand."
+    },
+    {
+      "id": "k-amsel-scharrt",
+      "geltung": "naturgetreu",
+      "tier": "amsel",
+      "verb": "scharren",
+      "titel": "Die Amsel scharrt im Laub",
+      "zeichen": "🍃",
+      "woran": "Sie wirft das Laub mit dem Schnabel zur Seite und scharrt mit den Füßen. Das ist richtig laut – man hört eine Amsel oft, bevor man sie sieht.",
+      "bewegungsAuftrag": "Scharr mit den Füßen laut über den Boden.",
+      "wortImpuls": "Scharr – scharr – laut, dass man es hört.",
+      "klatschImpuls": "Mit beiden Händen über die Hose reiben, kräftig.",
+      "tempo": "mittel",
+      "dynamik": "laut",
+      "artikulation": "getrennt",
+      "ort": "am-platz",
+      "jahreszeit": [
+        "fruehling",
+        "sommer",
+        "herbst",
+        "winter"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "D3",
+          "G3"
+        ],
+        "muster": [
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      "erwachsenenHinweis": "Laut heißt nicht schnell: diese Karte ist mittelschnell und trotzdem deutlich. Das Gegenbeispiel zu „langsam heißt leise“ ist das Storchenklappern."
+    },
+    {
+      "id": "k-schneeflocke",
+      "geltung": "unbelebt",
+      "figur": "die Schneeflocke",
+      "verb": "taumeln",
+      "titel": "Die Schneeflocke",
+      "zeichen": "❄️",
+      "kindText": "Die Luft trägt die Flocke. Sie fällt nicht gerade: sie kippt und dreht, und manchmal geht sie sogar wieder nach oben.",
+      "impulsQuelle": "luft",
+      "bewegungsAuftrag": "Dreh dich langsam weiter, solange die Luft dich schiebt.",
+      "wortImpuls": "Jetzt kommt ein Windstoß von der Tür her … und jetzt wieder.",
+      "klatschImpuls": "Ein Tuch oder eine Feder fallen lassen und zuschauen.",
+      "tempo": "langsam",
+      "dynamik": "leise",
+      "artikulation": "gebunden",
+      "ort": "am-platz",
+      "jahreszeit": [
+        "winter"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "C5"
+        ],
+        "muster": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Hier gibt der Erwachsene den Anstoß, nicht das Kind: eine Flocke wechselt ihre Richtung nicht selbst. Drehen deckeln – drei Drehungen, dann hinsetzen."
+    },
+    {
+      "id": "k-herbstblatt",
+      "geltung": "unbelebt",
+      "figur": "das Herbstblatt",
+      "verb": "flattern",
+      "titel": "Das Herbstblatt",
+      "zeichen": "🍂",
+      "kindText": "Der Wind schiebt das Blatt. Mal flattert es, mal überschlägt es sich – gleichmäßig im Kreis fällt es nie.",
+      "impulsQuelle": "wind",
+      "bewegungsAuftrag": "Flattere mit den Armen, bis der Wind aufhört.",
+      "wortImpuls": "Der Wind kommt … und hört auf. Dann liegst du still.",
+      "klatschImpuls": "Ein Blatt Papier fallen lassen – zweimal, es fällt jedes Mal anders.",
+      "tempo": "mittel",
+      "dynamik": "mittel",
+      "artikulation": "gebunden",
+      "ort": "zimmer",
+      "jahreszeit": [
+        "herbst"
+      ],
+      "motiv": {
+        "tonhoehen": [
+          "F4"
+        ],
+        "muster": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "erwachsenenHinweis": "Zum Schluss liegt das Blatt am Boden – ein guter Abschluss, weil das Kind dann sitzt und nicht steht."
+    }
+  ],
+  "schlussIdeen": [
+    "Geht nach draußen und schaut einem Tier beim Gehen zu – nur schauen, nicht anfassen und nicht suchen.",
+    "Denkt zusammen eine eigene Karte aus: Welches Tier kennt ihr, und wie geht es? Nur für heute, aufgeschrieben wird nichts.",
+    "Lasst draußen ein Blatt und einen Stein zugleich fallen und schaut, wer anders fällt.",
+    "Macht die Bewegungen noch einmal ohne Gerät – der Erwachsene sagt nur das Wort, der Rest geht von allein."
+  ],
+  "sicherheit": [
+    "Erst die Fläche, dann die Karte: räumt frei und sagt die Grenze laut („bis zum Teppichrand“), bevor es losgeht.",
+    "Barfuß oder mit rutschfester Sohle. Socken rutschen auf Laminat und Parkett, rutschfeste Sohlen und Noppensocken geben mehr Trittsicherheit.",
+    "Tischecken, Heizkörper, Stehlampe, Glastür und Blumentopf vorher wegräumen oder abdecken – nicht während der Bewegung.",
+    "Das Gerät gehört nicht auf den Boden: es wird getreten und ist eine Stolperfalle. Ablage außerhalb der Fläche oder in der Hand.",
+    "Die eigene Stimme muss lauter sein als die App. Das Gerät gibt den Impuls, der Erwachsene ist die Bremse. Lautsprecher, keine Kopfhörer – die Umgebung muss hörbar bleiben.",
+    "Beim Stehenbleiben beide Füße am Boden. Auf einem Bein einfrieren erzeugt den Sturz genau im Stillstand.",
+    "Drehen deckeln: drei Drehungen, dann Arme senken und hinsetzen. Nach wenigen Umdrehungen wird einem Kind schwindlig.",
+    "Einrollen und Rutschen brauchen Teppich, Matte oder Decke – nicht auf Parkett oder Fliesen, und nicht über den Nacken abrollen.",
+    "Nichts um den Hals: ein Tuch in der Hand ja, Schnur oder Schal als Halsband nein. Nichts im Mund während der Bewegung.",
+    "Nicht unter Tische oder auf Möbel – alle Bewegungen bleiben am Boden.",
+    "Draußen gilt: nichts anfassen. Igel nicht suchen, nicht aufheben, nicht füttern – sie sind besonders geschützt und tragen Flöhe, Zecken und manchmal Salmonellen. Storchennester nicht annähern. Danach Hände waschen.",
+    "Zimmer lüften, Wasser bereitstellen. Bei Asthma, Herzerkrankung oder Epilepsie vorher mit der Kinderärztin sprechen – und es ist kein Sport, es gibt nichts zu leisten."
+  ]
+}

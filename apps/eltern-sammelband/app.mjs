@@ -48,7 +48,15 @@ function kapitelKnoten(k, nummer) {
     : [el('section', { class: 'k-karte' },
         el('p', { style: 'margin:0' }, `Diese Seite konnte nicht geladen werden – direkt öffnen: `,
           el('a', { href: `../${k.name}/eltern.html` }, `${k.name}/eltern.html`)))];
-  return el('article', { class: 'esb-kapitel', id: `kapitel-${k.name}` },
+  // Die Kapitel werden hier SCHMALER gerendert als in der Quell-App (sie
+  // stecken zusaetzlich in diesem article). Lange Komposita –
+  // „Barrierefreiheitsstärkungsgesetz“, „Kennzeichnungspflicht“ – passen
+  // dann nicht mehr in die Zeile und schoben die ganze Seite bei 360 px
+  // nach rechts. Umbruch im Wort erlauben, mit Trennung nach `lang`.
+  return el('article', {
+    class: 'esb-kapitel', id: `kapitel-${k.name}`, lang: 'de',
+    style: 'overflow-wrap:anywhere;hyphens:auto',
+  },
     el('h2', { style: 'font-size:1.2rem;margin:1rem 0 0.25rem' }, `${nummer}. ${k.titel.replace('👪 Eltern-Kompass: ', '')}`),
     el('p', { style: 'margin:0 0 0.5rem;font-size:0.85rem;color:#4b5563' }, `App: apps/${k.name}/`),
     ...inhalt);
@@ -64,7 +72,15 @@ app.replaceChildren(
       el('a', { class: 'k-knopf k-knopf--neutral', style: 'text-decoration:none;text-align:center', href: '../elternabend-kit/' }, '🏠 Zum Elternabend-Kit'))),
   el('section', { class: 'k-karte esb-nur-bildschirm' },
     el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Inhalt'),
-    el('ol', { style: 'margin:0;padding-left:1.4rem;columns:2;column-gap:2rem' },
+    el('ol', {
+      // Zwei Spalten, aber die Namen sind lang und mit Bindestrich
+      // („Bewegungspausen-Generator“). Ohne Umbruch im Wort schob das
+      // Inhaltsverzeichnis die ganze Seite bei 360 px um 55 px nach
+      // rechts – mobile-first ist Pflicht (docs/02).
+      style: 'margin:0;padding-left:1.4rem;columns:2;column-gap:2rem;'
+        + 'overflow-wrap:anywhere;hyphens:auto',
+      lang: 'de',
+    },
       ...kapitel.map((k) =>
         el('li', { style: 'margin:0.15rem 0' },
           el('a', { href: `#kapitel-${k.name}` }, k.titel.replace('👪 Eltern-Kompass: ', '')))))),

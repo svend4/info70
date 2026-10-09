@@ -36,3 +36,17 @@ test('Sammelband bleibt Zusammenstellung: app.mjs kopiert keine Inhalte, sondern
   assert.match(quelle, /DOMParser/, 'HTML wird geparst, nicht als Text eingefügt');
   assert.match(quelle, /break-before|esb-kapitel/, 'Kapitel-Struktur für den Broschüren-Druck');
 });
+
+test('360 px: lange Komposita brechen um, statt die Seite breiter zu machen', async () => {
+  const quelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  // Der Sammelband rendert fremde Karten SCHMALER als die Quell-App (sie
+  // stecken zusaetzlich im Kapitel-article). „Barrierefreiheitsstaerkungs-
+  // gesetz“ und „Kennzeichnungspflicht“ passten dann nicht in die Zeile und
+  // schoben die Seite bei 360 px um 55 px nach rechts – mobile-first ist
+  // Pflicht (docs/02). Dasselbe im zweispaltigen Inhaltsverzeichnis.
+  const kapitel = quelle.slice(quelle.indexOf('function kapitelKnoten'), quelle.indexOf('app.replaceChildren(\n  el(\'h1\''));
+  assert.match(kapitel, /overflow-wrap:anywhere/, 'Kapitel muessen im Wort umbrechen duerfen');
+  assert.match(kapitel, /lang: 'de'/, 'Trennung braucht die Sprache');
+  const inhalt = quelle.slice(quelle.indexOf("'Inhalt'"), quelle.indexOf('...kapitel.map((k, i)'));
+  assert.match(inhalt, /overflow-wrap:anywhere/, 'auch das Inhaltsverzeichnis');
+});

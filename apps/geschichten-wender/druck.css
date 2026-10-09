@@ -1,0 +1,39 @@
+/* Geschichten-Wender: Druckansicht des Geschichtenblatts. Beim Drucken
+   verschwinden Kopf und Bedienung (.gw-nur-bildschirm); übrig bleibt das
+   Blatt allein auf der Seite – mit echten Schreiblinien, denn geschrieben
+   wird mit dem Stift. Es ist ausdrücklich KEINE Urkunde: keine Sterne,
+   keine Häkchen, keine Medaille, kein Zähler. */
+
+.gw-linie {
+  border-bottom: 1px solid var(--k-rand);
+  height: 1.6rem;
+}
+
+@media print {
+  .gw-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .gw-blatt {
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    break-inside: avoid;
+  }
+
+  /* Schreibhöhe für eine erwachsene Handschrift, nicht Bildschirmhöhe. */
+  .gw-linie {
+    height: 1.1cm !important;
+    border-bottom: 0.4pt solid #000 !important;
+  }
+}
