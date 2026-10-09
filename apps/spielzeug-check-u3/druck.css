@@ -1,0 +1,39 @@
+/* Druck: die offenen Eigenschaften als Zettel – mit der Hausprüfung dabei.
+   Ein Zettel, auf dem nur „kein Kleinteil“ steht, sagt nicht, wie man das
+   herausfindet. Kein Haken, kein Name, kein Wert (docs/02). */
+/* Der Nur-Druck-Block ist am Bildschirm aus und auf dem Papier an. */
+.szu3-nur-druck { display: none; }
+
+@media print {
+  .szu3-nur-bildschirm { display: none !important; }
+  .szu3-nur-druck { display: block !important; }
+  /* Kein Haken auf dem Papier: das Zeichen gehört zum Knopf, nicht zur
+     Zeile. */
+  .szu3-marke { display: none !important; }
+  /* Und der Knopf selbst ist auf Papier kein Knopf mehr. Eine abgehakte
+     Zeile trägt die Knopffarben aus kinder.css: blauer Grund, WEISSE
+     Schrift. Drucker lassen Hintergründe standardmäßig weg – die Zeile käme
+     weiss auf weiss heraus. Druckt der Browser den Grund doch, ist die
+     blaue Füllung eine Markierung auf Papier und damit genau das, was
+     docs/02 verbietet. Beides fällt weg, wenn die Zeile als Text kommt.
+     Gleiche Regel wie in apps/sicherer-krabbelraum-check. */
+  .szu3-block button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    font-weight: 600 !important;
+    text-align: start !important;
+    width: auto !important;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .szu3-block { break-inside: avoid; page-break-inside: avoid; border: 1pt solid #333; border-radius: 0; margin: 0 0 5mm; padding: 3mm; box-shadow: none; }
+  .szu3-block h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .szu3-block p, .szu3-block li { font-size: 10pt; line-height: 1.35; }
+  .szu3-kritisch { border: 2pt solid #000; }
+  a[href]::after { content: ""; }
+}
