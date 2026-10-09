@@ -1,0 +1,176 @@
+{
+  "art": "musik-alltags-begleiter",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 1 bis 3 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Kind sieht keinen Bildschirm – hier notieren Sie, was SIE getan haben.",
+  "wasEsIst": "Ein Notizzettel über Ihr eigenes Tun, kein Protokoll über Ihr Kind. Hier steht, wann Sie gesungen, gesummt, mitgehört, einen Klang gemacht, sich mitbewegt oder bewusst Stille gelassen haben – und sonst nichts.",
+  "keineReaktion": "Es gibt kein Feld dafür, wie Ihr Kind reagiert hat, und das ist eine Entscheidung, keine fehlende Funktion. Sobald eine Spalte fragt, ob es gefallen hat, wird aus einem Notizzettel über Sie eine Beobachtung über ein Kind. Beobachtungen über Kinder gehören in die Vorsorgeuntersuchung und, wenn Sie mögen, in den Meilenstein-Begleiter – nicht in einen Musikplaner.",
+  "keineAmpel": "Es gibt keine Ampel und keine rote Stufe. Eine Ampel über die letzten sieben Tage wäre eine Note für Sie, ausgerechnet an der Stelle, an der ohnehin alle ein schlechtes Gewissen haben. Die Liste zeigt, was war – sie bewertet es nicht, und es gibt keine Farbe für „zu wenig“.",
+  "keineSerie": "Keine Serie, keine Strähne, kein „x Tage in Folge“. Eine Serie macht den achten Tag wichtiger als die ersten sieben und bestraft genau den Tag, an dem nichts ging. Es gibt darum keine Funktion, die aufeinanderfolgende Tage zählt.",
+  "keinZiel": "Es gibt kein Soll und keine Empfehlung, wie oft. Mehr Notizen sind nicht besser als wenige – eine der sechs Arten ist „bewusst Stille gelassen“, und die zählt genauso.",
+  "wasDasFensterIst": "Gespeichert werden die Notizen der letzten sieben Tage, auf diesem Gerät. Was älter ist, wird beim Öffnen und beim Speichern gelöscht, nicht archiviert: ein Jahresverlauf Ihres Familienalltags müsste nirgends liegen, und ein Rückblick über sieben Tage reicht, um zu sehen, was Sie gerade tun.",
+  "minutenInDerQuelle": "Die Quelle nennt für das tägliche Hören in der Kindergruppe „von 1–2 bis 5 Minuten“. Das ist die Angabe der Quelle für eine Kita-Gruppe, und sie steht hier als solche. Diese App setzt keine Dauer: für das Zuhören mit einem Kind unter drei Jahren ist keine belegt, und eine Minutenzahl im Wohnzimmer wäre eine erfundene Vorgabe. Aufgehört wird, wenn Ihr Kind sich abwendet – das ist das Maß, nicht die Uhr.",
+  "keineLiederliste": "Hier stehen keine Lieder. Welche Musik, dafür gibt es zwei Nachbarn: die Hör-Ideen mit freien Werken in „Musikmomente 1–3“ und die Reime, Kniereiter und Wiegenlieder im „Familienschatz“. Diese App nennt nur die Gelegenheit, nicht das Stück.",
+  "keineUebersetzung": "In welcher Sprache Sie singen, entscheidet, was Sie auswendig können. Diese App schreibt dafür nichts vor und nennt keine Lieder in anderen Sprachen: eine ungegengelesene Übersetzung oder ein falsch geschriebener Liedtitel wäre eine Behauptung, und wo Ihr Lied steht, steht im Familienschatz ein freies Feld.",
+  "bildschirm": "Für Kinder unter drei Jahren ist Bildschirmzeit nicht empfohlen. Musik ist etwas anderes als ein Bildschirm – aber ein Gerät, das stundenlang nebenher läuft, ist auch keine Musikstunde: dauernder Ton im Raum überlagert die Stimmen und macht das Gespräch mit Ihnen schwerer. Dieses Gerät hier ist für Sie: notieren, weglegen, dann wieder Alltag.",
+  "elterntelefon": "Wenn Ihnen der Alltag gerade zu viel ist, reden Sie darüber: beim Elterntelefon (0800 111 0 550) anonym und kostenfrei.",
+  "zielAlsGanzes": {
+    "ziel": 8,
+    "warum": "Das achte Quellziel ist fachliche Hilfe für die ELTERN in Fragen der musikalischen Erziehung in der Familie. Dieses Ziel steht in keiner einzelnen Zeile, weil die App als Ganzes seine Einlösung ist: die übrigen Ziele der Quelle gelten der Kita-Gruppe, dieses gilt der Familie – und nur deshalb darf aus einem Gruppenprogramm ein Eltern-Werkzeug werden."
+  },
+  "rituale": [
+    {
+      "id": "r-aufwachen", "name": "Aufwachen", "zeichen": "🌅", "quellZiel": 2,
+      "wasDuTust": "Sie begrüßen den Tag mit einer gesungenen Zeile statt mit einem Satz – immer derselben.",
+      "warumHier": "Der Morgen hat jeden Tag dieselbe Reihenfolge. Eine Zeile, die immer gleich klingt, macht hörbar, was als Nächstes kommt, ohne dass jemand etwas erklären muss.",
+      "ohneGeraet": "Nichts nötig außer Ihrer Stimme."
+    },
+    {
+      "id": "r-anziehen", "name": "Anziehen und Wickeln", "zeichen": "🧦", "quellZiel": 5,
+      "wasDuTust": "Sie summen oder sprechen im Takt, was Sie gerade tun – ein Ärmel, ein Ton.",
+      "warumHier": "Anziehen dauert, und es dauert jeden Tag. Ein Takt gibt dem Hin und Her eine Form, und Sie haben beide Hände frei.",
+      "ohneGeraet": "Nichts nötig; der Rhythmus kommt von Ihrer Bewegung."
+    },
+    {
+      "id": "r-waschen", "name": "Hände waschen und Baden", "zeichen": "🚿", "quellZiel": 2,
+      "wasDuTust": "Sie singen so lange, wie das Wasser läuft, und hören auf, wenn Sie fertig sind.",
+      "warumHier": "Wasser macht selbst Geräusche, und das Lied sagt, wie lang die Sache dauert – ohne Uhr und ohne Zählen.",
+      "ohneGeraet": "Nichts nötig."
+    },
+    {
+      "id": "r-essen", "name": "Tisch decken", "zeichen": "🍽️", "quellZiel": 6,
+      "wasDuTust": "Sie legen einen Holzlöffel und eine umgedrehte Schüssel in Reichweite und lassen klingen, was dabei entsteht.",
+      "warumHier": "Beim Tischdecken sind sowieso Dinge in der Hand, die Geräusche machen. Dass Ihr Kind damit ausprobiert, braucht nur die Gelegenheit.",
+      "ohneGeraet": "Küchengeschirr. Kein Instrument nötig – und keines mit Kleinteilen."
+    },
+    {
+      "id": "r-aufraeumen", "name": "Aufräumen", "zeichen": "🧺", "quellZiel": 2,
+      "wasDuTust": "Sie fangen mit einer immer gleichen Zeile an, und sie hört auf, wenn Sie aufhören.",
+      "warumHier": "Aufräumen ist ein Anfang, den niemand von sich aus macht. Ein Signal, das Sie selbst erzeugen, lässt sich leichter geben als eine Ansage.",
+      "ohneGeraet": "Nichts nötig."
+    },
+    {
+      "id": "r-weg", "name": "Losgehen und unterwegs", "zeichen": "🚶", "quellZiel": 5,
+      "wasDuTust": "Sie gehen im Takt dessen, was Sie singen – langsam, wenn Sie langsam gehen.",
+      "warumHier": "Der Weg hat von sich aus einen Rhythmus, und im Freien ist niemandem die eigene Stimme peinlich.",
+      "ohneGeraet": "Nichts nötig. Kein Kopfhörer: der nimmt Ihnen beiden die Umgebung weg."
+    },
+    {
+      "id": "r-warten", "name": "Warten", "zeichen": "⏳", "quellZiel": 2,
+      "wasDuTust": "Sie summen leise in der Schlange, am Bahnsteig, im Wartezimmer.",
+      "warumHier": "Warten ist die Stelle, an der sonst das Handy herauskommt. Eine gesummte Zeile ist das, was stattdessen geht – und sie kostet keine Vorbereitung.",
+      "ohneGeraet": "Nichts nötig."
+    },
+    {
+      "id": "r-troesten", "name": "Trösten und Ankommen", "zeichen": "🤍", "quellZiel": 5,
+      "wasDuTust": "Sie summen dicht am Ohr, langsamer als Sie sprechen würden.",
+      "warumHier": "Nähe und eine ruhige Stimme sind beim Trösten das, was Sie ohnehin tun. Gesummt wird es langsamer von allein.",
+      "ohneGeraet": "Nichts nötig.",
+      "grenze": "Wenn Ihr Kind untröstlich schreit und nichts hilft: legen Sie es sicher ab und gehen Sie kurz aus dem Zimmer, statt zu schütteln. Schütteln verletzt ein Gehirn in Sekunden."
+    },
+    {
+      "id": "r-hoerinsel", "name": "Die Hör-Insel", "zeichen": "🎧", "quellZiel": 3,
+      "wasDuTust": "Sie legen ein Stück Musik auf, setzen sich dazu und hören mit – und stellen es ab, wenn Ihr Kind sich abwendet.",
+      "warumHier": "Zusammen zuhören ist etwas anderes als Musik, die nebenher läuft: Sie sind dabei, Sie hören dasselbe, und Sie merken, wann es genug ist.",
+      "ohneGeraet": "Hier braucht es Musik – Hör-Ideen mit freien Werken stehen in „Musikmomente 1–3“. Kein Kopfhörer, und laut genug, dass man sich im Zimmer noch ohne Stimmheben unterhalten kann.",
+      "grenze": "Keine Dauer: die Minutenangabe der Quelle gilt einer Kita-Gruppe, und für zu Hause ist keine belegt."
+    },
+    {
+      "id": "r-einschlafen", "name": "Einschlafen", "zeichen": "🌙", "quellZiel": 2,
+      "wasDuTust": "Sie singen dasselbe Lied wie gestern, im Dunkeln, und gehen danach hinaus.",
+      "warumHier": "Am Abend ist die Reihenfolge wichtiger als die Auswahl. Dasselbe Lied an derselben Stelle ist der Teil des Abends, der sich nicht ändert.",
+      "ohneGeraet": "Nichts nötig. Wiegenlieder stehen im „Familienschatz“.",
+      "grenze": "Kein Gerät im Bett und keine Einschlafhilfe mit Ton: der Schlafplatz bleibt leer – dazu steht alles im Sicherer-Krabbelraum-Check."
+    }
+  ],
+  "arten": [
+    {
+      "id": "a-gesungen", "name": "Selbst gesungen", "zeichen": "🎤", "quellZiel": 5,
+      "wasSieTun": "Sie haben selbst gesungen – gleich wie es klang und gleich welche Sprache.",
+      "ohneKoennen": "Treffen muss hier niemand etwas. Ihre Stimme ist nah, langsam und reagiert auf das, was gerade passiert; eine Aufnahme kann das nicht."
+    },
+    {
+      "id": "a-gesummt", "name": "Gesummt oder gepfiffen", "zeichen": "🎵", "quellZiel": 5,
+      "wasSieTun": "Sie haben gesummt oder gepfiffen, ohne Text.",
+      "ohneKoennen": "Das geht auch, wenn Sie kein Lied auswendig wissen, und es geht mit Händen voller Wäsche."
+    },
+    {
+      "id": "a-mitgehoert", "name": "Zusammen zugehört", "zeichen": "🎧", "quellZiel": 3,
+      "wasSieTun": "Sie haben Musik aufgelegt und sich dazugesetzt, statt sie nebenherlaufen zu lassen.",
+      "ohneKoennen": "Mithören heißt dabeibleiben. Läuft etwas nur im Hintergrund, ist das keine Hör-Insel – dann ist es Geräusch."
+    },
+    {
+      "id": "a-klang", "name": "Einen Klang bereitgelegt", "zeichen": "🥄", "quellZiel": 6,
+      "wasSieTun": "Sie haben etwas Klingendes in Reichweite gelegt – Löffel, Schüssel, Deckel – und ausprobieren lassen.",
+      "ohneKoennen": "Es braucht kein Instrument. Was in der Küche steht, klingt; was Kleinteile hat, bleibt weg."
+    },
+    {
+      "id": "a-mitbewegt", "name": "Mitbewegt", "zeichen": "💃", "quellZiel": 5,
+      "wasSieTun": "Sie haben sich zu Ihrem eigenen Singen oder zur Musik mitbewegt – gewiegt, geklopft, getanzt.",
+      "ohneKoennen": "Takt halten muss hier niemand. Das Zusammenspiel von Takt und Bewegung ist vor der Schule ohnehin nicht verlässlich."
+    },
+    {
+      "id": "a-stille", "name": "Bewusst Stille gelassen", "zeichen": "🤫", "quellZiel": 2,
+      "wasSieTun": "Sie haben den Ton ausgemacht oder gar nicht erst angemacht – weil Ruhe gerade das Richtige war.",
+      "ohneKoennen": "Diese Art steht aus einem Grund hier: sie macht es unmöglich, die Liste als „mehr ist besser“ zu lesen. Ein Tag mit Stille ist kein leerer Tag."
+    }
+  ],
+  "ausgeschlossen": [
+    {
+      "quellNr": "x01",
+      "was": "Die Ampel des Katalogeintrags",
+      "warum": "Der Eintrag wollte „Ampel und Tagesstatistik“. Eine Ampel über die letzten sieben Tage ist eine Note für den Erwachsenen, und eine rote Stufe würde genau den Tag markieren, an dem nichts ging. Gebaut ist darum eine Liste ohne Farbe und ohne Stufe: sie zeigt, was war."
+    },
+    {
+      "quellNr": "x02",
+      "was": "Die Tagesstatistik als Leistungsanzeige",
+      "warum": "Gezählt wird nur beschreibend – an wie vielen der letzten sieben Tage eine Notiz steht. Kein Anteil, kein „von sieben“, kein Durchschnitt, kein Vergleich mit einer Vorwoche und kein Soll. Eine Quote wäre eine Bewertung mit anderem Vorzeichen."
+    },
+    {
+      "quellNr": "x03",
+      "was": "Serie, Strähne, „x Tage in Folge“",
+      "warum": "Eine Serie macht aus einer Notiz eine Verpflichtung und bestraft die Unterbrechung. Es gibt darum keine Funktion, die aufeinanderfolgende Tage zusammenrechnet – ein Test verbietet sie."
+    },
+    {
+      "quellNr": "x04",
+      "was": "Ein Feld für die Reaktion des Kindes",
+      "warum": "„Hat es gefallen?“ wäre der Punkt, an dem dieser Zettel zu einer Beobachtung über ein Kind wird – und davon gibt es im Korpus schon eine, die dafür zuständig ist. Eine gespeicherte Notiz trägt genau drei Angaben: Tag, Gelegenheit, Art. Der Validator weist jede weitere ab."
+    },
+    {
+      "quellNr": "x05",
+      "was": "Die Liederlisten des Katalogeintrags, auch die ukrainischen und russischen",
+      "warum": "Der Eintrag wollte gemeinfreie deutsche Ritual-Lieder plus Kolyskova-Wiegenlieder. Eine Liedliste gehört in „Familienschatz“ und „Musikmomente 1–3“, die beide schon gebaut sind – zwei Listen wären zwei Wahrheiten über dasselbe. Und fremdsprachige Titel ohne Gegenlesen wären eine Behauptung: nicht übernommen, statt stillschweigend falsch geschrieben."
+    },
+    {
+      "quellNr": "x06",
+      "was": "Eine Minutenvorgabe für die Hör-Insel",
+      "warum": "Die Quelle nennt 1–2 bis 5 Minuten für die Kita-Gruppe. Für das Zuhören zu Hause mit einem Kind unter drei Jahren ist keine Dauer belegt; die Zahl steht darum als Angabe der Quelle da und nicht als Vorgabe. Das Maß ist, dass Ihr Kind sich abwendet."
+    },
+    {
+      "quellNr": "x07",
+      "was": "Musik zur Morgengymnastik und im Sportunterricht",
+      "quellZiel": 4,
+      "warum": "Das vierte Quellziel spielt in der Kita-Gruppe und im Sportunterricht. Eine Bewegungs-Ampel für Kinder von 3 bis 7 ist eine eigene Katalog-Einheit (Nr. 62); was hier davon trägt, ist das Mitbewegen zum eigenen Singen im Alltag – und das steht als Art drin."
+    },
+    {
+      "quellNr": "x08",
+      "was": "Die benannten Feste der Quelle",
+      "quellZiel": 7,
+      "warum": "Die Quelle nennt Neujahr und den 8. März. Der 8. März ist in Deutschland kein allgemeiner Feiertag und in Teilen politisch aufgeladen; übertragen ist davon nichts. Feste stehen hier überhaupt nicht: wiederkehrende Gelegenheiten im Alltag sind das, was diese App trägt."
+    },
+    {
+      "quellNr": "x09",
+      "was": "Die Musikecke mit Instrumenten zum Kaufen",
+      "quellZiel": 1,
+      "warum": "Das erste Quellziel stattet eine Gruppenecke mit Metallophonen, Xylophonen, Tamburinen, Rasseln, Flöten und Kinderklavieren aus. Eine Liste von Instrumenten wäre in einer Eltern-App ein Einkaufszettel, und bei Kindern unter drei Jahren kommt die Kleinteilgefahr dazu – für ein einzelnes Spielzeug prüft das der Spielzeug-Check U3. Übernommen ist nur, was in jeder Küche steht."
+    }
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, «Музыка в повседневной жизни», S. 87–88",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – der Gedanke, dass Musik in den Tagesablauf gehört, und die Gelegenheiten, an denen das geschieht. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": { "zieleQuelle": 8, "uebernommeneZiele": [2, 3, 5, 6, 8], "nichtUebernommeneZiele": [1, 4, 7] },
+    "nachgezaehlt": "Der Abschnitt trägt 8 Ziele. Nachgezählt. Ziel 8 – fachliche Hilfe für die ELTERN in Fragen der musikalischen Erziehung in der Familie – ist die Stelle, an der diese App ansetzt: die Quellziele gelten der Kita-Gruppe («в группе», «воспитатель»), und eine Eltern-App ist die Einlösung dieses einen Ziels.",
+    "abweichung": "Nicht übernommen sind drei der acht Ziele, jedes mit Begründung in der Ausschlussliste: die Musikecke mit Instrumenten (Ziel 1), Musik zur Morgengymnastik und im Sportunterricht (Ziel 4) und die benannten Feste (Ziel 7). Vom dritten Ziel ist das tägliche Hören übernommen, die Minutenangabe aber nicht als Vorgabe. Die Ampel und die Tagesstatistik des Katalogeintrags sind durch eine Liste ohne Farbe und eine beschreibende Zahl ersetzt."
+  }
+}

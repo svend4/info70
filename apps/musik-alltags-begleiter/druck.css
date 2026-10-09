@@ -1,0 +1,32 @@
+/* Druck: der Rückblick über sieben Tage als Text. Kein Häkchen, kein Name,
+   keine Farbe, keine Wertung (docs/02) – und die Absage an das Soll und an
+   das Feld über das Kind stehen mit, weil sonst ein Zettel übrig bliebe, der
+   wie eine Leistungsliste aussieht. */
+.mab-nur-druck { display: none; }
+
+@media print {
+  .mab-nur-bildschirm { display: none !important; }
+  .mab-nur-druck { display: block !important; }
+  /* Knöpfe sind auf Papier keine Knöpfe: die Knopffarben aus kinder.css
+     (blauer Grund, weisse Schrift) kämen weiss auf weiss heraus, weil
+     Drucker Hintergründe weglassen – und druckte der Browser den Grund doch,
+     wäre die Füllung eine Markierung auf Papier. Gleiche Regel wie in
+     apps/sicherer-krabbelraum-check und apps/spielzeug-check-u3. */
+  .mab-block button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    text-align: start !important;
+    width: auto !important;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .mab-block { break-inside: avoid; page-break-inside: avoid; border: 1pt solid #333; border-radius: 0; margin: 0 0 5mm; padding: 3mm; box-shadow: none; }
+  .mab-block h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .mab-block p, .mab-block li { font-size: 10pt; line-height: 1.35; }
+  a[href]::after { content: ""; }
+}

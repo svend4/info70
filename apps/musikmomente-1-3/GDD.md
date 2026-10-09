@@ -149,9 +149,13 @@ Alter trägt.
 ## 9. Was fehlt, und warum
 
 - **Kein Audio.** Keine Dateien, keine Oszillatoren.
-- **Keine Tagesstatistik, keine Ampel, kein Haken.** Ein Hör-Ritual zu
-  protokollieren wäre ein Protokoll über ein Kind — und es ist das Revier
-  einer anderen, noch nicht gebauten Katalog-Einheit.
+- **Keine Tagesstatistik, keine Ampel, kein Haken.** Das Hören eines Kindes
+  zu protokollieren wäre ein Protokoll über dieses Kind. Das Revier daneben
+  ist inzwischen gebaut: `apps/musik-alltags-begleiter` (Nr. 57) notiert das
+  **eigene Tun des Erwachsenen** — Tag, Gelegenheit, Art — und hat
+  ausdrücklich kein Feld für die Reaktion des Kindes, keine Ampel und keine
+  Serie. Der Unterschied ist nicht, dass dort gespeichert wird, sondern
+  **wessen Verhalten in der Zeile steht**.
 - **Keine Liedtexte.** Die Felder `liedtext`, `text` und `strophe` sind
   verboten; eine Zeile fremden Textes wäre eine Übernahme.
 - **Keine dB-Zahl.** Die Lautstärkeregel ist die Zimmerstimme: wer sich im

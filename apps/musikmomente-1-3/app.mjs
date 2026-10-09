@@ -9,8 +9,12 @@
 //
 // Sie fragt NICHTS ab (das ist `apps/musik-detektive` ab 4 und
 // `apps/klang-detektive` ab 3) und sie zählt NICHTS mit: kein Haken, keine
-// Ampel, keine Tagesstatistik, kein localStorage-Schlüssel. Ein
-// Hör-Ritual zu protokollieren wäre ein Protokoll über ein Kind.
+// Ampel, keine Tagesstatistik, kein localStorage-Schlüssel. Das Hören
+// EINES KINDES zu protokollieren wäre ein Protokoll über dieses Kind.
+// Nicht gemeint ist damit, dass ein Erwachsener sein EIGENES Tun nicht
+// notieren darf: genau das macht `apps/musik-alltags-begleiter` (Nr. 57) –
+// Tag, Gelegenheit, Art, und ausdrücklich kein Feld für die Reaktion des
+// Kindes. Der Unterschied ist, wessen Verhalten in der Zeile steht.
 // Politik docs/02: keine externen Anfragen.
 import { el, vorlesen, lokaleStimme } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
