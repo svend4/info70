@@ -57,7 +57,7 @@ gedruckten Zettel, und zwar unter einer eigenen Überschrift.
 | Zeile | Was der Validator erzwingt |
 |---|---|
 | CE (k01) | „KEINE Prüfung“ **und** „Erklärung des Herstellers“ in `prueferGrenze`; `kritisch: false` |
-| GS (k02) | der Name der Prüfstelle muss in `was` oder `wieZuPruefen` das Prüfbare sein |
+| GS (k02) | das **Symbol** der GS-Stelle muss in `was` oder `wieZuPruefen` das Prüfbare sein; `prueferGrenze` nennt die Fünfjahresbefristung und die veröffentlichte Bescheinigungsliste; Paragraf 21 ist als Fundstelle verboten |
 | U3-Symbol (k03) | „WARUM“ in `was`; „nicht automatisch“ in `warum` |
 
 Inhaltlich: CE ist die Erklärung des Herstellers; bei vollständiger Anwendung
@@ -73,6 +73,19 @@ den Hersteller nicht aus der Verantwortung.
 Dazu kommt k04: Name und Anschrift des Herstellers plus Typ-, Chargen- oder
 Seriennummer. Das ist der praktische Teil – ohne Anschrift gibt es niemanden,
 der zurückrufen kann.
+
+> **Abweichung beim Bau, nachgetragen (Welle 80).** Die GS-Zeile war in zwei
+> Punkten falsch, und beide standen mit Prüfvermerk da. Erstens die Fundstelle:
+> Paragraf 21 ProdSG regelt die **Befugnis** einer GS-Stelle, nicht die
+> Zuerkennung des Zeichens — das ist Paragraf 20, die Pflichten der Stelle
+> stehen in Paragraf 22, und die Gestaltung in der **Anlage**. Zweitens die
+> Sachaussage: verlangt ist nicht der NAME der Prüfstelle, sondern ihr
+> **Symbol**, in der linken oberen Ecke des Zeichens (oder links daneben und es
+> berührend), mit eindeutigem Rückschluss auf die Stelle. Beides ist jetzt im
+> Gesetzestext nachgelesen. Zusätzlich aufgenommen, weil es der einzige echte
+> Nachweisweg ist: jede GS-Stelle muss eine Liste aller von ihr ausgestellten
+> Bescheinigungen veröffentlichen (Paragraf 22 Absatz 1), und die Zuerkennung
+> ist auf höchstens fünf Jahre befristet (Paragraf 20 Absatz 5).
 
 ## 6. Die Zahlen sind die Zahlen der Norm
 
@@ -98,7 +111,16 @@ Zwei Regeln halten das ehrlich:
   selbst, dass hier niemand nachgelesen hat.
 
 `quelle.norm` nennt die Fassung, sagt, dass es neuere gibt, und listet, was
-nicht nachgelesen ist; alle vier Punkte sind Testbedingungen. Ausschluss x07
+nicht nachgelesen ist; alle vier Punkte sind Testbedingungen. **Nachgetragen
+(Welle 80):** harmonisiert — also konformitätsvermutungsstiftend — ist heute
+EN 71-1:2014+A1:2018, nicht die hier nachgelesene Ausgabe, und die
+Abschnittsnummern wandern zwischen den Ausgaben. Darum trägt jede Fundstelle
+ihre Fassung („Fassung 2011+A3"), und ein Validatorsatz erzwingt das. Und
+`quelle.rechtsstand` hält fest, dass die Richtlinie 2009/48/EG mit Wirkung vom
+1. August 2030 aufgehoben wird, dass dann die Verordnung (EU) 2025/2509 gilt
+und dass Bezugnahmen nach der Entsprechungstabelle in Anhang VIII zu lesen
+sind: die Artikelnummern dieser App verfallen zu einem bekannten Datum, die
+Sachaussagen nicht. Ausschluss x07
 weist „Normzahlen ohne Fassungsangabe“ ausdrücklich zurück – eine erfundene
 Fundstelle sieht aus wie eine geprüfte (docs/02).
 
@@ -128,6 +150,31 @@ Bälle werden mit der größeren Schablone beurteilt; eine Rolle mit 40 mm läss
 einen Ball von 43 mm nicht durch, der nach der Norm trotzdem ein kleiner Ball
 ist. Der Validator verlangt beide Richtungen und das Wort „Schablone“ und
 verbietet der Rolle jedes Vorkommen in einer Prüfung.
+
+## 8a. Der Gegenstand, der im Körper wächst
+
+Nachgetragen nach dem Review: eine kritische Dauerregel zu **quellenden
+Materialien** (Wasserperlen, Dekokugeln aus Superabsorber, Quellspielzeug).
+Superabsorbierende Polymere nehmen Wasser bis zum Hundertfachen ihres Volumens
+auf und quellen im Körper auf bis zum Sechzigfachen; die endoskopische Bergung
+kann dadurch erheblich erschwert oder unmöglich werden. Diese Zeile ist der
+deutlichste Fall der ganzen App: **hier versagt jede Größenprüfung**, weil
+Prüfzylinder und Schablone den Gegenstand so messen, wie er jetzt ist, nicht
+so, wie er im Körper wird. Der Validator verlangt genau diesen Satz, das
+Ausmaß des Quellens und `kritisch: true`. Die Hausprüfung, die hier wirklich
+etwas zeigt, ist ein Glas Wasser und eine Stunde Geduld. Quelle: AWMF 001/031,
+Version 2.0, Stand 12/2024 (Volltext gelesen).
+
+Aus derselben Leitlinie stammen drei Sätze im Notfallfeld: eine Knopfzelle in
+der Speiseröhre ist ein Notfall und soll unmittelbar entfernt werden,
+idealerweise innerhalb von zwei Stunden; in einer Auswertung tödlicher Verläufe
+war die Diagnose in 54 Prozent der Fälle nicht gestellt worden, und bei 95
+Prozent davon hatte niemand die Ingestion beobachtet. **Nicht** übernommen ist
+die Vorbehandlung mit Sucralfat oder Honig: das ist eine ärztliche Maßnahme auf
+dem Weg zur Bergung, Honig ist bei Säuglingen unter einem Jahr wegen Botulismus
+ausdrücklich nicht zu geben, und eine gedruckte Dosierung würde im Ernstfall
+die Fahrt verzögern. Der Verzicht steht als Ausschluss x08 in den Daten, und
+das Notfallfeld lehnt Hausmittel ausdrücklich ab.
 
 ## 9. Kein Wirkversprechen
 
@@ -174,7 +221,7 @@ Rechtsakteur zu sprechen.
 
 ## 12. Tests
 
-`node --test apps/spielzeug-check-u3/test/logik.test.mjs` (31 Tests). Fast jede
+`node --test apps/spielzeug-check-u3/test/logik.test.mjs` (36 Tests). Fast jede
 Zusage hat eine Gegenprobe: eine Mutation der Daten muss `pruefeDaten` rot
 machen. Geprüft werden unter anderem beide Pflichtfelder, die Fundstelle nur
 mit Prüfvermerk, die Maßzahl nur mit Herkunft im gleichen Feld und nur mit

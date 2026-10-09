@@ -271,7 +271,10 @@ function render(fokusElement = null) {
         }, zeigeNormhinweis ? '▲ Normhinweis zuklappen' : '📘 Woher die Maße kommen')),
       zeigeNormhinweis
         ? el('div', { class: 'k-hinweis', style: 'margin-top:0.4rem' },
-          el('p', { style: 'margin:0;font-size:0.9rem' }, daten.quelle.norm))
+          el('p', { style: 'margin:0;font-size:0.9rem' }, daten.quelle.norm),
+          // Das Recht hat ein Ablaufdatum. Wer eine Artikelnummer liest, soll
+          // sehen, bis wann sie gilt.
+          el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem' }, daten.quelle.rechtsstand))
         : null),
     el('section', { class: 'k-karte szu3-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🚑 Wenn etwas passiert ist'),

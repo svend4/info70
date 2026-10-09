@@ -27,7 +27,7 @@ const mit = (id, feld, wert) => {
 
 test('Daten sind gültig und vollständig', () => {
   assert.deepEqual(pruefeDaten(daten), []);
-  assert.equal(daten.pruefungen.length, 18);
+  assert.equal(daten.pruefungen.length, 19);
   assert.equal(daten.bereiche.length, BEREICHE.length);
   for (const b of BEREICHE) assert.ok(pruefungenIm(daten, b).length, `Bereich ${b} ist leer`);
 });
@@ -206,10 +206,21 @@ test('die CE-Zeile sagt, was CE nicht ist', () => {
   assert.match(pruefeDaten(mit('k01', 'kritisch', true)).join('\n'), /CE-Zeile: nicht kritisch/);
 });
 
-test('die GS-Zeile macht die Prüfstelle zum Prüfbaren', () => {
+test('die GS-Zeile verlangt das Symbol der Stelle – und nennt Paragraf 20', () => {
+  // Zwei Fehler der ersten Fassung, im Gesetz nachgelesen: verlangt ist nicht
+  // der NAME, sondern das SYMBOL der GS-Stelle (Anlage zum ProdSG, linke obere
+  // Ecke, eindeutiger Rückschluss), und die Zuerkennung steht in Paragraf 20 –
+  // Paragraf 21 regelt die Befugnis der Stelle. Eine falsche Fundstelle mit
+  // Prüfvermerk ist genau das, was docs/02 verbietet.
   const gs = daten.pruefungen.find((p) => /GS-Zeichen/.test(p.was));
-  assert.match(`${gs.was} ${gs.wieZuPruefen}`, /Name der Prüfstelle|Namen der prüfenden|prüfenden Stelle/);
+  assert.match(`${gs.was} ${gs.wieZuPruefen}`, /Symbol der (GS-Stelle|Prüfstelle)/);
+  assert.match(gs.quelle.gremium, /Paragraf 20/);
+  assert.doesNotMatch(gs.quelle.gremium, /Paragraf 21\b/);
+  assert.match(gs.prueferGrenze, /fünf Jahre/);
+  assert.match(gs.prueferGrenze, /Liste aller/);
   assert.match(gs.prueferGrenze, /freiwillig/);
+  const falsch = mit('k02', 'quelle', { gremium: 'Produktsicherheitsgesetz, Paragraf 21', geprueft: true });
+  assert.match(pruefeDaten(falsch).join('\n'), /Paragraf 21 ist die Befugnis der GS-Stelle/);
   // Gegenprobe: die Prüfstelle muss in `was` ODER in `wieZuPruefen` stehen,
   // darum müssen beide Felder mutiert werden – eine Mutation allein lässt
   // der Validator zu Recht durch.
@@ -400,4 +411,94 @@ test('App: replaceChildren bekommt nur echte Knoten', () => {
 test('App: der Datenfehler wird angezeigt, nicht verschluckt', () => {
   assert.match(code, /const fehler = pruefeDaten\(daten\)/);
   assert.match(code, /Datenfehler: \$\{fehler\[0\]\}/);
+});
+
+test('die Zeile zu quellenden Materialien: hier versagt jede Größenprüfung', () => {
+  // Der Fall, der die Thesis dieser App am deutlichsten trägt: ein Gegenstand,
+  // der im Körper wächst, ist durch keine Größenprüfung zu fassen.
+  const q = daten.pruefungen.find((p) => /Wasserperlen/.test(p.was));
+  assert.ok(q, 'die Zeile fehlt');
+  assert.equal(q.kritisch, true);
+  assert.match(q.prueferGrenze, /versagt jede Größenprüfung/);
+  assert.match(q.warum, /Sechzigfachen/);
+  assert.match(q.wieZuPruefen, /Glas Wasser/);
+  assert.equal(q.quelle.geprueft, true);
+  assert.match(q.quelle.gremium, /001\/031/);
+  // Gegenproben
+  assert.match(pruefeDaten(mit('t04', 'prueferGrenze', 'Zu Hause schwer zu beurteilen.')).join('\n'),
+    /Quell-Zeile: dass hier jede Größenprüfung versagt/);
+  assert.match(pruefeDaten(mit('t04', 'kritisch', false)).join('\n'), /Quell-Zeile: muss kritisch sein/);
+  assert.match(pruefeDaten(mit('t04', 'warum', 'Solche Kugeln quellen auf.')).join('\n'),
+    /Quell-Zeile: das Ausmaß des Quellens/);
+});
+
+test('jede EN-71-1-Fundstelle trägt ihre Fassung', () => {
+  // Die Abschnittsnummern wandern zwischen den Ausgaben, und harmonisiert ist
+  // heute EN 71-1:2014+A1:2018 – nicht die hier nachgelesene 2011+A3. Eine
+  // Nummer ohne Fassung ist damit keine prüfbare Fundstelle.
+  for (const p of daten.pruefungen) {
+    const g = p.quelle.gremium;
+    if (/EN 71-1/.test(g)) assert.match(g, /Fassung 2011\+A3/, `${p.id}`);
+  }
+  assert.match(daten.quelle.norm, /EN 71-1:2014\+A1:2018/);
+  const k = mit('t02', 'quelle', { gremium: 'EN 71-1, Abschnitt 5.10', geprueft: true });
+  assert.match(pruefeDaten(k).join('\n'), /nennt EN 71-1 ohne die Fassung/);
+  const z = kopie();
+  z.quelle.norm = z.quelle.norm.replace('EN 71-1:2014+A1:2018', 'eine neuere Ausgabe');
+  assert.match(pruefeDaten(z).join('\n'), /die heute harmonisierte Ausgabe muss benannt sein/);
+});
+
+test('das Recht hat ein Ablaufdatum, und es steht in den Daten', () => {
+  // Die Richtlinie 2009/48/EG wird mit Wirkung vom 1. August 2030 aufgehoben;
+  // ab dann gilt die Verordnung (EU) 2025/2509, und Bezugnahmen sind nach der
+  // Entsprechungstabelle in Anhang VIII zu lesen. Die Artikelnummern in dieser
+  // App verfallen also zu einem bekannten Datum – die Sachaussagen nicht.
+  const r = daten.quelle.rechtsstand;
+  assert.match(r, /2009\/48\/EG/);
+  assert.match(r, /2025\/2509/);
+  assert.match(r, /1\. August 2030/);
+  assert.match(r, /Anhang VIII/);
+  assert.match(code, /daten\.quelle\.rechtsstand/);
+  const k = kopie();
+  delete k.quelle.rechtsstand;
+  const f = pruefeDaten(k).join('\n');
+  assert.match(f, /die heute geltende Grundlage muss benannt sein/);
+  assert.match(f, /die Nachfolgeverordnung muss benannt sein/);
+});
+
+test('der Notfall nennt die Frist, die unbemerkte Ingestion und kein Hausmittel', () => {
+  assert.match(daten.notfall, /112/);
+  assert.match(daten.notfall, /zwei Stunden/);
+  assert.match(daten.notfall, /niemand die Ingestion beobachtet/);
+  assert.match(daten.notfall, /Hausmittel stehen hier nicht/);
+  assert.match(daten.notfall, /Botulismus/);
+  // Und das Hausmittel ist auch als Ausschluss verbucht, mit Begründung.
+  const aus = daten.ausgeschlossen.find((a) => /Hausmittel/.test(a.was));
+  assert.ok(aus);
+  assert.match(aus.warum, /zwölf Stunden/);
+  assert.match(aus.warum, /verzögert/);
+  const k = kopie();
+  k.notfall = 'Bei einer Knopfzelle sofort 112.';
+  const f = pruefeDaten(k).join('\n');
+  assert.match(f, /die Dringlichkeit bei der Knopfzelle muss eine Zahl haben/);
+  assert.match(f, /Hausmittel müssen ausdrücklich abgelehnt sein/);
+});
+
+test('die Klopapierrolle scheitert am Verfahren, nicht nur an Millimetern', () => {
+  // Der tragende Punkt, der in der ersten Fassung fehlte: die Norm fragt bei
+  // Kleinteilen nach dem HINEINPASSEN in einen geschlossenen Zylinder, bei
+  // Bällen nach dem DURCHFALLEN durch eine Schablone. Ein offenes Papprohr
+  // kann nur das Zweite nachahmen – es ist für Kugeln nah am Normmaß und für
+  // alles andere methodisch falsch. Die erste Fassung hatte die Richtung
+  // „zu lax" als die gefährliche dargestellt, ohne zu sagen, dass das Band
+  // schmal ist.
+  const rolle = daten.ausgeschlossen.find((a) => /Klopapierrolle/i.test(a.was));
+  assert.match(rolle.warum, /VOLLSTÄNDIG IN/);
+  assert.match(rolle.warum, /DURCHFÄLLT/);
+  assert.match(rolle.warum, /schmalen Band/);
+  assert.match(rolle.warum, /[Zz]u streng/);
+  assert.match(rolle.warum, /[Zz]u lax/);
+  assert.match(rolle.warum, /Schablone/);
+  assert.match(rolle.warum, /31,7 mm/);
+  assert.match(rolle.warum, /44,5 mm/);
 });

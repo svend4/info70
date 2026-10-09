@@ -10,169 +10,317 @@
   "keinWirkversprechen": "Diese App verspricht keine Entwicklungswirkung. Dass selbstkorrigierendes Material („das Material zeigt den Fehler selbst“) die Entwicklung von Kindern unter drei Jahren voranbringt, ist nicht belegt – es gibt dazu keine Wirksamkeitsstudie. Belegt ist etwas anderes und Nützlicheres: was Kinder dieses Alters mit solchem Material tatsächlich tun. Danach ist die Liste unten geordnet.",
   "wasImHausNichtGeht": "Manche Prüfungen kann man zu Hause nicht machen. Dann steht das hier auch so da, statt eine Ersatzprüfung zu erfinden, die beruhigt, ohne zu prüfen.",
   "elterntelefon": "Wenn Sie unsicher sind, ob ein Spielzeug für Ihr Kind geeignet ist, fragen Sie in Ihrer Kinderarztpraxis. Beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
-  "notfall": "Hat Ihr Kind etwas verschluckt und bekommt schlecht Luft, hustet anhaltend oder wird blau: sofort 112. Bei einer Knopfzelle oder einem Magneten gilt das auch ohne Beschwerden – dort zählt jede Stunde.",
+  "notfall": "Hat Ihr Kind etwas verschluckt und bekommt schlecht Luft, hustet anhaltend oder wird blau: sofort 112. Bei einer Knopfzelle oder einem Magneten gilt das auch ohne Beschwerden – dort zählt jede Stunde: eine Knopfzelle in der Speiseröhre ist ein Notfall und soll unmittelbar entfernt werden, idealerweise innerhalb von zwei Stunden. Dass niemand das Verschlucken gesehen hat, ist kein Gegenargument: in einer Auswertung tödlicher Verläufe war die Diagnose in 54 Prozent der Fälle nicht gestellt worden, und bei 95 Prozent davon hatte niemand die Ingestion beobachtet. Hausmittel stehen hier nicht: was vor der Bergung gegeben wird, ist eine ärztliche Entscheidung, und Honig ist bei Kindern unter einem Jahr wegen Botulismus ohnehin nichts. Fahren Sie los, statt etwas zu suchen oder nachzulesen.",
   "bereiche": [
-    { "id": "kennzeichen", "name": "Was auf der Packung steht", "zeichen": "🏷️", "zuerst": true,
-      "vorspann": "Zuerst das, was am häufigsten falsch gelesen wird." },
-    { "id": "kleinteile", "name": "Kleinteile, Bälle, Ballons", "zeichen": "🫧",
-      "vorspann": "Drei verschiedene Gefahren mit drei verschiedenen Maßstäben – die Norm behandelt sie getrennt, und das ist der Grund, warum eine einzige Hausprüfung nicht reicht." },
-    { "id": "strangulieren", "name": "Schnüre, Folien, becherförmige Teile", "zeichen": "🎗️",
-      "vorspann": "Vier Wege, auf denen von außen die Luft wegbleibt – alle ohne Verschlucken." },
-    { "id": "batterien", "name": "Batterien und Magnete", "zeichen": "🔋",
-      "vorspann": "Zwei Gefahren, bei denen es nicht auf Beschwerden ankommt, sondern auf Zeit." },
-    { "id": "material", "name": "Material und Verarbeitung", "zeichen": "🪵" },
-    { "id": "passt", "name": "Passt es zu dem, was Ihr Kind gerade tut?", "zeichen": "🧩",
-      "vorspann": "Hier wird nichts über Ihr Kind geurteilt. Es geht darum, ob der Gegenstand zu dem passt, was Sie sowieso schon sehen." }
+    {
+      "id": "kennzeichen",
+      "name": "Was auf der Packung steht",
+      "zeichen": "🏷️",
+      "zuerst": true,
+      "vorspann": "Zuerst das, was am häufigsten falsch gelesen wird."
+    },
+    {
+      "id": "kleinteile",
+      "name": "Kleinteile, Bälle, Ballons",
+      "zeichen": "🫧",
+      "vorspann": "Drei verschiedene Gefahren mit drei verschiedenen Maßstäben – die Norm behandelt sie getrennt, und das ist der Grund, warum eine einzige Hausprüfung nicht reicht."
+    },
+    {
+      "id": "strangulieren",
+      "name": "Schnüre, Folien, becherförmige Teile",
+      "zeichen": "🎗️",
+      "vorspann": "Vier Wege, auf denen von außen die Luft wegbleibt – alle ohne Verschlucken."
+    },
+    {
+      "id": "batterien",
+      "name": "Batterien und Magnete",
+      "zeichen": "🔋",
+      "vorspann": "Zwei Gefahren, bei denen es nicht auf Beschwerden ankommt, sondern auf Zeit."
+    },
+    {
+      "id": "material",
+      "name": "Material und Verarbeitung",
+      "zeichen": "🪵"
+    },
+    {
+      "id": "passt",
+      "name": "Passt es zu dem, was Ihr Kind gerade tut?",
+      "zeichen": "🧩",
+      "vorspann": "Hier wird nichts über Ihr Kind geurteilt. Es geht darum, ob der Gegenstand zu dem passt, was Sie sowieso schon sehen."
+    }
   ],
   "pruefungen": [
     {
-      "id": "k01", "bereich": "kennzeichen", "art": "einmal", "kritisch": false,
+      "id": "k01",
+      "bereich": "kennzeichen",
+      "art": "einmal",
+      "kritisch": false,
       "was": "Es gibt eine CE-Kennzeichnung.",
       "warum": "Fehlt sie, ist das Spielzeug nicht rechtmäßig im Handel. Das ist der einzige Schluss, den man daraus ziehen darf – und er ist ein Ausschluss, kein Gütesiegel.",
       "wieZuPruefen": "Auf Spielzeug, Anhänger oder Packung nach den zwei Buchstaben CE suchen. Vorgeschrieben ist eine Höhe von mindestens 5 mm; bei kleinem Spielzeug darf das Zeichen auf einem Beipackzettel stehen, und wenn es von außen nicht zu sehen ist, muss es wenigstens auf der Packung sein.",
       "prueferGrenze": "CE ist KEINE Prüfung durch eine unabhängige Stelle. Es ist die Erklärung des Herstellers, dass er die Vorschriften eingehalten hat, und er haftet dafür. Hat er die einschlägigen Normen vollständig angewendet, genügt seine eigene Fertigungskontrolle – dann war keine Prüfstelle beteiligt. Die Behörden nehmen Konformität an; sie stellen sie nicht fest. „CE heißt geprüft“ ist also falsch.",
-      "quelle": { "gremium": "Europäische Spielzeugrichtlinie, Artikel 15, 16 und 19; zur Anbringung die Vorbemerkung in EN 71-1, Abschnitt 7", "geprueft": true }
+      "quelle": {
+        "gremium": "Europäische Spielzeugrichtlinie, Artikel 15, 16 und 19; zur Anbringung die Vorbemerkung in EN 71-1 (Fassung 2011+A3), Abschnitt 7",
+        "geprueft": true
+      }
     },
     {
-      "id": "k02", "bereich": "kennzeichen", "art": "einmal", "kritisch": false,
-      "was": "Wenn ein GS-Zeichen da ist: daneben steht der Name der Prüfstelle.",
-      "warum": "Das GS-Zeichen ist freiwillig, aber es setzt eine Baumusterprüfung durch eine anerkannte Stelle voraus, die auch die laufende Fertigung überwacht. Es ist damit das Gegenstück zu CE: hier hat wirklich jemand von außen geprüft.",
-      "wieZuPruefen": "Ein gültiges GS-Zeichen trägt das Zeichen oder den Namen der prüfenden Stelle. Steht dort keine Stelle, ist es kein gültiges GS-Zeichen.",
-      "prueferGrenze": "Ein fehlendes GS-Zeichen ist kein Mangel – es ist freiwillig, und sehr vieles gutes Spielzeug trägt keines. Die Zuerkennung ist befristet; ein altes Zeichen sagt nichts über heute. Und es ist deutsches Recht, nicht EU-weit: an Spielzeug aus einem anderen Mitgliedstaat fehlt es oft einfach deshalb.",
-      "quelle": { "gremium": "Produktsicherheitsgesetz, Paragraf 21 (deutsches Recht, nicht EU-weit)", "geprueft": true }
+      "id": "k02",
+      "bereich": "kennzeichen",
+      "art": "einmal",
+      "kritisch": false,
+      "was": "Wenn ein GS-Zeichen da ist: links oben im Zeichen steht das Symbol der Prüfstelle.",
+      "warum": "Das GS-Zeichen ist freiwillig, aber es setzt voraus, dass eine GS-Stelle ein Baumuster geprüft, die Produktionsstätte vor Ort besichtigt und Kontrollen während der laufenden Fertigung vereinbart hat. Es ist damit das Gegenstück zu CE: hier hat wirklich jemand von außen geprüft.",
+      "wieZuPruefen": "Im Zeichen selbst nach dem Symbol der GS-Stelle suchen. Vorgeschrieben ist, dass dieses Symbol mit dem GS-Zeichen verbunden ist, in der linken oberen Ecke steht – oder links daneben und das Zeichen berührt – und eindeutig auf eine bestimmte Prüfstelle zurückführt. Ein Logo genügt; ein ausgeschriebener Name ist nicht verlangt. Fehlt das Symbol ganz, ist das Zeichen nicht so gestaltet, wie es vorgeschrieben ist.",
+      "prueferGrenze": "Ein fehlendes GS-Zeichen ist kein Mangel – es ist freiwillig, und sehr vieles gute Spielzeug trägt keines. Die Zuerkennung ist auf höchstens fünf Jahre befristet; ein altes Zeichen sagt nichts über heute. Und es ist deutsches Recht, nicht EU-weit: an Spielzeug aus einem anderen Mitgliedstaat fehlt es oft einfach deshalb. Wirklich nachprüfen lässt sich ein Zeichen nur außerhalb des Ladens: jede GS-Stelle muss eine Liste aller von ihr ausgestellten Bescheinigungen veröffentlichen, mit den Angaben, die das Produkt eindeutig bezeichnen.",
+      "quelle": {
+        "gremium": "Produktsicherheitsgesetz, Paragraf 20 (Zuerkennung des GS-Zeichens), Paragraf 22 (Pflichten der GS-Stellen) und die Anlage (Gestaltung des GS-Zeichens) – deutsches Recht, nicht EU-weit",
+        "geprueft": true
+      }
     },
     {
-      "id": "k03", "bereich": "kennzeichen", "art": "einmal", "kritisch": true,
+      "id": "k03",
+      "bereich": "kennzeichen",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Wenn das Symbol „nicht unter 3 Jahren“ oder dieser Satz draufsteht: es steht auch dabei, WARUM.",
       "warum": "Das Symbol heißt nur „für unter Dreijährige nicht geeignet, weil gefährlich“. Es heißt nicht automatisch „Kleinteile“. Vorgeschrieben ist, dass die Gefahr kurz angegeben wird – sie kann Verschlucken sein, aber auch Strangulieren durch eine Schnur, scharfe Kanten, Bruch, Batterien oder Magnete. Ist die Gefahr nicht offensichtlich, muss sogar dastehen, was sie anrichtet („Lange Schnur. Strangulationsgefahr“). Erst Symbol und Gefahr zusammen sind die Auskunft.",
       "wieZuPruefen": "Den Warnhinweis vollständig lesen – und zwar auch den Beipackzettel: die Angabe der Gefahr darf nach der Norm in der Gebrauchsanweisung oder einem Beipackzettel stehen statt auf dem Spielzeug oder der Packung. Steht sie nirgends, wissen Sie nicht, wovor gewarnt wird, und können nicht entscheiden, ob es sich entschärfen lässt.",
       "prueferGrenze": "Umgekehrt gilt: ein Aufkleber nimmt den Hersteller nicht aus der Verantwortung. Spielzeug, das nach Funktion, Maßen und Gestaltung für Kinder unter drei Jahren bestimmt ist, muss die Anforderungen für dieses Alter erfüllen; der Warnhinweis entlässt niemanden daraus – das steht im Begründungsanhang der Norm. Fehlt das Symbol, heißt das auch nichts: Spielzeug, das offensichtlich nichts für dieses Alter ist, braucht den Hinweis gar nicht.",
-      "quelle": { "gremium": "Europäische Spielzeugrichtlinie, Anhang V Teil B Nummer 1 und Artikel 11; EN 71-1, Abschnitt 7.2 und Begründungsanhang A.34", "geprueft": true }
+      "quelle": {
+        "gremium": "Europäische Spielzeugrichtlinie, Anhang V Teil B Nummer 1 und Artikel 11; EN 71-1 (Fassung 2011+A3), Abschnitt 7.2 und Begründungsanhang A.34",
+        "geprueft": true
+      }
     },
     {
-      "id": "k04", "bereich": "kennzeichen", "art": "einmal", "kritisch": false,
+      "id": "k04",
+      "bereich": "kennzeichen",
+      "art": "einmal",
+      "kritisch": false,
       "was": "Name und Anschrift des Herstellers stehen drauf – dazu eine Typ-, Chargen- oder Seriennummer.",
       "warum": "Das ist vorgeschrieben, und es ist der praktische Teil daran: ohne Anschrift gibt es niemanden, der ein Spielzeug zurückrufen kann, und ohne Nummer lässt sich nicht sagen, welche Serie gemeint ist. Kommt das Spielzeug von außerhalb der EU, muss auch der Einführer mit Anschrift genannt sein.",
       "wieZuPruefen": "Packung umdrehen und nach einer Anschrift suchen – eine Internetadresse allein ist keine. Sie darf auch auf einem beiliegenden Papier stehen. Dann nach der Nummer sehen, die diese Serie bezeichnet.",
       "prueferGrenze": "Eine Anschrift sagt nichts über die Qualität, und sie lässt sich drucken, ohne zu stimmen. Zu Hause prüfbar ist nur, ob sie überhaupt da ist.",
-      "quelle": { "gremium": "Europäische Spielzeugrichtlinie, Pflichten von Hersteller und Einführer; wiedergegeben in der Vorbemerkung zu EN 71-1, Abschnitt 7", "geprueft": true }
+      "quelle": {
+        "gremium": "Europäische Spielzeugrichtlinie, Pflichten von Hersteller und Einführer; wiedergegeben in der Vorbemerkung zu EN 71-1 (Fassung 2011+A3), Abschnitt 7",
+        "geprueft": true
+      }
     },
     {
-      "id": "t01", "bereich": "kleinteile", "art": "einmal", "kritisch": true,
+      "id": "t01",
+      "bereich": "kleinteile",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Nichts löst sich: Augen, Nasen, Räder, Knöpfe, Schrauben, Verschlüsse, Aufkleber.",
-      "warum": "Für Kinder unter drei Jahren darf weder das Spielzeug noch ein abnehmbares Teil davon vollständig in den Prüfzylinder der Norm passen – das ist der Maßstab für „zu klein“. Was hineinpasst, kann verschluckt oder eingeatmet werden.",
+      "warum": "Für Kinder unter drei Jahren darf weder das Spielzeug noch ein abnehmbares Teil davon vollständig in den Prüfzylinder der Norm passen – das ist der Maßstab für „zu klein“. Was hineinpasst, kann verschluckt oder eingeatmet werden. Ein spitzes oder ein quellendes Teil ist dabei noch gefährlicher als ein glattes – dazu steht hier eine eigene Zeile.",
       "wieZuPruefen": "An jedem angesetzten Teil kräftig ziehen und drehen – mit der Kraft, die Ihr Kind auch aufbringt, und an der Stelle, an der es ziehen würde. Danach noch einmal: Kinder finden die Schwachstelle zuverlässiger als Erwachsene.",
       "prueferGrenze": "Dieses Ziehen ist nicht die Normprüfung. Die Norm zieht und dreht mit festgelegten Kräften, lässt das Spielzeug fallen, schlägt und drückt es – und sieht erst DANN nach, was sich gelöst hat. Ihr Handgriff findet, was jetzt lose ist, nicht das, was nach dem zehnten Sturz lose wird. Ausgenommen von der Kleinteile-Anforderung ist außerdem einiges: Papier, Stoff, Garn, Schnur, Mal- und Schreibzeug ohne abnehmbare Teile, Knete – und Luftballons, zu denen hier eine eigene Zeile steht.",
-      "quelle": { "gremium": "EN 71-1 (europäische Spielzeugnorm), Abschnitt 5.1 und Abschnitt 8.2 (Prüfzylinder für Kleinteile)", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (europäische Spielzeugnorm, Fassung 2011+A3), Abschnitt 5.1 und Abschnitt 8.2 (Prüfzylinder für Kleinteile)",
+        "geprueft": true
+      }
     },
     {
-      "id": "t02", "bereich": "kleinteile", "art": "einmal", "kritisch": true,
+      "id": "t02",
+      "bereich": "kleinteile",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Kein herausnehmbarer Ball und kein kugeliges Teil, das klein genug ist – die Norm zieht die Grenze beim kleinsten Durchmesser.",
       "warum": "Kugelige Dinge können die Atemwege hinter dem harten Gaumen verschließen; ein Reflex verengt dann den Hals, und darum sind sie schwer wieder herauszuholen. Für Bälle gilt in der Norm deshalb eine EIGENE, größere Prüfung als für andere Kleinteile: nicht der Prüfzylinder, sondern eine 6,4 mm dicke Platte mit einem Loch von 44,5 mm. Was ganz hindurchfällt, ist ein „kleiner Ball“ – und Spielzeug für Kinder unter drei Jahren darf keiner sein und keinen herausnehmbaren enthalten.",
       "wieZuPruefen": "Den KLEINSTEN Durchmesser messen, bei einem eiförmigen Teil also quer. Unter 44,5 mm fällt er nach der Norm durch die Schablone und kommt weg; ab etwa 45 mm fällt er nicht mehr hindurch. Hängt der Ball an einer Schnur, zählt er auch dann noch, wenn er tief genug in das Loch eintaucht – die Norm setzt dafür 30 mm an, und diesen Fall stellen Sie zu Hause nicht nach: an der Schnur kommt er weg.",
       "prueferGrenze": "Drei Grenzen. Die Norm legt das Teil ohne zu drücken und in JEDER Lage ein; ein Lineal am kleinsten Durchmesser kommt dem nahe, trifft es aber nicht, und knapp um 44,5 mm herum entscheidet es nicht. Weiche, gefüllte Bälle sind von dieser Anforderung ausdrücklich ausgenommen – für sie sagt die Zahl nichts. Und die Norm sieht nach Zug-, Dreh-, Fall-, Schlag- und Druckprüfung noch einmal nach, ob ein Ball sich gelöst hat.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 5.10 und Abschnitt 8.32 (Schablone E), Begründungsanhang A.48", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 5.10 und Abschnitt 8.32 (Schablone E), Begründungsanhang A.48",
+        "geprueft": true
+      }
     },
     {
-      "id": "t03", "bereich": "kleinteile", "art": "immer", "kritisch": true,
+      "id": "t03",
+      "bereich": "kleinteile",
+      "art": "immer",
+      "kritisch": true,
       "was": "Luftballons bleiben weg – auch nicht aufgeblasene und auch geplatzte Reste.",
       "warum": "Die Norm nimmt Luftballons von der Kleinteile-Anforderung ausdrücklich aus und verlangt stattdessen einen Warnhinweis auf der Packung von Latexballons: Kinder unter acht Jahren können an nicht aufgeblasenen oder geplatzten Ballons ersticken. Ein Ballonrest legt sich an und wird eingesaugt.",
       "wieZuPruefen": "Nach dem Feiern einsammeln, auch Fetzen, und nachsehen, wo die Packung liegt. Ein Ballon ist nichts, was neben einem Kind unter drei Jahren herumliegt.",
       "prueferGrenze": "Keine – das ist ein Handgriff, nicht eine Prüfung. Ein Ballon aus metallisiertem Kunststoff gilt in der Norm als etwas anderes als ein Latexballon, und nur für Latex ist der Hinweis verlangt. Zu Hause trennt man das nicht zuverlässig, also gilt die Regel für alle.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 5.1 (Ausnahmen) und Abschnitt 7.3 (Warnhinweis für Latexballons)", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 5.1 (Ausnahmen) und Abschnitt 7.3 (Warnhinweis für Latexballons)",
+        "geprueft": true
+      }
     },
     {
-      "id": "s01", "bereich": "strangulieren", "art": "einmal", "kritisch": true,
+      "id": "t04",
+      "bereich": "kleinteile",
+      "art": "immer",
+      "kritisch": true,
+      "was": "Keine Wasserperlen, Quellkugeln oder Dekokugeln aus Superabsorber – auch nicht als Zubehör.",
+      "warum": "Superabsorbierende Polymere nehmen Wasser bis zum Hundertfachen ihres Volumens auf; im Körper quellen sie auf bis zum Sechzigfachen. Eine Perle, die trocken klein und harmlos aussieht, ist nach Stunden groß – und die endoskopische Bergung kann durch die Schwellung erheblich erschwert oder unmöglich werden, sodass operiert werden muss. Solche Kugeln stecken in Dekomaterial und in verschiedenem Spielzeug.",
+      "wieZuPruefen": "Nach kleinen harten Kügelchen sehen, die in Wasser wachsen: in Dekoschalen, in Blumenzubehör, in „Wachstieren\", in Knisterkissen. Im Zweifel ein Kügelchen in ein Glas Wasser legen und eine Stunde warten – das ist die eine Prüfung, die zu Hause wirklich etwas zeigt.",
+      "prueferGrenze": "Hier versagt jede Größenprüfung: Prüfzylinder und Schablone messen den Gegenstand so, wie er jetzt ist, nicht so, wie er im Körper wird. Für diese Dinge gibt es deshalb keine Größe, die in Ordnung wäre – sie gehören nicht in Reichweite, und zwar unabhängig vom Alter des Kindes.",
+      "quelle": {
+        "gremium": "Leitlinie zur Versorgung von Kindern nach Fremdkörperaspiration oder -ingestion, AWMF-Register 001/031, Version 2.0, Stand 12/2024 (Gültigkeit fünf Jahre)",
+        "geprueft": true
+      }
+    },
+    {
+      "id": "s01",
+      "bereich": "strangulieren",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Keine Schnur, kein Band, keine Kette, kein Gummi, keine Kordel am Spielzeug.",
       "warum": "Eine Schnur am Spielzeug kann sich zu einer Schlinge legen. Das ist eine eigene Gefahr und hat mit Verschlucken nichts zu tun.",
       "wieZuPruefen": "Das Spielzeug umdrehen und alles suchen, was sich zu einer Schlinge legen lässt – Zugbänder, Anhänger, Kordeln an Stofftieren, Bänder an Spielbögen. Die Norm setzt dafür Längen: eine Schnur oder Kette, die eine Schlinge bilden kann, höchstens 220 mm bei Spielzeug für Kinder unter 18 Monaten und höchstens 300 mm bei Spielzeug für ältere Kinder; eine feste Schlaufe höchstens 380 mm Umfang; ein freies Schnurende höchstens 300 mm, bei Nachziehspielzeug bis 800 mm.",
       "prueferGrenze": "Die Zahlen helfen beim Hinschauen, entscheiden aber nicht: welche gilt, hängt davon ab, für welches Alter das Spielzeug bestimmt ist und ob die Schnur eine Schlinge bilden KANN – beides beurteilt die Norm mit eigenen Verfahren, und wie gemessen wird, ist dort ebenfalls festgelegt. Für Spielzeug, das über ein Bett gespannt wird, gelten diese Längen gar nicht; dazu steht hier eine eigene Zeile. Die einfache Entscheidung bleibt: ab.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 5.4 (Schnüre, Ketten und elektrische Leitungen)", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 5.4 (Schnüre, Ketten und elektrische Leitungen)",
+        "geprueft": true
+      }
     },
     {
-      "id": "s02", "bereich": "strangulieren", "art": "immer", "kritisch": true,
+      "id": "s02",
+      "bereich": "strangulieren",
+      "art": "immer",
+      "kritisch": true,
       "was": "Folien und Verpackungsbeutel sind sofort weg – vor dem ersten Spielen.",
       "warum": "Dünne Folie legt sich an Mund und Nase und macht sie dicht. Die Norm schreibt für Verpackungsfolie darum eine mittlere Dicke von mindestens 0,038 mm vor – aber Beutel bis 10 cm × 10 cm sind davon ausgenommen, und das sind genau die kleinen Zubehörbeutel.",
       "wieZuPruefen": "Beim Auspacken alles Folienartige einsammeln, auch die kleinen Beutel mit Zubehör, und in den Müll bringen, nicht auf den Tisch legen.",
       "prueferGrenze": "Keine – das ist ein Handgriff, nicht eine Prüfung. Dicke Folie ist nicht harmlos, sie ist nur weniger anhänglich: die Mindestdicke ist eine Anforderung an den Hersteller, keine Freigabe für Sie.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 4.3 und Abschnitt 6 (Verpackung)", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 4.3 und Abschnitt 6 (Verpackung)",
+        "geprueft": true
+      }
     },
     {
-      "id": "s03", "bereich": "strangulieren", "art": "immer", "kritisch": true,
+      "id": "s03",
+      "bereich": "strangulieren",
+      "art": "immer",
+      "kritisch": true,
       "was": "Ein Spielzeug, das über oder an das Bett gespannt ist, kommt weg, sobald Ihr Kind anfängt, sich auf Hände und Knie zu stützen.",
       "warum": "Genau das verlangt die Norm als Warnhinweis auf solchem Spielzeug: wegnehmen, wenn das Kind beginnt, sich in den Vierfüßlerstand aufzurichten – sonst kann es sich verfangen. Der Auslöser ist also kein Datum, sondern etwas, das Sie sehen.",
       "wieZuPruefen": "Einmal nachsehen, ob so etwas über dem Bett hängt, und sich merken, worauf Sie warten: das erste Aufstützen auf Hände und Knie. Hängt schon etwas und Ihr Kind tut das bereits, ist das kein Fall für später.",
       "prueferGrenze": "Keine Prüfung – eine Regel. Dazu eine Lücke, die man kennen muss: für Spielzeug, das über ein Bett gespannt wird, gelten die Längengrenzen für Schnüre nach der Norm nicht. Sie wird dort über diesen Warnhinweis gelöst, nicht über die Länge.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 5.4 (Ausnahme für Bettspielzeug) und Abschnitt 7.11 (Warnhinweis)", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 5.4 (Ausnahme für Bettspielzeug) und Abschnitt 7.11 (Warnhinweis)",
+        "geprueft": true
+      }
     },
     {
-      "id": "s04", "bereich": "strangulieren", "art": "einmal", "kritisch": true,
+      "id": "s04",
+      "bereich": "strangulieren",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Becher, Schalen und Eierhälften haben Löcher, eine Rippe oder einen gewellten Rand.",
       "warum": "Ein becher- oder schalenförmiges Teil kann sich über Mund und Nase legen und dicht abschließen. Die Norm nimmt genau diese Form in den Blick: Öffnung innen zwischen 64 und 102 mm, Inhalt unter 177 ml, tiefer als 13 mm. Solche Teile müssen entweder zwei Löcher in genügendem Abstand vom Rand haben oder eine Rippe durch die Öffnung oder einen gewellten Rand. Bei den Todesfällen, aus denen diese Anforderung entstanden ist, waren die Kinder zwischen 4 und 24 Monaten alt.",
       "wieZuPruefen": "Jeden Becher und jede Schale umdrehen und nach Löchern, einer Rippe oder einem gewellten Rand sehen. Dann die Öffnung messen: die Norm nennt 64 bis 102 mm innen – liegt sie dazwischen, ist es genau diese Form. Nichts davon vorhanden: nicht in Reichweite eines Kindes unter drei Jahren.",
       "prueferGrenze": "Die Norm prüft Lage und Abstände der Löcher genau – zwei Löcher mindestens 13 mm vom Rand, als Loch zählt erst ab 2 mm – und sieht nach Fall-, Schlag- und Druckprüfung noch einmal nach. Ob ein einzelnes Loch an der richtigen Stelle sitzt, entscheiden Sie zu Hause nicht. Ausgenommen sind Behälter, die dicht sein müssen, etwa Knetdosen, und fest sitzende Teile größerer Spielzeuge.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 5.12 (becherförmige Spielzeuge) und Begründungsanhang A.50", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 5.12 (becherförmige Spielzeuge) und Begründungsanhang A.50",
+        "geprueft": true
+      }
     },
     {
-      "id": "b01", "bereich": "batterien", "art": "einmal", "kritisch": true,
+      "id": "b01",
+      "bereich": "batterien",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Das Batteriefach ist verschraubt und lässt sich nicht mit der Hand öffnen.",
       "warum": "Eine Knopfzelle im Körper verletzt in Stunden, nicht in Tagen, und sie tut das durch Strom, nicht durch Gift – auch eine leere.",
       "wieZuPruefen": "Versuchen, das Fach mit dem Fingernagel zu öffnen. Geht es ohne Werkzeug auf, ist das Spielzeug für dieses Alter nicht geeignet. Mit Schraube: nachsehen, ob die Schraube wirklich sitzt.",
       "prueferGrenze": "Keine wesentliche – das lässt sich zu Hause gut prüfen. Was hier fehlt, ist die Fundstelle: die Anforderungen an Batteriefächer stehen in der Norm für elektrisches Spielzeug, und deren Text lag für diese App nicht vor. Die Zeile steht trotzdem, weil der Handgriff selbst eindeutig ist – aber sie nennt keine Stelle, die hier niemand nachgelesen hat.",
-      "quelle": { "gremium": "Kinder- und Jugendmedizin zu Knopfzellen; die Anforderungen an Batteriefächer stehen in der Norm für elektrisches Spielzeug, deren Text hier nicht vorlag", "geprueft": false }
+      "quelle": {
+        "gremium": "Kinder- und Jugendmedizin zu Knopfzellen; die Anforderungen an Batteriefächer stehen in der Norm für elektrisches Spielzeug, deren Text hier nicht vorlag",
+        "geprueft": false
+      }
     },
     {
-      "id": "b02", "bereich": "batterien", "art": "einmal", "kritisch": true,
+      "id": "b02",
+      "bereich": "batterien",
+      "art": "einmal",
+      "kritisch": true,
       "was": "Es sind keine losen Magnete dabei und keine, die sich herauslösen lassen.",
       "warum": "Zwei Magnete, die durch die Darmwand hindurch zueinander finden, drücken das Gewebe zwischen sich ab. Das macht keine Beschwerden, bis es ernst ist. Die Norm lässt einen losen Magneten darum nur zu, wenn er entweder schwach genug ist oder zu groß für den Prüfzylinder – und bei Spielzeug für Kinder unter drei Jahren darf sich ein Magnet, der in den Zylinder passt, auch dann nicht lösen, wenn er schwach ist.",
       "wieZuPruefen": "Alle Magnetteile anfassen und daran ziehen. Bei Magnetbausteinen und Magnetangeln auf Risse in der Umhüllung achten – dort kommen die Magnete heraus.",
       "prueferGrenze": "Ein eingegossener Magnet lässt sich von außen nicht beurteilen; ein Riss im Kunststoff ist das einzige sichtbare Zeichen. Wie stark ein Magnet ist, messen Sie zu Hause nicht: die Norm hat dafür eine eigene Kennzahl und ein eigenes Verfahren.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 4.23 (Magnete) und Abschnitt 5.1", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 4.23 (Magnete) und Abschnitt 5.1",
+        "geprueft": true
+      }
     },
     {
-      "id": "m01", "bereich": "material", "art": "einmal", "kritisch": false,
+      "id": "m01",
+      "bereich": "material",
+      "art": "einmal",
+      "kritisch": false,
       "was": "Keine Splitter, keine scharfen Kanten, keine Spitzen, keine Quetschstellen.",
       "warum": "Ein Kind dieses Alters nimmt alles in den Mund und lässt alles fallen – beides findet schwache Stellen.",
       "wieZuPruefen": "Mit der Handfläche über alle Flächen und Kanten fahren, Holzteile gegen das Licht halten, Scharniere und Klappen einmal bewegen.",
       "prueferGrenze": "Was beim Fallen bricht, zeigt sich erst beim Fallen – nach dem ersten Sturz noch einmal hinschauen. Und ein Unterschied, der hier zu Ihren Gunsten geht: die Norm misst Kanten und Spitzen mit einem Gerät, aber nur an Metall und Glas. Bei Holz und Kunststoff steht in der Norm selbst eine Beurteilung – ob eine Kante oder ein Splitter ein unangemessenes Verletzungsrisiko ist. Ihre Hand auf dem Holz ist dieser Beurteilung also näher, als man denkt; dem Messgerät am Blech ist sie es nicht.",
-      "quelle": { "gremium": "EN 71-1, Abschnitt 4.7 (Kanten), Abschnitt 4.8 (Spitzen und Splitter) und Abschnitt 5.1", "geprueft": true }
+      "quelle": {
+        "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 4.7 (Kanten), Abschnitt 4.8 (Spitzen und Splitter) und Abschnitt 5.1",
+        "geprueft": true
+      }
     },
     {
-      "id": "m02", "bereich": "material", "art": "immer", "kritisch": false,
+      "id": "m02",
+      "bereich": "material",
+      "art": "immer",
+      "kritisch": false,
       "was": "Es riecht nicht auffällig und färbt nicht ab, wenn es nass wird.",
       "warum": "Ein starker chemischer Geruch oder abfärbende Lackierung ist ein Hinweis darauf, dass etwas nicht stimmt – kein Beweis, aber Grund genug, es nicht in einen Mund zu geben.",
       "wieZuPruefen": "Daran riechen, und mit einem feuchten weißen Tuch über die farbigen Flächen wischen.",
       "prueferGrenze": "Das ist keine Schadstoffprüfung. Die meisten Stoffe, um die es geht, riechen nach nichts und färben nicht ab; diese Zeile findet nur die auffälligen Fälle. Die Norm, die den Übergang solcher Stoffe aus Spielzeug begrenzt, lag für diese App nicht vor – darum steht hier keine Stelle und keine Zahl.",
-      "quelle": { "gremium": "europäische Spielzeugnorm zum Übergang bestimmter Elemente aus Spielzeugmaterial, deren Text hier nicht vorlag", "geprueft": false }
+      "quelle": {
+        "gremium": "europäische Spielzeugnorm zum Übergang bestimmter Elemente aus Spielzeugmaterial, deren Text hier nicht vorlag",
+        "geprueft": false
+      }
     },
     {
-      "id": "p01", "bereich": "passt", "art": "einmal", "kritisch": false,
+      "id": "p01",
+      "bereich": "passt",
+      "art": "einmal",
+      "kritisch": false,
       "was": "Ihr Kind kann mit dem Gegenstand schon etwas anfangen – so, wie es gerade spielt.",
       "warum": "Nicht weil früher besser wäre, sondern weil ein Gegenstand, mit dem noch nichts geht, nur herumliegt. Die Liste der Arten weiter unten sagt, was Kinder in welchem Abschnitt mit solchem Material tun.",
       "wieZuPruefen": "Schauen, was Ihr Kind diese Woche mit seinen Dingen macht: hineinlegen und herausnehmen, aufeinanderstellen, zwei Teile zusammenbringen, ordnen. Dann unten nachsehen, was dazu passt.",
       "prueferGrenze": "Die Altersangaben in der Liste sind Spannen aus beschreibenden Untersuchungen, keine Ziele. Ein Kind, das etwas noch nicht tut, ist nicht zu spät.",
-      "quelle": { "gremium": "entwicklungspsychologische Untersuchungen zu Stapel- und Steckmaterial", "geprueft": true }
+      "quelle": {
+        "gremium": "entwicklungspsychologische Untersuchungen zu Stapel- und Steckmaterial",
+        "geprueft": true
+      }
     },
     {
-      "id": "p02", "bereich": "passt", "art": "immer", "kritisch": false,
+      "id": "p02",
+      "bereich": "passt",
+      "art": "immer",
+      "kritisch": false,
       "was": "Beim Spielen damit bleiben Sie in Reichweite.",
       "warum": "Jede Prüfung oben gilt für den Zustand von heute. In Reichweite zu bleiben ist das, was bei einem Teil hilft, das sich erst beim Spielen löst.",
       "wieZuPruefen": "Keine Prüfung – eine Regel für jedes Mal.",
       "prueferGrenze": "Keine.",
-      "quelle": { "gremium": "allgemeine Aufsichtsregel", "geprueft": false }
+      "quelle": {
+        "gremium": "allgemeine Aufsichtsregel",
+        "geprueft": false
+      }
     },
     {
-      "id": "p03", "bereich": "passt", "art": "immer", "kritisch": false,
+      "id": "p03",
+      "bereich": "passt",
+      "art": "immer",
+      "kritisch": false,
       "was": "Es liegt nicht alles gleichzeitig da.",
       "warum": "Fachlich empfohlen wird, wenige, vielseitig bespielbare Dinge offen zugänglich zu halten – zu viel auf einmal überfordert. In zwei kleinen Untersuchungen spielten Kinder mit weniger Dingen länger an einem Stück, und gemeinsame Aufmerksamkeit mit dem Erwachsenen hielt länger an.",
       "wieZuPruefen": "Hinschauen, wie viel gerade erreichbar ist, und einen Teil wegstellen.",
       "prueferGrenze": "Ein Entwicklungsvorteil ist damit nicht belegt – die Untersuchungen beobachteten Spielverhalten in einer einzelnen Sitzung, nicht Entwicklung. Und wie lange man Dinge wegstellt, sagt niemand: eine Zahl dazu ließ sich nicht belegen.",
-      "quelle": { "gremium": "BIÖG (vormals BZgA) zum Spielzeug im Kleinkindalter; Handlungsempfehlungen eines Landes-Orientierungsplans für Kinder unter drei Jahren", "geprueft": true }
+      "quelle": {
+        "gremium": "BIÖG (vormals BZgA) zum Spielzeug im Kleinkindalter; Handlungsempfehlungen eines Landes-Orientierungsplans für Kinder unter drei Jahren",
+        "geprueft": true
+      }
     }
   ],
   "arten": [
     {
-      "id": "a-stapelbecher", "name": "Stapelbecher oder Nistwürfel",
+      "id": "a-stapelbecher",
+      "name": "Stapelbecher oder Nistwürfel",
       "statt": "In der Quelle steht die Matrjoschka. Stapelbecher und ineinander passende Würfel tun dasselbe und sind hier im Handel üblich.",
       "wasKinderTun": "Erst werden zwei Teile zusammengebracht, später viele geordnet. Fünf Becher der Größe nach zu ordnen gelingt zuverlässig etwa ab zwei Jahren.",
       "spanne": "etwa ab 1 Jahr, in Stufen",
@@ -180,35 +328,40 @@
       "sicherheit": "Becher mit Löchern sind besser als Becher ohne: ein Becher ohne Loch kann sich über Mund und Nase legen. Die Norm hat dafür eine eigene Anforderung – siehe die Zeile zu Bechern und Schalen oben."
     },
     {
-      "id": "a-steckpyramide", "name": "Steckpyramide mit Ringen",
+      "id": "a-steckpyramide",
+      "name": "Steckpyramide mit Ringen",
       "wasKinderTun": "Zuerst alles ab- und wieder aufstecken in beliebiger Folge, später der Größe nach. Das Abnehmen kommt lange vor dem Ordnen.",
       "spanne": "etwa ab 1 Jahr",
       "selbstkorrektur": "Bei einer Pyramide mit Kegelstab passt ein zu kleiner Ring nicht weit hinunter.",
       "sicherheit": "Der Stab soll nicht länger sein als die aufgesteckten Ringe hoch sind."
     },
     {
-      "id": "a-steckbrett", "name": "Steckbrett oder Formensortierer mit großen Teilen",
+      "id": "a-steckbrett",
+      "name": "Steckbrett oder Formensortierer mit großen Teilen",
       "wasKinderTun": "Ein Teil in die passende Öffnung bringen. Anfangs geht es um das Hineinfallenlassen, erst später um die Form.",
       "spanne": "etwa ab 1,5 Jahren",
       "selbstkorrektur": "Die falsche Form geht nicht hinein.",
       "sicherheit": "Die Teile müssen groß sein. Ein Formensortierer mit kleinen Steinen ist für dieses Alter nicht geeignet."
     },
     {
-      "id": "a-puzzle", "name": "Puzzle aus zwei oder drei Teilen",
+      "id": "a-puzzle",
+      "name": "Puzzle aus zwei oder drei Teilen",
       "wasKinderTun": "Zwei Teile zu einem Bild zusammenbringen. Dass es eines ergibt, ist der ganze Reiz.",
       "spanne": "etwa ab 2 Jahren",
       "selbstkorrektur": "Die Kanten passen oder passen nicht.",
       "sicherheit": "Knöpfe und Griffe an Puzzleteilen sind angesetzte Teile – daran ziehen."
     },
     {
-      "id": "a-paarkarten", "name": "Paarkarten – zwei gleiche Bilder finden",
+      "id": "a-paarkarten",
+      "name": "Paarkarten – zwei gleiche Bilder finden",
       "wasKinderTun": "Zwei gleiche Bilder nebeneinanderlegen. Offen liegend, nicht verdeckt: Gedächtnisspiele sind etwas für später.",
       "spanne": "etwa ab 2 Jahren",
       "selbstkorrektur": "Zwei gleiche Bilder sieht man.",
       "sicherheit": "Pappe wird nass und weich. Abgebissene Ecken sind Kleinteile."
     },
     {
-      "id": "a-baelle", "name": "Bälle und rollende Dinge",
+      "id": "a-baelle",
+      "name": "Bälle und rollende Dinge",
       "wasKinderTun": "Rollen, werfen, hinterherkrabbeln. Für die Bewegung, nicht für das Ordnen.",
       "spanne": "etwa ab 1 Jahr",
       "selbstkorrektur": "Keine – hier geht es um Bewegung.",
@@ -224,7 +377,7 @@
     {
       "quellNr": "x02",
       "was": "Die Klopapierrolle als Kleinteile-Prüfung",
-      "warum": "Nicht normgleich, und sie irrt in BEIDE Richtungen. Zu streng: handelsübliche Hülsen haben innen etwa 40 bis 45 mm, der genormte Prüfzylinder ist 31,7 mm weit – was durch die Rolle fällt, ist also nicht zwingend ein Kleinteil. Dazu ist die Rolle ein offenes Rohr von etwa zehn Zentimetern, während das Teil VOLLSTÄNDIG in einen unten geschlossenen Zylinder passen muss, dessen Boden schräg ist: 25,4 mm an der höchsten, 57,1 mm an der tiefsten Stelle. Ein langer dünner Stab rutscht durch die Rolle, ohne ein Kleinteil zu sein. Zu lax, und das ist das Gefährliche: Bälle werden gar nicht mit dem Zylinder beurteilt, sondern mit einer eigenen Schablone, einem Loch von 44,5 mm. Eine Rolle mit 40 mm lässt einen Ball von 43 mm nicht durch – nach der Norm ist er trotzdem ein kleiner Ball und in Spielzeug für dieses Alter verboten. Auch ein selbst gebautes Rohr mit den richtigen 31,7 mm wäre nicht die Prüfung: in der Norm wird in JEDER Lage geprüft, und erst nach Zug-, Dreh-, Fall-, Schlag- und Druckprüfung noch einmal nachgesehen."
+      "warum": "Nicht normgleich, und der Grund liegt tiefer als jede Zahl: bei Kleinteilen fragt die Norm, ob das Teil VOLLSTÄNDIG IN einen unten geschlossenen Zylinder hineinpasst – 31,7 mm weit, schräger Boden mit 25,4 mm an der höchsten und 57,1 mm an der tiefsten Stelle. Ein offenes Papprohr kann das gar nicht abbilden; es kann nur fragen, was DURCHFÄLLT. Zu streng ist es darum doppelt: handelsübliche Hülsen haben innen etwa 40 bis 45 mm und damit mehr als 31,7 mm, und ein langer dünner Stab fällt durch das zehn Zentimeter lange Rohr, obwohl er in einen 57,1 mm tiefen Zylinder nie ganz hineinpasst. Zu lax ist es in einem schmalen Band, und das ist die Richtung, die weh tut: bei Bällen fragt die Norm tatsächlich, was durch ein Loch fällt, und ihre Schablone hat 44,5 mm – ein Ball zwischen dem Innenmaß der Rolle und 44,5 mm fällt nicht durch die Rolle und ist nach der Norm trotzdem ein kleiner Ball. Was aber weder eine Rolle noch ein selbst gebautes Rohr mit 31,7 mm leisten kann: die Norm drückt das Teil nicht zusammen, prüft in JEDER Lage und sieht erst nach Zug-, Dreh-, Fall-, Schlag- und Druckprüfung noch einmal nach. Pappe gibt nach, und was nach dem zehnten Sturz abbricht, findet kein Rohr. Für becherförmige Teile und für Saugnäpfe gilt ohnehin eine eigene Anforderung."
     },
     {
       "quellNr": "x03",
@@ -250,15 +403,25 @@
       "quellNr": "x07",
       "was": "Normzahlen ohne die Fassung, in der sie nachgelesen sind",
       "warum": "Eine Zahl aus einer Norm ohne Fassungsangabe sieht geprüft aus und ist es nicht. Die Maße in dieser App sind in einer frei zugänglichen Wiedergabe von EN 71-1 in der Fassung 2011 mit der Änderung A3 nachgelesen; es gibt neuere Fassungen. Wo der Normtext nicht vorlag – Batteriefächer, Schadstoffübergang –, steht in der Zeile selbst, dass niemand dort nachgelesen hat."
+    },
+    {
+      "quellNr": "x08",
+      "was": "Hausmittel bei einer verschluckten Knopfzelle",
+      "warum": "Die Leitlinie kennt eine Vorbehandlung mit Sucralfat oder Honig, wenn die Ingestion weniger als zwölf Stunden zurückliegt – aber das ist eine ärztliche Maßnahme auf dem Weg zur Bergung, keine Elternanweisung, und Honig ist bei Säuglingen unter einem Jahr wegen Botulismus ausdrücklich nicht zu geben. Eine Eltern-App, die Dosierungen druckt, verzögert im Ernstfall die Fahrt in die Klinik. Hier steht darum nur: sofort los."
     }
   ],
   "quelle": {
     "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, «Дидактические игры», S. 69–70",
     "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die benannten Spielzeugarten und der Gedanke des Materials, das sich selbst korrigiert. Alle Texte dieser App sind Eigenproduktion.",
     "geprueft": true,
-    "zahlen": { "zieleQuelle": 7, "artenQuelle": 6, "artenUebernommen": 6 },
+    "zahlen": {
+      "zieleQuelle": 7,
+      "artenQuelle": 6,
+      "artenUebernommen": 6
+    },
     "nachgezaehlt": "Der Abschnitt trägt 7 Ziele und nennt 6 Spielzeugarten: zerlegbare Pyramide, Steckpilze, Bälle, Matrjoschka, Schnittbild aus zwei bis drei Teilen, Paarbilder. Beides nachgezählt.",
-    "norm": "Die Maße und Anforderungen aus der europäischen Spielzeugnorm sind in EN 71-1 in der Fassung von 2011 mit der Änderung A3 nachgelesen, und zwar in einer frei zugänglichen Wiedergabe des Normtextes, nicht in einer gekauften Ausgabe. Es gibt neuere Fassungen. Nachgelesen sind: der Prüfzylinder für Kleinteile, die Schablone für Bälle, die Schnurlängen, die Mindestdicke von Verpackungsfolie, die Anforderung an becherförmige Spielzeuge, die Magnetanforderung, Kanten und Spitzen, die Ausnahmen bei Luftballons und der Warnhinweis für Bettspielzeug. Nicht nachgelesen und darum ohne Stelle: Batteriefächer und der Übergang von Schadstoffen.",
-    "abweichung": "Die Matrjoschka ist zu Stapelbechern und Nistwürfeln verallgemeinert, die Steckpilze zum Steckbrett – beides ist im deutschen Handel die übliche Form derselben Sache. Die Quelle gibt keine Altersangaben zu den Arten; die Spannen hier stammen aus beschreibenden entwicklungspsychologischen Untersuchungen zu genau diesem Material und stehen als Spannen, nicht als Ziele. Nicht übernommen ist das Wirkversprechen, das im Begriff „autodidaktisch“ mitklingt."
+    "norm": "Die Maße und Anforderungen aus der europäischen Spielzeugnorm sind in EN 71-1 in der Fassung von 2011 mit der Änderung A3 nachgelesen, und zwar in einer frei zugänglichen Wiedergabe des Normtextes, nicht in einer gekauften Ausgabe. Es gibt neuere Fassungen. Nachgelesen sind: der Prüfzylinder für Kleinteile, die Schablone für Bälle, die Schnurlängen, die Mindestdicke von Verpackungsfolie, die Anforderung an becherförmige Spielzeuge, die Magnetanforderung, Kanten und Spitzen, die Ausnahmen bei Luftballons und der Warnhinweis für Bettspielzeug. Nicht nachgelesen und darum ohne Stelle: Batteriefächer und der Übergang von Schadstoffen. Nachtrag nach dem Review: harmonisiert – also konformitätsvermutungsstiftend – ist heute die Ausgabe EN 71-1:2014+A1:2018, nicht die hier nachgelesene. Die Abschnittsnummern wandern zwischen den Ausgaben, darum trägt jede Fundstelle in dieser App ihre Fassung; geprüft ist der Inhalt, nicht die Nummer in der aktuellen Ausgabe. Die Maße selbst stehen seit langem unverändert.",
+    "abweichung": "Die Matrjoschka ist zu Stapelbechern und Nistwürfeln verallgemeinert, die Steckpilze zum Steckbrett – beides ist im deutschen Handel die übliche Form derselben Sache. Die Quelle gibt keine Altersangaben zu den Arten; die Spannen hier stammen aus beschreibenden entwicklungspsychologischen Untersuchungen zu genau diesem Material und stehen als Spannen, nicht als Ziele. Nicht übernommen ist das Wirkversprechen, das im Begriff „autodidaktisch“ mitklingt.",
+    "rechtsstand": "Rechtsgrundlage ist heute die Europäische Spielzeugrichtlinie 2009/48/EG. Sie wird mit Wirkung vom 1. August 2030 aufgehoben: ab dann gilt die Verordnung (EU) 2025/2509 über die Sicherheit von Spielzeug vom 26. November 2025, und Bezugnahmen auf die Richtlinie sind nach der Entsprechungstabelle in Anhang VIII der Verordnung zu lesen. Die Artikel- und Anhangnummern in dieser App verfallen also zu einem bekannten Datum – die Sachaussagen nicht."
   }
 }

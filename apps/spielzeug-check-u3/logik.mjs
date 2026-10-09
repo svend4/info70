@@ -243,10 +243,27 @@ export function pruefeDaten(daten) {
     }
     if (ce.kritisch) fehler.push('CE-Zeile: nicht kritisch – ein fehlendes CE ist ein Ausschluss, kein Lebensrisiko');
   }
+  // Die GS-Zeile hatte bis zum Review der Welle 80 zwei Fehler: sie verlangte
+  // den NAMEN der Prüfstelle, und sie nannte als Fundstelle Paragraf 21. Im
+  // Gesetz nachgelesen: Paragraf 20 ist die Zuerkennung, Paragraf 21 die
+  // Befugnis der GS-Stelle, Paragraf 22 ihre Pflichten - und die Gestaltung
+  // steht in der ANLAGE, die nicht den Namen, sondern das SYMBOL der GS-Stelle
+  // verlangt (linke obere Ecke, eindeutiger Rückschluss auf die Stelle).
   const gs = pruefungen.find((p) => /GS-Zeichen/.test(p.was ?? ''));
   if (!gs) fehler.push('keine Zeile zum GS-Zeichen');
-  else if (!/Name der Prüfstelle|Namen der prüfenden|prüfenden Stelle/i.test(`${gs.was} ${gs.wieZuPruefen}`)) {
-    fehler.push('GS-Zeile: dass die Prüfstelle genannt sein muss, ist das Prüfbare daran');
+  else {
+    if (!/Symbol der (GS-Stelle|Prüfstelle)/i.test(`${gs.was} ${gs.wieZuPruefen}`)) {
+      fehler.push('GS-Zeile: verlangt wird das Symbol der GS-Stelle, nicht ihr Name – das ist das Prüfbare daran');
+    }
+    if (!/fünf Jahre/.test(gs.prueferGrenze ?? '')) {
+      fehler.push('GS-Zeile: die Befristung auf höchstens fünf Jahre gehört zur Grenze');
+    }
+    if (!/Liste aller/.test(gs.prueferGrenze ?? '')) {
+      fehler.push('GS-Zeile: dass die GS-Stelle ihre Bescheinigungen veröffentlichen muss, ist der einzige echte Nachweisweg');
+    }
+    if (/Paragraf 21(?![0-9])/.test(gs.quelle?.gremium ?? '')) {
+      fehler.push('GS-Zeile: Paragraf 21 ist die Befugnis der GS-Stelle, nicht die Zuerkennung des Zeichens');
+    }
   }
   const u3 = pruefungen.find((p) => /unter 3 Jahren|unter drei Jahren/.test(p.was ?? ''));
   if (!u3) fehler.push('keine Zeile zum Altershinweis');
@@ -280,6 +297,21 @@ export function pruefeDaten(daten) {
     if (!kugel.kritisch) fehler.push('Kugel-Zeile: muss kritisch sein');
   }
 
+  // --- Die Zeile, an der die ganze App haengt: ein Gegenstand, der im Koerper
+  //     waechst, ist durch keine Groessenpruefung zu fassen. Fehlt dieser Satz,
+  //     wird aus der Zeile eine gewoehnliche Kleinteil-Zeile.
+  const quellend = pruefungen.find((p) => /Wasserperlen|Quellkugeln|Superabsorber/i.test(p.was ?? ''));
+  if (!quellend) fehler.push('keine Zeile zu quellenden Materialien');
+  else {
+    if (!/versagt jede Größenprüfung/.test(quellend.prueferGrenze ?? '')) {
+      fehler.push('Quell-Zeile: dass hier jede Größenprüfung versagt, ist der Grund für die Zeile');
+    }
+    if (!quellend.kritisch) fehler.push('Quell-Zeile: muss kritisch sein');
+    if (!/Sechzigfachen|60-fach/.test(quellend.warum ?? '')) {
+      fehler.push('Quell-Zeile: das Ausmaß des Quellens muss dastehen, sonst klingt es harmlos');
+    }
+  }
+
   // --- Wer eine Normzahl nennt, nennt die Fassung. Eine Zahl aus einer Norm
   //     ohne Fassungsangabe sieht geprüft aus und ist es nicht (docs/02).
   const norm = String(daten?.quelle?.norm ?? '');
@@ -289,6 +321,24 @@ export function pruefeDaten(daten) {
   if (!/[Nn]icht nachgelesen|nicht vorlag/.test(norm)) {
     fehler.push('quelle.norm: wo nichts nachgelesen wurde, muss das benannt sein');
   }
+  if (!/EN 71-1:2014\+A1:2018/.test(norm)) {
+    fehler.push('quelle.norm: die heute harmonisierte Ausgabe muss benannt sein – die nachgelesene ist es nicht');
+  }
+  // Das Recht hat ein Ablaufdatum, und das steht in den Daten.
+  const rechtsstand = String(daten?.quelle?.rechtsstand ?? '');
+  if (!/2009\/48\/EG/.test(rechtsstand)) fehler.push('quelle.rechtsstand: die heute geltende Grundlage muss benannt sein');
+  if (!/2025\/2509/.test(rechtsstand)) fehler.push('quelle.rechtsstand: die Nachfolgeverordnung muss benannt sein');
+  if (!/1\. August 2030/.test(rechtsstand)) fehler.push('quelle.rechtsstand: ohne das Datum ist die Angabe nicht nachprüfbar');
+  // Die Abschnittsnummern von EN 71-1 wandern zwischen den Ausgaben, und
+  // harmonisiert ist heute eine andere als die hier nachgelesene. Eine
+  // Abschnittsnummer ohne Fassungsangabe ist darum keine pruefbare Fundstelle.
+  for (const p of pruefungen) {
+    const g = p.quelle?.gremium ?? '';
+    if (/EN 71-1/.test(g) && !/Fassung 2011\+A3/.test(g)) {
+      fehler.push(`Prüfung ${p.id}: nennt EN 71-1 ohne die Fassung, in der nachgelesen wurde`);
+    }
+  }
+
   // Eine Zeile, die ein Maß nennt, braucht eine geprüfte Quelle. Ohne
   // Ausnahme: ein Satz wie „die Norm lag nicht vor" entschuldigt keine Zahl,
   // sondern verbietet sie. Wo nichts nachgelesen ist, steht keine Zahl.
@@ -369,6 +419,9 @@ export function pruefeDaten(daten) {
     ['elterntelefon', /0800 111 0 550/, 'das Elterntelefon gehört in ein Eltern-Werkzeug'],
     ['notfall', /112/, 'der Notruf muss dastehen'],
     ['notfall', /Knopfzelle/, 'und der Fall, in dem es ohne Beschwerden gilt'],
+    ['notfall', /zwei Stunden/, 'die Dringlichkeit bei der Knopfzelle muss eine Zahl haben'],
+    ['notfall', /Hausmittel/, 'und Hausmittel müssen ausdrücklich abgelehnt sein'],
+    ['notfall', /Botulismus/, 'samt dem Grund, warum Honig bei Säuglingen nichts ist'],
   ];
   for (const [feld, muster, warum] of pflicht) {
     if (!muster.test(String(daten?.[feld] ?? ''))) fehler.push(`${feld}: ${warum}`);
@@ -390,7 +443,7 @@ export function pruefeDaten(daten) {
   // Die vier Ausschlüsse, die diese App tragen.
   for (const [muster, name] of [[/CE/, 'die CE-Fehllesart'], [/Klopapierrolle/i, 'die Klopapierrolle'],
     [/Entwicklungswirkung/i, 'die Entwicklungswirkung'], [/Gesamtnote|Ampel/i, 'die Gesamtnote'],
-    [/Normzahlen/i, 'die Normzahl ohne Fassungsangabe']]) {
+    [/Normzahlen/i, 'die Normzahl ohne Fassungsangabe'], [/Hausmittel/i, 'das Hausmittel bei der Knopfzelle']]) {
     if (!aus.some((a) => muster.test(a.was ?? ''))) fehler.push(`ausgeschlossen: ${name} muss zurückgewiesen werden`);
   }
 
