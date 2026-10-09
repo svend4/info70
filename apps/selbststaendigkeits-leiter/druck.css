@@ -1,0 +1,30 @@
+/* Druck: die Gelegenheiten und die Absagen. KEINE Stufen auf dem Papier –
+   ein Blatt mit drei Kreisen pro Zeile wäre ein Befund über ein Kind
+   (docs/02), und genau das ist diese Liste nicht. Kein Haken, kein Name,
+   keine Farbe. */
+.ssl-nur-druck { display: none; }
+
+@media print {
+  .ssl-nur-bildschirm { display: none !important; }
+  .ssl-nur-druck { display: block !important; }
+  /* Knöpfe sind auf Papier keine Knöpfe: die Knopffarben aus kinder.css
+     kämen weiss auf weiss heraus, und druckte der Browser den Grund doch,
+     wäre die Füllung eine Markierung. Gleiche Regel wie in Nr. 50, 56, 57. */
+  .ssl-block button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    text-align: start !important;
+    width: auto !important;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .ssl-block { break-inside: avoid; page-break-inside: avoid; border: 1pt solid #333; border-radius: 0; margin: 0 0 5mm; padding: 3mm; box-shadow: none; }
+  .ssl-block h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .ssl-block p, .ssl-block li { font-size: 10pt; line-height: 1.35; }
+  a[href]::after { content: ""; }
+}

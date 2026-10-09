@@ -1,0 +1,284 @@
+{
+  "art": "selbststaendigkeits-leiter",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von etwa 2 bis 3 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Kind sieht keinen Bildschirm – hier halten Sie fest, was Sie schon sehen.",
+  "wasEsIst": "Eine Leiter aus dem, was Kinder im Alltag selbst tun. Jede Zeile hat drei Stufen: noch nicht – manchmal – sicher. Es gibt keine Gesamtstufe, keinen Stand, keine Note und keine Ampel: die Zeilen gehören nicht zusammengerechnet, weil sie nichts Gemeinsames messen.",
+  "wozuDasGut": "Der Nutzen steckt in „manchmal“. Was manchmal geht, braucht keine Übung, sondern eine Gelegenheit – und die steht bei jeder Zeile dabei. Was „sicher“ ist, braucht nur noch Zeit, die man ihm lässt.",
+  "keinRueckstand": "„Noch nicht“ heißt: Sie haben es noch nicht gesehen. Es heißt nicht zu spät, nicht Rückstand und nicht Defizit – es gibt in dieser App keine rote Stufe und keine Reihenfolge, die ein Kind einhalten müsste. Und es geht in beide Richtungen: ein Kind, das etwas konnte, will es nach einem Umzug, einer Krankheit oder einem Geschwisterkind oft wieder nicht. Das ist normal, und darum lässt sich jede Stufe jederzeit zurückstellen.",
+  "keinScreening": "Diese Seite ist kein Entwicklungstest. Sie rechnet nichts aus und sagt nichts über den Stand Ihres Kindes. Ob die Entwicklung im Rahmen liegt, gehört in die Kinderarztpraxis – dafür gibt es die Vorsorgeuntersuchungen, und drei der Sätze hier stehen genau dort. Diese Liste ist eine Gedächtnisstütze für das Gespräch, kein Ersatz dafür.",
+  "keineZahlen": "Außer bei den drei amtlichen Sätzen steht hier kein Alter und kein Monat. Für die meisten dieser Handgriffe gibt es keine belastbare Altersangabe, und eine erfundene wäre schlimmer als keine. Die Reihenfolge in jeder Spalte ist keine Altersfolge, sondern eine Reihenfolge der Voraussetzungen: ausziehen kommt vor anziehen, weil es leichter ist – nicht, weil es früher dran wäre.",
+  "amtlichErklaert": "Drei Sätze in dieser Liste stehen wörtlich in der Kinder-Richtlinie des Gemeinsamen Bundesausschusses, also in den Unterlagen der Vorsorgeuntersuchungen. Dort sind sie an ein Zeitfenster gebunden, und zu jedem Fenster gehört eine Toleranzgrenze. Zwei Dinge, die dabei oft falsch gelesen werden: solche Angaben sind SPÄTE Grenzen und keine Durchschnitte – wer sie als Normalerwartung liest, dreht ihren Sinn um. Und die Sätze stehen dort nicht unter „Selbstständigkeit“, sondern in anderen Rubriken; eine amtliche Selbstständigkeits-Skala gibt es nicht.",
+  "keinLohn": "Es gibt keinen Haken fürs Sammeln, keine Sterne, keine Belohnungstafel und keine Serie. Mitmachen ist in diesem Alter kein Dienst, der sich verdienen lässt, und eine Tafel braucht einen Erwachsenen, der bewertet. Diese App bewertet nicht.",
+  "keineErsteHilfe": "Hier steht keine Erste-Hilfe-Anleitung. Halb erinnerte Anleitungen sind das Problem, nicht die Lösung: ein Erste-Hilfe-Kurs für Eltern ist der Ort dafür, und im Notfall ist es die 112. Bei Verdacht auf eine Vergiftung rufen Sie ein Giftinformationszentrum – eine bundesweite Nummer dafür gibt es nicht, die Zentren sind regional, und die Nummer Ihres Zentrums gehört an den Kühlschrank.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "bereiche": [
+    {
+      "id": "anziehen",
+      "name": "An- und Ausziehen",
+      "zeichen": "🧦",
+      "zuerst": true,
+      "vorspann": "Die Quelle nennt in einem einzigen Ziel acht Handgriffe – hier sind sie nach Voraussetzung geordnet."
+    },
+    {
+      "id": "essen",
+      "name": "Essen und Tisch",
+      "zeichen": "🥄"
+    },
+    {
+      "id": "haushalt",
+      "name": "Mitmachen im Haushalt",
+      "zeichen": "🧺",
+      "vorspann": "Mitmachen, nicht Dienst: ein Zweijähriger räumt nicht auf, er macht mit."
+    },
+    {
+      "id": "natur",
+      "name": "Pflanzen und Tiere",
+      "zeichen": "🪴"
+    }
+  ],
+  "stufenTexte": {
+    "noch-nicht": "noch nicht gesehen",
+    "manchmal": "manchmal",
+    "sicher": "sicher"
+  },
+  "zeilen": [
+    {
+      "id": "an-schuhe-aus",
+      "bereich": "anziehen",
+      "quellZiel": 1,
+      "vorher": null,
+      "was": "Zieht die Schuhe selbst aus.",
+      "gelegenheit": "Sie setzen sich im Flur daneben und warten, statt zu ziehen. Klettverschluss statt Schnürsenkel macht es möglich.",
+      "amtlich": null
+    },
+    {
+      "id": "an-socken-aus",
+      "bereich": "anziehen",
+      "quellZiel": 1,
+      "vorher": "an-schuhe-aus",
+      "was": "Zieht Socken und Mütze selbst aus.",
+      "gelegenheit": "Sie fangen an, den Socken über die Ferse zu schieben, und lassen den Rest.",
+      "amtlich": null
+    },
+    {
+      "id": "an-jacke-aus",
+      "bereich": "anziehen",
+      "quellZiel": 1,
+      "vorher": "an-socken-aus",
+      "was": "Zieht die Jacke selbst aus und legt sie weg.",
+      "gelegenheit": "Sie hängen den Haken so tief, dass er von unten zu erreichen ist.",
+      "amtlich": null
+    },
+    {
+      "id": "an-knopf",
+      "bereich": "anziehen",
+      "quellZiel": 1,
+      "vorher": "an-jacke-aus",
+      "was": "Öffnet große Knöpfe selbst.",
+      "gelegenheit": "Sie lassen die Jacke mit den großen Knöpfen oben liegen und greifen nicht ein, solange es Ihr Kind noch versucht.",
+      "amtlich": {
+        "untersuchung": "U7a",
+        "zeitraum": "34. bis 36. Lebensmonat",
+        "toleranz": "33. bis 38. Lebensmonat",
+        "rubrik": "Perzeption/Kognition",
+        "wortlaut": "Öffnet große Knöpfe selbst."
+      }
+    },
+    {
+      "id": "an-hose-an",
+      "bereich": "anziehen",
+      "quellZiel": 1,
+      "vorher": "an-knopf",
+      "was": "Zieht Hose oder Pullover selbst an – auch wenn es verdreht endet.",
+      "gelegenheit": "Sie legen die Sachen so hin, wie sie angezogen werden, und sagen nichts zur Reihenfolge.",
+      "amtlich": null
+    },
+    {
+      "id": "an-richtig-drehen",
+      "bereich": "anziehen",
+      "quellZiel": 1,
+      "vorher": "an-hose-an",
+      "was": "Dreht ein Kleidungsstück auf die richtige Seite.",
+      "gelegenheit": "Sie lassen das Verdrehte liegen, statt es heimlich zu richten – und zeigen es einmal, wenn gefragt wird.",
+      "amtlich": null
+    },
+    {
+      "id": "es-loeffel",
+      "bereich": "essen",
+      "quellZiel": 2,
+      "vorher": null,
+      "was": "Kann mit dem Löffel selber essen.",
+      "gelegenheit": "Sie geben einen eigenen Löffel und nehmen in Kauf, dass die Hälfte daneben geht. Eine Unterlage spart die Diskussion.",
+      "amtlich": {
+        "untersuchung": "U7",
+        "zeitraum": "21. bis 24. Lebensmonat",
+        "toleranz": "20. bis 27. Lebensmonat",
+        "rubrik": "Soziale/emotionale Kompetenz",
+        "wortlaut": "Kann mit dem Löffel selber essen."
+      }
+    },
+    {
+      "id": "es-becher",
+      "bereich": "essen",
+      "quellZiel": 2,
+      "vorher": "es-loeffel",
+      "was": "Trinkt aus einem offenen Becher und stellt ihn ab.",
+      "gelegenheit": "Sie füllen wenig ein und stellen den Becher an denselben Platz, damit er zu finden ist.",
+      "amtlich": null
+    },
+    {
+      "id": "es-teller",
+      "bereich": "essen",
+      "quellZiel": 2,
+      "vorher": "es-becher",
+      "was": "Bringt den eigenen Teller zur Spüle.",
+      "gelegenheit": "Sie stellen einen Hocker an die Spüle und nehmen den Teller unten ab, statt ihn aus der Hand zu heben.",
+      "grenze": "Nicht das heiße Wasser und nicht das Messer. Eine Wassertemperatur steht hier absichtlich nicht: die Leitlinie zu Verbrennungen bei Kindern nennt keine, und die Zahlen, die herumgehen, stammen aus Empfehlungen von Verbänden und aus Installationsnormen. Praktisch heißt das: den Hahn stellen Sie ein, nicht Ihr Kind.",
+      "amtlich": null
+    },
+    {
+      "id": "ha-mitmachen",
+      "bereich": "haushalt",
+      "quellZiel": 3,
+      "vorher": null,
+      "was": "Beteiligt sich an häuslichen Tätigkeiten, will mithelfen.",
+      "gelegenheit": "Sie fangen eine Arbeit in Reichweite an und lassen eine Lücke, in die Ihr Kind hineingehen kann – tragen, halten, hineinlegen.",
+      "amtlich": {
+        "untersuchung": "U7a",
+        "zeitraum": "34. bis 36. Lebensmonat",
+        "toleranz": "33. bis 38. Lebensmonat",
+        "rubrik": "Soziale/emotionale Kompetenz",
+        "wortlaut": "Beteiligt sich an häuslichen Tätigkeiten, will mithelfen."
+      }
+    },
+    {
+      "id": "ha-haende",
+      "bereich": "haushalt",
+      "quellZiel": 3,
+      "vorher": "ha-mitmachen",
+      "was": "Wäscht sich die Hände mit Seife.",
+      "gelegenheit": "Sie stellen Seife und Handtuch in Reichweite und waschen daneben mit – gleich lang.",
+      "grenze": "Kaltes Wasser genügt; worauf es ankommt, ist die Seife und dass lange genug eingeschäumt wird – in der bayerischen Rahmenhygieneempfehlung für die Kindertagesbetreuung sind das 20 bis 30 Sekunden, mit Handrücken, Fingerzwischenräumen, Daumen und Nägeln. Händedesinfektion ist bei Kindern nach derselben Empfehlung weder sinnvoll noch erforderlich. Sie ist allerdings ausdrücklich rechtlich nicht bindend und stammt aus der Pandemiezeit.",
+      "amtlich": null
+    },
+    {
+      "id": "ha-wegraeumen",
+      "bereich": "haushalt",
+      "quellZiel": 3,
+      "vorher": "ha-haende",
+      "was": "Legt ein Spielzeug an seinen Platz zurück, wenn jemand mitmacht.",
+      "gelegenheit": "Sie räumen mit und benennen dabei nur, wohin etwas gehört. Zwei Kisten mit Bild darauf reichen; ein Regal mit zwölf Fächern reicht nicht.",
+      "amtlich": null
+    },
+    {
+      "id": "ha-wischen",
+      "bereich": "haushalt",
+      "quellZiel": 3,
+      "vorher": "ha-wegraeumen",
+      "was": "Wischt Verschüttetes mit einem Tuch auf.",
+      "gelegenheit": "Sie legen ein kleines Tuch dorthin, wo es gebraucht wird, und wischen danach selbst nach, ohne es zu erwähnen.",
+      "grenze": "Ein Tuch und Wasser, nie ein Putzmittel: Haushaltsprodukte stehen bei Vergiftungsunfällen von Kindern an erster Stelle, und das Risikofenster liegt genau in diesem Alter. Reinigungsmittel gehören verschlossen und außer Reichweite – und niemals umgefüllt in eine Getränkeflasche.",
+      "amtlich": null
+    },
+    {
+      "id": "na-giessen",
+      "bereich": "natur",
+      "quellZiel": 4,
+      "vorher": null,
+      "was": "Gießt eine Zimmerpflanze mit einer kleinen Kanne.",
+      "gelegenheit": "Sie füllen die Kanne halb und zeigen auf die eine Pflanze, die heute dran ist.",
+      "grenze": "Die Gefahr ist nicht das Gießen, sondern die Pflanze: Kinder unter zehn Jahren machen den größten Teil der Pflanzenvergiftungen aus. Was besonders giftig ist, steht in einer im Bundesanzeiger veröffentlichten Liste, und solche Pflanzen gehören nicht dorthin, wo ein Kind spielt. Keine Pflanzenteile in den Mund, auch keine Beeren vom Balkon.",
+      "amtlich": null
+    },
+    {
+      "id": "na-fuettern",
+      "bereich": "natur",
+      "quellZiel": 4,
+      "vorher": "na-giessen",
+      "was": "Füttert Fische oder Vögel mit abgezählter Hilfe.",
+      "gelegenheit": "Sie geben die Portion in die Hand Ihres Kindes und lassen es streuen – die Dose bleibt bei Ihnen.",
+      "grenze": "Das Futter, nicht das Becken: offenes Wasser, Deckel und Technik sind Sache der Erwachsenen.",
+      "amtlich": null
+    },
+    {
+      "id": "na-ernten",
+      "bereich": "natur",
+      "quellZiel": 4,
+      "vorher": "na-fuettern",
+      "was": "Sammelt Gemüse oder Obst ein, das geerntet werden darf.",
+      "gelegenheit": "Sie zeigen eine Pflanze und eine Schüssel. Was gegessen werden darf, entscheiden Sie vorher, nicht beim Pflücken.",
+      "amtlich": null
+    }
+  ],
+  "ausgeschlossen": [
+    {
+      "quellNr": "x01",
+      "was": "Die Ampel des Katalogeintrags und jede Gesamtstufe",
+      "warum": "Der Eintrag wollte „Ampel-Fortschritt“. Eine Ampel über die Selbstständigkeit eines Kindes ist eine Einstufung des Kindes, und eine rote Stufe sagt einem Zweijährigen-Eltern, ihr Kind sei zurück. Es gibt darum keine Farbe, keine Gesamtstufe und keine summierende Funktion – die Zeilen messen nichts Gemeinsames und sind nicht aufrechenbar."
+    },
+    {
+      "quellNr": "x02",
+      "was": "Die Lesart „23 lebenspraktische Fertigkeiten“",
+      "warum": "Der Katalogeintrag zählt die 23 Ziele des Quellabschnitts als 23 Fertigkeiten. Das ist eine Fehllesung: es sind pädagogische Ziele, und ein großer Teil beschreibt keine Handlung des Kindes, sondern eine Haltung oder eine Aufgabe des Erwachsenen – beim Handarbeits-Abschnitt etwa das Interesse am Tun des Erwachsenen, bei drei der vier Naturziele das Zusehen. Umgekehrt trägt ein einziges Ziel der Selbstbedienung gleich acht Handgriffe. Die Zahl 23 sagt nichts darüber, wie viele Fertigkeiten es sind, und sie steht darum nirgends in dieser App."
+    },
+    {
+      "quellNr": "x03",
+      "was": "„Hilf mir, es selbst zu tun“ als Montessori-Zitat",
+      "warum": "Der Satz ist in dieser Form keiner belegbaren Stelle bei Maria Montessori zuzuordnen; er läuft in Portalen und Broschüren ohne Fundstelle um, teils als Äußerung eines Kindes, teils in freier Erweiterung. Als Zitat gedruckt wäre er eine erfundene Quelle. Der Gedanke steht hier ohne Namen – und die Gelegenheiten sind das, was von ihm bleibt."
+    },
+    {
+      "quellNr": "x04",
+      "was": "Der Dienst am Esstisch",
+      "warum": "Die Quelle kennt eine eigene Rolle dafür: ein Kind hat an einem Tag Dienst am Esstisch. Das ist eine Kita-Rolle mit Dienstplan; in einer Familie mit einem Zweijährigen wäre sie eine Pflicht, die das Kind nicht tragen kann. Für die Kita gibt es im Korpus ein eigenes Werkzeug."
+    },
+    {
+      "quellNr": "x05",
+      "was": "„Damit die Erwachsenen sich freuen“ als Grund",
+      "warum": "Die Quelle nennt als Motiv der Selbstbedienung auch, dass die Erwachsenen sich freuen. Damit wird das Gefallen des Erwachsenen zum Zweck der Hygiene – und ein Kind lernt, dass Händewaschen eine Gefälligkeit ist. Kein Satz in dieser App begründet einen Handgriff mit der Freude oder dem Stolz des Erwachsenen; ein Textnetz weist das ab."
+    },
+    {
+      "quellNr": "x06",
+      "was": "Ein positiver Status in der Gleichaltrigengruppe als Ziel",
+      "warum": "Die Quelle nennt ihn als Ziel der Arbeitserziehung. Selbstständigkeit, die dem Ansehen unter anderen Kindern dient, ist für dieses Alter keine Selbstständigkeit – und ein Vergleich zwischen Kindern ist in dieser Werkstatt ohnehin ausgeschlossen."
+    },
+    {
+      "quellNr": "x07",
+      "was": "Belohnungstafel, Sterne, Serie",
+      "warum": "Mitmachen ist in diesem Alter kein Dienst, der sich verdienen lässt. Eine Tafel braucht einen Erwachsenen, der bewertet, und eine Serie bestraft den Tag, an dem es nicht ging. Es gibt keine Funktion, die aufeinanderfolgende Tage zählt."
+    },
+    {
+      "quellNr": "x08",
+      "was": "Altersangaben zu den übrigen Zeilen",
+      "warum": "Für die meisten dieser Handgriffe gibt es keine belastbare Altersangabe. Drei Sätze stehen amtlich in der Kinder-Richtlinie, mit Zeitfenster und Toleranzgrenze – alle anderen Zeilen tragen bewusst keine Zahl. Und auch die drei amtlichen sind SPÄTE Grenzen, keine Durchschnitte: wer sie als Normalerwartung liest, dreht ihren Sinn um."
+    },
+    {
+      "quellNr": "x09",
+      "was": "Eine Wassertemperatur für den Wasserhahn",
+      "warum": "Die Leitlinie zu Verbrennungen und Verbrühungen im Kindesalter enthält kein Präventionskapitel und keine Temperaturangabe; die umlaufenden Zahlen stammen aus Verbandsempfehlungen und Installationsnormen. Eine Zahl, die aussieht wie eine medizinische Vorgabe, steht hier darum nicht – die Regel ist, dass der Erwachsene den Hahn einstellt."
+    },
+    {
+      "quellNr": "x10",
+      "was": "Die Kartentexte auf Ukrainisch und Russisch",
+      "warum": "Der Katalogeintrag wollte de/uk/ru für Familien mit Migrationsgeschichte. Eine ungegengelesene Übersetzung einer Entwicklungsliste wäre eine Behauptung – und bei amtlichen Wortlauten wäre sie zusätzlich eine falsche Wiedergabe. Weggelassen statt stillschweigend falsch."
+    },
+    {
+      "quellNr": "x11",
+      "was": "Eine Erste-Hilfe-Anleitung",
+      "warum": "Gleiche Entscheidung wie im Sicherer-Krabbelraum-Check: halb erinnerte Anleitungen sind das Problem. Diese App nennt die Gefahr und die Vorsorge, nicht die Behandlung – dafür ist ein Kurs da, und im Notfall die 112 beziehungsweise das regionale Giftinformationszentrum."
+    }
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, «Трудовое воспитание», S. 94–96",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die Abschnitte der Arbeitserziehung und die in ihnen benannten Handlungen des Kindes. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": {
+      "zieleQuelle": 23,
+      "abschnitte": 5,
+      "zieleMitKindHandlung": 4
+    },
+    "nachgezaehlt": "Der Abschnitt trägt 23 Ziele in fünf Teilen: Allgemein 6, Selbstbedienung 6, Haushalt 5, Natur 4, Handarbeit 2. Nachgezählt. Handlungen des Kindes benennen nur vier davon – Selbstbedienung 1 (acht Handgriffe in einem Ziel), Selbstbedienung 2 bis 4 zusammengefasst zu Essen und Hygiene, Haushalt und Natur 3. Die übrigen beschreiben Haltungen oder Aufgaben des Erwachsenen.",
+    "amtlich": "Drei Sätze dieser App stehen wörtlich in der Kinder-Richtlinie des Gemeinsamen Bundesausschusses, nachgelesen im Volltext: „Kann mit dem Löffel selber essen.“ (U7, Rubrik Soziale/emotionale Kompetenz), „Öffnet große Knöpfe selbst.“ (U7a, Rubrik Perzeption/Kognition) und „Beteiligt sich an häuslichen Tätigkeiten, will mithelfen.“ (U7a, Rubrik Soziale/emotionale Kompetenz). Zeitraum U7: 21. bis 24. Lebensmonat, Toleranz 20. bis 27.; U7a: 34. bis 36. Lebensmonat, Toleranz 33. bis 38. Das Wort „Grenzstein“ kommt in der Richtlinie nicht vor. Die Richtlinie wird regelmäßig geändert, und zu den Dokumentationsbögen laufen Stellungnahmeverfahren – die Fassung, in der hier nachgelesen wurde, kann also nicht die letzte sein.",
+    "abweichung": "Die Ampel des Katalogeintrags ist durch drei Stufen ohne Farbe ersetzt, die jederzeit in beide Richtungen gehen. Die Lesart „23 lebenspraktische Fertigkeiten“ ist zurückgewiesen. Nicht übernommen sind der Tischdienst, die Freude des Erwachsenen als Motiv und der Status in der Gleichaltrigengruppe; ebenso die Liederlisten-Entsprechung, nämlich uk/ru-Fassungen ohne Gegenlesen. Aus dem Handarbeits-Abschnitt ist nichts übernommen, weil beide Ziele dort das Tun des Erwachsenen betreffen."
+  }
+}
