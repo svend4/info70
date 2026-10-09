@@ -1,0 +1,372 @@
+{
+  "art": "sprich-mit-mir-katalog",
+  "version": 1,
+  "zielgruppe": "erwachsene-eltern-0-1",
+  "hinweis": "Das hier ist kein Entwicklungsplan und keine Liste über dein Kind. Es ist eine Sammlung von Ideen für die Sekunde NACH dem Signal deines Kindes – geordnet danach, was du gerade siehst, nicht nach Lebenswoche. Es gibt kein Geburtsdatum einzugeben, nichts anzukreuzen über dein Kind und nichts zu schaffen.",
+  "geraet": "Das Gerät bleibt in deiner Hand. Dein Baby sieht keinen Bildschirm.",
+  "einImpuls": "Nimm eine Idee mit, nicht zehn. Eine Woche mit einer Idee ist mehr als eine Liste, die liegen bleibt.",
+  "abbruch": "Du kannst jederzeit aufhören. Es bleibt nichts unerledigt – hier wird nichts gezählt.",
+  "quelle": {
+    "programm": "Praleska – staatliches Vorschulprogramm der Republik Belarus, НИО 2007",
+    "abschnitt": "«Общение и речь» (S. 37–39): ein Ziel für die Neugeborenenzeit, drei für den 2. bis 6. Monat, sechs für den 6. bis 12. Monat – zusammen 10 Kommunikationsziele.",
+    "form": "Die zehn Ziele der Quelle sind an die Fachkraft gerichtet, nicht an das Kind: sie sagen „fördern“, „befriedigen“, „nutzen“, „entwickeln“. Übernommen ist genau diese Form – jede Idee hier beschreibt, was der Erwachsene tut. Was NICHT übernommen ist, ist die Programmlogik dahinter: in einer Eltern-App würde aus einem Bildungsziel einer Einrichtung ein Soll für ein einzelnes Baby.",
+    "eigenproduktion": "Alle Texte dieser App sind Eigenproduktion. Übernommen sind die Struktur der drei Perioden und der Gedanke, dass vorsprachliche Verständigung eine eigene Tätigkeit ist – keine Formulierung.",
+    "nichtVonHier": "Die Kernbotschaft „sprich die Sprache, in der du zu Hause bist“ stammt NICHT aus der Quelle: das Programm ist einsprachig und sagt zur Familienmehrsprachigkeit in Deutschland nichts. Sie stammt aus der deutschen Fachdiskussion zur Mehrsprachigkeit (Mercator-Institut für Sprachförderung und Deutsch als Zweitsprache, Faktencheck Mehrsprachigkeit, 2022)."
+  },
+  "perioden": [
+    {
+      "id": "p1",
+      "name": "die ersten Monate",
+      "vonMonat": 0,
+      "bisMonat": 4,
+      "passtWenn": "Dein Kind schaut dich an, wird still, wenn du sprichst, und antwortet mit Gesicht und Bewegung.",
+      "ueberlappung": "Die Fenster überlappen absichtlich. Die Übergänge sind breit, und keine Grenze hier ist eine Grenze."
+    },
+    {
+      "id": "p2",
+      "name": "wenn Laute kommen",
+      "vonMonat": 2,
+      "bisMonat": 8,
+      "passtWenn": "Dein Kind gurrt, quietscht, macht Silben – und schaut dabei, was du damit machst.",
+      "ueberlappung": "Die Fenster überlappen absichtlich. Viele Kinder sind in zwei davon gleichzeitig."
+    },
+    {
+      "id": "p3",
+      "name": "wenn es zeigt und mitmacht",
+      "vonMonat": 6,
+      "bisMonat": 12,
+      "passtWenn": "Dein Kind zeigt, gibt dir Dinge, schaut zwischen dir und einer Sache hin und her, versteht einzelne Wörter.",
+      "ueberlappung": "Die Fenster überlappen absichtlich. Verstehen kommt vor dem Sprechen – oft mit großem Abstand."
+    }
+  ],
+  "signale": [
+    {
+      "id": "schaut-an",
+      "name": "Es schaut dich an",
+      "zeichen": "👀"
+    },
+    {
+      "id": "macht-laut",
+      "name": "Es macht einen Laut",
+      "zeichen": "🗣️"
+    },
+    {
+      "id": "wendet-sich-ab",
+      "name": "Es wendet sich ab",
+      "zeichen": "🙈"
+    },
+    {
+      "id": "greift",
+      "name": "Es greift nach etwas",
+      "zeichen": "✋"
+    },
+    {
+      "id": "zeigt",
+      "name": "Es zeigt oder gibt dir etwas",
+      "zeichen": "👉"
+    },
+    {
+      "id": "weint",
+      "name": "Es weint",
+      "zeichen": "😢"
+    }
+  ],
+  "anker": [
+    {
+      "id": "wickeln",
+      "name": "beim Wickeln"
+    },
+    {
+      "id": "anziehen",
+      "name": "beim Anziehen"
+    },
+    {
+      "id": "tragen",
+      "name": "beim Tragen"
+    },
+    {
+      "id": "essen",
+      "name": "beim Essen und Stillen"
+    },
+    {
+      "id": "spaziergang",
+      "name": "unterwegs"
+    },
+    {
+      "id": "einkauf",
+      "name": "beim Einkaufen"
+    },
+    {
+      "id": "baden",
+      "name": "beim Baden"
+    },
+    {
+      "id": "schlafen",
+      "name": "vor dem Einschlafen"
+    }
+  ],
+  "bloecke": {
+    "bildschirm": {
+      "titel": "Bildschirme: für dich, nicht für dein Kind",
+      "text": "Für Kinder unter drei Jahren ist Bildschirmzeit nicht empfohlen – weder Video noch Hörspiel im Hintergrund. Der Grund hat mit Sprache direkt zu tun: ein Gerät antwortet nicht auf das, was dein Kind gerade tut, und genau darauf kommt es an. Auch ein laufender Fernseher im Raum macht das Gespräch mit dir schwerer, weil er die Stimmen überlagert. Dieses Gerät hier ist für dich: lies die Idee, leg es weg, dann fang an.",
+      "quelle": "Empfehlung des Bundesinstituts für Öffentliche Gesundheit (BIÖG, bis Februar 2025 BZgA) sowie der WHO-Leitlinie zu Bewegung, Sitzen und Schlaf für Kinder unter fünf Jahren (2019)."
+    },
+    "hoeren": {
+      "titel": "Hören kommt zuerst",
+      "text": "Alles hier setzt voraus, dass dein Kind dich hört. In Deutschland gibt es für Neugeborene ein Hörscreening, meist in den ersten Lebenstagen. Ein unauffälliges Ergebnis ist gut – es schließt aber eine später auftretende Hörstörung nicht aus. Wenn dein Kind auf Stimmen und Geräusche kaum oder nicht reagiert, oder wenn es früher reagiert hat und jetzt nicht mehr, dann ist das eine Frage für die Kinderarztpraxis und nicht für mehr Üben.",
+      "quelle": "Das Neugeborenen-Hörscreening ist Teil der Kinder-Richtlinie des Gemeinsamen Bundesausschusses. Der Ablauf des Screenings wurde im August 2026 geändert; weil sich solche Verfahrensdetails ändern, steht hier nur, was für dich wichtig bleibt – und den Ablauf erklärt dir die Praxis."
+    },
+    "mehrsprachig": {
+      "titel": "Sprich die Sprache, in der du zu Hause bist",
+      "text": "Sprich mit deinem Baby in der Sprache, in der du dich wohl fühlst und in der dir die Worte von selbst kommen – Ukrainisch, Russisch, Türkisch, Arabisch, Polnisch, Deutsch, jede. Was ein Baby braucht, ist nicht eine bestimmte Sprache, sondern viel echte, zugewandte Rede und jemanden, der auf seine Laute antwortet. Wenn in deiner Familie mehrere Sprachen gesprochen werden, ist das ein Gewinn und kein Problem – und Mischen innerhalb eines Gesprächs ist normal und schadet nicht.",
+      "sicherung": "Mehrsprachigkeit ist kein Grund für eine Sprachstörung – und kein Grund, die Familiensprache aufzugeben. Umgekehrt gilt genauso: eine Sprachentwicklungsstörung zeigt sich in allen Sprachen eines Kindes. Mehrsprachigkeit erklärt sie nicht und verdeckt sie nicht. Wenn du dir Sorgen machst, ist der Weg die U-Untersuchung – nicht der Wechsel der Familiensprache.",
+      "quelle": "Mercator-Institut für Sprachförderung und Deutsch als Zweitsprache, Faktencheck Mehrsprachigkeit in Kita und Schule, 2022."
+    },
+    "dialog": {
+      "titel": "Wie ein Gespräch ohne Worte geht",
+      "text": "Es sind drei Dinge, und sie sind kleiner, als man denkt. Erstens: schau hin, was dein Kind gerade anschaut, und rede darüber – nicht über das, was du für wichtig hältst. Zweitens: wenn ein Laut kommt, antworte darauf, als wäre es ein Satz. Drittens: dann warte. Die Pause ist der Teil, den Erwachsene auslassen – und sie ist der Teil, in dem dein Kind antwortet."
+    },
+    "eigeneWorte": {
+      "titel": "Deine Worte, nicht unsere",
+      "text": "Diese App gibt dir absichtlich keine Wortlisten in anderen Sprachen. Was dein Kind braucht, sind die Wörter, die in deiner Familie wirklich benutzt werden – für den Löffel, für das Wasser, für Oma. Wo unten eine Lücke steht, gehört dein Wort hin, nicht eins aus einer App."
+    },
+    "praleska": {
+      "titel": "Woher das kommt",
+      "text": "Die Gliederung in drei Abschnitte und der Gedanke, dass die vorsprachliche Verständigung eine eigene Tätigkeit mit eigenen Zielen ist, kommen aus einem Vorschulprogramm von 2007. Alle Texte hier sind neu geschrieben. Die Botschaft zur Familiensprache steht nicht in dieser Quelle – sie kommt aus der deutschen Fachdiskussion."
+    }
+  },
+  "warnzeichen": {
+    "titel": "Wenige Punkte, bei denen Abwarten nicht richtig ist",
+    "vorspann": "Das Allermeiste bei der Sprache braucht Zeit und sonst nichts. Es gibt aber wenige Beobachtungen, bei denen Abwarten nicht die richtige Antwort ist – bei denen die Antwort auch nicht mehr Üben ist, sondern ein Termin:",
+    "punkte": [
+      "Dein Kind reagiert nicht auf Stimmen und Geräusche – oder es hat früher reagiert und tut es jetzt nicht mehr.",
+      "Dein Kind verliert etwas, das es schon konnte: es hat gelallt und lallt nicht mehr, es hat Blickkontakt gesucht und sucht ihn nicht mehr.",
+      "Dein Kind schaut dich gar nicht an und lässt sich auch von dir nicht beruhigen.",
+      "Dein Kind macht gegen Ende des ersten Jahres überhaupt keine Silben und zeigt auch nicht auf Dinge."
+    ],
+    "wasTun": "Sprich das in der Kinderarztpraxis an – zur nächsten U-Untersuchung oder vorher. Nimm einen Zettel mit, auf dem steht, was du beobachtet hast; wenn du magst, in deiner Sprache. Du hast ein Recht auf Sprachmittlung, wenn du eine brauchst.",
+    "nichtBeruhigen": "Zu diesen Punkten steht hier absichtlich kein „das ist meistens harmlos“. Genau so ein Satz ist der Grund, warum Eltern zu lange warten."
+  },
+  "erwachsener": "Wenn es zu viel wird: ein weinendes Baby darf nie geschüttelt werden. Schütteln verursacht Blutungen im Gehirn und kann tödlich sein. Leg dein Kind sicher auf den Rücken ins Bett, geh aus dem Zimmer, atme – und ruf an. Das Elterntelefon ist kostenlos und anonym: 0800 111 0 550.",
+  "merkliste": [
+    {
+      "id": "m01",
+      "satz": "Ich antworte auf die Laute meines Kindes, als wären sie ein Satz."
+    },
+    {
+      "id": "m02",
+      "satz": "Ich mache nach meinem Satz eine Pause und lasse mein Kind antworten."
+    },
+    {
+      "id": "m03",
+      "satz": "Ich rede über das, was mein Kind gerade anschaut – nicht über das, was ich wichtig finde."
+    },
+    {
+      "id": "m04",
+      "satz": "Ich erzähle beim Wickeln und Anziehen, was ich tue."
+    },
+    {
+      "id": "m05",
+      "satz": "Ich spreche mit meinem Kind in der Sprache, in der ich zu Hause bin."
+    },
+    {
+      "id": "m06",
+      "satz": "Ich lasse den Fernseher und das Radio aus, wenn ich mit meinem Kind rede."
+    },
+    {
+      "id": "m07",
+      "satz": "Ich höre auf, wenn mein Kind sich abwendet – und fange wieder an, wenn es zurückkommt."
+    },
+    {
+      "id": "m08",
+      "satz": "Ich benenne, was mein Kind mir zeigt, mit unserem Wort dafür."
+    }
+  ],
+  "impulse": [
+    {
+      "id": "i01",
+      "periode": "p1",
+      "signal": "schaut-an",
+      "anker": "wickeln",
+      "quellZiel": [
+        1
+      ],
+      "titel": "Dein Gesicht auf Sprechabstand",
+      "erwachsenenText": "Beim Wickeln bist du sowieso über ihm. Geh mit deinem Gesicht auf etwa eine Armlänge herunter – da sieht ein Baby am besten scharf – und sprich. Nicht lauter, nicht höher als sonst: nur näher und langsamer. Wenn der Blick kommt, hast du alles, was es braucht."
+    },
+    {
+      "id": "i02",
+      "periode": "p1",
+      "signal": "macht-laut",
+      "anker": "wickeln",
+      "quellZiel": [
+        1,
+        3
+      ],
+      "titel": "Antworte, als wäre es ein Satz",
+      "erwachsenenText": "Wenn ein Laut kommt – ein Knarzen, ein Seufzen, ein Quietschen –, antworte darauf. Sag irgendwas Freundliches und sag es so, als hätte dein Kind dir etwas erzählt. Dann warte. Es geht nicht darum, Laute nachzumachen, sondern darum, dass dein Kind merkt: was ich von mir gebe, kommt bei dir an."
+    },
+    {
+      "id": "i03",
+      "periode": "p1",
+      "signal": "wendet-sich-ab",
+      "anker": "tragen",
+      "quellZiel": [
+        2
+      ],
+      "titel": "Abwenden heißt Pause, nicht Nein",
+      "erwachsenenText": "Wenn dein Kind den Kopf wegdreht, die Augen zumacht oder zu schlucken anfängt, ist es nicht beleidigt und nicht überfordert von dir – es sortiert. Hör auf zu reden und bleib einfach da. Und fang wieder an, wenn es sich zurückdreht. Dieses Aufhören-und-wieder-Anfangen ist die Hälfte des Gesprächs."
+    },
+    {
+      "id": "i04",
+      "periode": "p1",
+      "signal": "weint",
+      "anker": "tragen",
+      "quellZiel": [
+        2,
+        10
+      ],
+      "titel": "Antworten verwöhnt nicht",
+      "erwachsenenText": "Auf Weinen zu reagieren ist die Antwort auf eine Mitteilung – es ist die einzige, die dein Kind hat. Nimm es hoch, sprich mit ihm, sag, was du tust. Dass ein Baby im ersten Jahr durch verlässliches Trösten „verwöhnt“ würde, ist eine alte Erzählung und keine Tatsache."
+    },
+    {
+      "id": "i05",
+      "periode": "p2",
+      "signal": "macht-laut",
+      "anker": "essen",
+      "quellZiel": [
+        3,
+        9
+      ],
+      "titel": "Erst du, dann es, dann wieder du",
+      "erwachsenenText": "Beim Füttern oder Stillen gibt es natürliche Pausen. Nutz eine: sag etwas, warte lang – länger, als sich richtig anfühlt. Oft kommt dann ein Laut. Dann sagst du wieder etwas. Das ist ein Gespräch mit vollständigem Wechsel, nur ohne Wörter, und es ist genau das, was Sprache aufbaut."
+    },
+    {
+      "id": "i06",
+      "periode": "p2",
+      "signal": "schaut-an",
+      "anker": "anziehen",
+      "quellZiel": [
+        4
+      ],
+      "titel": "Erzähl, was du gerade tust",
+      "erwachsenenText": "Sag beim Anziehen laut, was passiert: jetzt kommt der Arm, jetzt der zweite, jetzt sitzt die Mütze. Das klingt banal und ist das Wirksamste überhaupt – weil die Wörter genau in dem Moment kommen, in dem dein Kind die Sache erlebt. Benutz dabei dein eigenes Wort für jedes Teil, nicht ein hochdeutsches aus dem Buch."
+    },
+    {
+      "id": "i07",
+      "periode": "p2",
+      "signal": "greift",
+      "anker": "essen",
+      "quellZiel": [
+        4
+      ],
+      "titel": "Benenne, was die Hand will",
+      "erwachsenenText": "Wenn die Hand nach etwas greift, ist die Aufmerksamkeit schon dort – du musst sie nicht erst hinlenken. Sag, was es ist, und zwar mit dem Wort, das bei euch dafür benutzt wird: ______. Ein Wort, nicht fünf. Und noch mal, wenn das Interesse bleibt.",
+      "eigeneWorte": true
+    },
+    {
+      "id": "i08",
+      "periode": "p2",
+      "signal": "wendet-sich-ab",
+      "anker": "baden",
+      "quellZiel": [
+        2,
+        4
+      ],
+      "titel": "Weniger auf einmal",
+      "erwachsenenText": "Wenn dein Kind sich mitten im Spiel abwendet, sind oft zu viele Kanäle offen: Musik und Reden und Bewegen gleichzeitig. Mach eins davon aus. Ein Baby kann einer Stimme gut folgen – aber nicht einer Stimme und einem Lautsprecher."
+    },
+    {
+      "id": "i09",
+      "periode": "p2",
+      "signal": "weint",
+      "anker": "schlafen",
+      "quellZiel": [
+        10
+      ],
+      "titel": "Dieselben Worte an derselben Stelle",
+      "erwachsenenText": "Vor dem Einschlafen hilft Wiederholung mehr als Abwechslung: derselbe kurze Satz, dieselbe Reihenfolge, dieselbe Stimme. Dein Kind lernt dabei nicht die Wörter, sondern dass auf deine Worte etwas Verlässliches folgt. Das ist die Grundlage, auf der Wörter später stehen."
+    },
+    {
+      "id": "i10",
+      "periode": "p3",
+      "signal": "zeigt",
+      "anker": "spaziergang",
+      "quellZiel": [
+        5,
+        6
+      ],
+      "titel": "Folge dem Finger, führe ihn nicht",
+      "erwachsenenText": "Wenn dein Kind auf etwas zeigt oder zwischen dir und einer Sache hin und her schaut, ist das eine Frage. Beantworte sie: schau hin, sag, was da ist, und schau dein Kind wieder an. Eigene Themen setzen kannst du später – jetzt ist das, was es anschaut, das richtige Thema."
+    },
+    {
+      "id": "i11",
+      "periode": "p3",
+      "signal": "zeigt",
+      "anker": "einkauf",
+      "quellZiel": [
+        6,
+        7
+      ],
+      "titel": "Zwei Wörter statt eins",
+      "erwachsenenText": "Wenn dein Kind dir etwas gibt oder zeigt, nimm sein Signal und häng ein Wort dran: aus „das“ wird „das Brot“, aus „da“ wird „da ist der Hund“. Nicht korrigieren, nicht wiederholen lassen – nur ein kleines Stück dazulegen. Beim Einkaufen gibt es davon hundert Gelegenheiten."
+    },
+    {
+      "id": "i12",
+      "periode": "p3",
+      "signal": "macht-laut",
+      "anker": "wickeln",
+      "quellZiel": [
+        9
+      ],
+      "titel": "Silben sind kein Fehler",
+      "erwachsenenText": "Wenn Silbenketten kommen, ist das Üben, nicht Stammeln. Antworte darauf wie auf Sprache – freundlich, mit Inhalt, nicht mit Korrektur. Sprachlaute verbessern sich nicht durch Verbessern, sondern durch Hören und Antworten."
+    },
+    {
+      "id": "i13",
+      "periode": "p3",
+      "signal": "schaut-an",
+      "anker": "essen",
+      "quellZiel": [
+        7,
+        8
+      ],
+      "titel": "Frag etwas, das keine Antwort braucht",
+      "erwachsenenText": "Stell Fragen, auch wenn noch keine Antwort kommen kann: „Noch mehr?“, „Ist das warm?“, „Wo ist der Löffel?“ Und dann warte wieder. Dein Kind versteht lange vor dem ersten Wort – Verstehen und Sprechen liegen oft weit auseinander, und das Verstehen kommt zuerst."
+    },
+    {
+      "id": "i14",
+      "periode": "p3",
+      "signal": "greift",
+      "anker": "baden",
+      "quellZiel": [
+        8
+      ],
+      "titel": "Dasselbe Wort an derselben Stelle",
+      "erwachsenenText": "Wähle für ein paar Dinge ein festes Wort und bleib dabei – dein Wort: ______ für das Wasser, ______ für das Handtuch. Nicht abwechseln, nicht verniedlichen und dann wieder nicht. Wiederholung in derselben Situation ist der Weg, auf dem ein Wort hängen bleibt.",
+      "eigeneWorte": true
+    },
+    {
+      "id": "i15",
+      "periode": "p3",
+      "signal": "wendet-sich-ab",
+      "anker": "spaziergang",
+      "quellZiel": [
+        5
+      ],
+      "titel": "Lass es die Richtung bestimmen",
+      "erwachsenenText": "Wenn dein Kind unterwegs woanders hinschaut als du, folge ihm. Steh still, schau mit, sag etwas dazu. Zusammen auf dieselbe Sache zu schauen ist die Voraussetzung dafür, dass Wörter überhaupt etwas bedeuten können – und sie entsteht nur, wenn jemand nachgibt. Das bist du."
+    },
+    {
+      "id": "i16",
+      "periode": "p3",
+      "signal": "weint",
+      "anker": "anziehen",
+      "quellZiel": [
+        10
+      ],
+      "titel": "Sag vorher, was kommt",
+      "erwachsenenText": "Anziehen ist für viele Kinder der unangenehmste Teil des Tages. Sag jedes Mal vorher an, was passiert, und sag es in derselben Reihenfolge. Das nimmt das Weinen nicht immer weg – aber es macht aus etwas, das mit deinem Kind passiert, etwas, das es kommen sieht."
+    }
+  ]
+}

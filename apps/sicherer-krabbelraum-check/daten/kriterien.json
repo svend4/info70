@@ -1,0 +1,661 @@
+{
+  "art": "sicherer-krabbelraum-check",
+  "version": 1,
+  "zielgruppe": "Eltern, Kindertagespflege und Krippe – Kinder im ersten Jahr",
+  "hinweis": "Dieser Check schaut auf den RAUM, nicht auf das Kind und nicht auf dich. Jede Zeile hier beschreibt eine Sache, ein Möbelstück oder einen Handgriff daran – keine einzige beschreibt, was dein Kind kann oder wie du bist.",
+  "keinErgebnis": "Es gibt am Ende keine Note, keinen Prozentwert und keine Ampel. Risiken lassen sich nicht gegeneinander aufrechnen: eine abgedeckte Steckdose ersetzt kein Treppenschutzgitter. Du bekommst eine Liste der offenen Punkte, nach Dringlichkeit geordnet – nicht mehr.",
+  "nichtFertig": "Auch eine leere Liste heißt nicht, dass der Raum sicher ist. Die Reichweite deines Kindes ändert sich von Woche zu Woche, und jeder Besuch, jeder Umzug und jeder Karton verändert den Raum wieder. Dieser Check ist eine Momentaufnahme.",
+  "keineErsteHilfe": "Das hier ist keine Erste-Hilfe-Anleitung. Erste Hilfe am Kind lernt man in einem Kurs – in Deutschland gibt es dafür eigene Kurse für Eltern. Im Notfall: 112.",
+  "keineTechnik": "Geräte, die Atmung oder Puls überwachen, kommen in diesem Check nicht vor – auch nicht als Tipp. Sie sind kein Sicherheitsmerkmal eines Raums, und ein Babyphone ersetzt keine der Zeilen unten.",
+  "gift": "Bei Verdacht auf Vergiftung oder auf eine verschluckte Knopfzelle: 112 und sofort in die Kinderklinik, auch wenn dein Kind unauffällig wirkt. Eine bundesweite Giftnotruf-Nummer gibt es nicht – Deutschland hat regionale Giftinformationszentren mit je eigener Nummer. Such die Nummer für deine Region einmal heraus und häng sie an den Kühlschrank; dieser Check druckt sie nicht, weil er sie nicht kennt.",
+  "quellenHinweis": "Diese Liste nennt die zuständigen Stellen, nicht Seitenzahlen. Das ist Absicht: eine erfundene Fundstelle wäre in einer Baby-Sicherheits-App der gefährlichste Fehler, und ein Kapitelverweis, den niemand aufgeschlagen hat, sieht genauso aus wie einer, den jemand geprüft hat. Keine der genannten Stellen hat diesen Check geprüft oder freigegeben.",
+  "quellenKorrektur": "Für die Krippe gilt die DGUV Regel 102-602 „Branche Kindertageseinrichtung“ (Ausgabe 07/2019). Sie hat die DGUV Regel 102-002 (Ausgabe 04/2009) ersetzt, die zu Beginn 2020 zurückgezogen wurde – der Katalogeintrag in docs/10 nennt noch die alte und ist damit überholt.",
+  "profile": [
+    {
+      "id": "zuhause",
+      "name": "Zuhause",
+      "beschreibung": "Die eigene Wohnung, das eigene Kind."
+    },
+    {
+      "id": "tagespflege",
+      "name": "Kindertagespflege",
+      "beschreibung": "Eine Privatwohnung mit beruflicher Verantwortung und eigenem Unfallversicherungsträger – es gelten beide Spalten."
+    },
+    {
+      "id": "krippe",
+      "name": "Krippe",
+      "beschreibung": "Einrichtung: zusätzlich gelten die Regeln der Unfallkasse."
+    }
+  ],
+  "ausloeser": [
+    {
+      "id": "immer",
+      "name": "Von Anfang an",
+      "frage": "gilt immer"
+    },
+    {
+      "id": "dreht-sich",
+      "name": "Es dreht sich",
+      "frage": "Dreht sich dein Kind schon vom Rücken auf die Seite oder den Bauch?"
+    },
+    {
+      "id": "robbt-kriecht",
+      "name": "Es kommt von der Stelle",
+      "frage": "Robbt, krabbelt oder rutscht dein Kind schon durch den Raum?"
+    },
+    {
+      "id": "sitzt-frei",
+      "name": "Es sitzt frei",
+      "frage": "Sitzt dein Kind ohne Stütze und greift dabei nach Dingen?"
+    },
+    {
+      "id": "zieht-sich-hoch",
+      "name": "Es zieht sich hoch",
+      "frage": "Zieht sich dein Kind an Möbeln in den Stand?"
+    },
+    {
+      "id": "laeuft-an-moebeln",
+      "name": "Es läuft an Möbeln",
+      "frage": "Geht dein Kind an Möbeln entlang oder schon frei?"
+    }
+  ],
+  "bereiche": [
+    {
+      "id": "schlafen",
+      "name": "Schlafplatz",
+      "zeichen": "😴",
+      "zuerst": true,
+      "vorspann": "Dieser Abschnitt steht zuerst und steht absolut. Hier gibt es keine „wenn … dann auch“-Sätze: jede Ausnahmeklausel an dieser Stelle wäre lebensgefährlich."
+    },
+    {
+      "id": "stuerzen",
+      "name": "Stürzen",
+      "zeichen": "🪜"
+    },
+    {
+      "id": "ersticken",
+      "name": "Ersticken und Strangulieren",
+      "zeichen": "🧶"
+    },
+    {
+      "id": "verbrennen",
+      "name": "Verbrennen und Verbrühen",
+      "zeichen": "🔥"
+    },
+    {
+      "id": "vergiften",
+      "name": "Verschlucken und Vergiften",
+      "zeichen": "🧴"
+    },
+    {
+      "id": "ertrinken",
+      "name": "Ertrinken",
+      "zeichen": "🛁"
+    },
+    {
+      "id": "geborgenheit",
+      "name": "Ruhe und Nähe im Raum",
+      "zeichen": "🫧"
+    }
+  ],
+  "kriterien": [
+    {
+      "id": "s01",
+      "bereich": "schlafen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "Der Schlafplatz ist so eingerichtet, dass dein Kind auf dem Rücken liegt – bei jedem Schlafen, Tag und Nacht.",
+      "warum": "Die Rückenlage im Schlaf ist die wirksamste einzelne Maßnahme gegen den plötzlichen Kindstod. Die Seitenlage zählt nicht als Alternative, weil ein Kind von dort auf den Bauch rollt.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "s02",
+      "bereich": "schlafen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "Im Bett liegt nichts außer einer festen Matratze mit Bezug und einem passenden Schlafsack.",
+      "warum": "Kissen, Decke, Nestchen, Bettumrandung, Fell, Kuscheltiere und Wärmflasche bergen Ersticken und Überwärmung. Ein Schlafsack in der richtigen Größe ersetzt die Decke vollständig.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "s03",
+      "bereich": "schlafen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "Das eigene Bett steht im Schlafzimmer der Eltern – im ersten Jahr.",
+      "warum": "Eigenes Bett und gleicher Raum zusammen: die Nähe hilft, die eigene Liegefläche schützt.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege"
+      ]
+    },
+    {
+      "id": "s04",
+      "bereich": "schlafen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "Das Zimmer ist auch im Winter nicht wärmer als etwa achtzehn Grad, und dein Kind ist nicht zu warm angezogen.",
+      "warum": "Überwärmung ist ein Risiko. Prüfen kannst du es im Nacken, nicht an Händen oder Füßen – die sind bei Babys normalerweise kühler.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "s05",
+      "bereich": "schlafen",
+      "art": "immer",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "In der Wohnung wird nicht geraucht – auch nicht am offenen Fenster und nicht, wenn das Kind gerade nicht da ist.",
+      "warum": "Rauch in der Wohnung ist neben der Bauchlage im Schlaf der größte vermeidbare Risikofaktor. Er bleibt in Textilien und Staub.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "s06",
+      "bereich": "schlafen",
+      "art": "immer",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Empfehlungen zur sicheren Schlafumgebung, deutsche Kinder- und Jugendmedizin",
+        "geprueft": false
+      },
+      "was": "Wenn dein Kind auf dir liegt und du müde oder abgelenkt wirst, legst du es vorher in sein eigenes Bett.",
+      "warum": "Gemeinsames Einschlafen auf einer Polsterfläche, mit dem Kind auf dem Körper, ist die Lage, aus der es sich nicht selbst befreien kann.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "s07",
+      "bereich": "schlafen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "DGUV Regel 102-602 „Branche Kindertageseinrichtung“ (07/2019)",
+        "geprueft": true
+      },
+      "was": "Jeder Schlafplatz ist einem Kind fest zugeordnet, und der Schlafraum ist von der Gruppe aus einsehbar.",
+      "warum": "Ein wiedererkennbarer Platz macht das Einschlafen leichter, und Einsehbarkeit ist die Voraussetzung dafür, dass jemand etwas merkt.",
+      "giltFuer": [
+        "krippe"
+      ]
+    },
+    {
+      "id": "f01",
+      "bereich": "stuerzen",
+      "art": "immer",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Auf dem Wickelplatz bleibt eine Hand am Kind, und du gehst nie weg – auch nicht für die Windel im Regal daneben.",
+      "warum": "Ein Kind kann sich zum ersten Mal drehen, ohne es vorher je getan zu haben. Darum ist das keine Maßnahme, die man einmal erledigt, sondern eine Regel.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "f02",
+      "bereich": "stuerzen",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Alles, was du beim Wickeln brauchst, liegt in Reichweite der Hand, die nicht am Kind ist.",
+      "warum": "Das ist der Handgriff, der die Regel oben überhaupt einhaltbar macht. Sonst entsteht der Moment, in dem man sich wegdreht.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "f03",
+      "bereich": "stuerzen",
+      "art": "einmal",
+      "ausloeser": "robbt-kriecht",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "An der Treppe ist ein Schutzgitter angebracht – oben und unten.",
+      "warum": "Oben verhindert es den Sturz, unten das Hochklettern. Ein Gitter nur oben lässt die zweite Hälfte offen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "f04",
+      "bereich": "stuerzen",
+      "art": "einmal",
+      "ausloeser": "zieht-sich-hoch",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Fenster und Balkontüren sind gesichert, und unter dem Fenster steht nichts zum Klettern.",
+      "warum": "Ein Insektengitter hält kein Kind. Was zählt, ist eine abschließbare Sicherung – und dass keine Kiste, kein Stuhl und kein Blumenhocker die Höhe überbrückt.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "f05",
+      "bereich": "stuerzen",
+      "art": "immer",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Wippe, Babyschale und Autositz stehen auf dem Boden, nie auf Tisch, Sofa, Bett oder Arbeitsplatte.",
+      "warum": "Ein Kind, das sich streckt oder stößt, kippt mit der Schale. Auf dem Boden endet dieselbe Bewegung ohne Höhe.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "f06",
+      "bereich": "stuerzen",
+      "art": "einmal",
+      "ausloeser": "zieht-sich-hoch",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Regal, Kommode, Schuhschrank und Fernseher sind an der Wand befestigt oder stehen so, dass sie nicht kippen können.",
+      "warum": "Alles, woran sich ein Kind hochzieht, trägt dabei sein Gewicht. Eine Schublade, die aufgezogen wird, verschiebt den Schwerpunkt zusätzlich nach vorn.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "e01",
+      "bereich": "ersticken",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Schnüre von Rollos, Jalousien und Gardinen sind gekürzt oder hochgebunden – außer Reichweite, auch von der Bettkante aus.",
+      "warum": "Eine Schlaufe in Kopfhöhe ist eine Strangulationsgefahr, und ein Kind kommt an sie heran, sobald es sich aufrichtet.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "e02",
+      "bereich": "ersticken",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Über und im Bett hängt nichts: kein Mobile mit Schnur, keine Kette, kein Nestchen mit Bändern.",
+      "warum": "Alles Aufgehängte kann sich lösen oder erreicht werden. Was ein Kind anschauen soll, kann liegen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "e03",
+      "bereich": "ersticken",
+      "art": "einmal",
+      "ausloeser": "robbt-kriecht",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Kleinteile sind aus der Krabbelfläche weg: Münzen, Knöpfe, Batterien, Magnete, Nüsse, Lego der Großen, Luftballons.",
+      "warum": "Die Probe ist einfach: was durch eine leere Klopapierrolle fällt, ist zu klein. Luftballons sind eigens genannt, weil Gummireste sich beim Einatmen an die Atemwege legen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "e04",
+      "bereich": "ersticken",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Plastiktüten, Folien und Müllbeutel sind nicht in Reichweite und nicht im Zimmer.",
+      "warum": "Folie legt sich an Mund und Nase und ist nicht abzuschütteln.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "e05",
+      "bereich": "ersticken",
+      "art": "immer",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Um den Hals liegt beim Schlafen und Spielen nichts: keine Kette, kein Band, kein Schnullerclip mit langem Band, kein Schal.",
+      "warum": "Alles um den Hals kann sich an Gitterstäben und Möbelkanten verfangen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "v01",
+      "bereich": "verbrennen",
+      "art": "immer",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Heiße Getränke stehen nicht dort, wo ein Kind sie erreicht oder herunterziehen kann – auch nicht in der Tischmitte.",
+      "warum": "Ein Kind auf dem Arm greift weiter, als man denkt, und eine Tasse auf einer Tischdecke kommt mit der Decke. Babyhaut verbrennt bei niedrigeren Temperaturen und schneller als die von Erwachsenen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "v02",
+      "bereich": "verbrennen",
+      "art": "einmal",
+      "ausloeser": "zieht-sich-hoch",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Kabel von Wasserkocher, Bügeleisen und Fritteuse hängen nicht herunter, und die Geräte stehen weit hinten.",
+      "warum": "Am herabhängenden Kabel zieht sich ein Kind hoch – und zieht das Gerät mit.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "v03",
+      "bereich": "verbrennen",
+      "art": "einmal",
+      "ausloeser": "zieht-sich-hoch",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Herd und Backofen sind gesichert: Schutzgitter vorn, Töpfe auf den hinteren Platten, Griffe nach innen.",
+      "warum": "Die Backofentür wird heiß und ist genau auf Greifhöhe, wenn ein Kind daran steht.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "v04",
+      "bereich": "verbrennen",
+      "art": "immer",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Das Badewasser wird vor dem Hineinlegen am eigenen Unterarm geprüft, nicht an der Hand.",
+      "warum": "Die Hand ist unempfindlicher als der Rest des Körpers. Lauwarm am Unterarm ist der Maßstab.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "g01",
+      "bereich": "vergiften",
+      "art": "einmal",
+      "ausloeser": "robbt-kriecht",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Knopfzellen sind alle an einem Ort, hoch und verschlossen – auch die in Fernbedienung, Grußkarte, Waage und Teelicht.",
+      "warum": "Eine verschluckte Knopfzelle verätzt die Speiseröhre innerhalb von Stunden, auch wenn das Kind zunächst unauffällig wirkt. Das ist der Grund, warum sie eine eigene Zeile hat und nicht unter Kleinteile fällt.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "g02",
+      "bereich": "vergiften",
+      "art": "einmal",
+      "ausloeser": "robbt-kriecht",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Putzmittel, Waschmittelkapseln, Spülmaschinentabs, Medikamente, Zigaretten und E-Zigaretten-Liquid sind hoch und verschlossen – nicht unter der Spüle.",
+      "warum": "Waschmittelkapseln sehen wie Spielzeug aus und platzen beim Draufbeißen. Eine Kindersicherung am Schrank unter der Spüle ist schwächer als ein Platz, der zu hoch ist.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "g03",
+      "bereich": "vergiften",
+      "art": "einmal",
+      "ausloeser": "robbt-kriecht",
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Pflanzen, deren Blätter oder Beeren giftig sind, stehen nicht im Raum oder nicht in Reichweite.",
+      "warum": "Alles, was im Raum steht und Blätter hat, landet irgendwann im Mund. Wenn du nicht weißt, was die Pflanze ist, ist das selbst die Antwort.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "g04",
+      "bereich": "vergiften",
+      "art": "einmal",
+      "ausloeser": "zieht-sich-hoch",
+      "quelle": {
+        "gremium": "DIN VDE 0620 (Steckdosen mit erhöhtem Berührungsschutz), Fassung 2021-02",
+        "geprueft": true
+      },
+      "was": "Die Steckdosen in der Krabbelfläche sind Dosen mit erhöhtem Berührungsschutz nach DIN VDE 0620, nachgerüstet von einer Elektrofachkraft.",
+      "warum": "Dass eine Steckdose „kindersicher“ sei, darf nicht mehr behauptet werden – nach einem tödlichen Unfall in einer Kita hat der VDE seine Zertifizierung verschärft. Auch eine Dose mit Shutter ist kein absoluter Schutz. Ob ein aufgeklebter Einsatz schützt, kann dieser Check nicht beurteilen: frag die Elektrofachkraft.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "w01",
+      "bereich": "ertrinken",
+      "art": "immer",
+      "ausloeser": "immer",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Beim Baden bleibst du im Griff-Abstand – du gehst nicht ans Telefon, nicht zur Tür und nicht ein Handtuch holen.",
+      "warum": "Der Kopf eines Babys ist im Verhältnis schwer, und unter Wasser schließt sich die Stimmritze: es ruft nicht. Ein Badewannensitz ist keine Sicherung, sondern eine Sitzhilfe.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "w02",
+      "bereich": "ertrinken",
+      "art": "einmal",
+      "ausloeser": "robbt-kriecht",
+      "kritisch": true,
+      "quelle": {
+        "gremium": "Bundesarbeitsgemeinschaft Mehr Sicherheit für Kinder",
+        "geprueft": false
+      },
+      "was": "Eimer, Wannen, Gießkannen, Regentonne und Planschbecken stehen leer oder sind abgedeckt – auch der Wischeimer während des Putzens.",
+      "warum": "Es braucht keine Wassertiefe, in der ein Erwachsener schwimmen könnte. Ein Kind, das sich über den Rand beugt, kommt aus dieser Stellung nicht von allein zurück.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "r01",
+      "bereich": "geborgenheit",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "DGUV Regel 102-602 „Branche Kindertageseinrichtung“ (07/2019)",
+        "geprueft": true
+      },
+      "was": "Es gibt im Raum eine ruhige Ecke ohne Durchgangsverkehr, in der dein Kind liegen oder spielen kann.",
+      "warum": "Eine Fläche, über die niemand steigt, ist die Voraussetzung dafür, dass ein Kind sich auf etwas einlässt. Das ist eine Eigenschaft des Raums und keine Eigenschaft von dir.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "r02",
+      "bereich": "geborgenheit",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "DGUV Regel 102-602 „Branche Kindertageseinrichtung“ (07/2019)",
+        "geprueft": true
+      },
+      "was": "Im Krabbelraum läuft kein Bildschirm und kein Dauerradio.",
+      "warum": "Hintergrundstimmen überlagern die Stimme, der dein Kind folgen will. Für Kinder unter drei ist Bildschirmzeit ohnehin nicht empfohlen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "r03",
+      "bereich": "geborgenheit",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "DGUV Regel 102-602 „Branche Kindertageseinrichtung“ (07/2019)",
+        "geprueft": true
+      },
+      "was": "Von der Spielfläche aus ist eine vertraute Person zu sehen oder zu hören.",
+      "warum": "Sichtkontakt ist der Grund, warum ein Kind sich wegtraut. Gemessen wird das am Raum: Blickachse, keine Tür dazwischen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    },
+    {
+      "id": "r04",
+      "bereich": "geborgenheit",
+      "art": "einmal",
+      "ausloeser": "immer",
+      "quelle": {
+        "gremium": "DGUV Regel 102-602 „Branche Kindertageseinrichtung“ (07/2019)",
+        "geprueft": true
+      },
+      "was": "Der Schlafplatz lässt sich abdunkeln, und es gibt keine Zugluft über dem Bett.",
+      "warum": "Dunkel und zugfrei sind prüfbare Eigenschaften. Fenster, Lüfter und die Tür zum Flur sind die üblichen Quellen.",
+      "giltFuer": [
+        "zuhause",
+        "tagespflege",
+        "krippe"
+      ]
+    }
+  ]
+}

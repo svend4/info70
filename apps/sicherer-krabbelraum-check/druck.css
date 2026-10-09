@@ -1,0 +1,12 @@
+/* Druck: die offenen Punkte als Zettel. Kein Haken, kein Name, kein Wert –
+   und die Dauerregeln stehen mit, weil sie nie erledigt sind. */
+@media print {
+  .skc-nur-bildschirm { display: none !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .skc-block { break-inside: avoid; page-break-inside: avoid; border: 1pt solid #333; border-radius: 0; margin: 0 0 5mm; padding: 3mm; box-shadow: none; }
+  .skc-block h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .skc-block p, .skc-block li { font-size: 10pt; line-height: 1.35; }
+  .skc-kritisch { border: 2pt solid #000; }
+  a[href]::after { content: ""; }
+}

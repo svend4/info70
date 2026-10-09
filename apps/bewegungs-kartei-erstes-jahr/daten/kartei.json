@@ -1,0 +1,520 @@
+{
+  "art": "bewegungs-kartei-erstes-jahr",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege, Kinder im ersten Lebensjahr",
+  "hinweis": "Diese Kartei beschreibt keinen einzigen Handgriff am Kind. Sie beschreibt, was Sie an der Umgebung vorbereiten – Unterlage, Platz, Kleidung, was in Reichweite liegt, wo Sie sitzen. Die Bewegung macht Ihr Kind selbst. Alles auf einer festen Decke auf dem Boden, nie auf Wickeltisch, Sofa, Bett oder Tisch: ein Baby kann sich zum ersten Mal drehen, ohne dass es das vorher je getan hat.",
+  "geraet": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Baby sieht keinen Bildschirm.",
+  "keinPlan": "Das ist kein Übungsplan und kein Protokoll. Es gibt hier nichts abzuhaken, nichts zu zählen und nichts zu schaffen. Die App speichert nichts.",
+  "abbruch": "Wenn Ihr Kind quengelt, den Kopf wegdreht, die Arme steif macht oder zu weinen beginnt, ist es fertig – nicht faul. Aufhören ist die Regel, nicht die Ausnahme.",
+  "schuetteln": "Ein weinendes Baby darf nie geschüttelt werden. Schütteln verursacht Blutungen im Gehirn und kann tödlich sein. Wenn Sie an Ihre Grenze kommen: legen Sie Ihr Kind sicher auf den Rücken ins Bett, gehen Sie aus dem Zimmer und holen Sie sich Hilfe. Das Elterntelefon ist kostenlos und anonym: 0800 111 0 550.",
+  "zustaendigkeit": "Diese Kartei ersetzt keine Beratung. Hebammen, Kinderärztinnen und Kinderärzte, Physiotherapie und Eltern-Baby-Gruppen sehen Ihr Kind – eine App nicht. Keine der genannten Stellen hat diese Kartei geprüft oder freigegeben.",
+  "quelle": {
+    "programm": "Praleska – staatliches Vorschulprogramm der Republik Belarus, НИО 2007",
+    "abschnitte": "«Развитие движений» (S. 34–35, 26 Ziele) und «Гимнастические упражнения и массаж (от 1,5 мес. до года)» (S. 35–36, 16 Maßnahmen)",
+    "uebernommen": "Übernommen wurde die Struktur – die Gliederung nach dem, was das Kind schon kann, und der Gedanke, dass der Erwachsene die Bedingungen schafft. Alle Texte dieser Kartei sind Eigenproduktion.",
+    "bilanz": "Genau nachgezählt: die Quelle nennt 26 Bewegungsziele, 16 Gymnastik- und Massage-Maßnahmen und 4 Sicherheitsziele. Von den 26 Bewegungszielen sind 20 vollständig übernommen – alle, die Bedingungen schaffen, etwas anbieten oder Versuche begleiten. Von Ziel 26 ist nur die Hälfte „und selbstständig“ übernommen. Nicht übernommen sind 5 Ziele vollständig (6, 11, 16, 17, 20) und die andere Hälfte von Ziel 26: alle jene, in denen der Erwachsene das Kind in einer Haltung hält – im Griff unter den Achseln, an beiden Händen, an einer Hand, mit Stütze an der Brust. Von den 16 Gymnastik- und Massage-Maßnahmen ist eine übernommen (auf den Bauch legen – hier im Wachzustand und beobachtet), eine in Teilen (flächiges Streichen als Kontakt, ohne jedes Wirkversprechen), eine in Teilen als Umgebung (das Anregen des Krabbelns). Die übrigen 13 sind nicht übernommen; sie stehen mit Begründung in der Ausschlussliste. Die 4 Sicherheitsziele gehören zu einer eigenen Einheit (Sicherer-Krabbelraum-Check).",
+    "zahlen": {
+      "bewegungszieleQuelle": 26,
+      "bewegungszieleUebernommen": 21,
+      "bewegungszieleNichtUebernommen": 5,
+      "gymnastikMassnahmenQuelle": 16,
+      "gymnastikUebernommen": 3,
+      "gymnastikNichtUebernommen": 13,
+      "sicherheitszieleQuelle": 4
+    }
+  },
+  "ausgeschlossen": [
+    {
+      "id": "x01",
+      "quellNr": "g03, g05, g06",
+      "was": "Reflexe als Übung auslösen: reflektorisches Kriechen über den Fußsohlenreiz, reflektorisches Aufrichten der Wirbelsäule, Beinstreckung im Griff unter den Achseln.",
+      "grund": "Reflexauslösung als Training hat keinen belegten Nutzen bei gesunden reifen Säuglingen. Ein Seitenunterschied oder eine Kopfschiefhaltung ist ein Befund für die Kinderärztin, kein Übungsanlass – und Üben kann die nötige Abklärung verzögern."
+    },
+    {
+      "id": "x02",
+      "quellNr": "g07, g08, g09, g11",
+      "was": "Passives Bewegen der Gliedmaßen nach Übungsplan: Arme über der Brust kreuzen und ausbreiten, Arme in Schulter- und Ellenbogengelenk beugen und strecken, Beine beugen und strecken, passives Stampfen in Rückenlage.",
+      "grund": "Kein Nutzennachweis bei gesunden reifen Säuglingen, und das Prinzip widerspricht der freien Bewegungsentwicklung: eine Haltung, die das Kind nicht selbst erreicht hat, kann es auch nicht selbst verlassen. Ein Laie spürt an einem Säuglingsgelenk nicht, wann es genug ist."
+    },
+    {
+      "id": "x03",
+      "quellNr": "g10, g13, g14",
+      "was": "Zum Sitzen hochziehen oder aufsetzen – auch „bei leichtem Zug an den Händen“.",
+      "grund": "Zug am gestreckten Arm ist der Mechanismus der Chassaignac-Subluxation. Und die Haltung wird dem Kind abgenommen statt von ihm erarbeitet."
+    },
+    {
+      "id": "x04",
+      "quellNr": "g12, g16, z11, z17, z20, z26",
+      "was": "Stehen und Schreiten im Griff unter den Achseln, an beiden Händen oder an einer Hand führen.",
+      "grund": "Kein Nutzennachweis für Steh- und Gehübungen. Laufen kommt von allein; was hilft, ist Platz und barfuß, nicht Üben."
+    },
+    {
+      "id": "x05",
+      "quellNr": "–",
+      "was": "Dynamische Gymnastik, Schwingen, Hochwerfen, Drehen des Babys an Armen oder Beinen.",
+      "grund": "Steht nicht in der Quelle und kommt auch nicht als Warnung in die Kartei: eine Warnkarte macht die Praxis erst bekannt und liefert die Suchbegriffe. Hier steht sie nur als Ausschluss."
+    },
+    {
+      "id": "x06",
+      "quellNr": "–",
+      "was": "Lauflernhilfe („Gehfrei“, Babywalker) als Bewegungsangebot.",
+      "grund": "Der Berufsverband der Kinder- und Jugendärzte und die BAG Mehr Sicherheit für Kinder raten davon ab; die Stiftung Warentest rät seit 1997 vom Kauf ab. Die Kinder stürzen mit dem Gerät über Schwellen und Treppen, meist mit Kopfverletzungen. Steht in dieser Kartei nur als Entfernen-Punkt."
+    },
+    {
+      "id": "x07",
+      "quellNr": "–",
+      "was": "Knetende, klopfende, vibrierende Massagetechniken, Massage an Wirbelsäule, Hals und Kopf.",
+      "grund": "Krafttechniken an einem Körper mit weichem Knochen und Knorpel; in Deutschland werden sie Laien nicht beigebracht. Geblieben ist allein flächiges, langsames Streichen mit der ganzen Hand."
+    },
+    {
+      "id": "x08",
+      "quellNr": "–",
+      "was": "Wirkversprechen der Babymassage: bessere Verdauung, mehr Gewichtszunahme, besserer Schlaf, weniger Koliken.",
+      "grund": "Beim gesunden reifen Säugling schwach belegt; die tragfähigen Studien kommen aus der Frühgeborenen-Versorgung und sind nicht übertragbar. Babymassage ist gemeinsame Zeit und Hautkontakt – das genügt als Grund."
+    },
+    {
+      "id": "x09",
+      "quellNr": "–",
+      "was": "Ätherische Öle, Kampfer- und Mentholpräparate, Erkältungsbäder, Nussöl.",
+      "grund": "Das Bundesinstitut für Risikobewertung hält Kampfer und Menthol für Säuglinge für nicht geeignet. Welches Öl in Frage kommt, sagen Hebamme, Apotheke oder Kinderärztin – nicht eine App."
+    },
+    {
+      "id": "x10",
+      "quellNr": "–",
+      "was": "Bauchlage zum Schlafen, Seitenlage zum Schlafen, festes Pucken mit gestreckten Beinen.",
+      "grund": "Die Bauchlage im Schlaf ist neben dem Rauchen der größte vermeidbare Risikofaktor für den plötzlichen Kindstod; die Seitenlage gilt als ungünstig, weil das Kind auf den Bauch rollt. Festes Wickeln mit gestreckten Beinen kann die Hüftreifung behindern. Wickeltechniken zeigt die Hebamme."
+    },
+    {
+      "id": "x11",
+      "quellNr": "–",
+      "was": "Minutenpläne, Wiederholungszahlen, Tagesablauf-Tabellen, Abhärtung nach Schema.",
+      "grund": "Erzeugt Druck gegen das Kind und gegen den Erwachsenen und macht das Aufhören bei Protest zur Regelverletzung statt zur Regel. Säuglinge regulieren ihre Temperatur schlecht; Auskühlung ist ein echter Schaden."
+    },
+    {
+      "id": "x12",
+      "quellNr": "–",
+      "was": "Babyschwimmen mit Untertauchen.",
+      "grund": "Keine deutsche Fachempfehlung dafür gefunden, und es gibt dokumentierte Wasserintoxikation nach wiederholtem Untertauchen. Wassergewöhnung ohne Untertauchen ist etwas anderes und braucht keine Karte in dieser Kartei."
+    },
+    {
+      "id": "x13",
+      "quellNr": "–",
+      "was": "Bebilderte Griffpositionen am Babykörper (die Katalogvorgabe „bebildert“).",
+      "grund": "Eine Abbildung eines Griffs ist eine Anleitung zu einer Handlung am Kind, ohne die Rückmeldung einer anwesenden Fachperson. Beschrieben wird darum nur, was Ihr Kind von allein tut und was Sie vorbereiten."
+    }
+  ],
+  "nichtImHaus": [
+    {
+      "id": "n01",
+      "was": "Lauflernhilfe / „Gehfrei“",
+      "warum": "Kinderärzte und die BAG Mehr Sicherheit für Kinder raten ab; Stürze über Schwellen und Treppen enden meist mit Kopfverletzungen."
+    },
+    {
+      "id": "n02",
+      "was": "Türhopser",
+      "warum": "Nicht als Bewegungsförderung gedacht und nicht dafür nötig. Eine Aussage über Gelenkschäden steht hier nicht, weil sie nicht belegt ist – der Grund ist einfacher: der Boden kann alles, was der Hopser kann, und mehr."
+    },
+    {
+      "id": "n03",
+      "was": "Kissen, Nackenrolle oder Sitzschale als Sitzhilfe",
+      "warum": "Ein Sitz ist keine Sitzübung. Eine Haltung, aus der sich Ihr Kind nicht selbst befreien kann, ist eine Fixierung."
+    }
+  ],
+  "whoFenster": {
+    "hinweis": "Diese Spannen sind keine Ziele und kein Plan. Sie zeigen, wie breit „normal“ ist – vom frühesten bis zum spätesten Kind von hundert. Wenn Ihr Kind in einer Spanne liegt, ist nichts zu tun; wenn Sie sich Sorgen machen, ist der Weg die U-Untersuchung und nicht mehr Üben.",
+    "quelle": "WHO Multicentre Growth Reference Study, Windows of achievement, 1. bis 99. Perzentile, Monate",
+    "schritte": [
+      {
+        "id": "sitzen-frei",
+        "name": "sitzt ohne Stütze",
+        "von": 3.8,
+        "bis": 9.2
+      },
+      {
+        "id": "stehen-mit-hilfe",
+        "name": "steht mit Festhalten",
+        "von": 4.8,
+        "bis": 11.4
+      },
+      {
+        "id": "krabbeln",
+        "name": "krabbelt auf Händen und Knien",
+        "von": 5.2,
+        "bis": 13.5,
+        "nichtAlle": true,
+        "anteilOhne": 4.3
+      },
+      {
+        "id": "gehen-mit-hilfe",
+        "name": "geht mit Festhalten",
+        "von": 5.9,
+        "bis": 13.7
+      },
+      {
+        "id": "stehen-frei",
+        "name": "steht frei",
+        "von": 6.9,
+        "bis": 16.9
+      },
+      {
+        "id": "laufen-frei",
+        "name": "läuft frei",
+        "von": 8.2,
+        "bis": 17.6
+      }
+    ]
+  },
+  "wege": "Nicht jedes Kind krabbelt. Nach der WHO-Studie erreichen etwa vier von hundert gesunden Kindern das Krabbeln auf Händen und Knien nie – sie robben, rutschen auf dem Po oder rollen und stehen dann auf. Das sind gleichwertige Wege, keine übersprungene Stufe. „Krabbeln nachholen“ ist nichts, was man tun müsste.",
+  "koennen": [
+    {
+      "id": "k1",
+      "name": "liegt und schaut",
+      "beschreibung": "Ihr Kind liegt auf dem Rücken, hält den Kopf in der Mitte und schaut Ihnen ins Gesicht."
+    },
+    {
+      "id": "k2",
+      "name": "stützt sich auf",
+      "beschreibung": "Ihr Kind hebt in Bauchlage den Kopf und stützt sich auf die Unterarme."
+    },
+    {
+      "id": "k3",
+      "name": "dreht sich",
+      "beschreibung": "Ihr Kind dreht sich vom Rücken auf die Seite oder auf den Bauch."
+    },
+    {
+      "id": "k4",
+      "name": "robbt oder krabbelt",
+      "beschreibung": "Ihr Kind kommt von der Stelle – auf dem Bauch, auf Händen und Knien oder auf dem Po."
+    },
+    {
+      "id": "k5",
+      "name": "sitzt aus eigener Kraft",
+      "beschreibung": "Ihr Kind setzt sich selbst auf und sitzt ohne Stütze."
+    },
+    {
+      "id": "k6",
+      "name": "zieht sich hoch",
+      "beschreibung": "Ihr Kind zieht sich am Sofa, an der Schublade oder an Ihrem Finger in den Stand."
+    }
+  ],
+  "karten": [
+    {
+      "id": "b01",
+      "koennen": "k1",
+      "quellZiel": [
+        1
+      ],
+      "titel": "Dein Gesicht auf Sprechabstand",
+      "ausgangslage": "auf-dem-arm",
+      "rolle": "anbieten",
+      "ort": "auf-dem-arm",
+      "wasDuVorbereitest": [
+        "Setz dich hin und nimm dein Kind aufrecht auf den Arm, den Kopf an deiner Schulter oder in deiner Hand.",
+        "Halte dein Gesicht etwa eine Armlänge entfernt – da kann ein Baby am besten scharf sehen.",
+        "Sprich oder summe und warte zwischendurch."
+      ],
+      "wasDeinKindTut": "Es hebt den Kopf ein Stück, sucht dein Gesicht und hält es eine Weile fest.",
+      "sicherheit": "Der Kopf braucht im ersten Vierteljahr immer eine Auflage – deine Hand, deine Schulter, deinen Arm. Nie ohne.",
+      "abbruchzeichen": "Der Kopf sinkt weg oder dein Kind dreht sich vom Gesicht ab: genug gesehen."
+    },
+    {
+      "id": "b02",
+      "koennen": "k1",
+      "quellZiel": [
+        2,
+        5
+      ],
+      "titel": "Was die Hand schon berührt",
+      "ausgangslage": "rueckenlage",
+      "rolle": "vorbereiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Leg dein Kind auf den Rücken auf eine feste Decke auf dem Boden.",
+        "Leg einen leichten Gegenstand so hin, dass die offene Hand ihn von selbst berührt – ein Tuch, ein Holzring, eine leichte Rassel.",
+        "Mehr nicht. Nicht in die Hand drücken, nicht festhalten."
+      ],
+      "wasDeinKindTut": "Was die Handfläche berührt, umschließt es und hält es – erst zufällig, später mit Absicht.",
+      "sicherheit": "Nichts, was in den Mund passt und abgehen kann; keine Schnur, kein Band, keine Kette. Alles, was in eine Klopapierrolle fällt, ist zu klein.",
+      "abbruchzeichen": "Die Hand öffnet sich und bleibt offen, der Blick geht weg."
+    },
+    {
+      "id": "b03",
+      "koennen": "k1",
+      "quellZiel": [
+        3
+      ],
+      "titel": "Zappeln braucht Platz",
+      "ausgangslage": "rueckenlage",
+      "rolle": "vorbereiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Zieh dein Kind so an, dass Arme und Beine frei sind – lieber eine Schicht zu wenig als zu viel und zu eng.",
+        "Leg es auf den Rücken auf den Boden, nicht in Wippe oder Schale.",
+        "Setz dich dazu und schau zu, wie es zappelt."
+      ],
+      "wasDeinKindTut": "Wenn du mit ihm sprichst, werden Arme und Beine lebhaft, der Mund geht auf, manchmal kommt ein Lächeln. Das ist seine Antwort.",
+      "sicherheit": "Die Beine bleiben angewinkelt und frei beweglich. Festes Wickeln mit gestreckten, aneinandergelegten Beinen kann die Hüftreifung behindern – welche Wickeltechnik passt, zeigt dir deine Hebamme.",
+      "abbruchzeichen": "Das Zappeln wird steif und ruckartig, dein Kind wendet den Kopf weg: zu viel Reiz."
+    },
+    {
+      "id": "b04",
+      "koennen": "k1",
+      "quellZiel": [
+        "g01"
+      ],
+      "titel": "Streichen, einfach als Kontakt",
+      "ausgangslage": "rueckenlage",
+      "rolle": "begleiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Warmes Zimmer, dein Kind wach und zufrieden, dein Handy weg.",
+        "Mit der ganzen, flachen Hand langsam über Arme, Beine, Rücken streichen, am Bauch im Uhrzeigersinn.",
+        "Sag vorher, dass du anfängst, und hör auf, wenn dein Kind das sagt."
+      ],
+      "wasDeinKindTut": "Es wird ruhig, hält Blickkontakt oder schläft darüber ein.",
+      "sicherheit": "Nur streichen – nicht kneten, nicht klopfen, nichts an Wirbelsäule, Hals oder Kopf. Kein ätherisches Öl, kein Kampfer, kein Menthol, kein Nussöl, nichts ins Gesicht. Welches Öl geht, sagt dir Hebamme, Apotheke oder Kinderärztin.",
+      "abbruchzeichen": "Weggucken, Hände vors Gesicht, Quengeln.",
+      "ohneWirkung": "Babymassage ist gemeinsame Zeit und Hautkontakt. Dass sie Verdauung, Schlaf oder Gewicht verbessert, ist bei gesunden reifen Säuglingen nicht gut belegt – das muss sie auch nicht."
+    },
+    {
+      "id": "b05",
+      "koennen": "k2",
+      "quellZiel": [
+        "g02",
+        4
+      ],
+      "titel": "Bauchlage, wach und bei dir",
+      "ausgangslage": "bauchlage-wach",
+      "rolle": "anbieten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Eine feste, flache Decke auf dem Boden – kein Kissen, keine weiche Matratze, kein Sofa.",
+        "Leg dein Kind auf den Bauch, wenn es wach und satt und zufrieden ist, und bleib dabei auf Augenhöhe davor.",
+        "Lieber viele kurze Male am Tag als ein langes Mal."
+      ],
+      "wasDeinKindTut": "Es hebt den Kopf, stützt sich auf die Unterarme und schaut sich um. Später drückt es den Brustkorb hoch.",
+      "sicherheit": "Bauchlage nur im Wachzustand und nur, solange du dabei bist – und niemals gegen Protest.",
+      "schlafhinweis": "Zum Schlafen immer auf den Rücken. Die Bauchlage gehört zum Wachsein, nie zum Schlaf: sie ist der größte vermeidbare Risikofaktor für den plötzlichen Kindstod.",
+      "abbruchzeichen": "Der Kopf bleibt unten, das Gesicht wird rot, es quengelt: umdrehen und später wieder anbieten."
+    },
+    {
+      "id": "b06",
+      "koennen": "k2",
+      "quellZiel": [
+        "g02"
+      ],
+      "titel": "Bauch an Bauch statt Boden",
+      "ausgangslage": "bauchlage-wach",
+      "rolle": "anbieten",
+      "ort": "auf-dem-arm",
+      "wasDuVorbereitest": [
+        "Leg dich selbst auf den Rücken und dein Kind quer auf deinen Bauch, Gesicht zu dir.",
+        "Oder setz dich und leg es bäuchlings über deine Oberschenkel.",
+        "Beides zählt wie Bauchlage auf dem Boden – und viele Kinder mögen es lieber."
+      ],
+      "wasDeinKindTut": "Es hebt den Kopf, um dich anzusehen. Das ist derselbe Muskel und der schönere Anlass.",
+      "sicherheit": "Du bleibst wach. Wenn du müde wirst, leg dein Kind auf den Rücken in sein eigenes Bett – gemeinsames Einschlafen in dieser Lage ist gefährlich.",
+      "schlafhinweis": "Zum Schlafen immer auf den Rücken und ins eigene Bett. Diese Lage ist zum Wachsein.",
+      "abbruchzeichen": "Es lässt den Kopf sinken und quengelt."
+    },
+    {
+      "id": "b07",
+      "koennen": "k2",
+      "quellZiel": [
+        9,
+        7
+      ],
+      "titel": "Knapp in Reichweite, nicht über dem Gesicht",
+      "ausgangslage": "bauchlage-wach",
+      "rolle": "vorbereiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Leg etwas Interessantes so hin, dass dein Kind es sieht und fast erreicht – seitlich vor sich, auf Brusthöhe.",
+        "Nicht über das Gesicht hängen, nichts ins Bett hängen.",
+        "Wenn es danach greift, nicht nachschieben. Das Fast-Erreichen ist die Bewegung."
+      ],
+      "wasDeinKindTut": "Es verlagert das Gewicht, streckt eine Hand aus, verliert das Gleichgewicht, probiert wieder.",
+      "sicherheit": "Nichts Aufgehängtes über Kind oder Bett: Schnüre, Bänder und Mobiles sind eine Strangulationsgefahr. Alles liegt. Und wie jede Bauchlage: nur im Wachzustand und nur, solange du dabei bist.",
+      "schlafhinweis": "Zum Schlafen immer auf den Rücken, und im Bett liegt nichts außer Matratze und Schlafsack.",
+      "abbruchzeichen": "Es dreht sich weg oder legt den Kopf ab."
+    },
+    {
+      "id": "b08",
+      "koennen": "k3",
+      "quellZiel": [
+        8,
+        10
+      ],
+      "titel": "Platz zum Drehen",
+      "ausgangslage": "boden",
+      "rolle": "vorbereiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Räum eine freie Fläche auf dem Boden – größer als dein Kind lang ist, nach allen Seiten.",
+        "Leg etwas Interessantes zur Seite, auf Höhe der Schulter.",
+        "Zieh die Socken aus: barfuß greift der Fuß."
+      ],
+      "wasDeinKindTut": "Es dreht den Kopf, der Körper folgt, es kippt auf die Seite – und irgendwann ganz herum.",
+      "sicherheit": "Ab jetzt gilt überall: nie allein auf Wickeltisch, Sofa, Bett oder Tisch. Das erste Drehen kommt ohne Ankündigung.",
+      "abbruchzeichen": "Quengeln im Halbdrehen: eine Hand als Gegenlager anbieten, nicht herumdrehen."
+    },
+    {
+      "id": "b09",
+      "koennen": "k3",
+      "quellZiel": [
+        13
+      ],
+      "titel": "Der Boden statt der Wippe",
+      "ausgangslage": "boden",
+      "rolle": "vorbereiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Schau im Tagesverlauf, wie viel Zeit dein Kind in Wippe, Schale, Buggy und Hochstuhl liegt oder sitzt.",
+        "Mach daraus Bodenzeit – eine Decke genügt.",
+        "Autositz nur im Auto."
+      ],
+      "wasDeinKindTut": "Auf dem Boden kann es alles: drehen, strecken, robben, ausruhen, wieder anfangen.",
+      "sicherheit": "Die WHO empfiehlt für Kinder unter einem Jahr, sie nicht länger als eine Stunde am Stück festgelegt zu lassen – genannt sind Kinderwagen, Buggy und Hochstuhl.",
+      "abbruchzeichen": "Auf dem Boden gibt es keinen Abbruch – dein Kind hört selbst auf, wenn es genug hat."
+    },
+    {
+      "id": "b10",
+      "koennen": "k4",
+      "quellZiel": [
+        12,
+        15,
+        19
+      ],
+      "titel": "Das Interessante ein Stück weiter",
+      "ausgangslage": "boden",
+      "rolle": "anbieten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Setz dich ein Stück weg und halt das Interessante bei dir – oft bist du selbst das Interessante.",
+        "Feste Unterlage, barfuß, Hosen, die am Knie nicht rutschen.",
+        "Keine Teppichkante, keine Türschwelle in der Fläche."
+      ],
+      "wasDeinKindTut": "Es schiebt sich auf dem Bauch vorwärts, kommt auf Hände und Knie, wippt vor und zurück – und eines Tages fährt es los.",
+      "sicherheit": "Bevor dein Kind losfährt, ist der Raum dran: Treppe, Steckdosen, Kabel, Kleinteile, Kippmöbel. Dafür gibt es den Sicherer-Krabbelraum-Check.",
+      "abbruchzeichen": "Es legt den Kopf ab und weint: zu dir holen. Das Weiterweglegen ist dann für heute vorbei."
+    },
+    {
+      "id": "b11",
+      "koennen": "k4",
+      "quellZiel": [
+        19
+      ],
+      "titel": "Es gibt mehr als einen Weg",
+      "ausgangslage": "boden",
+      "rolle": "zuschauen",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Schau nach, wie dein Kind von A nach B kommt – und lass es so.",
+        "Robben, Po-Rutschen, Rollen, auf einer Seite schieben: alles Wege.",
+        "Nichts vormachen, nichts umlegen."
+      ],
+      "wasDeinKindTut": "Es benutzt den Weg, der für seinen Körper gerade geht.",
+      "sicherheit": "Was auffällt, gehört in die U-Untersuchung, nicht in mehr Üben: wenn eine Körperseite deutlich weniger mitmacht, wenn der Kopf immer zur selben Seite gedreht bleibt, oder wenn dein Kind etwas verliert, was es schon konnte.",
+      "abbruchzeichen": "–"
+    },
+    {
+      "id": "b12",
+      "koennen": "k5",
+      "quellZiel": [
+        13,
+        14
+      ],
+      "titel": "Ein Sitz hilft beim Sitzen nicht",
+      "ausgangslage": "sitzt-aus-eigener-kraft",
+      "rolle": "zuschauen",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Warte, bis dein Kind von allein zum Sitzen kommt – aus der Seitenlage über den Arm.",
+        "Kein Kissen im Rücken, keine Nackenrolle, keine Sitzschale.",
+        "Leg das Spielzeug auf den Boden, nicht auf einen Tisch."
+      ],
+      "wasDeinKindTut": "Wer von allein zum Sitzen kommt, kommt auch von allein wieder zum Liegen – und beides gehört zusammen.",
+      "sicherheit": "Eine Haltung, aus der sich dein Kind nicht selbst befreien kann, ist eine Fixierung. Freies Sitzen kommt bei gesunden Kindern in einer sehr breiten Spanne – da ist nichts zu beschleunigen.",
+      "abbruchzeichen": "Es kippt und quengelt: hinlegen und nicht wieder hinaufhelfen."
+    },
+    {
+      "id": "b13",
+      "koennen": "k5",
+      "quellZiel": [
+        18
+      ],
+      "titel": "Werfen, Rollen, Hinterherkommen",
+      "ausgangslage": "sitzt-aus-eigener-kraft",
+      "rolle": "anbieten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Ein Ball, ein Holzring, ein leerer Becher – etwas, das rollt oder fällt.",
+        "Setz dich gegenüber auf den Boden und roll es hin.",
+        "Wenn es wegfliegt: liegen lassen, bis dein Kind hinschaut."
+      ],
+      "wasDeinKindTut": "Es lässt fallen, schaut hinterher, dreht sich, robbt los und holt es. Das Hinterherkommen ist der Teil, um den es geht.",
+      "sicherheit": "Nichts aus Glas, nichts Zerbrechliches, nichts, was in den Mund passt. Keine Luftballons.",
+      "abbruchzeichen": "Es schiebt alles weg oder legt sich hin."
+    },
+    {
+      "id": "b14",
+      "koennen": "k6",
+      "quellZiel": [
+        21,
+        23,
+        24
+      ],
+      "titel": "Feste Möbel zum Hochziehen",
+      "ausgangslage": "boden",
+      "rolle": "vorbereiten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Geh durch den Raum und prüfe, was dein Kind als Griff benutzen wird: Sofakante, Schublade, Regal, Stuhlbein, Topfpflanze.",
+        "Alles, was kippen kann, an der Wand befestigen oder wegstellen – vorher, nicht wenn es passiert.",
+        "Eine freie Strecke an festen Möbeln entlang lassen."
+      ],
+      "wasDeinKindTut": "Es zieht sich hoch, steht, geht an den Möbeln entlang, lässt sich fallen, macht es wieder. Du hältst nicht – du räumst.",
+      "sicherheit": "Hochziehen heißt: alles Kippbare ist jetzt dran, auch der Fernseher. Und das Treppenschutzgitter gehört oben UND unten hin.",
+      "abbruchzeichen": "Dein Kind setzt sich hin. Dann ist Stehen für jetzt vorbei."
+    },
+    {
+      "id": "b15",
+      "koennen": "k6",
+      "quellZiel": [
+        25,
+        26
+      ],
+      "titel": "Barfuß und Platz",
+      "ausgangslage": "boden",
+      "rolle": "zuschauen",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Barfuß in der Wohnung, solange es geht – der Fuß greift, und er lernt dabei.",
+        "Etwas Niedriges zum Hinaufklettern: eine flache Kiste, ein Sofakissen auf dem Boden.",
+        "Keine Hand zum Führen anbieten. Dein Kind nimmt sie sich, wenn es sie will."
+      ],
+      "wasDeinKindTut": "Es klettert, steigt, lässt los, fällt auf den Po, steht wieder auf. Irgendwann lässt es einfach los und geht.",
+      "sicherheit": "Socken rutschen auf Laminat und Parkett – barfuß oder rutschfeste Sohle. Keine Lauflernhilfe: Kinderärzte und die BAG Mehr Sicherheit für Kinder raten davon ab.",
+      "abbruchzeichen": "Müde Kinder klettern unvorsichtig. Dann ist der Boden dran."
+    },
+    {
+      "id": "b16",
+      "koennen": "k6",
+      "quellZiel": [
+        22
+      ],
+      "titel": "Kleine Aufträge, die Spaß machen",
+      "ausgangslage": "sitzt-aus-eigener-kraft",
+      "rolle": "anbieten",
+      "ort": "boden",
+      "wasDuVorbereitest": [
+        "Frag etwas, das dein Kind schon kann: „Gibst du mir den Becher?“, „Wo ist dein Fuß?“, „Machst du winkewinke?“",
+        "Warte lange genug – Verstehen braucht länger als Antworten.",
+        "Freu dich über das, was kommt, auch wenn es etwas anderes ist."
+      ],
+      "wasDeinKindTut": "Es dreht sich, holt, zeigt, gibt – und merkt, dass seine Bewegung bei dir etwas auslöst.",
+      "sicherheit": "Keine Aufträge, die eine Haltung verlangen, die dein Kind noch nicht von allein findet. Und kein Abfragen vor anderen.",
+      "abbruchzeichen": "Es reagiert nicht mehr: nichts wiederholen, nichts nachfordern."
+    }
+  ]
+}
