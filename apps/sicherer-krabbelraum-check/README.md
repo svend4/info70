@@ -182,5 +182,5 @@ Sammelband. Hilfe-Insel нет. Печать со своим `druck.css`, без
 
 ```bash
 npm run dev   # http://localhost:8070/apps/sicherer-krabbelraum-check/
-node --test apps/sicherer-krabbelraum-check/test/*.test.mjs   # 17 тестов
+node --test apps/sicherer-krabbelraum-check/test/*.test.mjs   # 19 тестов
 ```

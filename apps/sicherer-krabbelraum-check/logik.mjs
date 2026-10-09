@@ -30,7 +30,7 @@ export const ARTEN = Object.freeze(['einmal', 'immer']);
 
 /** Kriterium als Beobachtung über das KIND – genau die wahrscheinlichste
  *  Abdrift, weil meilenstein-begleiter dieselbe Zielgruppe hat. */
-const KIND_ALS_SUBJEKT = /^(Dein|Ihr|Das|Mein) Kind\b|\bKind (kann|schläft durch|robbt schon|krabbelt schon|zieht sich schon|sitzt schon)\b|\bfühlt sich .* geborgen\b/i;
+const KIND_ALS_SUBJEKT = /^(Dein|Ihr|Das|Mein)\s+(Kind|Baby|Säugling)\b|^Es\s+(kann|schläft|robbt|krabbelt|sitzt|zieht|fühlt|ist\s+(schon|bereits))\b|\b(Kind|Baby|Säugling)\s+(kann|schläft durch|robbt schon|krabbelt schon|zieht sich schon|sitzt schon|ist schon)\b|\bfühlt sich .* geborgen\b/i;
 
 /** Erste Hilfe gehört nicht in eine Raum-Checkliste. */
 const ERSTE_HILFE = /Heimlich|Erbrechen ausl|Salzwasser|Milch zum Neutralisieren|Reanimation|Mund-zu-Mund|Honig/i;
@@ -49,7 +49,7 @@ const AUSNAHME = /\bsobald\b|\bsolange\b|\bab dem\b|ist (okay|in Ordnung), (wenn
  * machte damit die Ausnahme für das Elterntelefon zu totem Code. Die
  * Längenschranke hält Datums- und Regelnummern (07/2019, 102-602) heraus.
  */
-const FREMDE_NUMMER = /(?:\+49|0)[\d\s/-]{7,}\d/g;
+const FREMDE_NUMMER = /(?:\+49|\(0\)|0)[\d\s./()-]{7,}\d/g;
 /** Nummern, die hier stehen dürfen. Normalisiert verglichen. */
 const ERLAUBTE_NUMMERN = Object.freeze(['112', '08001110550']);
 const nurZiffern = (s) => String(s).replace(/\D/g, '');
@@ -195,9 +195,49 @@ export function pruefeDaten(daten) {
     // Dokument wirklich aufgeschlagen hat – eine erfundene Fundstelle sieht
     // genauso aus wie eine geprüfte.
     if (!k.quelle?.gremium) fehler.push(`${wo}: quelle.gremium fehlt`);
-    if (/Kap\.|§|Abschnitt \d|Seite \d/.test(JSON.stringify(k)) && k.quelle?.geprueft !== true) {
+    // Die eigene Schreibweise der Quellenangaben dieses Korpus ist „S. 34" -
+    // und genau die kannte die Sperre nicht (Review der Welle 78).
+    if (/Kap\.|§|Abschnitt \d|Seite \d|\bS\.\s*\d|\bSS?\.\s*\d|\bRn\.\s*\d|\bNr\.\s*\d+\s*Abs/.test(JSON.stringify(k)) && k.quelle?.geprueft !== true) {
       fehler.push(`${wo}: nennt eine Fundstelle, ohne dass die Quelle als geprüft markiert ist`);
     }
+  }
+
+  // Drei Regeln, die das GDD behauptet hat, ohne dass sie hier standen
+  // (Review der Welle 78 - eine Zusage, die weiter geht als der Code, ist
+  // nach docs/02 ein Fehler, und zwar genau an den Stellen, die die App
+  // plakatiert).
+  //
+  // (a) Kein Alter in einem Auslöser. Die App sagt im Einstieg „kein Alter
+  //     erwartet"; eine Monatsangabe in der Frage würde das umdrehen.
+  for (const a of daten?.ausloeser ?? []) {
+    if (/Monat|Woche|Lebensmonat|Lebenswoche|\d/i.test(`${a.name ?? ''} ${a.frage ?? ''}`)) {
+      fehler.push(`Auslöser ${a.id}: Altersangabe in der Frage – gefragt wird nach dem, was zu sehen ist`);
+    }
+  }
+  // (b) Der Geborgenheits-Bereich nennt eine prüfbare RAUM-Eigenschaft und
+  //     beurteilt keine Beziehung. Das dritte Quellziel ist übersetzt, nicht
+  //     übernommen - und das muss der Validator halten, nicht die Redaktion.
+  const RAUM_EIGENSCHAFT = /Ecke|Bildschirm|Radio|sehen|hören|abdunkeln|Zugluft|Durchgangsverkehr|Schlafplatz|Fläche|Licht|Lärm/i;
+  const BEZIEHUNGSURTEIL = /\bBindung\b|feinfühlig|liebevoll|geborgen fühlt|fühlt sich .* geborgen|verlässliche Beziehung|genug Zuwendung/i;
+  for (const k of (daten?.kriterien ?? []).filter((x) => x.bereich === 'geborgenheit')) {
+    if (!RAUM_EIGENSCHAFT.test(k.was ?? '')) {
+      fehler.push(`Kriterium ${k.id}: im Bereich Geborgenheit ohne prüfbare Raum-Eigenschaft`);
+    }
+    if (BEZIEHUNGSURTEIL.test(`${k.was ?? ''} ${k.warum ?? ''}`)) {
+      fehler.push(`Kriterium ${k.id}: beurteilt die Beziehung statt den Raum`);
+    }
+  }
+  // (c) Der Kernsatz darf nur so weit gehen, wie er stimmt. Mehrere
+  //     Dauerregeln beschreiben, was der ERWACHSENE tut (eine Hand am
+  //     Wickelplatz, Griffabstand in der Wanne) - der Anspruch „nur Sachen
+  //     und Handgriffe daran" war zu stark.
+  const kern = String(daten?.hinweis ?? '');
+  if (!/auf den RAUM|auf den Raum/.test(kern)) fehler.push('hinweis: der Gegenstand muss der Raum sein');
+  if (/keine einzige beschreibt, was dein Kind kann oder wie du bist/.test(kern)) {
+    fehler.push('hinweis: der Anspruch geht zu weit – mehrere Zeilen beschreiben, was der Erwachsene tut; er darf nur so weit gehen, wie er stimmt');
+  }
+  if (!/oder etwas, das du tust|was du tust/.test(kern)) {
+    fehler.push('hinweis: dass auch Handlungen des Erwachsenen vorkommen, muss dastehen');
   }
 
   // Eine Zeile, die ihre eigene Wiederkehr ausspricht, ist eine Dauerregel –
@@ -205,7 +245,9 @@ export function pruefeDaten(daten) {
   // `einmal` zu führen heißt, die wirksamste Einzelmaßnahme gegen den
   // plötzlichen Kindstod abhakbar zu machen und sie danach aus dem Bericht
   // zu nehmen. Das war so gebaut und ist beim Review aufgefallen.
-  const WIEDERKEHR = /bei jedem|zu jedem|jedes Mal|Tag und Nacht|jedes? Schlafen|immer wieder/i;
+  // „vor jedem", „nach jedem" und die Dativformen („bei jeder Mahlzeit")
+  // entgingen der ersten Fassung (Review der Welle 78).
+  const WIEDERKEHR = /\b(bei|zu|vor|nach|in|an)\s+jede[rmn]?\b|jedes Mal|jedes? Schlafen|Tag und Nacht|immer wieder|täglich|jeden Abend|jeden Morgen/i;
   for (const k of kriterien ?? []) {
     if (k.art === 'einmal' && WIEDERKEHR.test(k.was ?? '')) {
       fehler.push(`${k.id}: der Text spricht die Wiederkehr aus („bei jedem …“) – das ist eine Dauerregel und darf nicht abhakbar sein`);

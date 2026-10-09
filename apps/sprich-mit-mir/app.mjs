@@ -90,7 +90,8 @@ function impulsKarte() {
       liste.length > 1
         ? el('button', {
           class: 'k-knopf k-knopf--neutral',
-          onclick: () => { impuls = naechsterImpuls(liste, impuls.id); render(); },
+          id: 'smm-noch-eine',
+          onclick: () => { impuls = naechsterImpuls(liste, impuls.id); render('smm-noch-eine'); },
         }, '🔄 Noch eine Idee')
         : null,
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { signal = null; impuls = null; render(); } },
@@ -125,7 +126,10 @@ function merkKarte() {
         el('button', {
           class: `k-knopf k-knopf--klein ${gewaehlt ? '' : 'k-knopf--neutral'}`,
           style: 'text-align:start;width:100%;min-height:3rem',
-          id: `smm-${m.id}`,
+          // Eigener Namensraum: seit die Abschnitt- und Signalknöpfe Ids
+          // tragen, wäre `smm-<id>` nicht mehr eindeutig - ein Selektor auf
+          // `smm-` traf den Abschnittsknopf (von der Browser-Probe gefunden).
+          id: `smm-merk-${m.id}`,
           // Drei Zustände, darum `aria-pressed` und kein `role="checkbox"`:
           // eine Checkbox kennt nur an und aus, und der Stand steht dazu im
           // Namen. Nächster Schritt wird mitgesagt, damit klar ist, was ein
@@ -139,7 +143,7 @@ function merkKarte() {
             speichere(n);
             // Mit dem Fokus zurück auf die getippte Zeile – sonst landet er
             // nach jedem Antippen auf <body>.
-            render(m.id);
+            render(`smm-merk-${m.id}`);
           },
         }, `${zeichen} ${m.satz}`),
         gewaehlt ? el('small', { style: 'color:#4b5563' }, wort) : null);
@@ -182,8 +186,9 @@ function render(fokusId = null) {
         ...daten.perioden.map((x) => el('button', {
           class: `k-knopf ${x.id === periode ? '' : 'k-knopf--neutral'}`,
           style: 'min-height:3.6rem;text-align:start',
+          id: `smm-periode-${x.id}`,
           'aria-pressed': String(x.id === periode),
-          onclick: () => { periode = x.id; signal = null; impuls = null; render(); },
+          onclick: () => { periode = x.id; signal = null; impuls = null; render(`smm-periode-${x.id}`); },
         }, `${x.name} — ${x.passtWenn}`))),
       p ? el('p', { style: 'margin:0.4rem 0 0;font-size:0.85rem;color:#4b5563' }, p.ueberlappung) : null),
     periode && !impuls
@@ -194,6 +199,7 @@ function render(fokusId = null) {
         el('div', { class: 'k-antworten', role: 'group', 'aria-label': 'Signal wählen' },
           ...signaleIn(daten, periode).map((s) => el('button', {
             class: 'k-knopf k-knopf--neutral', style: 'min-height:3.4rem;text-align:start',
+            id: `smm-signal-${s.id}`,
             onclick: () => {
               signal = s.id;
               impuls = mischen(impulseFuer(daten, periode, s.id))[0] ?? null;
@@ -215,7 +221,12 @@ function render(fokusId = null) {
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
 
-  if (fokusId) document.getElementById(`smm-${fokusId}`)?.focus();
+  // Fokus zurueck auf das Element, das gerade gedrueckt wurde. Vorher lief
+  // das nur fuer die Merkliste (`smm-<id>`), und damit verloren genau die
+  // Knoepfe den Fokus an <body>, die man mehrfach hintereinander drueckt:
+  // Abschnitt, Signal, „Noch eine Idee". Ein Tastaturnutzer musste nach
+  // jedem Druck von vorn durchtabben (Review der Welle 78).
+  if (fokusId) document.getElementById(fokusId)?.focus();
 }
 
 const fehler = pruefeDaten(daten);

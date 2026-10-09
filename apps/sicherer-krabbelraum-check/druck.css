@@ -9,6 +9,25 @@
   /* Kein Haken auf dem Papier (docs/02): das Zeichen gehört zum Knopf,
      nicht zur Zeile. */
   .skc-marke { display: none !important; }
+  /* Und der Knopf selbst ist auf Papier kein Knopf mehr. Eine abgehakte
+     Zeile trug die Knopffarben aus kinder.css: blauer Grund, WEISSE
+     Schrift. Drucker lassen Hintergründe standardmäßig weg - die Zeile kam
+     weiss auf weiss heraus, war also unsichtbar. Druckt der Browser den
+     Grund doch, ist die blaue Füllung eine Markierung auf Papier und damit
+     genau das, was docs/02 verbietet. Beides faellt weg, wenn die Zeile
+     als Text gedruckt wird. */
+  .skc-block button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    font-weight: 600 !important;
+    text-align: start !important;
+    width: auto !important;
+  }
   body { background: #fff; }
   .k-app { max-width: none; padding: 0; }
   .skc-block { break-inside: avoid; page-break-inside: avoid; border: 1pt solid #333; border-radius: 0; margin: 0 0 5mm; padding: 3mm; box-shadow: none; }

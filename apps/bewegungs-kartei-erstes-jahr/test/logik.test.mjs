@@ -36,6 +36,78 @@ test('keine Säuglingsgymnastik – und der Anspruch geht nur so weit', () => {
   assert.ok(pruefeDaten(mut).some((f) => /nur so weit gehen, wie er stimmt/.test(f)));
 });
 
+test('der weitere Anspruch wird abgewiesen, nicht nur der engere verlangt', () => {
+  // Vorher prüfte der Validator nur, dass „keine Säuglingsgymnastik“
+  // DASTEHT. Ein hinweis, der beides enthielt, wäre durchgegangen - und
+  // genau das behauptete das GDD als geprüft (Review der Welle 78). Die
+  // eigene Gegenprobe fand dann, dass die erste Fassung der neuen Regel die
+  // Verneinung direkt vor dem Wort verlangte und den Satz durchliess.
+  for (const zusatz of [
+    'Und keine Karte beschreibt einen Handgriff am Kind.',
+    'Kein Handgriff am Kind.',
+    'Es gibt keinerlei Handgriffe am Kind.',
+    'Nichts am Körper des Kindes.',
+  ]) {
+    const mut = kopie();
+    mut.hinweis = `${daten.hinweis} ${zusatz}`;
+    assert.ok(pruefeDaten(mut).some((f) => /geht zu weit/.test(f)), zusatz);
+  }
+  // Und der enge Satz muss die eine Karte mit Körperkontakt nennen.
+  assert.match(daten.hinweis, /flächig streichen als Kontakt/);
+  const ohne = kopie();
+  ohne.hinweis = 'Diese Kartei beschreibt keine Säuglingsgymnastik.';
+  assert.ok(pruefeDaten(ohne).some((f) => /Karte mit Körperkontakt/.test(f)));
+});
+
+test('die Bodenregel nennt ihren Geltungsbereich – sie gilt nicht auf dem Arm', () => {
+  // Der Nur-Druck-Block sagte „Gilt für jede Karte“ und dann die
+  // Bodenregel. Eine Karte spielt auf dem ARM, und dort gilt sie nicht
+  // (Review der Welle 78).
+  assert.ok(daten.karten.some((k) => k.ausgangslage === 'auf-dem-arm'));
+  assert.match(daten.bodenregel, /bei der dein Kind liegt|auf dem Boden/);
+  assert.match(daten.bodenregel, /Ausnahme/);
+  assert.match(code, /Gilt für jede Karte auf dem Boden/);
+  assert.doesNotMatch(code, /'⚠️ Gilt für jede Karte'/);
+  const ohne = kopie();
+  ohne.bodenregel = 'Alles auf einer festen Decke auf dem Boden.';
+  assert.ok(pruefeDaten(ohne).some((f) => /Ausnahme für den Arm/.test(f)));
+  const ohneBereich = kopie();
+  ohneBereich.bodenregel = 'Nie auf Wickeltisch oder Sofa. Die Ausnahme steht auf der Karte.';
+  assert.ok(pruefeDaten(ohneBereich).some((f) => /Geltungsbereich fehlt/.test(f)));
+});
+
+test('gesperrtes Vokabular gilt auch im Sicherheitssatz – aber nur bejahend', () => {
+  // GESPERRTES_VOKABULAR lief nur auf den Anweisungsfeldern. Eine
+  // Sicherheitszeile hätte „Reflex“ oder „Übung“ einführen können - an der
+  // Stelle, die der Erwachsene am aufmerksamsten liest (Review der Welle 78).
+  const bejahend = kopie();
+  bejahend.karten[0].sicherheit = `${bejahend.karten[0].sicherheit} Danach eine kurze Übung anschließen.`;
+  assert.ok(pruefeDaten(bejahend).some((f) => /sicherheit: „Übung“ steht dort nicht verneint/.test(f)));
+  // Verneint muss es erlaubt bleiben, sonst könnte eine Sicherheitszeile das
+  // Verbotene nicht aussprechen.
+  const verneint = kopie();
+  verneint.karten[0].sicherheit = `${verneint.karten[0].sicherheit} Keine Übung, kein Reflex.`;
+  assert.deepEqual(pruefeDaten(verneint), []);
+  // Und die anatomische Wirbelsäule ist keine verbotene Bewegung: der nackte
+  // Stamm „wirbel“ traf genau den Begriff, mit dem eine Sicherheitszeile
+  // sagt, wo man NICHT hinfasst.
+  const netz = GESPERRTES_VOKABULAR.find((g) => g.wort === 'wirbeln').muster;
+  assert.doesNotMatch('nichts an Wirbelsäule, Hals oder Kopf', netz);
+  assert.match('wirbelt das Kind herum', netz);
+  assert.match('herumwirbeln', netz);
+});
+
+test('die Verneinung der Öle wird an JEDER Fundstelle geprüft', () => {
+  // `indexOf(treffer)` fand immer das erste Vorkommen derselben
+  // Zeichenfolge: stand „kein Kampfer“ vor „mit Kampfer einreiben“, galt der
+  // zweite, bejahende Gebrauch als verneint (Review der Welle 78).
+  const mut = kopie();
+  const k = mut.karten.find((x) => /Kampfer/.test(String(x.sicherheit ?? '')));
+  assert.ok(k, 'eine Karte nennt Kampfer verneint');
+  k.ohneWirkung = 'Kein Kampfer verwenden. Wer mag, kann mit Kampfer einreiben.';
+  assert.ok(pruefeDaten(mut).some((f) => /steht nicht verneint/.test(f)));
+});
+
 test('die Bodenregel steht auch auf dem Papier', () => {
   // Sie gilt für JEDE Karte und stand nur im Vorwort, das nicht mitgedruckt
   // wird – auf dem Papier fehlte sie damit ganz.

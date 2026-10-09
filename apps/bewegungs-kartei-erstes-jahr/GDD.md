@@ -122,8 +122,11 @@ Anweisungsfeldern ab. Beim Bau hat er eine eigene Formulierung getroffen
 („Schau einmal durch den Tag“) — die ist umgeschrieben worden, statt die
 Regel zu schwächen.
 
-Die einzigen Zahlen der App sind die WHO-Spannen und die WHO-Angabe zur
-Dauer am Stück, beide mit Quelle und Altersbezug.
+Die einzigen Zahlen in einem **Anweisungstext** sind keine: `ABZAEHLEN`
+weist dort jede Ziffer und jede `-mal`-Form ab. Zahlen gibt es sonst
+durchaus — die WHO-Spannen, die Quellbilanz, die Nummern der Quellziele und
+der Ausschlussliste —, sie stehen aber alle im Rahmen und nie in einer
+Anweisung an den Erwachsenen.
 
 ## 6. Kein Wirkversprechen
 
@@ -136,9 +139,12 @@ ausspricht, und einem Validator, der Wirkbehauptungen ablehnt. Nicht
 übernommen: Knetung, Klopfung, Vibration, alles an Wirbelsäule, Hals und
 Kopf.
 
-Die Öle **müssen** im Sicherheitssatz vorkommen, um ausgeschlossen zu werden;
-geprüft wird, dass sie nur dort und nur verneint auftreten und in keinem
-Anweisungsfeld stehen.
+Die Öle **müssen** im Sicherheitssatz vorkommen, um ausgeschlossen zu
+werden. Geprüft wird darum genau zweierlei: in einem **Anweisungsfeld**
+dürfen sie gar nicht stehen, und in jedem anderen Feld nur **verneint** —
+geprüft an jeder einzelnen Fundstelle, nicht nur an der ersten. Dass sie
+ausschließlich im Sicherheitssatz vorkommen, prüft der Validator **nicht**;
+erlaubt ist die verneinte Form in jedem Nicht-Anweisungsfeld.
 
 ## 7. Die App speichert nichts
 
@@ -194,7 +200,7 @@ Schüttel-Hinweis. Mobile-first, Touch-Ziele ≥ 48 px, Impressum im Fuß.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (24): Daten gültig; keine Säuglingsgymnastik und der
+`test/logik.test.mjs` (28): Daten gültig; keine Säuglingsgymnastik und der
 Anspruch nicht weiter als wahr (mit fünf Erwachsenen-Formulierungen als
 Gegenprobe **und** der Gegenprobe, dass das Kind sich selbst hochziehen
 darf); „Übung“ trifft in der Zusammensetzung;

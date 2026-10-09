@@ -96,7 +96,7 @@ function kriteriumZeile(k, erledigt) {
       `${abhakbar ? 'Einmal erledigen' : 'Regel für jedes Mal'} · ${k.quelle.gremium}`));
 }
 
-function render(fokusId = null) {
+function render(fokusId = null, fokusElement = null) {
   const erledigt = lade();
   const ausloeser = [...koennen];
 
@@ -143,8 +143,15 @@ function render(fokusId = null) {
         ...daten.ausloeser.filter((a) => a.id !== 'immer').map((a) => el('button', {
           class: `k-knopf k-knopf--klein ${koennen.has(a.id) ? '' : 'k-knopf--neutral'}`,
           style: 'text-align:start;min-height:3rem',
+          id: `skc-koennen-${a.id}`,
           'aria-pressed': String(koennen.has(a.id)),
-          onclick: () => { if (koennen.has(a.id)) koennen.delete(a.id); else koennen.add(a.id); render(); },
+          // Fokus bleibt auf dem Schalter: man tippt hier mehrere
+          // hintereinander an, und ohne das landet er jedes Mal auf <body>
+          // (Review der Welle 78).
+          onclick: () => {
+            if (koennen.has(a.id)) koennen.delete(a.id); else koennen.add(a.id);
+            render(a.id, `skc-koennen-${a.id}`);
+          },
         }, `${koennen.has(a.id) ? '☑' : '☐'} ${a.frage}`)))),
     ...bereicheInReihenfolge(daten).map((b) => {
       const drin = liste.filter((k) => k.bereich === b.id);
@@ -200,7 +207,24 @@ function render(fokusId = null) {
         el('div', { class: 'k-antworten' },
           el('button', {
             class: 'k-knopf k-knopf--klein',
-            onclick: (ev) => { berichtsFeld.select(); navigator.clipboard?.writeText(berichtsFeld.value); ev.target.textContent = '✔️ Kopiert!'; },
+            // Die Erfolgsmeldung stand unbedingt hinter einem Aufruf, den
+            // das Optional Chaining verschluckt: ohne secure context (die
+            // Krippe öffnet den Check im LAN) ist `navigator.clipboard`
+            // undefined, die Zwischenablage blieb unverändert und der Knopf
+            // meldete trotzdem Erfolg. Jetzt entscheidet das Ergebnis.
+            onclick: (ev) => {
+              const knopf = ev.currentTarget;
+              berichtsFeld.select();
+              const melde = (text) => { knopf.textContent = text; };
+              try {
+                const p = navigator.clipboard?.writeText(berichtsFeld.value);
+                if (!p) { melde('⚠️ Kopieren geht hier nicht – Text ist markiert'); return; }
+                p.then(() => melde('✔️ Kopiert!'))
+                  .catch(() => melde('⚠️ Kopieren hat nicht geklappt – Text ist markiert'));
+              } catch {
+                melde('⚠️ Kopieren geht hier nicht – Text ist markiert');
+              }
+            },
           }, '📋 Liste kopieren'),
           el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Liste drucken'),
           el('button', {
@@ -226,7 +250,8 @@ function render(fokusId = null) {
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
 
-  if (fokusId) document.getElementById(`skc-${fokusId}`)?.focus();
+  if (fokusElement) document.getElementById(fokusElement)?.focus();
+  else if (fokusId) document.getElementById(`skc-${fokusId}`)?.focus();
 }
 
 const fehler = pruefeDaten(daten);

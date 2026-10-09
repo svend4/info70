@@ -100,8 +100,12 @@ test('angekreuzt wird ein eigenes Vorhaben, nie ein Zustand des Kindes', () => {
   assert.match(code, /speicherSperre/);
   assert.match(code, /kann gerade nichts behalten/);
   // Und der Fokus bleibt auf der getippten Zeile.
-  assert.match(code, /render\(m\.id\)/);
-  assert.match(code, /getElementById\(`smm-\$\{fokusId\}`\)\?\.focus\(\)/);
+  // Der Fokus geht jetzt über die vollständige Element-Id, damit auch die
+  // Abschnitt- und Signalknöpfe ihn behalten (Review der Welle 78).
+  assert.match(code, /render\(`smm-merk-\$\{m\.id\}`\)/);
+  assert.match(code, /render\(`smm-periode-\$\{x\.id\}`\)/);
+  assert.match(code, /id: 'smm-noch-eine'/);
+  assert.match(code, /getElementById\(fokusId\)\?\.focus\(\)/);
   const merkTeil = code.slice(code.indexOf('function merkKarte('), code.indexOf('function render('));
   assert.doesNotMatch(merkTeil, /Status: \$\{stand\}/, 'der Enum-Wert darf nicht vorgelesen werden');
   for (const roh of MERK_STATUS) {

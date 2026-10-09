@@ -171,5 +171,5 @@ CSP `default-src 'self'`), **localStorage не используется**, де�
 
 ```bash
 npm run dev   # http://localhost:8070/apps/bewegungs-kartei-erstes-jahr/
-node --test apps/bewegungs-kartei-erstes-jahr/test/*.test.mjs   # 24 теста
+node --test apps/bewegungs-kartei-erstes-jahr/test/*.test.mjs   # 28 тестов
 ```

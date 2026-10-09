@@ -59,7 +59,11 @@ export const GESPERRTES_VOKABULAR = Object.freeze([
   { wort: 'schütteln', muster: /schüttel/i },
   { wort: 'schwingen', muster: /(^|[^a-zäöüß])schwing/i },
   { wort: 'hochwerfen', muster: /hochwerf/i },
-  { wort: 'wirbeln', muster: /(^|[^a-zäöüß])wirbel/i },
+  // Verboten ist das HERUMWIRBELN des Kindes, nicht das Wort. Der nackte
+  // Stamm traf „Wirbelsäule“ - also genau den anatomischen Begriff, mit dem
+  // eine Sicherheitszeile sagt, wo man NICHT hinfasst. Darum die
+  // Verbformen (Review der Welle 78).
+  { wort: 'wirbeln', muster: /(^|[^a-zäöüß])(herum|hoch|umher)?wirbel(n|t|st|e|nd)(\b|[^a-zäöüß])/i },
 ]);
 
 /** Wirkversprechen der Babymassage – beim gesunden Säugling nicht belegt. */
@@ -76,7 +80,7 @@ export const GESPERRTE_WIRKUNG = /(bessere|besserer|mehr|weniger)\s+(Verdauung|S
 const ABZAEHLEN = /(^|[^a-zäöüß])(\d|einmal|(?:zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn)(?:mal)?)($|[^a-zäöüß])/i;
 
 /** Alter in einer Können-Stufe – Komposita absichtlich mitgemeint. */
-const ALTER_IN_STUFE = /(monat|woche|lebensjahr|\d)/i;
+const ALTER_IN_STUFE = /(monat|woche|lebensjahr|halbjahr|vierteljahr|quartal|\d)/i;
 
 /**
  * Säuglingsgefährliche Zubereitungen. Nur die verneinte Form ist zulässig –
@@ -93,6 +97,18 @@ const SEITE = /(^|[^a-zäöüß])(links|rechts|linke[nrms]?|rechte[nrms]?)($|[^a
 
 /** Felder, die der Erwachsene als Anweisung liest. */
 const ANWEISUNGS_FELDER = Object.freeze(['titel', 'wasDuVorbereitest', 'wasDeinKindTut', 'abbruchzeichen']);
+
+/**
+ * Felder, die EINSCHRÄNKEN: Sicherheitshinweis und Schlafsatz. Das
+ * gesperrte Vokabular lief dort gar nicht, und damit hätte eine
+ * Sicherheitszeile „Reflex“ oder „Übung“ einführen können - genau an der
+ * Stelle, die der Erwachsene am aufmerksamsten liest (Review der Welle 78).
+ *
+ * Geprüft wird hier aber nur die BEJAHENDE Form: eine Sicherheitszeile muss
+ * „schütteln“ nennen dürfen, um es zu verbieten. Die Verneinung erkennt
+ * dasselbe Muster wie bei den Zubereitungen.
+ */
+const EINSCHRAENKENDE_FELDER = Object.freeze(['sicherheit', 'schlafhinweis', 'ohneWirkung']);
 
 /** Eine Karte holen. */
 export function karteVon(daten, id) {
@@ -201,6 +217,20 @@ export function pruefeDaten(daten) {
       fehler.push(`${wo}: Wirkversprechen – bei gesunden reifen Säuglingen nicht belegt`);
     }
 
+    // Einschränkende Felder: gesperrtes Vokabular nur VERNEINT.
+    for (const feld of EINSCHRAENKENDE_FELDER) {
+      const wert = Array.isArray(k[feld]) ? k[feld].join(' ') : String(k[feld] ?? '');
+      if (!wert) continue;
+      for (const g of GESPERRTES_VOKABULAR) {
+        for (const m of wert.matchAll(new RegExp(g.muster.source, 'gi'))) {
+          const davor = wert.slice(Math.max(0, m.index - 40), m.index);
+          if (!/\bkein\w*\s*$|\bnicht\w*\s*$|\bohne\s*$|\bnie\s*$|\bstatt\s*$/i.test(davor)) {
+            fehler.push(`${wo}.${feld}: „${g.wort}“ steht dort nicht verneint – auch ein Sicherheitshinweis führt es nicht ein`);
+          }
+        }
+      }
+    }
+
     // Gefährliche Zubereitungen: in den Anweisungsfeldern gar nicht, in den
     // übrigen nur verneint („kein Kampfer“, „nichts ins Gesicht“).
     for (const feld of ANWEISUNGS_FELDER) {
@@ -212,11 +242,14 @@ export function pruefeDaten(daten) {
     for (const feld of Object.keys(k)) {
       if (ANWEISUNGS_FELDER.includes(feld)) continue;
       const wert = Array.isArray(k[feld]) ? k[feld].join(' ') : String(k[feld] ?? '');
-      for (const treffer of wert.match(new RegExp(GEFAEHRLICHE_ZUBEREITUNG, 'gi')) ?? []) {
-        const i = wert.indexOf(treffer);
-        const davor = wert.slice(Math.max(0, i - 40), i);
+      // An JEDER Fundstelle prüfen, nicht an der ersten. `indexOf(treffer)`
+      // fand immer das erste Vorkommen derselben Zeichenfolge: stand
+      // „kein Kampfer“ vor „mit Kampfer einreiben“, galt der zweite,
+      // bejahende Gebrauch als verneint und rutschte durch.
+      for (const m of wert.matchAll(new RegExp(GEFAEHRLICHE_ZUBEREITUNG.source, 'gi'))) {
+        const davor = wert.slice(Math.max(0, m.index - 40), m.index);
         if (!/\bkein\w*\s*$|\bnicht\w*\s*$|\bohne\s*$/i.test(davor)) {
-          fehler.push(`${wo}.${feld}: „${treffer}“ steht nicht verneint – erlaubt ist nur der Ausschluss`);
+          fehler.push(`${wo}.${feld}: „${m[0]}“ steht nicht verneint – erlaubt ist nur der Ausschluss`);
         }
       }
     }
@@ -252,6 +285,37 @@ export function pruefeDaten(daten) {
   if (z.gymnastikUebernommen + z.gymnastikNichtUebernommen !== 16) {
     fehler.push('quelle.zahlen: übernommen plus nicht übernommen muss 16 ergeben');
   }
+  // Der WEITERE Anspruch wird abgewiesen, nicht nur der engere verlangt.
+  // Vorher prüfte nur die Anwesenheit von „keine Säuglingsgymnastik"; ein
+  // hinweis, der BEIDES enthielt, wäre durchgegangen - und genau das
+  // behauptete das GDD als geprüft (Review der Welle 78).
+  // Auf die WENDUNG, nicht auf die Verneinung davor: „keine Karte
+  // beschreibt einen Handgriff am Kind" setzt zwischen „keine" und
+  // „Handgriff" noch ein Wort, und die erste Fassung dieser Regel verlangte
+  // sie direkt hintereinander - sie liess den Satz durch, den sie abweisen
+  // sollte (von der eigenen Gegenprobe gefunden). Der verengte Kernsatz hat
+  // für diese Wendung keinen Grund, also ist sie im `hinweis` ganz gesperrt.
+  const ZU_WEIT = /(Handgriff|Handgriffe|Griff|Berührung)\w*\s+am\s+Kind|nichts am Körper des Kindes|keine Karte berührt/i;
+  if (ZU_WEIT.test(daten?.hinweis ?? '')) {
+    fehler.push('hinweis: der Anspruch geht zu weit – Tragen, Ablegen und flächiges Streichen kommen vor; er darf nur so weit gehen, wie er stimmt');
+  }
+
+  // Die Bodenregel gilt nicht fuer jede Karte: eine spielt auf dem Arm. Wer
+  // sie als allgemein ausgibt, behauptet mehr als die Daten (Review der
+  // Welle 78). Darum muss sie ihren Geltungsbereich und die Ausnahme selbst
+  // nennen, sobald es eine Karte mit `ort: 'auf-dem-arm'` gibt.
+  const aufDemArm = (karten ?? []).filter((k) => k.ort === 'auf-dem-arm' || k.ausgangslage === 'auf-dem-arm');
+  const regel = String(daten?.bodenregel ?? '');
+  if (!regel) fehler.push('bodenregel fehlt');
+  if (aufDemArm.length) {
+    if (!/auf dem Boden|bei der dein Kind liegt/.test(regel)) {
+      fehler.push('bodenregel: der Geltungsbereich fehlt – sie gilt nicht für die Karte auf dem Arm');
+    }
+    if (!/Ausnahme/.test(regel)) {
+      fehler.push('bodenregel: die Ausnahme für den Arm muss benannt sein');
+    }
+  }
+
   if (!/Eigenproduktion/.test(daten?.quelle?.uebernommen ?? '')) {
     fehler.push('quelle.uebernommen muss „Eigenproduktion“ aussprechen');
   }
@@ -292,6 +356,7 @@ export function pruefeDaten(daten) {
   // Pflichtsätze.
   for (const [feld, muster, was] of [
     ['hinweis', /keine Säuglingsgymnastik/, 'der Kernsatz muss dastehen – und nur so weit gehen, wie er stimmt'],
+    ['hinweis', /flächig streichen als Kontakt/, 'die eine Karte mit Körperkontakt muss im Kernsatz genannt sein'],
     ['hinweis', /Boden/, 'der Boden als Ort muss im Vorwort stehen'],
     ['bodenregel', /nie auf Wickeltisch/, 'die Bodenregel braucht eine eigene Fassung für das Druckblatt'],
     ['geraet', /Ihrer Hand|in Ihrer Hand/, 'das Gerät gehört dem Erwachsenen'],

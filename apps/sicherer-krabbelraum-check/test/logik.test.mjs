@@ -255,7 +255,7 @@ test('ein Schlüssel, löschbar, kein Kind-Datum', () => {
   assert.match(code, /localStorage\.removeItem\(SCHLUESSEL\)/);
   assert.doesNotMatch(code, /localStorage\.clear/);
   assert.match(code, /Haken löschen/);
-  // Die Haken liegen JE PROFIL in demselben einen Schlüssel: 33 von 34
+  // Die Haken liegen JE PROFIL in demselben einen Schlüssel: 32 von 34
   // Zeilen gelten für alle drei Profile, und vorher sah eine nie
   // besichtigte Krippe als erledigt aus, wenn zuhause abgehakt war.
   assert.match(code, /stand\[profil\]/);
@@ -355,6 +355,42 @@ test('die Fähigkeiten sind eine kumulative Leiter', () => {
   // Steckdose vor jedem Hochziehen.
   assert.equal(kriteriumVon(daten, 'g04').ausloeser, 'immer');
   assert.match(kriterienFuer(daten, 'zuhause', []).map((k) => k.was).join(' '), /Steckdosen/);
+});
+
+test('die Zahlen in Kommentar und Test sind nachgerechnet', () => {
+  // Kommentar und Testkommentar nannten zwei verschiedene, beide falsche
+  // Zahlen (31 von 32 und 33 von 34). Wer die Begründung der Profil-Trennung
+  // nachprüfen will, bekam damit zwei Angaben, die sich widersprachen.
+  // Jetzt wird die Zahl gerechnet, nicht geschrieben.
+  const alle = daten.kriterien.length;
+  const fuerAlle = daten.kriterien.filter((k) => k.giltFuer.length === 3).length;
+  assert.equal(alle, 34);
+  assert.equal(fuerAlle, 32);
+  assert.equal(alle - fuerAlle, 2, 'genau s03 und s07 sind profilgebunden');
+  assert.deepEqual(
+    daten.kriterien.filter((k) => k.giltFuer.length !== 3).map((k) => k.id).sort(),
+    ['s03', 's07']);
+  // Und die Kommentare nennen keine andere Zahl.
+  assert.ok(!code.includes('31 von 32'), 'alte Zahl im Kommentar');
+  assert.ok(!/3[0-9] von 3[0-9]/.test(code) || code.includes('32 von 34'),
+    'der Kommentar muss die nachgerechnete Zahl nennen');
+});
+
+test('auf Papier ist die abgehakte Zeile Text, kein Knopf', () => {
+  // Eine abgehakte Zeile trug die Knopffarben aus kinder.css: blauer Grund,
+  // WEISSE Schrift. Drucker lassen Hintergründe standardmäßig weg - die
+  // Zeile kam weiss auf weiss heraus, also unsichtbar. Druckt der Browser
+  // den Grund doch, ist die blaue Füllung eine Markierung auf Papier und
+  // damit genau das, was docs/02 verbietet.
+  const druckBlock = druck.slice(druck.indexOf('@media print'));
+  assert.match(druckBlock, /\.skc-block button \{/, 'die Knopfzeile braucht eine eigene Druckregel');
+  assert.match(druckBlock, /color: #000 !important/);
+  assert.match(druckBlock, /background: none !important/);
+  assert.match(druckBlock, /\.skc-marke \{ display: none !important/);
+  // Gegenprobe: die Regel muss NACH den Farben von kinder.css greifen -
+  // darum !important, und darum im @media-print-Block.
+  const ohneWichtig = druckBlock.replace(/!important/g, '');
+  assert.notEqual(ohneWichtig, druckBlock, 'ohne !important würde kinder.css gewinnen');
 });
 
 test('Hilfsfunktionen', () => {

@@ -108,7 +108,9 @@ function render() {
         // Die Bodenregel gilt für JEDE Karte und stand nur im Vorwort, das
         // nicht mitgedruckt wird – auf dem Papier fehlte sie damit ganz.
         el('section', { class: 'k-karte bk-karte bk-nur-druck' },
-          el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '⚠️ Gilt für jede Karte'),
+          // „Gilt fuer jede Karte" war falsch: eine Karte spielt auf dem
+          // ARM, und dort gilt die Bodenregel nicht (Review der Welle 78).
+          el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '⚠️ Gilt für jede Karte auf dem Boden'),
           el('p', { style: 'margin:0' }, daten.bodenregel),
           el('p', { style: 'margin:0.3rem 0 0' }, daten.abbruch)),
         ...liste.map(karteKnoten),

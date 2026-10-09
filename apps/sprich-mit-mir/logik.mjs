@@ -22,9 +22,13 @@ export const PRO_SITZUNG = 1;
 export const MERK_STATUS = Object.freeze(['moechte-ich', 'schon-probiert']);
 
 /** Ein Datum oder ein Wochenraster – der Katalogbegriff darf kein Plan werden. */
-const KALENDER = /(^|[^a-zäöüß])(Geburtsdatum|Lebenswoche|Lebensmonat|Woche \d|Monat \d|\d\. Woche|\d\. Monat)/i;
+// Ausgeschriebene Zahlwörter entgingen beiden Netzen: „mit sechs Monaten"
+// und „im dritten Lebensmonat" sind dieselbe Behauptung wie „mit 6 Monaten"
+// (Review der Welle 78).
+const ZAHLWORT = '(?:\\d+|ein|eine|einem|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|dritte[nrm]?|vierte[nrm]?|fünfte[nrm]?|sechste[nrm]?)';
+const KALENDER = new RegExp(`(^|[^a-zäöüß])(Geburtsdatum|Lebenswoche|Lebensmonat|Woche ${ZAHLWORT}|Monat ${ZAHLWORT}|${ZAHLWORT}\\.? (Woche|Monat|Lebenswoche|Lebensmonat))`, 'i');
 /** Alter im Impulstext – die App ist nach Signal geordnet, nicht nach Alter. */
-const ALTER_IM_TEXT = /(^|[^a-zäöüß])(mit \d|ab \d|\d Monat|\d Woche|Monaten alt)/i;
+const ALTER_IM_TEXT = new RegExp(`(^|[^a-zäöüß])(mit ${ZAHLWORT}|ab ${ZAHLWORT}|${ZAHLWORT} Monat|${ZAHLWORT} Woche|Monaten alt|im ${ZAHLWORT} (Monat|Lebensmonat))`, 'i');
 
 /**
  * Die eine Formulierung, die diese App nirgends enthalten darf – auch nicht
@@ -32,7 +36,11 @@ const ALTER_IM_TEXT = /(^|[^a-zäöüß])(mit \d|ab \d|\d Monat|\d Woche|Monaten
  * die Einordnung nicht.
  */
 export const RAT_GEGEN_DIE_FAMILIENSPRACHE =
-  /zu Hause Deutsch|nur Deutsch (sprech|red)|Deutsch (sprech|red)\w*,? (damit|um)|lieber Deutsch/i;
+  // Die erste Fassung hing an der Wortstellung: „sprechen Sie mit Ihrem Kind
+  // Deutsch, damit …" und „zu Hause besser Deutsch" entgingen ihr. Gefasst
+  // wird jetzt die Nähe von „Deutsch" zu einer Empfehlung oder zu „zu Hause"
+  // (Review der Welle 78).
+  /zu Hause[^.!?]{0,20}Deutsch|Deutsch[^.!?]{0,15}zu Hause|nur Deutsch|lieber Deutsch|besser Deutsch|(sprech|red)\w*[^.!?]{0,25}Deutsch[^.!?]{0,10}(damit|um zu|weil)|Deutsch (sprech|red)\w*,? (damit|um)/i;
 
 /**
  * Beruhigung an der falschen Stelle. Zu den Warnzeichen darf kein „das ist
@@ -186,7 +194,10 @@ export function pruefeDaten(daten) {
   // Der Hörblock trägt alles, was hier dauerhaft gilt – und keine
   // Verfahrensdetails, die sich ändern (der Ablauf wurde 2026 geändert).
   const hoer = daten?.bloecke?.hoeren;
-  if (!/schließt .*nicht aus|nicht aus/.test(hoer?.text ?? '')) {
+  // Die zweite Alternative verschluckte die erste: „nicht aus" allein trifft
+  // auch „das reicht nicht aus" und liess die Gegenaussage durch. Jetzt die
+  // Konstruktion (Review der Welle 78).
+  if (!/schließt\s[^.!?]{0,60}nicht aus|kein[^.!?]{0,40}Garantie|auch danach[^.!?]{0,40}entstehen/.test(hoer?.text ?? '')) {
     fehler.push('hoeren: es muss dastehen, dass ein unauffälliges Screening eine späte Hörstörung nicht ausschließt');
   }
   if (!/nicht für mehr Üben|nicht fürs Üben/.test(hoer?.text ?? '')) {
@@ -208,7 +219,9 @@ export function pruefeDaten(daten) {
   // auszuschließen („hier steht absichtlich kein ‚meistens harmlos‘“). Ein
   // Netz über das ganze Objekt träfe die Ausschlussklausel selbst. Dieselbe
   // Lage wie bei den Ölen in apps/bewegungs-kartei-erstes-jahr.
-  const warnText = [warn?.vorspann, ...(warn?.punkte ?? []), warn?.wasTun].filter(Boolean).join(' ');
+  // Der TITEL des Blocks fehlte - also genau die Zeile, die man zuerst liest
+  // (Review der Welle 78).
+  const warnText = [warn?.titel, warn?.vorspann, ...(warn?.punkte ?? []), warn?.wasTun].filter(Boolean).join(' ');
   if (BERUHIGUNG.test(warnText)) {
     fehler.push('warnzeichen: enthält eine Beruhigung – genau so ein Satz lässt Eltern zu lange warten');
   }
@@ -244,7 +257,11 @@ export function pruefeDaten(daten) {
   // darum beide Richtungen getrennt geprüft.
   const inhalte = JSON.stringify({
     impulse: daten?.impulse, merkliste: daten?.merkliste,
+    // `name` und `ueberlappung` fehlten - der Periodenname steht auf dem
+    // Knopf und ist das Erste, was ein Elternteil liest (Review der Welle 78).
     passtWenn: (daten?.perioden ?? []).map((p) => p.passtWenn),
+    name: (daten?.perioden ?? []).map((p) => p.name),
+    ueberlappung: daten?.ueberlappung,
   });
   if (KALENDER.test(inhalte)) {
     fehler.push('ein Impuls, ein Merksatz oder ein passtWenn nennt ein Geburtsdatum oder eine Lebenswoche');

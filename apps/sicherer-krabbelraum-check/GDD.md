@@ -186,7 +186,7 @@ Touch-Ziele ≥ 48 px, Impressum im Fuß.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (17): Daten gültig; keine Gesamtwertung (Exportnamen,
+`test/logik.test.mjs` (19): Daten gültig; keine Gesamtwertung (Exportnamen,
 Rechenteil, Bericht — mit `gesamtAnteil` als Gegenprobe); eine leere Liste ist
 keine Freigabe; Dauerregeln nicht abhakbar und nie in der Offen-Liste; der
 Raum als Gegenstand (mit drei Kind-Subjekt-Gegenproben); „psychische
