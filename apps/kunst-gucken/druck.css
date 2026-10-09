@@ -1,0 +1,33 @@
+/* Druck: ein Blatt, das man neben den Gegenstand legt. Alle fünf Achsen stehen
+   offen da, auch die zugeklappten – auf Papier gibt es kein Aufklappen.
+   Vorlesegröße, damit man es aus der Hand lesen kann. Kein Haken, keine
+   Namenszeile, kein Stern (docs/02). */
+.kg-nur-druck { display: none; }
+
+@media print {
+  .kg-nur-bildschirm { display: none !important; }
+  .kg-nur-druck { display: block !important; }
+  /* Knöpfe sind auf Papier keine Knöpfe. Gleiche Regel wie in Nr. 50, 56-59. */
+  .kg-blatt button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    text-align: start !important;
+    width: auto !important;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .kg-blatt { border: none; border-radius: 0; margin: 0; padding: 0; box-shadow: none; }
+  .kg-blatt h2 { font-size: 15pt; margin: 0 0 3mm; }
+  .kg-blatt h3 { font-size: 12pt; margin: 4mm 0 1mm; }
+  .kg-blatt p { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  /* Die Sätze zum Anfangen werden laut gelesen – größer als der Rest. */
+  .kg-impulse li { font-size: 13pt; line-height: 1.5; margin: 0 0 2mm; }
+  .kg-achse { break-inside: avoid; page-break-inside: avoid; border: none; box-shadow: none; margin: 0 0 2mm !important; padding: 0 !important; }
+  .kg-achse h3 { font-size: 12pt; margin: 3mm 0 1mm; }
+  a[href]::after { content: ""; }
+}

@@ -1,0 +1,346 @@
+{
+  "art": "kunst-gucken",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 1 bis 3 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Lesen, weglegen, dann zusammen hinschauen – das Angeschaute liegt auf dem Tisch, nicht auf einem Bildschirm.",
+  "wasEsIst": "Ein Leitfaden für das gemeinsame Hinschauen: auf eine Bilderbuchseite, eine Holzfigur, ein Stück Geschirr, einen Stoff. Fünf Achsen, an denen man etwas sagen kann, und zu jeder ein paar Sätze, die ein Gespräch anfangen statt es abzufragen.",
+  "reihenfolge": "Die Achsen stehen in der Reihenfolge, in der die Quelle die Mittel aufzählt: erst die Farbe, dann die Form der großen Teile, dann die Einzelheiten, dann das Material, dann der Klang. Das ist auch die Reihenfolge, in der ein kleines Kind hinschaut – zuerst das Auffällige, das Kleine erst beim zweiten Mal. Sie müssen nicht alle fünf durchgehen; eine Achse pro Gelegenheit ist genug.",
+  "fuenfteilung": "Eine Genauigkeit zur Quelle: dort steht «цвет, форму основных частей, деталей, материал, звук» – vier Mittel im Akkusativ, wobei „деталей“ im Genitiv an „форму“ hängt: die Form der Hauptteile UND der Einzelheiten. Grammatisch sind es also vier Mittel, nicht fünf. Diese App macht daraus fünf Achsen, weil beim Hinschauen mit einem Kind das große Umreißen und das Entdecken kleiner Dinge zwei verschiedene Handlungen sind – man fährt die Form mit dem Finger nach, aber man findet den Punkt am Rand. Die Fünfteilung ist die Gliederung dieser App, nicht der Wortlaut der Quelle.",
+  "keinAbfragen": "Hier wird nichts abgefragt. „Welche Farbe ist das?“ ist eine Prüfung mit bekannter Antwort – und ein Kind, das die Antwort nicht hat, hat verloren. Die Sätze hier sind Feststellungen: Sie sagen, was SIE sehen, und lassen Platz. Was abgefragt wird, ist der Kunst-Entdecker, und der ist für Schulkinder.",
+  "keineBuchliste": "Es gibt hier keine Buchtitel und keine Bilder von Büchern. Der Vorlese-Kompass hat diese Entscheidung für den ganzen Korpus getroffen: beschrieben werden BUCHARTEN, nicht Titel – eine Titelliste wäre Werbung, sie veraltet, und die Abbildung eines Buchumschlags ist nicht frei. Zwei Listen wären außerdem zwei Wahrheiten über dasselbe. Was Sie brauchen, steht in der Bibliothek.",
+  "keinDeuten": "Aus dem, was ein Kind beim Hinschauen sagt oder malt, wird hier nichts über das Kind geschlossen. Die Quelle nennt als Ziel ausdrücklich, die Möglichkeiten der Kunst zu nutzen, um „die innere Welt der Kinder zu erkennen und ihre individuellen Besonderheiten herauszufinden“. Das ist nicht übernommen: eine Zeichnung ist kein Befund, und ein Erwachsener, der im Gekritzel liest, liest sich selbst. Entwicklungsfragen gehören in die Vorsorgeuntersuchung.",
+  "keinKauf": "Nichts davon muss gekauft werden. Jeder Gegenstandstyp hier sagt, wo man ihn ohne Geld findet – Bibliothek, eigener Schrank, Küche, Flohmarkt, Museumsfoyer. Es gibt keine Marke, kein Modell und keine Bezugsquelle.",
+  "keinMuseum": "Ein Museumsbesuch ist nicht nötig. Er ist auch kein Fehler – aber mit einem Kind in diesem Alter ist die Küchenschublade näher, und was man anfassen darf, trägt weiter als was hinter Glas steht.",
+  "keinWirkversprechen": "Diese App verspricht nichts über Sprache, Wahrnehmung oder Begabung. Sie sagt, was man tun kann, und woran man sieht, dass es gerade passt – nicht, was dabei herauskommt.",
+  "anderesThema": "Fünf der sieben allgemeinen Ziele der Quelle betreffen das EIGENE TUN des Kindes: zeichnen, kneten, mit Material umgehen, sich über das eigene Ergebnis freuen. Die Quelle führt das in eigenen Unterabschnitten aus («Рисование» S. 89–90, «Лепка» S. 90, «Аппликация» S. 91); diese App baut nur den Unterabschnitt «Восприятие искусства», also das Anschauen. Das eigene Tun ist ein eigenes Vorhaben – hier steht dazu nichts, auch keine Bastelidee, damit niemand glaubt, er hätte es schon abgedeckt.",
+  "sicherheit": "Alles, was Sie hinlegen, ist für ein Kind unter drei Jahren erst einmal etwas zum In-den-Mund-Nehmen. Kleine Teile, abgeplatzter Lack und alte Farbe gehören nicht in Reichweite; eine Pfeife kommt in den Mund und ist damit kein Anschau-Gegenstand, sondern Spielzeug. Was ein einzelner Gegenstand aushält, prüft der Spielzeug-Check U3.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "achsen": [
+    {
+      "id": "a-farbe",
+      "name": "Farbe",
+      "zeichen": "🎨",
+      "quellZiel": 5,
+      "worauf": "Welche Farben überhaupt da sind, wie viele, und ob eine davon oft wiederkommt.",
+      "impulse": [
+        "Hier ist alles rot – und da hinten ein kleines Stück Blau.",
+        "Ich suche noch einmal die gleiche Farbe … hier ist sie wieder.",
+        "Das Gelb ist hell. Das daneben ist auch gelb, aber dunkler."
+      ],
+      "grenze": "Nicht abfragen, welche Farbe es ist. Ein Kind in diesem Alter kennt die Namen oft noch nicht und hört trotzdem zu – die Namen kommen vom Hören, nicht vom Geprüftwerden."
+    },
+    {
+      "id": "a-form",
+      "name": "Form",
+      "zeichen": "⬛",
+      "quellZiel": 5,
+      "worauf": "Die Form der großen Teile: rund, eckig, lang, dick. Nicht die Einzelheiten – die kommen danach.",
+      "impulse": [
+        "Das ist ganz rund. Mit dem Finger kann man einmal herumfahren.",
+        "Hier ist eine Ecke – und hier noch eine.",
+        "Der untere Teil ist dick, der obere ist dünn."
+      ],
+      "grenze": "Keine Formennamen abprüfen. Mit dem Finger die Form nachfahren sagt mehr als das Wort „Kreis“."
+    },
+    {
+      "id": "a-teile",
+      "name": "Teile",
+      "zeichen": "🔍",
+      "quellZiel": 5,
+      "worauf": "Die Einzelheiten, die man erst beim zweiten Hinsehen findet: ein Punkt, ein Strich, ein kleines Tier am Rand.",
+      "impulse": [
+        "Da ist noch etwas Kleines, fast am Rand.",
+        "Jedes Mal, wenn ich hinschaue, finde ich etwas Neues.",
+        "Das hier gehört zu dem da – sie hängen zusammen."
+      ],
+      "grenze": "Nicht suchen lassen, bis es gefunden ist. Wenn Ihr Kind wegschaut, ist das Gespräch zu Ende, nicht das Kind unaufmerksam."
+    },
+    {
+      "id": "a-material",
+      "name": "Material",
+      "zeichen": "🪵",
+      "quellZiel": 5,
+      "worauf": "Woraus es ist und wie es sich anfühlt: Holz, Ton, Papier, Stoff, Metall. Das ist die Achse, bei der die Hände mitreden.",
+      "impulse": [
+        "Das ist Holz. Es ist warm, wenn man es hält.",
+        "Fühl mal – hier ist es glatt und hier ganz rau.",
+        "Das Papier knistert. Der Stoff macht gar kein Geräusch."
+      ],
+      "grenze": "Nur, was in den Mund darf. Alter Lack, abgeplatzte Farbe und kleine Teile bleiben weg; angeschaut wird dann aus der Hand des Erwachsenen."
+    },
+    {
+      "id": "a-klang",
+      "name": "Klang",
+      "zeichen": "🔔",
+      "quellZiel": 5,
+      "worauf": "Ob der Gegenstand ein Geräusch macht, wenn man ihn bewegt, anstößt oder hinstellt.",
+      "impulse": [
+        "Hör mal, wenn ich es hinstelle: klack.",
+        "Dieses hier klingt hell. Das andere klingt dumpf.",
+        "Wenn man es schüttelt, hört man etwas darin."
+      ],
+      "grenze": "Nicht dicht am Ohr. Und keine Pfeife in den Mund: etwas, das in den Mund kommt, ist Spielzeug und gehört geprüft."
+    }
+  ],
+  "gegenstaende": [
+    {
+      "id": "g-buchseite",
+      "name": "Eine Bilderbuchseite",
+      "zeichen": "📖",
+      "quellZiel": 2,
+      "woGefunden": "In der Bibliothek, kostenlos und oft mit Krabbelecke. Welche BUCHART zu Ihrem Kind passt, sagt der Vorlese-Kompass – hier geht es um das Hinschauen auf EINE Seite.",
+      "besonderes": "Eine Seite reicht. Nicht umblättern, solange Ihr Kind noch hinschaut: das Gespräch hängt am Verweilen, nicht am Weiterkommen.",
+      "grenze": "Papierseiten reißen und wandern in den Mund – ein Pappbuch hält mehr aus, und abgebissene Ecken sind Kleinteile.",
+      "starkeAchsen": [
+        "a-farbe",
+        "a-form",
+        "a-teile"
+      ],
+      "starkeAchsenWarum": "Eine gedruckte Seite hat viel Farbe und viele kleine Dinge am Rand. Anstoßen und Wiegen in der Hand gibt sie nicht her – dafür nehmen Sie etwas anderes."
+    },
+    {
+      "id": "g-holzfigur",
+      "name": "Eine Holzfigur",
+      "zeichen": "🪆",
+      "quellZiel": 2,
+      "woGefunden": "Im eigenen Schrank, auf dem Flohmarkt, in der Weihnachtskiste. Die Quelle nennt bemalte Holzfiguren als Volkskunst; in Deutschland gibt es die Tradition unter anderem im Erzgebirge.",
+      "besonderes": "Eine Figur lässt sich drehen – die Rückseite ist oft anders als die Vorderseite, und das ist ein eigenes kleines Erlebnis.",
+      "grenze": "Alter Lack und abgeplatzte Farbe bleiben außer Reichweite, und was in den Zylinder passt, auch. Was eine einzelne Figur aushält, prüft der Spielzeug-Check U3.",
+      "starkeAchsen": [
+        "a-form",
+        "a-teile",
+        "a-material"
+      ],
+      "starkeAchsenWarum": "Eine Figur liegt in der Hand, lässt sich drehen und hat eine Rückseite. Holz ist warm und hat eine Richtung, die man fühlt."
+    },
+    {
+      "id": "g-tonware",
+      "name": "Etwas aus Ton",
+      "zeichen": "🏺",
+      "quellZiel": 2,
+      "woGefunden": "Ein Becher, ein Topf, eine Schale aus dem eigenen Schrank. Die Quelle nennt Tonpfeifen als Volkskunst – als Anschau-Gegenstand ist der Becher der bessere Anfang.",
+      "besonderes": "Ton ist kühl, schwer und hat oft eine Spur von der Hand, die ihn gemacht hat. Beides spürt man nur, wenn man es hält.",
+      "grenze": "Nichts, was zerbricht, in Kinderhände, und keine Pfeife in den Mund. Scherben sind der Grund, warum das hier aus Ihrer Hand angeschaut wird.",
+      "starkeAchsen": [
+        "a-material",
+        "a-klang",
+        "a-form"
+      ],
+      "starkeAchsenWarum": "Ton ist kühl und schwer, und ein Becher sagt etwas, wenn man ihn hinstellt. Die Form ist einfach – rund, unten dick."
+    },
+    {
+      "id": "g-stoff",
+      "name": "Ein Stück Stoff",
+      "zeichen": "🧶",
+      "quellZiel": 2,
+      "woGefunden": "Ein Tuch, ein Kissenbezug, ein Küchenhandtuch mit Muster. Kostet nichts und liegt schon da.",
+      "besonderes": "Muster wiederholen sich – das ist die Achse Farbe und die Achse Teile auf einmal, und man kann mit dem Finger der Wiederholung folgen.",
+      "grenze": "Kein langes Band, keine Kordel, keine Schnur in Reichweite: das ist eine eigene Gefahr und hat mit Verschlucken nichts zu tun.",
+      "starkeAchsen": [
+        "a-farbe",
+        "a-teile",
+        "a-material"
+      ],
+      "starkeAchsenWarum": "Muster wiederholen sich: das ist Farbe und Einzelheit auf einmal. Und Stoff fühlt sich an jeder Stelle anders an."
+    },
+    {
+      "id": "g-kachel",
+      "name": "Eine Kachel oder ein Teller",
+      "zeichen": "🟦",
+      "quellZiel": 2,
+      "woGefunden": "In der Küche, im Bad, im Museumsfoyer an der Wand. Auch eine Postkarte geht – aber ein Gegenstand, den man halten darf, trägt weiter.",
+      "besonderes": "Gemaltes auf glatter Fläche: hier ist die Farbe dünn und der Strich sichtbar. Gegen das Licht gehalten verändert sich, was man sieht.",
+      "grenze": "Nichts Zerbrechliches in Kinderhände. Angeschaut wird aus Ihrer Hand oder dort, wo es fest sitzt.",
+      "starkeAchsen": [
+        "a-farbe",
+        "a-form",
+        "a-klang"
+      ],
+      "starkeAchsenWarum": "Gemaltes auf glatter Fläche: die Farbe liegt dünn, der Strich ist sichtbar. Mit dem Fingernagel angetippt klingt sie kurz und hell."
+    }
+  ],
+  "regeln": [
+    {
+      "id": "r-erreichbar",
+      "quellZiel": 4,
+      "was": "Das Buch bleibt erreichbar, auch wenn Sie nicht dabei sind.",
+      "warum": "Die Quelle nennt ausdrücklich beides: zusammen mit dem Erwachsenen schauen UND selbst schauen. Das zweite braucht nur, dass etwas unten im Regal liegt."
+    },
+    {
+      "id": "r-bespielen",
+      "quellZiel": 6,
+      "was": "Was man anschaut, darf man auch bespielen.",
+      "warum": "Die Quelle will den Wunsch, mit solchen Dingen zu SPIELEN – nicht eine Vitrine. Eine Figur, die nur betrachtet werden darf, ist für dieses Alter die falsche Figur."
+    },
+    {
+      "id": "r-aufhoeren",
+      "quellZiel": 1,
+      "was": "Aufgehört wird, wenn Ihr Kind wegschaut.",
+      "warum": "Erste Eindrücke sammeln sich an, sie werden nicht durchgearbeitet. Ein Gespräch, das gegen das Wegschauen weitergeht, sammelt nichts an."
+    }
+  ],
+  "ziele": [
+    {
+      "gruppe": "wahrnehmung",
+      "nr": 1,
+      "kurz": "Erste Vorstellungen und Eindrücke aus der bildenden Kunst ansammeln lassen",
+      "einordnung": "gebaut",
+      "belegtDurch": [
+        "r-aufhoeren"
+      ]
+    },
+    {
+      "gruppe": "wahrnehmung",
+      "nr": 2,
+      "kurz": "Mit den Kunstarten bekannt machen, die ein kleines Kind aufnehmen kann: Volkskunst zum Gebrauch und Buchgrafik",
+      "einordnung": "gebaut",
+      "belegtDurch": [
+        "g-buchseite",
+        "g-holzfigur",
+        "g-tonware",
+        "g-stoff",
+        "g-kachel"
+      ]
+    },
+    {
+      "gruppe": "wahrnehmung",
+      "nr": 3,
+      "kurz": "Die Grundlagen des künstlerischen Wahrnehmens anlegen",
+      "einordnung": "alsGanzes",
+      "warum": "Das ist nicht ein Stück dieser App, das ist die App. Genau dafür stehen die fünf Achsen und die Impulssätze da – ein eigener Eintrag dafür wäre eine Dopplung."
+    },
+    {
+      "gruppe": "wahrnehmung",
+      "nr": 4,
+      "kurz": "Das Interesse an Illustrationen wecken und die Lust, farbige Illustrationen zusammen mit Erwachsenen UND allein anzuschauen",
+      "einordnung": "gebaut",
+      "belegtDurch": [
+        "r-erreichbar"
+      ]
+    },
+    {
+      "gruppe": "wahrnehmung",
+      "nr": 5,
+      "kurz": "Mit Volksspielzeug aus Ton und Holz bekannt machen und auf die Mittel der künstlerischen Ausdruckskraft aufmerksam machen: Farbe, Form der Hauptteile und der Einzelheiten, Material, Klang (Pfeifenspielzeug)",
+      "einordnung": "gebaut",
+      "belegtDurch": [
+        "a-farbe",
+        "a-form",
+        "a-teile",
+        "a-material",
+        "a-klang"
+      ]
+    },
+    {
+      "gruppe": "wahrnehmung",
+      "nr": 6,
+      "kurz": "Das Interesse am Volksspielzeug als Teil der Volkskunst wecken – und die Lust, damit zu spielen",
+      "einordnung": "gebaut",
+      "belegtDurch": [
+        "r-bespielen"
+      ]
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 1,
+      "kurz": "Bedingungen schaffen, die Kinder in das bildnerische Tun einbeziehen, und freie Äußerungen darin zulassen",
+      "einordnung": "anderesThema"
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 2,
+      "kurz": "Das Interesse an verschiedenen Arten des bildnerischen Tuns wecken",
+      "einordnung": "anderesThema"
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 3,
+      "kurz": "Dazu beitragen, dass ein Kind in eigenen Zeichnungen und Knetarbeiten das Bildhafte sieht und in Abbildungen bekannte Dinge wiedererkennt",
+      "einordnung": "anderesThema"
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 4,
+      "kurz": "Beim Umgang mit Zeichenmaterial und einfacher Technik helfen",
+      "einordnung": "anderesThema"
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 5,
+      "kurz": "Freude, Vergnügen und Staunen über Weg und Ergebnis der ersten eigenen Schritte stützen",
+      "einordnung": "anderesThema"
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 6,
+      "kurz": "Die Möglichkeiten der bildenden Kunst nutzen, um die innere Welt der Kinder zu erkennen und ihre individuellen Besonderheiten herauszufinden",
+      "einordnung": "ausgeschlossen",
+      "belegtDurch": [
+        "x01"
+      ]
+    },
+    {
+      "gruppe": "allgemein",
+      "nr": 7,
+      "kurz": "Eltern fachlich dabei helfen, in der Familie günstige Bedingungen für den Zugang zur bildenden Kunst zu schaffen",
+      "einordnung": "alsGanzes",
+      "warum": "Dieses Ziel richtet sich an den Erwachsenen, nicht an das Kind – und diese App ist genau das: ein Werkzeug für Eltern und Kindertagespflege. Eingelöst ist es dadurch, dass die App überhaupt existiert und nichts vom Kind verlangt."
+    }
+  ],
+  "ausgeschlossen": [
+    {
+      "quellNr": "x01",
+      "quellZiel": "allgemein-6",
+      "was": "Die „innere Welt“ des Kindes aus seinen Bildern erkennen",
+      "warum": "Die Quelle nennt als allgemeines Ziel, die Möglichkeiten der bildenden Kunst zu nutzen, um die innere Welt der Kinder zu erkennen und ihre individuellen Besonderheiten herauszufinden. Das ist nicht übernommen, und zwar ausdrücklich: aus einer Kinderzeichnung oder aus einer Äußerung beim Bilderschauen lässt sich nichts über ein Kind schließen, was man nicht ohnehin schon wüsste – und die Deutung sagt mehr über den Deutenden. Ein solches Werkzeug wäre eine Einstufung von Kindern (docs/02, EU-Verordnung über künstliche Intelligenz)."
+    },
+    {
+      "quellNr": "x02",
+      "was": "Die kuratierte Buchliste des Katalogeintrags",
+      "warum": "Der Eintrag wollte eine Buchliste mit Gesprächsimpulsen. Die Buchliste ist nicht gebaut: der Vorlese-Kompass (Nr. 54) hat für den Korpus entschieden, BUCHARTEN statt Titel zu nennen – eine Titelliste ist Werbung, sie veraltet, und ein Umschlagbild ist nicht frei. Zwei solche Listen wären zwei Wahrheiten über dasselbe. Gebaut sind die Gesprächsimpulse, und sie brauchen keinen bestimmten Titel."
+    },
+    {
+      "quellNr": "x03",
+      "was": "Die namentlich genannten Werke der Quelle",
+      "warum": "Die Quelle empfiehlt neun Werkgruppen und nennt dazu lebende oder erst kürzlich verstorbene Urheber – Töpfer, Illustratorinnen und Illustratoren. Keine Abbildung und keine Nachbildung davon steht hier: an Illustrationen bestehen Rechte, und bei zwei der genannten Illustratoren ist die Schutzfrist noch nicht abgelaufen. Übernommen ist die GATTUNG (bemalte Holzfigur, Tonware, Buchgrafik, Muster), nicht das Werk."
+    },
+    {
+      "quellNr": "x04",
+      "was": "Abfragen, was auf dem Bild zu sehen ist",
+      "warum": "„Welche Farbe ist das?“ und „Wie viele Hasen sind da?“ sind Prüfungen mit bekannter Antwort. Für das Abfragen gibt es im Korpus eine eigene App für Schulkinder; hier wird festgestellt, nicht geprüft, und der Validator weist jeden Impuls ab, der als Prüffrage gebaut ist."
+    },
+    {
+      "quellNr": "x05",
+      "was": "Eine Einkaufsliste für Volkskunst",
+      "warum": "Jeder Gegenstandstyp sagt, wo er ohne Geld zu finden ist. Keine Marke, kein Modell, keine Bezugsquelle, kein Shop – und keine Aufforderung, etwas anzuschaffen."
+    },
+    {
+      "quellNr": "x06",
+      "was": "Ukrainische und russische Buchtipps",
+      "warum": "Der Katalogeintrag wollte uk/ru-Buchtipps als Herkunftssprachen-Brücke. Ohne Titelliste entfällt das von selbst – und ein Titel in einer Sprache, die hier niemand gegengelesen hat, wäre eine Behauptung. Was bleibt, gilt in jeder Sprache: die fünf Achsen brauchen keine Wörter, die man vorher lernen muss."
+    },
+    {
+      "quellNr": "x07",
+      "was": "Ein Wirkversprechen zur Wahrnehmung oder zur Sprache",
+      "warum": "Dass gemeinsames Hinschauen die Wahrnehmung, den Wortschatz oder die Begabung voranbringt, steht hier nicht. Für Kinder unter drei Jahren ist zum Betrachten von Kunst nichts belegt, was eine solche Zusage tragen würde."
+    },
+    {
+      "quellNr": "x08",
+      "was": "Der Verweis auf eine bestimmte Organisation",
+      "warum": "Der Katalogeintrag wollte einen Verweis auf eine Leseförder-Organisation. Hier steht keiner. Eine benannte Organisation ist eine Empfehlung, die niemand gegengelesen hat, ihre Angebote ändern sich, und ein Link wäre eine Anfrage nach außen – die macht diese App nicht. Genannt ist stattdessen die Einrichtungsart, die Bücher ohne Geld herausgibt: die öffentliche Bibliothek."
+    }
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, «Ознакомление с изобразительным искусством и изобразительная деятельность» mit dem Unterabschnitt «Восприятие искусства», S. 88–89",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die Mittel der künstlerischen Ausdruckskraft, die die Quelle aufzählt, und der Gedanke, zusammen und auch allein zu schauen. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": {
+      "zieleAllgemein": 7,
+      "zieleWahrnehmung": 6,
+      "zieleGesamt": 13,
+      "werkgruppen": 9
+    },
+    "nachgezaehlt": "Der Abschnitt trägt 7 allgemeine Ziele und 6 Ziele zur Kunstwahrnehmung, zusammen 13 – so kommt die Zahl des Katalogeintrags zustande. Nachgezählt im Original. Dazu 9 empfohlene Werkgruppen: zwei zur Volkskunst (Tonpfeifen, bemalte Holzfiguren) und sieben zur Buchgrafik. Die Achsen dieser App stehen im fünften Wahrnehmungsziel, das die Mittel der künstlerischen Ausdruckskraft aufzählt – zu ihrer Zahl siehe den Hinweis zur Fünfteilung.",
+    "abweichung": "Von den 13 Zielen sind 5 als Achse, Gegenstandstyp oder Regel gebaut, 2 sind als Ganzes eingelöst (die Grundlagen des Wahrnehmens – dafür steht die ganze App; und die Hilfe für Eltern – das ist die App selbst), 1 ist ausdrücklich zurückgewiesen (die „innere Welt“) und 5 betreffen das eigene Tun des Kindes und damit einen anderen Unterabschnitt der Quelle. Nicht übernommen sind außerdem die namentlich genannten Werke, die Buchliste des Katalogeintrags, der Verweis auf eine bestimmte Organisation und die uk/ru-Buchtipps."
+  }
+}
