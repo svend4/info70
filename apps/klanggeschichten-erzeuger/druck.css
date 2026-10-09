@@ -1,0 +1,28 @@
+/* Druck: der erzeugte Text als Blatt zum Vorlesen. Groß genug, um es aus der
+   Hand zu lesen, während man mit der anderen klatscht. Kein Haken, keine
+   Namenszeile, kein Stern (docs/02). */
+.kge-nur-druck { display: none; }
+
+@media print {
+  .kge-nur-bildschirm { display: none !important; }
+  .kge-nur-druck { display: block !important; }
+  /* Knöpfe sind auf Papier keine Knöpfe. Gleiche Regel wie in Nr. 50, 56, 57, 58. */
+  .kge-block button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    text-align: start !important;
+    width: auto !important;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .kge-block { break-inside: avoid; page-break-inside: avoid; border: none; border-radius: 0; margin: 0; padding: 0; box-shadow: none; }
+  .kge-block h2 { font-size: 16pt; margin: 0 0 4mm; }
+  /* Vorlesetext: größer als üblich, mit Luft zwischen den Zeilen. */
+  .kge-block p { font-size: 14pt; line-height: 1.6; margin: 0 0 3mm; }
+  a[href]::after { content: ""; }
+}

@@ -1,0 +1,584 @@
+{
+  "art": "klanggeschichten-erzeuger",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 1 bis 3 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Kind sieht keinen Bildschirm – es hört Sie. Erzeugen, ablesen oder ausdrucken, Gerät weglegen, dann anfangen.",
+  "wasEsIst": "Ein Erzeuger für kurze Mitmach-Geschichten mit Klängen, für Frage-und-Antwort-Reime und für Kettenreime. Jeder Text entsteht hier aus Bausteinen, die für diese App geschrieben wurden – es ist kein Liederbuch und keine Sammlung fremder Reime.",
+  "eigenproduktion": "Jede Zeile, die hier herauskommt, ist Eigenproduktion. Kein überliefertes Fingerspiel, kein Liedtext, keine Strophe aus einem Buch – auch nicht in Teilen. Das ist keine Höflichkeit gegenüber Urhebern, sondern die Bedingung dafür, dass diese App alles ausdrucken darf, was sie erzeugt.",
+  "keineUebersetzung": "Es gibt hier keine ukrainischen oder russischen Fassungen. Die Quelle nennt zwei russische Volksmärchen als Vorbild für die Form; übernommen ist die FORM – eine Kette, die mit jeder Zeile länger wird –, nicht ein Text und keine Nachdichtung. Eine ungegengelesene Übersetzung wäre eine Behauptung, und bei einer Nachdichtung wäre sie zusätzlich eine Übernahme.",
+  "keinNiveau": "Diese App teilt Kinder nicht ein. Die Quelle markiert einen Teil ihrer Ziele als „Aufgaben für Kinder mit relativ hohem Niveau der Musikalität“ – diese Einteilung ist nicht übernommen. Was hier steht, hängt an etwas, das Sie SEHEN (Ihr Kind macht einen Laut mit), nie an einer Einschätzung Ihres Kindes.",
+  "keinWirkversprechen": "Diese App verspricht nichts über die Sprachentwicklung. Was sich sagen lässt: Kinder in diesem Alter machen Laute mit, bevor sie Wörter sprechen, und sie erkennen eine Zeile wieder, die sie schon kennen. Ob und wie sich daraus etwas entwickelt, ist nicht die Auskunft dieser App.",
+  "keineDauer": "Es steht hier keine Minutenzahl und keine Wiederholungszahl. Aufgehört wird, wenn Ihr Kind sich abwendet – nicht nach einer Uhr und nicht nach dem letzten Bild.",
+  "lautstaerke": "Laut genug ist es, wenn man sich im selben Zimmer noch ohne Stimmheben unterhalten kann. Nicht dicht am Ohr trommeln, nicht in das Ohr klatschen. Eine Dezibelzahl steht hier nicht: für Kleinkinder gibt es keinen belegten Grenzwert, und eine Zahl, die man ohne Messgerät nicht prüfen kann, hilft nicht.",
+  "instrumente": "Es braucht kein Instrument. Alle Klänge hier macht man mit Händen, Knien, der Zunge oder mit etwas, das schon in der Küche steht. Wenn doch ein Instrument dazukommt: Rasseln und Glöckchen haben oft Kleinteile – dafür gibt es den Spielzeug-Check.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "formen": [
+    {
+      "id": "klanggeschichte",
+      "name": "Klanggeschichte",
+      "zeichen": "🎭",
+      "wasSieTun": "Sie lesen vor und machen bei jedem Bild den Klang. Ihr Kind macht mit, wenn es will – oder schaut erst nur zu.",
+      "woranSieSehen": "Ihr Kind macht einen Laut mit, klopft mit oder schaut beim Klang zu Ihnen.",
+      "umfaenge": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": "frage-antwort",
+      "name": "Frage und Antwort",
+      "zeichen": "🗣️",
+      "wasSieTun": "Sie fragen, Ihr Kind antwortet – am Anfang antworten Sie selbst, und irgendwann kommt die Antwort von Ihrem Kind. Die zweite Zeile reimt sich auf die erste.",
+      "woranSieSehen": "Ihr Kind sagt das letzte Wort mit oder macht den Laut dazu.",
+      "umfaenge": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "kettenreim",
+      "name": "Kettenreim",
+      "zeichen": "🔗",
+      "wasSieTun": "Jede Zeile nimmt die Zeile davor mit und wird länger. Am Ende sagen Sie die ganze Kette noch einmal.",
+      "woranSieSehen": "Ihr Kind wartet auf die nächste Zeile oder spricht ein Glied der Kette mit.",
+      "umfaenge": [
+        3,
+        4
+      ]
+    }
+  ],
+  "stoffe": [
+    {
+      "id": "s-hof",
+      "name": "Auf dem Hof",
+      "zeichen": "🐓",
+      "ort": "im Stall",
+      "figuren": [
+        {
+          "name": "der Hahn",
+          "laut": "kikeriki",
+          "koerperklang": "mit der Zunge schnalzen"
+        },
+        {
+          "name": "die Kuh",
+          "laut": "muuuh",
+          "koerperklang": "auf die Knie klopfen"
+        },
+        {
+          "name": "die Katze",
+          "laut": "miau",
+          "koerperklang": "die Hände reiben"
+        },
+        {
+          "name": "der Hund",
+          "laut": "wuff wuff",
+          "koerperklang": "zweimal klatschen"
+        },
+        {
+          "name": "die Gans",
+          "laut": "schnatter schnatter",
+          "koerperklang": "mit den Fingern auf den Tisch tippen"
+        }
+      ],
+      "reimpaare": [
+        {
+          "frage": "Wer ruft so früh und weckt das ganze Haus?",
+          "antwort": "Der Hahn ruft kikeriki – und auf dem Dach sitzt eine Maus."
+        },
+        {
+          "frage": "Wer liegt im Stall und kaut und kaut?",
+          "antwort": "Die Kuh macht muuuh, und das klingt richtig laut."
+        },
+        {
+          "frage": "Wer schleicht am Zaun entlang und macht sich klein?",
+          "antwort": "Die Katze macht miau und will zu dir herein."
+        }
+      ],
+      "kette": {
+        "ding": "der Eimer",
+        "glieder": [
+          {
+            "wer": "der Hahn",
+            "satzteil": "der auf dem Eimer steht"
+          },
+          {
+            "wer": "die Katze",
+            "satzteil": "die den Hahn anschaut"
+          },
+          {
+            "wer": "der Hund",
+            "satzteil": "der die Katze ruft"
+          },
+          {
+            "wer": "die Gans",
+            "satzteil": "die dem Hund nachläuft"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s-wetter",
+      "name": "Wetter am Fenster",
+      "zeichen": "🌧️",
+      "ort": "am Fenster",
+      "figuren": [
+        {
+          "name": "der Regen",
+          "laut": "platsch platsch",
+          "koerperklang": "mit den Fingerspitzen auf den Tisch tippen"
+        },
+        {
+          "name": "der Wind",
+          "laut": "huuuiii",
+          "koerperklang": "die Hände aneinander reiben"
+        },
+        {
+          "name": "der Donner",
+          "laut": "brummmm",
+          "koerperklang": "mit den Handflächen auf die Knie"
+        },
+        {
+          "name": "der Hagel",
+          "laut": "tack tack tack",
+          "koerperklang": "mit den Fingernägeln klopfen"
+        },
+        {
+          "name": "die Sonne",
+          "laut": "– ganz still –",
+          "koerperklang": "die Hände still halten"
+        }
+      ],
+      "reimpaare": [
+        {
+          "frage": "Was klopft von draußen an die Scheibe, sacht?",
+          "antwort": "Der Regen macht platsch platsch, die halbe Nacht."
+        },
+        {
+          "frage": "Wer schiebt die Wolken über unser Dach?",
+          "antwort": "Der Wind macht huuuiii und bleibt noch lange wach."
+        },
+        {
+          "frage": "Und wer kommt leise, ohne jeden Ton?",
+          "antwort": "Die Sonne kommt und sagt gar nichts, schon."
+        }
+      ],
+      "kette": {
+        "ding": "die Pfütze",
+        "glieder": [
+          {
+            "wer": "der Regen",
+            "satzteil": "der die Pfütze füllt"
+          },
+          {
+            "wer": "der Wind",
+            "satzteil": "der den Regen kräuselt"
+          },
+          {
+            "wer": "das Blatt",
+            "satzteil": "das im Wind schwimmt"
+          },
+          {
+            "wer": "der Schuh",
+            "satzteil": "der das Blatt sucht"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s-kueche",
+      "name": "In der Küche",
+      "zeichen": "🍲",
+      "ort": "am Herd",
+      "figuren": [
+        {
+          "name": "der Topf",
+          "laut": "blubb blubb",
+          "koerperklang": "die Wangen mit den Fingern ploppen lassen"
+        },
+        {
+          "name": "der Löffel",
+          "laut": "kling klang",
+          "koerperklang": "zwei Finger gegeneinander tippen"
+        },
+        {
+          "name": "die Tür",
+          "laut": "knaaarr",
+          "koerperklang": "die Hände langsam aneinander reiben"
+        },
+        {
+          "name": "das Wasser",
+          "laut": "schschsch",
+          "koerperklang": "mit den Handflächen reiben"
+        },
+        {
+          "name": "die Mühle",
+          "laut": "knirsch knirsch",
+          "koerperklang": "die Fäuste gegeneinander drehen"
+        }
+      ],
+      "reimpaare": [
+        {
+          "frage": "Wer kocht die Suppe heiß und macht sie gut?",
+          "antwort": "Der Topf macht blubb blubb – und oben steigt der Dampf als Hut."
+        },
+        {
+          "frage": "Wer klappert laut und fällt beinah hinab?",
+          "antwort": "Der Löffel macht kling klang und liegt dann auf dem Tischrand ab."
+        },
+        {
+          "frage": "Wer macht die Tür so langsam auf?",
+          "antwort": "Die Tür macht knaaarr – und alle schauen drauf."
+        }
+      ],
+      "kette": {
+        "ding": "der Topf",
+        "glieder": [
+          {
+            "wer": "das Wasser",
+            "satzteil": "das im Topf steht"
+          },
+          {
+            "wer": "der Löffel",
+            "satzteil": "der das Wasser rührt"
+          },
+          {
+            "wer": "die Hand",
+            "satzteil": "die den Löffel hält"
+          },
+          {
+            "wer": "die Nase",
+            "satzteil": "die der Hand zusieht"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s-baustelle",
+      "name": "An der Baustelle",
+      "zeichen": "🚧",
+      "ort": "am Zaun",
+      "figuren": [
+        {
+          "name": "der Hammer",
+          "laut": "tock tock",
+          "koerperklang": "mit der Faust auf die Handfläche"
+        },
+        {
+          "name": "die Säge",
+          "laut": "ritsch ratsch",
+          "koerperklang": "die Handkanten gegeneinander schieben"
+        },
+        {
+          "name": "der Bagger",
+          "laut": "brummm",
+          "koerperklang": "mit den Lippen brummen"
+        },
+        {
+          "name": "die Hupe",
+          "laut": "tuuut",
+          "koerperklang": "die Hände an den Mund legen"
+        },
+        {
+          "name": "der Stein",
+          "laut": "klack",
+          "koerperklang": "einmal kurz klatschen"
+        }
+      ],
+      "reimpaare": [
+        {
+          "frage": "Wer klopft den ganzen Vormittag am Haus?",
+          "antwort": "Der Hammer macht tock tock – und abends ist er aus."
+        },
+        {
+          "frage": "Wer schiebt die Erde auf den Haufen rauf?",
+          "antwort": "Der Bagger macht brummm und nimmt die nächste Schaufel drauf."
+        },
+        {
+          "frage": "Wer ruft am Tor, damit man Platz macht, schnell?",
+          "antwort": "Die Hupe macht tuuut – und alle hören das sehr hell."
+        }
+      ],
+      "kette": {
+        "ding": "der Stein",
+        "glieder": [
+          {
+            "wer": "die Schaufel",
+            "satzteil": "die den Stein hebt"
+          },
+          {
+            "wer": "der Bagger",
+            "satzteil": "der die Schaufel hält"
+          },
+          {
+            "wer": "die Hupe",
+            "satzteil": "die am Bagger sitzt"
+          },
+          {
+            "wer": "das Ohr",
+            "satzteil": "das die Hupe hört"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s-abend",
+      "name": "Am Abend",
+      "zeichen": "🌙",
+      "ort": "im Bad",
+      "figuren": [
+        {
+          "name": "die Uhr",
+          "laut": "tick tack",
+          "koerperklang": "abwechselnd auf die Knie tippen"
+        },
+        {
+          "name": "die Jacke",
+          "laut": "rasch rasch",
+          "koerperklang": "mit den Händen über die Arme streichen"
+        },
+        {
+          "name": "die Zahnbürste",
+          "laut": "schrubb schrubb",
+          "koerperklang": "die Hände hin und her reiben"
+        },
+        {
+          "name": "die Decke",
+          "laut": "wuuusch",
+          "koerperklang": "mit den Armen einen Bogen machen"
+        },
+        {
+          "name": "der Atem",
+          "laut": "haaa",
+          "koerperklang": "die Hände auf den Bauch legen"
+        }
+      ],
+      "reimpaare": [
+        {
+          "frage": "Wer tickt so leise an der Wand im Flur?",
+          "antwort": "Die Uhr macht tick tack – und sonst hört man gar nichts nur."
+        },
+        {
+          "frage": "Wer schrubbt die Zähne, bis sie sauber sind?",
+          "antwort": "Die Zahnbürste macht schrubb schrubb – und freut sich wie ein Kind."
+        },
+        {
+          "frage": "Wer fliegt noch einmal über dich im Bett?",
+          "antwort": "Die Decke macht wuuusch – und danach liegt sie glatt und nett."
+        }
+      ],
+      "kette": {
+        "ding": "das Bett",
+        "glieder": [
+          {
+            "wer": "die Decke",
+            "satzteil": "die auf dem Bett liegt"
+          },
+          {
+            "wer": "das Kissen",
+            "satzteil": "das unter der Decke liegt"
+          },
+          {
+            "wer": "der Bär",
+            "satzteil": "der auf dem Kissen wartet"
+          },
+          {
+            "wer": "die Uhr",
+            "satzteil": "die neben dem Bären tickt"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s-weg",
+      "name": "Auf dem Weg",
+      "zeichen": "👣",
+      "ort": "an der Ecke",
+      "figuren": [
+        {
+          "name": "der Schuh",
+          "laut": "tapp tapp",
+          "koerperklang": "mit den Füßen auf den Boden tippen"
+        },
+        {
+          "name": "die Pfütze",
+          "laut": "platsch",
+          "koerperklang": "einmal kräftig klatschen"
+        },
+        {
+          "name": "der Vogel",
+          "laut": "piep piep",
+          "koerperklang": "mit den Lippen pfeifen oder schnalzen"
+        },
+        {
+          "name": "der Bus",
+          "laut": "brummm",
+          "koerperklang": "mit den Lippen brummen"
+        },
+        {
+          "name": "das Tor",
+          "laut": "klapp",
+          "koerperklang": "die Handflächen zusammenlegen"
+        }
+      ],
+      "reimpaare": [
+        {
+          "frage": "Wer läuft neben dir und bleibt nicht stehen?",
+          "antwort": "Der Schuh macht tapp tapp – und will noch weitergehen."
+        },
+        {
+          "frage": "Wer sitzt am Zaun und singt schon früh am Tag?",
+          "antwort": "Der Vogel macht piep piep – und fliegt dann weg, weil er das mag."
+        },
+        {
+          "frage": "Wer hält an der Ecke, wenn man einsteigen will?",
+          "antwort": "Der Bus macht brummm – und drinnen ist es still."
+        }
+      ],
+      "kette": {
+        "ding": "der Weg",
+        "glieder": [
+          {
+            "wer": "der Schuh",
+            "satzteil": "der auf dem Weg geht"
+          },
+          {
+            "wer": "die Pfütze",
+            "satzteil": "die vor dem Schuh wartet"
+          },
+          {
+            "wer": "der Vogel",
+            "satzteil": "der in die Pfütze schaut"
+          },
+          {
+            "wer": "das Tor",
+            "satzteil": "das hinter dem Vogel steht"
+          }
+        ]
+      }
+    }
+  ],
+  "ausgeschlossen": [
+    {
+      "quellNr": "x01",
+      "was": "Überlieferte Fingerspiele und Liedtexte",
+      "warum": "Kein überliefertes Fingerspiel und kein Liedtext steht hier, auch nicht in Teilen. Bei vielen bekannten Texten ist nicht ohne Weiteres zu klären, ob eine Fassung frei ist – an einer Sammlung, einer Bearbeitung und einer Melodie können eigene Rechte bestehen. Diese App erzeugt stattdessen eigene Zeilen; ein Test vergleicht alles Erzeugte gegen eine Liste bekannter Anfangszeilen und schlägt an, wenn eine davon vorkommt."
+    },
+    {
+      "quellNr": "x02",
+      "was": "Die Nachdichtungen der beiden russischen Märchen",
+      "warum": "Die Quelle nennt «Курочка Ряба» und «Репка» als Vorbild für Improvisationen. Übernommen ist die FORM – eine Kette, die mit jeder Zeile länger wird. Kein Text dieser Märchen und keine Nachdichtung steht hier: der Stoff ist Volksgut, eine bestimmte Nachdichtung ist es nicht, und die Grenze lässt sich von außen nicht sicher ziehen. Die Ketten in dieser App sind eigene."
+    },
+    {
+      "quellNr": "x03",
+      "was": "Ukrainische und russische Fassungen der Texte",
+      "warum": "Der Katalogeintrag wollte uk/ru-Varianten als Herkunftssprachen-Angebot. Eine ungegengelesene Übersetzung einer Reimzeile ist keine Übersetzung, sondern eine Behauptung – und ein Reim, der im Deutschen trägt, trägt in einer anderen Sprache nicht. Weggelassen statt stillschweigend falsch. Singen Sie in der Sprache, in der Sie zu Hause sind; die Form funktioniert in jeder."
+    },
+    {
+      "quellNr": "x04",
+      "was": "Die Einteilung nach „Niveau der Musikalität“",
+      "warum": "Die Quelle markiert einen Teil ihrer Ziele mit einem Zeichen, das in ihrer eigenen Fußnote „Aufgaben für Kinder mit relativ hohem Niveau der Musikalität“ bedeutet – darunter gerade die Märchen-Improvisation, auf die der Katalogeintrag zielt. Eine Einteilung von Kindern nach Fähigkeit ist nach den Projektregeln und nach der EU-Verordnung über künstliche Intelligenz ausgeschlossen. Übernommen ist die Aufgabe, nicht die Einteilung: jede Form nennt stattdessen, woran Sie SEHEN, dass sie gerade passt."
+    },
+    {
+      "quellNr": "x05",
+      "was": "Ein Wirkversprechen zur Sprachentwicklung",
+      "warum": "Dass Lautmalerei, Kettenreime oder Frage-Antwort-Formate die Sprachentwicklung voranbringen, steht hier nicht – unabhängig davon, wie plausibel es klingt. Beschrieben ist, was Kinder dieses Alters mit solchen Texten tun."
+    },
+    {
+      "quellNr": "x06",
+      "was": "Eine Minuten- oder Wiederholungszahl",
+      "warum": "Keine Dauer, keine Anzahl von Durchgängen, kein „dreimal täglich“. Das Maß ist, dass Ihr Kind sich abwendet."
+    },
+    {
+      "quellNr": "x07",
+      "was": "Eine Dezibelzahl für die Lautstärke",
+      "warum": "Für Kleinkinder gibt es keinen belegten Grenzwert, und eine Zahl ohne Messgerät ist keine Prüfung. Die Regel ist die Zimmerstimme – dieselbe wie in den Musikmomenten."
+    },
+    {
+      "quellNr": "x08",
+      "was": "Das Instrumentarium der Quelle",
+      "warum": "Die Quelle stattet eine Gruppenecke mit Dudelsack, Trommel, Glöckchen, Xylophon und Metallophon aus. Eine Instrumentenliste wäre in einer Eltern-App ein Einkaufszettel, und bei Kindern unter drei Jahren kommt die Kleinteilgefahr dazu. Hier macht die Hand den Klang."
+    }
+  ],
+  "bekannteAnfaenge": [
+    "backe backe kuchen",
+    "hoppe hoppe reiter",
+    "das ist der daumen",
+    "zehn kleine zappelm",
+    "alle meine entchen",
+    "haeschen in der grube",
+    "häschen in der grube",
+    "ri ra rutsch",
+    "himpelchen und pimpelchen",
+    "a b c die katze lief",
+    "gruen gruen gruen sind alle meine kleider",
+    "grün grün grün sind alle meine kleider",
+    "fuchs du hast die gans gestohlen",
+    "haenschen klein",
+    "hänschen klein",
+    "laterne laterne",
+    "schlaf kindlein schlaf",
+    "guten abend gut nacht",
+    "es tanzt ein bi ba butzemann",
+    "kommt ein vogel geflogen",
+    "auf der mauer auf der lauer",
+    "ein maennlein steht im walde",
+    "ein männlein steht im walde",
+    "widewidewenne",
+    "bruder jakob",
+    "was muessen das fuer baeume sein",
+    "ein elefant der telefoniert"
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Abschnitte «Пение» (S. 81) und «Игра на музыкальных инструментах» (S. 86)",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die Improvisation auf Lautmalerei, die Melodie von Frage und Antwort und die Form der wachsenden Kette. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": {
+      "zieleGesangskreativitaet": 4,
+      "zieleInstrumente": 6,
+      "zieleMitZeichen": 2
+    },
+    "nachgezaehlt": "Der Abschnitt «Песенно-игровое и песенно-инструментальное творчество» auf S. 81 trägt 4 Ziele, der Abschnitt «Игра на музыкальных инструментах» auf S. 86 trägt 6. Nachgezählt. Mit dem Zeichen für „Kinder mit relativ hohem Niveau der Musikalität“ sind davon 2 markiert – das vierte Ziel auf S. 81 (die Improvisation nach Märchen, also genau das, worauf der Katalogeintrag zielt) und das vierte Ziel auf S. 86 (das Spielen der Rhythmen von Lautmalereien). Die Fußnote mit dieser Bedeutung steht auf S. 80.",
+    "abweichung": "Nicht übernommen sind: die Einteilung nach Niveau der Musikalität, das Repertoire beider Abschnitte (es ist überwiegend nicht gemeinfrei – bei einem genannten Stück steht der Text von S. Marschak, gestorben 1964), die Instrumentenliste und die Nachdichtungen der beiden Märchen. Der Katalogeintrag wollte außerdem uk/ru-Varianten; die sind ausdrücklich weggelassen. Übernommen und gebaut sind drei Formen: Klanggeschichte, Frage-und-Antwort-Reim und Kettenreim."
+  },
+  "vorlagen": {
+    "klanggeschichte": {
+      "anfang": [
+        "Hör mal – {ort} ist es noch ganz still.",
+        "Komm, wir hören: {ort} fängt gleich etwas an.",
+        "Sei mal leise. {ort} wartet schon etwas."
+      ],
+      "bild": [
+        "{figur} kommt: {laut}. ({klang})",
+        "Da ist {figur}: {laut}. ({klang})",
+        "Und jetzt {figur}: {laut}. ({klang})"
+      ],
+      "schluss": [
+        "Jetzt sind alle da. Noch einmal alle zusammen: {alleLaute}. Und dann ist es wieder still.",
+        "Alle auf einmal: {alleLaute}. Und dann wird es ganz leise.",
+        "Zum Schluss noch alle: {alleLaute}. Und dann hören wir auf."
+      ]
+    },
+    "frage-antwort": {
+      "anfang": [
+        "Du fragst, dein Kind antwortet – oder am Anfang beides du.",
+        "Erst die Frage, dann die Antwort. Die zweite Zeile reimt sich."
+      ],
+      "schluss": [
+        "Und noch einmal – Kinder mögen dieselbe Zeile wieder.",
+        "Das war die letzte Frage. Wenn dein Kind weiterfragt, erfinde eine dazu."
+      ]
+    },
+    "kettenreim": {
+      "anfang": [
+        "Das ist {ding}."
+      ],
+      "glied": [
+        "Das ist {wer}, {kette}."
+      ],
+      "schluss": [
+        "Und jetzt alles noch einmal, von vorn.",
+        "Und noch einmal die ganze Kette – langsam."
+      ]
+    }
+  }
+}
