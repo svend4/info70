@@ -220,7 +220,16 @@ test('Bildschirm: die Behörde heißt aktuell BIÖG, mit dem alten Namen dazu', 
   // aber dazu, sonst findet niemand die Empfehlung wieder.
   assert.match(daten.bloecke.bildschirm.quelle, /BIÖG/);
   assert.match(daten.bloecke.bildschirm.quelle, /BZgA/);
-  assert.match(daten.bloecke.bildschirm.quelle, /WHO/);
+  // Korrektur Welle 81: die Quelle nannte die WHO-Leitlinie als Beleg für die
+  // Drei-Jahres-Grenze. Die WHO hat diese Grenze NICHT – sie rät Einjährigen
+  // von Bildschirmzeit ab und lässt Zweijährigen bis zu einer Stunde. Die
+  // Grenze bei drei Jahren ist eine deutsche Empfehlung (BIÖG und die
+  // AWMF-Leitlinie 027-075). Die WHO darf hier also nur noch mit genau dieser
+  // Unterscheidung vorkommen.
+  assert.match(daten.bloecke.bildschirm.quelle, /027-075/);
+  assert.match(daten.bloecke.bildschirm.quelle, /WHO[^.]*kennt sie nicht|Drei-Jahres-Grenze ist eine deutsche/);
+  assert.ok(!/WHO-Leitlinie zu Bewegung, Sitzen und Schlaf für Kinder unter fünf Jahren \(2019\)\.$/.test(daten.bloecke.bildschirm.quelle),
+    'die WHO darf nicht als Beleg für die Drei-Jahres-Grenze dastehen');
   for (const q of ['BIÖG', 'BZgA']) {
     const mut = kopie();
     mut.bloecke.bildschirm.quelle = mut.bloecke.bildschirm.quelle.replace(q, 'X');

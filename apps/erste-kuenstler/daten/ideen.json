@@ -1,0 +1,275 @@
+{
+  "art": "erste-kuenstler",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 1 bis 3 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Lesen, weglegen, dann zusammen etwas tun – das Papier liegt auf dem Boden, nicht auf einem Bildschirm.",
+  "wasEsIst": "Eine Ideenkartei für das erste eigene Tun: kritzeln, mit den Fingern malen, formen, kleben, bauen, eine Socke sprechen lassen. Geordnet nicht nach Alter, sondern danach, was Sie gerade sehen – acht Karten, zu jeder ein paar Schritte, woran Sie sehen, dass es gerade passt, und wann Schluss ist.",
+  "keinMeilenstein": "Hier gibt es keine Checkliste und keinen Haken. Der Katalogeintrag wollte „19 Meilensteine der frühen künstlerischen Entwicklung“ – gebaut ist das nicht, und zwar aus zwei nachprüfbaren Gründen. Erstens beschreibt die Quelle ihre 19 Merkmale ausdrücklich für das Ende des dritten Lebensjahres, nicht für die Spanne davor: ein Kind von vierzehn Monaten, das achtzehn davon nicht zeigt, ist vierzehn Monate alt. Zweitens gibt es in Deutschland keine Referenzliste für künstlerische Entwicklung, an der man ein Kind messen könnte. Die „Grenzsteine der Entwicklung“ kennen keinen solchen Bereich; im Altersband bis drei Jahre stehen dort zum Malen genau zwei Punkte – wie der Stift gehalten wird (24. Monat, Hand-Finger-Motorik) und ob das Kind auf Nachfrage sagt, wen oder was es gemalt hat (36. Monat, und das unter kognitiver Entwicklung). Ihre Autoren schreiben außerdem selbst, dass sie kein Diagnoseinstrument sind. Die Kinder-Richtlinie des Gemeinsamen Bundesausschusses führt zur U7 (21. bis 24. Lebensmonat) in der Feinmotorik einen einzigen Punkt mit Malbezug – die flache Spirale –, zur U7a keinen, und die Stifthaltung erst zur U8 nach dem dritten Geburtstag. Zu Singen, Zuhören, Kneten und Fingermalen steht in beiden nichts. Eine Neunzehn-Punkte-Liste zum Abhaken wäre also eine Erfindung mit dem Anschein einer Norm.",
+  "wasStattdessen": "Statt einer Liste, an der ein Kind gemessen wird, steht hier eine Liste von Gelegenheiten, bei denen ein Erwachsener etwas tun kann. Die 19 Merkmale der Quelle sind trotzdem vollständig aufgeführt – als Anhang, mit der Angabe, was im Korpus dazu gebaut ist und was nicht. Nachschlagen kann man sie; abhaken nicht.",
+  "zeitpunkt": "Die Quelle überschreibt ihre Merkmalsliste mit „zum Ende des dritten Lebensjahres“. Sie beschreibt damit einen Zustand am Ende der Spanne, nicht einen Weg dorthin – und auch das für eine Gruppe in einer Einrichtung, nicht für ein einzelnes Kind zu Hause.",
+  "keinDeuten": "Aus dem, was ein Kind malt oder formt, wird hier nichts über das Kind geschlossen. Ein Gekritzel ist kein Befund, und wer darin liest, liest sich selbst. Entwicklungsfragen gehören in die Vorsorgeuntersuchung; wenn Sie etwas beunruhigt, ist die Kinderarztpraxis die Stelle dafür, nicht eine App.",
+  "keinWirkversprechen": "Diese App verspricht nichts über Kreativität, Feinmotorik, Sprache oder Intelligenz. Sie sagt, was man tun kann, und woran man sieht, dass es gerade passt – nicht, was dabei herauskommt.",
+  "keinErgebnis": "Es kommt nichts dabei heraus, und das ist der Punkt. Ein Kind in diesem Alter macht die Bewegung, nicht das Bild. Wer ein vorzeigbares Ergebnis will, macht es selbst – das ist erlaubt, aber es ist dann Ihr Bild.",
+  "keinBildschirm": "Kein Bildschirm fürs Kind. Diese Seite ist für Erwachsene; was dabei herauskommt, liegt auf dem Tisch. Die deutsche Empfehlung dazu ist eindeutig: das Bundesinstitut für Öffentliche Gesundheit (BIÖG, bis Februar 2025 BZgA) rät unter drei Jahren zu möglichst keinen Bildschirmmedien, und die Leitlinie zur Prävention dysregulierten Bildschirmmediengebrauchs in Kindheit und Jugend (AWMF-Register 027-075, federführend Deutsche Gesellschaft für Kinder- und Jugendmedizin) empfiehlt, Kinder unter drei Jahren von jeder Nutzung von Bildschirmmedien fernzuhalten. Die Drei-Jahres-Grenze ist dabei deutsch: die WHO-Leitlinie für Kinder unter fünf Jahren (2019) kennt sie nicht – sie rät Einjährigen von Bildschirmzeit ab und lässt Zweijährigen bis zu einer Stunde.",
+  "sicherheitImmer": "Alles, was hier liegt, ist für ein Kind unter drei Jahren zuerst etwas zum In-den-Mund-Nehmen – das gilt für Farbe, Kleber, Knetmasse, Papierschnipsel und Klötze gleichermaßen. Nichts davon bleibt ohne Sie in Reichweite, und was klein genug zum Verschlucken ist, kommt weg. Ob ein einzelner Gegenstand klein genug ist, prüft der Spielzeug-Check U3.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "ideen": [
+    {
+      "id": "i-kritzeln", "name": "Kritzeln, wo es nicht stört", "zeichen": "✏️",
+      "wennSie": "Ihr Kind greift nach Ihrem Stift und zieht Striche auf allem, was flach ist.",
+      "material": ["m-papier", "m-wachsmalstift"],
+      "wasSieTun": [
+        "Legen Sie ein großes Stück Papier auf den Boden und kleben Sie zwei Ecken fest – sonst rutscht es weg und das Kritzeln hört auf, bevor es anfängt.",
+        "Geben Sie einen dicken, kurzen Stift. Er liegt in der Faust besser als ein langer dünner, und das ist der Griff, mit dem in diesem Alter gemalt wird.",
+        "Setzen Sie sich daneben und malen Sie auf Ihr eigenes Blatt. Nicht auf seines."
+      ],
+      "woranSieSehen": "Ihr Kind zieht von selbst weiter Striche, auch wenn Sie nichts sagen.",
+      "aufhoeren": "Wenn der Stift wandert – in den Mund, an die Wand, auf das Sofa. Dann ist das Papier zu Ende, nicht das Kind ungezogen.",
+      "grenze": "Gemalt wird im Sitzen. Ein Stift in der Hand und ein laufendes Kind gehören nicht zusammen.",
+      "quellMerkmale": ["m15", "m16"]
+    },
+    {
+      "id": "i-name", "name": "Dem Gekritzel seinen Namen lassen", "zeichen": "💬",
+      "wennSie": "Ihr Kind zeigt auf sein Blatt und sagt ein Wort dazu – „Ball“, „Mama“, „Auto“.",
+      "material": ["m-papier"],
+      "wasSieTun": [
+        "Nehmen Sie das Wort auf und sagen Sie es noch einmal: „Ein Ball. Der ist groß geworden.“",
+        "Fragen Sie nicht, was es ist. Die Antwort kennen Sie nicht, Ihr Kind oft auch nicht – und beim nächsten Hinschauen kann derselbe Strich etwas anderes sein.",
+        "Wenn Sie das Blatt behalten wollen: ein Wort an den Rand und das Datum. Mehr braucht es nicht."
+      ],
+      "woranSieSehen": "Ihr Kind sagt beim nächsten Blatt wieder etwas dazu.",
+      "aufhoeren": "Wenn nichts gesagt wird, war es eben kein Ball. Ein Gekritzel muss nichts sein.",
+      "grenze": "Kein Deuten – warum, steht oben und ausführlich im Kunst-Gucken.",
+      "quellMerkmale": ["m15"]
+    },
+    {
+      "id": "i-fingerfarbe", "name": "Mit den Fingern malen", "zeichen": "🖐️",
+      "wennSie": "Ihr Kind fährt mit der Hand durch alles, was eine Spur hinterlässt – Joghurt, beschlagene Scheibe, Pfütze.",
+      "material": ["m-fingerfarbe", "m-papier"],
+      "wasSieTun": [
+        "Eine Farbe zum Anfangen, nicht fünf. Zwei Farben geben Mischfarben, fünf geben Braun.",
+        "Papier festkleben, altes Hemd an, Lappen und warmes Wasser vorher bereitstellen – hinterher ist keine Hand frei.",
+        "Machen Sie selbst einen Abdruck daneben. Mehr Anleitung braucht es nicht."
+      ],
+      "woranSieSehen": "Ihr Kind fasst die Farbe von selbst an und zieht die Hand über das Papier.",
+      "aufhoeren": "Wenn die Finger in den Mund gehen oder die Farbe wandert. Das ist kein Ungehorsam, das ist das Alter.",
+      "grenze": "Nur Fingerfarbe, die als Spielzeug gekennzeichnet ist – und auch die bleibt nicht ohne Sie auf dem Tisch stehen.",
+      "quellMerkmale": ["m16"]
+    },
+    {
+      "id": "i-streumehl", "name": "Mit dem Finger im Mehl", "zeichen": "🌾",
+      "wennSie": "Sie wollen eine Spur ohne Farbe – draußen regnet es, oder die Küche soll heil bleiben.",
+      "material": ["m-mehl", "m-tablett"],
+      "wasSieTun": [
+        "Ein Esslöffel Mehl oder Grieß auf ein Tablett, dünn verteilt. Mehr wird nicht mehr, es wird nur überall.",
+        "Ziehen Sie mit dem Finger eine Linie und wischen Sie sie wieder weg. Das Wegwischen ist die halbe Freude.",
+        "Lassen Sie Ihr Kind machen. Eine Linie, ein Kreis, eine ganze Handfläche – alles ist richtig."
+      ],
+      "woranSieSehen": "Ihr Kind wischt von selbst und fängt wieder an.",
+      "aufhoeren": "Wenn das Tablett verlassen wird. Dann kommt es weg, bevor das Mehl den Flur findet.",
+      "grenze": "Nicht hineinpusten, und die Tüte bleibt außer Reichweite.",
+      "quellMerkmale": ["m16"]
+    },
+    {
+      "id": "i-formen", "name": "Formen, was in die Hand passt", "zeichen": "🫓",
+      "wennSie": "Ihr Kind drückt, quetscht und zerrupft gerade alles, was nachgibt.",
+      "material": ["m-knetmasse"],
+      "wasSieTun": [
+        "Ein Stück so groß wie seine Faust. Ein großer Klumpen ist zum Zerreißen da, nicht zum Gestalten.",
+        "Zeigen Sie drei Handgriffe: rollen zu einer Wurst, mit der Handfläche platt drücken, mit dem Finger ein Loch hineinbohren. Mehr sind es in diesem Alter nicht.",
+        "Keine Förmchen, kein Ausstecher. Die Hand ist das Werkzeug."
+      ],
+      "woranSieSehen": "Ihr Kind drückt weiter, auch wenn nichts Erkennbares entsteht.",
+      "aufhoeren": "Wenn die Masse in den Mund geht oder im Teppich landet.",
+      "grenze": "Nur Knetmasse, die als Spielzeug gekennzeichnet ist. Was wie Essen aussieht und nach Essen schmeckt, gehört nicht in die Hand eines Kindes, das noch alles probiert.",
+      "quellMerkmale": ["m17"]
+    },
+    {
+      "id": "i-kleben", "name": "Kleben, wobei Sie den Kleber behalten", "zeichen": "🧩",
+      "wennSie": "Ihr Kind legt Dinge hin, nimmt sie wieder weg und legt sie woanders hin.",
+      "material": ["m-formen", "m-klebstift", "m-papier"],
+      "wasSieTun": [
+        "Schneiden Sie vorher ein paar große Formen aus – vorher, nicht dabei. Die Schere bleibt bei Ihnen.",
+        "Ihr Kind legt die Formen auf das Blatt und schiebt sie herum, solange es will. Das ist der eigentliche Teil.",
+        "Wenn es dabei bleiben soll: Sie tragen den Kleber auf, Ihr Kind drückt an. Die Quelle sagt es genauso – aufgeklebt wird zusammen mit einem Erwachsenen."
+      ],
+      "woranSieSehen": "Ihr Kind schiebt die Formen gezielt, nicht nur vom Tisch.",
+      "aufhoeren": "Wenn die Formen fliegen oder in den Mund gehen.",
+      "grenze": "Kleine Schnipsel sind Kleinteile. Große Formen, und was herunterfällt, wird gleich aufgehoben.",
+      "quellMerkmale": ["m18"]
+    },
+    {
+      "id": "i-bauen", "name": "Türme, die umfallen dürfen", "zeichen": "🧱",
+      "wennSie": "Ihr Kind stapelt Dosen, Becher, Bücher – und freut sich am meisten, wenn alles kippt.",
+      "material": ["m-bauklotz"],
+      "wasSieTun": [
+        "Stellen Sie zwei Klötze übereinander und warten Sie ab. Oft kommt der dritte von allein.",
+        "Bauen Sie nichts fertig vor. Ein fertiger Turm ist Ihrer, und umwerfen darf man ihn dann auch nicht.",
+        "Sagen Sie, was passiert ist: „Der unterste war schief, da ist alles gefallen.“ Das ist Ursache und Wirkung, und mehr davon braucht es nicht."
+      ],
+      "woranSieSehen": "Ihr Kind stellt von selbst wieder einen Klotz auf den anderen.",
+      "aufhoeren": "Wenn geworfen wird. Werfen ist auch etwas, aber dann draußen und mit etwas Weichem.",
+      "grenze": "Kein Turm höher als Ihr Kind, und nichts zum Stapeln, was beim Umfallen weh tut.",
+      "quellMerkmale": ["m19"]
+    },
+    {
+      "id": "i-handpuppe", "name": "Eine Puppe aus dem, was da ist", "zeichen": "🧦",
+      "wennSie": "Ihr Kind bringt Ihnen ein Buch oder will dieselbe Geschichte zum fünften Mal.",
+      "material": ["m-socke"],
+      "wasSieTun": [
+        "Eine Socke über die Hand, Daumen nach unten – das ist der Mund. Mehr Puppe braucht es nicht.",
+        "Geben Sie ihr eine andere Stimme und lassen Sie sie zwei Sätze sagen. Dann verschwindet sie wieder hinter dem Rücken.",
+        "Lassen Sie die Puppe das tun, was Ihr Kind aus seinem Lieblingsbuch kennt – winken, schlafen, niesen. Wiedererkennen ist hier die ganze Sache."
+      ],
+      "woranSieSehen": "Ihr Kind antwortet der Puppe, macht etwas vor oder lacht.",
+      "aufhoeren": "Wenn Ihr Kind zurückweicht. Eine sprechende Hand kann unheimlich sein – dann kommt die Socke sofort herunter und Sie sind wieder Sie.",
+      "grenze": "Keine Plastiktüte über die Hand, und erst recht nicht über den Kopf.",
+      "quellMerkmale": ["m02", "m04"]
+    }
+  ],
+  "material": [
+    {
+      "id": "m-papier", "name": "Papier, das schon da ist", "zeichen": "📄",
+      "woGefunden": "Rückseiten von Briefen, Packpapier, die aufgeschnittene Innenseite einer Papiertüte.",
+      "sicherheit": "Papier wandert in den Mund, und abgerissene Ecken sind Kleinteile. Große Bögen festkleben, damit sie nicht zum Wickeltuch werden."
+    },
+    {
+      "id": "m-wachsmalstift", "name": "Ein dicker, kurzer Stift", "zeichen": "🖍️",
+      "woGefunden": "Ein dicker Wachsmalstift oder ein Malblock aus dem Bestand; geliehen tut es auch.",
+      "sicherheit": "Ein dicker Stift ist kein Kleinteil – ein abgebrochenes Stück schon. Abgebrochenes kommt weg."
+    },
+    {
+      "id": "m-fingerfarbe", "name": "Fingerfarbe", "zeichen": "🎨",
+      "woGefunden": "Ein kleiner Satz hält lange. Was nicht als Spielzeug gekennzeichnet ist, bleibt im Schrank.",
+      "sicherheit": "Fingerfarbe, die als Spielzeug verkauft wird, fällt unter die europäische Spielzeugnorm für Fingermalfarben (EN 71-7). Die begrenzt Farbmittel, Konservierungsstoffe und den pH-Wert, verlangt einen Bitterstoff und schreibt für die Verpackung einen Hinweis vor, dass Kinder unter drei Jahren dabei beaufsichtigt werden sollen. Was der Bitterstoff ausrichtet, ist damit nicht belegt – bitter heißt nicht ungiftig und nicht essbar. Umgekehrt gilt: „Nicht für Kinder unter 3 Jahren geeignet“ auf einer Packung ist kein Gütezeichen, sondern eine Warnung."
+    },
+    {
+      "id": "m-mehl", "name": "Ein Löffel Mehl oder Grieß", "zeichen": "🌾",
+      "woGefunden": "Aus der eigenen Küche. Kostet so gut wie nichts und ist schnell weggewischt.",
+      "sicherheit": "Nicht hineinpusten und nicht die Tüte in Reichweite. Ein Esslöffel reicht für ein Tablett."
+    },
+    {
+      "id": "m-tablett", "name": "Ein Tablett mit Rand", "zeichen": "🟫",
+      "woGefunden": "Ein Backblech, ein Tablett, der Deckel einer flachen Kiste.",
+      "sicherheit": "Mit Rand, sonst ist das Mehl überall. Nichts aus Glas."
+    },
+    {
+      "id": "m-knetmasse", "name": "Knetmasse", "zeichen": "🫧",
+      "woGefunden": "Eine Dose hält Monate, wenn sie zugeht. Ausleihen geht auch – Krabbelgruppen haben meistens welche.",
+      "sicherheit": "Nur Masse, die als Spielzeug gekennzeichnet ist; sie fällt damit unter die Spielzeugsicherheit. Trotzdem gilt: nicht ohne Sie, und was eingetrocknet und bröselig ist, kommt weg – Brösel sind Kleinteile."
+    },
+    {
+      "id": "m-formen", "name": "Vorgeschnittene Formen", "zeichen": "⬜",
+      "woGefunden": "Aus buntem Papier, aus Zeitschriften, aus einer Verpackung – handtellergroß.",
+      "sicherheit": "Handtellergroß, nicht fingernagelgroß: kleine Schnipsel sind Kleinteile. Geschnitten wird vorher, die Schere bleibt beim Erwachsenen."
+    },
+    {
+      "id": "m-klebstift", "name": "Ein Klebestift", "zeichen": "🖌️",
+      "woGefunden": "Der aus der Schreibtischschublade reicht.",
+      "sicherheit": "Der Stift bleibt in Ihrer Hand – er ist ohne Kappe ein Kleinteil, und Kleber gehört nicht in den Mund."
+    },
+    {
+      "id": "m-bauklotz", "name": "Klötze aus Holz", "zeichen": "🧱",
+      "woGefunden": "Aus dem eigenen Bestand, vom Flohmarkt, aus der Spielzeugkiste der Großeltern.",
+      "sicherheit": "Was klein genug zum Verschlucken ist, bleibt weg; alter Lack und abgeplatzte Farbe auch. Was ein einzelner Klotz aushält, prüft der Spielzeug-Check U3."
+    },
+    {
+      "id": "m-socke", "name": "Eine Socke oder ein Waschlappen", "zeichen": "🧦",
+      "woGefunden": "Aus der Wäsche. Die einzelne Socke, deren zweite fehlt, hat endlich eine Aufgabe.",
+      "sicherheit": "Keine Plastiktüte. Keine Schnur, kein Band, keine Kordel – das ist eine eigene Gefahr und hat mit Verschlucken nichts zu tun."
+    }
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Gruppe «МАЛЫШИ» (frühes Alter, von einem Jahr bis drei Jahren), «ОСНОВНЫЕ ПОКАЗАТЕЛИ РАЗВИТИЯ ДЕТЕЙ (к концу третьего года жизни)», Abschnitt «Художественная деятельность», S. 101–102",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – welche Tätigkeiten in diesem Alter vorkommen und in welcher Grobordnung. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": { "merkmale": 19, "sprache": 4, "musik": 8, "kunst": 7 },
+    "nachgezaehlt": "Nachgezählt im Original: 4 Merkmale zur künstlerisch-sprachlichen Tätigkeit, 8 zur musikalischen, 7 zu Kunstwahrnehmung und bildnerischem Tun – zusammen 19. Die Zahl des Katalogeintrags stimmt.",
+    "abweichung": "Die zweite Zahl des Katalogeintrags stimmt nicht: „9 Aktivitätsformen“ lassen sich an dieser Stelle nicht nachzählen. Der Abschnitt nennt drei Tätigkeitsbereiche, und die 19 Merkmale beschreiben etwa fünfzehn verschiedene Arten des Tuns. Die Neun gehört zu einer anderen Stelle – auf S. 89 empfiehlt die Quelle neun Werkgruppen. Nicht übernommen ist die Checkliste: die 19 Merkmale beschreiben laut Überschrift den Stand zum Ende des dritten Lebensjahres, und eine deutsche Referenzliste für künstlerische Entwicklung gibt es nicht."
+  },
+  "merkmale": [
+    { "id": "m01", "bereich": "sprache", "nr": 1,
+      "text": "Zeigt Interesse am Zuhören bei literarischen Texten, an Bilderbüchern und Spielbüchern und am Anschauen von Illustrationen; reagiert gefühlsmäßig darauf.",
+      "einordnung": "anderesWerkzeug", "apps": ["vorlese-kompass", "kunst-gucken"] },
+    { "id": "m02", "bereich": "sprache", "nr": 2,
+      "text": "Hört aufmerksam zu, was es verstehen kann; schaut kurze Stücke einfachster Puppenspielarten – Tischtheater, Fingerpuppen – und reagiert darauf.",
+      "einordnung": "ideeDa" },
+    { "id": "m03", "bereich": "sprache", "nr": 3,
+      "text": "Erkennt bekannte Reime, Lieder, Scherzverse und Märchen wieder; nimmt beim Wiederhören an einzelnen Figuren Anteil; versucht, einzelne Wörter und Zeilen gut bekannter Texte mitzusprechen.",
+      "einordnung": "anderesWerkzeug", "apps": ["familienschatz-reime", "klanggeschichten-erzeuger"] },
+    { "id": "m04", "bereich": "sprache", "nr": 4,
+      "text": "Will und kann den Inhalt eines Lieblingstextes mit Spielhandlungen, Gesten und Wörtern wiedergeben.",
+      "einordnung": "ideeDa" },
+    { "id": "m05", "bereich": "musik", "nr": 1,
+      "text": "Hört Musik gern und aufmerksam zu und gibt die Stimmung eines zugänglichen musikalischen Bildes in Bewegung wieder.",
+      "einordnung": "anderesWerkzeug", "apps": ["musikmomente-1-3", "musik-alltags-begleiter"] },
+    { "id": "m06", "bereich": "musik", "nr": 2,
+      "text": "Unterscheidet den Charakter der Musik – fröhlich, ruhig –, hat eine erste Vorstellung von Gattungen (Marsch, Wiegenlied, Tanz) und von der Form eines Stücks (einteilig, zweiteilig).",
+      "einordnung": "nichtUebernommen",
+      "warum": "Die Form eines Stücks abzuhören ist eine Aufgabe aus dem Programm einer Einrichtung, keine Elternsache. Zu Hause gäbe es daran nur etwas zu messen, nichts zu tun." },
+    { "id": "m07", "bereich": "musik", "nr": 3,
+      "text": "Kann Töne unterschiedlicher Dauer – lang, kurz – und unterschiedlicher Höhe – hoch, mittel, tief – unterscheiden.",
+      "einordnung": "nichtUebernommen",
+      "warum": "Dasselbe: eine Hörübung aus dem Gruppenalltag einer Einrichtung. Ein Elternteil, der das prüft, prüft – und genau das soll hier nicht passieren." },
+    { "id": "m08", "bereich": "musik", "nr": 4,
+      "text": "Hört Erwachsenen beim Singen gern zu und singt selbst, mit Instrument und ohne.",
+      "einordnung": "anderesWerkzeug", "apps": ["familienschatz-reime", "musik-alltags-begleiter"] },
+    { "id": "m09", "bereich": "musik", "nr": 5,
+      "text": "Singt natürlich und ohne Anstrengung und kann in Bewegung singen: singt mit bei Reigen, Tänzen und kleinen Spielszenen zu bekannten Märchen.",
+      "einordnung": "beschreibend",
+      "warum": "Das beschreibt, wie ein Kind singt – nicht, was ein Erwachsener tun könnte. Zu tun ist genau eine Sache, und die steht im Familienschatz: selbst singen, auch schief." },
+    { "id": "m10", "bereich": "musik", "nr": 6,
+      "text": "Bewegt sich ausdrucksvoll zur Musik und beherrscht die vom Programm vorgesehenen Grund- und Tanzbewegungen.",
+      "einordnung": "nichtUebernommen",
+      "warum": "„Vom Programm vorgesehen“ setzt einen Lehrplan voraus, den es hier nicht gibt. Ein Tanzschritt, den ein Kind zu Hause können soll, ist eine erfundene Anforderung." },
+    { "id": "m11", "bereich": "musik", "nr": 7,
+      "text": "Unterscheidet nach Gehör den Klang von Kinderinstrumenten: Flöte, Triangel, Trommel, Metallofon, Xylofon.",
+      "einordnung": "nichtUebernommen",
+      "warum": "Setzt fünf Instrumente voraus. Hier wird nichts angeschafft; Klang machen Hände, Dosen und Papier – dazu gibt es die Klanggeschichten." },
+    { "id": "m12", "bereich": "musik", "nr": 8,
+      "text": "Kann auf Instrumenten die Rhythmen von Sprechversen, Liedern und Stücken wiedergeben.",
+      "einordnung": "nichtUebernommen",
+      "warum": "Ebenfalls mit Instrumenten, und zusätzlich eine Könnensanforderung. Klatschen zu einem Vers ist dasselbe ohne Anschaffung und ohne Anforderung." },
+    { "id": "m13", "bereich": "kunst", "nr": 1,
+      "text": "Reagiert auf ein schönes Spielzeug, auf eine farbige Illustration.",
+      "einordnung": "anderesWerkzeug", "apps": ["kunst-gucken"] },
+    { "id": "m14", "bereich": "kunst", "nr": 2,
+      "text": "Versteht, was auf einer Illustration abgebildet ist, und kann eine Verbindung zwischen Bild und Text herstellen.",
+      "einordnung": "anderesWerkzeug", "apps": ["kunst-gucken", "vorlese-kompass"] },
+    { "id": "m15", "bereich": "kunst", "nr": 3,
+      "text": "Zeigt Interesse am bildnerischen Tun, hinterlässt auf Papier Gekritzel und Spuren mit Stift oder Farbe und gibt ihnen einen Namen; erste Versuche, absichtlich etwas darzustellen – „Ich male einen Ball“, „Ich male ein Haus“.",
+      "einordnung": "ideeDa" },
+    { "id": "m16", "bereich": "kunst", "nr": 4,
+      "text": "Hat eine erste Vorstellung davon, wie man Stift und Pinsel hält und damit malt und wie man mit Farben umgeht; malt mit Interesse mit den Fingern.",
+      "einordnung": "ideeDa" },
+    { "id": "m17", "bereich": "kunst", "nr": 5,
+      "text": "Kennt Material zum Formen, weiß, wie man damit umgeht, und beherrscht die einfachsten Handgriffe.",
+      "einordnung": "ideeDa" },
+    { "id": "m18", "bereich": "kunst", "nr": 6,
+      "text": "Beschäftigt sich gern mit Aufkleben; hat die Fläche des Blattes erfasst; kennt die Reihenfolge – fertige Formen hinlegen und dann, zusammen mit einem Erwachsenen, aufkleben.",
+      "einordnung": "ideeDa" },
+    { "id": "m19", "bereich": "kunst", "nr": 7,
+      "text": "Kennt Baumaterial, hat Interesse am Bauen nach einem Einfall, macht dabei mit – zusammen mit einem Erwachsenen – und hat erste Vorstellungen von Ursache und Wirkung, soweit sie fürs Bauen wichtig sind.",
+      "einordnung": "ideeDa" }
+  ],
+  "ausgeschlossen": [
+    { "quellNr": "x01",
+      "was": "Die Meilenstein-Checkliste des Katalogeintrags",
+      "warum": "Zwei Gründe, beide nachprüfbar. Die Quelle überschreibt ihre 19 Merkmale mit „zum Ende des dritten Lebensjahres“ – sie beschreibt einen Zustand am Ende der Spanne, nicht einen Weg. Und es gibt in Deutschland keine Referenzliste für künstlerische Entwicklung: die „Grenzsteine der Entwicklung“ kennen keinen solchen Bereich und führen bis drei Jahre genau zwei Punkte zum Malen, einen zur Stifthaltung und einen zur kognitiven Entwicklung. Eine Neunzehn-Punkte-Liste zum Abhaken hätte den Anschein einer Norm, hinter der nichts steht." },
+    { "quellNr": "x02",
+      "was": "Die Merkmale zu Instrumenten und zum Hören von Form und Tonhöhe",
+      "warum": "Vier der acht musikalischen Merkmale setzen Instrumente oder ein Programm voraus – Metallofon, Xylofon, Triangel, vorgesehene Tanzbewegungen, ein- und zweiteilige Form. Dieser Korpus schafft nichts an und hat keinen Lehrplan; was davon zu Hause trägt, steht in den Musik-Apps und in den Klanggeschichten." },
+    { "quellNr": "x03",
+      "was": "Salzteig",
+      "warum": "Eine Masse, die aussieht wie Teig und salzig schmeckt, in der Hand eines Kindes, das noch alles probiert – das ist für dieses Alter das falsche Material. Vor dem Verschlucken größerer Mengen Salzteig wird ausdrücklich gewarnt; eine Mengenschwelle nennt die amtliche Warnung bewusst nicht, und hier steht deshalb auch keine. Eine Zahl, die es nicht gibt, wäre hier eine erfundene Sicherheit. Statt Salzteig steht in der Kartei Knetmasse, die als Spielzeug gekennzeichnet ist." },
+    { "quellNr": "x04",
+      "was": "Liedvorschläge und ukrainische oder russische Familienlieder",
+      "warum": "Der Katalogeintrag wollte gemeinfreie deutsche Kinderlieder und einen Hinweis auf ukrainische und russische Familienlieder. Lieder stehen hier nicht: bei vielen bekannten Fassungen ist nicht ohne Weiteres zu klären, ob sie frei sind – an Sammlung, Bearbeitung und Melodie können eigene Rechte bestehen –, und ein Titel in einer Sprache, die hier niemand gegengelesen hat, wäre eine Behauptung. Was gilt, gilt ohne Titel: singen Sie, was Sie selbst kennen, in Ihrer Sprache." },
+    { "quellNr": "x05",
+      "was": "Ein Bericht oder ein Export",
+      "warum": "Der Eintrag wollte einen Bericht. Berichtet würde hier über ein Kind – und das ist genau die Einstufung, die diese App nicht macht. Gedruckt wird eine Ideenkarte, nicht ein Kind." },
+    { "quellNr": "x06",
+      "was": "Jede Minuten- und Mengenangabe zur Dauer",
+      "warum": "Wie lange ein Kind von eineinhalb Jahren kritzeln sollte, steht nirgends belegt. Die Karten sagen stattdessen, woran Sie sehen, dass es noch passt – und wann Schluss ist." }
+  ]
+}

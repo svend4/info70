@@ -181,8 +181,8 @@ test('„oben“, „über“ und „hinter“ sind wirklich gesperrt – auch a
   // JavaScript ist \w nur [A-Za-z0-9_], also ist „ü“ ein
   // Nicht-Wortzeichen – „über“ am Satzanfang wurde nie erkannt, und in
   // „darüber“ schlug die Regel falsch an.
-  assert.equal(/\büber\b/.test('über'), false, 'Vorbedingung des Befunds');
-  assert.equal(/\büber\b/.test('darüber'), true, 'Vorbedingung des Befunds');
+  assert.equal(/\büber\b/.test('über'), false, 'Vorbedingung des Befunds'); // wortgrenze-ok
+  assert.equal(/\büber\b/.test('darüber'), true, 'Vorbedingung des Befunds'); // wortgrenze-ok
   assert.equal(gesperrtesRaumwort('über dem Teller'), 'über');
   assert.equal(gesperrtesRaumwort('Über dem Teller'), 'über');
   assert.equal(gesperrtesRaumwort('darüber nachdenken'), null, 'Fehlalarm in „darüber“');

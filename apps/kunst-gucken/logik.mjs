@@ -81,8 +81,15 @@ export const PRUEFURTEIL = /\b(?:richtig|falsch|stimmt\s+nicht|fast\s+(?:richtig
  * `erkennen` steht NICHT allein im Netz: „woran Sie erkennen, dass es gerade
  * passt" ist der Kern dieser App. Getroffen wird die Konstruktion, in der ein
  * Gegenstand oder eine Aeusserung etwas ueber das Kind aussagt.
+ *
+ * Statt `\b` am Wortende steht ein Lookahead, der Umlaute und ß mitzaehlt:
+ * `\b` ist in JavaScript ueber [A-Za-z0-9_] definiert, und hinter einem
+ * Umlaut oder ß greift es darum nicht (etwa bei „weiß"). Hier ist kein Wort
+ * betroffen - der Lookahead steht vorsorglich, damit ein spaeter ergaenztes
+ * Wort nicht stillschweigend tot ist. Die Korpusregel
+ * `wortgrenze-umlaut.test.mjs` haelt die Falle aus dem ganzen Korpus heraus.
  */
-export const DEUTUNG = /\b(?:innere[ns]?\s+Welt|Seelenleben|Psyche|Befund|Rückschlüsse|Deutung|deuten|verrät|verraten)\b|\b(?:erkennen|herausfinden|herauslesen|ablesen|sehen)\b[^.!?]{0,40}\b(?:individuelle[nrs]?\s+Besonderheiten|Persönlichkeit|Charakter|wie\s+es\s+dem\s+Kind\s+geht)\b/i;
+export const DEUTUNG = /\b(?:innere[ns]?\s+Welt|Seelenleben|Psyche|Befund|Rückschlüsse|Deutung|deuten|verrät|verraten)(?![\wäöüß])|\b(?:erkennen|herausfinden|herauslesen|ablesen|sehen)(?![\wäöüß])[^.!?]{0,40}(?:individuelle[nrs]?\s+Besonderheiten|Persönlichkeit|Charakter|wie\s+es\s+dem\s+Kind\s+geht)(?![\wäöüß])/i;
 
 /** Eine Einstufung des Kindes. Wie in Nr. 55 und Nr. 59: ohne abschliessendes
  *  `\b` bei den Adjektiven, weil `begabt\b` „begabte" nicht treffen kann. */

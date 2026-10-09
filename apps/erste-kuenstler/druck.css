@@ -1,0 +1,33 @@
+/* Druck: EINE Ideenkarte, die man neben das Papier legt. Gedruckt wird die
+   offene Karte; die zugeklappten bleiben weg – anders als in Nr. 60, wo ein
+   Blatt alle fünf Achsen trägt, ist hier jede Karte für sich eine Tätigkeit.
+   Kein Haken, keine Namenszeile, kein Stern (docs/02). */
+.ek-nur-druck { display: none; }
+
+@media print {
+  .ek-nur-bildschirm { display: none !important; }
+  .ek-nur-druck { display: block !important; }
+  /* Nur die offene Karte kommt aufs Papier. */
+  .ek-idee:not(.ek-offen) { display: none !important; }
+  .ek-idee button {
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font: inherit !important;
+    text-align: start !important;
+    width: auto !important;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .ek-idee { border: none; border-radius: 0; margin: 0 !important; padding: 0 !important; box-shadow: none; }
+  .ek-idee h3 { font-size: 15pt; margin: 0 0 3mm; }
+  .ek-idee h4 { font-size: 11pt; margin: 4mm 0 1mm; }
+  .ek-idee p { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  .ek-idee li { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  /* Die Schritte liest man mit einer Hand am Kind – größer als der Rest. */
+  .ek-schritte li { font-size: 13pt; line-height: 1.5; margin: 0 0 3mm; }
+  a[href]::after { content: ""; }
+}

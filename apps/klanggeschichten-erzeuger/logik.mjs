@@ -59,8 +59,13 @@ export const WIRKVERSPRECHEN = /(fördert|trainiert|verbessert|steigert|entwicke
  *  und ist darum keine Vorgabe - gemeint sind Anweisungen an das Kind. */
 export const VORGABE = /(täglich|jeden Tag|mindestens|wenigstens|\bmal am Tag\b|\bMinuten\b|\bSekunden\b|\bdB\b|\bDezibel\b)/i;
 
-/** Ein fremder Liedtext hat eine Strophe. Diese App hat keine. */
-export const FREMDTEXT = /\bliedtext\b|\bstrophe\b|\brefrain\b|\büberliefert[er]*\s+(text|reim)\b/i;
+/** Ein fremder Liedtext hat eine Strophe. Diese App hat keine.
+ *
+ *  Ohne `\b` vor „überliefert": `\b` ist ueber [A-Za-z0-9_] definiert, und „ü"
+ *  gehoert nicht dazu - `\bü` trifft am Wortanfang nie. Der Zweig war in der
+ *  ersten Fassung tot; gefunden hat das die neue Korpusregel
+ *  `wortgrenze-umlaut.test.mjs` beim Bau von Nr. 61. */
+export const FREMDTEXT = /\bliedtext\b|\bstrophe\b|\brefrain\b|überliefert\w*\s+(?:text|lied|reim)\b/i;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 
