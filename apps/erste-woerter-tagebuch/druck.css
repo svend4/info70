@@ -1,0 +1,24 @@
+/* Druck: die chronologische Rohliste als Zettel fuer ein Gespraech.
+   Keine Zahl, keine Summe, keine Farbcodierung, kein Haken, kein Stern,
+   keine Namenszeile - das waere eine Beurteilung auf Papier (docs/02). */
+.ewt-nur-druck { display: none; }
+
+@media print {
+  .ewt-nur-bildschirm { display: none !important; }
+  .ewt-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+
+  .ewt-block {
+    break-inside: auto;
+    border: 1pt solid #333;
+    border-radius: 0;
+    margin: 0 0 5mm;
+    padding: 3mm;
+    box-shadow: none;
+  }
+  .ewt-block h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .ewt-block p { font-size: 10pt; line-height: 1.35; }
+  .ewt-kopf { break-after: avoid; page-break-after: avoid; }
+  a[href]::after { content: ""; }
+}
