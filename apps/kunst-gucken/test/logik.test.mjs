@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  ACHSEN, EINORDNUNGEN, ZIELE, ABFRAGE, PRUEFURTEIL, DEUTUNG, EINSTUFUNG,
+  ACHSEN, EINORDNUNGEN, ZIELE, NICHT_GEPRUEFT, ABFRAGE, PRUEFURTEIL, DEUTUNG, EINSTUFUNG,
   WIRKVERSPRECHEN, VORGABE, ALTERSSTUFUNG, PREIS, MARKE_ODER_QUELLE, WERK_ODER_URHEBER,
   achseVon, gegenstandVon, zielVon, zielSchluessel, angebotsTexte, alleImpulse,
   blatt, pruefeDaten,
@@ -212,6 +212,66 @@ test('das Blatt trägt alle fünf Achsen, auch die schwachen', () => {
   assert.equal(blatt(daten, 'gibt-es-nicht'), null);
 });
 
+test('die Netze decken JEDEN gerenderten Text ab, Ausnahmen sind benannt', () => {
+  // Review Welle 81: die erste Fassung zählte auf, was geprüft WIRD, und
+  // vergaß sechs gerenderte Elterntexte – darunter `sicherheit`, der auf dem
+  // Druckblatt steht. Jetzt ist es der Rest: alle Zeichenketten minus eine
+  // benannte Ausnahmeliste. Eine vergessene Lücke sieht sonst aus wie eine
+  // gewollte.
+  const geprueft = new Set(angebotsTexte(daten).map(([wo]) => wo.split(/[.[]/)[0]));
+  for (const feld of Object.keys(daten)) {
+    assert.ok(geprueft.has(feld) || feld in NICHT_GEPRUEFT,
+      `${feld} wird weder geprüft noch als Ausnahme benannt`);
+  }
+  // Jede Ausnahme braucht einen Grund und muss es wirklich geben.
+  for (const [feld, grund] of Object.entries(NICHT_GEPRUEFT)) {
+    assert.ok(feld in daten, `Ausnahme ${feld} gibt es in den Daten nicht`);
+    assert.ok(grund.length > 10, `Ausnahme ${feld} ohne Grund`);
+  }
+  const k = kopie();
+  delete k.fuenfteilung;
+  assert.ok(pruefeDaten(k).some((f) => /NICHT_GEPRUEFT nennt fuenfteilung/.test(f)));
+  // Und die neu abgedeckten Felder laufen wirklich durch die Netze.
+  const k2 = kopie();
+  k2.sicherheit = `${k2.sicherheit} Ein begabtes Kind braucht das nicht.`;
+  assert.ok(pruefeDaten(k2).some((f) => /sicherheit: stuft ein Kind ein/.test(f)));
+});
+
+test('die Netze treffen die Konstruktion, nicht das harmlose Wort', () => {
+  // Drei Fehlalarme, die beim Review gefunden wurden oder beim Fixen
+  // entstanden wären – jeder hätte die ganze App auf „Datenfehler" gesetzt.
+  assert.ok(!WERK_ODER_URHEBER.test('Nehmen Sie z. B. Holzfiguren.'), 'z. B. ist kein Urheber');
+  assert.ok(!WERK_ODER_URHEBER.test('u. a. Tonware aus der Küche'));
+  assert.ok(WERK_ODER_URHEBER.test('Bilder von W. Sutejew'), 'eine echte Initiale muss hängen bleiben');
+  assert.ok(!EINSTUFUNG.test('zuerst das Auffällige, das Kleine erst beim zweiten Mal'), 'das Bild ist auffällig, nicht das Kind');
+  assert.ok(EINSTUFUNG.test('Das Kind wirkt auffällig.'));
+  assert.ok(EINSTUFUNG.test('ein entwicklungsauffälliges Kind'));
+  // PRUEFURTEIL traf nur die Grundform – „die richtige Antwort" lief durch.
+  for (const satz of ['Das war die richtige Antwort.', 'Das ist eine falsche Farbe.', 'Richtig!', 'Brave Antwort.']) {
+    assert.ok(PRUEFURTEIL.test(satz), `PRUEFURTEIL greift nicht: ${satz}`);
+  }
+  assert.ok(!PRUEFURTEIL.test('Hier ist alles rot – und da hinten ein kleines Stück Blau.'));
+});
+
+test('die Seitenangaben der Unterabschnitte stimmen', () => {
+  // Review Welle 81: zwei der drei Angaben waren falsch. Am PDF Seite für
+  // Seite nachgelesen: «Рисование» beginnt auf S. 89 und läuft bis S. 91,
+  // «Лепка» S. 91–92, «Аппликация» S. 92–93; S. 90 trägt gar keine
+  // Überschrift. Der Validator prüft nur die NAMEN, darum hier die Zahlen.
+  for (const stelle of ['«Рисование» S. 89–91', '«Лепка» S. 91–92', '«Аппликация» S. 92–93']) {
+    assert.ok(daten.anderesThema.includes(stelle), `fehlt: ${stelle}`);
+  }
+  assert.ok(!/S\. 89–90|«Лепка» S\. 90/.test(daten.anderesThema), 'die alte, falsche Angabe ist zurück');
+});
+
+test('die verlinkte Abfrage-App ist mit ihrer eigenen Zielgruppe genannt', () => {
+  // Der Kunst-Entdecker sagt über sich „5–7 in Ko-Nutzung, Ausbau 8–12".
+  // „für Schulkinder" legt ihn drei Jahre zu spät weg.
+  assert.ok(!/für Schulkinder/.test(JSON.stringify(daten)), '„für Schulkinder" ist zurück');
+  assert.ok(!/Schulkindern/.test(code));
+  assert.match(daten.keinAbfragen, /fängt bei fünf an/);
+});
+
 test('die Fünfteilung ist als eigene Gliederung ausgewiesen, nicht als Wortlaut', () => {
   // Beim Bau nachgelesen: in der Quelle steht «цвет, форму основных частей,
   // деталей, материал, звук». „деталей" ist Genitiv und hängt an „форму" -
@@ -293,6 +353,9 @@ test('das Druckblatt zeigt alle Achsen und keine Knöpfe', () => {
   assert.ok(!/☐|✔|✓/.test(code), 'ein Haken in der App');
   // Die zugeklappten Achsen stehen im Druck offen da.
   assert.ok(/kg-nur-druck/.test(code));
+  // Ohne gewählten Gegenstand trägt sonst kein Element eine Druckklasse –
+  // das Blatt wäre leer (Review Welle 81).
+  assert.match(code, /Wählen Sie zuerst aus, was auf dem Tisch liegt/);
 });
 
 test('Zeichen und Grenzen sind überall gesetzt', () => {

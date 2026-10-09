@@ -71,8 +71,13 @@ export const ZIELE = Object.freeze({ allgemein: 7, wahrnehmung: 6 });
 export const ABFRAGE = /\?|\bzeig(?:e)?\s+mir\b|\bwie\s+heißt\b|\bwie\s+viele\b|\bweißt\s+du\b|\bsag\s+mal,/i;
 
 /** Ein Urteil ueber die Antwort des Kindes. Auch Lob gehoert dazu: wer gelobt
- *  wird, weil er richtig lag, hat beim naechsten Mal etwas zu verlieren. */
-export const PRUEFURTEIL = /\b(?:richtig|falsch|stimmt\s+nicht|fast\s+(?:richtig|geschafft)|genau\s+so|prima|brav|gut\s+gemacht)\b/i;
+ *  wird, weil er richtig lag, hat beim naechsten Mal etwas zu verlieren.
+ *
+ *  Mit `\w*` statt `\b` bei den Adjektiven: `richtig\b` kann „die richtige
+ *  Antwort" nicht treffen, weil zwischen „g" und „e" keine Wortgrenze liegt.
+ *  Dieselbe Falle wie bei EINSTUFUNG neunzehn Zeilen weiter unten - dort war
+ *  sie vermieden, hier nicht. */
+export const PRUEFURTEIL = /\b(?:richtig\w*|falsch\w*|stimmt\s+nicht|fast\s+(?:richtig|geschafft)|genau\s+so|prima|brav\w*|gut\s+gemacht)(?![\wäöüß])/i;
 
 /**
  * Eine Deutung des Kindes aus dem, was es sagt, zeigt oder malt. Das ist das
@@ -92,8 +97,13 @@ export const PRUEFURTEIL = /\b(?:richtig|falsch|stimmt\s+nicht|fast\s+(?:richtig
 export const DEUTUNG = /\b(?:innere[ns]?\s+Welt|Seelenleben|Psyche|Befund|Rückschlüsse|Deutung|deuten|verrät|verraten)(?![\wäöüß])|\b(?:erkennen|herausfinden|herauslesen|ablesen|sehen)(?![\wäöüß])[^.!?]{0,40}(?:individuelle[nrs]?\s+Besonderheiten|Persönlichkeit|Charakter|wie\s+es\s+dem\s+Kind\s+geht)(?![\wäöüß])/i;
 
 /** Eine Einstufung des Kindes. Wie in Nr. 55 und Nr. 59: ohne abschliessendes
- *  `\b` bei den Adjektiven, weil `begabt\b` „begabte" nicht treffen kann. */
-export const EINSTUFUNG = /(?:un)?begabt\w*|talentiert\w*|\b(?:Begabung|Talent|Niveau|Stufe\s+\d|förderbedürftig\w*|auffällig\w*|normal\s+für|weit\s+voraus|zurückgeblieben\w*|kreativer\s+als)/i;
+ *  `\b` bei den Adjektiven, weil `begabt\b` „begabte" nicht treffen kann.
+ *
+ *  `auffällig` steht NICHT allein im Netz: „zuerst das Auffällige, das Kleine
+ *  erst beim zweiten Mal" beschreibt das Bild, nicht das Kind. Gefunden hat
+ *  diesen Fehlalarm die umgedrehte Deckung von `angebotsTexte` - vorher lief
+ *  gar kein Netz ueber dieses Feld. Getroffen wird jetzt die Konstruktion. */
+export const EINSTUFUNG = /(?:un)?begabt\w*|talentiert\w*|\b(?:Begabung|Talent|Niveau|Stufe\s+\d|förderbedürftig\w*|normal\s+für|weit\s+voraus|zurückgeblieben\w*|kreativer\s+als)|(?:entwicklungs|verhaltens|sprach)auffällig\w*|\bKind\w*\s+(?:ist|wirkt|erscheint)\s+auffällig/i;
 
 /** Ein Wirkversprechen. */
 export const WIRKVERSPRECHEN = /\b(?:fördert|trainiert|verbessert|steigert|schult|stärkt|voranbringt|bringt)\b[^.!?]{0,40}\b(?:Wahrnehmung|Sprache|Sprachentwicklung|Entwicklung|Intelligenz|Wortschatz|Konzentration|Begabung|Fantasie|Kreativität)\b/i;
@@ -123,8 +133,13 @@ export const MARKE_ODER_QUELLE = /\b(?:GmbH|AG|KGaA|KG|SE|Ltd|Inc)\b|[®™]|\bM
  * Ein namentlich genanntes Werk oder ein Urheber. Dasselbe Problem wie bei der
  * Marke, darum auch hier die Konstruktion: ein Titel in Anfuehrungszeichen mit
  * Urheberangabe, „Illustrationen von …", eine abgekuerzte Vornamensinitiale.
+ *
+ * Die Initialen-Heuristik muss die gewoehnlichen Abkuerzungen ausnehmen: ohne
+ * sie faengt sie „z. B. Holzfiguren" und erklaert den haeufigsten Einschub der
+ * deutschen Sprache zum Urhebernamen. Dann zeigt die App statt des Inhalts nur
+ * „Datenfehler" - ein falscher Treffer kostet hier mehr als ein verpasster.
  */
-export const WERK_ODER_URHEBER = /[„»"][^„»"“]{2,60}[“«"]\s*(?:von|,)\s*[A-ZÄÖÜ]|\bIllustrationen?\s+von\s+[A-ZÄÖÜ]|\b[A-ZÄÖÜ]\.\s?[A-ZÄÖÜ][a-zäöüß]{2,}/;
+export const WERK_ODER_URHEBER = /[„»"][^„»"“]{2,60}[“«"]\s*(?:von|,)\s*[A-ZÄÖÜ]|\bIllustrationen?\s+von\s+[A-ZÄÖÜ]|(?<!\b(?:z|u|d|s|o|vgl|bzw|ca|ggf|evtl)\.\s)\b[A-ZÄÖÜ]\.\s?[A-ZÄÖÜ][a-zäöüß]{2,}/;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 const ZEICHEN = /\p{Extended_Pictographic}/u;
@@ -141,26 +156,47 @@ export function zielVon(daten, schluessel) {
 }
 
 /**
- * Alle Textstellen, die die App als ANGEBOT zeigt - also das, was ein
- * Erwachsener als Anleitung liest. Die Textnetze laufen hier und nur hier:
- * die Ausschlussliste, die Zielliste und die `kein…`-Absaetze MUESSEN
- * benennen, was sie ausschliessen.
+ * Die Stellen, die ausdruecklich NICHT durch die Textnetze laufen - jede mit
+ * ihrem Grund. Alles andere wird geprueft.
+ *
+ * Diese Richtung ist die wichtige. Die erste Fassung zaehlte auf, was
+ * GEPRUEFT wird, und vergass dabei sechs gerenderte Elterntexte, darunter
+ * `sicherheit`, der auf dem Druckblatt steht. Eine vergessene Ausnahme sieht
+ * genauso aus wie eine gewollte. So herum ist jede Ausnahme eine Entscheidung
+ * mit einem Namen, und ein neues Feld ist automatisch geprueft.
+ */
+export const NICHT_GEPRUEFT = Object.freeze({
+  keinAbfragen: 'muss die Prüffrage zeigen, um sie auszuschließen',
+  keineBuchliste: 'muss die Buchliste nennen, um sie auszuschließen',
+  keinDeuten: 'muss die Deutung nennen, um sie auszuschließen',
+  keinKauf: 'muss Marke, Modell und Bezugsquelle nennen, um sie auszuschließen',
+  keinMuseum: 'nennt den Museumsbesuch, um ihn als unnötig zu bezeichnen',
+  keinWirkversprechen: 'muss das Wirkversprechen nennen, um es auszuschließen',
+  anderesThema: 'nennt die Unterabschnitte der Quelle auf Russisch',
+  fuenfteilung: 'zitiert die Mittel der Quelle im Original',
+  ziele: 'die 13 Quellziele und ihre Einordnung – eines davon IST die Deutung',
+  ausgeschlossen: 'die Ausschlussliste benennt, was sie ausschließt',
+  quelle: 'Werk, Rechte und Zählung – russisch und mit Zahlen',
+  art: 'die Kennung der App, kein Text für Eltern',
+  version: 'eine Zahl, kein Text',
+});
+
+/**
+ * Alle Texte, die die App zeigt und die ein Netz sehen muss. Gebildet wird
+ * das als REST: alle Zeichenketten der Daten minus die benannten Ausnahmen.
  */
 export function angebotsTexte(daten) {
   const t = [];
-  for (const a of daten?.achsen ?? []) {
-    t.push([`Achse ${a.id} name`, a.name], [`Achse ${a.id} worauf`, a.worauf], [`Achse ${a.id} grenze`, a.grenze]);
-    (a.impulse ?? []).forEach((i, n) => t.push([`Achse ${a.id} Impuls ${n + 1}`, i]));
+  const sammle = (wert, wo) => {
+    if (typeof wert === 'string') { if (nichtLeer(wert)) t.push([wo, wert]); return; }
+    if (Array.isArray(wert)) { wert.forEach((x, n) => sammle(x, `${wo}[${n}]`)); return; }
+    if (wert && typeof wert === 'object') { for (const [k, v] of Object.entries(wert)) sammle(v, `${wo}.${k}`); }
+  };
+  for (const [feld, wert] of Object.entries(daten ?? {})) {
+    if (feld in NICHT_GEPRUEFT) continue;
+    sammle(wert, feld);
   }
-  for (const g of daten?.gegenstaende ?? []) {
-    t.push([`Gegenstand ${g.id} name`, g.name], [`Gegenstand ${g.id} woGefunden`, g.woGefunden],
-      [`Gegenstand ${g.id} besonderes`, g.besonderes], [`Gegenstand ${g.id} grenze`, g.grenze],
-      [`Gegenstand ${g.id} starkeAchsenWarum`, g.starkeAchsenWarum]);
-  }
-  for (const r of daten?.regeln ?? []) {
-    t.push([`Regel ${r.id} was`, r.was], [`Regel ${r.id} warum`, r.warum]);
-  }
-  return t.filter(([, s]) => nichtLeer(s));
+  return t;
 }
 
 /** Alle Impulse mit ihrer Herkunft - das Netz `ABFRAGE` laeuft nur hier. */
@@ -299,6 +335,11 @@ export function pruefeDaten(daten) {
     if (!(z.belegtDurch ?? []).includes(stueck.id)) {
       fehler.push(`${stueck.id}: zeigt auf Ziel ${stueck.quellZiel}, aber dieses Ziel nennt ${stueck.id} nicht`);
     }
+  }
+  // Eine Ausnahme fuer ein Feld, das es nicht mehr gibt, waere eine Luecke,
+  // die niemand sieht.
+  for (const feld of Object.keys(NICHT_GEPRUEFT)) {
+    if (!(feld in (daten ?? {}))) fehler.push(`NICHT_GEPRUEFT nennt ${feld}, das es in den Daten nicht gibt`);
   }
   if (aus.length < 5) fehler.push('die Ausschlussliste ist zu kurz – was nicht übernommen ist, muss benannt sein');
   for (const x of aus) {

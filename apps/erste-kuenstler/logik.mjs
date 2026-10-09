@@ -132,22 +132,46 @@ export function karte(daten, ideeId) {
   };
 }
 
-/** Die Texte, die die App als ANGEBOT zeigt - hier und nur hier laufen die
- *  Netze. Die Merkmalsliste und die Ausschlussliste muessen benennen duerfen,
- *  was sie ausschliessen. */
+/**
+ * Die Stellen, die ausdruecklich NICHT durch die Textnetze laufen - jede mit
+ * ihrem Grund. Alles andere wird geprueft.
+ *
+ * Diese Richtung ist die wichtige: eine Liste dessen, was geprueft WIRD,
+ * vergisst still ein neues Feld, und eine vergessene Luecke sieht aus wie
+ * eine gewollte. Gleiche Loesung wie in Nr. 60, nachdem dort das Review sechs
+ * ungeprueft gerenderte Elterntexte gefunden hat.
+ */
+export const NICHT_GEPRUEFT = Object.freeze({
+  keinMeilenstein: 'muss Checkliste, Meilenstein und die Monatsangaben der Referenzen nennen, um sie auszuschließen',
+  wasStattdessen: 'erklärt, was an die Stelle der Liste tritt, und nennt sie dafür',
+  zeitpunkt: 'gibt die Überschrift der Quelle wieder, samt „drittes Lebensjahr"',
+  keinDeuten: 'muss die Deutung nennen, um sie auszuschließen',
+  keinWirkversprechen: 'muss das Wirkversprechen nennen, um es auszuschließen',
+  keinErgebnis: 'nennt das vorzeigbare Ergebnis, um es abzulehnen',
+  keinBildschirm: 'nennt Empfehlungen samt Altersangaben und Stundenangabe',
+  merkmale: 'die 19 Quellmerkmale im Wortlaut der Quelle, mit ihrer Einordnung',
+  ausgeschlossen: 'die Ausschlussliste benennt, was sie ausschließt',
+  quelle: 'Werk, Rechte und Zählung – russisch und mit Zahlen',
+  art: 'die Kennung der App, kein Text für Eltern',
+  version: 'eine Zahl, kein Text',
+});
+
+/**
+ * Alle Texte, die die App zeigt und die ein Netz sehen muss - gebildet als
+ * REST: alle Zeichenketten der Daten minus die benannten Ausnahmen.
+ */
 export function angebotsTexte(daten) {
   const t = [];
-  for (const i of daten?.ideen ?? []) {
-    t.push([`Idee ${i.id} name`, i.name], [`Idee ${i.id} wennSie`, i.wennSie],
-      [`Idee ${i.id} woranSieSehen`, i.woranSieSehen], [`Idee ${i.id} aufhoeren`, i.aufhoeren],
-      [`Idee ${i.id} grenze`, i.grenze]);
-    (i.wasSieTun ?? []).forEach((s, n) => t.push([`Idee ${i.id} Schritt ${n + 1}`, s]));
+  const sammle = (wert, wo) => {
+    if (typeof wert === 'string') { if (nichtLeer(wert)) t.push([wo, wert]); return; }
+    if (Array.isArray(wert)) { wert.forEach((x, n) => sammle(x, `${wo}[${n}]`)); return; }
+    if (wert && typeof wert === 'object') { for (const [k, v] of Object.entries(wert)) sammle(v, `${wo}.${k}`); }
+  };
+  for (const [feld, wert] of Object.entries(daten ?? {})) {
+    if (feld in NICHT_GEPRUEFT) continue;
+    sammle(wert, feld);
   }
-  for (const m of daten?.material ?? []) {
-    t.push([`Material ${m.id} name`, m.name], [`Material ${m.id} woGefunden`, m.woGefunden],
-      [`Material ${m.id} sicherheit`, m.sicherheit]);
-  }
-  return t.filter(([, s]) => nichtLeer(s));
+  return t;
 }
 
 export function pruefeDaten(daten) {
@@ -249,6 +273,11 @@ export function pruefeDaten(daten) {
   // Die Regel, die immer gilt, muss das Kleinteil benennen.
   if (!/(?:verschluck|Kleinteil|in\s+den\s+Mund)/i.test(daten?.sicherheitImmer ?? '')) {
     fehler.push('sicherheitImmer benennt die Gefahr nicht, um die es geht');
+  }
+  // Eine Ausnahme fuer ein Feld, das es nicht mehr gibt, waere eine Luecke,
+  // die niemand sieht.
+  for (const feld of Object.keys(NICHT_GEPRUEFT)) {
+    if (!(feld in (daten ?? {}))) fehler.push(`NICHT_GEPRUEFT nennt ${feld}, das es in den Daten nicht gibt`);
   }
   if (aus.length < 5) fehler.push('die Ausschlussliste ist zu kurz');
   for (const x of aus) {

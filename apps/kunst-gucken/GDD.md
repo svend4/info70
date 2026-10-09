@@ -101,6 +101,29 @@ Achse, `aria-pressed` an der Gegenstandswahl, Fokus bleibt nach jedem Klick auf 
 Knopf, kein Querscrollen bei 360 px. Vorlesen nur mit lokaler Stimme; ohne sie steht an ihrer
 Stelle ein Hinweis, und der `voiceschanged`-Listener zeichnet neu, sobald die Stimmliste da ist.
 
+## 7a. Was das Review der Welle 81 geändert hat
+
+* **Die Netzdeckung ist umgedreht.** Vorher zählte `angebotsTexte` auf, was geprüft wird – und vergaß
+  sechs gerenderte Elterntexte, darunter `sicherheit`, der auf dem Druckblatt steht. Jetzt wird der
+  REST geprüft: alle Zeichenketten minus die benannte Liste `NICHT_GEPRUEFT`, deren Einträge der
+  Validator gegen die Daten abgleicht. Die Umstellung fand sofort einen Fehlalarm: `EINSTUFUNG`
+  fing „zuerst das Auffällige“ im Feld `reihenfolge` – gemeint ist das auffällige Ding im Bild,
+  nicht ein auffälliges Kind. Das Netz trifft jetzt die Konstruktion.
+* **`WERK_ODER_URHEBER` fing „z. B.“** – die häufigste Abkürzung der deutschen Sprache wurde als
+  Urhebername gemeldet, und die App hätte statt des Inhalts „Datenfehler“ gezeigt. Ein falscher
+  Treffer kostet hier mehr als ein verpasster.
+* **`PRUEFURTEIL` traf nur die Grundform.** „Das war die richtige Antwort“ lief durch, weil
+  `richtig\b` vor dem „e“ keine Wortgrenze findet – dieselbe Falle, die 19 Zeilen weiter unten bei
+  `EINSTUFUNG` ausdrücklich vermieden war.
+* **Zwei Seitenangaben waren falsch.** Nachgelesen, Seite für Seite: «Рисование» S. 89–91, «Лепка»
+  S. 91–92, «Аппликация» S. 92–93. Seite 90 trägt gar keine Überschrift.
+* **Zwei Quellziele waren verkürzt.** Die Quelle sagt beide Male „bildende Kunst UND bildnerisches
+  Tun“; die Kürzung ließ gerade die Hälfte weg, die diese App nicht bedient. Ziel allgemein-7 ist
+  deshalb nur zur Hälfte eingelöst, und das steht jetzt in seinem `warum`.
+* **Der Verweis auf den Kunst-Entdecker** sagte „für Schulkinder“. Die App selbst sagt „5–7 in
+  Ko-Nutzung, Ausbau 8–12“ – wer das las, legte sie drei Jahre zu spät weg.
+* **Im Anfangszustand druckte die Seite ein leeres Blatt.** Jetzt steht dort ein Satz.
+
 ## 8. Grenzen
 
 * Kein Wirkversprechen. Für Kinder unter drei Jahren ist zum Betrachten von Kunst nichts belegt,

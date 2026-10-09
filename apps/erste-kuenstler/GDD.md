@@ -102,6 +102,16 @@ Alle Knöpfe ≥ 48 px (gemessen: keiner unter 44 px), `aria-expanded` + `aria-c
 Karte, Fokus bleibt nach dem Klick auf dem Knopf, kein Querscrollen bei 360 px, nur eine Karte
 zugleich offen. Vorlesen nur mit lokaler Stimme, mit `voiceschanged`-Listener.
 
+## 10a. Was das Review der Welle 81 geändert hat
+
+* **Die Netzdeckung ist umgedreht** – wie in Nr. 60. Geprüft wird der Rest: alle Zeichenketten der
+  Daten minus die benannte Liste `NICHT_GEPRUEFT`. Damit laufen auch `hinweis`, `wasEsIst` und vor
+  allem `sicherheitImmer` durch die Netze; vorher tat das keines.
+* **Die immer gültige Sicherheitsregel fehlte auf dem Druckblatt.** `karte()` liefert sie, das GDD
+  sagte, sie gehöre auf die Karte – gerendert war sie nur im Bildschirmteil. Wer die Karte
+  ausdruckt und an den Schrank hängt, sieht den Bildschirmtext nie wieder.
+* **Im Anfangszustand druckte die Seite ein leeres Blatt.** Jetzt steht dort ein Satz.
+
 ## 11. Grenzen
 
 * Kein Wirkversprechen – auch nicht zur Feinmotorik.

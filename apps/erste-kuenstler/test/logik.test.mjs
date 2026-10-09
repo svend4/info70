@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import {
-  BEREICHE, MERKMALE_JE_BEREICH, EINORDNUNGEN, CHECKLISTE, EINSTUFUNG, DEUTUNG,
+  BEREICHE, MERKMALE_JE_BEREICH, EINORDNUNGEN, NICHT_GEPRUEFT, CHECKLISTE, EINSTUFUNG, DEUTUNG,
   WIRKVERSPRECHEN, VORGABE, ALTERSSTUFUNG, PREIS, MARKE_ODER_QUELLE, FREMDTEXT,
   ideeVon, materialVon, merkmalVon, ideenFuer, karte, angebotsTexte, pruefeDaten,
 } from '../logik.mjs';
@@ -264,6 +264,36 @@ test('die Begründung gegen die Checkliste nennt beide geprüften Belege', () =>
   for (const [wo, text] of angebotsTexte(daten)) {
     assert.ok(!/\b\d{1,2}\.\s*(?:Monat|Lebensmonat)/.test(text), `${wo} nennt einen Monat: ${text}`);
   }
+});
+
+test('die Netze decken JEDEN gerenderten Text ab, Ausnahmen sind benannt', () => {
+  // Gleiche Umkehrung wie in Nr. 60 nach dem Review: geprüft wird der REST,
+  // und jede Ausnahme hat einen Namen und einen Grund.
+  const geprueft = new Set(angebotsTexte(daten).map(([wo]) => wo.split(/[.[]/)[0]));
+  for (const feld of Object.keys(daten)) {
+    assert.ok(geprueft.has(feld) || feld in NICHT_GEPRUEFT, `${feld} wird weder geprüft noch als Ausnahme benannt`);
+  }
+  for (const [feld, grund] of Object.entries(NICHT_GEPRUEFT)) {
+    assert.ok(feld in daten, `Ausnahme ${feld} gibt es in den Daten nicht`);
+    assert.ok(grund.length > 10, `Ausnahme ${feld} ohne Grund`);
+  }
+  // Die neu abgedeckten Felder laufen wirklich durch die Netze.
+  const k = kopie();
+  k.sicherheitImmer = `${k.sicherheitImmer} Ein begabtes Kind braucht das nicht.`;
+  assert.ok(pruefeDaten(k).some((f) => /sicherheitImmer: stuft ein Kind ein/.test(f)));
+  const k2 = kopie();
+  delete k2.zeitpunkt;
+  assert.ok(pruefeDaten(k2).some((f) => /NICHT_GEPRUEFT nennt zeitpunkt/.test(f)));
+});
+
+test('die immer gültige Sicherheitsregel steht auf dem Blatt', () => {
+  // Review Welle 81: `karte()` liefert `sicherheitImmer` und das GDD sagt,
+  // sie gehöre auf die Karte – gerendert war sie nur im Bildschirmteil. Wer
+  // die Karte ausdruckt und an den Schrank hängt, sieht den Bildschirmtext
+  // nie wieder.
+  assert.match(code, /ek-nur-druck[^)]*\}, `🧷 \$\{k\.sicherheitImmer\}`\)/);
+  // Und ohne offene Karte wäre das Blatt leer.
+  assert.match(code, /Wählen Sie zuerst eine Idee aus/);
 });
 
 test('die App speichert nichts und erzeugt keinen Bericht', () => {

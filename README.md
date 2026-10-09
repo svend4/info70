@@ -79,7 +79,7 @@ npm test       # тесты (node --test)
 - Мультиязычность: `feed-forscher` — de/en/uk/ru + Leichte Sprache,
   `elternabend-kit` — de/en/uk/ru, `kettenbrief-stopper` — de/en + Leichte Sprache.
 
-**Проверки.** Полный прогон: **1555 тестов**. CI
+**Проверки.** Полный прогон: **1608 тестов**. CI
 (`.github/workflows/test.yml`) гоняет весь набор плюс запрет внешних URL и
 сторонних пакетов. Тестами закреплены не только логика, но и обещания: a11y-аудит
 всех страниц, соответствие текста Datenschutz-страницы реализации и охват

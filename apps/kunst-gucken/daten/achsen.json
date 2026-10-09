@@ -6,13 +6,13 @@
   "wasEsIst": "Ein Leitfaden für das gemeinsame Hinschauen: auf eine Bilderbuchseite, eine Holzfigur, ein Stück Geschirr, einen Stoff. Fünf Achsen, an denen man etwas sagen kann, und zu jeder ein paar Sätze, die ein Gespräch anfangen statt es abzufragen.",
   "reihenfolge": "Die Achsen stehen in der Reihenfolge, in der die Quelle die Mittel aufzählt: erst die Farbe, dann die Form der großen Teile, dann die Einzelheiten, dann das Material, dann der Klang. Das ist auch die Reihenfolge, in der ein kleines Kind hinschaut – zuerst das Auffällige, das Kleine erst beim zweiten Mal. Sie müssen nicht alle fünf durchgehen; eine Achse pro Gelegenheit ist genug.",
   "fuenfteilung": "Eine Genauigkeit zur Quelle: dort steht «цвет, форму основных частей, деталей, материал, звук» – vier Mittel im Akkusativ, wobei „деталей“ im Genitiv an „форму“ hängt: die Form der Hauptteile UND der Einzelheiten. Grammatisch sind es also vier Mittel, nicht fünf. Diese App macht daraus fünf Achsen, weil beim Hinschauen mit einem Kind das große Umreißen und das Entdecken kleiner Dinge zwei verschiedene Handlungen sind – man fährt die Form mit dem Finger nach, aber man findet den Punkt am Rand. Die Fünfteilung ist die Gliederung dieser App, nicht der Wortlaut der Quelle.",
-  "keinAbfragen": "Hier wird nichts abgefragt. „Welche Farbe ist das?“ ist eine Prüfung mit bekannter Antwort – und ein Kind, das die Antwort nicht hat, hat verloren. Die Sätze hier sind Feststellungen: Sie sagen, was SIE sehen, und lassen Platz. Was abgefragt wird, ist der Kunst-Entdecker, und der ist für Schulkinder.",
+  "keinAbfragen": "Hier wird nichts abgefragt. „Welche Farbe ist das?“ ist eine Prüfung mit bekannter Antwort – und ein Kind, das die Antwort nicht hat, hat verloren. Die Sätze hier sind Feststellungen: Sie sagen, was SIE sehen, und lassen Platz. Was abgefragt wird, ist der Kunst-Entdecker – und der fängt bei fünf an, gemeinsam mit einem Erwachsenen, mit einem Ausbau für 8 bis 12.",
   "keineBuchliste": "Es gibt hier keine Buchtitel und keine Bilder von Büchern. Der Vorlese-Kompass hat diese Entscheidung für den ganzen Korpus getroffen: beschrieben werden BUCHARTEN, nicht Titel – eine Titelliste wäre Werbung, sie veraltet, und die Abbildung eines Buchumschlags ist nicht frei. Zwei Listen wären außerdem zwei Wahrheiten über dasselbe. Was Sie brauchen, steht in der Bibliothek.",
   "keinDeuten": "Aus dem, was ein Kind beim Hinschauen sagt oder malt, wird hier nichts über das Kind geschlossen. Die Quelle nennt als Ziel ausdrücklich, die Möglichkeiten der Kunst zu nutzen, um „die innere Welt der Kinder zu erkennen und ihre individuellen Besonderheiten herauszufinden“. Das ist nicht übernommen: eine Zeichnung ist kein Befund, und ein Erwachsener, der im Gekritzel liest, liest sich selbst. Entwicklungsfragen gehören in die Vorsorgeuntersuchung.",
   "keinKauf": "Nichts davon muss gekauft werden. Jeder Gegenstandstyp hier sagt, wo man ihn ohne Geld findet – Bibliothek, eigener Schrank, Küche, Flohmarkt, Museumsfoyer. Es gibt keine Marke, kein Modell und keine Bezugsquelle.",
   "keinMuseum": "Ein Museumsbesuch ist nicht nötig. Er ist auch kein Fehler – aber mit einem Kind in diesem Alter ist die Küchenschublade näher, und was man anfassen darf, trägt weiter als was hinter Glas steht.",
   "keinWirkversprechen": "Diese App verspricht nichts über Sprache, Wahrnehmung oder Begabung. Sie sagt, was man tun kann, und woran man sieht, dass es gerade passt – nicht, was dabei herauskommt.",
-  "anderesThema": "Fünf der sieben allgemeinen Ziele der Quelle betreffen das EIGENE TUN des Kindes: zeichnen, kneten, mit Material umgehen, sich über das eigene Ergebnis freuen. Die Quelle führt das in eigenen Unterabschnitten aus («Рисование» S. 89–90, «Лепка» S. 90, «Аппликация» S. 91); diese App baut nur den Unterabschnitt «Восприятие искусства», also das Anschauen. Das eigene Tun ist ein eigenes Vorhaben – hier steht dazu nichts, auch keine Bastelidee, damit niemand glaubt, er hätte es schon abgedeckt.",
+  "anderesThema": "Fünf der sieben allgemeinen Ziele der Quelle betreffen das EIGENE TUN des Kindes: zeichnen, kneten, mit Material umgehen, sich über das eigene Ergebnis freuen. Die Quelle führt das in eigenen Unterabschnitten aus («Рисование» S. 89–91, «Лепка» S. 91–92, «Аппликация» S. 92–93); diese App baut nur den Unterabschnitt «Восприятие искусства», also das Anschauen. Das eigene Tun ist ein eigenes Vorhaben – hier steht dazu nichts, auch keine Bastelidee, damit niemand glaubt, er hätte es schon abgedeckt.",
   "sicherheit": "Alles, was Sie hinlegen, ist für ein Kind unter drei Jahren erst einmal etwas zum In-den-Mund-Nehmen. Kleine Teile, abgeplatzter Lack und alte Farbe gehören nicht in Reichweite; eine Pfeife kommt in den Mund und ist damit kein Anschau-Gegenstand, sondern Spielzeug. Was ein einzelner Gegenstand aushält, prüft der Spielzeug-Check U3.",
   "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
   "achsen": [
@@ -273,7 +273,7 @@
     {
       "gruppe": "allgemein",
       "nr": 6,
-      "kurz": "Die Möglichkeiten der bildenden Kunst nutzen, um die innere Welt der Kinder zu erkennen und ihre individuellen Besonderheiten herauszufinden",
+      "kurz": "Die Möglichkeiten der bildenden Kunst und des bildnerischen Tuns nutzen, um die innere Welt der Kinder zu erkennen und ihre individuellen Besonderheiten herauszufinden",
       "einordnung": "ausgeschlossen",
       "belegtDurch": [
         "x01"
@@ -282,9 +282,9 @@
     {
       "gruppe": "allgemein",
       "nr": 7,
-      "kurz": "Eltern fachlich dabei helfen, in der Familie günstige Bedingungen für den Zugang zur bildenden Kunst zu schaffen",
+      "kurz": "Eltern fachlich dabei helfen, in der Familie günstige Bedingungen für den Zugang des Kindes zur bildenden Kunst und zum bildnerischen Tun zu schaffen",
       "einordnung": "alsGanzes",
-      "warum": "Dieses Ziel richtet sich an den Erwachsenen, nicht an das Kind – und diese App ist genau das: ein Werkzeug für Eltern und Kindertagespflege. Eingelöst ist es dadurch, dass die App überhaupt existiert und nichts vom Kind verlangt."
+      "warum": "Dieses Ziel richtet sich an den Erwachsenen, nicht an das Kind – und diese App ist genau das: ein Werkzeug für Eltern und Kindertagespflege. Eingelöst ist es dadurch, dass die App überhaupt existiert und nichts vom Kind verlangt. Allerdings nur zur Hälfte: die Quelle nennt den Zugang zur Kunst UND zum eigenen bildnerischen Tun. Für das eigene Tun hilft diese App nicht – das ist derselbe andere Unterabschnitt, der auch die fünf Ziele weiter oben trägt."
     }
   ],
   "ausgeschlossen": [
@@ -307,7 +307,7 @@
     {
       "quellNr": "x04",
       "was": "Abfragen, was auf dem Bild zu sehen ist",
-      "warum": "„Welche Farbe ist das?“ und „Wie viele Hasen sind da?“ sind Prüfungen mit bekannter Antwort. Für das Abfragen gibt es im Korpus eine eigene App für Schulkinder; hier wird festgestellt, nicht geprüft, und der Validator weist jeden Impuls ab, der als Prüffrage gebaut ist."
+      "warum": "„Welche Farbe ist das?“ und „Wie viele Hasen sind da?“ sind Prüfungen mit bekannter Antwort. Für das Abfragen gibt es im Korpus eine eigene App, den Kunst-Entdecker, und der fängt bei fünf an; hier wird festgestellt, nicht geprüft, und der Validator weist jeden Impuls ab, der als Prüffrage gebaut ist."
     },
     {
       "quellNr": "x05",

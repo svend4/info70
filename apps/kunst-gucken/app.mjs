@@ -94,6 +94,9 @@ function render(fokusElement = null) {
           () => { gegenstand = x.id === gegenstand ? null : x.id; offeneAchse = null; render(`kg-g-${x.id}`); }))),
       el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem;color:#4b5563' },
         'Nichts davon muss gekauft werden – zu jedem steht, wo er ohne Geld zu finden ist.')),
+    // Ohne gewaehlten Gegenstand traegt kein Element eine Druckklasse - das
+    // Blatt waere leer. Ein Satz dazu ist besser als eine weisse Seite.
+    g ? null : el('p', { class: 'kg-nur-druck' }, 'Wählen Sie zuerst aus, was auf dem Tisch liegt – dann steht hier das Blatt dazu.'),
     g
       ? el('section', { class: 'k-karte kg-blatt' },
         el('h2', { style: 'margin-top:0;font-size:1.15rem' }, b.titel),
@@ -162,7 +165,7 @@ function render(fokusElement = null) {
         'Welche Buchart passt: ', el('a', { href: '../vorlese-kompass/' }, 'Vorlese-Kompass'),
         ' · einen Gegenstand auf Sicherheit prüfen: ', el('a', { href: '../spielzeug-check-u3/' }, 'Spielzeug-Check U3'),
         ' · Texte zum Vorlesen: ', el('a', { href: '../klanggeschichten-erzeuger/' }, 'Klanggeschichten'),
-        ' · Bilder abfragen mit Schulkindern: ', el('a', { href: '../kunst-entdecker/' }, 'Kunst-Entdecker')),
+        ' · Bilder abfragen, ab 5 gemeinsam: ', el('a', { href: '../kunst-entdecker/' }, 'Kunst-Entdecker')),
       el('p', { style: 'margin:0.5rem 0 0;font-size:0.9rem' }, `☎️ ${daten.elterntelefon}`)),
     el('footer', { class: 'k-fuss kg-nur-bildschirm' },
       el('span', {}, 'Werkzeug für Erwachsene · kein Bildschirm fürs Kind · speichert nichts · '),

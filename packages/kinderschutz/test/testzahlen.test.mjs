@@ -114,6 +114,39 @@ for (const doc of (await readdir(docsDir)).filter((d) => d.endsWith('.md')).sort
   }
 }
 
+// Die Gesamtzahl des Korpus („Полный прогон: 1601 тестов" in README.md) war
+// bis Welle 81 die einzige Testzahl des Projekts, die ABSICHTLICH ausgenommen
+// war - und damit die einzige, die ungestraft driften konnte. Beim Review der
+// Welle 81 stand dort 1555 gegen 1601 echte. Jetzt wird sie gezaehlt:
+// `^test(` ueber alle Testdateien in apps/ UND packages/.
+const WURZEL = new URL('../../../', import.meta.url);
+const PROGNOSE = /Полный\s+прогон:\s*\*\*(\d+)\s+тест/;
+
+async function testeZaehlen(basis) {
+  let n = 0;
+  for (const o of await readdir(basis, { withFileTypes: true })) {
+    if (!o.isDirectory()) continue;
+    const testDir = new URL(`${o.name}/test/`, basis);
+    if (!(await vorhanden(testDir))) continue;
+    for (const d of (await readdir(testDir)).filter((x) => x.endsWith('.test.mjs'))) {
+      n += ((await readFile(new URL(d, testDir), 'utf8')).match(/^test\(/gm) ?? []).length;
+    }
+  }
+  return n;
+}
+
+const korpusEcht = (await testeZaehlen(appsDir)) + (await testeZaehlen(new URL('packages/', WURZEL)));
+const korpusText = await readFile(new URL('README.md', WURZEL), 'utf8');
+const korpusGenannt = korpusText.match(PROGNOSE);
+
+test('die Gesamtzahl der Tests im README stimmt', () => {
+  assert.ok(korpusGenannt, 'die Zeile „Полный прогон: **N тестов**" fehlt im README – greift das Muster noch?');
+  assert.equal(Number(korpusGenannt[1]), korpusEcht,
+    `README nennt ${korpusGenannt[1]} Tests, gezählt sind ${korpusEcht}`);
+  // Plausibilität: die Zählung darf nicht grün werden, weil sie nichts findet.
+  assert.ok(korpusEcht > 1000, `nur ${korpusEcht} Tests gezählt – greift das Muster noch?`);
+});
+
 test('jede genannte Testzahl stimmt mit der Testdatei überein', () => {
   assert.deepEqual(befunde, [], befunde.join(' | '));
   // Plausibilität: die Regel darf nicht dadurch grün werden, dass sie nichts

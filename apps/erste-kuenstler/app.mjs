@@ -78,6 +78,10 @@ function ideenKarte(i) {
         ...k.material.map((m) => el('li', { style: 'margin-bottom:0.3rem' },
           el('strong', {}, `${m.zeichen} ${m.name}: `), el('span', {}, m.woGefunden),
           el('br'), el('span', { style: 'font-size:0.92rem' }, `🧷 ${m.sicherheit}`)))),
+      // Die Regel, die immer gilt, gehoert auf das BLATT: wer die Karte
+      // ausdruckt und an den Schrank haengt, sieht den Bildschirmtext nie
+      // wieder. `karte()` liefert sie, gerendert wurde sie bisher nur oben.
+      el('p', { class: 'k-hinweis ek-nur-druck', style: 'margin:0.5rem 0 0' }, `🧷 ${k.sicherheitImmer}`),
       offen
         ? el('div', { class: 'k-antworten ek-nur-bildschirm' },
           el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Diese Karte drucken'),
@@ -102,6 +106,11 @@ function render(fokusElement = null) {
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Was sehen Sie gerade?'),
       el('p', { style: 'margin:0 0 0.4rem;font-size:0.9rem;color:#4b5563' },
         'Die Karten sind nach der Gelegenheit geordnet, nicht nach Alter. Suchen Sie die Zeile, die auf Ihr Kind gerade passt.')),
+    // Ohne offene Karte traegt kein Element eine Druckklasse - das Blatt
+    // waere leer. Ein Satz dazu ist besser als eine weisse Seite.
+    offeneIdee === null
+      ? el('p', { class: 'ek-nur-druck' }, 'Wählen Sie zuerst eine Idee aus – dann steht hier die Karte dazu.')
+      : null,
     ...daten.ideen.map((i) => ideenKarte(i)),
     el('section', { class: 'k-karte ek-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🧭 Was diese App nicht tut'),
