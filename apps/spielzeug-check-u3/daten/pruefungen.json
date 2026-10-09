@@ -127,7 +127,7 @@
       "kritisch": true,
       "was": "Kein herausnehmbarer Ball und kein kugeliges Teil, das klein genug ist – die Norm zieht die Grenze beim kleinsten Durchmesser.",
       "warum": "Kugelige Dinge können die Atemwege hinter dem harten Gaumen verschließen; ein Reflex verengt dann den Hals, und darum sind sie schwer wieder herauszuholen. Für Bälle gilt in der Norm deshalb eine EIGENE, größere Prüfung als für andere Kleinteile: nicht der Prüfzylinder, sondern eine 6,4 mm dicke Platte mit einem Loch von 44,5 mm. Was ganz hindurchfällt, ist ein „kleiner Ball“ – und Spielzeug für Kinder unter drei Jahren darf keiner sein und keinen herausnehmbaren enthalten.",
-      "wieZuPruefen": "Den KLEINSTEN Durchmesser messen, bei einem eiförmigen Teil also quer. Unter 44,5 mm fällt er nach der Norm durch die Schablone und kommt weg; ab etwa 45 mm fällt er nicht mehr hindurch. Hängt der Ball an einer Schnur, zählt er auch dann noch, wenn er tief genug in das Loch eintaucht – die Norm setzt dafür 30 mm an, und diesen Fall stellen Sie zu Hause nicht nach: an der Schnur kommt er weg.",
+      "wieZuPruefen": "Den KLEINSTEN Durchmesser messen, bei einem eiförmigen Teil also quer. Unter 44,5 mm fällt er nach der Norm durch die Schablone und kommt weg; ab etwa 45 mm fällt er nicht mehr hindurch. Hängt der Ball an einer Schnur, prüft die Norm etwas anderes: sie hängt ihn in die Schablone und misst den Abstand von der Oberseite der Schablone bis zum Mittelpunkt des Balls – ist der größer als 30 mm, gilt er auch dann als kleiner Ball. Diesen Fall stellen Sie zu Hause nicht nach; an der Schnur kommt er weg.",
       "prueferGrenze": "Drei Grenzen. Die Norm legt das Teil ohne zu drücken und in JEDER Lage ein; ein Lineal am kleinsten Durchmesser kommt dem nahe, trifft es aber nicht, und knapp um 44,5 mm herum entscheidet es nicht. Weiche, gefüllte Bälle sind von dieser Anforderung ausdrücklich ausgenommen – für sie sagt die Zahl nichts. Und die Norm sieht nach Zug-, Dreh-, Fall-, Schlag- und Druckprüfung noch einmal nach, ob ein Ball sich gelöst hat.",
       "quelle": {
         "gremium": "EN 71-1 (Fassung 2011+A3), Abschnitt 5.10 und Abschnitt 8.32 (Schablone E), Begründungsanhang A.48",
@@ -365,7 +365,7 @@
       "wasKinderTun": "Rollen, werfen, hinterherkrabbeln. Für die Bewegung, nicht für das Ordnen.",
       "spanne": "etwa ab 1 Jahr",
       "selbstkorrektur": "Keine – hier geht es um Bewegung.",
-      "sicherheit": "Hier ist die Größe die ganze Frage: die Norm zieht die Grenze beim kleinsten Durchmesser von 44,5 mm, und darunter kommt ein Ball bei einem Kind unter drei Jahren weg. Siehe die Zeile zu Bällen oben."
+      "sicherheit": "Hier ist die Größe die ganze Frage, und für Bälle hat die Norm eine eigene Schablone mit eigener Schwelle – die Zahl steht in der Zeile zu Bällen oben, zusammen mit ihrer Fundstelle. Darunter kommt ein Ball bei einem Kind unter drei Jahren weg."
     }
   ],
   "ausgeschlossen": [

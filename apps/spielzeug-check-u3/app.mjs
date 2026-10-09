@@ -25,10 +25,18 @@ const daten = await fetch('daten/pruefungen.json').then((r) => r.json());
 // Der Stand liegt im Arbeitsspeicher; localStorage ist nur die Kopie. Ist
 // der Speicher gesperrt (privater Modus, blockierte Website-Daten), tut jedes
 // Antippen sonst sichtbar nichts, ohne zu sagen warum – wie in Nr. 50.
+// Gefiltert wird gegen die bekannten Prüfungs-ids: die erste Fassung prüfte
+// nur den Typ, und ein Fremdschlüssel im Speicher hätte dafür gesorgt, dass
+// `Object.keys(erledigt).length` nie 0 wird - die Zusage „bei leerem Stand
+// verschwindet der Schlüssel" wäre damit falsch (Review Welle 80).
+let rohText = null;
 let erledigt = (() => {
   try {
-    const roh = JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}');
-    return roh && typeof roh === 'object' && !Array.isArray(roh) ? roh : {};
+    rohText = localStorage.getItem(SCHLUESSEL);
+    const roh = JSON.parse(rohText ?? '{}');
+    if (!roh || typeof roh !== 'object' || Array.isArray(roh)) return {};
+    const ids = new Set(daten.pruefungen.map((p) => p.id));
+    return Object.fromEntries(Object.entries(roh).filter(([k, v]) => ids.has(k) && v === true));
   } catch { return {}; }
 })();
 let speicherSperre = false;
@@ -50,12 +58,15 @@ function speichere() {
   } catch { speicherSperre = true; }
 }
 
+// Hat das Filtern etwas verändert, gilt das auch auf der Platte.
+if (rohText !== null && JSON.stringify(erledigt) !== rohText) speichere();
+
 function umschalten(id) {
   const neu = { ...erledigt };
   if (neu[id]) delete neu[id]; else neu[id] = true;
   erledigt = neu;
   speichere();
-  // Fokus zurück auf die eben getippte Zeile: ohne das landet er bei achtzehn
+  // Fokus zurück auf die eben getippte Zeile: ohne das landet er bei neunzehn
   // Zeilen nach jedem Haken auf <body>.
   render(`szu3-${id}`);
 }
@@ -224,11 +235,15 @@ function render(fokusElement = null) {
         el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Liste drucken'),
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein',
+          id: 'szu3-haken-loeschen',
           onclick: () => {
             if (globalThis.confirm?.('Alle Haken auf diesem Gerät löschen?')) {
               erledigt = {};
               speichere();
-              render();
+              // Mit Fokusziel: ohne das landet der Fokus auf <body>, weil
+              // `replaceChildren` den gedrückten Knopf zerstört (Review
+              // Welle 80).
+              render('szu3-haken-loeschen');
             }
           },
         }, '🧹 Haken löschen'))),
@@ -285,6 +300,9 @@ function render(fokusElement = null) {
       was: 'welche Zeilen du abgehakt hast – keine Angabe über dein Kind, kein Alter, kein Name',
       nachLoeschen: () => { erledigt = {}; render(); },
       knopfId: 'szu3-daten-loeschen',
+      // Ohne die Nur-Bildschirm-Klasse druckt die Daten-Karte mit, und ein
+      // Druckblatt traegt keinen Loeschknopf (docs/02, Review Welle 80).
+      klasse: 'szu3-nur-bildschirm',
     }),
     el('section', { class: 'k-karte szu3-nur-bildschirm' },
       el('p', { style: 'margin:0;font-size:0.9rem' },
@@ -305,4 +323,12 @@ if (fehler.length) {
     el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));
 } else {
   render();
+  // `lokaleStimme` liefert `undefined`, solange der Browser die Stimmliste
+  // noch nicht geladen hat - das ist beim ersten Zeichnen der Normalfall.
+  // Ohne diesen Neuaufbau bliebe der Vorlese-Knopf stumm oder liefe mit der
+  // Standardstimme, die netzbasiert sein kann (Review Welle 80; Muster aus
+  // apps/erste-woerter-tagebuch).
+  if ('speechSynthesis' in globalThis) {
+    speechSynthesis.addEventListener?.('voiceschanged', () => render(), { once: true });
+  }
 }

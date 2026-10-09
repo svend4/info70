@@ -131,5 +131,5 @@ mit“).
 
 ## 11. Tests
 
-`node --test apps/musik-alltags-begleiter/test/logik.test.mjs` (24 Tests), fast
+`node --test apps/musik-alltags-begleiter/test/logik.test.mjs` (28 Tests), fast
 jeder mit Gegenprobe.

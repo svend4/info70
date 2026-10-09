@@ -113,7 +113,7 @@
 
 ```bash
 npm run dev            # http://localhost:8080/apps/musik-alltags-begleiter/
-node --test apps/musik-alltags-begleiter/test/logik.test.mjs   # 24 теста
+node --test apps/musik-alltags-begleiter/test/logik.test.mjs   # 28 тестов
 ```
 
 Почти каждое обещание закреплено контрпробой: посторонние поля в записи,

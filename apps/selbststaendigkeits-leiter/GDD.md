@@ -3,7 +3,7 @@
 **Zielgruppe:** Eltern und Kindertagespflege, Kinder von etwa 2 bis 3 Jahren.
 Werkzeug für Erwachsene; das Kind sieht keinen Bildschirm, darum keine
 `eltern.html`.
-**Quelle:** Praleska 2007, S. 94–96, «Трудовое воспитание» (23 Ziele in fünf
+**Quelle:** Praleska 2007, S. 94–96, «ПРИОБЩАЕМСЯ К ТРУДУ» (23 Ziele in fünf
 Teilen, nachgezählt). Katalog docs/10, Nr. 58.
 
 ## 1. Es gibt keine Gesamtstufe
@@ -50,12 +50,22 @@ Leiter eine Übungsanleitung geworden — und genau das ist der Unterschied zur
 Arbeitserziehung der Quelle, die an mehreren Stellen den Erwachsenen
 beschreibt.
 
-## 5. Die Leiter ist eine Kette von Voraussetzungen
+## 5. Die Leiter ist ein WALD von Voraussetzungen
 
 `vorher` zeigt auf die leichtere Zeile (ausziehen vor anziehen). Der Validator
-prüft: genau ein Anfang je Bereich, keine Kette über Bereichsgrenzen, kein
-Kreis, und `zeilenIm()` muss alle Zeilen des Bereichs erreichen. Damit hat die
-Liste eine Ordnung, ohne ein Alter zu behaupten.
+prüft: mindestens eine Wurzel je Bereich, keine Kette über Bereichsgrenzen,
+kein Verweis ins Leere, und **jede Zeile muss von einer Wurzel aus erreichbar
+sein** — das fängt den Kreis und die Lücke in einem. Damit hat die Liste eine
+Ordnung, ohne ein Alter zu behaupten.
+
+> **Abweichung beim Bau, nachgetragen (Welle 80).** Die erste Fassung erzwang
+> GENAU EINE Kette je Bereich. Das war kein Schutz, sondern eine falsche
+> Behauptung: um alle Zeilen in eine Reihe zu bringen, stand Händewaschen als
+> Voraussetzung des Aufräumens da. Eine Voraussetzung ist eine Tatsache über
+> zwei Handgriffe, kein Ordnungstrick. Dazu kam, dass der eine Prüfzweig
+> (`zeilenIm().length !== drin.length`) in 256 Mutationen nie auslöste, weil
+> `zeilenIm` nicht erreichte Zeilen hinten anhängt — jetzt ist die
+> Erreichbarkeit selbst die Prüfung.
 
 ## 6. Drei amtliche Sätze — und drei Lesefehler, die sie abräumen
 
@@ -91,14 +101,30 @@ Altersangabe in einer Zeile ohne amtliche Fundstelle ab.
 ## 7. „23 lebenspraktische Fertigkeiten“ ist eine Fehllesung
 
 Der Quellabschnitt trägt **23 pädagogische ZIELE** in fünf Teilen (Allgemein
-6, Selbstbedienung 6, Haushalt 5, Natur 4, Handarbeit 2). Eine Handlung des
-**Kindes** benennen nur **vier** davon: beide Handarbeits-Ziele betreffen das
-Interesse am Tun des Erwachsenen, drei von vier Naturzielen das Zusehen, und
-zwei Selbstbedienungs-Ziele sind Aufgaben des Erwachsenen. Umgekehrt trägt ein
-einziges Ziel acht Handgriffe. `quellZiel` indexiert darum die **vier** Ziele
-mit Kind-Handlung, nicht die 23 — und der Validator verlangt, dass alle vier
-in Zeilen vorkommen (Bauart aus Nr. 49). `DREIUNDZWANZIG` verbietet die
-Formulierung in jeder Zeile; im Ausschluss x02 muss sie stehen.
+6, Selbstbedienung 6, Haushalt 5, Natur 4, Handarbeit 2). Eine konkrete,
+beobachtbare Handlung des **Kindes** benennen **neun** davon: Selbstbedienung
+1–4, Haushalt 1, 2, 3 und 5, Natur 3. Die übrigen vierzehn beschreiben
+Haltungen (Interesse, Freude, Dankbarkeit, Gewöhnung) oder Aufgaben des
+Erwachsenen: beide Handarbeits-Ziele betreffen das Tun des Erwachsenen, drei
+von vier Naturzielen das Zusehen und das Verstehen seines rechten Zeitpunkts,
+und zwei Selbstbedienungs-Ziele richten sich an den Erwachsenen. Umgekehrt
+trägt ein einziges Ziel — Selbstbedienung 1 — acht Handgriffe.
+
+`quellZiel` indexiert die **neun**, nicht die 23; die neun stehen einzeln in
+`quelle.kindHandlungen`, und der Validator verlangt, dass jedes in einer Zeile
+**oder** im Ausschluss auftaucht und in keinem von beiden doppelt (Bauart aus
+Nr. 49 und Nr. 57): gebaut sind sieben, begründet nicht übernommen zwei (der
+Tischdienst und das Schmücken zum Fest). Eine Zeile ohne `quellZiel` braucht
+`eigen` — einen Satz, der sagt, woher sie stammt. `DREIUNDZWANZIG` verbietet
+die Formulierung „23 Fertigkeiten" in jeder Zeile; im Ausschluss x02 muss sie
+stehen.
+
+> **Abweichung beim Bau, nachgetragen (Welle 80).** Hier stand **vier**, und
+> das war die Zahl meiner eigenen GRUPPEN, nicht der Quellziele — der eigene
+> `nachgezaehlt`-Satz hat es verraten („Selbstbedienung 2 bis 4
+> zusammengefasst"). Nachgezählt im Quelltext sind es neun. Eine Zahl, die
+> eine Fehllesung des Katalogs korrigieren soll, war damit selbst falsch
+> gezählt.
 
 ## 8. Was nicht übernommen ist
 
@@ -132,9 +158,14 @@ Die vier Grenzen, die Zeilen tragen:
 - **Putzmittel:** Tuch und Wasser, nie ein Mittel. Haushaltsprodukte stehen
   bei Vergiftungsunfällen von Kindern an erster Stelle, das Risikofenster
   liegt in diesem Alter, und nichts wird in eine Getränkeflasche umgefüllt.
-- **Gießen:** die Gefahr ist die Pflanze, nicht das Gießen. Besonders giftige
-  Arten stehen in einer im Bundesanzeiger veröffentlichten Liste und gehören
-  nicht dorthin, wo ein Kind spielt.
+- **Gießen:** die Gefahr ist die Pflanze, nicht das Gießen. Welche Pflanze im
+  Haus steht und was sie anrichten kann, beantwortet das
+  Giftinformationszentrum; eine **Pflanzenliste führt die App nicht**, weil
+  eine halbe Liste gefährlicher ist als keine (Ausschluss x13). *Nachgetragen
+  (Welle 80): hier stand „Kinder unter zehn Jahren machen den größten Teil der
+  Pflanzenvergiftungen aus" und eine Bundesanzeiger-Fundstelle — beides nicht
+  selbst nachgelesen, und das ausgeschriebene Zahlwort brach zugleich die
+  eigene Zusage „kein Alter".*
 - **Händewaschen:** kaltes Wasser genügt, es kommt auf die Seife und die
   Dauer an (20 bis 30 Sekunden nach der bayerischen
   Rahmenhygieneempfehlung für die Kindertagesbetreuung, mit Handrücken,
@@ -160,7 +191,7 @@ Die vier Grenzen, die Zeilen tragen:
 
 ## 11. Tests
 
-`node --test apps/selbststaendigkeits-leiter/test/logik.test.mjs` (20 Tests),
+`node --test apps/selbststaendigkeits-leiter/test/logik.test.mjs` (24 Tests),
 fast jeder mit Gegenprobe: Kreis und Bereichssprung in der Kette, Alter ohne
 amtliche Fundstelle, fehlende Toleranzgrenze, abweichender amtlicher
 Wortlaut, Erwachsener in `was`, Übung in `gelegenheit`, Freude als Grund,

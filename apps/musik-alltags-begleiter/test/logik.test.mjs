@@ -53,7 +53,15 @@ test('der Tag kommt aus der LOKALEN Zeit, nicht aus UTC', () => {
   assert.equal(tagAus(new Date(2026, 0, 1, 23, 59, 0)), '2026-01-01');
   assert.equal(tagAus(new Date('kaputt')), '');
   assert.doesNotMatch(logikQuelle.replace(/^\s*\*.*$/gm, ''), /toISOString\(\)\.slice\(0, 10\)[\s\S]{0,40}new Date\(\)/);
-  assert.match(code, /tagAus\(new Date\(\)\)/);
+  // Und der Tag wird bei JEDEM Aufruf neu gebildet. Die erste Fassung bildete
+  // ihn einmal beim Modulladen: wer die Seite über Mitternacht offen hielt,
+  // speicherte mit dem Datum von gestern, und `speichere()` beschnitt gegen
+  // ein veraltetes Fenster (Review Welle 80).
+  assert.match(code, /const heuteJetzt = \(\) => tagAus\(new Date\(\)\);/);
+  assert.doesNotMatch(code, /const heute = tagAus\(new Date\(\)\);/);
+  assert.match(code, /\{ tag: heuteJetzt\(\), gelegenheit, art \}/);
+  assert.match(code, /notizen = beschneide\(notizen, heuteJetzt\(\), daten\);/);
+  assert.match(code, /const heute = heuteJetzt\(\);/);
 });
 
 test('das Fenster hat sieben Tage, älteste zuerst', () => {
@@ -77,13 +85,13 @@ test('beschneide wirft Älteres weg – und zwar wirklich weg', () => {
   assert.equal(beschneide([notiz(HEUTE), notiz(HEUTE, 'r-aufwachen', 'a-gesummt')], HEUTE, daten).length, 2);
   assert.deepEqual(beschneide('kaputt', HEUTE, daten), []);
   // In der App läuft es an BEIDEN Stellen – sonst wächst der Speicher weiter.
-  assert.match(code, /beschneide\(JSON\.parse\(rohText \?\? '\[\]'\), heute, daten\)/);
+  assert.match(code, /beschneide\(JSON\.parse\(rohText \?\? '\[\]'\), heuteJetzt\(\), daten\)/);
   // Und das Beschnittene muss ZURÜCKGESCHRIEBEN werden: beschneidet die App
   // nur ihre eigene Liste, bleibt das Alte auf der Platte liegen, und die
   // Zusage „beim Öffnen gelöscht" ist falsch. Die Browserprobe hat genau das
   // gefunden – eine Notiz von 2020 überlebte das Neuladen.
   assert.match(code, /if \(rohText !== null && JSON\.stringify\(notizen\) !== rohText\) speichere\(\);/);
-  assert.match(code, /notizen = beschneide\(notizen, heute, daten\);[\s\S]{0,120}setItem/);
+  assert.match(code, /notizen = beschneide\(notizen, heuteJetzt\(\), daten\);[\s\S]{0,160}setItem/);
 });
 
 test('gezählt wird beschreibend – keine Quote, keine Serie', () => {
@@ -255,7 +263,7 @@ test('App: nichts über das Kind, kein Eingabefeld, kein Datumsfeld', () => {
   assert.doesNotMatch(code, /<input|type="date"|geburtsdatum/i);
   assert.match(code, /nichts über Ihr Kind/);
   // Gespeichert wird nur die Form aus logik.mjs.
-  assert.match(code, /\{ tag: heute, gelegenheit, art \}/);
+  assert.match(code, /\{ tag: heuteJetzt\(\), gelegenheit, art \}/);
 });
 
 test('App: keine externen Anfragen, CSP steht in der Seite', () => {
@@ -299,4 +307,43 @@ test('App: replaceChildren bekommt nur echte Knoten', () => {
   assert.match(code, /\]\.filter\(Boolean\)\)/);
   assert.match(code, /const fehler = pruefeDaten\(daten\)/);
   assert.match(code, /Datenfehler: \$\{fehler\[0\]\}/);
+});
+
+test('die Meldung sagt nicht „notiert", wenn nichts dazukam', () => {
+  // Dieselbe Art bei derselben Gelegenheit am selben Tag ist EINE Notiz –
+  // eine Erfolgsmeldung über einen Eintrag, den es nicht gibt, wäre eine
+  // kleine Unwahrheit (Review Welle 80).
+  assert.match(code, /const vorher = notizen\.length;/);
+  assert.match(code, /notizen\.length > vorher/);
+  assert.match(code, /Steht schon da:/);
+  assert.equal(beschneide([notiz(HEUTE), notiz(HEUTE)], HEUTE, daten).length, 1);
+});
+
+test('jede Gelegenheit und jede Art trägt ihr Zeichen', () => {
+  // Die App rendert `zeichen` in jeder Knopfbeschriftung; fehlt es, steht
+  // dort „undefined" (Review Welle 80).
+  for (const r of daten.rituale) assert.ok(r.zeichen, `${r.id} ohne zeichen`);
+  for (const a of daten.arten) assert.ok(a.zeichen, `${a.id} ohne zeichen`);
+  const k = kopie();
+  delete k.rituale[0].zeichen;
+  assert.match(pruefeDaten(k).join('\n'), /zeichen fehlt/);
+  const z = kopie();
+  delete z.arten[0].zeichen;
+  assert.match(pruefeDaten(z).join('\n'), /zeichen fehlt/);
+});
+
+test('der Fokus landet auf einem Knopf, nicht auf <body>', () => {
+  // `mab-heute` ist eine <section> ohne tabindex: `focus()` tut darauf
+  // nichts, und `replaceChildren` hat den gedrückten Knopf vorher zerstört
+  // (Review Welle 80).
+  assert.match(code, /render\(`mab-a-\$\{art\}`\)/);
+  assert.match(code, /id: `mab-a-\$\{a\.id\}`/);
+  assert.match(code, /render\(gelegenheit \? `mab-g-\$\{gelegenheit\}` : 'mab-katalog'\)/);
+  assert.doesNotMatch(code, /render\('mab-heute'\)/);
+});
+
+test('die Entfernen-Knöpfe sind unterscheidbar, und die Daten-Karte druckt nicht mit', () => {
+  assert.match(code, /'aria-label': `Notiz entfernen: \$\{r\?\.name \?\? ''\} – \$\{a\?\.name \?\? ''\}`/);
+  assert.match(code, /klasse: 'mab-nur-bildschirm'/);
+  assert.match(code, /voiceschanged/);
 });

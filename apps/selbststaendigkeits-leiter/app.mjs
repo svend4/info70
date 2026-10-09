@@ -10,8 +10,8 @@ import { el, vorlesen, lokaleStimme } from '../../packages/kinder-ui/js/komponen
 import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
-  STUFEN, bereicheInReihenfolge, zeilenIm, beschneide, stufeVon, inBewegung,
-  naechsteGelegenheiten, bericht, pruefeDaten,
+  STUFEN, bereicheInReihenfolge, zeilenIm, beschneide, stufeVon, gesetzteStufe,
+  inBewegung, naechsteGelegenheiten, bericht, pruefeDaten,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -79,7 +79,10 @@ const hinweisKarte = (titel, ...absaetze) => el('div', { class: 'k-hinweis', sty
 const STUFEN_ZEICHEN = { 'noch-nicht': '○', manchmal: '◐', sicher: '●' };
 
 function zeileKnoten(z) {
-  const jetzt = stufeVon(stand, z.id);
+  // `jetzt` ist die ausdrücklich gesetzte Stufe oder null: beim ersten Öffnen
+  // ist KEINE Stufe gedrückt, denn „noch nicht angetippt" ist nicht dasselbe
+  // wie „hingesehen und noch nicht gesehen" (Review Welle 80).
+  const jetzt = gesetzteStufe(stand, z.id);
   const offen = offeneZeilen.has(z.id);
   return el('div', { class: 'ssl-zeile', style: 'padding:0.6rem 0;border-top:1px solid var(--k-rand)' },
     el('p', { style: 'margin:0;font-weight:600' }, `${z.was}`),
@@ -106,10 +109,17 @@ function zeileKnoten(z) {
         el('p', { style: 'margin:0;font-size:0.95rem' }, z.gelegenheit),
         z.grenze ? el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem' }, `⚠️ ${z.grenze}`) : null,
         z.amtlich
+          // Die Einordnung „späte Grenze" steht hier MIT, nicht nur in dem
+          // Abschnitt weiter unten: der startet zugeklappt und kommt nicht
+          // aufs Papier, dieses Detail schon (Review Welle 80).
           ? el('p', { style: 'margin:0.4rem 0 0;font-size:0.85rem;color:#4b5563' },
             `📘 Dieser Satz steht wörtlich in der Kinder-Richtlinie, bei der ${z.amtlich.untersuchung} `
             + `(${z.amtlich.zeitraum}, Toleranz ${z.amtlich.toleranz}) – und dort in der Rubrik `
-            + `„${z.amtlich.rubrik}“, nicht unter „Selbstständigkeit“.`)
+            + `„${z.amtlich.rubrik}“, nicht unter „Selbstständigkeit“. Ein solches Fenster ist eine SPÄTE `
+            + 'Grenze und kein Durchschnitt: wer es als Normalerwartung liest, dreht seinen Sinn um.')
+          : null,
+        z.eigen
+          ? el('p', { style: 'margin:0.4rem 0 0;font-size:0.85rem;color:#6b7280' }, `ℹ️ ${z.eigen}`)
           : null)
       : null);
 }
@@ -250,6 +260,9 @@ function render(fokusElement = null) {
       was: 'welche Stufe Sie bei welcher Zeile angetippt haben – kein Name, kein Alter, kein Datum',
       nachLoeschen: () => { stand = {}; render(); },
       knopfId: 'ssl-daten-loeschen',
+      // Ohne die Nur-Bildschirm-Klasse druckt die Daten-Karte mit, und ein
+      // Druckblatt traegt keinen Loeschknopf (docs/02, Review Welle 80).
+      klasse: 'ssl-nur-bildschirm',
     }),
     el('section', { class: 'k-karte ssl-nur-bildschirm' },
       el('p', { style: 'margin:0;font-size:0.9rem' },
@@ -270,4 +283,12 @@ if (fehler.length) {
     el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));
 } else {
   render();
+  // `lokaleStimme` liefert `undefined`, solange der Browser die Stimmliste
+  // noch nicht geladen hat - das ist beim ersten Zeichnen der Normalfall.
+  // Ohne diesen Neuaufbau bliebe der Vorlese-Knopf stumm oder liefe mit der
+  // Standardstimme, die netzbasiert sein kann (Review Welle 80; Muster aus
+  // apps/erste-woerter-tagebuch).
+  if ('speechSynthesis' in globalThis) {
+    speechSynthesis.addEventListener?.('voiceschanged', () => render(), { once: true });
+  }
 }

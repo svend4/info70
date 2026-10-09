@@ -5,7 +5,7 @@ import * as logik from '../logik.mjs';
 import {
   STUFEN, BEREICHE, ZIELE_QUELLE, ZIELE_MIT_KIND_HANDLUNG, BEWERTUNG, LOB_ALS_GRUND,
   ALTERSANGABE, DREIUNDZWANZIG, zeileVon, zeilenIm, bereicheInReihenfolge, pruefeStand,
-  beschneide, stufeVon, inBewegung, naechsteGelegenheiten, bericht, pruefeDaten,
+  beschneide, stufeVon, gesetzteStufe, inBewegung, naechsteGelegenheiten, bericht, pruefeDaten,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/leiter.json', import.meta.url), 'utf8'));
@@ -25,7 +25,7 @@ const mit = (id, feld, wert) => {
 
 test('Daten sind gültig und vollständig', () => {
   assert.deepEqual(pruefeDaten(daten), []);
-  assert.equal(daten.zeilen.length, 16);
+  assert.equal(daten.zeilen.length, 18);
   assert.equal(daten.bereiche.length, BEREICHE.length);
   for (const b of BEREICHE) assert.ok(zeilenIm(daten, b).length, `Bereich ${b} ist leer`);
 });
@@ -91,21 +91,28 @@ test('das Kind handelt in jeder Zeile, der Erwachsene in jeder Gelegenheit', () 
     /die Gelegenheit ist ein Angebot, keine Übung/);
 });
 
-test('die Leiter ist eine Kette von Voraussetzungen, keine Altersfolge', () => {
+test('die Leiter ist ein Wald von Voraussetzungen, keine Altersfolge', () => {
   assert.deepEqual(zeilenIm(daten, 'anziehen').map((z) => z.id),
-    ['an-schuhe-aus', 'an-socken-aus', 'an-jacke-aus', 'an-knopf', 'an-hose-an', 'an-richtig-drehen']);
+    ['an-schuhe-aus', 'an-socken-aus', 'an-jacke-aus', 'an-knopf', 'an-hose-an',
+      'an-richtig-drehen', 'an-unordnung']);
+  // Mehrere Ketten je Bereich sind erlaubt. Die erste Fassung erzwang genau
+  // eine und hat damit eine Behauptung erzeugt, die nicht stimmte: dass
+  // Händewaschen eine Voraussetzung des Aufräumens sei (Review Welle 80).
   for (const b of BEREICHE) {
     const drin = daten.zeilen.filter((z) => z.bereich === b);
-    assert.equal(drin.filter((z) => !z.vorher).length, 1, `${b}: genau ein Anfang`);
+    assert.ok(drin.some((z) => !z.vorher), `${b}: keine Wurzel`);
+    assert.equal(zeilenIm(daten, b).length, drin.length, `${b}: nicht alle Zeilen erreichbar`);
     for (const z of drin) {
       if (!z.vorher) continue;
       assert.equal(zeileVon(daten, z.vorher).bereich, b, `${z.id}: vorher im anderen Bereich`);
     }
   }
   assert.match(daten.keineZahlen, /Reihenfolge der Voraussetzungen/);
-  // Gegenproben: ein Kreis und ein Sprung über Bereichsgrenzen fallen auf.
-  assert.match(pruefeDaten(mit('an-schuhe-aus', 'vorher', 'an-richtig-drehen')).join('\n'),
-    /genau eine Zeile muss ohne Voraussetzung anfangen|keine durchgehende Kette/);
+  // Gegenproben: ein Kreis, ein Sprung über Bereichsgrenzen und ein Verweis
+  // ins Leere fallen auf.
+  const kreis = kopie();
+  kreis.zeilen.find((z) => z.id === 'an-schuhe-aus').vorher = 'an-unordnung';
+  assert.match(pruefeDaten(kreis).join('\n'), /von keiner Wurzel aus erreichbar/);
   assert.match(pruefeDaten(mit('es-becher', 'vorher', 'an-knopf')).join('\n'),
     /vorher liegt in einem anderen Bereich/);
   assert.match(pruefeDaten(mit('es-becher', 'vorher', 'gibt-es-nicht')).join('\n'), /gibt es nicht/);
@@ -163,24 +170,41 @@ test('ein solches Fenster ist eine späte Grenze, kein Durchschnitt', () => {
   assert.match(f, /späte Grenze/);
 });
 
-test('die Katalogzahl „23 Fertigkeiten“ ist zurückgewiesen', () => {
+test('die Katalogzahl „23 Fertigkeiten“ ist zurückgewiesen – und neun ist nachgezählt', () => {
   assert.equal(ZIELE_QUELLE, 23);
-  assert.equal(ZIELE_MIT_KIND_HANDLUNG, 4);
+  // KORRIGIERT im Review der Welle 80: hier stand 4, und das war die Zahl der
+  // eigenen GRUPPEN, nicht der Ziele. Nachgezählt im Quelltext S. 94-96 sind
+  // es neun, die eine konkrete Handlung des Kindes benennen.
+  assert.equal(ZIELE_MIT_KIND_HANDLUNG, 9);
   assert.equal(daten.quelle.zahlen.zieleQuelle, 23);
   assert.equal(daten.quelle.zahlen.abschnitte, 5);
-  assert.equal(daten.quelle.zahlen.zieleMitKindHandlung, 4);
-  assert.match(daten.quelle.nachgezaehlt, /Handlungen des Kindes benennen nur vier/);
+  assert.equal(daten.quelle.zahlen.zieleMitKindHandlung, 9);
+  assert.equal(daten.quelle.kindHandlungen.length, 9);
+  assert.match(daten.quelle.nachgezaehlt, /benennen davon neun/);
+  assert.match(daten.quelle.nachgezaehlt, /ein einziges Ziel/);
   assert.ok(daten.ausgeschlossen.some((a) => /23/.test(a.was)));
   assert.equal(DREIUNDZWANZIG.test('23 lebenspraktische Fertigkeiten'), true);
-  // In einer Zeile wäre die Fehllesung ein Fehler; im Ausschluss muss sie stehen.
   assert.match(pruefeDaten(mit('es-becher', 'gelegenheit', 'Sie gehen die 23 Fertigkeiten durch.')).join('\n'),
     /Fehllesung/);
-  // Jedes der vier Ziele mit Kind-Handlung kommt in einer Zeile vor.
-  const benutzt = new Set(daten.zeilen.map((z) => z.quellZiel));
-  for (let n = 1; n <= 4; n++) assert.ok(benutzt.has(n), `Quellziel ${n} fehlt`);
+  // Jedes der neun Ziele steht in einer Zeile ODER im Ausschluss, und keines
+  // in beidem. Gebaut sind sieben, begründet nicht übernommen zwei.
+  const benutzt = new Set(daten.zeilen.map((z) => z.quellZiel).filter(Number.isInteger));
+  const abgelehnt = new Set(daten.ausgeschlossen.map((a) => a.quellZiel).filter(Number.isInteger));
+  assert.equal(benutzt.size, 7);
+  assert.deepEqual([...abgelehnt].sort(), [7, 8]);
+  for (let n = 1; n <= 9; n++) {
+    assert.ok(benutzt.has(n) || abgelehnt.has(n), `Quellziel ${n} fehlt`);
+  }
   const k = kopie();
-  for (const z of k.zeilen) if (z.quellZiel === 4) z.quellZiel = 3;
-  assert.match(pruefeDaten(k).join('\n'), /Quellziel 4 mit Kind-Handlung kommt in keiner Zeile vor/);
+  for (const z of k.zeilen) if (z.quellZiel === 9) z.quellZiel = 5;
+  assert.match(pruefeDaten(k).join('\n'), /Quellziel 9 mit Kind-Handlung: weder in einer Zeile noch im Ausschluss/);
+  // Und eine Zeile ohne Quellziel muss sagen, woher sie kommt.
+  for (const z of daten.zeilen) {
+    if (z.quellZiel === null) assert.ok(z.eigen, `${z.id} ohne eigen`);
+  }
+  const e = kopie();
+  delete e.zeilen.find((z) => z.id === 'es-becher').eigen;
+  assert.match(pruefeDaten(e).join('\n'), /dann muss „eigen“ sagen, woher die Zeile kommt/);
 });
 
 test('kein Handgriff wird mit der Freude des Erwachsenen begründet', () => {
@@ -255,7 +279,14 @@ test('die Sicherheitsgrenzen nennen Gefahr und Vorsorge, keine Zahl ohne Quelle'
   assert.match(wischen.grenze, /umgefüllt in eine Getränkeflasche/);
   const giessen = zeileVon(daten, 'na-giessen');
   assert.match(giessen.grenze, /nicht das Gießen, sondern die Pflanze/);
-  assert.match(giessen.grenze, /Bundesanzeiger/);
+  // Korrigiert im Review der Welle 80: hier stand „Kinder unter zehn Jahren
+  // machen den größten Teil der Pflanzenvergiftungen aus" und eine
+  // Bundesanzeiger-Fundstelle. Beides war nicht nachgelesen, und das
+  // ausgeschriebene Zahlwort brach zugleich die eigene Zusage „kein Alter".
+  assert.match(giessen.grenze, /führt keine Pflanzenliste/);
+  assert.match(giessen.grenze, /Giftinformationszentrum/);
+  assert.doesNotMatch(giessen.grenze, /Bundesanzeiger|zehn Jahren/);
+  assert.ok(daten.ausgeschlossen.some((a) => /Liste giftiger Pflanzen/i.test(a.was)));
   const haende = zeileVon(daten, 'ha-haende');
   assert.match(haende.grenze, /Kaltes Wasser genügt/);
   assert.match(haende.grenze, /rechtlich nicht bindend/);
@@ -319,4 +350,52 @@ test('App: keine eltern.html, replaceChildren sauber, Datenfehler sichtbar', asy
   assert.match(code, /const fehler = pruefeDaten\(daten\)/);
   assert.match(code, /Datenfehler: \$\{fehler\[0\]\}/);
   assert.equal(bereicheInReihenfolge(daten)[0].id, 'anziehen');
+});
+
+test('ALTERSANGABE trifft auch die Notation der Richtlinie und Zahlwörter', () => {
+  // Die erste Fassung liess genau das durch, was sie verhindern sollte
+  // (Review Welle 80).
+  for (const t of ['34. bis 36. Lebensmonat', 'nach 30 Monaten', 'im 3. Lebensjahr',
+    'bis etwa 3 Jahren', 'Kinder unter zehn Jahren', 'ab 2 Jahren', 'mit 24 Monaten']) {
+    assert.equal(ALTERSANGABE.test(t), true, `durchgelassen: ${t}`);
+  }
+  // Und keine der 18 Zeilen ohne amtliche Fundstelle enthält eine.
+  for (const z of daten.zeilen) {
+    if (z.amtlich) continue;
+    assert.doesNotMatch(`${z.was} ${z.gelegenheit} ${z.grenze ?? ''} ${z.eigen ?? ''}`,
+      ALTERSANGABE, `${z.id}`);
+  }
+  assert.match(pruefeDaten(mit('es-becher', 'gelegenheit', 'Sie zeigen es im 3. Lebensjahr.')).join('\n'),
+    /Altersangabe ohne amtliche Fundstelle/);
+});
+
+test('„nicht angetippt“ ist nicht dasselbe wie „auf noch nicht gesetzt“', () => {
+  // Die erste Fassung meldete beim ersten Öffnen alle Zeilen als „noch nicht,
+  // gedrückt" (Review Welle 80).
+  assert.equal(gesetzteStufe({}, 'es-loeffel'), null);
+  assert.equal(gesetzteStufe({ 'es-loeffel': 'noch-nicht' }, 'es-loeffel'), 'noch-nicht');
+  assert.equal(gesetzteStufe({ 'es-loeffel': 'quatsch' }, 'es-loeffel'), null);
+  // Für die Auswertung bleibt der Vorgabewert, weil ein leeres Feld kein
+  // Befund ist – aber die Anzeige unterscheidet.
+  assert.equal(stufeVon({}, 'es-loeffel'), 'noch-nicht');
+  assert.match(code, /const jetzt = gesetzteStufe\(stand, z\.id\);/);
+});
+
+test('das amtliche Detail nennt die späte Grenze – auch auf dem Papier', () => {
+  // `amtlichErklaert` steht nur in einem Abschnitt, der zugeklappt startet
+  // und nicht mitdruckt; das Detail an der Zeile druckt mit (Review Welle 80).
+  assert.match(code, /Ein solches Fenster ist eine SPÄTE `/);
+  assert.match(code, /Grenze und kein Durchschnitt/);
+  assert.match(code, /z\.eigen/);
+  assert.match(code, /klasse: 'ssl-nur-bildschirm'/);
+  assert.match(code, /voiceschanged/);
+});
+
+test('die Quellenangabe nennt den Abschnitt, der wirklich dort steht', () => {
+  // «Трудовое воспитание» kommt im Quelltext NULL Mal vor; der Abschnitt auf
+  // S. 94 heißt «ПРИОБЩАЕМСЯ К ТРУДУ» (Review Welle 80, selbst nachgezählt).
+  assert.match(daten.quelle.werk, /ПРИОБЩАЕМСЯ К ТРУДУ/);
+  assert.doesNotMatch(daten.quelle.werk, /Трудовое воспитание/);
+  assert.match(daten.quelle.werk, /S\. 94–96/);
+  for (const text of [logikQuelle, app]) assert.doesNotMatch(text, /Трудовое воспитание/);
 });

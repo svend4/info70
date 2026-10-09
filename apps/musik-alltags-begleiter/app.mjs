@@ -19,7 +19,14 @@ const SCHLUESSEL = 'mab.notizen';
 const app = document.getElementById('app');
 const daten = await fetch('daten/rituale.json').then((r) => r.json());
 
-const heute = tagAus(new Date());
+/**
+ * Der heutige Tag, bei JEDEM Aufruf neu. Die erste Fassung bildete ihn einmal
+ * beim Modulladen - wer die Seite über Mitternacht offen hielt, speicherte
+ * eine Notiz mit dem Datum von GESTERN, und `speichere()` beschnitt gegen ein
+ * veraltetes Fenster und schrieb damit Notizen zurück, die längst aus den
+ * sieben Tagen gefallen waren (Review Welle 80).
+ */
+const heuteJetzt = () => tagAus(new Date());
 
 // Der Stand liegt im Arbeitsspeicher; localStorage ist die Kopie. Beim LADEN
 // wird beschnitten - und das Ergebnis muss ZURÜCKGESCHRIEBEN werden. Die
@@ -32,7 +39,7 @@ let rohText = null;
 let notizen = (() => {
   try {
     rohText = localStorage.getItem(SCHLUESSEL);
-    return beschneide(JSON.parse(rohText ?? '[]'), heute, daten);
+    return beschneide(JSON.parse(rohText ?? '[]'), heuteJetzt(), daten);
   } catch { return []; }
 })();
 let speicherSperre = false;
@@ -43,9 +50,9 @@ let zeigeWarumKeineAmpel = false;
 let meldung = '';
 
 function speichere() {
-  // Und beim SPEICHERN noch einmal: wer die Seite über Mitternacht offen
-  // hält, schreibt sonst einen achten Tag in den Speicher.
-  notizen = beschneide(notizen, heute, daten);
+  // Und beim SPEICHERN noch einmal, mit dem Tag von JETZT: sonst wächst der
+  // Speicher über das Fenster hinaus, wenn die Seite lange offen bleibt.
+  notizen = beschneide(notizen, heuteJetzt(), daten);
   try {
     if (!notizen.length) localStorage.removeItem(SCHLUESSEL);
     else localStorage.setItem(SCHLUESSEL, JSON.stringify(notizen));
@@ -60,19 +67,32 @@ if (rohText !== null && JSON.stringify(notizen) !== rohText) speichere();
 
 function notiere(art) {
   if (!gelegenheit) return;
-  notizen = [...notizen, { tag: heute, gelegenheit, art }];
+  const vorher = notizen.length;
+  notizen = [...notizen, { tag: heuteJetzt(), gelegenheit, art }];
   speichere();
   const a = daten.arten.find((x) => x.id === art);
   const r = daten.rituale.find((x) => x.id === gelegenheit);
-  meldung = `Notiert: ${r?.name ?? ''} – ${a?.name ?? ''}.`;
-  render('mab-heute');
+  // Nur melden, wenn wirklich etwas dazugekommen ist: dieselbe Art bei
+  // derselben Gelegenheit am selben Tag ist EINE Notiz (`beschneide`), und
+  // eine Erfolgsmeldung über einen Eintrag, den es nicht gibt, wäre eine
+  // kleine Unwahrheit (Review Welle 80).
+  meldung = notizen.length > vorher
+    ? `Notiert: ${r?.name ?? ''} – ${a?.name ?? ''}.`
+    : `Steht schon da: ${r?.name ?? ''} – ${a?.name ?? ''}.`;
+  // Fokus auf den eben gedrückten Knopf. Vorher stand hier `mab-heute`, und
+  // das ist eine <section> ohne tabindex: `focus()` tut darauf nichts, und
+  // weil `replaceChildren` den alten Knopf zerstört, landete der Fokus auf
+  // <body> - nach jedem Notieren musste man sich durch zehn Knöpfe
+  // zurücktabben (Review Welle 80).
+  render(`mab-a-${art}`);
 }
 
 function entferne(index) {
   notizen = notizen.filter((_, i) => i !== index);
   speichere();
   meldung = 'Notiz entfernt.';
-  render('mab-heute');
+  // Dasselbe hier: ein Knopf als Ziel, keine <section>.
+  render(gelegenheit ? `mab-g-${gelegenheit}` : 'mab-katalog');
 }
 
 function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
@@ -105,6 +125,7 @@ function katalogZeile(r) {
 }
 
 function render(fokusElement = null) {
+  const heute = heuteJetzt();
   const heuteNotizen = notizenAm(notizen, heute);
   const berichtsFeld = el('textarea', {
     readonly: true,
@@ -150,6 +171,7 @@ function render(fokusElement = null) {
             ...ARTEN.map((id) => daten.arten.find((a) => a.id === id)).filter(Boolean).map((a) => el('button', {
               class: 'k-knopf k-knopf--klein',
               style: 'text-align:start;min-height:3rem',
+              id: `mab-a-${a.id}`,
               onclick: () => notiere(a.id),
             }, `${a.zeichen} ${a.name}`))))
         : null,
@@ -165,6 +187,9 @@ function render(fokusElement = null) {
               el('button', {
                 class: 'k-knopf k-knopf--neutral k-knopf--klein',
                 style: 'min-height:2.6rem',
+                // Eigene Beschriftung je Knopf: bei sechs Notizen am Tag
+                // hieße sonst jeder Knopf gleich (Review Welle 80).
+                'aria-label': `Notiz entfernen: ${r?.name ?? ''} – ${a?.name ?? ''}`,
                 onclick: () => entferne(index),
               }, '✕ entfernen'));
           }))
@@ -267,6 +292,9 @@ function render(fokusElement = null) {
       was: 'was Sie an den letzten sieben Tagen selbst getan haben – nichts über Ihr Kind, kein Name, kein Alter',
       nachLoeschen: () => { notizen = []; meldung = ''; render(); },
       knopfId: 'mab-daten-loeschen',
+      // Ohne die Nur-Bildschirm-Klasse druckt die Daten-Karte mit, und ein
+      // Druckblatt traegt keinen Loeschknopf (docs/02, Review Welle 80).
+      klasse: 'mab-nur-bildschirm',
     }),
     el('footer', { class: 'k-fuss mab-nur-bildschirm' },
       el('span', {}, 'Werkzeug für Erwachsene · kein Bildschirm fürs Kind · keine Ampel · sieben Tage, dann weg · '),
@@ -282,4 +310,12 @@ if (fehler.length) {
     el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));
 } else {
   render();
+  // `lokaleStimme` liefert `undefined`, solange der Browser die Stimmliste
+  // noch nicht geladen hat - das ist beim ersten Zeichnen der Normalfall.
+  // Ohne diesen Neuaufbau bliebe der Vorlese-Knopf stumm oder liefe mit der
+  // Standardstimme, die netzbasiert sein kann (Review Welle 80; Muster aus
+  // apps/erste-woerter-tagebuch).
+  if ('speechSynthesis' in globalThis) {
+    speechSynthesis.addEventListener?.('voiceschanged', () => render(), { once: true });
+  }
 }

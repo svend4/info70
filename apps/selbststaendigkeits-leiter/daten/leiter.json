@@ -104,9 +104,18 @@
       "amtlich": null
     },
     {
+      "id": "an-unordnung",
+      "bereich": "anziehen",
+      "quellZiel": 2,
+      "vorher": "an-richtig-drehen",
+      "was": "Merkt, wenn an der Kleidung etwas nicht stimmt, und richtet es oder sagt es.",
+      "gelegenheit": "Sie kommentieren den offenen Reißverschluss nicht, sondern warten einen Moment – und helfen, wenn Ihr Kind sich meldet.",
+      "amtlich": null
+    },
+    {
       "id": "es-loeffel",
       "bereich": "essen",
-      "quellZiel": 2,
+      "quellZiel": 4,
       "vorher": null,
       "was": "Kann mit dem Löffel selber essen.",
       "gelegenheit": "Sie geben einen eigenen Löffel und nehmen in Kauf, dass die Hälfte daneben geht. Eine Unterlage spart die Diskussion.",
@@ -121,16 +130,17 @@
     {
       "id": "es-becher",
       "bereich": "essen",
-      "quellZiel": 2,
+      "quellZiel": null,
       "vorher": "es-loeffel",
       "was": "Trinkt aus einem offenen Becher und stellt ihn ab.",
       "gelegenheit": "Sie füllen wenig ein und stellen den Becher an denselben Platz, damit er zu finden ist.",
-      "amtlich": null
+      "amtlich": null,
+      "eigen": "Der offene Becher steht nicht in der Quelle – sie nennt Löffel, Gabel und Serviette. Hier steht er, weil er dieselbe Bewegung braucht und im Alltag vor dem Löffel kommt."
     },
     {
       "id": "es-teller",
       "bereich": "essen",
-      "quellZiel": 2,
+      "quellZiel": 4,
       "vorher": "es-becher",
       "was": "Bringt den eigenen Teller zur Spüle.",
       "gelegenheit": "Sie stellen einen Hocker an die Spüle und nehmen den Teller unten ab, statt ihn aus der Hand zu heben.",
@@ -140,7 +150,7 @@
     {
       "id": "ha-mitmachen",
       "bereich": "haushalt",
-      "quellZiel": 3,
+      "quellZiel": null,
       "vorher": null,
       "was": "Beteiligt sich an häuslichen Tätigkeiten, will mithelfen.",
       "gelegenheit": "Sie fangen eine Arbeit in Reichweite an und lassen eine Lücke, in die Ihr Kind hineingehen kann – tragen, halten, hineinlegen.",
@@ -150,13 +160,23 @@
         "toleranz": "33. bis 38. Lebensmonat",
         "rubrik": "Soziale/emotionale Kompetenz",
         "wortlaut": "Beteiligt sich an häuslichen Tätigkeiten, will mithelfen."
-      }
+      },
+      "eigen": "Dieser Satz stammt nicht aus der Quelle, sondern wörtlich aus der Kinder-Richtlinie (U7a). Er steht hier als erste Zeile des Bereichs, weil er das Mitmachen selbst benennt."
+    },
+    {
+      "id": "ha-decken",
+      "bereich": "haushalt",
+      "quellZiel": 6,
+      "vorher": "ha-mitmachen",
+      "was": "Stellt den eigenen Stuhl an den Tisch oder legt Stifte und Papier hin.",
+      "gelegenheit": "Sie fangen mit dem Decken an und lassen genau einen Handgriff übrig, der leicht zu sehen ist.",
+      "amtlich": null
     },
     {
       "id": "ha-haende",
       "bereich": "haushalt",
       "quellZiel": 3,
-      "vorher": "ha-mitmachen",
+      "vorher": "ha-decken",
       "was": "Wäscht sich die Hände mit Seife.",
       "gelegenheit": "Sie stellen Seife und Handtuch in Reichweite und waschen daneben mit – gleich lang.",
       "grenze": "Kaltes Wasser genügt; worauf es ankommt, ist die Seife und dass lange genug eingeschäumt wird – in der bayerischen Rahmenhygieneempfehlung für die Kindertagesbetreuung sind das 20 bis 30 Sekunden, mit Handrücken, Fingerzwischenräumen, Daumen und Nägeln. Händedesinfektion ist bei Kindern nach derselben Empfehlung weder sinnvoll noch erforderlich. Sie ist allerdings ausdrücklich rechtlich nicht bindend und stammt aus der Pandemiezeit.",
@@ -165,7 +185,7 @@
     {
       "id": "ha-wegraeumen",
       "bereich": "haushalt",
-      "quellZiel": 3,
+      "quellZiel": 5,
       "vorher": "ha-haende",
       "was": "Legt ein Spielzeug an seinen Platz zurück, wenn jemand mitmacht.",
       "gelegenheit": "Sie räumen mit und benennen dabei nur, wohin etwas gehört. Zwei Kisten mit Bild darauf reichen; ein Regal mit zwölf Fächern reicht nicht.",
@@ -174,27 +194,28 @@
     {
       "id": "ha-wischen",
       "bereich": "haushalt",
-      "quellZiel": 3,
+      "quellZiel": null,
       "vorher": "ha-wegraeumen",
       "was": "Wischt Verschüttetes mit einem Tuch auf.",
       "gelegenheit": "Sie legen ein kleines Tuch dorthin, wo es gebraucht wird, und wischen danach selbst nach, ohne es zu erwähnen.",
       "grenze": "Ein Tuch und Wasser, nie ein Putzmittel: Haushaltsprodukte stehen bei Vergiftungsunfällen von Kindern an erster Stelle, und das Risikofenster liegt genau in diesem Alter. Reinigungsmittel gehören verschlossen und außer Reichweite – und niemals umgefüllt in eine Getränkeflasche.",
-      "amtlich": null
+      "amtlich": null,
+      "eigen": "Das Aufwischen steht nicht in der Quelle. Hier steht es, weil es die Handlung ist, die auf ein Missgeschick folgt – und weil ohne diese Zeile die Warnung vor Putzmitteln keinen Ort hätte."
     },
     {
       "id": "na-giessen",
       "bereich": "natur",
-      "quellZiel": 4,
+      "quellZiel": 9,
       "vorher": null,
       "was": "Gießt eine Zimmerpflanze mit einer kleinen Kanne.",
       "gelegenheit": "Sie füllen die Kanne halb und zeigen auf die eine Pflanze, die heute dran ist.",
-      "grenze": "Die Gefahr ist nicht das Gießen, sondern die Pflanze: Kinder unter zehn Jahren machen den größten Teil der Pflanzenvergiftungen aus. Was besonders giftig ist, steht in einer im Bundesanzeiger veröffentlichten Liste, und solche Pflanzen gehören nicht dorthin, wo ein Kind spielt. Keine Pflanzenteile in den Mund, auch keine Beeren vom Balkon.",
+      "grenze": "Die Gefahr ist nicht das Gießen, sondern die Pflanze: manche Zimmer- und Gartenpflanzen sind giftig, und Kinder in diesem Alter nehmen Blätter und Beeren in den Mund. Welche Pflanze bei Ihnen steht und was sie anrichten kann, sagt Ihnen das Giftinformationszentrum – diese App führt keine Pflanzenliste, weil eine halbe Liste gefährlicher ist als keine. Keine Pflanzenteile in den Mund, auch keine Beeren vom Balkon.",
       "amtlich": null
     },
     {
       "id": "na-fuettern",
       "bereich": "natur",
-      "quellZiel": 4,
+      "quellZiel": 9,
       "vorher": "na-giessen",
       "was": "Füttert Fische oder Vögel mit abgezählter Hilfe.",
       "gelegenheit": "Sie geben die Portion in die Hand Ihres Kindes und lassen es streuen – die Dose bleibt bei Ihnen.",
@@ -204,7 +225,7 @@
     {
       "id": "na-ernten",
       "bereich": "natur",
-      "quellZiel": 4,
+      "quellZiel": 9,
       "vorher": "na-fuettern",
       "was": "Sammelt Gemüse oder Obst ein, das geerntet werden darf.",
       "gelegenheit": "Sie zeigen eine Pflanze und eine Schüssel. Was gegessen werden darf, entscheiden Sie vorher, nicht beim Pflücken.",
@@ -230,7 +251,8 @@
     {
       "quellNr": "x04",
       "was": "Der Dienst am Esstisch",
-      "warum": "Die Quelle kennt eine eigene Rolle dafür: ein Kind hat an einem Tag Dienst am Esstisch. Das ist eine Kita-Rolle mit Dienstplan; in einer Familie mit einem Zweijährigen wäre sie eine Pflicht, die das Kind nicht tragen kann. Für die Kita gibt es im Korpus ein eigenes Werkzeug."
+      "warum": "Die Quelle kennt eine eigene Rolle dafür: ein Kind hat an einem Tag Dienst am Esstisch. Das ist eine Kita-Rolle mit Dienstplan; in einer Familie mit einem Zweijährigen wäre sie eine Pflicht, die das Kind nicht tragen kann. Für die Kita gibt es im Korpus ein eigenes Werkzeug.",
+      "quellZiel": 8
     },
     {
       "quellNr": "x05",
@@ -266,19 +288,41 @@
       "quellNr": "x11",
       "was": "Eine Erste-Hilfe-Anleitung",
       "warum": "Gleiche Entscheidung wie im Sicherer-Krabbelraum-Check: halb erinnerte Anleitungen sind das Problem. Diese App nennt die Gefahr und die Vorsorge, nicht die Behandlung – dafür ist ein Kurs da, und im Notfall die 112 beziehungsweise das regionale Giftinformationszentrum."
+    },
+    {
+      "quellNr": "x12",
+      "was": "Das Schmücken zum Fest",
+      "warum": "Die Quelle lässt die Kinder den Gruppenraum zum Fest schmücken. Die benannten Feste der Quelle sind nicht übertragbar – dieselbe Entscheidung wie in Nr. 57 –, und ein Fest ist kein wiederkehrender Handgriff im Alltag, um den es dieser Liste geht.",
+      "quellZiel": 7
+    },
+    {
+      "quellNr": "x13",
+      "was": "Eine Liste giftiger Pflanzen",
+      "warum": "Eine halbe Pflanzenliste ist gefährlicher als keine: wer die eigene Pflanze nicht darauf findet, hält sie für harmlos. Die Zeile zum Gießen nennt darum die Gefahr und die Stelle, die sie beantworten kann – das Giftinformationszentrum –, aber keine Art und keine Zahl."
     }
   ],
   "quelle": {
-    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, «Трудовое воспитание», S. 94–96",
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, «ПРИОБЩАЕМСЯ К ТРУДУ» (Hinführung zur Arbeit), S. 94–96",
     "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die Abschnitte der Arbeitserziehung und die in ihnen benannten Handlungen des Kindes. Alle Texte dieser App sind Eigenproduktion.",
     "geprueft": true,
     "zahlen": {
       "zieleQuelle": 23,
       "abschnitte": 5,
-      "zieleMitKindHandlung": 4
+      "zieleMitKindHandlung": 9
     },
-    "nachgezaehlt": "Der Abschnitt trägt 23 Ziele in fünf Teilen: Allgemein 6, Selbstbedienung 6, Haushalt 5, Natur 4, Handarbeit 2. Nachgezählt. Handlungen des Kindes benennen nur vier davon – Selbstbedienung 1 (acht Handgriffe in einem Ziel), Selbstbedienung 2 bis 4 zusammengefasst zu Essen und Hygiene, Haushalt und Natur 3. Die übrigen beschreiben Haltungen oder Aufgaben des Erwachsenen.",
+    "nachgezaehlt": "Der Abschnitt trägt 23 Ziele in fünf Teilen: Allgemein 6, Selbstbedienung 6, Haushalt 5, Natur 4, Handarbeit 2. Nachgezählt. Eine konkrete, beobachtbare Handlung des Kindes benennen davon neun – Selbstbedienung 1 bis 4, Haushalt 1, 2, 3 und 5, Natur 3. Die übrigen vierzehn beschreiben Haltungen (Interesse, Freude, Dankbarkeit, Gewöhnung) oder Aufgaben des Erwachsenen: beide Ziele der Handarbeit betreffen das Tun des Erwachsenen, drei der vier Naturziele das Zusehen und das Verstehen seines rechten Zeitpunkts, und zwei Selbstbedienungs-Ziele richten sich an den Erwachsenen (den Sinn eröffnen, eine Atmosphäre der Freude schaffen). Umgekehrt trägt ein einziges Ziel – Selbstbedienung 1 – gleich acht Handgriffe. Die Zahl 23 sagt also nichts darüber, wie viele Fertigkeiten es sind.",
     "amtlich": "Drei Sätze dieser App stehen wörtlich in der Kinder-Richtlinie des Gemeinsamen Bundesausschusses, nachgelesen im Volltext: „Kann mit dem Löffel selber essen.“ (U7, Rubrik Soziale/emotionale Kompetenz), „Öffnet große Knöpfe selbst.“ (U7a, Rubrik Perzeption/Kognition) und „Beteiligt sich an häuslichen Tätigkeiten, will mithelfen.“ (U7a, Rubrik Soziale/emotionale Kompetenz). Zeitraum U7: 21. bis 24. Lebensmonat, Toleranz 20. bis 27.; U7a: 34. bis 36. Lebensmonat, Toleranz 33. bis 38. Das Wort „Grenzstein“ kommt in der Richtlinie nicht vor. Die Richtlinie wird regelmäßig geändert, und zu den Dokumentationsbögen laufen Stellungnahmeverfahren – die Fassung, in der hier nachgelesen wurde, kann also nicht die letzte sein.",
-    "abweichung": "Die Ampel des Katalogeintrags ist durch drei Stufen ohne Farbe ersetzt, die jederzeit in beide Richtungen gehen. Die Lesart „23 lebenspraktische Fertigkeiten“ ist zurückgewiesen. Nicht übernommen sind der Tischdienst, die Freude des Erwachsenen als Motiv und der Status in der Gleichaltrigengruppe; ebenso die Liederlisten-Entsprechung, nämlich uk/ru-Fassungen ohne Gegenlesen. Aus dem Handarbeits-Abschnitt ist nichts übernommen, weil beide Ziele dort das Tun des Erwachsenen betreffen."
+    "abweichung": "Die Ampel des Katalogeintrags ist durch drei Stufen ohne Farbe ersetzt, die jederzeit in beide Richtungen gehen. Die Lesart „23 lebenspraktische Fertigkeiten“ ist zurückgewiesen. Von den neun Zielen mit einer Handlung des Kindes sind sieben gebaut und zwei begründet nicht übernommen: der Tischdienst (eine Kita-Rolle mit Dienstplan) und das Schmücken zum Fest (wie in Nr. 57 sind die benannten Feste der Quelle nicht übertragbar). Nicht übernommen sind außerdem die Freude des Erwachsenen als Motiv und der Status in der Gleichaltrigengruppe, ebenso uk/ru-Fassungen ohne Gegenlesen. Drei Zeilen stammen nicht aus der Quelle und sagen das selbst: der offene Becher und das Aufwischen sind Zusätze, und „Beteiligt sich an häuslichen Tätigkeiten“ kommt aus der Kinder-Richtlinie.",
+    "kindHandlungen": [
+      "Selbstbedienung 1: selbstständig an- und ausziehen in bestimmter Folge, Knöpfe vorn auf- und zuknöpfen, Kleidung auf die rechte Seite wenden und weglegen, Schuhe aufschnüren und öffnen, ausziehen und hinstellen, anziehen, mit Hilfe des Erwachsenen schnüren",
+      "Selbstbedienung 2: Unordnung an der Kleidung bemerken und sie selbst richten oder sich an Erwachsene wenden",
+      "Selbstbedienung 3: Gesicht und Hände selbst waschen – Ärmel hochschieben, Hände einseifen, den Schaum sorgfältig abspülen, Gesicht waschen, sich trocken abtrocknen",
+      "Selbstbedienung 4: Ess- und Teelöffel, Gabel und Serviette richtig benutzen; nach dem Essen das Geschirr zum Abräumtisch bringen",
+      "Haushalt 1: Ordnung im Raum und draußen halten – Dinge des Alltags hinstellen und hinlegen, Spielzeug nach dem Spielen wegräumen",
+      "Haushalt 2: einfache Arbeitshandlungen mit schnell erreichbarem Ergebnis selbst ausführen – Stühle an die Tische stellen, Stifte, Pinsel und Papier hinlegen",
+      "Haushalt 3: am Schmücken des Gruppenraums zum Fest teilnehmen",
+      "Haushalt 5: nach dem Erlernen der Arbeitsschritte die Pflichten des Tischdienstes übernehmen",
+      "Natur 3: elementare Arbeitshandlungen zur Pflege von Pflanzen und Tieren selbst ausführen – Vögel und Fische füttern, Zimmerpflanzen und Beete gießen, Gemüse einsammeln"
+    ]
   }
 }

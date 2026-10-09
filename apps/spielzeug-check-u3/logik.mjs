@@ -75,13 +75,35 @@ export const MARKE_ODER_PREIS = /(€|EUR\b|\bEuro\b|\bPreis\b|\bkostet\b|\bgün
  * folgt ein Eigenname. Zehnter Fall dieser Art in diesem Projekt - ein Netz,
  * das ein Wort verbietet, verbietet auch seine Zurückweisung.
  *
- * OHNE `i`: mit dem Flag würde die Großschreibung des Eigennamens nicht mehr
- * zählen und das Netz jede Fortsetzung treffen.
+ * OHNE `i`: mit dem Flag würde die Großschreibung nicht mehr zählen.
+ *
+ * NACHGEBESSERT (Review Welle 80): die erste Fassung war
+ * `/\bHerstellers?\s+[A-ZÄÖÜ]/` und damit in BEIDE Richtungen falsch. Im
+ * Deutschen ist JEDES Substantiv großgeschrieben - „Hat der Hersteller Normen
+ * vollständig angewendet" löste das Netz aus, und weil `pruefeDaten` dann
+ * einen Fehler meldet, hätte die App statt des Inhalts nur noch
+ * „Datenfehler" gezeigt. Umgekehrt blieb der Eigenname in Anführungszeichen
+ * unentdeckt. Getroffen wird jetzt, was ein Eigenname WIRKLICH mitbringt:
+ * Anführungszeichen, die Konstruktion „vom Hersteller X" oder eine
+ * Rechtsform. Falle A, fünfzehntes Mal - und der Grund ist diesmal nicht ein
+ * zu weites Wort, sondern eine Eigenschaft der deutschen Orthografie.
+ *
+ * Was dieses Netz NICHT kann: „vom Hersteller Musterwerk" von „vom Hersteller
+ * Angaben" unterscheiden. Ein Eigenname ist im Deutschen lexikalisch nicht
+ * erkennbar, und ein Netz, das es behauptet, wäre eine Zusage, die es nicht
+ * hält. Getroffen wird, was ein Markenname typischerweise MITBRINGT -
+ * Anführungszeichen, Rechtsform, Schutzzeichen; den Rest halten die
+ * ausgesprochene Zusage in `keineMarken` und das Review.
  */
-export const HERSTELLER_GENANNT = /\bHerstellers?\s+(?:namens\s+)?[A-ZÄÖÜ]/;
+export const HERSTELLER_GENANNT = /\bHerstellers?\s+(?:namens\s+)?[„"'»]|[A-ZÄÖÜ]\w*\s*(?:GmbH|AG|KGaA|KG|SE|Ltd|Inc|&\s*Co\b)|[®™]/;
 
-/** Eine Maßzahl in Millimeter, Zentimeter oder Milliliter. */
-const MASSZAHL = /\d+(?:,\d+)?\s*(?:mm|cm|ml)\b/;
+/**
+ * Eine Maßzahl. Nachgebessert im Review der Welle 80: die erste Fassung kannte
+ * nur `mm|cm|ml`, und „0,5 Zentimeter" oder „0,22 m" gingen durch - also
+ * genau die Schreibweisen, mit denen sich die Zusage „keine Zahl ohne
+ * geprüfte Quelle" umgehen ließ.
+ */
+const MASSZAHL = /\d+(?:,\d+)?\s*(?:mm|cm|dm|ml|l|m|Millimeter|Zentimeter|Dezimeter|Meter|Milliliter|Liter)\b/;
 
 /**
  * Woher eine Maßzahl kommt. Jede Zahl in dieser App ist die Zahl der Norm
@@ -235,8 +257,15 @@ export function pruefeDaten(daten) {
   const ce = pruefungen.find((p) => /CE/.test(p.was ?? ''));
   if (!ce) fehler.push('keine Zeile zur CE-Kennzeichnung');
   else {
-    if (!/KEINE Prüfung|keine Prüfung durch/i.test(ce.prueferGrenze ?? '')) {
-      fehler.push('CE-Zeile: dass CE keine Prüfung durch eine unabhängige Stelle ist, muss dastehen');
+    // Verankert auf das NEGIERTE, nicht auf eine Wortfolge: die erste Fassung
+    // ließ „CE ist KEINE Prüfung durch den Händler. … die eine unabhängige
+    // Prüfstelle vorher bestätigt hat" durchgehen, also genau die Fehllesart,
+    // die der Ausschluss x01 zurückweist (Review Welle 80).
+    if (!/[Kk]eine Prüfung durch eine unabhängige Stelle|KEINE Prüfung durch eine unabhängige Stelle/.test(ce.prueferGrenze ?? '')) {
+      fehler.push('CE-Zeile: dass CE keine Prüfung durch eine unabhängige Stelle ist, muss wörtlich dastehen');
+    }
+    if (/\bCE heißt geprüft“ ist also richtig|unabhängige (Prüf)?[Ss]telle \w* ?(vorher )?bestätigt/.test(ce.prueferGrenze ?? '')) {
+      fehler.push('CE-Zeile: behauptet die Beteiligung einer unabhängigen Stelle – das ist die Fehllesart aus x01');
     }
     if (!/Erklärung des Herstellers|erklärt.{0,20}selbst/i.test(ce.prueferGrenze ?? '')) {
       fehler.push('CE-Zeile: dass es die Erklärung des Herstellers ist, muss dastehen');
@@ -268,7 +297,15 @@ export function pruefeDaten(daten) {
   const u3 = pruefungen.find((p) => /unter 3 Jahren|unter drei Jahren/.test(p.was ?? ''));
   if (!u3) fehler.push('keine Zeile zum Altershinweis');
   else {
-    if (!/WARUM|warum/.test(u3.was ?? '')) fehler.push('U3-Zeile: die Gefahrenangabe ist der Punkt – sie muss in „was“ stehen');
+    // Nicht nur das Wort „warum": die Zeile muss VERLANGEN, dass die Gefahr
+    // dabeisteht. „heißt Kleinteile – egal warum" enthielt das Wort und
+    // behauptete das Gegenteil (Review Welle 80).
+    if (!/steht auch dabei, WARUM|WARUM/.test(u3.was ?? '')) {
+      fehler.push('U3-Zeile: die Gefahrenangabe ist der Punkt – sie muss in „was“ stehen');
+    }
+    if (/heißt Kleinteile|bedeutet Kleinteile/.test(u3.was ?? '')) {
+      fehler.push('U3-Zeile: behauptet, das Symbol heiße Kleinteile – genau das ist die Fehllesart');
+    }
     if (!/nicht automatisch|heißt nicht/i.test(u3.warum ?? '')) {
       fehler.push('U3-Zeile: dass das Symbol nicht automatisch „Kleinteile“ heißt, muss dastehen');
     }
@@ -293,6 +330,10 @@ export function pruefeDaten(daten) {
     }
     if (!/jeder Lage|JEDER Lage/.test(kugel.prueferGrenze ?? '')) {
       fehler.push('Kugel-Zeile: dass die Norm in jeder Lage prüft, gehört zur Grenze der Messung');
+    }
+    // Das GDD kündigt „drei Grenzen" an; die dritte war nur Prosa.
+    if (!/ohne zu drücken|nicht zusammen|nicht gedrückt/.test(kugel.prueferGrenze ?? '')) {
+      fehler.push('Kugel-Zeile: dass die Norm das Teil nicht drückt, ist die dritte der drei Grenzen');
     }
     if (!kugel.kritisch) fehler.push('Kugel-Zeile: muss kritisch sein');
   }
@@ -348,6 +389,24 @@ export function pruefeDaten(daten) {
       fehler.push(`Prüfung ${p.id}: nennt ein Maß, obwohl die Quelle nicht als geprüft markiert ist`);
     }
   }
+  // Und nirgends sonst. `arten` und `bereiche` tragen gar kein `quelle`-Feld;
+  // eine Maßzahl dort wäre also eine Zahl, deren Herkunft sich nicht
+  // markieren LÄSST - die Zusage „ohne Ausnahme" war dort bisher strukturell
+  // unerfüllbar (Review Welle 80). Ausgenommen ist das Feld `quelle.norm`,
+  // das die nachgelesenen Maße aufzählt, und `ausgeschlossen`, das die
+  // Fehlprüfungen widerlegen muss.
+  for (const [wo, o] of [...arten.map((a) => [`Art ${a.id}`, a]),
+    ...(daten?.bereiche ?? []).map((b) => [`Bereich ${b.id}`, b])]) {
+    if (MASSZAHL.test(JSON.stringify(o))) {
+      fehler.push(`${wo}: nennt ein Maß – Maße gehören in eine Prüfung mit geprüfter Quelle`);
+    }
+  }
+  for (const feld of ['hinweis', 'keinErgebnis', 'nichtFertig', 'keinEinkaufszettel', 'keineMarken',
+    'keinWirkversprechen', 'wasImHausNichtGeht', 'elterntelefon', 'notfall', 'zielgruppe']) {
+    if (MASSZAHL.test(String(daten?.[feld] ?? ''))) {
+      fehler.push(`${feld}: nennt ein Maß – Maße gehören in eine Prüfung mit geprüfter Quelle`);
+    }
+  }
 
   // --- Die Klopapierrolle steht NUR in der Ausschlussliste, und dort mit
   //     BEIDEN Irrtumsrichtungen. Eine halbe Entwarnung ist schlimmer als keine.
@@ -394,6 +453,12 @@ export function pruefeDaten(daten) {
   } };
   for (const p of pruefungen) sammle(p, `Prüfung ${p.id}`);
   for (const a of arten) sammle(a, `Art ${a.id}`);
+  // Und über die Bereiche. Die fehlten in der ersten Fassung, obwohl `name`
+  // und `vorspann` als Überschrift und Vorspann jedes Blocks am Bildschirm
+  // UND auf dem Papier stehen: ein Markenname, ein Preis, ein
+  // Wirkversprechen und eine Ampel passten dort gleichzeitig hinein, und der
+  // Validator blieb grün (Review Welle 80).
+  for (const b of daten?.bereiche ?? []) sammle(b, `Bereich ${b.id}`);
   for (const [wo, t] of alleTexte) {
     if (MARKE_ODER_PREIS.test(t)) fehler.push(`Marke, Preis oder Bezugsquelle in ${wo}: „${t.slice(0, 60)}“`);
     if (HERSTELLER_GENANNT.test(t)) fehler.push(`ein benannter Hersteller in ${wo}: „${t.slice(0, 60)}“`);

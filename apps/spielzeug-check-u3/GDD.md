@@ -23,7 +23,7 @@ derselben Sache, und beides steht als Abweichung in `quelle.abweichung`.
 ## 1. Der Gegenstand ist ein OBJEKT
 
 Der Raum gehört `apps/sicherer-krabbelraum-check`, das Kind gehört
-`apps/meilenstein-begleiter`. Hier beschreibt jede der 18 Zeilen eine
+`apps/meilenstein-begleiter`. Hier beschreibt jede der 19 Zeilen eine
 Eigenschaft des Gegenstands oder einen Handgriff daran. Eine dritte Liste über
 dasselbe Kind wäre eine dritte Wahrheit darüber.
 
@@ -221,7 +221,7 @@ Rechtsakteur zu sprechen.
 
 ## 12. Tests
 
-`node --test apps/spielzeug-check-u3/test/logik.test.mjs` (36 Tests). Fast jede
+`node --test apps/spielzeug-check-u3/test/logik.test.mjs` (44 Tests). Fast jede
 Zusage hat eine Gegenprobe: eine Mutation der Daten muss `pruefeDaten` rot
 machen. Geprüft werden unter anderem beide Pflichtfelder, die Fundstelle nur
 mit Prüfvermerk, die Maßzahl nur mit Herkunft im gleichen Feld und nur mit

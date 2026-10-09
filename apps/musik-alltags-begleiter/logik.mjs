@@ -204,6 +204,9 @@ export function pruefeDaten(daten) {
     if (ids.has(r.id)) fehler.push(`${wo}: id doppelt`);
     ids.add(r.id);
     if (!nichtLeer(r.name)) fehler.push(`${wo}: name fehlt`);
+    // `zeichen` steht in jeder Knopfbeschriftung - fehlt es, steht dort
+    // „undefined" (Review Welle 80).
+    if (!nichtLeer(r.zeichen)) fehler.push(`${wo}: zeichen fehlt – die App rendert es`);
     if (!nichtLeer(r.warumHier)) fehler.push(`${wo}: warumHier fehlt`);
     if (!nichtLeer(r.ohneGeraet)) fehler.push(`${wo}: ohneGeraet fehlt – ohne das wäre es eine Geräte-App`);
     if (!nichtLeer(r.wasDuTust)) fehler.push(`${wo}: wasDuTust fehlt`);
@@ -221,6 +224,7 @@ export function pruefeDaten(daten) {
     if (!ARTEN.includes(a.id)) fehler.push(`${wo}: nicht in der geschlossenen Liste`);
     artIds.add(a.id);
     if (!nichtLeer(a.name)) fehler.push(`${wo}: name fehlt`);
+    if (!nichtLeer(a.zeichen)) fehler.push(`${wo}: zeichen fehlt – die App rendert es`);
     if (!nichtLeer(a.wasSieTun)) fehler.push(`${wo}: wasSieTun fehlt`);
     else if (!/\bSie\b/.test(a.wasSieTun)) fehler.push(`${wo}: wasSieTun nennt nicht SIE als die Handelnde`);
     if (!nichtLeer(a.ohneKoennen)) fehler.push(`${wo}: ohneKoennen fehlt – niemand muss hier etwas können`);

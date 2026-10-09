@@ -1,5 +1,5 @@
 // Selbststaendigkeits-Leiter (Praleska docs/10, Eltern-Werkzeuge Nr. 58,
-// Quelle S. 94-96 «Трудовое воспитание»).
+// Quelle S. 94-96 «ПРИОБЩАЕМСЯ К ТРУДУ», Hinfuehrung zur Arbeit).
 //
 // TRAGENDE ENTSCHEIDUNGEN
 //
@@ -43,10 +43,18 @@ export const BEREICHE = Object.freeze(['anziehen', 'essen', 'haushalt', 'natur']
  *  „23 Fertigkeiten" ueberhaupt benennbar ist - und nirgends sonst. */
 export const ZIELE_QUELLE = 23;
 
-/** Von diesen 23 benennen nur vier ueberhaupt eine Handlung des Kindes. Der
- *  Rest beschreibt Haltungen oder Aufgaben des Erwachsenen - das ist der
- *  Grund, warum die Katalogzahl „23 Fertigkeiten" eine Fehllesung ist. */
-export const ZIELE_MIT_KIND_HANDLUNG = 4;
+/**
+ * Von diesen 23 benennen NEUN eine konkrete, beobachtbare Handlung des Kindes
+ * (Selbstbedienung 1-4, Haushalt 1, 2, 3 und 5, Natur 3). Die uebrigen
+ * vierzehn beschreiben Haltungen oder Aufgaben des Erwachsenen - das ist der
+ * Grund, warum die Katalogzahl „23 Fertigkeiten" eine Fehllesung ist.
+ *
+ * KORRIGIERT im Review der Welle 80: hier stand 4, und das war die Zahl
+ * meiner eigenen GRUPPEN, nicht der Ziele. Nachgezaehlt sind es neun; die
+ * Liste steht in `quelle.kindHandlungen`, und jede davon muss in einer Zeile
+ * oder im Ausschluss auftauchen.
+ */
+export const ZIELE_MIT_KIND_HANDLUNG = 9;
 
 /** Was eine gespeicherte Stufe tragen darf: die Zeile und die Stufe. Kein
  *  Datum, kein Name, keine Notiz. */
@@ -67,8 +75,23 @@ export const BEWERTUNG = /\bAmpel\b|🔴|\brote Stufe\b|\bRückstand\b|\bDefizit
  */
 export const LOB_ALS_GRUND = /(damit|weil)\s+(du|Sie|Mama|Papa|wir|die Erwachsenen|ich)\s+[^.!?]{0,30}(freu|stolz|zufrieden|lob)/i;
 
-/** Eine Altersangabe. Ausser in den drei amtlichen Zeilen verboten. */
-export const ALTERSANGABE = /\d+\s*(Monat|Monate|Lebensmonat|Jahr|Jahre|J\.)\b|\bab \d|\bmit \d+\s*(Monaten|Jahren)/i;
+/**
+ * Eine Altersangabe. Ausser in den drei amtlichen Zeilen verboten.
+ *
+ * NACHGEBESSERT im Review der Welle 80: die erste Fassung liess genau die
+ * Notation der Kinder-Richtlinie durch („34. bis 36. Lebensmonat"), weil nach
+ * der Zahl ein Punkt steht, dazu „nach 30 Monaten", „im 3. Lebensjahr" und
+ * jedes ausgeschriebene Zahlwort - und an einem ausgeschriebenen „unter zehn
+ * Jahren" in einer Pflanzen-Zeile ist die Zusage „kein Alter" auch wirklich
+ * gebrochen gewesen.
+ */
+export const ALTERSANGABE = new RegExp([
+  '\\d+\\.?\\s*(?:bis\\s*\\d+\\.?\\s*)?(?:Monat|Monate|Monaten|Lebensmonat|Lebensjahr|Jahr|Jahre|Jahren|J\\.)\\b',
+  '\\b(?:ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|achtzehn|zwanzig|dreißig|sechsunddreißig)\\s*'
+    + '(?:Monate|Monaten|Jahre|Jahren|Lebensmonat|Lebensjahr)\\b',
+  '\\bab\\s*\\d',
+  '\\bim\\s*\\d+\\.\\s*Lebensjahr',
+].join('|'), 'i');
 
 /** Die Fehllesung des Katalogeintrags. Darf nur im Ausschluss stehen. */
 export const DREIUNDZWANZIG = /23\s*(lebenspraktische\s*)?(Fertigkeiten|Fähigkeiten|Handgriffe|Schritte)/i;
@@ -79,19 +102,33 @@ export function zeileVon(daten, id) {
   return (daten?.zeilen ?? []).find((z) => z.id === id) ?? null;
 }
 
-/** Die Zeilen eines Bereichs, in der Reihenfolge der Voraussetzungen. */
+/**
+ * Die Zeilen eines Bereichs, in der Reihenfolge der Voraussetzungen.
+ *
+ * Ein Bereich darf MEHRERE Ketten haben. Die erste Fassung erzwang genau eine
+ * je Bereich, und das hat eine Behauptung erzeugt, die nicht stimmte: dass
+ * Händewaschen eine Voraussetzung des Aufräumens sei. Eine Voraussetzung ist
+ * eine Tatsache über zwei Handgriffe, kein Ordnungstrick (Review Welle 80).
+ */
 export function zeilenIm(daten, bereich) {
   const drin = (daten?.zeilen ?? []).filter((z) => z.bereich === bereich);
-  const raus = [];
-  let aktuell = drin.find((z) => !z.vorher) ?? null;
-  const gesehen = new Set();
-  while (aktuell && !gesehen.has(aktuell.id)) {
-    gesehen.add(aktuell.id);
-    raus.push(aktuell);
-    aktuell = drin.find((z) => z.vorher === aktuell.id) ?? null;
+  const kinder = new Map();
+  for (const z of drin) {
+    if (!z.vorher) continue;
+    kinder.set(z.vorher, [...(kinder.get(z.vorher) ?? []), z]);
   }
-  // Was nicht in der Kette haengt, kommt hinten dran - damit nichts
-  // verschwindet, wenn die Daten einmal eine Luecke haben.
+  const raus = [];
+  const gesehen = new Set();
+  const lauf = (z) => {
+    if (gesehen.has(z.id)) return;
+    gesehen.add(z.id);
+    raus.push(z);
+    for (const k of kinder.get(z.id) ?? []) lauf(k);
+  };
+  for (const z of drin) if (!z.vorher) lauf(z);
+  // Was von keiner Wurzel erreichbar ist - ein Kreis oder ein Verweis ins
+  // Leere -, kommt hinten dran, damit nichts verschwindet; der Validator
+  // meldet es.
   for (const z of drin) if (!gesehen.has(z.id)) raus.push(z);
   return raus;
 }
@@ -122,6 +159,17 @@ export function beschneide(stand, daten) {
 /** Die Stufe einer Zeile. Ohne Eintrag: `noch-nicht` - und das ist kein Befund. */
 export function stufeVon(stand, id) {
   return STUFEN.includes(stand?.[id]) ? stand[id] : 'noch-nicht';
+}
+
+/**
+ * Die AUSDRUECKLICH gesetzte Stufe, sonst `null`. Fuer die Anzeige ist der
+ * Unterschied wichtig: „noch nicht angetippt" ist nicht dasselbe wie „ich
+ * habe hingesehen und es noch nicht gesehen". Die erste Fassung meldete beim
+ * ersten Oeffnen alle sechzehn Zeilen als „noch nicht, gedrueckt" (Review
+ * Welle 80).
+ */
+export function gesetzteStufe(stand, id) {
+  return STUFEN.includes(stand?.[id]) ? stand[id] : null;
 }
 
 /**
@@ -198,10 +246,16 @@ export function pruefeDaten(daten) {
     if (/üben|trainier|Übung|beibringen|lehren/i.test(z.gelegenheit ?? '')) {
       fehler.push(`${wo}: die Gelegenheit ist ein Angebot, keine Übung`);
     }
-    // `quellZiel` ist der Index in die VIER Quellziele, die ueberhaupt eine
+    // `quellZiel` ist der Index in die NEUN Quellziele, die eine konkrete
     // Handlung des Kindes benennen - nicht in die 23 Ziele des Abschnitts.
-    if (!Number.isInteger(z.quellZiel) || z.quellZiel < 1 || z.quellZiel > ZIELE_MIT_KIND_HANDLUNG) {
-      fehler.push(`${wo}: quellZiel fehlt oder liegt außerhalb der vier Ziele mit einer Handlung des Kindes`);
+    // `null` ist erlaubt, aber dann MUSS die Zeile sagen, woher sie kommt:
+    // eine Zeile ohne Quelle und ohne Erklaerung waere eine erfundene Quelle.
+    if (z.quellZiel === null || z.quellZiel === undefined) {
+      if (!nichtLeer(z.eigen)) {
+        fehler.push(`${wo}: ohne quellZiel – dann muss „eigen“ sagen, woher die Zeile kommt`);
+      }
+    } else if (!Number.isInteger(z.quellZiel) || z.quellZiel < 1 || z.quellZiel > ZIELE_MIT_KIND_HANDLUNG) {
+      fehler.push(`${wo}: quellZiel liegt außerhalb der neun Ziele mit einer Handlung des Kindes`);
     }
   }
 
@@ -209,23 +263,28 @@ export function pruefeDaten(daten) {
   for (const b of BEREICHE) {
     const drin = zeilen.filter((z) => z.bereich === b);
     if (!drin.length) { fehler.push(`Bereich ${b}: keine Zeile`); continue; }
-    const ohne = drin.filter((z) => !z.vorher);
-    if (ohne.length !== 1) fehler.push(`Bereich ${b}: genau eine Zeile muss ohne Voraussetzung anfangen, es sind ${ohne.length}`);
+    const wurzeln = drin.filter((z) => !z.vorher);
+    if (!wurzeln.length) fehler.push(`Bereich ${b}: keine Zeile ohne Voraussetzung – dann hängt alles im Kreis`);
     for (const z of drin) {
       if (!z.vorher) continue;
       const v = zeileVon(daten, z.vorher);
       if (!v) { fehler.push(`Zeile ${z.id}: vorher „${z.vorher}“ gibt es nicht`); continue; }
       if (v.bereich !== z.bereich) fehler.push(`Zeile ${z.id}: vorher liegt in einem anderen Bereich`);
     }
-    // Kein Kreis: die Kette muss alle Zeilen des Bereichs erreichen.
-    if (zeilenIm(daten, b).length !== drin.length) fehler.push(`Bereich ${b}: die Kette erreicht nicht alle Zeilen`);
-    const kette = new Set();
-    let lauf = ohne[0] ?? null;
-    while (lauf && !kette.has(lauf.id)) {
-      kette.add(lauf.id);
-      lauf = drin.find((x) => x.vorher === lauf.id) ?? null;
+    // Jede Zeile muss von einer Wurzel aus erreichbar sein. Das faengt den
+    // Kreis und den Verweis ins Leere in einem.
+    const erreichbar = new Set();
+    const lauf = (z) => {
+      if (erreichbar.has(z.id)) return;
+      erreichbar.add(z.id);
+      for (const k of drin.filter((x) => x.vorher === z.id)) lauf(k);
+    };
+    for (const z of wurzeln) lauf(z);
+    for (const z of drin) {
+      if (!erreichbar.has(z.id)) {
+        fehler.push(`Zeile ${z.id}: von keiner Wurzel aus erreichbar – ein Kreis oder ein Verweis ins Leere`);
+      }
     }
-    if (kette.size !== drin.length) fehler.push(`Bereich ${b}: die Voraussetzungen bilden keine durchgehende Kette`);
   }
   for (const b of daten?.bereiche ?? []) {
     if (!BEREICHE.includes(b.id)) fehler.push(`Bereich ${b.id}: nicht in der geschlossenen Liste`);
@@ -294,7 +353,8 @@ export function pruefeDaten(daten) {
     [/Hilf mir/i, 'das unbelegte Montessori-Zitat'], [/Tischdienst|Dienst am Esstisch/i, 'der Tischdienst'],
     [/freuen/i, 'die Freude des Erwachsenen als Grund'], [/Status/i, 'der Status in der Gruppe'],
     [/Belohnungstafel/i, 'die Belohnungstafel'], [/Altersangaben/i, 'die Altersangaben'],
-    [/Wassertemperatur/i, 'die Wassertemperatur'], [/Erste-Hilfe/i, 'die Erste-Hilfe-Anleitung']]) {
+    [/Wassertemperatur/i, 'die Wassertemperatur'], [/Erste-Hilfe/i, 'die Erste-Hilfe-Anleitung'],
+    [/Fest/i, 'das Schmücken zum Fest'], [/Liste giftiger Pflanzen/i, 'die Pflanzenliste']]) {
     if (!aus.some((a) => muster.test(a.was ?? ''))) fehler.push(`ausgeschlossen: ${name} muss zurückgewiesen werden`);
   }
   for (const a of aus) {
@@ -307,16 +367,34 @@ export function pruefeDaten(daten) {
   if (z.zieleQuelle !== ZIELE_QUELLE) fehler.push(`quelle.zahlen: der Abschnitt trägt ${ZIELE_QUELLE} Ziele`);
   if (z.abschnitte !== 5) fehler.push('quelle.zahlen: der Abschnitt hat fünf Teile');
   if (z.zieleMitKindHandlung !== ZIELE_MIT_KIND_HANDLUNG) {
-    fehler.push(`quelle.zahlen: nur ${ZIELE_MIT_KIND_HANDLUNG} Ziele benennen eine Handlung des Kindes`);
+    fehler.push(`quelle.zahlen: ${ZIELE_MIT_KIND_HANDLUNG} Ziele benennen eine Handlung des Kindes`);
   }
-  // Jedes dieser vier Ziele muss auch wirklich in einer Zeile vorkommen,
-  // sonst behauptet die Bilanz mehr als die Daten geben (Bauart aus Nr. 49).
-  const benutzt = new Set(zeilen.map((x) => x.quellZiel));
+  // Die neun Ziele stehen einzeln da, nicht nur als Zahl - sonst liesse sich
+  // die Zahl behaupten, ohne sie zu belegen.
+  const handlungen = daten?.quelle?.kindHandlungen ?? [];
+  if (handlungen.length !== ZIELE_MIT_KIND_HANDLUNG) {
+    fehler.push(`quelle.kindHandlungen: ${ZIELE_MIT_KIND_HANDLUNG} Ziele müssen einzeln benannt sein, es sind ${handlungen.length}`);
+  }
+  for (const [i, h] of handlungen.entries()) {
+    if (!nichtLeer(h)) fehler.push(`quelle.kindHandlungen[${i}] ist leer`);
+  }
+  // Jedes der neun Ziele muss in einer Zeile stehen ODER im Ausschluss
+  // begruendet sein (Bauart aus Nr. 49 und Nr. 57).
+  const benutzt = new Set(zeilen.map((x) => x.quellZiel).filter(Number.isInteger));
+  const abgelehnt = new Set((daten?.ausgeschlossen ?? []).map((a) => a.quellZiel).filter(Number.isInteger));
   for (let n = 1; n <= ZIELE_MIT_KIND_HANDLUNG; n++) {
-    if (!benutzt.has(n)) fehler.push(`Quellziel ${n} mit Kind-Handlung kommt in keiner Zeile vor`);
+    if (!benutzt.has(n) && !abgelehnt.has(n)) {
+      fehler.push(`Quellziel ${n} mit Kind-Handlung: weder in einer Zeile noch im Ausschluss begründet`);
+    }
+    if (benutzt.has(n) && abgelehnt.has(n)) {
+      fehler.push(`Quellziel ${n}: steht in einer Zeile UND im Ausschluss`);
+    }
   }
-  if (!/Handlungen des Kindes benennen nur vier/.test(daten?.quelle?.nachgezaehlt ?? '')) {
-    fehler.push('quelle.nachgezaehlt muss sagen, wie wenige Ziele eine Handlung des Kindes benennen');
+  if (!/benennen davon neun/.test(daten?.quelle?.nachgezaehlt ?? '')) {
+    fehler.push('quelle.nachgezaehlt muss sagen, wie viele Ziele eine Handlung des Kindes benennen');
+  }
+  if (!/ein einziges Ziel/.test(daten?.quelle?.nachgezaehlt ?? '')) {
+    fehler.push('quelle.nachgezaehlt muss sagen, dass ein Ziel allein acht Handgriffe trägt – daran hängt die Fehllesung');
   }
   if (!/Grenzstein/.test(daten?.quelle?.amtlich ?? '')) {
     fehler.push('quelle.amtlich muss sagen, dass das Wort „Grenzstein“ in der Richtlinie nicht vorkommt');

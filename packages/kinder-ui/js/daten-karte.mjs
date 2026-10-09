@@ -73,9 +73,9 @@ export function setzeMerkerZurueck() {
  * Der Fokus bleibt nach dem Löschen auf dem Knopf: Wer mit der Tastatur
  * arbeitet, soll nicht an den Seitenanfang zurückgeworfen werden.
  *
- * @param {{schluessel: string|string[], was?: string, nachLoeschen?: () => void, speicher?: Storage, knopfId?: string}} optionen
+ * @param {{schluessel: string|string[], was?: string, nachLoeschen?: () => void, speicher?: Storage, knopfId?: string, klasse?: string}} optionen
  */
-export function datenKarte({ schluessel, was, nachLoeschen, speicher, knopfId = 'daten-loeschen' } = {}) {
+export function datenKarte({ schluessel, was, nachLoeschen, speicher, knopfId = 'daten-loeschen', klasse = '' } = {}) {
   const t = DATEN_TEXTE;
   const hinweis = was
     ? `Gespeichert wird nur ${was} – und zwar nur hier auf diesem Gerät. Keine Namen, keine Werbung, keine Anmeldung.`
@@ -84,7 +84,11 @@ export function datenKarte({ schluessel, was, nachLoeschen, speicher, knopfId = 
   const meldungsText = geradeGeloescht ? t.bestaetigung : '';
   geradeGeloescht = false;
   const meldung = el('p', { style: 'margin:0.4rem 0 0;font-weight:700', 'aria-live': 'polite' }, meldungsText);
-  return el('section', { class: 'k-karte' },
+  // `klasse` haengt eine App-Klasse an - gebraucht wird das fuer die
+  // Nur-Bildschirm-Klasse der druckenden Apps: ohne sie landete die Karte
+  // samt Loeschknopf auf dem Papier, und ein Druckblatt traegt keinen Knopf
+  // (docs/02). Gefunden im Review der Welle 80.
+  return el('section', { class: `k-karte${klasse ? ` ${klasse}` : ''}` },
     el('h2', { style: 'margin-top:0' }, t.titel),
     el('p', { style: 'margin-top:0' }, hinweis),
     el('div', { class: 'k-antworten' },

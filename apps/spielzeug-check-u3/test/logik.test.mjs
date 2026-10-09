@@ -161,11 +161,23 @@ test('„Hersteller" darf stehen – ein benannter Hersteller nicht', () => {
   assert.equal(HERSTELLER_GENANNT.test('Es ist die Erklärung des Herstellers.'), false);
   assert.equal(HERSTELLER_GENANNT.test('Der Hersteller erklärt das selbst.'), false);
   assert.equal(HERSTELLER_GENANNT.test('Hersteller und Einführer haften.'), false);
-  // Und das, worum es geht:
-  assert.equal(HERSTELLER_GENANNT.test('Vom Hersteller Musterwerk gibt es gutes Holzspielzeug.'), true);
-  assert.equal(HERSTELLER_GENANNT.test('Hersteller namens Beispielfirma.'), true);
-  const k = mit('m01', 'warum', 'Beim Hersteller Musterwerk ist das Holz besser verarbeitet.');
+  // Nachgebessert im Review der Welle 80: die erste Fassung des Netzes war
+  // `/\bHerstellers?\s+[A-ZÄÖÜ]/` und traf im Deutschen JEDES folgende
+  // Substantiv - „Hat der Hersteller Normen vollständig angewendet" hätte die
+  // Datei ungültig gemacht und die App hätte nur noch „Datenfehler" gezeigt.
+  // Diese beiden Sätze sind die Gegenprobe dazu:
+  assert.equal(HERSTELLER_GENANNT.test('Hat der Hersteller Normen vollständig angewendet.'), false);
+  assert.equal(HERSTELLER_GENANNT.test('Ein Aufkleber nimmt den Hersteller nicht aus der Verantwortung.'), false);
+  // Und das, worum es geht - was ein Markenname typischerweise mitbringt:
+  assert.equal(HERSTELLER_GENANNT.test('Beim Hersteller „Musterwerk“ ist das Holz besser.'), true);
+  assert.equal(HERSTELLER_GENANNT.test('Hersteller namens „Beispielfirma“.'), true);
+  assert.equal(HERSTELLER_GENANNT.test('Die Muster GmbH baut das.'), true);
+  assert.equal(HERSTELLER_GENANNT.test('Holzspielzeug Marke®'), true);
+  const k = mit('m01', 'warum', 'Beim Hersteller „Musterwerk“ ist das Holz besser verarbeitet.');
   assert.match(pruefeDaten(k).join('\n'), /ein benannter Hersteller/);
+  // Was das Netz NICHT kann, steht als Zusage nirgends: ein Eigenname ohne
+  // Anführungszeichen und ohne Rechtsform ist lexikalisch nicht erkennbar.
+  assert.match(logikQuelle, /Was dieses Netz NICHT kann/);
 });
 
 test('ohne Marke, Preis und Bezugsquelle', () => {
@@ -501,4 +513,93 @@ test('die Klopapierrolle scheitert am Verfahren, nicht nur an Millimetern', () =
   assert.match(rolle.warum, /Schablone/);
   assert.match(rolle.warum, /31,7 mm/);
   assert.match(rolle.warum, /44,5 mm/);
+});
+
+test('Maße gehören in eine Prüfung mit geprüfter Quelle – und nirgends sonst', () => {
+  // `arten` und `bereiche` tragen gar kein `quelle`-Feld; eine Maßzahl dort
+  // wäre eine Zahl, deren Herkunft sich nicht markieren LÄSST. Die Zusage
+  // „ohne Ausnahme" war dort bisher strukturell unerfüllbar (Review Welle 80).
+  const k = kopie();
+  k.arten[0].sicherheit = 'Die Norm verlangt mindestens 50 mm.';
+  assert.match(pruefeDaten(k).join('\n'), /Art a-stapelbecher: nennt ein Maß/);
+  const b = kopie();
+  b.bereiche[1].vorspann = 'Alles unter 32 mm kommt weg.';
+  assert.match(pruefeDaten(b).join('\n'), /Bereich kleinteile: nennt ein Maß/);
+  const o = kopie();
+  o.hinweis = `${o.hinweis} Nichts unter 31,7 mm.`;
+  assert.match(pruefeDaten(o).join('\n'), /hinweis: nennt ein Maß/);
+  // Ausgeschriebene Einheiten und Meter gehen nicht mehr durch.
+  const z = mit('b01', 'wieZuPruefen', 'Nachsehen, ob die Schraube mindestens 0,5 Zentimeter greift.');
+  assert.match(pruefeDaten(z).join('\n'), /b01: nennt ein Maß|Maßzahl ohne Herkunft/);
+  const m = mit('b01', 'wieZuPruefen', 'Eine Schnur darf höchstens 0,22 m lang sein.');
+  assert.match(pruefeDaten(m).join('\n'), /b01: nennt ein Maß|Maßzahl ohne Herkunft/);
+});
+
+test('die Textnetze laufen auch über die Bereiche', () => {
+  // `bereiche[].name` und `vorspann` stehen am Bildschirm UND auf dem Papier;
+  // in der ersten Fassung berührte sie kein Netz (Review Welle 80).
+  const k = kopie();
+  k.bereiche[1].vorspann = 'Beim Hersteller „Musterwerk“ kostet so ein Becher 8 Euro im Shop.';
+  const f = pruefeDaten(k).join('\n');
+  assert.match(f, /Bereich kleinteile/);
+  assert.match(f, /Marke, Preis oder Bezugsquelle|benannter Hersteller/);
+  const w = kopie();
+  w.bereiche[1].name = 'Das Material fördert die Entwicklung';
+  assert.match(pruefeDaten(w).join('\n'), /Wirkversprechen in Bereich kleinteile/);
+  const g = kopie();
+  g.bereiche[1].vorspann = 'Ergebnis: 4 von 18 bestanden, Ampel gelb.';
+  assert.match(pruefeDaten(g).join('\n'), /Gesamtwertung in Bereich kleinteile/);
+});
+
+test('die CE-Zeile lässt sich nicht umdrehen', () => {
+  // Die erste Fassung verankerte nur Wortfolgen: „CE ist KEINE Prüfung durch
+  // den Händler. Es ist die Erklärung des Herstellers, die eine unabhängige
+  // Prüfstelle vorher bestätigt hat." blieb grün – also genau die Fehllesart,
+  // die Ausschluss x01 zurückweist (Review Welle 80).
+  const ce = daten.pruefungen.find((p) => /CE/.test(p.was));
+  assert.match(ce.prueferGrenze, /KEINE Prüfung durch eine unabhängige Stelle/);
+  const k = mit('k01', 'prueferGrenze',
+    'CE ist KEINE Prüfung durch den Händler. Es ist die Erklärung des Herstellers, '
+    + 'die eine unabhängige Prüfstelle vorher bestätigt hat. „CE heißt geprüft“ ist also richtig.');
+  const f = pruefeDaten(k).join('\n');
+  assert.match(f, /CE-Zeile/);
+});
+
+test('die Kugel-Zeile nennt alle drei Grenzen, die sie ankündigt', () => {
+  const kugel = daten.pruefungen.find((p) => /Ball|kugelig/i.test(p.was));
+  assert.match(kugel.prueferGrenze, /Drei Grenzen/);
+  assert.match(kugel.prueferGrenze, /ohne zu drücken/);
+  assert.match(pruefeDaten(mit('t02', 'prueferGrenze',
+    kugel.prueferGrenze.replace('ohne zu drücken und ', ''))).join('\n'),
+    /dass die Norm das Teil nicht drückt/);
+  // Und der Ball an der Schnur ist jetzt richtig beschrieben: gemessen wird
+  // von der Oberseite der Schablone zum Mittelpunkt des Balls, nicht eine
+  // Eintauchtiefe in eine 6,4 mm dicke Platte (Review Welle 80).
+  assert.match(kugel.wieZuPruefen, /Oberseite der Schablone bis zum Mittelpunkt des Balls/);
+  assert.doesNotMatch(kugel.wieZuPruefen, /tief genug in das Loch eintaucht/);
+});
+
+test('die U3-Zeile kann die Fehllesart nicht behaupten', () => {
+  const k = mit('k03', 'was', 'Das Symbol „nicht unter 3 Jahren“ heißt Kleinteile – egal warum.');
+  assert.match(pruefeDaten(k).join('\n'), /U3-Zeile: behauptet, das Symbol heiße Kleinteile/);
+});
+
+test('App: ein Fremdschlüssel im Speicher überlebt das Laden nicht', () => {
+  // Sonst wird `Object.keys(erledigt).length` nie 0 und der Schlüssel
+  // verschwindet nicht mehr (Review Welle 80).
+  assert.match(code, /const ids = new Set\(daten\.pruefungen\.map\(\(p\) => p\.id\)\)/);
+  assert.match(code, /filter\(\(\[k, v\]\) => ids\.has\(k\) && v === true\)/);
+  assert.match(code, /if \(rohText !== null && JSON\.stringify\(erledigt\) !== rohText\) speichere\(\);/);
+});
+
+test('App: auch der Löschknopf behält den Fokus', () => {
+  assert.match(code, /id: 'szu3-haken-loeschen'/);
+  assert.match(code, /render\('szu3-haken-loeschen'\)/);
+});
+
+test('App: der Vorlese-Knopf wartet auf die Stimmliste', () => {
+  // `lokaleStimme` liefert `undefined`, solange die Liste nicht geladen ist –
+  // beim ersten Zeichnen der Normalfall (Review Welle 80).
+  assert.match(code, /voiceschanged/);
+  assert.match(code, /klasse: 'szu3-nur-bildschirm'/);
 });
