@@ -433,7 +433,14 @@ test('Druckblatt und Politik', () => {
   // Speichert nichts.
   assert.doesNotMatch(code, /localStorage/);
   // Nur eine geräteinterne Stimme darf sprechen.
-  assert.match(code, /localService/);
+  // Die Zusage ist nicht „eine lokale Stimme wird GESUCHT", sondern „sie
+  // wird BENUTZT": `lokaleStimme()` liegt jetzt in kinder-ui, und die
+  // gefundene Stimme wird an `vorlesen()` uebergeben, das sie auf die
+  // Utterance setzt. Vorher steuerte sie nur die Sichtbarkeit des Knopfes,
+  // und der Browser nahm die Standardstimme - auf Android typischerweise
+  // die netzbasierte. Das war ein echter Defekt (Review der Welle 78).
+  assert.match(code, /lokaleStimme\('de'\)/);
+  assert.match(code, /vorlesen\(text, 'de-DE', stimme\)/);
   // Nachbarschaft: die Grenzen werden verlinkt, nicht wiederholt.
   for (const nachbar of ['musik-detektive', 'klang-detektive', 'tonleiter-treppe', 'rhythmus-orchester', 'familienschatz-reime', 'bewegungs-schatzkiste']) {
     assert.match(code, new RegExp(nachbar), `Verweis auf ${nachbar} fehlt`);

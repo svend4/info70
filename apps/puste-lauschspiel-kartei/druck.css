@@ -1,0 +1,29 @@
+/* Druck: ein Karteikaertchen je Spiel. Kein Haken, kein Name, kein Stern,
+   kein Tagesfeld - das waere ein Protokoll ueber ein Kind (docs/02).
+   Der Nur-Druck-Block traegt, was fuer jede Karte gilt: das fehlende
+   Uebungsversprechen, das Aufhoeren und der Weg bei Sorge. */
+.plk-nur-druck { display: none; }
+
+@media print {
+  .plk-nur-bildschirm { display: none !important; }
+  .plk-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+
+  .plk-karte {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1pt solid #333;
+    border-radius: 0;
+    margin: 0 0 6mm;
+    padding: 4mm;
+    box-shadow: none;
+    min-height: 5cm;
+  }
+  .plk-karte h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .plk-karte p, .plk-karte li { font-size: 10pt; line-height: 1.35; }
+  .plk-sicherheit { border: 1pt solid #000; padding: 2mm; }
+  .plk-dementi { border: 1pt solid #000; padding: 2mm; font-weight: 700; }
+  .plk-kopf { break-after: avoid; page-break-after: avoid; }
+  a[href]::after { content: ""; }
+}

@@ -242,8 +242,16 @@ test('jeder Impuls hat einen Alltagsmoment und beschreibt eine Erwachsenenhandlu
 });
 
 test('Vorlesen nur mit Gerätestimme, nichts vom Kind geht durch', () => {
-  assert.match(code, /localService/);
-  assert.match(code, /startsWith\('de'\)/);
+  // Die Zusage ist nicht „eine lokale Stimme wird GESUCHT", sondern „sie
+  // wird BENUTZT": `lokaleStimme()` liegt jetzt in kinder-ui, und die
+  // gefundene Stimme wird an `vorlesen()` uebergeben, das sie auf die
+  // Utterance setzt. Vorher steuerte sie nur die Sichtbarkeit des Knopfes,
+  // und der Browser nahm die Standardstimme - auf Android typischerweise
+  // die netzbasierte. Das war ein echter Defekt (Review der Welle 78).
+  assert.match(code, /lokaleStimme\('de'\)/);
+  assert.match(code, /vorlesen\(text, 'de-DE', stimme\)/);
+  // getVoices() und die Sprachprüfung liegen jetzt in kinder-ui; dort
+  // werden sie auch geprüft (packages/kinder-ui/test/vorlesen.test.mjs).
   assert.match(code, /keine deutsche Stimme/);
   // Vorgelesen wird nur fester Erwachsenentext.
   assert.match(impulsText(daten, daten.impulse[0]), new RegExp(daten.impulse[0].titel.slice(0, 12)));

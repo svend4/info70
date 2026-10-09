@@ -154,7 +154,9 @@ Rohtext träfe sich selbst (die Falle aus Welle 76).
 
 ## 8. Vorlesen nur mit einer Stimme vom Gerät
 
-`vorlesen()` aus `kinder-ui` wählt keine Stimme aus, und Web-Speech-Stimmen
+`vorlesen()` aus `kinder-ui` setzt die übergebene Stimme auf die Äußerung —
+ohne eine übergebene Stimme wählt der Browser die Standardstimme, und
+Web-Speech-Stimmen
 sind nicht garantiert geräteintern; der NetzwerkWaechter patcht nur `fetch`,
 `XMLHttpRequest` und `WebSocket`. Hier geht zwar nichts vom Kind durch die
 Ausgabe — es gibt kein Eingabefeld und keinen Kindertext —, aber die Zusage

@@ -12,7 +12,7 @@
 // kein localStorage-Schlüssel. Vorbild apps/bewegungs-schatzkiste, nicht
 // apps/meilenstein-begleiter – ein Fortschrittsmerker wäre hier ein
 // Protokoll über ein Kind. Politik docs/02: keine externen Anfragen.
-import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
+import { el, vorlesen, lokaleStimme } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { kartenFuer, karteText, fensterSatz, pruefeDaten } from './logik.mjs';
 
@@ -28,28 +28,23 @@ let zeigeAusschluss = false;
 
 /**
  * Vorlesen nur mit einer Stimme, die auf dem Gerät liegt. `vorlesen()` aus
- * kinder-ui wählt keine Stimme aus, und Web-Speech-Stimmen sind nicht
+ * kinder-ui setzt die übergebene Stimme auf die Äußerung; ohne sie wählt
+ * der Browser die Standardstimme, und Web-Speech-Stimmen sind nicht
  * garantiert geräteintern – auf vielen Geräten sind sie netzbasiert, und
  * der NetzwerkWaechter patcht nur fetch, XMLHttpRequest und WebSocket.
  * Hier geht kein Kindertext und kein eingegebener Text durch die Ausgabe,
  * aber die Zusage „keine externen Anfragen“ gilt trotzdem.
  */
-function lokaleStimme() {
-  if (!('speechSynthesis' in globalThis)) return null;
-  const stimmen = speechSynthesis.getVoices?.() ?? [];
-  if (!stimmen.length) return undefined; // noch nicht geladen – Knopf darf es versuchen
-  return stimmen.find((s) => s.localService && String(s.lang ?? '').toLowerCase().startsWith('de')) ?? null;
-}
 
 function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
-  const stimme = lokaleStimme();
+  const stimme = lokaleStimme('de');
   if (stimme === null) {
     return el('p', { class: 'k-hinweis bk-nur-bildschirm', style: 'margin:0.6rem 0' },
       '🗣️ Auf diesem Gerät gibt es keine deutsche Stimme, die offline arbeitet. Vorlesen ist hier deshalb aus.');
   }
   return el('button', {
     class: 'k-knopf k-knopf--neutral bk-nur-bildschirm',
-    onclick: () => vorlesen(text),
+    onclick: () => vorlesen(text, 'de-DE', stimme),
   }, beschriftung);
 }
 

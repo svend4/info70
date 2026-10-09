@@ -13,7 +13,7 @@
 // Kindes können in jeder Familiensprache sein, und `vorlesen()` setzt nur
 // `utterance.lang` - eine deutsche Stimme würde sie falsch lesen.
 // Politik docs/02: keine externen Anfragen.
-import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
+import { el, vorlesen, lokaleStimme } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
@@ -63,19 +63,14 @@ function heute() {
   return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`;
 }
 
-function lokaleStimme() {
-  if (!('speechSynthesis' in globalThis)) return null;
-  const stimmen = speechSynthesis.getVoices?.() ?? [];
-  if (!stimmen.length) return undefined;
-  return stimmen.find((s) => s.localService && String(s.lang ?? '').toLowerCase().startsWith('de')) ?? null;
-}
 
 function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
-  if (lokaleStimme() === null) {
+  const stimme = lokaleStimme('de');
+  if (stimme === null) {
     return el('p', { class: 'k-hinweis ewt-nur-bildschirm', style: 'margin:0.6rem 0' },
       '🗣️ Auf diesem Gerät gibt es keine deutsche Stimme, die offline arbeitet. Vorlesen ist hier deshalb aus.');
   }
-  return el('button', { class: 'k-knopf k-knopf--neutral ewt-nur-bildschirm', onclick: () => vorlesen(text) }, beschriftung);
+  return el('button', { class: 'k-knopf k-knopf--neutral ewt-nur-bildschirm', onclick: () => vorlesen(text, 'de-DE', stimme) }, beschriftung);
 }
 
 const hinweisKarte = (titel, ...absaetze) => el('div', { class: 'k-hinweis', style: 'margin-top:0.6rem' },

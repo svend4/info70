@@ -8,7 +8,7 @@
 // Gespeichert wird genau eine Sache: die Merkliste EIGENER Vorhaben des
 // Erwachsenen. Nichts über das Kind, kein Geburtsdatum, kein Alter, kein
 // Eingabefeld. Politik docs/02: keine externen Anfragen.
-import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
+import { el, vorlesen, mischen, lokaleStimme } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
   MERK_STATUS, periodeVon, impulseFuer, signaleIn, naechsterImpuls, impulsText, pruefeDaten,
@@ -42,19 +42,14 @@ function speichere(m) {
 }
 
 /** Nur eine Stimme, die auf dem Gerät liegt – siehe Kommentar in Nr. 49. */
-function lokaleStimme() {
-  if (!('speechSynthesis' in globalThis)) return null;
-  const stimmen = speechSynthesis.getVoices?.() ?? [];
-  if (!stimmen.length) return undefined;
-  return stimmen.find((s) => s.localService && String(s.lang ?? '').toLowerCase().startsWith('de')) ?? null;
-}
 
 function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
-  if (lokaleStimme() === null) {
+  const stimme = lokaleStimme('de');
+  if (stimme === null) {
     return el('p', { class: 'k-hinweis', style: 'margin:0.6rem 0' },
       '🗣️ Auf diesem Gerät gibt es keine deutsche Stimme, die offline arbeitet. Vorlesen ist hier deshalb aus.');
   }
-  return el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(text) }, beschriftung);
+  return el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(text, 'de-DE', stimme) }, beschriftung);
 }
 
 /**

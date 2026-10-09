@@ -5,7 +5,7 @@
 // Erwachsenen. Es gibt keine Gesamtwertung: kein Prozentwert, keine Ampel,
 // kein „bestanden“ (siehe logik.mjs). Politik docs/02: keine externen
 // Anfragen; ein localStorage-Schlüssel, löschbar.
-import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
+import { el, vorlesen, lokaleStimme } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
   kriterienFuer, istAbhakbar, bereicheInReihenfolge, offenePunkte, dauerregeln, bericht, pruefeDaten,
@@ -64,19 +64,14 @@ function umschalten(id) {
   render(id);
 }
 
-function lokaleStimme() {
-  if (!('speechSynthesis' in globalThis)) return null;
-  const stimmen = speechSynthesis.getVoices?.() ?? [];
-  if (!stimmen.length) return undefined;
-  return stimmen.find((s) => s.localService && String(s.lang ?? '').toLowerCase().startsWith('de')) ?? null;
-}
 
 function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
-  if (lokaleStimme() === null) {
+  const stimme = lokaleStimme('de');
+  if (stimme === null) {
     return el('p', { class: 'k-hinweis skc-nur-bildschirm', style: 'margin:0.6rem 0' },
       '🗣️ Auf diesem Gerät gibt es keine deutsche Stimme, die offline arbeitet. Vorlesen ist hier deshalb aus.');
   }
-  return el('button', { class: 'k-knopf k-knopf--neutral skc-nur-bildschirm', onclick: () => vorlesen(text) }, beschriftung);
+  return el('button', { class: 'k-knopf k-knopf--neutral skc-nur-bildschirm', onclick: () => vorlesen(text, 'de-DE', stimme) }, beschriftung);
 }
 
 function kriteriumZeile(k, erledigt) {

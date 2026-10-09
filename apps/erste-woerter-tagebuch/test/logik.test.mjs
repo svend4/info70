@@ -268,7 +268,14 @@ test('vorgelesen werden nur die Rahmentexte, nie die Einträge', () => {
   // Die Wörter des Kindes können in jeder Familiensprache sein, und
   // `vorlesen()` setzt nur die Sprachkennung - eine deutsche Stimme würde
   // sie falsch lesen.
-  assert.match(code, /localService/);
+  // Die Zusage ist nicht „eine lokale Stimme wird GESUCHT", sondern „sie
+  // wird BENUTZT": `lokaleStimme()` liegt jetzt in kinder-ui, und die
+  // gefundene Stimme wird an `vorlesen()` uebergeben, das sie auf die
+  // Utterance setzt. Vorher steuerte sie nur die Sichtbarkeit des Knopfes,
+  // und der Browser nahm die Standardstimme - auf Android typischerweise
+  // die netzbasierte. Das war ein echter Defekt (Review der Welle 78).
+  assert.match(code, /lokaleStimme\('de'\)/);
+  assert.match(code, /vorlesen\(text, 'de-DE', stimme\)/);
   const rufe = [...code.matchAll(/vorleseKnopf\(([^,]+),/g)].map((m) => m[1].trim());
   assert.ok(rufe.length >= 1);
   for (const r of rufe) {

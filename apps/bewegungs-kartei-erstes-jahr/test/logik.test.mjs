@@ -292,12 +292,18 @@ test('kein Bildschirm fürs Kind, keine Bewertung, kein Scoring', () => {
 });
 
 test('Vorlesen nur mit einer Stimme, die auf dem Gerät liegt', () => {
-  // vorlesen() aus kinder-ui wählt keine Stimme aus, und Web-Speech-Stimmen
-  // sind nicht garantiert geräteintern. Der NetzwerkWaechter patcht nur
-  // fetch, XMLHttpRequest und WebSocket.
-  assert.match(code, /localService/);
-  assert.match(code, /getVoices/);
-  assert.match(code, /startsWith\('de'\)/);
+  // Web-Speech-Stimmen sind nicht garantiert geräteintern, und der
+  // NetzwerkWaechter patcht nur fetch, XMLHttpRequest und WebSocket.
+  // Die Zusage ist nicht „eine lokale Stimme wird GESUCHT", sondern „sie
+  // wird BENUTZT": `lokaleStimme()` liegt jetzt in kinder-ui, und die
+  // gefundene Stimme wird an `vorlesen()` uebergeben, das sie auf die
+  // Utterance setzt. Vorher steuerte sie nur die Sichtbarkeit des Knopfes,
+  // und der Browser nahm die Standardstimme - auf Android typischerweise
+  // die netzbasierte. Das war ein echter Defekt (Review der Welle 78).
+  assert.match(code, /lokaleStimme\('de'\)/);
+  assert.match(code, /vorlesen\(text, 'de-DE', stimme\)/);
+  // getVoices() und die Sprachprüfung liegen jetzt in kinder-ui; dort
+  // werden sie auch geprüft (packages/kinder-ui/test/vorlesen.test.mjs).
   assert.match(code, /keine deutsche Stimme/);
 });
 

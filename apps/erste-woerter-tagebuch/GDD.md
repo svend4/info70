@@ -138,7 +138,7 @@ Namenszeile.
 ## 8. Was fehlt, und warum
 
 - **Kein Vorlesen der Einträge.** Die Wörter des Kindes können in jeder
-  Familiensprache sein; `vorlesen()` setzt nur `utterance.lang`, und eine
+  Familiensprache sein; die gesetzte Stimme ist eine deutsche, und eine
   deutsche Stimme läse sie falsch. Vorgelesen werden nur die Rahmentexte,
   und ein Test prüft, dass kein Eintragsfeld in einen Vorlese-Aufruf gerät.
 - **Keine Freitextfelder über Dritte.** Nicht über den anderen Elternteil,
