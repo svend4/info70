@@ -235,7 +235,7 @@ function jahreszeitBildschirm() {
         ...daten.jahreszeiten.map((j) => el('button', {
           class: 'k-knopf k-knopf--neutral', style: 'min-height:4rem',
           onclick: () => starte(j.id),
-        }, `${j.emoji} ${j.name} (${karten(daten, j.id).length} Karten)`))),
+        }, `${j.emoji} ${j.name} (${Math.min(karten(daten, j.id).length, PRO_SESSION)} Karten)`))),
       erwachsenenKarte('Im Winter schläft der Igel. Darum ist er im Winter-Deck nicht dabei – ein Igel im Schnee ist ein Notfall und kein Winterbild.')));
 }
 
@@ -291,8 +291,13 @@ function spiele(karte) {
     // dort nur zum Anfang einer Runde (stelle === 0).
     if (!leise) {
       laeuft.push(setTimeout(() => zeigePuls(punkte, -1), (n.zeit + n.dauer) * 1000));
-    } else if (stelle === 0) {
-      laeuft.push(setTimeout(() => zeigePuls(punkte, -1), Math.max(0, n.zeit * 1000 - 40)));
+    } else if (stelle === 0 && n.zeit > 0) {
+      // n.zeit > 0 ist Pflicht: beim ersten Schlag wäre die Verzögerung
+      // max(0, -40) === 0, also dieselbe wie die des Füll-Timers. Timer mit
+      // gleicher Verzögerung feuern in Registrierungsreihenfolge, der
+      // Füll-Timer wird zuerst gepusht – der Reset hätte den ersten Schlag
+      // jeder Wiedergabe sofort wieder gelöscht.
+      laeuft.push(setTimeout(() => zeigePuls(punkte, -1), n.zeit * 1000 - 40));
     }
   });
 }

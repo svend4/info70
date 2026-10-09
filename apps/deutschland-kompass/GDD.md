@@ -78,7 +78,7 @@ Sammelband.
 
 ## 6. Tests
 
-`test/logik.test.mjs` (10): Daten gültig; Norden ist oben (Vorzeichen,
+`test/logik.test.mjs` (11): Daten gültig; Norden ist oben (Vorzeichen,
 unbekannte Richtung, Umkehrbarkeit); Uhrzeigersinn läuft um und
 Gegenrichtung stimmt; `imFeld`/`ortAn` am Planrand; `alleAufgaben`
 enthält nur Wege, die auf einem Ort enden, und zu jedem Weg auch den

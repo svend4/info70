@@ -98,10 +98,19 @@ Prüfung, weil dort kein Taktwort steht, sondern eine Zahl. Ein Drei- bis
 Fünfjähriger kann seine Sprünge nicht mitzählen, *während* er springt: er zählt,
 ohne zu springen, oder springt, ohne zu zählen — und der Erwachsene sieht ein
 Kind, das es „nicht richtig“ macht. Die Zahl trägt ohnehin der Rhythmus
-(`muster [1,1,1,0]`). `pruefeDaten` weist deshalb Ziffern, Zahlwörter, Seite
-und Einbeinstand ab — aber nur in den Feldern, die dem **Kind** vorgelesen
-werden: `klatschImpuls` und `erwachsenenHinweis` sprechen zum Erwachsenen, und
-„drei Drehungen, dann hinsetzen“ muss dort sagbar bleiben.
+(`muster [1,1,1,0]`). `pruefeDaten` trennt dafür zwei Register.
+
+In den Feldern, die dem Kind sagen, was es **tun** soll — `bewegungsAuftrag`,
+`wortImpuls`, `titel`, `kindText` —, sind Ziffern und Zahlwörter verboten. In
+den Feldern, die ihm das **Tier beschreiben** — `woran` und `wirklich`, und
+`kindTextVon()` gibt `woran` als Kindtext jeder naturgetreuen Karte zurück —,
+ist eine beobachtete Menge dagegen eine Tatsache und keine Aufforderung: „Sie
+macht zwei, drei Hüpfer, bleibt stehen und legt den Kopf schräg“ macht die
+Beobachtung gerade überprüfbar, und sie zu entzahlen würde sie vager machen.
+Verboten bleibt dort das Zählen als **Tätigkeit** („zähl mit, wie oft …“).
+Seite und Einbeinstand sind in **jedem** Kindfeld verboten, auch im
+beschreibenden. `klatschImpuls` und `erwachsenenHinweis` sprechen zum
+Erwachsenen — „drei Drehungen, dann hinsetzen“ muss dort sagbar bleiben.
 
 Und kein Zeigewort ohne Bezug: „dann dreh dich **dorthin**“ nannte nirgends ein
 Dorthin — nicht im Kartentext, nicht im Wort-, nicht im Klatschimpuls —, und
@@ -193,7 +202,7 @@ ab.
 
 ## 10. Tests
 
-`test/logik.test.mjs` (24): Daten gültig; „Igel schleicht“ als Abmachung mit
+`test/logik.test.mjs` (25): Daten gültig; „Igel schleicht“ als Abmachung mit
 Gegenprobe in beide Richtungen; alle drei Geltungsarten; naturgetreu mit
 prüfbarem Merkmal; unbelebt ohne Absicht und mit äußerer Impulsquelle;
 höchstens zwei Tonhöhen (plus Melodie-Gegenprobe); Tempo und Dynamik
@@ -205,4 +214,7 @@ Puls gerampt; Ton und Puls aus derselben Quelle; Sitzungsgrenze mit
 Rotation; offline beobachten statt anfassen; `kindTextVon` je Geltung; die
 vier Altersgrenzen als Schema-Regel mit drei Gegenproben; kein Zeigewort ohne
 Bezug; Tempo-Behauptung gegen Karten-Tempo (plus die erlaubte Vergleichsform);
-🐿️ als Streifenhörnchen; Sicherheit vor der ersten Bewegung.
+🐿️ als Streifenhörnchen; Sicherheit vor der ersten Bewegung; „weniger
+Bewegung“ macht den Puls nicht zum An/Aus-Sprung. Die Zahl der Tests in GDD und
+README prüft ein Korpus-Test für alle Apps, die eine nennt
+(`packages/kinderschutz/test/testzahlen.test.mjs`).

@@ -49,7 +49,7 @@ eltern.html, im Sammelband.
 
 ## 6. Tests
 
-`test/logik.test.mjs` (9): Daten gültig; alle drei Sortierungen mit je
+`test/logik.test.mjs` (10): Daten gültig; alle drei Sortierungen mit je
 ≥4 Aufgaben (Mutation geprüft); bei den binären Typen kommen beide
 Antworten vor (Mutation); Gegenteil-Aufgaben haben genau eine richtige
 Option ohne Textdubletten (Mutation); **kein Ablenker ist selbst ein

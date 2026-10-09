@@ -88,7 +88,7 @@ Sammelband.
 
 ## 5. Tests
 
-`test/logik.test.mjs` (8): Daten gültig und ≥60 Kombinationen; Artikel
+`test/logik.test.mjs` (9): Daten gültig und ≥60 Kombinationen; Artikel
 werden korrekt in den Akkusativ gesetzt und jeder Gegenstand trägt einen
 gültigen; `baueAuftrag` ersetzt jeden Platzhalter; keine zwei gleichen
 Aufträge hintereinander (300 Ziehungen mit echtem Zufall); jede

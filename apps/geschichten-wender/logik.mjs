@@ -106,8 +106,18 @@ const EINE_FRAGE = /^[^?]*\?$/;
 const FREMDPERSPEKTIVE = /\b(denk\w*|glaub\w*|mein\w*|gedacht|geglaubt|gemeint|dachte\w*)\b[^?]*\bdass\b/i;
 /** Gemischte oder gegenläufige Gefühle – erst im Schulalter. */
 const GLEICHZEITIG = /\b(zugleich|gleichzeitig|obwohl|einerseits|andererseits|trotzdem)\b/i;
-/** Gefühlswörter – höchstens eines pro Impuls. */
-const GEFUEHLE = /\b(traurig|fr[oö]hlich|w[uü]tend|[aä]ngstlich|froh|gl[uü]cklich|erleichtert|entt[aä]uscht|stolz)\w*/gi;
+/**
+ * Gefühlswörter – höchstens eines pro Impuls.
+ *
+ * Die erste Fassung begann mit `\b`. In JavaScript ist „ä“ kein `\w`-Zeichen,
+ * also gibt es zwischen einem Leerzeichen und „ä“ GAR KEINE Wortgrenze: der
+ * Zweig `[aä]ngstlich` konnte nur die Falschschreibung „angstlich“ treffen.
+ * „War es traurig oder ängstlich?“ zählte damit als EIN Gefühl und kam durch,
+ * obwohl die Regel höchstens eines erlaubt. Dieselbe Falle wie bei
+ * GESPERRTE_RAUMWOERTER in apps/tischdienst-trainer (Welle 76). Auch das
+ * abschliessende `\w*` traf „ängstliche“ nicht zu Ende.
+ */
+const GEFUEHLE = /(^|[^a-zäöüß])((?:traurig|fr[oö]hlich|w[uü]tend|[aä]ngstlich|froh|gl[uü]cklich|erleichtert|entt[aä]uscht|stolz)[a-zäöüß]*)/gi;
 
 /** Eine Vorlage holen. */
 export function vorlageVon(daten, id) {
@@ -218,7 +228,9 @@ export function pruefeReihenfolge(teile, wo) {
 
 /** Wie viele Gefühlswörter nennt der Text? */
 export function gefuehlsWoerter(text) {
-  return [...String(text ?? '').matchAll(GEFUEHLE)].map((m) => m[0].toLowerCase());
+  // Gruppe 2, nicht m[0]: vor dem Wort steht die Grenze mit, und mit ihr
+  // wären „ traurig“ und „traurig“ zwei verschiedene Einträge im Set.
+  return [...String(text ?? '').matchAll(GEFUEHLE)].map((m) => m[2].toLowerCase());
 }
 
 /** Sollzustand – ein Ziel, das das Kind nicht beurteilen kann. */

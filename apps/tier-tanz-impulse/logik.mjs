@@ -74,8 +74,17 @@ export const TOENE = Object.freeze({
 /** Absichtsverben – eine Flocke hat keine Absicht. */
 const ABSICHT = /\b(will|wollte|möchte|beschließt|beschloss|entscheidet|denkt|freut sich|tanzt|sucht|versucht)\b/i;
 
-/** Wortfeld Taktgenauigkeit. Siehe Entscheidung 4. */
-const TAKT = /\b(takt|taktgenau|auf den schlag|im rhythmus mitgehen|mitzählen|abzählen|zähl mit)\b/i;
+/**
+ * Wortfeld Taktgenauigkeit. Siehe Entscheidung 4.
+ *
+ * Das abschliessende `\b` der ersten Fassung liess die Komposita durch:
+ * „Taktgenauigkeit“ und „Taktgefühl“ passten NICHT, weil nach „takt“ ein
+ * Wortzeichen folgt – und „Taktgenauigkeit“ ist genau das Wort, mit dem der
+ * Kommentar und das GDD die verbotene Sache benennen. Darum vorn eine
+ * umlautsichere Grenze und hinten der Stamm offen. „Kontakt“ und „intakt“
+ * bleiben unberührt, weil davor ein Buchstabe steht.
+ */
+const TAKT = /(^|[^a-zäöüß])(takt|mitzähl|abzähl|zähl mit|auf den schlag|im rhythmus mitgehen)/i;
 
 /**
  * Abzählen im Kind-Text. Die Elternseite und das GDD führen „kein Abzählen
@@ -91,6 +100,11 @@ const ABZAEHLEN = /(^|[^a-zäöüß])(\d|zwei|drei|vier|fünf|sechs|sieben|acht|
 
 /** Seitigkeit und Einbeinstand – vor der Schule nicht verfügbar. */
 const SEITE_BEIN = /(^|[^a-zäöüß])(links|rechts|linke[nrms]?|rechte[nrms]?|auf einem Bein|einbeinig)($|[^a-zäöüß])/i;
+
+/** Felder, die dem Kind sagen, was es TUN soll. Dort keine Zahl. */
+const AUFTRAGS_FELDER = ['bewegungsAuftrag', 'wortImpuls', 'titel', 'kindText'];
+/** Felder, die dem Kind das TIER beschreiben. Dort ist eine Menge eine Tatsache. */
+const BESCHREIBENDE_FELDER = ['woran', 'wirklich'];
 
 /** Nennt ein Text eine Bewegung als „so heißt das“? */
 const SO_HEISST_DAS = /\b(?:nennt man|nennen Jäger|heißt|sagt man dazu)\s+([a-zäöüß]+)/gi;
@@ -339,14 +353,28 @@ export function pruefeDaten(daten) {
     // Taktgrenze im Code, die anderen drei standen nur im Text. Geprüft wird
     // auf den Feldern, die dem KIND vorgelesen werden; `klatschImpuls` ist
     // eine Anweisung an den Erwachsenen und darf eine Zahl nennen.
-    for (const feld of ['bewegungsAuftrag', 'kindText', 'wortImpuls', 'titel']) {
+    for (const feld of AUFTRAGS_FELDER) {
       const text = String(k[feld] ?? '');
       if (!text) continue;
       if (ABZAEHLEN.test(text)) {
         fehler.push(`${wo}.${feld}: verlangt Abzählen – ein Kind dieses Alters zählt oder bewegt sich, nicht beides`);
       }
-      if (SEITE_BEIN.test(text)) {
+    }
+    // Seite und Einbeinstand sind in JEDEM Kindfeld verboten, auch im
+    // beschreibenden: „rechts“ verlangt die Unterscheidung auch dann, wenn
+    // sie nur über das Tier gesagt wird.
+    for (const feld of [...AUFTRAGS_FELDER, ...BESCHREIBENDE_FELDER]) {
+      const text = String(k[feld] ?? '');
+      if (text && SEITE_BEIN.test(text)) {
         fehler.push(`${wo}.${feld}: nennt Seite oder Einbeinstand – vor der Schule nicht verfügbar`);
+      }
+    }
+    // Und in den beschreibenden Feldern bleibt das Zählen als TÄTIGKEIT
+    // verboten – die beobachtete Menge selbst nicht.
+    for (const feld of BESCHREIBENDE_FELDER) {
+      const text = String(k[feld] ?? '');
+      if (text && /(^|[^a-zäöüß])(zähl|mitzähl|abzähl)/i.test(text)) {
+        fehler.push(`${wo}.${feld}: macht Zählen zur Tätigkeit des Kindes`);
       }
     }
 

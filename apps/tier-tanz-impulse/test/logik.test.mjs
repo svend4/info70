@@ -223,11 +223,38 @@ test('die App geht vollständig ohne Ton', () => {
   // Der stille Knopf steht gleich groß und zuerst.
   assert.match(app, /Ohne Ton – ich spreche und klatsche/);
   assert.ok(app.indexOf('Ohne Ton') < app.indexOf('🔊 Mit Ton'), 'der stille Weg steht nicht zuerst');
-  // Und der sichtbare Puls läuft auch ohne Ton.
-  assert.match(app, /Er läuft auch ohne Ton/);
+  // Und der sichtbare Puls läuft auch ohne Ton. Das stand zuerst als
+  // `assert.match(app, /Er läuft auch ohne Ton/)` da – und traf damit den
+  // KOMMENTAR, der die Zusage erklärt, nicht den Code. `if (!punkte ||
+  // !mitTon) return;` liess den stillen Weg ganz ohne Puls und den Test
+  // grün. Dieselbe Falle wie der /XMLHttpRequest/-Check in Welle 76.
+  // Geprüft wird darum strukturell: der Ton liegt in `if (mitTon) { … }`,
+  // die Puls-Planung steht AUSSERHALB dieses Blocks.
+  const spieleRumpf = app.slice(app.indexOf('function spiele('), app.indexOf('function karteBildschirm('));
+  const tonAb = spieleRumpf.indexOf('if (mitTon) {');
+  assert.ok(tonAb > 0, 'der Ton-Zweig heisst nicht mehr if (mitTon)');
+  let tiefe = 0;
+  let tonBis = tonAb;
+  for (let i = spieleRumpf.indexOf('{', tonAb); i < spieleRumpf.length; i++) {
+    if (spieleRumpf[i] === '{') tiefe += 1;
+    if (spieleRumpf[i] === '}') { tiefe -= 1; if (tiefe === 0) { tonBis = i; break; } }
+  }
+  const tonZweig = spieleRumpf.slice(tonAb, tonBis + 1);
+  assert.match(tonZweig, /schlag\(n\.hertz/, 'im Ton-Zweig wird kein Ton geplant');
+  assert.doesNotMatch(tonZweig, /zeigePuls/, 'die Puls-Planung liegt im Ton-Zweig');
+  const ohneTonTeil = spieleRumpf.slice(0, tonAb) + spieleRumpf.slice(tonBis + 1);
+  assert.match(ohneTonTeil, /zeigePuls\(punkte, stelle\)/, 'ohne Ton wird kein Puls geplant');
+  assert.doesNotMatch(ohneTonTeil, /!mitTon/, 'der Puls hängt doch am Ton');
 });
 
 test('eine Jahreszeit pro Sitzung – im Winter schläft der Igel', () => {
+  // Der Knopf nannte die GESAMTZAHL der Karten der Jahreszeit, ausgeteilt
+  // werden aber höchstens PRO_SESSION – „Frühling (8 Karten)“ und gleich
+  // danach „Karte 1 von 5“.
+  assert.match(app, /Math\.min\(karten\(daten, j\.id\)\.length, PRO_SESSION\)/);
+  for (const j of daten.jahreszeiten) {
+    assert.ok(waehleKarten(daten, j.id).length <= PRO_SESSION, j.id);
+  }
   const igel = karteVon(daten, 'k-igel-schleicht');
   assert.equal(igel.jahreszeit.includes('winter'), false, 'Igel im Winter-Deck');
   assert.equal(karten(daten, 'winter').some((k) => k.tier === 'igel'), false);
@@ -325,9 +352,16 @@ test('Ton und sichtbarer Puls kommen aus derselben Quelle', () => {
   const schlagDauer = 60 / daten.tempi.find((t) => t.id === k.tempo).bpm;
   assert.ok(Math.abs(plan[1].zeit - plan[0].zeit - schlagDauer) < 1e-9);
   for (const n of plan) assert.ok(n.staerke <= MAX_LAUTSTAERKE, 'Deckel verletzt');
-  // Gebunden klingt länger als getrennt – das ist die Artikulation.
+  // Gebunden klingt länger als getrennt – das ist die Artikulation. BEIDE
+  // Karten sind langsam: gegen die schnelle Amsel verglichen trug die
+  // Zusicherung allein der Tempo-Unterschied (66 gegen 138 bpm), und den
+  // Artikulations-Zweig aus zeitplan() zu löschen liess sie bestehen.
   const gebunden = zeitplan(daten, karteVon(daten, 'k-schnecke-kriecht'), 1);
-  assert.ok(gebunden[0].dauer > plan[0].dauer);
+  const getrennt = zeitplan(daten, karteVon(daten, 'k-storch-schreitet'), 1);
+  const langsam = 60 / daten.tempi.find((t) => t.id === 'langsam').bpm;
+  assert.ok(gebunden[0].dauer > getrennt[0].dauer, 'die Artikulation hat keine Wirkung');
+  assert.ok(Math.abs(gebunden[0].dauer - langsam * 0.95) < 1e-9);
+  assert.ok(Math.abs(getrennt[0].dauer - langsam * 0.45) < 1e-9);
   assert.deepEqual(zeitplan(daten, { tempo: 'x' }, 1), []);
   assert.match(app, /aus DEMSELBEN Zeitplan/);
 });
