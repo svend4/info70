@@ -205,6 +205,10 @@ test('die Bildschirmregel ist richtig zugeordnet – die Drei-Jahres-Grenze ist 
   assert.match(daten.keinBildschirm, /BIÖG/);
   assert.match(daten.keinBildschirm, /BZgA/, 'ohne den alten Namen findet niemand die Empfehlung wieder');
   assert.match(daten.keinBildschirm, /027-075/);
+  // Empfehlung 25 richtet sich an die Unterstützung der Eltern, nicht als
+  // Verbot an das Kind - die Gegenprobe hat diese Verkürzung beanstandet.
+  assert.match(daten.keinBildschirm, /Eltern dabei zu unterstützen/);
+  assert.match(daten.keinBildschirm, /passiven\s+und\s+aktiven/);
   assert.match(daten.keinBildschirm, /kennt sie nicht/);
   assert.ok(/Zweijährigen bis zu einer Stunde/.test(daten.keinBildschirm),
     'die WHO-Ausnahme für Zweijährige muss dastehen, sonst klingt es nach WHO-Verbot');
@@ -232,13 +236,30 @@ test('die Sicherheitsangaben behaupten kein Gesetz und keine Unbedenklichkeit', 
   assert.ok(salz, 'Salzteig muss in der Ausschlussliste stehen');
   assert.ok(!/\d+\s*(?:g\b|Gramm|Teelöffel|Esslöffel|Prozent)/.test(salz.warum),
     'eine Mengenschwelle, die es nicht gibt');
-  assert.match(salz.warum, /nennt.*nicht|keine Mengenschwelle|bewusst nicht/);
+  assert.match(salz.warum, /Mengenschwelle nennt sie nicht/);
+  // Was die amtliche Warnung sagt, steht da - samt der Handlungsanweisung,
+  // die für Eltern der eigentlich nützliche Teil ist.
+  assert.match(salz.warum, /Wasser- und Elektrolythaushalt/);
+  assert.match(salz.warum, /Kinderklinik/);
 });
 
 test('die Begründung gegen die Checkliste nennt beide geprüften Belege', () => {
   assert.match(daten.keinMeilenstein, /Kinder-Richtlinie/);
   assert.match(daten.keinMeilenstein, /Diagnoseinstrument/);
   assert.match(daten.keinMeilenstein, /U7/);
+  // Korrektur nach der Gegenprobe: die erste Fassung schrieb „zu Singen,
+  // Zuhören, Kneten und Fingermalen steht in beiden nichts". Im Text der
+  // Kinder-Richtlinie selbst nachgelesen stimmt das nicht: zur U7a steht
+  // unter „d) Perzeption/Kognition" der Punkt „Kann zuhören und konzentriert
+  // spielen, Als-Ob-Spiele.", und „Singen" kommt viermal vor - allerdings
+  // nur als Mittel („lässt sich durch Wiegen, Singen oder Ansprache ...
+  // beruhigen"), nie als etwas, das das Kind tut. Ein pauschaler
+  // Negativbefund ist genau die Art Behauptung, die diese App nicht machen
+  // darf, also steht jetzt die Unterscheidung da.
+  assert.match(daten.keinMeilenstein, /Kann zuhören und konzentriert spielen/);
+  assert.match(daten.keinMeilenstein, /nur als Mittel/);
+  assert.ok(!/Zu Singen, Zuhören, Kneten und Fingermalen steht in beiden nichts/.test(daten.keinMeilenstein),
+    'der zu breite Negativbefund ist zurück');
   // Und keine Monatsangabe zu einer Tätigkeit, für die es keine gibt.
   for (const [wo, text] of angebotsTexte(daten)) {
     assert.ok(!/\b\d{1,2}\.\s*(?:Monat|Lebensmonat)/.test(text), `${wo} nennt einen Monat: ${text}`);

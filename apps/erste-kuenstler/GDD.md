@@ -29,6 +29,14 @@ und zwar nicht aus Geschmack, sondern aus zwei nachprüfbaren Gründen:
    Diagnoseinstrument sind. Die Kinder-Richtlinie des G-BA hat zur U7 einen einzigen Malpunkt (die
    flache Spirale), zur U7a keinen, und die Stifthaltung erst zur U8 nach dem dritten Geburtstag.
 
+**Korrektur nach der Gegenprobe:** die erste Fassung schloss mit „zu Singen, Zuhören, Kneten und
+Fingermalen steht in beiden nichts“. Im Richtlinientext selbst nachgelesen ist das falsch – zur U7a
+steht unter „Perzeption/Kognition“ der Punkt „Kann zuhören und konzentriert spielen, Als-Ob-Spiele.“,
+und „Singen“ kommt viermal vor, allerdings nur als Mittel („lässt sich durch Wiegen, Singen oder
+Ansprache … beruhigen“), nie als etwas, das das Kind tut. Der Schluss braucht diesen pauschalen
+Negativbefund gar nicht: es gibt bis drei Jahre kein Merkmal dafür, WIE ein Kind singt, formt oder
+malt. Genau so steht es jetzt in der App, und ein Test hält die zurückgezogene Fassung draußen.
+
 Der Validator erzwingt, dass **beide** Gründe in der App stehen: fehlt „Grenzsteine“ oder „dritten
 Lebensjahr“ im Text, sind die Daten ungültig. Eine Entscheidung ohne ihre Begründung ist eine
 Meinung.
