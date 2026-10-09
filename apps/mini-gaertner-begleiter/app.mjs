@@ -93,9 +93,10 @@ function tagebuchKarte() {
           el('p', { style: 'margin:0.1rem 0 0' }, '☐ gelockert · ☐ gejätet')))));
   }
   return el('section', { class: 'k-karte mgb-blatt' },
+    // Keine Zeile fuer den Namen: ein Druckblatt mit Namensfeld ist der
+    // Anfang eines Vergleichs von Kindern auf Papier (docs/02).
     el('div', { style: 'display:flex;justify-content:space-between;gap:1rem;align-items:baseline;flex-wrap:wrap' },
-      el('p', { style: 'margin:0;font-weight:700;font-size:1.1rem' }, `📔 Mein Pflanztagebuch: ${k.emoji} ${k.name}`),
-      el('p', { style: 'margin:0;color:#6b7280' }, 'Name: ______________')),
+      el('p', { style: 'margin:0;font-weight:700;font-size:1.1rem' }, `📔 Mein Pflanztagebuch: ${k.emoji} ${k.name}`),),
     el('p', { style: 'margin:0.3rem 0 0' }, 'Ich habe gesät am: ____________'),
     ...zeilen,
     el('p', { style: 'margin:0.5rem 0 0' }, '🧺 Geerntet habe ich am: ____________ · So viele: ________'),

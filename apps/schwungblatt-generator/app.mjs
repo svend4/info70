@@ -39,9 +39,10 @@ function blattKarte() {
     for (let i = 0; i < ZEILEN_JE_MUSTER; i++) zeilen.push(svgZeile(m.id));
   }
   return el('section', { class: 'k-karte sbg-blatt' },
+    // Keine Zeile fuer den Namen: ein Druckblatt mit Namensfeld ist der
+    // Anfang eines Vergleichs von Kindern auf Papier (docs/02).
     el('div', { style: 'display:flex;justify-content:space-between;gap:1rem;align-items:baseline' },
-      el('p', { style: 'margin:0;font-weight:700' }, '✏️ Mein Schwungblatt'),
-      el('p', { style: 'margin:0;color:#6b7280' }, 'Name: ______________')),
+      el('p', { style: 'margin:0;font-weight:700' }, '✏️ Mein Schwungblatt'),),
     ...zeilen,
     el('p', { style: 'margin:0.6rem 0 0;font-size:0.8rem;color:#6b7280' }, 'info70-Schwungblatt · frei nutzbar (OER) · Stift locker halten, Richtung von links nach rechts'));
 }
