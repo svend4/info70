@@ -1,0 +1,538 @@
+{
+  "stand": {
+    "jahr": 2026,
+    "schutzdauerJahre": 70,
+    "regel": "In Deutschland und der EU endet das Urheberrecht an einer Komposition 70 Jahre nach dem Tod des Komponisten, gerechnet ab dem Ende des Todesjahres. Diese App rechnet das selbst nach und behauptet Gemeinfreiheit nie von Hand."
+  },
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Kind sieht keinen Bildschirm – es hört Musik und Sie hören mit.",
+  "keinVersprechen": "Diese Seite verspricht keine Wirkung. Dass Musikhören kleine Kinder klüger oder sprachgewandter macht, ist nicht belegt; der sogenannte Mozart-Effekt hat sich nicht halten lassen. Gemeinsam hören ist schön, und das ist Grund genug.",
+  "keinQuiz": "Hier wird nichts abgefragt. Kein richtig, kein falsch, keine Punkte: ein Kind, das ein Genre nicht erkennt, hat nichts verfehlt. Wenn Ihr Kind später selbst raten will, steht dafür eine eigene App bereit.",
+  "keineAufnahme": "Was hier steht, sind Werke – nicht Aufnahmen. Dass eine Komposition gemeinfrei ist, macht eine Einspielung davon nicht frei: an einer Aufnahme haben das Tonstudio und die Musikerinnen und Musiker eigene Rechte. Suchen Sie die Stücke in der Bibliothek, im Rundfunk oder in Ihrer eigenen Sammlung.",
+  "keineEmpfehlung": "Es steht hier kein Label, kein Interpret, kein Shop und kein Streaming-Dienst. Nur Werk und Komponist – damit Sie selbst suchen und nichts kaufen müssen.",
+  "abbruch": "Aufhören ist die Regel, nicht die Ausnahme. Dreht sich Ihr Kind weg, hält es sich die Ohren zu, wird es unruhig oder quengelig: aus. Das ist keine Ablehnung von Musik, sondern eine Antwort, und sie zählt.",
+  "lautstaerke": "Leise ist richtig. Richten Sie die Lautstärke so ein, dass Sie sich im selben Raum in normaler Zimmerstimme unterhalten können, ohne die Stimme zu heben – dann ist sie für ein kleines Kind in Ordnung. Keine Kopfhörer: über Kopfhörer liegt der Schall direkt am Ohr, und ein Kleinkind kann nicht sagen, dass es zu laut ist.",
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Kapitel «Музыкальная деятельность», S. 78–80",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik (Gattungen, Kontrastpaare, die Idee der Vertiefung). Alle Texte dieser App sind Eigenproduktion.",
+    "zahlen": {
+      "zieleQuelle": 14,
+      "zieleUebernommen": 8,
+      "zieleNichtUebernommen": 6,
+      "repertoireQuelle": 70,
+      "repertoireUebernommen": 11,
+      "repertoireNichtUebernommen": 59
+    },
+    "geprueft": true,
+    "nachgezaehlt": "Die 14 Ziele auf S. 78–80 sind nachgezählt: 5 allgemeine, 6 zum Hören, 3 zum Singen. Die 70 Hör-Stücke sind nachgezählt: 23 vokale und 47 instrumentale (die vierte Angabe «Сказка о глупом мышонке» ist die Quelle von vier Stücken, kein eigenes Stück)."
+  },
+  "ziele": [
+    {
+      "nr": "z01",
+      "was": "Mit Musik Freude machen und eine Antwort darauf zulassen",
+      "uebernommen": true
+    },
+    {
+      "nr": "z02",
+      "was": "Verschiedene Zeiten und Stile hören, nicht immer dasselbe",
+      "uebernommen": true
+    },
+    {
+      "nr": "z03",
+      "was": "Kontrastierende Instrumentenklänge nach Gehör unterscheiden",
+      "uebernommen": true
+    },
+    {
+      "nr": "z04",
+      "was": "Eindrücke von Musik ausdrücken – mit Stimme, Gesicht, Bewegung, Berührung",
+      "uebernommen": true
+    },
+    {
+      "nr": "z05",
+      "was": "Erste Vorstellung von Marsch, Tanz und Lied – auf der Ebene des Wiedererkennens",
+      "uebernommen": true
+    },
+    {
+      "nr": "z06",
+      "was": "Hoch und tief, lang und kurz, laut und leise heraushören",
+      "uebernommen": true
+    },
+    {
+      "nr": "z07",
+      "was": "An Musikkultur und hochkünstlerische Beispiele heranführen, Anfänge des Geschmacks bilden",
+      "uebernommen": true,
+      "anmerkung": "Übernommen als Auswahl, nicht als Erziehungsziel: die Stücke sind sorgfältig gewählt, über Geschmack urteilt niemand."
+    },
+    {
+      "nr": "z08",
+      "was": "Musikalische Fähigkeiten entwickeln – unter Beachtung der Möglichkeiten jedes Kindes",
+      "uebernommen": true,
+      "anmerkung": "Übernommen als Vertiefung, die an einer beobachteten Handlung hängt, nicht an einer Einschätzung des Kindes."
+    },
+    {
+      "nr": "z09",
+      "was": "Die sich bildende Persönlichkeit des Kindes, Vorstellungskraft und Gefühl des Selbstwerts in der Musiktätigkeit entwickeln",
+      "uebernommen": false,
+      "warum": "Kein Ziel, das eine Hörliste einlösen kann. Eine App, die das verspricht, verspricht zu viel."
+    },
+    {
+      "nr": "z10",
+      "was": "Die Musiktätigkeit nutzen, um die innere Welt der Kinder und ihre musikalischen Fähigkeiten zu erkennen",
+      "uebernommen": false,
+      "warum": "Das ist Diagnostik am Kind durch Beobachtung beim Spiel. Diese App schaut auf die Musik, nicht auf das Kind."
+    },
+    {
+      "nr": "z11",
+      "was": "Die Musiktätigkeit zur Korrektur des emotionalen Zustands und der psychischen Gesundheit nutzen",
+      "uebernommen": false,
+      "warum": "Musiktherapie ist ein Fach mit Ausbildung. Ein Elternzettel darf sie nicht andeuten."
+    },
+    {
+      "nr": "z12",
+      "was": "Interesse am Lied wecken, Lust am Mitsingen",
+      "uebernommen": false,
+      "warum": "Singen ist nicht Hören. Dafür gibt es im Korpus eigene Werkzeuge."
+    },
+    {
+      "nr": "z13",
+      "was": "Zum Mitsingen von Phrasenenden und wiederkehrenden Wörtern anregen",
+      "uebernommen": false,
+      "warum": "Siehe z12 – und es bräuchte fremde Liedtexte, die diese App nicht abdruckt."
+    },
+    {
+      "nr": "z14",
+      "was": "Singen und sich gleichzeitig bewegen, den Rhythmus der Melodie wiedergeben",
+      "uebernommen": false,
+      "warum": "Verlangt Synchronisation mit einem äußeren Puls. Die ist vor der Schule nicht verlässlich und wäre hier eine Anforderung, die das Kind nicht erfüllen kann."
+    }
+  ],
+  "werke": [
+    {
+      "id": "w-elefant",
+      "titel": "Der Elefant",
+      "original": "Le Carnaval des animaux – L’Éléphant",
+      "komponist": "Camille Saint-Saëns",
+      "art": "komposition",
+      "todesjahr": 1921,
+      "gattung": "tierstueck",
+      "ausQuellListe": true,
+      "woran": "Ein Kontrabass spielt ganz tief und wiegt sich schwer. Tiefer geht es in dieser Liste nicht.",
+      "eigenschaft": [
+        "tief",
+        "langsam"
+      ]
+    },
+    {
+      "id": "w-tabakdose",
+      "titel": "Spieldose",
+      "original": "Музыкальная табакерка",
+      "komponist": "Anatoli Ljadow",
+      "art": "komposition",
+      "todesjahr": 1914,
+      "gattung": "spieluhr",
+      "ausQuellListe": true,
+      "woran": "Alles klingelt hoch und klein, wie eine Spieldose, die man aufgezogen hat. Das ist das Gegenstück zum Elefanten.",
+      "eigenschaft": [
+        "hoch",
+        "leise"
+      ]
+    },
+    {
+      "id": "w-schachtel",
+      "titel": "Spieldöschen",
+      "original": "Музыкальная шкатулочка",
+      "komponist": "Samuil Maikapar",
+      "art": "komposition",
+      "todesjahr": 1938,
+      "gattung": "spieluhr",
+      "ausQuellListe": true,
+      "woran": "Dasselbe Bild, andere Hand: kurze, perlende Töne. Gut zum Vergleichen mit der Spieldose.",
+      "eigenschaft": [
+        "hoch",
+        "kurz"
+      ]
+    },
+    {
+      "id": "w-soldatenmarsch",
+      "titel": "Soldatenmarsch",
+      "komponist": "Robert Schumann",
+      "art": "komposition",
+      "todesjahr": 1856,
+      "gattung": "marsch",
+      "ausQuellListe": true,
+      "woran": "Man hört die Schritte: gleich lange Schläge, immer gleich schwer. Füße gehen von allein mit.",
+      "eigenschaft": [
+        "laut",
+        "gleichmaessig"
+      ]
+    },
+    {
+      "id": "w-polka",
+      "titel": "Polka",
+      "komponist": "Pjotr Tschaikowski",
+      "art": "komposition",
+      "todesjahr": 1893,
+      "gattung": "tanz",
+      "ausQuellListe": true,
+      "woran": "Hüpft und federt, mit kleinen Pausen zwischen den Sprüngen – anders als der Marsch, der durchgeht.",
+      "eigenschaft": [
+        "schnell",
+        "huepfend"
+      ]
+    },
+    {
+      "id": "w-kamarinskaja",
+      "titel": "Kamarinskaja",
+      "original": "Камаринская",
+      "komponist": "Pjotr Tschaikowski",
+      "art": "komposition",
+      "todesjahr": 1893,
+      "gattung": "tanz",
+      "ausQuellListe": true,
+      "woran": "Wird schneller und schneller. Ein Kind, das schon läuft, wird dabei meist von allein zappelig – das ist erlaubt.",
+      "eigenschaft": [
+        "schnell",
+        "treibend"
+      ]
+    },
+    {
+      "id": "w-murmeltier",
+      "titel": "Marmotte",
+      "komponist": "Ludwig van Beethoven",
+      "art": "komposition",
+      "todesjahr": 1827,
+      "gattung": "lied",
+      "ausQuellListe": true,
+      "woran": "Eine ruhige Melodie, die man leicht mitsummen kann. Summen Sie mit, das reicht völlig.",
+      "eigenschaft": [
+        "ruhig",
+        "singbar"
+      ]
+    },
+    {
+      "id": "w-ecossaise",
+      "titel": "Ecossaise",
+      "komponist": "Ludwig van Beethoven",
+      "art": "komposition",
+      "todesjahr": 1827,
+      "gattung": "tanz",
+      "ausQuellListe": true,
+      "woran": "Kurz, hell und schnell vorbei. Gut für ein Kind, das nicht lange stillhält.",
+      "eigenschaft": [
+        "schnell",
+        "kurz"
+      ]
+    },
+    {
+      "id": "w-wiegenlied-brahms",
+      "titel": "Guten Abend, gut’ Nacht",
+      "komponist": "Johannes Brahms",
+      "art": "komposition",
+      "todesjahr": 1897,
+      "gattung": "wiegenlied",
+      "ausQuellListe": false,
+      "woran": "Die Melodie schaukelt. Sie brauchen sie nicht zu können – wiegen Sie Ihr Kind einfach dazu.",
+      "eigenschaft": [
+        "leise",
+        "wiegend"
+      ]
+    },
+    {
+      "id": "w-mond",
+      "titel": "Der Mond ist aufgegangen",
+      "komponist": "Johann Abraham Peter Schulz",
+      "art": "komposition",
+      "todesjahr": 1800,
+      "gattung": "wiegenlied",
+      "ausQuellListe": false,
+      "woran": "Lange, gleich lange Töne. Man kann dazu atmen, ohne sich zu beeilen.",
+      "eigenschaft": [
+        "leise",
+        "lang"
+      ]
+    },
+    {
+      "id": "w-schlaf-kindlein",
+      "titel": "Schlaf, Kindlein, schlaf",
+      "komponist": null,
+      "art": "volksweise",
+      "todesjahr": null,
+      "gattung": "wiegenlied",
+      "ausQuellListe": false,
+      "woran": "Drei Töne abwärts, immer wieder. Eine der einfachsten Melodien, die es gibt – darum singt sie fast jeder.",
+      "eigenschaft": [
+        "leise",
+        "wiegend"
+      ]
+    },
+    {
+      "id": "w-prinzchen",
+      "titel": "Schlafe, mein Prinzchen, schlaf ein",
+      "komponist": null,
+      "art": "unbekannter-urheber",
+      "todesjahr": null,
+      "erscheinungsjahr": 1795,
+      "gattung": "wiegenlied",
+      "ausQuellListe": true,
+      "woran": "Ein Wiegenlied, das viele kennen – und das vermutlich gar nicht von dem stammt, nach dem es benannt wird.",
+      "eigenschaft": [
+        "leise",
+        "wiegend"
+      ],
+      "zuschreibung": "Die Quelle führt dieses Wiegenlied als «Колыбельная песня» von Mozart. Das gilt heute als falsche Zuschreibung: in Mozarts Werkverzeichnis steht es nur im Anhang der zweifelhaften Stücke. Als Urheber wird meist Bernhard Flies genannt, zeitweise auch Friedrich Fleischmann; sicher ist es nicht. Darum steht hier kein Komponistenname, sondern das Erscheinungsjahr."
+    },
+    {
+      "id": "w-kolo",
+      "titel": "Kolo",
+      "original": "Коло",
+      "komponist": null,
+      "art": "volksweise",
+      "todesjahr": null,
+      "gattung": "tanz",
+      "ausQuellListe": true,
+      "herkunft": "ukrainische Volksweise",
+      "woran": "Eine Reigenmelodie: sie dreht sich und fängt wieder an. Nehmen Sie Ihr Kind an beide Hände und gehen Sie im Kreis.",
+      "eigenschaft": [
+        "schnell",
+        "kreisend"
+      ]
+    },
+    {
+      "id": "w-menuett-haydn",
+      "titel": "Menuett",
+      "komponist": "Joseph Haydn",
+      "art": "komposition",
+      "todesjahr": 1809,
+      "gattung": "tanz",
+      "ausQuellListe": true,
+      "woran": "Ein alter, gemessener Tanz: er wiegt sich, statt zu hüpfen. Langsamer als die Polka und doch ein Tanz – so hört man, dass „Tanz“ nicht „schnell“ heißt.",
+      "eigenschaft": [
+        "langsam",
+        "wiegend"
+      ]
+    }
+  ],
+  "kontraste": [
+    {
+      "id": "k-tief-hoch",
+      "paar": [
+        "w-elefant",
+        "w-tabakdose"
+      ],
+      "ohneWorte": "Bewegen Sie beim tiefen Stück die flache Hand tief am Boden, beim hohen Stück hoch über dem Kopf. Ihr Kind braucht die Wörter „hoch“ und „tief“ dafür nicht.",
+      "eigenschaft": "hoch und tief",
+      "wasDuBemerkst": "Das eine ist das große Tier, das andere die kleine Dose. Tiefer und höher geht es in dieser Liste nicht."
+    },
+    {
+      "id": "k-marsch-tanz",
+      "paar": [
+        "w-soldatenmarsch",
+        "w-polka"
+      ],
+      "ohneWorte": "Gehen Sie zum Marsch mit Ihrem Kind an der Hand Schritt für Schritt durch den Raum, und hüpfen Sie zur Polka. Das Genre ist der Unterschied, den die Beine fühlen.",
+      "eigenschaft": "Marsch und Tanz",
+      "wasDuBemerkst": "Beim einen gehen die Füße gleichmäßig, beim anderen hüpfen sie. Das ist der Unterschied zwischen Marsch und Tanz, und er steckt in den Beinen, nicht in den Wörtern."
+    },
+    {
+      "id": "k-laut-leise",
+      "paar": [
+        "w-soldatenmarsch",
+        "w-wiegenlied-brahms"
+      ],
+      "ohneWorte": "Nehmen Sie das laute Stück zuerst und das leise danach, nie umgekehrt – sonst erschrickt das Kind mitten im Ruhigwerden.",
+      "eigenschaft": "laut und leise",
+      "wasDuBemerkst": "Das eine hält man kaum still aus, beim anderen wird man müde."
+    },
+    {
+      "id": "k-lang-kurz",
+      "paar": [
+        "w-mond",
+        "w-schachtel"
+      ],
+      "ohneWorte": "Streichen Sie bei den langen Tönen mit der Hand über den Arm Ihres Kindes, und tippen Sie bei den kurzen leicht mit der Fingerspitze.",
+      "eigenschaft": "lang und kurz",
+      "wasDuBemerkst": "Beim einen dauert jeder Ton lange, beim anderen sind die Töne winzig kurz."
+    },
+    {
+      "id": "k-schnell-langsam",
+      "paar": [
+        "w-menuett-haydn",
+        "w-polka"
+      ],
+      "wasDuBemerkst": "Zwei Tänze aus verschiedenen Zeiten: der eine wiegt sich langsam, der andere hüpft schnell. So merkt man, dass eine Gattung kein Tempo ist.",
+      "ohneWorte": "Wiegen Sie sich zum langsamen Stück mit Ihrem Kind auf dem Arm, und setzen Sie es für das schnelle ab.",
+      "eigenschaft": "schnell und langsam"
+    }
+  ],
+  "instrumentenPaare": [
+    {
+      "id": "i-floete-trommel",
+      "hoch": "Blockflöte oder Pfeife",
+      "tief": "Trommel",
+      "warum": "Das ist das Paar, mit dem die Quelle anfängt: ein Blasinstrument gegen ein Schlaginstrument. Der Unterschied ist so groß, dass ein Einjähriger ihn hört.",
+      "sicherheit": "Eine Pfeife, die ins Kind kommt, ist nicht für ein Kind unter drei: Mundstücke und abgehende Kleinteile gehören in diesem Alter nicht in die Hand. Spielen Sie selbst, das Kind hört zu."
+    },
+    {
+      "id": "i-triangel-trommel",
+      "hoch": "Triangel",
+      "tief": "Trommel",
+      "warum": "Hell und klingend gegen dumpf und kurz. Das zweite Paar der Quelle.",
+      "sicherheit": "Der Triangelschläger ist ein Stab und der Triangel selbst hat eine Schnur. Beides bleibt in Erwachsenenhand – ein Stab im Mund und eine Schnur am Hals sind die zwei Gefahren, die hier zählen."
+    },
+    {
+      "id": "i-glockenspiel-kiste",
+      "hoch": "Glockenspiel",
+      "tief": "Umgedrehte Kiste oder Topf",
+      "warum": "Die Quelle nennt hier ein Instrument, das es im deutschen Handel nicht gibt. Ein Glockenspiel gegen etwas Großes und Hohles tut dasselbe.",
+      "sicherheit": "Die Klangplättchen eines Glockenspiels sind lose und klein. Für das Kind ist der Topf da, das Glockenspiel spielen Sie."
+    }
+  ],
+  "momente": [
+    {
+      "id": "m-auf-dem-arm",
+      "titel": "Wenn du es auf dem Arm hast",
+      "altersband": "1-2",
+      "wasDuTust": [
+        "Ein langsames Stück leise anstellen und Ihr Kind auf den Arm nehmen.",
+        "Sich selbst wiegen, nicht das Kind schaukeln – es wiegt sich mit, weil Sie es tun.",
+        "Absetzen, sobald es sich windet oder herunter will."
+      ],
+      "wasDeinKindVielleichtTut": "Vielleicht legt es den Kopf an, vielleicht wird es ganz still, vielleicht will es nach einer halben Melodie wieder herunter. Alles davon ist eine Antwort.",
+      "werke": [
+        "w-wiegenlied-brahms",
+        "w-menuett-haydn"
+      ],
+      "gattung": "wiegenlied",
+      "abbruchzeichen": "Winden, Abstoßen, Herunterwollen.",
+      "sicherheit": "Auf dem Arm gilt, was immer auf dem Arm gilt: eine Hand bleibt am Kind, und wer müde oder abgelenkt wird, setzt es vorher ab. Nicht im Dunkeln durch die Wohnung gehen."
+    },
+    {
+      "id": "m-aufmerksam",
+      "titel": "Wenn es gerade wach und ruhig ist",
+      "altersband": "1-3",
+      "wasDuTust": [
+        "Ein Stück auswählen, leise anstellen und sich dazusetzen.",
+        "Mithören, statt zuzuschauen, wie Ihr Kind hört.",
+        "Sagen Sie, was Sie hören: „Da ist es ganz tief.“ Und dann nichts mehr."
+      ],
+      "wasDeinKindVielleichtTut": "Es hält inne, schaut zum Lautsprecher, wird still – oder krabbelt weg und kommt wieder. Alles davon ist Hören.",
+      "werke": [
+        "w-elefant",
+        "w-tabakdose",
+        "w-murmeltier"
+      ],
+      "gattung": "tierstueck",
+      "abbruchzeichen": "Ohren zu, Wegdrehen, Quengeln."
+    },
+    {
+      "id": "m-bewegung",
+      "titel": "Wenn Bewegung raus muss",
+      "altersband": "1-3",
+      "wasDuTust": [
+        "Ein schnelles Stück anstellen und selbst anfangen zu gehen oder zu hüpfen.",
+        "Ihr Kind an die Hand nehmen, wenn es will – nicht ziehen.",
+        "Aufhören, wenn es nicht mehr mitgeht."
+      ],
+      "wasDeinKindVielleichtTut": "Es wippt, patscht, dreht sich, läuft los. Es wird nicht im Takt sein, und das muss es auch nicht.",
+      "werke": [
+        "w-polka",
+        "w-kamarinskaja",
+        "w-ecossaise",
+        "w-kolo",
+        "w-menuett-haydn"
+      ],
+      "gattung": "tanz",
+      "abbruchzeichen": "Hinsetzen, Wegschauen, Hochwollen."
+    },
+    {
+      "id": "m-schritte",
+      "titel": "Wenn es schon läuft",
+      "altersband": "2-3",
+      "wasDuTust": [
+        "Einen Marsch anstellen und mit Ihrem Kind Schritt für Schritt durch die Wohnung gehen.",
+        "Die eigenen Schritte hörbar machen, nicht zählen.",
+        "Am Ende stehen bleiben – das Stehenbleiben ist der schönste Teil."
+      ],
+      "wasDeinKindVielleichtTut": "Es geht mit, stampft, bleibt stehen, wenn Sie stehen bleiben. Ein Kind, das zufällig im Schritt ist, hat Glück gehabt, nicht etwas geleistet.",
+      "werke": [
+        "w-soldatenmarsch"
+      ],
+      "gattung": "marsch",
+      "abbruchzeichen": "Stolpern, Hinsetzen, Arme hoch."
+    },
+    {
+      "id": "m-einschlafen",
+      "titel": "Wenn es zur Ruhe kommt",
+      "altersband": "1-3",
+      "wasDuTust": [
+        "Ein leises Stück anstellen, Licht herunter, selbst langsamer werden.",
+        "Mitsummen, wenn Sie wollen – Ihre Stimme ist dem Kind lieber als jede Aufnahme.",
+        "Die Musik ausschalten, wenn Ihr Kind schläft."
+      ],
+      "wasDeinKindVielleichtTut": "Vielleicht wird es schwer, hört auf zu greifen, atmet länger. Vielleicht braucht es heute etwas anderes als Musik – dann ist das die Antwort.",
+      "werke": [
+        "w-wiegenlied-brahms",
+        "w-mond",
+        "w-schlaf-kindlein",
+        "w-prinzchen"
+      ],
+      "gattung": "wiegenlied",
+      "abbruchzeichen": "Unruhe statt Ruhe – dann ist das Stück falsch oder der Moment.",
+      "sicherheit": "Nichts läuft die ganze Nacht durch. Dauerbeschallung nimmt dem Ohr die Stille, und im Bett liegt ohnehin nichts außer Matratze und Schlafsack."
+    },
+    {
+      "id": "m-vergleichen",
+      "titel": "Zwei Stücke nebeneinander",
+      "altersband": "2-3",
+      "wasDuTust": [
+        "Zwei Stücke aus einem Kontrastpaar kurz hintereinander anstellen.",
+        "Zu jedem eine andere Bewegung machen – immer dieselbe zu demselben Stück.",
+        "Nichts fragen. Ihr Kind zeigt die Antwort mit dem Körper oder gar nicht."
+      ],
+      "wasDeinKindVielleichtTut": "Es macht die Bewegung mit, bevor es die Wörter hat. Oder es tut nichts – dann hören Sie es nächste Woche wieder.",
+      "werke": [
+        "w-elefant",
+        "w-tabakdose",
+        "w-soldatenmarsch",
+        "w-polka"
+      ],
+      "gattung": "tierstueck",
+      "abbruchzeichen": "Weggehen."
+    },
+    {
+      "id": "m-eigene",
+      "titel": "Die Musik Ihrer eigenen Familie",
+      "altersband": "1-3",
+      "wasDuTust": [
+        "Stellen Sie an, was in Ihrer Familie gehört und gesungen wird – in jeder Sprache.",
+        "Sagen Sie Ihrem Kind, woher das Lied kommt, auch wenn es die Wörter noch nicht versteht.",
+        "Diese Liste hier ist eine Anregung und keine Vorschrift."
+      ],
+      "wasDeinKindVielleichtTut": "Stimmen und Melodien, die ein Kind von Anfang an gehört hat, erkennt es meist am schnellsten wieder. Vielleicht sehen Sie das, vielleicht nicht.",
+      "werke": [],
+      "gattung": "lied",
+      "abbruchzeichen": "Wie überall: Wegdrehen heißt aus.",
+      "sicherheit": "Zu dieser App gehört keine Liste in anderen Sprachen als Deutsch. Was Ihre Familie singt, wissen Sie besser als jede App – und eine erfundene Übersetzung wäre schlimmer als keine."
+    }
+  ],
+  "vertiefungen": [
+    {
+      "id": "v-mitwiegen",
+      "wennDuSiehst": "Ihr Kind wiegt sich von selbst mit, ohne dass Sie anfangen",
+      "dannProbiere": "Wechseln Sie mitten im Stück die Bewegung – vom Wiegen zum Klopfen. Schaut Ihr Kind hin und wechselt mit, hat es die Bewegung an die Musik gebunden.",
+      "nichtAls": "Nicht als Prüfung und nicht als Stufe. Ein Kind, das nicht wechselt, ist nicht weiter hinten."
+    },
+    {
+      "id": "v-wiedererkennen",
+      "wennDuSiehst": "Ihr Kind reagiert bei den ersten Tönen eines Stücks, das es kennt",
+      "dannProbiere": "Nehmen Sie ein zweites Stück derselben Gattung dazu – zwei Märsche, zwei Wiegenlieder. Dann geht es nicht mehr um das eine Stück, sondern um die Art.",
+      "nichtAls": "Nicht, um zu sehen, ob es die Gattung „kann“. Gattungen erkennen ist ein Thema für Vierjährige, und dafür gibt es eine eigene App."
+    },
+    {
+      "id": "v-eigenes-instrument",
+      "wennDuSiehst": "Ihr Kind schlägt selbst auf etwas und hört dabei hin",
+      "dannProbiere": "Geben Sie ihm etwas Großes und Hohles – einen Topf, eine Kiste – und schlagen Sie daneben leise mit. Lauter und leiser abwechselnd, ohne Worte.",
+      "nichtAls": "Kein Kleinteil, kein Stab, keine Schnur. Und kein Takt: dass zwei Menschen gleichzeitig schlagen, ist vor der Schule Zufall."
+    }
+  ],
+  "quelleAnmerkung": "Die Quelle markiert einige Ziele mit dem Zeichen Ё und erklärt im Fußnotentext: so bezeichnet sind «Aufgaben für Kinder mit relativ hohem Niveau der Musikalität». Diese Einteilung ist hier nicht übernommen. Eine App, die Kinder nach Musikalität sortiert, bewertet sie – das ist nach den Projektregeln ausgeschlossen und nach der europäischen KI-Verordnung ein Feld, in dem man Kinder nicht einordnet. Aus der Idee ist eine Vertiefung geworden, die an einer beobachteten Handlung hängt und an keiner Eigenschaft des Kindes."
+}

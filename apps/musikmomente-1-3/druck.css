@@ -1,0 +1,28 @@
+/* Druck: die Hörmomente und die Werkliste als Zettel für die Bibliothek.
+   Kein Haken, kein Name, kein Stern, kein Tagesfeld – das wäre ein
+   Protokoll über ein Kind (docs/02). */
+/* Nur auf dem Papier: was für jeden Moment gilt. Das Vorwort wird nicht
+   mitgedruckt, und ohne diesen Block fehlten Lautstärke und Abbruch. */
+.mm-nur-druck { display: none; }
+
+@media print {
+  .mm-nur-bildschirm { display: none !important; }
+  .mm-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+
+  .mm-karte {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1pt solid #333;
+    border-radius: 0;
+    margin: 0 0 5mm;
+    padding: 3mm;
+    box-shadow: none;
+  }
+  .mm-karte h2 { font-size: 12pt; margin: 0 0 2mm; }
+  .mm-karte p, .mm-karte li { font-size: 10pt; line-height: 1.35; }
+  .mm-sicherheit { border: 1pt solid #000; padding: 2mm; }
+  .mm-kopf { break-after: avoid; page-break-after: avoid; }
+  a[href]::after { content: ""; }
+}
