@@ -1,0 +1,216 @@
+{
+  "art": "wachstums-bewegungs-begleiter",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 3 bis 7 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Hier wird nichts über Ihr Kind festgestellt – hier steht, was Sie bereitstellen können und wo welche Frage hingehört.",
+  "wasEsIst": "Die Quelle stellt vier Fragen an das Kind über seinen eigenen Körper: Wie ist deine Haltung? Wie sind deine Füße? Wie schnell wächst du? Wie viel bewegst du dich? Diese App dreht alle vier um. Aus „Wie ist deine Haltung?“ wird „Wo kann sich mein Kind bewegen?“ – aus einer Prüfung am Kind wird eine Frage an die Erwachsenen.",
+  "warumUmgedreht": "Ein Kind von vier Jahren, das lernt, seine Haltung mit einer Zeichnung zu vergleichen und seinen Fuß auf einem Bild als „platt“ zu erkennen, lernt vor allem eines: den eigenen Körper auf Fehler abzusuchen. Die Quelle will das ausdrücklich – im Kapitel für die Fünf- bis Siebenjährigen steht als Ziel, das Interesse an „mir, meinem Wuchs, Gewicht, meiner Haltung, meinem Fuß, meinem Herz“ zu wecken. Übernommen ist davon nichts. Was am Körper eines Kindes beurteilt werden muss, beurteilt die Vorsorgeuntersuchung.",
+  "keineAmpel": "Es gibt hier keine Ampel, keine Punkte, keinen Prozentwert und keine Tagesstatistik über Ihr Kind. Der Katalogeintrag wollte eine „Bewegungs-Ampel“ – eine Ampel über ein Kind ist eine Einstufung (docs/02, EU-Verordnung über künstliche Intelligenz), und die Orientierungswerte unten sind Werte für ALTERSGRUPPEN, keine Grenzwerte für ein einzelnes Kind. Wer Minuten einträgt und daraus Rot bekommt, misst sein Kind an einer Zahl, die dafür nie gemacht wurde.",
+  "keinSchrittzaehler": "Kein Schrittzähler für ein Vorschulkind. Die Quelle will ausdrücklich, dass Kinder einen Schrittzähler anlegen und „die Anzeige erklärt“ bekommen. Für Kindergartenkinder gibt es in keiner der deutschen Empfehlungen eine Schrittzahl; die einzige Schrittzahl, die dort überhaupt vorkommt, betrifft Grundschulkinder von 6 bis 11 Jahren – und auch dort als eine Möglichkeit, Alltagsbewegung zu beschreiben, nicht als Ziel für ein Kind am Handgelenk.",
+  "keinWachstumstrick": "Es gibt keine Übung, die ein Kind größer macht. Die Quelle nennt „Übungen zur Stimulation des Wachstums (Hochspringen und dabei einen Gegenstand erreichen)“. Hochspringen ist ein schönes Spiel und macht nicht größer. Ein Satz, der das verspricht, wäre schlicht falsch.",
+  "keinKoerperdatum": "Diese App speichert keine Körperdaten: keine Größe, kein Gewicht, keinen BMI, keine Perzentile. Gespeichert wird höchstens, was SIE als Erwachsene an einem Tag möglich gemacht haben – und auch das nur auf diesem Gerät und mit einem Knopf zum Löschen.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "bloecke": [
+    {
+      "id": "b-haltung",
+      "name": "Haltung",
+      "zeichen": "🧍",
+      "quellZiel": 2,
+      "quellFrage": "Wie ist deine Haltung?",
+      "wasDieQuelleWill": "Das Kind soll seine Haltung an einem eigens eingerichteten Platz prüfen, sie mit Abbildungen vergleichen, erklären, warum ein Mensch eine gute Haltung haben soll, und einige Haltungsübungen kennen („Kätzchen“, „Schlange“).",
+      "nichtUebernommen": "Der Bildvergleich. Ein Kind, das seine Haltung mit einer Zeichnung vergleicht, sucht an sich einen Fehler – und ein Elternteil, das mitvergleicht, stellt etwas fest, was es nicht feststellen kann.",
+      "wasStattdessen": "Die Frage an die Erwachsenen lautet: Wo kann sich mein Kind heute bewegen? Ein Kind, das klettert, rennt, trägt und hängt, braucht keine Haltungsübung.",
+      "woEsHingehoert": "Was an der Haltung eines Kindes auffällt, gehört in die Vorsorgeuntersuchung bei der Kinderärztin oder dem Kinderarzt – dort wird der ganze Bewegungsapparat angesehen, nicht ein Foto."
+    },
+    {
+      "id": "b-fuesse",
+      "name": "Füße",
+      "zeichen": "🦶",
+      "quellZiel": 3,
+      "quellFrage": "Wie sind deine Füße?",
+      "wasDieQuelleWill": "Das Kind soll auf Abbildungen einen richtig geformten Fuß von einem platten unterscheiden lernen, über die Bedeutung gut geformter Füße erzählen und Übungen zur Kräftigung kennen (Gehen auf Zehen, Fersen, Fußaußenseite, kleine Gegenstände mit den Zehen aufsammeln).",
+      "nichtUebernommen": "Das Unterscheiden am Bild. Einem Vorschulkind beizubringen, den eigenen Fuß als „platt“ zu erkennen, ist das Gegenteil von hilfreich.",
+      "wasStattdessen": "Die Frage an die Erwachsenen lautet: Passt der Schuh noch, und wie oft ist das Kind barfuß? Beides liegt in Ihrer Hand, anders als die Form eines Fußes.",
+      "woEsHingehoert": "Was an den Füßen eines Kindes auffällt – Schmerzen, Hinken, ein Fuß anders als der andere –, gehört in die kinderärztliche Praxis."
+    },
+    {
+      "id": "b-wachstum",
+      "name": "Wachsen",
+      "zeichen": "📏",
+      "quellZiel": 4,
+      "quellFrage": "Wie schnell wächst du?",
+      "wasDieQuelleWill": "Das Kind soll eine Vorstellung vom Wachsen bekommen, an Marken auf einem Messband Veränderungen verfolgen und „Übungen zur Stimulation des Wachstums“ lernen.",
+      "nichtUebernommen": "Die Wachstumsübungen – es gibt keine. Und die Messwerte selbst: diese App führt keine Größentabelle und keine Kurve.",
+      "wasStattdessen": "Die Frage an die Erwachsenen lautet: Haben wir einen Türrahmen? Ein Strich mit Datum am Türrahmen ist ein Familienritual und keine Messung – er sagt „du wächst“, nicht „du liegst unter dem Durchschnitt“.",
+      "woEsHingehoert": "Gemessen und eingeordnet wird bei den Vorsorgeuntersuchungen; die Werte stehen im gelben Heft, und dort gehören sie auch hin."
+    },
+    {
+      "id": "b-bewegung",
+      "name": "Bewegung",
+      "zeichen": "🏃",
+      "quellZiel": 5,
+      "quellFrage": "Wie viel bewegst du dich?",
+      "wasDieQuelleWill": "Das Kind soll die Bedeutung von Bewegung verstehen und einen Schrittzähler kennenlernen, den es zur Sportstunde und zum Spaziergang anlegt.",
+      "nichtUebernommen": "Der Schrittzähler am Kind und jede Tageszahl, die das Kind selbst erreichen soll.",
+      "wasStattdessen": "Die Frage an die Erwachsenen lautet: Welche Gelegenheit haben wir heute genutzt? Darunter stehen die Orientierungswerte für die jeweilige Altersgruppe – mit Quelle, damit sichtbar bleibt, woher sie kommen und wie belastbar sie sind.",
+      "woEsHingehoert": "Sorgen um die Bewegungsentwicklung gehören in die Vorsorgeuntersuchung, nicht in eine Statistik."
+    }
+  ],
+  "fachliches": [
+    {
+      "id": "f-fuss-normal",
+      "block": "b-fuesse",
+      "aussage": "Ein weicher, beweglicher Knick-Senkfuß gehört in diesem Alter fast immer zur normalen Entwicklung. Das Längsgewölbe bildet sich über Jahre hinweg aus, und nur bei einem kleinen Teil der Kinder bleibt der Knick-Senkfuß bis ins Schulalter bestehen.",
+      "quelle": "S2k-Leitlinie „Kindlicher Knick-Senkfuß“, Deutsche Gesellschaft für Orthopädie und Unfallchirurgie, AWMF-Register 187-053, Fassung von 2022"
+    },
+    {
+      "id": "f-fuss-einlagen",
+      "block": "b-fuesse",
+      "aussage": "Ein schmerzloser, beweglicher Knick-Senkfuß soll nicht eigens behandelt werden: weder Einlagen noch Krankengymnastik sind dafür nötig. Für Kinder unter sechs Jahren hält die Leitlinie stattdessen ein ausführliches Elterngespräch für den richtigen Weg.",
+      "quelle": "S2k-Leitlinie „Kindlicher Knick-Senkfuß“, AWMF-Register 187-053, Fassung von 2022"
+    },
+    {
+      "id": "f-fuss-vorbeugung",
+      "block": "b-fuesse",
+      "aussage": "Was die Leitlinie zur Vorbeugung nennt, ist genau das, was in der Frage an die Erwachsenen steht: tägliche Bewegung, Schuhe, die weich sind und genug Länge und Weite haben, und Barfußlaufen auf wechselndem Untergrund.",
+      "quelle": "S2k-Leitlinie „Kindlicher Knick-Senkfuß“, AWMF-Register 187-053, Fassung von 2022, Abschnitt zur Prävention"
+    },
+    {
+      "id": "f-fuss-zehenspitzen",
+      "block": "b-fuesse",
+      "aussage": "Der Zehenspitzengang, den die Quelle als Kräftigungsübung vorschlägt, ist in der Leitlinie etwas ganz anderes: ein Zeichen, auf das die Ärztin achtet. Geht ein Kind dauerhaft auf Zehenspitzen, kann das auf eine neurologische Ursache hinweisen. Ein Warnzeichen zur Übung umzudeuten wäre der falsche Weg.",
+      "quelle": "S2k-Leitlinie „Kindlicher Knick-Senkfuß“, AWMF-Register 187-053, Fassung von 2022, Abschnitt zur Untersuchung"
+    }
+  ],
+  "bewegungswerte": [
+    {
+      "id": "w-who34",
+      "alter": "3 bis 4 Jahre",
+      "wert": "mindestens 180 Minuten Bewegung am Tag, in Aktivitäten jeder Intensität – davon mindestens 60 Minuten mit mittlerer bis hoher Intensität",
+      "quelle": "Weltgesundheitsorganisation, Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age (2019), Abschnitt „Recommendations“, Altersblock 3–4 Jahre",
+      "einschraenkung": "Die WHO nennt das selbst eine starke Empfehlung auf Basis sehr niedriger Evidenzqualität; die Zahl 180 geht auf einen Expertenkonsens zurück, der zuerst 2010 in australischen Empfehlungen stand. Eine deutsche Fassung der Leitlinie gibt es im WHO-Repositorium nicht – die Formulierung hier ist eine Übersetzung."
+    },
+    {
+      "id": "w-nebb46",
+      "alter": "4 bis 6 Jahre",
+      "wert": "180 Minuten am Tag und mehr, aus angeleiteter und nicht angeleiteter Bewegung – ohne Vorgabe zur Intensität",
+      "quelle": "Nationale Empfehlungen für Bewegung und Bewegungsförderung, herausgegeben von Alfred Rütten und Klaus Pfeifer (FAU Erlangen-Nürnberg 2016; gedruckt bei der damaligen BZgA 2017), Block Kindergartenkinder",
+      "einschraenkung": "Das ist die deutsche Zahl, und sie gilt ab vier. Für Kinder bis drei nennen die Nationalen Empfehlungen bewusst keine Minutenzahl, sondern: so viel wie möglich bewegen und so wenig wie möglich daran hindern."
+    },
+    {
+      "id": "w-who5",
+      "alter": "ab 5 Jahren (Weltgesundheitsorganisation)",
+      "wert": "im Wochendurchschnitt mindestens 60 Minuten am Tag mit mittlerer bis hoher Intensität, überwiegend ausdauernd – dazu an mindestens 3 Tagen in der Woche intensive sowie muskel- und knochenstärkende Bewegung",
+      "quelle": "Weltgesundheitsorganisation, WHO guidelines on physical activity and sedentary behaviour (2020), Abschnitt „Children and adolescents aged 5–17 years“",
+      "einschraenkung": "Ab dem fünften Geburtstag gilt bei der WHO nicht mehr die Leitlinie von 2019, sondern diese. Die 60 Minuten sind ein Wochendurchschnitt, kein Tagessoll."
+    },
+    {
+      "id": "w-nebb611",
+      "alter": "6 bis 11 Jahre",
+      "wert": "90 Minuten am Tag und mehr in mittlerer bis hoher Intensität – davon dürfen 60 Minuten durch Alltagsbewegung zusammenkommen, zum Beispiel durch mindestens 12 000 Schritte am Tag",
+      "quelle": "Nationale Empfehlungen für Bewegung und Bewegungsförderung (Rütten/Pfeifer 2016), Block Grundschulkinder",
+      "einschraenkung": "Die deutsche Zahl für ein Schulkind ist 90 Minuten, die der WHO 60 – beide meinen nicht dasselbe und dürfen nicht gegeneinander getauscht werden. Die 12 000 Schritte beschreiben Alltagsbewegung; sie sind kein Ziel, das ein Kind erreichen muss."
+    }
+  ],
+  "werteHinweise": {
+    "ueberschneidung": "Für ein sechsjähriges Kind nennen die Nationalen Empfehlungen zwei Zahlen: 180 Minuten im Block „4 bis 6“ und 90 Minuten im Block „6 bis 11“. Die Quelle löst das nicht auf. Diese App zeigt für Sechsjährige beide und sagt dazu, dass es eine Überschneidung ist – eine Zahl auszuwählen wäre eine Entscheidung dieser App und keine Aussage der Quelle.",
+    "stand": "Die Nationalen Empfehlungen stammen von 2016. Eine Aktualisierung läuft seit Februar 2025 unter Leitung von Klaus Pfeifer (FAU Erlangen-Nürnberg); die neue Fassung soll Anfang 2027 erscheinen. Bis dahin ist 2016 der gültige Stand – „Bewegungsempfehlungen 2025“ gibt es nicht.",
+    "bioeg": "Das Bundesinstitut für Öffentliche Gesundheit (BIÖG, bis zum 13. Februar 2025 Bundeszentrale für gesundheitliche Aufklärung) sagt es Eltern kürzer: für Kindergartenkinder drei Stunden und mehr am Tag, für Kinder und Jugendliche von 6 bis 18 Jahren anderthalb Stunden, wovon eine Stunde leichte Alltagsbewegung sein darf.",
+    "keinGrenzwert": "Alle diese Zahlen sind Orientierungswerte für Altersgruppen. Die WHO schreibt ausdrücklich nicht, wie die Zeiten erreicht werden sollen, und ihre Leitlinie von 2019 gilt nicht für Kinder mit Behinderung oder chronischer Erkrankung – dafür ist die kinderärztliche Praxis zuständig."
+  },
+  "gelegenheiten": [
+    {
+      "id": "g-weg",
+      "zeichen": "🚶",
+      "text": "Den Weg zu Fuß gemacht – zur Kita, zum Einkauf, zur Haltestelle"
+    },
+    {
+      "id": "g-draussen",
+      "zeichen": "🌳",
+      "text": "Draußen gewesen, bei jedem Wetter"
+    },
+    {
+      "id": "g-klettern",
+      "zeichen": "🧗",
+      "text": "Etwas zum Klettern, Hängen oder Balancieren gefunden"
+    },
+    {
+      "id": "g-treppe",
+      "zeichen": "🪜",
+      "text": "Treppe statt Aufzug"
+    },
+    {
+      "id": "g-platz",
+      "zeichen": "🛋️",
+      "text": "Zu Hause Platz gemacht – Tisch zur Seite, Teppich frei"
+    },
+    {
+      "id": "g-mit",
+      "zeichen": "👫",
+      "text": "Selbst mitgemacht statt danebengesessen"
+    },
+    {
+      "id": "g-tragen",
+      "zeichen": "🧺",
+      "text": "Tragen und Schieben gelassen – Einkauf, Wäschekorb, Roller"
+    },
+    {
+      "id": "g-ruhe",
+      "zeichen": "😴",
+      "text": "Auch Ruhe gelassen: nicht jeder Tag ist ein Bewegungstag"
+    }
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Gruppe «ПОЧЕМУЧКИ» (jüngeres Vorschulalter, drei bis fünf Jahre), Abschnitt «Здоровый образ жизни», S. 126–127; dazu die entsprechende Stelle der Gruppe «ФАНТАЗЕРЫ» (älteres Vorschulalter, fünf bis sechs/sieben Jahre), S. 222 und S. 224–225",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die vier Themen, die die Quelle anspricht. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": {
+      "zieleGesamt": 5,
+      "zieleMitFrage": 4
+    },
+    "nachgezaehlt": "Der Abschnitt «Здоровый образ жизни» trägt fünf Ziele: ein allgemeines und vier, die mit einer Frage an das Kind überschrieben sind – «Какая у тебя осанка?», «Какие у тебя стопы?», «Как быстро ты растешь?», «Сколько ты двигаешься?». Nachgezählt im Original. Die vier Fragen sind die vier Blöcke dieser App, umgedreht.",
+    "abweichung": "Vom allgemeinen Ziel (Tagesablauf, dem Wetter entsprechend anziehen, Morgengymnastik, auf dem Spaziergang weder frieren noch überhitzen) ist nichts gebaut: das ist eine Liste von Erziehungszielen am Kind, und der Teil, der Erwachsene betrifft – raus bei jedem Wetter, passend anziehen –, steckt in den Gelegenheiten. Von den vier Fragen ist keine als Prüfung am Kind übernommen; alle vier sind als Frage an die Erwachsenen gebaut. Nicht übernommen sind außerdem der Bildvergleich zur Haltung, das Erkennen des platten Fußes auf Abbildungen, die Wachstumsübungen, der Schrittzähler und die Bewegungs-Ampel des Katalogeintrags."
+  },
+  "ausgeschlossen": [
+    {
+      "quellNr": "x01",
+      "was": "Der Haltungs-Bildvergleich",
+      "warum": "Die Quelle will, dass ein Kind seine Haltung mit Abbildungen vergleicht, und der Katalogeintrag wollte das als Funktion. Nicht gebaut: ein Vorschulkind, das lernt, den eigenen Körper mit einer Zeichnung abzugleichen, lernt, an sich einen Fehler zu suchen. Was an einer Haltung auffällt, sieht die Vorsorgeuntersuchung."
+    },
+    {
+      "quellNr": "x02",
+      "was": "Das Erkennen des platten Fußes auf Bildern",
+      "warum": "Dasselbe eine Stufe schärfer: hier soll das Kind den eigenen Fuß einer von zwei Zeichnungen zuordnen – der richtigen oder der platten. Nicht gebaut."
+    },
+    {
+      "quellNr": "x03",
+      "was": "Übungen zur Stimulation des Wachstums",
+      "warum": "Es gibt keine Übung, die ein Kind größer macht. Hochspringen und dabei etwas erreichen ist ein gutes Spiel und steht deshalb bei den Gelegenheiten – aber nicht als Wachstumstrick."
+    },
+    {
+      "quellNr": "x04",
+      "was": "Der Schrittzähler am Kind",
+      "warum": "Für Kindergartenkinder nennt keine deutsche Empfehlung eine Schrittzahl. Die einzige Schrittzahl, die überhaupt vorkommt, beschreibt Alltagsbewegung von Grundschulkindern – und beschreibt, statt vorzugeben."
+    },
+    {
+      "quellNr": "x05",
+      "was": "Die Bewegungs-Ampel mit Tagesstatistik",
+      "warum": "Der Katalogeintrag wollte eine Ampel mit Tagesstatistik. Eine Ampel über ein Kind ist eine Einstufung (docs/02, EU-Verordnung über künstliche Intelligenz). Die Orientierungswerte gelten für Altersgruppen; ein einzelnes Kind daran rot oder grün zu färben, macht aus einer Empfehlung ein Urteil."
+    },
+    {
+      "quellNr": "x06",
+      "was": "Messlatten-Einträge mit Größe und Gewicht",
+      "warum": "Diese App speichert keine Körperdaten. Größe und Gewicht eines Kindes werden bei den Vorsorgeuntersuchungen erhoben und stehen im gelben Heft. Ein zweiter Satz Zahlen zu Hause – erst recht mit Kurve oder BMI – erzeugt Vergleiche, die niemand gebraucht hat. Der Türrahmen reicht."
+    },
+    {
+      "quellNr": "x07",
+      "was": "Das Interesse am eigenen Gewicht",
+      "warum": "Im Kapitel für die Fünf- bis Siebenjährigen nennt die Quelle als Ziel, das Interesse des Kindes an „mir, meinem Wuchs, Gewicht, meiner Haltung, meinem Fuß, meinem Herz“ zu wecken. Das Gewicht eines Vorschulkindes ist kein Thema für das Kind."
+    },
+    {
+      "quellNr": "x08",
+      "was": "Die Fuß-Kräftigungsübungen der Quelle, besonders der Zehenspitzengang",
+      "warum": "Für gesunde Vorschulkinder ist nicht belegt, dass solche Übungen die Fußentwicklung verbessern – und beim Zehenspitzengang ist es schlimmer: er ist in der Leitlinie ein Untersuchungszeichen, kein Training. Was die Leitlinie stattdessen empfiehlt, steht im Block „Füße“."
+    }
+  ]
+}

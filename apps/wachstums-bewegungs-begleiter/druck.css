@@ -1,0 +1,27 @@
+/* Druck: ein Zettel für die Küche – die Orientierungswerte des gewählten
+   Alters und die Liste der Gelegenheiten. OHNE Haken: ein Blatt mit Haken
+   wäre eine Bewertung auf Papier (docs/02), und ohne Ampel sowieso. */
+.wbb-nur-druck { display: none; }
+/* Ein zugeklappter Block ist auf dem Bildschirm aus; auf Papier stehen
+   die Blöcke ohnehin nicht (der Zettel ist für die Küche). */
+.wbb-zu { display: none; }
+
+@media print {
+  .wbb-nur-bildschirm { display: none !important; }
+  .wbb-nur-druck { display: block !important; }
+  .wbb-block { display: none !important; }
+  /* Knöpfe sind auf Papier keine Knöpfe (Nr. 50, 56-61). */
+  .wbb-werte button, .wbb-gelegenheiten button { display: none !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .wbb-werte, .wbb-gelegenheiten {
+    border: none; border-radius: 0; margin: 0 0 5mm; padding: 0; box-shadow: none;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .wbb-werte h2, .wbb-gelegenheiten h2 { font-size: 14pt; margin: 0 0 3mm; }
+  .wbb-werte p { font-size: 10.5pt; line-height: 1.45; margin: 0 0 2mm; }
+  .wbb-wert { border-left: 2pt solid #000; padding-left: 3mm; margin: 0 0 3mm !important; }
+  /* Die Gelegenheiten liest man im Vorbeigehen am Kühlschrank. */
+  .wbb-gelegenheiten li { font-size: 12pt; line-height: 1.5; margin: 0 0 2mm; }
+  a[href]::after { content: ""; }
+}
