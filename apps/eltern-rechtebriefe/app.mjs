@@ -52,6 +52,10 @@ function render() {
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `📄 ${b.name}`),
       briefFeld,
+      // Ein <textarea> druckt in den meisten Browsern nur seinen sichtbaren
+      // Ausschnitt. Der Brief steht darum zusaetzlich in einem <pre>, das nur
+      // im Druck erscheint.
+      el('pre', { class: 'erb-nur-druck' }, briefFeld.value),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--klein', onclick: (ev) => { briefFeld.select(); navigator.clipboard?.writeText(briefFeld.value); ev.target.textContent = '✔️ Kopiert!'; } }, '📋 Kopieren'),
         el('button', { class: 'k-knopf k-knopf--klein', onclick: herunterladen }, '💾 Als .txt speichern'),

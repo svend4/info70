@@ -115,6 +115,9 @@ function render() {
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => kofferImport.click() }, '📂 Koffer laden (.json)'),
         kofferImport),
       gesamtFeld,
+      // Ein <textarea> druckt nur seinen sichtbaren Ausschnitt - der
+      // Gesamtbericht steht darum zusaetzlich in einem <pre> fuer den Druck.
+      el('pre', { class: 'cok-nur-druck' }, gesamtFeld.value),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--klein', onclick: () => download('compliance-gesamtbericht.txt', gesamtFeld.value, 'text/plain') }, '💾 Gesamtbericht (.txt)'),
         el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Drucken'),

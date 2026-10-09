@@ -1,0 +1,15 @@
+/* Druck: der Knopf verspricht „Verweise drucken" – also kommen genau die
+   Verweise und Meldewege aufs Blatt, nicht die Punktzahl des Durchgangs
+   (docs/02: ein Druckblatt traegt keine Punkte). */
+.lst-nur-druck { display: none; }
+
+@media print {
+  .k-app > *:not(.lst-blatt):not(.lst-nur-druck) { display: none !important; }
+  .lst-nur-druck { display: block !important; font-size: 11pt; }
+  .lst-blatt { border: none; border-radius: 0; margin: 0; padding: 0; box-shadow: none; }
+  .lst-blatt h2 { font-size: 15pt; margin: 0 0 4mm; }
+  .lst-blatt li { font-size: 11pt; line-height: 1.5; margin: 0 0 2.5mm; break-inside: avoid; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  a[href]::after { content: ""; }
+}

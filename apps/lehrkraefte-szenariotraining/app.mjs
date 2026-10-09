@@ -10,6 +10,9 @@ import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/ind
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
+// Vor dem Ende gibt es nichts zu drucken; ohne diesen Satz käme eine weiße
+// Seite aus dem Drucker.
+const lstPlatzhalter = () => el('p', { class: 'lst-nur-druck' }, 'Die Verweise und Meldewege stehen nach dem letzten Szenario – dann lohnt sich der Druck.');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let index = 0;
@@ -18,6 +21,7 @@ let punkte = 0;
 function start() {
   index = 0; punkte = 0;
   app.replaceChildren(
+    lstPlatzhalter(),
     el('h1', { class: 'k-titel' }, '🏫 Ernstfall Pausenhof-Chat'),
     el('p', { class: 'k-untertitel' }, 'Szenariotraining für Lehrkräfte: souverän reagieren im digitalen Schulalltag'),
     el('section', { class: 'k-karte' },
@@ -29,6 +33,7 @@ function start() {
 function frage() {
   const s = daten.szenarien[index];
   app.replaceChildren(
+    lstPlatzhalter(),
     el('h1', { class: 'k-titel' }, '🏫 Ernstfall Pausenhof-Chat'),
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `Situation ${index + 1} von ${daten.szenarien.length}`),
@@ -42,6 +47,7 @@ function aufloesung(s, gewaehlt) {
   const symbol = gewaehlt.wert === 2 ? '✅' : gewaehlt.wert === 1 ? '🟡' : '🔴';
   const titel = gewaehlt.wert === 2 ? 'Souverän!' : gewaehlt.wert === 1 ? 'Geht besser' : 'Besser vermeiden';
   app.replaceChildren(
+    lstPlatzhalter(),
     el('h1', { class: 'k-titel' }, '🏫 Ernstfall Pausenhof-Chat'),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-size:1.3rem;margin-top:0' }, `${symbol} ${titel}`),
@@ -64,7 +70,9 @@ function ende() {
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-size:1.2rem;font-weight:700;margin-top:0' }, `${punkte} von ${max} Punkten`),
       el('p', {}, einschaetzung)),
-    el('section', { class: 'k-karte' },
+    // `lst-blatt` ist das, was der Knopf verspricht: die Verweise, nicht die
+    // Punktzahl. Alles andere blendet druck.css aus (docs/02).
+    el('section', { class: 'k-karte lst-blatt' },
       el('h2', { style: 'margin-top:0;font-size:1.15rem' }, '📇 Wichtige Verweise & Meldewege'),
       el('ul', {}, ...daten.verweise.map((v) => el('li', { style: 'margin:0.35rem 0' }, v)))),
     el('section', { class: 'k-karte' },

@@ -1,0 +1,15 @@
+/* Druck: der Knopf verspricht „Foto-Regeln drucken" – also kommen genau die
+   Regeln aufs Blatt. Die Punktzahl bleibt auf dem Bildschirm: ein Blatt mit
+   Punkten waere eine Bewertung auf Papier (docs/02). */
+.shs-nur-druck { display: none; }
+
+@media print {
+  .k-app > *:not(.shs-blatt):not(.shs-nur-druck) { display: none !important; }
+  .shs-nur-druck { display: block !important; font-size: 11pt; }
+  .shs-blatt { border: none; border-radius: 0; margin: 0; padding: 0; box-shadow: none; break-inside: avoid; }
+  .shs-blatt h2 { font-size: 15pt; margin: 0 0 4mm; }
+  .shs-blatt li { font-size: 11pt; line-height: 1.5; margin: 0 0 2mm; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  a[href]::after { content: ""; }
+}

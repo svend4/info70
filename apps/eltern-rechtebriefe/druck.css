@@ -1,0 +1,24 @@
+/* Druck: aufs Blatt kommt der Brief, und zwar vollstaendig. Ein <textarea>
+   druckt in den meisten Browsern nur seinen sichtbaren Ausschnitt, darum
+   steht der Text zusaetzlich in einem <pre class="erb-nur-druck">, das nur
+   hier erscheint. Der Bildschirmrahmen bleibt weg (docs/02). */
+.erb-nur-druck { display: none; }
+
+@media print {
+  .k-app > * { display: none !important; }
+  .k-app > *:has(.erb-nur-druck) { display: block !important; }
+  .erb-nur-druck { display: block !important; }
+  .k-app > *:has(.erb-nur-druck) > *:not(.erb-nur-druck) { display: none !important; }
+  .erb-nur-druck {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, "DejaVu Sans Mono", monospace;
+    font-size: 10pt;
+    line-height: 1.45;
+    margin: 0;
+    border: none;
+  }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  a[href]::after { content: ""; }
+}

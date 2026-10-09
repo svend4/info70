@@ -8,6 +8,9 @@ import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/ind
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
+// Vor dem Ende gibt es nichts zu drucken; ohne diesen Satz käme eine weiße
+// Seite aus dem Drucker.
+const shsPlatzhalter = () => el('p', { class: 'shs-nur-druck' }, 'Die Familien-Foto-Regeln stehen nach dem letzten Szenario – dann lohnt sich der Druck.');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let index = 0;
@@ -16,6 +19,7 @@ let punkte = 0;
 function start() {
   index = 0; punkte = 0;
   app.replaceChildren(
+    shsPlatzhalter(),
     el('h1', { class: 'k-titel' }, '🪞 Sharenting-Spiegel'),
     el('p', { class: 'k-untertitel' }, 'Ein ehrlicher Selbsttest für Eltern: Wie teile ich Fotos meines Kindes?'),
     el('section', { class: 'k-karte' },
@@ -27,6 +31,7 @@ function start() {
 function frage() {
   const s = daten.szenarien[index];
   app.replaceChildren(
+    shsPlatzhalter(),
     el('h1', { class: 'k-titel' }, '🪞 Sharenting-Spiegel'),
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `Situation ${index + 1} von ${daten.szenarien.length}`),
@@ -39,6 +44,7 @@ function aufloesung(s, gewaehlt) {
   punkte += gewaehlt.wert;
   const symbol = gewaehlt.wert === 2 ? '✅' : gewaehlt.wert === 1 ? '🟡' : '🔴';
   app.replaceChildren(
+    shsPlatzhalter(),
     el('h1', { class: 'k-titel' }, '🪞 Sharenting-Spiegel'),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-size:1.4rem;margin-top:0' }, `${symbol} ${gewaehlt.wert === 2 ? 'Gut abgewogen!' : gewaehlt.wert === 1 ? 'Geht besser' : 'Lieber nicht'}`),
@@ -57,7 +63,9 @@ function ende() {
       ? 'Eine gute Grundhaltung – an ein paar Stellen lohnt sich noch mehr Zurückhaltung.'
       : 'Ein guter Anlass, die eigenen Gewohnheiten zu überdenken. Die Regeln unten helfen dabei.';
 
-  const regelBlock = el('section', { class: 'k-karte' },
+  // `shs-blatt` ist das, was der Knopf verspricht: die Regeln, nicht die
+  // Punktzahl. Alles andere blendet druck.css aus (docs/02).
+  const regelBlock = el('section', { class: 'k-karte shs-blatt' },
     el('h2', { style: 'margin-top:0;font-size:1.15rem' }, '📋 Unsere Familien-Foto-Regeln'),
     el('ul', {}, ...daten.fotoregeln.map((r) => el('li', { style: 'margin:0.35rem 0' }, r))));
 

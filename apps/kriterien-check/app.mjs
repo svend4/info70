@@ -80,6 +80,9 @@ function render() {
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Bericht (zum Kopieren, z. B. für fragFINN-Antrag oder Förder-Nachweis)'),
       berichtsFeld,
+      // Ein <textarea> druckt nur seinen sichtbaren Ausschnitt - der Bericht
+      // steht darum zusaetzlich in einem <pre>, das nur im Druck erscheint.
+      el('pre', { class: 'kcb-nur-druck' }, berichtsFeld.value),
       el('div', { class: 'k-antworten' },
         el('button', {
           class: 'k-knopf k-knopf--klein',

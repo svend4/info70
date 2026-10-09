@@ -31,8 +31,11 @@ function render() {
 
   const bereichsKarten = daten.bereiche.map((b) => {
     const ok = b.punkte.filter((p) => status[p.id]).length;
-    return el('section', { class: 'k-karte' },
-      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `${b.emoji} ${b.name} (${ok}/${b.punkte.length})`),
+    // `skk-blatt`: der Merkzettel sind die Fragen mit ihrem Warum. Haken und
+    // Zaehlstand bleiben auf dem Bildschirm - ein Blatt mit Haken waere eine
+    // Bewertung auf Papier (docs/02).
+    return el('section', { class: 'k-karte skk-blatt' },
+      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `${b.emoji} ${b.name}`, el('span', { class: 'skk-nur-bildschirm' }, ` (${ok}/${b.punkte.length})`)),
       ...b.punkte.map((p) => {
         const box = el('input', { type: 'checkbox', id: `skk-${p.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
         box.checked = Boolean(status[p.id]);

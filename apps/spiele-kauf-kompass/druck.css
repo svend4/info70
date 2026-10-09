@@ -1,0 +1,20 @@
+/* Druck: der Merkzettel sind die Fragen mit ihrem Warum – zum Mitnehmen in
+   den Laden. Haken, Zaehlstand und Fortschrittsbalken bleiben auf dem
+   Bildschirm: ein Blatt mit Haken waere eine Bewertung auf Papier (docs/02). */
+.skk-nur-druck { display: none; }
+
+@media print {
+  .k-app > *:not(.skk-blatt) { display: none !important; }
+  .skk-nur-bildschirm { display: none !important; }
+  .skk-blatt input[type="checkbox"] { display: none !important; }
+  .skk-blatt button { display: none !important; }
+  .skk-blatt { border: none; border-radius: 0; margin: 0 0 4mm; padding: 0; box-shadow: none; break-inside: avoid; }
+  .skk-blatt h2 { font-size: 13pt; margin: 0 0 2mm; }
+  .skk-blatt label { font-size: 11pt; }
+  .skk-blatt p { font-size: 10pt; line-height: 1.4; margin: 0 0 1.5mm; }
+  /* Ohne Haken braucht die Einrueckung der Beschreibung keinen Platz mehr. */
+  .skk-blatt div > div { margin-left: 0 !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  a[href]::after { content: ""; }
+}
