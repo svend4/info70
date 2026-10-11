@@ -30,6 +30,7 @@ const normal = (s) => s
 
 const befunde = [];
 let geprueft = 0;
+let statuszeilen = 0;
 
 for (const doc of (await readdir(docsDir)).filter((d) => d.endsWith('.md')).sort()) {
   const zeilen = (await readFile(new URL(doc, docsDir), 'utf8')).split('\n');
@@ -65,16 +66,32 @@ for (const doc of (await readdir(docsDir)).filter((d) => d.endsWith('.md')).sort
       }
     }
     // Und die Bilanz muss aufgehen: „gebaut von insgesamt" gegen die Zahl der Eintraege.
-    const [, , gesamt] = zeilen[i].match(STATUSZEILE);
+    const [, gebaut, gesamt] = zeilen[i].match(STATUSZEILE);
     if (Number(gesamt) !== abschnitt.eintraege.length) {
       befunde.push(`docs/${doc}:${i + 1} nennt ${gesamt} Einheiten, der Abschnitt hat `
         + `${abschnitt.eintraege.length} Eintraege`);
     }
+    // Die Konvention lautet „die naechsten drei" - solange es noch drei gibt.
+    // Je naeher ein Abschnitt der Fertigstellung kommt, desto weniger werden
+    // genannt, und das ist richtig so. Geprueft wird deshalb gegen die
+    // Zahlen der Zeile selbst, nicht gegen eine feste Untergrenze.
+    const offen = Number(gesamt) - Number(gebaut);
+    const erwartet = Math.min(3, Math.max(offen, 0));
+    const genannt = [...aufzaehlung.matchAll(/№\d+\s*\(/g)].length;
+    if (genannt !== erwartet) {
+      befunde.push(`docs/${doc}:${i + 1} nennt ${genannt} naechste Einheiten, erwartet ${erwartet} `
+        + `(${offen} von ${gesamt} sind offen)`);
+    }
+    statuszeilen += 1;
   }
 }
 
 test('jede in einer Statuszeile genannte Einheit gibt es wirklich', () => {
   assert.deepEqual(befunde, [], befunde.join(' | '));
   // Plausibilitaet: die Regel darf nicht gruen werden, weil sie nichts findet.
-  assert.ok(geprueft >= 3, `nur ${geprueft} genannte Einheiten gefunden – greift das Muster noch?`);
+  // Gezaehlt werden die STATUSZEILEN, nicht die genannten Einheiten - deren
+  // Zahl sinkt zu Recht, je naeher ein Abschnitt der Fertigstellung kommt
+  // (Welle 82: der Abschnitt der Eltern-Werkzeuge hatte nur noch zwei offene).
+  assert.ok(statuszeilen >= 1, 'keine Statuszeile gefunden – greift das Muster noch?');
+  assert.ok(geprueft >= 1, `nur ${geprueft} genannte Einheiten gefunden – greift das Muster noch?`);
 });

@@ -1,0 +1,122 @@
+{
+  "art": "schulanfang-spiel-navigator",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 5 bis 7 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Hier wird Ihr Kind nicht beurteilt, nicht verglichen und nicht vorhergesagt – hier steht, wer entscheidet, was wirklich bekannt ist und was Spielen damit zu tun hat.",
+  "wasEsIst": "Ein Wegweiser für die Zeit vor der Einschulung, in drei Teilen: was rechtlich gilt und wer entscheidet; was über die Grundlagen fürs Lernen bekannt ist und wie sicher; und was Spielen dazu beiträgt – ohne Versprechen.",
+  "warumNichtSchulreif": "Das Wort „schulreif“ kommt in dieser App nur als Begriff aus der Geschichte vor. Bis in die 1960er-Jahre nahm man an, die Schulreife sei ein biologisch bedingter Reifungsvorgang, rein von innen gesteuert. Abgelöst wurde der Begriff durch „Schulfähigkeit“ und später „Schulbereitschaft“, weil diese dem Einfluss der Umgebung stärker Rechnung tragen. Nordrhein-Westfalen hat auch die Schulfähigkeit als Voraussetzung für die Einschulung ausdrücklich aufgegeben – an ihre Stelle ist eine bedarfsgerechte individuelle Förderung getreten. Ein Kind ist also nicht reif oder unreif; es kommt in die Schule, und die Schule richtet sich auf das Kind ein.",
+  "keineBeurteilung": "Diese App beurteilt Ihr Kind nicht, vergleicht es nicht und sagt nichts über seine Zukunft voraus. Es gibt keine Checkliste, keine Punkte, keine Ampel und kein Ergebnis. Das ist keine Vorsicht, sondern eine Konsequenz: selbst das eigens dafür entwickelte und normierte Vorhersage-Verfahren für Leseschwierigkeiten erkannte in unabhängiger Prüfung meist weniger als die Hälfte der Kinder, die später Schwierigkeiten zeigten. Was eine Fachkraft mit einem geprüften Verfahren nicht sicher kann, kann ein Fragebogen in einer App erst recht nicht.",
+  "quellZielAbgelehnt": "Die Quelle nennt als eines ihrer fünf allgemeinen Ziele, „die reichen Möglichkeiten des Spiels zu diagnostischen und, falls nötig, zu korrektiven Zwecken zu nutzen“. Das ist nicht übernommen. Ein Kind, das spielt, gibt sich preis – es beim Spielen zu beobachten, um es einzuschätzen, macht aus dem Spiel eine Prüfung, von der das Kind nichts weiß.",
+  "wohinMitFragen": "Schulanmeldung und Einschulungsentscheidung: die Schulleitung der zuständigen Grundschule. Gesundheitliche Fragen: der schulärztliche Dienst des Gesundheitsamts. Entwicklungsfragen: die Kita-Fachkraft, die Kinderarztpraxis oder eine Frühförderstelle. Maßgeblich ist immer das Schulgesetz Ihres Bundeslandes.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "wasGilt": [
+    {
+      "id": "g-entscheidung", "zeichen": "🏫", "frage": "Wer entscheidet über die Einschulung?",
+      "antwort": "Nicht die Eltern und nicht die Ärztin. In Nordrhein-Westfalen zum Beispiel trifft die Entscheidung die Schulleiterin oder der Schulleiter auf der Grundlage des amtsärztlichen Gutachtens; die Eltern sind anzuhören.",
+      "quelle": "Schulgesetz Nordrhein-Westfalen, Paragraf 35 Absatz 3"
+    },
+    {
+      "id": "g-laender", "zeichen": "🗺️", "frage": "Gilt überall dasselbe?",
+      "antwort": "Nein, und das ist der wichtigste Satz dieser Seite. Der Stichtag liegt je nach Bundesland zwischen dem 30. Juni und dem 30. September. Eine Zurückstellung ist in Nordrhein-Westfalen nur aus erheblichen gesundheitlichen Gründen möglich – ein allgemeines „noch nicht so weit“ reicht dort nicht. In Bayern dagegen gibt es einen Korridor: Wer zwischen dem 1. Juli und dem 30. September sechs wird, ist nur schulpflichtig, wenn die Erziehungsberechtigten den Beginn nicht auf das kommende Schuljahr verschieben.",
+      "quelle": "Schulgesetz Nordrhein-Westfalen, Paragraf 35 Absatz 3; Bayerisches Gesetz über das Erziehungs- und Unterrichtswesen, Artikel 37; Kultusministerkonferenz, Empfehlungen zum Schulanfang von 1997"
+    },
+    {
+      "id": "g-seu", "zeichen": "🩺", "frage": "Was macht die Schuleingangsuntersuchung?",
+      "antwort": "Sie ist in allen Bundesländern verpflichtend und kostenlos; Umfang und Durchführung unterscheiden sich. Untersucht werden fast überall: Vorgeschichte, Vorsorge- und Impfstatus, Sehen und Hören sowie die Entwicklung des Kindes und sein individueller Förderbedarf. Sie stellt nicht fest, ob ein Kind „schulfähig“ ist – in Nordrhein-Westfalen hat das Gutachten ausschließlich die Frage erheblicher gesundheitlicher Gründe zu beantworten.",
+      "quelle": "Baumgarten u. a., Das Gesundheitswesen 2023 (bundesweite Befragung der Gesundheitsämter); Landeszentrum Gesundheit Nordrhein-Westfalen, Stand 2021"
+    },
+    {
+      "id": "g-zurueck", "zeichen": "⏳", "frage": "Bringt ein Jahr Warten etwas?",
+      "antwort": "Ein Vorteil ist nicht belegt. Der deutschsprachige Forschungsüberblick hält fest, eindeutige Vorteile einer Zurückstellung seien bisher nicht nachgewiesen worden; die größte deutsche Einzelstudie fand am Ende der ersten Klasse keinen Unterschied, im Alter von acht Jahren aber im Schnitt schwächere Leistungen bei den zurückgestellten Kindern. Umgekehrt gilt genauso: „Später einschulen schadet“ ist als Pauschalsatz ebenfalls nicht haltbar – die Daten sind nicht aus Zufallszuteilung gewonnen, und ein Kommentar in derselben Zeitschrift bezweifelt, dass sie für eine Empfehlungsänderung ausreichen.",
+      "quelle": "Wehner, Universität Bamberg (Forschungsüberblick); Jaekel u. a., Developmental Medicine and Child Neurology 2015 (Bayerische Längsschnittstudie, 999 Kinder) samt Kommentar von Fastenau 2015"
+    },
+    {
+      "id": "g-wer", "zeichen": "⚖️", "frage": "Wer wird eigentlich zurückgestellt?",
+      "antwort": "Nicht nur Kinder, bei denen etwas im Kind liegt. Jungen stellen fast zwei Drittel der zurückgestellten Kinder; überdurchschnittlich betroffen sind außerdem die jüngsten eines Jahrgangs und Kinder aus Familien mit geringeren Bildungs- und Einkommensressourcen. Wer vor dieser Frage steht, sollte wissen, dass sie nicht nur vom Kind handelt.",
+      "quelle": "Autorengruppe Bildungsberichterstattung 2010; Landeszentrum Gesundheit Nordrhein-Westfalen"
+    },
+    {
+      "id": "g-daten", "zeichen": "🔒", "frage": "Darf die Kita Unterlagen an die Schule geben?",
+      "antwort": "Nur mit Ihrer Einwilligung. Sie ist freiwillig, jederzeit widerrufbar und darf nicht an den Betreuungsvertrag gekoppelt werden.",
+      "quelle": "Gemeinsamer Beschluss von Kultusministerkonferenz und Jugend- und Familienministerkonferenz von 2026, unter Verweis auf das Zehnte Buch Sozialgesetzbuch"
+    }
+  ],
+  "bereiche": [
+    {
+      "id": "b-sozial", "zeichen": "🤝", "name": "Sozial-emotional",
+      "wasGemeintIst": "Mit anderen zurechtkommen, warten können, sich zutrauen, etwas allein zu versuchen, und wissen, was man gerade fühlt.",
+      "wasBekanntIst": "Dieser Bereich steht in der gemeinsamen Empfehlung von Kultusministerkonferenz und Jugend- und Familienministerkonferenz an erster Stelle. Zahlen dazu, wie stark er die spätere Schulleistung erklärt, nennt die Empfehlung nicht – und diese App erfindet keine.",
+      "sicherheit": "benannt, nicht beziffert",
+      "quelle": "Gemeinsamer Beschluss von Kultusministerkonferenz und Jugend- und Familienministerkonferenz von 2026, Abschnitt zu den basalen Kompetenzbereichen"
+    },
+    {
+      "id": "b-sprache", "zeichen": "🗣️", "name": "Sprachlich",
+      "wasGemeintIst": "Dazu zählt die Empfehlung unter anderem das Hören auf Laute und Silben, das Bewusstsein für Wörter, Bedeutungen und Satzbau sowie alles, was mit Büchern, Vorlesen und Schrift zu tun hat.",
+      "wasBekanntIst": "Hier gibt es belastbare Forschung: Die Förderung der phonologischen Bewusstheit – also des Hörens auf Laute und Silben – wirkt im deutschen Sprachraum nachweisbar, allerdings schwächer als in internationalen Studien, und am stärksten vor der Einschulung. Ein zusätzliches Buchstabentraining brachte in derselben Übersichtsarbeit keinen zusätzlichen Nutzen.",
+      "sicherheit": "belegt, Wirkung eher klein",
+      "quelle": "Wolf, Schröders und Kriegbaum, Zeitschrift für pädagogische Psychologie 2016 (Übersichtsarbeit über 27 Studien)"
+    },
+    {
+      "id": "b-mathe", "zeichen": "🔢", "name": "Mathematisch",
+      "wasGemeintIst": "Sortieren und Ordnen, Muster und Symmetrie, Zahlen und Mengen, Raum und Formen, Größen.",
+      "wasBekanntIst": "Die vor der Einschulung erfasste Mengen-Zahlen-Kompetenz erklärt etwa ein Viertel der Unterschiede in der Mathematikleistung am Ende der Grundschulzeit. Ein dafür entwickeltes Programm steigerte vor allem die mathematischen Vorläuferfertigkeiten; bei unspezifischen Fähigkeiten wie dem Arbeitsgedächtnis zeigten sich keine Unterschiede zwischen den Gruppen.",
+      "sicherheit": "belegt, Zusammenhang deutlich",
+      "quelle": "Längsschnittstudie von Krajewski; Krajewski u. a., Zeitschrift für Entwicklungspsychologie und Pädagogische Psychologie 2008"
+    }
+  ],
+  "bereicheHinweis": "Diese drei Bereiche sind keine abschließende Liste – das sagt die Empfehlung ausdrücklich. Und sie sind keine Prüfpunkte: Sie finden hier nichts zum Abhaken und keine Altersangabe, ab wann ein Kind etwas können müsste.",
+  "spielarten": [
+    {
+      "id": "s-rolle", "zeichen": "🧑‍🚒", "name": "Rollenspiel",
+      "wasEsIst": "Einkaufen, Arztpraxis, Feuerwehr, Familie – das Spiel, in dem Kinder Rollen übernehmen, aushandeln und die Welt der Erwachsenen durchspielen.",
+      "wasSieTun": "Mitspielen, wenn Sie eingeladen werden, und die Rolle annehmen, die Sie bekommen. Material bereitlegen statt vorgeben: eine alte Tasche, ein Tuch, leere Verpackungen. Und das Spiel stehen lassen, wenn es unterbrochen wird – ein Aufbau, der bis morgen liegen bleiben darf, wird weitergespielt.",
+      "wasEsNichtIst": "Keine Gelegenheit zum Abfragen. Wer im Kaufladen heimlich das Rechnen übt, macht aus dem Spiel Unterricht, und Kinder merken das sofort.",
+      "quellBezug": "Die Quelle führt das Rollenspiel als eigenen Abschnitt und will, dass die Handlungen aus der übernommenen Rolle folgen."
+    },
+    {
+      "id": "s-regel", "zeichen": "🎲", "name": "Regelspiel",
+      "wasEsIst": "Würfelspiele, Kartenspiele, Fangen, Verstecken – alles, wo eine Regel gilt, die für alle gleich ist.",
+      "wasSieTun": "Mitspielen und selbst verlieren können. Regeln vor dem Anfang klären und während des Spiels nicht ändern. Ein Spiel zu Ende spielen, auch wenn es knapp wird.",
+      "wasEsNichtIst": "Kein Training. Ein Regelspiel, das gespielt wird, damit das Kind „das Zählen übt“, ist eine Übung mit Würfel.",
+      "quellBezug": "Die Quelle nennt bewegliche und didaktische Spiele als eigene Arten und verlangt Zeit dafür im Tagesablauf."
+    },
+    {
+      "id": "s-theater", "zeichen": "🎭", "name": "Theaterspiel",
+      "wasEsIst": "Eine bekannte Geschichte nachspielen – mit Puppen, mit Tüchern, mit dem ganzen Körper.",
+      "wasSieTun": "Eine Geschichte nehmen, die das Kind kennt, und es die Rollen verteilen lassen. Selbst eine Rolle übernehmen, am besten keine Hauptrolle. Kein Publikum organisieren, solange niemand danach fragt.",
+      "wasEsNichtIst": "Keine Aufführung für Erwachsene. Sobald geprobt wird, damit es am Ende gut aussieht, spielt das Kind nicht mehr, sondern arbeitet.",
+      "quellBezug": "Die Quelle nennt Dramatisierungsspiele als eigene Art und will, dass Kinder Zubehör und Kulisse selbst herstellen."
+    },
+    {
+      "id": "s-bauen", "zeichen": "🧱", "name": "Bauen und Konstruieren",
+      "wasEsIst": "Türme, Höhlen, Straßen, Maschinen – aus Klötzen, Kissen, Kartons, allem, was stapelbar ist.",
+      "wasSieTun": "Platz schaffen und den Aufbau stehen lassen. Fragen, was es wird, statt zu sagen, was es sein soll. Beim Einsturz nichts kommentieren.",
+      "wasEsNichtIst": "Kein Bauplan. Ein Bauwerk nach Vorlage ist etwas anderes als ein selbst erfundenes – beides ist in Ordnung, aber nur das zweite ist Spiel.",
+      "quellBezug": "Die Quelle führt das Konstruieren als eigenen Abschnitt im selben Kapitel."
+    }
+  ],
+  "spielHinweis": "Was Spielen für die Schule bringt, steht hier bewusst nicht als Zahl. Die Quelle nennt das Spiel die führende Tätigkeit dieses Alters; belegte Wirkungszahlen zum Zusammenhang von Spiel und späterer Schulleistung sind beim Bau dieser App nicht gefunden worden. Was gefunden wurde, steht oben bei den drei Bereichen – und es betrifft die Sprache und die Mengen, nicht das Spiel als solches.",
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Gruppe «ФАНТАЗЕРЫ» (älteres Vorschulalter, fünf bis sechs/sieben Jahre), Kapitel «МИР ИГРЫ», allgemeine Ziele, S. 242",
+    "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – welche Spielarten das Kapitel unterscheidet und der Gedanke, die Kompetenz der Eltern zum Spiel zu stärken. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": { "zieleGesamt": 5 },
+    "nachgezaehlt": "Das Kapitel trägt fünf allgemeine Ziele. Nachgezählt im Original.",
+    "abweichung": "Von den fünf Zielen ist eines ausdrücklich zurückgewiesen (das Spiel zu diagnostischen und korrektiven Zwecken zu nutzen), eines ist das Ziel dieser App (die Kompetenz der Eltern zum Spiel stärken), zwei betreffen die Einrichtung und ihren Tagesablauf, und eines – das Spiel als führende Tätigkeit zu stützen – ist der Grund, warum es die vier Spielarten hier überhaupt gibt. Nicht übernommen ist außerdem der Titel des Katalogeintrags: „schulreif“ ist ein Begriff aus der Zeit vor den 1960er-Jahren, und Nordrhein-Westfalen hat auch die nachfolgende „Schulfähigkeit“ als Einschulungsvoraussetzung aufgegeben."
+  },
+  "ziele": [
+    { "nr": 1, "kurz": "Das Spiel als selbstständige schöpferische Tätigkeit weiterentwickeln, ihm den Rang der führenden Tätigkeit sichern und es auch zur Vorbereitung auf die Schule nutzen", "einordnung": "gebaut", "warum": "Dafür stehen die vier Spielarten – ohne die Zusage, dass Spielen die Schulleistung verbessert." },
+    { "nr": 2, "kurz": "Günstige Bedingungen für alle Spielarten schaffen, auf die Spielumgebung achten und Zeit im Tagesablauf dafür vorsehen", "einordnung": "einrichtung", "warum": "Das betrifft den Tagesablauf einer Einrichtung. Was davon in eine Familie trägt, steht bei jeder Spielart unter „Was Sie tun können“." },
+    { "nr": 3, "kurz": "Die reichen Möglichkeiten des Spiels zu diagnostischen und, falls nötig, zu korrektiven Zwecken nutzen", "einordnung": "zurueckgewiesen", "warum": "Ein Kind, das spielt, gibt sich preis. Es beim Spielen zu beobachten, um es einzuschätzen, macht aus dem Spiel eine Prüfung, von der das Kind nichts weiß." },
+    { "nr": 4, "kurz": "Das Spiel als Mittel zur Organisation des Kinderlebens nutzen", "einordnung": "einrichtung", "warum": "Auch das betrifft die Gruppe und den Tagesablauf einer Einrichtung." },
+    { "nr": 5, "kurz": "Die psychologisch-pädagogische Kompetenz der Eltern zum Spiel als führender Tätigkeit erhöhen, auch mit Blick auf die Vorbereitung der Schule", "einordnung": "gebaut", "warum": "Das ist der Auftrag dieser App, und der Katalogeintrag zitiert genau dieses Ziel." }
+  ],
+  "ausgeschlossen": [
+    { "quellNr": "x01", "was": "Das Wort „schulreif“ als Urteil", "warum": "Der Katalogeintrag heißt „Spielend schulreif“. Die App heißt anders. „Schulreife“ unterstellte einen biologischen Reifungsvorgang und wurde durch „Schulfähigkeit“ und „Schulbereitschaft“ abgelöst; Nordrhein-Westfalen hat auch die Schulfähigkeit als Einschulungsvoraussetzung aufgegeben. Als Urteil über ein Kind kommt das Wort hier nicht vor – nur als Begriff aus der Geschichte." },
+    { "quellNr": "x02", "was": "Die Checkliste und der Bericht als Datei-Export", "warum": "Der Eintrag nannte beides. Ein Bericht wäre hier ein Bericht über ein Kind. Und eine Checkliste zum Schulanfang ist genau das, was die Kultusministerkonferenz schon 1997 zurückgewiesen hat: rein kognitiv ausgerichtete Schulfähigkeitstests reichen als alleinige Grundlage der Aufnahmeentscheidung nicht aus." },
+    { "quellNr": "x03", "was": "Jede Vorhersage über das einzelne Kind", "warum": "Auch das normierte, eigens dafür entwickelte Screening für Leseschwierigkeiten erkannte in unabhängiger Prüfung meist weniger als die Hälfte der später betroffenen Kinder. Eine App mit Elternfragen kann das nicht besser." },
+    { "quellNr": "x04", "was": "Die Mehrsprachigkeit de/uk/ru des Katalogeintrags", "warum": "Der Eintrag wollte die Oberfläche dreisprachig. Rechtsbegriffe wie „Zurückstellung“, „Schulpflicht“ und „amtsärztliches Gutachten“ in einer Sprache wiederzugeben, die hier niemand gegengelesen hat, wäre bei genau diesem Thema fahrlässig. Was stattdessen geht: die Seite laut vorlesen lassen und die Fragen mitnehmen." },
+    { "quellNr": "x05", "was": "Ein bundesweit gültiger Satz zu Stichtag, Zurückstellung oder Untersuchung", "warum": "Es gibt keinen. Der Stichtag liegt zwischen dem 30. Juni und dem 30. September, die Zurückstellung ist in Nordrhein-Westfalen nur aus erheblichen gesundheitlichen Gründen möglich und in Bayern gibt es einen Elternkorridor. Diese App nennt Beispiele und sagt dazu, dass das Schulgesetz des eigenen Landes gilt." },
+    { "quellNr": "x06", "was": "Ein Wirkversprechen zum Spielen", "warum": "Dass Rollenspiel oder Regelspiel die spätere Schulleistung verbessern, steht hier nicht. Belegte Wirkungszahlen dazu sind beim Bau nicht gefunden worden. Gefunden wurde etwas anderes, und das steht bei den drei Bereichen: zur phonologischen Bewusstheit und zur Mengen-Zahlen-Kompetenz." }
+  ]
+}

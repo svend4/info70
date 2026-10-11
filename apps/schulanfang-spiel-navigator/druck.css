@@ -1,0 +1,25 @@
+/* Druck: ein Blatt für die Elternmappe – was gilt und wer entscheidet, die
+   drei Bereiche mit ihrem Stand, die vier Spielarten. Ohne Knöpfe, ohne
+   Haken, ohne Namenszeile (docs/02). Die Fragen und Spielarten stehen offen
+   da: auf Papier gibt es kein Aufklappen. */
+.ssn-nur-druck { display: none; }
+.ssn-zu { display: none; }
+
+@media print {
+  .ssn-nur-bildschirm { display: none !important; }
+  .ssn-nur-druck { display: block !important; }
+  .ssn-zu { display: block !important; }
+  .ssn-frage button, .ssn-spiel button { display: none !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .ssn-gilt, .ssn-bereiche, .ssn-spielarten {
+    border: none; border-radius: 0; margin: 0 0 5mm; padding: 0; box-shadow: none;
+  }
+  .ssn-gilt h2, .ssn-bereiche h2, .ssn-spielarten h2 { font-size: 14pt; margin: 0 0 3mm; }
+  .ssn-frage, .ssn-spiel {
+    border: none; box-shadow: none; margin: 0 0 3mm !important; padding: 0 !important;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .ssn-gilt p, .ssn-bereiche p, .ssn-spielarten p { font-size: 10.5pt; line-height: 1.45; margin: 0 0 1.5mm; }
+  a[href]::after { content: ""; }
+}
