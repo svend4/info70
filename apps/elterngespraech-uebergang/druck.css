@@ -1,0 +1,27 @@
+/* Druck: ein Blatt mit IHREN Fragen und Platz für die Antworten, die Sie
+   bekommen. Ohne Haken, ohne Punkte, ohne Namenszeile (docs/02) – und ohne
+   eine einzige Angabe über das Kind. Ohne Auswahl stehen alle Fragen darauf:
+   ein leeres Blatt wäre kein Blatt. */
+.eub-nur-druck { display: none; }
+.eub-zu { display: none; }
+
+@media print {
+  .eub-nur-bildschirm { display: none !important; }
+  .eub-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  /* Die Bildschirmteile fallen ganz weg; gedruckt wird nur das Blatt. */
+  .eub-felder, .eub-druckknopf { display: none !important; }
+  .eub-blatt { border: none; border-radius: 0; margin: 0; padding: 0; box-shadow: none; }
+  .eub-blatt h2 { font-size: 14pt; margin: 0 0 4mm; }
+  .eub-blatt p { font-size: 10.5pt; line-height: 1.4; }
+  .eub-blatt-frage { break-inside: avoid; page-break-inside: avoid; margin-bottom: 2mm; }
+  /* Platz für die Antwort: zwei Linien, kein Kästchen zum Abhaken. */
+  .eub-linien {
+    border-bottom: 1px solid #999;
+    height: 7mm;
+    box-shadow: 0 7mm 0 -1px #999;
+    margin-bottom: 9mm !important;
+  }
+  a[href]::after { content: ""; }
+}

@@ -29,7 +29,8 @@ const normal = (s) => s
   .toLowerCase();
 
 const befunde = [];
-let geprueft = 0;
+let geprueft = 0;      // Einheiten, deren Existenz geprueft wurde
+let genanntGesamt = 0; // Einheiten, die die Aufzaehlung nennt
 let statuszeilen = 0;
 
 for (const doc of (await readdir(docsDir)).filter((d) => d.endsWith('.md')).sort()) {
@@ -78,6 +79,7 @@ for (const doc of (await readdir(docsDir)).filter((d) => d.endsWith('.md')).sort
     const offen = Number(gesamt) - Number(gebaut);
     const erwartet = Math.min(3, Math.max(offen, 0));
     const genannt = [...aufzaehlung.matchAll(/№\d+\s*\(/g)].length;
+    genanntGesamt += genannt;
     if (genannt !== erwartet) {
       befunde.push(`docs/${doc}:${i + 1} nennt ${genannt} naechste Einheiten, erwartet ${erwartet} `
         + `(${offen} von ${gesamt} sind offen)`);
@@ -93,5 +95,14 @@ test('jede in einer Statuszeile genannte Einheit gibt es wirklich', () => {
   // Zahl sinkt zu Recht, je naeher ein Abschnitt der Fertigstellung kommt
   // (Welle 82: der Abschnitt der Eltern-Werkzeuge hatte nur noch zwei offene).
   assert.ok(statuszeilen >= 1, 'keine Statuszeile gefunden – greift das Muster noch?');
-  assert.ok(geprueft >= 1, `nur ${geprueft} genannte Einheiten gefunden – greift das Muster noch?`);
+  // In Welle 83 ist der erste Abschnitt FERTIG geworden: 21 von 21, also keine
+  // naechste Einheit und richtigerweise kein Name in der Zeile. Eine feste
+  // Untergrenze „mindestens eine genannte Einheit" waere damit rot geworden,
+  // obwohl nichts falsch ist. Geprueft wird deshalb die Deckung der beiden
+  // Muster: die Zahl der Einheiten, deren Existenz geprueft wurde, muss der
+  // Zahl der genannten entsprechen. Sind beide null, ist der Abschnitt fertig;
+  // laufen sie auseinander, hat eines der beiden Muster aufgehoert zu greifen -
+  // und genau das soll diese Zusicherung finden.
+  assert.equal(geprueft, genanntGesamt,
+    `${genanntGesamt} Einheiten genannt, aber ${geprueft} geprüft – greift eines der Muster nicht mehr?`);
 });

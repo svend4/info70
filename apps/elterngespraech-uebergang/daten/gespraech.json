@@ -1,0 +1,285 @@
+{
+  "art": "elterngespraech-uebergang",
+  "version": 1,
+  "hinweis": "Dieses Werkzeug stellt keine Frage über Ihr Kind. Es hilft Ihnen, Fragen zu stellen.",
+  "wasEsIst": "Vor der Einschulung gibt es ein Gespräch – in der Kita, oft auch in der Schule. Die Quelle, auf der dieses Werkzeug beruht, liefert dafür eine Liste: 141 Merkmale in 13 Feldern, die am Ende des siebten Lebensjahres erreicht sein sollen. Diese Liste ist hier nicht abgetippt, und zwar in keiner Form, die man ankreuzen kann. Umgedreht ist die Richtung: aus „Kann Ihr Kind das?“ wird „Was haben Sie beobachtet – und was möchte ich erzählen?“ Zwölf Felder, je eine Frage für Sie, dazu ein Blatt zum Mitnehmen.",
+  "warumKeineCheckliste": "Die Liste ist für Fachkräfte gemacht, nicht für Eltern, und sie ist für ein anderes Schulsystem gemacht. Ihr erstes Feld fragt unter anderem, ob „Anzeichen von hoher Ängstlichkeit, Depressivität, Ungeschütztheit und aggressive Tendenzen im Verhalten fehlen“. Das ist eine klinische Frage. Sie zu Hause anzukreuzen heißt, am eigenen Kind ein Screening zu machen – ohne Ausbildung und ohne jemanden, der das Ergebnis einordnet. Ein zweites Feld verlangt Größe, Gewicht und Brustumfang „nicht unter dem Altersdurchschnitt“. Ein drittes fragt nach den Staatssymbolen eines anderen Landes. Eine Liste, die so beginnt, wird nicht dadurch harmlos, dass man sie in freundliche Worte übersetzt.",
+  "staerkenblick": "„Stärken statt Defizite“ heißt hier nicht, dass dieselbe Liste freundlicher formuliert wird. Es heißt, dass nach dem Kind gar nicht gefragt wird. Gefragt wird nach Situationen: wo es etwas allein macht, was es gerade interessiert, worüber es zu Hause erzählt. Eine Situation kann man schildern, ohne sie zu bewerten – ein Merkmal nicht.",
+  "keinBericht": "Dieses Werkzeug erzeugt keinen Bericht über Ihr Kind. Kein Punktestand, keine Ampel, keine Stufen, kein Vergleich mit anderen Kindern, keine Vorhersage über die Schulzeit. Was Sie drucken können, sind Ihre eigenen Fragen und Platz für die Antworten, die Sie bekommen. Das Blatt gehört Ihnen und sonst niemandem.",
+  "dreiSprachen": "Der Katalogeintrag wollte dieses Werkzeug dreisprachig: deutsch, ukrainisch, russisch. Es ist nur deutsch, und der Grund ist kein Zeitmangel. Hier stehen Rechtsbegriffe – Einwilligung, Zurückstellung, Schuleingangsuntersuchung –, und eine ungeprüfte Übersetzung davon wäre schlimmer als keine: sie klingt verbindlich und ist es nicht. Was dieses Werkzeug stattdessen tut: kurze Sätze, keine Fachwörter ohne Erklärung, und ein Blatt, das Sie jemandem zeigen können, der mit Ihnen übersetzt. Wenn Sie zu einem Gespräch jemanden mitbringen möchten, der für Sie übersetzt, sagen Sie das vorher – vereinbart wird so ein Gespräch ohnehin.",
+  "vorbereitung": "Drei oder vier Fragen sind genug. Mehr schafft kein Gespräch, und bei zwölf Fragen in der Hand kommt niemand zum Zuhören. Schreiben Sie sich auf, was Sie wissen wollen, bevor Sie hingehen – im Gespräch fällt es einem nicht wieder ein. Fragen Sie nach, wenn Sie ein Wort nicht kennen; wer es benutzt, kann es erklären. Und wenn eine Antwort wichtig ist, bitten Sie darum, sie aufschreiben zu dürfen.",
+  "wohinMitFragen": "Sorgen um Gesundheit, Sprechen, Hören oder Sehen gehören zur Kinderärztin oder zum Kinderarzt – die Vorsorgeuntersuchung U9 ist für das Alter davor gedacht. Fragen zum Schulanfang beantwortet die Grundschule selbst, oft an einem Informationsabend. Für Fragen, die Sie zu Hause beschäftigen, gibt es Erziehungs- und Familienberatungsstellen; sie arbeiten unabhängig von Kita und Schule.",
+  "gespraechsfelder": [
+    {
+      "id": "f-seelisch",
+      "zeichen": "💛",
+      "name": "Seelisches Wohlbefinden",
+      "quellPunkte": 7,
+      "quellFrage": "Die Liste fragt nach Freundlichkeit im Umgang, innerer Ausgeglichenheit, guten Beziehungen in Familie und Gruppe – und danach, ob Anzeichen von hoher Ängstlichkeit, Depressivität und Ungeschütztheit fehlen.",
+      "nichtUebernommen": "„Zeigt Ihr Kind Anzeichen von Ängstlichkeit oder Depressivität?“ – Diese Frage steht hier nicht, und sie steht als erste nicht hier. Sie ist klinisch. Eltern sollen sie nicht ankreuzen, sondern jemandem sagen, wenn sie sie haben.",
+      "ihreFrage": "Wie geht es meinem Kind in der Gruppe – an einem gewöhnlichen Tag?",
+      "wasSieErzaehlen": "Was Ihr Kind zu Hause gern erzählt und was es lieber nicht erzählt. Wie es nach der Kita ankommt: aufgedreht, müde, erleichtert.",
+      "wohinEsGehoert": "Wenn Sie sich Sorgen machen: Kinderärztin oder Kinderarzt, und wenn Sie möchten eine Erziehungsberatungsstelle."
+    },
+    {
+      "id": "f-koerper",
+      "zeichen": "🏃",
+      "name": "Körper und Bewegung",
+      "quellPunkte": 7,
+      "quellFrage": "Größe, Gewicht und Brustumfang sollen „harmonisch“ und nicht unter dem Altersdurchschnitt liegen; dazu Bewegungsmenge, Geschicklichkeit und wie oft das Kind krank ist.",
+      "nichtUebernommen": "„Liegt Ihr Kind im Normbereich?“ – Körpermaße und ihr Vergleich mit einem Durchschnitt gehören in die Vorsorgeuntersuchung und in kein Elternformular. Dieselbe Grenze zieht schon „Wachsen und Bewegen“.",
+      "ihreFrage": "Wo können sich die Kinder bei Ihnen bewegen – und wie oft gehen Sie raus?",
+      "wasSieErzaehlen": "Wie weit Ihr Kind läuft, ohne getragen zu werden. Was es draußen am liebsten macht.",
+      "wohinEsGehoert": "Körpermaße, Hören, Sehen: Kinderärztin oder Kinderarzt. Die Schuleingangsuntersuchung sieht sich das ebenfalls an."
+    },
+    {
+      "id": "f-denken",
+      "zeichen": "🧠",
+      "name": "Denken und Wissen",
+      "quellPunkte": 21,
+      "quellFrage": "Einundzwanzig Punkte: von „kennt Name, Alter, Adresse“ über Formen, Mengen und Schlussfolgern bis zu Vorstellungen von der Heimat und ihren Staatssymbolen.",
+      "nichtUebernommen": "„Weiß Ihr Kind, wo es wohnt?“ lässt sich abhaken, „kennt die Staatssymbole“ nicht einmal übertragen – das ist ein anderes Land. Einundzwanzig Punkte in einer Spalte sind keine Beobachtung, sondern eine Prüfung.",
+      "ihreFrage": "Woran merken Sie, was mein Kind gerade besonders interessiert?",
+      "wasSieErzaehlen": "Welche Frage es gerade zum zehnten Mal stellt. Was es sich erklärt haben will.",
+      "wohinEsGehoert": "Was die Schule erwartet, sagt die Grundschule selbst – am Informationsabend oder im Übergangsgespräch."
+    },
+    {
+      "id": "f-person",
+      "zeichen": "🌱",
+      "name": "Wille und Zutrauen",
+      "quellPunkte": 21,
+      "quellFrage": "Einundzwanzig Punkte zu Motiven, Werten, Selbstbild – darunter, dass im siebten Lebensjahr eine „innere Position des Schulkindes“ entstehe.",
+      "nichtUebernommen": "„Hat Ihr Kind schon die innere Haltung eines Schulkindes?“ – Das kann niemand ankreuzen, und Eltern müssen es nicht beantworten. Was ein Kind will, sagt es selbst, in seinen Worten.",
+      "ihreFrage": "Worauf freut sich mein Kind, wenn von der Schule die Rede ist – und wovor hat es Respekt?",
+      "wasSieErzaehlen": "Was es von sich aus über die Schule sagt. Ob es ältere Kinder kennt, die schon hingehen.",
+      "wohinEsGehoert": "Nirgendwohin – das ist keine Frage für eine Stelle. Es ist eine Frage für ein Gespräch."
+    },
+    {
+      "id": "f-andere",
+      "zeichen": "🤝",
+      "name": "Umgang mit anderen",
+      "quellPunkte": 9,
+      "quellFrage": "Neun Punkte zur „psychologischen Kultur“: Interesse an der Innenwelt anderer, „psychologische Beobachtungsgabe“ – und die Fähigkeit, die Ausprägung psychischer Funktionen bei anderen und bei sich selbst einzuschätzen.",
+      "nichtUebernommen": "„Kann Ihr Kind psychische Funktionen bei sich einschätzen?“ – Hier endet die Übertragbarkeit ganz. Der Begriff hat in der deutschen Frühpädagogik keine Entsprechung, und das Einschätzen von Funktionen ist nicht die Aufgabe von Sechsjährigen und nicht die von Eltern.",
+      "ihreFrage": "Wie geht mein Kind mit Streit um – was haben Sie gesehen?",
+      "wasSieErzaehlen": "Mit wem es sich zu Hause verabreden will. Wie es reagiert, wenn etwas nicht nach seinem Willen geht.",
+      "wohinEsGehoert": "Wiederkehrende Konflikte sind ein Thema für die Kita selbst – sie sieht die Gruppe, in der sie entstehen."
+    },
+    {
+      "id": "f-sprache",
+      "zeichen": "💬",
+      "name": "Sprechen und Zuhören",
+      "quellPunkte": 9,
+      "quellFrage": "Neun Punkte: verschiedene Formen des Gesprächs, Gesprächskultur, „Grundlagen der kommunikativen Bereitschaft für die Schule“ und für das Gespräch mit der Lehrkraft.",
+      "nichtUebernommen": "„Spricht Ihr Kind in vollständigen Sätzen?“ – Den Sprachstand erheben in Deutschland je nach Bundesland Kita oder Schule, mit eigenen Verfahren. Ein Haken von Eltern ersetzt das nicht und führt bei mehrsprachigen Kindern besonders leicht in die Irre.",
+      "ihreFrage": "In welcher Sprache spricht mein Kind bei Ihnen – und wie viel Deutsch hört es bei Ihnen am Tag?",
+      "wasSieErzaehlen": "Welche Sprachen zu Hause gesprochen werden und von wem. Dass Mehrsprachigkeit kein Mangel ist, der aufgeholt werden muss.",
+      "wohinEsGehoert": "Sprachstandserhebung: je nach Bundesland Kita oder Schule. Wenn Sie sich um das Sprechen sorgen: Kinderärztin oder Kinderarzt."
+    },
+    {
+      "id": "f-spiel",
+      "zeichen": "🧩",
+      "name": "Spielen",
+      "quellPunkte": 10,
+      "quellFrage": "Zehn Punkte: Spiel als Lieblingstätigkeit, das Rollenspiel im Voraus planen, Material selbst beschaffen oder herstellen, Regeln „wie im Leben“ einhalten.",
+      "nichtUebernommen": "„Plant Ihr Kind sein Rollenspiel im Voraus?“ – Ein Kind beim Spielen zu beobachten, um es einzuschätzen, macht aus dem Spiel eine Prüfung, von der das Kind nichts weiß. Dasselbe Quellziel hat schon „Schulanfang und Spiel“ zurückgewiesen.",
+      "ihreFrage": "Was spielt mein Kind bei Ihnen am liebsten, und mit wem?",
+      "wasSieErzaehlen": "Was zu Hause gespielt wird und was dabei immer wieder vorkommt.",
+      "wohinEsGehoert": "Niemanden – außer Sie wollen es wissen. Dann ist es eine schöne Frage."
+    },
+    {
+      "id": "f-erzaehlen",
+      "zeichen": "📖",
+      "name": "Erzählen und Theaterspielen",
+      "quellPunkte": 8,
+      "quellFrage": "Acht Punkte: hört gern Geschichten, kennt Werke verschiedener Gattungen, trägt ein Gedicht ausdrucksvoll vor, erzählt eine Geschichte nach, erfindet selbst eine.",
+      "nichtUebernommen": "„Kann Ihr Kind ein Gedicht vortragen?“ – Eine Aufforderung mit Publikum. Ob ein Kind vorträgt, hängt an diesem Tag und an diesen Zuhörern, nicht an seinem Können.",
+      "ihreFrage": "Welche Geschichte will mein Kind bei Ihnen immer wieder hören?",
+      "wasSieErzaehlen": "Welches Buch zu Hause schon kaputt ist vom Vorlesen. Ob es sich selbst Geschichten ausdenkt.",
+      "wohinEsGehoert": "Nirgendwohin. Vorlesen ist keine Leistung des Kindes, sondern etwas, das Erwachsene tun."
+    },
+    {
+      "id": "f-musik",
+      "zeichen": "🎵",
+      "name": "Musik",
+      "quellPunkte": 10,
+      "quellFrage": "Zehn Punkte: Interesse an Musik, eigene Vorlieben, Erfahrung mit Musik verschiedener Epochen und Stile, das Erfassen eines ganzen musikalischen Bildes.",
+      "nichtUebernommen": "„Kennt Ihr Kind Musik verschiedener Epochen?“ – Was ein Kind gehört hat, sagt mehr über die Wohnung als über das Kind. Ein Haken daneben wäre eine Auskunft über das Elternhaus.",
+      "ihreFrage": "Was singen Sie mit den Kindern – und wann?",
+      "wasSieErzaehlen": "Was Ihr Kind zu Hause singt und wo es das her hat.",
+      "wohinEsGehoert": "Niemanden. Wenn Sie Lieder suchen, gibt es dafür eigene Werkzeuge."
+    },
+    {
+      "id": "f-kunst",
+      "zeichen": "🎨",
+      "name": "Anschauen und Gestalten",
+      "quellPunkte": 20,
+      "quellFrage": "Zwanzig Punkte: Werke betrachten und sie „ziemlich fachgerecht beschreiben“, Kunstarten und Gattungen kennen, die Funktionen von Architektur und Design kennen, beim Zeichnen, Formen und Kleben eigene Mittel benutzen.",
+      "nichtUebernommen": "„Kann Ihr Kind ein Bild fachgerecht beschreiben?“ – Darüber entscheidet, ob jemand mit ihm je ein Bild angeschaut hat. Zum gemeinsamen Hinschauen gibt es „Kunst gucken“; eine Bewertung entsteht daraus nicht.",
+      "ihreFrage": "Was hat mein Kind bei Ihnen zuletzt gemacht, das es selbst gut fand?",
+      "wasSieErzaehlen": "Was an Ihrem Kühlschrank hängt und warum es dort hängt.",
+      "wohinEsGehoert": "Niemanden. Hier ist nichts zu klären."
+    },
+    {
+      "id": "f-forschen",
+      "zeichen": "🔍",
+      "name": "Ausprobieren und Erforschen",
+      "quellPunkte": 7,
+      "quellFrage": "Sieben Punkte: Interesse am praktischen Erkunden, Vermutungen äußern, Hypothesen aufstellen und einige davon im Versuch prüfen, Ergebnisse besprechen, eigene Schlüsse ziehen.",
+      "nichtUebernommen": "„Stellt Ihr Kind Hypothesen auf?“ – Mit diesem Wort hat noch kein Kind etwas angefangen. Und ob ein Kind etwas ausprobiert, hängt zuerst daran, ob es darf.",
+      "ihreFrage": "Wo dürfen die Kinder bei Ihnen etwas ausprobieren, das schiefgehen kann?",
+      "wasSieErzaehlen": "Was Ihr Kind zu Hause auseinandergenommen hat. Welche Frage Sie nicht beantworten konnten.",
+      "wohinEsGehoert": "Niemanden. Aber die Antwort der Kita sagt Ihnen viel über die Kita."
+    },
+    {
+      "id": "f-mithelfen",
+      "zeichen": "🧺",
+      "name": "Mithelfen und Selbstständigkeit",
+      "quellPunkte": 4,
+      "quellFrage": "Vier Punkte: Arbeitsaufträge gern annehmen, sich allein und in der richtigen Reihenfolge an- und ausziehen, Dienste übernehmen, aus Material etwas herstellen und den Arbeitsplatz aufräumen.",
+      "nichtUebernommen": "„Kann Ihr Kind sich allein anziehen?“ – Der einzige Punkt dieser ganzen Liste, den Eltern wirklich beantworten könnten. Genau deshalb steht er hier nicht als Haken: aus dem einen beantwortbaren Punkt würde sonst das Maß für alle anderen.",
+      "ihreFrage": "Was macht mein Kind bei Ihnen allein, was es zu Hause nicht allein macht?",
+      "wasSieErzaehlen": "Wo Sie zu Hause helfen, weil es morgens schneller gehen muss. Das ist keine Schwäche des Kindes, sondern eine Eigenschaft von Morgen.",
+      "wohinEsGehoert": "Die Kita sieht Ihr Kind in einer Lage, in der Sie es nie sehen. Diese Frage holt genau das."
+    }
+  ],
+  "lernvoraussetzungenHinweis": "Diese acht Punkte stehen hier vollständig, im Wortlaut der Quelle – und keiner davon ist eine Voraussetzung für die Einschulung in Deutschland. Die Quelle beschreibt, was am Ende des siebten Lebensjahres erreicht sein soll, in einem Schulsystem, in dem das Lesen vor der Schule beginnt. Hier beginnt es in der Schule. Übungen dazu gibt es in diesem Werkzeug nicht, und das ist keine Auslassung, sondern eine Entscheidung.",
+  "lernvoraussetzungen": [
+    {
+      "nr": 1,
+      "kurz": "zeigt Interesse daran, die Umgebung zu erkunden",
+      "wasHierGilt": "Interesse ist keine Leistung, und man stellt es nicht her. Wenn Ihr Kind sich gerade für etwas ganz anderes interessiert als das, was in der Schule vorkommt, fehlt nichts."
+    },
+    {
+      "nr": 2,
+      "kurz": "steht der lernenden und spielenden Tätigkeit positiv gegenüber",
+      "wasHierGilt": "Ob ein Kind gern mitmacht, hängt davon ab, was angeboten wird und von wem. Das ist eine Aussage über die Situation – deshalb fragt dieses Werkzeug bei den Feldern nach der Situation und nicht nach dem Kind."
+    },
+    {
+      "nr": 3,
+      "kurz": "die Voraussetzungen für das Lernen sind gebildet, einzelne Lernfertigkeiten – allgemeine und besondere, verbunden mit dem Erwerb von Mathematik, Lesen und so weiter",
+      "wasHierGilt": "Die gemeinsame Empfehlung von Kultusministerkonferenz und Jugend- und Familienministerkonferenz nennt für Deutschland drei basale Kompetenzbereiche – sozial-emotional, sprachlich, mathematisch – und sagt ausdrücklich, dass das keine abschließende Liste ist. Von Voraussetzungen, die „gebildet“ vorliegen müssen, steht dort nichts.",
+      "quelle": "Gemeinsamer Beschluss von Kultusministerkonferenz und Jugend- und Familienministerkonferenz von 2026, Abschnitt zu den basalen Kompetenzbereichen."
+    },
+    {
+      "nr": 4,
+      "kurz": "kann die Lautanalyse von Wörtern praktisch jeder Schwierigkeit durchführen, indem es das Wort laut oder im Kopf ausspricht",
+      "wasHierGilt": "Auf Laute und Silben zu hören ist tatsächlich wichtig – aber als Vorläuferfähigkeit, nicht als Prüfung. Das verbreitetste Verfahren der Schuleingangsuntersuchung nennt seine Teile selbst so: Vorläuferfähigkeiten für Lesen und Schreiben. Die Förderung dieser Fähigkeit wirkt im deutschen Sprachraum nachweisbar, allerdings schwächer als in internationalen Studien. „Wörter praktisch jeder Schwierigkeit“ verlangt hier niemand.",
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022 (drei Indikatoren des Entwicklungsscreenings); Wolf, Schröders und Kriegbaum, Zeitschrift für pädagogische Psychologie 2016, Übersichtsarbeit über 27 Studien."
+    },
+    {
+      "nr": 5,
+      "kurz": "kennt alle Vokalbuchstaben (oder fünf von ihnen) und einen Teil der Konsonanten",
+      "wasHierGilt": "Buchstaben lernt man in der Schule. In derselben Übersichtsarbeit brachte ein zusätzliches Buchstabentraining vor der Einschulung keinen zusätzlichen Nutzen. Wenn Ihr Kind Buchstaben kennt, ist das schön – und wenn nicht, fehlt nichts.",
+      "quelle": "Wolf, Schröders und Kriegbaum, Zeitschrift für pädagogische Psychologie 2016, Übersichtsarbeit über 27 Studien."
+    },
+    {
+      "nr": 6,
+      "kurz": "liest einzelne Silben und Wörter silbenweise",
+      "wasHierGilt": "Hier liegt der deutlichste Unterschied zwischen den beiden Schulsystemen. Vor der Schule wird in Deutschland nicht geprüft, ob ein Kind liest, sondern was dem Lesen vorausgeht – das Verfahren der Untersuchung nennt es wörtlich so. Was die Grundschule im ersten Schuljahr lehrt, sagt ihr Lehrplan; danach zu fragen ist eine der Fragen in diesem Werkzeug.",
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022: die drei Indikatoren lauten „Erkennen und Zeichnen von Objekten und Formen (Vorläuferfähigkeiten für Lesen und Schreiben)“, „Umgang mit Zahlen und Mengen (Vorläuferfähigkeiten für Rechnen)“ und „Sprachkompetenz in der deutschen Sprache“."
+    },
+    {
+      "nr": 7,
+      "kurz": "verfügt über einige allgemeine Lernfertigkeiten",
+      "wasHierGilt": "Was „allgemeine Lernfertigkeiten“ sein sollen, sagt die Quelle nicht. Ein Satz, der nicht sagt, was er meint, lässt sich auch nicht beantworten – und man muss sich von ihm nicht beunruhigen lassen."
+    },
+    {
+      "nr": 8,
+      "kurz": "zeigt den Wunsch zu lernen und in die Schule zu gehen",
+      "wasHierGilt": "Viele Kinder freuen sich, manche nicht, und viele beides an verschiedenen Tagen. Der Wunsch ist keine Bedingung für die Einschulung; wer darüber entscheidet und auf welcher Grundlage, steht unter „Was gilt“ – mit Paragraf."
+    }
+  ],
+  "rechtliches": [
+    {
+      "id": "r-pflicht",
+      "zeichen": "📋",
+      "frage": "Muss mein Kind zur Schuleingangsuntersuchung?",
+      "antwort": "Ja. Sie ist Pflicht, und zwar nach dem Recht des jeweiligen Bundeslandes – einen bundesweiten Satz gibt es nicht. In Nordrhein-Westfalen schreibt das Schulgesetz vor, dass vor der Aufnahme eine schulärztliche Untersuchung stattfindet; in Brandenburg steht dasselbe im Schulgesetz, und die Kinder sind dort ausdrücklich verpflichtet, sich untersuchen zu lassen; in Bayern regelt es das Erziehungs- und Unterrichtsgesetz zusammen mit dem Gesundheitsdienstgesetz; in Baden-Württemberg das Schulgesetz. Wann genau untersucht wird, unterscheidet sich: Bayern verlegt die Untersuchung derzeit in ein früheres Kindergartenjahr.",
+      "quelle": "§ 54 Abs. 4 Satz 1 SchulG NRW; § 37 Abs. 1 Satz 1 und § 45 Abs. 1, 2 BbgSchulG; Art. 80 Satz 1 BayEUG und Art. 12 Abs. 3 GDG; § 91 Abs. 1 SchG BW."
+    },
+    {
+      "id": "r-wer",
+      "zeichen": "⚖️",
+      "frage": "Wer entscheidet, ob mein Kind eingeschult wird?",
+      "antwort": "Die Schule – nicht die Ärztin, nicht die Kita und nicht Sie. In Nordrhein-Westfalen entscheidet die Schulleiterin oder der Schulleiter über die Aufnahme, und über eine Zurückstellung ebenfalls, auf Grundlage des amtsärztlichen Gutachtens; die Eltern sind anzuhören. In Brandenburg entscheidet die Schulleitung über die Aufnahme und berücksichtigt dabei das Ergebnis der schulärztlichen Untersuchung; zurückgestellt wird nur im Ausnahmefall und nur auf Antrag der Eltern. In Baden-Württemberg entscheidet die Schulleitung der Grundschule – dort auf Grundlage der Einschätzung einer Kooperationslehrkraft, und ein Gutachten des Gesundheitsamtes kann sie hinzuziehen, muss es aber nicht.",
+      "quelle": "§ 46 Abs. 1 Satz 1 und § 35 Abs. 3 Satz 1–3 SchulG NRW; § 51 Abs. 1, 2 BbgSchulG; § 74 Abs. 2 Satz 2, 3 SchG BW."
+    },
+    {
+      "id": "r-urteil",
+      "zeichen": "🚦",
+      "frage": "Sagt die Untersuchung, ob mein Kind schulfähig ist?",
+      "antwort": "Nicht als Urteil. Sie stellt einen Befund fest und gibt eine Empfehlung, und die Schule hat diese Empfehlung zu berücksichtigen – entscheiden muss sie selbst. Der Rechtsbegriff lautet in Brandenburg „gesundheitliche Schulfähigkeit“, also die Frage aus medizinischer Sicht, nicht die ganze Frage. In der Fachliteratur ist die Richtung noch deutlicher: die alten Schulreife-Konzepte wurden verlassen, weil sie einer Überprüfung nicht standhielten, und es stelle sich „nicht mehr die Frage, ob, sondern mit welchen Hilfen und welcher Förderung ein Kind einzuschulen ist“.",
+      "quelle": "§ 1 Abs. 3 Satz 1 KJGDV Brandenburg und Handbuch des Kinder- und Jugendgesundheitsdienstes Brandenburg 2026; Verwaltungsvorschrift 1.4.1 und 1.4.2 zu § 1 Abs. 4 AO-GS NRW; Wattjes u. a., „Das Gesundheitswesen“ 2018, Band 80, Heft 4, S. 310–316."
+    },
+    {
+      "id": "r-ergebnis",
+      "zeichen": "📨",
+      "frage": "Erfahre ich das Ergebnis – und bekomme ich es schriftlich?",
+      "antwort": "Das hängt vom Bundesland ab, und der Unterschied ist groß. In Nordrhein-Westfalen ist Ihnen eine Kopie dessen zu übersenden, was an die Schulleitung geht. In Brandenburg ist Ihnen Gelegenheit zu geben, sich vorher zu informieren, die Ergebnisse zu besprechen und in die Unterlagen Einsicht zu nehmen. In Baden-Württemberg wird ein Befundbogen ausgehändigt, der auch für die Kinderärztin gedacht ist. In Bayern sind Sie anzuhören, bevor das Gesundheitsamt die Schule informiert; einen ausdrücklichen Anspruch auf ein schriftliches Ergebnis war dort nicht zu finden. Unabhängig davon gilt das Auskunftsrecht der Datenschutz-Grundverordnung.",
+      "quelle": "§ 11 Abs. 4 Satz 3, 4 ÖGDG NRW; § 45 Abs. 2 Satz 4 BbgSchulG; § 2 Abs. 8 Satz 3, 4 SchulUV BW; Art. 12 Abs. 2 Satz 1 GDG Bayern; Art. 15 DSGVO."
+    },
+    {
+      "id": "r-schule",
+      "zeichen": "🔒",
+      "frage": "Was von dem Ergebnis bekommt die Schule zu sehen?",
+      "antwort": "Nicht alles. In Nordrhein-Westfalen ist die Weitergabe schulärztlicher Einzelinformationen an die Schulleitung nur dann gerechtfertigt, wenn deren Kenntnis für die spätere Förderung des Kindes erforderlich ist; Ihr Einverständnis ist dabei anzustreben. Das Gutachten bewahrt die Schule getrennt vom Stammblatt und verschlossen auf. Es ist also zulässig zu fragen, was weitergegeben wird und warum.",
+      "quelle": "Verwaltungsvorschrift 1.4.3 zu § 1 Abs. 4 AO-GS NRW."
+    },
+    {
+      "id": "r-freiwillig",
+      "zeichen": "✋",
+      "frage": "Muss ich alles beantworten, was man mich fragt?",
+      "antwort": "Nicht alles. Ein Gesundheitsamt kennzeichnet in seinem Datenschutzblatt zur Schuleingangsuntersuchung die Angaben zur Vorgeschichte, das Vorzeigen des gelben Heftes und des Impfpasses sowie die Angaben zu Beruf, Herkunft und Familie ausdrücklich als freiwillig. Das ist die Auskunft eines Amtes, nicht die aller; fragen Sie im Zweifel vor Ort, was freiwillig ist. Fragen zu stellen ist dabei immer erlaubt.",
+      "quelle": "Datenschutzinformation eines Gesundheitsamtes zur Schuleingangsuntersuchung, Stand 31. Juli 2025, mit Verweis auf § 54 SchulG NRW, § 1 AO-GS und § 11 ÖGDG NRW."
+    },
+    {
+      "id": "r-sicher",
+      "zeichen": "📐",
+      "frage": "Wie sicher ist so eine Untersuchung?",
+      "antwort": "Sicherer als ein Elternfragebogen, aber kein Orakel. Das am häufigsten eingesetzte Verfahren erkennt Kinder mit Auffälligkeiten zuverlässig und nimmt dafür in Kauf, manche Kinder zu Unrecht zu markieren: bei etwa der Hälfte der so markierten Kinder tritt später keine Lernstörung auf. In zwei Bereichen führt eine Auffälligkeit außerdem fast nie zu einer Empfehlung – kritische Werte im Rechnen hatten zwölf von hundert Kindern, eine Empfehlung erhielt eines von zweihundert. Dazu kommt, dass die Durchführung zwischen Teams und Ämtern stark schwankt, was die Belastbarkeit der Daten beeinträchtigt, und dass für einige breit eingesetzte Verfahren Normierung und Validierung fehlen.",
+      "quelle": "Daseking u. a. zur prognostischen Güte, „Das Gesundheitswesen“ 2011, Band 73, Heft 10, S. 650–659 und S. 660–667; Malonga Makosi u. a. zur methodenbedingten Heterogenität, ebenda 2025, Band 87, Heft 6, S. 391–397; Preuschhof u. a., Übersichtsarbeit, ebenda 2023, Band 85, Heft 10, S. 937–944."
+    },
+    {
+      "id": "r-was",
+      "zeichen": "🔎",
+      "frage": "Was wird bei der Untersuchung überhaupt angeschaut?",
+      "antwort": "Je nach Bundesland verschieden, und die Unterschiede betreffen nicht nur den Zeitpunkt, sondern auch, ob überhaupt alle Kinder von einer Ärztin des öffentlichen Gesundheitsdienstes gesehen werden. Das verbreitetste Entwicklungsscreening fasst seine zehn Teile zu drei Angaben zusammen: Erkennen und Zeichnen von Objekten und Formen – als Vorläuferfähigkeit für Lesen und Schreiben –, Umgang mit Zahlen und Mengen als Vorläuferfähigkeit für das Rechnen, und Sprachkompetenz im Deutschen. Beachten Sie das Wort Vorläuferfähigkeit: geprüft wird nicht, ob ein Kind liest, sondern was dem Lesen vorausgeht.",
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022, und die Verfahrensbeschreibung mit zehn Untertests; zur Heterogenität Preuschhof u. a., „Das Gesundheitswesen“ 2023, Band 85, Heft 10, S. 937–944."
+    }
+  ],
+  "ausgeschlossen": [
+    {
+      "was": "Die Liste der 141 Merkmale",
+      "warum": "Sie ist für Fachkräfte und für ein anderes Schulsystem gemacht. In einer Elternhand wird sie zur Prüfung des eigenen Kindes am Küchentisch. Übernommen ist ihre Gliederung in Felder, nicht ihr Inhalt."
+    },
+    {
+      "was": "Haken, Punkte, Stufen, Ampel",
+      "warum": "Kein Werkzeug dieses Hauses bewertet ein Kind (docs/02). Angekreuzt wird hier nur, welche Frage SIE mitnehmen wollen."
+    },
+    {
+      "was": "Ein Bericht über das Kind",
+      "warum": "Der Katalogeintrag wollte einen. Ein Bericht, den Eltern über ihr Kind erzeugen und in eine Kita oder Schule mitbringen, wird dort gelesen wie ein Befund – und ist keiner. Gedruckt werden Ihre Fragen."
+    },
+    {
+      "was": "Deutsch, Ukrainisch, Russisch",
+      "warum": "Nur deutsch. Rechtsbegriffe in ungeprüfter Übersetzung klingen verbindlich, ohne es zu sein; das wäre bei diesem Thema fahrlässig. Stattdessen kurze Sätze und ein Blatt, das man jemandem zeigen kann."
+    },
+    {
+      "was": "Übungen für die Zeit bis zur Schule",
+      "warum": "Keine Lautübungen, keine Buchstabenkarten, keine Silbenleseaufgaben. Lesen und Schreiben beginnen in der Schule, und ein Werkzeug, das Eltern das Gegenteil nahelegt, macht aus dem letzten Kita-Jahr eine Vorschule."
+    },
+    {
+      "was": "Eine Einschätzung, ob das Kind in die Schule kann",
+      "warum": "Das entscheidet dieses Werkzeug nicht, Sie entscheiden es nicht allein, und eine App schon gar nicht. Wer entscheidet, steht unter „Was gilt“ – mit Quelle."
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Пралеска: программа дошкольного образования / Е. А. Панько и др. — Минск: НИО; Аверсэв, 2007. Раздел «ОСНОВНЫЕ ПОКАЗАТЕЛИ РАЗВИТИЯ ДЕТЕЙ (к концу седьмого года жизни)», с. 300–311.",
+    "rechte": "© НИО 2007. Übernommen sind Konzept und Gliederung, nicht Texte: alle Formulierungen dieser App sind Eigenproduktion.",
+    "nachgezaehlt": "Пересчитано по пунктам: 141 показатель в 13 областях — психологическое здоровье 7, физическое 7, интеллектуальные достижения 21, личностное и эмоционально-волевое 21, психологическая культура 9, общение и речь 9, игровая 10, художественно-речевая и театральная 8, музыкальная 10, восприятие искусства и изобразительная 20, детское экспериментирование 7, трудовая 4, предпосылки учебной деятельности 8. Двенадцать областей плюс восемь предпосылок — именно так, как значится в записи каталога.",
+    "abweichung": "Запись каталога указывает «с. 301–311» и «Учебная деятельность, с. 311». Проверено: раздел начинается на с. 300, а заголовок на с. 311 — «ПРЕДПОСЫЛКИ учебной деятельности», то есть предпосылки, а не сама учебная деятельность. Числа каталога (12 + 8) верны. Ни один из 141 показателя не воспроизведён как пункт для галочки: взята только структура полей, направление вопроса перевёрнуто."
+  },
+  "elterntelefon": "Elterntelefon „Nummer gegen Kummer“: 0800 111 0 550, kostenlos und anonym."
+}
