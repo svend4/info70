@@ -1,0 +1,19 @@
+/* Druck: ein Zettel für die Jackentasche – die gewählten Karten mit ihrer
+   Frage, dazu die Regeln für unterwegs. Ohne Knöpfe, ohne Haken, ohne
+   Namenszeile (docs/02). Ohne Auswahl werden alle Karten gedruckt: ein
+   leeres Blatt wäre kein Blatt. */
+.asp-nur-druck { display: none; }
+.asp-zu { display: none; }
+
+@media print {
+  .asp-nur-bildschirm { display: none !important; }
+  .asp-nur-druck { display: block !important; }
+  body { background: #fff; }
+  /* Bildschirmteile fallen ganz weg; gedruckt wird nur das Blatt. */
+  .k-app { max-width: none; padding: 0; }
+  .asp-karten, .asp-sicherheit { display: none !important; }
+  .asp-blatt { border: none; border-radius: 0; margin: 0; padding: 0; box-shadow: none; }
+  .asp-blatt h2 { font-size: 14pt; margin: 0 0 3mm; }
+  .asp-blatt p { font-size: 10.5pt; line-height: 1.45; break-inside: avoid; page-break-inside: avoid; }
+  a[href]::after { content: ""; }
+}

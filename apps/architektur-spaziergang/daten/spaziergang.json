@@ -1,0 +1,412 @@
+{
+  "art": "architektur-spaziergang",
+  "version": 1,
+  "hinweis": "Ein Begleiter für Erwachsene. Kein Bildschirm fürs Kind: der Spaziergang findet draußen statt, nicht hier.",
+  "wasEsIst": "Die Quelle will Kinder mit Baudenkmälern, modernen Wohn-, Industrie- und öffentlichen Bauten, mit Parks und mit kleinen Architekturformen bekannt machen – Laternen, Brunnen, Zäune. Dafür nennt sie eine Vorbildliste. Diese App hat keine Liste für Ihren Ort: sie kennt Ihren Ort nicht. Was sie hat, sind Suchaufträge, die an jedem Haus funktionieren, und zu jedem eine offene Frage für unterwegs.",
+  "keineVorbildliste": "Die Quelle nennt vierzehn Baudenkmäler als Vorbildliste – vom Mirski Samok bis zur Sophienkathedrale in Polozk. Alle vierzehn stehen in Belarus. Sie durch vierzehn deutsche zu ersetzen hätte keinen Sinn: welche Bauwerke in der Nähe sind, ist in jedem Ort eine andere Liste, und eine App, die Ihren Ort nicht kennt, kann sie nicht aufstellen. Die Quelle sagt am Ende derselben Aufzählung selbst, womit stattdessen gearbeitet werden soll: mit den Wohnhäusern sowie den öffentlichen und gewerblichen Gebäuden „der eigenen Gegend“. Genau das tut diese App.",
+  "nurManchmal": "Ein Ziel der Quelle lautet, Kinder sollten Vorstellungen davon bekommen, dass das Aussehen eines Gebäudes von seiner Bestimmung abhängt. Das gilt – aber nur manchmal. Eine Scheune hat ein großes Tor, weil ein Wagen hineinfahren muss; ein Wasserturm ist hoch, weil die Höhe die Arbeit tut. Ein Rathaus hat keine Form, an der man es erkennt. Wohnung und Büro sehen von außen oft gleich aus. Deshalb sind die Karten hier in drei Gruppen geteilt, und die dritte ist die wichtigste: die Dinge, die man nicht sehen kann.",
+  "dreiArten": "Am Bau zu sehen: das Merkmal steckt im Gebäude selbst. Nur an der Ausstattung: das Haus sagt nichts, die Sachen drumherum schon. Nicht zu sehen: das Aussehen verrät es nicht, und niemand kann es von außen wissen.",
+  "impulseSindOffen": "Die Fragen auf den Karten prüfen nichts. Bei manchen kann man zusammen nachschauen, andere haben gar keine Antwort – und keine davon ist dafür gedacht, dass ein Kind sie richtig beantwortet. Was unter „Für Erwachsene“ steht, ist Hintergrund für Sie, kein Lösungsblatt zum Nachsprechen. Ein Kind, das ein Haus anschaut und etwas ganz anderes sagt, hat die Frage nicht verfehlt. „Das weiß ich auch nicht“ und „da sind sich Fachleute nicht einig“ sind gute Antworten.",
+  "keinUrteil": "Diese App führt keine Liste über Ihr Kind. Es gibt nichts anzukreuzen, was es erkannt hat, keine Punkte, keine Stufen, keinen Vergleich mit anderen Kindern. Angekreuzt wird nur, was SIE sich für den nächsten Spaziergang vornehmen; morgen können Sie etwas anderes wählen.",
+  "sicherheitImmer": "Unterwegs gilt zuerst die Straße, dann das Haus. Wer ein Dach betrachtet, schaut nach oben und nicht nach vorn – bleiben Sie dafür stehen, und zwar auf dem Gehweg und mit Abstand zur Fahrbahn. Kein Grundstück betreten, nicht klingeln, nicht über Zäune schauen: ein Haus ist die Wohnung von jemandem. Und keine Menschen fotografieren.",
+  "eigeneListe": "Wenn Sie wissen wollen, welche geschützten Bauwerke in Ihrer Nähe stehen: Denkmalschutz ist Landesrecht, und jedes Bundesland führt eine Denkmalliste. Viele Städte und Kreise veröffentlichen ihren Teil davon im Netz; Auskunft gibt die Untere Denkmalschutzbehörde, meist bei der Stadt oder beim Kreis. Diese App ruft dafür nichts ab – sie stellt keine Netzverbindungen her.",
+  "wohinMitFragen": "Fragen zu einem bestimmten Gebäude beantwortet am besten, wer vor Ort dafür zuständig ist: die Untere Denkmalschutzbehörde bei Stadt oder Kreis, das Stadtarchiv, ein Heimat- oder Geschichtsverein. Wer mit einer Kindergruppe etwas bauen oder eine Baustelle besuchen will, fragt bei der Architektenkammer des Bundeslandes nach Angeboten zur Architekturvermittlung.",
+  "karten": [
+    {
+      "id": "b-fachwerk",
+      "zeichen": "🏠",
+      "name": "Fachwerkhaus",
+      "art": "bauform",
+      "woranMan": "Ein Gitter aus Balken liegt sichtbar in der Wand: senkrechte, waagerechte und schräge Hölzer, dazwischen Flächen aus anderem Material.",
+      "fuerErwachsene": "Das sichtbare Holzgerüst ist das tragende Gerüst des Hauses; die Flächen zwischen den Balken – die Gefache – sind ausgefüllt, früher mit Lehm und Flechtwerk, später mit Ziegeln, und oft verputzt.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Dass die Balken tragen, ist die Bauweise. Dass man sie sieht, ist nicht überall so: viele Fachwerkhäuser sind vollständig verputzt.",
+      "gegenbeispiel": "Fachwerk ist nicht schwarz-weiß – die dunklen Balken gehen oft auf späteren Anstrich zurück, und regional gab es rote, ockerfarbene und grüne Fassungen. Solche Häuser gibt es außerdem in halb Europa, nicht nur hier.",
+      "impuls": "Wo liegen die Balken schräg – und wo gerade?"
+    },
+    {
+      "id": "b-wasserturm",
+      "zeichen": "💧",
+      "name": "Wasserturm",
+      "art": "bauform",
+      "woranMan": "Ein schmaler hoher Schaft mit einem dicken Kopf obenauf, fast immer ohne Fenster in der Mitte.",
+      "fuerErwachsene": "Oben steht ein Behälter voll Wasser. Weil er hoch steht, drückt das Wasser von allein in die Leitungen – der Turm ist kein Schmuck, sondern das Gerät.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Dass die Höhe den Druck macht, ist der Grund für die Form. Wie viel Druck und ob ein Ort überhaupt einen Turm braucht, hängt vom Gelände ab.",
+      "gegenbeispiel": "Viele Wassertürme sind außer Dienst und heute Wohnung, Büro oder Aussichtspunkt. Orte am Hang brauchen keinen Turm: dort liegt der Behälter oben am Berg.",
+      "impuls": "Was ist das höchste Haus, das wir von hier aus sehen?"
+    },
+    {
+      "id": "b-kirchturm",
+      "zeichen": "⛪",
+      "name": "Kirche mit Turm",
+      "art": "bauform",
+      "woranMan": "Ein Turm, der höher ist als das Haus daneben, mit Schallöffnungen oder einer Uhr, oft mit Kreuz, Hahn oder Kugel obenauf.",
+      "fuerErwachsene": "Im Turm hängen die Glocken; von oben sind sie weit zu hören. Und ein Turm ist von weit her zu sehen.",
+      "sicherheit": "offen",
+      "sicherheitText": "Warum Kirchen überhaupt Türme haben, ist nicht mit einem Satz beantwortet – Glocken sind ein Grund, Sichtbarkeit und Darstellung sind andere. Diese App behauptet dazu nicht mehr, als sie weiß.",
+      "gegenbeispiel": "Es gibt Kirchen ohne Turm, und es gibt Türme ohne Kirche: Rathausturm, Wasserturm, Aussichtsturm, Funkturm.",
+      "impuls": "Hörst du von hier eine Glocke? Und wenn sie schlägt – wie oft?"
+    },
+    {
+      "id": "b-scheune",
+      "zeichen": "🚜",
+      "name": "Scheune oder Stall",
+      "art": "bauform",
+      "woranMan": "Ein großes Tor, breiter und höher als eine Haustür, und auffällig wenige Fenster.",
+      "fuerErwachsene": "Durch das Tor muss etwas Großes hinein: früher der beladene Wagen, heute der Traktor. Fenster braucht Heu nicht.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Die Erklärung passt zur Form, ist aber nicht für jedes Gebäude geprüft. Welche Tore für welche Wagen gebaut wurden, unterscheidet sich von Gegend zu Gegend.",
+      "gegenbeispiel": "Viele Scheunen sind längst Garage, Werkstatt oder Wohnhaus – manche mit neuen Fenstern im alten Tor.",
+      "impuls": "Was müsste durch dieses Tor passen?"
+    },
+    {
+      "id": "b-laden",
+      "zeichen": "🛍️",
+      "name": "Laden im Erdgeschoss",
+      "art": "bauform",
+      "woranMan": "Unten große Fenster bis fast zum Boden, oben normale Fenster.",
+      "fuerErwachsene": "Ein großes Fenster zeigt, was drinnen verkauft wird, und lässt Licht in den Raum. Darüber wohnen Menschen – zwei verschiedene Nutzungen in einem Haus.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Ein Schaufenster ist ein guter Hinweis auf einen Laden, aber kein Beweis: es gibt leere Schaufenster, Büros und Arztpraxen dahinter.",
+      "gegenbeispiel": "Es gibt Läden ohne Schaufenster, und in vielen Orten stehen Schaufenster leer – auch das kann man sehen und darüber sprechen.",
+      "impuls": "Wie viele Stockwerke hat dieses Haus – und sieht jedes gleich aus?"
+    },
+    {
+      "id": "b-hochhaus",
+      "zeichen": "🏢",
+      "name": "Hochhaus",
+      "art": "bauform",
+      "woranMan": "Viele Stockwerke übereinander, die fast alle gleich aussehen.",
+      "fuerErwachsene": "Viele Wohnungen oder Büros stehen übereinander statt nebeneinander. Weil die Stockwerke gleich genutzt werden, sehen sie gleich aus – und ohne Aufzug geht es nicht.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Dass gleiche Stockwerke gleich aussehen, beschreibt die Form. Warum an einer bestimmten Stelle hoch gebaut wurde, lässt sich daraus nicht ablesen.",
+      "gegenbeispiel": "Was im Hochhaus ist, sieht man nicht: Wohnungen, Büros, ein Hotel, ein Krankenhaus.",
+      "impuls": "Welches Fenster würdest du dir aussuchen – und warum?"
+    },
+    {
+      "id": "b-bruecke",
+      "zeichen": "🌉",
+      "name": "Brücke",
+      "art": "bauform",
+      "woranMan": "Entweder ein Bogen unter dem Weg oder ein gerader Balken, der auf Pfeilern liegt.",
+      "fuerErwachsene": "Die Brücke muss ihr eigenes Gewicht und das der Fahrzeuge bis zum Ufer bringen. Ein Bogen gibt die Last schräg nach außen ab, ein Balken braucht Stützen unter sich.",
+      "sicherheit": "offen",
+      "sicherheitText": "Dass Bogen und Balken die Last anders weitergeben, ist Tragwerkslehre; diese App gibt es als Bild weiter, nicht als Erklärung, die hier geprüft wurde.",
+      "gegenbeispiel": "Nicht jede Brücke führt über Wasser: es gibt Bahnbrücken, Fußgängerbrücken über die Straße und Brücken über ein Tal.",
+      "impuls": "Was ist unter dieser Brücke – und was oben drauf?"
+    },
+    {
+      "id": "b-halle",
+      "zeichen": "🏟️",
+      "name": "Weite Halle",
+      "art": "bauform",
+      "woranMan": "Ein sehr weites Dach ohne Stütze in der Mitte – Markthalle, Bahnsteighalle, Turnhalle, Werkhalle.",
+      "fuerErwachsene": "In der Mitte darf nichts stehen, weil dort Platz gebraucht wird: für Stände, für einen Zug, für ein Spielfeld. Deshalb liegt das Dach weit gespannt auf den Außenwänden.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Der Zusammenhang zwischen freier Mitte und Nutzung stimmt der Richtung nach. Welche Spannweite wie erreicht wird, ist Ingenieursache und steht hier nicht.",
+      "gegenbeispiel": "Auch große Hallen haben manchmal Stützen – und ein Dach ohne Stützen heißt nicht, dass die Halle öffentlich ist.",
+      "impuls": "Wo steht in dieser Halle etwas, das das Dach hält?"
+    },
+    {
+      "id": "a-kita",
+      "zeichen": "🧸",
+      "name": "Kindergarten",
+      "art": "ausstattung",
+      "woranMan": "Spielgeräte im Garten, ein Zaun, Bilder in den Fenstern, viele kleine Fahrzeuge vor der Tür.",
+      "nichtAmHaus": "Am Gebäude selbst erkennt man eine Kita nicht: sie kann in einem Neubau sein, in einem alten Haus, in einer Etage über einem Laden.",
+      "fuerErwachsene": "Was eine Kita kenntlich macht, ist die Ausstattung, nicht die Bauform. Ihr Kind erkennt vermutlich „seine“ Kita sofort – das ist Ortskenntnis und hat mit Architektur nichts zu tun.",
+      "sicherheit": "offen",
+      "sicherheitText": "Eine Aufzählung typischer Merkmale, keine Regel. Bitte nicht in die Fenster fremder Gruppenräume schauen.",
+      "impuls": "Was wäre für dich das Beste an diesem Garten?"
+    },
+    {
+      "id": "a-bahnhof",
+      "zeichen": "🚉",
+      "name": "Bahnhof",
+      "art": "ausstattung",
+      "woranMan": "Gleise, ein Bahnsteig, eine Anzeige, ein Dach über dem Warten.",
+      "nichtAmHaus": "Das Empfangsgebäude kann aussehen wie ein Rathaus, ein Wohnhaus oder ein Glaskasten – oder ganz fehlen. Was den Bahnhof macht, liegt daneben: die Gleise.",
+      "fuerErwachsene": "Der Bahnsteig und sein Dach sind die eigentliche Einrichtung; viele kleine Haltepunkte haben gar kein Gebäude mehr.",
+      "sicherheit": "offen",
+      "sicherheitText": "Beschreibung dessen, was zu sehen ist – keine geprüfte Aussage über Bahnhofsbau.",
+      "impuls": "Woran merkt man hier, wo der Zug hält?"
+    },
+    {
+      "id": "a-feuerwehr",
+      "zeichen": "🚒",
+      "name": "Feuerwehrhaus",
+      "art": "ausstattung",
+      "woranMan": "Mehrere große Tore nebeneinander, breit genug für ein Fahrzeug, und eine Einfahrt ohne Bordstein.",
+      "nichtAmHaus": "Ein hoher schmaler Turm an einem Feuerwehrhaus ist ein Schlauchturm. Neue Wachen haben meist keinen mehr – die Form verrät das Haus also nur manchmal.",
+      "fuerErwachsene": "Die Tore sind so breit und hoch, weil große Fahrzeuge schnell herausfahren müssen, und zwar alle gleichzeitig nebeneinander.",
+      "sicherheit": "offen",
+      "sicherheitText": "Wozu ein Schlauchturm diente, wird oft mit dem Trocknen der Schläuche erklärt; diese App hat das beim Bau nicht belegen können und sagt es deshalb nicht.",
+      "impuls": "Warum sind die Tore so breit, was meinst du?"
+    },
+    {
+      "id": "a-schule",
+      "zeichen": "🎒",
+      "name": "Schule",
+      "art": "ausstattung",
+      "woranMan": "Ein Hof mit Markierungen, viele Fahrradstände, eine Reihe gleich großer Fenster, oft ein Zaun und ein Schild mit Namen.",
+      "nichtAmHaus": "Schulgebäude gibt es aus allen Zeiten und in allen Formen. Die Reihe gleicher Fenster weist auf gleich große Räume hin – das kann aber auch ein Bürohaus sein.",
+      "fuerErwachsene": "Viele gleich große Räume nebeneinander ergeben eine Reihe gleicher Fenster; der Hof ist die Fläche, die eine Pause braucht.",
+      "sicherheit": "offen",
+      "sicherheitText": "Der Zusammenhang leuchtet ein, wurde hier aber nicht an Fachliteratur geprüft. Zu Fensterflächen in Schulen gibt es Vorschriften, die diese App nicht nachgelesen hat.",
+      "impuls": "Was würdest du in diesem Hof zuerst machen?"
+    },
+    {
+      "id": "n-rathaus",
+      "zeichen": "🏛️",
+      "name": "Rathaus",
+      "art": "nichtErkennbar",
+      "woranMan": "Kein Merkmal, das immer stimmt.",
+      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Eine Form, die alle teilen, hat das Rathaus nicht. Wer glaubt, man erkenne es an „so einem alten Haus mit Turm“, liegt in der Hälfte der Städte falsch.",
+      "woranDoch": "Was es verrät, ist kein Bauteil: die Flagge, das Wappen, das Schild an der Tür, der Briefkasten für Anträge.",
+      "impuls": "Wie würden wir herausfinden, ob hier das Rathaus ist?"
+    },
+    {
+      "id": "n-nutzung",
+      "zeichen": "🚪",
+      "name": "Wohnung oder Büro",
+      "art": "nichtErkennbar",
+      "woranMan": "Von außen meist gar nicht zu unterscheiden.",
+      "warumNicht": "Ein Haus mit gleichmäßigen Fenstern kann Wohnungen enthalten, Büros, beides, oder im Lauf der Zeit nacheinander alles davon. Das Aussehen hängt hier nicht von der Bestimmung ab – genau dort hört das Ziel der Quelle auf zu gelten.",
+      "woranDoch": "Gardinen, Blumen, Wäsche auf dem Balkon, ein Fahrrad im Flur – Spuren von Menschen, nicht Bauteile. Und Klingelschilder, die man lesen, aber nicht drücken soll.",
+      "impuls": "Wohnt hier jemand, glaubst du? Woran könnte man das merken?"
+    },
+    {
+      "id": "n-innen",
+      "zeichen": "❓",
+      "name": "Was drinnen ist",
+      "art": "nichtErkennbar",
+      "woranMan": "Nichts. Das ist die wichtigste Karte.",
+      "warumNicht": "In einem ganz normalen Wohnhaus kann eine Kita sein, eine Arztpraxis, eine Werkstatt, eine Moschee, ein Verein, ein Lager. Von draußen ist das nicht zu sehen, und es ist auch nicht unsere Sache. Ein Spaziergang, auf dem man alles errät, wäre ein falscher Spaziergang: manches weiß man nicht, und das darf so bleiben.",
+      "woranDoch": "Nur, was die Menschen selbst nach draußen gestellt haben: ein Schild, ein Name, ein Aufkleber.",
+      "impuls": "Was könnte hier drin sein? Und wie sicher sind wir uns?"
+    },
+    {
+      "id": "k-laterne",
+      "zeichen": "💡",
+      "name": "Laterne",
+      "art": "kleineForm",
+      "quellBezug": "genannt",
+      "woranMan": "Ein Mast mit einer Leuchte oben – an einer Straße fast immer in gleichen Abständen.",
+      "fuerErwachsene": "Die Quelle nennt Laternen ausdrücklich als „kleine Architekturform“. Sie sind gebaut wie Häuser: aus einem Material, in einer Form, nach einem Maß – und es stehen immer mehrere gleiche nebeneinander.",
+      "sicherheit": "offen",
+      "sicherheitText": "Dass die Abstände geplant sind, ist offensichtlich; nach welcher Regel, hat diese App nicht nachgesehen.",
+      "impuls": "Was ist an dieser Laterne anders als an der nächsten?"
+    },
+    {
+      "id": "k-brunnen",
+      "zeichen": "⛲",
+      "name": "Brunnen",
+      "art": "kleineForm",
+      "quellBezug": "genannt",
+      "woranMan": "Ein Becken, ein Rohr oder eine Figur, aus der Wasser kommt oder gekommen ist.",
+      "fuerErwachsene": "Die Quelle nennt Brunnen ausdrücklich. Viele sind älter als alles ringsum und standen da, als es noch keine Leitung in die Häuser gab.",
+      "sicherheit": "offen",
+      "sicherheitText": "Allgemein richtig, für den Brunnen vor Ihnen nicht geprüft – dazu wüsste das Stadtarchiv mehr.",
+      "impuls": "Wohin läuft das Wasser, wenn das Becken voll ist?"
+    },
+    {
+      "id": "k-zaun",
+      "zeichen": "🚧",
+      "name": "Zaun und Geländer",
+      "art": "kleineForm",
+      "quellBezug": "genannt",
+      "woranMan": "Etwas, das eine Grenze zieht oder einen Absturz verhindert: Latten, Stäbe, Mauer, Hecke, Gitter.",
+      "fuerErwachsene": "Die Quelle nennt Zäune ausdrücklich. Ein Zaun sagt zweierlei: hier hört das eine auf und das andere fängt an – und manchmal: hier wäre es gefährlich.",
+      "sicherheit": "offen",
+      "sicherheitText": "Eine Unterscheidung zum Anschauen, keine Vorschriftenkunde. Für Geländer gibt es Bauvorschriften, die hier nicht nachgelesen wurden.",
+      "impuls": "Was trennt dieser Zaun – und von was?"
+    },
+    {
+      "id": "k-bank",
+      "zeichen": "🪑",
+      "name": "Bank",
+      "art": "kleineForm",
+      "quellBezug": "ergaenzt",
+      "woranMan": "Etwas zum Sitzen, das jemand absichtlich dorthin gestellt hat.",
+      "fuerErwachsene": "Die Quelle sagt „Laternen, Brunnen, Zäune und so weiter“; die Bank ist unsere Ergänzung, weil sie die Frage besonders gut stellt: Wohin schaut man von hier?",
+      "sicherheit": "offen",
+      "sicherheitText": "Eine Ergänzung dieser App, kein Punkt der Quelle.",
+      "impuls": "Wohin schaut man, wenn man hier sitzt?"
+    },
+    {
+      "id": "g-park",
+      "zeichen": "🌳",
+      "name": "Park",
+      "art": "gruen",
+      "quellBezug": "genannt",
+      "woranMan": "Wege, die irgendwohin führen, gepflanzte Bäume in Reihen oder Gruppen, Rasen, Bänke.",
+      "fuerErwachsene": "Die Quelle zählt Parks und kleine Grünanlagen zur „Landschaftsarchitektur“ – auch sie sind geplant. Wer den Wegen folgt, geht die Planung nach.",
+      "sicherheit": "offen",
+      "sicherheitText": "Dass Parkwege geplant sind, ist allgemein richtig; zu diesem Park sagt die App nichts.",
+      "impuls": "Welcher Weg wird hier am meisten benutzt? Woran sieht man das?"
+    },
+    {
+      "id": "g-platz",
+      "zeichen": "🌿",
+      "name": "Grünanlage am Platz",
+      "art": "gruen",
+      "quellBezug": "genannt",
+      "woranMan": "Eine kleine Fläche mit Bäumen oder Beeten zwischen Häusern oder Straßen, oft mit Weg quer hindurch.",
+      "fuerErwachsene": "Die Quelle nennt neben dem Park ausdrücklich den kleinen begrünten Platz. Er ist meist das, was zwischen Straßen übrig geblieben ist – und wurde dann gestaltet.",
+      "sicherheit": "offen",
+      "sicherheitText": "Die Entstehung ist je nach Ort eine andere; hier steht eine Beobachtung, keine Ortsgeschichte.",
+      "impuls": "Was war hier wohl vorher?"
+    },
+    {
+      "id": "g-spielplatz",
+      "zeichen": "🛝",
+      "name": "Spielplatz",
+      "art": "gruen",
+      "quellBezug": "ergaenzt",
+      "woranMan": "Geräte, ein Zaun oder eine Hecke, Sand oder Fallschutz unter dem Gerät, ein Schild mit Regeln.",
+      "fuerErwachsene": "Der Spielplatz steht nicht in der Quelle, aber im Katalogeintrag dieser App. Er ist der einzige Ort des Spaziergangs, der ganz für Kinder gebaut wurde – und darum der beste, um nach dem Warum zu fragen.",
+      "sicherheit": "offen",
+      "sicherheitText": "Eine Ergänzung aus dem Katalog, kein Punkt der Quelle. Für Spielplatzgeräte gibt es Normen, die diese App nicht nachgelesen hat.",
+      "impuls": "Was fehlt auf diesem Spielplatz?"
+    }
+  ],
+  "ziele": [
+    {
+      "nr": 1,
+      "kurz": "Vorstellungen über die bildende Kunst, ihre Arten (Malerei, Grafik, Skulptur, angewandte Kunst) und Gattungen (Landschaft, Porträt, Stillleben, Alltag, Tierbild) bilden",
+      "einordnung": "anderesThema",
+      "warum": "Kunstarten und Gattungen sind der Gegenstand von „Kunst gucken“ und „Kunst-Entdecker“, nicht eines Spaziergangs."
+    },
+    {
+      "nr": 2,
+      "kurz": "die Fähigkeit entwickeln, die Absicht des Künstlers zu verstehen und – mit Hilfe der Pädagogin – die eingesetzten Ausdrucksmittel zu bestimmen",
+      "einordnung": "anderesThema",
+      "warum": "Die Absicht hinter einem Werk gehört vor das Werk; „Kunst gucken“ ist dafür gebaut."
+    },
+    {
+      "nr": 3,
+      "kurz": "weiter mit der Gestaltung des Kinderbuchs bekannt machen, mit Stilvielfalt der Buchgestaltung, mit Tafelgrafik und einzelnen Techniken (Linolschnitt, Lithografie), mit der angewandten Grafik",
+      "einordnung": "anderesThema",
+      "warum": "Buch und Druckgrafik sind Themen von „Erste Künstler“ und „Kunst gucken“."
+    },
+    {
+      "nr": 4,
+      "kurz": "Wissen über Kleinplastik erweitern, mit Monumental-, Tafel- und Dekorationsskulptur (je nach örtlichen Bedingungen), mit der angewandten Volks- und Berufskunst und ihren Gemeinsamkeiten bei verschiedenen Völkern bekannt machen",
+      "einordnung": "anderesThema",
+      "warum": "Skulptur ist in „Kunst gucken“ eingeordnet. Die Parkskulptur wäre hier denkbar – sie ist bewusst nicht aufgenommen, weil diese App beim Gebäude bleibt."
+    },
+    {
+      "nr": 5,
+      "kurz": "die Vorstellungen über die Ausdrucksmittel von Werken der bildenden Kunst bereichern (Bild, Illustration, Zeichnung, Skulptur, Erzeugnisse der angewandten Kunst)",
+      "einordnung": "anderesThema",
+      "warum": "Ausdrucksmittel am Werk – wieder „Kunst gucken“."
+    },
+    {
+      "nr": 6,
+      "kurz": "mit der Arbeit des Künstlers bekannt machen (Maler, Grafiker, Bildhauer, Architekt, Designer, Volkskünstler)",
+      "einordnung": "gebaut",
+      "warum": "Vom ganzen Berufsfeld nimmt diese App genau einen: dass jemand jedes dieser Häuser geplant hat, bevor es gebaut wurde."
+    },
+    {
+      "nr": 7,
+      "kurz": "die Vorstellungen über moderne öffentliche, gewerbliche und Wohngebäude und über Baudenkmäler erweitern und vertiefen; mit Landschaftsarchitektur (Parks, Grünanlagen) und kleinen Architekturformen (Laternen, Brunnen, Zäune usw.) bekannt machen",
+      "einordnung": "gebaut",
+      "warum": "Das ist der Kern dieser App. Die drei namentlich genannten kleinen Formen sind als Karten da, Park und Grünanlage ebenso."
+    },
+    {
+      "nr": 8,
+      "kurz": "mit der Vielfalt architektonischer Lösungen bekannt machen (Größen, räumliche Komposition, Besonderheiten von Dach und Dekor usw.)",
+      "einordnung": "gebaut",
+      "warum": "Größe, Form, Dach – das ist, was man im Gehen sehen kann, und danach fragen die Impulse."
+    },
+    {
+      "nr": 9,
+      "kurz": "Vorstellungen davon bilden, dass das Aussehen eines Gebäudes von seiner Bestimmung abhängt",
+      "einordnung": "nurEingeschraenkt",
+      "warum": "Nur manchmal. Scheune, Wasserturm und Halle verraten ihre Bestimmung; Rathaus, Wohnhaus und Büro nicht. Die App nimmt das Ziel auf und stellt ihm drei Karten gegenüber, bei denen es nicht gilt."
+    },
+    {
+      "nr": 10,
+      "kurz": "die Wahrnehmung von Design als Art moderner Kunst und Bestandteil der gegenständlichen Umwelt fördern; die Vorstellungen darüber vertiefen, was ein Designer tut",
+      "einordnung": "anderesThema",
+      "warum": "Design am Gegenstand ist der „Design-Entdecker“ – dort geht es um den Henkel an der Tasse und das Material des Kochlöffels."
+    },
+    {
+      "nr": 11,
+      "kurz": "den Wortschatz beim Wahrnehmen von Design bereichern; den sinnvollen Gebrauch einiger Fachbegriffe anregen: Design, Designer, Material, Raum, Stil, Stilisierung, Plastik, Kolorit, Dekor, Faktur, Modul",
+      "einordnung": "nichtUebernommen",
+      "warum": "Elf Fachwörter, von denen diese App keines braucht. Wer auf dem Gehweg „Faktur“ sagt, hat nichts erklärt. Die Karten benutzen Wörter, die ein Kind draußen selbst verwenden kann: hoch, breit, Tor, Balken, Dach."
+    },
+    {
+      "nr": 12,
+      "kurz": "die Ganzheit der künstlerischen Wahrnehmung weiterentwickeln, die Fähigkeit, Elemente des Designs zu unterscheiden und selbstständig zu analysieren, ihre stilistischen, künstlerischen und utilitären Besonderheiten und deren Zusammenhang zu erkennen",
+      "einordnung": "anderesThema",
+      "warum": "Stilanalyse am Gegenstand – „Design-Entdecker“."
+    },
+    {
+      "nr": 13,
+      "kurz": "das Wissen über die utilitären und ästhetischen Eigenschaften von Gebrauchsgegenständen vertiefen (Form, Proportion, Material, Farbe, Dekor, Komposition, Stil, Bestimmung)",
+      "einordnung": "anderesThema",
+      "warum": "Gebrauchsgegenstände – „Design-Entdecker“ und „Dinge des Alltags“."
+    },
+    {
+      "nr": 14,
+      "kurz": "die Vorstellungen über das Design verschiedener Innenräume und ihrer Funktionszonen erweitern (Material und Farbe, Licht, Möbel, Kunst im Raum, Pflanzen) und über ihre Kombination je nach Funktion des Raumes",
+      "einordnung": "anderesThema",
+      "warum": "Innenräume sind nicht draußen. Den eigenen Raum zeichnet der „Kita-Kartograph“."
+    },
+    {
+      "nr": 15,
+      "kurz": "die Vorstellungen über die Rolle verschiedener Kunstarten im Design und über seine historischen und nationalen Wurzeln bereichern",
+      "einordnung": "anderesThema",
+      "warum": "Stilgeschichte des Designs – nicht hier, und für fünf- bis siebenjährige Kinder auch nicht im Gehen."
+    },
+    {
+      "nr": 16,
+      "kurz": "weiter mit den Arten und Anwendungsfeldern der angewandten Grafik bekannt machen (Verpackungsdesign, Großplakate, Außenwerbung, Aushänge, Etiketten, Visitenkarten, Prospekte)",
+      "einordnung": "nichtUebernommen",
+      "warum": "Außenwerbung, Plakate, Verpackung, Etiketten: das ist Werbung. Diese Werkzeuge sind werbefrei, und zwar nicht nur in der eigenen Oberfläche – fünf- bis siebenjährigen Kindern die Gestaltung von Werbung als Kunstgenuss nahezubringen, ist das Gegenteil davon. Wenn Kinder etwas über Werbung lernen sollen, dann sie zu erkennen; dafür gibt es „Werbekennzeichnung“."
+    },
+    {
+      "nr": 17,
+      "kurz": "im Wahrnehmen von Designwerken künstlerischen Geschmack und Kriterien zur Bewertung von Massenproduktion bilden",
+      "einordnung": "nichtUebernommen",
+      "warum": "Zwei Dinge auf einmal, und beide nicht hier. „Geschmack bilden“ setzt voraus, dass einer der richtige ist – eine Geschmacksfrage hat keine Antwort. Und „Kriterien zur Bewertung von Massenproduktion“ machte aus einem Spaziergang eine Kaufberatung."
+    }
+  ],
+  "ausgeschlossen": [
+    {
+      "was": "Eine Liste berühmter Bauwerke",
+      "warum": "Die Quelle nennt vierzehn, alle in Belarus. Eine deutsche Liste wäre in jedem Ort eine andere, und diese App kennt Ihren Ort nicht. Stattdessen: Suchaufträge, die überall gehen, und der Hinweis auf die Denkmalliste Ihres Bundeslandes."
+    },
+    {
+      "was": "Jahreszahlen und Epochennamen",
+      "warum": "Gotik, Barock, Gründerzeit, Bauhaus – nichts davon steht auf den Karten. Für ein Kind draußen ist das Wortwissen ohne Gegenstand, und für eine App, die Ihren Ort nicht kennt, wäre jede Jahreszahl geraten. Ein Textnetz lehnt Jahreszahlen in den Kindertexten ab."
+    },
+    {
+      "was": "Ein Haken, was das Kind erkannt hat",
+      "warum": "Angekreuzt wird, was Sie sich vornehmen, nicht was Ihr Kind geleistet hat. Es gibt keine Punkte, keine Stufen, keinen Vergleich – kein Werkzeug dieses Hauses bewertet ein Kind (docs/02)."
+    },
+    {
+      "was": "Fotos",
+      "warum": "Die App zeigt keine Gebäudebilder: ein Bild müsste von irgendwo kommen, und diese App ruft nichts ab. Die Häuser stehen draußen und sind umsonst zu sehen. Ob und wie Sie selbst fotografieren, ist Ihre Sache – nur Menschen nicht."
+    },
+    {
+      "was": "Eine Karte, ein Weg, ein Standort",
+      "warum": "Kein Ortungsdienst, keine Karte, keine Route: das wäre eine Netzverbindung und eine Spur, wo Sie mit Ihrem Kind unterwegs sind. Den Weg kennen Sie besser als jede App."
+    },
+    {
+      "was": "Die Stilgeschichte des Designs",
+      "warum": "Acht der siebzehn Quellziele betreffen Design, Innenraum und angewandte Grafik. Sie sind hier nicht übernommen – zwei davon ausdrücklich zurückgewiesen, sechs gehören in Apps, die es schon gibt."
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Пралеска: программа дошкольного образования / Е. А. Панько и др. — Минск: НИО; Аверсэв, 2007. Раздел «Восприятие искусства», группа «ФАНТАЗЕРЫ» (5–6/7 лет), с. 274–276; перечень «Архитектура» — с. 278.",
+    "rechte": "© НИО 2007. Übernommen sind Konzept und Struktur, nicht Texte: alle Formulierungen dieser App sind Eigenproduktion.",
+    "nachgezaehlt": "Семнадцать задач в разделе «Восприятие искусства» (пересчитано по пунктам на с. 274–276). В перечне «Архитектура» на с. 278 названы четырнадцать памятников: десять отдельных плюс ратуши в Минске, Витебске, Могилёве и Несвиже.",
+    "abweichung": "Приложение не воспроизводит перечень: все четырнадцать памятников находятся в Беларуси. Основание для замены — сама же фраза источника в конце того же перечня: «общественные и производственные здания своей местности». Две задачи из семнадцати отклонены (№ 16 — реклама, № 17 — оценка массовой продукции), одна принята с ограничением (№ 9 — внешний вид зависит от назначения: только иногда), восемь отнесены к другим приложениям."
+  },
+  "elterntelefon": "Elterntelefon „Nummer gegen Kummer“: 0800 111 0 550, kostenlos und anonym."
+}
