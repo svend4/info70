@@ -1,0 +1,144 @@
+{
+  "art": "frischluft-familie",
+  "version": 1,
+  "zielgruppe": "Eltern und Kindertagespflege; Kinder von 3 bis 5 Jahren",
+  "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Hier wird nichts angekreuzt und nichts ausgewertet – hier steht, was die Quelle verlangt und was davon in Deutschland heute belegt ist.",
+  "wasEsIst": "Die Quelle führt acht „obligatorische Maßnahmen“ zur Abhärtung auf. Diese App liest sie der Reihe nach und sagt zu jeder, was dazu belegt ist, was nur mit Einschränkung gilt und was nicht übernommen wird – jeweils mit Quelle. Am Ende steht, was in Deutschland tatsächlich gegen Infekte hilft.",
+  "dieEhrlicheBilanz": "Der Satz, um den es geht, lautet in vielen Ratgebern und auch auf Elternseiten: „Abhärtung stärkt das Immunsystem, dann wird das Kind seltener krank.“ Er steht dort ohne Quelle. Die wichtigste Auskunft zuerst: Keine der acht Maßnahmen ist als Infektvorbeugung bei Kindern von drei bis fünf Jahren belegt. Die einzige randomisierte Studie, die Wasseranwendungen bei Kindern dieses Alters mit häufigen Erkältungen geprüft hat, fand über ein Jahr keinen Unterschied. Ein Übersichtsartikel zur Kneipp-Therapie hält ausdrücklich fest, wechselwarme Anwendungen trügen „bei Erwachsenen – nicht jedoch bei Kindern“ zur Abhärtung bei. Das heißt nicht, dass die Maßnahmen schaden: Draußensein, Händewaschen und ein kühles Schlafzimmer sind aus anderen Gründen gut. Es heißt, dass die Begründung „damit es nicht krank wird“ nicht trägt.",
+  "keinVersaeumnis": "Es ist kein Versäumnis, keine Abhärtungsrituale zu machen. Was in Deutschland belegt gegen Infekte hilft, ist unspektakulär – Hände waschen, rauchfreie Wohnung, die von der STIKO empfohlenen Impfungen, lüften –, und nichts davon ist eine Abhärtungsmaßnahme.",
+  "keineBewertung": "Diese App kreuzt nichts an und wertet nichts aus. Es gibt keine Punkte, keine Stufe, keine Ampel und kein „Ergebnis“ – weder über Ihr Kind noch über Ihre Familie. Eine Checkliste mit Auswertung wäre eine Bewertung von Familien (docs/02, EU-Verordnung über künstliche Intelligenz), und bei Maßnahmen, für die es keine Belege gibt, wäre sie doppelt sinnlos.",
+  "warumTrotzdem": "Warum die Liste dann überhaupt da ist: weil sie in vielen Familien und Einrichtungen weiterlebt und weil Eltern gefragt werden, ob sie „abhärten“. Wer die acht Punkte kennt und weiß, was dahintersteht, kann in Ruhe antworten.",
+  "elterntelefon": "Wenn der Alltag gerade zu viel ist: beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden.",
+  "einordnungen": {
+    "belegtAnders": "Gut – aber aus einem anderen Grund",
+    "nurEingeschraenkt": "Nur mit Einschränkung",
+    "nichtUebernommen": "Nicht übernommen"
+  },
+  "massnahmen": [
+    {
+      "id": "m1-raumluft", "zeichen": "🌡️", "nr": 1,
+      "quellText": "Lufttemperatur im Raum 20 bis 22 Grad Celsius – nicht höher.",
+      "einordnung": "nurEingeschraenkt",
+      "warum": "Eine deutsche Angabe gibt es, aber für einen anderen Raum und eine andere Zeit: das Bundesinstitut für Öffentliche Gesundheit (BIÖG, bis Februar 2025 BZgA) nennt für die Nacht im Kinderzimmer eine Temperatur von nicht mehr als achtzehn Grad. Für die Tagestemperatur im Wohnraum eines Kindes gibt es keine deutsche Gesundheitsempfehlung, die eine Zahl nennt.",
+      "wasStattdessen": "Vor dem Schlafen lüften und nachts nicht überheizen. Und darauf achten, dass das Kind nicht durch zu warme Kleidung schwitzt – auch das nennt das BIÖG ausdrücklich.",
+      "quelle": "Bundesinstitut für Öffentliche Gesundheit (BIÖG), Elternportal kindergesundheit-info.de, „Sanfte Abhärtung für Kinder“ (0 bis 6 Jahre)"
+    },
+    {
+      "id": "m2-draussen", "zeichen": "🚶", "nr": 2,
+      "quellText": "Gesundheitsfördernde Spaziergänge, täglich drei bis vier Stunden.",
+      "einordnung": "belegtAnders",
+      "warum": "Draußen sein ist gut, aber nicht als Abhärtung. Das BIÖG empfiehlt für Kinder bis sechs Jahre täglich ein bis zwei Stunden an der frischen Luft, bei Wind und Wetter. Die drei bis vier Stunden der Quelle beschreiben den Tagesablauf einer Einrichtung, nicht den einer Familie.",
+      "wasStattdessen": "Jeden Tag raus, bei jedem Wetter – und wenn es eine halbe Stunde auf dem Weg zur Kita ist, ist das auch etwas. Was Bewegung angeht, stehen die Orientierungswerte im Begleiter „Wachsen und Bewegen“.",
+      "quelle": "BIÖG, kindergesundheit-info.de, „Sanfte Abhärtung für Kinder“"
+    },
+    {
+      "id": "m3-waschen", "zeichen": "🚰", "nr": 3,
+      "quellText": "Waschen mit kühlem oder kaltem Wasser vor dem Essen und nach jeder Verschmutzung der Hände.",
+      "einordnung": "belegtAnders",
+      "warum": "Händewaschen ist die am besten belegte einzelne Maßnahme gegen Atemwegsinfekte – aber wegen der Seife und der Gelegenheit, nicht wegen der Temperatur. Für kaltes Wasser als solches gibt es keinen Beleg. Der kinderspezifische Übersichtsartikel verzichtet bewusst auf eine gemeinsame Wirkungszahl, weil die Studien zu verschieden sind; die oft zitierte Zahl stammt aus gemischten Gruppen, nicht aus einer Kinderstichprobe.",
+      "wasStattdessen": "Vor dem Essen und nach dem Nachhausekommen Hände waschen, mit Seife, und die Wassertemperatur so, wie das Kind sie mag.",
+      "quelle": "Cochrane-Übersichtsarbeit zu physikalischen Maßnahmen gegen Atemwegsinfekte (CD006207, Fassung von 2023); kinderspezifisch: Willmott u. a., Archives of Disease in Childhood 2016, Band 101, Heft 1"
+    },
+    {
+      "id": "m4-spuelen", "zeichen": "💧", "nr": 4,
+      "quellText": "Mund und Rachen nach jeder Mahlzeit und nach dem Schlafen mit kühlem oder kaltem Wasser spülen.",
+      "einordnung": "nichtUebernommen",
+      "warum": "Die bekannte Studie zum Gurgeln betrifft Erwachsene zwischen achtzehn und fünfundsechzig Jahren. Eine randomisierte Studie mit Kindern gibt es nicht. Dazu kommt das Praktische: Gurgeln setzt voraus, dass ein Kind nicht schluckt, und das ist in diesem Alter keine sichere Annahme.",
+      "wasStattdessen": "Zähne putzen, und zwar zweimal am Tag – das ist die Mundmaßnahme, die in Deutschland empfohlen wird.",
+      "quelle": "Satomura u. a., American Journal of Preventive Medicine 2005, Band 29, Heft 4 (Stichprobe: Erwachsene)"
+    },
+    {
+      "id": "m5-luftbad", "zeichen": "🌬️", "nr": 5,
+      "quellText": "Luftbäder vor und nach dem Schlafen und beim Sport, fünf bis zwanzig Minuten, die Zeit wird allmählich gesteigert.",
+      "einordnung": "nurEingeschraenkt",
+      "warum": "„Luftbäder“ als Abhärtungsübung kommen in den deutschen Empfehlungen nicht vor – weder als Rat noch als Warnung. Was dort steht, ist bescheidener und betrifft dasselbe: lüften und das Kind nicht zu warm anziehen.",
+      "wasStattdessen": "Vor dem Schlafen das Zimmer lüften, und beim Anziehen eine Schicht weniger, wenn das Kind schwitzt.",
+      "quelle": "BIÖG, kindergesundheit-info.de, „Sanfte Abhärtung für Kinder“ – dort kommen Luftbäder nicht vor"
+    },
+    {
+      "id": "m6-barfuss", "zeichen": "🦶", "nr": 6,
+      "quellText": "Barfußgehen unter gewöhnlichen Bedingungen und über ein Rippenbrett, vor und nach dem Schlafen und beim Sport, zwei bis zwanzig Minuten, allmählich gesteigert.",
+      "einordnung": "belegtAnders",
+      "warum": "Barfußlaufen ist empfohlen – in der Leitlinie zum kindlichen Knick-Senkfuß steht es unter Vorbeugung, zusammen mit täglicher Bewegung und weichen Schuhen mit genug Länge und Weite. Als Abhärtung ist es nicht belegt. Das Rippenbrett ist ein Gerät aus dem Turnraum und für nichts davon nötig.",
+      "wasStattdessen": "Zu Hause und draußen barfuß laufen lassen, auf wechselndem Untergrund – Teppich, Fliesen, Gras, Sand. Ohne Zeitvorgabe.",
+      "quelle": "S2k-Leitlinie „Kindlicher Knick-Senkfuß“, AWMF-Register 187-053, Fassung von 2022, Abschnitt zur Prävention"
+    },
+    {
+      "id": "m7-pulsierend", "zeichen": "📉", "nr": 7,
+      "quellText": "Elemente „pulsierender“ Temperaturen über den Tag: Absenken der Lufttemperatur beim Sport und während des Schlafs.",
+      "einordnung": "nurEingeschraenkt",
+      "warum": "Die Hälfte davon hat eine deutsche Entsprechung: nachts soll es im Kinderzimmer nicht wärmer als achtzehn Grad sein. Für das Absenken der Temperatur während einer Bewegungsstunde gibt es keine deutsche Quelle.",
+      "wasStattdessen": "Nachts kühl schlafen lassen. Mehr steckt in diesem Punkt nicht.",
+      "quelle": "BIÖG, kindergesundheit-info.de, „Sanfte Abhärtung für Kinder“"
+    },
+    {
+      "id": "m8-familie", "zeichen": "🏠", "nr": 8,
+      "quellText": "Abhärtungsprozeduren in der Familie.",
+      "einordnung": "nichtUebernommen",
+      "warum": "Das ist keine Maßnahme, sondern eine Weitergabe: die Einrichtung reicht die Abhärtung an die Familie durch. Genau an dieser Stelle steht diese App – und ihre Antwort lautet, dass es kein Programm gibt, das eine Familie zu Hause durchziehen müsste.",
+      "wasStattdessen": "Die vier Dinge, die das BIÖG nennt: täglich ein bis zwei Stunden an der frischen Luft, vor dem Schlafen lüften, nachts nicht wärmer als achtzehn Grad, und nicht so warm anziehen, dass das Kind schwitzt.",
+      "quelle": "BIÖG, kindergesundheit-info.de, „Sanfte Abhärtung für Kinder“"
+    }
+  ],
+  "oftDazugezaehlt": [
+    {
+      "id": "d-guss", "zeichen": "🚿", "was": "Kalte Güsse und Wechselduschen",
+      "urteil": "Nicht zu empfehlen.",
+      "warum": "In der Quelle stehen sie gar nicht, in den deutschen Elternempfehlungen auch nicht. Der Übersichtsartikel zur Kneipp-Therapie hält fest, wechselwarme Anwendungen trügen „bei Erwachsenen – nicht jedoch bei Kindern“ zur Abhärtung bei. Ganzkörperanwendungen sind in den Studien mit Kindern überhaupt nicht geprüft worden; geprüft wurden kleine Teilanwendungen an Händen, Füßen und Gesicht.",
+      "quelle": "Stier-Jarmer u. a., Complementary Medicine Research 2021, Band 28, Heft 2"
+    },
+    {
+      "id": "d-sauna", "zeichen": "🧖", "was": "Sauna mit kleinen Kindern",
+      "urteil": "Nicht zu empfehlen – und es gibt dazu auch nichts Verlässliches.",
+      "warum": "Es gibt in Deutschland keine Empfehlung einer medizinischen Fachgesellschaft mit Altersgrenze, Temperatur oder Dauer. Die Zahlen, die im Umlauf sind, stammen von Branchen- und Anbieterseiten. Kinder regulieren ihre Temperatur schlechter als Erwachsene: mehr Körperoberfläche im Verhältnis zur Masse, weniger Schweiß je Drüse.",
+      "quelle": "Recherche beim Bau: keine Fachgesellschaftsquelle auffindbar; das einzige Merkblatt eines kinderärztlichen Elternportals stammt aus dem Jahr 2008, nennt keine Quelle und begründet Sauna unter anderem mit „Erziehung des Willens“"
+    },
+    {
+      "id": "d-sonne", "zeichen": "☀️", "was": "Sonnenbäder",
+      "urteil": "Nicht zu empfehlen.",
+      "warum": "Ein „Sonnenbad“ als Übung verträgt sich nicht mit dem, was heute gilt: Kinder sollen keinen Sonnenbrand bekommen, bei starker Strahlung hautbedeckende Kleidung tragen, und die Mittagssonne zwischen elf und fünfzehn Uhr ist zu meiden. Einen gesundheitlichen Nutzen von Sonnenbestrahlung bei kleinen Kindern nennt keine der deutschen Quellen. Kleidung ist dabei besser belegt als Creme.",
+      "quelle": "S3-Leitlinie „Prävention von Hautkrebs“, AWMF-Register 032/052OL, Kurzversion von 2021; BIÖG, kindergesundheit-info.de; Bundesamt für Strahlenschutz"
+    }
+  ],
+  "wasWirklichHilft": [
+    {
+      "id": "h-haende", "zeichen": "🧼", "was": "Hände waschen, mit Seife",
+      "warum": "Die am besten belegte einzelne Maßnahme gegen Atemwegsinfekte.",
+      "einschraenkung": "Die oft genannte Zahl stammt aus gemischten Gruppen. Der kinderspezifische Übersichtsartikel verzichtet bewusst auf eine gemeinsame Zahl und formuliert vorsichtig: Programme zur Handhygiene „können“ Atemwegsinfekte bei jüngeren Kindern senken.",
+      "quelle": "Cochrane-Übersichtsarbeit CD006207, Fassung von 2023; Willmott u. a., Archives of Disease in Childhood 2016"
+    },
+    {
+      "id": "h-rauchfrei", "zeichen": "🚭", "was": "Rauchfreie Wohnung",
+      "warum": "Der deutlichste nachgewiesene Zusammenhang überhaupt: raucht jemand im Haushalt, steigt das Risiko für Infekte der unteren Atemwege erheblich.",
+      "einschraenkung": "Die Zahlen, die dazu berichtet werden, stammen aus Untersuchungen an Kindern unter zwei Jahren. Für drei- bis fünfjährige Kinder ist genau diese Größenordnung nicht belegt; die Richtung ist es.",
+      "quelle": "Jones u. a., Respiratory Research 2011, Band 12"
+    },
+    {
+      "id": "h-impfen", "zeichen": "💉", "was": "Die von der STIKO empfohlenen Impfungen",
+      "warum": "Impfungen sind das Einzige auf dieser Liste, das gegen bestimmte Erreger wirklich schützt.",
+      "einschraenkung": "Welche Impfung für Ihr Kind empfohlen ist, steht im Impfkalender der STIKO und wird in der kinderärztlichen Praxis besprochen. Die Grippeimpfung ist in Deutschland für gesunde Kinder nicht allgemein empfohlen, sondern ab sechs Monaten bei erhöhter gesundheitlicher Gefährdung durch eine Grunderkrankung.",
+      "quelle": "Ständige Impfkommission (STIKO) am Robert Koch-Institut, Impfkalender und Antworten des RKI zur Influenza-Impfung"
+    },
+    {
+      "id": "h-lueften", "zeichen": "🪟", "was": "Lüften",
+      "warum": "Frische Luft im Raum ist sinnvoll und kostet nichts.",
+      "einschraenkung": "Ehrlich bleibt: das Umweltbundesamt sagt selbst, dass sich wissenschaftlich nicht eindeutig belegen lässt, ob Lüften in bestimmten Abständen einen nennenswerten Beitrag zur Infektionsvorbeugung leistet. Die bekannten Richtwerte und das Intervall von etwa zwanzig Minuten beziehen sich auf Unterrichtsräume, nicht auf Kitas und nicht auf Wohnungen.",
+      "quelle": "Umweltbundesamt, Hinweise zum Lüften in Unterrichtsräumen"
+    }
+  ],
+  "quelle": {
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Gruppe «ПОЧЕМУЧКИ» (jüngeres Vorschulalter, drei bis fünf Jahre), «Закаливание (обязательные мероприятия)», S. 125",
+    "rechte": "© НИО 2007. Übernommen ist ausschließlich die Liste der acht Punkte als Gliederung – um sie zu prüfen. Alle Texte dieser App sind Eigenproduktion.",
+    "geprueft": true,
+    "zahlen": { "massnahmen": 8 },
+    "nachgezaehlt": "Nachgezählt im Original: acht Punkte. Die Zahl des Katalogeintrags stimmt. Die Überschrift nennt sie „obligatorische Maßnahmen“ – für eine Einrichtung mit Tagesplan, nicht für eine Familie. Schon das ist ein Unterschied: eine Kita kann eine Raumtemperatur einhalten, eine Familie am Morgen nicht.",
+    "abweichung": "Der Katalogeintrag versprach, die acht Maßnahmen „evidenzbasiert gefiltert“ zu übernehmen – mit der Einordnung, was die deutsche Präventionsempfehlung stützt und was nicht. Das Ergebnis der Prüfung ist schärfer als erwartet: KEINE der acht ist als Infektvorbeugung bei Kindern von drei bis fünf Jahren belegt. Drei sind aus anderen Gründen gut (draußen sein, Hände waschen, barfuß laufen), drei gelten nur mit Einschränkung, zwei sind nicht übernommen. Nicht gebaut ist außerdem die Auswertung: der Eintrag nannte eine „Checkliste“, und eine Checkliste mit Ergebnis wäre eine Bewertung von Familien."
+  },
+  "ausgeschlossen": [
+    { "quellNr": "x01", "was": "Die Auswertung der Checkliste", "warum": "Keine Punkte, keine Stufe, keine Ampel, kein Ergebnis – weder über ein Kind noch über eine Familie (docs/02, EU-Verordnung über künstliche Intelligenz). Bei Maßnahmen ohne Belege wäre eine Bewertung doppelt sinnlos." },
+    { "quellNr": "x02", "was": "Jede Dosierung für kalte Anwendungen", "warum": "Es gibt Studien, die kleine kalte Teilanwendungen bei Kindern untersucht haben – Gesichtwaschen, Armbad, Fußbad, Wassertreten – mit Sekunden bis wenigen Minuten. Die jüngste dieser Arbeiten ist ein noch nicht begutachteter Vorabdruck von 2026, bei dem die Zufallszuteilung aufgegeben werden musste. Eine Sekundenangabe aus einer solchen Arbeit in einem Elternzettel wäre eine Genauigkeit, die es nicht gibt." },
+    { "quellNr": "x03", "was": "Die sechzehn Grad im Schlafzimmer", "warum": "Die Zahl kursiert als Abhärtungsregel. Belegbar ist eine andere: nicht mehr als achtzehn Grad in der Nacht, und das ist eine Komfort- und Schlafempfehlung, keine Infektvorbeugung." },
+    { "quellNr": "x04", "was": "Das Rippenbrett", "warum": "Ein Gerät aus dem Turnraum einer Einrichtung. Barfußlaufen auf wechselndem Untergrund braucht keins." },
+    { "quellNr": "x05", "was": "Der Satz „Abhärtung stärkt das Immunsystem“", "warum": "Er steht sinngemäß in vielen Ratgebern, auch auf Elternseiten, dort ohne Quelle. Die einzige randomisierte Studie bei Kindern von drei bis sieben Jahren mit häufigen Erkältungen fand über zwölf Monate keinen Unterschied." }
+  ]
+}

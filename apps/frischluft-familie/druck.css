@@ -1,0 +1,26 @@
+/* Druck: die Bilanz und das, was belegt hilft – ein Blatt, das man dem
+   Großelternteil oder der Kita in die Hand drücken kann. Die acht Punkte
+   stehen als Liste darauf, ohne Aufklapptext. Kein Haken, keine Punktzahl,
+   keine Namenszeile (docs/02). */
+.ffa-nur-druck { display: none; }
+.ffa-zu { display: none; }
+
+@media print {
+  .ffa-nur-bildschirm { display: none !important; }
+  .ffa-nur-druck { display: block !important; }
+  .ffa-zu { display: none !important; }
+  .ffa-massnahme button { display: none !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .ffa-bilanz, .ffa-hilft {
+    border: none; border-radius: 0; margin: 0 0 5mm; padding: 0; box-shadow: none;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .ffa-bilanz h2, .ffa-hilft h2 { font-size: 14pt; margin: 0 0 3mm; }
+  .ffa-bilanz p, .ffa-hilft p { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  .ffa-punkte { border: none; border-radius: 0; margin: 0 0 5mm; padding: 0; box-shadow: none; }
+  .ffa-punkte h2 { font-size: 14pt; margin: 0 0 3mm; }
+  .ffa-massnahme { border: none; box-shadow: none; margin: 0 0 2.5mm !important; padding: 0 !important; break-inside: avoid; }
+  .ffa-massnahme p { font-size: 10pt; line-height: 1.4; margin: 0 0 1.5mm; }
+  a[href]::after { content: ""; }
+}
