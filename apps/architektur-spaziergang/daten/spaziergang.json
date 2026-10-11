@@ -17,12 +17,13 @@
       "zeichen": "🏠",
       "name": "Fachwerkhaus",
       "art": "bauform",
-      "woranMan": "Ein Gitter aus Balken liegt sichtbar in der Wand: senkrechte, waagerechte und schräge Hölzer, dazwischen Flächen aus anderem Material.",
-      "fuerErwachsene": "Das sichtbare Holzgerüst ist das tragende Gerüst des Hauses; die Flächen zwischen den Balken – die Gefache – sind ausgefüllt, früher mit Lehm und Flechtwerk, später mit Ziegeln, und oft verputzt.",
-      "sicherheit": "vereinfachung",
-      "sicherheitText": "Dass die Balken tragen, ist die Bauweise. Dass man sie sieht, ist nicht überall so: viele Fachwerkhäuser sind vollständig verputzt.",
-      "gegenbeispiel": "Fachwerk ist nicht schwarz-weiß – die dunklen Balken gehen oft auf späteren Anstrich zurück, und regional gab es rote, ockerfarbene und grüne Fassungen. Solche Häuser gibt es außerdem in halb Europa, nicht nur hier.",
-      "impuls": "Wo liegen die Balken schräg – und wo gerade?"
+      "woranMan": "Ein Gitter aus Balken liegt sichtbar in der Wand: senkrechte Ständer, waagerechte Riegel – die immer nur zwischen zwei Ständern sitzen – und schräge Streben. Dazwischen Flächen aus anderem Material.",
+      "fuerErwachsene": "Das Holzgerüst IST das Tragwerk, nicht die Zierde: unten die Schwelle, oft erhöht auf einem Steinsockel gegen die Feuchtigkeit, darauf die Ständer, oben das Rähm, das die Deckenbalken trägt. Die schrägen Streben steifen die Wand aus. Die Felder dazwischen – die Gefache – sind nur gefüllt, meist mit Lehm, seltener mit Naturstein oder Ziegeln.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt ist das Gefüge und dass das Holz trägt. NICHT belegt ist, dass man es sehen muss: sichtbares Fachwerk war nicht der Normalzustand, und manches wurde erst im 20. Jahrhundert freigelegt – siehe Gegenbeispiel.",
+      "gegenbeispiel": "Viele Fachwerkhäuser sind verputzt, verschiefert oder mit Holz verkleidet – besonders auf der Wetterseite –, und man sieht vom Gerüst nichts. Fachwerk ist auch nicht schwarz-weiß: die dunklen Balken gehen oft auf späteren Anstrich zurück. Solche Häuser gibt es in halb Europa, nicht nur hier.",
+      "impuls": "Wo liegen die Balken schräg – und wo gerade?",
+      "quelle": "Ein Fachportal für Architektur und digitalisierte Baulehrwerke einer Universitätsbibliothek zu Schwelle, Ständer, Riegel, Rähm, Streben und Gefachen."
     },
     {
       "id": "b-wasserturm",
@@ -30,23 +31,25 @@
       "name": "Wasserturm",
       "art": "bauform",
       "woranMan": "Ein schmaler hoher Schaft mit einem dicken Kopf obenauf, fast immer ohne Fenster in der Mitte.",
-      "fuerErwachsene": "Oben steht ein Behälter voll Wasser. Weil er hoch steht, drückt das Wasser von allein in die Leitungen – der Turm ist kein Schmuck, sondern das Gerät.",
-      "sicherheit": "vereinfachung",
-      "sicherheitText": "Dass die Höhe den Druck macht, ist der Grund für die Form. Wie viel Druck und ob ein Ort überhaupt einen Turm braucht, hängt vom Gelände ab.",
-      "gegenbeispiel": "Viele Wassertürme sind außer Dienst und heute Wohnung, Büro oder Aussichtspunkt. Orte am Hang brauchen keinen Turm: dort liegt der Behälter oben am Berg.",
-      "impuls": "Was ist das höchste Haus, das wir von hier aus sehen?"
+      "fuerErwachsene": "Oben steht ein Behälter voll Wasser. Der Turm ersetzt einen Hügel, der fehlt: wo kein hoher Punkt in der Nähe liegt, wird einer gebaut, damit das Wasser von allein in die Leitungen drückt. Liegt der Ort am Hang, steht der Behälter dort oben – dann braucht es keinen Turm.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt ist der Zweck: der Turm wird errichtet, wenn keine ausreichend hohen Geländeerhebungen in der Nähe sind. Nicht belegt – und darum nicht hier – ist die bekannte Faustregel, wie viel Druck zehn Meter Höhe geben.",
+      "gegenbeispiel": "Viele Wassertürme sind außer Dienst und heute Wohnung, Büro oder Aussichtspunkt.",
+      "impuls": "Was ist das höchste Haus, das wir von hier aus sehen?",
+      "quelle": "Bayerisches Landesamt für Umwelt, Trinkwasserspeicherung (Speicherarten: Wasserturm, Erdhochbehälter, Tiefbehälter)."
     },
     {
       "id": "b-kirchturm",
       "zeichen": "⛪",
       "name": "Kirche mit Turm",
       "art": "bauform",
-      "woranMan": "Ein Turm, der höher ist als das Haus daneben, mit Schallöffnungen oder einer Uhr, oft mit Kreuz, Hahn oder Kugel obenauf.",
-      "fuerErwachsene": "Im Turm hängen die Glocken; von oben sind sie weit zu hören. Und ein Turm ist von weit her zu sehen.",
-      "sicherheit": "offen",
-      "sicherheitText": "Warum Kirchen überhaupt Türme haben, ist nicht mit einem Satz beantwortet – Glocken sind ein Grund, Sichtbarkeit und Darstellung sind andere. Diese App behauptet dazu nicht mehr, als sie weiß.",
+      "woranMan": "Ein Turm, der höher ist als das Haus daneben. Oben, wo die Glocken hängen, sind keine Fenster, sondern Schallluken – Öffnungen, oft mit schrägen Lamellen.",
+      "fuerErwachsene": "Die Glockenstube hat statt Fenstern Schallluken, damit der Klang nach außen kommt. Warum Kirchen überhaupt Türme haben, ist damit nicht beantwortet: Türme wurden vielfach erst später neben eine ältere Kirche gestellt, Zahl und Höhe galten als Rangzeichen, und manche Orden verzichteten bewusst darauf. Als Wachtturm und Feuermeldestelle wurden sie ebenfalls benutzt.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Belegt sind die Schallluken und ihr Zweck. NICHT belegt ist der Satz, den fast jeder kennt: dass der Turm hoch sei, damit die Glocken weit zu hören sind – dafür war beim Bau keine Quelle zu finden. Er steht deshalb nicht hier.",
       "gegenbeispiel": "Es gibt Kirchen ohne Turm, und es gibt Türme ohne Kirche: Rathausturm, Wasserturm, Aussichtsturm, Funkturm.",
-      "impuls": "Hörst du von hier eine Glocke? Und wenn sie schlägt – wie oft?"
+      "impuls": "Hörst du von hier eine Glocke? Und wenn sie schlägt – wie klingt sie?",
+      "quelle": "Zu den Schallluken ein Fachportal für Architektur (Stichwort Glockenstube); zur späteren Hinzufügung der Türme und ihren Nebenfunktionen nur eine Sekundärquelle."
     },
     {
       "id": "b-scheune",
@@ -54,11 +57,12 @@
       "name": "Scheune oder Stall",
       "art": "bauform",
       "woranMan": "Ein großes Tor, breiter und höher als eine Haustür, und auffällig wenige Fenster.",
-      "fuerErwachsene": "Durch das Tor muss etwas Großes hinein: früher der beladene Wagen, heute der Traktor. Fenster braucht Heu nicht.",
-      "sicherheit": "vereinfachung",
-      "sicherheitText": "Die Erklärung passt zur Form, ist aber nicht für jedes Gebäude geprüft. Welche Tore für welche Wagen gebaut wurden, unterscheidet sich von Gegend zu Gegend.",
-      "gegenbeispiel": "Viele Scheunen sind längst Garage, Werkstatt oder Wohnhaus – manche mit neuen Fenstern im alten Tor.",
-      "impuls": "Was müsste durch dieses Tor passen?"
+      "fuerErwachsene": "Hinter dem großen Tor lag die Tenne: dort wurde der Wagen abgeladen und von Hand gedroschen. Daneben, in den Bansen, lagerte das Getreide. Manche Scheunen haben zwei Tore gegenüber – dann konnte der Wagen durchfahren. Nach den Mähdreschern wurde aus der Tenne oft die Traktorgarage.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt sind die Zweiteilung in Tenne und Bansen, die Durchfahrtscheune und der Umbau zur Garage. NICHT belegt ist die beliebte Erklärung, die zwei Tore seien für den Durchzug beim Worfeln da. Und eine Form, an der man Scheune von Stall unterscheiden könnte, war nicht zu belegen – das ist eine echte Lücke dieser Karte.",
+      "gegenbeispiel": "Viele Scheunen sind längst Garage, Werkstatt oder Wohnhaus – manche mit neuen Fenstern im alten Tor. Ob ein Gebäude Scheune oder Stall war, sagt die Form nicht.",
+      "impuls": "Was müsste durch dieses Tor passen?",
+      "quelle": "Landesamt für Bauforschung zur Durchfahrtscheune eines untersuchten Dorfes; Enzyklopädie-Definition von 1870, wiedergegeben in einem Journal der Denkmalpflege, zu Bansen und Tenne."
     },
     {
       "id": "b-laden",
@@ -90,23 +94,24 @@
       "name": "Brücke",
       "art": "bauform",
       "woranMan": "Entweder ein Bogen unter dem Weg oder ein gerader Balken, der auf Pfeilern liegt.",
-      "fuerErwachsene": "Die Brücke muss ihr eigenes Gewicht und das der Fahrzeuge bis zum Ufer bringen. Ein Bogen gibt die Last schräg nach außen ab, ein Balken braucht Stützen unter sich.",
-      "sicherheit": "offen",
-      "sicherheitText": "Dass Bogen und Balken die Last anders weitergeben, ist Tragwerkslehre; diese App gibt es als Bild weiter, nicht als Erklärung, die hier geprüft wurde.",
+      "fuerErwachsene": "Die Brücke muss ihr Gewicht bis zum Ufer bringen. Ein Balken wird dabei oben zusammengedrückt und unten auseinandergezogen, und er braucht Stützen unter sich. Ein Bogen drückt zusätzlich waagerecht nach außen, gegen seine Auflager – je besser seine Form dem Verlauf der Kräfte folgt, desto weniger muss er sich biegen.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "So steht es in Lehrmaterial zur Baustatik; ein Lehrbuch wurde dafür nicht herangezogen. NICHT belegt – und darum nicht hier – ist der meistwiederholte Satz dazu: dass Stein keinen Zug aushalte und der Bogen deshalb die einzige Möglichkeit gewesen sei.",
       "gegenbeispiel": "Nicht jede Brücke führt über Wasser: es gibt Bahnbrücken, Fußgängerbrücken über die Straße und Brücken über ein Tal.",
       "impuls": "Was ist unter dieser Brücke – und was oben drauf?"
     },
     {
       "id": "b-halle",
       "zeichen": "🏟️",
-      "name": "Weite Halle",
+      "name": "Weite Halle ohne Stütze",
       "art": "bauform",
-      "woranMan": "Ein sehr weites Dach ohne Stütze in der Mitte – Markthalle, Bahnsteighalle, Turnhalle, Werkhalle.",
-      "fuerErwachsene": "In der Mitte darf nichts stehen, weil dort Platz gebraucht wird: für Stände, für einen Zug, für ein Spielfeld. Deshalb liegt das Dach weit gespannt auf den Außenwänden.",
-      "sicherheit": "vereinfachung",
-      "sicherheitText": "Der Zusammenhang zwischen freier Mitte und Nutzung stimmt der Richtung nach. Welche Spannweite wie erreicht wird, ist Ingenieursache und steht hier nicht.",
+      "woranMan": "Ein sehr weites Dach ohne Stütze in der Mitte – über Bahnsteigen, in einer Markthalle, in einer Turnhalle. Manchmal sieht man unten, wo ein Bogen ansetzt, ein waagerechtes Zugband.",
+      "fuerErwachsene": "Bei den großen Bahnsteighallen ist der Grund überliefert: die weite Spannweite sollte die Zwischenpfeiler ersparen, die sonst nötig gewesen wären. Wo mit Bögen gebaut wurde, spannt zwischen den Bogenfüßen ein Zugband – weil der Bogen nach außen drückt.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt ist das Motiv für die Bahnsteighalle samt Zugband. NICHT belegt ist dasselbe für die Markthalle: dort ist der Zweck überliefert – geregelter Markt, bessere Hygiene –, das Spannweiten-Motiv nicht.",
       "gegenbeispiel": "Auch große Hallen haben manchmal Stützen – und ein Dach ohne Stützen heißt nicht, dass die Halle öffentlich ist.",
-      "impuls": "Wo steht in dieser Halle etwas, das das Dach hält?"
+      "impuls": "Wo steht in dieser Halle etwas, das das Dach hält?",
+      "quelle": "Digitalisierte historische Bauliteratur einer Universitätsbibliothek zu einer 73 m weit gespannten Bahnsteighalle mit steifen Bögen und Zugbändern zwischen den Bogenfüßen."
     },
     {
       "id": "a-kita",
@@ -125,24 +130,26 @@
       "zeichen": "🚉",
       "name": "Bahnhof",
       "art": "ausstattung",
-      "woranMan": "Gleise, ein Bahnsteig, eine Anzeige, ein Dach über dem Warten.",
-      "nichtAmHaus": "Das Empfangsgebäude kann aussehen wie ein Rathaus, ein Wohnhaus oder ein Glaskasten – oder ganz fehlen. Was den Bahnhof macht, liegt daneben: die Gleise.",
-      "fuerErwachsene": "Der Bahnsteig und sein Dach sind die eigentliche Einrichtung; viele kleine Haltepunkte haben gar kein Gebäude mehr.",
-      "sicherheit": "offen",
-      "sicherheitText": "Beschreibung dessen, was zu sehen ist – keine geprüfte Aussage über Bahnhofsbau.",
-      "impuls": "Woran merkt man hier, wo der Zug hält?"
+      "woranMan": "Gleise, ein Bahnsteig, eine Anzeige, ein Dach über dem Warten – dessen Stützen auffällig weit vom Gleis weg stehen.",
+      "nichtAmHaus": "Das Gebäude kann aussehen wie ein Rathaus, ein Wohnhaus oder ein Glaskasten – oder ganz fehlen. „Empfangsgebäude“ ist nicht einmal ein Rechtsbegriff: die Eisenbahn-Bau- und Betriebsordnung definiert ihn nicht. Den Bahnhof macht, was daneben liegt: Gleise und mindestens eine Weiche.",
+      "fuerErwachsene": "Das Bahnsteigdach ist Wetterschutz. Dass seine Stützen so weit weg stehen und das Dach weit auskragt, hat einen Grund: wie nah ein festes Teil der Gleismitte kommen darf, ist geregelt – ein Dach, das zu nah stand, ist deshalb schon abgerissen worden.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt über die Eisenbahn-Bau- und Betriebsordnung und das Regelwerk der Bahn. Der Wortlaut der Bahn-Richtlinie selbst war nicht einsehbar; gelesen wurden die Verordnung und eine Unterlage zu Einhausungen.",
+      "impuls": "Woran merkt man hier, wo der Zug hält?",
+      "quelle": "Eisenbahn-Bau- und Betriebsordnung (EBO) § 4 zum Begriff des Bahnhofs und § 13 zu Bahnsteigen und zum Abstand fester Gegenstände von der Gleismitte; Richtlinie 81302 „Bahnsteige und ihre Zugänge“ der Bahn, Neuausgabe vom 1. Dezember 2022."
     },
     {
       "id": "a-feuerwehr",
       "zeichen": "🚒",
       "name": "Feuerwehrhaus",
       "art": "ausstattung",
-      "woranMan": "Mehrere große Tore nebeneinander, breit genug für ein Fahrzeug, und eine Einfahrt ohne Bordstein.",
-      "nichtAmHaus": "Ein hoher schmaler Turm an einem Feuerwehrhaus ist ein Schlauchturm. Neue Wachen haben meist keinen mehr – die Form verrät das Haus also nur manchmal.",
-      "fuerErwachsene": "Die Tore sind so breit und hoch, weil große Fahrzeuge schnell herausfahren müssen, und zwar alle gleichzeitig nebeneinander.",
-      "sicherheit": "offen",
-      "sicherheitText": "Wozu ein Schlauchturm diente, wird oft mit dem Trocknen der Schläuche erklärt; diese App hat das beim Bau nicht belegen können und sagt es deshalb nicht.",
-      "impuls": "Warum sind die Tore so breit, was meinst du?"
+      "woranMan": "Mehrere große Tore nebeneinander, breit genug für ein Fahrzeug, eine Einfahrt ohne Bordstein – und manchmal ein schmaler hoher Turm.",
+      "nichtAmHaus": "Den Turm haben längst nicht alle: wo die Schlauchpflege für mehrere Wehren an einer Stelle zusammengefasst ist, steht keiner. Ein Feuerwehrhaus im Dorf hat oft bewusst keinen.",
+      "fuerErwachsene": "Die Tore sind so breit und hoch, weil große Fahrzeuge schnell herausfahren müssen, und zwar nebeneinander. Der schmale Turm heißt umgangssprachlich Schlauchturm; die geltende Norm nennt ihn Feuerwehrübungsturm und zählt mehrere Zwecke auf – Aus- und Fortbildung, Übungen, Antennenträger und, bis heute, das Trocknen von Schläuchen. Dass die Norm von „Schlauchtrockenturm“ über „Feuerwehrturm“ zu „Feuerwehrübungsturm“ umbenannt wurde, zeigt, wie sich die Aufgabe verschoben hat.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt über die Titelgeschichte der Norm und über Förderrecht, das Voll- und Halbtürme samt automatischer Schlauchaufhängevorrichtung auflistet. Gelesen wurde dabei der einführende Beitrag zur Norm, nicht der Normtext selbst: Normen sind kostenpflichtig. NICHT belegt ist, WARUM Schläuche getrocknet werden müssen – die naheliegende Erklärung über Naturfasern war nicht zu belegen.",
+      "impuls": "Warum sind die Tore so breit, was meinst du?",
+      "quelle": "DIN 14092-3:2024-06 „Feuerwehrhäuser – Teil 3: Feuerwehrübungsturm“, Vorgängerausgabe von 1992 unter dem Titel „Schlauchtrockenturm, Übungswand“; dazu eine Feuerwehr-Zuwendungsrichtlinie mit Förderliste für Voll- und Halbturm nach DIN 14092-3."
     },
     {
       "id": "a-schule",
@@ -150,11 +157,12 @@
       "name": "Schule",
       "art": "ausstattung",
       "woranMan": "Ein Hof mit Markierungen, viele Fahrradstände, eine Reihe gleich großer Fenster, oft ein Zaun und ein Schild mit Namen.",
-      "nichtAmHaus": "Schulgebäude gibt es aus allen Zeiten und in allen Formen. Die Reihe gleicher Fenster weist auf gleich große Räume hin – das kann aber auch ein Bürohaus sein.",
-      "fuerErwachsene": "Viele gleich große Räume nebeneinander ergeben eine Reihe gleicher Fenster; der Hof ist die Fläche, die eine Pause braucht.",
-      "sicherheit": "offen",
-      "sicherheitText": "Der Zusammenhang leuchtet ein, wurde hier aber nicht an Fachliteratur geprüft. Zu Fensterflächen in Schulen gibt es Vorschriften, die diese App nicht nachgelesen hat.",
-      "impuls": "Was würdest du in diesem Hof zuerst machen?"
+      "nichtAmHaus": "Schulgebäude gibt es aus allen Zeiten und in allen Formen. Die Reihe gleich großer Fenster weist auf gleich große Räume hin – das kann auch ein Bürohaus sein.",
+      "fuerErwachsene": "Die freie Fläche neben dem Gebäude ist nicht übrig geblieben, sie ist vorgeschrieben: in der Schulbauverordnung, die beim Bau dieser App nachgelesen wurde, steht eine Pausenfläche je Schülerin und Schüler. Wie viel, ist Landesrecht und von Land zu Land verschieden.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Belegt ist, dass eine Pausenfläche vorgeschrieben ist – in EINEM nachgelesenen Landesrecht. Eine Zahl nennt diese App nicht: die Angaben widersprechen sich. NICHT belegt ist, dass die langen Fensterreihen auf Tageslichtvorschriften zurückgehen; in der nachgelesenen Verordnung steht zu Fenstern nichts.",
+      "impuls": "Was würdest du in diesem Hof zuerst machen?",
+      "quelle": "Schulbauverordnung eines Bundeslandes (BaySchulBauV vom 30. Dezember 1994), § 2 zur Pausenfläche je Schülerin und Schüler; zu Fenstern, Fensterflächen oder Tageslicht enthält diese Verordnung nichts."
     },
     {
       "id": "n-rathaus",
@@ -162,9 +170,10 @@
       "name": "Rathaus",
       "art": "nichtErkennbar",
       "woranMan": "Kein Merkmal, das immer stimmt.",
-      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Eine Form, die alle teilen, hat das Rathaus nicht. Wer glaubt, man erkenne es an „so einem alten Haus mit Turm“, liegt in der Hälfte der Städte falsch.",
+      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Die Fachliteratur arbeitet deshalb nicht mit einer Form, sondern mit einer Typologie: allein für die mittelalterlichen Rathäuser werden drei Typen unterschieden, und eine Typologie mit drei Typen ist der Gegenbeweis zur typischen Form. Häufig ist nur ein Schema – unten eine offene Halle, oben ein großer Saal –, und ein häufiges Schema ist kein Merkmal. Auch die Deutung „der Turm zeigt, dass die Bürger frei waren“ ist jünger als die Rathäuser: sie stammt aus dem 19. Jahrhundert.",
       "woranDoch": "Was es verrät, ist kein Bauteil: die Flagge, das Wappen, das Schild an der Tür, der Briefkasten für Anträge.",
-      "impuls": "Wie würden wir herausfinden, ob hier das Rathaus ist?"
+      "impuls": "Wie würden wir herausfinden, ob hier das Rathaus ist?",
+      "quelle": "Eine Fachmonographie zu den mittelalterlichen Rathäusern in Deutschland, die drei Typen nach der Laube unterscheidet, nach einer Fachrezension; zum Turm als Zeichen der Zünfte die Stadtkonservatorin bzw. der Stadtkonservator einer Großstadt."
     },
     {
       "id": "n-nutzung",

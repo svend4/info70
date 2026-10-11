@@ -93,8 +93,15 @@ export const WIRKVERSPRECHEN = /\b(?:fördert|verbessert|steigert|trainiert|stä
 export const JAHRESZAHL = /\b(?:1[0-9]{3}|20[0-9]{2})\b/;
 
 /**
- * Ein Epochenname. Nur in den KARTENTEXTEN verboten: die Ausschlussliste muss
- * sagen duerfen, welche Woerter nicht vorkommen (Falle A).
+ * Ein Epochenname. Verboten nur auf der KINDSEITE einer Karte - in der Frage
+ * und in dem, worauf man zeigt. Der Grund der Regel ist, dass „Gotik" oder
+ * „Gruenderzeit" einem Kind vor einem Haus nichts erklaeren; er verlangt
+ * nicht, dass eine Quellenangabe die Epoche ihrer Fachliteratur verschweigt.
+ * Die Rathaus-Karte muss sagen duerfen, dass die Fachliteratur fuer die
+ * MITTELALTERLICHEN Rathaeuser drei Typen unterscheidet - sonst koennte sie
+ * den Mythos der typischen Form nicht widerlegen (Falle A, siebenundzwanzig-
+ * stes Mal). Dieselbe Grenze zieht schon „Design-Entdecker" fuer seinen
+ * Kindertext.
  */
 export const EPOCHE = /\b(?:Gotik|gotisch\w*|Barock|barock\w*|Romanik|romanisch\w*|Renaissance|Gründerzeit|Bauhaus|Jugendstil|Klassizismus|klassizistisch\w*|Mittelalter|mittelalterlich\w*|Ritter\w*)\b/i;
 
@@ -136,6 +143,16 @@ export const NICHT_GEPRUEFT = Object.freeze({
 /** Einzelne Feldnamen, die ueberall ausgenommen sind (Lehre aus Nr. 63). */
 export const NICHT_GEPRUEFT_FELDER = Object.freeze({});
 
+/**
+ * Feldausnahme fuer EIN Netz statt fuer alle: eine Quellenangabe traegt das
+ * Jahr ihrer Norm, ihrer Verordnung oder ihrer Ausgabe. Das ist keine
+ * Behauptung ueber ein Gebaeude - und genau das verbietet `JAHRESZAHL`. Alle
+ * anderen Netze laufen weiter ueber die Quellenangaben.
+ */
+export const JAHRESZAHL_ERLAUBT_IN = Object.freeze({
+  quelle: 'eine Quellenangabe nennt das Jahr ihrer Norm oder Ausgabe – das ist keine Angabe über ein Gebäude',
+});
+
 /** Alle Texte der Daten ausser den benannten Ausnahmen. */
 export function angebotsTexte(daten) {
   const t = [];
@@ -160,6 +177,19 @@ export function kartenTexte(daten) {
   for (const k of daten?.karten ?? []) {
     for (const [feld, wert] of Object.entries(k)) {
       if (typeof wert === 'string' && nichtLeer(wert)) t.push([`Karte ${k.id}.${feld}`, wert]);
+    }
+  }
+  return t;
+}
+
+/** Die Kindseite einer Karte: die Frage und das, worauf man zeigt. */
+export const KINDSEITE_FELDER = Object.freeze(['impuls', 'woranMan']);
+
+export function kindseiteTexte(daten) {
+  const t = [];
+  for (const k of daten?.karten ?? []) {
+    for (const feld of KINDSEITE_FELDER) {
+      if (nichtLeer(k[feld])) t.push([`Karte ${k.id}.${feld}`, k[feld]]);
     }
   }
   return t;
@@ -317,12 +347,14 @@ export function pruefeDaten(daten) {
     if (BEWERTUNG.test(text)) fehler.push(`${wo}: eine Bewertung`);
     if (EINSTUFUNG.test(text)) fehler.push(`${wo}: eine Einstufung des Kindes`);
     if (WIRKVERSPRECHEN.test(text)) fehler.push(`${wo}: Wirkversprechen`);
-    if (JAHRESZAHL.test(text)) fehler.push(`${wo}: eine Jahreszahl – diese App hat keine geprüften Daten zu einem Gebäude`);
+    if (JAHRESZAHL.test(text) && !(wo.split('.').at(-1) in JAHRESZAHL_ERLAUBT_IN)) {
+      fehler.push(`${wo}: eine Jahreszahl – diese App hat keine geprüften Daten zu einem Gebäude`);
+    }
     if (ORTSNAME.test(text)) fehler.push(`${wo}: ein Ortsname – die App kennt Ihren Ort nicht`);
     if (KYRILLISCH.test(text)) fehler.push(`${wo}: kyrillisch – die Quelle gehört in das Quellfeld`);
   }
-  for (const [wo, text] of kartenTexte(daten)) {
-    if (EPOCHE.test(text)) fehler.push(`${wo}: ein Epochenname`);
+  for (const [wo, text] of kindseiteTexte(daten)) {
+    if (EPOCHE.test(text)) fehler.push(`${wo}: ein Epochenname auf der Kindseite`);
   }
   return fehler;
 }

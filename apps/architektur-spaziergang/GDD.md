@@ -56,10 +56,32 @@ Jedes `fuerErwachsene` trägt ein `sicherheit`:
 | `vereinfachung` | stimmt der Richtung nach, ist aber zugespitzt | `sicherheitText` |
 | `offen` | hier nicht geprüft | `sicherheitText` |
 
-Deshalb steht beim Feuerwehrhaus **nicht**, der schmale Turm habe dem Trocknen
-der Schläuche gedient. Das ist die verbreitete Erklärung; sie war beim Bau
-dieser App nicht zu belegen und steht darum als Lücke da. Eine Erklärung, die
-sich „belegt" nennt und keine Quelle mitbringt, lässt die App nicht starten.
+Eine Erklärung, die sich „belegt" nennt und keine Quelle mitbringt, lässt die
+App nicht starten.
+
+Die Faktenprüfung lief in zwei Runden (Recherche, dann Gegenprobe). Ergebnis:
+**sechs Karten sind belegt** — der Wasserturm als Ersatz für einen fehlenden
+Hügel (amtliche Quelle: er wird errichtet, wenn keine ausreichend hohen
+Geländeerhebungen in der Nähe sind), das Fachwerk-Gefüge, Tenne und Bansen der
+Scheune samt Durchfahrtscheune, Bahnsteigdach und Abstand fester Gegenstände
+von der Gleismitte, der Feuerwehrübungsturm nach DIN 14092-3 und die
+Bahnsteighalle mit ihrem Zugband.
+
+**Sechs verbreitete Erklärungen stehen nicht in der App**, weil keine Quelle zu
+finden war: dass der Kirchturm hoch sei, damit die Glocken weit zu hören sind;
+dass die zwei Scheunentore den Durchzug zum Worfeln erzeugen sollten; dass
+Schulen Fensterbänder wegen Tageslichtvorschriften haben; dass Stein keinen Zug
+aushalte und der Bogen deshalb die einzige Möglichkeit war; dass Markthallen
+ihre Spannweite für frei aufstellbare Stände brauchten; und warum Schläuche
+überhaupt getrocknet werden müssen.
+
+**Eine Karte war falsch und ist korrigiert:** sie sagte, das Trocknen der
+Schläuche sei nicht zu belegen gewesen. Es ist normativ bis heute genannt — und
+die Norm selbst dokumentiert die Verschiebung der Aufgabe, denn sie hieß 1992
+noch „Schlauchtrockenturm, Übungswand" und heute „Feuerwehrübungsturm". Was
+nicht zu belegen war, ist die Begründung dahinter. Gelesen wurde dabei der
+einführende Beitrag zur Norm, nicht der Normtext: Normen sind kostenpflichtig,
+und das steht im `sicherheitText` der Karte.
 
 Jede `bauform`-Karte braucht außerdem ihr `gegenbeispiel`: es gibt Kirchen ohne
 Turm, Wassertürme ohne Wasser, Scheunen, die Garagen sind. Eine Erkennungsregel
@@ -110,12 +132,21 @@ Fahrbahn, kein Grundstück und kein Klingeln, keine Menschen fotografieren.
   **und** gewöhnliche Wörter („eine weite Halle", „zum Essen", „der
   Pausenhof"). Getroffen wird die Konstruktion, nicht das Wort — Falle A zum
   sechsundzwanzigsten Mal.
-- `EPOCHE` gilt nur für die Kartentexte, damit die Ausschlussliste sagen darf,
-  welche Wörter nicht vorkommen.
+- `EPOCHE` gilt nur für die **Kindseite** einer Karte (`impuls`, `woranMan`).
+  Der Grund der Regel ist, dass „Gotik" einem Kind vor einem Haus nichts
+  erklärt; er verlangt nicht, dass eine Quellenangabe die Epoche ihrer
+  Fachliteratur verschweigt. Die Rathaus-Karte muss sagen dürfen, dass die
+  Fachliteratur für die **mittelalterlichen** Rathäuser drei Typen
+  unterscheidet — ohne das lässt sich der Mythos der typischen Form nicht
+  widerlegen. Falle A zum siebenundzwanzigsten Mal.
+- `JAHRESZAHL_ERLAUBT_IN` ist eine Ausnahme für **ein Feld und ein Netz**: eine
+  Quellenangabe trägt das Jahr ihrer Norm oder Ausgabe, und das ist keine
+  Angabe über ein Gebäude. Alle anderen Netze laufen weiter über die
+  Quellenangaben — ein Test beweist es mit einer eingeschmuggelten Erwartung.
 - Gespeichert wird genau eine Liste: `asp-auswahl`, die gewählten Karten. Mit
   `datenKarte` samt Löschknopf. Ohne Auswahl druckt die App alle Karten — ein
   leeres Blatt wäre kein Blatt.
-- 22 Tests.
+- 24 Tests.
 
 Quelle: «Пралеска» © НИО 2007, S. 274–276 und S. 278 — übernommen sind Konzept
 und Struktur, alle Formulierungen sind Eigenproduktion.

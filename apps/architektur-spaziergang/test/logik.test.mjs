@@ -4,7 +4,8 @@ import { readFile } from 'node:fs/promises';
 import {
   ARTEN, SICHERHEITEN, EINORDNUNGEN, ZIELE, DENKMAELER_DER_QUELLE, KLEINE_FORMEN_DER_QUELLE,
   DRUCK_ABSAETZE, ERWARTUNG, BEWERTUNG, EINSTUFUNG, WIRKVERSPRECHEN, JAHRESZAHL, EPOCHE, ORTSNAME,
-  NICHT_GEPRUEFT, angebotsTexte, kartenTexte, kinderfragen, karteVon, kartenNachArt, pruefeDaten,
+  NICHT_GEPRUEFT, JAHRESZAHL_ERLAUBT_IN, KINDSEITE_FELDER,
+  angebotsTexte, kartenTexte, kindseiteTexte, kinderfragen, karteVon, kartenNachArt, pruefeDaten,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/spaziergang.json', import.meta.url), 'utf8'));
@@ -57,7 +58,7 @@ test('ohne die Karten „nicht erkennbar" wird die App abgelehnt', () => {
 
 test('eine Erklärung, die sich „belegt" nennt, braucht ihre Quelle', () => {
   const d = kopie();
-  const k = d.karten.find((x) => x.fuerErwachsene);
+  const k = d.karten.find((x) => x.fuerErwachsene && !x.quelle);
   k.sicherheit = 'belegt';
   delete k.quelle;
   assert.ok(pruefeDaten(d).some((f) => /dann ist es nicht belegt/.test(f)));
@@ -160,16 +161,41 @@ test('die Textnetze greifen – Erwartung, Bewertung, Einstufung, Wirkverspreche
   assert.ok(!WIRKVERSPRECHEN.test('Die Höhe erzeugt den Druck in der Leitung.'));
 });
 
-test('Jahreszahlen und Epochennamen sind in den Karten gesperrt', () => {
-  assert.ok(JAHRESZAHL.test('Erbaut 1873.'));
-  assert.ok(JAHRESZAHL.test('Im Jahr 2019 umgebaut.'));
+test('Epochennamen sind auf der Kindseite gesperrt, nicht in der Quellenangabe', () => {
   assert.ok(EPOCHE.test('ein gotisches Fenster'));
   assert.ok(EPOCHE.test('So haben die Ritter gewohnt.'));
   assert.ok(EPOCHE.test('Gründerzeit'));
-  for (const [wo, text] of kartenTexte(daten)) {
-    assert.ok(!EPOCHE.test(text), `${wo}: ${text}`);
+  assert.deepEqual([...KINDSEITE_FELDER], ['impuls', 'woranMan']);
+  assert.equal(kindseiteTexte(daten).length, daten.karten.length * 2);
+  for (const [wo, text] of kindseiteTexte(daten)) assert.ok(!EPOCHE.test(text), `${wo}: ${text}`);
+  // Die Rathaus-Karte MUSS die Epoche ihrer Fachliteratur nennen duerfen:
+  // ohne „mittelalterliche Rathaeuser" liesse sich der Mythos der typischen
+  // Form nicht widerlegen (Falle A, siebenundzwanzigstes Mal).
+  assert.ok(EPOCHE.test(karteVon(daten, 'n-rathaus').warumNicht));
+  const d = kopie();
+  karteVon(d, 'n-rathaus').impuls = 'Ist das ein gotisches Fenster?';
+  assert.ok(pruefeDaten(d).some((f) => /Epochenname auf der Kindseite/.test(f)));
+});
+
+test('Jahreszahlen sind gesperrt – außer in der Quellenangabe', () => {
+  assert.ok(JAHRESZAHL.test('Erbaut 1873.'));
+  assert.ok(JAHRESZAHL.test('Im Jahr 2019 umgebaut.'));
+  assert.deepEqual(Object.keys(JAHRESZAHL_ERLAUBT_IN), ['quelle']);
+  for (const [wo, text] of angebotsTexte(daten)) {
+    if (wo.split('.').at(-1) in JAHRESZAHL_ERLAUBT_IN) continue;
     assert.ok(!JAHRESZAHL.test(text), `${wo}: ${text}`);
   }
+  // Eine Normausgabe darf ihr Jahr tragen ...
+  assert.ok(JAHRESZAHL.test(karteVon(daten, 'a-feuerwehr').quelle));
+  // ... eine Erklärung nicht.
+  const d = kopie();
+  karteVon(d, 'a-feuerwehr').fuerErwachsene += ' Gebaut 1965.';
+  assert.ok(pruefeDaten(d).some((f) => /Jahreszahl/.test(f)));
+  // Und die Ausnahme gilt nur für dieses eine Netz: alle anderen laufen
+  // weiter über die Quellenangaben.
+  const e = kopie();
+  karteVon(e, 'a-feuerwehr').quelle += ' Danach können Sie die Karte abhaken.';
+  assert.ok(pruefeDaten(e).some((f) => /Erwartung/.test(f)));
 });
 
 test('der Ortsname-Netz trifft Städte, aber nicht die weite Halle', () => {
@@ -184,6 +210,7 @@ test('der Ortsname-Netz trifft Städte, aber nicht die weite Halle', () => {
 
 test('kein Text der App verletzt die Netze', () => {
   for (const [wo, text] of angebotsTexte(daten)) {
+    if (wo.split('.').at(-1) in JAHRESZAHL_ERLAUBT_IN) continue;
     assert.ok(!ERWARTUNG.test(text), `${wo}: Erwartung`);
     assert.ok(!BEWERTUNG.test(text), `${wo}: Bewertung`);
     assert.ok(!EINSTUFUNG.test(text), `${wo}: Einstufung`);
@@ -191,6 +218,9 @@ test('kein Text der App verletzt die Netze', () => {
     assert.ok(!JAHRESZAHL.test(text), `${wo}: Jahreszahl`);
     assert.ok(!ORTSNAME.test(text), `${wo}: Ortsname`);
   }
+  // Ortsnamen gelten auch in Quellenangaben: eine Fundstelle aus einem
+  // bestimmten Land darf nicht wie eine bundesweite Regel klingen.
+  for (const k of daten.karten) if (k.quelle) assert.ok(!ORTSNAME.test(k.quelle), k.id);
   // Die Pruefung ist umgedreht: geprueft wird der REST.
   assert.ok(angebotsTexte(daten).length > 200);
   for (const feld of Object.keys(NICHT_GEPRUEFT)) assert.ok(feld in daten, feld);
@@ -207,4 +237,21 @@ test('die Quelle ist geprüft und nennt ihre Zählung', () => {
   assert.match(daten.quelle.nachgezaehlt, /четырнадцать|14/);
   assert.match(daten.quelle.rechte, /НИО 2007/);
   assert.match(daten.quelle.abweichung, /своей\s+местности/);
+});
+
+test('jede Quellenangabe wird auch angezeigt – auch ohne Erklärung', async () => {
+  // Die Rathaus-Karte erklaert nichts (sie sagt, dass es nichts zu erkennen
+  // gibt) und hat trotzdem eine Quelle. Wird die Quelle nur im Block der
+  // Erklaerung gerendert, ist sie toter Datenbestand.
+  const app = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const quellenZeilen = app.split('\n').filter((z) => /k\.quelle/.test(z));
+  assert.ok(quellenZeilen.length >= 1, 'app.mjs rendert k.quelle nicht');
+  const ohneErklaerung = daten.karten.filter((k) => k.quelle && !k.fuerErwachsene);
+  assert.ok(ohneErklaerung.length >= 1, 'keine Karte mit Quelle ohne Erklärung – Test ohne Gegenstand');
+  // Der Block der Erklaerung ist an `k.fuerErwachsene` gebunden; die
+  // Quellenzeile darf nicht darin liegen.
+  const i = app.indexOf('k.fuerErwachsene');
+  const j = app.indexOf('k.quelle', i);
+  const dazwischen = app.slice(i, j);
+  assert.ok(/:\s*null,/.test(dazwischen), 'die Quellenzeile liegt im Block der Erklärung – dann fehlt sie bei den Karten ohne Erklärung');
 });

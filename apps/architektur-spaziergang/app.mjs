@@ -95,7 +95,13 @@ function karteAnsicht(k, auswahl) {
           el('p', { style: 'margin:0;font-size:0.95rem' }, `🧑‍🏫 Für Erwachsene: ${k.fuerErwachsene}`),
           el('p', { style: 'margin:0.3rem 0 0;font-size:0.85rem;color:#4b5563' },
             `${k.sicherheit === 'belegt' ? '📚' : k.sicherheit === 'vereinfachung' ? '📐' : '❔'} ${k.sicherheitText}`),
-          k.quelle ? el('p', { style: 'margin:0.2rem 0 0;font-size:0.85rem;color:#4b5563' }, `📚 ${k.quelle}`) : null)
+          )
+        : null,
+      // Die Quellenangabe steht eigenstaendig: auch eine Karte ohne Erklaerung
+      // kann eine haben - die Rathaus-Karte belegt, dass es die typische Form
+      // nicht gibt.
+      k.quelle
+        ? el('p', { class: 'asp-nur-bildschirm', style: 'margin:0.2rem 0;font-size:0.85rem;color:#4b5563' }, `📚 ${k.quelle}`)
         : null,
       k.gegenbeispiel
         ? el('p', { class: 'asp-nur-bildschirm', style: 'margin:0.2rem 0;font-size:0.95rem' }, `↩️ Gegenbeispiel: ${k.gegenbeispiel}`)
