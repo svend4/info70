@@ -19,11 +19,10 @@
       "art": "bauform",
       "woranMan": "Ein Gitter aus Balken liegt sichtbar in der Wand: senkrechte Ständer, waagerechte Riegel – die immer nur zwischen zwei Ständern sitzen – und schräge Streben. Dazwischen Flächen aus anderem Material.",
       "fuerErwachsene": "Das Holzgerüst IST das Tragwerk, nicht die Zierde: unten die Schwelle, oft erhöht auf einem Steinsockel gegen die Feuchtigkeit, darauf die Ständer, oben das Rähm, das die Deckenbalken trägt. Die schrägen Streben steifen die Wand aus. Die Felder dazwischen – die Gefache – sind nur gefüllt, meist mit Lehm, seltener mit Naturstein oder Ziegeln.",
-      "sicherheit": "belegt",
-      "sicherheitText": "Belegt ist das Gefüge und dass das Holz trägt. NICHT belegt ist, dass man es sehen muss: sichtbares Fachwerk war nicht der Normalzustand, und manches wurde erst im 20. Jahrhundert freigelegt – siehe Gegenbeispiel.",
-      "gegenbeispiel": "Viele Fachwerkhäuser sind verputzt, verschiefert oder mit Holz verkleidet – besonders auf der Wetterseite –, und man sieht vom Gerüst nichts. Fachwerk ist auch nicht schwarz-weiß: die dunklen Balken gehen oft auf späteren Anstrich zurück. Solche Häuser gibt es in halb Europa, nicht nur hier.",
-      "impuls": "Wo liegen die Balken schräg – und wo gerade?",
-      "quelle": "Ein Fachportal für Architektur und digitalisierte Baulehrwerke einer Universitätsbibliothek zu Schwelle, Ständer, Riegel, Rähm, Streben und Gefachen."
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Die Begriffe des Gefüges stammen von einem Fachportal und sind in der Gegenprobe nicht nachgeprüft worden. NICHT belegt ist, dass man das Holz sehen muss: der Aufsatz dazu war hinter einer Zugangssperre nicht einsehbar, und seine Jahresangaben hätten in einer App irregeführt. In der zeitlosen Form hält die Aussage – siehe Gegenbeispiel.",
+      "gegenbeispiel": "Viele Fachwerkhäuser waren früher verputzt, verschiefert oder verschindelt – besonders auf der Wetterseite. Dass man das Holzgerüst heute sieht, ist oft das Ergebnis späterer Freilegungen. Fachwerk ist auch nicht schwarz-weiß: die dunklen Balken gehen oft auf späteren Anstrich zurück. Solche Häuser gibt es in halb Europa, nicht nur hier.",
+      "impuls": "Wo liegen die Balken schräg – und wo gerade?"
     },
     {
       "id": "b-wasserturm",
@@ -43,13 +42,13 @@
       "zeichen": "⛪",
       "name": "Kirche mit Turm",
       "art": "bauform",
-      "woranMan": "Ein Turm, der höher ist als das Haus daneben. Oben, wo die Glocken hängen, sind keine Fenster, sondern Schallluken – Öffnungen, oft mit schrägen Lamellen.",
-      "fuerErwachsene": "Die Glockenstube hat statt Fenstern Schallluken, damit der Klang nach außen kommt. Warum Kirchen überhaupt Türme haben, ist damit nicht beantwortet: Türme wurden vielfach erst später neben eine ältere Kirche gestellt, Zahl und Höhe galten als Rangzeichen, und manche Orden verzichteten bewusst darauf. Als Wachtturm und Feuermeldestelle wurden sie ebenfalls benutzt.",
-      "sicherheit": "vereinfachung",
-      "sicherheitText": "Belegt sind die Schallluken und ihr Zweck. NICHT belegt ist der Satz, den fast jeder kennt: dass der Turm hoch sei, damit die Glocken weit zu hören sind – dafür war beim Bau keine Quelle zu finden. Er steht deshalb nicht hier.",
+      "woranMan": "Ein Turm, der höher ist als das Haus daneben. Oben, wo die Glocken hängen, sitzen keine normalen Fenster, sondern Schallöffnungen – schräge Holzjalousien, durch die nichts verglast ist.",
+      "fuerErwachsene": "Im Glockengeschoss sitzen Schallöffnungen: Schallfenster, Schallluken oder Klangarkaden. Verglast sind sie nicht – meist aber mit schräg nach unten gestellten Holzjalousien verschlossen, den Schallläden. Die lenken den Klang nach außen und halten Regen von den Glocken ab. Und mehr als Glockenträger war ein Turm oft auch: Wachtturm, Feuermeldestation, Kontrollplatz der Stadtverwaltung.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt sind die Schallöffnungen samt Schallläden und die Nebenaufgaben der Türme – letztere allerdings an italienischen und österreichischen Beispielen, nicht an deutschen. NICHT belegt ist der Satz, den fast jeder kennt: dass der Turm hoch sei, damit die GLOCKEN weit zu hören sind. Für Schallquellen allgemein steht der Zusammenhang in derselben Quelle schon – Sirenen sitzen optimal auf Hochpunkten –, für Glocken war dafür keine Quelle zu finden.",
       "gegenbeispiel": "Es gibt Kirchen ohne Turm, und es gibt Türme ohne Kirche: Rathausturm, Wasserturm, Aussichtsturm, Funkturm.",
       "impuls": "Hörst du von hier eine Glocke? Und wenn sie schlägt – wie klingt sie?",
-      "quelle": "Zu den Schallluken ein Fachportal für Architektur (Stichwort Glockenstube); zur späteren Hinzufügung der Türme und ihren Nebenfunktionen nur eine Sekundärquelle."
+      "quelle": "Zu den Schallöffnungen ein Fachportal für Architektur (Schallfenster, Schallläden); zu den Nebenaufgaben der Türme Michael Mitterauer im Austria-Forum: Türme dienten „als Wachttürme, als Feuermeldestationen, als Kontrollplätze der Stadtverwaltung“ – die dortigen Beispiele sind Venedig, Pisa, Genua und Wien."
     },
     {
       "id": "b-scheune",
@@ -58,11 +57,10 @@
       "art": "bauform",
       "woranMan": "Ein großes Tor, breiter und höher als eine Haustür, und auffällig wenige Fenster.",
       "fuerErwachsene": "Hinter dem großen Tor lag die Tenne: dort wurde der Wagen abgeladen und von Hand gedroschen. Daneben, in den Bansen, lagerte das Getreide. Manche Scheunen haben zwei Tore gegenüber – dann konnte der Wagen durchfahren. Nach den Mähdreschern wurde aus der Tenne oft die Traktorgarage.",
-      "sicherheit": "belegt",
-      "sicherheitText": "Belegt sind die Zweiteilung in Tenne und Bansen, die Durchfahrtscheune und der Umbau zur Garage. NICHT belegt ist die beliebte Erklärung, die zwei Tore seien für den Durchzug beim Worfeln da. Und eine Form, an der man Scheune von Stall unterscheiden könnte, war nicht zu belegen – das ist eine echte Lücke dieser Karte.",
+      "sicherheit": "vereinfachung",
+      "sicherheitText": "Die Zweiteilung in Tenne und Bansen stammt aus einer Enzyklopädie-Definition des 19. Jahrhunderts und ist in der Gegenprobe nicht nachgeprüft worden. Die Fundstelle für die Durchfahrtscheune hat NICHT gehalten: das Dokument beschreibt ein anderes Gebäude in einem anderen Ort, und das Wort kommt darin nicht vor. Der Typ existiert, der Nachweis fehlt. Nicht belegt bleibt die beliebte Erklärung, die zwei Tore seien für den Durchzug beim Worfeln da; und eine Form, an der man Scheune von Stall unterscheiden könnte, war nicht zu belegen.",
       "gegenbeispiel": "Viele Scheunen sind längst Garage, Werkstatt oder Wohnhaus – manche mit neuen Fenstern im alten Tor. Ob ein Gebäude Scheune oder Stall war, sagt die Form nicht.",
-      "impuls": "Was müsste durch dieses Tor passen?",
-      "quelle": "Landesamt für Bauforschung zur Durchfahrtscheune eines untersuchten Dorfes; Enzyklopädie-Definition von 1870, wiedergegeben in einem Journal der Denkmalpflege, zu Bansen und Tenne."
+      "impuls": "Was müsste durch dieses Tor passen?"
     },
     {
       "id": "b-laden",
@@ -94,11 +92,12 @@
       "name": "Brücke",
       "art": "bauform",
       "woranMan": "Entweder ein Bogen unter dem Weg oder ein gerader Balken, der auf Pfeilern liegt.",
-      "fuerErwachsene": "Die Brücke muss ihr Gewicht bis zum Ufer bringen. Ein Balken wird dabei oben zusammengedrückt und unten auseinandergezogen, und er braucht Stützen unter sich. Ein Bogen drückt zusätzlich waagerecht nach außen, gegen seine Auflager – je besser seine Form dem Verlauf der Kräfte folgt, desto weniger muss er sich biegen.",
-      "sicherheit": "vereinfachung",
-      "sicherheitText": "So steht es in Lehrmaterial zur Baustatik; ein Lehrbuch wurde dafür nicht herangezogen. NICHT belegt – und darum nicht hier – ist der meistwiederholte Satz dazu: dass Stein keinen Zug aushalte und der Bogen deshalb die einzige Möglichkeit gewesen sei.",
+      "fuerErwachsene": "Ein Steinbogen kann nur Druck aufnehmen, keinen Zug. Die Last läuft als Drucklinie – Fachleute sagen Stützlinie – durch den Bogen: solange sie im Bogenquerschnitt bleibt, trägt er. Verlässt sie ihn, entstehen Zugkräfte und Gelenke, und bei mehr als drei Gelenken wird der Bogen instabil. Ein Balken dagegen braucht Stützen unter sich.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt ist der Steinbogen samt Stützlinie – und zwar gerade der Satz, den die erste Fassung dieser Karte als unbelegt zurückgewiesen hatte: dass Stein keinen Zug aufnimmt, steht in einer Arbeit des Instituts für Baustatik, mit einer begutachteten Veröffentlichung als Nachweis. NICHT belegt ist hier die einfache Erklärung zum Balken (oben gedrückt, unten gezogen): die Physik stimmt, ein Lehrbuch wurde dafür nicht herangezogen.",
       "gegenbeispiel": "Nicht jede Brücke führt über Wasser: es gibt Bahnbrücken, Fußgängerbrücken über die Straße und Brücken über ein Tal.",
-      "impuls": "Was ist unter dieser Brücke – und was oben drauf?"
+      "impuls": "Was ist unter dieser Brücke – und was oben drauf?",
+      "quelle": "Institut für Baustatik und Baudynamik der Universität Stuttgart, Poster „Formfindung und Stabilität von Steinbogenbrücken“ von Andreas Ott: „Steinbögen können keine Zugkräfte aufnehmen, sondern nur Druckkräfte“, mit Clemente, Occhiuzzi und Raithel, Journal of Structural Engineering, Band 121, Heft 7, S. 1045–1050, als Nachweis."
     },
     {
       "id": "b-halle",
@@ -106,12 +105,12 @@
       "name": "Weite Halle ohne Stütze",
       "art": "bauform",
       "woranMan": "Ein sehr weites Dach ohne Stütze in der Mitte – über Bahnsteigen, in einer Markthalle, in einer Turnhalle. Manchmal sieht man unten, wo ein Bogen ansetzt, ein waagerechtes Zugband.",
-      "fuerErwachsene": "Bei den großen Bahnsteighallen ist der Grund überliefert: die weite Spannweite sollte die Zwischenpfeiler ersparen, die sonst nötig gewesen wären. Wo mit Bögen gebaut wurde, spannt zwischen den Bogenfüßen ein Zugband – weil der Bogen nach außen drückt.",
+      "fuerErwachsene": "Die größten dieser Hallen überspannen ihre ganze Breite in einem Stück: eine bekannte Bahnsteighalle 73 Meter weit, als Bogenträger mit Zugband, ohne eine einzige Stütze dazwischen. Das Zugband hält die Bogenfüße zusammen – weil der Bogen nach außen drückt.",
       "sicherheit": "belegt",
-      "sicherheitText": "Belegt ist das Motiv für die Bahnsteighalle samt Zugband. NICHT belegt ist dasselbe für die Markthalle: dort ist der Zweck überliefert – geregelter Markt, bessere Hygiene –, das Spannweiten-Motiv nicht.",
+      "sicherheitText": "Belegt sind die Spannweite und die Bauart mit Zugband. NICHT belegt ist, WARUM man so weit spannen wollte: die erste Fassung dieser Karte nannte dafür das Ersparen der Zwischenpfeiler und eine Quelle, in der dieser Satz nicht steht. Für die Markthalle gilt dasselbe – überliefert ist dort nur der Zweck, geregelter Markt und bessere Hygiene, nicht das Spannweiten-Motiv.",
       "gegenbeispiel": "Auch große Hallen haben manchmal Stützen – und ein Dach ohne Stützen heißt nicht, dass die Halle öffentlich ist.",
       "impuls": "Wo steht in dieser Halle etwas, das das Dach hält?",
-      "quelle": "Digitalisierte historische Bauliteratur einer Universitätsbibliothek zu einer 73 m weit gespannten Bahnsteighalle mit steifen Bögen und Zugbändern zwischen den Bogenfüßen."
+      "quelle": "Structurae zur Bahnsteighalle von St Pancras in London: 73 m Stützweite, Konstruktion „Bogenträger mit Zugband“."
     },
     {
       "id": "a-kita",
@@ -132,9 +131,9 @@
       "art": "ausstattung",
       "woranMan": "Gleise, ein Bahnsteig, eine Anzeige, ein Dach über dem Warten – dessen Stützen auffällig weit vom Gleis weg stehen.",
       "nichtAmHaus": "Das Gebäude kann aussehen wie ein Rathaus, ein Wohnhaus oder ein Glaskasten – oder ganz fehlen. „Empfangsgebäude“ ist nicht einmal ein Rechtsbegriff: die Eisenbahn-Bau- und Betriebsordnung definiert ihn nicht. Den Bahnhof macht, was daneben liegt: Gleise und mindestens eine Weiche.",
-      "fuerErwachsene": "Das Bahnsteigdach ist Wetterschutz. Dass seine Stützen so weit weg stehen und das Dach weit auskragt, hat einen Grund: wie nah ein festes Teil der Gleismitte kommen darf, ist geregelt – ein Dach, das zu nah stand, ist deshalb schon abgerissen worden.",
+      "fuerErwachsene": "Das Bahnsteigdach ist Wetterschutz. Dass seine Stützen so weit weg stehen und das Dach weit auskragt, hat einen Grund: feste Gegenstände auf dem Bahnsteig – Säulen zum Beispiel – müssen mindestens drei Meter von der Gleismitte wegbleiben.",
       "sicherheit": "belegt",
-      "sicherheitText": "Belegt über die Eisenbahn-Bau- und Betriebsordnung und das Regelwerk der Bahn. Der Wortlaut der Bahn-Richtlinie selbst war nicht einsehbar; gelesen wurden die Verordnung und eine Unterlage zu Einhausungen.",
+      "sicherheitText": "Belegt über die Eisenbahn-Bau- und Betriebsordnung; der Wortlaut der Richtlinie der Bahn selbst war nicht einsehbar. Die erste Fassung dieser Karte erzählte dazu von einem abgerissenen Dach und meinte damit eine andere Vorschrift – die Begrenzungslinie –, nicht diesen Mindestabstand. Das steht jetzt nicht mehr hier.",
       "impuls": "Woran merkt man hier, wo der Zug hält?",
       "quelle": "Eisenbahn-Bau- und Betriebsordnung (EBO) § 4 zum Begriff des Bahnhofs und § 13 zu Bahnsteigen und zum Abstand fester Gegenstände von der Gleismitte; Richtlinie 81302 „Bahnsteige und ihre Zugänge“ der Bahn, Neuausgabe vom 1. Dezember 2022."
     },
@@ -149,7 +148,7 @@
       "sicherheit": "belegt",
       "sicherheitText": "Belegt über die Titelgeschichte der Norm und über Förderrecht, das Voll- und Halbtürme samt automatischer Schlauchaufhängevorrichtung auflistet. Gelesen wurde dabei der einführende Beitrag zur Norm, nicht der Normtext selbst: Normen sind kostenpflichtig. NICHT belegt ist, WARUM Schläuche getrocknet werden müssen – die naheliegende Erklärung über Naturfasern war nicht zu belegen.",
       "impuls": "Warum sind die Tore so breit, was meinst du?",
-      "quelle": "DIN 14092-3:2024-06 „Feuerwehrhäuser – Teil 3: Feuerwehrübungsturm“, Vorgängerausgabe von 1992 unter dem Titel „Schlauchtrockenturm, Übungswand“; dazu eine Feuerwehr-Zuwendungsrichtlinie mit Förderliste für Voll- und Halbturm nach DIN 14092-3."
+      "quelle": "DIN 14092-3:2024-06 „Feuerwehrhäuser – Teil 3: Feuerwehrübungsturm“, 13 Seiten, mit fünf genannten Zwecken; Vorgängerausgabe DIN 14092-3:1992-10 unter dem Titel „Feuerwehrhäuser; Schlauchtrockenturm, Übungswand“, zurückgezogen. Dass Türme weiter gebaut werden, steht in einer Feuerwehr-Zuwendungsrichtlinie, die Voll- und Halbtürme nach dieser Norm als eigene Bauarten führt; Fördersummen nennt diese App nicht, weil die dafür gefundene Fassung ein unveröffentlichter Entwurf war."
     },
     {
       "id": "a-schule",
@@ -160,7 +159,7 @@
       "nichtAmHaus": "Schulgebäude gibt es aus allen Zeiten und in allen Formen. Die Reihe gleich großer Fenster weist auf gleich große Räume hin – das kann auch ein Bürohaus sein.",
       "fuerErwachsene": "Die freie Fläche neben dem Gebäude ist nicht übrig geblieben, sie ist vorgeschrieben: in der Schulbauverordnung, die beim Bau dieser App nachgelesen wurde, steht eine Pausenfläche je Schülerin und Schüler. Wie viel, ist Landesrecht und von Land zu Land verschieden.",
       "sicherheit": "vereinfachung",
-      "sicherheitText": "Belegt ist, dass eine Pausenfläche vorgeschrieben ist – in EINEM nachgelesenen Landesrecht. Eine Zahl nennt diese App nicht: die Angaben widersprechen sich. NICHT belegt ist, dass die langen Fensterreihen auf Tageslichtvorschriften zurückgehen; in der nachgelesenen Verordnung steht zu Fenstern nichts.",
+      "sicherheitText": "Belegt ist, dass in einem nachgelesenen Landesrecht eine Mindestfläche für den Pausenhof und zusätzlich eine geschlossene Pausenfläche vorgeschrieben sind. Andere Länder regeln das anders oder gar nicht – deshalb nennt diese App keine Zahl. (Die erste Fassung behauptete hier, die Angaben widersprächen sich; das war ein Lesefehler: eine Länderübersicht bestätigt die Zahl, sie widerspricht ihr nicht.) NICHT belegt ist, dass die langen Fensterreihen auf Tageslichtvorschriften zurückgehen: in der nachgelesenen Verordnung steht zu Fenstern nichts.",
       "impuls": "Was würdest du in diesem Hof zuerst machen?",
       "quelle": "Schulbauverordnung eines Bundeslandes (BaySchulBauV vom 30. Dezember 1994), § 2 zur Pausenfläche je Schülerin und Schüler; zu Fenstern, Fensterflächen oder Tageslicht enthält diese Verordnung nichts."
     },
@@ -170,10 +169,10 @@
       "name": "Rathaus",
       "art": "nichtErkennbar",
       "woranMan": "Kein Merkmal, das immer stimmt.",
-      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Die Fachliteratur arbeitet deshalb nicht mit einer Form, sondern mit einer Typologie: allein für die mittelalterlichen Rathäuser werden drei Typen unterschieden, und eine Typologie mit drei Typen ist der Gegenbeweis zur typischen Form. Häufig ist nur ein Schema – unten eine offene Halle, oben ein großer Saal –, und ein häufiges Schema ist kein Merkmal. Auch die Deutung „der Turm zeigt, dass die Bürger frei waren“ ist jünger als die Rathäuser: sie stammt aus dem 19. Jahrhundert.",
+      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Beim Rathaus verneint die Fachliteratur die Erklärung über die Funktion ausdrücklich: die Bauaufgabe entstand nicht aus einer funktionalen Notwendigkeit, sondern aus dem Willen des Rates, sich zu zeigen. Laube, Turm und Freitreppe folgen deshalb nur selten unmittelbar der Funktion, sondern der Tradition – an einem Ort hat die Laube überhaupt keine Funktion mehr. Und dass der Rathausturm für die Freiheit der Bürger stehe, ist eine Vorstellung des 19. Jahrhunderts. Das macht diese Karte zur wichtigsten des ganzen Spaziergangs: hier sagt die Forschung selbst, dass die Form dem Zweck nicht folgt.",
       "woranDoch": "Was es verrät, ist kein Bauteil: die Flagge, das Wappen, das Schild an der Tür, der Briefkasten für Anträge.",
       "impuls": "Wie würden wir herausfinden, ob hier das Rathaus ist?",
-      "quelle": "Eine Fachmonographie zu den mittelalterlichen Rathäusern in Deutschland, die drei Typen nach der Laube unterscheidet, nach einer Fachrezension; zum Turm als Zeichen der Zünfte die Stadtkonservatorin bzw. der Stadtkonservator einer Großstadt."
+      "quelle": "Stephan Albrecht, „Mittelalterliche Rathäuser in Deutschland. Architektur und Funktion“, nach der Fachrezension von Maritta Iseler in sehepunkte: die Entstehung der Bauaufgabe „entsprang nicht einer funktionalen Notwendigkeit, sondern einem repräsentativen Willen zur Selbstdarstellung des Rates“; zum Turm als Zeichen der Zünfte die Stadt Köln über ihren Rathausturm."
     },
     {
       "id": "n-nutzung",
@@ -228,7 +227,7 @@
       "woranMan": "Etwas, das eine Grenze zieht oder einen Absturz verhindert: Latten, Stäbe, Mauer, Hecke, Gitter.",
       "fuerErwachsene": "Die Quelle nennt Zäune ausdrücklich. Ein Zaun sagt zweierlei: hier hört das eine auf und das andere fängt an – und manchmal: hier wäre es gefährlich. Unterwegs ist das auch eine Regel: Absperrungen wie Stangen- oder Kettengeländer darf man zu Fuß nicht überschreiten.",
       "sicherheit": "belegt",
-      "sicherheitText": "Belegt ist die Regel für Absperrungen. NICHT belegt – und darum nicht hier – ist alles über die Vorschriften, nach denen Geländer gebaut werden; die wurden nicht nachgelesen.",
+      "sicherheitText": "Belegt ist die Regel für Absperrungen; der Wortlaut der Straßenverkehrsordnung nennt Stangen- und Kettengeländer ausdrücklich. NICHT belegt – und darum nicht hier – ist alles über die Vorschriften, nach denen Geländer gebaut werden: die wurden nicht nachgelesen.",
       "impuls": "Was trennt dieser Zaun – und von was?",
       "quelle": "§ 25 Abs. 1 und Abs. 4 Straßenverkehrsordnung (Gehwegbenutzung als Pflicht; Absperrungen dürfen nicht überschritten werden)."
     },

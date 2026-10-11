@@ -75,6 +75,40 @@ aushalte und der Bogen deshalb die einzige Möglichkeit war; dass Markthallen
 ihre Spannweite für frei aufstellbare Stände brauchten; und warum Schläuche
 überhaupt getrocknet werden müssen.
 
+### Was die zweite Runde umgedreht hat
+
+Die Gegenprobe hat die Fundstellen der ersten Runde nachgerufen — und mehrere
+davon fielen. **Drei Zitate existierten nicht** an der angegebenen Stelle: der
+Satz zur Glockenstube, das „beste Zitat" zur Bahnsteighalle und der Nachweis
+zur Durchfahrtscheune (das Dokument beschreibt ein anderes Gebäude in einem
+anderen Ort, und das Wort kommt darin nicht vor). **Ein Satz war
+irrtümlich verworfen:** dass Stein keinen Zug aufnimmt, steht sehr wohl
+belegt da — im Institut für Baustatik, mit einer begutachteten Arbeit als
+Nachweis. Die erste Fassung dieser Karte hatte ihn als unbelegt
+zurückgewiesen; jetzt trägt sie ihn samt Stützlinie, Gelenken und der Grenze
+von drei Gelenken.
+
+**Der wichtigste Einzelbefund für eine App über Form und Funktion** betrifft
+das Rathaus: die Fachliteratur verneint die Funktionserklärung dort
+ausdrücklich. Die Bauaufgabe „entsprang nicht einer funktionalen
+Notwendigkeit, sondern einem repräsentativen Willen zur Selbstdarstellung des
+Rates"; Laube, Turm und Freitreppe folgen nur selten unmittelbar der Funktion.
+An einem Ort hat die Laube überhaupt keine Funktion mehr. Damit ist die
+`nichtErkennbar`-Karte nicht bloß eine Lücke, sondern der Gegenbeweis zum
+Quellziel — belegt aus der Forschung.
+
+**Zwei Karten sind herabgesetzt** von `belegt` auf `vereinfachung`: Scheune und
+Fachwerk. Beide Inhalte bleiben, aber ihre Nachweise haben die Gegenprobe nicht
+überstanden oder wurden dort gar nicht geprüft, und das steht jetzt in ihrem
+`sicherheitText`. Eine Erklärung darf sich nur „belegt" nennen, wenn die
+Fundstelle gehalten hat.
+
+**Ein Lesefehler war meiner:** beim Pausenhof hatte ich behauptet, die Angaben
+widersprächen sich. Sie tun es nicht — die eine Zahl stand in der Zeile eines
+anderen Bundeslandes derselben Übersicht. Eine Länder-Tabellenzeile als
+bundesweite Aussage zu lesen ist genau der Fehler, den diese App sonst
+verfolgt.
+
 **Eine Karte war falsch und ist korrigiert:** sie sagte, das Trocknen der
 Schläuche sei nicht zu belegen gewesen. Es ist normativ bis heute genannt — und
 die Norm selbst dokumentiert die Verschiebung der Aufgabe, denn sie hieß 1992
@@ -139,10 +173,18 @@ Fahrbahn, kein Grundstück und kein Klingeln, keine Menschen fotografieren.
   Fachliteratur für die **mittelalterlichen** Rathäuser drei Typen
   unterscheidet — ohne das lässt sich der Mythos der typischen Form nicht
   widerlegen. Falle A zum siebenundzwanzigsten Mal.
-- `JAHRESZAHL_ERLAUBT_IN` ist eine Ausnahme für **ein Feld und ein Netz**: eine
-  Quellenangabe trägt das Jahr ihrer Norm oder Ausgabe, und das ist keine
-  Angabe über ein Gebäude. Alle anderen Netze laufen weiter über die
-  Quellenangaben — ein Test beweist es mit einer eingeschmuggelten Erwartung.
+- `NETZ_AUSNAHMEN` ist eine Tabelle **je Feld und je Netz**: eine
+  Quellenangabe trägt das Jahr ihrer Norm (keine Angabe über ein Gebäude) und
+  nennt ihren Urheber — ein Institut, eine Stadt, ein Amt (keine Angabe über
+  den Ort des Lesers). Die Einschränkung, dass eine Fundstelle nur für ein Land
+  gilt, muss der **Kartentext** tragen; dort laufen beide Netze weiter, und ein
+  Test schmuggelt ein Bundesland in eine Erklärung, um es zu beweisen. Alle
+  übrigen Netze laufen auch über die Quellenangaben — ein zweiter Test
+  schmuggelt dafür eine Erwartung ein.
+- **Eine Ausnahme muss sich verdienen** (übernommen aus Nr. 66): `pruefeDaten`
+  verlangt, dass mindestens eine Quellenangabe die Konstruktion wirklich
+  enthält, für die das Feld ausgenommen ist. Nimmt man allen Quellenangaben
+  die Jahreszahl, fällt die Ausnahme als Lücke auf.
 - Gespeichert wird genau eine Liste: `asp-auswahl`, die gewählten Karten. Mit
   `datenKarte` samt Löschknopf. Ohne Auswahl druckt die App alle Karten — ein
   leeres Blatt wäre kein Blatt.

@@ -144,14 +144,34 @@ export const NICHT_GEPRUEFT = Object.freeze({
 export const NICHT_GEPRUEFT_FELDER = Object.freeze({});
 
 /**
- * Feldausnahme fuer EIN Netz statt fuer alle: eine Quellenangabe traegt das
- * Jahr ihrer Norm, ihrer Verordnung oder ihrer Ausgabe. Das ist keine
- * Behauptung ueber ein Gebaeude - und genau das verbietet `JAHRESZAHL`. Alle
- * anderen Netze laufen weiter ueber die Quellenangaben.
+ * AUSNAHMEN JE NETZ UND JE FELD - nicht pauschal fuer ein Feld.
+ *
+ * Eine Quellenangabe traegt das Jahr ihrer Norm oder Ausgabe; das ist keine
+ * Behauptung ueber ein Gebaeude, und genau die verbietet `JAHRESZAHL`. Und sie
+ * nennt, wer sie herausgegeben hat - ein Institut, eine Stadt, ein Amt. Das
+ * ist eine Urheberangabe, keine Behauptung ueber den Ort des Lesers, und genau
+ * die verbietet `ORTSNAME`. Die Einschraenkung, dass eine Fundstelle nur fuer
+ * EIN Land gilt, muss der Kartentext selbst tragen - dort laufen beide Netze
+ * weiter, wie alle anderen auch.
+ *
+ * Nach dem Vorbild von Nr. 66: eine Ausnahme muss sich verdienen.
+ * `pruefeDaten` verlangt, dass mindestens eine Quellenangabe die Konstruktion,
+ * fuer die sie ausgenommen ist, wirklich enthaelt - sonst ist die Ausnahme
+ * keine Ausnahme, sondern eine Luecke.
  */
-export const JAHRESZAHL_ERLAUBT_IN = Object.freeze({
-  quelle: 'eine Quellenangabe nennt das Jahr ihrer Norm oder Ausgabe – das ist keine Angabe über ein Gebäude',
+export const NETZ_AUSNAHMEN = Object.freeze({
+  quelle: Object.freeze({
+    JAHRESZAHL: 'eine Quellenangabe nennt das Jahr ihrer Norm oder Ausgabe – das ist keine Angabe über ein Gebäude',
+    ORTSNAME: 'eine Quellenangabe nennt ihren Urheber – Institut, Stadt, Amt – und nicht den Ort des Lesers',
+  }),
 });
+
+/** Rueckwaertskompatibel: welche Felder von JAHRESZAHL ausgenommen sind. */
+export const JAHRESZAHL_ERLAUBT_IN = Object.freeze(
+  Object.fromEntries(Object.entries(NETZ_AUSNAHMEN)
+    .filter(([, netze]) => 'JAHRESZAHL' in netze)
+    .map(([feld, netze]) => [feld, netze.JAHRESZAHL])),
+);
 
 /** Alle Texte der Daten ausser den benannten Ausnahmen. */
 export function angebotsTexte(daten) {
@@ -340,6 +360,17 @@ export function pruefeDaten(daten) {
   for (const feld of Object.keys(NICHT_GEPRUEFT)) {
     if (!(feld in (daten ?? {}))) fehler.push(`NICHT_GEPRUEFT nennt ${feld}, das es in den Daten nicht gibt`);
   }
+  // Jede Netzausnahme muss sich verdienen: irgendeine Quellenangabe muss die
+  // Konstruktion wirklich enthalten, fuer die das Feld ausgenommen ist.
+  const NETZE = { JAHRESZAHL, ORTSNAME, EPOCHE, ERWARTUNG, BEWERTUNG, EINSTUFUNG, WIRKVERSPRECHEN };
+  for (const [feld, netze] of Object.entries(NETZ_AUSNAHMEN)) {
+    const texte = karten.map((k) => k[feld]).filter((t) => typeof t === 'string');
+    for (const name of Object.keys(netze)) {
+      if (!texte.some((t) => NETZE[name].test(t))) {
+        fehler.push(`${feld} ist von ${name} ausgenommen, aber keine ${feld}-Angabe enthält es – eine Ausnahme ohne Grund ist eine Lücke`);
+      }
+    }
+  }
 
   // --- Die Textnetze -------------------------------------------------------
   for (const [wo, text] of angebotsTexte(daten)) {
@@ -347,10 +378,14 @@ export function pruefeDaten(daten) {
     if (BEWERTUNG.test(text)) fehler.push(`${wo}: eine Bewertung`);
     if (EINSTUFUNG.test(text)) fehler.push(`${wo}: eine Einstufung des Kindes`);
     if (WIRKVERSPRECHEN.test(text)) fehler.push(`${wo}: Wirkversprechen`);
-    if (JAHRESZAHL.test(text) && !(wo.split('.').at(-1) in JAHRESZAHL_ERLAUBT_IN)) {
+    const feld = wo.split('.').at(-1);
+    const frei = NETZ_AUSNAHMEN[feld] ?? {};
+    if (JAHRESZAHL.test(text) && !('JAHRESZAHL' in frei)) {
       fehler.push(`${wo}: eine Jahreszahl – diese App hat keine geprüften Daten zu einem Gebäude`);
     }
-    if (ORTSNAME.test(text)) fehler.push(`${wo}: ein Ortsname – die App kennt Ihren Ort nicht`);
+    if (ORTSNAME.test(text) && !('ORTSNAME' in frei)) {
+      fehler.push(`${wo}: ein Ortsname – die App kennt Ihren Ort nicht`);
+    }
     if (KYRILLISCH.test(text)) fehler.push(`${wo}: kyrillisch – die Quelle gehört in das Quellfeld`);
   }
   for (const [wo, text] of kindseiteTexte(daten)) {

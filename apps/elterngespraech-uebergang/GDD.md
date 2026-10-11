@@ -78,7 +78,7 @@ sprechen Eltern von ihrem Kind, wenn sie selbst fragen, und genau das soll diese
 Werkzeug ermöglichen. „Kann **mein** Kind **schon** lesen?" trifft es wieder —
 das ist dieselbe Checkliste in der Ichform.
 
-## Elf Rechtsfragen, jede mit Paragraf
+## Zwölf Rechtsfragen, jede mit Paragraf
 
 Einschulung ist Landesrecht; der Validator verlangt deshalb, dass mindestens
 **zwei** Antworten je **zwei** Bundesländer nennen — sonst klingt ein Beispiel
@@ -110,6 +110,49 @@ Drei Fragen sind nach der Faktenprüfung hinzugekommen:
   der altersgebundenen Schulpflicht. Und mit der ehrlichen Angabe, dass keine
   amtliche Stelle diesen Satz ausdrücklich so schreibt: das Ergebnis folgt aus
   den Quellen zusammen. Umgekehrt steht hier auch nicht, frühes Lesen schade.
+- **Bekomme ich die Unterlagen über mein Kind zu sehen?** Ja — Auskunft und
+  eine Kopie der personenbezogenen Daten, nicht Einsicht in die ganze Akte;
+  die erste Kopie unentgeltlich, fremde Namen geschwärzt. In
+  Nordrhein-Westfalen wird die Dokumentation beim Ende der Betreuung
+  ausgehändigt, ohne Antrag und ohne Entgelt.
+
+### Was die zweite Runde der Faktenprüfung umgedreht hat
+
+Zwei Antworten waren **falsch** und sind korrigiert:
+
+- **Das Ergebnis der Untersuchung in Bayern.** Die erste Fassung sagte, ein
+  ausdrücklicher Anspruch auf ein schriftliches Ergebnis sei dort nicht zu
+  finden. Es gibt ihn: die Schulgesundheitspflegeverordnung regelt ihn unter
+  der Überschrift „Ergebnis der Schuleingangsuntersuchung". Die App zitiert
+  diese Vorschrift jetzt über ihre **Überschrift** und nicht nur über ihre
+  Nummer — eine Änderungsverordnung verschiebt sie zum 1. August 2027 um einen
+  Paragrafen weiter, und eine App, die die Nummer nennt, wäre an diesem Tag
+  falsch.
+- **Die Freiwilligkeit der Angaben.** Sie gilt nicht überall. In Brandenburg
+  haben Kinder und Eltern die erforderlichen Angaben **zu machen**, begrenzt
+  allein dadurch, dass darüber hinausgehende Fragen zur Persönlichkeitssphäre
+  nicht gestellt werden dürfen. Die erste Fassung verallgemeinerte das
+  Datenschutzblatt eines Gesundheitsamtes — genau der Fehler, den diese App
+  sonst verfolgt.
+
+Drei weitere Korrekturen:
+
+- Die schleswig-holsteinische Fundstelle für das Einwilligungserfordernis war
+  **keine Einwilligungsnorm**, sondern die Definition des Wortes „Eltern" — die
+  Klammer im Erlass stand hinter dem Wort, nicht hinter der Rechtsfolge. Das
+  Erfordernis folgt aus dem Erlass selbst.
+- Es gibt **einwilligungsfreie Meldepflichten** der Kita für einzelne Daten.
+  Die Behauptung, kein Bundesland erlaube eine Übermittlung ohne Einwilligung,
+  hielt nicht: in Nordrhein-Westfalen geht ein Datensatz an das Schulamt für
+  die Sprachstandsfeststellung, in Bayern eine Meldung an die Grundschule bei
+  Verstoß gegen eine Sprachförderpflicht. Für die
+  **Entwicklungsdokumentation** bleibt es bei der Einwilligung.
+- Der Anspruch auf **Gebärdensprache** richtet sich gegen den Leistungsträger
+  im Sozialverwaltungsverfahren und erreicht eine **Grundschule nicht**: die
+  Schule ist kein Leistungsträger, Schulbesuch keine Sozialleistung. Dort gilt
+  das Gleichstellungsgesetz des Landes. Und das Argument, im Sozialrecht könne
+  eine Behörde eine Übersetzung verlangen, betraf **Dokumente**, nicht das
+  Dolmetschen in einem Gespräch — es ist gestrichen.
 
 ## Die acht Vorbedingungen — vollständig, mit Gegenrede
 
@@ -125,6 +168,11 @@ geprüft wird also nicht das Lesen, sondern was ihm vorausgeht.
 Nach der Faktenprüfung sind drei dieser Gegenreden genauer geworden, und zwar
 in beide Richtungen:
 
+- **Risikokinder:** für sie ist im deutschen Sprachraum kein Nutzen
+  nachgewiesen — das ist **fehlende Evidenz, kein Nachweis eines Schadens**.
+  Die Effekte sind nicht von Null zu unterscheiden, bei vier bis fünf Studien;
+  international findet man dort eher größere Effekte. Die erste Fassung
+  schrieb „das Gegenteil ist der Befund", und das war ein Fehlschluss.
 - **Lautbewusstheit** erklärt im deutschen Sprachraum etwa ein Zehntel der
   Unterschiede im späteren Lesen — weniger als in englischsprachigen Studien;
   in Sprachen mit regelmäßiger Schrift sagte eher das Lesen die Lautbewusstheit
@@ -133,12 +181,15 @@ in beide Richtungen:
   langfristig klein, beim Entschlüsseln nicht nachweisbar, und bei
   Risikostichproben war er nicht zu finden.
 - **Buchstabenkenntnis** sagt das spätere Lesen sogar *besser* vorher als die
-  Lautbewusstheit. Daraus folgt nicht, dass Üben das bewirkt — Vorhersage und
-  Wirkung werden hier regelmäßig verwechselt, und gerade Vorschulprogramme
-  gehören zu denen, deren Effekte nicht halten.
+  Lautbewusstheit (Sekundärzitat, nicht im Original geprüft). Daraus folgt
+  nicht, dass Üben das bewirkt — Vorhersage und Wirkung werden hier regelmäßig
+  verwechselt. International halten Programme zur phonemischen Bewusstheit ihre
+  Wirkung durchaus, Vorschul- und Kindergartenprogramme eher nicht; die App
+  nennt jetzt beide Hälften dieses Befunds statt nur der einen.
 - **Silbenweises Lesen**: in einer Studie, die deutsch- und englischsprachige
   Kinder verglich, waren die meisten deutschsprachigen Kinder zu Schulbeginn
-  noch Nichtleser.
+  noch Nichtleser — das ist dort allerdings eine Randbemerkung zu den Grenzen
+  der Studie, kein eigener Befund, und so steht es auch in der App.
 
 Übungen dazu gibt es in dieser App nicht, und das ist eine Entscheidung, keine
 Auslassung. Die Zahlen stehen jeweils im `quelle`-Feld desselben Punktes, nicht

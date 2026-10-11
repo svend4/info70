@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import {
   ARTEN, SICHERHEITEN, EINORDNUNGEN, ZIELE, DENKMAELER_DER_QUELLE, KLEINE_FORMEN_DER_QUELLE,
   DRUCK_ABSAETZE, ERWARTUNG, BEWERTUNG, EINSTUFUNG, WIRKVERSPRECHEN, JAHRESZAHL, EPOCHE, ORTSNAME,
-  NICHT_GEPRUEFT, JAHRESZAHL_ERLAUBT_IN, KINDSEITE_FELDER,
+  NICHT_GEPRUEFT, JAHRESZAHL_ERLAUBT_IN, NETZ_AUSNAHMEN, KINDSEITE_FELDER,
   angebotsTexte, kartenTexte, kindseiteTexte, kinderfragen, karteVon, kartenNachArt, pruefeDaten,
 } from '../logik.mjs';
 
@@ -168,10 +168,15 @@ test('Epochennamen sind auf der Kindseite gesperrt, nicht in der Quellenangabe',
   assert.deepEqual([...KINDSEITE_FELDER], ['impuls', 'woranMan']);
   assert.equal(kindseiteTexte(daten).length, daten.karten.length * 2);
   for (const [wo, text] of kindseiteTexte(daten)) assert.ok(!EPOCHE.test(text), `${wo}: ${text}`);
-  // Die Rathaus-Karte MUSS die Epoche ihrer Fachliteratur nennen duerfen:
-  // ohne „mittelalterliche Rathaeuser" liesse sich der Mythos der typischen
-  // Form nicht widerlegen (Falle A, siebenundzwanzigstes Mal).
-  assert.ok(EPOCHE.test(karteVon(daten, 'n-rathaus').warumNicht));
+  // Auf der ERWACHSENENSEITE ist eine Epoche erlaubt: eine Karte muss die
+  // Epoche ihrer Fachliteratur nennen duerfen, sonst liesse sich etwa der
+  // Mythos der typischen Rathausform nicht widerlegen (Falle A,
+  // siebenundzwanzigstes Mal). Geprueft wird der Mechanismus, nicht ein
+  // bestimmter Satz - der Text darf sich aendern.
+  const e = kopie();
+  karteVon(e, 'n-rathaus').warumNicht += ' Die Fachliteratur spricht von mittelalterlichen Rathäusern.';
+  assert.ok(EPOCHE.test(karteVon(e, 'n-rathaus').warumNicht));
+  assert.deepEqual(pruefeDaten(e), []);
   const d = kopie();
   karteVon(d, 'n-rathaus').impuls = 'Ist das ein gotisches Fenster?';
   assert.ok(pruefeDaten(d).some((f) => /Epochenname auf der Kindseite/.test(f)));
@@ -181,6 +186,11 @@ test('Jahreszahlen sind gesperrt – außer in der Quellenangabe', () => {
   assert.ok(JAHRESZAHL.test('Erbaut 1873.'));
   assert.ok(JAHRESZAHL.test('Im Jahr 2019 umgebaut.'));
   assert.deepEqual(Object.keys(JAHRESZAHL_ERLAUBT_IN), ['quelle']);
+  // Und die Ausnahme muss sich verdienen (Vorbild Nr. 66): nimmt man allen
+  // Quellenangaben die Jahreszahl, fällt die Ausnahme als Lücke auf.
+  const ohne = kopie();
+  for (const k of ohne.karten) if (k.quelle) k.quelle = k.quelle.replace(/\b(?:1[0-9]{3}|20[0-9]{2})\b/g, 'im Erscheinungsjahr');
+  assert.ok(pruefeDaten(ohne).some((f) => /Ausnahme ohne Grund ist eine Lücke/.test(f)));
   for (const [wo, text] of angebotsTexte(daten)) {
     if (wo.split('.').at(-1) in JAHRESZAHL_ERLAUBT_IN) continue;
     assert.ok(!JAHRESZAHL.test(text), `${wo}: ${text}`);
@@ -218,9 +228,17 @@ test('kein Text der App verletzt die Netze', () => {
     assert.ok(!JAHRESZAHL.test(text), `${wo}: Jahreszahl`);
     assert.ok(!ORTSNAME.test(text), `${wo}: Ortsname`);
   }
-  // Ortsnamen gelten auch in Quellenangaben: eine Fundstelle aus einem
-  // bestimmten Land darf nicht wie eine bundesweite Regel klingen.
-  for (const k of daten.karten) if (k.quelle) assert.ok(!ORTSNAME.test(k.quelle), k.id);
+  // Eine Quellenangabe DARF ihren Urheber nennen - Institut, Stadt, Amt -,
+  // und die darf einen Ortsnamen enthalten. Die Einschraenkung, dass eine
+  // Fundstelle nur fuer ein Land gilt, traegt der Kartentext selbst: dort
+  // laeuft das Netz weiter.
+  assert.deepEqual(Object.keys(NETZ_AUSNAHMEN), ['quelle']);
+  assert.deepEqual(Object.keys(NETZ_AUSNAHMEN.quelle).sort(), ['JAHRESZAHL', 'ORTSNAME']);
+  assert.ok(daten.karten.some((k) => k.quelle && ORTSNAME.test(k.quelle)), 'keine Quellenangabe mit Urheberort – Ausnahme ohne Grund');
+  // Im Kartentext selbst bleibt der Ortsname verboten.
+  const o = kopie();
+  karteVon(o, 'a-schule').fuerErwachsene += ' In Bayern sind es drei Quadratmeter.';
+  assert.ok(pruefeDaten(o).some((f) => /Ortsname/.test(f)));
   // Die Pruefung ist umgedreht: geprueft wird der REST.
   assert.ok(angebotsTexte(daten).length > 200);
   for (const feld of Object.keys(NICHT_GEPRUEFT)) assert.ok(feld in daten, feld);
