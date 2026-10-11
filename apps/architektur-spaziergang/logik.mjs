@@ -54,6 +54,10 @@ export const SICHERHEITEN = Object.freeze(['belegt', 'vereinfachung', 'offen']);
 /** Die Einordnungen der siebzehn Quellziele. */
 export const EINORDNUNGEN = Object.freeze(['gebaut', 'nurEingeschraenkt', 'anderesThema', 'nichtUebernommen']);
 
+/** Die Apps, auf die ein Ziel verwiesen werden kann. */
+export const GENANNTE_APPS = Object.freeze(['Kunst gucken', 'Kunst-Entdecker', 'Erste Künstler',
+  'Design-Entdecker', 'Kita-Kartograph', 'Dinge des Alltags', 'Werbekennzeichnung']);
+
 /** Wie viele Ziele der Abschnitt traegt (nachgezaehlt S. 274-276). */
 export const ZIELE = 17;
 
@@ -76,8 +80,19 @@ export const DRUCK_ABSAETZE = Object.freeze(['sicherheitImmer', 'impulseSindOffe
  */
 export const ERWARTUNG = /\bdie\s+(?:richtige|falsche)\s+Antwort\b|\b(?:richtig|falsch)\s+(?:beantwortet|geantwortet|benannt)\b|\b(?:soll|sollte|muss|müsste)\s+(?:es\s+|das\s+|dein\s+Kind\s+|Ihr\s+Kind\s+)?(?:erkennen|wissen|benennen|nennen\s+können|sagen\s+können|erraten)\b|\babfragen\b|\babhaken\b|\bLösungsblatt\b|\brichtig\s+gemacht\b/i;
 
-/** Eine Bewertung: Punkte, Stufen, Haken, Vergleich mit anderen Kindern. */
-export const BEWERTUNG = /\bAmpel\w*|\b\d+\s*(?:von|\/)\s*\d+\s*(?:Punkt|Karte|Haus)|\bProzent\b|\d\s*%|\bVergleich\s+(?:zu|mit)\s+(?:anderen\s+Kindern|Gleichaltrigen)|\bPunkte?\s+(?:zu\s+)?(?:sammeln|geben|vergeben|zählen)|\bStufen?\b[^.!?]{0,12}\b(?:erreicht|aufsteigen)|\bStufe\s+\d/i;
+/**
+ * Eine Bewertung: Punkte, Stufen, Haken, Vergleich mit anderen Kindern.
+ *
+ * Die Haken-Konstruktion steht mit im Netz, weil die Ausschlussliste genau
+ * sie verspricht („Ein Haken, was das Kind erkannt hat" - es gibt keinen).
+ * Getroffen wird die KONSTRUKTION, nicht das Wort: der Stamm `kreuz` mit
+ * Vorsilbe, zu-Infinitiv und Partizip (ankreuzen, anzukreuzen, angekreuzt,
+ * „kreuzt ... an") und `Haken` samt setzen/machen. Ein blosses `\bHaken\b`
+ * waere die Wortform und traefe den Haken an der Jacke mit (Falle A).
+ * `keinUrteil` und `ausgeschlossen` muessen die Konstruktion benennen
+ * duerfen - sie stehen dafuer in `NICHT_GEPRUEFT`.
+ */
+export const BEWERTUNG = /\bAmpel\w*|\b(?:an)?(?:zu)?kreuz\w*|\bangekreuzt\b|\b(?:ab)?(?:zu)?hak\w*|\bHäkchen\b|\b(?:an|ange)kreuz\w*|\banzukreuzen\b|\bkreuz\w*\b[^.!?]{0,25}\ban\b|\bHaken\b[^.!?]{0,15}\b(?:setzen|setze|setzt|machen|macht|gesetzt|gemacht)\b|\b(?:setzen|setze|setzt|machen|macht)\b[^.!?]{0,15}\bHaken\b|\bein(?:en)?\s+Haken\b|\b\d+\s*(?:von|\/)\s*\d+\s*(?:Punkt|Karte|Haus)|\bProzent\b|\d\s*%|\bVergleich\s+(?:zu|mit)\s+(?:anderen\s+Kindern|Gleichaltrigen)|\bPunkte?\s+(?:zu\s+)?(?:sammeln|geben|vergeben|zählen)|\bStufen?\b[^.!?]{0,12}\b(?:erreicht|aufsteigen)|\bStufe\s+\d/i;
 
 /** Eine Einstufung des Kindes - Begabung, Niveau, Auffaelligkeit. */
 export const EINSTUFUNG = /(?:un)?begabt\w*|talentiert\w*|\b(?:Begabung|Talent|Niveau|förderbedürftig\w*|normal\s+für\s+(?:sein|das)\s+Alter|weit\s+voraus|zurückgeblieben\w*|aufgeweckter\s+als)|(?:entwicklungs|verhaltens|sprach)auffällig\w*/i;
@@ -110,12 +125,15 @@ export const EPOCHE = /\b(?:Gotik|gotisch\w*|Barock|barock\w*|Romanik|romanisch\
  * bestimmten Stadt wuerde fuer alle anderen falsch klingen. Die Liste der
  * nicht uebernommenen Werke darf Orte nennen (Falle A, Ausnahme benannt).
  *
- * Halle, Essen und Hof sind Staedte UND gewoehnliche Woerter: „eine weite
- * Halle", „zum Essen", „der Pausenhof". Sie stehen deshalb nur mit
- * Praeposition im Netz - getroffen wird die Konstruktion, nicht das Wort
- * (Falle A, sechsundzwanzigstes Mal).
+ * Halle, Essen, Hof, Kiel und Muenster sind Staedte UND gewoehnliche Woerter:
+ * „eine weite Halle", „zum Essen", „der Pausenhof", „der Kiel eines Schiffs",
+ * „das Muenster" - und ein Muenster ist fuer eine Architektur-App besonders
+ * naheliegend. Sie stehen deshalb nur mit Praeposition im Netz, und die
+ * Praeposition steht in beiden Schreibungen da, weil sie am Satzanfang gross
+ * beginnt und der Zweig sonst nie greift (Review Welle 83). Getroffen wird die
+ * Konstruktion, nicht das Wort - Falle A, sechsundzwanzigstes Mal.
  */
-export const ORTSNAME = /\b(?:Berlin|Hamburg|München|Köln|Frankfurt|Stuttgart|Düsseldorf|Leipzig|Dortmund|Bremen|Dresden|Hannover|Nürnberg|Duisburg|Bochum|Wuppertal|Bielefeld|Bonn|Münster|Karlsruhe|Mannheim|Augsburg|Wiesbaden|Mönchengladbach|Braunschweig|Chemnitz|Kiel|Aachen|Magdeburg|Freiburg|Krefeld|Mainz|Lübeck|Erfurt|Rostock|Kassel|Potsdam|Saarbrücken|Nordrhein-Westfalen|Bayern|Baden-Württemberg|Niedersachsen|Hessen|Sachsen-Anhalt|Sachsen|Thüringen|Brandenburg|Mecklenburg-Vorpommern|Schleswig-Holstein|Rheinland-Pfalz|Saarland)\b|\b(?:in|aus|bei|nach|von)\s+(?:Halle|Essen|Hof)\b/;
+export const ORTSNAME = /\b(?:Berlin|Hamburg|München|Köln|Frankfurt|Stuttgart|Düsseldorf|Leipzig|Dortmund|Bremen|Dresden|Hannover|Nürnberg|Duisburg|Bochum|Wuppertal|Bielefeld|Bonn|Karlsruhe|Mannheim|Augsburg|Wiesbaden|Mönchengladbach|Braunschweig|Chemnitz|Aachen|Magdeburg|Freiburg|Krefeld|Mainz|Lübeck|Erfurt|Rostock|Kassel|Potsdam|Saarbrücken|Nordrhein-Westfalen|Bayern|Baden-Württemberg|Niedersachsen|Hessen|Sachsen-Anhalt|Sachsen|Thüringen|Brandenburg|Mecklenburg-Vorpommern|Schleswig-Holstein|Rheinland-Pfalz|Saarland)\b|\b(?:[Ii]n|[Aa]us|[Bb]ei|[Nn]ach|[Vv]on)\s+(?:Halle|Essen|Hof|Kiel|Münster)\b/;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 const ZEICHEN = /\p{Extended_Pictographic}/u;
@@ -129,19 +147,39 @@ export const kartenNachArt = (daten, art) => (daten?.karten ?? []).filter((k) =>
  * die Pruefung umgedreht: geprueft wird der REST. `pruefeDaten` verlangt,
  * dass jedes hier genannte Feld in den Daten existiert.
  */
+/**
+ * Von acht Ausnahmen waren FUENF unverdient (Review Welle 83): sie nahmen ein
+ * Feld aus, das kein Netz getroffen haette. Eine unverdiente Ausnahme ist
+ * keine Ausnahme, sondern eine Luecke - `keineVorbildliste`, `elterntelefon`,
+ * `art` und `version` werden jetzt mitgeprueft, und `version` ist ohnehin eine
+ * Zahl, die der Sammler nie angefasst hat. Geblieben sind vier, und jede muss
+ * sich verdienen (siehe `AUSNAHME_MUSS_ENTHALTEN`).
+ */
 export const NICHT_GEPRUEFT = Object.freeze({
   impulseSindOffen: 'erklärt, dass nichts geprüft wird – und muss die Prüfung dafür benennen',
   keinUrteil: 'muss Haken, Punkte und Vergleich nennen, um sie auszuschließen',
-  keineVorbildliste: 'nennt die vierzehn nicht übernommenen Werke samt Ort',
   ausgeschlossen: 'die Ausschlussliste benennt, was sie ausschließt',
   quelle: 'Werk, Rechte und Zählung – russisch, mit Jahr und Seitenzahlen',
-  elterntelefon: 'enthält die Telefonnummer',
-  art: 'die Kennung der App, kein Text für Erwachsene',
-  version: 'eine Zahl, kein Text',
 });
 
 /** Einzelne Feldnamen, die ueberall ausgenommen sind (Lehre aus Nr. 63). */
 export const NICHT_GEPRUEFT_FELDER = Object.freeze({});
+
+/**
+ * Was ein ausgenommenes Feld ENTHALTEN MUSS, um die Ausnahme zu verdienen
+ * (uebernommen aus Nr. 66). Fuenf der acht Ausnahmen waren unverdient, vier
+ * davon an angezeigten Feldern (Review Welle 83).
+ */
+export const AUSNAHME_MUSS_ENTHALTEN = Object.freeze({
+  impulseSindOffen: ['ERWARTUNG'],
+  keinUrteil: ['BEWERTUNG'],
+  ausgeschlossen: ['BEWERTUNG'],
+  quelle: ['KYRILLISCH'],
+});
+
+/** Felder ohne Netzgrund - benannt, damit die Luecke nicht still bleibt.
+ *  Nach dem Review ist die Liste leer: jede Ausnahme hat ihren Grund. */
+export const OHNE_NETZGRUND = Object.freeze({});
 
 /**
  * AUSNAHMEN JE NETZ UND JE FELD - nicht pauschal fuer ein Feld.
@@ -178,26 +216,15 @@ export function angebotsTexte(daten) {
   const t = [];
   const sammle = (wert, wo, feld) => {
     if (typeof wert === 'string') {
-      if (nichtLeer(wert) && !(feld in NICHT_GEPRUEFT_FELDER)) t.push([wo, wert]);
+      if (nichtLeer(wert) && !Object.hasOwn(NICHT_GEPRUEFT_FELDER, feld)) t.push([wo, wert]);
       return;
     }
     if (Array.isArray(wert)) { wert.forEach((x, n) => sammle(x, `${wo}[${n}]`, feld)); return; }
     if (wert && typeof wert === 'object') { for (const [k, v] of Object.entries(wert)) sammle(v, `${wo}.${k}`, k); }
   };
   for (const [feld, wert] of Object.entries(daten ?? {})) {
-    if (feld in NICHT_GEPRUEFT) continue;
+    if (Object.hasOwn(NICHT_GEPRUEFT, feld)) continue;
     sammle(wert, feld, feld);
-  }
-  return t;
-}
-
-/** Nur die Texte der Karten: dort sind zusaetzlich Epochennamen verboten. */
-export function kartenTexte(daten) {
-  const t = [];
-  for (const k of daten?.karten ?? []) {
-    for (const [feld, wert] of Object.entries(k)) {
-      if (typeof wert === 'string' && nichtLeer(wert)) t.push([`Karte ${k.id}.${feld}`, wert]);
-    }
   }
   return t;
 }
@@ -247,6 +274,12 @@ export function pruefeDaten(daten) {
       if (k.sicherheit === 'belegt' && !nichtLeer(k.quelle)) {
         fehler.push(`${wo}: als „belegt" eingeordnet, aber ohne Quelle – dann ist es nicht belegt`);
       }
+    } else if (nichtLeer(k.quelle)) {
+      // Eine Quellenangabe ist eine Behauptung, auch ohne `fuerErwachsene`:
+      // die Rathaus-Karte belegt, dass es die typische Form NICHT gibt
+      // (Review Welle 83).
+      if (!SICHERHEITEN.includes(k.sicherheit)) fehler.push(`${wo}: trägt eine Quelle, aber keinen Sicherheitsgrad`);
+      else if (!nichtLeer(k.sicherheitText)) fehler.push(`${wo}: sicherheitText fehlt`);
     } else if (k.sicherheit !== undefined) {
       fehler.push(`${wo}: sicherheit ohne Erklärung`);
     }
@@ -309,7 +342,8 @@ export function pruefeDaten(daten) {
   }
   if (!BEWERTUNG.test(daten?.keinUrteil ?? '')) fehler.push('keinUrteil benennt nicht, was es ausschließt');
   // Die Sicherheitsregel gehoert auf den Zettel, nicht nur auf den Bildschirm.
-  if (!DRUCK_ABSAETZE.includes('sicherheitImmer')) fehler.push('sicherheitImmer wird nicht gedruckt');
+  // (Die Konstante gegen sich selbst zu pruefen war tautologisch - das steht
+  // jetzt im Test, wo eine Konstantenzusicherung hingehoert.)
   for (const feld of DRUCK_ABSAETZE) {
     if (!nichtLeer(daten?.[feld])) fehler.push(`DRUCK_ABSAETZE nennt ${feld}, das es in den Daten nicht gibt`);
   }
@@ -336,7 +370,12 @@ export function pruefeDaten(daten) {
       if (!/Aussehen|Bestimmung/i.test(z.kurz ?? '')) fehler.push(`${wo}: als eingeschränkt eingeordnet, aber nicht das Ziel über Aussehen und Bestimmung`);
     }
     if (z.einordnung === 'nichtUebernommen') abgelehnt += 1;
-    if (z.einordnung === 'anderesThema' && !/[A-ZÄÖÜ]/.test(z.warum ?? '')) fehler.push(`${wo}: nennt die App nicht, in die es gehört`);
+    // Ein Grossbuchstabe war kein Nachweis: jedes deutsche Substantiv hat
+    // einen. Geprueft wird jetzt, dass eine der gebauten Apps namentlich
+    // dasteht (Review Welle 83).
+    if (z.einordnung === 'anderesThema' && !GENANNTE_APPS.some((a) => (z.warum ?? '').includes(a))) {
+      fehler.push(`${wo}: nennt keine der Apps, in die es gehört`);
+    }
   }
   for (let n = 1; n <= ZIELE; n += 1) if (!nummern.has(n)) fehler.push(`Quellziel ${n} fehlt`);
   if (eingeschraenkt !== 1) fehler.push(`${eingeschraenkt} eingeschränkte Ziele – genau eines ist es (das über Aussehen und Bestimmung)`);
@@ -344,6 +383,16 @@ export function pruefeDaten(daten) {
   // Die Zurueckweisung muss benennen, was sie zurueckweist.
   const werbung = ziele.filter((z) => z.einordnung === 'nichtUebernommen' && /Werbung/i.test(z.warum ?? ''));
   if (!werbung.length) fehler.push('kein zurückgewiesenes Ziel benennt die Werbung, um die es geht');
+  // Die Abweichungsnotiz muss jede zurueckgewiesene Nummer NENNEN. In der
+  // ersten Fassung stand dort „zwei zurueckgewiesen", waehrend die Daten drei
+  // sagten, und die Rechnung ging nicht auf - niemand hat es gemerkt, weil
+  // nichts die Prosa gegen die Daten hielt (Review Welle 83).
+  const notiz = daten?.quelle?.abweichung ?? '';
+  for (const z of ziele.filter((x) => x.einordnung === 'nichtUebernommen')) {
+    if (!new RegExp(`№\\s*${z.nr}(?!\\d)`).test(notiz)) {
+      fehler.push(`quelle.abweichung nennt das zurückgewiesene Ziel ${z.nr} nicht`);
+    }
+  }
 
   // --- Ausschlussliste und Quelle -----------------------------------------
   if (aus.length < 5) fehler.push('die Ausschlussliste ist zu kurz');
@@ -354,15 +403,44 @@ export function pruefeDaten(daten) {
   for (const feld of ['werk', 'rechte', 'nachgezaehlt', 'abweichung']) {
     if (!nichtLeer(daten?.quelle?.[feld])) fehler.push(`quelle.${feld} fehlt`);
   }
-  if (!new RegExp(`${DENKMAELER_DER_QUELLE}|четырнадцать`).test(daten?.quelle?.nachgezaehlt ?? '')) {
+  if (!new RegExp(`(?<!\\d)${DENKMAELER_DER_QUELLE}(?!\\d)|четырнадцать`).test(daten?.quelle?.nachgezaehlt ?? '')) {
     fehler.push('quelle.nachgezaehlt nennt die Zahl der Denkmäler nicht');
   }
   for (const feld of Object.keys(NICHT_GEPRUEFT)) {
     if (!(feld in (daten ?? {}))) fehler.push(`NICHT_GEPRUEFT nennt ${feld}, das es in den Daten nicht gibt`);
   }
+  // Jedes ausgenommene Feld braucht einen Netzgrund oder steht benannt ohne.
+  for (const feld of [...Object.keys(NICHT_GEPRUEFT), ...Object.keys(NICHT_GEPRUEFT_FELDER)]) {
+    if (Object.hasOwn(AUSNAHME_MUSS_ENTHALTEN, feld)) continue;
+    if (Object.hasOwn(OHNE_NETZGRUND, feld)) continue;
+    fehler.push(`${feld} ist ausgenommen, steht aber weder in AUSNAHME_MUSS_ENTHALTEN noch in OHNE_NETZGRUND`);
+  }
+  // Und umgekehrt: wer in einer der beiden Tabellen steht, muss wirklich
+  // ausgenommen sein - sonst beschreibt die Tabelle etwas, das es nicht gibt.
+  for (const feld of [...Object.keys(AUSNAHME_MUSS_ENTHALTEN), ...Object.keys(OHNE_NETZGRUND)]) {
+    if (feld === 'quelle' && Object.hasOwn(NETZ_AUSNAHMEN, feld)) continue;
+    if (!Object.hasOwn(NICHT_GEPRUEFT, feld) && !Object.hasOwn(NICHT_GEPRUEFT_FELDER, feld)) {
+      fehler.push(`${feld} steht in einer Ausnahmetabelle, ist aber nicht ausgenommen`);
+    }
+  }
+  const textVon = (wert) => {
+    if (typeof wert === 'string') return wert;
+    if (Array.isArray(wert)) return wert.map(textVon).join(' ');
+    if (wert && typeof wert === 'object') return Object.values(wert).map(textVon).join(' ');
+    return '';
+  };
+  for (const [feld, namen] of Object.entries(AUSNAHME_MUSS_ENTHALTEN)) {
+    const text = textVon(daten?.[feld]);
+    for (const name of namen) {
+      const netz = { ERWARTUNG, BEWERTUNG, ORTSNAME, JAHRESZAHL, EPOCHE, KYRILLISCH }[name];
+      if (netz && !netz.test(text)) {
+        fehler.push(`${feld} ist von ${name} ausgenommen, enthält es aber nicht – eine Ausnahme ohne Grund ist eine Lücke`);
+      }
+    }
+  }
   // Jede Netzausnahme muss sich verdienen: irgendeine Quellenangabe muss die
   // Konstruktion wirklich enthalten, fuer die das Feld ausgenommen ist.
-  const NETZE = { JAHRESZAHL, ORTSNAME, EPOCHE, ERWARTUNG, BEWERTUNG, EINSTUFUNG, WIRKVERSPRECHEN };
+  const NETZE = { JAHRESZAHL, ORTSNAME, EPOCHE, ERWARTUNG, BEWERTUNG, EINSTUFUNG, WIRKVERSPRECHEN, KYRILLISCH };
   for (const [feld, netze] of Object.entries(NETZ_AUSNAHMEN)) {
     const texte = karten.map((k) => k[feld]).filter((t) => typeof t === 'string');
     for (const name of Object.keys(netze)) {
@@ -380,10 +458,10 @@ export function pruefeDaten(daten) {
     if (WIRKVERSPRECHEN.test(text)) fehler.push(`${wo}: Wirkversprechen`);
     const feld = wo.split('.').at(-1);
     const frei = NETZ_AUSNAHMEN[feld] ?? {};
-    if (JAHRESZAHL.test(text) && !('JAHRESZAHL' in frei)) {
+    if (JAHRESZAHL.test(text) && !Object.hasOwn(frei, 'JAHRESZAHL')) {
       fehler.push(`${wo}: eine Jahreszahl – diese App hat keine geprüften Daten zu einem Gebäude`);
     }
-    if (ORTSNAME.test(text) && !('ORTSNAME' in frei)) {
+    if (ORTSNAME.test(text) && !Object.hasOwn(frei, 'ORTSNAME')) {
       fehler.push(`${wo}: ein Ortsname – die App kennt Ihren Ort nicht`);
     }
     if (KYRILLISCH.test(text)) fehler.push(`${wo}: kyrillisch – die Quelle gehört in das Quellfeld`);

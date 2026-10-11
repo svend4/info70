@@ -33,12 +33,30 @@ async function laufzeitQuelle(app) {
 const quellen = new Map();
 for (const a of apps) quellen.set(a, await laufzeitQuelle(a));
 
-const speichernde = apps.filter((a) => quellen.get(a).includes('localStorage.setItem'));
+/**
+ * Wer speichert? Die erste Fassung suchte nur `localStorage.setItem` in den
+ * Dateien der App selbst - und uebersah damit jede App, die ueber `starteQuiz`
+ * laeuft: `quiz-kern` schreibt am Rundenende den Rekord in den localStorage
+ * (quiz.mjs:253). Das Impressum nannte deshalb 25 Apps als „speichert gar
+ * nichts", die einen Rekord ablegen (Review Welle 83).
+ *
+ * Geprueft wird jetzt die Konstruktion: eigenes `setItem` ODER der Aufruf von
+ * `starteQuiz(`.
+ */
+const speichertSelbst = (q) => q.includes('localStorage.setItem');
+// Kein Wahlschalter: `quiz-kern` schreibt den Rekord am Rundenende immer
+// (quiz.mjs:252-253), unabhaengig von der Konfiguration. Wer `starteQuiz`
+// aufruft, speichert.
+const speichertUeberQuiz = (q) => /starteQuiz\(/.test(q);
+const speichernde = apps.filter((a) => speichertSelbst(quellen.get(a)) || speichertUeberQuiz(quellen.get(a)));
 
 test('jede App, die etwas speichert, lässt es auch löschen', async () => {
   const ohne = [];
   for (const a of speichernde) {
     const q = quellen.get(a);
+    // Wer ueber quiz-kern speichert, loescht auch darueber: der Kern bringt
+    // den Loeschknopf fuer den eigenen Rekord mit (quiz.mjs:130).
+    if (!speichertSelbst(q) && speichertUeberQuiz(q)) continue;
     const kannLoeschen = /removeItem|localStorage\.clear|datenKarte\(/.test(q)
       // Manche Apps löschen durch Überschreiben mit einem leeren Stand.
       || /(löschen|Löschen|zurücksetzen|Zurücksetzen)/.test(q);
@@ -51,7 +69,7 @@ test('die Apps löschen nur ihre eigenen Schlüssel – quiz-kern ist die bewuss
   // localStorage.clear() wirft auch die Anzeige-Einstellungen (hoher Kontrast,
   // Schriftgröße) und die Daten der Nachbar-Apps weg. Neue Apps nehmen deshalb
   // die Daten-Karte, die gezielt entfernt.
-  const mitClear = speichernde.filter((a) => /localStorage\.clear\(/.test(quellen.get(a)));
+  const mitClear = speichernde.filter((a) => /localStorage\.clear\(/.test(quellen.get(a)) && speichertSelbst(quellen.get(a)));
   assert.deepEqual(mitClear, [], `räumt fremde Schlüssel mit ab, bitte datenKarte nutzen:\n${mitClear.join('\n')}`);
 });
 

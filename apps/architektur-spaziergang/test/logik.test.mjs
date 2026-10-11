@@ -2,10 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  ARTEN, SICHERHEITEN, EINORDNUNGEN, ZIELE, DENKMAELER_DER_QUELLE, KLEINE_FORMEN_DER_QUELLE,
+  ARTEN, SICHERHEITEN, EINORDNUNGEN, ZIELE, DENKMAELER_DER_QUELLE, KLEINE_FORMEN_DER_QUELLE, GENANNTE_APPS,
+  AUSNAHME_MUSS_ENTHALTEN, OHNE_NETZGRUND,
   DRUCK_ABSAETZE, ERWARTUNG, BEWERTUNG, EINSTUFUNG, WIRKVERSPRECHEN, JAHRESZAHL, EPOCHE, ORTSNAME,
   NICHT_GEPRUEFT, JAHRESZAHL_ERLAUBT_IN, NETZ_AUSNAHMEN, KINDSEITE_FELDER,
-  angebotsTexte, kartenTexte, kindseiteTexte, kinderfragen, karteVon, kartenNachArt, pruefeDaten,
+  angebotsTexte, kindseiteTexte, kinderfragen, karteVon, kartenNachArt, pruefeDaten,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/spaziergang.json', import.meta.url), 'utf8'));
@@ -68,7 +69,13 @@ test('eine Erklärung, die sich „belegt" nennt, braucht ihre Quelle', () => {
 
 test('jeder Sicherheitsgrad ist einer der drei und hat seinen Satz', () => {
   for (const k of daten.karten) {
-    if (!k.fuerErwachsene) { assert.equal(k.sicherheit, undefined, k.id); continue; }
+    if (!k.fuerErwachsene) {
+      // Eine Karte ohne Erklaerung darf einen Grad tragen, wenn sie eine
+      // Quelle hat: die Rathaus-Karte belegt, dass es nichts zu erkennen gibt.
+      if (k.quelle) { assert.ok(SICHERHEITEN.includes(k.sicherheit), k.id); assert.ok(k.sicherheitText, k.id); }
+      else assert.equal(k.sicherheit, undefined, k.id);
+      continue;
+    }
     assert.ok(SICHERHEITEN.includes(k.sicherheit), k.id);
     assert.ok((k.sicherheitText ?? '').length > 10, k.id);
     if (k.sicherheit === 'belegt') assert.ok(k.quelle, k.id);
@@ -137,6 +144,8 @@ test('die nicht übernommene Vorbildliste nennt Zahl, Ort und die Begründung de
 });
 
 test('die Regel für unterwegs steht auf dem Zettel, nicht nur auf dem Bildschirm', () => {
+  // Eine Konstantenzusicherung gehoert in den Test, nicht in pruefeDaten -
+  // dort war sie eine Pruefung der Konstante gegen sich selbst.
   assert.ok(DRUCK_ABSAETZE.includes('sicherheitImmer'));
   for (const feld of DRUCK_ABSAETZE) assert.ok((daten[feld] ?? '').length > 20, feld);
   // Und sie nennt die drei Dinge, die draussen gelten.
@@ -153,7 +162,18 @@ test('die Textnetze greifen – Erwartung, Bewertung, Einstufung, Wirkverspreche
   assert.ok(BEWERTUNG.test('Für jede erkannte Bauform gibt es Punkte zu sammeln.'));
   assert.ok(BEWERTUNG.test('Ihr Kind steht bei Stufe 2.'));
   assert.ok(BEWERTUNG.test('ein Vergleich mit anderen Kindern'));
+  // Die Ausschlussliste verspricht, dass es keinen Haken gibt - das Netz muss
+  // die Konstruktion fangen, nicht nur die eine Wortform (Review Welle 83).
+  assert.ok(BEWERTUNG.test('Setzen Sie einen Haken, sobald Ihr Kind das Merkmal erkannt hat.'));
+  assert.ok(BEWERTUNG.test('Zu jeder Karte ist ein Kästchen anzukreuzen.'));
+  assert.ok(BEWERTUNG.test('Angekreuzt wird, was das Kind geleistet hat.'));
+  assert.ok(BEWERTUNG.test('Das Kind kreuzt das erkannte Merkmal an.'));
+  assert.ok(BEWERTUNG.test('Danach einen Haken machen.'));
   assert.ok(!BEWERTUNG.test('Drei oder vier Karten sind genug.'));
+  // Die Wortform allein ist keine Bewertung: ein Haken an der Jacke, ein
+  // hoher Punkt in der Landschaft, kein Punkt der Quelle.
+  assert.ok(!BEWERTUNG.test('Wo kein hoher Punkt in der Nähe liegt, wird einer gebaut.'));
+  assert.ok(!BEWERTUNG.test('Eine Ergänzung dieser App, kein Punkt der Quelle.'));
   assert.ok(EINSTUFUNG.test('Ein besonders begabtes Kind sieht das sofort.'));
   assert.ok(EINSTUFUNG.test('Das ist normal für sein Alter.'));
   assert.ok(WIRKVERSPRECHEN.test('Der Spaziergang fördert die Wahrnehmung Ihres Kindes.'));
@@ -216,6 +236,13 @@ test('der Ortsname-Netz trifft Städte, aber nicht die weite Halle', () => {
   assert.ok(!ORTSNAME.test('Ein Hof mit Markierungen und Fahrradständen.'));
   assert.ok(!ORTSNAME.test('Nehmen Sie etwas zum Essen mit.'));
   assert.ok(ORTSNAME.test('ein Wasserturm in Halle'));
+  // Muenster und Kiel sind gewoehnliche Woerter - fuer eine Architektur-App
+  // ist „das Münster" besonders naheliegend (Review Welle 83).
+  assert.ok(!ORTSNAME.test('Das Münster hat zwei Türme.'));
+  assert.ok(!ORTSNAME.test('Der Kiel eines Schiffs.'));
+  assert.ok(ORTSNAME.test('wie in Münster'));
+  // Und der Praepositionszweig greift auch am Satzanfang.
+  assert.ok(ORTSNAME.test('In Halle steht einer.'));
 });
 
 test('kein Text der App verletzt die Netze', () => {
@@ -240,8 +267,67 @@ test('kein Text der App verletzt die Netze', () => {
   karteVon(o, 'a-schule').fuerErwachsene += ' In Bayern sind es drei Quadratmeter.';
   assert.ok(pruefeDaten(o).some((f) => /Ortsname/.test(f)));
   // Die Pruefung ist umgedreht: geprueft wird der REST.
-  assert.ok(angebotsTexte(daten).length > 200);
+  assert.ok(angebotsTexte(daten).length > 280);
   for (const feld of Object.keys(NICHT_GEPRUEFT)) assert.ok(feld in daten, feld);
+});
+
+test('JEDE Ausnahme ist verdient – die Liste ohne Grund ist leer', () => {
+  // Fuenf von acht Ausnahmen waren unverdient (Review Welle 83): sie nahmen
+  // Felder aus, die kein Netz getroffen haette. Geblieben sind vier.
+  assert.deepEqual(Object.keys(NICHT_GEPRUEFT).sort(),
+    ['ausgeschlossen', 'impulseSindOffen', 'keinUrteil', 'quelle']);
+  assert.deepEqual(OHNE_NETZGRUND, {});
+  for (const feld of Object.keys(NICHT_GEPRUEFT)) {
+    assert.ok(feld in AUSNAHME_MUSS_ENTHALTEN || feld in OHNE_NETZGRUND, feld);
+  }
+  // Nimmt man dem Absatz die Konstruktion, verliert er seine Ausnahme.
+  const d = kopie();
+  d.keinUrteil = 'Dieses Werkzeug führt keine Liste über Ihr Kind.';
+  assert.ok(pruefeDaten(d).some((f) => /keinUrteil ist von BEWERTUNG ausgenommen/.test(f)));
+});
+
+test('Haken und Ankreuzen stehen im Bewertungsnetz', () => {
+  // Genau die Konstruktion, die `keinUrteil` ausschliesst, fehlte in jedem
+  // Netz (Review Welle 83) - eine Ankreuz-Aufforderung im Impuls ging durch.
+  for (const satz of ['Danach ankreuzen.', 'Das wird angekreuzt.', 'zum Abhaken',
+    'ein Häkchen setzen', 'Karten anzukreuzen', 'Haken dahinter']) {
+    assert.ok(BEWERTUNG.test(satz), satz);
+  }
+  const d = kopie();
+  karteVon(d, 'b-fachwerk').impuls = 'Hast du die Balken gefunden – dann ankreuzen?';
+  assert.ok(pruefeDaten(d).some((f) => /Bewertung/.test(f)));
+});
+
+test('die Abweichungsnotiz nennt jedes zurückgewiesene Ziel mit Nummer', () => {
+  // In der ersten Fassung stand dort „zwei zurueckgewiesen", die Daten sagten
+  // drei, und die Rechnung ging nicht auf (Review Welle 83).
+  for (const z of daten.ziele.filter((x) => x.einordnung === 'nichtUebernommen')) {
+    assert.match(daten.quelle.abweichung, new RegExp(`№\\s*${z.nr}`), `Ziel ${z.nr}`);
+  }
+  const d = kopie();
+  d.quelle.abweichung = d.quelle.abweichung.replace(/№\s*11/g, 'eine Nummer');
+  assert.ok(pruefeDaten(d).some((f) => /nennt das zurückgewiesene Ziel 11 nicht/.test(f)));
+});
+
+test('eine Karte mit Quelle braucht einen Sicherheitsgrad – auch ohne Erklärung', () => {
+  // Die Rathaus-Karte erklaert nichts und belegt doch etwas: dass es die
+  // typische Form NICHT gibt (Review Welle 83).
+  const r = karteVon(daten, 'n-rathaus');
+  assert.ok(r.quelle && !r.fuerErwachsene);
+  assert.ok(SICHERHEITEN.includes(r.sicherheit));
+  const d = kopie();
+  delete karteVon(d, 'n-rathaus').sicherheit;
+  assert.ok(pruefeDaten(d).some((f) => /trägt eine Quelle, aber keinen Sicherheitsgrad/.test(f)));
+});
+
+test('ein abgegebenes Ziel muss die App nennen, in die es gehört', () => {
+  // Ein Grossbuchstabe war kein Nachweis - jedes deutsche Substantiv hat einen.
+  for (const z of daten.ziele.filter((x) => x.einordnung === 'anderesThema')) {
+    assert.ok(GENANNTE_APPS.some((a) => z.warum.includes(a)), `Ziel ${z.nr}: ${z.warum}`);
+  }
+  const d = kopie();
+  d.ziele.find((z) => z.einordnung === 'anderesThema').warum = 'Gehört nicht hierher, Punkt.';
+  assert.ok(pruefeDaten(d).some((f) => /nennt keine der Apps/.test(f)));
 });
 
 test('karteVon findet und findet nicht', () => {

@@ -219,7 +219,7 @@ verschwiegen wird die Absage nicht.
   kein Blatt.
 - Gespeichert wird `eub-fragen`: welche Fragen Sie mitnehmen wollen. Mit
   `datenKarte` samt Löschknopf.
-- 18 Tests.
+- 21 Tests.
 
 Quelle: «Пралеска» © НИО 2007, S. 300–311 — übernommen sind Konzept und
 Gliederung, alle Formulierungen sind Eigenproduktion. Der Katalogeintrag nennt

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir, stat } from 'node:fs/promises';
 
 // In Welle 83 ist eine `package.json` mit UNGUELTIGEM JSON in das Repository
 // gelangt und durch den gesamten Lauf gekommen: im Beschreibungstext stand ein
@@ -16,15 +16,27 @@ import { readFile, readdir } from 'node:fs/promises';
 const wurzel = new URL('../../../', import.meta.url);
 const UEBERGEHEN = new Set(['node_modules', '.git', 'dist', 'coverage']);
 
+// Der Name wird fuer die URL kodiert: ein `#` im Dateinamen beendet sonst den
+// Pfad, und die Regel liest eine ANDERE Datei - und bleibt gruen (Welle 83).
+// Dasselbe gilt fuer `%` und `?`. Jeder heute vorhandene Name bleibt dabei
+// unveraendert; geprueft wurde das gegen Leerzeichen, Umlaute, `+` und Klammern.
+const alsUrl = (name, basis) => new URL(encodeURIComponent(name), basis);
+
 async function sammleJson(verzeichnis, pfad = '') {
   const gefunden = [];
   for (const eintrag of await readdir(verzeichnis, { withFileTypes: true })) {
     if (UEBERGEHEN.has(eintrag.name)) continue;
     const relativ = pfad ? `${pfad}/${eintrag.name}` : eintrag.name;
-    if (eintrag.isDirectory()) {
-      gefunden.push(...await sammleJson(new URL(`${eintrag.name}/`, verzeichnis), relativ));
-    } else if (eintrag.name.endsWith('.json')) {
-      gefunden.push([relativ, new URL(eintrag.name, verzeichnis)]);
+    // Ein Verzeichnis kann auch ueber einen Symlink erreichbar sein; dann sagt
+    // isDirectory() nein, und der Zweig wird uebersprungen.
+    let istOrdner = eintrag.isDirectory();
+    if (!istOrdner && eintrag.isSymbolicLink()) {
+      try { istOrdner = (await stat(alsUrl(eintrag.name, verzeichnis))).isDirectory(); } catch { istOrdner = false; }
+    }
+    if (istOrdner) {
+      gefunden.push(...await sammleJson(new URL(`${encodeURIComponent(eintrag.name)}/`, verzeichnis), relativ));
+    } else if (/\.json$/i.test(eintrag.name)) {
+      gefunden.push([relativ, alsUrl(eintrag.name, verzeichnis)]);
     }
   }
   return gefunden;
@@ -37,7 +49,9 @@ test('jede JSON-Datei ist gültiges JSON', async () => {
   for (const [relativ, url] of dateien) {
     const roh = await readFile(url, 'utf8');
     try {
-      JSON.parse(roh);
+      // Ein Byte-Order-Mark laedt node ohne Murren; JSON.parse nicht. Die
+      // Regel soll das finden, was node bricht, und nicht mehr.
+      JSON.parse(roh.replace(/^\uFEFF/, ''));
     } catch (fehler) {
       // Die Stelle mitliefern: „unexpected token" allein hilft nicht.
       const stelle = /position (\d+)/.exec(fehler.message)?.[1];

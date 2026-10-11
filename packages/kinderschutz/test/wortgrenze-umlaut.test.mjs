@@ -29,6 +29,118 @@ const NACH = new RegExp(`[${UMLAUT}]\\\\b`);
 const VOR = new RegExp(`\\\\b[${UMLAUT}]`);
 
 /**
+ * WELLE 83: die Zeichenfolgen-Suche sieht nur den unmittelbaren Nachbarn. Steht
+ * die Wortgrenze an einer ALTERNATIVENGRUPPE - `\b(?:über|unter)` oder
+ * `(?:weiß|rot)\b` -, dann ist nur EINE Alternative tot, und die Suche findet
+ * nichts. Genau in dieser Form schreiben die Netze dieses Projekts die meisten
+ * ihrer Wortgrenzen; das Review hat 45 solche Stellen gezaehlt.
+ *
+ * `randzeichen` loest die Gruppe auf: hinter einer Wortgrenze sammelt sie das
+ * ERSTE Zeichen jeder Alternative, davor das LETZTE - und meldet jedes, das
+ * kein ASCII-Wortzeichen ist. Geprueft wird damit, was die Wortgrenze
+ * tatsaechlich beruehrt, nicht wie sie geschrieben ist.
+ */
+const ASCII_WORTZEICHEN = /[A-Za-z0-9_]/;
+const BUCHSTABE = /\p{L}/u;
+
+/** Die Klammer zu `text[von]` (eine „(") finden, Escapes und Klassen achtend. */
+function klammerZu(text, von) {
+  let tiefe = 0;
+  let inKlasse = false;
+  for (let i = von; i < text.length; i += 1) {
+    const c = text[i];
+    if (c === '\\') { i += 1; continue; }
+    if (inKlasse) { if (c === ']') inKlasse = false; continue; }
+    if (c === '[') { inKlasse = true; continue; }
+    if (c === '(') tiefe += 1;
+    else if (c === ')') { tiefe -= 1; if (tiefe === 0) return i; }
+  }
+  return -1;
+}
+
+/** Die Klammer auf zu `text[bis]` (eine „)") finden. */
+function klammerAuf(text, bis) {
+  let tiefe = 0;
+  for (let i = bis; i >= 0; i -= 1) {
+    const c = text[i];
+    if (i > 0 && text[i - 1] === '\\') continue;
+    if (c === ')') tiefe += 1;
+    else if (c === '(') { tiefe -= 1; if (tiefe === 0) return i; }
+  }
+  return -1;
+}
+
+/** Die Alternativen einer Gruppe, oberste Ebene. */
+function alternativen(inhalt) {
+  const teile = [];
+  let tiefe = 0;
+  let inKlasse = false;
+  let akt = '';
+  for (let i = 0; i < inhalt.length; i += 1) {
+    const c = inhalt[i];
+    if (c === '\\') { akt += c + (inhalt[i + 1] ?? ''); i += 1; continue; }
+    if (inKlasse) { akt += c; if (c === ']') inKlasse = false; continue; }
+    if (c === '[') { akt += c; inKlasse = true; continue; }
+    if (c === '(') tiefe += 1;
+    if (c === ')') tiefe -= 1;
+    if (c === '|' && tiefe === 0) { teile.push(akt); akt = ''; continue; }
+    akt += c;
+  }
+  teile.push(akt);
+  return teile;
+}
+
+const gruppenKopf = /^\(\?(?::|<?[=!]|<[A-Za-z_$][\w$]*>)?/;
+
+/** Das erste bzw. letzte LITERALE Zeichen eines Teilmusters. */
+function literalRand(teil, welche) {
+  let t = teil;
+  if (welche === 'erst') {
+    t = t.replace(gruppenKopf, '');
+    for (let i = 0; i < t.length; i += 1) {
+      const c = t[i];
+      if (c === '\\') return t[i + 1] ?? '';
+      if ('([^$'.includes(c)) return '';
+      return c;
+    }
+    return '';
+  }
+  // letztes Zeichen: Quantoren und Gruppenenden abstreifen
+  t = t.replace(/[*+?]$|\{\d+(?:,\d*)?\}$/, '');
+  const c = t.at(-1) ?? '';
+  if (')]'.includes(c)) return '';
+  if (t.length >= 2 && t.at(-2) === '\\') return '';
+  return c;
+}
+
+export function randzeichen(code) {
+  const befunde = [];
+  for (let i = 0; i < code.length - 1; i += 1) {
+    if (!(code[i] === '\\' && code[i + 1] === 'b')) continue;
+    if (i > 0 && code[i - 1] === '\\') continue; // \\b ist ein Backslash plus b
+    // --- was folgt der Wortgrenze?
+    const nachIdx = i + 2;
+    let folgende = [];
+    if (code[nachIdx] === '(') {
+      const zu = klammerZu(code, nachIdx);
+      if (zu > 0) folgende = alternativen(code.slice(nachIdx, zu + 1).slice(1, -1).replace(/^\?(?::|<?[=!])/, ''))
+        .map((t) => literalRand(t, 'erst'));
+    } else folgende = [code[nachIdx] ?? ''];
+    // --- was steht davor?
+    let vorige = [];
+    if (code[i - 1] === ')') {
+      const auf = klammerAuf(code, i - 1);
+      if (auf >= 0) vorige = alternativen(code.slice(auf + 1, i - 1).replace(/^\?(?::|<?[=!])/, ''))
+        .map((t) => literalRand(t, 'letzt'));
+    } else vorige = [code[i - 1] ?? ''];
+    const tot = (c) => c && BUCHSTABE.test(c) && !ASCII_WORTZEICHEN.test(c);
+    for (const c of folgende) if (tot(c)) befunde.push(`\\b vor „${c}" – trifft am Wortanfang nie`);
+    for (const c of vorige) if (tot(c)) befunde.push(`„${c}" vor \\b – trifft am Wortende nie`);
+  }
+  return befunde;
+}
+
+/**
  * Kommentare unkenntlich machen, OHNE Zeilen zu verschieben: jedes Zeichen
  * eines Kommentars wird zu einem Leerzeichen, Zeilenumbrueche bleiben stehen.
  * Sonst zeigt die gemeldete Zeilennummer auf eine andere Zeile als die, in der
@@ -63,6 +175,8 @@ for (const ordner of ['apps', 'packages']) {
         if (/wortgrenze-ok/.test(zeilenRoh[n] ?? '')) return;
         if (NACH.test(zeile)) befunde.push(`${wo}: Umlaut oder ß direkt vor \\b – trifft am Wortende nie`);
         if (VOR.test(zeile)) befunde.push(`${wo}: \\b direkt vor einem Umlaut – trifft am Wortanfang nie`);
+        // Und durch die Gruppe hindurch (Welle 83).
+        for (const f of randzeichen(zeile)) befunde.push(`${wo}: ${f}`);
       });
     }
   }
@@ -71,6 +185,24 @@ for (const ordner of ['apps', 'packages']) {
 test('kein \\b neben einem Umlaut – das wäre ein totes Muster', () => {
   assert.deepEqual(befunde, [], befunde.join('\n'));
   assert.ok(geprueft > 100, `nur ${geprueft} Dateien gelesen – greift die Suche noch?`);
+});
+
+test('die Prüfung sieht auch durch eine Alternativengruppe', () => {
+  // Nur EINE Alternative ist tot - die Zeichenfolgen-Suche findet das nicht.
+  const durchGruppe = String.raw`const N = /\b(?:über|unter)/;`; // wortgrenze-ok
+  assert.equal(VOR.test(durchGruppe), false, 'die alte Suche findet es nicht – darum gibt es die neue');
+  assert.ok(randzeichen(durchGruppe).some((f) => /Wortanfang/.test(f)), durchGruppe);
+  const hinten = String.raw`const N = /(?:weiß|rot)\b/;`; // wortgrenze-ok
+  assert.ok(randzeichen(hinten).some((f) => /Wortende/.test(f)), hinten);
+  // Und was in Ordnung ist, bleibt in Ordnung.
+  for (const gut of [
+    String.raw`/\b(?:Kind|Eltern)\b/`,
+    String.raw`/schul(?:fähig|reif|bereit)(?![\wäöüß])/`,
+    String.raw`/\b(?:sollte|müsste|muss)\s+/`,
+    String.raw`/\bverrät\b/`,
+    String.raw`/\b\d+\s*Jahre\b/`,
+    String.raw`/\b(?:in|aus)\s+(?:Halle|Münster)\b/`,
+  ]) assert.deepEqual(randzeichen(gut), [], gut);
 });
 
 test('die Prüfung findet die Falle wirklich', () => {

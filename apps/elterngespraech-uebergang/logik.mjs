@@ -52,8 +52,20 @@ export const BUNDESLAENDER = Object.freeze(['Nordrhein-Westfalen', 'Bayern', 'Ba
   'Niedersachsen', 'Hessen', 'Sachsen-Anhalt', 'Sachsen', 'Thüringen', 'Brandenburg', 'Berlin',
   'Hamburg', 'Bremen', 'Mecklenburg-Vorpommern', 'Schleswig-Holstein', 'Rheinland-Pfalz', 'Saarland']);
 
-/** Wie viele Merkmale die Quelle traegt (nachgezaehlt S. 300-311). */
-export const MERKMALE_INSGESAMT = 141;
+/**
+ * Wie viele Merkmale die Quelle traegt (nachgezaehlt S. 300-311).
+ *
+ * KORREKTUR DER ERSTEN FASSUNG: hier stand 141. Die erste Zaehlung lief ueber
+ * die Textzeilen des umkodierten PDF und hat zwei Felder um je eins zu hoch
+ * gezaehlt, weil eine Fortsetzungszeile am Spaltenanfang wie ein Listenpunkt
+ * aussah. Nachgezaehlt ueber das GLYPH des Listenpunkts (0xF6) an seiner
+ * festen Spalte, zugeordnet ueber die senkrechte Koordinate: 139.
+ *
+ * Die Lehre daraus steht in `pruefeDaten`: die Bilanz allein war eine Probe
+ * auf sich selbst. Jetzt muessen drei Dinge uebereinstimmen - diese Konstante,
+ * die Zahl an jedem Feld und die Aufzaehlung im Quellfeld `nachgezaehlt`.
+ */
+export const MERKMALE_INSGESAMT = 139;
 
 /** Wie viele Felder die Quelle traegt: zwoelf plus die Vorbedingungen. */
 export const FELDER_DER_QUELLE = 13;
@@ -75,7 +87,7 @@ export const SCHULSTOFF = /Lesen|liest|Buchstab|Lautanalyse|Silbe|Mathematik|Kon
 export const KINDFRAGE = /\b(?:Kann|Weiß|Beherrscht|Spricht|Liest|Schreibt|Rechnet|Zeigt|Stellt|Plant|Kennt|Hat|Macht|Versteht|Liegt|Erkennt|Benennt)\s+(?:Ihr|dein|das)\s+Kind\b|\bIhr\s+Kind\s+(?:sollte|müsste|muss|kann\s+schon|soll\s+schon|beherrscht)\b|\bkann\s+(?:mein|Ihr|dein)\s+Kind\s+(?:schon|bereits)\b|\bkann\s+es\s+schon\b/i;
 
 /** Eine Bewertung: Haken, Punkte, Stufen, Ampel, Vergleich. */
-export const BEWERTUNG = /\bAmpel\w*|\bankreuzen\b|\babhaken\b|\bHaken\b|\b\d+\s*(?:von|\/)\s*\d+\s*(?:Punkt|Merkmal)|\bProzent\b|\d\s*%|\bPunkte?\s+(?:zu\s+)?(?:sammeln|geben|vergeben|zählen)|\bStufe\s+\d|\bVergleich\s+(?:zu|mit)\s+(?:anderen\s+Kindern|Gleichaltrigen)/i;
+export const BEWERTUNG = /\bAmpel\w*|\b(?:an)?(?:zu)?kreuz\w*|\bangekreuzt\b|\b(?:ab)?(?:zu)?hak\w*|\bHäkchen\b|\b\d+\s*(?:von|\/)\s*\d+\s*(?:Punkt|Merkmal)|\bProzent\b|\d\s*%|\bPunkte?\s+(?:zu\s+)?(?:sammeln|geben|vergeben|zählen)|\bStufe\s+\d|\bVergleich\s+(?:zu|mit)\s+(?:anderen\s+Kindern|Gleichaltrigen)/i;
 
 /**
  * Eine Diagnose, die dem Kind ZUGESCHRIEBEN wird. Getroffen wird die
@@ -89,16 +101,16 @@ export const DIAGNOSE_ZUGESCHRIEBEN = /\bIhr\s+Kind\s+(?:hat|zeigt|leidet\s+an|e
  * Netz: eine Quellenangabe darf die prognostische Guete einer Studie nennen,
  * ohne selbst eine Vorhersage zu sein. Getroffen wird die Konstruktion.
  */
-export const VORHERSAGE = /\bdaran\s+erkennen\s+Sie,\s+ob\b|\bwird\s+(?:später|in\s+der\s+Schule)\b[^.!?]{0,30}\b(?:Schwierigkeiten|Probleme)\b|\bRisiko\s+für\s+(?:Lese|Rechen|Schul)\w*|\b(?:sagt|sagen)\s+(?:wir\s+)?voraus\b|\bvorhersagen\b|\bvoraussagen\b/i;
+export const VORHERSAGE = /\bdaran\s+(?:erkennen\s+Sie|sehen\s+Sie|merken\s+Sie),\s+ob\b|\bSie\s+erkennen\s+daran,\s+ob\b|\bwird\s+(?:später|in\s+der\s+Schule)\b[^.!?]{0,30}\b(?:Schwierigkeiten|Probleme)\b|\bRisiko\s+für\s+(?:Lese|Rechen|Schul)\w*|\b(?:sagt|sagen)\s+(?:wir\s+)?voraus\b|\bvorhersagen\b|\bvoraussagen\b/i;
 
 /** „Ihr Kind ist schulfaehig" als Urteil. Der Rechtsteil muss den Begriff
  *  erklaeren duerfen - getroffen wird die Zuschreibung an dieses Kind. */
-export const SCHULFAEHIG_ALS_URTEIL = /\b(?:Ihr|dein|das)\s+Kind\s+(?:ist|wäre|scheint|wirkt)\s+(?:noch\s+)?(?:nicht\s+)?schul(?:fähig|reif|bereit)\b/i;
+export const SCHULFAEHIG_ALS_URTEIL = /\b(?:Ihr|dein|das)\s+Kind\s+(?:ist|wäre|scheint|wirkt)\s+(?:noch\s+)?(?:nicht\s+)?schul(?:fähig|reif|bereit)\b|\bschul(?:fähig|reif|bereit)\s+(?:ist|wäre|wirkt)\s+(?:Ihr|dein|das)\s+Kind\b|\b(?:ist|wäre)\s+(?:Ihr|dein)\s+Kind\s+(?:schon\s+)?schul(?:fähig|reif|bereit)\b|\bschul(?:fähig|reif|bereit)e[rsn]?\s+Kind\b/i;
 
 /** Eine Altersangabe, ab der ein Kind etwas koennen soll. Ausgeschriebene
  *  Zahlen gehoeren ins Netz: in Welle 80 ging „Kinder unter zehn Jahren"
  *  durch ein Netz, das nur Ziffern kannte. */
-export const KOENNENSALTER = /\b(?:mit|ab)\s+(?:\d+|drei|vier|fünf|sechs|sieben|acht)\s+Jahren\s+(?:sollte|müsste|muss|kann\s+ein\s+Kind|können\s+Kinder)\b/i;
+export const KOENNENSALTER = /\b(?:mit|ab)\s+(?:\d+|drei|vier|fünf|sechs|sieben|acht)\s+Jahren\s+(?:sollte|müsste|muss|kann\s+ein\s+Kind|können\s+Kinder)\b|\b(?:sollte|müsste|muss)\s+(?:ein\s+Kind|es|Ihr\s+Kind)\s+(?:mit|ab)\s+(?:\d+|drei|vier|fünf|sechs|sieben|acht)\s+Jahren\b/i;
 
 /** Die Erwartung, ein Kind solle vor der Schule lesen oder rechnen koennen. */
 export const LESEN_ERWARTET = /\b(?:Ihr|dein)\s+Kind\s+(?:sollte|muss|müsste)\b[^.!?]{0,40}\b(?:lesen|schreiben|rechnen)\s+können\b|\bvor\s+der\s+(?:Einschulung|Schule)\s+(?:sollte|muss)\s+(?:ein\s+Kind|es|Ihr\s+Kind)\b|\bbis\s+zur\s+Einschulung\s+(?:sollte|muss)\b/i;
@@ -117,15 +129,19 @@ export function merkmaleGezaehlt(daten) {
 }
 
 /** Ausnahmen von den Textnetzen, jede mit Grund. Geprueft wird der REST. */
+/**
+ * Drei der acht Ausnahmen waren unverdient (Review Welle 83): kein Netz haette
+ * sie getroffen. Eine unverdiente Ausnahme ist keine Ausnahme, sondern eine
+ * Luecke - `elterntelefon` und `art` werden jetzt mitgeprueft, und `version`
+ * ist eine Zahl, die der Sammler nie angefasst hat. Geblieben sind fuenf, und
+ * jede muss sich verdienen (siehe `AUSNAHME_MUSS_ENTHALTEN`).
+ */
 export const NICHT_GEPRUEFT = Object.freeze({
   wasEsIst: 'zitiert die umgedrehte Frage und das Ankreuzen, um beides abzulehnen',
-  warumKeineCheckliste: 'zitiert die klinische Frage der Quelle, um sie abzulehnen',
+  warumKeineCheckliste: 'zitiert die klinische Frage der Quelle und das Ankreuzen, um beides abzulehnen',
   keinBericht: 'muss Punkte, Ampel, Stufen und Vergleich nennen, um sie auszuschließen',
   ausgeschlossen: 'die Ausschlussliste benennt, was sie ausschließt',
   quelle: 'Werk, Rechte und Zählung – russisch, mit Jahr und Seitenzahlen',
-  elterntelefon: 'enthält die Telefonnummer',
-  art: 'die Kennung der App, kein Text für Eltern',
-  version: 'eine Zahl, kein Text',
 });
 
 /**
@@ -135,6 +151,28 @@ export const NICHT_GEPRUEFT = Object.freeze({
 export const NICHT_GEPRUEFT_FELDER = Object.freeze({
   nichtUebernommen: 'zitiert die abgelehnte Frage an die Eltern über das Kind',
 });
+
+/**
+ * AUSNAHMEN JE FELD UND JE NETZ. Die erste Fassung nahm `nichtUebernommen` von
+ * ALLEN acht Netzen aus, obwohl nur EINES begruendet war - das Feld hatte
+ * damit freie Fahrt fuer Vorhersagen, Bewertungen und Leseerwartungen. Jetzt
+ * laeuft jedes andere Netz weiter darueber.
+ */
+export const NETZ_AUSNAHMEN = Object.freeze({
+  nichtUebernommen: Object.freeze({
+    KINDFRAGE: 'zitiert die abgelehnte Frage an die Eltern über das Kind',
+    BEWERTUNG: 'muss den Haken benennen, den es ablehnt',
+  }),
+});
+
+/**
+ * Felder ohne Netzgrund - benannt, damit die Luecke nicht still bleibt. Wer
+ * hier steht, ist aus einem STRUKTURELLEN Grund ausgenommen, nicht wegen einer
+ * Konstruktion, die er enthalten muesste.
+ */
+/** Felder ohne Netzgrund - benannt, damit die Luecke nicht still bleibt.
+ *  Nach dem Review ist die Liste leer: jede Ausnahme hat ihren Grund. */
+export const OHNE_NETZGRUND = Object.freeze({});
 
 /** Die Netze unter ihrem Namen - fuer die Gegenrichtung der Ausnahmen. */
 export const NETZE = Object.freeze({
@@ -155,24 +193,25 @@ export const NETZE = Object.freeze({
  */
 export const AUSNAHME_MUSS_ENTHALTEN = Object.freeze({
   wasEsIst: ['KINDFRAGE', 'BEWERTUNG'],
+  warumKeineCheckliste: ['BEWERTUNG'],
   keinBericht: ['BEWERTUNG'],
   ausgeschlossen: ['BEWERTUNG'],
   quelle: ['KYRILLISCH'],
-  nichtUebernommen: ['KINDFRAGE'],
+  nichtUebernommen: ['KINDFRAGE', 'BEWERTUNG'],
 });
 
 export function angebotsTexte(daten) {
   const t = [];
   const sammle = (wert, wo, feld) => {
     if (typeof wert === 'string') {
-      if (nichtLeer(wert) && !(feld in NICHT_GEPRUEFT_FELDER)) t.push([wo, wert]);
+      if (nichtLeer(wert) && !Object.hasOwn(NICHT_GEPRUEFT_FELDER, feld)) t.push([wo, wert]);
       return;
     }
     if (Array.isArray(wert)) { wert.forEach((x, n) => sammle(x, `${wo}[${n}]`, feld)); return; }
     if (wert && typeof wert === 'object') { for (const [k, v] of Object.entries(wert)) sammle(v, `${wo}.${k}`, k); }
   };
   for (const [feld, wert] of Object.entries(daten ?? {})) {
-    if (feld in NICHT_GEPRUEFT) continue;
+    if (Object.hasOwn(NICHT_GEPRUEFT, feld)) continue;
     sammle(wert, feld, feld);
   }
   return t;
@@ -219,6 +258,24 @@ export function pruefeDaten(daten) {
   if (gezaehlt !== MERKMALE_INSGESAMT) {
     fehler.push(`die Felder nennen ${gezaehlt} Merkmale, nachgezählt sind ${MERKMALE_INSGESAMT}`);
   }
+  // Die Bilanz allein war eine Probe auf SICH SELBST: die Summe stimmte, weil
+  // die Konstante zur Summe passte, und beide waren falsch (Review Welle 83:
+  // nachgezaehlt sind 139, nicht 141). Jetzt muss auch die AUFZAEHLUNG im
+  // Quellfeld mit den Zahlen an den Feldern uebereinstimmen - drei Stellen,
+  // die unabhaengig voneinander geschrieben werden.
+  const prosa = daten?.quelle?.nachgezaehlt ?? '';
+  // Geprueft wird die FOLGE, nicht die Menge der Zahlen: eine Menge laesst sich
+  // durch Verschieben zwischen zwei Feldern austricksen, und eine einzelne Zahl
+  // findet sich im Text auch zufaellig (im Glyphnamen 0xF6 steckt eine 6).
+  const folge = felder.map((f) => f.quellPunkte).join(', ');
+  if (!prosa.includes(folge)) {
+    fehler.push(`quelle.nachgezaehlt enthält die Folge „${folge}" nicht – die Aufzählung und die Zahlen an den Feldern laufen auseinander`);
+  }
+  for (const [was, zahl] of [['die Summe der zwölf Felder', gezaehlt - vor.length], ['die Zahl der Vorbedingungen', vor.length]]) {
+    if (!new RegExp(`(?<!\\d)${zahl}(?!\\d)`).test(prosa)) {
+      fehler.push(`quelle.nachgezaehlt nennt ${was} (${zahl}) nicht`);
+    }
+  }
 
   // --- Die acht Vorbedingungen --------------------------------------------
   if (vor.length !== VORBEDINGUNGEN) fehler.push(`${vor.length} Vorbedingungen, die Quelle nennt ${VORBEDINGUNGEN}`);
@@ -230,7 +287,7 @@ export function pruefeDaten(daten) {
     if (!nichtLeer(v.kurz)) fehler.push(`${wo}: kurz fehlt`);
     if (!nichtLeer(v.wasHierGilt)) fehler.push(`${wo}: wasHierGilt fehlt – ohne das steht die Erwartung der Quelle unwidersprochen da`);
     // Wer Schulstoff verlangt, braucht eine Quelle fuer die Gegenrede.
-    if (SCHULSTOFF.test(v.kurz ?? '') && !nichtLeer(v.quelle)) {
+    if ((SCHULSTOFF.test(v.kurz ?? '') || SCHULSTOFF.test(v.wasHierGilt ?? '')) && !nichtLeer(v.quelle)) {
       fehler.push(`${wo}: nennt Schulstoff, aber die Gegenrede hat keine Quelle`);
     }
   }
@@ -243,8 +300,17 @@ export function pruefeDaten(daten) {
 
   // --- Der Rechtsteil ------------------------------------------------------
   if (recht.length < 5) fehler.push(`${recht.length} Rechtsfragen – zu wenige`);
+  const rIds = new Set();
   for (const r of recht) {
     const wo = `Recht ${r.id ?? '?'}`;
+    if (!nichtLeer(r.id)) fehler.push(`${wo}: id fehlt`);
+    else {
+      if (rIds.has(r.id)) fehler.push(`${wo}: doppelt`);
+      rIds.add(r.id);
+      // Feld- und Rechtskennungen landen in derselben Auswahlliste im
+      // Speicher; eine Kollision waehlte zwei Dinge auf einmal.
+      if (ids.has(r.id)) fehler.push(`${wo}: dieselbe id gibt es schon als Gesprächsfeld – beide landen in derselben Auswahl`);
+    }
     if (!ZEICHEN.test(r.zeichen ?? '')) fehler.push(`${wo}: zeichen fehlt`);
     for (const feld of ['frage', 'antwort', 'quelle']) {
       if (!nichtLeer(r[feld])) fehler.push(`${wo}: ${feld} fehlt – eine Rechtsauskunft ohne Quelle ist keine`);
@@ -253,7 +319,17 @@ export function pruefeDaten(daten) {
   }
   // Landesrecht darf nicht wie Bundesrecht klingen: mindestens zwei Antworten
   // muessen je zwei Bundeslaender nennen.
-  const mitZweiLaendern = recht.filter((r) => BUNDESLAENDER.filter((l) => (r.antwort ?? '').includes(l)).length >= 2);
+  const laenderIn = (text) => {
+    // Laengste zuerst und Treffer ausblenden: „Sachsen" steckt in
+    // „Sachsen-Anhalt", und sonst zaehlt ein Land doppelt (Review Welle 83).
+    let rest = text ?? '';
+    const gefunden = [];
+    for (const l of [...BUNDESLAENDER].sort((a, b) => b.length - a.length)) {
+      if (rest.includes(l)) { gefunden.push(l); rest = rest.split(l).join(' '); }
+    }
+    return gefunden;
+  };
+  const mitZweiLaendern = recht.filter((r) => laenderIn(r.antwort).length >= 2);
   if (mitZweiLaendern.length < 2) {
     fehler.push(`nur ${mitZweiLaendern.length} Antwort(en) nennen zwei oder mehr Bundesländer – bei Landesrecht klingt ein Beispiel sonst wie eine Regel`);
   }
@@ -289,6 +365,20 @@ export function pruefeDaten(daten) {
   for (const feld of Object.keys(NICHT_GEPRUEFT)) {
     if (!(feld in (daten ?? {}))) fehler.push(`NICHT_GEPRUEFT nennt ${feld}, das es in den Daten nicht gibt`);
   }
+  // Jedes ausgenommene Feld braucht entweder einen Netzgrund oder steht
+  // benannt in OHNE_NETZGRUND - eine stille Ausnahme gibt es nicht mehr.
+  for (const feld of [...Object.keys(NICHT_GEPRUEFT), ...Object.keys(NICHT_GEPRUEFT_FELDER)]) {
+    if (Object.hasOwn(AUSNAHME_MUSS_ENTHALTEN, feld)) continue;
+    if (Object.hasOwn(OHNE_NETZGRUND, feld)) continue;
+    fehler.push(`${feld} ist ausgenommen, steht aber weder in AUSNAHME_MUSS_ENTHALTEN noch in OHNE_NETZGRUND`);
+  }
+  // Und umgekehrt: wer in einer Ausnahmetabelle steht, muss wirklich
+  // ausgenommen sein - sonst beschreibt die Tabelle etwas, das es nicht gibt.
+  for (const feld of [...Object.keys(AUSNAHME_MUSS_ENTHALTEN), ...Object.keys(OHNE_NETZGRUND)]) {
+    if (!Object.hasOwn(NICHT_GEPRUEFT, feld) && !Object.hasOwn(NICHT_GEPRUEFT_FELDER, feld)) {
+      fehler.push(`${feld} steht in einer Ausnahmetabelle, ist aber nicht ausgenommen`);
+    }
+  }
   // Jede Ausnahme muss sich verdienen (siehe AUSNAHME_MUSS_ENTHALTEN).
   const textVon = (wert) => {
     if (typeof wert === 'string') return wert;
@@ -313,20 +403,37 @@ export function pruefeDaten(daten) {
   for (const feld of ['werk', 'rechte', 'nachgezaehlt', 'abweichung']) {
     if (!nichtLeer(daten?.quelle?.[feld])) fehler.push(`quelle.${feld} fehlt`);
   }
-  if (!new RegExp(String(MERKMALE_INSGESAMT)).test(daten?.quelle?.nachgezaehlt ?? '')) {
+  if (!new RegExp(`(?<!\\d)${MERKMALE_INSGESAMT}(?!\\d)`).test(daten?.quelle?.nachgezaehlt ?? '')) {
     fehler.push('quelle.nachgezaehlt nennt die Zahl der Merkmale nicht');
   }
 
   // --- Die Textnetze -------------------------------------------------------
-  for (const [wo, text] of angebotsTexte(daten)) {
-    if (KINDFRAGE.test(text)) fehler.push(`${wo}: eine Frage an die Eltern über das Kind`);
-    if (BEWERTUNG.test(text)) fehler.push(`${wo}: eine Bewertung`);
-    if (DIAGNOSE_ZUGESCHRIEBEN.test(text)) fehler.push(`${wo}: eine Diagnose, dem Kind zugeschrieben`);
-    if (VORHERSAGE.test(text)) fehler.push(`${wo}: eine Vorhersage über dieses Kind`);
-    if (SCHULFAEHIG_ALS_URTEIL.test(text)) fehler.push(`${wo}: „schulfähig" als Urteil über dieses Kind`);
-    if (KOENNENSALTER.test(text)) fehler.push(`${wo}: eine Altersangabe, ab der ein Kind etwas können soll`);
-    if (LESEN_ERWARTET.test(text)) fehler.push(`${wo}: die Erwartung, ein Kind solle vor der Schule lesen oder rechnen`);
-    if (KYRILLISCH.test(text)) fehler.push(`${wo}: kyrillisch – die Quelle gehört in das Quellfeld`);
+  // Die Netze laufen ueber den REST - und ueber ein ausgenommenes Feld laeuft
+  // jedes Netz weiter, fuer das es NICHT ausgenommen ist (Review Welle 83:
+  // `nichtUebernommen` war pauschal von allen acht ausgenommen).
+  const BENANNT = Object.freeze({
+    KINDFRAGE: ['eine Frage an die Eltern über das Kind', KINDFRAGE],
+    BEWERTUNG: ['eine Bewertung', BEWERTUNG],
+    DIAGNOSE_ZUGESCHRIEBEN: ['eine Diagnose, dem Kind zugeschrieben', DIAGNOSE_ZUGESCHRIEBEN],
+    VORHERSAGE: ['eine Vorhersage über dieses Kind', VORHERSAGE],
+    SCHULFAEHIG_ALS_URTEIL: ['„schulfähig" als Urteil über dieses Kind', SCHULFAEHIG_ALS_URTEIL],
+    KOENNENSALTER: ['eine Altersangabe, ab der ein Kind etwas können soll', KOENNENSALTER],
+    LESEN_ERWARTET: ['die Erwartung, ein Kind solle vor der Schule lesen oder rechnen', LESEN_ERWARTET],
+    KYRILLISCH: ['kyrillisch – die Quelle gehört in das Quellfeld', KYRILLISCH],
+  });
+  const alleTexte = [...angebotsTexte(daten)];
+  // Dazu die ausgenommenen Felder, aber nur gegen die Netze, von denen sie
+  // NICHT ausgenommen sind.
+  for (const f of felder) {
+    if (nichtLeer(f.nichtUebernommen)) alleTexte.push([`Feld ${f.id}.nichtUebernommen`, f.nichtUebernommen]);
+  }
+  for (const [wo, text] of alleTexte) {
+    const feld = wo.split('.').at(-1);
+    const frei = NETZ_AUSNAHMEN[feld] ?? {};
+    for (const [name, [satz, netz]] of Object.entries(BENANNT)) {
+      if (Object.hasOwn(frei, name)) continue;
+      if (netz.test(text)) fehler.push(`${wo}: ${satz}`);
+    }
   }
   // Die Fragen der Eltern duerfen die Checklistenfrage auch nicht als Zitat
   // tragen: sie werden laut gesagt.

@@ -133,7 +133,7 @@ dieses Hauses bewertet ein Kind (docs/02).
 ## Siebzehn Quellziele, vier Einordnungen
 
 `gebaut` (3: Nr. 6, 7, 8) · `nurEingeschraenkt` (1: Nr. 9) · `anderesThema`
-(10 → Design-Entdecker, Kunst gucken, Erste Künstler, Kita-Kartograph, Dinge
+(10, jedes mit dem Namen seiner App → Design-Entdecker, Kunst gucken, Erste Künstler, Kita-Kartograph, Dinge
 des Alltags) · `nichtUebernommen` (3):
 
 - **Nr. 11** — elf Fachwörter einüben, darunter „Stilisierung", „Faktur",
@@ -160,7 +160,7 @@ Fahrbahn, kein Grundstück und kein Klingeln, keine Menschen fotografieren.
 
 - `logik.mjs` ist rein: keine DOM-, keine Netz-, keine Speicherzugriffe.
 - Umgekehrte Prüfung wie in Nr. 60–64: `angebotsTexte` liefert den **Rest** —
-  alle 272 Strings minus den benannten Ausnahmen in `NICHT_GEPRUEFT`, und jede
+  alle 286 Strings minus den vier benannten Ausnahmen in `NICHT_GEPRUEFT`, und jede
   Ausnahme muss ein Feld benennen, das es wirklich gibt.
 - `ORTSNAME` kennt Halle, Essen und Hof nur mit Präposition: das sind Städte
   **und** gewöhnliche Wörter („eine weite Halle", „zum Essen", „der
@@ -188,7 +188,7 @@ Fahrbahn, kein Grundstück und kein Klingeln, keine Menschen fotografieren.
 - Gespeichert wird genau eine Liste: `asp-auswahl`, die gewählten Karten. Mit
   `datenKarte` samt Löschknopf. Ohne Auswahl druckt die App alle Karten — ein
   leeres Blatt wäre kein Blatt.
-- 24 Tests.
+- 29 Tests.
 
 Quelle: «Пралеска» © НИО 2007, S. 274–276 und S. 278 — übernommen sind Konzept
 und Struktur, alle Formulierungen sind Eigenproduktion.

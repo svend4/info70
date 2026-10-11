@@ -107,7 +107,7 @@
       "woranMan": "Ein sehr weites Dach ohne Stütze in der Mitte – über Bahnsteigen, in einer Markthalle, in einer Turnhalle. Manchmal sieht man unten, wo ein Bogen ansetzt, ein waagerechtes Zugband.",
       "fuerErwachsene": "Die größten dieser Hallen überspannen ihre ganze Breite in einem Stück: eine bekannte Bahnsteighalle 73 Meter weit, als Bogenträger mit Zugband, ohne eine einzige Stütze dazwischen. Das Zugband hält die Bogenfüße zusammen – weil der Bogen nach außen drückt.",
       "sicherheit": "belegt",
-      "sicherheitText": "Belegt sind die Spannweite und die Bauart mit Zugband. NICHT belegt ist, WARUM man so weit spannen wollte: die erste Fassung dieser Karte nannte dafür das Ersparen der Zwischenpfeiler und eine Quelle, in der dieser Satz nicht steht. Für die Markthalle gilt dasselbe – überliefert ist dort nur der Zweck, geregelter Markt und bessere Hygiene, nicht das Spannweiten-Motiv.",
+      "sicherheitText": "Belegt sind die Spannweite und die Bauart mit Zugband. NICHT belegt ist, WARUM man so weit spannen wollte: die erste Fassung dieser Karte nannte dafür das Ersparen der Zwischenpfeiler und eine Quelle, in der dieser Satz nicht steht. Für die Markthalle gilt dasselbe, und auch ihr überlieferter Zweck steht hier nur als Hinweis ohne eigene Fundstelle.",
       "gegenbeispiel": "Auch große Hallen haben manchmal Stützen – und ein Dach ohne Stützen heißt nicht, dass die Halle öffentlich ist.",
       "impuls": "Wo steht in dieser Halle etwas, das das Dach hält?",
       "quelle": "Structurae zur Bahnsteighalle von St Pancras in London: 73 m Stützweite, Konstruktion „Bogenträger mit Zugband“."
@@ -142,13 +142,13 @@
       "zeichen": "🚒",
       "name": "Feuerwehrhaus",
       "art": "ausstattung",
-      "woranMan": "Mehrere große Tore nebeneinander, breit genug für ein Fahrzeug, eine Einfahrt ohne Bordstein – und manchmal ein schmaler hoher Turm.",
-      "nichtAmHaus": "Den Turm haben längst nicht alle: wo die Schlauchpflege für mehrere Wehren an einer Stelle zusammengefasst ist, steht keiner. Ein Feuerwehrhaus im Dorf hat oft bewusst keinen.",
-      "fuerErwachsene": "Die Tore sind so breit und hoch, weil große Fahrzeuge schnell herausfahren müssen, und zwar nebeneinander. Der schmale Turm heißt umgangssprachlich Schlauchturm; die geltende Norm nennt ihn Feuerwehrübungsturm und zählt mehrere Zwecke auf – Aus- und Fortbildung, Übungen, Antennenträger und, bis heute, das Trocknen von Schläuchen. Dass die Norm von „Schlauchtrockenturm“ über „Feuerwehrturm“ zu „Feuerwehrübungsturm“ umbenannt wurde, zeigt, wie sich die Aufgabe verschoben hat.",
+      "woranMan": "Rote Fahrzeuge hinter großen Toren, ein Schild mit dem Namen der Wehr, eine Einfahrt ohne Bordstein, oft eine Sirene auf dem Dach.",
+      "nichtAmHaus": "Am Gebäude selbst erkennt man ein Feuerwehrhaus nicht: große Tore nebeneinander und eine Einfahrt ohne Bordstein haben auch der Bauhof, die Kfz-Werkstatt und das Busdepot. Und den schmalen hohen Turm haben längst nicht alle – wo die Schlauchpflege für mehrere Wehren an einer Stelle zusammengefasst ist, steht keiner.",
+      "fuerErwachsene": "Der schmale Turm heißt umgangssprachlich Schlauchturm; die geltende Norm nennt ihn Feuerwehrübungsturm und zählt mehrere Zwecke auf – Aus- und Fortbildung, Übungen, Antennenträger und, bis heute, das Trocknen von Schläuchen. Dass die Norm von „Schlauchtrockenturm“ über „Feuerwehrturm“ zu „Feuerwehrübungsturm“ umbenannt wurde, zeigt, wie sich die Aufgabe verschoben hat.",
       "sicherheit": "belegt",
-      "sicherheitText": "Belegt über die Titelgeschichte der Norm und über Förderrecht, das Voll- und Halbtürme samt automatischer Schlauchaufhängevorrichtung auflistet. Gelesen wurde dabei der einführende Beitrag zur Norm, nicht der Normtext selbst: Normen sind kostenpflichtig. NICHT belegt ist, WARUM Schläuche getrocknet werden müssen – die naheliegende Erklärung über Naturfasern war nicht zu belegen.",
+      "sicherheitText": "Belegt über die Titelgeschichte der Norm und über Förderrecht, das Voll- und Halbtürme als eigene Bauarten führt. Gelesen wurde dabei der einführende Beitrag zur Norm, nicht der Normtext selbst: Normen sind kostenpflichtig. NICHT belegt ist, WARUM Schläuche getrocknet werden müssen – die naheliegende Erklärung über Naturfasern war nicht zu belegen. Und NICHT belegt ist, warum die Tore so breit und hoch sind: die Fundstellen dieser Karte handeln vom Turm, nicht von den Toren. Auf die Frage der Karte gibt es hier also keine Antwort zum Nachsprechen – was zu dieser App passt.",
       "impuls": "Warum sind die Tore so breit, was meinst du?",
-      "quelle": "DIN 14092-3:2024-06 „Feuerwehrhäuser – Teil 3: Feuerwehrübungsturm“, 13 Seiten, mit fünf genannten Zwecken; Vorgängerausgabe DIN 14092-3:1992-10 unter dem Titel „Feuerwehrhäuser; Schlauchtrockenturm, Übungswand“, zurückgezogen. Dass Türme weiter gebaut werden, steht in einer Feuerwehr-Zuwendungsrichtlinie, die Voll- und Halbtürme nach dieser Norm als eigene Bauarten führt; Fördersummen nennt diese App nicht, weil die dafür gefundene Fassung ein unveröffentlichter Entwurf war."
+      "quelle": "DIN 14092-3:2024-06 „Feuerwehrhäuser – Teil 3: Feuerwehrübungsturm“, 13 Seiten, mit fünf genannten Zwecken; die Vorgängerausgabe 2012-04 hieß „Feuerwehrturm“, die Ausgabe 1992-10 noch „Schlauchtrockenturm, Übungswand“. Dass Türme weiter gebaut werden, steht in einer Feuerwehr-Zuwendungsrichtlinie, die Voll- und Halbtürme nach dieser Norm als eigene Bauarten führt; Fördersummen nennt diese App nicht, weil die dafür gefundene Fassung ein unveröffentlichter Entwurf war."
     },
     {
       "id": "a-schule",
@@ -157,9 +157,9 @@
       "art": "ausstattung",
       "woranMan": "Ein Hof mit Markierungen, viele Fahrradstände, eine Reihe gleich großer Fenster, oft ein Zaun und ein Schild mit Namen.",
       "nichtAmHaus": "Schulgebäude gibt es aus allen Zeiten und in allen Formen. Die Reihe gleich großer Fenster weist auf gleich große Räume hin – das kann auch ein Bürohaus sein.",
-      "fuerErwachsene": "Die freie Fläche neben dem Gebäude ist nicht übrig geblieben, sie ist vorgeschrieben: in der Schulbauverordnung, die beim Bau dieser App nachgelesen wurde, steht eine Pausenfläche je Schülerin und Schüler. Wie viel, ist Landesrecht und von Land zu Land verschieden.",
+      "fuerErwachsene": "Die freie Fläche neben dem Gebäude ist nicht übrig geblieben, sie ist vorgeschrieben: in der Schulbauverordnung, die beim Bau dieser App nachgelesen wurde, steht eine Mindestfläche für den Pausenhof je Schülerin und Schüler, und zusätzlich soll jede Schule eine geschlossene Pausenfläche haben – also eine überdachte für schlechtes Wetter. Wie viel, ist Landesrecht und von Land zu Land verschieden.",
       "sicherheit": "vereinfachung",
-      "sicherheitText": "Belegt ist, dass in einem nachgelesenen Landesrecht eine Mindestfläche für den Pausenhof und zusätzlich eine geschlossene Pausenfläche vorgeschrieben sind. Andere Länder regeln das anders oder gar nicht – deshalb nennt diese App keine Zahl. (Die erste Fassung behauptete hier, die Angaben widersprächen sich; das war ein Lesefehler: eine Länderübersicht bestätigt die Zahl, sie widerspricht ihr nicht.) NICHT belegt ist, dass die langen Fensterreihen auf Tageslichtvorschriften zurückgehen: in der nachgelesenen Verordnung steht zu Fenstern nichts.",
+      "sicherheitText": "Belegt ist, dass in einem nachgelesenen Landesrecht beides vorgeschrieben ist: eine Mindestfläche für den Pausenhof und eine geschlossene Pausenfläche. Andere Länder regeln das anders oder gar nicht – deshalb nennt diese App keine Zahl. (Die erste Fassung behauptete hier, die Angaben widersprächen sich; das war ein Lesefehler – eine Länderübersicht bestätigt die Zahl, sie widerspricht ihr nicht.) NICHT belegt ist, dass die langen Fensterreihen auf Tageslichtvorschriften zurückgehen: in der nachgelesenen Verordnung steht zu Fenstern nichts.",
       "impuls": "Was würdest du in diesem Hof zuerst machen?",
       "quelle": "Schulbauverordnung eines Bundeslandes (BaySchulBauV vom 30. Dezember 1994), § 2 zur Pausenfläche je Schülerin und Schüler; zu Fenstern, Fensterflächen oder Tageslicht enthält diese Verordnung nichts."
     },
@@ -169,10 +169,12 @@
       "name": "Rathaus",
       "art": "nichtErkennbar",
       "woranMan": "Kein Merkmal, das immer stimmt.",
-      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Beim Rathaus verneint die Fachliteratur die Erklärung über die Funktion ausdrücklich: die Bauaufgabe entstand nicht aus einer funktionalen Notwendigkeit, sondern aus dem Willen des Rates, sich zu zeigen. Laube, Turm und Freitreppe folgen deshalb nur selten unmittelbar der Funktion, sondern der Tradition – an einem Ort hat die Laube überhaupt keine Funktion mehr. Und dass der Rathausturm für die Freiheit der Bürger stehe, ist eine Vorstellung des 19. Jahrhunderts. Das macht diese Karte zur wichtigsten des ganzen Spaziergangs: hier sagt die Forschung selbst, dass die Form dem Zweck nicht folgt.",
+      "warumNicht": "Es gibt alte Rathäuser mit Turm, Erker und Arkaden – und es gibt Rathäuser, die ein normales Bürohaus sind. Beim Rathaus verneint die Fachliteratur die Erklärung über die Funktion ausdrücklich: die Bauaufgabe entstand nicht aus einer funktionalen Notwendigkeit, sondern aus dem Willen des Rates, sich zu zeigen. Laube, Turm und Freitreppe folgen deshalb nur selten unmittelbar der Funktion, sondern der Tradition – an einem Ort hat die Laube überhaupt keine Funktion mehr. Auch der Turm trägt das Erkennen nicht: wo Zünfte einen Ratsturm bauen ließen, war er das Zeichen ihrer eigenen Stadtherrschaft. Im Rathaus ein Sinnbild der Freiheit aller zu sehen, ist eine Rückprojizierung auf das mittelalterliche Rathaus und eine Vorstellung des 19. Jahrhunderts. Das macht diese Karte zur wichtigsten des ganzen Spaziergangs: hier sagt die Forschung selbst, dass die Form dem Zweck nicht folgt.",
       "woranDoch": "Was es verrät, ist kein Bauteil: die Flagge, das Wappen, das Schild an der Tür, der Briefkasten für Anträge.",
       "impuls": "Wie würden wir herausfinden, ob hier das Rathaus ist?",
-      "quelle": "Stephan Albrecht, „Mittelalterliche Rathäuser in Deutschland. Architektur und Funktion“, nach der Fachrezension von Maritta Iseler in sehepunkte: die Entstehung der Bauaufgabe „entsprang nicht einer funktionalen Notwendigkeit, sondern einem repräsentativen Willen zur Selbstdarstellung des Rates“; zum Turm als Zeichen der Zünfte die Stadt Köln über ihren Rathausturm."
+      "quelle": "Stephan Albrecht, „Mittelalterliche Rathäuser in Deutschland. Architektur und Funktion“, nach der Fachrezension von Maritta Iseler in sehepunkte: die Entstehung der Bauaufgabe „entsprang nicht einer funktionalen Notwendigkeit, sondern einem repräsentativen Willen zur Selbstdarstellung des Rates“, und die Rückprojizierung der Freiheitssymbolik „entstammt einem Mythos, ist eine Vorstellung der romantisch geprägten bürgerlichen Gesellschaft des 19. Jahrhunderts“; zum Zunftturm die Stadt Köln über ihren Rathausturm.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt ist, dass die Fachliteratur die Erklärung über die Funktion hier ausdrücklich verneint, und dass die Freiheitsdeutung des Turms eine Rückprojizierung des 19. Jahrhunderts ist. Gelesen wurde dabei eine Fachrezension, nicht die Monographie selbst. NICHT belegt – und darum nicht hier – ist das häufige Schema „offene Halle unten, großer Saal oben“ als funktionale Erklärung: die zitierte Quelle läuft ihm sogar entgegen."
     },
     {
       "id": "n-nutzung",
@@ -369,7 +371,7 @@
       "nr": 15,
       "kurz": "die Vorstellungen über die Rolle verschiedener Kunstarten im Design und über seine historischen und nationalen Wurzeln bereichern",
       "einordnung": "anderesThema",
-      "warum": "Stilgeschichte des Designs – nicht hier, und für fünf- bis siebenjährige Kinder auch nicht im Gehen."
+      "warum": "Stilgeschichte und nationale Wurzeln des Designs – das ist der Gegenstand des „Design-Entdecker“, und für fünf- bis siebenjährige Kinder im Gehen ohnehin nichts."
     },
     {
       "nr": 16,
@@ -407,7 +409,7 @@
     },
     {
       "was": "Die Stilgeschichte des Designs",
-      "warum": "Acht der siebzehn Quellziele betreffen Design, Innenraum und angewandte Grafik. Sie sind hier nicht übernommen – zwei davon ausdrücklich zurückgewiesen, sechs gehören in Apps, die es schon gibt."
+      "warum": "Acht der siebzehn Quellziele betreffen Design, Innenraum und angewandte Grafik. Sie sind hier nicht übernommen – drei davon ausdrücklich zurückgewiesen, fünf gehören in Apps, die es schon gibt."
     }
   ],
   "quelle": {
@@ -415,7 +417,7 @@
     "werk": "Пралеска: программа дошкольного образования / Е. А. Панько и др. — Минск: НИО; Аверсэв, 2007. Раздел «Восприятие искусства», группа «ФАНТАЗЕРЫ» (5–6/7 лет), с. 274–276; перечень «Архитектура» — с. 278.",
     "rechte": "© НИО 2007. Übernommen sind Konzept und Struktur, nicht Texte: alle Formulierungen dieser App sind Eigenproduktion.",
     "nachgezaehlt": "Семнадцать задач в разделе «Восприятие искусства» (пересчитано по пунктам на с. 274–276). В перечне «Архитектура» на с. 278 названы четырнадцать памятников: десять отдельных плюс ратуши в Минске, Витебске, Могилёве и Несвиже.",
-    "abweichung": "Приложение не воспроизводит перечень: все четырнадцать памятников находятся в Беларуси. Основание для замены — сама же фраза источника в конце того же перечня: «общественные и производственные здания своей местности». Две задачи из семнадцати отклонены (№ 16 — реклама, № 17 — оценка массовой продукции), одна принята с ограничением (№ 9 — внешний вид зависит от назначения: только иногда), восемь отнесены к другим приложениям."
+    "abweichung": "Приложение не воспроизводит перечень: все четырнадцать памятников находятся в Беларуси. Основание для замены — сама же фраза источника в конце того же перечня: «общественные и производственные здания своей местности». **Три задачи из семнадцати отклонены (№ 11 — одиннадцать терминов, № 16 — реклама, № 17 — оценка массовой продукции)**, одна принята с ограничением (№ 9 — внешний вид зависит от назначения: только иногда), **десять отнесены к другим приложениям**, а остальные три (№ 6, 7, 8) и составляют ядро приложения: 3 + 1 + 10 + 3 = 17. **Исправление:** в первой сборке здесь стояло «две отклонены» и «восемь отнесены» — счёт не сходился (2+1+8=11 из 17), потому что задача № 11 была переведена в отклонённые, а эта запись не обновлена. Теперь валидатор требует, чтобы в этом поле стоял номер каждой отклонённой задачи."
   },
   "elterntelefon": "Elterntelefon „Nummer gegen Kummer“: 0800 111 0 550, kostenlos und anonym."
 }

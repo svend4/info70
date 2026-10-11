@@ -11,10 +11,18 @@ import { readFile, readdir, access } from 'node:fs/promises';
 // Derselbe Fehler lag in drei älteren Apps (deutschland-kompass,
 // erfinder-werkstatt, woerter-sortierer), jeweils um eins.
 //
-// Eine App MUSS die Zahl nicht nennen; 153 von 183 tun es nicht. Geprüft
-// wird nur, wer sie nennt.
+// Eine App MUSS die Zahl nicht nennen. Geprüft wird nur, wer sie nennt.
+//
+// WELLE 83: die beiden Muster fassten die Zahl an einer NOTATION – an der
+// Befehlszeile (`# 24 теста`) und an der Klammer hinter einem Dateinamen. Die
+// Apps der Wellen 80 bis 83 schreiben dieselbe Zusage anders auf, als Listen-
+// oder Tabellenzeile (`- 24 Tests.`, `- 24 теста. Хранится …`), und lagen
+// damit ausserhalb der Reichweite der Regel: sieben Apps nannten ihre Zahl und
+// wurden nicht geprüft, Nr. 65 und Nr. 66 eingeschlossen. Gefasst wird die
+// Zahl jetzt am EINHEITENWORT – „N Tests", „N теста", „N тестов" – und die
+// Klammerform bleibt daneben erhalten.
 const appsDir = new URL('../../../apps/', import.meta.url);
-const ZAHL_IM_BEFEHL = /#\s*(\d+)\s*(?:тест|Test)/g;
+const ZAHL_AM_EINHEITENWORT = /(?<![\d,.])(\d+)\s+(?:Tests?|тест(?:а|ов)?)(?![\wäöüß])/g;
 const ZAHL_AN_DER_DATEI = /\.test\.mjs`?\s*\((\d+)\)/g;
 
 const vorhanden = async (url) => { try { await access(url); return true; } catch { return false; } };
@@ -38,7 +46,7 @@ for (const name of ordner) {
     const url = new URL(`${name}/${doc}`, appsDir);
     if (!(await vorhanden(url))) continue;
     const s = await readFile(url, 'utf8');
-    for (const muster of [ZAHL_IM_BEFEHL, ZAHL_AN_DER_DATEI]) {
+    for (const muster of [ZAHL_AM_EINHEITENWORT, ZAHL_AN_DER_DATEI]) {
       for (const m of s.matchAll(muster)) {
         geprueft += 1;
         if (Number(m[1]) !== echt) befunde.push(`apps/${name}/${doc} nennt ${m[1]} Tests, es sind ${echt}`);

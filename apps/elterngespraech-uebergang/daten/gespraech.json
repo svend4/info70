@@ -47,7 +47,7 @@
       "id": "f-person",
       "zeichen": "🌱",
       "name": "Wille und Zutrauen",
-      "quellPunkte": 21,
+      "quellPunkte": 20,
       "quellFrage": "Einundzwanzig Punkte zu Motiven, Werten, Selbstbild – darunter, dass im siebten Lebensjahr eine „innere Position des Schulkindes“ entstehe.",
       "nichtUebernommen": "„Hat Ihr Kind schon die innere Haltung eines Schulkindes?“ – Das kann niemand ankreuzen, und Eltern müssen es nicht beantworten. Was ein Kind will, sagt es selbst, in seinen Worten.",
       "ihreFrage": "Worauf freut sich mein Kind, wenn von der Schule die Rede ist – und wovor hat es Respekt?",
@@ -113,7 +113,7 @@
       "id": "f-kunst",
       "zeichen": "🎨",
       "name": "Anschauen und Gestalten",
-      "quellPunkte": 20,
+      "quellPunkte": 19,
       "quellFrage": "Zwanzig Punkte: Werke betrachten und sie „ziemlich fachgerecht beschreiben“, Kunstarten und Gattungen kennen, die Funktionen von Architektur und Design kennen, beim Zeichnen, Formen und Kleben eigene Mittel benutzen.",
       "nichtUebernommen": "„Kann Ihr Kind ein Bild fachgerecht beschreiben?“ – Darüber entscheidet, ob jemand mit ihm je ein Bild angeschaut hat. Zum gemeinsamen Hinschauen gibt es „Kunst gucken“; eine Bewertung entsteht daraus nicht.",
       "ihreFrage": "Was hat mein Kind bei Ihnen zuletzt gemacht, das es selbst gut fand?",
@@ -165,7 +165,7 @@
       "nr": 4,
       "kurz": "kann die Lautanalyse von Wörtern praktisch jeder Schwierigkeit durchführen, indem es das Wort laut oder im Kopf ausspricht",
       "wasHierGilt": "Auf Laute und Silben zu hören ist wichtig – aber anders, als es hier steht. Das verbreitetste Verfahren der Schuleingangsuntersuchung nennt seine Teile selbst „Vorläuferfähigkeiten für Lesen und Schreiben“. Im deutschen Sprachraum erklärt die Lautbewusstheit etwa ein Zehntel der Unterschiede im späteren Lesen und Schreiben – weniger als in englischsprachigen Studien; in Sprachen mit regelmäßiger Schrift sagte sogar eher das Lesen die Lautbewusstheit voraus als umgekehrt. Sie ist eine Begleiterin des Lesenlernens, nicht seine Vorbedingung. Übungen vor der Schule verbessern die Lautbewusstheit selbst; der Übertrag auf das spätere Lesen ist langfristig klein und beim Entschlüsseln von Wörtern nicht nachweisbar. Für Kinder, um die man sich Sorgen macht, ist im deutschen Sprachraum kein Nutzen nachgewiesen – das ist fehlende Evidenz, kein Nachweis eines Schadens; international findet man dort eher größere Effekte. „Wörter praktisch jeder Schwierigkeit“ verlangt hier niemand.",
-      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022; Pfost, Zeitschrift für Entwicklungspsychologie und Pädagogische Psychologie 2015, 21 Studien, etwa ein Zehntel der Varianz, ausdrücklich nicht kausal zu lesen; Landerl u. a., Scientific Studies of Reading 2019 („corequisite“ statt „prerequisite“); Fischer und Pfost, ebenda 2015, 22 Trainingsvergleiche: langfristig d = 0,14 auf Lesen und Rechtschreiben, Entschlüsseln d = 0,03 und Risikostichproben d = −0,11, beide nicht signifikant bei k = 7 bzw. k = 4."
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022; Pfost, Zeitschrift für Entwicklungspsychologie und Pädagogische Psychologie 2015, 21 Studien, etwa ein Zehntel der Varianz, ausdrücklich nicht kausal zu lesen; Landerl u. a., Scientific Studies of Reading 2019 („corequisite“ statt „prerequisite“); Fischer und Pfost, Zeitschrift für Entwicklungspsychologie und Pädagogische Psychologie 2015, 22 Trainingsvergleiche: langfristig d = 0,14 auf Lesen und Rechtschreiben, Entschlüsseln d = 0,03 und Risikostichproben d = −0,11, beide nicht signifikant bei k = 7 bzw. k = 4."
     },
     {
       "nr": 5,
@@ -177,7 +177,7 @@
       "nr": 6,
       "kurz": "liest einzelne Silben und Wörter silbenweise",
       "wasHierGilt": "Hier liegt der deutlichste Unterschied zwischen den beiden Schulsystemen. Vor der Schule wird in Deutschland nicht geprüft, ob ein Kind liest, sondern was dem Lesen vorausgeht – das Verfahren der Untersuchung nennt es wörtlich so. Geprüft wird bei der Anmeldung dagegen, ob ein Kind gesprochenes Deutsch hinreichend beherrscht. Lesen und Schreiben sind Lernziele der ersten Schuljahre. In einer Studie, die deutschsprachige und englischsprachige Kinder verglich, waren die meisten deutschsprachigen Kinder zu Schulbeginn noch Nichtleser – das ist dort allerdings eine Randbemerkung zu den Grenzen der Studie, kein eigener Befund. Mehr dazu, mit Fundstellen, unter „Was gilt“.",
-      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022: die drei Indikatoren lauten „Erkennen und Zeichnen von Objekten und Formen (Vorläuferfähigkeiten für Lesen und Schreiben)“, „Umgang mit Zahlen und Mengen (Vorläuferfähigkeiten für Rechnen)“ und „Sprachkompetenz in der deutschen Sprache“; Landerl u. a., Scientific Studies of Reading 2019, zur deutschsprachigen Teilstichprobe."
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022: die Vorläuferfähigkeiten heißen dort „Erkennen und Zeichnen von Objekten und Formen (Vorläuferfähigkeiten für Lesen und Schreiben)“ und „Umgang mit Zahlen und Mengen (Vorläuferfähigkeiten für Rechnen)“, daneben stehen Sprachkompetenz im Deutschen und Körperkoordination; Landerl u. a., Scientific Studies of Reading 2019, zur deutschsprachigen Teilstichprobe."
     },
     {
       "nr": 7,
@@ -195,8 +195,8 @@
       "id": "r-pflicht",
       "zeichen": "📋",
       "frage": "Muss mein Kind zur Schuleingangsuntersuchung?",
-      "antwort": "Ja. Sie ist Pflicht, und zwar nach dem Recht des jeweiligen Bundeslandes – einen bundesweiten Satz gibt es nicht. In Nordrhein-Westfalen schreibt das Schulgesetz vor, dass vor der Aufnahme eine schulärztliche Untersuchung stattfindet; in Brandenburg steht dasselbe im Schulgesetz, und die Kinder sind dort ausdrücklich verpflichtet, sich untersuchen zu lassen; in Bayern regelt es das Erziehungs- und Unterrichtsgesetz zusammen mit dem Gesundheitsdienstgesetz; in Baden-Württemberg das Schulgesetz. Wann genau untersucht wird, unterscheidet sich: Bayern verlegt die Untersuchung derzeit in ein früheres Kindergartenjahr.",
-      "quelle": "§ 54 Abs. 4 Satz 1 SchulG NRW; § 37 Abs. 1 Satz 1 und § 45 Abs. 1, 2 BbgSchulG; Art. 80 Satz 1 BayEUG und Art. 12 Abs. 3 GDG; § 91 Abs. 1 SchG BW."
+      "antwort": "Ja. Sie ist Pflicht, und zwar nach dem Recht des jeweiligen Bundeslandes – einen bundesweiten Satz gibt es nicht. In Nordrhein-Westfalen sind die Kinder nach dem Schulgesetz verpflichtet, sich bei der Reihenuntersuchung zur Einschulung untersuchen zu lassen. In Brandenburg steht die Pflicht ebenfalls im Schulgesetz, dort für alle Kinder vor Beginn der Schulpflicht, und die Untersuchung gilt als verbindliche Veranstaltung der Schule. In Bayern regelt es das Erziehungs- und Unterrichtsgesetz zusammen mit dem Gesundheitsdienstgesetz; in Baden-Württemberg das Schulgesetz, dort in zwei Schritten – der erste Schritt ist Pflicht für alle Kinder etwa zwei Jahre vor der Einschulung, der zweite nur in begründeten Fällen. Wann genau untersucht wird, unterscheidet sich also auch: Bayern verlegt die Untersuchung derzeit in ein früheres Kindergartenjahr.",
+      "quelle": "§ 54 Abs. 4 Satz 1 SchulG NRW; § 37 Abs. 1 Satz 1 und § 45 Abs. 1, 2 BbgSchulG; Art. 80 Satz 1 BayEUG und Art. 12 Abs. 3 GDG; § 91 Abs. 2 Satz 1 und Satz 4 SchG BW. Die Texte für Baden-Württemberg waren nur über Spiegelseiten erreichbar, nicht über das amtliche Landesrechtsportal."
     },
     {
       "id": "r-wer",
@@ -209,8 +209,8 @@
       "id": "r-urteil",
       "zeichen": "🚦",
       "frage": "Sagt die Untersuchung, ob mein Kind schulfähig ist?",
-      "antwort": "Nicht als Urteil. Sie stellt einen Befund fest und gibt eine Empfehlung, und die Schule hat diese Empfehlung zu berücksichtigen – entscheiden muss sie selbst. Der Rechtsbegriff lautet in Brandenburg „gesundheitliche Schulfähigkeit“, also die Frage aus medizinischer Sicht, nicht die ganze Frage. In der Fachliteratur ist die Richtung noch deutlicher: die alten Schulreife-Konzepte wurden verlassen, weil sie einer Überprüfung nicht standhielten, und es stelle sich „nicht mehr die Frage, ob, sondern mit welchen Hilfen und welcher Förderung ein Kind einzuschulen ist“.",
-      "quelle": "§ 1 Abs. 3 Satz 1 KJGDV Brandenburg und Handbuch des Kinder- und Jugendgesundheitsdienstes Brandenburg 2026; Verwaltungsvorschrift 1.4.1 und 1.4.2 zu § 1 Abs. 4 AO-GS NRW; Wattjes u. a., „Das Gesundheitswesen“ 2018, Band 80, Heft 4, S. 310–316."
+      "antwort": "Nicht als Urteil. Sie stellt einen Befund fest und gibt gegebenenfalls eine Empfehlung – entscheiden muss die Schule selbst. Wie fest sie dabei an das Ergebnis gebunden ist, sagt das Landesrecht, und es sagt es verschieden: in Brandenburg berücksichtigt die Schulleitung die Ergebnisse der schulärztlichen Untersuchung, in Nordrhein-Westfalen entscheidet sie über eine Zurückstellung auf der Grundlage des amtsärztlichen Gutachtens. Der Rechtsbegriff lautet in Brandenburg „gesundheitliche Schulfähigkeit“ – also die Frage aus medizinischer Sicht, nicht die ganze Frage. In der Fachliteratur ist die Richtung noch deutlicher: die alten Schulreife-Konzepte wurden verlassen, weil sie einer Überprüfung nicht standhielten, und es stelle sich „nicht mehr die Frage, ob, sondern mit welchen Hilfen und welcher Förderung ein Kind einzuschulen ist“.",
+      "quelle": "§ 51 Abs. 1 BbgSchulG (die Schulleitung berücksichtigt die Ergebnisse) und § 1 Abs. 3 Satz 1 KJGDV Brandenburg (gesundheitliche Schulfähigkeit); § 35 Abs. 3 Satz 2 SchulG NRW (Entscheidung auf Grundlage des amtsärztlichen Gutachtens) mit der Verwaltungsvorschrift 1.4.1 und 1.4.2 zu § 1 Abs. 4 AO-GS; Wattjes u. a., „Das Gesundheitswesen“ 2018, Band 80, Heft 4, S. 310–316."
     },
     {
       "id": "r-ergebnis",
@@ -258,8 +258,8 @@
       "id": "r-was",
       "zeichen": "🔎",
       "frage": "Was wird bei der Untersuchung überhaupt angeschaut?",
-      "antwort": "Je nach Bundesland verschieden, und die Unterschiede betreffen nicht nur den Zeitpunkt, sondern auch, ob überhaupt alle Kinder von einer Ärztin des öffentlichen Gesundheitsdienstes gesehen werden. Das verbreitetste Entwicklungsscreening fasst seine zehn Teile zu drei Angaben zusammen: Erkennen und Zeichnen von Objekten und Formen – als Vorläuferfähigkeit für Lesen und Schreiben –, Umgang mit Zahlen und Mengen als Vorläuferfähigkeit für das Rechnen, und Sprachkompetenz im Deutschen. Beachten Sie das Wort Vorläuferfähigkeit: geprüft wird nicht, ob ein Kind liest, sondern was dem Lesen vorausgeht.",
-      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022, und die Verfahrensbeschreibung mit zehn Untertests; zur Heterogenität Preuschhof u. a., „Das Gesundheitswesen“ 2023, Band 85, Heft 10, S. 937–944."
+      "antwort": "Je nach Bundesland verschieden, und die Unterschiede betreffen nicht nur den Zeitpunkt, sondern auch, ob überhaupt alle Kinder von einer Ärztin des öffentlichen Gesundheitsdienstes gesehen werden. Das verbreitetste Entwicklungsscreening wird zu vier Angaben zusammengefasst: Erkennen und Zeichnen von Objekten und Formen – als Vorläuferfähigkeit für Lesen und Schreiben –, Umgang mit Zahlen und Mengen als Vorläuferfähigkeit für das Rechnen, Sprachkompetenz im Deutschen, und Körperkoordination. Beachten Sie das Wort Vorläuferfähigkeit: geprüft wird nicht, ob ein Kind liest, sondern was dem Lesen vorausgeht.",
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022, mit den vier zusammengefassten Angaben; zur Heterogenität zwischen den Ländern Preuschhof u. a., „Das Gesundheitswesen“ 2023, Band 85, Heft 10, S. 937–944."
     },
     {
       "id": "r-lesen",
@@ -306,8 +306,8 @@
     "geprueft": true,
     "werk": "Пралеска: программа дошкольного образования / Е. А. Панько и др. — Минск: НИО; Аверсэв, 2007. Раздел «ОСНОВНЫЕ ПОКАЗАТЕЛИ РАЗВИТИЯ ДЕТЕЙ (к концу седьмого года жизни)», с. 300–311.",
     "rechte": "© НИО 2007. Übernommen sind Konzept und Gliederung, nicht Texte: alle Formulierungen dieser App sind Eigenproduktion.",
-    "nachgezaehlt": "Пересчитано по пунктам: 141 показатель в 13 областях — психологическое здоровье 7, физическое 7, интеллектуальные достижения 21, личностное и эмоционально-волевое 21, психологическая культура 9, общение и речь 9, игровая 10, художественно-речевая и театральная 8, музыкальная 10, восприятие искусства и изобразительная 20, детское экспериментирование 7, трудовая 4, предпосылки учебной деятельности 8. Двенадцать областей плюс восемь предпосылок — именно так, как значится в записи каталога.",
-    "abweichung": "Запись каталога указывает «с. 301–311» и «Учебная деятельность, с. 311». Проверено: раздел начинается на с. 300, а заголовок на с. 311 — «ПРЕДПОСЫЛКИ учебной деятельности», то есть предпосылки, а не сама учебная деятельность. Числа каталога (12 + 8) верны. Ни один из 141 показателя не воспроизведён как пункт для галочки: взята только структура полей, направление вопроса перевёрнуто."
+    "nachgezaehlt": "Пересчитано по глифу маркера списка (0xF6) по его постоянной колонке в PDF и с привязкой к заголовкам по вертикальной координате: **139 показателей в 13 областях** — 7, 7, 21, 20, 9, 9, 10, 8, 10, 19, 7, 4 в двенадцати областях (131) плюс 8 предпосылок учебной деятельности. Двенадцать областей плюс восемь предпосылок — именно так, как значится в записи каталога.",
+    "abweichung": "Запись каталога указывает «с. 301–311» и «Учебная деятельность, с. 311». Проверено: раздел начинается на с. 300, а заголовок на с. 311 — «ПРЕДПОСЫЛКИ учебной деятельности», то есть предпосылки, а не сама учебная деятельность. Числа каталога (12 + 8) верны. **Исправление первой сборки:** сначала здесь стояло 141 показателей с распределением …21, 20… — подсчёт по строкам текста завысил два поля на единицу каждое. Пересчёт по глифу маркера даёт 139, и теперь в приложении сверяются друг с другом три вещи: это поле, числа у каждого поля и константа. Ни один из 139 показателей не воспроизведён как пункт для галочки: взята только структура полей, направление вопроса перевёрнуто."
   },
   "elterntelefon": "Elterntelefon „Nummer gegen Kummer“: 0800 111 0 550, kostenlos und anonym."
 }

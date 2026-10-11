@@ -17,21 +17,32 @@ const app = document.getElementById('app');
 const daten = await fetch('daten/gespraech.json').then((r) => r.json());
 const SCHLUESSEL = 'eub-fragen';
 
+// Der Stand liegt im Arbeitsspeicher, localStorage ist die Kopie (Muster aus
+// Nr. 49). Sonst tut bei gesperrtem Speicher - privates Fenster, blockierte
+// Website-Daten - jedes Antippen sichtbar nichts (Review Welle 83).
+let speicherSperre = false;
+
 /** Welche Fragen Sie mitnehmen - nicht, was Ihr Kind kann. */
-function ladeAuswahl() {
+function geleseneAuswahl() {
   try {
     const roh = JSON.parse(localStorage.getItem(SCHLUESSEL) ?? 'null');
     if (!Array.isArray(roh)) return [];
     const bekannt = new Set([...daten.gespraechsfelder.map((f) => f.id), ...daten.rechtliches.map((r) => r.id)]);
-    return roh.filter((id) => bekannt.has(id));
+    // Entdoppeln: sonst widersprechen sich Kopfzeile und Druckknopf.
+    return [...new Set(roh.filter((id) => bekannt.has(id)))];
   } catch { return []; }
 }
 
+let merkAuswahl = geleseneAuswahl();
+const ladeAuswahl = () => merkAuswahl;
+
 function speichereAuswahl(ids) {
+  merkAuswahl = [...new Set(ids)];
   try {
-    if (!ids.length) localStorage.removeItem(SCHLUESSEL);
-    else localStorage.setItem(SCHLUESSEL, JSON.stringify(ids));
-  } catch { /* privater Modus: dann eben nicht */ }
+    if (!merkAuswahl.length) localStorage.removeItem(SCHLUESSEL);
+    else localStorage.setItem(SCHLUESSEL, JSON.stringify(merkAuswahl));
+    speicherSperre = false;
+  } catch { speicherSperre = true; }
 }
 
 let offenesFeld = null;
@@ -145,6 +156,10 @@ function render(fokusElement = null) {
         `💬 ${daten.gespraechsfelder.length} Felder${auswahl.length ? ` · ${auswahl.length} Fragen gewählt` : ''}`),
       el('p', { class: 'eub-nur-bildschirm', style: 'margin:0 0 0.4rem;font-size:0.9rem;color:#4b5563' },
         'Zu jedem Feld der Quelle steht hier, was ihre Liste prüft, warum das nicht übernommen ist – und eine Frage, die Sie stellen können.'),
+      speicherSperre
+        ? el('p', { class: 'k-hinweis eub-nur-bildschirm', style: 'margin:0 0 0.4rem' },
+          '🔒 Dieses Gerät lässt gerade nichts speichern – privates Fenster oder blockierte Website-Daten. Die Auswahl gilt, solange die Seite offen ist; nach dem Schließen ist sie weg. Drucken Sie das Blatt, dann haben Sie es auf Papier.')
+        : null,
       ...daten.gespraechsfelder.map((f) => feldAnsicht(f, auswahl))),
 
     el('section', { class: 'k-karte eub-nur-bildschirm' },
@@ -197,7 +212,7 @@ function render(fokusElement = null) {
       datenKarte({
         schluessel: SCHLUESSEL,
         was: 'die Fragen, die Sie mitnehmen wollen (nur dieses Gerät, keine Angaben über Ihr Kind)',
-        nachLoeschen: () => render(),
+        nachLoeschen: () => { merkAuswahl = []; render(); },
         knopfId: 'eub-loeschen',
         klasse: 'eub-nur-bildschirm',
       })),

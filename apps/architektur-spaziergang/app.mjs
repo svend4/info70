@@ -23,21 +23,34 @@ const GRUPPEN = [
   { art: 'gruen', titel: '🌳 Grün und Platz', satz: 'Auch Parks und Grünanlagen sind geplant.' },
 ];
 
+// Der Stand liegt im Arbeitsspeicher, localStorage ist die Kopie (Muster aus
+// Nr. 49). Las und schrieb jeder Weg direkt in den Speicher, dann tat bei
+// gesperrtem Speicher - privates Fenster, blockierte Website-Daten - jedes
+// Antippen sichtbar nichts, ohne zu sagen warum (Review Welle 83).
+let speicherSperre = false;
+
 /** Was Sie sich vornehmen – nicht, was Ihr Kind geschafft hat. */
-function ladeAuswahl() {
+function geleseneAuswahl() {
   try {
     const roh = JSON.parse(localStorage.getItem(SCHLUESSEL) ?? 'null');
     if (!Array.isArray(roh)) return [];
     const bekannt = new Set(daten.karten.map((k) => k.id));
-    return roh.filter((id) => bekannt.has(id));
+    // Entdoppeln: sonst zaehlt die Kopfzeile Wiederholungen mit, der
+    // Druckknopf nicht, und zwei Zahlen widersprechen sich auf einem Bild.
+    return [...new Set(roh.filter((id) => bekannt.has(id)))];
   } catch { return []; }
 }
 
+let merkAuswahl = geleseneAuswahl();
+const ladeAuswahl = () => merkAuswahl;
+
 function speichereAuswahl(ids) {
+  merkAuswahl = [...new Set(ids)];
   try {
-    if (!ids.length) localStorage.removeItem(SCHLUESSEL);
-    else localStorage.setItem(SCHLUESSEL, JSON.stringify(ids));
-  } catch { /* privater Modus: dann eben nicht */ }
+    if (!merkAuswahl.length) localStorage.removeItem(SCHLUESSEL);
+    else localStorage.setItem(SCHLUESSEL, JSON.stringify(merkAuswahl));
+    speicherSperre = false;
+  } catch { speicherSperre = true; }
 }
 
 let offeneKarte = null;
@@ -149,6 +162,10 @@ function render(fokusElement = null) {
         `🗂️ ${daten.karten.length} Karten${auswahl.length ? ` · ${auswahl.length} für den nächsten Spaziergang gewählt` : ''}`),
       el('p', { class: 'asp-nur-bildschirm', style: 'margin:0 0 0.5rem;font-size:0.9rem;color:#4b5563' },
         'Wählen Sie aus, worauf Sie diesmal schauen wollen – drei oder vier sind genug. Ohne Auswahl werden alle Karten gedruckt.'),
+      speicherSperre
+        ? el('p', { class: 'k-hinweis asp-nur-bildschirm', style: 'margin:0 0 0.5rem' },
+          '🔒 Dieses Gerät lässt gerade nichts speichern – privates Fenster oder blockierte Website-Daten. Die Auswahl gilt, solange die Seite offen ist; nach dem Schließen ist sie weg. Drucken Sie den Zettel, dann haben Sie ihn auf Papier.')
+        : null,
       ...GRUPPEN.map((g) => {
         const karten = kartenNachArt(daten, g.art);
         if (!karten.length) return null;
@@ -219,7 +236,7 @@ function render(fokusElement = null) {
       datenKarte({
         schluessel: SCHLUESSEL,
         was: 'Ihre Kartenauswahl für den nächsten Spaziergang (nur dieses Gerät, keine Angaben über Ihr Kind)',
-        nachLoeschen: () => render(),
+        nachLoeschen: () => { merkAuswahl = []; render(); },
         knopfId: 'asp-loeschen',
         klasse: 'asp-nur-bildschirm',
       })),

@@ -5,7 +5,7 @@ import {
   BUNDESLAENDER, MERKMALE_INSGESAMT, FELDER_DER_QUELLE, VORBEDINGUNGEN, SCHULSTOFF,
   KINDFRAGE, BEWERTUNG, DIAGNOSE_ZUGESCHRIEBEN, VORHERSAGE, SCHULFAEHIG_ALS_URTEIL,
   KOENNENSALTER, LESEN_ERWARTET, NETZE, NICHT_GEPRUEFT, NICHT_GEPRUEFT_FELDER,
-  AUSNAHME_MUSS_ENTHALTEN, angebotsTexte, elternfragen, feldVon, rechtVon,
+  AUSNAHME_MUSS_ENTHALTEN, OHNE_NETZGRUND, NETZ_AUSNAHMEN, angebotsTexte, elternfragen, feldVon, rechtVon,
   merkmaleGezaehlt, pruefeDaten,
 } from '../logik.mjs';
 
@@ -16,15 +16,52 @@ test('die Daten sind in Ordnung', () => {
   assert.deepEqual(pruefeDaten(daten), []);
 });
 
-test('die Zählung der Quelle geht auf: zwölf Felder plus acht Vorbedingungen = 141', () => {
+test('die Zählung der Quelle geht auf: zwölf Felder plus acht Vorbedingungen = 139', () => {
   assert.equal(daten.gespraechsfelder.length, FELDER_DER_QUELLE - 1);
   assert.equal(daten.lernvoraussetzungen.length, VORBEDINGUNGEN);
+  assert.equal(MERKMALE_INSGESAMT, 139);
   assert.equal(merkmaleGezaehlt(daten), MERKMALE_INSGESAMT);
-  // Eine verschobene Zahl faellt auf - die Bilanz ist die Probe darauf, dass
-  // die Felder der Quelle wirklich nachgezaehlt und nicht geschaetzt sind.
+  // Eine verschobene Zahl faellt auf.
   const d = kopie();
   d.gespraechsfelder[0].quellPunkte += 1;
-  assert.ok(pruefeDaten(d).some((f) => /nachgezählt sind 141/.test(f)));
+  assert.ok(pruefeDaten(d).some((f) => /nachgezählt sind 139/.test(f)));
+});
+
+test('die Bilanz ist keine Probe auf sich selbst mehr', () => {
+  // Die erste Fassung zaehlte 141 und war damit in zwei Feldern um je eins zu
+  // hoch; die Summe stimmte trotzdem, weil die Konstante dazu passte. Jetzt
+  // muessen drei unabhaengig geschriebene Stellen uebereinstimmen: die
+  // Konstante, die Zahl an jedem Feld und die Aufzaehlung im Quellfeld.
+  const folge = daten.gespraechsfelder.map((f) => f.quellPunkte).join(', ');
+  assert.ok(daten.quelle.nachgezaehlt.includes(folge), folge);
+  // Verschieben zwischen zwei Feldern laesst die Summe gleich - und faellt auf.
+  const d = kopie();
+  d.gespraechsfelder[0].quellPunkte = 8;
+  d.gespraechsfelder[1].quellPunkte = 6;
+  assert.equal(merkmaleGezaehlt(d), MERKMALE_INSGESAMT);
+  assert.ok(pruefeDaten(d).some((f) => /die Aufzählung und die Zahlen an den Feldern laufen auseinander/.test(f)));
+});
+
+test('JEDE Ausnahme ist verdient, und jedes Netz läuft über jedes Feld, von dem es nicht ausgenommen ist', () => {
+  // `nichtUebernommen` war pauschal von ALLEN acht Netzen ausgenommen, obwohl
+  // nur zwei begruendet sind (Review Welle 83).
+  assert.deepEqual(Object.keys(NETZ_AUSNAHMEN), ['nichtUebernommen']);
+  assert.deepEqual(Object.keys(NETZ_AUSNAHMEN.nichtUebernommen).sort(), ['BEWERTUNG', 'KINDFRAGE']);
+  assert.deepEqual(OHNE_NETZGRUND, {});
+  for (const feld of Object.keys(NICHT_GEPRUEFT)) assert.ok(feld in AUSNAHME_MUSS_ENTHALTEN, feld);
+  // Eine Vorhersage im ausgenommenen Feld faellt jetzt auf.
+  const d = kopie();
+  feldVon(d, 'f-spiel').nichtUebernommen += ' Das Risiko für Leseschwierigkeiten ist dann höher.';
+  assert.ok(pruefeDaten(d).some((f) => /Vorhersage/.test(f)));
+});
+
+test('die Kennungen der Rechtsfragen kollidieren nicht mit denen der Felder', () => {
+  // Beide landen in derselben Auswahlliste im Speicher.
+  const feldIds = new Set(daten.gespraechsfelder.map((f) => f.id));
+  for (const r of daten.rechtliches) assert.ok(!feldIds.has(r.id), r.id);
+  const d = kopie();
+  d.rechtliches[0].id = 'f-spiel';
+  assert.ok(pruefeDaten(d).some((f) => /dieselbe id gibt es schon als Gesprächsfeld/.test(f)));
 });
 
 test('jedes Feld hat seine sieben Angaben und eine Frage an die Fachkraft', () => {
@@ -128,7 +165,17 @@ test('der Rechtsteil trägt zu jeder Antwort ihre Quelle', () => {
 });
 
 test('Landesrecht klingt nicht wie Bundesrecht: mindestens zwei Antworten nennen zwei Länder', () => {
-  const mitZwei = daten.rechtliches.filter((r) => BUNDESLAENDER.filter((l) => r.antwort.includes(l)).length >= 2);
+  // Gezaehlt wird laengste zuerst und mit Ausblenden: „Sachsen" steckt in
+  // „Sachsen-Anhalt" und zaehlte sonst doppelt (Review Welle 83).
+  const laender = (t) => {
+    let rest = t; const g = [];
+    for (const l of [...BUNDESLAENDER].sort((a, b) => b.length - a.length)) {
+      if (rest.includes(l)) { g.push(l); rest = rest.split(l).join(' '); }
+    }
+    return g;
+  };
+  assert.deepEqual(laender('In Sachsen-Anhalt gilt eigenes Recht.'), ['Sachsen-Anhalt']);
+  const mitZwei = daten.rechtliches.filter((r) => laender(r.antwort).length >= 2);
   assert.ok(mitZwei.length >= 2, `nur ${mitZwei.length} Antworten mit zwei Ländern`);
   const d = kopie();
   for (const r of d.rechtliches) for (const l of BUNDESLAENDER) r.antwort = r.antwort.split(l).join('dort');
@@ -197,13 +244,13 @@ test('kein Text der App verletzt die Netze', () => {
     assert.ok(!LESEN_ERWARTET.test(text), `${wo}: Leseerwartung`);
   }
   // Die Pruefung ist umgedreht: geprueft wird der REST.
-  assert.ok(angebotsTexte(daten).length > 120);
+  assert.ok(angebotsTexte(daten).length > 160);
   for (const feld of Object.keys(NICHT_GEPRUEFT)) assert.ok(feld in daten, feld);
 });
 
 test('die Quelle ist geprüft und nennt ihre Zählung samt der Abweichung vom Katalog', () => {
   assert.equal(daten.quelle.geprueft, true);
-  assert.match(daten.quelle.nachgezaehlt, /141/);
+  assert.match(daten.quelle.nachgezaehlt, /(?<!\d)139(?!\d)/);
   assert.match(daten.quelle.rechte, /НИО 2007/);
   // Der Katalogeintrag nennt S. 301-311 und „Учебная деятельность"; beides ist
   // ungenau, und das steht in der Abweichung.
