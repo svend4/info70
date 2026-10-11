@@ -105,10 +105,15 @@ test('jede fachliche Aussage trägt ihre Leitlinie mit Jahr', () => {
     assert.ok(f.aussage.length > 60, `${f.id}: aussage zu knapp`);
   }
   assert.ok(daten.fachliches.some((f) => /Knick-Senkfuß/.test(f.quelle)), 'die Fußleitlinie fehlt');
-  // Der Zehenspitzengang der Quelle ist ein Untersuchungszeichen, keine Übung.
-  const zeh = daten.fachliches.find((f) => /Zehenspitzengang/.test(f.aussage));
-  assert.ok(zeh, 'der Zehenspitzengang ist nicht eingeordnet');
-  assert.match(zeh.aussage, /Untersuch|Zeichen|neurolog/);
+  // Das Gehen auf den Zehen, das die Quelle als Übung vorschlägt, ist in der
+  // Leitlinie eine UNTERSUCHUNGSPOSITION. Korrektur nach der Gegenprobe: die
+  // erste Fassung schrieb, es sei dort ein Zeichen für eine neurologische
+  // Ursache – das Wort „Zehenspitzengang" kommt in der Leitlinie aber gar
+  // nicht vor. Was vorkommt, ist der funktionelle Zehenstand als Testposition.
+  const zeh = daten.fachliches.find((f) => /Zehen/.test(f.aussage));
+  assert.ok(zeh, 'der Zehenstand ist nicht eingeordnet');
+  assert.match(zeh.aussage, /Untersuchungsposition/);
+  assert.ok(!/neurologische Ursache/.test(zeh.aussage), 'die zurückgezogene Begründung ist zurück');
   const k = kopie();
   k.fachliches[0].quelle = 'eine Leitlinie';
   assert.ok(pruefeDaten(k).some((f) => /trägt kein Jahr/.test(f)));

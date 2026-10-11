@@ -36,11 +36,19 @@
 //   behauptet: `pruefeDaten` weist jede Zahl auf der Handlungsseite ab.
 //
 // Der Katalogeintrag nennt „WHO/BZgA-Bewegungsempfehlung (180 Min/Tag fuer
-// 3-5)". Diese Angabe gibt es nicht: den Altersblock 3-5 verwendet keine der
-// Quellen. Die WHO nennt 180 Minuten fuer 1-2 und fuer 3-4 Jahre, die
-// Nationalen Empfehlungen nennen 180 Minuten fuer 4-6 Jahre - und ab fuenf
-// gilt bei der WHO eine andere Leitlinie mit 60 Minuten im Wochendurchschnitt.
-// Die App zeigt darum die Werte GETRENNT, jeweils mit Herkunft.
+// 3-5)". Diese Angabe gibt es so nicht. Die WHO nennt 180 Minuten fuer 1-2
+// UND fuer 3-4 Jahre (nur fuer 3-4 mit der Teilmenge von 60 Minuten mittlerer
+// bis hoher Intensitaet), die Nationalen Empfehlungen nennen 180 Minuten fuer
+// 4-6 Jahre - und ab fuenf gilt bei der WHO eine andere Leitlinie mit 60
+// Minuten im Wochendurchschnitt. Die App zeigt die Werte darum GETRENNT,
+// jeweils mit Herkunft.
+//
+// Genauer, nachdem die Gegenprobe den ersten Befund als zu breit zurueckgab:
+// einen Altersblock 3-5 gibt es durchaus - das aeltere BZgA-Themenblatt
+// fuehrt ihn fuer den Medienkonsum, und die US-Empfehlungen fuehren ihn fuer
+// Bewegung mit drei Stunden taeglich. Falsch am Katalogeintrag ist nicht,
+// dass es den Block gaebe, sondern die ZUSCHREIBUNG: weder die WHO noch die
+// deutschen Empfehlungen verwenden ihn fuer eine Bewegungsempfehlung.
 
 /** Die vier Bloecke in der Reihenfolge der Quelle. */
 export const BLOECKE = Object.freeze(['b-haltung', 'b-fuesse', 'b-wachstum', 'b-bewegung']);

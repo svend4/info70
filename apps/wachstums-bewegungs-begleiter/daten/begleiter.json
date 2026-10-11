@@ -78,7 +78,7 @@
     {
       "id": "f-fuss-zehenspitzen",
       "block": "b-fuesse",
-      "aussage": "Der Zehenspitzengang, den die Quelle als Kräftigungsübung vorschlägt, ist in der Leitlinie etwas ganz anderes: ein Zeichen, auf das die Ärztin achtet. Geht ein Kind dauerhaft auf Zehenspitzen, kann das auf eine neurologische Ursache hinweisen. Ein Warnzeichen zur Übung umzudeuten wäre der falsche Weg.",
+      "aussage": "Das Gehen auf den Zehen schlägt die Quelle als Kräftigungsübung vor. In der Leitlinie kommt der Zehenstand auch vor – aber als Untersuchungsposition: die Ärztin sieht daran, ob sich das Fußgewölbe aufrichtet, und unterscheidet so einen beweglichen von einem festen Fuß. Das ist etwas anderes als ein Training, und eine Untersuchungsposition zur Übung umzudeuten wäre der falsche Weg.",
       "quelle": "S2k-Leitlinie „Kindlicher Knick-Senkfuß“, AWMF-Register 187-053, Fassung von 2022, Abschnitt zur Untersuchung"
     }
   ],
@@ -93,7 +93,7 @@
     {
       "id": "w-nebb46",
       "alter": "4 bis 6 Jahre",
-      "wert": "180 Minuten am Tag und mehr, aus angeleiteter und nicht angeleiteter Bewegung – ohne Vorgabe zur Intensität",
+      "wert": "mindestens 180 Minuten Bewegung am Tag – ohne Vorgabe zur Intensität",
       "quelle": "Nationale Empfehlungen für Bewegung und Bewegungsförderung, herausgegeben von Alfred Rütten und Klaus Pfeifer (FAU Erlangen-Nürnberg 2016; gedruckt bei der damaligen BZgA 2017), Block Kindergartenkinder",
       "einschraenkung": "Das ist die deutsche Zahl, und sie gilt ab vier. Für Kinder bis drei nennen die Nationalen Empfehlungen bewusst keine Minutenzahl, sondern: so viel wie möglich bewegen und so wenig wie möglich daran hindern."
     },
@@ -113,10 +113,10 @@
     }
   ],
   "werteHinweise": {
-    "ueberschneidung": "Für ein sechsjähriges Kind nennen die Nationalen Empfehlungen zwei Zahlen: 180 Minuten im Block „4 bis 6“ und 90 Minuten im Block „6 bis 11“. Die Quelle löst das nicht auf. Diese App zeigt für Sechsjährige beide und sagt dazu, dass es eine Überschneidung ist – eine Zahl auszuwählen wäre eine Entscheidung dieser App und keine Aussage der Quelle.",
-    "stand": "Die Nationalen Empfehlungen stammen von 2016. Eine Aktualisierung läuft seit Februar 2025 unter Leitung von Klaus Pfeifer (FAU Erlangen-Nürnberg); die neue Fassung soll Anfang 2027 erscheinen. Bis dahin ist 2016 der gültige Stand – „Bewegungsempfehlungen 2025“ gibt es nicht.",
-    "bioeg": "Das Bundesinstitut für Öffentliche Gesundheit (BIÖG, bis zum 13. Februar 2025 Bundeszentrale für gesundheitliche Aufklärung) sagt es Eltern kürzer: für Kindergartenkinder drei Stunden und mehr am Tag, für Kinder und Jugendliche von 6 bis 18 Jahren anderthalb Stunden, wovon eine Stunde leichte Alltagsbewegung sein darf.",
-    "keinGrenzwert": "Alle diese Zahlen sind Orientierungswerte für Altersgruppen. Die WHO schreibt ausdrücklich nicht, wie die Zeiten erreicht werden sollen, und ihre Leitlinie von 2019 gilt nicht für Kinder mit Behinderung oder chronischer Erkrankung – dafür ist die kinderärztliche Praxis zuständig."
+    "ueberschneidung": "Für ein sechsjähriges Kind nennen die Nationalen Empfehlungen zwei Zahlen: 180 Minuten im Block „4 bis 6“ und 90 Minuten im Block „6 bis 11“. Aufgelöst wird das in der Quelle nicht durch ein Datum, sondern durch ein Kriterium: der zweite Punkt spricht von Kindern „ab dem Grundschulalter“, also vom Schuleintritt, während die Überschrift die Spanne 6 bis 11 nennt. Diese App zeigt für Sechsjährige beide Zahlen und sagt dazu, dass es eine Überschneidung ist – eine davon auszuwählen wäre eine Entscheidung dieser App und keine Aussage der Quelle.",
+    "stand": "Die Nationalen Empfehlungen stammen von 2016. Eine Aktualisierung läuft seit Februar 2025 bei einem Projektteam der Friedrich-Alexander-Universität Erlangen-Nürnberg, dem auch Klaus Pfeifer angehört; die neue Fassung soll Anfang 2027 erscheinen. Bis dahin ist 2016 der gültige Stand – „Bewegungsempfehlungen 2025“ gibt es nicht.",
+    "bioeg": "Das Bundesinstitut für Öffentliche Gesundheit (BIÖG, bis zum 13. Februar 2025 Bundeszentrale für gesundheitliche Aufklärung) sagt es Eltern kürzer, teilt die Jahrgänge aber anders ein als die Nationalen Empfehlungen: bis drei Jahre so viel Bewegung wie möglich, von vier bis sechs Jahren drei Stunden und mehr, von sieben bis achtzehn Jahren anderthalb Stunden, wovon eine Stunde leichte Alltagsbewegung sein darf. Ein älteres Themenblatt derselben Behörde führt stattdessen die Blöcke vier bis fünf und sechs bis achtzehn – wer eine dieser Zahlen weitergibt, sollte dazusagen, aus welcher Fassung sie stammt.",
+    "keinGrenzwert": "Alle diese Zahlen sind Orientierungswerte für Altersgruppen. Die WHO schreibt ausdrücklich nicht, wie die Zeiten erreicht werden sollen, und ihre Leitlinie von 2019 sagt selbst, dass sie die Bedürfnisse von Kindern mit Behinderung oder chronischer Erkrankung nicht eigens behandelt – das heißt nicht, dass sie für sie nicht gälte. Was für ein einzelnes Kind passt, bespricht die kinderärztliche Praxis."
   },
   "gelegenheiten": [
     {
@@ -210,7 +210,7 @@
     {
       "quellNr": "x08",
       "was": "Die Fuß-Kräftigungsübungen der Quelle, besonders der Zehenspitzengang",
-      "warum": "Für gesunde Vorschulkinder ist nicht belegt, dass solche Übungen die Fußentwicklung verbessern – und beim Zehenspitzengang ist es schlimmer: er ist in der Leitlinie ein Untersuchungszeichen, kein Training. Was die Leitlinie stattdessen empfiehlt, steht im Block „Füße“."
+      "warum": "Für gesunde Vorschulkinder ist nicht belegt, dass solche Übungen die Fußentwicklung verbessern. Beim Gehen auf den Zehen kommt hinzu, dass der Zehenstand in der Leitlinie eine Untersuchungsposition ist und kein Training. Was die Leitlinie stattdessen empfiehlt, steht im Block „Füße“."
     }
   ]
 }
