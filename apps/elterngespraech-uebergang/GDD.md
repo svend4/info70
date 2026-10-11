@@ -78,7 +78,7 @@ sprechen Eltern von ihrem Kind, wenn sie selbst fragen, und genau das soll diese
 Werkzeug ermöglichen. „Kann **mein** Kind **schon** lesen?" trifft es wieder —
 das ist dieselbe Checkliste in der Ichform.
 
-## Acht Rechtsfragen, jede mit Paragraf
+## Elf Rechtsfragen, jede mit Paragraf
 
 Einschulung ist Landesrecht; der Validator verlangt deshalb, dass mindestens
 **zwei** Antworten je **zwei** Bundesländer nennen — sonst klingt ein Beispiel
@@ -92,6 +92,25 @@ Schulreife-Konzepte wurden verlassen, weil sie einer Überprüfung nicht
 standhielten, und es stelle sich „nicht mehr die Frage, ob, sondern mit welchen
 Hilfen und welcher Förderung ein Kind einzuschulen ist".
 
+Drei Fragen sind nach der Faktenprüfung hinzugekommen:
+
+- **Darf die Kita ihre Unterlagen an die Schule geben?** Nur mit Einwilligung;
+  eine gesetzliche Übermittlungsbefugnis gibt es nicht. Drei Punkte, die selten
+  richtig dargestellt werden: die Einwilligung ist gegenüber der **Kita** zu
+  erklären, sie darf **nicht im Betreuungsvertrag** mitstecken, und sie ist
+  jederzeit widerruflich. In Nordrhein-Westfalen erhält die Schule die
+  Dokumentation nur **zur Einsichtnahme**, nicht als Kopie.
+- **Kann ich jemanden mitbringen, der übersetzt?** Einen allgemeinen Anspruch
+  auf einen Dolmetscher gibt es nicht — ein Kita-Gespräch ist meist nicht
+  einmal ein Verwaltungsverfahren. Bei Hör- oder Sprachbehinderung dagegen
+  besteht ein echter, kostentragender Anspruch auf Gebärdensprache oder andere
+  Kommunikationshilfen. Diese beiden Fälle trennt die App scharf.
+- **Muss mein Kind vor der Schule lesen können?** Nein — mit Belegkette aus
+  Lehrplänen, der Vereinbarung der Kultusministerkonferenz zur Grundschule und
+  der altersgebundenen Schulpflicht. Und mit der ehrlichen Angabe, dass keine
+  amtliche Stelle diesen Satz ausdrücklich so schreibt: das Ergebnis folgt aus
+  den Quellen zusammen. Umgekehrt steht hier auch nicht, frühes Lesen schade.
+
 ## Die acht Vorbedingungen — vollständig, mit Gegenrede
 
 Sie stehen im Wortlaut da, auch die unbequemen: Lautanalyse von Wörtern
@@ -101,8 +120,29 @@ Quelle** — das prüft der Validator über das Muster `SCHULSTOFF`. Der
 entscheidende belegte Punkt: das verbreitetste Verfahren der
 Schuleingangsuntersuchung nennt seine drei Indikatoren selbst
 „Vorläuferfähigkeiten für Lesen und Schreiben" beziehungsweise „für Rechnen" —
-geprüft wird also nicht das Lesen, sondern was ihm vorausgeht. Übungen dazu gibt
-es in dieser App nicht, und das ist eine Entscheidung, keine Auslassung.
+geprüft wird also nicht das Lesen, sondern was ihm vorausgeht.
+
+Nach der Faktenprüfung sind drei dieser Gegenreden genauer geworden, und zwar
+in beide Richtungen:
+
+- **Lautbewusstheit** erklärt im deutschen Sprachraum etwa ein Zehntel der
+  Unterschiede im späteren Lesen — weniger als in englischsprachigen Studien;
+  in Sprachen mit regelmäßiger Schrift sagte eher das Lesen die Lautbewusstheit
+  voraus als umgekehrt. Sie ist **Begleiterin, nicht Vorbedingung**. Übungen
+  verbessern die Lautbewusstheit selbst; der Übertrag auf das Lesen ist
+  langfristig klein, beim Entschlüsseln nicht nachweisbar, und bei
+  Risikostichproben war er nicht zu finden.
+- **Buchstabenkenntnis** sagt das spätere Lesen sogar *besser* vorher als die
+  Lautbewusstheit. Daraus folgt nicht, dass Üben das bewirkt — Vorhersage und
+  Wirkung werden hier regelmäßig verwechselt, und gerade Vorschulprogramme
+  gehören zu denen, deren Effekte nicht halten.
+- **Silbenweises Lesen**: in einer Studie, die deutsch- und englischsprachige
+  Kinder verglich, waren die meisten deutschsprachigen Kinder zu Schulbeginn
+  noch Nichtleser.
+
+Übungen dazu gibt es in dieser App nicht, und das ist eine Entscheidung, keine
+Auslassung. Die Zahlen stehen jeweils im `quelle`-Feld desselben Punktes, nicht
+im Elterntext.
 
 ## Einsprachig, und der Grund ist kein Zeitmangel
 

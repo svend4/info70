@@ -164,20 +164,20 @@
     {
       "nr": 4,
       "kurz": "kann die Lautanalyse von Wörtern praktisch jeder Schwierigkeit durchführen, indem es das Wort laut oder im Kopf ausspricht",
-      "wasHierGilt": "Auf Laute und Silben zu hören ist tatsächlich wichtig – aber als Vorläuferfähigkeit, nicht als Prüfung. Das verbreitetste Verfahren der Schuleingangsuntersuchung nennt seine Teile selbst so: Vorläuferfähigkeiten für Lesen und Schreiben. Die Förderung dieser Fähigkeit wirkt im deutschen Sprachraum nachweisbar, allerdings schwächer als in internationalen Studien. „Wörter praktisch jeder Schwierigkeit“ verlangt hier niemand.",
-      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022 (drei Indikatoren des Entwicklungsscreenings); Wolf, Schröders und Kriegbaum, Zeitschrift für pädagogische Psychologie 2016, Übersichtsarbeit über 27 Studien."
+      "wasHierGilt": "Auf Laute und Silben zu hören ist wichtig – aber anders, als es hier steht. Das verbreitetste Verfahren der Schuleingangsuntersuchung nennt seine Teile selbst „Vorläuferfähigkeiten für Lesen und Schreiben“. Im deutschen Sprachraum erklärt die Lautbewusstheit etwa ein Zehntel der Unterschiede im späteren Lesen und Schreiben – weniger als in englischsprachigen Studien; in Sprachen mit regelmäßiger Schrift sagte sogar eher das Lesen die Lautbewusstheit voraus als umgekehrt. Sie ist eine Begleiterin des Lesenlernens, nicht seine Vorbedingung. Übungen vor der Schule verbessern die Lautbewusstheit selbst, der Übertrag auf das spätere Lesen ist langfristig klein, beim Entschlüsseln von Wörtern nicht nachweisbar – und bei Kindern, um die man sich Sorgen macht, war er in den Studien nicht zu finden. „Wörter praktisch jeder Schwierigkeit“ verlangt hier niemand.",
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022; Pfost, Zeitschrift für Entwicklungspsychologie und Pädagogische Psychologie 2015 (21 Studien, etwa ein Zehntel der Varianz, ausdrücklich nicht kausal zu lesen); Landerl u. a., Scientific Studies of Reading 2019 („corequisite“ statt „prerequisite“); Fischer und Pfost, ebenda 2015 (22 Trainingsvergleiche: langfristig d = 0,14 auf Lesen und Rechtschreiben, Entschlüsseln d = 0,03 nicht signifikant, Risikostichproben d = −0,11 nicht signifikant)."
     },
     {
       "nr": 5,
       "kurz": "kennt alle Vokalbuchstaben (oder fünf von ihnen) und einen Teil der Konsonanten",
-      "wasHierGilt": "Buchstaben lernt man in der Schule. In derselben Übersichtsarbeit brachte ein zusätzliches Buchstabentraining vor der Einschulung keinen zusätzlichen Nutzen. Wenn Ihr Kind Buchstaben kennt, ist das schön – und wenn nicht, fehlt nichts.",
-      "quelle": "Wolf, Schröders und Kriegbaum, Zeitschrift für pädagogische Psychologie 2016, Übersichtsarbeit über 27 Studien."
+      "wasHierGilt": "Buchstaben lernt man in der Schule. Dass Kinder, die vor der Schule schon Buchstaben kennen, später oft besser lesen, ist gut belegt – in einer großen Übersicht war die Buchstabenkenntnis sogar der bessere Vorhersagewert als die Lautbewusstheit. Daraus folgt aber nicht, dass Üben das bewirkt: Vorhersage und Wirkung werden hier regelmäßig verwechselt, und gerade Vorschulprogramme gehören in den Langzeitauswertungen zu denen, deren Effekte nicht halten. Wenn Ihr Kind Buchstaben kennt, ist das schön. Wenn nicht, fehlt nichts.",
+      "quelle": "Scarborough 1998, zusammengefasst in Pfost 2015: Buchstabenkenntnis r = 0,52 gegenüber Lautbewusstheit r = 0,46 als Vorhersage des späteren Lesens; Suggate, Journal of Learning Disabilities 2016, zur Haltbarkeit – Vorschul- und Kindergartenprogramme gehören zu denen, deren Wirkung nachlässt."
     },
     {
       "nr": 6,
       "kurz": "liest einzelne Silben und Wörter silbenweise",
-      "wasHierGilt": "Hier liegt der deutlichste Unterschied zwischen den beiden Schulsystemen. Vor der Schule wird in Deutschland nicht geprüft, ob ein Kind liest, sondern was dem Lesen vorausgeht – das Verfahren der Untersuchung nennt es wörtlich so. Was die Grundschule im ersten Schuljahr lehrt, sagt ihr Lehrplan; danach zu fragen ist eine der Fragen in diesem Werkzeug.",
-      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022: die drei Indikatoren lauten „Erkennen und Zeichnen von Objekten und Formen (Vorläuferfähigkeiten für Lesen und Schreiben)“, „Umgang mit Zahlen und Mengen (Vorläuferfähigkeiten für Rechnen)“ und „Sprachkompetenz in der deutschen Sprache“."
+      "wasHierGilt": "Hier liegt der deutlichste Unterschied zwischen den beiden Schulsystemen. Vor der Schule wird in Deutschland nicht geprüft, ob ein Kind liest, sondern was dem Lesen vorausgeht – das Verfahren der Untersuchung nennt es wörtlich so. Lesen und Schreiben sind Lernziele der ersten Schuljahre; die Schulpflicht hängt allein vom Alter ab. In einer Studie, die deutschsprachige und englischsprachige Kinder verglich, waren die meisten deutschsprachigen Kinder zu Schulbeginn noch Nichtleser. Mehr dazu, mit Fundstellen, unter „Was gilt“.",
+      "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022: die drei Indikatoren lauten „Erkennen und Zeichnen von Objekten und Formen (Vorläuferfähigkeiten für Lesen und Schreiben)“, „Umgang mit Zahlen und Mengen (Vorläuferfähigkeiten für Rechnen)“ und „Sprachkompetenz in der deutschen Sprache“; Landerl u. a., Scientific Studies of Reading 2019, zur deutschsprachigen Teilstichprobe."
     },
     {
       "nr": 7,
@@ -227,6 +227,13 @@
       "quelle": "Verwaltungsvorschrift 1.4.3 zu § 1 Abs. 4 AO-GS NRW."
     },
     {
+      "id": "r-kita",
+      "zeichen": "📂",
+      "frage": "Darf die Kita ihre Unterlagen an die Grundschule geben?",
+      "antwort": "Nur mit Ihrer Einwilligung. Eine gesetzliche Befugnis, die Dokumentation einfach zu übermitteln, gibt es nicht; die gemeinsame Empfehlung der Ministerkonferenzen sagt, die Weitergabe setze „immer die Einwilligung der Eltern voraus“ und solle mit Beteiligung des Kindes erfolgen. Drei Punkte, die selten richtig dargestellt werden: die Einwilligung ist gegenüber der KITA zu erklären, nicht gegenüber der Schule; sie darf nicht im Betreuungsvertrag mitstecken, sondern nur als eigene, getrennt zu unterschreibende Erklärung; und Sie können sie jederzeit widerrufen, worauf hingewiesen werden muss. In Nordrhein-Westfalen braucht schon das Anlegen der Dokumentation Ihre schriftliche Zustimmung, und die Schule erhält sie nur zur Einsichtnahme – nicht als Kopie. In Schleswig-Holstein darf die Grundschule im Einschulungsverfahren bei der Kita Daten erheben, aber auch dort erst mit Ihrer Einwilligung.",
+      "quelle": "Gemeinsame Empfehlung zum Übergang vom Elementar- in den Primarbereich, Beschluss der Bildungsministerkonferenz vom 26. März 2026 und der Jugend- und Familienministerkonferenz vom 3. März 2026, S. 4; § 67b Abs. 1 Satz 1 SGB X; § 18 Abs. 1 Satz 6 und Abs. 2 KiBiz NRW; Erlass des Bildungsministeriums Schleswig-Holstein vom 25. Juni 2018, Ziffer 4, zu § 2 Abs. 5 Satz 1 und § 30 Abs. 1 SchulG."
+    },
+    {
       "id": "r-freiwillig",
       "zeichen": "✋",
       "frage": "Muss ich alles beantworten, was man mich fragt?",
@@ -246,6 +253,20 @@
       "frage": "Was wird bei der Untersuchung überhaupt angeschaut?",
       "antwort": "Je nach Bundesland verschieden, und die Unterschiede betreffen nicht nur den Zeitpunkt, sondern auch, ob überhaupt alle Kinder von einer Ärztin des öffentlichen Gesundheitsdienstes gesehen werden. Das verbreitetste Entwicklungsscreening fasst seine zehn Teile zu drei Angaben zusammen: Erkennen und Zeichnen von Objekten und Formen – als Vorläuferfähigkeit für Lesen und Schreiben –, Umgang mit Zahlen und Mengen als Vorläuferfähigkeit für das Rechnen, und Sprachkompetenz im Deutschen. Beachten Sie das Wort Vorläuferfähigkeit: geprüft wird nicht, ob ein Kind liest, sondern was dem Lesen vorausgeht.",
       "quelle": "Landeszentrum Gesundheit Nordrhein-Westfalen, Bericht zur Schuleingangsuntersuchung 2022, und die Verfahrensbeschreibung mit zehn Untertests; zur Heterogenität Preuschhof u. a., „Das Gesundheitswesen“ 2023, Band 85, Heft 10, S. 937–944."
+    },
+    {
+      "id": "r-lesen",
+      "zeichen": "📖",
+      "frage": "Muss mein Kind vor der Schule lesen können?",
+      "antwort": "Nein. Lesen und Schreiben sind nach den Lehrplänen Lernziele der ersten Schuljahre, und die Schulpflicht hängt allein vom Alter ab: in Bayern wird schulpflichtig, wer die altersmäßigen Voraussetzungen erfüllt, und die amtliche Elterninformation in Nordrhein-Westfalen begründet den festen Stichtag ausdrücklich damit, dass alle Kinder eines Jahrgangs aufgenommen werden sollen, „da sie das Recht zu lernen haben“. Die Vereinbarung der Kultusministerkonferenz zur Grundschule sagt: der Erwerb von Lese- und Schreibkompetenzen erfolgt in der Regel im Zuge des Schriftspracherwerbs – also in der Schule. Bildungsstandards gibt es für das Ende der vierten Klasse, nicht für den Schulanfang. Ehrlich dazu: eine amtliche Stelle, die ausdrücklich den Satz schreibt „Kinder müssen bei Schuleintritt nicht lesen können“, war nicht zu finden; das Ergebnis folgt aus Lehrplänen und Schulpflicht zusammen. Umgekehrt gilt es genauso: ein Kind, das schon viele Buchstaben kennt, ist ebenso normal – die Elterninformation behandelt beide Fälle nebeneinander.",
+      "quelle": "Vereinbarung der Kultusministerkonferenz zur Arbeit in der Grundschule, Beschluss vom 15. März 2024; Bildungsstandards im Fach Deutsch für den Primarbereich (Jahrgangsstufe 4), Beschluss vom 15. Oktober 2004 in der Fassung vom 23. Juni 2022; Art. 35 Abs. 1 Satz 1 und Art. 37 Abs. 1 Satz 1 BayEUG; amtliche Elterninformation „Die Grundschule in Nordrhein-Westfalen“; Lehrplan Deutsch Grundschule Sachsen, Klassenstufen 1/2."
+    },
+    {
+      "id": "r-uebersetzen",
+      "zeichen": "🗣️",
+      "frage": "Kann ich jemanden mitbringen, der für mich übersetzt?",
+      "antwort": "Fragen kostet nichts, und üblich ist es auch – ein Recht darauf war für das Gespräch in Kita oder Schule allerdings nicht zu finden. Einen allgemeinen Anspruch auf einen Dolmetscher gibt es nicht: Amtssprache ist deutsch, das Verfahrensrecht regelt den Fall nicht, und im Sozialrecht kann eine Behörde sogar verlangen, dass Sie eine Übersetzung beibringen. Ein Entwicklungs- oder Übergangsgespräch ist ohnehin meist kein Verwaltungsverfahren, sodass auch der Beistand, den das Verfahrensrecht kennt, dort nicht greift. Sagen Sie es deshalb vorher, dann ist es fast immer möglich. Anders – und klar geregelt – ist es bei einer Hör- oder Sprachbehinderung: dort besteht ein echter Anspruch auf Deutsche Gebärdensprache oder andere Kommunikationshilfen, und die Kosten trägt der Leistungsträger. Dieser Anspruch gilt für die Behinderung, nicht für fehlende Deutschkenntnisse.",
+      "quelle": "§ 23 Abs. 1 VwVfG; § 19 Abs. 2 SGB X; Wissenschaftliche Dienste des Deutschen Bundestages, WD 3 – 3000 – 095/17 vom 5. Mai 2017; § 13 Abs. 4 SGB X zum Beistand; § 17 Abs. 2 SGB I, § 19 Abs. 1 SGB X und § 9 Abs. 1 BGG zu Gebärdensprache und Kommunikationshilfen."
     }
   ],
   "ausgeschlossen": [

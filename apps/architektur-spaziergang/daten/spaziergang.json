@@ -8,9 +8,9 @@
   "dreiArten": "Am Bau zu sehen: das Merkmal steckt im Gebäude selbst. Nur an der Ausstattung: das Haus sagt nichts, die Sachen drumherum schon. Nicht zu sehen: das Aussehen verrät es nicht, und niemand kann es von außen wissen.",
   "impulseSindOffen": "Die Fragen auf den Karten prüfen nichts. Bei manchen kann man zusammen nachschauen, andere haben gar keine Antwort – und keine davon ist dafür gedacht, dass ein Kind sie richtig beantwortet. Was unter „Für Erwachsene“ steht, ist Hintergrund für Sie, kein Lösungsblatt zum Nachsprechen. Ein Kind, das ein Haus anschaut und etwas ganz anderes sagt, hat die Frage nicht verfehlt. „Das weiß ich auch nicht“ und „da sind sich Fachleute nicht einig“ sind gute Antworten.",
   "keinUrteil": "Diese App führt keine Liste über Ihr Kind. Es gibt nichts anzukreuzen, was es erkannt hat, keine Punkte, keine Stufen, keinen Vergleich mit anderen Kindern. Angekreuzt wird nur, was SIE sich für den nächsten Spaziergang vornehmen; morgen können Sie etwas anderes wählen.",
-  "sicherheitImmer": "Unterwegs gilt zuerst die Straße, dann das Haus. Wer ein Dach betrachtet, schaut nach oben und nicht nach vorn – bleiben Sie dafür stehen, und zwar auf dem Gehweg und mit Abstand zur Fahrbahn. Kein Grundstück betreten, nicht klingeln, nicht über Zäune schauen: ein Haus ist die Wohnung von jemandem. Und keine Menschen fotografieren.",
+  "sicherheitImmer": "Unterwegs gilt zuerst die Straße, dann das Haus. Wer ein Dach betrachtet, schaut nach oben und nicht nach vorn – bleiben Sie dafür stehen, und zwar auf dem Gehweg: wer zu Fuß geht, muss ihn benutzen, und Absperrungen wie Stangen- oder Kettengeländer darf man nicht überschreiten (§ 25 StVO). Kein Grundstück betreten, nicht klingeln, nicht über Zäune schauen: ein Haus ist die Wohnung von jemandem. Und keine Menschen fotografieren – das ist die Regel dieser App, nicht eine Rechtsauskunft.",
   "eigeneListe": "Wenn Sie wissen wollen, welche geschützten Bauwerke in Ihrer Nähe stehen: Denkmalschutz ist Landesrecht, und jedes Bundesland führt eine Denkmalliste. Viele Städte und Kreise veröffentlichen ihren Teil davon im Netz; Auskunft gibt die Untere Denkmalschutzbehörde, meist bei der Stadt oder beim Kreis. Diese App ruft dafür nichts ab – sie stellt keine Netzverbindungen her.",
-  "wohinMitFragen": "Fragen zu einem bestimmten Gebäude beantwortet am besten, wer vor Ort dafür zuständig ist: die Untere Denkmalschutzbehörde bei Stadt oder Kreis, das Stadtarchiv, ein Heimat- oder Geschichtsverein. Wer mit einer Kindergruppe etwas bauen oder eine Baustelle besuchen will, fragt bei der Architektenkammer des Bundeslandes nach Angeboten zur Architekturvermittlung.",
+  "wohinMitFragen": "Fragen zu einem bestimmten Gebäude beantwortet am besten, wer vor Ort dafür zuständig ist: die Untere Denkmalschutzbehörde bei Stadt oder Kreis, das Stadtarchiv, ein Heimat- oder Geschichtsverein. Ein Angebot zur Architekturvermittlung für Kinder dieses Alters zu finden, ist dagegen schwer, und diese App soll da nichts versprechen: die großen Programme setzen bei Schulklassen an, mehrere ausdrücklich erst ab der fünften Jahrgangsstufe, und für Kitas waren beim Bau nur einzelne örtliche Angebote zu belegen. Wer trotzdem suchen will: die Bundesstiftung Baukultur führt eine Datenbank „Angebote baukultureller Bildung“ mit einem Filter nach Zielgruppe Kinder und Jugendliche – einen Altersfilter oder eine Kita-Kategorie gibt es dort nicht.",
   "karten": [
     {
       "id": "b-fachwerk",
@@ -226,10 +226,11 @@
       "art": "kleineForm",
       "quellBezug": "genannt",
       "woranMan": "Etwas, das eine Grenze zieht oder einen Absturz verhindert: Latten, Stäbe, Mauer, Hecke, Gitter.",
-      "fuerErwachsene": "Die Quelle nennt Zäune ausdrücklich. Ein Zaun sagt zweierlei: hier hört das eine auf und das andere fängt an – und manchmal: hier wäre es gefährlich.",
-      "sicherheit": "offen",
-      "sicherheitText": "Eine Unterscheidung zum Anschauen, keine Vorschriftenkunde. Für Geländer gibt es Bauvorschriften, die hier nicht nachgelesen wurden.",
-      "impuls": "Was trennt dieser Zaun – und von was?"
+      "fuerErwachsene": "Die Quelle nennt Zäune ausdrücklich. Ein Zaun sagt zweierlei: hier hört das eine auf und das andere fängt an – und manchmal: hier wäre es gefährlich. Unterwegs ist das auch eine Regel: Absperrungen wie Stangen- oder Kettengeländer darf man zu Fuß nicht überschreiten.",
+      "sicherheit": "belegt",
+      "sicherheitText": "Belegt ist die Regel für Absperrungen. NICHT belegt – und darum nicht hier – ist alles über die Vorschriften, nach denen Geländer gebaut werden; die wurden nicht nachgelesen.",
+      "impuls": "Was trennt dieser Zaun – und von was?",
+      "quelle": "§ 25 Abs. 1 und Abs. 4 Straßenverkehrsordnung (Gehwegbenutzung als Pflicht; Absperrungen dürfen nicht überschritten werden)."
     },
     {
       "id": "k-bank",
@@ -399,7 +400,7 @@
     },
     {
       "was": "Fotos",
-      "warum": "Die App zeigt keine Gebäudebilder: ein Bild müsste von irgendwo kommen, und diese App ruft nichts ab. Die Häuser stehen draußen und sind umsonst zu sehen. Ob und wie Sie selbst fotografieren, ist Ihre Sache – nur Menschen nicht."
+      "warum": "Die App zeigt keine Gebäudebilder: ein Bild müsste von irgendwo kommen, und diese App ruft nichts ab. Die Häuser stehen draußen und sind umsonst zu sehen. Ob und wie Sie selbst fotografieren, ist Ihre Sache; wer es wissen will: Werke, die bleibend an öffentlichen Wegen, Straßen oder Plätzen stehen, darf man abbilden, bei Bauwerken nur die äußere Ansicht (§ 59 Urheberrechtsgesetz) – aber nur von allgemein zugänglichen Stellen aus, nicht vom Grundstück des Eigentümers und nicht per Drohne; dazu gibt es Urteile des Bundesgerichtshofs. Über das Fotografieren von Menschen sagt diese App nichts, weil sie es nicht geprüft hat – unsere Regel bleibt: keine Menschen."
     },
     {
       "was": "Eine Karte, ein Weg, ein Standort",
