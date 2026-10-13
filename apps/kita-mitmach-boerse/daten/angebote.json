@@ -66,13 +66,13 @@
     {
       "id": "f11",
       "deutsch": "Begegnungen mit Musikerinnen und Musikern",
-      "russisch": "встречах с музыкантами",
+      "russisch": "музыкантами",
       "quelle": "S. 24"
     },
     {
       "id": "f12",
       "deutsch": "Begegnungen mit Künstlerinnen und Künstlern",
-      "russisch": "встречах с художниками",
+      "russisch": "художниками",
       "quelle": "S. 24"
     },
     {
@@ -98,7 +98,7 @@
     {
       "id": "c03",
       "deutsch": "Tanzstudio „Topotuschka“",
-      "russisch": "студия танца «Топотушка»",
+      "russisch": "студии танца «Топотушка»",
       "quelle": "S. 25"
     },
     {
@@ -138,10 +138,10 @@
     }
   ],
   "praxis": "Was nicht im Text steht, ist keine Pflicht: Laternenfest, Vorlesepaten, Gartentag und ähnliche Formate sind keine Quellenangaben. Ob eine Abstimmung über Angebote unter Art. 14 oder § 6 fällt, ist Auslegung des jeweiligen Landesrechts.",
-  "datenschutz": "Die App speichert nur die eigene Stimme auf dem Gerät, mit Löschknopf. Die Datei enthält einen zufälligen Code und die Markierungen – keinen Namen, kein Freitext, keine Angabe über das Kind. Das Team sieht die Summen, nicht die Familien.",
+  "datenschutz": "Die App speichert nur die eigene Stimme auf dem Gerät, mit Löschknopf. Die App schreibt einen Zufallscode und die Markierungen in die Datei – keinen Namen, kein Freitext, keine Angabe über das Kind. Eine von Hand gebaute Datei kann im Code Buchstaben tragen; die Prüfung erkennt das nicht. Das Team sieht die Summen, nicht die Familien.",
   "quelle": {
     "geprueft": true,
     "werk": "Praleska, Kapitel „Сотрудничаем с семьей“, S. 24–25 (Eigenübersetzung der Angebotsnamen).",
-    "abweichung": "Der Katalogeintrag nennt 20 Formate, den Namen „Näh-Werkstatt“ und einen „Großeltern-Klub“. Im Text stehen 13 Formen auf S. 24 und sechs Clubs auf S. 25, Club der Großmütter („Клуб бабушек“). „Näh-Werkstatt“ gibt es im Text nicht; das Nähen wird nur als Kostümvorbereitung genannt. Die Liste hier ist die des Textes."
+    "abweichung": "Der Katalogeintrag nennt 20 Formate, den Namen „Näh-Werkstatt“ und einen „Großeltern-Klub“. Im Text stehen 13 Formen auf S. 24 und 6 Clubs auf S. 25, als Aufzählung im Fließtext ohne Zählung; die Liste ist offen („и др.“). Der Club der Großmütter heißt im Text „Клуб бабушек“. „Näh-Werkstatt“ gibt es im Text nicht; das Nähen wird nur als Kostümvorbereitung genannt. Die Liste hier ist die des Textes."
   }
 }

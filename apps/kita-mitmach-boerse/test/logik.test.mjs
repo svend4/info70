@@ -92,3 +92,9 @@ test('die Summen nennen keine Codes und keine Namen', () => {
   assert.deepEqual(z.summen.f02, { interessiert: 2, mithilfe: 1 });
   assert.equal(/ABCDEF|GHJKLM/.test(JSON.stringify(z)), false);
 });
+
+test('ein Angebot zweimal in einer Datei wird abgewiesen – sonst zählte es doppelt', () => {
+  const inhalt = JSON.parse(packeKoffer({ code: 'ABCDEF', stimmen: [{ id: 'f01', interessiert: true, mithilfe: false }] }));
+  inhalt.stimmen.push({ id: 'f01', interessiert: true, mithilfe: false });
+  assert.ok(pruefeKoffer(inhalt, daten).some((f) => /mehrfach/.test(f)));
+});

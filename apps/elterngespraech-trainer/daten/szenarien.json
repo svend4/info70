@@ -15,7 +15,7 @@
           "wert": 2
         },
         {
-          "text": "Das Weinen gehört in der Eingewöhnung oft dazu. Da müssen Sie sich keine Sorgen machen.",
+          "text": "Das Weinen gehört in der Eingewöhnung oft dazu, das ist ganz normal.",
           "wert": 1
         },
         {
@@ -24,7 +24,7 @@
           "falle": true
         }
       ],
-      "erklaerung": "Das Gespräch öffnen statt beruhigen: den Abschied gemeinsam anschauen. Die Bayern-Broschüre beschreibt die Eingewöhnung als elternbegleitet über mehrere Wochen mit klarem Abschied (PDF-S. 48). Der Hessen-BEP beschreibt ein Eingewöhnungsmodell mit vier Phasen (S. 97). Die Falle ist die Belehrung der Eltern; die Quelle lehnt die Position ab, die Eltern belehrt (Praleska S. 23).",
+      "erklaerung": "Das Gespräch öffnen statt beruhigen: den Abschied gemeinsam anschauen. Die Bayern-Broschüre beschreibt die Eingewöhnung als elternbegleitet über mehrere Wochen mit klarem Abschied (PDF-S. 48). Der Hessen-BEP beschreibt ein Eingewöhnungsmodell mit vier Phasen (S. 97). Die 1 beruhigt, ohne auf die Sorge der Mutter einzugehen: verständlich, aber einseitig. Die Falle ist die Belehrung der Eltern; die Quelle lehnt die Position ab, die Eltern belehrt (Praleska S. 23).",
       "quelle": "Bayern, Bildungs- und Erziehungspartnerschaft (STMAS, Stand April 2022), PDF-S. 48; Hessen, Bildung von Anfang an, S. 97; Praleska S. 23."
     },
     {
@@ -46,8 +46,8 @@
           "falle": true
         }
       ],
-      "erklaerung": "Der Hessen-BEP nennt als Ziel, dass Eltern und Einrichtung ihre Erziehungsvorstellungen austauschen und zum Wohl der Kinder kooperieren (S. 108). Die Bayern-Broschüre spricht von gegenseitiger Wertschätzung (PDF-S. 43). Die Falle ist das Urteil über das Kind und die Familie – auch dann, wenn man anderer Meinung ist.",
-      "quelle": "Hessen, Bildung von Anfang an, S. 108; Bayern-Broschüre, PDF-S. 43; Praleska S. 23 (Eigenübersetzung: „взаимоуважение, доброжелательность“)."
+      "erklaerung": "Der Hessen-BEP nennt als Ziel, dass Eltern und Einrichtung ihre Erziehungsvorstellungen austauschen und zum Wohl der Kinder kooperieren (S. 108). Die Bayern-Broschüre spricht von gegenseitiger Wertschätzung (PDF-S. 43). Die 1 erklärt die Regel der Gruppe, ohne auf den Vater einzugehen: verständlich, aber einseitig. Die Falle ist das Urteil über das Kind und die Familie – auch dann, wenn man anderer Meinung ist.",
+      "quelle": "Hessen, Bildung von Anfang an, S. 108; Bayern-Broschüre, PDF-S. 43; Praleska S. 23 („взаимоуважения, доброжелательности“, Eigenübersetzung der Begriffe)."
     },
     {
       "id": "s3",
@@ -68,7 +68,7 @@
           "falle": true
         }
       ],
-      "erklaerung": "Eigene Grenzen erkennen und auf fachkompetente Unterstützung verweisen – das ist im Rahmenlehrplan der Fachschule Sozialpädagogik als Fertigkeit im Lernfeld Erziehungs- und Bildungspartnerschaft benannt. Die 1 ist richtig, aber kalt: sie schickt die Mutter weg, statt sie zu begleiten. Die Falle ist eine Schuldzuweisung ans Elternhaus, die die Quelle ausdrücklich nicht vorsieht.",
+      "erklaerung": "Eigene Grenzen erkennen und auf fachkompetente Unterstützung verweisen – das ist im Rahmenlehrplan der Fachschule Sozialpädagogik als Fertigkeit im Lernfeld Erziehungs- und Bildungspartnerschaft benannt. Die 1 ist richtig, aber kalt: sie schickt die Mutter weg, statt sie zu begleiten. Die Falle ist eine Schuldzuweisung ans Elternhaus. Die Quelle setzt auf Partnerschaft und Vertrauen (S. 23); ein ausdrückliches Verbot von Schuldzuweisungen steht dort nicht – das ist unsere Ableitung.",
       "quelle": "KMK, Rahmenlehrplan Fachschule Sozialpädagogik (Beschluss vom 18.06.2020), Lernfeld 5; Praleska S. 23."
     },
     {
@@ -103,7 +103,7 @@
           "wert": 2
         },
         {
-          "text": "Das Entwicklungsgespräch ist wichtig für Sie. Bitte kommen Sie pünktlich, dann haben wir mehr Zeit.",
+          "text": "Das Entwicklungsgespräch ist wichtig für Sie, und ich erkläre Ihnen gern, wie es abläuft.",
           "wert": 1
         },
         {
@@ -112,7 +112,7 @@
           "falle": true
         }
       ],
-      "erklaerung": "Die Bayern-Broschüre nennt als Kern des Entwicklungsgesprächs einen offenen und intensiven Dialog von Anfang an (PDF-S. 49). Das Lernfeld 5 verlangt, Gespräche mit Eltern methodengeleitet und partizipativ zu führen. Die 2 beginnt mit der Erfahrung des Vaters, nicht mit der eigenen Beobachtung. Die 0 macht Angst; die Quelle wendet sich gegen Einschüchterung als Mittel der Zusammenarbeit (Praleska S. 23).",
+      "erklaerung": "Die Bayern-Broschüre nennt als Kern des Entwicklungsgesprächs einen offenen und intensiven Dialog von Anfang an (PDF-S. 49). Das Lernfeld 5 verlangt, Gespräche mit Eltern methodengeleitet und partizipativ zu führen. Die 2 beginnt mit der Erfahrung des Vaters, nicht mit der eigenen Beobachtung. Die 1 ist freundlich, geht aber am Vater vorbei: sie sagt ihm, was wichtig ist, und fragt nicht, was er erlebt hat. Die 0 macht Angst statt Vertrauen; die Quelle setzt auf einen Kontakt, „основанный на доверии“ (Praleska S. 23).",
       "quelle": "Bayern-Broschüre, PDF-S. 49; KMK, Rahmenlehrplan Fachschule Sozialpädagogik (2020), Lernfeld 5; Praleska S. 23."
     }
   ],

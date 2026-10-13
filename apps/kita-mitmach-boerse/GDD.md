@@ -18,8 +18,10 @@ Häkchen. Die Datei enthält keinen Platz für Text.
 
 Eine Datei mit fremden Feldern (etwa `name`) wird abgewiesen, ebenso eine falsche Art,
 eine falsche Version, ein unbekanntes Angebot und ein Wert, der nicht ja oder nein
-ist. Damit kann eine Datei nicht unbemerkt Angaben über Personen transportieren. Die
-Prüfung ist in `logik.mjs` (`pruefeKoffer`) und ist getestet.
+ist. Felder für Angaben über Personen gibt es in der Datei nicht. Im Code-Feld sind
+Buchstaben möglich; dort prüft die App nicht, ob der Code zufällig ist. Das ist eine
+bekannte Grenze, siehe „Grenzen“ in der README. Die Prüfung steht in `logik.mjs`
+(`pruefeKoffer`) und ist getestet.
 
 ## Die tragende Entscheidung 3: die Zahl 20 ist nicht die Zahl der Quelle
 
@@ -31,6 +33,7 @@ Gesamtzahl. Die Abweichung steht in `daten/angebote.json` (`quelle.abweichung`).
 ## Zählung
 
 - Je Familie eine Stimme pro Angebot und Häkchen.
+- Ein Angebot, das zweimal in einer Datei steht, wird abgewiesen; sonst zählte es doppelt.
 - Dateien mit demselben Code zählen einmal; die zuletzt geladene gilt.
 - Die Zählung ist eine Stimmung, keine Erhebung. Zwei Geräte derselben Familie zählen
   doppelt, eine von Hand gebaute Datei zählt mit. Das ist im Team-Bildschirm gesagt.
@@ -42,6 +45,8 @@ Gesamtzahl. Die Abweichung steht in `daten/angebote.json` (`quelle.abweichung`).
 - **Familie:** die eigene Auswahl und ein Zufallscode, in `localStorage` unter einem
   eigenen Schlüssel. Der Löschknopf (Daten-Karte aus `kinder-ui`) entfernt genau diesen
   Schlüssel.
+- **Gesperrter Speicher:** die Stimme gilt nur bis zum Schließen der Seite; der Status im
+  Bildschirm sagt das, und die Datei ist dann die einzige Kopie.
 - **Team:** nichts. Geladene Dateien liegen nur im Arbeitsspeicher der offenen Seite
   und sind mit „Geladene Dateien vergessen“ weg.
 
@@ -53,7 +58,7 @@ Abstimmung über Angebote ist Auslegung; `praxis` sagt das.
 
 ## Prüfung
 
-- 12 Tests in `test/logik.test.mjs`: Anzahl und Seiten, kein erfundenes Format, Code,
+- 13 Tests in `test/logik.test.mjs`: Anzahl und Seiten, kein erfundenes Format, Code,
   Prüfung der Datei, Zählung, Summen ohne Namen.
 - Browser bei 360 px: Überlauf 0, Ziele mindestens 44 px, Export nur mit vier Feldern,
   Import, Abweisung, Löschen, keine externen Anfragen. Die einzige Konsolenmeldung ist

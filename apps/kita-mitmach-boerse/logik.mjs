@@ -1,8 +1,8 @@
 // Kita-Mitmach-Börse (Praleska docs/10, Kita-Abschnitt, Nr. 75). Die Angebote
 // stammen aus dem Familienkapitel der Quelle (S. 24–25). Die Abstimmung ist
 // eine Eigenentwicklung auf Grundlage der Stimm-Datei aus mitmach-arena, hier
-// aber ohne Namen und ohne Freitext: Eine Datei enthält nur einen zufälligen
-// Code und die Markierungen.
+// aber ohne Namen und ohne Freitext: Eine Datei enthält einen Code und die
+// Markierungen. Die App erzeugt den Code zufällig; die Prüfung kann das nicht erkennen.
 //
 // TRAGENDE ENTSCHEIDUNG 1: KEINE NAMEN, KEIN FREITEXT.
 // Der Katalogeintrag wollte, dass Eltern „eigene Talente eintragen“. Das wäre
@@ -10,8 +10,9 @@
 // Angebot zwei Häkchen: interessiert und kann mithelfen.
 //
 // TRAGENDE ENTSCHEIDUNG 2: DIE DATEI IST GEPRÜFT, NICHT NUR GELESEN.
-// Eine Datei mit fremden Schlüsseln (etwa „name“) wird abgewiesen. Damit
-// kann eine Datei nicht unbemerkt Angaben über Personen transportieren.
+// Eine Datei mit fremden Schlüsseln (etwa „name“) wird abgewiesen. Im Code-Feld
+// sind aber Buchstaben erlaubt: eine von Hand gebaute Datei kann dort einen Namen
+// tragen, und die Prüfung erkennt das nicht. Die App selbst erzeugt nur Zufallscodes.
 //
 // TRAGENDE ENTSCHEIDUNG 3: DIE ZAHL 20 IST NICHT DIE ZAHL DER QUELLE.
 // Der Text nennt 13 Formen auf S. 24 und sechs Clubs auf S. 25, die Liste ist
@@ -65,6 +66,8 @@ export function pruefeKoffer(inhalt, daten) {
   if (!Array.isArray(inhalt.stimmen)) fehler.push('stimmen fehlt');
   else {
     const bekannt = new Set(alleIds(daten));
+    const kennungen = inhalt.stimmen.map((s) => s?.id);
+    if (new Set(kennungen).size !== kennungen.length) fehler.push('ein Angebot steht mehrfach in der Datei – es würde doppelt gezählt');
     for (const s of inhalt.stimmen) {
       if (!s || typeof s !== 'object') { fehler.push('eine Stimme ist keine Angabe'); continue; }
       for (const k of Object.keys(s)) {
@@ -118,6 +121,6 @@ export function pruefeDaten(daten) {
   if (!/keine?\s+Pflicht|nicht im Text/i.test(daten?.praxis ?? '')) fehler.push('praxis sagt nicht, was keine Pflicht ist');
   if (!/keinen Namen|keine Namen/i.test(daten?.datenschutz ?? '')) fehler.push('datenschutz sagt nicht, dass keine Namen gespeichert werden');
   if (daten?.quelle?.geprueft !== true) fehler.push('quelle.geprueft ist nicht true');
-  if (!/20/.test(daten?.quelle?.abweichung ?? '')) fehler.push('quelle.abweichung nennt die Zahl 20 nicht, die der Katalog behauptet');
+  if (!/Katalogeintrag nennt 20\b/.test(daten?.quelle?.abweichung ?? '')) fehler.push('quelle.abweichung nennt die Zahl 20 aus dem Katalogeintrag nicht');
   return fehler;
 }

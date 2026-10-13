@@ -38,6 +38,12 @@ entfernt genau den gespeicherten Eintrag und den Code.
 
 ## Grenzen – ehrlich
 
+- Im **Code-Feld** sind Buchstaben erlaubt. Eine von Hand gebaute Datei kann dort einen
+  Namen tragen; die Prüfung erkennt das nicht, weil sie nicht prüfen kann, ob ein Code
+  zufällig entstanden ist. Die App selbst erzeugt nur Zufallscodes.
+- Wer „Meine Daten löschen“ drückt und neu ausfüllt, erscheint als **neue Familie**.
+- Ist der Speicher des Geräts gesperrt, gilt die Stimme nur bis zum Schließen der Seite.
+  Die Datei ist dann die einzige Kopie – die App sagt das im Bildschirm.
 - Eine Familie, die auf **zwei Geräten** ausfüllt, zählt zweimal. Die App kann das
   nicht erkennen.
 - Eine Datei lässt sich **von Hand bauen**. Die Zählung ist deshalb eine Stimmung,
@@ -49,10 +55,10 @@ entfernt genau den gespeicherten Eintrag und den Code.
 
 ## Prüfung
 
-- `node --test apps/kita-mitmach-boerse/test/*.mjs` – 12 Tests: 13 Formate und 6 Clubs,
+- `node --test apps/kita-mitmach-boerse/test/*.mjs` – 13 Tests: 13 Formate und 6 Clubs,
   Seitenangaben, „Näh-Werkstatt“ nicht als Angebot, Code ohne verwechselbare Zeichen,
   Datei mit Namensfeld abgewiesen, falsche Version abgewiesen, dieselbe Familie einmal
-  gezählt, Summen ohne Codes und Namen.
+  gezählt, ein Angebot doppelt in einer Datei abgewiesen, Summen ohne Codes und Namen.
 - Browser bei 360 px: 38 Häkchen, jedes Feld mindestens 44 px, Export mit exakt den
   vier Feldern, Import der eigenen Datei zählt 1, eine fremde Datei mit Namensfeld
   wird abgewiesen, Löschen leert den Speicher, keine externen Anfragen.

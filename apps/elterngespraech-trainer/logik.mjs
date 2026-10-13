@@ -21,7 +21,7 @@ export const STUFEN = Object.freeze([2, 1, 0]);
 
 /** Die Muster, die in Antworten 1 und 2 und in Erklärungen nicht stehen dürfen.
  *  Die 0-Antwort darf sie tragen, weil sie die Falle ist. */
-export const BELEHRUNG = /\bSie müssen\b|\bSo erzieht man\b|\bDas machen Sie falsch\b/i;
+export const BELEHRUNG = /\bSie müssen\b|\bmüssen Sie\b|\bSo erzieht man\b|\bDas machen Sie falsch\b/i;
 export const SCHULDZUWEISUNG = /\bliegt an der Erziehung\b|\bSie sind schuld\b|\bliegt an den Eltern\b/i;
 export const ETIKETT = /\bDiagnose\b|\bDefizit\b|\bStörung\b|\bEntwicklungsverzögerung\b|\bProblemeltern\b|\bschwierige Eltern\b|\bbildungsferne Eltern\b/i;
 export const ANGST = /\bdürfen Sie sich nicht wundern\b|\bhinterherhinkt\b/i;

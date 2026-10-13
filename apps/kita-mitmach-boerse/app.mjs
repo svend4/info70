@@ -12,7 +12,10 @@ import { CODE_LAENGE, alleIds, neuerCode, packeKoffer, pruefeDaten, pruefeKoffer
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
-const daten = await fetch('daten/angebote.json').then((r) => r.json());
+// Ein fehlender Katalog wird gemeldet, statt die Seite still abbrechen zu lassen.
+const daten = await fetch('daten/angebote.json')
+  .then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+  .catch(() => null);
 
 const SCHLUESSEL = 'kita-mitmach-boerse:stimme';
 const DATEI_NAME = 'kita-mitmach-boerse-stimme.json';
@@ -40,11 +43,16 @@ function ladeEigene() {
   }
 }
 
+/** true, wenn die Stimme auf dem Gerät liegt. false: sie gilt nur bis zum Schließen der Seite. */
 function merkeEigene() {
+  const speicher = globalThis.localStorage;
+  if (!speicher) return false;
   try {
-    globalThis.localStorage?.setItem(SCHLUESSEL, packeKoffer(koffer()));
+    speicher.setItem(SCHLUESSEL, packeKoffer(koffer()));
+    return true;
   } catch {
     // Privates Fenster oder gesperrter Speicher: die Datei lässt sich trotzdem speichern.
+    return false;
   }
 }
 
@@ -71,8 +79,12 @@ function koffer() {
 function setze(id, feld, wert) {
   const e = eigeneStimme();
   e.auswahl[id] = { interessiert: false, mithilfe: false, ...e.auswahl[id], [feld]: wert };
-  merkeEigene();
-  if (statusZeile) statusZeile.textContent = 'Auf diesem Gerät gemerkt. Noch nichts gesendet – das passiert nur mit der Datei.';
+  const gemerkt = merkeEigene();
+  if (statusZeile) {
+    statusZeile.textContent = gemerkt
+      ? 'Auf diesem Gerät gemerkt. Noch nichts gesendet – das passiert nur mit der Datei.'
+      : 'Nur bis zum Schließen dieser Seite gemerkt: der Speicher des Geräts ist gesperrt. Bitte die Datei speichern, bevor Sie die Seite schließen.';
+  }
 }
 
 function exportiere() {
@@ -193,7 +205,7 @@ function teamBildschirm(meldung) {
   app.replaceChildren(
     kopf('🧑‍🏫 Dateien zählen'),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, 'Die Familien-Dateien einlesen. Gezählt werden die Häkchen je Angebot. Namen gibt es in den Dateien nicht, und die Summen zeigen keine Codes.'),
+      el('p', { style: 'margin-top:0' }, 'Die Familien-Dateien einlesen. Gezählt werden die Häkchen je Angebot. Die App schreibt keine Namen in die Dateien; eine von Hand gebaute Datei könnte im Code Buchstaben tragen, das prüft die App nicht. Die Summen zeigen keine Codes.'),
       el('label', { for: 'mb-dateien', style: 'font-weight:600;display:block;margin-bottom:0.4rem' }, 'Dateien auswählen (mehrere sind möglich)'),
       el('input', { type: 'file', id: 'mb-dateien', multiple: true, accept: '.json,application/json', onchange: importiere }),
       meldung
@@ -226,7 +238,7 @@ function teamBildschirm(meldung) {
     footer());
 }
 
-const fehler = pruefeDaten(daten);
+const fehler = daten ? pruefeDaten(daten) : ['Die Angebote konnten nicht geladen werden.'];
 if (fehler.length) {
   app.replaceChildren(el('div', { class: 'k-hinweis k-hinweis--falsch' },
     el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));

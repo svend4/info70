@@ -9,9 +9,10 @@ bestimmtes Kind und kein Kinder-Bildschirm.
 
 ## Die tragende Entscheidung: die Quelle wird nicht geglättet
 
-Der Katalog hatte zwei Zahlen (25 Meilensteine, 3 Kommunikationsformen), eine
-Verbindung (Lisina – Komplex) und einen Fachbegriff („Belebungskomplex“) behauptet,
-die der Text nicht trägt. Das Quiz übernimmt keine dieser Behauptungen als Fakt.
+Der Katalog hatte die Zahl 25 Meilensteine, eine Verbindung (Lisina – Komplex) und
+einen Fachbegriff („Belebungskomplex“) behauptet, die der Text nicht trägt. Die Zahl der
+Kommunikationsformen ist kein Widerspruch: der Text beschreibt mehrere Formen, zählt sie
+aber nicht ausdrücklich. Das Quiz übernimmt keine dieser Behauptungen als Fakt.
 Die richtigen Antworten sind die des Textes; wo der Text sich widerspricht, zeigt das
 Quiz den Widerspruch und löst ihn nicht auf.
 
@@ -20,7 +21,7 @@ Quiz den Widerspruch und löst ihn nicht auf.
 | Aussage | Stand im Text | Seite |
 |---|---|---|
 | Merkmale am Jahresende | 22 Aufzählungspunkte | S. 42–43 |
-| Komplex der Belebung | etwa dritter Monat, bis vierter stark zunehmend | S. 28 |
+| Komplex der Belebung | etwa dritter Monat, bis vierter stark zunehmend; Genitivform S. 38 | S. 28 |
 | Gezieltes Greifen | Aufgabe für unter Dreimonatige, aber Beschreibung im fünften Monat | S. 34, S. 39 |
 | Drei Gegenstände gleichzeitig | neun bis zehn Monate | S. 40 |
 | Bewegungsaufgaben | bis 3 Monate, 3 bis 6–7, 6–7 bis 12 | S. 34–35 |

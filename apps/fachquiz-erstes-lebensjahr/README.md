@@ -12,12 +12,13 @@ Der Katalogeintrag (Praleska, Kita-Abschnitt, Nr. 76) nannte **25 Meilensteine**
 - **22 Merkmale** in der Liste „Основные показатели развития детей (к концу первого года
   жизни)“, S. 42–43. Die Zahl 25 steht nicht im Text.
 - **Der Komplex** heißt im Text «комплекс оживления». Er bildet sich etwa im dritten
-  Monat und nimmt bis zum vierten stark zu (S. 28). „Belebungskomplex“ ist eine
-  Übertragung, kein belegter Fachbegriff.
+  Monat und nimmt bis zum vierten stark zu (S. 28); die Genitivform steht auf S. 38.
+  „Belebungskomplex“ ist eine Übertragung, kein belegter Fachbegriff.
 - **Lisina** wird in der Einleitung zitiert (S. 5) – zum Übergang zwischen Tätigkeiten.
   Mit dem Komplex verbindet die Quelle sie nicht.
-- **Kommunikation:** Der Text beschreibt die situativ-geschäftliche Form (S. 28) und die
-  Übergangsform personal-geschäftlich (S. 37–38). Eine Dreizahl zählt er nicht.
+- **Kommunikation:** Der Text beschreibt mehrere Formen – die emotional-persönliche (S. 37),
+  die situativ-geschäftliche (S. 28) und die Übergangsform personal-geschäftlich (S. 37–38) –
+  zählt sie aber nicht ausdrücklich als drei.
 - **Greifen:** Die Aufgabe für Kinder unter drei Monaten zielt auf das Greifen (S. 34);
   die Beschreibung nennt den fünften Monat (S. 39). Das Quiz zeigt den Widerspruch.
 

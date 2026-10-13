@@ -62,7 +62,7 @@
         "Die Quelle nennt das Verhalten «Komplex der Freude»"
       ],
       "korrekt": 1,
-      "erklaerung": "Im Text steht nur «комплекс оживления» (S. 28 und S. 34). Die deutsche Form „Belebungskomplex“ ist eine Übertragung; die Recherche hat sie nicht als deutschen Fachbegriff belegt. In Zitaten bitte die russische Form mit Seitenangabe verwenden."
+      "erklaerung": "Im Text steht die Nominativform «комплекс оживления» (S. 28 und S. 34), in der Genitivform «комплекса оживления» (S. 38). Die deutsche Form „Belebungskomplex“ ist eine Übertragung; die Recherche hat sie nicht als deutschen Fachbegriff belegt. In Zitaten bitte die russische Form mit Seitenangabe verwenden."
     },
     {
       "id": "f04",
@@ -183,6 +183,6 @@
   "quelle": {
     "geprueft": true,
     "werk": "Praleska, Kapitel zum ersten Lebensjahr, S. 26–43, sowie Einleitung S. 5. Zitate im russischen Original, Übersetzungen eigen.",
-    "abweichung": "Der Katalogeintrag nannte 25 Meilensteine und 3 Kommunikationsformen. Der Text listet 22 Merkmale (S. 42–43). Eine Dreizahl der Formen zählt der Text nicht: er beschreibt die situativ-geschäftliche Form (S. 28) und die Übergangsform personal-geschäftlich (S. 37–38). Der Begriff „Belebungskomplex“ ist im Text nicht belegt. Offen: S. 29 nennt bei den ersten Wörtern in Klammern „(4—20)“; ob das eine Anzahl ist, geht aus dem Text nicht sicher hervor, deshalb fragt das Quiz danach nicht. Der Widerspruch zum Greifen (S. 34 gegen S. 39) bleibt im Quiz stehen und wird nicht aufgelöst."
+    "abweichung": "Der Katalogeintrag nannte 25 Meilensteine. Der Text listet 22 Merkmale (S. 42–43); die Zahl 25 steht nicht im Text. Zu den Kommunikationsformen beschreibt der Text mehrere Formen – die emotional-persönliche (S. 37), die situativ-geschäftliche (S. 28) und die Übergangsform personal-geschäftlich (S. 37–38) –, zählt sie aber nicht ausdrücklich als drei. Der Begriff „Belebungskomplex“ ist im Text nicht belegt. Offen: S. 29 nennt bei den ersten Wörtern in Klammern „(4—20)“; ob das eine Anzahl ist, geht aus dem Text nicht sicher hervor, deshalb fragt das Quiz danach nicht. Der Widerspruch zum Greifen (S. 34 gegen S. 39) bleibt im Quiz stehen und wird nicht aufgelöst."
   }
 }

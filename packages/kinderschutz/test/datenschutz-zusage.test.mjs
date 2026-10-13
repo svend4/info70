@@ -43,9 +43,10 @@ for (const a of apps) quellen.set(a, await laufzeitQuelle(a));
  * Geprueft wird jetzt die Konstruktion: eigenes `setItem` ODER der Aufruf von
  * `starteQuiz(`.
  */
-// Auch `globalThis.localStorage?.setItem` zählt: die Daten-Karte-Apps der Welle 84
-// schreiben so. Das frühere `includes('localStorage.setItem')` hat sie übersehen.
-const speichertSelbst = (q) => /localStorage\??\.setItem\(/.test(q);
+// Jeder Aufruf von `.setItem(` zählt, auch über eine Hilfsvariable
+// (`speicher.setItem(`) oder `globalThis.localStorage?.setItem(`). Ein Muster, das
+// nur `localStorage.setItem` sieht, hat Welle 84 zweimal übersehen.
+const speichertSelbst = (q) => /\.setItem\(/.test(q);
 // Kein Wahlschalter: `quiz-kern` schreibt den Rekord am Rundenende immer
 // (quiz.mjs:252-253), unabhaengig von der Konfiguration. Wer `starteQuiz`
 // aufruft, speichert.
