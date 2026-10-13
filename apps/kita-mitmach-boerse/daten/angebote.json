@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "hinweis": "Die Liste stammt aus dem Familienkapitel der Quelle (Praleska, S. 24–25). Dort steht sie im Fließtext; eine gezählte oder abschließende Liste gibt es nicht. Die Zahl „20“ aus dem Katalogeintrag ist nicht aus dem Text ableitbar und wird hier nicht verwendet.",
+  "wasEsIst": "Eltern und Kita-Team sehen dieselben Angebote. Jede Familie markiert, was sie interessiert und wobei sie mithelfen könnte. Die Stimmen sammelt das Team aus Dateien, die die Familien auf ihrem eigenen Gerät speichern. Namen werden nicht abgefragt und nicht gespeichert.",
+  "formate": [
+    {
+      "id": "f01",
+      "deutsch": "Ausflüge und Wanderungen",
+      "russisch": "совместные экскурсии и походы",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f02",
+      "deutsch": "Baumpflanzen auf dem Kitagelände",
+      "russisch": "посадка деревьев на участке детского сада",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f03",
+      "deutsch": "Zusammenarbeit beim Spielen",
+      "russisch": "сотрудничество в процессе игр",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f04",
+      "deutsch": "Märcheninszenierungen",
+      "russisch": "театрализации сказок",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f05",
+      "deutsch": "Kostüme für die Inszenierungen vorbereiten",
+      "russisch": "подготовки костюмов к ним",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f06",
+      "deutsch": "Studios",
+      "russisch": "в организации и работе студий",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f07",
+      "deutsch": "Kreise und Zirkel",
+      "russisch": "кружков",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f08",
+      "deutsch": "Seminare",
+      "russisch": "на семинарах",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f09",
+      "deutsch": "Abende mit Fragen und Antworten",
+      "russisch": "вечерах вопросов и ответов",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f10",
+      "deutsch": "Begegnungen mit Schriftstellerinnen und Schriftstellern",
+      "russisch": "встречах с писателями",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f11",
+      "deutsch": "Begegnungen mit Musikerinnen und Musikern",
+      "russisch": "встречах с музыкантами",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f12",
+      "deutsch": "Begegnungen mit Künstlerinnen und Künstlern",
+      "russisch": "встречах с художниками",
+      "quelle": "S. 24"
+    },
+    {
+      "id": "f13",
+      "deutsch": "Gemeinsames Besprechen neuer Literatur (psychologisch-pädagogische und Kinderliteratur)",
+      "russisch": "совместном обсуждении новой литературы (психолого-педагогической, детской)",
+      "quelle": "S. 24"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "c01",
+      "deutsch": "Club junger Mütter",
+      "russisch": "«Клуб молодых мам»",
+      "quelle": "S. 25"
+    },
+    {
+      "id": "c02",
+      "deutsch": "Club der Großmütter",
+      "russisch": "«Клуб бабушек»",
+      "quelle": "S. 25"
+    },
+    {
+      "id": "c03",
+      "deutsch": "Tanzstudio „Topotuschka“",
+      "russisch": "студия танца «Топотушка»",
+      "quelle": "S. 25"
+    },
+    {
+      "id": "c04",
+      "deutsch": "Zirkusgruppe",
+      "russisch": "цирковая",
+      "quelle": "S. 25"
+    },
+    {
+      "id": "c05",
+      "deutsch": "Gruppe „Bienchen“ (Spielzeug herstellen)",
+      "russisch": "«Пчелка» — по изготовлению игрушек",
+      "quelle": "S. 25"
+    },
+    {
+      "id": "c06",
+      "deutsch": "Touristenclub",
+      "russisch": "туристический клуб",
+      "quelle": "S. 25"
+    }
+  ],
+  "rechtlich": [
+    {
+      "titel": "Elternbeirat in jeder Kita (Bayern)",
+      "text": "Nach Art. 14 Abs. 1 Satz 1 BayKiBiG ist in jeder Kindertageseinrichtung ein Elternbeirat einzurichten. Er wird vor wichtigen Entscheidungen informiert und angehört (Art. 14 Abs. 2 Satz 1) und berät unter anderem über die Planung regelmäßiger Informations- und Bildungsveranstaltungen (Art. 14 Abs. 2 Satz 2).",
+      "quelle": "Art. 14 BayKiBiG (Abruf 13.10.2026)"
+    },
+    {
+      "titel": "Beteiligung der Eltern (Brandenburg)",
+      "text": "Nach § 6 Abs. 1 KitaG sind die Eltern an der Konzeptionsentwicklung und an Fragen ihrer organisatorischen Umsetzung zu beteiligen. Nach § 6 Abs. 4 Satz 2 erörtern die Mitarbeitenden mit den Eltern die Grundlagen, Ziele und Methoden der pädagogischen Arbeit und stimmen sie mit ihnen ab.",
+      "quelle": "§ 6 KitaG Brandenburg (Abruf 13.10.2026)"
+    },
+    {
+      "titel": "Beteiligung im Bundesrecht",
+      "text": "§ 22a Abs. 2 Satz 2 SGB VIII: Die Erziehungsberechtigten sind an den Entscheidungen in wesentlichen Angelegenheiten der Erziehung, Bildung und Betreuung zu beteiligen. Satz 1 ist eine Soll-Vorschrift an die Träger der öffentlichen Jugendhilfe. § 8 Abs. 1 SGB VIII verlangt zusätzlich die Beteiligung der Kinder entsprechend ihrem Entwicklungsstand. § 45 Abs. 2 SGB VIII verlangt für die Betriebserlaubnis Verfahren der Beteiligung und der Beschwerde.",
+      "quelle": "§§ 8, 22a, 45 SGB VIII (Abruf 13.10.2026)"
+    }
+  ],
+  "praxis": "Was nicht im Text steht, ist keine Pflicht: Laternenfest, Vorlesepaten, Gartentag und ähnliche Formate sind keine Quellenangaben. Ob eine Abstimmung über Angebote unter Art. 14 oder § 6 fällt, ist Auslegung des jeweiligen Landesrechts.",
+  "datenschutz": "Die App speichert nur die eigene Stimme auf dem Gerät, mit Löschknopf. Die Datei enthält einen zufälligen Code und die Markierungen – keinen Namen, kein Freitext, keine Angabe über das Kind. Das Team sieht die Summen, nicht die Familien.",
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Kapitel „Сотрудничаем с семьей“, S. 24–25 (Eigenübersetzung der Angebotsnamen).",
+    "abweichung": "Der Katalogeintrag nennt 20 Formate, den Namen „Näh-Werkstatt“ und einen „Großeltern-Klub“. Im Text stehen 13 Formen auf S. 24 und sechs Clubs auf S. 25, Club der Großmütter („Клуб бабушек“). „Näh-Werkstatt“ gibt es im Text nicht; das Nähen wird nur als Kostümvorbereitung genannt. Die Liste hier ist die des Textes."
+  }
+}

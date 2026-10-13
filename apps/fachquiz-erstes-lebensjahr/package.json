@@ -1,0 +1,8 @@
+{
+  "name": "@info70/fachquiz-erstes-lebensjahr",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fachquiz Entwicklung im ersten Lebensjahr für Auszubildende und Tagespflege: quiz-kern-Quiz mit dreizehn Fragen zur Praleska-Quelle (S. 26–43, Einleitung S. 5), jede Antwort mit Seite. Zeigt die Widersprüche der Quelle (Greifen S. 34 gegen S. 39) statt sie zu glätten. Die Zahl 25 aus dem Katalog ist im Text nicht belegt; gezählt sind 22 Merkmale. Lernwerkzeug, kein Test für Kinder.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

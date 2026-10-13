@@ -1,0 +1,16 @@
+/* Kita-Mitmach-Börse: eine Zeile je Angebot mit zwei Häkchen. Touch-Ziele mind. 44 px (docs/02). */
+.mb-gruppe { border: 0; margin: 0.8rem 0 0; padding: 0; }
+.mb-gruppe legend { font-weight: 700; font-size: 1.1rem; padding: 0; margin-bottom: 0.3rem; }
+.mb-zeile { border-top: 1px solid #d1d5db; padding: 0.6rem 0; }
+.mb-name { margin: 0 0 0.3rem; font-weight: 600; }
+.mb-russisch { font-weight: 400; font-size: 0.9rem; color: #4b5563; }
+.mb-felder { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+.mb-feld { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; }
+.mb-feld input { width: 1.4rem; height: 1.4rem; margin: 0; }
+.mb-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.6rem 0 0; }
+.mb-hinweis { font-weight: 600; margin: 0.6rem 0 0; }
+.mb-zahlen { margin: 0; }
+@media (prefers-color-scheme: dark) {
+  .mb-zeile { border-top-color: #374151; }
+  .mb-russisch, .mb-quelle { color: #9ca3af; }
+}

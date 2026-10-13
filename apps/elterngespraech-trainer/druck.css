@@ -1,0 +1,17 @@
+/* Druck: ein Blatt mit Grundhaltungen und Verweisen. Ohne Knöpfe, ohne
+   Punkte, ohne Namenszeile (docs/02). Das Blatt ist im Bildschirmbetrieb
+   versteckt; gedruckt wird nur das Blatt. */
+.et-blatt { display: none; }
+
+@media print {
+  body { background: #fff; }
+  .k-app > *:not(.et-blatt) { display: none !important; }
+  .et-blatt { display: block !important; border: none; padding: 0; margin: 0; box-shadow: none; }
+  .et-blatt h2 { font-size: 14pt; margin: 0 0 3mm; }
+  .et-blatt h3 { font-size: 11pt; margin: 4mm 0 1mm; }
+  .et-blatt p, .et-blatt li { font-size: 10pt; line-height: 1.4; margin: 0 0 1.5mm; }
+  .et-punkt { break-inside: avoid; page-break-inside: avoid; margin-bottom: 2.5mm; }
+  .et-titel { font-weight: 700; }
+  .et-quelle { color: #333; font-size: 9pt; }
+  a[href]::after { content: ""; }
+}

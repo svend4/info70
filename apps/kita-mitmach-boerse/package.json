@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kita-mitmach-boerse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kita-Mitmach-Börse: Angebote aus dem Familienkapitel der Quelle (Praleska S. 24–25; 13 Formate und 6 Clubs laut Text, Liste nicht abschließend). Familien markieren Interesse und Mithilfe je Angebot und speichern eine Datei; das Team zählt die Dateien zusammen. EIGENENTWURF der Abstimmung – die Zahl 20 aus dem Katalog ist im Text nicht belegt. Keine Namen, offline, werbefrei.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

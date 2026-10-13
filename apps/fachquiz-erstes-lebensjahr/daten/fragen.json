@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkraefte",
+  "hinweis": "Lernwerkzeug für Ausbildung und Praxis – kein Test für ein Kind. Jede Antwort nennt die Seite der Quelle. Wo die Quelle sich widerspricht oder etwas nicht zählt, sagt die Erklärung das.",
+  "raenge": [
+    {
+      "ab": 0,
+      "titel": "Einsteiger*in",
+      "emoji": "🌱"
+    },
+    {
+      "ab": 5,
+      "titel": "Kundig",
+      "emoji": "🧭"
+    },
+    {
+      "ab": 8,
+      "titel": "Sicher im ersten Jahr",
+      "emoji": "🍼"
+    },
+    {
+      "ab": 10,
+      "titel": "Multiplikator*in",
+      "emoji": "🏅"
+    }
+  ],
+  "fragen": [
+    {
+      "id": "f01",
+      "typ": "wahl",
+      "kategorie": "Kommunikation",
+      "frage": "Wann bildet sich nach der Quelle der „Komplex der Belebung“ (russisch «комплекс оживления»)?",
+      "antworten": [
+        "Sofort nach der Geburt, schon in den ersten Tagen",
+        "Etwa im dritten Monat; bis zum vierten Monat nimmt er stark zu",
+        "Erst im zweiten Halbjahr des ersten Lebensjahres"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Der Text sagt: Der Komplex formt sich „примерно на третьем месяце“ und nimmt bis zum vierten Monat stark zu (S. 28). Bei den jüngsten Kindern steht er als Ziel der Anregung (S. 34)."
+    },
+    {
+      "id": "f02",
+      "typ": "wahl",
+      "kategorie": "Kommunikation",
+      "frage": "Aus welchen Verhaltensweisen besteht der Komplex der Belebung laut Quelle?",
+      "antworten": [
+        "Greifen, Krabbeln und Stehen",
+        "Aufmerksamer Blick auf den Erwachsenen, Zuwendung zu ihm, Lächeln, Körperbewegung und Lautäußerungen",
+        "Weinen, Wegdrehen und Schlafen"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Die Quelle zählt auf: den Blick auf den Erwachsenen, die Konzentration auf ihn, das Lächeln, die Bewegung des Körpers („двигательное оживление“) und Laute (S. 28). Gemeint ist das Zusammenspiel, nicht ein einzelnes Verhalten."
+    },
+    {
+      "id": "f03",
+      "typ": "wahl",
+      "kategorie": "Begriffe",
+      "frage": "Der Katalogeintrag spricht vom „Belebungskomplex“. Was lässt sich dazu im Text belegen?",
+      "antworten": [
+        "„Belebungskomplex“ ist der feststehende deutsche Fachbegriff für dieses Verhalten",
+        "Der Text hat nur die russische Bezeichnung «комплекс оживления»; „Belebungskomplex“ ist eine eigene Übertragung, kein belegter Fachbegriff",
+        "Die Quelle nennt das Verhalten «Komplex der Freude»"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Im Text steht nur «комплекс оживления» (S. 28 und S. 34). Die deutsche Form „Belebungskomplex“ ist eine Übertragung; die Recherche hat sie nicht als deutschen Fachbegriff belegt. In Zitaten bitte die russische Form mit Seitenangabe verwenden."
+    },
+    {
+      "id": "f04",
+      "typ": "wahl",
+      "kategorie": "Quellenkunde",
+      "frage": "Die Quelle zitiert M. I. Lisina. Worum geht es in dieser Stelle der Einleitung?",
+      "antworten": [
+        "Um den Komplex der Belebung im dritten Monat",
+        "Um den Übergang von einer Tätigkeit zur nächsten, höher entwickelten Tätigkeit",
+        "Um die Zahl der Merkmale im ersten Jahr"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Das Zitat (S. 5): «смена предыдущей деятельности последующей, более высокой по своему развитию». Es steht in der Einleitung zu den kindlichen Tätigkeiten und hat mit dem Komplex der Belebung nichts zu tun. Der Katalog hatte beides verbunden; die Quelle tut das nicht."
+    },
+    {
+      "id": "f05",
+      "typ": "wahl",
+      "kategorie": "Kommunikation",
+      "frage": "Was kommt nach der Quelle in der zweiten Hälfte des ersten Lebensjahres neu hinzu?",
+      "antworten": [
+        "Die Verständigung über Gegenstände: Kontakt, der durch Dinge vermittelt wird",
+        "Das erste Lächeln als Antwort auf Sprache",
+        "Das Verstehen von Zahlen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Für die zweite Jahreshälfte nennt der Text die situativ-geschäftliche Form: „общение, опосредованное предметами“, also Verständigung über Dinge (S. 28). Hier beginnt auch die aktive Vorbereitung auf das Sprechen."
+    },
+    {
+      "id": "f06",
+      "typ": "wahl",
+      "kategorie": "Kommunikation",
+      "frage": "Was kennzeichnet nach der Quelle die Übergangsform „personal-geschäftlich“ (личностно-деловая)?",
+      "antworten": [
+        "Das Kind will zugleich Zuwendung des Erwachsenen und gemeinsames Tun; die Zuwendung kommt zuerst",
+        "Das Kind lehnt jede Zusammenarbeit ab",
+        "Das Kind arbeitet allein mit Werkzeugen"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Ab dem zweiten Halbjahr treten Kinder in diese Form ein: Das Bedürfnis nach Zuwendung und das nach Zusammenarbeit werden zugleich befriedigt (S. 37). Erst wenn sich das Kind angenommen fühlt, öffnet es sich für sachliche Information (S. 38)."
+    },
+    {
+      "id": "f07",
+      "typ": "binaer",
+      "kategorie": "Kommunikation",
+      "aussage": "Ein Kind nimmt eine Sachinformation erst dann richtig auf, wenn es sich vorher emotional angenommen fühlt.",
+      "korrekt": "ja",
+      "erklaerung": "Die Quelle sagt: Das Kind wird erst dann bereit für die „деловая“ Information, wenn es sich der Zuwendung des Erwachsenen sicher ist (S. 38). Das beschreibt eine Reihenfolge im typischen Verlauf, keine Regel für jedes einzelne Kind."
+    },
+    {
+      "id": "f08",
+      "typ": "binaer",
+      "kategorie": "Hantieren",
+      "aussage": "Mit neun bis zehn Monaten können Kinder laut Quelle gleichzeitig mit drei Gegenständen hantieren.",
+      "korrekt": "ja",
+      "erklaerung": "Der Text: In den Monaten neun bis zehn können Babys „одновременно действовать даже с тремя предметами“ (S. 40). Am Anfang hält das Kind nur einen Gegenstand; mit acht Monaten behält es den ersten, wenn es den zweiten greift (S. 40)."
+    },
+    {
+      "id": "f09",
+      "typ": "wahl",
+      "kategorie": "Greifen",
+      "frage": "Ab wann greift ein Kind nach der Quelle gezielt nach einem Gegenstand?",
+      "antworten": [
+        "Erst ab dem sechsten Monat",
+        "Die Quelle nennt zwei Zeitpunkte, die nicht zusammenpassen: Die Aufgabe für Kinder unter drei Monaten zielt schon aufs Greifen, die Beschreibung nennt den fünften Monat",
+        "Vor dem dritten Monat; dort ist das Greifen schon voll entwickelt"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Zwei Stellen, die sich nicht decken: Für Kinder bis drei Monate steht die Aufgabe, „захватывание предмета“ anzuregen (S. 34). Im fünften Monat dagegen greift das Kind nach Dingen, hält sie und will sie festhalten (S. 39). Die Quelle löst den Widerspruch nicht auf, deshalb wird hier keine Zahl als gesichert ausgegeben."
+    },
+    {
+      "id": "f10",
+      "typ": "wahl",
+      "kategorie": "Meilensteine",
+      "frage": "Wie viele Merkmale führt die Liste „Основные показатели развития детей (к концу первого года жизни)“ auf?",
+      "antworten": [
+        "25",
+        "22",
+        "13"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Gezählt sind die 22 Aufzählungspunkte der Liste auf S. 42–43. Der Katalog nannte 25 Meilensteine; diese Zahl steht so im Text nicht."
+    },
+    {
+      "id": "f11",
+      "typ": "wahl",
+      "kategorie": "Bewegung",
+      "frage": "In welche Altersstufen gliedert die Quelle die Aufgaben der Bewegungsentwicklung im ersten Jahr?",
+      "antworten": [
+        "Bis 3 Monate, 3 bis 6–7 Monate, 6–7 bis 12 Monate",
+        "Bis 6 Monate und 6 bis 12 Monate",
+        "Bis 4 Monate, 4 bis 8 Monate, 8 bis 12 Monate"
+      ],
+      "korrekt": 0,
+      "erklaerung": "Die Aufgaben stehen in drei Stufen: „для детей до 3 месяцев“ (S. 34), „от 3 до 6—7 месяцев“ (S. 34), „от 6—7 до 12 месяцев“ (S. 35). Die Grenze um sechs bis sieben Monate ist im Text ein Bereich, keine genaue Zahl."
+    },
+    {
+      "id": "f12",
+      "typ": "wahl",
+      "kategorie": "Hantieren",
+      "frage": "Wie sieht das Hantieren mit Gegenständen zu Beginn nach der Quelle aus?",
+      "antworten": [
+        "Das Kind baut aus den Gegenständen Türme",
+        "Es hält sie, schwenkt sie, steckt sie in den Mund, betastet und schüttelt sie – wenige, gleichförmige Handlungen",
+        "Es benennt die Gegenstände"
+      ],
+      "korrekt": 1,
+      "erklaerung": "Das Repertoire ist anfangs begrenzt und gleichförmig: halten, schwenken, in den Mund stecken, betasten, schütteln (S. 40). Erst im zweiten Halbjahr wird es vielfältiger (S. 40)."
+    },
+    {
+      "id": "f13",
+      "typ": "binaer",
+      "kategorie": "Quellenkunde",
+      "aussage": "Die Quelle verbindet das Zitat von M. I. Lisina mit dem Komplex der Belebung.",
+      "korrekt": "nein",
+      "erklaerung": "Das Lisina-Zitat steht in der Einleitung (S. 5) und geht um den Übergang zwischen Tätigkeiten. Der Komplex der Belebung wird auf S. 28 beschrieben, ohne dass Lisina dort genannt wird. Die Verbindung hat der Katalog hergestellt, nicht die Quelle."
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Kapitel zum ersten Lebensjahr, S. 26–43, sowie Einleitung S. 5. Zitate im russischen Original, Übersetzungen eigen.",
+    "abweichung": "Der Katalogeintrag nannte 25 Meilensteine und 3 Kommunikationsformen. Der Text listet 22 Merkmale (S. 42–43). Eine Dreizahl der Formen zählt der Text nicht: er beschreibt die situativ-geschäftliche Form (S. 28) und die Übergangsform personal-geschäftlich (S. 37–38). Der Begriff „Belebungskomplex“ ist im Text nicht belegt. Offen: S. 29 nennt bei den ersten Wörtern in Klammern „(4—20)“; ob das eine Anzahl ist, geht aus dem Text nicht sicher hervor, deshalb fragt das Quiz danach nicht. Der Widerspruch zum Greifen (S. 34 gegen S. 39) bleibt im Quiz stehen und wird nicht aufgelöst."
+  }
+}

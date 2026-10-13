@@ -1,0 +1,8 @@
+{
+  "name": "@info70/elterngespraech-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Elterngespräch üben für Erzieher*innen: fünf Gespräche, je drei Antworten (dialogisch, verständlich aber einseitig, Falle). EIGENENTWURF – die Quelle (Praleska S. 21–25) enthält keine Gesprächssituationen, nur Grundsätze; der Katalogeintrag hatte das anders behauptet, und das steht hier. Jede Einstufung trägt eine Seitenangabe aus der Quelle oder dem Hessen-Bildungsplan (S. 97, 108, 109) bzw. der Bayern-Broschüre (PDF-S. 43, 44, 48, 49) und dem Rahmenlehrplan der Fachschule Sozialpädagogik (KMK 2020, Lernfeld 5, S. 37–39). Keine Gesamtpunktzahl und keine Rangliste: die Stufe beschreibt die Antwort, nicht die Person. Die Falle ist als Falle markiert, damit die Muster, vor denen gewarnt wird, nur dort stehen. Nichts wird gespeichert; offline, werbefrei.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

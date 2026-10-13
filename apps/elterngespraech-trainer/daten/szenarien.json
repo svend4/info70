@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte (Erzieher*innen in Ausbildung und Praxis)",
+  "hinweis": "Eigenentwurf: Die Situationen und die Einstufung 2/1/0 stammen NICHT aus der Quelle. Die Quelle (Praleska, S. 21–25) enthält keine Gesprächssituationen, sondern Grundsätze. Die Grundsätze sind hier mit Seitenangabe benannt; die Situationen sind Übungsfälle.",
+  "wasEsIst": "Fünf typische Gespräche mit Eltern, je drei Antworten. Eine davon ist dialogisch (2), eine verständlich, aber einseitig (1), eine ist die Falle (0). Nach jeder Antwort steht, warum sie so eingestuft ist, mit Quelle. Die Einstufung beschreibt das Verhalten in dieser einen Antwort – nicht die Person, die sie gibt.",
+  "keinePunktesumme": "Es gibt keine Gesamtpunktzahl und keine Rangliste. Die Stufen gelten je Antwort, mit Erklärung zur Haltung. Eine Summe über alle Situationen würde aus einer Übung eine Bewertung machen.",
+  "szenarien": [
+    {
+      "id": "s1",
+      "titel": "Weinen in der Eingewöhnung",
+      "situation": "Eine Mutter sagt beim Bringen: „Mein Kind weint jeden Morgen. Ich habe das Gefühl, Sie kümmern sich nicht richtig darum.“",
+      "optionen": [
+        {
+          "text": "Ich verstehe, dass Sie das belastet. Lassen Sie uns gemeinsam anschauen, wie der Abschied abläuft, und sagen Sie mir, was Ihrem Kind hilft.",
+          "wert": 2
+        },
+        {
+          "text": "Das Weinen gehört in der Eingewöhnung oft dazu. Da müssen Sie sich keine Sorgen machen.",
+          "wert": 1
+        },
+        {
+          "text": "Sie müssen lernen loszulassen. Andere Eltern schaffen das auch.",
+          "wert": 0,
+          "falle": true
+        }
+      ],
+      "erklaerung": "Das Gespräch öffnen statt beruhigen: den Abschied gemeinsam anschauen. Die Bayern-Broschüre beschreibt die Eingewöhnung als elternbegleitet über mehrere Wochen mit klarem Abschied (PDF-S. 48). Der Hessen-BEP beschreibt ein Eingewöhnungsmodell mit vier Phasen (S. 97). Die Falle ist die Belehrung der Eltern; die Quelle lehnt die Position ab, die Eltern belehrt (Praleska S. 23).",
+      "quelle": "Bayern, Bildungs- und Erziehungspartnerschaft (STMAS, Stand April 2022), PDF-S. 48; Hessen, Bildung von Anfang an, S. 97; Praleska S. 23."
+    },
+    {
+      "id": "s2",
+      "titel": "Unterschiedliche Erziehungsvorstellungen",
+      "situation": "Ein Vater sagt: „Bei uns zu Hause darf sie nach dem Essen nicht schlafen. Das wollen wir so.“ Die Gruppe hat einen festen Mittagsschlaf.",
+      "optionen": [
+        {
+          "text": "Danke, dass Sie mir Ihre Sicht erklären. Erzählen Sie mir, wie der Tag bei Ihnen zu Hause abläuft. Dann schauen wir gemeinsam, wie wir hier und zu Hause einen guten Rhythmus finden.",
+          "wert": 2
+        },
+        {
+          "text": "Bei uns gilt der Mittagsschlaf für alle Kinder. Daran halten wir uns.",
+          "wert": 1
+        },
+        {
+          "text": "Das ist für Ihre Tochter nicht gut. So kann sie nicht gesund groß werden.",
+          "wert": 0,
+          "falle": true
+        }
+      ],
+      "erklaerung": "Der Hessen-BEP nennt als Ziel, dass Eltern und Einrichtung ihre Erziehungsvorstellungen austauschen und zum Wohl der Kinder kooperieren (S. 108). Die Bayern-Broschüre spricht von gegenseitiger Wertschätzung (PDF-S. 43). Die Falle ist das Urteil über das Kind und die Familie – auch dann, wenn man anderer Meinung ist.",
+      "quelle": "Hessen, Bildung von Anfang an, S. 108; Bayern-Broschüre, PDF-S. 43; Praleska S. 23 (Eigenübersetzung: „взаимоуважение, доброжелательность“)."
+    },
+    {
+      "id": "s3",
+      "titel": "Sensibles Thema: Verdacht auf Entwicklungsstörung",
+      "situation": "Eine Mutter fragt: „Ich glaube, mein Sohn hat vielleicht eine Entwicklungsstörung. Können Sie das sagen?“",
+      "optionen": [
+        {
+          "text": "Im Gruppenalltag sehe ich, dass er beim Sprechen oft Mühe hat, und das nehme ich ernst. Eine fachliche Einschätzung kann ich nicht geben. Ich schreibe Ihnen auf, an wen Sie sich wenden können.",
+          "wert": 2
+        },
+        {
+          "text": "Das klingt, als ob da etwas nicht stimmt. Gehen Sie am besten mal zum Arzt.",
+          "wert": 1
+        },
+        {
+          "text": "Der Junge ist einfach schwierig. Das liegt an der Erziehung zu Hause.",
+          "wert": 0,
+          "falle": true
+        }
+      ],
+      "erklaerung": "Eigene Grenzen erkennen und auf fachkompetente Unterstützung verweisen – das ist im Rahmenlehrplan der Fachschule Sozialpädagogik als Fertigkeit im Lernfeld Erziehungs- und Bildungspartnerschaft benannt. Die 1 ist richtig, aber kalt: sie schickt die Mutter weg, statt sie zu begleiten. Die Falle ist eine Schuldzuweisung ans Elternhaus, die die Quelle ausdrücklich nicht vorsieht.",
+      "quelle": "KMK, Rahmenlehrplan Fachschule Sozialpädagogik (Beschluss vom 18.06.2020), Lernfeld 5; Praleska S. 23."
+    },
+    {
+      "id": "s4",
+      "titel": "Tür-und-Angel-Gespräch mit Zuhörenden",
+      "situation": "Ein Vater holt ab und fragt laut: „Ich habe nur kurz Zeit. Hat er heute wieder gehauen? Die Mutter von dem anderen Kind hat mir etwas erzählt.“ Andere Eltern stehen daneben.",
+      "optionen": [
+        {
+          "text": "Das Thema ist mir wichtig. Können wir dafür heute einen Termin in Ruhe ausmachen? Dann erzähle ich Ihnen alles dazu.",
+          "wert": 2
+        },
+        {
+          "text": "Heute war alles bestens, er hat toll mitgemacht.",
+          "wert": 1
+        },
+        {
+          "text": "Ja, er hat wieder gehauen, und Sie müssen zu Hause dringend etwas ändern.",
+          "wert": 0,
+          "falle": true
+        }
+      ],
+      "erklaerung": "Der Hessen-BEP nennt gut vor- und nachbereitete, vertrauliche Gespräche (S. 109). Die Bayern-Broschüre führt Tür-und-Angel-Gespräche als Form der Partnerschaft neben Termingesprächen (PDF-S. 44). Die 2 verschiebt das Thema in einen geschützten Rahmen, ohne es zu verschweigen. Die 1 beschönigt. Die 0 sagt vor anderen Eltern etwas über ein fremdes Kind und gibt Anweisungen.",
+      "quelle": "Hessen, Bildung von Anfang an, S. 109; Bayern-Broschüre, PDF-S. 44."
+    },
+    {
+      "id": "s5",
+      "titel": "Skeptischer Vater beim Entwicklungsgespräch",
+      "situation": "Ein Vater sagt: „Ich war schon bei drei Entwicklungsgesprächen. Da kommt sowieso nichts dabei heraus.“",
+      "optionen": [
+        {
+          "text": "Dass Sie das so erlebt haben, nehme ich ernst. Was ist Ihnen heute wichtig? Ich zeige Ihnen zuerst, was ich beobachte, und dann höre ich Ihnen zu, wie Sie Ihr Kind zu Hause erleben.",
+          "wert": 2
+        },
+        {
+          "text": "Das Entwicklungsgespräch ist wichtig für Sie. Bitte kommen Sie pünktlich, dann haben wir mehr Zeit.",
+          "wert": 1
+        },
+        {
+          "text": "Wenn Sie das nicht ernst nehmen, dürfen Sie sich nicht wundern, wenn Ihr Kind später hinterherhinkt.",
+          "wert": 0,
+          "falle": true
+        }
+      ],
+      "erklaerung": "Die Bayern-Broschüre nennt als Kern des Entwicklungsgesprächs einen offenen und intensiven Dialog von Anfang an (PDF-S. 49). Das Lernfeld 5 verlangt, Gespräche mit Eltern methodengeleitet und partizipativ zu führen. Die 2 beginnt mit der Erfahrung des Vaters, nicht mit der eigenen Beobachtung. Die 0 macht Angst; die Quelle wendet sich gegen Einschüchterung als Mittel der Zusammenarbeit (Praleska S. 23).",
+      "quelle": "Bayern-Broschüre, PDF-S. 49; KMK, Rahmenlehrplan Fachschule Sozialpädagogik (2020), Lernfeld 5; Praleska S. 23."
+    }
+  ],
+  "grundhaltungen": [
+    {
+      "titel": "Partnerschaft statt Expertenrolle",
+      "text": "Die Quelle lehnt die Position ab, die alles besser weiß und die Eltern belehrt (Praleska S. 23, Eigenübersetzung). Partnerschaft braucht gegenseitige Achtung und Wohlwollen (ebd.).",
+      "quelle": "Praleska S. 23"
+    },
+    {
+      "titel": "Zuhören und sich hineinversetzen",
+      "text": "Dialogfähig ist, wer zuhören kann, sich in den Gesprächspartner hineinversetzt und Eltern nicht als Durchschnitt behandelt (Praleska S. 25).",
+      "quelle": "Praleska S. 25"
+    },
+    {
+      "titel": "Austausch der Erziehungsvorstellungen",
+      "text": "Eltern und Einrichtung öffnen sich füreinander, tauschen Erziehungsvorstellungen aus und kooperieren zum Wohl der Kinder.",
+      "quelle": "Hessen, Bildung von Anfang an, S. 108"
+    },
+    {
+      "titel": "Eigene Grenzen benennen",
+      "text": "Wer an fachliche Grenzen kommt, erkennt sie und verweist auf fachkompetente Unterstützung, statt sie zu übergehen oder abzuwehren.",
+      "quelle": "KMK, Rahmenlehrplan Fachschule Sozialpädagogik (2020), Lernfeld 5, S. 37–39"
+    },
+    {
+      "titel": "Vertraulichkeit",
+      "text": "Heikle Themen gehören in ein vorbereitetes, vertrauliches Gespräch, nicht vor andere Eltern.",
+      "quelle": "Hessen, Bildung von Anfang an, S. 109"
+    }
+  ],
+  "rechtlich": [
+    {
+      "titel": "Beteiligung der Eltern (SGB VIII § 22a)",
+      "text": "Die Träger sollen sicherstellen, dass die Fachkräfte mit den Erziehungsberechtigten zum Wohl der Kinder zusammenarbeiten (Abs. 2 Satz 1 Nr. 1, Soll-Vorschrift). Die Erziehungsberechtigten sind an den Entscheidungen in wesentlichen Angelegenheiten zu beteiligen (Satz 2)."
+    },
+    {
+      "titel": "Was der Rahmenlehrplan verlangt",
+      "text": "Der Rahmenlehrplan der Fachschule Sozialpädagogik (KMK, 18.06.2020) führt das Lernfeld 5 mit mindestens 80 Stunden. Gespräche mit Eltern methodengeleitet und partizipativ zu führen, ist dort eine Fertigkeit."
+    }
+  ],
+  "verweise": [
+    "Hessen: Bildung von Anfang an – Bildungs- und Erziehungsplan (S. 97, 108, 109, 115)",
+    "Bayern: Bildungs- und Erziehungspartnerschaft zwischen Eltern und Kindertageseinrichtungen (STMAS mit Staatsinstitut für Frühpädagogik, Stand April 2022)",
+    "KMK: Rahmenlehrplan für die Fachschule für Sozialpädagogik (Beschluss vom 18.06.2020), Lernfeld 5",
+    "SGB VIII § 22a Abs. 2 (Fassung des KJSG vom 03.06.2021)"
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Kapitel „Сотрудничаем с семьей“, S. 21–25; Ausgabe Minsk, NIO 2007. Zitate sind Eigenübersetzungen aus dem Russischen.",
+    "abweichung": "Der Katalogeintrag nennt Trainingssituationen aus dem Familienkapitel. Die Quelle enthält keine. Die Situationen sind Eigenentwurf; die Quellen stützen die Einstufung, nicht die Situation."
+  }
+}
