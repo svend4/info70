@@ -22,7 +22,7 @@ so nicht trägt:
 
 Belegt und mit Seite genannt: die sechs Aufgaben (S. 68–69), die Spielproblemsituation als Mittel
 (S. 69), Handlungsketten und Nebeneinander-Spiel als Ziel (S. 69) und als Entwicklungsmerkmal
-(S. 46, S. 100), das Beispiel mit dem Ersatzgegenstand (S. 100, Karte 6).
+(S. 46 für die Kette, S. 47 und S. 100 für das Nebeneinander-Spiel), das Beispiel mit dem Ersatzgegenstand (S. 100, Karte 6).
 
 ## So funktioniert es
 
@@ -34,6 +34,7 @@ Belegt und mit Seite genannt: die sechs Aufgaben (S. 68–69), die Spielproblems
 
 ## Grenzen – ehrlich
 
+- Die Prüfung gegen Lösungen erkennt **häufige Formulierungen** (etwa „die Fachkraft gibt …“, „Lösung“, „dient als …“) in Titel und Situation. Sie ist keine Garantie: ob eine Situation die Lösung schon verrät, entscheidet die Fachkraft beim Lesen der Karte.
 - Die Karten sind **Übungsbeispiele**, keine Vorlage für Wortlaut im Gruppenalltag.
 - Die Quelle nennt Ziele, aber keine Schritte für Handlungsketten und kein Verfahren für
   Nebeneinander-Spiel. Diese Hinweise fehlen; die App erfindet sie nicht.
@@ -41,7 +42,7 @@ Belegt und mit Seite genannt: die sechs Aufgaben (S. 68–69), die Spielproblems
 
 ## Prüfung
 
-- `node --test apps/impulskarten-sujetspiel/test/*.mjs` – 17 Tests: sechs Aufgaben mit Seite
+- `node --test apps/impulskarten-sujetspiel/test/*.mjs` – 21 Tests: sechs Aufgaben mit Seite
   68 oder 69, keine Lernziel-Formulierung, kein „Rollenspiel“ im Titel, kein Lösungsfeld in
   einer Karte, jede Karte Eigenentwurf oder mit Seite, jede Aufgabe mit einer Karte, Filter,
   und Gegenproben: eine Karte mit Lösungsfeld, eine Lösung im Text, ein fehlender Eigenentwurf

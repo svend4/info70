@@ -31,7 +31,7 @@ export const BAUSTEIN_SCHLUESSEL = Object.freeze(['id', 'titel', 'seite', 'art']
 /** Angaben, die weder Plan noch Daten tragen dürfen: sie beträfen Kinder. */
 const KINDER_FELDER = Object.freeze(['name', 'kind', 'vorname', 'nachname', 'geburtstag', 'alter', 'notiz', 'text', 'bemerkung', 'beobachtung']);
 /** Autoren- und Notenangaben aus den Listen der Quelle. */
-const AUTOREN = /(^|[\s,(«])(муз|сл|обр)\./u;
+const AUTOREN = /(^|[^\p{L}])(муз|сл|обр)\./iu;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 const seiteOk = (s) => typeof s === 'string' && /^S\. \d+(–\d+)?(, S\. \d+(–\d+)?)*$/.test(s);
@@ -129,6 +129,11 @@ export function pruefePlan(inhalt, daten) {
   const bekannteBereiche = new Set(daten.bereiche.map((b) => b.id));
   inhalt.woche.forEach((z, i) => {
     if (!z || typeof z !== 'object') { fehler.push(`Tag ${i + 1} ist keine Angabe`); return; }
+    for (const s of Object.keys(z)) {
+      if (!['tag', 'einheiten'].includes(s)) {
+        fehler.push(`Tag ${i + 1}: unbekanntes Feld „${s}“${KINDER_FELDER.includes(s) ? ' – die Datei enthält keine Angaben über Kinder' : ''}`);
+      }
+    }
     if (z.tag !== daten.tage[i]) fehler.push(`Tag ${i + 1} heißt „${z.tag}“, erwartet „${daten.tage[i]}“`);
     if (!Array.isArray(z.einheiten)) { fehler.push(`${z.tag}: einheiten fehlt`); return; }
     if (z.einheiten.length > daten.hoechstensProTag) fehler.push(`${z.tag}: mehr als ${daten.hoechstensProTag} Einheiten`);

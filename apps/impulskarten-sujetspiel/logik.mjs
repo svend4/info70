@@ -18,6 +18,7 @@
 // Rollenspiel nennt sie am Ende des vierten Lebensjahres (S. 104). Eine Kartei für 1–3 Jahre heißt deshalb anders.
 //
 // Die Karten sind ein Eigenentwurf (außer Karte k06, dem Beispiel auf S. 100).
+// Die Lösungsprüfung erkennt häufige Formulierungen, nicht jede Lösung: das steht so in GDD und README.
 // Die Zahl 6 gilt nur für die sechs Aufgaben der Quelle, nicht für die Kartei.
 // Politik docs/02: keine externen Anfragen, KEIN localStorage.
 
@@ -25,11 +26,14 @@
 export const KARTEN_SCHLUESSEL = Object.freeze(['id', 'titel', 'figur', 'situation', 'ziel', 'quelle', 'eigenentwurf']);
 export const FIGUREN = Object.freeze(['puppe', 'stofftier', 'spielzeug', 'kind']);
 
-/** Ein Text, der eine Lösung für den Erwachsenen verspricht. */
-const LOESUNG_TEXT = /\bdie Fachkraft (löst|hilft|gibt)\b|\bLösung:|\bso (geht|macht) (es|man)\b/i;
+/**
+ * Muster, die eine Lösung für den Erwachsenen verraten. Das sind die häufigsten Formen,
+ * keine Garantie: ob eine Situation eine Lösung verrät, prüft die Fachkraft beim Lesen der Karte.
+ */
+const LOESUNG_TEXT = /\b(Fachkraft|Erzieher(in)?|Erwachsene[rn]?|Pädagog(e|in)|Sie)\s+(löst|lösen|hilft|helfen|gibt|bringt|zeigt|reicht)\b|\bLösung\b|\bso (geht|macht) (es|man)\b|\bdient als\b|\bnimmt (einen|den|die|das) \w+ als\b|\bman (nimmt|gibt|bringt|legt|nutzt)\b/i;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
-const seiteOk = (s) => typeof s === 'string' && /^S\. \d+/.test(s);
+const seiteOk = (s) => typeof s === 'string' && /^S\. \d+(–\d+)?$/.test(s);
 
 /** Die Aufgaben-Ziele nach Kennung. */
 export function zielVon(daten, id) {
@@ -91,6 +95,7 @@ export function pruefeDaten(daten) {
       if (!KARTEN_SCHLUESSEL.includes(s)) fehler.push(`${wo}: unbekanntes Feld „${s}“${s === 'loesung' ? ' – eine Karte enthält keine Lösung für den Erwachsenen' : ''}`);
     }
     if (!nichtLeer(k.titel) || /Rollenspiel/.test(k.titel)) fehler.push(`${wo}: Titel fehlt oder nennt „Rollenspiel“`);
+    if (LOESUNG_TEXT.test(k.titel ?? '')) fehler.push(`${wo}: der Titel enthält eine Lösung für die Fachkraft`);
     if (!FIGUREN.includes(k.figur)) fehler.push(`${wo}: unbekannte Figur „${k.figur}“`);
     if (!zielIds.includes(k.ziel)) fehler.push(`${wo}: Ziel „${k.ziel}“ gibt es nicht`);
     if (!nichtLeer(k.situation) || k.situation.length < 20) fehler.push(`${wo}: Situation fehlt oder ist zu kurz`);

@@ -2,7 +2,7 @@
   "version": 1,
   "zielgruppe": "Fachkräfte mit Kindern von 1 bis 3 Jahren (Gruppe „Малыши“, S. 80–87)",
   "titel": "Musikspiele für Kinder von 1 bis 3 Jahren",
-  "hinweis": "Die Karten sind nach den Gattungen gegliedert, die die Quelle selbst nennt (S. 81–86). Die Beispiele sind nur Titel, mit Seite. Die Lieder sind dort Notenbeispiele: Texte und Noten stehen hier nicht. Die Formulierung des Spielprinzips ist eigen.",
+  "hinweis": "Die Karten gliedern die Musikspiele nach Gattungen, die die Überschriften und Aufgaben der Quelle zusammenfassen (S. 81–86). Die Seiten stimmen; die Namen sind eigen gefasst. Die Beispiele sind nur Titel, mit Seite. Die Lieder sind dort Notenbeispiele: Texte und Noten stehen hier nicht. Die Formulierung des Spielprinzips ist eigen.",
   "wasEsIst": "Eine Kartei für Fachkräfte. Jede Karte beschreibt eine Gattung musikalischer Spiele und zeigt, wo die Quelle sie findet. Gedruckt wird auf Karteikarten; nichts wird gespeichert.",
   "nichtInDerQuelle": "Dauer, Gruppengröße und Ort stehen in der Quelle nicht bei den einzelnen Spielen. Die Kartei filtert deshalb nur nach Gattung.",
   "gattungen": [
@@ -176,10 +176,10 @@
       "id": "g09",
       "gattung": "Freier Tanz",
       "quelle": "S. 84",
-      "prinzip": "Das Kind improvisiert Bewegungen zur Tanzmusik frei und zeigt darin seine Antwort auf die Musik.",
+      "prinzip": "Das Kind improvisiert Bewegungen zur Tanzmusik frei und zeigt darin seine Antwort auf die Musik. Die Quelle nennt dazu „Полька (свободная пляска)“ (S. 84).",
       "beispiele": [
         {
-          "titel": "Полька (свободная пляска)",
+          "titel": "Полька",
           "seite": "S. 84"
         }
       ],

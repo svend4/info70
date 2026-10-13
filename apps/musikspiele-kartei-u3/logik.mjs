@@ -2,10 +2,11 @@
 // Praleska docs/10, Kita-Abschnitt, Nr. 78. Quelle: Musik der Gruppe „Малыши“,
 // S. 81–86 (Aufgaben und Repertoire-Listen).
 //
-// TRAGENDE ENTSCHEIDUNG 1: DIE GATTUNGEN SIND DIE DER QUELLE.
-// Die Karten folgen den Abschnitten der Quelle (Попевки, Песни, Инсценирование,
-// Игры, Хороводы, Танцы, Танцевальное творчество, Фольклорspiele, Märchen,
-// Instrumente). Eine eigene Gattungsliste gibt es nicht.
+// TRAGENDE ENTSCHEIDUNG 1: DIE GATTUNGEN SIND EINE ZUSAMMENFASSUNG DER QUELLE.
+// Die Namen fassen die Überschriften und Aufgaben der Quelle zusammen (S. 81–86). Vier
+// davon (Klangnachahmung, Melodie aus Frage und Antwort, Lied mit Bewegung,
+// Tierbewegungen) sind Aufgabenstichworte, keine Überschriften. Die Seiten stimmen;
+// die Namen sind eigen gefasst.
 //
 // TRAGENDE ENTSCHEIDUNG 2: KEINE SUMME.
 // Der Katalog nannte „ca. 50“, dann „46“ und „9“. Die Zahl hängt an einer Zählregel
@@ -29,11 +30,13 @@ export const GATTUNG_SCHLUESSEL = Object.freeze(['id', 'gattung', 'quelle', 'pri
 export const BEISPIEL_SCHLUESSEL = Object.freeze(['titel', 'seite']);
 /** Angaben, die die Quelle bei den Spielen nicht macht. */
 const VERBOTENE_FELDER = Object.freeze(['dauer', 'gruppe', 'gruppengroesse', 'ort', 'anzahl', 'gesamt', 'summe']);
-/** Autoren- und Notenangaben aus den Listen der Quelle. */
-// \b ist für Kyrillisch blind (ASCII-only): deshalb eine ausdrückliche Grenze davor.
-const AUTOREN = /(^|[\s,(«])(муз|сл|обр)\./u;
-/** Eine Summe oder eine Zählung in einem Text. */
-const SUMMEN_TEXT = /\b(ca\.|rund|insgesamt|gesamt)\b\s*\d+|\b\d+\s+(Spielprinzipien|Spielformen|Inszenierungsformen|Reigen)\b/i;
+/**
+ * Autoren- und Notenangaben aus den Listen der Quelle. Ohne i-Flag blieb „Муз.“ stehen;
+ * die Grenze davor ist „kein Buchstabe“, weil \b für Kyrillisch nicht greift.
+ */
+const AUTOREN = /(^|[^\p{L}])(муз|сл|обр)\./iu;
+/** Eine Summe oder Zählung. „ca.“ endet auf einen Punkt, daher kein \b dahinter. */
+const SUMMEN_TEXT = /(^|[^\p{L}])(ca\.|rund|insgesamt|gesamt)\s*\d+|\d+\s+(Spielprinzipien|Spielformen|Inszenierungsformen|Reigen)\b/iu;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 const seiteOk = (s) => typeof s === 'string' && /^S\. \d+(–\d+)?(, S\. \d+(–\d+)?)*$/.test(s);
@@ -64,6 +67,17 @@ export function pruefeDaten(daten) {
   }
   if (!/Eigenentwurf|eigen/.test(daten?.hinweis ?? '')) {
     fehler.push('der Hinweis muss sagen, dass die Formulierung des Prinzips eigen ist');
+  }
+  if (!/zusammenfass/i.test(daten?.hinweis ?? '')) {
+    fehler.push('der Hinweis muss sagen, dass die Gattungsnamen eine Zusammenfassung sind');
+  }
+  // Autoren- und Summenprüfung über alle angezeigten Texte, nicht nur Titel und Prinzip.
+  // quelle.abweichung bleibt aus: dort stehen die Katalogzahlen absichtlich als Gegenbeispiel.
+  const angezeigt = [daten?.hinweis, daten?.wasEsIst, daten?.nichtInDerQuelle, daten?.quelle?.werk,
+    ...(daten?.gattungen ?? []).flatMap((g) => [g.gattung, g.prinzip, g.altersHinweis ?? '', ...(g.beispiele ?? []).map((b) => b.titel)])];
+  for (const t of angezeigt) {
+    if (AUTOREN.test(t ?? '')) fehler.push(`„${String(t).slice(0, 40)}…“ enthält eine Autoren- oder Notenangabe`);
+    if (SUMMEN_TEXT.test(t ?? '')) fehler.push(`„${String(t).slice(0, 40)}…“ enthält eine Zählung`);
   }
   if (!nichtLeer(daten?.nichtInDerQuelle) || !/Dauer.*Gruppengröße.*Ort|Dauer, Gruppengröße und Ort/.test(daten.nichtInDerQuelle)) {
     fehler.push('nichtInDerQuelle muss sagen, dass Dauer, Gruppengröße und Ort fehlen');

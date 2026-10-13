@@ -147,3 +147,18 @@ test('Gegenprobe Daten: ein fremdes Feld im Baustein wird abgewiesen', () => {
 test('die Einheit-Felder sind genau bereich und baustein', () => {
   assert.deepEqual([...EINHEIT_SCHLUESSEL], ['bereich', 'baustein']);
 });
+
+test('ein Zusatzfeld auf Tagesebene – etwa ein Name oder eine Notiz – wird abgewiesen', () => {
+  const inhalt = JSON.parse(packePlan(richtigerPlan()));
+  inhalt.woche[1].name = 'Mia';
+  assert.ok(pruefePlan(inhalt, daten).some((f) => /Tag 2: unbekanntes Feld „name“/.test(f)));
+  const notiz = JSON.parse(packePlan(richtigerPlan()));
+  notiz.woche[0].notiz = 'schläft schlecht';
+  assert.ok(pruefePlan(notiz, daten).some((f) => /Tag 1: unbekanntes Feld „notiz“/.test(f)));
+});
+
+test('ein Autor im Baustein wird auch mit großem Anfangsbuchstaben erkannt', () => {
+  const d = kopie(daten);
+  d.bereiche[0].bausteine[0].titel = 'Иди ко мне, Муз. Иванова';
+  assert.ok(pruefeDaten(d).some((f) => /Autoren- oder Notenangabe/.test(f)));
+});

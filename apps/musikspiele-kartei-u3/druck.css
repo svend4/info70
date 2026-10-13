@@ -26,6 +26,6 @@
   a[href]::after { content: ""; }
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   .mk-quelle { color: #9ca3af; }
 }

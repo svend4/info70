@@ -29,7 +29,7 @@
   a[href]::after { content: ""; }
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   .ik-zeile { border-top-color: #374151; }
   .ik-quelle { color: #9ca3af; }
 }

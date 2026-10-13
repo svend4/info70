@@ -39,8 +39,8 @@ function karteBild(g) {
 function zeichne() {
   const karten = kartenFuer(daten, { gattung });
   app.replaceChildren(
-    el('h1', { class: 'k-titel' }, `🎵 ${daten.titel}`),
-    el('p', { class: 'k-untertitel' }, 'Spielgattungen für Kinder von 1 bis 3 Jahren – nach der Quelle gegliedert'),
+    el('h1', { class: 'k-titel mk-nur-bildschirm' }, `🎵 ${daten.titel}`),
+    el('p', { class: 'k-untertitel mk-nur-bildschirm' }, 'Spielgattungen für Kinder von 1 bis 3 Jahren – nach Gattungen gegliedert, die die Quelle zusammenfasst'),
     el('section', { class: 'k-karte mk-nur-bildschirm' },
       el('p', { style: 'margin-top:0;font-weight:600' }, daten.hinweis),
       el('p', {}, daten.wasEsIst),

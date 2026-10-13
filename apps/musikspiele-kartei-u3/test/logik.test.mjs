@@ -22,7 +22,7 @@ test('jedes Beispiel ist ein Titel mit Seite 81–86 und trägt keine Autoren- o
     for (const b of g.beispiele) {
       assert.deepEqual(Object.keys(b).sort(), [...BEISPIEL_SCHLUESSEL].sort(), `${g.id} ${b.titel}`);
       assert.match(b.seite, /^S\. (8[1-6])$/, `${g.id} ${b.titel}`);
-      assert.doesNotMatch(b.titel, /(^|[\s,(«])(муз|сл|обр)\./u, b.titel);
+      assert.doesNotMatch(b.titel, /(^|[^\p{L}])(муз|сл|обр)\./iu, b.titel);
     }
   }
 });
@@ -80,4 +80,35 @@ test('zu wenige Gattungen werden abgewiesen', () => {
   const d = kopie(daten);
   d.gattungen = d.gattungen.slice(0, 5);
   assert.ok(pruefeDaten(d).some((f) => /5 Gattungen/.test(f)));
+});
+
+test('„Муз.“ mit großem Anfangsbuchstaben wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.gattungen[2].beispiele[0].titel = 'Сорока, Муз. Иванова';
+  assert.ok(pruefeDaten(d).some((f) => /Autoren- oder Notenangabe/.test(f)));
+});
+
+test('Autorenangabe nach Gedankenstrich wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.gattungen[2].beispiele[0].titel = 'Сорока—муз. Иванова';
+  assert.ok(pruefeDaten(d).some((f) => /Autoren- oder Notenangabe/.test(f)));
+});
+
+test('eine Summe im Hinweis wird abgewiesen, auch mit „ca.“ mit Leerzeichen', () => {
+  const d = kopie(daten);
+  d.hinweis = d.hinweis + ' Ca. 50 Lieder sind enthalten.';
+  assert.ok(pruefeDaten(d).some((f) => /enthält eine Zählung/.test(f)));
+});
+
+test('ein Autor im Gattungsnamen wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.gattungen[4].gattung = 'Lied-Inszenierung, муз. Иванова';
+  assert.ok(pruefeDaten(d).some((f) => /Autoren- oder Notenangabe/.test(f)));
+});
+
+test('der Hinweis sagt, dass die Gattungsnamen eine Zusammenfassung sind', () => {
+  assert.match(daten.hinweis, /zusammenfass/i);
+  const d = kopie(daten);
+  d.hinweis = 'Die Karten sind die Gattungen der Quelle.';
+  assert.ok(pruefeDaten(d).some((f) => /Gattungsnamen eine Zusammenfassung/.test(f)));
 });

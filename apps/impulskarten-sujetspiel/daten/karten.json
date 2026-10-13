@@ -61,7 +61,7 @@
     },
     {
       "id": "spielzeug",
-      "text": "anderes Spielzeug (Auto, Ball) – in der Quelle nicht genannt"
+      "text": "anderes Spielzeug"
     },
     {
       "id": "kind",
@@ -107,7 +107,7 @@
       "figur": "stofftier",
       "ziel": "z6",
       "eigenentwurf": true,
-      "situation": "Hase und Bär wollen auf dasselbe Kissen. Es gibt zwei Kissen."
+      "situation": "Hase und Bär wollen auf dasselbe Kissen. Es ist nur ein Kissen da."
     },
     {
       "id": "k06",

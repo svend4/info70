@@ -44,7 +44,7 @@ vier Einheiten pro Tag stehen in den Daten und sind als Eigenentwurf gekennzeich
 
 ## Prüfung
 
-- 19 Tests in `test/logik.test.mjs`: Richtwerte und Summe, Musik-Bausteine, Operationen am Plan,
+- 21 Tests in `test/logik.test.mjs`: Richtwerte und Summe, Musik-Bausteine, Operationen am Plan,
   Datei mit Form, Abweisung bei Namensfeld, falscher Art, Version, Tagesreihenfolge, fremdem
   Baustein und zu vielen Einheiten; Abweichung ist keine Ablehnung.
 - Browser bei 360 px: alle Bedienelemente mindestens 44 px, Export, Import (abgewiesen und

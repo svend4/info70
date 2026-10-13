@@ -16,8 +16,9 @@ der sie als Kinder-Lernziel ausweist.
 
 ## Die tragende Entscheidung 2: keine Lösung für den Erwachsenen
 
-Eine Karte hat kein Feld für eine Lösung. Die Prüfung lehnt unbekannte Felder und Lösungssätze
-im Situationstext ab. Das folgt aus S. 69: Die Kinder sollen „без помощи взрослых находить выход“.
+Eine Karte hat kein Feld für eine Lösung. Die Prüfung lehnt unbekannte Felder ab und erkennt
+häufige Lösungsformulierungen in Titel und Situation. Das ist keine Garantie: ob eine Situation
+die Lösung verrät, entscheidet die Fachkraft beim Lesen. Das folgt aus S. 69: Die Kinder sollen „без помощи взрослых находить выход“.
 
 ## Die tragende Entscheidung 3: kein Titel „Rollenspiel“
 
@@ -31,7 +32,7 @@ Jahre heißt deshalb „Impulskarten für das sujetabbildende Spiel“.
 |---|---|
 | Sechs Aufgaben | Quelle, S. 68–69 |
 | Spielproblemsituation als Mittel | Quelle, S. 69 |
-| Handlungskette, Nebeneinander-Spiel als Ziel | Quelle, S. 69; Entwicklungsmerkmale S. 46, S. 100 |
+| Handlungskette, Nebeneinander-Spiel als Ziel | Quelle, S. 69; Entwicklungsmerkmale S. 46 (Kette), S. 47 und S. 100 (Nebeneinander) |
 | Karte 6 (Puppe mit Ersatzgegenstand füttern) | Quelle, S. 100 |
 | Karten 1–5, 7–9 (Situationen) | Eigenentwurf |
 | Format, Kartenzahl, Druckbild | Eigenentwurf |
@@ -47,7 +48,7 @@ Jahre heißt deshalb „Impulskarten für das sujetabbildende Spiel“.
 
 ## Prüfung
 
-- 17 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Titel, Lösungsverbot, Quellenpflicht je
+- 21 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Titel, Lösungsverbot, Quellenpflicht je
   Karte, Abdeckung aller Aufgaben, Filter und die Abweisung fehlerhafter Daten.
 - Browser bei 360 px: neun Karten am Anfang, Filter, Druck nur mit den Karten, Ziele mindestens
   44 px, kein Überlauf, keine externen Anfragen.

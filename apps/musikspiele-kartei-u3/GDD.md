@@ -6,11 +6,12 @@ Eine Kartei für Fachkräfte mit Kindern von 1 bis 3 Jahren. Sie ordnet die Musi
 (Praleska, Gruppe „Малыши“, S. 81–86) nach deren eigenen Gattungen und zeigt je Gattung das
 Prinzip, die Seite und einige Titel. Zum Drucken; kein Kinderbildschirm.
 
-## Die tragende Entscheidung 1: die Gattungen der Quelle
+## Die tragende Entscheidung 1: Gattungen als Zusammenfassung der Quelle
 
 Der Katalog nannte eine Filterlogik nach Alter, Dauer, Gruppengröße und Ort. Die Quelle kennt
-diese Filter für die einzelnen Spiele nicht. Die Kartei gliedert deshalb nach den dreizehn
-Gattungen, die der Text selbst als Abschnitte führt. Das Alter wird nur gezeigt, wo der Text es
+diese Filter für die einzelnen Spiele nicht. Die Kartei gliedert deshalb nach dreizehn Gattungen,
+die die Überschriften und Aufgaben der Quelle zusammenfassen. Vier davon sind Aufgabenstichworte,
+keine Überschriften; die Namen sind eigen gefasst, die Seiten stimmen. Das Alter wird nur gezeigt, wo der Text es
 nennt.
 
 ## Die tragende Entscheidung 2: keine Summe
@@ -29,7 +30,7 @@ gesetzt, weil `\b` in JavaScript bei kyrillischen Buchstaben nicht greift.
 
 | Teil | Status |
 |---|---|
-| Dreizehn Gattungen und ihre Seiten | Quelle, S. 81–86 |
+| Dreizehn Gattungen und ihre Seiten | Zusammenfassung der Überschriften und Aufgaben, S. 81–86 |
 | Titel je Gattung (Auswahl) | Quelle, mit Seite |
 | Alter, wo der Text es nennt (Melodie Frage–Antwort, dritte Lebensjahr) | Quelle, S. 81 |
 | Formulierung des Spielprinzips | Eigenentwurf |
@@ -44,7 +45,7 @@ gesetzt, weil `\b` in JavaScript bei kyrillischen Buchstaben nicht greift.
 
 ## Prüfung
 
-- 12 Tests in `test/logik.test.mjs`: Gattungen und Seiten, Titel ohne Autorenangabe, kein Feld für
+- 17 Tests in `test/logik.test.mjs`: Gattungen und Seiten, Titel ohne Autorenangabe, kein Feld für
   Dauer, Gruppengröße oder Ort, keine Summe, Filter und die Abweisung fehlerhafter Daten.
 - Browser bei 360 px: dreizehn Karten, Filter, Druck, Knöpfe mindestens 44 px, keine externen
   Anfragen.

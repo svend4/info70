@@ -118,3 +118,26 @@ test('ein Lernziel-Satz für Kinder wird abgewiesen', () => {
   d.ziele[1].text = 'Kinder lernen, Spielhandlungen zu planen.';
   assert.ok(pruefeDaten(d).some((f) => /als Lernziel der Kinder/.test(f)));
 });
+
+test('eine Lösung im Titel wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.karten[0].titel = 'Die Puppe hat Hunger – man nimmt einen Becher';
+  assert.ok(pruefeDaten(d).some((f) => /Titel enthält eine Lösung/.test(f)));
+});
+
+test('eine Lösung in Form eines Ersatzgegenstands („dient als“) wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.karten[0].situation = 'Ein umgedrehter Deckel dient als Teller, und die Puppe bekommt ihr Essen.';
+  assert.ok(pruefeDaten(d).some((f) => /Lösung für die Fachkraft/.test(f)));
+});
+
+test('die Seitenangabe ist genau ein Wert: „S. 100 – Lösung“ wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.karten[5].quelle = 'S. 100 – Lösung: Ersatzgegenstand';
+  assert.ok(pruefeDaten(d).some((f) => /keine Seitenangabe/.test(f)));
+});
+
+test('die Karte k05 verrät keinen Ausweg mehr', () => {
+  const k05 = daten.karten.find((k) => k.id === 'k05');
+  assert.doesNotMatch(k05.situation, /Es gibt zwei Kissen/);
+});

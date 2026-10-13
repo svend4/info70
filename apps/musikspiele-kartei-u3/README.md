@@ -1,12 +1,12 @@
 # Musikspiele-Kartei U3 🎵
 
 Kartei für Fachkräfte mit Kindern von 1 bis 3 Jahren. Sie gliedert die Musikspiele nach den
-Gattungen, die die Praleska-Quelle selbst nennt (S. 81–86), und zeigt je Gattung das Prinzip,
+Gattungen, die die Überschriften und Aufgaben der Praleska-Quelle zusammenfassen (S. 81–86), und zeigt je Gattung das Prinzip,
 die Seite und einige Titel als Beispiele.
 
 ## Was an der Quelle geprüft ist
 
-Der Katalogeintrag (Nr. 78) hatte drei Angaben, die der Text so nicht trägt:
+Der Katalogeintrag (Nr. 78) hatte drei Angaben, die der Text so nicht trägt. Die Gattungsnamen sind eine Zusammenfassung der Überschriften und Aufgaben der Quelle, keine Liste ihrer Überschriften:
 
 - **„ca. 50 Spielprinzipien“**: eine Summe gibt es nicht. Die Quelle nennt Titel in Listen, die
   mit „и др.“ enden. Je nach Zählregel kommen andere Zahlen heraus (Melodienamen, Liedtitel,
@@ -15,7 +15,7 @@ Der Katalogeintrag (Nr. 78) hatte drei Angaben, die der Text so nicht trägt:
   nicht. Die Kartei filtert nur nach Gattung. Das steht im Bildschirm.
 - **„gemeinfreie deutsche Kinderlieder als Träger“**: nicht geprüft und nicht enthalten.
 
-Belegt und mit Seite: dreizehn Gattungen (S. 81–86), darunter Singübungen, Lied mit Bewegung,
+Mit Seite belegt sind die Überschriften und Aufgaben, aus denen die dreizehn Gattungen gebildet sind (S. 81–86): darunter Singübungen, Lied mit Bewegung,
 Lied-Inszenierung mit Tierfiguren, Singspiele, Reigen (S. 83), Rhythmus und Tanzschritte (S. 83–84),
 freier Tanz (S. 84), Tierbewegungen (S. 85), Volksspiele (S. 86), Musikmärchen (S. 86) und
 Musikinstrumente (S. 86). Die Titel stehen dort mit Seite; Texte und Noten stehen hier nicht.
@@ -41,7 +41,7 @@ Musikinstrumente (S. 86). Die Titel stehen dort mit Seite; Texte und Noten stehe
 
 ## Prüfung
 
-- `node --test apps/musikspiele-kartei-u3/test/*.mjs` – 12 Tests: dreizehn Gattungen mit Seite
+- `node --test apps/musikspiele-kartei-u3/test/*.mjs` – 17 Tests: dreizehn Gattungen mit Seite
   81–86, Titel mit Seite und ohne Autorenangabe, kein Feld für Dauer, Gruppengröße oder Ort,
   keine Summe im Text, Filter nach Gattung, und Gegenproben: ein Dauerfeld, ein Autor im Titel,
   eine Zählung im Prinzip, ein Beispiel ohne Seite und zu wenige Gattungen werden abgewiesen.

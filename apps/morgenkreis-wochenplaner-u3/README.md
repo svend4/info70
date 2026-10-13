@@ -43,7 +43,7 @@ Formen (S. 92–93) und Konstruieren (S. 94).
 
 ## Prüfung
 
-- `node --test apps/morgenkreis-wochenplaner-u3/test/*.mjs` – 19 Tests: Richtwerte ergeben zehn,
+- `node --test apps/morgenkreis-wochenplaner-u3/test/*.mjs` – 21 Tests: Richtwerte ergeben zehn,
   Musik-Bausteine sind die Gattungen der Kartei 78, leerer Plan, voller Tag, Ändern und Entfernen,
   Datei nur mit Form, Abweichung ist keine Ablehnung, und Gegenproben: ein Namensfeld, falsche Art,
   Version oder Tagesreihenfolge, Baustein aus fremdem Bereich, zu viele Einheiten, Summe ungleich

@@ -51,13 +51,13 @@ function karteBild(k) {
 function zeichne() {
   const karten = kartenFuer(daten, { ziel, figur });
   app.replaceChildren(
-    el('h1', { class: 'k-titel' }, `🃏 ${daten.titel}`),
-    el('p', { class: 'k-untertitel' }, 'Kleine Spielsituationen für Kinder von 1 bis 3 Jahren – mit Puppe, Stofftier oder Spielzeug'),
+    el('h1', { class: 'k-titel ik-nur-bildschirm' }, `🃏 ${daten.titel}`),
+    el('p', { class: 'k-untertitel ik-nur-bildschirm' }, 'Kleine Spielsituationen für Kinder von 1 bis 3 Jahren – mit Puppe, Stofftier oder Spielzeug'),
     el('section', { class: 'k-karte ik-nur-bildschirm' },
       el('p', { style: 'margin-top:0;font-weight:600' }, daten.hinweis),
       el('p', {}, daten.wasEsIst),
       el('p', { class: 'ik-quelle' }, `Quelle: ${daten.quelle.werk}`),
-      el('p', {}, `Sujetabbildendes Spiel: ${daten.faktenZumSpiel.altersBereich} (${daten.faktenZumSpiel.quelleAlter}). Übergang zum Rollenspiel: ${daten.faktenZumSpiel.rollenspielAb} (${daten.faktenZumSpiel.quelleRollenspiel}).`),
+      el('p', {}, `Sujetabbildendes Spiel: ${daten.faktenZumSpiel.altersBereich} (${daten.faktenZumSpiel.quelleAlter}). Rollenspiel: ${daten.faktenZumSpiel.rollenspielAb} (${daten.faktenZumSpiel.quelleRollenspiel}).`),
       el('p', { class: 'ik-quelle' }, daten.faktenZumSpiel.hinweisTitel)),
     el('section', { class: 'k-karte ik-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Die sechs Aufgaben der Quelle'),
@@ -74,7 +74,7 @@ function zeichne() {
     el('section', { class: 'ik-nur-bildschirm', style: 'margin-top:1rem' },
       el('p', { style: 'font-weight:600' }, `${karten.length} ${karten.length === 1 ? 'Karte' : 'Karten'} in dieser Auswahl`),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', id: 'ik-drucken', onclick: () => window.print() }, '🖨️ Diese Karten drucken'))),
+        el('button', { class: 'k-knopf', id: 'ik-drucken', disabled: karten.length === 0 ? true : null, onclick: () => window.print() }, '🖨️ Diese Karten drucken'))),
     el('section', { class: 'ik-nur-druck' },
       el('p', { style: 'font-weight:600' }, `${daten.titel} – Karten`),
       el('p', {}, 'Die Karten zeigen Situationen. Die Lösung findet das Kind. Ohne Quellenangabe auf der Karte: Eigenentwurf.')),
