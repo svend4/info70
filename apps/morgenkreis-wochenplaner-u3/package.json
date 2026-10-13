@@ -1,0 +1,8 @@
+{
+  "name": "@info70/morgenkreis-wochenplaner-u3",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Morgenkreis- und Wochenplaner für Kinder von 1 bis 3 Jahren: zehn Einheiten pro Woche in sieben Bereichen nach den Richtwerten der Praleska-Quelle (S. 8–9), Bausteine aus Musik-, Bewegungs- und Gestaltungsthemen mit Seite, Plan als Datei ohne Angaben über Kinder. Wochentage und Ablauf sind Eigenentwurf; der Morgenkreis als Format steht nicht in der Quelle.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

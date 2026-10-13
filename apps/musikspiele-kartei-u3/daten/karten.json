@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte mit Kindern von 1 bis 3 Jahren (Gruppe „Малыши“, S. 80–87)",
+  "titel": "Musikspiele für Kinder von 1 bis 3 Jahren",
+  "hinweis": "Die Karten sind nach den Gattungen gegliedert, die die Quelle selbst nennt (S. 81–86). Die Beispiele sind nur Titel, mit Seite. Die Lieder sind dort Notenbeispiele: Texte und Noten stehen hier nicht. Die Formulierung des Spielprinzips ist eigen.",
+  "wasEsIst": "Eine Kartei für Fachkräfte. Jede Karte beschreibt eine Gattung musikalischer Spiele und zeigt, wo die Quelle sie findet. Gedruckt wird auf Karteikarten; nichts wird gespeichert.",
+  "nichtInDerQuelle": "Dauer, Gruppengröße und Ort stehen in der Quelle nicht bei den einzelnen Spielen. Die Kartei filtert deshalb nur nach Gattung.",
+  "gattungen": [
+    {
+      "id": "g01",
+      "gattung": "Klangnachahmung",
+      "quelle": "S. 81, S. 86",
+      "prinzip": "Das Kind ahmt Töne und Klänge nach, singend oder spielend, in verschiedener Höhe und im Rhythmus und Tempo.",
+      "beispiele": [],
+      "altersHinweis": null
+    },
+    {
+      "id": "g02",
+      "gattung": "Melodie aus Frage und Antwort",
+      "quelle": "S. 81",
+      "prinzip": "Die Fachkraft singt eine Frage, das Kind antwortet mit einer eigenen kurzen Melodie. Es ist eine gemeinsame Improvisation.",
+      "beispiele": [],
+      "altersHinweis": "für das dritte Lebensjahr, gemeinsam mit dem Erwachsenen (S. 81)"
+    },
+    {
+      "id": "g03",
+      "gattung": "Singübungen (Попевки)",
+      "quelle": "S. 81",
+      "prinzip": "Kurze Lieder und Übungen für Rhythmus und Gesang; das Kind singt mit und spielt den Rhythmus auf einem Instrument.",
+      "beispiele": [
+        {
+          "titel": "Андрей-воробей",
+          "seite": "S. 81"
+        },
+        {
+          "titel": "Сорока",
+          "seite": "S. 81"
+        },
+        {
+          "titel": "Барашеньки-крутороженьки",
+          "seite": "S. 81"
+        },
+        {
+          "titel": "Зайка",
+          "seite": "S. 81"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g04",
+      "gattung": "Lied mit Bewegung",
+      "quelle": "S. 81, S. 82",
+      "prinzip": "Das Kind macht Bewegungen zum Liedtext, die dem Inhalt des Liedes folgen (S. 81).",
+      "beispiele": [
+        {
+          "titel": "Бобик",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Корова",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Птичка",
+          "seite": "S. 82"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g05",
+      "gattung": "Lied-Inszenierung mit Tierfiguren",
+      "quelle": "S. 82",
+      "prinzip": "Das Kind stellt die Figuren des Liedes dar, meist Tiere, und spielt die Handlung des Liedes nach.",
+      "beispiele": [
+        {
+          "titel": "Заинька-зайка",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Гусачок",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Котик и козлик",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Курачка",
+          "seite": "S. 82"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g06",
+      "gattung": "Singspiele mit Rollen",
+      "quelle": "S. 82",
+      "prinzip": "Ein Spiel mit Gesang und einfachem Ablauf: Zwei Figuren spielen aufeinander ab, etwa Vögel und eine Katze.",
+      "beispiele": [
+        {
+          "titel": "Птички и кот",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Кошка и котята",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Мишка в санках",
+          "seite": "S. 82"
+        },
+        {
+          "titel": "Погуляем",
+          "seite": "S. 82"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g07",
+      "gattung": "Reigen (Хороводы)",
+      "quelle": "S. 83",
+      "prinzip": "Gemeinsame Bewegung im Kreis zur Musik: die Kinder bewegen sich zusammen (S. 83).",
+      "beispiele": [
+        {
+          "titel": "Чудо-елка",
+          "seite": "S. 83"
+        },
+        {
+          "titel": "Мы на луг ходили",
+          "seite": "S. 83"
+        },
+        {
+          "titel": "Елочка",
+          "seite": "S. 83"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g08",
+      "gattung": "Rhythmische Bewegung und Tanzschritte",
+      "quelle": "S. 83, S. 84",
+      "prinzip": "Gehen, Laufen, Hüpfen und einfache Tanzschritte im Takt. Das Tempo wechselt: langsam, mäßig, schnell, mit Beschleunigung und Verlangsamung (S. 83).",
+      "beispiele": [
+        {
+          "titel": "Марш",
+          "seite": "S. 84"
+        },
+        {
+          "titel": "Ходим—бегаем",
+          "seite": "S. 84"
+        },
+        {
+          "titel": "Лошадки",
+          "seite": "S. 84"
+        },
+        {
+          "titel": "Веселые мячики",
+          "seite": "S. 84"
+        },
+        {
+          "titel": "Хлопай",
+          "seite": "S. 84"
+        },
+        {
+          "titel": "Приседай",
+          "seite": "S. 84"
+        }
+      ],
+      "altersHinweis": "Bewegungen des zweiten und dritten Lebensjahres sind in der Quelle getrennt aufgeführt (S. 83)"
+    },
+    {
+      "id": "g09",
+      "gattung": "Freier Tanz",
+      "quelle": "S. 84",
+      "prinzip": "Das Kind improvisiert Bewegungen zur Tanzmusik frei und zeigt darin seine Antwort auf die Musik.",
+      "beispiele": [
+        {
+          "titel": "Полька (свободная пляска)",
+          "seite": "S. 84"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g10",
+      "gattung": "Tierbewegungen zur Musik",
+      "quelle": "S. 83, S. 85",
+      "prinzip": "Das Kind bewegt sich wie ein Tier zur Musik: Der Gang oder Sprung des Tieres ist der Impuls (S. 83).",
+      "beispiele": [
+        {
+          "titel": "Медведь",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Воробей",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Птички",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Собачка",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Зайки",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Волк",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Кошка",
+          "seite": "S. 85"
+        },
+        {
+          "titel": "Бабочки",
+          "seite": "S. 85"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g11",
+      "gattung": "Volksspiele (belarussisch)",
+      "quelle": "S. 86",
+      "prinzip": "Volksspiele der Gattung „Белорусские фольклорные игры“, mit Gesang und Bewegung.",
+      "beispiele": [
+        {
+          "titel": "Маша",
+          "seite": "S. 86"
+        },
+        {
+          "titel": "Дожджык",
+          "seite": "S. 86"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g12",
+      "gattung": "Musikmärchen",
+      "quelle": "S. 86",
+      "prinzip": "Ein Märchen wird gesungen und gespielt; das Kind übernimmt eine der Figuren.",
+      "beispiele": [
+        {
+          "titel": "Курочка Ряба",
+          "seite": "S. 86"
+        },
+        {
+          "titel": "Терем-теремок",
+          "seite": "S. 86"
+        }
+      ],
+      "altersHinweis": null
+    },
+    {
+      "id": "g13",
+      "gattung": "Musikinstrumente",
+      "quelle": "S. 86",
+      "prinzip": "Metrum und Rhythmus auf einfachen Instrumenten spielen, allein oder im Gruppenorchester. Die Quelle nennt Trommel, Flöte, Glöckchen, Xylophon und Metallophon (S. 86).",
+      "beispiele": [],
+      "altersHinweis": null
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Abschnitt Musik der Gruppe „Малыши“, S. 81–86 (Repertoire-Listen und Aufgaben). Begriffe in deutscher Übertragung, Titel im russischen oder belarussischen Original.",
+    "abweichung": "Der Katalogeintrag nannte „ca. 50 Spielprinzipien“ und zugleich „46 Spiel- und Inszenierungsformen“ sowie „9 Reigen“. Eine Gesamtzahl hängt von der Zählregel ab (Melodienamen, Liedtitel, Quellenangaben), und die Listen enden mit „и др.“. Die Kartei nennt deshalb keine Summe. Filter nach Dauer, Gruppengröße und Ort gibt es in der Quelle nicht; die Adaptation „gemeinfreie deutsche Kinderlieder“ ist nicht geprüft und nicht enthalten."
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte mit Kindern von 1 bis 3 Jahren (Gruppe „Малыши“, S. 6 und S. 44)",
+  "titel": "Impulskarten für das sujetabbildende Spiel",
+  "hinweis": "Die sechs Ziele stehen in der Quelle als Aufgaben für die Fachkraft (S. 68–69). Die Karten sind ein Eigenentwurf auf dieser Grundlage, außer Karte 6, die das Beispiel der Quelle auf S. 100 wiedergibt. Die Karten zeigen Situationen, keine Lösungen: Die Lösung findet das Kind.",
+  "wasEsIst": "Eine Kartei für Fachkräfte. Jede Karte beschreibt eine kleine Spielsituation mit Puppe, Stofftier oder Spielzeug. Das Kind soll ohne Erwachsenen-Lösung einen Ausweg finden. Gedruckt wird auf Karteikarten; nichts wird gespeichert.",
+  "faktenZumSpiel": {
+    "begriff": "sujetabbildendes Spiel (сюжетно-отобразительная игра)",
+    "altersBereich": "bis etwa zum dritten Lebensjahr (Merkmal „к трем годам“)",
+    "quelleAlter": "S. 99–100",
+    "rollenspielAb": "am Ende des vierten Lebensjahres: Übergang vom gegenständlich-abbildenden Spiel zum Rollenspiel",
+    "quelleRollenspiel": "S. 104",
+    "hinweisTitel": "Der Titel „Rollenspiel“ passt nicht zu den Jahren 1 bis 3; die Kartei heißt deshalb „Impulskarten für das sujetabbildende Spiel“."
+  },
+  "ziele": [
+    {
+      "id": "z1",
+      "text": "Interesse der Kinder an Menschen, ihrem Tun und an Dingen fördern; die reale Erfahrung erweitern; den Wunsch stärken, Vorstellungen und Wissen im Spiel darzustellen.",
+      "quelle": "S. 68",
+      "zitat": "содействовать развитию интереса детей к окружающим людям, взрослым и их жизнедеятельности"
+    },
+    {
+      "id": "z2",
+      "text": "Elementare Spielhandlungen aneignen, in gemeinsamen Spielen mit dem Erwachsenen bereichern und später im selbstständigen Spiel anwenden. Dafür Spiel-Problemsituationen nutzen, die Kinder ohne Hilfe Erwachsener einen Ausweg finden lassen.",
+      "quelle": "S. 69",
+      "zitat": "используя игровые проблемные ситуации, побуждающие детей без помощи взрослых находить выход из затруднительных положений"
+    },
+    {
+      "id": "z3",
+      "text": "Die Entstehung einer Kette von Spielhandlungen anregen, sie festigen und ausbauen.",
+      "quelle": "S. 69",
+      "zitat": "способствовать возникновению цепочки игровых действий, ее закреплению и обогащению"
+    },
+    {
+      "id": "z4",
+      "text": "Zum Handeln in der Vorstellung anregen; die Spielaufgabe verstehen und annehmen, die der Erwachsene stellt; zu einem eigenen Spielgedanken ermutigen.",
+      "quelle": "S. 69",
+      "zitat": "побуждать детей к действию в воображаемой ситуации"
+    },
+    {
+      "id": "z5",
+      "text": "Den Übergang von der gegenstandsbezogenen Spielhandlung zum sujetabbildenden Spiel unterstützen.",
+      "quelle": "S. 69",
+      "zitat": "оказывать содействие в переходе детей от отобразительной предметно-игровой деятельности к сюжетно-отобразительной"
+    },
+    {
+      "id": "z6",
+      "text": "Kinder anregen, nebeneinander zu spielen, ohne sich zu stören, Spielkontakte aufzunehmen und freundlich mit Puppe, Stofftier und Spielpartner zu sprechen.",
+      "quelle": "S. 69",
+      "zitat": "побуждать малышей играть рядом, не мешая друг другу, вступать в игровые контакты"
+    }
+  ],
+  "figuren": [
+    {
+      "id": "puppe",
+      "text": "Puppe"
+    },
+    {
+      "id": "stofftier",
+      "text": "Stofftier"
+    },
+    {
+      "id": "spielzeug",
+      "text": "anderes Spielzeug (Auto, Ball) – in der Quelle nicht genannt"
+    },
+    {
+      "id": "kind",
+      "text": "das Kind selbst als Figur"
+    }
+  ],
+  "karten": [
+    {
+      "id": "k01",
+      "titel": "Die Puppe hat Hunger",
+      "figur": "puppe",
+      "ziel": "z2",
+      "eigenentwurf": true,
+      "situation": "Die Puppe möchte essen. Auf dem Tisch liegen Becher, Tuch und Holzklötze, ein Teller ist nicht da."
+    },
+    {
+      "id": "k02",
+      "titel": "Der Teddy hat sich wehgetan",
+      "figur": "stofftier",
+      "ziel": "z2",
+      "eigenentwurf": true,
+      "situation": "Der Teddy ist hingefallen und hat einen Arm verdreht. Ein Pflaster gibt es nicht."
+    },
+    {
+      "id": "k03",
+      "titel": "Das Auto steckt fest",
+      "figur": "spielzeug",
+      "ziel": "z2",
+      "eigenentwurf": true,
+      "situation": "Das Auto kommt nicht über die Kante des Teppichs. Es bleibt stehen."
+    },
+    {
+      "id": "k04",
+      "titel": "Die Puppe soll schlafen",
+      "figur": "puppe",
+      "ziel": "z3",
+      "eigenentwurf": true,
+      "situation": "Die Puppe soll ins Bett. Dafür braucht sie eine Decke, ein Kissen und ein Schlaflied, aber in welcher Reihenfolge?"
+    },
+    {
+      "id": "k05",
+      "titel": "Zwei Tiere, ein Kissen",
+      "figur": "stofftier",
+      "ziel": "z6",
+      "eigenentwurf": true,
+      "situation": "Hase und Bär wollen auf dasselbe Kissen. Es gibt zwei Kissen."
+    },
+    {
+      "id": "k06",
+      "titel": "Die Puppe bekommt Essen",
+      "figur": "puppe",
+      "ziel": "z5",
+      "eigenentwurf": false,
+      "quelle": "S. 100",
+      "situation": "Beispiel aus der Quelle: Ein Kind kämmt die Puppe mit einem Stab und füttert sie mit einem Ersatzgegenstand."
+    },
+    {
+      "id": "k07",
+      "titel": "Der Hase will spazieren gehen",
+      "figur": "stofftier",
+      "ziel": "z4",
+      "eigenentwurf": true,
+      "situation": "Der Hase möchte in den Park. Wo ist seine Jacke, und was braucht er noch?"
+    },
+    {
+      "id": "k08",
+      "titel": "Die Puppe ist vom Sofa gefallen",
+      "figur": "puppe",
+      "ziel": "z2",
+      "eigenentwurf": true,
+      "situation": "Die Puppe liegt auf dem Boden. Sie soll wieder hoch, aber sie ist zu schwer für das Kind allein."
+    },
+    {
+      "id": "k09",
+      "titel": "Die Mama kocht",
+      "figur": "kind",
+      "ziel": "z1",
+      "eigenentwurf": true,
+      "situation": "Die Mama rührt im Topf. Das Kind möchte mithelfen, hat aber keinen Löffel."
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Abschnitt „Сюжетно-отобразительные игры“ im Unterkapitel „Мир игры“, S. 68–69; Altersangaben S. 100 und S. 104; Gruppe „Малыши“ S. 6 und S. 44. Begriffe in deutscher Übertragung, Zitate im russischen Original.",
+    "abweichung": "Der Katalogeintrag nannte die Ziele „Lernziele“ und die Kartei „Rollenspiel-Impulskarten (Kind 1–3)“ sowie Erzieher und Tagespflege. Die Quelle nennt die sechs Punkte als Aufgaben für die Fachkraft (S. 7, S. 68–69), das sujetabbildende Spiel bis etwa zum dritten Lebensjahr (Merkmal „к трем годам“, S. 99–100) und den Übergang zum Rollenspiel am Ende des vierten Lebensjahres (S. 104). Tagespflege nennt die Quelle nicht. Die drei Beispiele des Katalogs (Puppe hat Hunger, Teddy ist krank, Auto steckt fest) stehen nicht im Text. Die Karten sind deshalb ein Eigenentwurf."
+  }
+}

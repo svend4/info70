@@ -1,0 +1,452 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte mit Kindern von 1 bis 3 Jahren (Gruppe „Малыши“, S. 8–9)",
+  "titel": "Morgenkreis- und Wochenplaner für Kinder von 1 bis 3 Jahren",
+  "hinweis": "Die Richtwerte stehen als „Примерный перечень занятий“ auf S. 8–9: zehn Einheiten pro Woche in sieben Bereichen. Die Quelle nennt keine Wochentage und keinen Morgenkreis-Ablauf; beides ist eigen. Die Bausteine sind Titel mit Seite aus der Musik-, Bewegungs- und Kreativ-Kartei der Quelle. Die Titelbausteine sind Auswahlen aus den Listen der Quelle, nicht die vollständigen Listen.",
+  "wasEsIst": "Eine Wochenplanung für eine Gruppe. Sie zeigt, wie viele Einheiten die Quelle je Bereich vorsieht, und zählt Ihre Planung dagegen. Der Plan wird als Datei gespeichert und wieder geladen; die App speichert nichts im Gerät.",
+  "tage": [
+    "Montag",
+    "Dienstag",
+    "Mittwoch",
+    "Donnerstag",
+    "Freitag"
+  ],
+  "hoechstensProTag": 4,
+  "richtwerte": [
+    {
+      "bereich": "bewegung",
+      "name": "Физическая культура (Bewegung)",
+      "anzahl": 3,
+      "quelle": "S. 8"
+    },
+    {
+      "bereich": "sprache",
+      "name": "Развитие общения и речи (Sprache und Kommunikation)",
+      "anzahl": 1,
+      "quelle": "S. 8"
+    },
+    {
+      "bereich": "musik",
+      "name": "Музыкальное занятие (Musik)",
+      "anzahl": 2,
+      "quelle": "S. 8"
+    },
+    {
+      "bereich": "zeichnen",
+      "name": "рисование (Malen)",
+      "anzahl": 1,
+      "quelle": "S. 8"
+    },
+    {
+      "bereich": "formen",
+      "name": "лепка (конструирование, аппликация) (Formen, Konstruieren, Kleben)",
+      "anzahl": 1,
+      "quelle": "S. 8, S. 9"
+    },
+    {
+      "bereich": "umwelt",
+      "name": "Ознакомление с окружающим миром и познание себя (Umwelt)",
+      "anzahl": 1,
+      "quelle": "S. 9"
+    },
+    {
+      "bereich": "sensomotorik",
+      "name": "Развитие сенсомоторики (Sensomotorik)",
+      "anzahl": 1,
+      "quelle": "S. 9"
+    }
+  ],
+  "bereiche": [
+    {
+      "id": "bewegung",
+      "name": "Bewegung",
+      "bausteine": [
+        {
+          "id": "b-gehen-laufen-1",
+          "titel": "Иди ко мне",
+          "seite": "S. 70",
+          "art": "gehen-laufen"
+        },
+        {
+          "id": "b-gehen-laufen-2",
+          "titel": "К куклам в гости",
+          "seite": "S. 70",
+          "art": "gehen-laufen"
+        },
+        {
+          "id": "b-gehen-laufen-3",
+          "titel": "Найди мяч",
+          "seite": "S. 70",
+          "art": "gehen-laufen"
+        },
+        {
+          "id": "b-gehen-laufen-4",
+          "titel": "Поезд",
+          "seite": "S. 70",
+          "art": "gehen-laufen"
+        },
+        {
+          "id": "b-gehen-laufen-5",
+          "titel": "Мыши и кот",
+          "seite": "S. 70",
+          "art": "gehen-laufen"
+        },
+        {
+          "id": "b-springen-1",
+          "titel": "Дружно прыгаем",
+          "seite": "S. 71",
+          "art": "springen"
+        },
+        {
+          "id": "b-springen-2",
+          "titel": "Поймай птичку",
+          "seite": "S. 71",
+          "art": "springen"
+        },
+        {
+          "id": "b-springen-3",
+          "titel": "Через ручеек",
+          "seite": "S. 71",
+          "art": "springen"
+        },
+        {
+          "id": "b-springen-4",
+          "titel": "Зайцы и волк",
+          "seite": "S. 71",
+          "art": "springen"
+        },
+        {
+          "id": "b-kriechen-klettern-1",
+          "titel": "Доползи до погремушки",
+          "seite": "S. 71",
+          "art": "kriechen-klettern"
+        },
+        {
+          "id": "b-kriechen-klettern-2",
+          "titel": "За мячом с горки",
+          "seite": "S. 71",
+          "art": "kriechen-klettern"
+        },
+        {
+          "id": "b-kriechen-klettern-3",
+          "titel": "Высокий дом",
+          "seite": "S. 71",
+          "art": "kriechen-klettern"
+        },
+        {
+          "id": "b-kriechen-klettern-4",
+          "titel": "Кролики",
+          "seite": "S. 71",
+          "art": "kriechen-klettern"
+        },
+        {
+          "id": "b-werfen-1",
+          "titel": "Мяч в круге",
+          "seite": "S. 71",
+          "art": "werfen"
+        },
+        {
+          "id": "b-werfen-2",
+          "titel": "Лови мяч",
+          "seite": "S. 71",
+          "art": "werfen"
+        },
+        {
+          "id": "b-werfen-3",
+          "titel": "Сбей кеглю",
+          "seite": "S. 71",
+          "art": "werfen"
+        },
+        {
+          "id": "b-werfen-4",
+          "titel": "Кто дальше",
+          "seite": "S. 71",
+          "art": "werfen"
+        }
+      ],
+      "quelle": "Подвижные игры, S. 70–71"
+    },
+    {
+      "id": "sprache",
+      "name": "Sprache und Kommunikation",
+      "bausteine": [],
+      "quelle": "S. 8 (ohne Titelbaustein)"
+    },
+    {
+      "id": "musik",
+      "name": "Musik",
+      "bausteine": [
+        {
+          "id": "g01",
+          "titel": "Klangnachahmung",
+          "seite": "S. 81, S. 86"
+        },
+        {
+          "id": "g02",
+          "titel": "Melodie aus Frage und Antwort",
+          "seite": "S. 81"
+        },
+        {
+          "id": "g03",
+          "titel": "Singübungen (Попевки)",
+          "seite": "S. 81"
+        },
+        {
+          "id": "g04",
+          "titel": "Lied mit Bewegung",
+          "seite": "S. 81, S. 82"
+        },
+        {
+          "id": "g05",
+          "titel": "Lied-Inszenierung mit Tierfiguren",
+          "seite": "S. 82"
+        },
+        {
+          "id": "g06",
+          "titel": "Singspiele mit Rollen",
+          "seite": "S. 82"
+        },
+        {
+          "id": "g07",
+          "titel": "Reigen (Хороводы)",
+          "seite": "S. 83"
+        },
+        {
+          "id": "g08",
+          "titel": "Rhythmische Bewegung und Tanzschritte",
+          "seite": "S. 83, S. 84"
+        },
+        {
+          "id": "g09",
+          "titel": "Freier Tanz",
+          "seite": "S. 84"
+        },
+        {
+          "id": "g10",
+          "titel": "Tierbewegungen zur Musik",
+          "seite": "S. 83, S. 85"
+        },
+        {
+          "id": "g11",
+          "titel": "Volksspiele (belarussisch)",
+          "seite": "S. 86"
+        },
+        {
+          "id": "g12",
+          "titel": "Musikmärchen",
+          "seite": "S. 86"
+        },
+        {
+          "id": "g13",
+          "titel": "Musikinstrumente",
+          "seite": "S. 86"
+        }
+      ],
+      "quelle": "Musikspiele, S. 81–86 (Gattungen der Kartei 78)"
+    },
+    {
+      "id": "zeichnen",
+      "name": "Malen",
+      "bausteine": [
+        {
+          "id": "z01",
+          "titel": "Веселые краски",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z02",
+          "titel": "Цветная бабочка",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z03",
+          "titel": "Умелые пальчики",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z04",
+          "titel": "Песенка красок",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z05",
+          "titel": "Танец красок",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z06",
+          "titel": "Колючий ежик",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z07",
+          "titel": "Зайка серенький",
+          "seite": "S. 91"
+        },
+        {
+          "id": "z08",
+          "titel": "Медвежата",
+          "seite": "S. 91"
+        }
+      ],
+      "quelle": "Рисование, Themen S. 91"
+    },
+    {
+      "id": "formen",
+      "name": "Formen, Konstruieren, Kleben",
+      "bausteine": [
+        {
+          "id": "f-lepka-1",
+          "titel": "Зернышки для цыплят",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-2",
+          "titel": "Бусы для куклы",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-3",
+          "titel": "Угощение для мамы и папы",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-4",
+          "titel": "Блины для бабушки",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-5",
+          "titel": "Белочке — орешки, зайке — морковка",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-6",
+          "titel": "Большие и маленькие снеговики",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-7",
+          "titel": "Курица с цыплятами",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-lepka-8",
+          "titel": "Моя любимая кукла",
+          "seite": "S. 92",
+          "art": "lepka"
+        },
+        {
+          "id": "f-applik-1",
+          "titel": "Цветы и бабочки",
+          "seite": "S. 93",
+          "art": "applikation"
+        },
+        {
+          "id": "f-applik-2",
+          "titel": "Кот и мышка",
+          "seite": "S. 93",
+          "art": "applikation"
+        },
+        {
+          "id": "f-applik-3",
+          "titel": "Я играю с котенком",
+          "seite": "S. 93",
+          "art": "applikation"
+        },
+        {
+          "id": "f-applik-4",
+          "titel": "Чудо-елочка",
+          "seite": "S. 93",
+          "art": "applikation"
+        },
+        {
+          "id": "f-applik-5",
+          "titel": "Юбочка для лисички",
+          "seite": "S. 93",
+          "art": "applikation"
+        },
+        {
+          "id": "f-applik-6",
+          "titel": "Шапочка для Снегурочки",
+          "seite": "S. 93",
+          "art": "applikation"
+        },
+        {
+          "id": "f-konstr-1",
+          "titel": "Дорожки",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-2",
+          "titel": "Заборчик",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-3",
+          "titel": "Ворота",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-4",
+          "titel": "Гараж для машинки",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-5",
+          "titel": "Столик и стульчик для куклы",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-6",
+          "titel": "Кроватка для куклы Маши",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-7",
+          "titel": "Горка",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        },
+        {
+          "id": "f-konstr-8",
+          "titel": "Башня",
+          "seite": "S. 94",
+          "art": "konstruktion"
+        }
+      ],
+      "quelle": "Лепка S. 92, Аппликация S. 93, Конструирование S. 94"
+    },
+    {
+      "id": "umwelt",
+      "name": "Umwelt und Selbsterkenntnis",
+      "bausteine": [],
+      "quelle": "S. 9 (ohne Titelbaustein)"
+    },
+    {
+      "id": "sensomotorik",
+      "name": "Sensomotorik",
+      "bausteine": [],
+      "quelle": "S. 9 (ohne Titelbaustein)"
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Gruppe „Малыши“: Richtwerte S. 8–9, Bewegungs-, Musik-, Mal-, Form- und Konstruktionsthemen S. 70–71, 81–86, 91–94.",
+    "abweichung": "Der Katalogeintrag nannte den Quellenbereich S. 81–94 als „Querschnitt aller Tätigkeitsbereiche“. Die Richtwerte stehen auf S. 8–9, die Bewegungsspiele auf S. 70–71, Musik auf S. 81–86, Malen, Formen und Konstruieren auf S. 90–94; der Bereich 81–94 deckt also nicht alle Bereiche ab. Der Morgenkreis als Format und die Wochentage stehen nicht in der Quelle. „Planer-Selbstbeobachtung“ und „Datei-Export“ sind Eigenschaften dieser App, keine Angaben der Quelle. Die Angabe „Länder-Bildungspläne“ ist nicht geprüft und wird nicht als Quellenangabe verwendet."
+  },
+  "monatsregel": "Lepka wechselt einmal im Monat mit Konstruieren und Aufkleben ohne Aufkleben (S. 9). Der Plan kennt keinen Monat; die Regel bleibt Hinweis."
+}

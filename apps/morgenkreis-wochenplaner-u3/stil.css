@@ -1,0 +1,11 @@
+/* Wochenplaner: Auswahlfelder und Knöpfe mindestens 44 px hoch (docs/02). */
+.mw-zeile { border-top: 1px solid #d1d5db; padding: 0.6rem 0; }
+.mw-name { margin: 0 0 0.3rem; font-weight: 600; }
+.mw-feld { display: flex; flex-direction: column; gap: 0.2rem; margin: 0.4rem 0; font-weight: 600; }
+.mw-feld select { min-height: 44px; font: inherit; padding: 0.4rem; border-radius: 0.5rem; border: 2px solid var(--k-rand, #d1d5db); }
+.mw-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
+.mw-zahlen { margin: 0.2rem 0; }
+@media (prefers-color-scheme: dark) {
+  .mw-zeile { border-top-color: #374151; }
+  .mw-quelle { color: #9ca3af; }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/impulskarten-sujetspiel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Impulskarten für das sujetabbildende Spiel bei Kindern von 1 bis 3 Jahren: sechs Aufgaben der Praleska-Quelle (S. 68–69) als Aufgaben für die Fachkraft, Karten mit Situationen als Eigenentwurf, eine Ausnahme aus dem Beispiel der Quelle (S. 100). Keine Lösungen für den Erwachsenen, kein Rollenspiel-Titel für 1–3 Jahre. Zum Drucken, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

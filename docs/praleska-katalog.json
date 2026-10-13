@@ -25,7 +25,8 @@
  "top30": [
   {
    "titel": "Entwicklungs-Kompass Kita (digitaler Beobachtungsbogen)",
-   "begruendung": "Beobachtung und Dokumentation ist in allen 16 Landes-Bildungsplaenen Pflicht, und der lokale Datei-Export ohne Cloud/Konto ist gegenueber cloudbasierter Kita-Software ein echtes DSGVO-Alleinstellungsmerkmal - die Bogen-Engine traegt zugleich alle absorbierten Altersmodule 1-7."
+   "begruendung": "Beobachtung und Dokumentation ist in allen 16 Landes-Bildungsplaenen Pflicht, und der lokale Datei-Export ohne Cloud/Konto ist gegenueber cloudbasierter Kita-Software ein echtes DSGVO-Alleinstellungsmerkmal - die Bogen-Engine traegt zugleich alle absorbierten Altersmodule 1-7.",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Schulstart-Begleiter: Beobachtungsbogen zur Schulfaehigkeit",
@@ -33,7 +34,8 @@
   },
   {
    "titel": "Eingewoehnungs-Tagebuch",
-   "begruendung": "Eingewoehnung nach Berliner/Muenchener Modell ist deutscher Kita-Standard, wird aber fast ueberall auf Papier dokumentiert - ein Ampel-Verlaufslog mit Elterngespraech-Bericht ist sofort anschlussfaehig und praktisch konkurrenzlos."
+   "begruendung": "Eingewoehnung nach Berliner/Muenchener Modell ist deutscher Kita-Standard, wird aber fast ueberall auf Papier dokumentiert - ein Ampel-Verlaufslog mit Elterngespraech-Bericht ist sofort anschlussfaehig und praktisch konkurrenzlos.",
+   "pruefstatus": "Die Behauptung „deutscher Kita-Standard“ ist nicht aus der Quelle belegt und ungeprüft; sie bleibt bis zur Prüfung ohne Gewähr."
   },
   {
    "titel": "Meilenstein-Begleiter 1. Lebensjahr",
@@ -243,7 +245,8 @@
    "beschreibung": "Planungswerkzeug mit altersgerechten Richtwerten fuer Anzahl und Dauer von Angeboten (aus den Wochenplaenen 10/12/15/17 Einheiten und Dauergrenzen 10-25 Min) plus Ausgewogenheits-Check ueber Bildungsbereiche.",
    "adaptionDE": "Raster auf die Bildungsbereiche der jeweiligen Landes-Bildungsplaene ummappen; Richtwerte nur als Empfehlung mit Freispiel-Vorrang deutscher Kita-Praxis; Ueberlastungswarnung der Quelle uebernommen (keine Wettbewerbs-Events fuer Kita-Kinder).",
    "quelleImBuch": "Beschaeftigungsplaene und Dauer-Richtwerte (S. 8-10)",
-   "aufwand": "M"
+   "aufwand": "M",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Selbstcheck paedagogisches Ich",
@@ -271,7 +274,8 @@
    "beschreibung": "Mapping-Dokument: welche Praleska-Konzepte (Ziele, Prinzipien, Bereichsstruktur, Diagnose-Domaenen) welchen Feldern der 16 Landes-Bildungsplaene und welchen Rechtsnormen (DSGVO, JuSchG/JMStV, BFSG, EU AI Act, BzKJ) entsprechen; Grundlage aller Content-Packs.",
    "adaptionDE": "Stellt sicher, dass nur nicht schutzfaehige Ideen und Strukturen uebernommen werden, nie Texte/Lieder/Gedichte; enthaelt Urheberrechts-Checkliste und Standard-Referenzliste je Bundesland.",
    "quelleImBuch": "Gesamtes Rahmenkonzept (S. 3-11)",
-   "aufwand": "S"
+   "aufwand": "S",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Meilenstein-Begleiter 1. Lebensjahr",
@@ -281,7 +285,8 @@
    "adaptionDE": "Mapping auf deutsche U-Untersuchungen (U2-U6) und die 'Grenzsteine der Entwicklung' (Berliner/Brandenburger Bildungsprogramm); Hinweis-Logik 'Sprechen Sie mit Ihrer Kinderarztpraxis' statt Bewertung; DSGVO-konform rein lokal, dreisprachig de/uk/ru fuer zugewanderte Familien.",
    "aufwand": "M",
    "engine": "Erwachsenen-Katalog+Checkliste+Bericht",
-   "quelleImBuch": "Charakteristik der Entwicklung 1. Lebensjahr, S. 26-31"
+   "quelleImBuch": "Charakteristik der Entwicklung 1. Lebensjahr, S. 26-31",
+   "korrektur": "Die Quelle nennt 22 Merkmale am Ende des Abschnitts (S. 42–43), nicht ca. 25. Der Begriff „Belebungskomplex“ ist im Text nicht belegt; die Quelle schreibt «комплекс оживления» (S. 28, S. 34, Genitiv S. 38). Korrektur Welle 84."
   },
   {
    "titel": "Sprich mit mir! Sprachanbahnung 0-1 mehrsprachig",
@@ -292,7 +297,8 @@
    "aufwand": "M",
    "engine": "Erwachsenen-Katalog+Checkliste",
    "quelleImBuch": "Kommunikation und Sprache, S. 37-39",
-   "quelle": "S. 37-39"
+   "quelle": "S. 37-39",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Bewegungs-Kartei Babys erstes Jahr",
@@ -312,7 +318,8 @@
    "adaptionDE": "Uebersetzt in den deutschen Fachbegriff 'Erziehungspartnerschaft' (verankert in allen Landes-Bildungsplaenen und im Nationalen Kriterienkatalog); Abschied von der Experten-Belehrungshaltung wird als Reflexionsdimension uebernommen.",
    "aufwand": "M",
    "engine": "kriterien-check (Erwachsenen-Katalog+Checkliste+Bericht)",
-   "quelleImBuch": "Sotrudnitschajem s semjoj, S. 21-25"
+   "quelleImBuch": "Sotrudnitschajem s semjoj, S. 21-25",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Szenario-Trainer Elterngespraech",
@@ -322,7 +329,8 @@
    "adaptionDE": "Szenarien nach deutschem Kita-Alltag (Eingewoehnung, Entwicklungsgespraech, Tuer-und-Angel-Gespraech); Bezug auf Gespraechsfuehrungs-Standards der Erzieherausbildung (laendergemeinsamer Rahmenlehrplan Fachschule Sozialpaedagogik).",
    "aufwand": "M",
    "engine": "Szenario-Trainer",
-   "quelleImBuch": "Sotrudnitschajem s semjoj, S. 23-25"
+   "quelleImBuch": "Sotrudnitschajem s semjoj, S. 23-25",
+   "korrektur": "Die Quelle enthält keine Gesprächssituationen, nur Grundsätze (S. 21–25). Szenarien und die Stufen 2/1/0 sind Eigenentwurf. Gebaut als elterngespraech-trainer (Welle 84), jede Antwort mit Seitenangabe."
   },
   {
    "titel": "Eingewoehnungs-Tagebuch",
@@ -382,7 +390,8 @@
    "adaptionDE": "Deutsche Formate ergaenzt (Laternenfest, Vorlesepaten, Gartentag); rechtlich sauber ueber Elternbeirat/Elternversammlung nach Landes-KitaG; anonym und kontenfrei per Datei-Austausch.",
    "aufwand": "M",
    "engine": "Beteiligung (Abstimmung + Datei-Export)",
-   "quelleImBuch": "Sotrudnitschajem s semjoj, S. 24-25"
+   "quelleImBuch": "Sotrudnitschajem s semjoj, S. 24-25",
+   "korrektur": "Der Text nennt 13 Formen (S. 24) und 6 Clubs (S. 25), keine 20; „Näh-Werkstatt“ und „Großeltern-Klub“ stehen nicht im Text. Gebaut als kita-mitmach-boerse (Welle 84): ohne Namen, die Stimme ist eine Datei mit Zufallscode; die Prüfung erkennt nicht, ob ein Code zufällig ist."
   },
   {
    "titel": "Fachquiz Entwicklung im 1. Lebensjahr",
@@ -392,7 +401,8 @@
    "adaptionDE": "Inhalte abgeglichen mit deutschen Lehrbuchstandards der Entwicklungspsychologie und dem QHB-Curriculum fuer Kindertagespflege; Fachbegriffe deutsch, Quellenlage neutral (Wygotski bleibt als klassischer Bezug erhalten).",
    "aufwand": "S",
    "engine": "quiz-kern",
-   "quelleImBuch": "Entwicklungscharakteristik, S. 26-31, 37-40"
+   "quelleImBuch": "Entwicklungscharakteristik, S. 26-31, 37-40",
+   "korrektur": "22 Merkmale (S. 42–43), nicht 25. „Belebungskomplex“ ist nicht belegt (Text: «комплекс оживления», S. 28). Lisina steht in der Einleitung (S. 5), nicht beim Komplex. Der Text beschreibt mehrere Kommunikationsformen, zählt sie aber nicht als drei. Greifen: Widerspruch S. 34 gegen S. 39. Gebaut als fachquiz-erstes-lebensjahr (Welle 84)."
   },
   {
    "titel": "Trostvers-Generator (personalisierte Wiegenreime)",
@@ -451,7 +461,8 @@
    "adaptionDE": "Methodisch an 'Bildungs- und Lerngeschichten' (DJI) angedockt; ohne Fotos/Cloud, lokal und kontofrei (DSGVO); Struktur kompatibel zu Beobachtungsvorgaben der Landes-Bildungsplaene.",
    "aufwand": "M",
    "engine": "Erwachsenen-Katalog+Checkliste+Bericht, Export nach 'Klassen-Koffer'-Muster",
-   "quelleImBuch": "Bereichsstruktur 'Ja i mir wokrug menja', S.50-53"
+   "quelleImBuch": "Bereichsstruktur 'Ja i mir wokrug menja', S.50-53",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Bewegungslandschaften-Plakate Krippe",
@@ -549,7 +560,8 @@
    "adaptionDE": "Situationen auf deutschen Kita-Alltag uebertragen; methodischer Kern (Spielproblemsituation als Entwicklungsimpuls) ist nicht schutzfaehige Methodik; ergaenzt um Beobachtungshinweise fuer Entwicklungsdokumentation nach Landesverfahren.",
    "engine": "erwachsenen-katalog (Kartei) + Druck",
    "quelleImBuch": "Sjuschetno-otobrasitelnyje igry, S. 68-69 (6 Lernziele, Spielproblemsituationen als Methode)",
-   "aufwand": "S"
+   "aufwand": "S",
+   "korrektur": "Der Titel „Rollenspiel“ passt nicht zu 1–3 Jahren: das sujetabbildende Spiel steht als Merkmal „к трем годам“ (S. 99–100), der Übergang zum Rollenspiel am Ende des vierten Lebensjahres (S. 104). Die drei Beispielsituationen des Katalogs stehen nicht im Text (Eigenentwurf). Gebaut als impulskarten-sujetspiel (Welle 85)."
   },
   {
    "titel": "Theater zuhause - Bastel- und Spielheft",
@@ -579,7 +591,8 @@
    "adaptionDE": "Nur Spielmechaniken uebernommen, nie fremde Liedtexte: gemeinfreie deutsche Kinderlieder ('Alle meine Entchen', 'Hopp hopp hopp', Kniereiter) als Traeger; optional uk/ru-Volkslied-Hinweise als Herkunftssprachen-Chance; Bezug Bildungsbereich Musik/aesthetische Bildung.",
    "aufwand": "M",
    "engine": "Erwachsenen-Katalog+Checkliste",
-   "quelleImBuch": "S. 81-86, Repertoire Singen (46 Spiel-/Inszenierungsformen, 9 Reigen)"
+   "quelleImBuch": "S. 81-86, Repertoire Singen (46 Spiel-/Inszenierungsformen, 9 Reigen)",
+   "korrektur": "Keine Gesamtzahl: „ca. 50“, „46“ und „9“ im Eintrag widersprechen sich und hängen an einer Zählregel; die Listen enden mit „и др.“. Filter nach Dauer, Gruppengröße und Ort gibt die Quelle bei den Spielen nicht. Gebaut als musikspiele-kartei-u3 (Welle 85) mit 13 Gattungen aus S. 81–86."
   },
   {
    "titel": "Musik-Alltags-Begleiter fuer Eltern",
@@ -639,7 +652,8 @@
    "adaptionDE": "Planraster nach den Bildungsbereichen der Laender-Bildungsplaene; Export unterstuetzt die deutsche Kita-Dokumentationspflicht; werbefrei, lokal, ohne Konten (traegertauglich).",
    "aufwand": "M",
    "engine": "Planer-Selbstbeobachtung + Datei-Export (Klassen-Koffer-Muster)",
-   "quelleImBuch": "S. 81-94, Querschnitt aller Taetigkeitsbereiche der Malyschi-Gruppe"
+   "quelleImBuch": "S. 81-94, Querschnitt aller Taetigkeitsbereiche der Malyschi-Gruppe",
+   "korrektur": "Der Quellenbereich S. 81–94 deckt nicht alle Bereiche ab: Richtwerte S. 8–9, Bewegung S. 70–71, Musik S. 81–86, Malen, Formen und Konstruieren S. 90–94. Der Morgenkreis als Format und die Wochentage stehen nicht in der Quelle. Gebaut als morgenkreis-wochenplaner-u3 (Welle 85)."
   },
   {
    "titel": "Rhythmus-Orchester-Handbuch",
@@ -829,7 +843,8 @@
    "adaptionDE": "Deutsche Verkehrsrealitaet (Ampelmaennchen, Zebrastreifen, Schulweg), Notruf 112/110 statt belarussischer Nummern; Bezug: Verkehrs- und Sicherheitserziehung in allen Landes-Bildungsplaenen, fragFINN-konform ohne externe Links; uk/ru-Vorlesen fuer Familien mit Migrationsgeschichte.",
    "aufwand": "M",
    "engine": "Szenario-Trainer",
-   "quelleImBuch": "Obespetschenie besopasnosti, S. 125-126"
+   "quelleImBuch": "Obespetschenie besopasnosti, S. 125-126",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Mathe-Entdecker: Zahlen, Formen, Reihen",
@@ -1387,7 +1402,8 @@
    "beschreibung": "Kurze eigenstaendige Lese-Sessions nach dem Praleska-Stufenmodell: erst Vokale, dann 8 haeufige Konsonanten, offene Silben (MA, MO), dann lautgetreue Woerter der Strukturen KV/KVK/KVKV mit Bild-Selbstkontrolle.",
    "adaptionDE": "Buchstabenfolge und Wortmaterial auf die deutsche Silbenmethode/Anfangsunterricht umgestellt (OMA, ESEL, MAMA, lautgetreue Woerter ohne Dehnungs-h); Zeitbegrenzung pro Session eingebaut (5-7 = kurze Nutzung); Anschluss an Vorlaeuferfaehigkeiten Schriftsprache in allen Landes-Bildungsplaenen.",
    "aufwand": "M",
-   "quelleImBuch": "S. 298 (Obutschenie tschteniju)"
+   "quelleImBuch": "S. 298 (Obutschenie tschteniju)",
+   "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Mess-Labor der kleinen Forscher",
