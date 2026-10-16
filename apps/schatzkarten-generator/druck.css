@@ -1,0 +1,101 @@
+/* Schatzkarten-Generator: Bildschirm und Druck.
+   Gedruckt wird entweder nur die Karte (body[data-druck="karten"]) oder nur das
+   Lösungsblatt (body[data-druck="loesung"]). Ohne Druckmodus bleibt die Lösung
+   weg, damit ein Druck über den Browser nie das Ziel verrät. */
+
+.sg-ueber { font-size: 1.1rem; margin: 0 0 0.4rem; color: var(--k-blau-dunkel); }
+
+.sg-feld { display: block; font-weight: 600; margin: 0.6rem 0; }
+.sg-feld select {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  margin-top: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--k-tinte);
+  background: #fff;
+  border: 2px solid var(--k-rand);
+  border-radius: 0.6rem;
+}
+.sg-feld select:focus-visible { outline: 4px solid var(--k-gelb); outline-offset: 2px; }
+
+.sg-teil { display: flex; flex-direction: column; gap: 1rem; }
+.sg-decktitel { font-size: 1.1rem; margin: 0.6rem 0 0.2rem; text-align: center; }
+.sg-quelle { font-size: 0.85rem; color: #374151; margin: 0; }
+.sg-warnung { font-size: 0.9rem; font-weight: 600; color: var(--k-rot); margin: 0; }
+
+.sg-raster {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+}
+.sg-raster th,
+.sg-raster td {
+  height: 2.4rem;
+  padding: 0.1rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.15rem;
+  border: 1px solid #6b7280;
+}
+.sg-raster th { background: #f3f4f6; font-size: 0.8rem; font-weight: 600; color: #374151; }
+.sg-start { font-size: 0.75rem; font-weight: 700; }
+.sg-ziel { font-size: 0.75rem; font-weight: 700; color: #7f1d1d; }
+.sg-weg { font-size: 0.75rem; color: #374151; }
+.sg-zeichen { font-size: 1.2em; line-height: 1; font-variant-emoji: text; }
+
+.sg-legende {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.3rem 0.6rem;
+  align-items: center;
+  margin: 0;
+}
+.sg-legende dt { text-align: center; }
+.sg-legende dd { margin: 0; }
+
+.sg-wegkarten { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.sg-wegkarte {
+  padding: 0.6rem 0.8rem;
+  background: #fff;
+  border: 2px solid #374151;
+  border-radius: 0.6rem;
+  break-inside: avoid;
+}
+.sg-titel { margin: 0 0 0.2rem; font-size: 0.8rem; font-weight: 600; color: #4b5563; }
+.sg-satz { margin: 0; font-size: 1rem; }
+
+.sg-loesung-liste { margin: 0; padding-left: 1.2rem; font-size: 0.95rem; }
+
+@media (min-width: 640px) {
+  .sg-wegkarten { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen {
+  .sg-verborgen { display: none !important; }
+}
+
+@media print {
+  .sg-nur-bildschirm { display: none !important; }
+
+  body[data-druck="karten"] [data-teil="loesung"],
+  body[data-druck="loesung"] [data-teil="karten"],
+  body:not([data-druck="loesung"]) [data-teil="loesung"] { display: none !important; }
+
+  .sg-loesung { break-before: page; }
+  .sg-decktitel { break-after: avoid; }
+  .sg-raster { break-inside: avoid; }
+  .sg-raster th,
+  .sg-raster td,
+  .sg-wegkarte { border-color: #000; }
+  .sg-wegkarte { margin-bottom: 0.4cm; }
+
+  html { font-size: 10.5pt; }
+  body { background: #fff; }
+  .k-app { display: block; max-width: none; min-height: auto; padding: 0; }
+  .sg-teil { display: block; }
+  .sg-zeichen { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

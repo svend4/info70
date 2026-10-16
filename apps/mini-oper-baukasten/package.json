@@ -1,0 +1,8 @@
+{
+  "name": "@info70/mini-oper-baukasten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mini-Oper-Baukasten (offline, ohne KI): Gerüst für eine kleine Musikszene nach der Praleska-Quelle, Katalog docs/10 Nr. 91. Szenen (3 bis 5), Rollen als Platzhalter (2 bis 6), eine Titelauswahl aus S. 269 (18 Titel, ohne Text und Musik), Requisiten aus einer festen Liste, ein Klang-Hinweis nach S. 270 und ein Druckbogen mit leeren Linien. Werkzeug für Erwachsene: keine Kinderdaten, keine Bewertung von Kindern, keine externen Anfragen, nichts wird gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

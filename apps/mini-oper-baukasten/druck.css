@@ -1,0 +1,18 @@
+/* Druck: der Gerüstbogen. Auf Papier stehen Szenen, Rollen und Requisiten als leere Linien
+   zum Ausfüllen von Hand, dazu der Klang-Hinweis (S. 270) und der Impuls. Keine Kästchen,
+   keine Häkchen, keine Zeile für einen Namen, kein Knopf. Die Bildschirmteile fallen weg (docs/02). */
+.mop-nur-druck { display: none; }
+
+@media print {
+  .mop-nur-bildschirm { display: none !important; }
+  .mop-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; min-height: 0; }
+  .mop-druckkopf-titel { font-size: 15pt; margin: 0 0 1mm; }
+  .mop-druckhinweis { font-size: 9pt; margin: 0 0 4mm; }
+  .mop-nur-druck h2 { font-size: 12pt; margin: 4mm 0 2mm; border-bottom: 1pt solid #333; }
+  .mop-druckblock { break-inside: avoid; page-break-inside: avoid; margin: 0 0 3mm; }
+  .mop-druckblock p { font-size: 10pt; margin: 0 0 1mm; }
+  .mop-linie { border-bottom: 0.5pt solid #777; height: 7mm; }
+  a[href]::after { content: ""; }
+}

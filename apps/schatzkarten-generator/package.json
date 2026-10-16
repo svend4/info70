@@ -1,0 +1,8 @@
+{
+  "name": "@info70/schatzkarten-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Schatzkarten-Generator für Erwachsene: erzeugt Raster-Karte, Wegkarten, Zeichen-Legende und Lösungsblatt zum Drucken für Spiele draußen oder im Raum. Offline, speichert nichts.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

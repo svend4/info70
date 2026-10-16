@@ -1,0 +1,19 @@
+/* Druck: der Jahresbogen. Auf Papier stehen nur Monate, Bereiche mit Seitenangabe und
+   leere Linien zum Ausfüllen von Hand. Keine Häkchen, keine Kästchen, keine Zählung,
+   keine Namen, kein Knopf. Die Bildschirmteile fallen weg (docs/02). */
+.mjp-nur-druck { display: none; }
+
+@media print {
+  .mjp-nur-bildschirm { display: none !important; }
+  .mjp-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .mjp-druckkopf-titel { font-size: 14pt; margin: 0 0 1mm; }
+  .mjp-druckhinweis { font-size: 9pt; margin: 0 0 4mm; }
+  .mjp-druckmonat { break-inside: avoid; page-break-inside: avoid; margin: 0 0 5mm; }
+  .mjp-druckmonat h2 { font-size: 12pt; margin: 0 0 2mm; border-bottom: 1pt solid #333; }
+  .mjp-druckbereich { margin: 0 0 2mm; }
+  .mjp-druckbereich p { font-size: 10pt; margin: 0 0 1mm; }
+  .mjp-linie { border-bottom: 0.5pt solid #777; height: 7mm; }
+  a[href]::after { content: ""; }
+}

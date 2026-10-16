@@ -80,7 +80,7 @@ npm test       # тесты (node --test)
 - Мультиязычность: `feed-forscher` — de/en/uk/ru + Leichte Sprache,
   `elternabend-kit` — de/en/uk/ru, `kettenbrief-stopper` — de/en + Leichte Sprache.
 
-**Проверки.** Полный прогон: **1912 тестов**. CI
+**Проверки.** Полный прогон: **1987 тестов**. CI
 (`.github/workflows/test.yml`) гоняет весь набор плюс запрет внешних URL и
 сторонних пакетов. Тестами закреплены не только логика, но и обещания: a11y-аудит
 всех страниц, соответствие текста Datenschutz-страницы реализации и охват
@@ -310,6 +310,9 @@ Hilfe-Insel.
 | `natur-fuersorge-karten` | Для специалистов: четыре задачи Quelle (S. 96), три действия из текста, чек-лист — Eigenentwurf; без протокола о детях | кат.№80 |
 | `spielbegleiter-rollenspiel` | Для специалистов: семь задач перехода к ролевой игре (S. 145–146), факты S. 104; без выдуманных идей и без документации хода игры | кат.№81 |
 | `bewegungs-richtwerte-3-5` | Для специалистов: 24 значения с мерой из заданий (S. 129–132) по годам; нормы нет, оценки отдельных детей нет | кат.№83 |
+| `musik-jahresplaner` | Для Fachkraft: музыкальные области по S. 160–174 и месяцы, собственный список песен с Herkunftsangabe, без Buchliste | кат.№87 |
+| `schatzkarten-generator` | Для Erwachsener: Raster-Karten, Wegkarten und Lösungsblatt zum Drucken; Spielnamen als Übersetzung S. 246, Rest Eigenentwurf | кат.№90 |
+| `mini-oper-baukasten` | Для Erwachsener: Gerüst für eine kleine Musikszene offline, ohne KI; Titel aus S. 269 ohne Text | кат.№91 |
 | `buchecke-check` | Для Kita-команды: пространство, фонд книг, ежедневное чтение и уход за книжным уголком; 9 вопросов с S. 155, 186, 251, 6 — Eigenentwurf; без сведений о детях | кат.№85 |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
