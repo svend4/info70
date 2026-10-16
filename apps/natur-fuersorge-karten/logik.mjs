@@ -22,7 +22,23 @@ const KARTEN_SCHLUESSEL = Object.freeze(['id', 'handlung', 'anregung', 'eigenent
 const HANDLUNG_SCHLUESSEL = Object.freeze(['id', 'titel', 'beispiel', 'quelle', 'ziel']);
 const ZIEL_SCHLUESSEL = Object.freeze(['id', 'text', 'quelle', 'zitat']);
 /** Felder, die nach Angaben über ein Kind aussehen. Keines davon darf in den Daten vorkommen. */
-const KINDER_FELDER = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'protokoll', 'verlauf', 'beobachtung', 'notiz', 'geburtstag', 'alter']);
+
+/**
+ * Felder, die nach Angaben über ein Kind aussehen. Exakte Namen und Wortteile, damit auch
+ * Varianten wie „kindername“ oder „notizen“ auffallen. „alter“ nur exakt, weil „altersBereich“
+ * ein harmloses Feld ist.
+ */
+const KINDER_EXAKT = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'alter', 'protokoll', 'verlauf', 'beobachtung', 'notiz', 'notizen', 'geburtstag', 'geschlecht', 'diagnose', 'bewertung', 'ergebnis']);
+const KINDER_TEIL = Object.freeze(['kindername', 'kinder', 'notiz', 'beobacht', 'geburt', 'geschlecht', 'protokoll', 'verlauf', 'diagnos', 'bewert']);
+/** Ein Muster im Wert, das wie ein Eintrag über ein Kind aussieht („Name: Mia“). */
+const KINDER_WERT = /\b(Name|Vorname|Kindername|Geburtsdatum|Notiz|Beobachtung)\s*:/i;
+const istKinderFeld = (s) => { const k = s.toLowerCase(); return KINDER_EXAKT.includes(k) || KINDER_TEIL.some((t) => k.includes(t)); };
+function alleTexte(o, acc = []) {
+  if (Array.isArray(o)) o.forEach((x) => alleTexte(x, acc));
+  else if (typeof o === 'string') acc.push(o);
+  else if (o && typeof o === 'object') Object.values(o).forEach((v) => alleTexte(v, acc));
+  return acc;
+}
 const seiteOk = (s) => typeof s === 'string' && /^S\. \d+(–\d+)?$/.test(s);
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 
@@ -57,7 +73,10 @@ export function pruefeDaten(daten) {
   if (!/kein Protokoll/.test(daten?.hinweis ?? '')) fehler.push('der Hinweis muss sagen, dass es kein Protokoll über einzelne Kinder gibt');
   if (!/Protokoll/.test(daten?.quelle?.abweichung ?? '')) fehler.push('quelle.abweichung muss das Protokoll als Abweichung nennen');
   for (const s of schluesselIn(daten)) {
-    if (KINDER_FELDER.includes(s.toLowerCase())) fehler.push(`das Feld „${s}“ sieht nach Angaben über ein Kind aus`);
+    if (istKinderFeld(s)) fehler.push(`das Feld „${s}“ sieht nach Angaben über ein Kind aus`);
+  }
+  for (const t of alleTexte(daten)) {
+    if (KINDER_WERT.test(t)) fehler.push(`ein Text enthält einen Eintrag über ein Kind („${t.slice(0, 40)}…“)`);
   }
   if (!Array.isArray(daten?.ziele) || daten.ziele.length !== 4) {
     fehler.push(`${daten?.ziele?.length ?? 0} Ziele – die Quelle nennt vier auf S. 96`);

@@ -99,3 +99,18 @@ test('der Hinweis ohne „kein Protokoll“ wird abgewiesen', () => {
   d.hinweis = 'Eine Kartei für Fachkräfte.';
   assert.ok(pruefeDaten(d).some((f) => /kein Protokoll/.test(f)));
 });
+
+test('ein Feldname mit Kinderbezug in einer Variante wird abgewiesen („kindername“, „notizen“)', () => {
+  const d = kopie(daten);
+  d.quelle.kindername = 'Mia';
+  assert.ok(pruefeDaten(d).some((f) => /kindername/.test(f)));
+  const e = kopie(daten);
+  e.checkliste.notizen = 'nichts';
+  assert.ok(pruefeDaten(e).some((f) => /notizen/.test(f)));
+});
+
+test('ein Text mit „Name: …“ wird abgewiesen, auch ohne verdächtigen Feldnamen', () => {
+  const d = kopie(daten);
+  d.karten[0].anregung = 'Name: Mia gießt heute ihre Pflanze, und sie hat dabei zugeschaut.';
+  assert.ok(pruefeDaten(d).some((f) => /Eintrag über ein Kind/.test(f)));
+});

@@ -24,7 +24,7 @@ Die Quelle nennt Übungen im Gleichgewicht, aber keine messbare Größe. Die App
 
 | Teil | Status |
 |---|---|
-| 24 Angaben mit Maß | Quelle, S. 129–132 |
+| 25 Angaben nach Aufnahmeregel | Quelle, S. 129–132 |
 | Zuordnung zu Lebensjahr und Bewegungsart | Quelle, Abschnitte „für das vierte“ und „fünfte Lebensjahr“ |
 | Balancieren | Übung ohne Maß, nicht als Angabe |
 | Beobachtungsbogen, Kriterien-Check, Bericht-Export | Eigenentwurf, nicht gebaut |
@@ -32,9 +32,9 @@ Die Quelle nennt Übungen im Gleichgewicht, aber keine messbare Größe. Die App
 
 ## Prüfung
 
-- 13 Tests in `test/logik.test.mjs`: Einträge und Seiten, feste Felder, keine Normsprache, Balancieren,
+- 17 Tests in `test/logik.test.mjs`: Einträge und Seiten, feste Felder, keine Normsprache, Balancieren,
   Abweichung, Filter, Gegenproben.
-- Die 24 russischen Zitate sind maschinell auf ihren Seiten nachgewiesen.
+- Die 25 russischen Zitate sind maschinell auf ihren Seiten nachgewiesen (kein Test). Die Auswahl ist nicht vollständig; die Aufnahmeregel steht im Hinweis.
 - Browser bei 360 px: Filter, Druck, keine Schaltfläche für Check, Bericht oder Speichern, keine externen
   Anfragen.
 

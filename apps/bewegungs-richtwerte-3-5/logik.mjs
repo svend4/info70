@@ -19,9 +19,17 @@
 export const EINTRAG_SCHLUESSEL = Object.freeze(['id', 'jahr', 'art', 'text', 'zitat', 'seite']);
 export const ARTEN = Object.freeze(['Laufen', 'Springen', 'Kriechen und Klettern', 'Werfen, Rollen, Fangen']);
 const KINDER_FELDER = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'protokoll', 'verlauf', 'beobachtung', 'notiz', 'geburtstag', 'alter', 'bewertung', 'ergebnis', 'kriterium']);
-const NORM_SPRACHE = /\bmuss\b|\bsoll jedes\b|\bNorm erreichen\b|\bPflicht\b|\bjedes Kind\b/i;
+const NORM_SPRACHE = /\b(muss|müssen|soll|sollen|Pflicht|Norm erreichen|jedes Kind|alle Kinder)\b/i;
+const JAHR_SEITEN = { 4: [128, 129, 130], 5: [131, 132, 133] };
 const seiteOk = (s) => typeof s === 'string' && /^S\. 1(2[89]|3[0-4])$/.test(s);
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
+
+function alleTexte(o, acc = []) {
+  if (Array.isArray(o)) o.forEach((x) => alleTexte(x, acc));
+  else if (typeof o === 'string') acc.push(o);
+  else if (o && typeof o === 'object') Object.values(o).forEach((v) => alleTexte(v, acc));
+  return acc;
+}
 
 function schluesselIn(o, acc = []) {
   if (Array.isArray(o)) o.forEach((x) => schluesselIn(x, acc));
@@ -45,6 +53,7 @@ export function pruefeDaten(daten) {
   for (const s of schluesselIn(daten)) {
     if (KINDER_FELDER.includes(s.toLowerCase())) fehler.push(`das Feld „${s}“ sieht nach Angaben über ein Kind aus`);
   }
+  if (!/Aufnahmeregel|Aufgenommen sind/.test(daten?.hinweis ?? '')) fehler.push('der Hinweis muss die Aufnahmeregel nennen');
   if (!Array.isArray(daten?.eintraege) || daten.eintraege.length < 20) {
     fehler.push(`${daten?.eintraege?.length ?? 0} Einträge – es sollen die Angaben mit Maß der Quelle sein`);
   }
@@ -58,9 +67,13 @@ export function pruefeDaten(daten) {
     if (!nichtLeer(e.zitat) || e.zitat.length < 10) fehler.push(`${e.id}: russischer Wortlaut fehlt oder ist zu kurz`);
     if (!nichtLeer(e.text)) fehler.push(`${e.id}: Text fehlt`);
     if (NORM_SPRACHE.test(e.text ?? '')) fehler.push(`${e.id}: Normsprache im Text („${e.text}“)`);
+    const seitenZahl = Number(String(e.seite).match(/\d+/)?.[0]);
+    if (JAHR_SEITEN[e.jahr] && !JAHR_SEITEN[e.jahr].includes(seitenZahl)) fehler.push(`${e.id}: Lebensjahr ${e.jahr} passt nicht zur Seite ${e.seite}`);
     if (/Balancieren|Gleichgewicht/i.test(e.art + ' ' + e.text)) fehler.push(`${e.id}: Balancieren hat keine messbare Größe in der Quelle`);
   }
-  if (NORM_SPRACHE.test(daten?.hinweis ?? '')) fehler.push('der Hinweis enthält Normsprache');
+  for (const t of alleTexte(daten)) {
+    if (NORM_SPRACHE.test(t)) fehler.push(`Normsprache in einem angezeigten Text („${t.slice(0, 50)}…“)`);
+  }
   if (daten?.quelle?.geprueft !== true) fehler.push('quelle.geprueft ist nicht true');
   return fehler;
 }

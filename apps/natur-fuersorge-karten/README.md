@@ -38,10 +38,10 @@ Belegt und mit Seite: die vier Aufgaben (S. 96), die Handlungen gießen („по
 
 ## Prüfung
 
-- `node --test apps/natur-fuersorge-karten/test/*.mjs` – 16 Tests: vier Aufgaben auf S. 96,
+- `node --test apps/natur-fuersorge-karten/test/*.mjs` – 18 Tests: vier Aufgaben auf S. 96,
   Handlungen als Textbeispiele, Karten als Eigenentwurf, kein Feld nach Kind (Protokoll, Name,
   Notiz u. a.), Altersangabe 1 bis 3, Filter, Gegenproben.
-- Alle russischen Zitate sind maschinell auf S. 96 nachgewiesen.
+- Alle russischen Zitate sind maschinell auf S. 96 nachgewiesen. Dieser Nachweis ist kein Test: Die Tests prüfen die Form, nicht den Wortlaut gegen die Quelle.
 - Browser bei 360 px: vier Karten am Anfang, Filter, Druck nur mit Karten, Knöpfe mindestens 44 px,
   kein Überlauf, keine externen Anfragen. Die einzige Konsolenmeldung ist das `favicon.ico`.
 

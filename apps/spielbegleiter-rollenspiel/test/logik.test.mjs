@@ -79,3 +79,19 @@ test('eine Abweichung ohne Verlaufsdokumentation wird abgewiesen', () => {
   d.quelle.abweichung = 'Der Katalog hatte Recht.';
   assert.ok(pruefeDaten(d).some((f) => /Verlaufsdokumentation/.test(f)));
 });
+
+test('ein Feld „notizen“ in einer Variante wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.quelle.notizen = 'Mia spielt Küche';
+  assert.ok(pruefeDaten(d).some((f) => /notizen/.test(f)));
+});
+
+test('ein Text mit „Beobachtung: …“ wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.aufgaben[0].text = 'Beobachtung: Mia spielt gern Küche.';
+  assert.ok(pruefeDaten(d).some((f) => /Eintrag über ein Kind/.test(f)));
+});
+
+test('die Checkliste fragt nicht nach einem einzelnen Kind', () => {
+  assert.doesNotMatch(daten.checkliste.fragen.join(' '), /wer beginnt|welches Kind/i);
+});

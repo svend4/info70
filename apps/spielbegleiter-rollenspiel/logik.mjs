@@ -14,7 +14,23 @@
 
 const AUFGABE_SCHLUESSEL = Object.freeze(['id', 'text', 'quelle', 'zitat']);
 const FAKT_SCHLUESSEL = Object.freeze(['id', 'text', 'quelle', 'zitat']);
-const KINDER_FELDER = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'protokoll', 'verlauf', 'verlaufsdokumentation', 'beobachtung', 'notiz', 'geburtstag', 'alter', 'diagnose']);
+
+/**
+ * Felder, die nach Angaben über ein Kind aussehen. Exakte Namen und Wortteile, damit auch
+ * Varianten wie „kindername“ oder „notizen“ auffallen. „alter“ nur exakt, weil „altersBereich“
+ * ein harmloses Feld ist.
+ */
+const KINDER_EXAKT = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'alter', 'protokoll', 'verlauf', 'beobachtung', 'notiz', 'notizen', 'geburtstag', 'geschlecht', 'diagnose', 'bewertung', 'ergebnis']);
+const KINDER_TEIL = Object.freeze(['kindername', 'kinder', 'notiz', 'beobacht', 'geburt', 'geschlecht', 'protokoll', 'verlauf', 'diagnos', 'bewert']);
+/** Ein Muster im Wert, das wie ein Eintrag über ein Kind aussieht („Name: Mia“). */
+const KINDER_WERT = /\b(Name|Vorname|Kindername|Geburtsdatum|Notiz|Beobachtung)\s*:/i;
+const istKinderFeld = (s) => { const k = s.toLowerCase(); return KINDER_EXAKT.includes(k) || KINDER_TEIL.some((t) => k.includes(t)); };
+function alleTexte(o, acc = []) {
+  if (Array.isArray(o)) o.forEach((x) => alleTexte(x, acc));
+  else if (typeof o === 'string') acc.push(o);
+  else if (o && typeof o === 'object') Object.values(o).forEach((v) => alleTexte(v, acc));
+  return acc;
+}
 const seiteOk = (s) => typeof s === 'string' && /^S\. \d+(–\d+)?$/.test(s);
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
 
@@ -42,7 +58,10 @@ export function pruefeDaten(daten) {
   if (!/nicht enthalten/.test(daten?.hinweis ?? '')) fehler.push('der Hinweis muss sagen, dass Spielideen und Verlaufsdokumentation nicht enthalten sind');
   if (!/Verlaufsdokumentation/.test(daten?.quelle?.abweichung ?? '')) fehler.push('quelle.abweichung muss die Verlaufsdokumentation als Abweichung nennen');
   for (const s of schluesselIn(daten)) {
-    if (KINDER_FELDER.includes(s.toLowerCase())) fehler.push(`das Feld „${s}“ sieht nach Angaben über ein Kind aus`);
+    if (istKinderFeld(s)) fehler.push(`das Feld „${s}“ sieht nach Angaben über ein Kind aus`);
+  }
+  for (const t of alleTexte(daten)) {
+    if (KINDER_WERT.test(t)) fehler.push(`ein Text enthält einen Eintrag über ein Kind („${t.slice(0, 40)}…“)`);
   }
   if (!Array.isArray(daten?.aufgaben) || daten.aufgaben.length !== 7) {
     fehler.push(`${daten?.aufgaben?.length ?? 0} Aufgaben – die Quelle nennt sieben auf S. 145–146`);

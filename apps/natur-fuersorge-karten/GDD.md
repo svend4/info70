@@ -16,7 +16,8 @@ Die Quelle formuliert die vier Punkte auf S. 96 als „Задачи“, Aufgaben
 Der Katalog wollte ein Mini-Protokoll, welches Kind welche Handlung selbstständig zeigt. Die Quelle
 sieht dafür in diesem Abschnitt keine Dokumentation vor, und Notizen über einzelne Kinder gehören
 nicht ins Gerät. Die Prüfung lehnt Felder ab, die nach einem Kind aussehen (Name, Protokoll,
-Verlauf, Beobachtung und ähnliche).
+Verlauf, Beobachtung, Notizen, Geburtsdatum und Varianten), und Texte mit Mustern wie „Name:“.
+Sie liest aber keinen Fließtext auf Namen; die Texte sind von Hand gelesen.
 
 ## Die tragende Entscheidung 3: Handlungen aus dem Text, Anregungen als Eigenentwurf
 
@@ -36,7 +37,7 @@ Eigenentwurf markiert. Eine Altersnorm für die Handlungen gibt die Quelle nicht
 
 ## Prüfung
 
-- 16 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Handlungen als Textbeispiele, Eigenentwurf
+- 18 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Handlungen als Textbeispiele, Eigenentwurf
   je Karte, Abweisung von Feldern nach Kind, Altersangabe, Filter und Gegenproben.
 - Die russischen Zitate sind maschinell auf S. 96 nachgewiesen.
 - Browser bei 360 px: Karten, Filter, Druck, Knöpfe mindestens 44 px, keine externen Anfragen.

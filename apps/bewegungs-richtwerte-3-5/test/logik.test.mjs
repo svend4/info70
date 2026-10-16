@@ -78,3 +78,31 @@ test('der Hinweis ohne „keine Norm“ wird abgewiesen', () => {
   d.hinweis = d.hinweis.replace('keine Norm', 'eine Vorgabe');
   assert.ok(pruefeDaten(d).some((f) => /keine Norm/.test(f)));
 });
+
+test('Normsprache mit „müssen“ oder „sollen“ in einem angezeigten Titel wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.titel = 'Kinder müssen 10 m laufen';
+  assert.ok(pruefeDaten(d).some((f) => /Normsprache/.test(f)));
+  const e = kopie(daten);
+  e.eintraege[0].text = 'Alle Kinder sollen schnell laufen.';
+  assert.ok(pruefeDaten(e).some((f) => /Normsprache/.test(f)));
+});
+
+test('ein Lebensjahr 5 mit einer Seite des vierten Jahres wird abgewiesen', () => {
+  const d = kopie(daten);
+  const e = d.eintraege.find((x) => x.jahr === 5);
+  e.seite = 'S. 129';
+  assert.ok(pruefeDaten(d).some((f) => /passt nicht zur Seite/.test(f)));
+});
+
+test('der Hinweis ohne Aufnahmeregel wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.hinweis = 'Die Angaben stehen auf S. 128–134. Keine Norm, keine Bewertung einzelner Kinder.';
+  assert.ok(pruefeDaten(d).some((f) => /Aufnahmeregel/.test(f)));
+});
+
+test('die Auswahl umfasst fünfundzwanzig Angaben, siebzehn davon für das fünfte Jahr', () => {
+  assert.equal(daten.eintraege.length, 25);
+  assert.equal(daten.eintraege.filter((e) => e.jahr === 5).length, 17);
+  assert.equal(daten.eintraege.filter((e) => e.jahr === 4).length, 8);
+});

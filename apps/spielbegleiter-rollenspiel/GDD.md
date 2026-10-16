@@ -35,9 +35,9 @@ zu erkennen. Das ist Beobachten einzelner Kinder. Es wird nicht übernommen und 
 
 ## Prüfung
 
-- 13 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Fakten, keine Felder nach Kind, keine Lernziele,
+- 16 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Fakten, keine Felder nach Kind, keine Lernziele,
   Abweichung, Gegenproben.
-- Die russischen Zitate sind maschinell auf den angegebenen Seiten nachgewiesen.
+- Die russischen Zitate sind maschinell auf den angegebenen Seiten nachgewiesen (kein Test). Die Prüfung der Felder erkennt Feldnamen und Muster, nicht jeden Satz über ein Kind.
 - Browser bei 360 px: Karten, Druck, Knöpfe mindestens 44 px, keine externen Anfragen.
 
 ## Offen

@@ -36,10 +36,10 @@ wird nicht übernommen, weil er das Beobachten einzelner Kinder betrifft.
 
 ## Prüfung
 
-- `node --test apps/spielbegleiter-rollenspiel/test/*.mjs` – 13 Tests: sieben Aufgaben auf S. 145 oder 146,
+- `node --test apps/spielbegleiter-rollenspiel/test/*.mjs` – 16 Tests: sieben Aufgaben auf S. 145 oder 146,
   Fakten mit Seite, Abweisung von Feldern nach Kind (Verlauf, Diagnose u. a.), keine Lernziele für Kinder,
   Abweichung nennt die Verlaufsdokumentation, Gegenproben.
-- Alle elf russischen Zitate sind maschinell auf den angegebenen Seiten nachgewiesen.
+- Alle zehn russischen Zitate (sieben Aufgaben, drei Fakten) sind maschinell auf den angegebenen Seiten nachgewiesen. Dieser Nachweis ist kein Test.
 - Browser bei 360 px: neun Karten, Druck nur mit Karten, Knöpfe mindestens 44 px, keine externen Anfragen.
 
 ## Starten

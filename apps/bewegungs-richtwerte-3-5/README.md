@@ -17,8 +17,11 @@ Der Katalogeintrag (Nr. 83) hatte fünf Angaben, die der Text so nicht trägt:
   Verfahren vor. Ein solcher Check wäre eine Bewertung einzelner Kinder; er wird hier nicht gebaut.
 - **Abschnitt „Beobachtungsbogen“ im Programm**: nicht im Text.
 
-Belegt und mit Seite: 24 Angaben mit Maß, verteilt auf Laufen, Springen, Kriechen und Klettern sowie
-Werfen, Rollen und Fangen (S. 129–132). Das Prellen zehnmal hintereinander steht auf S. 132.
+Belegt und mit Seite: 25 Angaben, verteilt auf Laufen, Springen, Kriechen und Klettern sowie
+Werfen, Rollen und Fangen (S. 129–132). Aufgenommen sind Strecken, Abstände und Zeiten, die die Aufgabe
+selbst beschreiben. Nicht aufgenommen sind Maße von Geräten und Hindernissen (Leiterhöhe, Torbreite,
+Höhe von Gegenständen, Abstand von Linien) und Häufigkeiten; eine Ausnahme ist das zehnmalige Prellen,
+das der Text als Ziel nennt. Das Prellen zehnmal hintereinander steht auf S. 132.
 
 ## So funktioniert es
 
@@ -36,11 +39,11 @@ Werfen, Rollen und Fangen (S. 129–132). Das Prellen zehnmal hintereinander ste
 
 ## Prüfung
 
-- `node --test apps/bewegungs-richtwerte-3-5/test/*.mjs` – 13 Tests: 24 Angaben, Lebensjahr 4 und 5,
+- `node --test apps/bewegungs-richtwerte-3-5/test/*.mjs` – 17 Tests: 25 Angaben, Lebensjahr 4 und 5,
   Seiten 129–132, feste Felder, keine Normsprache, kein Balancieren als Maß, Abweichung nennt 32, Norm und
   Kriterien-Check, Filter, Gegenproben.
-- Alle 24 russischen Zitate sind maschinell auf ihren Seiten nachgewiesen.
-- Browser bei 360 px: 24 Angaben, Filter nach Jahr und Art, Druck nur mit Angaben, keine Schaltfläche für
+- Alle 25 russischen Zitate sind maschinell auf ihren Seiten nachgewiesen (kein Test).
+- Browser bei 360 px: 25 Angaben, Filter nach Jahr und Art, Druck nur mit Angaben, keine Schaltfläche für
   Kriterien-Check, Bericht oder Speichern, keine externen Anfragen.
 
 ## Starten
