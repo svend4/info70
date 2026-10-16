@@ -149,6 +149,8 @@ function drucke(teil) {
   };
   window.addEventListener('afterprint', aufraeumen);
   window.print();
+  // Nicht jeder Browser feuert afterprint. Der Druckmodus fällt deshalb auch per Zeitgeber zurück.
+  window.setTimeout(aufraeumen, 1500);
 }
 
 function ladeTextHerunter(teil) {

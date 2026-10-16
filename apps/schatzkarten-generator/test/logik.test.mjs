@@ -179,7 +179,7 @@ test('Lösungszeilen nennen Start, Ziel und den Weg in Himmelsrichtungen', () =>
   assert.match(zeilen[3], /1× O, 2× S/);
 });
 
-test('die Textdatei für die Karten verrät weder Ziel noch Lösung noch Weg', () => {
+test('die Textdatei für die Karten nennt das Wort Ziel nicht', () => {
   for (let saat = 1; saat <= 20; saat++) {
     const k = erzeugeKarte({ groesse: 4 + (saat % 5), ort: 'aussengelaende', anzahlZeichen: saat % 7, rng: zufallsgeber(saat) });
     const text = alsTextdatei(k, 'karten');

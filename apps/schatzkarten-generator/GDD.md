@@ -9,7 +9,7 @@
 3. **Keine externen Anfragen.** Die Seite arbeitet lokal und ist nach dem ersten Laden offline lauffähig. Der Netzwerkwächter aus `packages/kinderschutz` ist beim Start aktiv.
 4. **Zufall nur über den Parameter `rng`.** Die Logik in `logik.mjs` ruft `Math.random` nicht auf. Mit einem festen Zufallsgeber sind alle Karten in den Tests reproduzierbar.
 5. **Richtungen vom Kind aus.** Die Startmarke zeigt nach vorn. Links und rechts gelten immer vom Kind aus, nie vom Bildschirmrand. Die Karten verwenden keine „oben“- oder „unten“-Angaben.
-6. **Druck ohne Lösung.** Die Karten zeigen Raster, Zeichen und Wegkarten, aber weder Ziel noch Weg. Das Lösungsblatt hat einen eigenen Druckbereich (`body[data-druck="loesung"]`) und wird nur über seinen eigenen Knopf gedruckt. Der Druck enthält keine Kästchen, keine Häkchen und keine Zeile für einen Namen.
+6. **Druck ohne Lösung.** Die Raster-Karte zeigt weder Ziel noch Weg. Die Wegkarten beschreiben den Weg in Schritten; daraus ist das Ziel ableitbar. Das ist gewollt, denn die Kinder gehen die Wegkarten ab. Das Lösungsblatt hat einen eigenen Druckbereich (`body[data-druck="loesung"]`) und wird nur über seinen eigenen Knopf gedruckt. Der Druck enthält keine Kästchen, keine Häkchen und keine Zeile für einen Namen.
 7. **Zeichen als Text.** Die sechs Zeichen sind Unicode-Textzeichen, keine Bilddateien. Verkehrszeichen (S. 302) sind nicht Teil der Liste.
 8. **Quelle eng gehalten.** Aus dem Programm «Пралеска» stammen nur die Spielnamen von S. 246 (eigene Übersetzung) und die Seitenanker. Regeln oder Kartenformen stammen nicht aus der Quelle. Alles andere ist als Eigenentwurf gekennzeichnet.
 
@@ -47,7 +47,7 @@
 - S. 138: Plan mit Zeichen.
 - S. 245: Plan-Schema für Rätsel.
 - S. 247: Spiele im Freien bei verschiedenen Jahreszeiten.
-- S. 302: Verkehrszeichen als Ziel, nicht als Spielmaterial.
+- S. 302: Verkehrszeichen als Entwicklungsindikator (Kenntnis üblicher Zeichen), nicht als Spielmaterial.
 
 ## 6. Tests
 

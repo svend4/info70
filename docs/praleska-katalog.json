@@ -1060,7 +1060,7 @@
   },
   {
    "titel": "Musik-Jahresplaner für die Kita",
-   "korrektur": "Welle 88: gebaut als musik-jahresplaner, ohne Buchliste. Keine Quellenzahl „über 280“; Feste sind eine Aufgabe auf S. 174, kein Bereich; Gemeinfreiheit für mehrere Autoren widerlegt. Jahreskreis und Festliste sind Eigenentwurf.",
+   "korrektur": "Welle 88: gebaut als musik-jahresplaner, ohne Buchliste. Keine Quellenzahl „über 280“; Feste sind eine Aufgabe auf S. 174, kein Bereich; Gemeinfreiheit für mehrere Autoren widerlegt. Gespeichert werden nur die Häkchen, die Stückliste bleibt bis zum Neuladen. Drei Feste sind saisonal genannt, aber keinem Monat zugeordnet.",
    "typ": "erzieher-werkzeug",
    "alter": "Erwachsene (Fachkräfte)",
    "beschreibung": "Durchsuchbarer Katalog nach Praleska-Struktur (Hören / Singen / Tanzen / Instrumente / Alltag / Feste) mit gemeinfreiem Repertoire und Jahreskreis-Zuordnung (Herbst, Advent, Frühling); Checkliste, welche Bereiche im Monat abgedeckt wurden.",
@@ -1310,7 +1310,7 @@
   },
   {
    "titel": "Schatzkarten-Generator",
-   "korrektur": "Welle 88: gebaut als schatzkarten-generator. Spielnamen stehen auf S. 246 nur auf Russisch; deutsche Namen sind Übersetzungen. Raster, Wegkarten, Symbole und Lösungsblatt sind Eigenentwurf; keine Spielregeln aus der Quelle.",
+   "korrektur": "Welle 88: gebaut als schatzkarten-generator. Zwei der drei Spielnamen stehen auf S. 246 nur auf Russisch; die App übernimmt sie als Übersetzung. Raster, Wegkarten, Symbole und Lösungsblatt sind Eigenentwurf; keine Spielregeln aus der Quelle.",
    "typ": "erzieher-werkzeug",
    "alter": "Erwachsene erstellen, Kinder 5-7 spielen offline",
    "beschreibung": "Werkzeug zum Erzeugen und Drucken von Mini-Orientierungs-Schnitzeljagden nach den Praleska-Spielen 'Mit der Karte unterwegs' und 'Versteck den Gegenstand und beschreibe den Weg': Raster-Karte, Wegbeschreibungs-Karten, Symbol-Legende.",
@@ -1351,7 +1351,7 @@
   },
   {
    "titel": "Mini-Oper-Baukasten",
-   "korrektur": "Welle 88: gebaut als mini-oper-baukasten (offline, ohne KI). „18 Märchen“ falsch: S. 269 nennt 18 Titel. Instrument→Figur nicht aus der Quelle, als Eigenentwurf gekennzeichnet.",
+   "korrektur": "Welle 88: gebaut als mini-oper-baukasten (offline, ohne KI). „18 Märchen“ falsch: S. 269 nennt 18 Titel. Die Zuordnung Instrument→Figur ist nicht gebaut; die App ordnet keine Figur einem Instrument zu.",
    "typ": "erzieher-werkzeug",
    "alter": "Erwachsene (fuer Kinder 5-7)",
    "engine": "Geschichten-Generator (KI-bereit)",

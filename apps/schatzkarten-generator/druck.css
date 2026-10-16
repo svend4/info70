@@ -1,7 +1,7 @@
 /* Schatzkarten-Generator: Bildschirm und Druck.
    Gedruckt wird entweder nur die Karte (body[data-druck="karten"]) oder nur das
    Lösungsblatt (body[data-druck="loesung"]). Ohne Druckmodus bleibt die Lösung
-   weg, damit ein Druck über den Browser nie das Ziel verrät. */
+   weg, damit ein Druck über den Browser nie das Lösungsblatt mit Ziel druckt. */
 
 .sg-ueber { font-size: 1.1rem; margin: 0 0 0.4rem; color: var(--k-blau-dunkel); }
 

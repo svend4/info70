@@ -2,7 +2,7 @@
 //
 // Werkzeug für Erwachsene: Stückliste, Monatsübersicht und Jahresbogen gehören der
 // Fachkraft. Kein Bildschirm für Kinder, darum keine eltern.html. Politik docs/02: keine
-// externen Anfragen; gespeichert wird nur die eigene Stückliste mit den Häkchen, und
+// externen Anfragen; gespeichert werden nur die Häkchen, und
 // der Löschknopf der Daten-Karte entfernt sie.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
@@ -12,6 +12,7 @@ import {
   KENNZEICHNUNG_VORSCHLAG, KENNZEICHNUNG_UEBERSETZUNG,
   leererStand, ladeStand, normalisiereStand, fuegeStueckHinzu, entferneStueck, umschalteHaken,
   istHaken, zaehleProMonat, zaehlWort, sortiereStuecke, druckGliederung, istLeer, bereichName, herkunftText,
+  gespeicherterStand,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -30,7 +31,8 @@ let monat = new Date().getMonth() + 1;
 
 function lade() {
   try {
-    return ladeStand(localStorage.getItem(SCHLUESSEL));
+    // Titel gehen nie in den Speicher; nur die Häkchen werden zurückgelesen.
+    return { ...leererStand(), haken: ladeStand(localStorage.getItem(SCHLUESSEL)).haken };
   } catch {
     // Gesperrter Speicher (privates Fenster, blockierte Website-Daten): der Plan gilt
     // dann nur bis zum Neuladen, die Seite funktioniert trotzdem.
@@ -43,8 +45,9 @@ let stand = lade();
 
 function speichere() {
   try {
-    if (istLeer(stand)) localStorage.removeItem(SCHLUESSEL);
-    else localStorage.setItem(SCHLUESSEL, JSON.stringify(normalisiereStand(stand)));
+    const nurHaken = gespeicherterStand(stand);
+    if (istLeer(nurHaken)) localStorage.removeItem(SCHLUESSEL);
+    else localStorage.setItem(SCHLUESSEL, JSON.stringify(normalisiereStand(nurHaken)));
     speicherFehler = false;
   } catch {
     speicherFehler = true;
@@ -80,10 +83,12 @@ const titelFeld = el('input', {
   style: FELD_STIL,
 });
 const bereichFeld = el('select', { id: 'mjp-bereich', style: FELD_STIL },
+  el('option', { value: '' }, '— bitte wählen —'),
   ...BEREICHE.map((b) => el('option', { value: b.id }, `${b.name} (S. ${b.seiten})`)));
 const monatFeld = el('select', { id: 'mjp-monat-feld', style: FELD_STIL },
   ...MONATE.map((n, i) => el('option', { value: String(i + 1), selected: i + 1 === monat }, n)));
 const herkunftFeld = el('select', { id: 'mjp-herkunft', style: FELD_STIL },
+  el('option', { value: '' }, '— bitte wählen —'),
   ...HERKUNFT.map((h) => el('option', { value: h.id }, h.text)));
 
 function stueckAufnehmen() {
@@ -141,7 +146,7 @@ const kopf = el('header', {},
     'Für Fachkräfte: die fünf Bereiche der Quelle, eine eigene Stückliste und eine Monatsübersicht zum Abhaken von Hand.'),
   el('p', {},
     'Das Werkzeug bewertet weder Kinder noch Gruppen. Es gibt keine Ampel, keine Rangliste und kein Soll. '
-    + 'Gespeichert wird nur, was du hier eintippst, und nur auf diesem Gerät.'));
+    + 'Gespeichert werden nur die Häkchen der Monatsübersicht, und nur auf diesem Gerät. Deine Stückliste bleibt bis zum Neuladen der Seite.'));
 
 const bereicheTeil = el('section', { class: 'k-karte' },
   el('h2', {}, 'Die fünf Bereiche'),
@@ -228,7 +233,7 @@ function zeichneMonat() {
         type: 'button',
         class: an ? 'k-knopf' : 'k-knopf k-knopf--neutral',
         'aria-pressed': String(an),
-        'aria-label': `${b.name}, ${name}, Seiten ${b.seiten}`,
+        'aria-label': `${b.name} (S. ${b.seiten}), ${name}`,
         onclick: () => {
           stand = umschalteHaken(stand, monat, b.id);
           speichere();
@@ -274,7 +279,7 @@ function zeichneListe() {
 function zeichneKarte() {
   kartenTeil.replaceChildren(datenKarte({
     schluessel: SCHLUESSEL,
-    was: 'deine eigene Stückliste und deine Häkchen zur Monatsübersicht',
+    was: 'deine Häkchen zur Monatsübersicht (deine Stückliste mit Titeln wird nie gespeichert)',
     nachLoeschen: () => {
       stand = leererStand();
       meldung = '';

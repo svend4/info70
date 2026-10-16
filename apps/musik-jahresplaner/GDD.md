@@ -24,10 +24,9 @@ darum keine `eltern.html`.
 6. **Der Jahresbogen hat keine Zählung, keine Namen und keine Häkchen.** Er zeigt jeden
    Monat mit den fünf Bereichen und leeren Linien. Auf dem Papier stehen weder Knopf
    noch Eingabefeld; der Bildschirmteil fällt im Druck weg (druck.css).
-7. **Gespeichert wird nur die eigene Stückliste mit den Häkchen,** unter einem Schlüssel
-   (`mjp.stand`). Der Löschknopf kommt aus der Daten-Karte. Kinderdaten, auch als
-   Monats-Häkchen mit Namen, gibt es nicht; das Titelfeld bittet um keine Namen von Kindern,
-   prüft das aber nicht.
+7. **Gespeichert werden nur die Häkchen der Monatsübersicht,** unter einem Schlüssel
+   (`mjp.stand`), ohne Titel. Die Stückliste mit Titeln bleibt nur bis zum Neuladen auf der Seite,
+   weil Titel frei sind und einen Namen enthalten könnten. Der Löschknopf kommt aus der Daten-Karte.
 8. **Keine Zufallszahlen.** Die Nummern der Stücke sind fortlaufend. Der Kern ist ohne DOM
    und deterministisch.
 9. **Fehlerhafter Speicher ist kein Absturz.** Der Plan läuft ohne Speicher weiter und sagt
@@ -53,12 +52,12 @@ darum keine `eltern.html`.
 - **Katalogeintrag Nr. 87.** Er nennt eine Stückzahl der Quelle und legt die Feste auf
   Jahreskreis-Zeiten fest. Beides ist nicht übernommen: Die Zahl ist eine Gesamtzahl der
   Quelle, und die Quelle gibt keine Jahreskreis-Zuordnung vor.
-- **Seitenspannen** sind an den Überschriften gegengeprüft. Die Kopfzeilen der Seiten
-  entsprechen der gedruckten Seitenzahl.
+- **Seitenspannen** sind an den Überschriften geprüft (Hören 160–162, Singen 162–165, Rhythmus 166–170,
+  Instrumente 170–172, Alltag 172–174). Benachbarte Bereiche teilen sich die Seiten 162, 170 und 172.
 
 ## 4. Prüfungen
 
-- **Tests:** 33 Tests in `test/logik.test.mjs`, Lauf mit `node --test` im Ordner des Projekts.
+- **Tests:** 34 Tests in `test/logik.test.mjs`, Lauf mit `node --test` im Ordner des Projekts.
   Alle grün.
 - **Browserprobe** einmalig gegen den lokalen Server, nicht im Repo: Laden ohne Konsolenfehler
   und ohne Anfrage an fremde Adressen; Stück anlegen, Häkchen setzen, Neuladen; Entfernen;
@@ -68,9 +67,9 @@ darum keine `eltern.html`.
 
 ## 5. Außerhalb dieses Ordners (nicht geändert)
 
-- `impressum.html`: Die Zahl der speichernden Apps steigt um eins, weil die App eine Stückliste
+- `impressum.html`: Die Zahl der speichernden Apps steigt um eins, weil die App die Häkchen
   ablegt. Der Test in `packages/kinderschutz/test/datenschutz-zusage.test.mjs` verlangt die
   neue Zahl.
-- `README.md` (Wurzel): Die Gesamtzahl der Tests im Repo steigt um die 33 neuen Tests.
+- `README.md` (Wurzel): Die Gesamtzahl der Tests im Repo steigt um die 34 neuen Tests.
 - `docs/10-praleska-baukasten.md`: Eintrag Nr. 87 und Statuszeile (gebaut, offene Nummern).
 - `index.html` (Hub) und ggf. Katalog-Übersichten: Eintrag der App.

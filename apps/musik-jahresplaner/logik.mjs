@@ -11,7 +11,7 @@
 // Die einzigen Zahlen, die die App zeigt, sind die eigenen Einträge je Monat.
 // Eine Gesamtzahl wird nicht gebildet.
 
-/** localStorage-Schlüssel der Fachkraft-Daten (Stückliste und Häkchen). */
+/** localStorage-Schlüssel der Fachkraft-Daten: nur die Häkchen, nie die Titel. */
 export const SCHLUESSEL = 'mjp.stand';
 export const TITEL_MAX = 120;
 const MAX_STUECKE = 500;
@@ -26,13 +26,13 @@ export const MONATE = Object.freeze([
  * die Seitenspanne (gedruckte Seitenzahl). `name` ist Eigenbenennung.
  */
 export const BEREICHE = Object.freeze([
-  Object.freeze({ id: 'hoeren', name: 'Hören', quelle: 'Слушание музыки', seiten: '160–163' }),
+  Object.freeze({ id: 'hoeren', name: 'Hören', quelle: 'Слушание музыки', seiten: '160–162' }),
   Object.freeze({ id: 'singen', name: 'Singen', quelle: 'Пение', seiten: '162–165' }),
   Object.freeze({
     id: 'rhythmus',
     name: 'Musikalisch-rhythmische Tätigkeit und Tanz',
     quelle: 'Музыкально-ритмическая деятельность',
-    seiten: '166–169',
+    seiten: '166–170',
   }),
   Object.freeze({
     id: 'instrumente',
@@ -151,6 +151,14 @@ export function zaehleProMonat(stand) {
 /** „1 Stück“, sonst „n Stücke“. */
 export function zaehlWort(n) {
   return n === 1 ? '1 Stück' : `${n} Stücke`;
+}
+
+/**
+ * Was in den Speicher darf: nur die Häkchen. Titel stehen nie im Speicher, weil sie frei sind
+ * und einen Namen enthalten könnten.
+ */
+export function gespeicherterStand(stand) {
+  return { stuecke: [], haken: { ...stand.haken } };
 }
 
 export function istLeer(stand) {

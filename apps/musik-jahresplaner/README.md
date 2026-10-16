@@ -7,7 +7,7 @@ Quelle: Praleska, Musikteil der Gruppe «ПОЧЕМУЧКИ», S. 160–174.
 ## Was die App ist
 
 - Ein Überblick über die **fünf Bereiche** der Quelle, mit Überschrift und Seite.
-- Eine **eigene Stückliste** der Fachkraft: Titel, Bereich, Monat und Herkunft.
+- Eine **eigene Stückliste** der Fachkraft: Titel, Bereich, Monat und Herkunft. Sie bleibt nur bis zum Neuladen der Seite.
   Die Herkunft wählt man aus vier festen Optionen.
 - Eine **Monatsübersicht**: Die Fachkraft hakt von Hand an, welche Bereiche sie im
   Monat angesprochen hat. Das ist eine Erinnerung, keine Bewertung.
@@ -35,8 +35,9 @@ Inhalt prüft die App nicht.
 
 ## Was gespeichert wird
 
-- Auf diesem Gerät, im Browser, unter dem Schlüssel `mjp.stand`: die eigene
-  Stückliste und die Häkchen der Monatsübersicht. Mehr nicht.
+- Auf diesem Gerät, im Browser, unter dem Schlüssel `mjp.stand`: nur die Häkchen der
+  Monatsübersicht, ohne Titel. Mehr nicht. Die Stückliste mit ihren Titeln wird nie gespeichert;
+  sie gilt nur bis zum Neuladen. Titel sind frei und könnten einen Namen enthalten.
 - Der Knopf „Meine Daten löschen“ entfernt genau diesen Schlüssel.
 - Ist der Speicher gesperrt, etwa im privaten Fenster, funktioniert die Seite
   trotzdem. Der Plan gilt dann nur bis zum Neuladen, und die Seite sagt das.
@@ -48,9 +49,9 @@ sind Eigenbenennungen.
 
 | Bereich (Eigenbenennung) | Überschrift der Quelle | Seiten |
 |---|---|---|
-| Hören | Слушание музыки | 160–163 |
+| Hören | Слушание музыки | 160–162 |
 | Singen | Пение | 162–165 |
-| Musikalisch-rhythmische Tätigkeit und Tanz | Музыкально-ритмическая деятельность | 166–169 |
+| Musikalisch-rhythmische Tätigkeit und Tanz | Музыкально-ритмическая деятельность | 166–170 |
 | Spiel auf Instrumenten | Обучение элементам нотной грамоты, игре на музыкальных инструментах | 170–172 |
 | Musik im Alltag | Музыка в повседневной жизни | 172–174 |
 
@@ -68,8 +69,8 @@ zwar 1–2 Mal im Monat, im Sommer wöchentlich. Die Beispiele dort sind
 - die vier Herkunftsoptionen;
 - die Oberfläche, der Jahresbogen und die Hinweistexte.
 
-Die Quelle gibt keine Zuordnung von Festen zu Monaten oder Jahreszeiten vor.
-Die App tut das ebenfalls nicht; die Fachkraft wählt den Monat selbst.
+Die Quelle nennt drei Feste ausdrücklich als saisonal („сезонные праздники-развлечения“, S. 174),
+ordnet sie aber keinem Monat zu. Die App ordnet ebenfalls keinen Monat zu; die Fachkraft wählt ihn selbst.
 
 ## Starten
 
@@ -89,7 +90,7 @@ Jahresbogen.
 node --test apps/musik-jahresplaner/test/*.test.mjs
 ```
 
-Die App hat 33 Tests in `test/logik.test.mjs`. Sie prüfen die Quellangaben
+Die App hat 34 Tests in `test/logik.test.mjs`. Sie prüfen die Quellangaben
 wörtlich, die festen Optionen, die Prüfregeln der Stückliste, das Bereinigen des
 gespeicherten Stands, die Druckregeln und die Abwesenheit externer Adressen.
 Die Oberfläche selbst ist nicht durch Unit-Tests abgedeckt; siehe GDD.md.

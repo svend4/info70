@@ -1,19 +1,14 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import {
-  BEREICHE, MONATE, HERKUNFT, FESTE_QUELLE, FEST_SEITE, FESTE_VORSCHLAEGE, KENNZEICHNUNG_VORSCHLAG,
-  TITEL_MAX, SCHLUESSEL, leererStand, pruefeStueck, fuegeStueckHinzu, entferneStueck, umschalteHaken,
-  istHaken, zaehleProMonat, zaehlWort, normalisiereStand, ladeStand, druckGliederung, sortiereStuecke,
-  naechsteId,
-} from '../logik.mjs';
+import { BEREICHE, MONATE, HERKUNFT, FESTE_QUELLE, FEST_SEITE, FESTE_VORSCHLAEGE, KENNZEICHNUNG_VORSCHLAG, TITEL_MAX, SCHLUESSEL, leererStand, pruefeStueck, fuegeStueckHinzu, entferneStueck, umschalteHaken, istHaken, zaehleProMonat, zaehlWort, normalisiereStand, ladeStand, druckGliederung, sortiereStuecke, naechsteId, gespeicherterStand } from '../logik.mjs';
 
 const dateiText = (name) => readFile(new URL(`../${name}`, import.meta.url), 'utf8');
 const gutes = { titel: 'Herbstlied', bereich: 'singen', monat: 10, herkunft: 'eigenes-lied' };
 
 test('die fünf Bereiche stehen in der Reihenfolge der Quelle mit ihren Seitenspannen', () => {
   assert.deepEqual(BEREICHE.map((b) => b.id), ['hoeren', 'singen', 'rhythmus', 'instrumente', 'alltag']);
-  assert.deepEqual(BEREICHE.map((b) => b.seiten), ['160–163', '162–165', '166–169', '170–172', '172–174']);
+  assert.deepEqual(BEREICHE.map((b) => b.seiten), ['160–162', '162–165', '166–170', '170–172', '172–174']);
 });
 
 test('die Überschriften der Bereiche stimmen wörtlich mit der Quelle überein', () => {
@@ -260,4 +255,11 @@ test('index.html hat die Pflichtteile der Vorlage: lang, CSP, Stylesheets, Skrip
 
 test('der Speicherschlüssel sieht nicht nach personenbezogenen Daten aus', () => {
   assert.ok(!/name|mail|geburt|adresse|telefon|foto|standort|gps/i.test(SCHLUESSEL));
+});
+
+test('gespeicherterStand gibt nie Titel in den Speicher, nur die Häkchen', () => {
+  const stand = { stuecke: [{ id: 1, titel: 'Mia – Abschiedslied', bereich: 'hoeren', monat: 3, herkunft: 'eigenes Lied' }], haken: { '3:hoeren': true } };
+  const gespeichert = gespeicherterStand(stand);
+  assert.deepEqual(gespeichert.stuecke, []);
+  assert.deepEqual(gespeichert.haken, { '3:hoeren': true });
 });

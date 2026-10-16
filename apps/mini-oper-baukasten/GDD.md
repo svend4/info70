@@ -48,7 +48,7 @@
   einer nach Garschin. Die App übernimmt keine Autorenangaben.
 - **S. 255.** Die Literaturliste dieser Seite wurde geprüft und nicht übernommen. Die App nutzt nur die
   Titel von S. 269.
-- **Statuszeile docs/10.** Mit dieser App wären 21 von 27 Einheiten gebaut. Die Zeile ist nicht geändert.
+- **Statuszeile docs/10.** Welle 88 setzt die Zeile auf 23 von 27. Diese App ist davon die 21. Einheit.
 
 ## 4. Prüfungen
 

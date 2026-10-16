@@ -2,7 +2,7 @@
   "name": "@info70/musik-jahresplaner",
   "version": "0.1.0",
   "private": true,
-  "description": "Musik-Jahresplaner für Fachkräfte (Praleska, Musikteil, S. 160–174, Katalog docs/10 Nr. 87): fünf Bereiche mit Seitenangaben, eine eigene Stückliste mit Herkunft aus vier festen Optionen, eine Monatsübersicht zum Abhaken von Hand und ein Jahresbogen mit leeren Linien zum Ausdrucken. Werkzeug für Erwachsene: keine Kinderdaten, keine Bewertung von Kindern, keine externen Anfragen, gespeichert wird nur die eigene Stückliste auf diesem Gerät.",
+  "description": "Musik-Jahresplaner für Fachkräfte (Praleska, Musikteil, S. 160–174, Katalog docs/10 Nr. 87): fünf Bereiche mit Seitenangaben, eine eigene Stückliste mit Herkunft aus vier festen Optionen, eine Monatsübersicht zum Abhaken von Hand und ein Jahresbogen mit leeren Linien zum Ausdrucken. Werkzeug für Erwachsene: keine Kinderdaten, keine Bewertung von Kindern, keine externen Anfragen, gespeichert werden nur die Häkchen der Monatsübersicht auf diesem Gerät, die Stückliste nur bis zum Neuladen.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

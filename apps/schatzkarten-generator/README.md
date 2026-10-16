@@ -34,7 +34,7 @@ Aus der Quelle übernommen sind nur die Spielnamen und die Seitenanker:
 - **S. 138**, Gruppe «Почемучки»: einen Plan mit Zeichen (Symbolen) anfertigen.
 - **S. 245**: Plan-Schema als Grundlage für Rätsel.
 - **S. 247**: selbstständige Spiele im Freien bei verschiedenen Jahreszeiten.
-- **S. 302**: Zu den Zielen gehört das Kennen allgemein üblicher Zeichen, darunter Verkehrszeichen. Die App verwendet **keine** Verkehrszeichen als Spielmaterial.
+- **S. 302**: Als Entwicklungsindikator steht dort das Kennen allgemein üblicher Zeichen, darunter Verkehrszeichen. Die App verwendet **keine** Verkehrszeichen als Spielmaterial.
 
 **Eigenentwurf der App, nicht aus der Quelle:** die Raster-Karte mit Koordinaten (Spalten A bis H, Zeilen ab 1) und der Startmarke mit Pfeil nach vorn; die sechs festen Zeichen (Kreis, Dreieck, Raute, Quadrat, Herz, Sonne); die Wegkarten mit Drehungen „geradeaus“, „rechts“, „links“, „umdrehen“; das Lösungsblatt; die Textdateien; der Ablauf des Spiels, einschließlich des Vorschlags, den Gegenstand auf dem Ziel zu verstecken; die Mindestlänge des Weges (Abstand von Start und Ziel: Gittergröße minus 1); die Ortsoptionen als Überschrift.
 
