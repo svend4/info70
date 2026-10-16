@@ -127,11 +127,12 @@ test('die Schnittstelle nennt keine Summe, keine Bewertung und kein Kind', () =>
   }
 });
 
-test('der Hinweis steht im Wortlaut des Auftrags im Text', () => {
+test('der Hinweis sagt, dass die Abstimmung offen ist, und behauptet keine Anonymität', () => {
   assert.equal(
     TEXTE.hinweis,
-    'Ob Kinder mitentscheiden, entscheidet der Träger bzw. das Team. Das Werkzeug hilft nur nach einer Abstimmung in der Gruppe. Abstimmen Sie verdeckt (Handzeichen oder Klebepunkte), damit sich Kinder nicht beeinflussen. Die Zählung ordnet keine Stimme einem Kind zu.',
+    'Ob Kinder mitentscheiden, entscheidet der Träger bzw. das Team. Das Werkzeug hilft nur nach einer Abstimmung in der Gruppe. Handzeichen sind für die Gruppe sichtbar, die Abstimmung ist also offen. Die Zählung ordnet keine Stimme einem Kind zu und hält keine Namen fest.',
   );
+  assert.doesNotMatch(TEXTE.hinweis, /verdeckt|anonym|geheim/i);
 });
 
 test('Anregungen: drei Seiten aus Praleska, als Anregung und nicht als Vorgabe', () => {
@@ -141,4 +142,13 @@ test('Anregungen: drei Seiten aus Praleska, als Anregung und nicht als Vorgabe',
     assert.ok(!/\b(muss|müssen|soll|sollen|verpflichtend|Pflicht)\b/i.test(a.text), `Vorgabe statt Anregung: S. ${a.seite}`);
   }
   assert.ok(TEXTE.anregungenTitel.includes('keine Vorgaben'));
+});
+
+
+test('Titel: NFD und NFC gelten als derselbe Titel; Zeichen ohne Buchstaben und Ziffern sind leer', () => {
+  const nfc = 'Fr\u00FChling';
+  const nfd = 'Fr\u0075\u0308hling';
+  assert.equal(pruefeTitel(nfd).titel, nfc);
+  assert.deepEqual(pruefeTitel(nfd, [{ titel: nfc }]), { ok: false, grund: 'doppelt' });
+  assert.deepEqual(pruefeTitel('\u200B'), { ok: false, grund: 'leer' });
 });

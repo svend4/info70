@@ -57,9 +57,9 @@ herunterladen oder die Seite schließen. Nichts bleibt zurück.
 
 ## Offen (für den Nutzer)
 
-1. **Widerspruch im Hinweis.** Der Wortlaut verlangt verdecktes Abstimmen und nennt
-   zugleich Handzeichen. Handzeichen sind für die Gruppe sichtbar. Bitte den
-   Wortlaut entscheiden. Auf der Seite steht der Wortlaut aus dem Auftrag.
+1. **Hinweis geändert (Gegenprüfung Welle 89).** Der Hinweis sagt jetzt: Handzeichen sind für die
+   Gruppe sichtbar, die Abstimmung ist also offen. Ein verdecktes Verfahren bildet das Werkzeug nicht ab;
+   die Fachkraft entscheidet, ob sie ein anderes Verfahren wählt.
 2. **Zwei eigene Entscheidungen.** Das Entfernen eines Vorschlags und die Sperre
    gegen doppelte Titel stehen nicht im Auftrag. Bitte bestätigen oder streichen.
 3. **Eigenentwurf prüfen.** Die Arten (besonders „Festprogramm“) und die
@@ -75,5 +75,5 @@ herunterladen oder die Seite schließen. Nichts bleibt zurück.
 
 ## Tests
 
-31 Tests. Zählung nach `^test(` über `test/logik.test.mjs` und `test/regeln.test.mjs`.
+32 Tests. Zählung nach `^test(` über `test/logik.test.mjs` und `test/regeln.test.mjs`.
 Lauf: `node --test apps/unser-konzert-zaehlhilfe/test/*.test.mjs`.

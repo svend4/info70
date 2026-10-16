@@ -168,7 +168,7 @@ export const BLOECKE = [
       {
         id: 't8',
         seite: 317,
-        frage: 'Gibt es Bedingungen, die Überlastung im Team vorbeugen?',
+        frage: 'Gibt es Bedingungen, die dem emotionalen Ausbrennen von Fachkräften vorbeugen?',
         hinweis: 'Hinweis: Bei Überlastung einzelner Personen entscheiden Leitung und Träger. Dieses Werkzeug bewertet keine Person.',
       },
       {
@@ -195,10 +195,10 @@ export const AUSGESCHLOSSEN = [
   { seite: 313, thema: 'Soziometrische Aufgabe zur Stellung einzelner Kinder in der Gruppe', grund: 'ordnet einzelne Kinder nach ihrer Stellung in der Gruppe ein' },
   { seite: 314, thema: 'Erkennung der Begabung einzelner Kinder', grund: 'stellt Merkmale einzelner Kinder fest' },
   { seite: 314, thema: 'Diagnostik der Schulreife', grund: 'diagnostiziert einzelne Kinder' },
-  { seite: 314, thema: 'Kinder mit besonderem Förderbedarf', grund: 'ordnet Kinder nach einem Förderbedarf ein' },
+  { seite: 314, thema: 'Kinder mit besonderem Förderbedarf', grund: 'richtet sich an einzelne Kinder, die besondere Bildungsprogramme brauchen' },
   { seite: 314, thema: 'Kategorien einzelner Kinder mit Schwierigkeiten', grund: 'ordnet einzelne Kinder in Kategorien ein' },
   { seite: 315, thema: 'Beratung zu konkreten Familien mit besonderen Merkmalen der Kinder', grund: 'betrifft einzelne Familien und ordnet Kinder ein' },
-  { seite: 316, thema: 'Typ des pädagogischen Zusammenwirkens einzelner Fachkräfte', grund: 'ordnet einzelne Fachkräfte einem Typ zu' },
+  { seite: 316, thema: 'Typ des pädagogischen Zusammenwirkens einzelner Fachkräfte', grund: 'Lesart: ordnet einzelne Fachkräfte einem Typ zu' },
   { seite: 316, thema: 'Analyse der Arbeit einer Fachkraft im Auftrag der Verwaltung', grund: 'analysiert eine einzelne Fachkraft' },
 ];
 

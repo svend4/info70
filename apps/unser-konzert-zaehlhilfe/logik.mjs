@@ -30,7 +30,7 @@ export const TEXTE = Object.freeze({
   titel: 'Unser Konzert – Zählhilfe für die Fachkraft',
   untertitel: 'Vorschläge für Lieder und Tänze für ein Kita-Fest sammeln und Handzeichen je Vorschlag zählen. Keine Namen, nichts wird gespeichert.',
   hinweisTitel: 'Bitte vor dem Zählen lesen',
-  hinweis: 'Ob Kinder mitentscheiden, entscheidet der Träger bzw. das Team. Das Werkzeug hilft nur nach einer Abstimmung in der Gruppe. Abstimmen Sie verdeckt (Handzeichen oder Klebepunkte), damit sich Kinder nicht beeinflussen. Die Zählung ordnet keine Stimme einem Kind zu.',
+  hinweis: 'Ob Kinder mitentscheiden, entscheidet der Träger bzw. das Team. Das Werkzeug hilft nur nach einer Abstimmung in der Gruppe. Handzeichen sind für die Gruppe sichtbar, die Abstimmung ist also offen. Die Zählung ordnet keine Stimme einem Kind zu und hält keine Namen fest.',
   eigenentwurf: 'Eigenentwurf',
   titelFeld: 'Titel des Vorschlags',
   titelHinweis: 'Nur der Titel, höchstens 60 Zeichen. Keine Namen.',
@@ -45,7 +45,7 @@ export const TEXTE = Object.freeze({
   zuruecksetzenJa: 'Ja, Zählung zurücksetzen',
   abbrechen: 'Abbrechen',
   anregungenTitel: 'Anregungen (keine Vorgaben)',
-  anregungenHilfe: 'Aus der Quelle Praleska übernommen, als Anregung und nicht als Vorgabe.',
+  anregungenHilfe: 'Sinngemäß aus der Quelle Praleska übernommen (umformuliert), als Anregung und nicht als Vorgabe.',
   fussText: 'Werkzeug für Fachkräfte · ohne Konto · nichts wird gespeichert · Eigenentwurf',
   impressum: 'Impressum & Datenschutz',
 });
@@ -91,7 +91,7 @@ export const ANREGUNGEN = Object.freeze([
   }),
   Object.freeze({
     seite: 272,
-    text: 'Feste und Feiern etwa ein- bis zweimal im Monat, unter anderem zu Neujahr und zum 8. März.',
+    text: 'Feste wie Neujahr und der 8. März; Unterhaltungen etwa ein- bis zweimal im Monat, im Sommer wöchentlich.',
   }),
 ]);
 
@@ -121,8 +121,8 @@ export function darfHinzugefuegtWerden(anzahl) {
  * @returns {{ok: true, titel: string} | {ok: false, grund: 'leer' | 'zu-lang' | 'doppelt'}}
  */
 export function pruefeTitel(roh, vorhandene = []) {
-  const titel = typeof roh === 'string' ? roh.replace(/\s+/g, ' ').trim() : '';
-  if (titel === '') return { ok: false, grund: 'leer' };
+  const titel = typeof roh === 'string' ? roh.normalize('NFC').replace(/\s+/g, ' ').trim() : '';
+  if (titel === '' || !/[\p{L}\p{N}]/u.test(titel)) return { ok: false, grund: 'leer' };
   if ([...titel].length > MAX_TITEL_ZEICHEN) return { ok: false, grund: 'zu-lang' };
   const schluessel = titel.toLocaleLowerCase('de-DE');
   if (vorhandene.some((v) => v.titel.toLocaleLowerCase('de-DE') === schluessel)) {

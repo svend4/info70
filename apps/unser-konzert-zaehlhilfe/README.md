@@ -8,9 +8,8 @@ Programmliste ordnet nach dieser Zählung und zeigt nur die Titel.
 ## Hinweis auf der Seite (Eigenentwurf)
 
 > Ob Kinder mitentscheiden, entscheidet der Träger bzw. das Team. Das Werkzeug
-> hilft nur nach einer Abstimmung in der Gruppe. Abstimmen Sie verdeckt
-> (Handzeichen oder Klebepunkte), damit sich Kinder nicht beeinflussen. Die
-> Zählung ordnet keine Stimme einem Kind zu.
+> hilft nur nach einer Abstimmung in der Gruppe. Handzeichen sind für die Gruppe sichtbar, die
+> Abstimmung ist also offen. Die Zählung ordnet keine Stimme einem Kind zu und hält keine Namen fest.
 
 ## Was die App ist
 
@@ -47,8 +46,8 @@ Programmliste, die die Fachkraft selbst herunterlädt. Sie enthält nur Titel.
 - Praleska (Volltext), S. 262: Repertoire der Lieblingslieder von Gruppe und
   kleineren Gruppen aufbauen. Anregung, umformuliert, kein Zitat.
 - Praleska, S. 265: besonders geliebte Tänze im Repertoire sammeln. Anregung.
-- Praleska, S. 272: Feste und Feiern etwa ein- bis zweimal im Monat, unter
-  anderem zu Neujahr und zum 8. März. Anregung.
+- Praleska, S. 272: Feste wie Neujahr und der 8. März; Unterhaltungen etwa ein- bis
+  zweimal im Monat, im Sommer wöchentlich. Anregung, umformuliert.
 - docs/02, Z. 22–24: keine externen Netzwerkanfragen.
 - docs/02, Z. 141–146: kein Kind wird bewertet, auch nicht in einer Rangfolge.
 - docs/10, №92 („Unser Konzert – Mitbestimmen“): Ausgangspunkt. Die dort
@@ -86,7 +85,7 @@ Programmliste, die die Fachkraft selbst herunterlädt. Sie enthält nur Titel.
 
 ## Tests
 
-31 Tests.
+32 Tests.
 
 - `test/logik.test.mjs`: Vorschlagsliste, Titel, Art, Zählung nie negativ,
   Sortierung der Programmliste ohne Zahlen, Textdatei, Zählbogen, Wortlaut des Hinweises.

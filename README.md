@@ -80,7 +80,7 @@ npm test       # тесты (node --test)
 - Мультиязычность: `feed-forscher` — de/en/uk/ru + Leichte Sprache,
   `elternabend-kit` — de/en/uk/ru, `kettenbrief-stopper` — de/en + Leichte Sprache.
 
-**Проверки.** Полный прогон: **2056 тестов**. CI
+**Проверки.** Полный прогон: **2057 тестов**. CI
 (`.github/workflows/test.yml`) гоняет весь набор плюс запрет внешних URL и
 сторонних пакетов. Тестами закреплены не только логика, но и обещания: a11y-аудит
 всех страниц, соответствие текста Datenschutz-страницы реализации и охват
@@ -314,6 +314,8 @@ Hilfe-Insel.
 | `schatzkarten-generator` | Для Erwachsener: Raster-Karten, Wegkarten und Lösungsblatt zum Drucken; Spielnamen als Übersetzung S. 246, Rest Eigenentwurf | кат.№90 |
 | `mini-oper-baukasten` | Для Erwachsener: Gerüst für eine kleine Musikszene offline, ohne KI; Titel aus S. 269 ohne Text | кат.№91 |
 | `buchecke-check` | Для Kita-команды: пространство, фонд книг, ежедневное чтение и уход за книжным уголком; 9 вопросов с S. 155, 186, 251, 6 — Eigenentwurf; без сведений о детях | кат.№85 |
+| `unser-konzert-zaehlhilfe` | Для Fachkraft: предложения песен и танцев, подсчёт Handzeichen по каждому предложению, программа и пустой лист для подсчёта; Anregungen sinngemäß aus S. 262, 265, 272; без данных о детях | кат.№92 |
+| `kita-unterstuetzungs-navigator` | Для Fachkraft und Träger: контрольный список 32 задач (S. 312–317), 24 взяты, 8 исключены; итог по блокам без процентов; без имён и контактов | кат.№93 |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
 метод «Eltern-Kompass») — ссылка «👪 Für Eltern» в подвале. Единая витрина —

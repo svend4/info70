@@ -1364,10 +1364,10 @@
    "titel": "Unser Konzert – Mitbestimmen",
    "typ": "erzieher-werkzeug",
    "alter": "5-7 mit Erzieher*in",
-   "engine": "Beteiligung (Abstimmung + Klassen-Koffer-Export)",
-   "beschreibung": "Kinder stimmen ueber Lieblingslieder und Taenze fuer das Kita-Fest ab; Ergebnis als Datei-Export fuer die Programmplanung – setzt die Praleska-Idee der gruppeneigenen Lieblingsrepertoires partizipativ um.",
-   "adaptionDE": "Direkter Standard-Bezug: Beteiligungsgebot §45 SGB VIII fuer Kitas; Bildkarten-Abstimmung ohne Lesenmuessen; anonym, ohne Konten (DSGVO Art. 8 unkritisch).",
-   "quelleImBuch": "S.262 (Repertoire der Lieblingslieder von Gruppe/Untergruppen aufbauen)",
+   "engine": "Zählhilfe (Handzeichen je Vorschlag, Programmliste, leerer Zählbogen)",
+   "beschreibung": "Die Fachkraft sammelt Lieder- und Tanzvorschläge für das Kita-Fest, zählt je Vorschlag die Handzeichen und druckt eine Programmliste. Ob Kinder mitentscheiden, entscheiden Träger oder Team; das Werkzeug führt keine Abstimmung durch.",
+   "adaptionDE": "Umbau Welle 89: keine Abstimmung der Kinder im Gerät; Handzeichen sind für die Gruppe sichtbar, das Verfahren ist nicht anonym; kein Gesetzesbezug (§45 SGB VIII nicht geprüft, gestrichen); keine Namen, nichts wird gespeichert.",
+   "quelleImBuch": "S.262 (Lieder), S.265 (Tänze), S.272 (Feste und Unterhaltungen)",
    "aufwand": "S"
   },
   {
@@ -1474,8 +1474,8 @@
    "titel": "Kita-Unterstuetzungs-Navigator",
    "typ": "erzieher-werkzeug",
    "alter": "Fachkraefte/Traeger",
-   "beschreibung": "Katalog + Checkliste nach dem Anhang Psychologischer Dienst (32 Aufgaben in 4 Feldern: Kinder, Eltern, Team, Praevention/Burnout): Kita prueft, welche psychologisch-paedagogischen Unterstuetzungsaufgaben abgedeckt sind, und erhaelt einen Bericht mit passenden Anlaufstellen.",
-   "adaptionDE": "Uebersetzung der Rollen ins deutsche System: Kita-Fachberatung, Erziehungsberatungsstellen (SGB VIII Paragraf 28), Fruehfoerderstellen, schulpsychologischer Dienst statt Kita-Psychologe sowjetischer Praegung; Sozialraum-Verweise als gepflegte lokale Liste, keine externen Requests; anschlussfaehig an BzKJ-Foerderlogik Kinderschutz/Praevention.",
+   "beschreibung": "Checkliste nach dem Anhang Psychologischer Dienst (32 Aufgaben in vier Blöcken, S. 312–317; 24 übernommen, davon eine teilweise, 8 ausgeschlossen): Die Einrichtung prüft, welche Unterstützungsaufgaben geregelt sind, und erhält einen Bericht je Block mit Anlaufstellen als Kategorien.",
+   "adaptionDE": "Anlaufstellen als Kategorien (Eigenentwurf; die Quelle nennt auf S. 314 nur psychologische, medizinische und medizinisch-pädagogische Zentren); keine Gesetzesverweise, weil keine geprüft sind; keine lokale Liste, keine Kontaktdaten, keine externen Requests.",
    "aufwand": "M",
    "engine": "Erwachsenen-Katalog+Checkliste+Bericht (foerder-navigator)",
    "quelleImBuch": "Anhang: Psichologitscheskaja sluschba, S.312-317"

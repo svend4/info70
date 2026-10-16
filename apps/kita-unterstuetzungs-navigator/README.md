@@ -5,7 +5,7 @@ Unterstützungsaufgaben die Einrichtung abdeckt. Grundlage ist der Anhang
 „Психологическая служба в дошкольном учреждении“ der Praleska, Seiten 312 bis 317
 (Katalog Nr. 93, docs/10-praleska-baukasten.md).
 
-Übernommen sind **24 Aufgaben** in vier Blöcken. Zu jeder Frage gibt es vier Antworten:
+Übernommen sind **24 Aufgaben** in vier Blöcken, davon eine teilweise (S. 317). Acht sind ausgeschlossen. Zu jeder Frage gibt es vier Antworten:
 **geregelt**, **teilweise**, **nicht geregelt**, **Träger oder extern**. Gezählt wird je Block.
 Der Bericht als Text kann gedruckt oder als Textdatei gespeichert werden. Außerdem gibt es
 einen leeren Druckbogen zum Ausfüllen von Hand.
@@ -42,9 +42,9 @@ Quelle. Die deutsche Übersetzung in Klammern ist Eigenentwurf.
 | Работа с педагогами (Arbeit mit dem Team) | 315–317 | 10 |
 
 Die Fragen und Hinweise sind Eigenentwurf nach der jeweiligen Aufgabe. Bei jeder Frage steht die Seite
-der Quelle. Zitate aus der Quelle gibt es nicht; die App übernimmt nur die Blocküberschriften.
+der Quelle. Die App zitiert den Anhangstitel und die vier Blocküberschriften; die Fragen selbst sind Eigenentwurf.
 
-Die Quelle nennt 32 Aufgaben in vier Blöcken, als Aufzählungspunkte ohne Nummern. 24 davon sind übernommen (siehe unten).
+Die Quelle nennt 32 Aufgaben in vier Blöcken, als Aufzählungspunkte ohne Nummern. 24 davon sind übernommen, acht ausgeschlossen (siehe unten).
 
 ## Ausgeschlossene Aufgaben
 
@@ -79,27 +79,38 @@ Die Liste steht im Quelltext als `AUSGESCHLOSSEN` und `TEILWEISE_AUSGESCHLOSSEN`
   Entwicklung von Angeboten, gemeinsame Haltung, berufliche Weiterentwicklung, Überlastung im Team,
   pädagogische Konferenzen, psychologisches Klima im Team.
 
-**Frage zur Überlastung (S. 317):** Sie steht nur auf Einrichtungsebene als „Gibt es Bedingungen, die
-Überlastung im Team vorbeugen?“. Der Hinweis dazu lautet: „Bei Überlastung einzelner Personen entscheiden
+**Frage zum emotionalen Ausbrennen (S. 317):** Die einzige Burnout-Aufgabe der Quelle steht im Block Team. Die App fragt nur auf Einrichtungsebene: „Gibt es Bedingungen, die
+dem emotionalen Ausbrennen von Fachkräften vorbeugen?“. Der Hinweis dazu lautet: „Bei Überlastung einzelner Personen entscheiden
 Leitung und Träger. Dieses Werkzeug bewertet keine Person.“ (Eigenentwurf)
 
 ## Grenzfälle, die du prüfen solltest
 
 1. **Angebote für Einzelne oder Gruppen** (S. 315 Eltern, S. 316 berufliche Weiterentwicklung): übernommen,
-   weil der Gegenstand die Eltern oder das Team insgesamt ist. Es geht um Angebote, nicht um eine Einordnung.
-2. **Hilfe für Kinder mit besonderem Förderbedarf** (S. 314): ausgeschlossen, weil sie Kinder nach einem
-   Bedarf einordnet. Wer nur das allgemeine Förderangebot meint, kann die Aufgabe übernehmen.
-3. **Typ des Zusammenwirkens** (S. 316): ausgeschlossen, weil jede Fachkraft einem Typ zugeordnet wird.
+   weil das Angebot Eltern oder dem Team dient und keine Einordnung einzelner Personen ist.
+2. **Hilfe für Kinder mit besonderem Förderbedarf** (S. 314): ausgeschlossen, als Lesart: sie richtet sich an einzelne Kinder mit einem
+   Bedarf. Meint die Aufgabe nur das allgemeine Förderangebot, wäre sie übernehmbar; das ist eine offene Entscheidung.
+3. **Typ des Zusammenwirkens** (S. 316): ausgeschlossen, als Lesart: die Aufgabe ordnet einzelne Fachkräfte einem Typ zu.
    Eine Frage auf Teamebene wäre möglich.
 4. **Teil der Aufgabe auf S. 317:** die Verträglichkeit einzelner Fachkräfte mit einer Gruppe ist nicht
    Teil der Fragen. Die Frage zum Klima im Team bleibt.
+
+## Verkürzungen gegenüber dem Wortlaut
+
+Die Fragen sind Eigenentwurf nach den Aufgaben und geben den Wortlaut nicht vollständig wieder. Bekannte Verkürzungen:
+
+- Rechte des Kindes: Die Quelle spricht von Kontrolle der Einhaltung der Rechte, die Frage von „achtet“.
+- Eingewöhnung: Die Quelle nennt auch die Schulbereitschaft, die Frage lässt sie aus.
+- Förderaufgabe: Die Quelle nennt korrigierende Maßnahmen, die Frage lässt sie aus.
+- Konferenzen: Die Quelle beschreibt die Teilnahme an Räten, die Frage fragt, ob Fragen behandelt werden.
+- Entwicklungsangebote: Die Quelle nennt Entwicklungstechnologien, die Frage spricht von Lern- und Erziehungsangeboten.
+- Hilfsmittel: Die Quelle meint die eigenen Kinder der Fachkraft, die Frage nennt Gruppe und Familien.
 
 ## Antworten und Zählung
 
 Jede Frage hat die vier Antworten. Ein zweiter Druck auf dieselbe Antwort nimmt sie zurück. Je Block
 steht eine Zählung, zum Beispiel:
 
-`geregelt: 2, teilweise: 1, nicht geregelt: 3, Träger oder extern: 0, ohne Antwort: 0`
+`geregelt: 2, teilweise: 1, nicht geregelt: 2, Träger oder extern: 0, ohne Antwort: 0` (ein Block mit fünf Fragen)
 
 Die Zählung je Block ergibt die Zahl seiner Fragen. Eine Zusammenfassung über alle Blöcke gibt es nicht.
 
@@ -115,6 +126,8 @@ Die Zählung je Block ergibt die Zahl seiner Fragen. Eine Zusammenfassung über 
 `druck.css` blendet beim Drucken die Bildschirmseite aus. `body[data-druck]` bestimmt, welches Blatt erscheint.
 
 ## Anlaufstellen
+
+Eigenentwurf. Die Quelle nennt auf S. 314 nur psychologische, medizinische und medizinisch-pädagogische Zentren, an die einzelne Kinder verwiesen werden; die fünf Kategorien stammen nicht aus dem Text.
 
 Die Liste nennt fünf Kategorien: Kita-Fachberatung, Erziehungsberatungsstelle für Familien,
 Frühförderstelle, Schulpsychologischer Dienst und Fachberatung des Trägers. Zu jeder Kategorie gibt
@@ -135,7 +148,7 @@ es die Zeile „Kontakt (von Hand eintragen)“. Die App kennt keine Adresse und
 
 37 Tests in zwei Dateien:
 
-- `test/logik.test.mjs`: genau die 24 Aufgaben mit Seiten, Blocknamen, Burnout-Frage mit Wortlaut und
+- `test/logik.test.mjs`: genau die 24 Aufgaben mit Seiten, Blocknamen, Burnout-Frage mit
   Hinweis, Ausschlüsse mit Seiten, Zählung je Block, Bericht ohne Prozentzeichen, keine Summe in der
   Schnittstelle.
 - `test/regeln.test.mjs`: Quelltext. Keine fremde Adresse, nichts gespeichert, genau ein Eingabefeld (bei

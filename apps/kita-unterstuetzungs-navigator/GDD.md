@@ -30,7 +30,7 @@
    eine zweite Lesung geprüft. Ein Gegencheck mit der Quelle auf den Seiten 312 bis 317 steht aus.
 4. **Anlaufstellen.** Die Liste nennt fünf Kategorien ohne Kontakt. Ob es im Umfeld passende Stellen gibt, weiß
    nur die Einrichtung. Eine lokale Liste ist nicht vorgesehen.
-5. **Rechtsbezüge fehlen.** Der Anhang und der Katalog verweisen auf Rechte des Kindes und auf Gesetze. Beides
+5. **Rechtsbezüge fehlen.** Der Katalog verweist auf Gesetze; der Anhang nennt nur die Deklaration der Rechte des Kindes. Die App nennt keine Gesetze. Beides
    ist nicht geprüft und deshalb nicht in den Texten. Eine Rechtsangabe kommt erst zurück, wenn sie geprüft ist.
 6. **Erprobung.** Ein Test mit drei bis fünf Fachkräften und einer Vertretung des Trägers klärt, ob die Fragen
    verständlich sind und ob die Ausschlüsse nachvollziehbar sind.

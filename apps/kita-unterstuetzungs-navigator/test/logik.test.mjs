@@ -49,8 +49,8 @@ test('keine Frage betrifft einzelne Kinder, Familien oder Fachkräfte', () => {
   }
 });
 
-test('die Burnout-Aufgabe steht nur auf Einrichtungsebene, mit Wortlaut und Hinweis', () => {
-  const treffer = alle.filter((a) => a.frage === 'Gibt es Bedingungen, die Überlastung im Team vorbeugen?');
+test('die Burnout-Aufgabe steht nur auf Einrichtungsebene, mit Hinweis', () => {
+  const treffer = alle.filter((a) => a.frage === 'Gibt es Bedingungen, die dem emotionalen Ausbrennen von Fachkräften vorbeugen?');
   assert.equal(treffer.length, 1);
   assert.equal(treffer[0].seite, 317);
   assert.equal(treffer[0].hinweis, 'Hinweis: Bei Überlastung einzelner Personen entscheiden Leitung und Träger. Dieses Werkzeug bewertet keine Person.');
