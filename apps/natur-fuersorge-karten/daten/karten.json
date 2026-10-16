@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte mit Kindern von 1 bis 3 Jahren (Gruppe „Малыши“, S. 6 und S. 44)",
+  "titel": "Natur-Fürsorge: Handlungen und Aufgaben für Fachkräfte",
+  "hinweis": "Die vier Aufgaben stehen auf S. 96 als Aufgaben für die Fachkraft, nicht als Fähigkeiten der Kinder. Die drei Handlungen sind Beispiele aus dem Text. Die Anregungen auf den Karten und die Checkliste sind ein Eigenentwurf. Die Quelle sieht in diesem Abschnitt kein Protokoll über einzelne Kinder vor; deshalb gibt es hier keines.",
+  "wasEsIst": "Eine Kartei zum Drucken für die Pflege von Zimmerpflanzen, Pflanzen auf dem Beet und Tieren der Naturecke. Die Karten zeigen die Handlungen; die Checkliste hilft Erwachsenen, den richtigen Zeitpunkt zu erkennen. Nichts wird gespeichert.",
+  "ziele": [
+    {
+      "id": "z1",
+      "text": "Das Interesse der Kinder am Beobachten der Pflegearbeit der Erwachsenen an Tieren und Pflanzen wecken.",
+      "quelle": "S. 96",
+      "zitat": "развивать интерес к наблюдению за трудом взрослого по уходу за животными уголка природы и по выращиванию растений"
+    },
+    {
+      "id": "z2",
+      "text": "Freude an den gepflegten Pflanzen und an der Fürsorge für die Tiere erleben.",
+      "quelle": "S. 96",
+      "zitat": "способствовать возникновению у ребенка радости от цветения комнатных растений, от результатов проявления заботы о животных"
+    },
+    {
+      "id": "z3",
+      "text": "Den Wunsch stärken, einfache Handlungen der Pflege selbst auszuführen.",
+      "quelle": "S. 96",
+      "zitat": "желания самостоятельно выполнять элементарные трудовые действия по уходу за растениями и животными"
+    },
+    {
+      "id": "z4",
+      "text": "Erkennen, wann eine Pflegehandlung nötig ist, je nach Zustand der Pflanzen und Tiere (zum Beispiel gießen, füttern, Käfig und Aquarium reinigen).",
+      "quelle": "S. 96",
+      "zitat": "учить замечать и понимать своевременность проведения взрослым того или иного трудового действия по уходу за растениями или животными"
+    }
+  ],
+  "handlungen": [
+    {
+      "id": "h1",
+      "titel": "Gießen",
+      "beispiel": "полить комнатные растения, растения на грядках",
+      "quelle": "S. 96",
+      "ziel": "z3"
+    },
+    {
+      "id": "h2",
+      "titel": "Vögel und Fische füttern",
+      "beispiel": "покормить птичек, рыбок",
+      "quelle": "S. 96",
+      "ziel": "z3"
+    },
+    {
+      "id": "h3",
+      "titel": "Gemüse ernten",
+      "beispiel": "собрать овощи",
+      "quelle": "S. 96",
+      "ziel": "z3"
+    }
+  ],
+  "karten": [
+    {
+      "id": "k01",
+      "handlung": "h1",
+      "anregung": "Die Erwachsene zeigt, wie viel Wasser die Pflanze braucht und wann die Erde trocken ist; das Kind gießt mit.",
+      "eigenentwurf": true
+    },
+    {
+      "id": "k02",
+      "handlung": "h2",
+      "anregung": "Das Kind legt Futter auf die Schale oder ins Futterhäuschen; die Erwachsene erklärt, was die Tiere brauchen.",
+      "eigenentwurf": true
+    },
+    {
+      "id": "k03",
+      "handlung": "h3",
+      "anregung": "Gemüse aus dem Beet oder aus dem Laden: Das Kind trägt die Ernte zum Tisch. Nur Gemüse, wie in der Quelle genannt.",
+      "eigenentwurf": true
+    }
+  ],
+  "checkliste": {
+    "titel": "Erwachsenen-Checkliste: den richtigen Zeitpunkt erkennen (Ziel 4)",
+    "quelle": "S. 96, Ziel 4",
+    "eigenentwurf": true,
+    "fragen": [
+      "Wie sieht die Erde der Pflanzen heute aus, und sind die Blätter trocken oder schlaff?",
+      "Wann wurden die Tiere zuletzt gefüttert, und ist ihr Wasser und ihr Futter frisch?",
+      "Ist das Material bereit (Gießkanne, Futter, Schale, Handfeger)?",
+      "Welche Gelegenheit gibt es heute, eine Pflegehandlung im Alltag gemeinsam zu machen?"
+    ]
+  },
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Gruppe „Малыши“, Unterabschnitt „Труд в природе“, S. 96 (Aufgaben). Begriffe in deutscher Übertragung, Zitate im russischen Original. Altersangabe S. 6 und S. 44.",
+    "abweichung": "Der Katalogeintrag nannte „Kinder 2–3“ als Alter. Der Text nennt 1 bis 3 Jahre (S. 6, S. 44). Er nennt keine Altersnorm für die drei Handlungen. Der Katalog nannte ein Mini-Protokoll, welches Kind welche Handlung selbstständig zeigt; der Abschnitt sieht keine Dokumentation von Kindern vor, und das Protokoll wird hier nicht gebaut. Der Katalog nannte Bezüge zu BNE und zu den Länderplänen; beides steht nicht im Text (das Programm ist das belarussische Programm, S. 3). „Vier Ziele“ gilt für „Труд в природе“ auf S. 96, nicht für das ganze Kapitel „Приобщаемся к труду“ (S. 94, sechs allgemeine Aufgaben)."
+  }
+}

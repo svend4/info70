@@ -1,0 +1,8 @@
+{
+  "name": "@info70/bewegungs-richtwerte-3-5",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bewegungs-Richtwerte für Kinder von 4 und 5 Jahren: vierundzwanzig Angaben mit Maß aus den Bewegungsaufgaben der Praleska-Quelle (S. 128–134), nach Lebensjahr und Bewegungsart. Richtwerte, keine Norm und keine Bewertung einzelner Kinder; kein Beobachtungsbogen, kein Kriterien-Check, kein Bericht-Export. Zum Drucken, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

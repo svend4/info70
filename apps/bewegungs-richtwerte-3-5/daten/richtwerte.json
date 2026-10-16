@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte mit Kindern von 4 bis 5 Jahren (Gruppe „Почемучки“, Abschnitt „Развитие движений“, S. 128–134)",
+  "titel": "Bewegungsaufgaben für Vier- und Fünfjährige: Richtwerte aus der Quelle",
+  "hinweis": "Die Angaben mit Maß stehen in den Beschreibungen der Bewegungsaufgaben im Abschnitt „Развитие движений“ (S. 128–134), getrennt nach viertem und fünftem Lebensjahr. Sie sind Richtwerte aus dem Text, keine Norm, kein Test und keine Bewertung einzelner Kinder. Eine Maßangabe fehlt bei „Balancieren“: Die Quelle nennt Übungen im Gleichgewicht (S. 132–133), aber keine messbare Größe.",
+  "wasEsIst": "Ein Nachschlageblatt für Fachkräfte: Wo steht eine Bewegungsaufgabe mit Maß, in welchem Lebensjahr und auf welcher Seite. Es gibt keine Eingabe, keinen Kriterien-Check und keinen Bericht. Nichts wird gespeichert.",
+  "eintraege": [
+    {
+      "id": "r01",
+      "jahr": 4,
+      "art": "Laufen",
+      "text": "Schnell 10–20 m laufen.",
+      "zitat": "пробегая быстро 10—20 м",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r02",
+      "jahr": 4,
+      "art": "Laufen",
+      "text": "Ohne Pause 40–50 Sekunden laufen.",
+      "zitat": "бегать без перерыва 40—50 с",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r03",
+      "jahr": 4,
+      "art": "Springen",
+      "text": "Aus dem Stand in die Weite 30–50 cm springen.",
+      "zitat": "в длину с места (30—50 см)",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r04",
+      "jahr": 4,
+      "art": "Springen",
+      "text": "Auf flache, niedrige Gegenstände bis 5–7 cm springen.",
+      "zitat": "вскакивание на плоские низкие предметы (до 5—7 см)",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r05",
+      "jahr": 4,
+      "art": "Springen",
+      "text": "Von 10–15 cm Höhe herunterspringen.",
+      "zitat": "соскакивание (10—15 см)",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r06",
+      "jahr": 4,
+      "art": "Kriechen und Klettern",
+      "text": "Geradeaus zu einem Gegenstand kriechen, mindestens 6 m weit.",
+      "zitat": "проползать по прямой к предмету на расстоянии не менее 6 м",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r07",
+      "jahr": 4,
+      "art": "Kriechen und Klettern",
+      "text": "Auf eine Sprossenwand (1,5–2 m hoch) steigen und wieder herunter.",
+      "zitat": "влезать на гимнастическую лестницу (высота 1,5—2 м) и слезать",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r08",
+      "jahr": 4,
+      "art": "Werfen, Rollen, Fangen",
+      "text": "Einen Gegenstand mit rechts und links auf 2,5–5 m werfen.",
+      "zitat": "бросать предмет на определенное расстояние правой и левой рукой (2,5—5 м)",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r09",
+      "jahr": 4,
+      "art": "Werfen, Rollen, Fangen",
+      "text": "Bälle aus 1–1,5 m durch ein 50–60 cm breites Tor rollen.",
+      "zitat": "прокатывать мячи в ворота шириной 50—60 см с расстояния 1—1,5 м",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r10",
+      "jahr": 4,
+      "art": "Werfen, Rollen, Fangen",
+      "text": "Den Ball 2–3 Mal prellen und fangen.",
+      "zitat": "бросать мяч об пол с отскоком вверх 2—3 раза, стараясь поймать его",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r11",
+      "jahr": 4,
+      "art": "Werfen, Rollen, Fangen",
+      "text": "Bälle von einer Rutsche auf Ziele 1,5–2 m entfernt rollen.",
+      "zitat": "скатывать мячи, обручи с горки с попаданием в предметы (расстояние 1,5—2 м)",
+      "seite": "S. 129"
+    },
+    {
+      "id": "r12",
+      "jahr": 5,
+      "art": "Laufen",
+      "text": "Ununterbrochen 1–1,5 Minuten laufen.",
+      "zitat": "бежать непрерывно 1—1,5 мин",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r13",
+      "jahr": 5,
+      "art": "Laufen",
+      "text": "40–60 m mit mittlerer Geschwindigkeit laufen.",
+      "zitat": "пробегать 40—60 м со средней скоростью",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r14",
+      "jahr": 5,
+      "art": "Laufen",
+      "text": "80–120 m im Wechsel mit Gehen laufen (2–3 Mal).",
+      "zitat": "80—120 м при чередовании с ходьбой (2—3 раза)",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r15",
+      "jahr": 5,
+      "art": "Laufen",
+      "text": "10 m schnell laufen (2–3 Mal).",
+      "zitat": "быстро 10 м (2—3 раза)",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r16",
+      "jahr": 5,
+      "art": "Laufen",
+      "text": "20 und 30 m so schnell wie möglich laufen; der Text nennt etwa 9,5 Sekunden (Zuordnung im Text nicht eindeutig).",
+      "zitat": "как можно быстрее 20 и 30 м (примерно за 9,5 с)",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r17",
+      "jahr": 5,
+      "art": "Laufen",
+      "text": "Langsam laufen: Die Strecke wächst von 10–20 m am Jahresanfang auf 120–160 m am Jahresende.",
+      "zitat": "расстояние увеличивается с 10—20 м в начале года до 120—160 м к концу",
+      "seite": "S. 132"
+    },
+    {
+      "id": "r18",
+      "jahr": 5,
+      "art": "Springen",
+      "text": "Aus dem Stand mindestens 70 cm weit springen.",
+      "zitat": "прыгать в длину с места не меньше чем на 70 см",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r19",
+      "jahr": 5,
+      "art": "Springen",
+      "text": "Von 20–30 cm Höhe herunterspringen.",
+      "zitat": "спрыгивать с высоты 20—30 см",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r20",
+      "jahr": 5,
+      "art": "Springen",
+      "text": "Über 6–8 Linien springen; der Abstand zwischen den Linien beträgt 40–48 cm.",
+      "zitat": "через 6—8 линий (расстояние между ними 40—48 см)",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r21",
+      "jahr": 5,
+      "art": "Springen",
+      "text": "Über 5–6 Gegenstände springen, 5–10 cm hoch.",
+      "zitat": "перепрыгивать через 5—6 предметов высотой 5—10 см",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r22",
+      "jahr": 5,
+      "art": "Kriechen und Klettern",
+      "text": "Mindestens 10 m kriechen.",
+      "zitat": "проползать не менее 10 м",
+      "seite": "S. 131"
+    },
+    {
+      "id": "r23",
+      "jahr": 5,
+      "art": "Werfen, Rollen, Fangen",
+      "text": "Den Ball mit rechts und links mindestens 10 Mal hintereinander am Boden prellen.",
+      "zitat": "отбивать мяч об пол правой и левой рукой не менее 10 раз подряд",
+      "seite": "S. 132"
+    },
+    {
+      "id": "r24",
+      "jahr": 5,
+      "art": "Werfen, Rollen, Fangen",
+      "text": "Gegen Jahresende den Ball auf mindestens 4,5–6,5 m werfen.",
+      "zitat": "бросать мяч на расстояние (к концу года не менее 4,5—6,5 м)",
+      "seite": "S. 132"
+    }
+  ],
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Gruppe „Почемучки“, Abschnitt „Развитие движений“, S. 128–134 (Aufgabenbeschreibungen je Lebensjahr). Begriffe in deutscher Übertragung, Zitate im russischen Original.",
+    "abweichung": "Der Katalogeintrag nannte 32 messbare Zielwerte, „Balancieren“ als messbaren Wert, eine Norm, einen Beobachtungsbogen mit Verlaufs- und Kriterien-Check und einen Bericht-Export. Der Text enthält Angaben mit Maß in den Bewegungsaufgaben; eine feste Zahl 32 lässt sich nach keiner Zählregel bestätigen (die Angaben mit Maß schließen Tageszeiten ein, die keine Bewegungsaufgaben sind). Balancieren ist eine Übungsart ohne Maß. Eine Norm sagt der Text nicht. Der Beobachtungsbogen, der Kriterien-Check und der Bericht-Export sind Eigenentwürfe und werden hier nicht gebaut, weil sie einzelne Kinder bewerten würden."
+  }
+}

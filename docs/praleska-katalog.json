@@ -713,7 +713,8 @@
    "adaptionDE": "Heimische Arten und deutscher Jahreszeitenlauf; Anschluss an BNE (Bildung fuer nachhaltige Entwicklung) in den Laenderplaenen; Protokoll lokal ohne personenbezogene Cloud-Daten (DSGVO).",
    "aufwand": "S",
    "engine": "Erwachsenen-Checkliste+Bericht (optional), sonst Druckmaterial",
-   "quelleImBuch": "S. 96, Arbeit in der Natur (4 Ziele)"
+   "quelleImBuch": "S. 96, Arbeit in der Natur (4 Ziele)",
+   "korrektur": "Korrektur Welle 86: Alter 1 bis 3 Jahre (S. 6, S. 44), nicht 2–3. Vier Aufgaben auf S. 96, kein Mini-Protokoll über Kinder (nicht im Text). Gebaut als natur-fuersorge-karten."
   },
   {
    "titel": "Meine fuenf Helfer - Koerper-Entdecker",
@@ -823,7 +824,8 @@
    "adaptionDE": "Spielentwicklungs-Wissen aus der Charakteristik wird zum Praxiswerkzeug; Terminologie an deutsche Fachsprache angepasst (Als-ob-Spiel, Rollenspiel); nuetzlich fuer Entwicklungsgespraeche nach Paragraf 22a SGB VIII Qualitaetsentwicklung; keine Kinderdaten in der Cloud.",
    "quelleImBuch": "S. 104, Spielentwicklungs-Passagen (Rollenspiel-Uebergang, Spielgruppierungen)",
    "engine": "Erwachsenen-Katalog+Checkliste+Bericht",
-   "aufwand": "M"
+   "aufwand": "M",
+   "korrektur": "Korrektur Welle 86: Spielideen je Entwicklungsschritt und Verlaufsdokumentation stehen nicht im Text. Aufgaben S. 145–146, Übergang S. 104. Gebaut als spielbegleiter-rollenspiel."
   },
   {
    "titel": "Tierkinder und ihre Familien (Geschichten-Pack)",
@@ -924,7 +926,8 @@
    "adaptionDE": "Werte als Beobachtungskorridore, abgeglichen mit deutschen Motorik-Referenzen (z. B. MoMo-Studie), ausdruecklich keine Leistungsnorm; lokal gespeichert, Export nur durch die Fachkraft (DSGVO Art. 8); Bezug: Beobachtung und Dokumentation als Pflichtteil aller Bildungsplaene.",
    "aufwand": "M",
    "engine": "kriterien-check (Erwachsenen-Katalog+Checkliste+Bericht)",
-   "quelleImBuch": "Raswitie dwischeni, Zielwerte S. 128-134"
+   "quelleImBuch": "Raswitie dwischeni, Zielwerte S. 128-134",
+   "korrektur": "Korrektur Welle 86: 32 Zielwerte nicht belegbar; Balancieren ohne Maß; keine Norm im Text. Beobachtungsbogen und Kriterien-Check nicht gebaut (Bewertung einzelner Kinder). Gebaut als bewegungs-richtwerte-3-5 mit 24 Angaben (S. 129–132)."
   },
   {
    "titel": "Frischluft-Familie: Abhaertung kritisch adaptiert",

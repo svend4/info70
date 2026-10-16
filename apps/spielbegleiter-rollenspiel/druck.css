@@ -1,0 +1,30 @@
+/* Karteikarten. Kein Haken, kein Name, kein Stern (docs/02). Auf dem Bildschirm sind die
+   Druckregeln versteckt. */
+.sr-nur-druck { display: none; }
+.sr-kartentitel { font-size: 1.15rem; margin: 0 0 0.3rem; }
+.sr-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
+.sr-liste { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+
+@media print {
+  .sr-nur-bildschirm { display: none !important; }
+  .sr-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .sr-karte {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1pt solid #333;
+    border-radius: 0;
+    margin: 0 0 6mm;
+    padding: 4mm;
+    box-shadow: none;
+  }
+  .sr-kartentitel { font-size: 12pt; margin: 0 0 2mm; }
+  .sr-karte p, .sr-karte li { font-size: 10pt; line-height: 1.35; }
+  .sr-quelle { color: #000; font-size: 8.5pt; }
+  a[href]::after { content: ""; }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .sr-quelle { color: #9ca3af; }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@info70/natur-fuersorge-karten",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Natur-Fürsorge-Karten für Kinder von 1 bis 3 Jahren: die vier Aufgaben der Praleska-Quelle (S. 96) als Aufgaben für die Fachkraft, drei Handlungen aus dem Text (gießen, Vögel und Fische füttern, Gemüse ernten) mit Anregungen als Eigenentwurf und eine Checkliste für Erwachsene. Kein Protokoll über einzelne Kinder, zum Drucken, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

@@ -1,0 +1,35 @@
+/* Karteikarten je Handlung und die Checkliste. Kein Haken, kein Name, kein Stern (docs/02).
+   Auf dem Bildschirm sind die Druckregeln versteckt. */
+.nf-nur-druck { display: none; }
+.nf-kartentitel { font-size: 1.15rem; margin: 0 0 0.3rem; }
+.nf-beispiel { font-weight: 600; margin: 0 0 0.3rem; }
+.nf-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
+.nf-zeile { border-top: 1px solid #d1d5db; padding: 0.6rem 0; }
+.nf-name { margin: 0 0 0.2rem; font-weight: 600; }
+.nf-liste { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+
+@media print {
+  .nf-nur-bildschirm { display: none !important; }
+  .nf-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .nf-karte {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1pt solid #333;
+    border-radius: 0;
+    margin: 0 0 6mm;
+    padding: 4mm;
+    box-shadow: none;
+    min-height: 5.5cm;
+  }
+  .nf-kartentitel { font-size: 12pt; margin: 0 0 2mm; }
+  .nf-karte p, .nf-karte li { font-size: 10pt; line-height: 1.35; }
+  .nf-quelle { color: #000; font-size: 8.5pt; }
+  a[href]::after { content: ""; }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .nf-zeile { border-top-color: #374151; }
+  .nf-quelle { color: #9ca3af; }
+}

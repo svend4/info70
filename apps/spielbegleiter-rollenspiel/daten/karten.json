@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "zielgruppe": "Fachkräfte mit Kindern von 3 bis 5 Jahren (Gruppe „Почемучки“, S. 6 und S. 103)",
+  "titel": "Vom Hantieren zum Rollenspiel: Aufgaben für die Fachkraft",
+  "hinweis": "Die Quelle beschreibt den Übergang vom gegenständlichen Spiel zum Rollenspiel am Ende des vierten Lebensjahres (S. 104) und nennt Aufgaben für die Fachkraft (S. 145–146). Spielideen je Entwicklungsschritt und eine Verlaufsdokumentation nennt die Quelle nicht; sie sind hier nicht enthalten. Die Checkliste ist ein Eigenentwurf und enthält keine Namen.",
+  "wasEsIst": "Eine Kartei zum Drucken mit den sieben Aufgaben der Quelle, den wichtigsten Fakten zum Übergang und einer Checkliste für Erwachsene. Nichts wird gespeichert.",
+  "fakten": [
+    {
+      "id": "f1",
+      "text": "Am Ende des vierten Lebensjahres: Übergang vom gegenständlichen Spiel zum Rollenspiel",
+      "quelle": "S. 104",
+      "zitat": "В конце четвертого года происходит переход от предметно-отобразительной игры к сюжетно-ролевой"
+    },
+    {
+      "id": "f2",
+      "text": "Die ersten Spielgruppen sind unbeständig und meist klein: Diade oder Triade",
+      "quelle": "S. 104",
+      "zitat": "(диады, триады, «чистые» по половому составу)"
+    },
+    {
+      "id": "f3",
+      "text": "Gruppe „Почемучки“: Kinder von 3 bis 5 Jahren",
+      "quelle": "S. 6",
+      "zitat": "младший дошкольный возраст (от трех до пяти лет) — «Почемучки»"
+    }
+  ],
+  "aufgaben": [
+    {
+      "id": "a1",
+      "text": "Den Übergang vom Spiel mit Dingen zum Spiel mit den Beziehungen der Erwachsenenwelt fördern.",
+      "quelle": "S. 145",
+      "zitat": "переходу от отображения действий с предметами к передаче в игре отношений в мире взрослых"
+    },
+    {
+      "id": "a2",
+      "text": "Die Spielumgebung so ordnen, dass Spielzeug als Ersatzgegenstände genutzt werden kann.",
+      "quelle": "S. 145",
+      "zitat": "предметами-заместителями"
+    },
+    {
+      "id": "a3",
+      "text": "Gemeinsame Rollenspiele jüngerer und älterer Kinder ermöglichen.",
+      "quelle": "S. 145",
+      "zitat": "совместных сюжетно-ролевых игр младших и старших воспитанников"
+    },
+    {
+      "id": "a4",
+      "text": "Rollenhandeln, Rollenbeziehungen und Rollenkommunikation zwischen den Kindern als Spielpartner stärken.",
+      "quelle": "S. 146",
+      "zitat": "обогащению ролевых действий, ролевого взаимодействия, ролевого общения между детьми как партнерами по игре"
+    },
+    {
+      "id": "a5",
+      "text": "Das Regiespiel anregen; Stoff aus eigenem Erleben, aus Büchern, Kinderfilmen und Puppenspielen nutzen.",
+      "quelle": "S. 146",
+      "zitat": "знакомства с художественной литературой, просмотра детских видеофильмов, кукольных спектаклей"
+    },
+    {
+      "id": "a6",
+      "text": "Gelungene Erfahrungen aus dem gemeinsamen Rollenspiel in das Regiespiel übertragen lassen.",
+      "quelle": "S. 146",
+      "zitat": "умений из сюжетно-ролевой игры в режиссерскую"
+    },
+    {
+      "id": "a7",
+      "text": "Eigene Ideen der Kinder im Spiel unterstützen und ihre Originalität würdigen.",
+      "quelle": "S. 146",
+      "zitat": "поддерживать, одобрять проявление оригинальности в процессе режиссерской игры"
+    }
+  ],
+  "checkliste": {
+    "titel": "Checkliste für Erwachsene (Eigenentwurf)",
+    "quelle": "S. 104, S. 145–146",
+    "eigenentwurf": true,
+    "fragen": [
+      "Gibt es Dinge, die als Ersatz dienen können (Tücher, Bausteine, Puppen, Schüsseln)?",
+      "Spielen die Kinder zu zweit oder zu dritt, und wer beginnt das Spiel?",
+      "Gibt es einen Platz für Rollenspiele (Küche, Werkstatt, Bahnhof, Arztpraxis)?",
+      "Haben jüngere und ältere Kinder gemeinsame Rollen (S. 145)?",
+      "Werden eigene Ideen der Kinder aufgegriffen und gewürdigt (S. 146)?"
+    ]
+  },
+  "quelle": {
+    "geprueft": true,
+    "werk": "Praleska, Gruppe „Почемучки“: Altersangabe S. 6; Übergang und Gruppengröße S. 104; Aufgaben Rollenspiel S. 145–146. Begriffe in deutscher Übertragung, Zitate im russischen Original.",
+    "abweichung": "Der Katalogeintrag nannte Spielideen je Entwicklungsschritt, Rollenangebote und eine kurze Verlaufsdokumentation. Der Text nennt Aufgaben für die Fachkraft (S. 145–146), keine Spielideen je Entwicklungsschritt und keine Verlaufsdokumentation. Die Gruppengröße Diade und Triade steht auf S. 104. Ein Diagnoseteil auf S. 146 (Kinder mit emotionalem Unbehagen erkennen) wird nicht übernommen: Er betrifft das Beobachten einzelner Kinder, und das gehört nicht ins Gerät."
+  }
+}

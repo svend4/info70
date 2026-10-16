@@ -1,0 +1,23 @@
+/* Nachschlageblatt. Kein Haken, kein Name, kein Stern (docs/02). Auf dem Bildschirm sind die
+   Druckregeln versteckt. */
+.rw-nur-druck { display: none; }
+.rw-zeile { border-top: 1px solid #d1d5db; padding: 0.6rem 0; }
+.rw-name { margin: 0 0 0.2rem; font-weight: 600; }
+.rw-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.3rem 0 0; }
+
+@media print {
+  .rw-nur-bildschirm { display: none !important; }
+  .rw-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .rw-karte { border: none; box-shadow: none; padding: 0; }
+  .rw-zeile { break-inside: avoid; page-break-inside: avoid; border-top: 0.5pt solid #333; }
+  .rw-zeile p { font-size: 10pt; line-height: 1.35; margin: 0 0 1mm; }
+  .rw-quelle { color: #000; font-size: 8.5pt; }
+  a[href]::after { content: ""; }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .rw-zeile { border-top-color: #374151; }
+  .rw-quelle { color: #9ca3af; }
+}

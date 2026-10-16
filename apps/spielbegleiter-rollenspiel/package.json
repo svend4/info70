@@ -1,0 +1,8 @@
+{
+  "name": "@info70/spielbegleiter-rollenspiel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vom Hantieren zum Rollenspiel für Kinder von 3 bis 5 Jahren: die sieben Aufgaben der Praleska-Quelle (S. 145–146) für die Fachkraft, Fakten zum Übergang am Ende des vierten Lebensjahres (S. 104) und eine Checkliste als Eigenentwurf. Keine Spielideen je Entwicklungsschritt und keine Verlaufsdokumentation, weil die Quelle beides nicht nennt. Kein Protokoll über Kinder, zum Drucken, offline.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
