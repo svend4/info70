@@ -10,22 +10,31 @@ installiereNetzwerkWaechter();
 
 const DATEI_NAME = 'buchecke-check-team-bericht.txt';
 const app = document.getElementById('app');
-const daten = await fetch('daten/checkliste.json').then((r) => r.json());
+const status = document.getElementById('bc-status');
 
-// Der einzige Zustand: die Antworten des Teams und eine Meldung. Im Speicher, nicht auf der Platte.
+// Der einzige Zustand: die Antworten des Teams. Im Speicher, nicht auf der Platte.
 let zustand = {};
-let meldung = null;
+let daten = null;
 
-function setze(frageId, wert) {
-  zustand = zustandSetzen(daten, zustand, frageId, wert);
-  meldung = null;
-  zeichne();
+/** Die Meldung für Bildschirmleser. Die Region bleibt bestehen; nur ihr Text wechselt. */
+function meldeStatus(text) {
+  status.textContent = text;
 }
 
-function knopf(text, aktiv, onklick, id) {
+function setze(frageId, wert) {
+  // Das Neuzeichnen ersetzt alle Knöpfe. Der Fokus kommt deshalb auf denselben Knopf zurück.
+  const fokus = document.activeElement?.id || null;
+  zustand = zustandSetzen(daten, zustand, frageId, wert);
+  meldeStatus('');
+  zeichne();
+  if (fokus) document.getElementById(fokus)?.focus({ preventScroll: true });
+}
+
+function knopf(text, aktiv, onklick, id, label) {
   return el('button', {
     class: `k-knopf k-knopf--klein${aktiv ? '' : ' k-knopf--neutral'}`,
     'aria-pressed': String(aktiv),
+    'aria-label': label,
     id,
     onclick: onklick,
   }, text);
@@ -40,7 +49,7 @@ function frageBild(f) {
     f.zitat ? el('p', { class: 'bc-zitat' }, `russisch: „${f.zitat}“`) : null,
     el('div', { class: 'k-antworten' },
       ...ZUSTAENDE.map((wert) => knopf(BESCHRIFTUNG[wert], zustand[f.id] === wert,
-        () => setze(f.id, wert), `bc-${f.id}-${wert}`))));
+        () => setze(f.id, wert), `bc-${f.id}-${wert}`, `${BESCHRIFTUNG[wert]}: ${f.text}`))));
 }
 
 function exportiere() {
@@ -51,8 +60,7 @@ function exportiere() {
   anker.click();
   anker.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  meldung = 'Bericht als Textdatei gespeichert. Er enthält keine Angaben über einzelne Kinder.';
-  zeichne();
+  meldeStatus('Bericht als Textdatei gespeichert. Er enthält keine Angaben über einzelne Kinder.');
 }
 
 function zusammenfassung() {
@@ -65,8 +73,7 @@ function zusammenfassung() {
       el('li', {}, `${b.titel}: ${b.erfuellt} von ${b.gesamt} erfüllt`))),
     el('div', { class: 'k-antworten' },
       el('button', { class: 'k-knopf', id: 'bc-speichern', onclick: exportiere }, '💾 Bericht als Datei speichern'),
-      el('button', { class: 'k-knopf k-knopf--neutral', id: 'bc-drucken', onclick: () => window.print() }, '🖨️ Bericht drucken')),
-    meldung ? el('p', { class: 'k-hinweis', role: 'status', style: 'margin:0.8rem 0 0' }, meldung) : null);
+      el('button', { class: 'k-knopf k-knopf--neutral', id: 'bc-drucken', onclick: () => window.print() }, '🖨️ Bericht drucken')));
 }
 
 function zeichne() {
@@ -89,10 +96,22 @@ function zeichne() {
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
 }
 
-const fehler = pruefeDaten(daten);
+async function ladeDaten() {
+  try {
+    const antwort = await fetch('daten/checkliste.json');
+    if (!antwort.ok) return { fehler: `Die Datei daten/checkliste.json fehlt (HTTP ${antwort.status}).` };
+    return { daten: await antwort.json() };
+  } catch {
+    return { fehler: 'Die Datei daten/checkliste.json ist nicht lesbar.' };
+  }
+}
+
+const geladen = await ladeDaten();
+const fehler = geladen.fehler ? [geladen.fehler] : pruefeDaten(geladen.daten);
 if (fehler.length) {
   app.replaceChildren(el('div', { class: 'k-hinweis k-hinweis--falsch' },
     el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));
 } else {
+  daten = geladen.daten;
   zeichne();
 }

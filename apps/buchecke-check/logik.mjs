@@ -4,16 +4,20 @@
 //
 // TRAGENDE ENTSCHEIDUNG 1: DAS WERKZEUG FRAGT NACH DEM RAUM, NICHT NACH KINDERN.
 // Der Katalog nannte eine Kriterienliste zum Einrichten und Pflegen der Buchecke. Sie fragt hier
-// nach Ort, Bestand, Zeit und Pflege der Gruppe. Ein Feld für einzelne Kinder gibt es nicht, und
-// die Prüfung lehnt Felder und Texte ab, die danach aussehen.
+// nach Ort, Bestand, Zeit und Pflege der Gruppe. Ein Feld für einzelne Kinder gibt es nicht. Die
+// Prüfung fängt einige Muster ab (Feldnamen, Beschriftungen wie „Notiz:“). Sie ist eine Sperre gegen
+// Versehen, keine Garantie. Die eigentliche Sicherung: die Seite hat keine Eingabefelder, und alle
+// Texte stammen aus einer festen Datei.
 //
 // TRAGENDE ENTSCHEIDUNG 2: NICHTS WIRD GESPEICHERT.
 // Die Antworten liegen im Speicher der Seite. Der Bericht ist eine Datei, die das Team selbst
-// speichert oder druckt. Kein localStorage, keine Anfragen (docs/02).
+// speichert oder druckt. Kein localStorage ist eine eigene Entscheidung: docs/02 (Z. 25) würde
+// localStorage für Nutzerdaten mit Löschknopf erlauben. Keine Anfragen nach außen (docs/02, Z. 22–24).
 //
 // TRAGENDE ENTSCHEIDUNG 3: JEDE FRAGE TRÄGT IHRE HERKUNFT.
 // Eine Frage hat entweder eine Seite mit russischem Wortlaut oder das Wort „Eigenentwurf“.
-// Eine Frage ohne eines von beidem wird abgelehnt.
+// Eine Frage ohne eines von beidem wird abgelehnt. Geprüft wird die Form; ob der Wortlaut mit
+// der Quelle übereinstimmt, prüft ein Mensch (GDD, „Die tragende Entscheidung 3“).
 
 const WURZEL = Object.freeze(['version', 'titel', 'zielgruppe', 'hinweis', 'quelle', 'bereiche']);
 const QUELLE = Object.freeze(['werk', 'abweichung']);
@@ -24,18 +28,24 @@ export const EIGEN = 'Eigenentwurf';
 export const ZUSTAENDE = Object.freeze(['erfuellt', 'offen', 'nicht']);
 export const BESCHRIFTUNG = Object.freeze({ erfuellt: 'erfüllt', offen: 'noch offen', nicht: 'trifft nicht zu' });
 
+/** Kennungen wie „b1“ oder „f7“: ein Buchstabe oder mehr, dann Ziffern. Schließt „constructor“ aus. */
+const KENNUNG = /^[a-z]+\d+$/;
+
 /**
  * Felder, die nach Angaben über ein Kind aussehen. Exakte Namen und Wortteile, wie in den
  * anderen Werkzeugen der Reihe. „alter“ nur exakt.
  */
 const KINDER_EXAKT = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'alter', 'protokoll', 'verlauf', 'beobachtung', 'notiz', 'notizen', 'geburtstag', 'geschlecht', 'diagnose', 'bewertung', 'ergebnis']);
 const KINDER_TEIL = Object.freeze(['kindername', 'kinder', 'notiz', 'beobacht', 'geburt', 'geschlecht', 'protokoll', 'verlauf', 'diagnos', 'bewert']);
-/** Ein Muster im Wert, das wie ein Eintrag über ein Kind aussieht („Name: Mia“). */
-const KINDER_WERT = /\b(Name|Vorname|Kindername|Geburtsdatum|Notiz|Beobachtung)\s*:/i;
+/** Eine Beschriftung im Text, die nach einem Eintrag über ein Kind aussieht („Name: Mia“). Eine Sperre gegen Versehen. */
+const KINDER_WERT = /\b(Name|Vorname|Nachname|Kind|Kindername|Geburtsdatum|Notiz|Anmerkung|Beobachtung|Entwicklung|Diagnose|Bewertung|Ergebnis)\s*:/i;
 
 const istKinderFeld = (s) => { const k = s.toLowerCase(); return KINDER_EXAKT.includes(k) || KINDER_TEIL.some((t) => k.includes(t)); };
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
+const istObjekt = (o) => o !== null && typeof o === 'object' && !Array.isArray(o);
 const fremde = (o, erlaubt) => Object.keys(o).filter((k) => !erlaubt.includes(k));
+/** Antwort zu einer Frage; nur eigene Schlüssel zählen, nie geerbte. */
+const stand = (zustand, id) => (Object.hasOwn(zustand, id) ? zustand[id] : null);
 
 function alleTexte(o, acc = []) {
   if (Array.isArray(o)) o.forEach((x) => alleTexte(x, acc));
@@ -58,11 +68,13 @@ export function alleFragen(daten) {
 
 /** Liefert die Liste der Fehler in den Daten. Leer heißt: in Ordnung. */
 export function pruefeDaten(daten) {
-  if (!daten || typeof daten !== 'object') return ['Die Daten fehlen.'];
+  if (!istObjekt(daten)) return ['Die Daten fehlen.'];
   const fehler = [];
   for (const k of fremde(daten, WURZEL)) fehler.push(`Unbekanntes Feld „${k}“.`);
   if (!nichtLeer(daten.titel)) fehler.push('Der Titel fehlt.');
-  if (!daten.quelle || typeof daten.quelle !== 'object' || fremde(daten.quelle, QUELLE).length
+  if (!nichtLeer(daten.zielgruppe)) fehler.push('Die Zielgruppe fehlt.');
+  if (!nichtLeer(daten.hinweis)) fehler.push('Der Hinweis fehlt.');
+  if (!istObjekt(daten.quelle) || fremde(daten.quelle, QUELLE).length
     || !nichtLeer(daten.quelle.werk) || !nichtLeer(daten.quelle.abweichung)) {
     fehler.push('Die Quellenangabe ist unvollständig.');
   }
@@ -72,8 +84,9 @@ export function pruefeDaten(daten) {
   const bereichIds = new Set();
   const frageIds = new Set();
   for (const b of daten.bereiche) {
+    if (!istObjekt(b)) { fehler.push('Ein Bereich ist kein Objekt.'); continue; }
     for (const k of fremde(b, BEREICH)) fehler.push(`Bereich ${b.id}: unbekanntes Feld „${k}“.`);
-    if (!nichtLeer(b.id) || bereichIds.has(b.id)) fehler.push(`Bereich-Kennung „${b.id}“ fehlt oder ist doppelt.`);
+    if (!KENNUNG.test(String(b.id)) || bereichIds.has(b.id)) fehler.push(`Bereich-Kennung „${b.id}“ fehlt, ist doppelt oder hat eine ungültige Form.`);
     bereichIds.add(b.id);
     if (!nichtLeer(b.titel)) fehler.push(`Bereich ${b.id} hat keinen Titel.`);
     if (!Array.isArray(b.fragen) || b.fragen.length === 0) {
@@ -81,8 +94,9 @@ export function pruefeDaten(daten) {
       continue;
     }
     for (const f of b.fragen) {
+      if (!istObjekt(f)) { fehler.push(`Bereich ${b.id}: eine Frage ist kein Objekt.`); continue; }
       for (const k of fremde(f, FRAGE)) fehler.push(`Frage ${f.id}: unbekanntes Feld „${k}“.`);
-      if (!nichtLeer(f.id) || frageIds.has(f.id)) fehler.push(`Frage-Kennung „${f.id}“ fehlt oder ist doppelt.`);
+      if (!KENNUNG.test(String(f.id)) || frageIds.has(f.id)) fehler.push(`Frage-Kennung „${f.id}“ fehlt, ist doppelt oder hat eine ungültige Form.`);
       frageIds.add(f.id);
       if (!nichtLeer(f.text) || !/[.?!]$/.test(f.text.trim())) {
         fehler.push(`Frage ${f.id}: Text fehlt oder endet ohne Satzzeichen.`);
@@ -111,7 +125,7 @@ export function zustandSetzen(daten, zustand, frageId, wert) {
   const neu = { ...zustand };
   const bekannt = alleFragen(daten).some((f) => f.id === frageId);
   if (!bekannt || !ZUSTAENDE.includes(wert)) return neu;
-  if (neu[frageId] === wert) delete neu[frageId];
+  if (stand(neu, frageId) === wert) delete neu[frageId];
   else neu[frageId] = wert;
   return neu;
 }
@@ -119,7 +133,7 @@ export function zustandSetzen(daten, zustand, frageId, wert) {
 /** Zählt je Bereich und insgesamt. Unbeantwortete Fragen zählen als „ungeprüft“. */
 export function zaehle(daten, zustand = {}) {
   const zeile = (fragen) => {
-    const werte = fragen.map((f) => zustand[f.id] ?? null);
+    const werte = fragen.map((f) => stand(zustand, f.id));
     return {
       gesamt: fragen.length,
       erfuellt: werte.filter((w) => w === 'erfuellt').length,
@@ -149,7 +163,8 @@ export function berichtZeilen(daten, zustand = {}) {
     const bz = z.bereiche[i];
     zeilen.push(`${i + 1}. ${b.titel} – erfüllt ${bz.erfuellt}, noch offen ${bz.offen}, trifft nicht zu ${bz.nicht}, nicht geprüft ${bz.ungeprueft}`);
     for (const f of b.fragen) {
-      const status = zustand[f.id] ? BESCHRIFTUNG[zustand[f.id]] : 'nicht geprüft';
+      const antwort = stand(zustand, f.id);
+      const status = antwort ? BESCHRIFTUNG[antwort] : 'nicht geprüft';
       const herkunft = f.quelle === EIGEN ? 'Eigenentwurf' : `Quelle ${f.quelle}`;
       zeilen.push(`   - ${status}: ${f.text} (${herkunft})`);
     }

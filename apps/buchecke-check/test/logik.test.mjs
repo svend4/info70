@@ -15,7 +15,7 @@ test('vier Bereiche mit fünfzehn Fragen', () => {
   assert.equal(alleFragen(daten).length, 15);
 });
 
-test('jede Frage trägt ihre Herkunft: Seite mit russischem Wortlaut oder Eigenentwurf', () => {
+test('jede Frage trägt ihre Herkunft – die Form wird geprüft, der Wortlaut nicht (siehe GDD)', () => {
   for (const f of alleFragen(daten)) {
     if (f.quelle === 'Eigenentwurf') assert.equal('zitat' in f, false, f.id);
     else {
@@ -116,4 +116,45 @@ test('die Bilanz im Bericht stimmt mit der Zählung überein', () => {
   const z = zaehle(daten, zustand);
   const zeilen = berichtZeilen(daten, zustand);
   assert.ok(zeilen.includes(`Insgesamt: ${z.gesamt.erfuellt} von ${z.gesamt.gesamt} erfüllt, ${z.gesamt.offen} noch offen, ${z.gesamt.nicht} trifft nicht zu, ${z.gesamt.ungeprueft} nicht geprüft.`));
+});
+
+test('die Abweichung belegt die 14 Ziele: Aufgabenliste mit 14 Punkten auf S. 153–155, die Buchecke ist der elfte', () => {
+  assert.match(daten.quelle.abweichung, /14 Punkten auf S\. 153–155/);
+  assert.match(daten.quelle.abweichung, /elfte Punkt/);
+});
+
+test('eine Kennung wie „constructor“ wird abgelehnt', () => {
+  const d = kopie(daten);
+  d.bereiche[0].fragen[0].id = 'constructor';
+  assert.match(pruefeDaten(d).join(' '), /Frage-Kennung „constructor“/);
+});
+
+test('ein Bereich oder eine Frage, die null ist, führt zu einer Fehlermeldung statt zum Abbruch', () => {
+  const d = kopie(daten);
+  d.bereiche.push(null);
+  assert.doesNotThrow(() => pruefeDaten(d));
+  assert.ok(pruefeDaten(d).length > 0);
+  const e = kopie(daten);
+  e.bereiche[0].fragen.push(null);
+  assert.doesNotThrow(() => pruefeDaten(e));
+  assert.ok(pruefeDaten(e).length > 0);
+});
+
+test('ein Datenfile ohne Hinweis ist fehlerhaft', () => {
+  const d = kopie(daten);
+  delete d.hinweis;
+  assert.match(pruefeDaten(d).join(' '), /Hinweis fehlt/);
+});
+
+test('auch Anmerkung:, Nachname: und Entwicklung: in Texten werden als Eintrag über ein Kind erkannt', () => {
+  for (const satz of ['Anmerkung: Mia war heute still.', 'Nachname: Schmidt braucht Hilfe.', 'Entwicklung: Mia spricht noch wenig.']) {
+    const d = kopie(daten);
+    d.hinweis = satz;
+    assert.match(pruefeDaten(d).join(' '), /sieht nach einem Eintrag über ein Kind aus/, satz);
+  }
+});
+
+test('eine Kennung wie „constructor“ zählt nicht als beantwortet', () => {
+  const d = { titel: 'x', bereiche: [{ id: 'b1', titel: 'B', fragen: [{ id: 'constructor', text: 'Frage.', quelle: 'Eigenentwurf' }] }] };
+  assert.equal(zaehle(d, {}).gesamt.ungeprueft, 1);
 });

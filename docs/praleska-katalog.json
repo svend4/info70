@@ -961,7 +961,7 @@
   },
   {
    "titel": "Beobachtungsbogen \"Spiel-Entwicklung 3-5\"",
-   "korrektur": "Welle 87: nicht gebaut in der beschriebenen Form (Diagnose, Ampel und Bericht pro Kind widersprechen der Projektregel). Diagnose-Passagen belegt (S. 14, 17–20, 145–160); S. 19 warnt vor Schäden durch Diagnostik.",
+   "korrektur": "Welle 87: nicht gebaut in der beschriebenen Form (Diagnose-Indikatoren je Kind widersprechen docs/02 Z. 141–146). Diagnose-Passagen belegt (S. 14, 17–20, 145–160, 312–314); S. 19 warnt vor Schäden durch Diagnostik. Ein Ampel-Urteil steht bei dieser Einheit nicht im Katalog.",
    "typ": "erzieher-werkzeug",
    "alter": "Erwachsene (fuer Kinder 3-5)",
    "beschreibung": "Digitaler Beobachtungsbogen aus den im Programm verstreuten Diagnose-Indikatoren: Uebergang zum Rollenspiel, Regie-Spiel als Fenster zu emotionalem Diskomfort, Bewegungsauffaelligkeiten, musikalische Begabungsanzeichen; lokal, ohne Konto, Datei-Export.",
@@ -1012,7 +1012,7 @@
   },
   {
    "titel": "Buchecke-Check",
-   "korrektur": "Welle 87: „14 Ziele der künstlerischen Wahrnehmung“ auf S. 155 nicht belegt. Belegt sind Buchecke und täglicher Buchkontakt (S. 155, Почемучки 3–5), Vorlesen mit Fortsetzung (S. 251, Фантазеры 5–7), Einkleben mit der Fachkraft (S. 186). Kriterien nicht im Text; sechs von 15 Fragen Eigenentwurf. Gebaut als buchecke-check (ohne Kinderdaten).",
+   "korrektur": "Welle 87: „14 Ziele der künstlerischen Wahrnehmung“ belegt: Aufgabenliste „Художественное восприятие / Задачи“ mit 14 Punkten auf S. 153–155, die Buchecke-Aufgabe ist der 11. (S. 155). Belegt sind auch täglicher Buchkontakt (S. 155, Почемучки 3–5), Vorlesen mit Fortsetzung (S. 251, Фантазеры 5–7), Einkleben mit der Fachkraft (S. 186). Kriterien nicht im Text; sechs von 15 Fragen Eigenentwurf. Gebaut als buchecke-check (ohne Kinderdaten). Die frühere Notiz „nicht belegt“ war falsch.",
    "typ": "erzieher-werkzeug",
    "alter": "Erwachsene (Kita-Team)",
    "beschreibung": "Kriterien-Checkliste zum Einrichten und Pflegen einer Kita-Buchecke plus taeglicher Buch-Zeit (aus den 14 Zielen der kuenstlerischen Wahrnehmung abgeleitet), mit Team-Bericht als Datei-Export.",
@@ -1043,7 +1043,7 @@
   },
   {
    "titel": "Beobachtungsbogen Musikalische Entwicklung 3-5",
-   "korrektur": "Welle 87: nicht gebaut in der beschriebenen Form (Ampel und Bericht pro Kind). „Erkennt Instrumente“ ist für 3–5 belegt (S. 106), nicht widerlegt; die Prüfung von Welle 87 war hier falsch.",
+   "korrektur": "Welle 87: nicht gebaut in der beschriebenen Form (Ampel-Einschätzung je Kind widerspricht docs/02 Z. 141–146). „Erkennt Instrumente“ ist für 3–5 belegt (S. 106), nicht widerlegt; die frühere Prüfung war hier falsch.",
    "typ": "erzieher-werkzeug",
    "alter": "Erwachsene (über Kinder 3-5)",
    "beschreibung": "Digitaler Beobachtungs- und Berichtsbogen: singt im eigenen Tonumfang mit, hält Rhythmus in Bewegung, wechselt Bewegung bei Musikwechsel, erkennt Instrumente, zeigt Eigeninitiative in der Musikecke; Ampel-Einschätzung + Datei-Export ohne Konto/Cloud (DSGVO-konform lokal).",
