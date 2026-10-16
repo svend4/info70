@@ -36,8 +36,8 @@ im Werkzeug selbst, nicht nur in der Dokumentation.
 
 ## Die Fragen
 
-- **Ort und Zugang** (S. 155, S. 251, Eigenentwurf): Buchecke im Raum (Aufgabe 11 der Liste auf
-  S. 153–155), Bücher in die Hand nehmen, Lieblingsort, Sitzplatz und Licht als Eigenentwurf.
+- **Ort und Zugang** (S. 155, S. 251, Eigenentwurf): Buchecke im Raum, Bücher in die Hand nehmen
+  (f1–f4 stammen aus Punkt 11 der Liste auf S. 153–155), Lieblingsort, Sitzplatz und Licht als Eigenentwurf.
 - **Tägliche Buchzeit und Begleitung** (S. 155, S. 251): tägliche Begegnung mit dem Buch,
   Hinweis auf Umschlag, Bilder und Text, tägliches Vorlesen mit Fortsetzung.
 - **Bestand und Auswahl** (S. 251, Eigenentwurf): Bücher mit demselben Stoff von verschiedenen
@@ -47,21 +47,24 @@ im Werkzeug selbst, nicht nur in der Dokumentation.
 
 ## Bewusst weggelassen
 
-- Das Ampel-Urteil und der Bericht pro Kind (Katalog Nr. 84 und Nr. 86). Die Release-Regel in
+- Das Ampel-Urteil (Katalog Nr. 86) und der Bericht pro Kind (Nr. 84 und Nr. 86). Die Release-Regel in
   `docs/02` (Z. 141–146) verbietet dem Kind eine Bewertung.
 - Eine Mengenangabe („mindestens einmal im Monat“): Die Quelle nennt keine Häufigkeit. Das Team
   legt sie fest.
 
 ## Offen
 
-Drei früher gebaute Apps tun, was diese App nicht tut: wohlfuehl-ampel, entwicklungs-kompass und
-eingewoehnungs-tagebuch vergeben je Kind eine Ampel oder Stufe und speichern diese Einträge in
-`localStorage`. Das widerspricht `docs/02` (Z. 141–146). Diese App hat damit keine Lösung für sie.
-Die Entscheidung liegt beim Team.
+Vier früher gebaute Apps vergeben je Kind eine Ampel oder Stufe und speichern diese Einträge in
+`localStorage`: wohlfuehl-ampel, entwicklungs-kompass, eingewoehnungs-tagebuch und schulstart-begleiter
+(Katalog Nr. 89). Das widerspricht `docs/02` (Z. 141–146). Diese App ändert sie nicht. Die Entscheidung
+liegt beim Team.
 
-Zur Live-Region: Der Projekt-Test verlangt `aria-live` auf `#app` in jeder App. Die Seite baut ihren Inhalt bei jeder Antwort neu auf. Bildschirmleser können dabei mehr vorlesen, als sich geändert hat. Die Meldungen nach dem Speichern laufen zusätzlich über eine eigene `role="status"`-Region. Ob die Projekt-Regel für neu aufgebaute Seiten angepasst werden soll, ist offen.
+Zur Live-Region: Der Projekt-Test verlangt `aria-live` auf `#app` in jeder App. Die Antworten bauen die
+Seite nicht neu auf; nur die Zustände der Knöpfe, die Bilanz und der Druckbericht ändern sich. Die Bilanz
+wird dabei mitgelesen. Meldungen nach dem Speichern laufen zusätzlich über die Region `role="status"`
+außerhalb von `#app`.
 
 ## Tests
 
-22 Tests in `test/logik.test.mjs`: Daten, Herkunft, Kennungen, Kinderdaten-Ablehnung, Zustandswechsel,
+24 Tests in `test/logik.test.mjs`: Daten, Herkunft, Kennungen, Kinderdaten-Ablehnung, Zustandswechsel,
 Zählung und Bericht.

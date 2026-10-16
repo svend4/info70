@@ -13,7 +13,7 @@ Ausdruck, den das Team selbst aufbewahrt.
 
 - **„14 Ziele der künstlerischen Wahrnehmung“** (Katalog Nr. 85): belegt. Die Aufgabenliste
   „Художественное восприятие / Задачи“ hat 14 Punkte auf S. 153–155. Die Buchecke-Aufgabe ist der
-  elfte Punkt (S. 155). Die Fragen dieses Werkzeugs stützen sich auf diese Liste.
+  elfte Punkt (S. 155). Daraus stammen die Fragen f1–f4; f5–f8 stammen von S. 251, f9 von S. 186.
 - **Kriterien für eine Buchecke**: Der Text nennt keine. Deshalb sind sechs Fragen Eigenentwurf.
 - **„BFSG-konforme Umsetzung“ und „uk/ru-Titel“**: Das sind Aussagen über Bestände und über
   Barrierefreiheit, nicht über die Quelle. Sie werden nicht übernommen. Die Eigenentwurf-Frage zu
@@ -53,4 +53,4 @@ Im Projektordner den lokalen Server starten (`node tools/serve.mjs 8099`) und
 
 `node --test apps/buchecke-check/test/logik.test.mjs` prüft die Daten (Herkunft jeder Frage,
 Kennungen, keine Felder über Kinder, keine Eintragsmuster in Texten), die Zählung, das Setzen der
-Antworten und den Bericht. Es sind 22 Tests in `test/logik.test.mjs`.
+Antworten und den Bericht. Es sind 24 Tests in `test/logik.test.mjs`.

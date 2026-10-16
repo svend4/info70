@@ -37,8 +37,11 @@ const KENNUNG = /^[a-z]+\d+$/;
  */
 const KINDER_EXAKT = Object.freeze(['name', 'vorname', 'kind', 'kinder', 'alter', 'protokoll', 'verlauf', 'beobachtung', 'notiz', 'notizen', 'geburtstag', 'geschlecht', 'diagnose', 'bewertung', 'ergebnis']);
 const KINDER_TEIL = Object.freeze(['kindername', 'kinder', 'notiz', 'beobacht', 'geburt', 'geschlecht', 'protokoll', 'verlauf', 'diagnos', 'bewert']);
-/** Eine Beschriftung im Text, die nach einem Eintrag über ein Kind aussieht („Name: Mia“). Eine Sperre gegen Versehen. */
-const KINDER_WERT = /\b(Name|Vorname|Nachname|Kind|Kindername|Geburtsdatum|Notiz|Anmerkung|Beobachtung|Entwicklung|Diagnose|Bewertung|Ergebnis)\s*:/i;
+/**
+ * Eine Beschriftung im Text, die nach einem Eintrag über ein Kind aussieht („Name: Mia“, „Notizen: …“).
+ * „Kind“ und „Kinder“ stehen nicht darin: „einzelnen Kindern: keine Namen“ ist ein normaler Satz.
+ */
+const KINDER_WERT = /\b(Name|Vorname|Nachname|Kindername|Geburtsdatum|Notiz|Anmerkung|Beobachtung|Entwicklung|Diagnose|Bewertung|Ergebnis)(n|en|e|s)?\s*[:：]/i;
 
 const istKinderFeld = (s) => { const k = s.toLowerCase(); return KINDER_EXAKT.includes(k) || KINDER_TEIL.some((t) => k.includes(t)); };
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
@@ -86,7 +89,7 @@ export function pruefeDaten(daten) {
   for (const b of daten.bereiche) {
     if (!istObjekt(b)) { fehler.push('Ein Bereich ist kein Objekt.'); continue; }
     for (const k of fremde(b, BEREICH)) fehler.push(`Bereich ${b.id}: unbekanntes Feld „${k}“.`);
-    if (!KENNUNG.test(String(b.id)) || bereichIds.has(b.id)) fehler.push(`Bereich-Kennung „${b.id}“ fehlt, ist doppelt oder hat eine ungültige Form.`);
+    if (typeof b.id !== 'string' || !KENNUNG.test(b.id) || bereichIds.has(b.id)) fehler.push(`Bereich-Kennung „${b.id}“ fehlt, ist doppelt oder hat eine ungültige Form.`);
     bereichIds.add(b.id);
     if (!nichtLeer(b.titel)) fehler.push(`Bereich ${b.id} hat keinen Titel.`);
     if (!Array.isArray(b.fragen) || b.fragen.length === 0) {
@@ -96,7 +99,7 @@ export function pruefeDaten(daten) {
     for (const f of b.fragen) {
       if (!istObjekt(f)) { fehler.push(`Bereich ${b.id}: eine Frage ist kein Objekt.`); continue; }
       for (const k of fremde(f, FRAGE)) fehler.push(`Frage ${f.id}: unbekanntes Feld „${k}“.`);
-      if (!KENNUNG.test(String(f.id)) || frageIds.has(f.id)) fehler.push(`Frage-Kennung „${f.id}“ fehlt, ist doppelt oder hat eine ungültige Form.`);
+      if (typeof f.id !== 'string' || !KENNUNG.test(f.id) || frageIds.has(f.id)) fehler.push(`Frage-Kennung „${f.id}“ fehlt, ist doppelt oder hat eine ungültige Form.`);
       frageIds.add(f.id);
       if (!nichtLeer(f.text) || !/[.?!]$/.test(f.text.trim())) {
         fehler.push(`Frage ${f.id}: Text fehlt oder endet ohne Satzzeichen.`);

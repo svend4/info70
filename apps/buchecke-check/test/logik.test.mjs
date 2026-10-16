@@ -158,3 +158,17 @@ test('eine Kennung wie „constructor“ zählt nicht als beantwortet', () => {
   const d = { titel: 'x', bereiche: [{ id: 'b1', titel: 'B', fragen: [{ id: 'constructor', text: 'Frage.', quelle: 'Eigenentwurf' }] }] };
   assert.equal(zaehle(d, {}).gesamt.ungeprueft, 1);
 });
+
+test('eine Kennung als Liste (["f1"]) neben „f1“ ist eine Dublette und wird abgelehnt', () => {
+  const d = kopie(daten);
+  d.bereiche[0].fragen[1].id = ['f1'];
+  assert.ok(pruefeDaten(d).length > 0);
+});
+
+test('auch Pluralformen und der Vollbreit-Doppelpunkt gelten als Eintrag über ein Kind', () => {
+  for (const satz of ['Notizen: Mia war still.', 'Namen: Mia und Jonas.', 'Notiz\uFF1A Mia war still.', 'Beobachtungen: ruhig.']) {
+    const d = kopie(daten);
+    d.hinweis = satz;
+    assert.match(pruefeDaten(d).join(' '), /sieht nach einem Eintrag über ein Kind aus/, satz);
+  }
+});

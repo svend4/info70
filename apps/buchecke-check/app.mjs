@@ -4,7 +4,7 @@
 // speichert oder druckt. Keine Anfragen nach außen (docs/02).
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { BESCHRIFTUNG, berichtZeilen, EIGEN, pruefeDaten, zaehle, zustandSetzen, ZUSTAENDE } from './logik.mjs';
+import { alleFragen, BESCHRIFTUNG, berichtZeilen, EIGEN, pruefeDaten, zaehle, zustandSetzen, ZUSTAENDE } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -16,40 +16,78 @@ const status = document.getElementById('bc-status');
 let zustand = {};
 let daten = null;
 
+// Die Seite wird einmal aufgebaut. Eine Antwort ändert danach nur die Zustände der drei Knöpfe der
+// Frage sowie Bilanz und Druckbericht. Die Knöpfe bleiben dieselben Elemente; so bleibt der Fokus,
+// wo er ist, und Bildschirmleser hören nicht die ganze Seite noch einmal.
+const knoepfe = new Map(); // Frage-Kennung -> { erfuellt, offen, nicht } als Schaltflächen
+let bilanzBox = null;
+let druckBox = null;
+
 /** Die Meldung für Bildschirmleser. Die Region bleibt bestehen; nur ihr Text wechselt. */
 function meldeStatus(text) {
   status.textContent = text;
 }
 
 function setze(frageId, wert) {
-  // Das Neuzeichnen ersetzt alle Knöpfe. Der Fokus kommt deshalb auf denselben Knopf zurück.
-  const fokus = document.activeElement?.id || null;
   zustand = zustandSetzen(daten, zustand, frageId, wert);
   meldeStatus('');
-  zeichne();
-  if (fokus) document.getElementById(fokus)?.focus({ preventScroll: true });
+  aktualisiere();
 }
 
-function knopf(text, aktiv, onklick, id, label) {
+const knopfKlasse = (aktiv) => `k-knopf k-knopf--klein${aktiv ? '' : ' k-knopf--neutral'}`;
+
+function knopf(f, wert) {
   return el('button', {
-    class: `k-knopf k-knopf--klein${aktiv ? '' : ' k-knopf--neutral'}`,
-    'aria-pressed': String(aktiv),
-    'aria-label': label,
-    id,
-    onclick: onklick,
-  }, text);
+    class: knopfKlasse(false),
+    id: `bc-${f.id}-${wert}`,
+    'aria-pressed': 'false',
+    'aria-label': `${BESCHRIFTUNG[wert]}: ${f.text}`,
+    onclick: () => setze(f.id, wert),
+  }, BESCHRIFTUNG[wert]);
 }
 
 function frageBild(f) {
+  const schaltflaechen = Object.fromEntries(ZUSTAENDE.map((wert) => [wert, knopf(f, wert)]));
+  knoepfe.set(f.id, schaltflaechen);
   return el('fieldset', { class: 'bc-frage', id: `bc-${f.id}` },
     el('legend', { class: 'bc-legende' }, f.text),
     el('p', { class: 'bc-quelle' }, f.quelle === EIGEN
       ? 'Eigenentwurf: die Quelle nennt diesen Punkt nicht.'
       : `Quelle: ${f.quelle}`),
     f.zitat ? el('p', { class: 'bc-zitat' }, `russisch: „${f.zitat}“`) : null,
-    el('div', { class: 'k-antworten' },
-      ...ZUSTAENDE.map((wert) => knopf(BESCHRIFTUNG[wert], zustand[f.id] === wert,
-        () => setze(f.id, wert), `bc-${f.id}-${wert}`, `${BESCHRIFTUNG[wert]}: ${f.text}`))));
+    el('div', { class: 'k-antworten' }, ...ZUSTAENDE.map((wert) => schaltflaechen[wert])));
+}
+
+/** Setzt die Zustände der Knöpfe, die Bilanz und den Druckbericht nach dem Stand der Antworten. */
+function aktualisiere() {
+  for (const f of alleFragen(daten)) {
+    for (const wert of ZUSTAENDE) {
+      const b = knoepfe.get(f.id)[wert];
+      const aktiv = zustand[f.id] === wert;
+      b.setAttribute('aria-pressed', String(aktiv));
+      b.className = knopfKlasse(aktiv);
+    }
+  }
+  bilanzBox.replaceChildren(...bilanzInhalt());
+  druckBox.replaceChildren(...druckInhalt());
+}
+
+function bilanzInhalt() {
+  const z = zaehle(daten, zustand);
+  const g = z.gesamt;
+  return [
+    el('p', { style: 'margin-top:0;font-weight:600', id: 'bc-bilanz' },
+      `${g.erfuellt} von ${g.gesamt} erfüllt · ${g.offen} noch offen · ${g.nicht} trifft nicht zu · ${g.ungeprueft} nicht geprüft`),
+    el('ul', { class: 'bc-liste' }, ...z.bereiche.map((b) =>
+      el('li', {}, `${b.titel}: ${b.erfuellt} von ${b.gesamt} erfüllt`))),
+  ];
+}
+
+function druckInhalt() {
+  return [
+    el('p', { class: 'bc-druckzeile', style: 'font-weight:700;font-size:12pt' }, daten.titel),
+    ...berichtZeilen(daten, zustand).map((z) => el('p', { class: 'bc-druckzeile' }, z || ' ')),
+  ];
 }
 
 function exportiere() {
@@ -64,19 +102,16 @@ function exportiere() {
 }
 
 function zusammenfassung() {
-  const z = zaehle(daten, zustand);
-  const g = z.gesamt;
+  bilanzBox = el('div');
   return el('section', { class: 'k-karte bc-nur-bildschirm', id: 'bc-stand' },
-    el('p', { style: 'margin-top:0;font-weight:600', id: 'bc-bilanz' },
-      `${g.erfuellt} von ${g.gesamt} erfüllt · ${g.offen} noch offen · ${g.nicht} trifft nicht zu · ${g.ungeprueft} nicht geprüft`),
-    el('ul', { class: 'bc-liste' }, ...z.bereiche.map((b) =>
-      el('li', {}, `${b.titel}: ${b.erfuellt} von ${b.gesamt} erfüllt`))),
+    bilanzBox,
     el('div', { class: 'k-antworten' },
       el('button', { class: 'k-knopf', id: 'bc-speichern', onclick: exportiere }, '💾 Bericht als Datei speichern'),
       el('button', { class: 'k-knopf k-knopf--neutral', id: 'bc-drucken', onclick: () => window.print() }, '🖨️ Bericht drucken')));
 }
 
-function zeichne() {
+function aufbauen() {
+  druckBox = el('section', { class: 'bc-nur-druck' });
   app.replaceChildren(
     el('h1', { class: 'k-titel bc-nur-bildschirm' }, `📚 ${daten.titel}`),
     el('p', { class: 'k-untertitel bc-nur-bildschirm' }, 'Raum, Bestand, Zeit und Pflege der Buchecke, für das Kita-Team'),
@@ -88,12 +123,11 @@ function zeichne() {
       el('h2', { class: 'bc-bereichstitel' }, b.titel),
       ...b.fragen.map(frageBild))),
     zusammenfassung(),
-    el('section', { class: 'bc-nur-druck' },
-      el('p', { class: 'bc-druckzeile', style: 'font-weight:700;font-size:12pt' }, daten.titel),
-      ...berichtZeilen(daten, zustand).map((z) => el('p', { class: 'bc-druckzeile' }, z || ' '))),
+    druckBox,
     el('footer', { class: 'k-fuss bc-nur-bildschirm' },
       el('span', {}, 'Werkzeug für das Kita-Team · nichts wird gespeichert · keine Anfragen nach außen · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
+  aktualisiere();
 }
 
 async function ladeDaten() {
@@ -113,5 +147,5 @@ if (fehler.length) {
     el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));
 } else {
   daten = geladen.daten;
-  zeichne();
+  aufbauen();
 }
