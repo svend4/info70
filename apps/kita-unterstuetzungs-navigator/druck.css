@@ -1,0 +1,68 @@
+/* Druck: zwei Blätter, der Bildschirm wird beim Drucken ausgeblendet.
+   body[data-druck] (gesetzt von app.mjs) bestimmt, welches Blatt erscheint:
+   der Bericht oder der leere Druckbogen. Beides ist ohne Kästchen und ohne Häkchen. */
+
+.k-druck {
+  display: none;
+}
+
+.k-linie {
+  border-bottom: 0.4pt solid #000;
+  height: 8mm;
+  margin: 1mm 0 3mm;
+}
+
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .k-bildschirm {
+    display: none !important;
+  }
+
+  body[data-druck="bogen"] .k-druck-bogen,
+  body[data-druck="bericht"] .k-druck-bericht {
+    display: block;
+  }
+
+  .k-druck h1 {
+    font-size: 18pt;
+    margin: 0 0 4mm;
+  }
+
+  .k-druck h2 {
+    font-size: 13pt;
+    margin: 6mm 0 2mm;
+  }
+
+  .k-druck p {
+    font-size: 11pt;
+    margin: 0 0 1.5mm;
+  }
+
+  .k-druck-frage {
+    break-inside: avoid;
+    margin: 0 0 4mm;
+  }
+
+  .k-druck-optionen {
+    font-size: 10pt;
+  }
+
+  .k-druck-hinweis {
+    font-size: 9.5pt;
+  }
+
+  .k-druck-pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 10.5pt;
+    margin: 0;
+  }
+}

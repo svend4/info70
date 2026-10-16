@@ -1,0 +1,8 @@
+{
+  "name": "@info70/unser-konzert-zaehlhilfe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unser Konzert, Zählhilfe für die Fachkraft: Vorschläge für Lieder, Tänze und Festprogramme für ein Kita-Fest sammeln, Handzeichen je Vorschlag zählen und die Programmliste drucken. Keine Namen, nichts wird gespeichert, keine Verbindung nach außen.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

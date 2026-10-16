@@ -1,0 +1,8 @@
+{
+  "name": "@info70/kita-unterstuetzungs-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kita-Unterstützungs-Navigator: Checkliste für Fachkraft und Träger zu den Unterstützungsaufgaben im Anhang der Praleska (S. 312 bis 317), Zählung je Block, Bericht zum Drucken oder Speichern, keine Namen, nichts wird gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}

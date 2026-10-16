@@ -1,0 +1,82 @@
+/* Druck: auf dem Bildschirm ist davon nichts zu sehen. Gedruckt wird der Bogen,
+   den der Knopf gewählt hat (data-druck am Seitenkopf). Die Bögen haben keine
+   Kästchen, keine Häkchen, keine Zahlen und keine Zeile für einen Namen. */
+
+.k-druck {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .k-bildschirm {
+    display: none !important;
+  }
+
+  .k-druck {
+    display: block;
+  }
+
+  [data-druck="programm"] .k-druck-zaehl,
+  [data-druck="zaehlbogen"] .k-druck-programm {
+    display: none !important;
+  }
+
+  .k-druck h1 {
+    font-size: 20pt;
+    margin: 0 0 4mm;
+  }
+
+  .k-druck p {
+    font-size: 11pt;
+    margin: 0 0 2mm;
+  }
+
+  .k-druck-abstand {
+    margin-top: 6mm;
+  }
+
+  .k-druck-punkte,
+  .k-druck-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .k-druck-punkte li {
+    font-size: 13pt;
+    margin: 0 0 3mm;
+    break-inside: avoid;
+    overflow-wrap: anywhere;
+  }
+
+  .k-druck-zeile {
+    display: flex;
+    gap: 6mm;
+    margin: 0 0 3mm;
+    break-inside: avoid;
+  }
+
+  /* Nur Linien zum Ausfüllen von Hand. */
+  .k-druck-titelfeld,
+  .k-druck-strichfeld {
+    display: block;
+    min-height: 9mm;
+    border-bottom: 0.3mm solid #000;
+  }
+
+  .k-druck-titelfeld {
+    flex: 3 1 0;
+  }
+
+  .k-druck-strichfeld {
+    flex: 2 1 0;
+  }
+}
