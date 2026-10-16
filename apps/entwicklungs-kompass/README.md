@@ -70,12 +70,12 @@ Silbentrennung am Zeilenende.
   `kinderschutz` (`installiereNetzwerkWaechter()`, beim Start aufgerufen).
 - CSP `default-src 'self'; style-src 'self' 'unsafe-inline'`. Keine externen Anfragen, keine
   fremden Skripte, keine Adressen im Quelltext.
-- Beim Klick werden nur die Knöpfe der Zeile, die Zählung des Bereichs und der Druckbogen
+- Beim Klick werden nur die Knöpfe der Zeile, die Zählung des Bereichs
   aktualisiert, nicht die ganze Seite. Umschalter mit `aria-pressed`, jeder Knopf trägt den
   Prüfpunkt im `aria-label`.
 - **Vorlesen** läuft nur mit einer Stimme, die auf dem Gerät liegt (`localService`). Gibt es keine,
   erscheint ein Hinweis, und es wird nicht vorgelesen.
-- **Druck:** `druck.css` mit `@media print`. Bedienteile verschwinden, der Druckbogen erscheint.
+- **Druck:** `druck.css` mit `@media print`. Bedienteile verschwinden, der leere Druckbogen erscheint (☐ zum Abhaken von Hand).
   Keine Namenszeile.
 
 ## Dateien

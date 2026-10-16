@@ -2,7 +2,7 @@
   "art": "eingewoehnungs-leitfaden-config",
   "version": 2,
   "hinweis": "Leitfaden zur Eingewöhnung für Fachkräfte: vier Phasen mit Checklisten eigener Handlungen der Fachkraft. Keine Kinder, keine Namen, keine Bewertung von Kindern. Beobachtung, keine Diagnose. Nichts wird gespeichert.",
-  "herkunft": "Eigenentwurf: Phasen, Handlungen und Texte sind neu formuliert und an die in Deutschland üblichen Eingewöhnungsmodelle (Berliner/Münchener Modell) angelehnt. Konzept-Idee aus Katalog Nr. 3 des Projekts (docs/10, Praleska-Ableitung, Top-30 Platz 3). Übernommen wurde ausschließlich das Konzept, kein Wortlaut.",
+  "herkunft": "Eigenentwurf: Die Handlungen sind neu formuliert. Die Phasennamen und Kurztexte stammen aus der früheren Fassung und folgen dem Berliner Eingewöhnungsmodell, das in Deutschland üblich ist. Konzept-Idee aus Katalog Nr. 3 des Projekts (docs/10, Praleska-Ableitung, Top-30 Platz 3). Übernommen wurde ausschließlich das Konzept, kein Wortlaut.",
   "phasen": [
     {
       "id": "grundphase",

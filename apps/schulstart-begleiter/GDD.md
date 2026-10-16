@@ -36,7 +36,7 @@ Druckzeilen aktualisiert.
 
 1. Fachkraft kann die Angebote in fünf Bereichen prüfen und jedes als angeboten, noch offen oder
    trifft nicht zu markieren.
-2. Das Team kann den Druckbogen nutzen und die Zählung je Bereich lesen, ohne Gesamtzahl und ohne
+2. Das Team kann den leeren Druckbogen nutzen; die Zählung je Bereich liest es vom Bildschirm, ohne Gesamtzahl und ohne
    Prozentwert.
 3. Fachkraft kann erklären, warum die Seite nichts über Kinder erfasst, nichts speichert und nichts
    bewertet (docs/02, Z. 141–146).

@@ -58,13 +58,12 @@ function handlungsKnopf(phase, handlung) {
 }
 
 function druckInhalt(phase) {
-  const blatt = druckBlatt(config, phase.id, erledigt);
+  const blatt = druckBlatt(config, phase.id, new Set());
   return [
     el('h2', {}, blatt.titel),
     el('p', {}, blatt.info),
     el('p', {}, el('strong', {}, 'Handlungen der Fachkraft (Eigenentwurf)')),
-    el('ul', {}, ...blatt.punkte.map((p) => el('li', {}, `${p.erledigt ? '☒' : '☐'} ${p.frage}`))),
-    el('p', {}, blatt.bilanz),
+    el('ul', {}, ...blatt.punkte.map((p) => el('li', {}, `☐ ${p.frage}`))),
     el('p', { style: 'font-size:0.85rem' }, 'Der Bogen fragt nach Ihren eigenen Handlungen. Er enthält keine Angaben zu Kindern und bewertet keine Person.'),
   ];
 }
@@ -84,8 +83,6 @@ function aktualisiere(phaseId, handlungId) {
   }
   const bilanzFeld = app.querySelector(`[data-bilanz="${phaseId}"]`);
   if (bilanzFeld) bilanzFeld.textContent = bilanz(phase, erledigt);
-  const blatt = app.querySelector(`[data-druck="${phaseId}"]`);
-  if (blatt) blatt.replaceChildren(...druckInhalt(phase));
 }
 
 function umschalten(phaseId, handlungId) {

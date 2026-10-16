@@ -20,8 +20,8 @@ und speichert keine Kinderdaten auf dem Gerät.
   „Bezugsperson mit den Eltern besprochen?“, „Verabschiedung vorbereitet?“.
 - Bilanz je Phase, zum Beispiel `erledigt: 3 von 6`. Eine Summe über alle
   Phasen gibt es nicht, auch keinen Prozentwert.
-- Druckbogen: vier Blätter, je Phase eins. Er zeigt die Haken der laufenden
-  Sitzung. Keine Namenszeile.
+- Druckbogen: vier leere Blätter, je Phase eins, zum Abhaken von Hand. Er zeigt
+  nichts aus der laufenden Sitzung. Keine Namenszeile.
 
 ## Was entfällt
 
@@ -55,9 +55,9 @@ Eltern, Träger und Leitung; die App ist im Eltern-Sammelband aufgeführt.
 - `docs/02-anforderungen.md`, Z. 141–146: keine Bewertung eines Kindes; erlaubt
   ist die Bewertung eigener Handlungen der Fachkraft und des Gegenstands.
 - `docs/10-praleska-baukasten.md`, Katalog Nr. 3: Herkunft der Idee.
-- Phasennamen und Handlungen sind Eigenentwurf, angelehnt an die in Deutschland
-  üblichen Eingewöhnungsmodelle (Berliner/Münchener Modell). Keine wörtlichen
-  Zitate, keine Seitenangaben; die Literatur ist nicht seitengenau geprüft.
+- Die Handlungen sind Eigenentwurf. Die Phasennamen und Kurztexte stammen aus der
+  früheren Fassung und folgen dem Berliner Eingewöhnungsmodell (in Deutschland üblich).
+  Keine wörtlichen Zitate, keine Seitenangaben; die Literatur ist nicht seitengenau geprüft.
 
 ## Запуск и тесты
 

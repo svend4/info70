@@ -16,14 +16,14 @@ Handeln umgesetzt ist, und druckt den Bogen für die Besprechung. Kein Kind wird
 Motor: Erwachsenen-Werkzeug. Dünner DOM-Layer (`app.mjs`) über reiner Logik (`logik.mjs`)
 und einem JSON-Katalog (`daten/indikatoren.json`) mit Merkmal-Register.
 Schleife: Bereich öffnen → je Prüfpunkt eine der drei Auswahlmöglichkeiten wählen (erneuter
-Klick nimmt sie zurück) → Zählung des Bereichs aktualisiert sich → Druckbogen drucken.
+Klick nimmt sie zurück) → Zählung des Bereichs aktualisiert sich. Der Druckbogen bleibt leer.
 Keine Speicherung, kein Export, kein Import.
 
 ## 4. Lernziele (проверяемые!)
 1. Fachkraft kann die Angebote von Raum, Material und eigenem Handeln in fünf Bereichen
    prüfen und jeden Prüfpunkt als umgesetzt, noch offen oder trifft nicht zu markieren.
-2. Team kann den Druckbogen für die Besprechung nutzen und die Zählung je Bereich lesen,
-   ohne Gesamtzahl und ohne Prozentwert.
+2. Team kann den leeren Druckbogen für die Besprechung nutzen und die Zählung je Bereich
+   vom Bildschirm lesen, ohne Gesamtzahl und ohne Prozentwert.
 3. Fachkraft kann erklären, warum die Seite nichts über Kinder erfasst und nichts bewertet
    (docs/02, Z. 141–146).
 
@@ -112,3 +112,8 @@ Bewertung? Wird der Druckbogen in der Besprechung genutzt? (Protokoll: docs/05, 
   Muster auf diesen Ordner. Keine Importe, nur Kommentare und Texte.
 - `docs/10-praleska-baukasten.md`, `docs/11-kinderrechte-charta.md` Z. 105 und
   `docs/praleska-katalog.json`: Nennungen des Eintrags als Beobachtungsbogen.
+
+## Offen (Welle 88)
+
+- Merkmal-Auswahl: S17.3, S18.1 und S19.1 sind übernommen, liegen aber nahe an der Einstufung, die S18.5 ausschließt. Eine Fachkraft entscheidet, ob sie bleiben oder ersetzt werden.
+- Leere Kästchen auf dem Druckbogen: docs/02 Z. 79–80 nennt Haken auf dem Papier; die Frage liegt beim Team.

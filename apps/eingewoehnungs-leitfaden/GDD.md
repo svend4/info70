@@ -25,8 +25,8 @@ nach einem Kind.
   (`removeItem` in `try/catch`, nie geschrieben).
 - **Zählen nur eigener Haken je Phase** (z. B. «erledigt: 3 von 6»). Keine
   Gesamtsumme über Phasen, keine Prozentwerte.
-- **Druckbogen je Phase.** Vier Blätter, die die Haken der Sitzung zeigen. Keine
-  Namenszeile.
+- **Druckbogen je Phase.** Vier leere Blätter zum Abhaken von Hand; sie zeigen nichts
+  aus der Sitzung. Keine Namenszeile.
 - **Keine externen Anfragen.** Netzwerk-Wächter zur Laufzeit, CSP
   `default-src 'self'`, keine fremden Skripte.
 
@@ -38,7 +38,7 @@ nach einem Kind.
 
 ## 4. Didaktik / Nutzen
 
-Die Eingewöhnung ist deutscher Kita-Standard und wird oft auf Papier notiert.
+Die Eingewöhnung ist in deutschen Kitas üblich. Dass sie oft auf Papier notiert wird, ist nicht aus der Quelle belegt.
 Der Leitfaden hilft dabei, die eigenen Schritte der Fachkraft vollständig im
 Blick zu haben (Absprachen mit den Eltern, Abschied, Team, Abschluss). Er sagt
 nichts über ein Kind aus.

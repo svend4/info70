@@ -20,7 +20,7 @@ let katalog = null;
 
 /** Nur im Speicher dieser Seite: angebotId -> auswahlWert. Ohne Eintrag gilt „offen“. */
 let auswahl = {};
-/** angebotId -> { bereichId, knoepfe: [{el, wert}], druckZeilen: [el] } */
+/** angebotId -> { bereichId, knoepfe: [{el, wert}] } */
 const zeilen = new Map();
 /** bereichId -> { bereich, bilanzen: [el] } */
 const bereiche = new Map();
@@ -37,7 +37,7 @@ function setzeMeldung(text, ok = true) {
 
 function zeileRegistrieren(angebot, bereichId) {
   if (!zeilen.has(angebot.id)) {
-    zeilen.set(angebot.id, { bereichId, knoepfe: [], druckZeilen: [] });
+    zeilen.set(angebot.id, { bereichId, knoepfe: [] });
   }
   return zeilen.get(angebot.id);
 }
@@ -50,8 +50,6 @@ function zeileAktualisieren(id) {
     k.el.setAttribute('aria-pressed', String(gedrueckt));
     k.el.classList.toggle('k-knopf--neutral', !gedrueckt);
   }
-  const marken = druckMarken(katalog.auswahl, aktuell).join('   ');
-  for (const d of z.druckZeilen) d.textContent = marken;
 }
 
 function bilanzAktualisieren(bereichId) {
@@ -151,8 +149,7 @@ function datenKarte() {
 // --- Druckbogen (nur beim Drucken sichtbar) -----------------------------------
 
 function druckZeile(p) {
-  const marken = el('p', { class: 'k-druck-marken' });
-  zeilen.get(p.id).druckZeilen.push(marken);
+  const marken = el('p', { class: 'k-druck-marken' }, druckMarken(katalog.auswahl, null).join('   '));
   return el('div', { class: 'k-druck-zeile' },
     el('p', { style: 'margin:0;font-size:0.95rem' }, p.text),
     el('p', { class: 'k-kleingedruckt' }, eigenentwurfsHinweis(p.quelleMerkmal)),
@@ -165,12 +162,9 @@ function druckBogen() {
     el('p', { style: 'margin:0 0 0.3rem' }, `Stand: ${datum}`),
     el('p', { style: 'margin:0 0 0.6rem' }, 'Geprüft werden Raum, Material, Spiele und die Handlung der Fachkraft. Kein Kind wird erfasst oder bewertet.'),
     ...katalog.bereiche.map((bereich) => {
-      const bilanzEl = el('p', { style: 'margin:0.3rem 0 0;font-weight:600' });
-      bereiche.get(bereich.id).bilanzen.push(bilanzEl);
       return el('section', { class: 'k-druck-bereich' },
         el('h3', { style: 'margin:0;font-size:1.05rem' }, `${bereich.emoji} ${bereich.name}`),
         el('p', { style: 'margin:0;font-size:0.9rem' }, bereich.fokus),
-        bilanzEl,
         ...bereich.angebote.map((p) => druckZeile(p)));
     }),
     el('p', { class: 'k-druck-fuss' },
