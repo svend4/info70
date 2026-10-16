@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "titel": "Buchecke-Check",
+  "zielgruppe": "Kita-Team für die Gruppe (Kinder von 3 bis 7 Jahren, Gruppen „Почемучки“ und „Фантазеры“)",
+  "hinweis": "Ein Werkzeug für das Kita-Team. Es fragt nach Raum, Bestand, Zeit und Pflege der Gruppe, nie nach einzelnen Kindern: keine Namen, keine Notizen über Kinder, keine Bewertung. Nichts wird gespeichert. Die Antworten bleiben nur, bis die Seite neu geladen wird. Den Bericht speichern oder drucken Sie selbst.",
+  "quelle": {
+    "werk": "Programm «ПРАЛЕСКА», Kapitel „Развиваемся в деятельности“, S. 155, S. 186 und S. 251",
+    "abweichung": "Der Katalogeintrag Nr. 85 stützte sich auf „14 Ziele der künstlerischen Wahrnehmung“. Auf S. 155 steht diese Zahl nicht. Kriterien für eine Buchecke nennt der Text nicht; deshalb sind sechs der fünfzehn Fragen Eigenentwurf und als solche gekennzeichnet."
+  },
+  "bereiche": [
+    {
+      "id": "b1",
+      "titel": "Ort und Zugang",
+      "fragen": [
+        {
+          "id": "f1",
+          "text": "Die Gruppe hat eine Buchecke als festen Teil ihrer Raumgestaltung.",
+          "quelle": "S. 155 (Почемучки, 3–5)",
+          "zitat": "ввести книжный уголок в предметно-пространственную среду дошкольной группы"
+        },
+        {
+          "id": "f2",
+          "text": "Kinder dürfen ein Buch in die Hand nehmen, darin blättern und es ansehen.",
+          "quelle": "S. 155 (Почемучки, 3–5)",
+          "zitat": "предоставлять возможность дошкольнику подержать книгу в руках, полистать, посмотреть"
+        },
+        {
+          "id": "f7",
+          "text": "Die Buchecke ist ein Lieblingsort: Kinder finden dort ihre Lieblingsbücher, blättern darin und lesen – wer es kann – selbst.",
+          "quelle": "S. 251 (Фантазеры, 5–7)",
+          "zitat": "превращению книжного уголка в любимое место в группе, где дети могли бы найти, полистать, почитать (кто умеет) любимые книги"
+        },
+        {
+          "id": "e1",
+          "text": "Die Bücher stehen so, dass Kinder sie selbst erreichen und zurückstellen können.",
+          "quelle": "Eigenentwurf"
+        },
+        {
+          "id": "e2",
+          "text": "Die Buchecke hat einen ruhigen Platz zum Sitzen und ist gut beleuchtet.",
+          "quelle": "Eigenentwurf"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "titel": "Tägliche Buchzeit und Begleitung",
+      "fragen": [
+        {
+          "id": "f3",
+          "text": "Es gibt täglich eine inhaltliche Begegnung der Kinder mit Büchern.",
+          "quelle": "S. 155 (Почемучки, 3–5)",
+          "zitat": "организовывать ежедневное содержательное общение ребенка с книгой"
+        },
+        {
+          "id": "f4",
+          "text": "Die Fachkraft macht beim Betrachten auf Umschlag, Bilder und Text aufmerksam.",
+          "quelle": "S. 155 (Почемучки, 3–5)",
+          "zitat": "обращать внимание ребенка на то, что в книге есть обложка, рисунки, текст"
+        },
+        {
+          "id": "f5",
+          "text": "Vorlesen findet täglich statt, und Geschichten werden über mehrere Tage fortgesetzt.",
+          "quelle": "S. 251 (Фантазеры, 5–7)",
+          "zitat": "ежедневное чтение книг, чтение с продолжением"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "titel": "Bestand und Auswahl",
+      "fragen": [
+        {
+          "id": "f6",
+          "text": "Die Buchecke hat Bücher mit derselben Geschichte, von verschiedenen Illustratorinnen und Illustratoren.",
+          "quelle": "S. 251 (Фантазеры, 5–7)",
+          "zitat": "предлагать детям книги с одним и тем же сюжетом, проиллюстрированные разными художниками"
+        },
+        {
+          "id": "f8",
+          "text": "Es gibt selbstgemachte Bücher mit Bildern, die die Kinder selbst gemacht haben.",
+          "quelle": "S. 251 (Фантазеры, 5–7)",
+          "zitat": "книжки-самоделки с иллюстрациями, сделанные самими детьми"
+        },
+        {
+          "id": "e3",
+          "text": "Bücher in den Familiensprachen der Kinder sind vorhanden.",
+          "quelle": "Eigenentwurf"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "titel": "Pflege",
+      "fragen": [
+        {
+          "id": "f9",
+          "text": "Beschädigte Bücher werden gemeinsam mit der Fachkraft wieder eingeklebt.",
+          "quelle": "S. 186 (Почемучки, 3–5)",
+          "zitat": "подклеивать вместе с воспитателем книжки"
+        },
+        {
+          "id": "e4",
+          "text": "Das Team hat festgelegt, wer die Bücher prüft, klebt und ersetzt.",
+          "quelle": "Eigenentwurf"
+        },
+        {
+          "id": "e5",
+          "text": "Die Bücher werden regelmäßig auf Schäden geprüft; die Häufigkeit legt das Team fest.",
+          "quelle": "Eigenentwurf"
+        },
+        {
+          "id": "e6",
+          "text": "Bücher, die sich nicht mehr reparieren lassen, werden aussortiert.",
+          "quelle": "Eigenentwurf"
+        }
+      ]
+    }
+  ]
+}

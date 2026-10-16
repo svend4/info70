@@ -1,0 +1,24 @@
+/* Buchecke-Check: Fragen mit Herkunft, Bilanz und Druckbericht. Kein Name, kein Kind.
+   Auf dem Bildschirm ist der Druckbericht versteckt, beim Drucken die Fragen. */
+.bc-nur-druck { display: none; }
+.bc-frage { margin: 0 0 1rem; padding: 0.8rem 0; min-width: 0; border: 0; border-top: 1px solid #d1d5db; }
+.bc-legende { font-weight: 600; padding: 0; margin-bottom: 0.3rem; }
+.bc-bereichstitel { font-size: 1.1rem; margin: 1.4rem 0 0.2rem; }
+.bc-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0.5rem; }
+.bc-zitat { font-size: 0.85rem; color: #4b5563; font-style: italic; margin: 0 0 0.5rem; }
+.bc-liste { margin: 0.2rem 0 0.8rem; padding-left: 1.2rem; }
+.bc-druckzeile { margin: 0; font-size: 10pt; line-height: 1.35; white-space: pre-wrap; }
+
+@media print {
+  .bc-nur-bildschirm { display: none !important; }
+  .bc-nur-druck { display: block !important; }
+  body { background: #fff; }
+  .k-app { max-width: none; padding: 0; }
+  .bc-druckzeile { font-size: 10pt; }
+  a[href]::after { content: ""; }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .bc-frage { border-top-color: #374151; }
+  .bc-quelle, .bc-zitat { color: #9ca3af; }
+}

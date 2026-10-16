@@ -1,0 +1,8 @@
+{
+  "name": "@info70/buchecke-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Buchecke-Check für das Kita-Team: Raum, Bestand, tägliche Buchzeit und Pflege der Buchecke nach S. 155, 186 und 251 der Praleska-Quelle, dazu Eigenentwurf. Team-Bericht als Datei oder Druck, keine Angaben über einzelne Kinder, nichts wird gespeichert.",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
