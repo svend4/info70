@@ -90,8 +90,8 @@ Wer beruflich Aufzeichnungen über fremde Kinder führt, hat dabei Pflichten
 gegenüber den Familien, die ein Heft wie dieses nicht erfüllt: getrennte
 Akten je Kind, Auskunft auf Verlangen, geregelte Aufbewahrung. Die
 Abgrenzung steht im Text und ist Pflichtsatz im Validator. Für die
-Kita-Dokumentation ist `apps/eingewoehnungs-tagebuch` da — ein
-Fachkräfte-Werkzeug mit Kürzel statt Namen.
+Eingewöhnungs-Phasen und Checklisten eigener Handlungen sind in `apps/eingewoehnungs-leitfaden`
+da — ein Fachkräfte-Werkzeug ohne Kinderdaten.
 
 ## 5. Zweckbestimmung, und zwei Wörter, die sie kippen
 

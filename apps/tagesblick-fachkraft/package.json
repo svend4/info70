@@ -1,8 +1,8 @@
 {
-  "name": "@info70/wohlfuehl-ampel",
+  "name": "@info70/tagesblick-fachkraft",
   "version": "0.1.0",
   "private": true,
-  "description": "Wohlfuehl-Ampel Gruppe: Tages-Ampel zum emotionalen Wohlbefinden je Kind (Kuerzel statt Namen) mit Wochenansicht und sanften Hinweis-Impulsen - Fachkraft-Werkzeug, rein lokal, Beobachtung statt Diagnose.",
+  "description": "Tagesblick Fachkraft: tägliche Liste eigener Handlungen der Fachkraft (sechs Handlungen in drei Bereichen), ohne Angaben zu Kindern, ohne Speicherung, mit leerem Tagesbogen zum Ausdrucken.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

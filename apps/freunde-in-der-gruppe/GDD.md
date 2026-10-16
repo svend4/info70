@@ -14,7 +14,7 @@ verlieren, warten, Rollen aushandeln, Gefühle erkennen, Hilfe holen.
 ## 2. Zielgruppe
 
 Vorschule/Grundschule. Nachbarn: gefuehle-entdecker, sicher-unterwegs,
-stark-im-chat-mini, wohlfuehl-ampel, gruppenklima-check.
+stark-im-chat-mini, tagesblick-fachkraft, gruppenklima-check.
 
 ## 3. Ablauf
 

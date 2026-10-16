@@ -1,97 +1,114 @@
-# 🧭 Entwicklungs-Kompass Kita — Kurz-GDD
+# 🧭 Angebots-Kompass Kita — Kurz-GDD
 
 ## 1. Феномен / потребность (Warum)
-Какому явлению отвечает: каталог №2 (docs/10, дериваты «Пралеска»), позиция
-**№1 в Топ-30** — «Entwicklungs-Kompass Kita (digitaler Beobachtungsbogen)».
-Наблюдение и документация развития ребёнка обязательны во всех 16 земельных
-Bildungspläne и в развитии качества по § 22a SGB VIII. Что происходит без
-приложения: специалисты либо ведут разрозненные бумажные заметки (часто с
-именами и свободным текстом — риск по DSGVO), либо уходят в облачную Kita-
-Software с постоянным конфликтом защиты данных и хранением детских профилей у
-внешнего провайдера. Пробел «lokal statt Cloud» — реальное отличие info70.
+Команда Kita должна регулярно prüfen, ob ihre **Angebote** stimmen: Raum, Material und
+eigenes Handeln der Fachkraft. Ohne Werkzeug bleibt das in Köpfen oder auf Zetteln, und
+die Teambesprechung hat keine gemeinsame Grundlage. Die Vorgängerfassung (Beobachtungsbogen
+je Kind, Schlüssel `ek.daten`) hat genau diese Lücke nicht geschlossen, sondern Kinder
+dokumentiert und in Stufen gefasst. Das ist nach docs/02, Z. 141–146, nicht zulässig.
 
 ## 2. Игрок и обещание (Wer + Kernerlebnis)
-Возраст/роль: **Fachkraft** (специалист Kita; ребёнку экран не адресован).
-Одно предложение: «Специалист документирует наблюдаемые индикаторы ребёнка
-(только как Kürzel) в трёх ступенях и уходит с текстовым отчётом для
-Bildungsdokumentation и разговора с родителями — без облака, без имён, без
-оценки ребёнка».
+Nutzer: **Fachkraft und Team** (Kita). Kein Kinder-Bildschirm.
+Ein Satz: «Das Team hakt in fünf Bereichen ab, was am Raum, am Material und am eigenen
+Handeln umgesetzt ist, und druckt den Bogen für die Besprechung. Kein Kind wird dabei erfasst.»
 
 ## 3. Движок и петля (Wie)
-Движок: Erwachsenen-Werkzeug (по образцу kriterien-check + foerder-navigator:
-тонкий DOM-слой над чистой логикой + JSON-контентбанк) + Koffer-экспорт
-(mitmach-arena).
-Основная петля: выбрать Kürzel → пройтись по 5 областям × 6 индикаторов →
-у каждого индикатора выбрать ступень (noch nicht / manchmal / sicher) →
-текстовый отчёт по ребёнку обновляется → копирование в документацию /
-подготовка Elterngespräch.
-Устойчивость петли: несколько детей (несколько Kürzel), повторный клик снимает
-наблюдение, прогресс полноты документации, Koffer-обмен между двумя
-устройствами (слияние без перезаписи).
+Motor: Erwachsenen-Werkzeug. Dünner DOM-Layer (`app.mjs`) über reiner Logik (`logik.mjs`)
+und einem JSON-Katalog (`daten/indikatoren.json`) mit Merkmal-Register.
+Schleife: Bereich öffnen → je Prüfpunkt eine der drei Auswahlmöglichkeiten wählen (erneuter
+Klick nimmt sie zurück) → Zählung des Bereichs aktualisiert sich → Druckbogen drucken.
+Keine Speicherung, kein Export, kein Import.
 
 ## 4. Lernziele (проверяемые!)
-Инструмент взрослый, цели — для специалиста:
-1. Fachkraft может **задокументировать** развитие ребёнка по 30 наблюдаемым
-   индикаторам структурированно и датосберегающе (только Kürzel).
-2. Fachkraft может **подготовить и провести** Entwicklungsgespräch на основе
-   текстового отчёта по ребёнку (с оговоркой «наблюдение, не диагноз»).
-3. Fachkraft может **объяснить своими словами**, почему инструмент НЕ создаёт
-   балл/рейтинг/сравнение детей, и **назвать** адрес помощи при тревоге
-   (Frühförderstelle / Kinderarzt).
+1. Fachkraft kann die Angebote von Raum, Material und eigenem Handeln in fünf Bereichen
+   prüfen und jeden Prüfpunkt als umgesetzt, noch offen oder trifft nicht zu markieren.
+2. Team kann den Druckbogen für die Besprechung nutzen und die Zählung je Bereich lesen,
+   ohne Gesamtzahl und ohne Prozentwert.
+3. Fachkraft kann erklären, warum die Seite nichts über Kinder erfasst und nichts bewertet
+   (docs/02, Z. 141–146).
 
 ## 5. Контент-план
-Единица контента: наблюдаемый индикатор. MVP: **5 областей × 6 индикаторов
-(30)** + 3 ступени в `daten/indikatoren.json`. Схема:
-`{ stufen: [{id,text}]×3, bereiche: [{id,name,emoji,fokus,
-indikatoren: [{id,text}]×6}]×5 }`. Дидактический анти-шаблон-тест: тест
-фиксирует ровно 5/6/3, глобальную уникальность id и префикс области; отдельный
-тест запрещает scoring-лексику (score/ranking/rangliste/benotung/punktzahl/
-punkte/defizit/bewertung/begabung) в датасете — инструмент документирует, а не
-оценивает; имя невозможно даже через koffer-импорт (кюрцель > 3 отклоняется).
+Einheit: **Prüfpunkt** = Angebot des Erwachsenen mit Merkmal-Kennung. MVP: 5 Bereiche × 6
+Prüfpunkte (30) plus 3 Auswahlmöglichkeiten. Die Auswahl heißt bewusst nicht Stufe, es gibt
+keine Rangfolge. Merkmal-Register: 11 verwendete Merkmale aus S. 17–19 des Programms
+Praleska mit wörtlichen Auszügen (Tabelle in README.md).
+Tests erzwingen 5/6/3, global eindeutige Kennungen mit Bereichs-Präfix, Pflicht-Merkmal
+je Prüfpunkt und ein Register ohne tote Einträge.
 
 ## 6. Политика соответствия (Pflicht, docs/02)
-[x] Werbefrei / без покупок
-[x] Без аккаунтов и персональных данных — дети только как Kürzel (макс. 3
-    символа, «keine Namen!»), без имён/даты/свободного текста; длина закреплена
-    технически и проверяется даже при импорте
-[x] Без внешних запросов (CSP `default-src 'self'` + installiereNetzwerkWaechter)
-[x] localStorage: только `ek.daten` (кюрцели + ступени) + кнопка «Alle Daten
-    löschen»; Export/Import только как локальный JSON-файл (kompass.mjs)
-[x] Privacy by default (ноль запросов привилегий)
-[x] Mobile First 360px/48px (kinder-ui-классы)
-[x] Vorlesen — кнопка озвучивания индикаторов по каждой области
-[x] Offline после загрузки
-[x] eltern.html — страница для Träger & Leitung (DSGVO lokal-statt-Cloud,
-    Bildungsplan-Mapping, AI Act, § 22a SGB VIII)
-[x] Impressum/DSGVO перед публикацией (ссылка на ../../impressum.html)
-Особые риски темы: наблюдение за детьми → строго OHNE Score/Ranking/
-Kind-Vergleich (EU AI Act); документация только ПО КАЖДОМУ ребёнку отдельно;
-закреплённый UI-текст «Beobachtung, keine Diagnose — bei Fragen an
-Frühförderstellen»; это не ИИ-система (нет вычисления/прогноза).
+[x] Werbefrei, keine Käufe, keine Links zu kommerziellen Seiten
+[x] Keine Kinderdaten: kein Name, kein Kürzel, keine Angabe je Kind, keine Eingabefelder
+[x] Keine Speicherung auf dem Gerät: kein `setItem`, kein `sessionStorage`, keine IndexedDB,
+    keine Cookies; nur das Entfernen des Altbestands (`ek.daten`) beim Start
+[x] Keine externen Anfragen: CSP `default-src 'self'` und `installiereNetzwerkWaechter()`
+[x] Keine Bewertung eines Kindes: keine Ampel, keine Stufe, keine Punkte, keine Prozent,
+    keine Rangfolge (docs/02, Z. 141–146)
+[x] Modellnamen: keine in Dateien, Kommentaren oder Texten (Test in `quellcode.test.mjs`)
+[x] Barrierefreiheit: Umschalter mit `aria-pressed`, Knopf trägt den Prüfpunkt im `aria-label`
+[x] Vorlesen nur mit einer Stimme auf dem Gerät (`localService`), sonst Hinweis
+[x] Druckbogen: `druck.css` mit `@media print`, keine Namenszeile
+[x] eltern.html für Träger und Leitung, Titel und `lang` erhalten, Struktur für den Sammelband
+[x] Impressum und Datenschutz verlinkt (`../../impressum.html`)
 
-## 7. Стандарты и финансирование (Wofür)
-Стандарты: DSGVO Art. 5 (Datenminimierung; свободный текст о ребёнке исключён
-дизайном) · EU AI Act (никакого автоматического скоринга детей в инструментах
-наблюдения) · § 22a SGB VIII + земельные Bildungspläne (обязанность
-наблюдения/документации) · BFSG (доступность).
-Förder-Fit: BzKJ (защитный дизайн, приватность); B2B-канал Träger/Leitung/
-Fachschulen как множитель (см. docs/08, foerder-navigator); ключевой аргумент
-рынка — «lokal statt Cloud» против облачной Kita-Software.
+## 7. Kernentscheidungen (Stand v0.2.0)
+- **Variante A (Entscheidung des Nutzers):** Die App bewertet kein Kind mehr und speichert
+  keine Kinderdaten auf dem Gerät. Die Zielgruppe sind Angebote des Erwachsenen.
+- **Drei Auswahlmöglichkeiten ohne Rangfolge:** umgesetzt, noch offen, trifft nicht zu.
+- **Zählung nur je Bereich** («erfüllt: 3 von 6»), keine Summe über alle Bereiche, keine
+  Prozentwerte, kein Balken in Prozent. Der Nenner ist immer die Zahl der Prüfpunkte des
+  Bereichs; «trifft nicht zu» zählt also nicht als erfüllt.
+- **Merkmal-Kennung je Prüfpunkt** und die Kennzeichnung «Eigenentwurf nach Merkmal …».
+  Die Nummerierung der Merkmale ist eine Setzung dieses Projekts.
+- **Ausgeschlossene Merkmale** (nicht übernommen, Begründung in README.md): Gesundheit und
+  Reserven eines Kindes, Stellung in der Kindergruppe (Rangordnung), Einfluss der Eltern,
+  Einstufung von Hilfebedarf, Temperament und Fähigkeiten, Selbstdiagnose der Fachkraft.
+- **Keine Speicherung:** Der Zustand lebt nur im Speicher der Seite. Beim Start wird der
+  Altbestand `ek.daten` einmal entfernt (try/catch, nur Entfernen).
+- **Kein Export, kein Import, kein Koffer.** `kompass.mjs` und sein Test sind entfernt.
+- **Vorlesen** nur mit einer Stimme, die auf dem Gerät liegt. Sonst bleibt es still, und die
+  Seite zeigt einen Hinweis.
+- **Keine Rechtsangaben.** Der Verweis auf § 22a SGB VIII und die Aussage über eine
+  Beobachtungspflicht in allen Bildungsplänen aus der Vorgängerfassung sind entfernt. Die
+  Aussage passt nicht zu einer Team-Checkliste und ist nicht gegen docs/ geprüft. docs/10
+  nennt § 22a nur bei anderen Einträgen. Eine rechtliche Prüfung steht offen (siehe unten).
 
-## 8. Аджайл-оценка
-Aufwand: M (контентбанк + чистая логика + тонкий DOM-слой на готовых пакетах).
-Что переиспользуем: kinder-ui (el, vorlesen, CSS), kinderschutz
-(NetzwerkWaechter), паттерн Katalog+JSON (foerder-navigator), Koffer-паттерн
-(mitmach-arena), логика/отчёт по образцу selbstcheck-paedagogik и
-staerken-tagebuch (наблюдение без скоринга). Первый срез (playable):
-несколько Kürzel + 5×6 индикаторов с 3 ступенями + отчёт + Löschen + Koffer
-(готово в MVP). Ausbaulinie: Alters-Content-Packs 1–7 на той же Bogen-Engine
-(Топ-30 №1 несёт «alle absorbierten Altersmodule 1-7»).
+## 8. Стандарты и финансирование (Wofür)
+Stand: DSGVO (keine personenbezogenen Daten, keine Speicherung), docs/02 Z. 141–146
+(keine Bewertung eines Kindes). Der Förderbezug bleibt wie bisher offen (docs/08).
 
-## 9. Kindertest-гипотезы
-Инструмент взрослый → вместо Kindertest — Fachkraft-Test на 5–8 специалистах:
-хватает ли 30 индикаторов на реальную группу (чего не хватает — но помним: без
-свободного текста и без имён)? Понимают ли, что «X/30» — полнота документации,
-а НЕ оценка ребёнка? Считывают ли «Beobachtung, keine Diagnose» как поддержку,
-а не как тревогу? Удобно ли ведение нескольких Kürzel на одном планшете и
-слияние двух устройств через Koffer? (протокол — docs/05, метод 5).
+## 9. Аджайл-оценка
+Aufwand: S bis M. Wiederverwendet: `kinder-ui` (`el`, `lokaleStimme`, `vorlesen`, CSS),
+`kinderschutz` (`installiereNetzwerkWaechter`), Katalog-Muster aus `foerder-navigator`.
+Prüfung: 25 Tests in drei Dateien (`node --test apps/entwicklungs-kompass/test/*.test.mjs`).
+
+## 10. Test-Hypothesen mit Fachkräften
+Teamtest mit 5 bis 8 Fachkräften: Sind die 30 Angebote für eine Gruppe vollständig genug?
+Verstehen alle, dass «erfüllt: 3 von 6» nur die eigene Zählung eines Bereichs ist und keine
+Bewertung? Wird der Druckbogen in der Besprechung genutzt? (Protokoll: docs/05, Methode 5.)
+
+## Offen (Entscheidungen des Teams)
+1. Ordnername: Die Seite heißt jetzt Angebots-Kompass, der Ordner bleibt `entwicklungs-kompass`.
+   Umbenennen würde Hub, Sammelband, Wurzel-README und mehrere GDD-Verweise betreffen.
+2. Rechtliche Einordnung und Verweise (§ 22a SGB VIII, Landes-Bildungspläne) sind nicht
+   gegen docs/ belegt und deshalb entfernt. Ob und wie sie wieder aufgenommen werden, entscheidet das Team.
+3. Die Zuordnung der Prüfpunkte zu den Merkmalen ist ein Eigenentwurf und in Teilen
+   großzügig (z. B. Feinmotorik unter S18.7). Eine Durchsicht durch eine Fachkraft ist offen.
+4. docs/10 Z. 412 und Z. 431 (Wellen 82 und 87) führen den Beobachtungsbogen je Kind noch als
+   offene Frage. Durch Variante A ist sie beantwortet. Die Dokumente sind außerhalb dieser App
+   zu aktualisieren.
+
+## Außerhalb des Ordners (nicht geändert)
+- `index.html` (Hub): Linktext «🧭 Entwicklungs-Kompass – Beobachtungsbogen» und Linkziel
+  `apps/entwicklungs-kompass/` (Ordner unverändert, Text anpassen).
+- `README.md` (Wurzel), Zeile `entwicklungs-kompass`: Beschreibung «Лист наблюдения развития»
+  passt nicht mehr.
+- `apps/eltern-sammelband/daten/apps.json`: Eintrag `entwicklungs-kompass` bleibt gültig,
+  da `eltern.html` vorhanden ist.
+- `apps/eingewoehnungs-leitfaden/GDD.md`, `apps/meilenstein-begleiter/GDD.md`,
+  `apps/elternbrief-generator/GDD.md`, `apps/buchecke-check/GDD.md`: nennen
+  `entwicklungs-kompass` als Nachbarn oder als Beispiel für localStorage. Die letzte Angabe
+  ist falsch geworden.
+- `apps/schulstart-begleiter/`: eigene Kopie von `logik.mjs` und `kompass.mjs`, verweist als
+  Muster auf diesen Ordner. Keine Importe, nur Kommentare und Texte.
+- `docs/10-praleska-baukasten.md`, `docs/11-kinderrechte-charta.md` Z. 105 und
+  `docs/praleska-katalog.json`: Nennungen des Eintrags als Beobachtungsbogen.

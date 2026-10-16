@@ -1,71 +1,86 @@
-// Entwicklungs-Kompass Kita: reine Logik (ohne DOM), damit sie testbar ist.
-// Wichtig (EU AI Act, docs/02): Es wird ausschließlich je Kind DOKUMENTIERT,
-// welche Stufe bei welchem Indikator beobachtet wurde - KEIN Score, KEINE
-// Rangfolge, KEIN Vergleich zwischen Kindern. Die Auswertung ist reiner Text
-// ("Beobachtung, keine Diagnose"); es gibt bewusst keine Zahl, die ein Kind
-// bewertet.
+// Angebots-Kompass Kita: reine Logik (ohne DOM), damit sie testbar ist.
+// Gegenstand sind die ANGEBOTE des Erwachsenen (Raum, Material, Handlung der
+// Fachkraft). Erfasst wird nur, ob ein Angebot umgesetzt, noch offen oder
+// nicht zutreffend ist. Kein Kind wird erfasst, bewertet oder verglichen
+// (docs/02, Z. 141-146). Es gibt bewusst keine Summe über alle Bereiche und
+// keine Prozentwerte; gezählt wird je Bereich.
 
-/** Kürzel bleiben absichtlich winzig: max 3 Zeichen, damit KEINE Namen entstehen. */
-export const MAX_KUERZEL = 3;
+/** Speicherschlüssel der Vorgängerfassung (Angaben zu Kindern). Nur entfernen, nie schreiben. */
+export const ALTER_SCHLUESSEL = 'ek.daten';
 
-/**
- * Normalisiert ein eingegebenes Kürzel: Rand-Leerzeichen weg, auf höchstens
- * MAX_KUERZEL Zeichen gekürzt. So kann gar kein Name gespeichert werden.
- * @param {unknown} roh
- * @returns {string}
- */
-export function normalisiereKuerzel(roh) {
-  if (typeof roh !== 'string') return '';
-  return roh.trim().slice(0, MAX_KUERZEL);
+/** Ein Prüfpunkt-Text muss ein ausformulierter Satz sein. */
+export const MIN_TEXTLAENGE = 20;
+
+/** Die drei Auswahlmöglichkeiten je Prüfpunkt (keine Rangfolge). */
+export const AUSWAHL = Object.freeze({
+  umgesetzt: 'umgesetzt',
+  offen: 'offen',
+  nichtZu: 'nicht-zutreffend',
+});
+
+const BEREICH_ANZAHL = 5;
+const PRUEFPUNKTE_JE_BEREICH = 6;
+const AUSWAHL_ANZAHL = 3;
+const KENNUNG = /^S(\d{2})\.(\d{1,2})$/;
+
+/** Alle Prüfpunkt-Kennungen des Katalogs (flach). @param {{bereiche: Array}} katalog */
+export function allePruefpunktIds(katalog) {
+  return katalog.bereiche.flatMap((b) => b.angebote.map((p) => p.id));
 }
 
 /**
- * Prüft, ob ein Kürzel gültig ist: nicht-leerer String mit 1..MAX_KUERZEL
- * Zeichen (nach Trim). Der harte Längen-Deckel ist die technische Umsetzung
- * der Regel "keine Namen".
- * @param {unknown} kuerzel
- * @returns {boolean}
- */
-export function kuerzelOk(kuerzel) {
-  if (typeof kuerzel !== 'string') return false;
-  const k = kuerzel.trim();
-  return k.length >= 1 && k.length <= MAX_KUERZEL;
-}
-
-/** Alle Indikator-Kennungen des Katalogs (flach). @param {{bereiche: Array}} katalog */
-export function alleIndikatorIds(katalog) {
-  return katalog.bereiche.flatMap((b) => b.indikatoren.map((i) => i.id));
-}
-
-/** Alle Stufen-Kennungen des Katalogs. @param {{stufen: Array}} katalog */
-export function alleStufenIds(katalog) {
-  return katalog.stufen.map((s) => s.id);
-}
-
-/**
- * Prüft den Indikatoren-Katalog (daten/indikatoren.json).
- * Erwartet: genau 3 Stufen und genau 5 Bereiche mit je genau 6 beobachtbaren
- * Indikatoren; alle Indikator-Kennungen global eindeutig und mit dem Bereichs-
- * Präfix versehen. Liefert Fehlerliste (leer = gültig).
+ * Prüft den Katalog (daten/indikatoren.json). Erwartet 3 Auswahlmöglichkeiten,
+ * 5 Bereiche mit je 6 Prüfpunkten (Kennung mit Bereichs-Präfix, ausformuliert)
+ * und ein Merkmal-Register, in dem jede Kennung eine Seite und einen
+ * Wortlaut hat und jedes Merkmal genutzt wird. Liefert Fehlerliste (leer = gültig).
  * @param {unknown} katalog geparstes JSON
  * @returns {string[]}
  */
 export function pruefeKatalog(katalog) {
-  const k = /** @type {{bereiche?: unknown, stufen?: unknown}} */ (katalog);
+  const k = /** @type {{bereiche?: unknown, auswahl?: unknown, merkmale?: unknown}} */ (katalog);
   if (typeof katalog !== 'object' || katalog === null
-    || !Array.isArray(k.bereiche) || !Array.isArray(k.stufen)) {
-    return ['Kein gültiger Indikatoren-Katalog'];
+    || !Array.isArray(k.bereiche) || !Array.isArray(k.auswahl)
+    || typeof k.merkmale !== 'object' || k.merkmale === null) {
+    return ['Kein gültiger Katalog (bereiche, auswahl und merkmale fehlen)'];
   }
   const fehler = [];
-  if (k.stufen.length !== 3) fehler.push(`Es müssen genau 3 Stufen sein (gefunden: ${k.stufen.length})`);
-  for (const stufe of k.stufen) {
-    if (!stufe || typeof stufe.id !== 'string' || typeof stufe.text !== 'string' || stufe.text.length === 0) {
-      fehler.push('Stufe ohne id/text');
+
+  // Auswahlmöglichkeiten
+  if (k.auswahl.length !== AUSWAHL_ANZAHL) {
+    fehler.push(`Es müssen genau ${AUSWAHL_ANZAHL} Auswahlmöglichkeiten sein (gefunden: ${k.auswahl.length})`);
+  }
+  const auswahlIds = new Set();
+  for (const a of k.auswahl) {
+    if (!a || typeof a.id !== 'string' || typeof a.text !== 'string' || a.text.length === 0) {
+      fehler.push('Auswahlmöglichkeit ohne id/text');
+    } else if (auswahlIds.has(a.id)) {
+      fehler.push(`Auswahl-Id doppelt: ${a.id}`);
+    } else {
+      auswahlIds.add(a.id);
     }
   }
-  if (k.bereiche.length !== 5) fehler.push(`Es müssen genau 5 Bereiche sein (gefunden: ${k.bereiche.length})`);
+  for (const id of Object.values(AUSWAHL)) {
+    if (!auswahlIds.has(id)) fehler.push(`Auswahlmöglichkeit fehlt: ${id}`);
+  }
+
+  // Merkmal-Register: Kennung = S + Seite (2 Stellen) + Nummer auf der Seite
+  for (const [kennung, m] of Object.entries(k.merkmale)) {
+    const treffer = KENNUNG.exec(kennung);
+    if (!treffer) {
+      fehler.push(`Merkmal-Kennung ungültig: ${kennung}`);
+      continue;
+    }
+    if (!m || m.seite !== Number(treffer[1])) fehler.push(`${kennung}: Seite passt nicht zur Kennung`);
+    if (!m || typeof m.wortlaut !== 'string' || m.wortlaut.length === 0) fehler.push(`${kennung}: Wortlaut fehlt`);
+  }
+
+  // Bereiche und Prüfpunkte
+  if (k.bereiche.length !== BEREICH_ANZAHL) {
+    fehler.push(`Es müssen genau ${BEREICH_ANZAHL} Bereiche sein (gefunden: ${k.bereiche.length})`);
+  }
   const bereichIds = new Set();
-  const indikatorIds = new Set();
+  const punktIds = new Set();
+  const genutzt = new Set();
   for (const bereich of k.bereiche) {
     if (!bereich || typeof bereich.id !== 'string' || bereich.id.length === 0) {
       fehler.push('Bereich ohne id');
@@ -73,76 +88,96 @@ export function pruefeKatalog(katalog) {
     }
     if (bereichIds.has(bereich.id)) fehler.push(`Bereich-Id doppelt: ${bereich.id}`);
     bereichIds.add(bereich.id);
-    if (typeof bereich.name !== 'string' || bereich.name.length === 0) fehler.push(`${bereich.id}: Name fehlt`);
-    if (typeof bereich.emoji !== 'string' || bereich.emoji.length === 0) fehler.push(`${bereich.id}: Emoji fehlt`);
-    if (typeof bereich.fokus !== 'string' || bereich.fokus.length === 0) fehler.push(`${bereich.id}: Fokus fehlt`);
-    if (!Array.isArray(bereich.indikatoren) || bereich.indikatoren.length !== 6) {
-      fehler.push(`${bereich.id}: es müssen genau 6 beobachtbare Indikatoren sein`);
+    for (const feld of ['name', 'emoji', 'fokus']) {
+      if (typeof bereich[feld] !== 'string' || bereich[feld].length === 0) fehler.push(`${bereich.id}: ${feld} fehlt`);
+    }
+    if (!Array.isArray(bereich.angebote) || bereich.angebote.length !== PRUEFPUNKTE_JE_BEREICH) {
+      fehler.push(`${bereich.id}: es müssen genau ${PRUEFPUNKTE_JE_BEREICH} Prüfpunkte sein`);
       continue;
     }
-    for (const ind of bereich.indikatoren) {
-      if (!ind || typeof ind.id !== 'string' || ind.id.length === 0
-        || typeof ind.text !== 'string' || ind.text.length === 0) {
-        fehler.push(`${bereich.id}: Indikator ohne id/text`);
+    for (const p of bereich.angebote) {
+      if (!p || typeof p.id !== 'string' || p.id.length === 0 || typeof p.text !== 'string') {
+        fehler.push(`${bereich.id}: Prüfpunkt ohne id/text`);
         continue;
       }
-      if (indikatorIds.has(ind.id)) fehler.push(`Indikator-Id doppelt: ${ind.id}`);
-      indikatorIds.add(ind.id);
-      if (!ind.id.startsWith(`${bereich.id}-`)) {
-        fehler.push(`${ind.id}: Kennung muss zum Bereich ${bereich.id} gehören`);
+      if (punktIds.has(p.id)) fehler.push(`Prüfpunkt-Id doppelt: ${p.id}`);
+      punktIds.add(p.id);
+      if (!p.id.startsWith(`${bereich.id}-`)) fehler.push(`${p.id}: Kennung muss zum Bereich ${bereich.id} gehören`);
+      if (p.text.trim().length < MIN_TEXTLAENGE) fehler.push(`${p.id}: Text ist kürzer als ${MIN_TEXTLAENGE} Zeichen`);
+      if (!Object.hasOwn(k.merkmale, p.quelleMerkmal)) {
+        fehler.push(`${p.id}: quelleMerkmal „${p.quelleMerkmal}“ steht nicht im Merkmal-Register`);
+      } else {
+        genutzt.add(p.quelleMerkmal);
       }
     }
+  }
+  for (const kennung of Object.keys(k.merkmale)) {
+    if (!genutzt.has(kennung)) fehler.push(`${kennung}: Merkmal steht im Register, wird aber von keinem Prüfpunkt genutzt`);
   }
   return fehler;
 }
 
 /**
- * Zählt, wie viele Indikatoren für EIN Kind dokumentiert sind (gültige Stufe).
- * Reine Vollständigkeits-Anzeige der Dokumentation - ausdrücklich KEIN
- * Leistungswert des Kindes.
- * @param {{bereiche: Array, stufen: Array}} katalog
- * @param {Record<string, string>} [beobKind] indikatorId -> stufeId
- * @returns {number}
+ * Zählt die Auswahl EINES Bereichs. Gezählt werden nur bekannte Prüfpunkte des
+ * Bereichs; fremde oder kaputte Schlüssel zählen nicht. Der Nenner ist immer
+ * die Zahl der Prüfpunkte dieses Bereichs. Keine Summe über Bereiche.
+ * @param {{angebote: Array<{id: string}>}} bereich
+ * @param {Record<string, string>} [auswahl] prüfpunktId -> auswahlId
+ * @returns {{erfuellt: number, offen: number, nichtZu: number, gesamt: number}}
  */
-export function zaehleDokumentiert(katalog, beobKind = {}) {
-  const stufen = new Set(alleStufenIds(katalog));
-  return alleIndikatorIds(katalog).filter((id) => stufen.has(beobKind?.[id])).length;
+export function bilanzBereich(bereich, auswahl = {}) {
+  const angaben = bereich.angebote.map((p) => (Object.hasOwn(auswahl ?? {}, p.id) ? auswahl[p.id] : null));
+  const zaehle = (id) => angaben.filter((a) => a === id).length;
+  return {
+    erfuellt: zaehle(AUSWAHL.umgesetzt),
+    offen: zaehle(AUSWAHL.offen),
+    nichtZu: zaehle(AUSWAHL.nichtZu),
+    gesamt: bereich.angebote.length,
+  };
+}
+
+/** Zählung eines Bereichs als Satz, ohne Prozentwert. @param {ReturnType<typeof bilanzBereich>} b */
+export function bilanzText(b) {
+  return `erfüllt: ${b.erfuellt} von ${b.gesamt} · noch offen: ${b.offen} · trifft nicht zu: ${b.nichtZu}`;
 }
 
 /**
- * Baut die Beobachtungs-Dokumentation EINES Kindes als reinen Text (für das
- * <textarea>). Je Bereich werden alle Indikatoren mit ihrer dokumentierten
- * Stufe aufgelistet; nicht Dokumentiertes erscheint als "(offen)". Ohne Zahlen-
- * wertung, ohne Prozente, ohne Vergleich mit anderen Kindern.
- * @param {{bereiche: Array, stufen: Array}} katalog
- * @param {string} kuerzel
- * @param {Record<string, string>} [beobKind] indikatorId -> stufeId
- * @param {string} [datum] vorformatiertes Datum (Testbarkeit)
- * @returns {string}
+ * Nächster Stand nach einem Klick: dieselbe Wahl nochmals nimmt sie zurück
+ * (null), eine andere Wahl ersetzt sie.
+ * @param {string|null|undefined} aktuell
+ * @param {string} gewaehlt
+ * @returns {string|null}
  */
-export function berichtFuerKind(katalog, kuerzel, beobKind = {}, datum = new Date().toLocaleDateString('de-DE')) {
-  const stufenText = new Map(katalog.stufen.map((s) => [s.id, s.text]));
-  const zeilen = [
-    'Entwicklungs-Kompass Kita - Beobachtungs-Dokumentation',
-    `Kind (Kürzel): ${kuerzel}`,
-    `Stand: ${datum}`,
-    '',
-    'Beobachtung, keine Diagnose. Diese Dokumentation hält fest, was im Alltag',
-    'beobachtet wurde. Sie bewertet, benotet und vergleicht kein Kind; jedes Kind',
-    'entwickelt sich in seinem eigenen Tempo. Bei Fragen an Frühförderstellen oder',
-    'die Kinderärztin bzw. den Kinderarzt.',
-    '',
-  ];
-  for (const bereich of katalog.bereiche) {
-    zeilen.push(`## ${bereich.emoji} ${bereich.name}`);
-    for (const ind of bereich.indikatoren) {
-      const stufe = beobKind?.[ind.id];
-      const marke = stufenText.has(stufe) ? stufenText.get(stufe) : 'offen';
-      zeilen.push(`- [${marke}] ${ind.text}`);
-    }
-    zeilen.push('');
+export function naechsterStand(aktuell, gewaehlt) {
+  return aktuell === gewaehlt ? null : gewaehlt;
+}
+
+/**
+ * Kästchen für den Druckbogen: genau ein gefülltes Kästchen, wenn gewählt.
+ * @param {Array<{id: string, text: string}>} optionen
+ * @param {string|null} [gewaehlt]
+ * @returns {string[]}
+ */
+export function druckMarken(optionen, gewaehlt = null) {
+  return optionen.map((o) => `${o.id === gewaehlt ? '☒' : '☐'} ${o.text}`);
+}
+
+/** Kennzeichnung jeder Formulierung als Eigenentwurf mit Merkmal-Kennung. */
+export function eigenentwurfsHinweis(kennung) {
+  return `Eigenentwurf nach Merkmal ${kennung}`;
+}
+
+/**
+ * Entfernt beim Start den Altbestand (ALTER_SCHLUESSEL). Es wird nur entfernt,
+ * nie geschrieben. Ein gesperrter oder fehlender Speicher bricht nichts ab.
+ * @param {{removeItem: (k: string) => void} | null} [speicher] Standard: localStorage
+ * @returns {boolean} true, wenn der Aufruf ohne Fehler durchlief
+ */
+export function bereinigeAltbestand(speicher = null) {
+  try {
+    (speicher ?? globalThis.localStorage).removeItem(ALTER_SCHLUESSEL);
+    return true;
+  } catch {
+    return false;
   }
-  zeilen.push('Diese Doku gehört in die Bildungsdokumentation der Einrichtung und ist als');
-  zeilen.push('Grundlage für das Entwicklungsgespräch mit den Eltern gedacht - nicht als Urteil.');
-  return zeilen.join('\n');
 }

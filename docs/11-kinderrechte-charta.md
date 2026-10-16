@@ -102,7 +102,7 @@ die vollständige Liste ergibt sich aus den `GDD.md`-Feldern *Bezug*.)
 `oer-vorlage`, `stundenentwurf-*`, `projektwoche`, `netz-pass-urkunde`,
 `quiz-karten-druck`, `stations-konfigurator`, `klassen-koffer-auswertung`,
 `lehrkraefte-szenariotraining`, `schulfreigabe-dossier`, sowie die
-pädagogischen Apps `entwicklungs-kompass`, `wohlfuehl-ampel`,
+pädagogischen Apps `entwicklungs-kompass`, `tagesblick-fachkraft`,
 `kita-wochenplaner`, `bewegungs-schatzkiste`, `staerken-tagebuch`,
 `selbstcheck-paedagogik`, `stark-und-gesund`, `gefuehle-entdecker`,
 `gemeinsam-gesund-essen`, `ich-schaff-das`.

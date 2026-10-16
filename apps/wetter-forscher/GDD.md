@@ -61,7 +61,7 @@ Die 28 Kalenderfelder tragen `role="img"` samt vollem Datum im
 spezifikationstreue Screenreader ignorieren ihn dann, während die
 sichtbare Tageszahl `aria-hidden` ist. (Chromium trägt den Namen zwar
 trotzdem in seinen Baum ein; darauf zu bauen wäre aber fahrlässig.)
-Dieselbe Lösung nutzen `wohlfuehl-ampel` und `uhr-und-kalender-kind`.
+Dieselbe Lösung nutzen (früher) `wohlfuehl-ampel` und `uhr-und-kalender-kind`.
 
 Ein Klick baut die Seite nicht neu auf: `#app` ist eine `aria-live`-Region,
 ein Komplettaustausch würde dem Screenreader bei jedem Tipp alles erneut

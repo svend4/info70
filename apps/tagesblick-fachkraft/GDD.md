@@ -1,89 +1,88 @@
-# 🚥 Wohlfühl-Ampel Gruppe — Kurz-GDD
+# 📋 Tagesblick Fachkraft — Kurz-GDD
+
+## Kernentscheidungen (Variante A, Entscheidung des Nutzers)
+
+1. **Kein Kind wird bewertet.** Keine Ampel, Stufe, Punkte, Prozent, Rang, kein
+   Kürzel und keine Kinderliste (docs/02, Z. 141–146).
+2. **Nichts wird gespeichert.** Der Zustand liegt in einer Variablen im Speicher
+   der Seite. Es gibt keinen Schreibzugriff auf Browser-Speicher. Die einzige
+   Berührung mit dem Speicher ist das Entfernen des Altbestands `wa.daten`.
+3. **Gezählt werden nur eigene Handlungen** der Fachkraft, je Bereich
+   („erledigt: X von Y“). Eine Gesamtzahl gibt es nicht.
+4. **Der Tagesbogen ist leer.** Datum und Häkchen trägt man von Hand ein. Auf dem
+   Papier gibt es keine Namenszeile und keine Häkchen vom Bildschirm (docs/02, Z. 79–82).
+5. **Keine Rechtsangabe ohne Prüfvermerk** (docs/02).
+6. **Keine Verbindung nach außen.** CSP `default-src 'self'` und Netzwerk-Wächter.
 
 ## 1. Феномен / потребность (Warum)
-Какому явлению отвечает: эмоциональное благополучие как базовая задача всех
-16 земельных Bildungspläne (Beobachtung & Dokumentation — Pflicht) и как
-Top-Thema каталога №2 (docs/10, дериваты Праляски: «Psychologische
-Gesundheit / emotionales Wohlbefinden»); Beschwerdeverfahren für Kinder
-как условие Betriebserlaubnis (§ 45 Abs. 2 Nr. 4 SGB VIII); UN-KRK Art. 3/12.
-Что сейчас происходит без приложения: самочувствие детей фиксируется
-в лучшем случае «в голове» воспитателя или в облачной Kita-Software с
-постоянным датеншутц-конфликтом; тихие «красные» серии (Eingewöhnung,
-домашние перемены) замечаются поздно, а разговор с родителями начинается
-без задокументированного повода.
+
+Fachkräfte haben im Alltag selten einen Ort, an dem sie ihre eigenen Schritte
+(Einzelzeit, Beschwerdeweg, Gespräche) an einem Tag sichtbar machen. Die frühere
+Wohlfühl-Ampel bewertete dagegen jedes Kind. Das widerspricht docs/02, Z. 141–146,
+und wird deshalb ersetzt. Thema bleibt das emotionale Wohlbefinden (Praleska, S. 15–18).
 
 ## 2. Игрок и обещание (Wer + Kernerlebnis)
-Возраст: Fachkräfte (дети 1–7 — как субъекты наблюдения, без экрана для них).
-Одно предложение: «Педагог за две минуты в день тикает светофор по каждому
-кюрцелю и уходит с видимой недельной динамикой плюс мягким импульсом,
-когда ребёнку три дня подряд „красно“».
+
+Fachkraft in Krippe und Kita. Versprechen: Am Tagesende sieht sie in zwei Minuten,
+welche ihrer Handlungen heute erledigt sind, und kann den leeren Bogen ausdrucken.
+Kinder kommen dabei nicht vor.
 
 ## 3. Движок и петля (Wie)
-Движок: planer (Planer-Selbstbeobachtung: Ampel + Tagesstatistik, по образцу
-takt-pause/kriterien-check — тонкий DOM-слой над чистой логикой).
-Основная петля: карточка ребёнка → тап 🟢/🟡/🔴 → (опционально) контекст-тег
-из фиксированного списка → недельная лента обновляется → при ≥ 3 «рот» подряд
-появляется импульс-подсказка. Что делает петлю устойчивой: ежедневный ритуал
-«2 минуты после обеда», дозаполнение пропущенного дня через поле даты,
-Koffer-экспорт для смены устройства.
 
-## 4. Lernziele (проверяемые!)
-Это Fachkraft-инструмент, цели — для взрослого:
-1. Fachkraft может **увидеть и показать** недельную динамику самочувствия
-   ребёнка («покажи ленту MO за неделю») вместо смутного «вроде норм».
-2. Fachkraft может **распознать** тихую «красную серию» (≥ 3 дней) и
-   **назвать** три мягких следующих шага (Bezugsperson-Zeit, Elterngespräch,
-   Beschwerdeweg des Kindes) — без диагноза.
-3. Fachkraft может **объяснить родителю/Träger своими словами**, почему
-   данные не уходят с устройства и почему кюрцель вместо имени достаточен.
+Движок: eine Checkliste mit sechs Handlungen in drei Bereichen. Петля: Handlung
+antippen → Knopf und Bilanz des Bereichs ändern sich → am Ende Bogen drucken oder
+die Seite schließen. Nichts bleibt zurück.
+
+## 4. Lernziele (проверяемые)
+
+1. Die Fachkraft kann am Tag benennen, welche ihrer Handlungen erledigt sind, je Bereich.
+2. Die Fachkraft kann erklären, warum auf Bildschirm und Papier keine Kinder stehen
+   und warum nichts gespeichert wird.
+3. Die Fachkraft kann einen Bereich mit wenigen erledigten Handlungen benennen, ohne
+   dabei ein Kind zu bewerten.
 
 ## 5. Контент-план
-Единица контента: не банк, а фиксированные словари в `logik.mjs`:
-3 Ampel-Stufen + 5 Kontext-Tags (Eingewöhnung, Konflikt, müde, Abschied
-schwer, neu in Gruppe) + 4 Impuls-Formulierungen в `app.mjs`. Схема данных
-(`wa.daten`): `{ kinder: string[?3 Zeichen, max 20], eintraege: { [kuerzel]:
-{ [JJJJ-MM-TT]: { ampel, kontext|null } } } }`. Дидактический
-анти-шаблон-тест: тесты фиксируют, что списков ровно 3/5, что свободный
-текст невозможен даже через импорт и что импульс не срабатывает без серии
-(«rot-grün-rot» ≠ серия).
 
-## 6. Политика соответствия (Pflicht, docs/02)
-[x] Werbefrei / без покупок
-[x] Без аккаунтов и персональных данных (только самовыбранные кюрцели
-≤ 3 знаков, UI-предупреждение «keine Namen!», max 20 детей)
-[x] Без внешних запросов (CSP `default-src 'self'` + installiereNetzwerkWaechter)
-[x] localStorage: только `wa.daten` (кюрцели + записи) + кнопка
-«Alle Daten löschen»; Export/Import только как локальный JSON-файл
-[x] Privacy by default (ноль запросов привилегий)
-[x] Mobile First 360px/48px (kinder-ui-классы)
-[ ] Vorlesen — n/a: чистый Fachkraft-инструмент без детского контента
-(как kriterien-check/foerder-navigator); детям экран не адресован
-[x] Offline после загрузки
-[x] eltern.html — здесь как Träger-/Leitungs-Info (DSGVO-аргументация,
-Eingewöhnung, Partizipation)
-[x] Impressum/DSGVO перед публикацией (ссылка на ../../impressum.html)
-Особые риски темы: наблюдение за детьми → строго OHNE Score/Ranking/
-Kind-Vergleich (AI Act: reine Dokumentation), пометка «Beobachtung, keine
-Diagnose» в UI и в импульсе; рекомендация в eltern.html: соответствие
-кюрцель↔ребёнок держать максимум на бумаге в закрытом шкафу.
+Drei Bereiche mit je zwei Handlungen (Eigenentwurf) in `logik.mjs`, `BEREICHE`.
+Jede Handlung hat einen Namen, eine Frage für die Hilfstechnik (`frage`, enthält
+den Namen wörtlich) und einen kurzen Hinweis. Keine Eingabefelder für Kinder,
+keine Kontext-Listen.
 
-## 7. Стандарты и финансирование (Wofür)
-Стандарты: DSGVO Art. 5 (Datenminimierung) / Art. 8 · § 45 Abs. 2 Nr. 4
-SGB VIII (Beschwerdeverfahren) · Landes-Bildungspläne (Beobachtungspflicht) ·
-EU AI Act (без автоматизированного скоринга детей) · UN-KRK Art. 3/12.
-Förder-Fit: B2B-канал Träger/Fortbildung; аргумент «lokal statt Cloud» —
-дифференциатор против облачной Kita-Software (см. docs/10, Deutschland-Lücke).
+## 6. Политика соответствия (docs/02)
+
+- [x] Werbefrei, ohne Konto, ohne Tracking
+- [x] Keine Kinderdaten: keine Namen, Kürzel, Fotos oder Adressen; kein Eingabefeld
+- [x] Keine externen Anfragen: CSP und Netzwerk-Wächter; geprüft in `test/regeln.test.mjs`
+- [x] Speicher: keiner; nur `removeItem('wa.daten')` in try/catch
+- [x] Druck: eigenes `druck.css` mit `@media print`, leerer Bogen, ohne Namenszeile, ohne Häkchen
+- [x] Keine Gesamtzahl, kein Score, keine Prozentwerte
+- [x] Keine Rechtsangabe ohne Prüfvermerk (§ 45 SGB VIII entfernt)
+- [x] `eltern.html` als Info für Träger und Leitung, ohne Ampel-Behauptung und ohne Kinder-Behauptung
+- [x] Mobile First: kinder-ui-Klassen, Knöpfe in voller Breite, mindestens 3 rem hoch
+- [x] Offline nach dem Laden
+- [x] Impressum verlinkt (`../../impressum.html`)
+- [ ] Vorlesen: nicht vorgesehen. Die App richtet sich an Fachkräfte, nicht an Kinder
+
+## 7. Стандарты (Wofür)
+
+DSGVO (Datenminimierung). docs/02 mit der Regel, dass ein Kind nicht bewertet wird.
+Die Grenze folgt docs/02: Die App klassifiziert keine Menschen; sie zählt nur, was
+die Fachkraft selbst getan hat.
 
 ## 8. Аджайл-оценка
-Aufwand: M (готовые пакеты + два чистых модуля + тонкий DOM-слой).
-Что переиспользуем: kinder-ui (el, CSS), kinderschutz (NetzwerkWaechter),
-Koffer-паттерн mitmach-arena, tagesSchluessel-паттерн takt-pause.
-Первый срез (playable): кюрцели + дневной светофор + недельная лента +
-импульс + Koffer + Löschen-Knopf (готово в MVP).
 
-## 9. Kindertest-гипотезы
-Инструмент взрослый → вместо Kindertest — Fachkraft-Test на 3–5 педагогах:
-хватает ли 5 контекст-тегов на реальную неделю (чего не хватает — но
-помним: без свободного текста)? Понятен ли «повторный тап = удалить запись»
-без объяснения? Считывают ли импульс как помощь, а не как упрёк/диагноз?
-Пользуются ли полем даты для дозаполнения или тикают только «сегодня»?
+Aufwand S: ein Ordner, eine reine Logik-Datei, ein DOM-Modul, ein Druck-CSS. Wiederverwendet
+werden `el` aus kinder-ui und der Netzwerk-Wächter aus kinderschutz.
+
+## 9. Offene Entscheidungen
+
+- Der Druckbogen bleibt leer, Antworten ändern ihn nicht. Gefüllte Häkchen auf dem
+  Papier verbietet docs/02 (Z. 79–82). Wer das ändern will, muss die Regel ändern.
+- § 45 SGB VIII fehlt. Eine Rechtsangabe kommt nur mit dem Prüfvermerk aus docs/02 zurück.
+- Die sechs Handlungen sind Vorschläge. Ob die Liste vollständig ist, klärt ein Test
+  mit drei bis fünf Fachkräften.
+
+## 10. Тесты
+
+19 тестов. Zählung nach `^test(` über alle Testdateien dieses Ordners. Lauf:
+`node --test apps/tagesblick-fachkraft/test/*.test.mjs`.

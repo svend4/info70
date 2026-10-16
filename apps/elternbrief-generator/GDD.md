@@ -12,7 +12,7 @@ Hause. Immer über die Gruppe, nie über einzelne Kinder.
 
 ## 2. Zielgruppe
 
-Fachkräfte. Nachbarn: eingewoehnungs-tagebuch, entwicklungs-kompass,
+Fachkräfte. Nachbarn: eingewoehnungs-leitfaden, entwicklungs-kompass,
 meilenstein-begleiter (Eltern-Seite), vorlese-kompass, familienschatz-reime.
 
 ## 3. Ablauf

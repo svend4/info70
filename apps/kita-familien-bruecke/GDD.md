@@ -16,7 +16,7 @@ Ampel-Auswertung je Bereich, Maßnahmenkatalog, druckbarer Team-Bericht.
 ## 2. Zielgruppe
 
 Kita-Teams und Leitungen (QM/Teamsitzung). Nachbarn: selbstcheck-
-paedagogik, gruppenklima-check, eingewoehnungs-tagebuch,
+paedagogik, gruppenklima-check, eingewoehnungs-leitfaden,
 elternbrief-generator, kriterien-check.
 
 ## 3. Ablauf

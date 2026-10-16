@@ -199,5 +199,5 @@ test('die Nachbar-Apps, auf die verwiesen wird, gibt es wirklich', async () => {
   // muss stimmen, sonst stehen zwei Apps nebeneinander, die dasselbe zu tun
   // scheinen.
   assert.ok(vorhanden.has('schulstart-begleiter'));
-  assert.match(code, /Für Fachkräfte, mit Beobachtungsbogen/);
+  assert.match(code, /Für Fachkräfte, mit Angeboten/);
 });

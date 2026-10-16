@@ -159,7 +159,7 @@ function rueckblickKarte() {
       // trägt das aria-label zwar trotzdem in seinen Baum ein, aber
       // spezifikationstreue Screenreader ignorieren es – das Datum wäre für
       // sie verloren, und die sichtbare Tageszahl ist aria-hidden. Gleiche
-      // Lösung wie in wohlfuehl-ampel und uhr-und-kalender-kind.
+      // Lösung wie früher in wohlfuehl-ampel und in uhr-und-kalender-kind.
       const feld = el('div', {
         role: 'img',
         style: 'aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;'

@@ -37,7 +37,7 @@ bewusst weggelassen und im Validator festgeschrieben:
 
 Damit ist die App auch mit Blick auf die EU-KI-Verordnung sauber: kein
 Scoring, kein Ranking, keine Ableitung über Kinder. Dieselbe Linie wie in
-`wohlfuehl-ampel` und `staerken-tagebuch`.
+`tagesblick-fachkraft` und `staerken-tagebuch`.
 
 ## 4. Abgrenzung zu den Nachbar-Apps
 
@@ -45,8 +45,8 @@ Scoring, kein Ranking, keine Ableitung über Kinder. Dieselbe Linie wie in
 - `koerper-entdecker` — **Quiz** über den Körperbau (was steckt drin?).
 - diese App — **kein Quiz**: Es gibt keine richtige Antwort, nur den
   eigenen Tag.
-- `wohlfuehl-ampel` — Ampel, aber **für Fachkräfte über Kinder**; hier
-  beobachtet sich das Kind selbst.
+- `tagesblick-fachkraft` (früher `wohlfuehl-ampel`) — eigene Handlungen der Fachkraft, keine Bewertung von
+  Kindern; hier beobachtet sich das Kind selbst.
 
 ## 5. Datensparsamkeit
 

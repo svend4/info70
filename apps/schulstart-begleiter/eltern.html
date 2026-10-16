@@ -9,32 +9,60 @@
 </head>
 <body>
   <main class="k-app">
-    <h1 class="k-titel">🏛️ Info: Schulstart-Begleiter</h1>
+    <h1 class="k-titel">🏛️ Info für Träger &amp; Leitung: Schulstart-Begleiter</h1>
 
     <section class="k-karte">
       <h2>Worum geht es?</h2>
-      <p>Ein <strong>lokaler Beobachtungsbogen zur Schulfähigkeit</strong> für pädagogische Fachkräfte im letzten Kita-Jahr: fünf Reifebereiche – <strong>Sprache &amp; phonologische Bewusstheit</strong>, <strong>Mengen &amp; frühe Mathematik</strong>, <strong>Fein- &amp; Graphomotorik</strong>, <strong>Konzentration &amp; Arbeitsverhalten</strong> und <strong>soziale/emotionale Reife &amp; Selbstständigkeit</strong> – mit je sechs beobachtbaren Merkmalen (30 insgesamt). Je Kind wird in drei Stufen dokumentiert: <em>noch nicht / in Ansätzen / sicher</em>. Daraus entsteht ein rein textlicher Bericht für die Bildungsdokumentation und das Übergangs- bzw. Elterngespräch.</p>
+      <p>Eine <strong>Checkliste für pädagogische Fachkräfte</strong> im letzten Kita-Jahr. Sie prüft die <strong>Angebote des Erwachsenen</strong> für den Schulstart in fünf Bereichen: <strong>Sprache &amp; phonologische Bewusstheit</strong>, <strong>Mengen &amp; frühe Mathematik</strong>, <strong>Fein- &amp; Graphomotorik</strong>, <strong>Konzentration &amp; Arbeitsverhalten</strong> und <strong>soziale/emotionale Reife &amp; Selbstständigkeit</strong>. Je Bereich gibt es sechs Angebote. Jedes wird als <em>angeboten</em>, <em>noch offen</em> oder <em>trifft nicht zu</em> markiert.</p>
+      <p>Ausgegeben wird ein <strong>Druckbogen</strong> für die Teambesprechung und die Planung von Raum und Material.</p>
     </section>
 
     <section class="k-karte">
-      <h2>Was es NICHT ist</h2>
-      <p><strong>Keine Diagnose und kein Ersatz für das Schuleingangsverfahren.</strong> Der Bogen vergibt <strong>keine Schulreife-Note</strong>, keine Punkte, keine Rangfolge und vergleicht kein Kind mit anderen. Er strukturiert die pädagogische Beobachtung. Über die Einschulung entscheidet er nicht: das tut die Schule. In Nordrhein-Westfalen zum Beispiel trifft die Entscheidung die Schulleiterin oder der Schulleiter auf der Grundlage des amtsärztlichen Gutachtens, und die Eltern sind anzuhören (§ 35 Abs. 3 Schulgesetz NRW). Die Regeln unterscheiden sich von Land zu Land – maßgeblich ist das Schulgesetz Ihres Bundeslandes. <em>(Berichtigt in Welle 82: hier stand, die Entscheidung träfen „die Erziehungsberechtigten, die Schule und der Schulärztliche Dienst“. Das war falsch.)</em></p>
-    </section>
-
-    <section class="k-karte">
-      <h2>Datenschutz (DSGVO / EU AI Act)</h2>
+      <h2>Neu gegenüber der früheren Fassung</h2>
+      <p>Die frühere Fassung war ein Beobachtungsbogen je Kind mit Stufen, einem Bericht je Kind und Kürzeln. Das ist entfallen:</p>
       <ul>
-        <li><strong>Keine Namen:</strong> Kinder werden nur als Kürzel (max 3 Zeichen) geführt – es entstehen keine personenbezogenen Daten auf dem Gerät.</li>
-        <li><strong>Lokal statt Cloud:</strong> Speicherung nur in <code>localStorage</code> („ssb.daten“) dieses Geräts; kein Konto, keine Übertragung, keine externen Requests (CSP self + Netzwerk-Wächter).</li>
-        <li><strong>Kein automatisches Scoring von Kindern</strong> (EU AI Act): reine Dokumentation, keine Bewertung.</li>
-        <li><strong>Datei-Sicherung:</strong> Backup/Gerätewechsel nur als private Datei; auch beim Import werden Kürzel über 3 Zeichen abgelehnt.</li>
-        <li><strong>Löschen:</strong> „Alle Daten löschen“ entfernt alles vom Gerät.</li>
+        <li>keine Angaben zu einzelnen Kindern, keine Kürzel und keine Stufen,</li>
+        <li>kein Bericht über ein Kind, kein Kopieren eines Berichts, kein Export und kein Import,</li>
+        <li>keine Bewertung, keine Ampel, keine Punkte und keine Rangfolge.</li>
       </ul>
     </section>
 
     <section class="k-karte">
-      <h2>Herkunft</h2>
-      <p>Konzept-Idee aus Katalog Nr. 2 des Projekts (docs/10, Praleska-Ableitung, Top-30 Platz 2 „Schulstart-Begleiter“). Übernommen wurde ausschließlich das Konzept; sämtliche Bereiche, Merkmale und Berichtstexte wurden neu formuliert und an die deutschen Landes-Bildungspläne und das Schuleingangsverfahren angelehnt.</p>
+      <h2>Keine Kinderdaten – nichts wird gespeichert</h2>
+      <ul>
+        <li><strong>Keine Angaben zu einzelnen Kindern:</strong> Die Seite enthält keine Namen, keine Fotos und keine Adressen und fragt nichts über ein Kind ab.</li>
+        <li><strong>Nichts auf dem Gerät:</strong> Die Seite schreibt nichts in den Browser. Die Angaben bleiben nur im Speicher der Seite und sind nach dem Neuladen weg.</li>
+        <li><strong>Altbestand entfernt:</strong> Eine frühere Fassung hat unter dem Schlüssel „ssb.daten“ Angaben zu Kindern gespeichert. Diese Einträge werden beim Öffnen einmal vom Gerät entfernt.</li>
+        <li><strong>Keine Verbindung nach außen:</strong> Die Seite lädt nur eigene Dateien. Eine Content-Security-Policy und ein Netzwerk-Wächter verhindern Anfragen an andere Server. Werbefrei, ohne Konto und ohne Tracking.</li>
+      </ul>
+    </section>
+
+    <section class="k-karte">
+      <h2>Keine Bewertung – weder von Kindern noch von Teams</h2>
+      <ul>
+        <li><strong>Nur die Angebote der Einrichtung:</strong> Bewertet wird nur, ob ein Angebot angeboten wird, noch offen ist oder nicht zutrifft.</li>
+        <li><strong>Zählung nur je Bereich:</strong> Pro Bereich wird gezählt, wie viele Angebote angeboten sind (z. B. „angeboten: 3 von 6“). Eine Gesamtzahl über alle Bereiche oder Prozentwerte gibt es bewusst nicht.</li>
+        <li><strong>Keine Einschätzung:</strong> Das Werkzeug rechnet nichts aus und schätzt nichts ein. Es hält fest, was das Team angekreuzt hat.</li>
+        <li><strong>Einschulung:</strong> Über die Einschulung entscheidet die Schule nach dem Schulrecht des Landes. Dieses Werkzeug ersetzt weder eine Untersuchung noch ein Verfahren.</li>
+      </ul>
+    </section>
+
+    <section class="k-karte">
+      <h2>Herkunft der Formulierungen</h2>
+      <ul>
+        <li><strong>Eigenentwürfe mit Merkmal-Kennung:</strong> Jedes Angebot ist ein Eigenentwurf nach einem Merkmal, zum Beispiel sprache-1. Die Kennung steht unter dem Angebot. Zitate gibt es nicht.</li>
+        <li><strong>Konzept:</strong> Anregung aus dem Programm „Praleska“ (Nationales Institut für Bildung, Minsk 2007). Die Bereichsnamen und alle Formulierungen sind eigene Arbeit des Projekts.</li>
+      </ul>
+    </section>
+
+    <section class="k-karte">
+      <h2>Einsatz im Team</h2>
+      <p>Die Checkliste eignet sich für die Teambesprechung, die Prüfung des Raums und die Planung von Material. Der Druckbogen zeigt alle Angebote mit Kästchen, die Zählung je Bereich und das Datum. Er enthält keinen Namen und keine Angaben zu Kindern.</p>
+    </section>
+
+    <section class="k-karte">
+      <h2>Hinweis</h2>
+      <p style="font-size:0.9rem;color:#4b5563">Dies ist eine Orientierung, keine Rechtsberatung. Prüfen Sie den Einsatz mit Ihrem Träger, Ihrer Datenschutzbeauftragten und dem Landes-Bildungsplan.</p>
     </section>
 
     <footer class="k-fuss"><a href="./">Zum Werkzeug</a> · <a href="../../impressum.html">Impressum &amp; Datenschutz</a></footer>

@@ -1,0 +1,21 @@
+/* Angebots-Kompass: Druckbogen (Team-Checkliste). Auf dem Bildschirm bleibt der
+   Druckteil verborgen; beim Drucken verschwinden die Bedienteile. */
+
+.k-nur-druck { display: none; }
+.k-kleingedruckt { font-size: 0.8rem; color: #4b5563; margin: 0.15rem 0 0.4rem; }
+.k-druck-marken { font-family: monospace; font-size: 0.85rem; margin: 0.2rem 0 0; }
+.k-druck-fuss { font-size: 0.75rem; color: #4b5563; margin-top: 1rem; }
+
+@media print {
+  .k-nur-bildschirm { display: none !important; }
+  .k-nur-druck { display: block !important; box-shadow: none; border: none; padding: 0; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+
+  .k-druck-bereich { break-inside: avoid; margin-top: 0.8rem; }
+  .k-druck-zeile { break-inside: avoid; border-top: 1px solid #999; padding: 0.3rem 0; }
+  .k-kleingedruckt, .k-druck-fuss { color: #000; }
+  .k-druck-marken { font-size: 10pt; }
+}

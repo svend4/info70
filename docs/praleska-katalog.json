@@ -25,15 +25,18 @@
  "top30": [
   {
    "titel": "Entwicklungs-Kompass Kita (digitaler Beobachtungsbogen)",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu Angebots-Kompass Kita (Ordner entwicklungs-kompass), einer Team-Checkliste ohne Kinderbewertung und ohne Kinderdaten auf dem Gerät. Stufen je Kind, Bericht je Kind und Koffer sind entfallen.",
    "begruendung": "Beobachtung und Dokumentation ist in allen 16 Landes-Bildungsplaenen Pflicht, und der lokale Datei-Export ohne Cloud/Konto ist gegenueber cloudbasierter Kita-Software ein echtes DSGVO-Alleinstellungsmerkmal - die Bogen-Engine traegt zugleich alle absorbierten Altersmodule 1-7.",
    "pruefstatus": "Die Verankerung in den Landes-Bildungsplänen ist nicht aus dem Praleska-Text belegt und ungeprüft."
   },
   {
    "titel": "Schulstart-Begleiter: Beobachtungsbogen zur Schulfaehigkeit",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu einer Checkliste mit Angeboten des Erwachsenen (Ordner schulstart-begleiter); keine Stufen je Kind, kein Kinderbericht, keine Speicherung.",
    "begruendung": "Der Uebergang Kita-Grundschule ist in jedem Bundesland Pflichtthema mit Schuleingangsverfahren, und ein strukturierter Reifemerkmale-Bogen mit Foerderbericht (absorbiert zwei Dubletten mit 131 Indikatoren) fuellt die Luecke zwischen informellen Notizen und aerztlicher Untersuchung."
   },
   {
    "titel": "Eingewoehnungs-Tagebuch",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu Eingewöhnungs-Leitfaden (Ordner eingewoehnungs-leitfaden): vier Phasen und Checklisten eigener Handlungen der Fachkraft; keine Tagesampel, keine Kinderdaten, keine Speicherung.",
    "begruendung": "Eingewoehnung nach Berliner/Muenchener Modell ist deutscher Kita-Standard, wird aber fast ueberall auf Papier dokumentiert - ein Ampel-Verlaufslog mit Elterngespraech-Bericht ist sofort anschlussfaehig und praktisch konkurrenzlos.",
    "pruefstatus": "Die Behauptung „deutscher Kita-Standard“ ist nicht aus der Quelle belegt und ungeprüft; sie bleibt bis zur Prüfung ohne Gewähr."
   },
@@ -149,6 +152,7 @@
  "ideen": [
   {
    "titel": "Entwicklungs-Kompass Kita (digitaler Beobachtungsbogen)",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu Angebots-Kompass Kita (Ordner entwicklungs-kompass), einer Team-Checkliste ohne Kinderbewertung und ohne Kinderdaten auf dem Gerät. Stufen je Kind, Bericht je Kind und Koffer sind entfallen.",
    "typ": "erzieher-werkzeug",
    "alter": "Fachkraefte (Kinder 3-7)",
    "engine": "Erwachsenen-Katalog+Checkliste+Bericht",
@@ -189,6 +193,7 @@
   },
   {
    "titel": "Wohlfuehl-Ampel Gruppe",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu Tagesblick Fachkraft (Ordner tagesblick-fachkraft): eigene Handlungen des Tages; keine Ampel, keine Kinderdaten, keine Speicherung.",
    "typ": "erzieher-werkzeug",
    "alter": "Fachkraefte (Kinder 1-7)",
    "engine": "Planer-Selbstbeobachtung (Ampel, Tagesstatistik)",
@@ -334,6 +339,7 @@
   },
   {
    "titel": "Eingewoehnungs-Tagebuch",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu Eingewöhnungs-Leitfaden (Ordner eingewoehnungs-leitfaden): vier Phasen und Checklisten eigener Handlungen der Fachkraft; keine Tagesampel, keine Kinderdaten, keine Speicherung.",
    "typ": "erzieher-werkzeug",
    "alter": "Erzieher*innen + Eltern von Kindern 0-3",
    "beschreibung": "Die Bindungs- und Trennungsindikatoren des Kapitels (Fremdeln, Trennungsschmerz ab 6 Mon., Bindungsaufbau) werden zu einem strukturierten Beobachtungslog fuer die Kita-Eingewoehnung mit Tages-Ampel und Verlaufsbericht fuer das Elterngespraech.",
@@ -1133,6 +1139,7 @@
   },
   {
    "titel": "Schulstart-Begleiter: Beobachtungsbogen zur Schulfaehigkeit",
+   "korrektur": "Welle 88 (Variante A): umgebaut zu einer Checkliste mit Angeboten des Erwachsenen (Ordner schulstart-begleiter); keine Stufen je Kind, kein Kinderbericht, keine Speicherung.",
    "typ": "erzieher-werkzeug",
    "alter": "5-7 (Werkzeug fuer Erwachsene, kein Kind-Bildschirm)",
    "beschreibung": "Digitaler Beobachtungs- und Berichtsbogen fuer Erzieher*innen/Eltern, der die im Buch beschriebenen Reifemerkmale (Motivation, Willkuersteuerung/произвольность, kommunikative Schulreife, Reflexion, Motiv-Unterordnung) strukturiert erfasst und einen Foerderbericht erzeugt.",

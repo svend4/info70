@@ -1,8 +1,8 @@
 {
   "name": "@info70/schulstart-begleiter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Schulstart-Begleiter: lokaler Beobachtungsbogen zur Schulfaehigkeit fuer paedagogische Fachkraefte. Fuenf Reifebereiche (Sprache/phonologische Bewusstheit, Mengen/fruehe Mathematik, Fein-/Graphomotorik, Konzentration/Arbeitsverhalten, soziale/emotionale Reife & Selbststaendigkeit) mit je sechs beobachtbaren Merkmalen (30), je Kind in drei Stufen dokumentiert; Text-Bericht fuers Uebergangs-/Elterngespraech; Datei-Export/Import (Kuerzel-Koffer). Beobachtung, keine Diagnose, KEIN Ersatz fuers Schuleingangsverfahren, kein Score/keine Note (EU AI Act). Kinder nur als Kuerzel (max 3 Zeichen), lokal, ohne Konto/Cloud. Praleska docs/10 (Top-30 Nr. 2). Zielgruppe: Fachkraefte.",
+  "description": "Schulstart-Begleiter: Checkliste mit Angeboten des Erwachsenen für den Schulstart (fünf Bereiche mit je sechs Angeboten, je angeboten / noch offen / trifft nicht zu). Zählung je Bereich, Druckbogen. Kein Kind wird erfasst oder bewertet; nichts wird auf dem Gerät gespeichert. Eigenentwürfe nach Merkmal (docs/10, Praleska Nr. 2). Zielgruppe: Fachkräfte.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

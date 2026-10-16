@@ -1,32 +1,81 @@
-// Wohlfühl-Ampel Gruppe: reine Logik (ohne DOM), damit sie testbar ist.
-// Fachkraft-Werkzeug: tägliche Ampel-Einschätzung des emotionalen
-// Wohlbefindens je Kind (nur Kürzel, keine Namen), Wochenansicht,
-// sanfter Hinweis-Impuls bei anhaltendem Rot.
-// Bewusst OHNE Score, OHNE Ranking, OHNE Kind-Vergleich (Beobachtung,
-// keine Diagnose - AI-Act-konforme reine Dokumentation).
+// Tagesblick Fachkraft: reine Logik (ohne DOM), damit sie testbar ist.
+//
+// Die Fachkraft hält am Tag ihre EIGENEN Handlungen fest (Häkchen). Kinder
+// kommen in dieser App nicht vor: keine Namen, keine Kürzel, keine Bewertung,
+// keine Summe über Kinder. Gezählt wird nur, wie viele eigene Handlungen je
+// Bereich erledigt sind. Eine Gesamtzahl gibt es bewusst nicht.
 
-export const MAX_KINDER = 20;
-export const MAX_KUERZEL_LAENGE = 3;
-export const IMPULS_SCHWELLE = 3;
-export const WOCHEN_TAGE = 7;
+/** Schlüssel der früheren Fassung im Browser. Die App entfernt ihn nur. */
+export const ALTER_SCHLUESSEL = 'wa.daten';
 
-/** Die drei Ampelstufen (feste Liste, kein Zahlenwert = kein Score). */
-export const AMPELN = [
-  { code: 'gruen', name: 'wohl', punkt: '🟢' },
-  { code: 'gelb', name: 'wackelig', punkt: '🟡' },
-  { code: 'rot', name: 'braucht Aufmerksamkeit', punkt: '🔴' },
+/**
+ * Die Handlungen der Fachkraft, gegliedert in Bereiche.
+ * Eigenentwurf, aus den bisherigen Impuls-Texten der früheren Fassung
+ * umformuliert. `frage` ist die Beschriftung für Hilfstechnik am Knopf;
+ * sie enthält den Namen der Handlung wörtlich.
+ */
+export const BEREICHE = [
+  {
+    id: 'zeit',
+    name: 'Zeit und Mitsprache',
+    handlungen: [
+      {
+        id: 'einzelzeit',
+        name: 'Einzelzeit angeboten',
+        frage: 'Hast du heute Einzelzeit angeboten?',
+        hilfe: 'Kurze 1:1-Momente beim Ankommen, Spielen oder Abholen anbieten.',
+      },
+      {
+        id: 'mitsprache',
+        name: 'Kindern Mitsprache gegeben',
+        frage: 'Hast du heute Kindern Mitsprache gegeben?',
+        hilfe: 'Bei einer Entscheidung im Alltag, zum Beispiel bei Spielwahl oder Ruhezeit, nach der Meinung des Kindes fragen.',
+      },
+    ],
+  },
+  {
+    id: 'beschwerde',
+    name: 'Beschwerde und Gespräch',
+    handlungen: [
+      {
+        id: 'beschwerdeweg',
+        name: 'Beschwerdeweg erklärt',
+        frage: 'Hast du heute den Beschwerdeweg erklärt?',
+        hilfe: 'Dem Kind zeigen, wem es sagen kann, wenn etwas nicht gut ist.',
+      },
+      {
+        id: 'elterngespraech',
+        name: 'Elterngespräch angeboten',
+        frage: 'Hast du heute ein Elterngespräch angeboten?',
+        hilfe: 'Den Eltern ein Gespräch anbieten: Was hat sich zu Hause verändert? Was hilft dem Kind gerade?',
+      },
+    ],
+  },
+  {
+    id: 'team',
+    name: 'Team und Fachberatung',
+    handlungen: [
+      {
+        id: 'teamgespraech',
+        name: 'Teamgespräch geführt',
+        frage: 'Hast du heute ein Teamgespräch geführt?',
+        hilfe: 'Im Team besprechen und gemeinsam weiter im Blick behalten.',
+      },
+      {
+        id: 'fachberatung',
+        name: 'Fachberatung eingeholt',
+        frage: 'Hast du heute Fachberatung eingeholt?',
+        hilfe: 'Bei anhaltender Sorge, die im Team allein nicht geklärt werden kann, Fachberatung hinzuziehen.',
+      },
+    ],
+  },
 ];
-export const AMPEL_WERTE = AMPELN.map((a) => a.code);
 
-/** Feste Kontext-Liste - bewusst KEIN Freitext (Datensparsamkeit). */
-export const KONTEXTE = [
-  { code: 'eingewoehnung', name: 'Eingewöhnung' },
-  { code: 'konflikt', name: 'Konflikt' },
-  { code: 'muede', name: 'müde' },
-  { code: 'abschied', name: 'Abschied schwer' },
-  { code: 'neu', name: 'neu in Gruppe' },
+const WOCHENTAGE = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+const MONATE = [
+  'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+  'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember',
 ];
-export const KONTEXT_WERTE = KONTEXTE.map((k) => k.code);
 
 /**
  * Lokaler Tagesschlüssel "JJJJ-MM-TT" (keine UTC-Verschiebung).
@@ -38,80 +87,34 @@ export function tagesSchluessel(datum = new Date()) {
 }
 
 /**
- * Tagesschlüssel um delta Tage verschieben (kalenderfest, auch über
- * Monats-/Jahresgrenzen).
+ * Lesbares Datum zu einem Tagesschlüssel, z. B. "Freitag, 16. Oktober 2026".
  * @param {string} tagKey "JJJJ-MM-TT"
- * @param {number} delta z. B. -1 für gestern
  */
-export function verschiebeTag(tagKey, delta) {
+export function tagesLabel(tagKey) {
   const [j, m, t] = tagKey.split('-').map(Number);
-  return tagesSchluessel(new Date(j, m - 1, t + delta));
+  const wochentag = WOCHENTAGE[new Date(j, m - 1, t).getDay()];
+  return `${wochentag}, ${t}. ${MONATE[m - 1]} ${j}`;
 }
 
 /**
- * Wochenansicht für ein Kind: die letzten 7 Tage (ältester zuerst,
- * endet bei bisTag). Tage ohne Eintrag erscheinen mit ampel/kontext = null.
- * @param {Record<string, {ampel: string, kontext: string|null}>} eintraegeJeKind
- *        Einträge des Kindes, Schlüssel = Tagesschlüssel
- * @param {string} [bisTag] Tagesschlüssel des letzten Tages
- * @returns {Array<{datum: string, ampel: string|null, kontext: string|null}>}
+ * Wie viele eigene Handlungen eines Bereichs sind erledigt?
+ * Unbekannte Kennungen zählen nicht; Handlungen anderer Bereiche auch nicht.
+ * @param {{handlungen: {id: string}[]}} bereich
+ * @param {Set<string>} erledigt Kennungen der erledigten Handlungen
+ * @returns {{erledigt: number, gesamt: number}}
  */
-export function wochenSicht(eintraegeJeKind = {}, bisTag = tagesSchluessel()) {
-  const tage = [];
-  for (let i = WOCHEN_TAGE - 1; i >= 0; i--) {
-    const datum = verschiebeTag(bisTag, -i);
-    const eintrag = eintraegeJeKind[datum] ?? null;
-    tage.push({
-      datum,
-      ampel: eintrag?.ampel ?? null,
-      kontext: eintrag?.kontext ?? null,
-    });
-  }
-  return tage;
+export function zaehleBereich(bereich, erledigt) {
+  const gesamt = bereich.handlungen.length;
+  const anzahl = bereich.handlungen.filter((h) => erledigt.has(h.id)).length;
+  return { erledigt: anzahl, gesamt };
 }
 
 /**
- * Länge der Ampel-Serie am Ende einer chronologischen Tagesliste:
- * Wie viele dokumentierte Tage in Folge zeigen die Farbe?
- * Tage OHNE Eintrag (null) zählen nicht und unterbrechen nicht -
- * ein Wochenende ohne Doku beendet eine Rot-Serie also nicht.
- * @param {Array<{ampel: string|null}|string|null>} tage ältester zuerst
- * @param {string} [farbe]
+ * Anzeige je Bereich, z. B. "erledigt: 1 von 2".
+ * @param {{handlungen: {id: string}[]}} bereich
+ * @param {Set<string>} erledigt
  */
-export function ampelSerie(tage, farbe = 'rot') {
-  let serie = 0;
-  for (let i = tage.length - 1; i >= 0; i--) {
-    const eintrag = tage[i];
-    const ampel = eintrag !== null && typeof eintrag === 'object' ? eintrag.ampel : eintrag;
-    if (ampel == null) continue;
-    if (ampel !== farbe) break;
-    serie++;
-  }
-  return serie;
-}
-
-/**
- * Sanfter Hinweis-Impuls fällig? Ja bei >= 3 dokumentierten Rot-Tagen
- * in Folge. Der Impuls ist eine Beobachtungs-Erinnerung, KEINE Diagnose.
- * @param {Array<{ampel: string|null}|string|null>} tage ältester zuerst
- * @param {number} [schwelle]
- */
-export function brauchtImpuls(tage, schwelle = IMPULS_SCHWELLE) {
-  return ampelSerie(tage, 'rot') >= schwelle;
-}
-
-/**
- * Prüft ein neues Kürzel. Liefert eine Fehlermeldung oder null (= gültig).
- * Regeln: 1-3 Zeichen (keine Namen!), einmalig, höchstens 20 Kinder.
- * @param {string} kuerzel
- * @param {string[]} [vorhandene] bereits angelegte Kürzel
- * @returns {string|null}
- */
-export function pruefeKuerzel(kuerzel, vorhandene = []) {
-  const k = (kuerzel ?? '').trim();
-  if (vorhandene.length >= MAX_KINDER) return `Höchstens ${MAX_KINDER} Kinder pro Gruppe.`;
-  if (k.length === 0) return 'Bitte ein Kürzel eingeben.';
-  if (k.length > MAX_KUERZEL_LAENGE) return `Höchstens ${MAX_KUERZEL_LAENGE} Zeichen - bitte keine Namen!`;
-  if (vorhandene.includes(k)) return 'Dieses Kürzel gibt es schon.';
-  return null;
+export function bilanzText(bereich, erledigt) {
+  const { erledigt: anzahl, gesamt } = zaehleBereich(bereich, erledigt);
+  return `erledigt: ${anzahl} von ${gesamt}`;
 }

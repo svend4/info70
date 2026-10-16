@@ -1,318 +1,215 @@
-// Schulstart-Begleiter: lokaler Beobachtungsbogen zur SCHULFÄHIGKEIT für
-// pädagogische FACHKRÄFTE. Praleska docs/10 (Top-30 Nr. 2). Alle Reifemerkmale
-// sind Neuformulierungen. Engine-Muster: apps/entwicklungs-kompass (dünner
-// DOM-Layer über reiner Logik + JSON-Bank + Datei-Koffer).
-//
-// Politik docs/02: KEINE externen Anfragen (CSP self + Netzwerk-Wächter);
-// Kinder NUR als Kürzel (max 3 Zeichen), keine Namen; localStorage nur
-// 'ssb.daten' + "Alle Daten löschen"; Sicherung nur als private Datei.
-// EU AI Act: reine Dokumentation je Kind – KEIN Score, KEINE Rangfolge, KEINE
-// Schulreife-Note. "Beobachtung, keine Diagnose, kein Screening-Ersatz."
-import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
+// Schulstart-Begleiter: Checkliste mit Angeboten des Erwachsenen für den
+// Schulstart. Geprüft werden die ANGEBOTE der Fachkraft (Raum, Material,
+// Spiele, eigenes Handeln), nie ein Kind. Politik docs/02: keine externen
+// Anfragen (CSP self und Netzwerk-Wächter), keine Speicherung auf dem Gerät;
+// der Stand lebt nur im Speicher dieser Seite. Kein Score, keine Rangfolge
+// (docs/02, Z. 141-146). Dünner DOM-Layer über der reinen Logik in logik.mjs.
+import { el, lokaleStimme, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
-  pruefeKatalog, kuerzelOk, normalisiereKuerzel, MAX_KUERZEL,
-  alleIndikatorIds, alleStufenIds, zaehleDokumentiert, berichtFuerKind,
+  pruefeKatalog, stand, setzeAuswahl, bilanzBereich, bilanzText, druckMarken,
+  eigenentwurfsHinweis, bereinigeAltbestand,
 } from './logik.mjs';
-import { packeKoffer, pruefeKoffer, vereinigeKoffer } from './kompass.mjs';
 
 installiereNetzwerkWaechter();
+bereinigeAltbestand(); // einmal beim Start: Altbestand entfernen, nie schreiben
 
-const SCHLUESSEL = 'ssb.daten';
 const app = document.getElementById('app');
-const katalog = await fetch('daten/indikatoren.json').then((r) => r.json());
-const INDIKATOR_IDS = alleIndikatorIds(katalog);
-const STUFEN_IDS = alleStufenIds(katalog);
-const GESAMT = INDIKATOR_IDS.length;
+const datum = new Date().toLocaleDateString('de-DE');
+let katalog = null;
 
-let aktivKuerzel = null;
-let meldung = null;
+/** Nur im Speicher dieser Seite: angebotId -> auswahlWert. Ohne Eintrag gilt „offen“. */
+let auswahl = {};
+/** angebotId -> { bereichId, knoepfe: [{el, wert}], druckZeilen: [el] } */
+const zeilen = new Map();
+/** bereichId -> { bereich, bilanzen: [el] } */
+const bereiche = new Map();
+let meldungEl = null;
 
-const leereDaten = () => ({ kinder: [], beobachtungen: {} });
-
-function ladeDaten() {
-  const roh = JSON.parse(localStorage.getItem(SCHLUESSEL) ?? 'null');
-  if (!roh || typeof roh !== 'object' || Array.isArray(roh)) return leereDaten();
-  return {
-    kinder: Array.isArray(roh.kinder) ? roh.kinder.filter(kuerzelOk) : [],
-    beobachtungen: (roh.beobachtungen && typeof roh.beobachtungen === 'object' && !Array.isArray(roh.beobachtungen))
-      ? roh.beobachtungen : {},
-  };
+function setzeMeldung(text, ok = true) {
+  if (!meldungEl) return;
+  meldungEl.className = `k-hinweis ${ok ? 'k-hinweis--richtig' : 'k-hinweis--falsch'}`;
+  meldungEl.textContent = text;
+  meldungEl.hidden = false;
 }
 
-const speichereDaten = (daten) => localStorage.setItem(SCHLUESSEL, JSON.stringify(daten));
+// --- Zustand anzeigen (nur betroffene Teile aktualisieren) -------------------
 
-function fuegeKindHinzu(rohKuerzel) {
-  const kuerzel = normalisiereKuerzel(rohKuerzel);
-  if (!kuerzelOk(kuerzel)) {
-    meldung = { ok: false, text: `Bitte ein Kürzel mit 1 bis ${MAX_KUERZEL} Zeichen eingeben (keine Namen).` };
-    return render();
+function zeileRegistrieren(angebot, bereichId) {
+  if (!zeilen.has(angebot.id)) {
+    zeilen.set(angebot.id, { bereichId, knoepfe: [], druckZeilen: [] });
   }
-  const daten = ladeDaten();
-  if (daten.kinder.includes(kuerzel)) {
-    meldung = { ok: false, text: `Das Kürzel „${kuerzel}“ gibt es schon. Bitte ein anderes wählen.` };
-    aktivKuerzel = kuerzel;
-    return render();
+  return zeilen.get(angebot.id);
+}
+
+function zeileAktualisieren(id) {
+  const z = zeilen.get(id);
+  const aktuell = stand(auswahl, id);
+  for (const k of z.knoepfe) {
+    const gedrueckt = k.wert === aktuell;
+    k.el.setAttribute('aria-pressed', String(gedrueckt));
+    k.el.classList.toggle('k-knopf--neutral', !gedrueckt);
   }
-  daten.kinder.push(kuerzel);
-  speichereDaten(daten);
-  aktivKuerzel = kuerzel;
-  meldung = { ok: true, text: `Kürzel „${kuerzel}“ angelegt. Bitte keine Namen notieren.` };
-  render();
+  const marken = druckMarken(katalog.auswahl, aktuell).join('   ');
+  for (const d of z.druckZeilen) d.textContent = marken;
 }
 
-function entferneKind(kuerzel) {
-  const daten = ladeDaten();
-  daten.kinder = daten.kinder.filter((k) => k !== kuerzel);
-  delete daten.beobachtungen[kuerzel];
-  speichereDaten(daten);
-  if (aktivKuerzel === kuerzel) aktivKuerzel = daten.kinder[0] ?? null;
-  meldung = { ok: true, text: `Kürzel „${kuerzel}“ mit allen Beobachtungen gelöscht.` };
-  render();
+function bilanzAktualisieren(bereichId) {
+  const { bereich, bilanzen } = bereiche.get(bereichId);
+  const text = bilanzText(bilanzBereich(bereich, auswahl));
+  for (const b of bilanzen) b.textContent = text;
 }
 
-function setzeStufe(kuerzel, indId, stufeId) {
-  const daten = ladeDaten();
-  const beob = { ...(daten.beobachtungen[kuerzel] ?? {}) };
-  if (beob[indId] === stufeId) delete beob[indId]; // erneuter Klick nimmt die Beobachtung zurück
-  else beob[indId] = stufeId;
-  daten.beobachtungen[kuerzel] = beob;
-  speichereDaten(daten);
-  render();
+function waehle(angebotId, wert) {
+  auswahl = setzeAuswahl(auswahl, angebotId, wert);
+  zeileAktualisieren(angebotId);
+  bilanzAktualisieren(zeilen.get(angebotId).bereichId);
 }
+
+function vorleseBereich(bereich) {
+  // Nur eine Stimme, die auf dem Gerät liegt (localService). Sonst wird nicht vorgelesen,
+  // weil die Standardstimme eines Browsers netzbasiert sein kann.
+  const stimme = lokaleStimme('de-DE');
+  if (stimme === undefined) {
+    setzeMeldung('Die Stimmen des Geräts sind (noch) nicht verfügbar. Bitte gleich noch einmal tippen oder selbst vorlesen.', false);
+    return;
+  }
+  if (!stimme) {
+    setzeMeldung('Auf diesem Gerät gibt es keine Stimme, die ohne Netz läuft. Bitte selbst vorlesen.', false);
+    return;
+  }
+  const text = `${bereich.name}. ${bereich.angebote.map((p) => p.text).join(' ')}`;
+  vorlesen(text, 'de-DE', stimme);
+}
+
+// --- Bausteine ----------------------------------------------------------------
 
 function kopfKarte() {
   return el('section', { class: 'k-karte' },
     el('div', { class: 'k-hinweis' },
-      el('p', { style: 'margin:0;font-weight:600' },
-        'Beobachtung, keine Diagnose und KEIN Ersatz für das Schuleingangsverfahren – bei Fragen an Frühförderstellen, Kooperationslehrkraft und Schulärztlichen Dienst.')),
+      el('p', { style: 'margin:0;font-weight:600' }, 'Kein Kind wird erfasst, bewertet oder verglichen.')),
     el('p', { style: 'font-size:0.9rem' },
-      'Ein lokaler Beobachtungsbogen zur Schulfähigkeit: fünf Reifebereiche mit je sechs beobachtbaren Merkmalen, je Kind in drei Stufen dokumentiert (noch nicht / in Ansätzen / sicher). ',
-      el('strong', {}, 'Keine Schulreife-Note, keine Rangfolge, kein Vergleich zwischen Kindern'),
-      ' – jedes Kind wird nur für sich dokumentiert und hat sein eigenes Tempo.'),
+      'Geprüft werden die Angebote des Erwachsenen für den Schulstart: Raum, Material, Spiele und eigene Handlung. Jedes Angebot wird als ',
+      el('strong', {}, 'angeboten'), ', ', el('strong', {}, 'noch offen'), ' oder ',
+      el('strong', {}, 'trifft nicht zu'), ' markiert. Ohne Angabe gilt „noch offen“.'),
+    el('p', { style: 'font-size:0.9rem' },
+      'Je Bereich wird gezählt, wie viele Angebote angeboten sind (z. B. „angeboten: 3 von 6“). Eine Gesamtzahl über alle Bereiche oder Prozentwerte gibt es bewusst nicht.'),
     el('p', { style: 'font-size:0.9rem;margin-bottom:0' },
-      el('strong', {}, 'Keine Namen! '),
-      `Kinder werden ausschließlich als Kürzel geführt (max ${MAX_KUERZEL} Zeichen, z. B. „AB“). So entstehen keine personenbezogenen Daten auf diesem Gerät.`));
+      'Jede Formulierung ist ein Eigenentwurf nach einem Merkmal. Die Kennung, z. B. sprache-1, steht unter jedem Angebot.'));
 }
 
-function kinderKarte(daten) {
-  const eingabe = el('input', {
-    type: 'text', maxlength: String(MAX_KUERZEL), inputmode: 'text',
-    placeholder: `Kürzel (max ${MAX_KUERZEL} Zeichen)`, 'aria-label': 'Kürzel des Kindes, keine Namen',
-    style: 'flex:1 1 8rem;min-width:0;font:inherit;padding:0.6rem;border-radius:0.5rem;border:2px solid var(--k-rand)',
-  });
-  const formular = el('form', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap;align-items:stretch;margin:0 0 0.6rem' },
-    eingabe,
-    el('button', { type: 'submit', class: 'k-knopf k-knopf--klein' }, '➕ Kürzel anlegen'));
-  formular.addEventListener('submit', (ev) => {
-    ev.preventDefault();
-    const wert = eingabe.value;
-    eingabe.value = '';
-    fuegeKindHinzu(wert);
-  });
-
-  const liste = daten.kinder.length === 0
-    ? el('p', { style: 'font-size:0.9rem;color:#4b5563;margin:0' },
-        'Noch kein Kürzel angelegt. Lege oben ein Kürzel an, um mit der Dokumentation zu beginnen.')
-    : el('div', { style: 'display:flex;gap:0.4rem;flex-wrap:wrap' },
-        ...daten.kinder.map((kuerzel) => {
-          const aktiv = kuerzel === aktivKuerzel;
-          const n = zaehleDokumentiert(katalog, daten.beobachtungen[kuerzel]);
-          return el('div', { style: 'display:flex;align-items:stretch;gap:0.2rem' },
-            el('button', {
-              class: `k-knopf k-knopf--klein ${aktiv ? '' : 'k-knopf--neutral'}`,
-              'aria-pressed': String(aktiv),
-              onclick: () => { aktivKuerzel = kuerzel; meldung = null; render(); },
-            }, `${kuerzel} (${n}/${GESAMT})`),
-            el('button', {
-              class: 'k-knopf k-knopf--neutral k-knopf--klein',
-              'aria-label': `Kürzel ${kuerzel} löschen`,
-              style: 'padding:0.75rem 0.7rem',
-              onclick: () => {
-                if (globalThis.confirm?.(`Kürzel „${kuerzel}“ und alle seine Beobachtungen wirklich löschen?`)) entferneKind(kuerzel);
-              },
-            }, '🗑️'));
-        }));
-
-  return el('section', { class: 'k-karte' },
-    el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '👶 Kürzel verwalten'),
-    el('p', { style: 'margin:0 0 0.5rem;font-size:0.85rem;color:#4b5563' },
-      'Keine Namen – nur ein kurzes Kürzel je Kind. Tippe auf ein Kürzel, um es zu dokumentieren. Die Zahl zeigt, wie viele Merkmale schon festgehalten sind (Stand der Doku, keine Bewertung).'),
-    formular,
-    liste);
-}
-
-function indikatorZeile(ind, beobKind) {
-  return el('div', { role: 'group', 'aria-label': ind.text, style: 'padding:0.55rem 0;border-top:1px solid var(--k-rand)' },
-    el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' }, ind.text),
+function angebotZeile(bereich, p) {
+  const z = zeileRegistrieren(p, bereich.id);
+  return el('div', { role: 'group', 'aria-label': p.text, style: 'padding:0.55rem 0;border-top:1px solid var(--k-rand)' },
+    el('p', { style: 'margin:0 0 0.2rem;font-size:0.95rem' }, p.text),
+    el('p', { class: 'k-kleingedruckt' }, eigenentwurfsHinweis(p.quelleMerkmal)),
     el('div', { style: 'display:flex;gap:0.4rem;flex-wrap:wrap' },
-      ...katalog.stufen.map((stufe) => {
-        const gewaehlt = beobKind[ind.id] === stufe.id;
-        return el('button', {
-          class: `k-knopf k-knopf--klein ${gewaehlt ? '' : 'k-knopf--neutral'}`,
-          'aria-pressed': String(gewaehlt),
-          onclick: () => setzeStufe(aktivKuerzel, ind.id, stufe.id),
-        }, stufe.text);
+      ...katalog.auswahl.map((opt) => {
+        const knopf = el('button', {
+          class: 'k-knopf k-knopf--klein k-knopf--neutral',
+          'aria-pressed': 'false',
+          'aria-label': `${p.text} – ${opt.text}`,
+          onclick: () => waehle(p.id, opt.id),
+        }, opt.text);
+        z.knoepfe.push({ el: knopf, wert: opt.id });
+        return knopf;
       })));
 }
 
-function bereichKarte(bereich, beobKind) {
+function bereichKarte(bereich) {
+  const bilanzEl = el('p', { style: 'margin:0.5rem 0 0;font-weight:600;font-size:0.95rem' });
+  bereiche.get(bereich.id).bilanzen.push(bilanzEl);
   return el('section', { class: 'k-karte' },
-    el('div', { style: 'display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem' },
+    el('div', { style: 'display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem;flex-wrap:wrap' },
       el('h2', { style: 'margin:0;font-size:1.1rem' }, `${bereich.emoji} ${bereich.name}`),
       el('button', {
         class: 'k-knopf k-knopf--neutral k-knopf--klein',
-        'aria-label': `Merkmale im Bereich ${bereich.name} vorlesen`,
-        onclick: () => vorlesen(`${bereich.name}. ${bereich.indikatoren.map((i) => i.text).join(' ')}`),
+        'aria-label': `Angebote im Bereich ${bereich.name} vorlesen`,
+        onclick: () => vorleseBereich(bereich),
       }, '🔊 Vorlesen')),
     el('p', { style: 'margin:0.25rem 0 0;font-size:0.85rem;color:#4b5563' }, bereich.fokus),
-    ...bereich.indikatoren.map((ind) => indikatorZeile(ind, beobKind)));
+    bilanzEl,
+    ...bereich.angebote.map((p) => angebotZeile(bereich, p)));
 }
 
-function fortschrittKarte(kuerzel, beobKind) {
-  const n = zaehleDokumentiert(katalog, beobKind);
+function aktionenKarte() {
   return el('section', { class: 'k-karte' },
-    el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' },
-      `Dokumentation für Kürzel „${kuerzel}“: ${n} von ${GESAMT} Merkmalen festgehalten.`),
-    el('div', { class: 'k-fortschritt', role: 'progressbar', 'aria-valuemin': 0, 'aria-valuemax': GESAMT, 'aria-valuenow': n, 'aria-label': 'Vollständigkeit der Dokumentation' },
-      el('div', { style: `width:${Math.round((n / GESAMT) * 100)}%` })),
-    el('p', { style: 'margin:0.4rem 0 0;font-size:0.85rem;color:#4b5563' },
-      'Das ist der Stand der Dokumentation – nicht eine Bewertung des Kindes oder seiner Schulreife. Ein erneuter Klick auf eine gewählte Stufe nimmt die Beobachtung zurück.'));
-}
-
-function berichtKarte(kuerzel, beobKind) {
-  const berichtsFeld = el('textarea', {
-    readonly: true,
-    style: 'width:100%;min-height:16rem;font-family:monospace;font-size:0.8rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.5rem',
-    'aria-label': `Beobachtungs-Dokumentation für Kürzel ${kuerzel} als Text`,
-  });
-  berichtsFeld.value = berichtFuerKind(katalog, kuerzel, beobKind);
-  return el('section', { class: 'k-karte' },
-    el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `📝 Bericht für Kürzel „${kuerzel}“`),
+    el('h2', { style: 'margin-top:0;font-size:1.05rem' }, '🖨️ Druckbogen'),
     el('p', { style: 'font-size:0.9rem' },
-      'Reiner Text zum Kopieren in Ihre Bildungsdokumentation oder als Grundlage fürs Übergangs- und Elterngespräch. Der Bericht enthält den Hinweis „Beobachtung, keine Diagnose, kein Screening-Ersatz“ und keinerlei Note, Prozente oder Vergleich.'),
-    berichtsFeld,
+      'Der Druckbogen zeigt alle Angebote mit ihren Kästchen und die Zählung je Bereich. Er enthält keinen Namen und keine Angaben zu Kindern.'),
     el('div', { class: 'k-antworten' },
-      el('button', {
-        class: 'k-knopf k-knopf--klein',
-        onclick: (ev) => {
-          berichtsFeld.select();
-          navigator.clipboard?.writeText(berichtsFeld.value);
-          ev.target.textContent = '✔️ Kopiert!';
-        },
-      }, '📋 Bericht kopieren')));
-}
-
-function kofferKarte() {
-  return el('section', { class: 'k-karte' },
-    el('h2', { style: 'margin-top:0;font-size:1.05rem' }, '📦 Sichern & Übertragen (Datei)'),
-    el('p', { style: 'font-size:0.9rem' },
-      'Den gesamten Stand als lokale Datei sichern – fürs Backup, einen Gerätewechsel oder um zwei Tablets zusammenzuführen. Beim Einlesen behalten vorhandene Beobachtungen Vorrang, der Import füllt nur Lücken. Es reist nur das Kürzel, nie ein Name; Kürzel über 3 Zeichen werden abgelehnt.'),
-    el('div', { class: 'k-antworten' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: exportiere }, '📤 Als Datei sichern'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: importiere }, '📥 Datei einlesen')));
+      el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Druckbogen drucken')));
 }
 
 function datenKarte() {
   return el('section', { class: 'k-karte' },
     el('h2', { style: 'margin-top:0;font-size:1.05rem' }, '🧹 Ihre Daten'),
-    el('p', { style: 'font-size:0.9rem' },
-      'Gespeichert wird nur der Beobachtungs-Stand („ssb.daten“: Kürzel und dokumentierte Stufen), ausschließlich auf diesem Gerät. Kein Konto, keine Cloud, keine Übertragung. Bitte nirgendwo Namen notieren – das Kürzel genügt.'),
-    el('button', {
-      class: 'k-knopf k-knopf--falsch k-knopf--klein',
-      onclick: () => {
-        if (!globalThis.confirm?.('Wirklich ALLE Kürzel und Beobachtungen auf diesem Gerät löschen?')) return;
-        localStorage.removeItem(SCHLUESSEL);
-        aktivKuerzel = null;
-        meldung = { ok: true, text: 'Alle Daten wurden von diesem Gerät gelöscht.' };
-        render();
-      },
-    }, '🧹 Alle Daten löschen'));
+    el('p', { style: 'font-size:0.9rem;margin-bottom:0' },
+      'Diese Seite speichert nichts auf diesem Gerät. Die Angaben bleiben nur im Speicher dieser Seite und sind nach dem Neuladen weg. Eine frühere Fassung hat Angaben zu einzelnen Kindern gespeichert (Schlüssel „ssb.daten“); diese alten Einträge werden beim Öffnen einmal entfernt. Alte Sicherungsdateien (schulstart-begleiter-daten) werden nicht mehr eingelesen.'));
 }
 
-function exportiere() {
-  const blob = new Blob([packeKoffer(ladeDaten())], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const anker = el('a', { href: url, download: 'schulstart-begleiter-daten.json' });
-  document.body.append(anker);
-  anker.click();
-  anker.remove();
-  URL.revokeObjectURL(url);
+// --- Druckbogen (nur beim Drucken sichtbar) -----------------------------------
+
+function druckZeile(p) {
+  const marken = el('p', { class: 'k-druck-marken' });
+  zeilen.get(p.id).druckZeilen.push(marken);
+  return el('div', { class: 'k-druck-zeile' },
+    el('p', { style: 'margin:0;font-size:0.95rem' }, p.text),
+    el('p', { class: 'k-kleingedruckt' }, eigenentwurfsHinweis(p.quelleMerkmal)),
+    marken);
 }
 
-function importiere() {
-  const eingabe = el('input', { type: 'file', accept: '.json,application/json', style: 'display:none' });
-  eingabe.addEventListener('change', async () => {
-    const datei = eingabe.files?.[0];
-    eingabe.remove();
-    if (!datei) return;
-    let inhalt;
-    try {
-      inhalt = JSON.parse(await datei.text());
-    } catch {
-      meldung = { ok: false, text: 'Die Datei ließ sich nicht lesen.' };
-      return render();
-    }
-    const fehler = pruefeKoffer(inhalt, { indikatorIds: INDIKATOR_IDS, stufenIds: STUFEN_IDS });
-    if (fehler.length > 0) {
-      meldung = { ok: false, text: `Einlesen nicht möglich: ${fehler[0]}.` };
-      return render();
-    }
-    const vorher = ladeDaten();
-    const vereinigt = vereinigeKoffer(vorher, inhalt);
-    speichereDaten(vereinigt);
-    const neu = vereinigt.kinder.length - vorher.kinder.length;
-    if (!aktivKuerzel) aktivKuerzel = vereinigt.kinder[0] ?? null;
-    meldung = { ok: true, text: `Datei eingelesen – ${neu} neue${neu === 1 ? 's' : ''} Kürzel ergänzt, vorhandene Beobachtungen blieben erhalten.` };
-    render();
-  });
-  document.body.append(eingabe);
-  eingabe.click();
+function druckBogen() {
+  return el('section', { class: 'k-karte k-nur-druck', 'aria-label': 'Druckbogen: Checkliste Schulstart-Angebote' },
+    el('h2', { style: 'margin:0 0 0.3rem;font-size:1.3rem' }, 'Checkliste: Schulstart-Angebote des Erwachsenen'),
+    el('p', { style: 'margin:0 0 0.3rem' }, `Stand: ${datum}`),
+    el('p', { style: 'margin:0 0 0.6rem' }, 'Geprüft werden Raum, Material, Spiele und die Handlung der Fachkraft. Kein Kind wird erfasst oder bewertet.'),
+    ...katalog.bereiche.map((bereich) => {
+      const bilanzEl = el('p', { style: 'margin:0.3rem 0 0;font-weight:600' });
+      bereiche.get(bereich.id).bilanzen.push(bilanzEl);
+      return el('section', { class: 'k-druck-bereich' },
+        el('h3', { style: 'margin:0;font-size:1.05rem' }, `${bereich.emoji} ${bereich.name}`),
+        el('p', { style: 'margin:0;font-size:0.9rem' }, bereich.fokus),
+        bilanzEl,
+        ...bereich.angebote.map((p) => druckZeile(p)));
+    }),
+    el('p', { class: 'k-druck-fuss' },
+      'Merkmal-Kennungen (z. B. sprache-1) bezeichnen die Merkmale, auf denen die Angebote beruhen. Die Formulierungen sind Eigenentwürfe, keine Zitate.'));
 }
+
+// --- Render (einmal beim Start) -----------------------------------------------
 
 function render() {
-  const daten = ladeDaten();
-  if (aktivKuerzel && !daten.kinder.includes(aktivKuerzel)) aktivKuerzel = null;
-  if (!aktivKuerzel && daten.kinder.length > 0) aktivKuerzel = daten.kinder[0];
-  const beobKind = aktivKuerzel ? (daten.beobachtungen[aktivKuerzel] ?? {}) : {};
-
-  const kinder = [
+  meldungEl = el('div', { class: 'k-hinweis', role: 'status', hidden: '' });
+  for (const b of katalog.bereiche) bereiche.set(b.id, { bereich: b, bilanzen: [] });
+  const bildschirm = el('div', { class: 'k-nur-bildschirm' },
     el('h1', { class: 'k-titel' }, '🎒 Schulstart-Begleiter'),
-    el('p', { class: 'k-untertitel' }, 'Beobachtungsbogen zur Schulfähigkeit – für pädagogische Fachkräfte'),
-    meldung
-      ? el('div', { class: `k-hinweis ${meldung.ok ? 'k-hinweis--richtig' : 'k-hinweis--falsch'}`, role: 'status' },
-          el('p', { style: 'margin:0' }, meldung.text))
-      : '',
+    el('p', { class: 'k-untertitel' }, 'Schulstart-Angebote für pädagogische Fachkräfte'),
+    meldungEl,
     kopfKarte(),
-    kinderKarte(daten),
-  ];
-
-  if (aktivKuerzel) {
-    kinder.push(
-      fortschrittKarte(aktivKuerzel, beobKind),
-      ...katalog.bereiche.map((b) => bereichKarte(b, beobKind)),
-      berichtKarte(aktivKuerzel, beobKind),
-    );
-  }
-
-  kinder.push(
-    kofferKarte(),
+    ...katalog.bereiche.map(bereichKarte),
+    aktionenKarte(),
     datenKarte(),
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werkzeug für Fachkräfte · werbefrei · keine Cloud – alle Daten bleiben auf diesem Gerät · '),
-      el('a', { href: 'eltern.html' }, '🏛️ Info für Eltern, Träger & Leitung'), el('span', {}, ' · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
-  );
-
-  app.replaceChildren(...kinder);
-  meldung = null;
+      el('span', {}, 'Werkzeug für Fachkräfte · werbefrei · keine Cloud, nichts wird auf dem Gerät gespeichert · '),
+      el('a', { href: 'eltern.html' }, '🏛️ Info für Träger & Leitung'), el('span', {}, ' · '),
+      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
+  app.replaceChildren(bildschirm, druckBogen());
+  for (const id of zeilen.keys()) zeileAktualisieren(id);
+  for (const id of bereiche.keys()) bilanzAktualisieren(id);
 }
 
+// --- Start ----------------------------------------------------------------------
+
+try {
+  katalog = await fetch('daten/indikatoren.json').then((r) => r.json());
+} catch {
+  katalog = null;
+}
 const katalogFehler = pruefeKatalog(katalog);
 if (katalogFehler.length > 0) {
-  app.replaceChildren(
-    el('div', { class: 'k-hinweis k-hinweis--falsch' },
-      el('p', { style: 'margin:0' }, `Datenfehler im Katalog: ${katalogFehler[0]}`)));
+  app.replaceChildren(el('div', { class: 'k-hinweis k-hinweis--falsch' },
+    el('p', { style: 'margin:0' }, `Datenfehler im Katalog: ${katalogFehler[0]}`)));
 } else {
   render();
 }

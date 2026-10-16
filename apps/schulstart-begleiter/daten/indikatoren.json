@@ -1,25 +1,12 @@
 {
-  "art": "schulstart-begleiter-katalog",
-  "version": 1,
-  "stand": "2026-07",
-  "hinweis": "Lokaler Beobachtungsbogen zur Schulfaehigkeit fuer Fachkraefte. Kinder nur als Kuerzel (max 3 Zeichen), keine Namen. Beobachtung, keine Diagnose und KEIN Ersatz fuer das aerztliche Schuleingangsverfahren. Dokumentiert wird je Kind einzeln, ohne Rangfolge und ohne Schulreife-Note. Bei Fragen an Fruehfoerderstellen, Grundschule (Kooperationslehrkraft) und Schulaerztlichen Dienst.",
-  "berichtKopf": "Schulstart-Begleiter – Beobachtungs-Dokumentation zur Schulfähigkeit",
-  "berichtHinweis": [
-    "Beobachtung, keine Diagnose und kein Ersatz für das Schuleingangsverfahren.",
-    "Diese Dokumentation hält fest, was im Kita-Alltag beobachtet wurde. Sie",
-    "vergibt keine Schulreife-Note und vergleicht kein Kind mit anderen; jedes",
-    "Kind entwickelt sich in seinem eigenen Tempo. Grundlage für das Übergangs-",
-    "und Elterngespräch. Bei Fragen an Frühförderstellen, Kooperationslehrkraft",
-    "der Grundschule und den Schulärztlichen Dienst."
-  ],
-  "berichtFuss": [
-    "Diese Doku gehört in die Bildungsdokumentation der Einrichtung und dient dem",
-    "Übergangsgespräch Kita–Grundschule – nicht als Urteil über die Schulreife."
-  ],
-  "stufen": [
-    { "id": "noch-nicht", "text": "noch nicht" },
-    { "id": "manchmal", "text": "in Ansätzen" },
-    { "id": "sicher", "text": "sicher" }
+  "art": "schulstart-begleiter-angebote",
+  "version": 2,
+  "stand": "2026-10",
+  "hinweis": "Angebote des Erwachsenen für den Schulstart: Raum, Material, Spiele und eigenes Handeln der Fachkraft. Kein Kind wird erfasst, bewertet oder verglichen (docs/02, Z. 141–146). Gezählt wird nur je Bereich.",
+  "auswahl": [
+    { "id": "angeboten", "text": "angeboten" },
+    { "id": "offen", "text": "noch offen" },
+    { "id": "nicht-zutreffend", "text": "trifft nicht zu" }
   ],
   "bereiche": [
     {
@@ -27,13 +14,13 @@
       "name": "Sprache & phonologische Bewusstheit",
       "emoji": "💬",
       "fokus": "Sprechen, Zuhören, Reime und Laute – Vorläufer des Lesens und Schreibens",
-      "indikatoren": [
-        { "id": "sprache-1", "text": "Spricht in vollständigen, verständlichen Sätzen über eigene Erlebnisse." },
-        { "id": "sprache-2", "text": "Hört bei einer Geschichte aufmerksam zu und gibt den Inhalt sinngemäß wieder." },
-        { "id": "sprache-3", "text": "Erkennt und bildet Reime (z. B. Katze – Tatze)." },
-        { "id": "sprache-4", "text": "Hört den Anlaut eines Wortes heraus (Mit welchem Laut beginnt „Sonne“?)." },
-        { "id": "sprache-5", "text": "Zerlegt kurze Wörter klatschend in Silben." },
-        { "id": "sprache-6", "text": "Verfügt über einen altersgemäßen Wortschatz und fragt nach unbekannten Wörtern." }
+      "angebote": [
+        { "id": "sprache-a1", "text": "Erzählrunden mit eigenen Erlebnissen anbieten, in denen in ganzen Sätzen berichtet wird", "quelleMerkmal": "sprache-1" },
+        { "id": "sprache-a2", "text": "Geschichten in Etappen vorlesen und die Wiedergabe gemeinsam anbieten", "quelleMerkmal": "sprache-2" },
+        { "id": "sprache-a3", "text": "Reimspiele im Alltag anbieten, etwa Reimpaare beim Aufräumen oder beim Abzählen", "quelleMerkmal": "sprache-3" },
+        { "id": "sprache-a4", "text": "Anlaut-Spiele anbieten, bei denen Gegenstände mit gleichem Anfangslaut gesucht werden", "quelleMerkmal": "sprache-4" },
+        { "id": "sprache-a5", "text": "Silbenklatschen mit Wörtern aus dem Alltag und beim Bewegungsspiel anbieten", "quelleMerkmal": "sprache-5" },
+        { "id": "sprache-a6", "text": "Neue Wörter aus Bilderbüchern und dem Alltag einführen und Nachfragen ausdrücklich anregen", "quelleMerkmal": "sprache-6" }
       ]
     },
     {
@@ -41,13 +28,13 @@
       "name": "Mengen & frühe Mathematik",
       "emoji": "🔢",
       "fokus": "Zahlen, Mengen, Formen und Muster – mathematische Vorläuferfähigkeiten",
-      "indikatoren": [
-        { "id": "mathe-1", "text": "Zählt kleine Mengen sicher ab und nennt die Anzahl." },
-        { "id": "mathe-2", "text": "Vergleicht Mengen (mehr, weniger, gleich viel) durch Zuordnen." },
-        { "id": "mathe-3", "text": "Benennt und unterscheidet Grundformen (Kreis, Dreieck, Viereck)." },
-        { "id": "mathe-4", "text": "Setzt ein einfaches Muster (Reihe) folgerichtig fort." },
-        { "id": "mathe-5", "text": "Ordnet nach Größe (klein–groß) und beschreibt Lagebeziehungen (oben/unten, vor/hinter)." },
-        { "id": "mathe-6", "text": "Erkennt Ziffern im Alltag wieder und ordnet ihnen Mengen zu." }
+      "angebote": [
+        { "id": "mathe-a1", "text": "Zählspiele mit Mengen im Alltag anbieten", "quelleMerkmal": "mathe-1" },
+        { "id": "mathe-a2", "text": "Zuordnungsspiele anbieten, bei denen Mengen Eins zu Eins verglichen werden", "quelleMerkmal": "mathe-2" },
+        { "id": "mathe-a3", "text": "Formen-Suche im Raum anbieten, bei der Kreis, Dreieck und Viereck benannt werden", "quelleMerkmal": "mathe-3" },
+        { "id": "mathe-a4", "text": "Muster-Reihen mit Perlen oder Bausteinen anbieten, die weitergeführt werden können", "quelleMerkmal": "mathe-4" },
+        { "id": "mathe-a5", "text": "Ordnungsspiele nach Größe anbieten und dabei Lagewörter wie oben, unten, vor und hinter nutzen", "quelleMerkmal": "mathe-5" },
+        { "id": "mathe-a6", "text": "Ziffern im Alltag sichtbar machen und passende Mengen dazu legen anbieten", "quelleMerkmal": "mathe-6" }
       ]
     },
     {
@@ -55,13 +42,13 @@
       "name": "Fein- & Graphomotorik",
       "emoji": "✏️",
       "fokus": "Hand, Stift und Werkzeug – Grundlage fürs Schreiben",
-      "indikatoren": [
-        { "id": "motorik-1", "text": "Hält den Stift mit lockerem Dreipunktgriff und malt mit angemessenem Druck." },
-        { "id": "motorik-2", "text": "Malt Formen aus und bleibt dabei weitgehend in der Linie." },
-        { "id": "motorik-3", "text": "Spurt Linien, Bögen und einfache Formen nach." },
-        { "id": "motorik-4", "text": "Schneidet mit der Schere einer vorgegebenen Linie entlang." },
-        { "id": "motorik-5", "text": "Fädelt Perlen auf oder knöpft selbstständig zu." },
-        { "id": "motorik-6", "text": "Zeichnet einen erkennbaren Menschen mit mehreren Körperteilen." }
+      "angebote": [
+        { "id": "motorik-a1", "text": "Stifte in verschiedenen Stärken und Griffhilfen zum Malen bereitstellen", "quelleMerkmal": "motorik-1" },
+        { "id": "motorik-a2", "text": "Ausmalvorlagen mit großen und kleinen Formen bereitstellen", "quelleMerkmal": "motorik-2" },
+        { "id": "motorik-a3", "text": "Nachspur-Vorlagen mit Linien, Bögen und einfachen Formen anbieten", "quelleMerkmal": "motorik-3" },
+        { "id": "motorik-a4", "text": "Schneideübungen an vorgezeichneten Linien mit Kinderscheren anbieten", "quelleMerkmal": "motorik-4" },
+        { "id": "motorik-a5", "text": "Fädelmaterial und Knöpfe an Kleidungsstücken zum Üben bereitstellen", "quelleMerkmal": "motorik-5" },
+        { "id": "motorik-a6", "text": "Freies Zeichnen von Menschen und Figuren mit mehreren Körperteilen anregen", "quelleMerkmal": "motorik-6" }
       ]
     },
     {
@@ -69,13 +56,13 @@
       "name": "Konzentration & Arbeitsverhalten",
       "emoji": "🎯",
       "fokus": "Ausdauer, Regeln und Aufgaben zu Ende bringen",
-      "indikatoren": [
-        { "id": "arbeit-1", "text": "Bleibt bei einer selbst gewählten Aufgabe über einige Minuten konzentriert dabei." },
-        { "id": "arbeit-2", "text": "Führt eine vorgegebene Aufgabe bis zum Ende, auch wenn sie anstrengt." },
-        { "id": "arbeit-3", "text": "Hört eine mehrteilige Anweisung und setzt sie in der richtigen Reihenfolge um." },
-        { "id": "arbeit-4", "text": "Hält vereinbarte Regeln ein und wartet, bis es an der Reihe ist." },
-        { "id": "arbeit-5", "text": "Hält kurze Sitz- und Arbeitsphasen im Kreis oder am Tisch aus." },
-        { "id": "arbeit-6", "text": "Geht mit Fehlern und Anstrengung um, ohne sofort aufzugeben." }
+      "angebote": [
+        { "id": "arbeit-a1", "text": "Ruhige Ecke mit selbst wählbaren Aufgaben für längere Konzentration bereitstellen", "quelleMerkmal": "arbeit-1" },
+        { "id": "arbeit-a2", "text": "Mehrstufige Aufgaben mit sichtbarem Ende anbieten, etwa Bastel- oder Pflanzprojekte", "quelleMerkmal": "arbeit-2" },
+        { "id": "arbeit-a3", "text": "Spiele mit mehrteiligen Anweisungen in fester Reihenfolge anbieten", "quelleMerkmal": "arbeit-3" },
+        { "id": "arbeit-a4", "text": "Gemeinsame Regeln für Spiele und Warteroutinen vereinbaren und gemeinsam üben", "quelleMerkmal": "arbeit-4" },
+        { "id": "arbeit-a5", "text": "Wechsel von Sitz- und Bewegungsphasen im Tagesablauf fest einplanen", "quelleMerkmal": "arbeit-5" },
+        { "id": "arbeit-a6", "text": "Fehler als Lernschritt benennen und Übungsphasen mit Wiederholungen anbieten", "quelleMerkmal": "arbeit-6" }
       ]
     },
     {
@@ -83,13 +70,13 @@
       "name": "Soziale & emotionale Reife / Selbstständigkeit",
       "emoji": "🤝",
       "fokus": "In der Gruppe zurechtkommen, sich selbst versorgen, Gefühle regulieren",
-      "indikatoren": [
-        { "id": "sozial-1", "text": "Findet in einer Gruppe Kontakt und arbeitet mit anderen Kindern zusammen." },
-        { "id": "sozial-2", "text": "Löst kleine Konflikte zunehmend mit Worten statt mit Streit." },
-        { "id": "sozial-3", "text": "Zieht sich weitgehend selbstständig an und geht allein zur Toilette." },
-        { "id": "sozial-4", "text": "Trennt sich morgens ohne große Belastung von den Eltern." },
-        { "id": "sozial-5", "text": "Benennt eigene Gefühle und beruhigt sich nach Aufregung wieder." },
-        { "id": "sozial-6", "text": "Bittet bei Schwierigkeiten von sich aus um Hilfe." }
+      "angebote": [
+        { "id": "sozial-a1", "text": "Kleingruppen mit wechselnden Partnern für gemeinsame Aufgaben anbieten", "quelleMerkmal": "sozial-1" },
+        { "id": "sozial-a2", "text": "Rollenspiele zu kleinen Streitfällen und feste Gesprächsregeln anbieten", "quelleMerkmal": "sozial-2" },
+        { "id": "sozial-a3", "text": "Zeit und Material für selbstständiges Anziehen und den Toilettengang einplanen", "quelleMerkmal": "sozial-3" },
+        { "id": "sozial-a4", "text": "Verabschiedungsrituale mit den Eltern abstimmen und einen festen Ankommensablauf anbieten", "quelleMerkmal": "sozial-4" },
+        { "id": "sozial-a5", "text": "Karten mit Gefühlen und eine Rückzugsecke zum Beruhigen bereitstellen", "quelleMerkmal": "sozial-5" },
+        { "id": "sozial-a6", "text": "Hilfe-Signale vereinbaren und das Bitten um Hilfe im Alltag einüben", "quelleMerkmal": "sozial-6" }
       ]
     }
   ]

@@ -14,7 +14,7 @@ Aufhängen direkt an der Situation. Je Situation ein Praxis-Tipp.
 ## 2. Zielgruppe
 
 Kita-Teams (auch ohne Einarbeitung einsetzbar). Nachbarn:
-herkunftssprachen-bruecke, eingewoehnungs-tagebuch, elternbrief-generator,
+herkunftssprachen-bruecke, eingewoehnungs-leitfaden, elternbrief-generator,
 vorlese-kompass.
 
 ## 3. Ablauf
@@ -47,4 +47,4 @@ in beide Richtungen), Kern-Situationen abgedeckt, Methode/Ehrlichkeits-Hinweis,
 ## 7. Erweiterungen (Katalog)
 
 Weitere Sprachen nur mit geprüfter Übersetzung (tr/ar/pl), Karten-Sets je
-Jahreszeit, Kopplung mit elternbrief-generator und eingewoehnungs-tagebuch.
+Jahreszeit, Kopplung mit elternbrief-generator und eingewoehnungs-leitfaden.

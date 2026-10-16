@@ -4,57 +4,54 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
-  <title>Für Träger &amp; Leitung – Entwicklungs-Kompass Kita</title>
+  <title>Für Träger &amp; Leitung – Angebots-Kompass Kita</title>
   <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" />
 </head>
 <body>
   <main class="k-app">
-    <h1 class="k-titel">🏛️ Info für Träger &amp; Leitung: Entwicklungs-Kompass Kita</h1>
+    <h1 class="k-titel">🏛️ Info für Träger &amp; Leitung: Angebots-Kompass Kita</h1>
 
     <section class="k-karte">
       <h2>Worum geht es?</h2>
-      <p>Ein <strong>lokaler digitaler Beobachtungsbogen</strong> für pädagogische Fachkräfte: fünf Entwicklungsbereiche – <strong>Bewegung &amp; Motorik</strong>, <strong>Sprache &amp; Kommunikation</strong>, <strong>Sozial-emotional</strong>, <strong>Denken &amp; Neugier</strong> und <strong>Spiel &amp; Selbstständigkeit</strong> – mit je sechs beobachtbaren Indikatoren (30 insgesamt). Je Kind wird in drei Stufen dokumentiert: <em>noch nicht / manchmal / sicher</em>. Daraus entsteht je Kind ein rein textlicher Bericht als Grundlage für Bildungsdokumentation und Entwicklungsgespräch.</p>
-      <p>Herkunft: Konzept-Idee aus Katalog Nr. 2 des Projekts (docs/10, Praleska-Ableitung, Top-30 Platz 1 „Entwicklungs-Kompass Kita – digitaler Beobachtungsbogen“). Übernommen wurde ausschließlich das Konzept; sämtliche Bereiche, Indikatoren und Berichtstexte wurden neu formuliert.</p>
+      <p>Eine <strong>Team-Checkliste</strong> für pädagogische Fachkräfte. Sie prüft die <strong>Angebote des Erwachsenen</strong> – Raum, Material und eigene Handlung – in fünf Bereichen: <strong>Bewegung &amp; Motorik</strong>, <strong>Sprache &amp; Kommunikation</strong>, <strong>Sozial-emotional</strong>, <strong>Denken &amp; Neugier</strong> und <strong>Spiel &amp; Selbstständigkeit</strong>. Je Bereich gibt es sechs Prüfpunkte. Jeder Prüfpunkt wird als <em>umgesetzt</em>, <em>noch offen</em> oder <em>trifft nicht zu</em> markiert.</p>
+      <p>Neu gegenüber der früheren Fassung: Das Werkzeug dokumentiert <strong>keine Kinder</strong> mehr. Es gibt keine Angaben je Kind, keine Stufen, keinen Bericht je Kind und keine Kürzel. Ausgegeben wird ein <strong>Druckbogen</strong> für die Teambesprechung und die Planung von Raum und Material.</p>
     </section>
 
     <section class="k-karte">
-      <h2>Das Grundprinzip: lokal statt Cloud – DSGVO by Design</h2>
+      <h2>Keine Kinderdaten – nichts wird gespeichert</h2>
       <ul>
-        <li><strong>Keine personenbezogenen Kinderdaten:</strong> Kinder werden ausschließlich als <strong>Kürzel (höchstens 3 Zeichen)</strong> geführt – keine Namen, kein Geburtsdatum, kein Freitext über das Kind. Der Längen-Deckel ist technisch erzwungen; selbst ein Datei-Import lehnt längere Kürzel ab. Damit entstehen im Regelfall keine personenbezogenen Daten im Sinne der DSGVO.</li>
-        <li><strong>Alles bleibt auf dem Gerät:</strong> Der Stand wird nur lokal im Browser gespeichert (<code>ek.daten</code>). Es gibt keinen Server, kein Konto, keine Übertragung – anders als cloudbasierte Kita-Software entsteht keine Auftragsverarbeitung mit externem Anbieter.</li>
-        <li><strong>Technisch abgesichert:</strong> Content-Security-Policy <code>default-src 'self'</code> plus ein Netzwerk-Wächter blockieren jede Verbindung nach außen zur Laufzeit. Werbefrei, ohne Tracking, offline nutzbar.</li>
-        <li><strong>Übertragung nur als Datei:</strong> Für Backup, Gerätewechsel oder das Zusammenführen zweier Tablets gibt es einen lokalen JSON-Export/-Import – auf Wunsch der Einrichtung, in ihrer Hand. Ein Knopf „Alle Daten löschen“ entfernt alles vom Gerät.</li>
+        <li><strong>Keine Angaben zu einzelnen Kindern:</strong> Die Seite enthält keine Namen, keine Fotos und keine Adressen und fragt nichts über ein Kind ab.</li>
+        <li><strong>Nichts auf dem Gerät:</strong> Die Seite schreibt nichts in den Browser. Die Angaben bleiben nur für die Dauer des Besuchs im Speicher der Seite und sind nach dem Neuladen weg. Es gibt keinen Export und keinen Import.</li>
+        <li><strong>Altbestand entfernt:</strong> Eine frühere Fassung hat Angaben zu einzelnen Kindern gespeichert. Diese alten Einträge werden beim Öffnen einmal vom Gerät entfernt.</li>
+        <li><strong>Keine Verbindung nach außen:</strong> Die Seite lädt nur eigene Dateien. Eine Content-Security-Policy <code>default-src 'self'</code> und ein Netzwerk-Wächter verhindern Anfragen an andere Server. Werbefrei, ohne Konto und ohne Tracking.</li>
       </ul>
     </section>
 
     <section class="k-karte">
-      <h2>Beobachtung, keine Diagnose – und kein KI-Scoring (EU AI Act)</h2>
+      <h2>Keine Bewertung – weder von Kindern noch von Teams</h2>
       <ul>
-        <li><strong>Reine Dokumentation:</strong> Das Werkzeug erzeugt <strong>keinen Punktestand, keine Rangfolge und keinen Vergleich zwischen Kindern</strong>. Es hält je Kind einzeln fest, was im Alltag beobachtet wurde – nicht mehr. Es gibt schlicht nichts, was Kinder gegeneinander bewertet.</li>
-        <li><strong>Kein KI-System:</strong> Es rechnet nichts, es schätzt nichts ein – es sammelt nur die Auswahl der Fachkraft und setzt sie zu Text zusammen. Kein automatisiertes Scoring, keine Prognose, keine Emotionserkennung.</li>
-        <li><strong>Fachkraft entscheidet:</strong> Die Deutung bleibt vollständig bei der pädagogischen Fachkraft. Jeder Bericht trägt den Hinweis „Beobachtung, keine Diagnose – bei Fragen an Frühförderstellen oder die Kinderärztin bzw. den Kinderarzt“.</li>
+        <li><strong>Kein Punktestand, keine Ampel, keine Rangfolge:</strong> Es gibt keine Zahl, die ein Kind bewertet. Bewertet werden nur die Angebote der Einrichtung: Was ist umgesetzt, was ist noch offen.</li>
+        <li><strong>Zählung nur je Bereich:</strong> Pro Bereich wird gezählt, wie viele Prüfpunkte umgesetzt sind (z. B. „erfüllt: 3 von 6“). Eine Gesamtzahl über alle Bereiche oder Prozentwerte gibt es bewusst nicht.</li>
+        <li><strong>Kein KI-System:</strong> Das Werkzeug rechnet nichts aus und schätzt nichts ein. Es hält fest, was das Team angekreuzt hat.</li>
       </ul>
     </section>
 
     <section class="k-karte">
-      <h2>Anschluss an Bildungspläne und Qualitätsentwicklung</h2>
+      <h2>Herkunft der Formulierungen</h2>
       <ul>
-        <li>Beobachtung und Dokumentation der kindlichen Entwicklung ist in allen 16 Landes-Bildungsplänen und in der Qualitätsentwicklung nach <strong>§ 22a SGB VIII</strong> verankert. Die fünf Bereiche lassen sich an die Bildungsbereiche Ihres Landes-Bildungsplans anknüpfen (z. B. Bewegung/Körper, Sprache/Kommunikation, soziale/emotionale Entwicklung, Naturwissenschaft/kognitive Entwicklung, Spiel/Selbstständigkeit).</li>
-        <li><strong>Bildungsplan-Mapping (Beispiele):</strong> „Bewegung &amp; Motorik“ → Bewegung/Gesundheit; „Sprache &amp; Kommunikation“ → Sprache/Kommunikation und Literacy; „Sozial-emotional“ → soziale und emotionale Bildung; „Denken &amp; Neugier“ → mathematische/naturwissenschaftliche Bildung, Lernmethodik; „Spiel &amp; Selbstständigkeit“ → Spiel als Grundform des Lernens, Partizipation und Selbstwirksamkeit.</li>
-        <li>Der textliche Bericht ist bewusst als Gesprächsgrundlage formuliert – für das jährliche Entwicklungsgespräch mit den Eltern und für die kollegiale Fallbesprechung, nicht als Ergebnis-Etikett.</li>
-        <li>Für die QM-Dokumentation genügt der Nachweis, <em>dass</em> strukturiert und datensparsam beobachtet wird; der Bogen ersetzt keine ärztliche oder heilpädagogische Diagnostik.</li>
+        <li><strong>Eigenentwürfe mit Merkmal-Kennung:</strong> Jede Formulierung ist ein Eigenentwurf nach einem Merkmal aus dem Programm „Praleska“ (Nationales Institut für Bildung, Minsk 2007), Seiten 17 bis 19. Die Kennung, zum Beispiel S18.6, nennt Seite und Merkmal. Zitate gibt es nicht.</li>
+        <li><strong>Bereichsnamen:</strong> Die fünf Bereiche sind eigene Formulierungen des Projekts und lassen sich an die Bildungsbereiche Ihres Landes-Bildungsplans anknüpfen.</li>
       </ul>
     </section>
 
     <section class="k-karte">
-      <h2>Rechtlicher Rahmen (Kurzüberblick)</h2>
-      <ul>
-        <li><strong>DSGVO:</strong> Datenminimierung nach Art. 5 – nur Kürzel, keine Namen, kein Freitext; Verarbeitung ausschließlich lokal im Verfügungsbereich der Einrichtung, keine Übermittlung an Dritte.</li>
-        <li><strong>EU AI Act:</strong> kein KI-System – rein regelbasierte Textbausteine, kein Scoring, keine Prognose, keine Emotionserkennung von Kindern.</li>
-        <li><strong>SGB VIII / Landes-Bildungspläne:</strong> unterstützt die gesetzlich verankerte Beobachtungs- und Dokumentationspflicht.</li>
-        <li><strong>Urheberrecht:</strong> Aus der Quellidee (Praleska) wurde nur das Konzept übernommen; alle Bereiche, Indikatoren und Texte sind Neuformulierungen dieses Projekts (AGPL-3.0-only).</li>
-      </ul>
-      <p style="font-size:0.9rem;color:#4b5563">Hinweis: Dies ist eine Orientierung, keine Rechtsberatung. Prüfen Sie die Einbettung mit Ihrem/Ihrer Datenschutzbeauftragten und dem Landes-Bildungsplan.</p>
+      <h2>Einsatz im Team</h2>
+      <p>Die Checkliste eignet sich für die Teambesprechung, für die Prüfung des Raums und für die Planung von Material. Der Druckbogen zeigt alle Prüfpunkte mit Kästchen, die Zählung je Bereich und das Datum. Er enthält keinen Namen und keine Angaben zu Kindern.</p>
+    </section>
+
+    <section class="k-karte">
+      <h2>Hinweis</h2>
+      <p style="font-size:0.9rem;color:#4b5563">Dies ist eine Orientierung, keine Rechtsberatung. Prüfen Sie den Einsatz mit Ihrem Träger, Ihrer Datenschutzbeauftragten und dem Landes-Bildungsplan.</p>
     </section>
 
     <footer class="k-fuss"><a href="./">Zur App</a> · <a href="../../impressum.html">Impressum &amp; Datenschutz</a></footer>

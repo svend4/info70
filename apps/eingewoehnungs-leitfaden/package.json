@@ -1,8 +1,8 @@
 {
-  "name": "@info70/eingewoehnungs-tagebuch",
+  "name": "@info70/eingewoehnungs-leitfaden",
   "version": "0.1.0",
   "private": true,
-  "description": "Eingewoehnungs-Tagebuch: lokaler Ampel-Verlaufslog zur Eingewoehnung (Berliner/Muenchener Modell) fuer paedagogische Fachkraefte. Je Kind pro Tag strukturiert festgehalten: Phase (Grundphase/Trennungsversuch/Stabilisierung/Schlussphase), Ampel (gut/wackelig/schwer) und Trennung; Verlaufsbericht mit Tendenz und Empfehlung fuers Elterngespraech; Datei-Koffer Export/Import. Kinder nur als Kuerzel (max 3 Zeichen), keine Namen, keine Freitexte, kein Score/keine Rangfolge (EU AI Act). Beobachtung, keine Diagnose. Lokal, ohne Konto/Cloud. Praleska docs/10 (Top-30 Nr. 3). Zielgruppe: Fachkraefte.",
+  "description": "Eingewoehnungs-Leitfaden: vier Phasen der Eingewoehnung (Berliner/Muenchener Modell) mit druckbaren Checklisten eigener Handlungen der Fachkraft. Keine Kinderdaten, keine Bewertung von Kindern, nichts wird gespeichert. Praleska docs/10 (Top-30 Nr. 3). Zielgruppe: Fachkraefte.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

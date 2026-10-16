@@ -1,0 +1,50 @@
+/* Tagesbogen zum Ausdrucken: auf dem Bildschirm nicht sichtbar, beim Drucken
+   nur der Bogen. Der Bogen ist leer; Datum und Häkchen trägt man von Hand ein. */
+
+.k-druck {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .k-bildschirm {
+    display: none !important;
+  }
+
+  .k-druck {
+    display: block;
+  }
+
+  .k-druck h1 {
+    font-size: 20pt;
+    margin: 0 0 4mm;
+  }
+
+  .k-druck h2 {
+    font-size: 13pt;
+    margin: 6mm 0 2mm;
+  }
+
+  .k-druck ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .k-druck li {
+    font-size: 12pt;
+    margin: 0 0 2.5mm;
+  }
+
+  .k-druck p {
+    font-size: 11pt;
+  }
+}

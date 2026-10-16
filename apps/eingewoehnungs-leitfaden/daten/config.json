@@ -1,28 +1,59 @@
 {
-  "art": "eingewoehnungs-tagebuch-config",
-  "version": 1,
-  "hinweis": "Lokaler Ampel-Verlauf zur Eingewoehnung (Berliner/Muenchener Modell) fuer Fachkraefte. Kinder nur als Kuerzel (max 3 Zeichen), keine Namen, keine Freitext-Notizen mit Namen. Beobachtung, keine Diagnose. Jeder Tag wird nur strukturiert festgehalten; kein Score, keine Rangfolge, kein Vergleich zwischen Kindern.",
+  "art": "eingewoehnungs-leitfaden-config",
+  "version": 2,
+  "hinweis": "Leitfaden zur Eingewöhnung für Fachkräfte: vier Phasen mit Checklisten eigener Handlungen der Fachkraft. Keine Kinder, keine Namen, keine Bewertung von Kindern. Beobachtung, keine Diagnose. Nichts wird gespeichert.",
+  "herkunft": "Eigenentwurf: Phasen, Handlungen und Texte sind neu formuliert und an die in Deutschland üblichen Eingewöhnungsmodelle (Berliner/Münchener Modell) angelehnt. Konzept-Idee aus Katalog Nr. 3 des Projekts (docs/10, Praleska-Ableitung, Top-30 Platz 3). Übernommen wurde ausschließlich das Konzept, kein Wortlaut.",
   "phasen": [
-    { "id": "grundphase", "name": "Grundphase", "info": "Elternteil ist dabei, noch keine Trennung (meist Tag 1–3)." },
-    { "id": "trennungsversuch", "name": "Erster Trennungsversuch", "info": "Kurze Trennung; Reaktion des Kindes beobachten (ab ca. Tag 4)." },
-    { "id": "stabilisierung", "name": "Stabilisierungsphase", "info": "Bezugserzieher*in übernimmt mehr, Trennungen werden länger." },
-    { "id": "schlussphase", "name": "Schlussphase", "info": "Kind bleibt allein; die Fachkraft ist sichere Basis." }
-  ],
-  "ampeln": [
-    { "id": "gut", "text": "🟢 gut", "info": "lässt sich trösten, spielt, isst, schläft" },
-    { "id": "wackelig", "text": "🟡 wackelig", "info": "braucht viel Nähe, ist zeitweise untröstlich" },
-    { "id": "schwer", "text": "🔴 schwer", "info": "anhaltend belastet, kaum zu trösten" }
-  ],
-  "trennungen": [
-    { "id": "keine", "text": "keine Trennung" },
-    { "id": "kurz", "text": "kurze Trennung geklappt" },
-    { "id": "lang", "text": "längere Trennung geklappt" },
-    { "id": "abbruch", "text": "Trennung abgebrochen" }
-  ],
-  "empfehlungen": {
-    "gut": "Verlässt sich sichtbar auf die Fachkraft. Nächsten Schritt (längere Trennung) behutsam wagen.",
-    "wackelig": "Tempo halten, nicht steigern. Bezugsperson als sichere Basis präsent halten, Rituale nutzen.",
-    "schwer": "Eingewöhnung verlangsamen, Trennung zurücknehmen und zeitnah ein Elterngespräch führen.",
-    "abbruch": "Trennung war zu früh. Einen Schritt zurückgehen und die Grundphase verlängern; mit den Eltern absprechen."
-  }
+    {
+      "id": "grundphase",
+      "name": "Grundphase",
+      "info": "Elternteil ist dabei, noch keine Trennung (meist Tag 1–3).",
+      "handlungen": [
+        { "id": "bezugsperson", "frage": "Bezugsperson mit den Eltern besprochen?" },
+        { "id": "ablauf", "frage": "Ablauf der Eingewöhnung mit den Eltern abgesprochen?" },
+        { "id": "gewohnheiten", "frage": "Gewohnheiten und Rituale von zu Hause bei den Eltern erfragt?" },
+        { "id": "erreichbarkeit", "frage": "Erreichbarkeit der Eltern in den ersten Tagen geklärt?" },
+        { "id": "tagesablauf", "frage": "Eltern über den Tagesablauf in der Gruppe informiert?" },
+        { "id": "anwesenheit", "frage": "Eltern gebeten, in der Grundphase anwesend zu bleiben?" }
+      ]
+    },
+    {
+      "id": "trennungsversuch",
+      "name": "Erster Trennungsversuch",
+      "info": "Kurze Trennung; Reaktion des Kindes beobachten (ab ca. Tag 4).",
+      "handlungen": [
+        { "id": "verabschiedung", "frage": "Verabschiedung vorbereitet?" },
+        { "id": "verabredung", "frage": "Kurze Trennung mit den Eltern vorab verabredet?" },
+        { "id": "abschiedsablauf", "frage": "Ablauf des Abschieds mit der Bezugsperson abgestimmt?" },
+        { "id": "team", "frage": "Team darüber informiert, wann der erste Trennungsversuch stattfindet?" },
+        { "id": "erreichbarkeit", "frage": "Erreichbarkeit der Eltern für den Tag des Versuchs geklärt?" },
+        { "id": "rueckmeldung", "frage": "Eltern nach dem Versuch über den Verlauf informiert?" }
+      ]
+    },
+    {
+      "id": "stabilisierung",
+      "name": "Stabilisierungsphase",
+      "info": "Bezugserzieher*in übernimmt mehr, Trennungen werden länger.",
+      "handlungen": [
+        { "id": "pflege", "frage": "Pflege- und Essenssituationen mit der Bezugsperson im Team abgesprochen?" },
+        { "id": "vertretung", "frage": "Vertretung für die Bezugsperson im Team geklärt?" },
+        { "id": "laengere-trennung", "frage": "Längere Trennungen mit den Eltern abgestimmt?" },
+        { "id": "naechste-schritte", "frage": "Eltern über die nächsten Schritte informiert?" },
+        { "id": "elterngespraech", "frage": "Elterngespräch zum bisherigen Verlauf angeboten?" },
+        { "id": "team-stand", "frage": "Team über den Stand der Eingewöhnung informiert?" }
+      ]
+    },
+    {
+      "id": "schlussphase",
+      "name": "Schlussphase",
+      "info": "Kind bleibt allein; die Fachkraft ist sichere Basis.",
+      "handlungen": [
+        { "id": "abschlussgespraech", "frage": "Elterngespräch zum Abschluss der Eingewöhnung geführt?" },
+        { "id": "ansprechpersonen", "frage": "Eltern über Ansprechpersonen nach der Eingewöhnung informiert?" },
+        { "id": "team-abschluss", "frage": "Abschluss der Eingewöhnung im Team mitgeteilt?" },
+        { "id": "fragen-eltern", "frage": "Vorgehen bei späteren Fragen der Eltern besprochen?" },
+        { "id": "eigenes-vorgehen", "frage": "Eigenes Vorgehen in der Eingewöhnung im Team besprochen?" }
+      ]
+    }
+  ]
 }

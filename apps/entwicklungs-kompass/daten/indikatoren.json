@@ -1,26 +1,39 @@
 {
-  "art": "entwicklungs-kompass-katalog",
-  "version": 1,
-  "stand": "2026-07",
-  "hinweis": "Lokaler Beobachtungsbogen fuer Fachkraefte. Kinder nur als Kuerzel (max 3 Zeichen), keine Namen. Beobachtung, keine Diagnose: dokumentiert wird je Kind einzeln, ohne Rangfolge und ohne Kinder gegeneinander zu stellen. Bei Fragen an Fruehfoerderstellen.",
-  "stufen": [
-    { "id": "noch-nicht", "text": "noch nicht" },
-    { "id": "manchmal", "text": "manchmal" },
-    { "id": "sicher", "text": "sicher" }
+  "art": "angebots-kompass-katalog",
+  "version": 2,
+  "stand": "2026-10",
+  "hinweis": "Team-Checkliste zu Angeboten des Erwachsenen (Raum, Material, Handlung der Fachkraft). Keine Angaben zu einzelnen Kindern. Jeder Prüfpunkt ist ein Eigenentwurf nach einem Merkmal (quelleMerkmal) aus dem Programm Praleska, S. 17-19.",
+  "auswahl": [
+    { "id": "umgesetzt", "text": "umgesetzt" },
+    { "id": "offen", "text": "noch offen" },
+    { "id": "nicht-zutreffend", "text": "trifft nicht zu" }
   ],
+  "merkmale": {
+    "S17.3": { "seite": 17, "wortlaut": "выявление степени психологического здоровья" },
+    "S17.4": { "seite": 17, "wortlaut": "изучение развитости социальных эмоций" },
+    "S18.1": { "seite": 18, "wortlaut": "выявление уровня уверенности в себе" },
+    "S18.2": { "seite": 18, "wortlaut": "общение и взаимоотношения в важных для ребенка" },
+    "S18.6": { "seite": 18, "wortlaut": "определение исходного уровня двигательной активности" },
+    "S18.7": { "seite": 18, "wortlaut": "изучение состава движений самостоятельной" },
+    "S18.8": { "seite": 18, "wortlaut": "оценка уровня физической подготовленности" },
+    "S18.10": { "seite": 18, "wortlaut": "изучение познавательной сферы детей" },
+    "S19.1": { "seite": 19, "wortlaut": "выявление особенностей личности воспитанников" },
+    "S19.2": { "seite": 19, "wortlaut": "познание волевой сферы детей" },
+    "S19.3": { "seite": 19, "wortlaut": "изучение деятельности воспитанников" }
+  },
   "bereiche": [
     {
       "id": "bewegung",
       "name": "Bewegung & Motorik",
       "emoji": "🤸",
       "fokus": "Grob- und Feinmotorik, Körpergefühl im Alltag",
-      "indikatoren": [
-        { "id": "bewegung-1", "text": "Läuft, rennt und stoppt sicher und weicht dabei Hindernissen aus." },
-        { "id": "bewegung-2", "text": "Hält beim Anziehen oder im Spiel kurz auf einem Bein das Gleichgewicht." },
-        { "id": "bewegung-3", "text": "Fängt einen zugeworfenen weichen Ball oder hält ihn zumindest auf." },
-        { "id": "bewegung-4", "text": "Steigt Treppen im Wechselschritt auf und ab, ohne sich festzuhalten." },
-        { "id": "bewegung-5", "text": "Führt Stift, Löffel oder Schere gezielt mit lockerem Griff." },
-        { "id": "bewegung-6", "text": "Fädelt Perlen auf oder öffnet und schließt große Knöpfe selbst." }
+      "angebote": [
+        { "id": "bewegung-1", "text": "Eine freie Laufstrecke mit Hindernissen und feste Bewegungszeiten im Tagesablauf sind eingeplant.", "quelleMerkmal": "S18.6" },
+        { "id": "bewegung-2", "text": "Balanciermaterial wie Schwebebalken, Trittsteine oder Wackelbrett steht täglich bereit.", "quelleMerkmal": "S18.7" },
+        { "id": "bewegung-3", "text": "Weiche Bälle in verschiedenen Größen liegen für Wurf- und Fangspiele bereit, auch zu zweit.", "quelleMerkmal": "S18.7" },
+        { "id": "bewegung-4", "text": "Kletter- und Treppenelemente stehen drinnen und draußen bereit und werden von der Fachkraft begleitet.", "quelleMerkmal": "S18.8" },
+        { "id": "bewegung-5", "text": "Stift-, Löffel- und Scherenangebote liegen in passender Größe bereit.", "quelleMerkmal": "S18.7" },
+        { "id": "bewegung-6", "text": "Perlen zum Auffädeln und große Knöpfe zum Öffnen und Schließen sind im Freispiel zugänglich.", "quelleMerkmal": "S18.7" }
       ]
     },
     {
@@ -28,13 +41,13 @@
       "name": "Sprache & Kommunikation",
       "emoji": "💬",
       "fokus": "Sprechen, Zuhören, Verstehen und Dialog",
-      "indikatoren": [
-        { "id": "sprache-1", "text": "Erzählt ein kleines Erlebnis so, dass Außenstehende es verstehen." },
-        { "id": "sprache-2", "text": "Stellt Fragen mit Wörtern wie warum, wie oder wann." },
-        { "id": "sprache-3", "text": "Gibt den Inhalt einer gehörten Geschichte in eigenen Worten wieder." },
-        { "id": "sprache-4", "text": "Benennt eigene Gefühle oder die anderer mit Worten (froh, wütend, traurig)." },
-        { "id": "sprache-5", "text": "Reimt, singt Lieder mit oder spielt hörbar mit Lauten und Wörtern." },
-        { "id": "sprache-6", "text": "Wartet im Gespräch ab, bis das Gegenüber zu Ende gesprochen hat." }
+      "angebote": [
+        { "id": "sprache-1", "text": "Im Morgenkreis ist Zeit für eigene Erzählungen eingeplant; die Fachkraft hört aufmerksam zu.", "quelleMerkmal": "S18.2" },
+        { "id": "sprache-2", "text": "Bilder, Gegenstände und Alltagssituationen laden zu Fragen ein; die Fachkraft nimmt sie ernst.", "quelleMerkmal": "S18.10" },
+        { "id": "sprache-3", "text": "Geschichten werden vorgelesen; danach gibt es Zeit zum Nacherzählen mit Bildkarten.", "quelleMerkmal": "S18.10" },
+        { "id": "sprache-4", "text": "Gefühlskarten mit Gesichtern hängen in Augenhöhe und werden im Alltag gemeinsam benannt.", "quelleMerkmal": "S17.3" },
+        { "id": "sprache-5", "text": "Reime, Fingerspiele und Lieder sind im Tagesablauf eingeplant, dazu Sprach- und Klangspiele.", "quelleMerkmal": "S19.1" },
+        { "id": "sprache-6", "text": "Eine Gesprächsregel wie der Gesprächsstein ist eingeführt; die Fachkraft lässt alle ausreden.", "quelleMerkmal": "S19.2" }
       ]
     },
     {
@@ -42,13 +55,13 @@
       "name": "Sozial-emotional",
       "emoji": "🤝",
       "fokus": "Miteinander, Gefühle und Regeln",
-      "indikatoren": [
-        { "id": "sozial-1", "text": "Findet mit anderen Kindern ins gemeinsame Spiel und bleibt in seiner Rolle." },
-        { "id": "sozial-2", "text": "Bietet von sich aus Trost oder Hilfe an, wenn ein Kind traurig ist." },
-        { "id": "sozial-3", "text": "Trägt einen Streit mit Worten aus statt mit Schubsen oder Schreien." },
-        { "id": "sozial-4", "text": "Hält eine kurze Wartezeit aus, ohne die Fassung zu verlieren." },
-        { "id": "sozial-5", "text": "Hält vereinbarte Gruppenregeln auch ohne Erinnerung ein." },
-        { "id": "sozial-6", "text": "Freut sich sichtbar mit, wenn einem anderen Kind etwas gelingt." }
+      "angebote": [
+        { "id": "sozial-1", "text": "Rollenspielmaterial und Verkleidung stehen bereit; die Fachkraft bringt Ideen für gemeinsame Spiele ein.", "quelleMerkmal": "S18.2" },
+        { "id": "sozial-2", "text": "Eine ruhige Ecke zum Trösten ist eingerichtet; die Fachkraft zeigt Wege, anderen zu helfen.", "quelleMerkmal": "S17.4" },
+        { "id": "sozial-3", "text": "Sätze zum Lösen von Streit mit Worten hängen aus; die Fachkraft begleitet Streit sprachlich.", "quelleMerkmal": "S18.2" },
+        { "id": "sozial-4", "text": "Wartezeiten sind mit kurzen Ritualen gefüllt, etwa Fingerspiel, Lied oder Sanduhr.", "quelleMerkmal": "S19.2" },
+        { "id": "sozial-5", "text": "Gruppenregeln hängen als Bilder im Raum und werden gemeinsam wiederholt besprochen.", "quelleMerkmal": "S19.2" },
+        { "id": "sozial-6", "text": "Im Morgenkreis gibt es Zeit, Erfolge gemeinsam zu feiern, etwa mit einem festen Applaus-Ritual.", "quelleMerkmal": "S17.4" }
       ]
     },
     {
@@ -56,13 +69,13 @@
       "name": "Denken & Neugier",
       "emoji": "🔍",
       "fokus": "Forschen, Problemlösen und Ausdauer",
-      "indikatoren": [
-        { "id": "denken-1", "text": "Probiert bei einer Aufgabe einen anderen Weg, wenn der erste nicht klappt." },
-        { "id": "denken-2", "text": "Ordnet Dinge nach einem selbst gewählten Merkmal wie Farbe, Größe oder Form." },
-        { "id": "denken-3", "text": "Erzählt, was im Tagesablauf als Nächstes kommt, und stellt sich darauf ein." },
-        { "id": "denken-4", "text": "Äußert Vermutungen (Ich glaube, das schwimmt) und schaut nach, ob sie stimmen." },
-        { "id": "denken-5", "text": "Bleibt bei einer selbst gewählten Beschäftigung über längere Zeit dabei." },
-        { "id": "denken-6", "text": "Erkennt eine einfache Reihenfolge oder ein Muster und setzt es fort." }
+      "angebote": [
+        { "id": "denken-1", "text": "Offene Bau- und Knobelaufgaben stehen bereit; die Fachkraft ermutigt zu einem zweiten Versuch mit anderem Weg.", "quelleMerkmal": "S19.2" },
+        { "id": "denken-2", "text": "Sortiermaterial nach Farbe, Größe und Form ist frei zugänglich, dazu Zeit für eigene Ordnungen.", "quelleMerkmal": "S18.10" },
+        { "id": "denken-3", "text": "Der Tagesablauf hängt mit Bildkarten sichtbar im Raum; Wechsel werden vorab angekündigt.", "quelleMerkmal": "S18.10" },
+        { "id": "denken-4", "text": "Eine Forscherecke mit Wasser, Lupen und Experimentierkarten ist eingerichtet; Vermutungen werden gemeinsam geprüft.", "quelleMerkmal": "S18.10" },
+        { "id": "denken-5", "text": "Im Tagesplan sind längere Freispielzeiten ohne Unterbrechung eingeplant.", "quelleMerkmal": "S18.10" },
+        { "id": "denken-6", "text": "Muster- und Reihenfolgespiele wie Perlenketten, Steckreihen und Bildfolgen liegen bereit.", "quelleMerkmal": "S18.10" }
       ]
     },
     {
@@ -70,13 +83,13 @@
       "name": "Spiel & Selbstständigkeit",
       "emoji": "🧩",
       "fokus": "Selbst tun, dranbleiben und Verantwortung übernehmen",
-      "indikatoren": [
-        { "id": "spiel-1", "text": "Zieht Jacke, Schuhe oder Hausschuhe weitgehend allein an und aus." },
-        { "id": "spiel-2", "text": "Räumt benutztes Material nach dem Spiel ohne viel Aufforderung weg." },
-        { "id": "spiel-3", "text": "Wählt selbst eine Beschäftigung, wenn nichts vorgegeben ist." },
-        { "id": "spiel-4", "text": "Führt eine begonnene Bau- oder Bastelidee bis zu einem Ende." },
-        { "id": "spiel-5", "text": "Holt sich Hilfe, wenn etwas allein nicht gelingt, statt gleich aufzugeben." },
-        { "id": "spiel-6", "text": "Übernimmt kleine Aufgaben in der Gruppe verlässlich, zum Beispiel Tisch decken." }
+      "angebote": [
+        { "id": "spiel-1", "text": "Eine Garderobe mit Sitzbank und Schuhregal ist eingerichtet; die Fachkraft gibt Zeit zum selbst Anziehen.", "quelleMerkmal": "S19.2" },
+        { "id": "spiel-2", "text": "Materialkisten sind beschriftet und in Reichweite; Aufräumen ist als gemeinsame Aufgabe eingeplant.", "quelleMerkmal": "S19.2" },
+        { "id": "spiel-3", "text": "Freispielbereiche mit unterschiedlichem Material sind offen; die Fachkraft bietet Wahlmöglichkeiten an.", "quelleMerkmal": "S19.1" },
+        { "id": "spiel-4", "text": "Bau- und Bastelmaterial wird aufbewahrt, damit Projekte über mehrere Tage weitergeführt werden können.", "quelleMerkmal": "S19.3" },
+        { "id": "spiel-5", "text": "Die Fachkraft zeigt, wie man um Hilfe bittet, und ermutigt dazu, statt aufzugeben.", "quelleMerkmal": "S18.1" },
+        { "id": "spiel-6", "text": "Kleine Aufgaben wie Tisch decken oder Pflanzen gießen sind als feste Dienste eingeplant.", "quelleMerkmal": "S19.3" }
       ]
     }
   ]

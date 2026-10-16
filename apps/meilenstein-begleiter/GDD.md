@@ -14,7 +14,7 @@ kein Screening-Ersatz, keine Kind-Daten.
 ## 2. Zielgruppe
 
 Eltern (Erst-Eltern-Segment). Nachbarn (Elternwerkzeuge): autonomiephase-
-navigator; Fachkraft-Nachbarn: eingewoehnungs-tagebuch, entwicklungs-kompass.
+navigator; Fachkraft-Nachbarn: eingewoehnungs-leitfaden, entwicklungs-kompass.
 
 ## 3. Ablauf
 

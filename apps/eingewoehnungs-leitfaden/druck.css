@@ -1,0 +1,56 @@
+/* Druckbogen: auf dem Bildschirm nicht sichtbar; beim Drucken nur die vier
+   Checklisten, je Phase ein Blatt. Die Haken zeigen, was in dieser Sitzung
+   abgehakt wurde. Keine Namenszeile. */
+
+.k-druck {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .k-bildschirm {
+    display: none !important;
+  }
+
+  .k-druck {
+    display: block;
+  }
+
+  .k-druckbogen {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .k-druckbogen:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .k-druck h2 {
+    font-size: 16pt;
+    margin: 0 0 3mm;
+  }
+
+  .k-druck ul {
+    list-style: none;
+    margin: 0 0 4mm;
+    padding: 0;
+  }
+
+  .k-druck li {
+    font-size: 12pt;
+    margin: 0 0 2.5mm;
+  }
+
+  .k-druck p {
+    font-size: 11pt;
+  }
+}

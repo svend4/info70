@@ -68,7 +68,7 @@ Grundlage der Aufnahmeentscheidung nicht ausreichen. `VORHERSAGE` und `BEWERTUNG
 
 ## 8. Abgrenzung im Korpus
 
-`schulstart-begleiter` ist das Werkzeug für **Fachkräfte** und enthält einen Beobachtungsbogen.
+`schulstart-begleiter` ist das Werkzeug für **Fachkräfte** und enthält Angebote für Fachkräfte, ohne Kinderbewertung.
 Diese App enthält keinen. Der Verweis darauf steht im Fuß und nennt die Zielgruppe, damit nicht
 zwei Apps nebeneinanderstehen, die dasselbe zu tun scheinen – ein Test prüft den Wortlaut.
 

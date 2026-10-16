@@ -52,12 +52,15 @@ im Werkzeug selbst, nicht nur in der Dokumentation.
 - Eine Mengenangabe („mindestens einmal im Monat“): Die Quelle nennt keine Häufigkeit. Das Team
   legt sie fest.
 
-## Offen
+## Entschieden: die vier Apps (Welle 88, Variante A)
 
-Vier früher gebaute Apps vergeben je Kind eine Ampel oder Stufe und speichern diese Einträge in
-`localStorage`: wohlfuehl-ampel, entwicklungs-kompass, eingewoehnungs-tagebuch und schulstart-begleiter
-(Katalog Nr. 89). Das widerspricht `docs/02` (Z. 141–146). Diese App ändert sie nicht. Die Entscheidung
-liegt beim Team.
+Vier früher gebaute Apps vergaben je Kind eine Ampel oder Stufe und speicherten das in `localStorage`.
+Das widersprach `docs/02` (Z. 141–146). Sie sind umgebaut: keine Bewertung von Kindern, keine Kinderdaten
+auf dem Gerät. wohlfuehl-ampel heißt jetzt tagesblick-fachkraft, eingewoehnungs-tagebuch heißt
+eingewoehnungs-leitfaden. entwicklungs-kompass und schulstart-begleiter behalten den Namen.
+
+Offen bleiben: die Prüfpunkte sind Eigenentwurf nach den Merkmalen und brauchen eine fachliche Durchsicht.
+Alte Exportdateien auf Geräten sind für die Apps nicht erreichbar; die Eltern-Seiten bitten, sie zu löschen.
 
 Zur Live-Region: Der Projekt-Test verlangt `aria-live` auf `#app` in jeder App. Die Antworten bauen die
 Seite nicht neu auf; nur die Zustände der Knöpfe, die Bilanz und der Druckbericht ändern sich. Die Bilanz

@@ -148,7 +148,7 @@ function render(fokusElement = null) {
 
     el('section', { class: 'k-karte ssn-nur-bildschirm' },
       el('p', { style: 'margin:0;font-size:0.9rem' },
-        'Für Fachkräfte, mit Beobachtungsbogen: ', el('a', { href: '../schulstart-begleiter/' }, 'Schulstart-Begleiter'),
+        'Für Fachkräfte, mit Angeboten: ', el('a', { href: '../schulstart-begleiter/' }, 'Schulstart-Begleiter'),
         ' · Spielideen für zwischendurch: ', el('a', { href: '../bewegungs-schatzkiste/' }, 'Bewegungs-Schatzkiste'),
         ' · Vorlesen: ', el('a', { href: '../vorlese-kompass/' }, 'Vorlese-Kompass')),
       el('p', { style: 'margin:0.5rem 0 0;font-size:0.9rem' }, `☎️ ${daten.elterntelefon}`)),

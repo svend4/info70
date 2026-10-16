@@ -1,8 +1,8 @@
 {
-  "name": "@info70/entwicklungs-kompass",
-  "version": "0.1.0",
+  "name": "@info70/angebots-kompass",
+  "version": "0.2.0",
   "private": true,
-  "description": "Entwicklungs-Kompass Kita: lokaler digitaler Beobachtungsbogen fuer paedagogische Fachkraefte. Kinder nur als Kuerzel, ohne Cloud, ohne Konto. Beobachtung, keine Diagnose. Zielgruppe: Fachkraefte.",
+  "description": "Angebots-Kompass Kita: Team-Checkliste für pädagogische Fachkräfte. Prüft Angebote des Erwachsenen (Raum, Material, Handlung) in fünf Bereichen. Keine Angaben zu Kindern, keine Speicherung auf dem Gerät, keine Bewertung. Zielgruppe: Fachkräfte und Team.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }
