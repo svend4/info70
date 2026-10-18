@@ -19,6 +19,11 @@ const ladeStatus = () => JSON.parse(localStorage.getItem(STATUS_SCHLUESSEL) ?? '
 const speichereStatus = (s) => localStorage.setItem(STATUS_SCHLUESSEL, JSON.stringify(s));
 const ladeNotiz = () => localStorage.getItem(NOTIZ_SCHLUESSEL) ?? '';
 
+// Eingabehinweis am Notizfeld: keine Kindernamen eintragen. Sichtbar, als eigenes Element
+// direkt vor dem Feld; das Feld verweist per aria-describedby darauf. Der Feldname bleibt gleich.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const kinderHinweis = (id) => el('span', { id, style: 'display:block;font-size:0.85rem;color:#4b5563;margin:0 0 0.3rem' }, KINDER_HINWEIS);
+
 function bericht(status, notiz) {
   const erfuellt = ALLE.filter((k) => status[k.id]).length;
   const zeilen = [
@@ -78,7 +83,7 @@ function render() {
 
   const notizFeld = el('textarea', {
     style: 'width:100%;min-height:5rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.5rem;font-size:0.9rem',
-    'aria-label': 'Notizen', placeholder: 'Notizen, offene Punkte, geplante Maßnahmen …',
+    'aria-label': 'Notizen', 'aria-describedby': 'kitc-hinweis-notiz', placeholder: 'Notizen, offene Punkte, geplante Maßnahmen …',
   });
   notizFeld.value = ladeNotiz();
   notizFeld.addEventListener('input', () => localStorage.setItem(NOTIZ_SCHLUESSEL, notizFeld.value));
@@ -101,6 +106,7 @@ function render() {
     ...bereichsKarten,
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📝 Notizen'),
+      kinderHinweis('kitc-hinweis-notiz'),
       notizFeld),
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Prüfbericht (zur internen Dokumentation)'),

@@ -37,14 +37,16 @@ Selbsthilfe, ausdrücklich keine Rechtsberatung.
 
 Keine externen Anfragen (NetzwerkWaechter), Haken/Notiz nur in localStorage
 (kitc.status, kitc.notiz) + Zurücksetzen, Bericht-Export lokal per Blob,
-werbefrei. Der Katalog (daten/kriterien.json) enthält keine externen Links.
+werbefrei. Eingabehinweis „Keine Namen von Kindern eingeben.“ am Notizfeld. Der Katalog (daten/kriterien.json) enthält keine externen Links.
 
 ## 6. Tests
 
 `test/kriterien.test.mjs`: 4 AI-Act-Bereiche, eindeutige IDs, ≥10
 Kriterien, Hinweis als Selbst-Check, jedes Kriterium mit Aussage/Hilfe/
 Bezug (AI Act/DSGVO/DSA/UN-KRK), thematische Abdeckung (Art. 5, Art. 50,
-Hochrisiko, KI-Kennzeichnung, Datensparsamkeit), Verbote mit Kinder-Bezug.
+Hochrisiko, KI-Kennzeichnung, Datensparsamkeit), Verbote mit Kinder-Bezug. `test/eingabe-hinweis.test.mjs`: Hinweis „Keine Namen
+von Kindern eingeben.“ am Notizfeld (sichtbar, direkt vor dem Feld, aria-describedby),
+Feldname „Notizen“ unverändert. Gesamt 10 Tests (vorher 5).
 
 ## 7. Erweiterungen (Katalog)
 
