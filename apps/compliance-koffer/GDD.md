@@ -39,12 +39,22 @@ Keine externen Anfragen (NetzwerkWaechter), Inhalte nur in localStorage
 (`compliance.koffer`) + „Leeren“, Import/Export lokal per Datei/Blob,
 werbefrei. Werkzeug für Erwachsene ohne eltern.html. Kein Rechtsrat.
 
+Eingabehinweis „Keine Namen von Kindern eingeben.“ am Feld „Name des
+Angebots“ und an jedem Berichtsfeld: sichtbar, als eigenes Element direkt
+vor dem Feld, per aria-describedby verknüpft. Im Druck ausgeblendet
+(`druck.css`, `.cok-hinweis`).
+
 ## 6. Tests
 
 `test/logik.test.mjs`: WERKZEUGE-Katalog (Kern-Werkzeuge, eindeutige IDs),
 `packeKoffer` (Struktur/Trim/leere verworfen), `pruefeKoffer` (gültig/
 ungültig), Roundtrip JSON, `vorhandeneWerkzeuge`/`fortschritt`, `nameVon`,
 `gesamtbericht` (Kopf, Abdeckung, Sektionen, offene Liste).
+
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Platzierung und
+aria-describedby am Angebotsfeld und an allen Berichtsfeldern, Ausblendung
+im Druck (druck.css).
+Testzahl: 12 (7 Logik, 5 Hinweis); `npm test` grün.
 
 ## 7. Erweiterungen (Katalog)
 

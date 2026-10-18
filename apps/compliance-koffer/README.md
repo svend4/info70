@@ -15,6 +15,9 @@
   список недостающих) обновляются вживую.
 - **Сохранить Koffer как `.json`** и позже снова загрузить (валидация при
   импорте). Экспорт общего отчёта `.txt`, кнопка **«Drucken»**, «Leeren».
+- Подсказка «Keine Namen von Kindern eingeben.» у поля названия предложения
+  и у каждого поля отчёта: отдельный элемент прямо перед полем, связан через
+  `aria-describedby`. В печати скрыта (`druck.css`, класс `cok-hinweis`).
 - `logik.mjs` (чистая): `packeKoffer`, `pruefeKoffer`, `gesamtbericht`,
   `fortschritt`, `vorhandeneWerkzeuge`, `nameVon`, `WERKZEUGE`.
 
@@ -31,5 +34,6 @@ Werbefrei, без внешних запросов (NetzwerkWaechter); содер
 
 ```bash
 npm run dev   # http://localhost:8070/apps/compliance-koffer/
+npm test      # в папке приложения: logik + eingabe-hinweis (12 Tests)
 node --test apps/compliance-koffer/test/*.test.mjs
 ```

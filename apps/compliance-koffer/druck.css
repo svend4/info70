@@ -9,6 +9,8 @@
   .k-app > *:has(.cok-nur-druck) { display: block !important; }
   .cok-nur-druck { display: block !important; }
   .k-app > *:has(.cok-nur-druck) > *:not(.cok-nur-druck) { display: none !important; }
+  /* Eingabehinweise („Keine Namen von Kindern eingeben.“) gehören nicht aufs Blatt. */
+  .cok-hinweis { display: none !important; }
   .cok-nur-druck {
     white-space: pre-wrap;
     word-break: break-word;
