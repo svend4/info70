@@ -97,6 +97,7 @@ test('pruefePlan: unbekannte Altersgruppe löst keinen Dauer-Hinweis aus (defens
 });
 
 test('neueId liefert eindeutige Kennungen', () => {
-  const ids = new Set(Array.from({ length: 200 }, () => neueId()));
+  const ids = new Set(Array.from({ length: 200 }, (_, i) => neueId(1760000000000, (i + 1) / 201)));
   assert.equal(ids.size, 200);
+  assert.match(neueId(1760000000000, 0.5), /^a-[0-9a-z]+-[0-9a-z]+$/, 'Format bleibt a-<Zeit>-<Zufall>');
 });

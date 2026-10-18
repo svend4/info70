@@ -10,9 +10,14 @@ export const TAGE = [
   { id: 'fr', name: 'Freitag' },
 ];
 
-/** Zufällige, kollisionsarme Kennung für ein Angebot. */
-export function neueId() {
-  return `a-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+/**
+ * Kennung für ein Angebot aus Zeitstempel und Zufallszahl. Beide Werte liefert
+ * app.mjs (Zufall nur dort, docs/bauauftraege/SESSION-ANLEITUNG.md, Schritt 3).
+ * @param {number} zeitstempel - z. B. Date.now()
+ * @param {number} zufall - Zahl zwischen 0 und 1, z. B. Math.random()
+ */
+export function neueId(zeitstempel, zufall) {
+  return `a-${zeitstempel.toString(36)}-${zufall.toString(36).slice(2, 8)}`;
 }
 
 /**

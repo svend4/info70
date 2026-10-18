@@ -103,7 +103,7 @@ function formularKarte() {
           }
           const plan = ladePlan();
           plan.angebote.push({
-            id: neueId(),
+            id: neueId(Date.now(), Math.random()),
             tag: entwurf.tag,
             bereich: entwurf.bereich,
             alter: entwurf.alter,
