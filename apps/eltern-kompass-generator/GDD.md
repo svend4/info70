@@ -37,12 +37,22 @@ Keine externen Anfragen (NetzwerkWaechter), Angaben nur in localStorage
 escaped; die Ausgabe enthält kein Script und keinen externen Host (Test) –
 nur lokale Verweise auf Stylesheet und Impressum.
 
+Eingabehinweis „Keine Namen von Kindern eingeben.“ an jedem Eingabefeld
+(Name, Altersgruppe, Worum, Lernziele, Daten, Interaktion, Hinweis): sichtbar,
+als eigenes Element direkt vor dem Feld, per aria-describedby verknüpft. Die
+Seite wird öffentlich eingebunden; der Hinweis steht nur im Formular, nicht in
+der erzeugten eltern.html.
+
 ## 6. Tests
 
 `test/logik.test.mjs`: baueSektionen übernimmt alle Angaben inkl. 116 111,
 Pflicht-Struktur + datensparsamer Default, kostenfrei-Schalter, baueSeite
 liefert vollständiges Dokument (DOCTYPE/CSP/Titel/Footer), Sicherheit
 (Escaping, kein Script/kein externer Host), escapeHtml.
+
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Platzierung
+direkt vor dem Feld, aria-describedby, und dass alle sieben Freitext-Felder
+den Hinweis haben. Testzahl: 11 (6 Logik, 5 Hinweis); `npm test` grün.
 
 ## 7. Erweiterungen (Katalog)
 

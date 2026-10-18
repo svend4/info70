@@ -25,12 +25,19 @@ function aktualisiere() {
   if (htmlFeld) htmlFeld.value = baueSeite(c);
 }
 
+// Eingabehinweis am Feld: Alle Freitexte hier landen in der öffentlichen „Für Eltern“-Seite, darum gilt
+// der Hinweis für jedes Feld. Sichtbar, als eigenes Element direkt vor dem Feld; das Feld verweist per
+// aria-describedby darauf. Der Feldname (label) bleibt gleich.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+
 function eingabe(label, key, cfg, opts = {}) {
-  const gem = { value: cfg[key], style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem;font-size:0.95rem', 'aria-label': label, placeholder: opts.platzhalter ?? '' };
+  const hinweisId = `ekg-hinweis-${key}`;
+  const gem = { value: cfg[key], style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem;font-size:0.95rem', 'aria-label': label, placeholder: opts.platzhalter ?? '', 'aria-describedby': hinweisId };
   const feld = opts.mehrzeilig ? el('textarea', { ...gem, style: gem.style + ';min-height:4rem' }) : el('input', { ...gem, type: 'text' });
   feld.addEventListener('input', () => { const c = lade(); c[key] = feld.value; speichere(c); aktualisiere(); });
   return el('label', { style: 'display:block;margin:0.5rem 0' },
     el('span', { style: 'display:block;font-weight:600;font-size:0.9rem;margin-bottom:0.2rem' }, label),
+    el('span', { id: hinweisId, style: 'display:block;font-size:0.85rem;color:#4b5563;margin:0 0 0.2rem' }, KINDER_HINWEIS),
     feld,
     opts.hinweis ? el('small', { style: 'color:#4b5563' }, opts.hinweis) : '');
 }

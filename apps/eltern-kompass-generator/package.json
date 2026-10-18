@@ -4,5 +4,8 @@
   "private": true,
   "description": "Eltern-Kompass-Generator fuer Kinderseiten: aus strukturierten Angaben (Name, Altersgruppe, Lernziele, gespeicherte Daten, Interaktion, Kostenfreiheit) entsteht eine fertige Eltern-Kompass-HTML-Seite im Stil der info70-Fuer-Eltern-Seiten. Formular-zu-Dokument-Engine (geteilt mit Impressum-/Datenschutz-Generator). Zielgruppe: Betreiber.",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/eingabe-hinweis.test.mjs"
+  }
 }
