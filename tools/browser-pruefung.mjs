@@ -100,7 +100,12 @@ for (const k of kennungen) {
   await page.waitForTimeout(50);
   const fokus = await page.evaluate(() => document.activeElement?.dataset?.kennung ?? document.activeElement?.tagName ?? null);
   const ueberlauf = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
-  ergebnis.klicks.push({ kennung: k, fokus, fokusStimmt: fokus === k, ueberlaufPx: ueberlauf });
+  // Verschwindet der Knopf, weil der Bildschirm wechselt, ist der Fokus auf der Überschrift des neuen
+  // Bildschirms richtig (tabindex="-1"). Das zählt als Bildschirmwechsel, nicht als Fehler.
+  const verschwunden = (await page.$(`button[data-kennung="${k}"]`)) === null;
+  const fokusAufUeberschrift = await page.evaluate(() => document.activeElement?.getAttribute('tabindex') === '-1');
+  const fokusStimmt = fokus === k ? true : (verschwunden && fokusAufUeberschrift ? 'bildschirmwechsel' : false);
+  ergebnis.klicks.push({ kennung: k, fokus, fokusStimmt, ueberlaufPx: ueberlauf });
 }
 
 ergebnis.speicher = await page.evaluate(() => ({
