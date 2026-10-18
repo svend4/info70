@@ -4,5 +4,8 @@
   "private": true,
   "description": "Mitmach-Arena: Abstimmungen für Klassenrat und Familie - Teilhabe und Demokratie für Kinder (Prototyp)",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/koffer.test.mjs test/vorlagen.test.mjs test/eingabe-hinweis.test.mjs"
+  }
 }

@@ -28,6 +28,11 @@ function zeige(...knoten) {
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
 }
 
+// Eingabehinweis am Feld (Kinder-App mit Freitext): sichtbar, als eigenes Element direkt vor dem
+// Feld und nicht im label. Das Feld verweist per aria-describedby auf die id.
+const EINGABE_HINWEIS = 'Keine Namen von Mitschüler*innen eintragen.';
+const eingabeHinweis = (id) => el('p', { id, style: 'font-size:0.85rem;color:#4b5563;margin:0.25rem 0 0.5rem' }, EINGABE_HINWEIS);
+
 function startBildschirm() {
   const umfrage = lade();
   zeige(
@@ -48,14 +53,16 @@ function startBildschirm() {
 }
 
 function anlegenBildschirm() {
-  const frageFeld = el('input', { id: 'frage', style: 'width:100%;font:inherit;padding:0.6rem;border-radius:0.5rem;border:2px solid var(--k-rand)', placeholder: 'z. B. Wohin geht der Klassenausflug?', maxlength: 100 });
+  const frageFeld = el('input', { id: 'frage', style: 'width:100%;font:inherit;padding:0.6rem;border-radius:0.5rem;border:2px solid var(--k-rand)', placeholder: 'z. B. Wohin geht der Klassenausflug?', maxlength: 100, 'aria-describedby': 'frage-hinweis' });
   const optionsFelder = [0, 1, 2, 3].map((i) =>
-    el('input', { style: 'width:100%;font:inherit;padding:0.6rem;border-radius:0.5rem;border:2px solid var(--k-rand);margin-top:0.5rem', placeholder: `Möglichkeit ${i + 1}${i > 1 ? ' (optional)' : ''}`, maxlength: 60 }));
+    el('input', { style: 'width:100%;font:inherit;padding:0.6rem;border-radius:0.5rem;border:2px solid var(--k-rand);margin-top:0.5rem', placeholder: `Möglichkeit ${i + 1}${i > 1 ? ' (optional)' : ''}`, maxlength: 60, 'aria-describedby': 'optionen-hinweis' }));
   zeige(
     el('section', { class: 'k-karte' },
       el('label', { for: 'frage', style: 'font-weight:600' }, 'Worüber wird abgestimmt?'),
+      eingabeHinweis('frage-hinweis'),
       frageFeld,
       el('p', { style: 'font-weight:600;margin-bottom:0' }, 'Möglichkeiten:'),
+      eingabeHinweis('optionen-hinweis'),
       ...optionsFelder,
       el('div', { class: 'k-antworten' },
         el('button', {

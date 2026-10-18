@@ -26,6 +26,14 @@
 2. Наглядность большинства/меньшинства (столбики, проценты).
 3. Культура обсуждения в классе (Klassenrat-практика); материалы для взрослых — `eltern.html`.
 
+## Eingabefelder (Kinder-App mit Freitext)
+Frage (maxlength 100) und Möglichkeiten (maxlength 60) sind Freitext. Vor dem Frage-Feld steht
+sichtbar der Hinweis „Keine Namen von Mitschüler*innen eintragen.“; vor den vier Möglichkeiten-Feldern steht er
+einmal gemeinsam für alle vier (eigene Elemente, nicht im label).
+Das Frage-Feld verweist per `aria-describedby` auf `frage-hinweis`, die Möglichkeiten-Felder auf
+`optionen-hinweis`. Der Hinweis verhindert keine Eingabe; die
+Feldlängen bleiben unverändert. Tests: `test/eingabe-hinweis.test.mjs` (Quelltext-Prüfung).
+
 ## План развития (docs/04, этап 3)
 - Режимы: рейтинговое голосование, «светофор».
 - Кандидат в заявку BzKJ-2027 (пакет «Demokratie & KI»).
@@ -33,5 +41,5 @@
 ## Запуск и тесты
 ```bash
 npm run dev   # → http://localhost:8070/apps/mitmach-arena/
-npm test      # тесты Klassen-Koffer
+npm test      # 15 Tests: Klassen-Koffer, Vorlagen, Eingabehinweis
 ```
