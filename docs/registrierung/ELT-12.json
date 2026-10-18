@@ -1,0 +1,12 @@
+{
+  "id": "ELT-12",
+  "slug": "musik-alltags-begleiter",
+  "titel": "Musik-Alltags-Begleiter für Eltern",
+  "status_neu": "ausgebaut",
+  "app": "musik-alltags-begleiter",
+  "tests_app": 45,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/musik-alltags-begleiter/\">🎶 Musik im Alltag – ein Zettel über Ihr eigenes Tun, ohne Ampel (Eltern, Kinder 1–3)</a>",
+  "readme_zeile": "| `musik-alltags-begleiter` | Для родителей: музыка в быту 1–3 — запись своих действий, без светофора и серий | кат.№2 |",
+  "docs10_notiz": "Eltern-Werkzeug Nr. 57 (S. 87–88): Musik-Alltags-Begleiter ausgebaut. Druckblatt mit dem Rückblick über sieben Tage, ohne Seitenangabe (A18); einziger Speicherschlüssel mab.notizen mit Löschknopf; 45 Tests. Ampel und Tagesstatistik sind bewusst nicht gebaut, Begründung in der App.",
+  "katalog_korrektur": "Ampel und Tagesstatistik nicht gebaut: die App ersetzt sie durch eine beschreibende Zahl (an wie vielen der letzten sieben Tage eine Notiz steht) ohne Soll, Serie und Stufe. Speicherung nach docs/02 Z. 25 (Nutzerdaten im localStorage mit Löschknopf, sieben Tage). uk- und ru-Schlaflieder nicht übernommen (keine Liederliste). Entscheidung durch den Koordinator bestätigen: Bildschirmregel-Quelle (BZgA/WHO oder BIÖG/AWMF) und Herkunftssprachen-Angebot."
+}

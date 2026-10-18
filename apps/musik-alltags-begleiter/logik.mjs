@@ -169,21 +169,40 @@ export function fensterSatz(notizen, heute) {
   return `In den letzten sieben Tagen haben Sie ${wie} etwas notiert, ${womit}.`;
 }
 
+/**
+ * Der Inhalt des Druckblatts ohne Darstellung. Die App setzt ihn in den
+ * Druckbereich; der Test prüft genau diesen Text auf Zeichen, Emojis und
+ * Namenszeile (docs/02 Z. 79–82). Keine Seitenangabe auf dem Blatt (A18).
+ */
+export function druckBlatt(daten, notizen, heute) {
+  const tage = fensterTage(heute)
+    .filter((tag) => notizenAm(notizen, tag).length)
+    .map((tag) => ({
+      tag,
+      heute: tag === heute,
+      eintraege: notizenAm(notizen, tag).map((n) => ({
+        gelegenheit: (daten?.rituale ?? []).find((x) => x.id === n.gelegenheit)?.name ?? n.gelegenheit,
+        art: (daten?.arten ?? []).find((x) => x.id === n.art)?.name ?? n.art,
+      })),
+    }));
+  return {
+    titel: 'Musik im Alltag – sieben Tage',
+    satz: fensterSatz(notizen, heute),
+    tage,
+    schluss: [daten?.keinZiel ?? '', daten?.keineReaktion ?? ''],
+  };
+}
+
 /** Ein Rückblick als Text. Ohne Wertung, mit den Absagen dabei. */
 export function bericht(daten, notizen, heute) {
-  const zeilen = ['Musik im Alltag – Notizen über mein eigenes Tun', fensterSatz(notizen, heute), ''];
-  for (const tag of fensterTage(heute)) {
-    const drin = notizenAm(notizen, tag);
-    if (!drin.length) continue;
-    zeilen.push(tag === heute ? `${tag} (heute)` : tag);
-    for (const n of drin) {
-      const r = (daten?.rituale ?? []).find((x) => x.id === n.gelegenheit);
-      const a = (daten?.arten ?? []).find((x) => x.id === n.art);
-      zeilen.push(`- ${r?.name ?? n.gelegenheit}: ${a?.name ?? n.art}`);
-    }
+  const blatt = druckBlatt(daten, notizen, heute);
+  const zeilen = ['Musik im Alltag – Notizen über mein eigenes Tun', blatt.satz, ''];
+  for (const t of blatt.tage) {
+    zeilen.push(t.heute ? `${t.tag} (heute)` : t.tag);
+    for (const e of t.eintraege) zeilen.push(`- ${e.gelegenheit}: ${e.art}`);
     zeilen.push('');
   }
-  zeilen.push(daten?.keinZiel ?? '', daten?.keineReaktion ?? '');
+  zeilen.push(...blatt.schluss);
   return zeilen.join('\n');
 }
 

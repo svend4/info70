@@ -5,7 +5,7 @@ import * as logik from '../logik.mjs';
 import {
   ARTEN, TAGE_FENSTER, NOTIZ_SCHLUESSEL, ZIELE_QUELLE, BEWERTUNG, REAKTION_DES_KINDES,
   DAUER_ALS_VORGABE, istTag, tagAus, fensterTage, pruefeNotiz, beschneide, notizenAm,
-  tageMitNotiz, artenImFenster, fensterSatz, bericht, pruefeDaten,
+  tageMitNotiz, artenImFenster, fensterSatz, bericht, druckBlatt, pruefeDaten,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/rituale.json', import.meta.url), 'utf8'));
@@ -284,10 +284,13 @@ test('App: Vorlesen nur mit einer Stimme, die auf dem Gerät liegt', () => {
 test('App: der Druckzettel ist ein Rückblick, keine Leistungsliste', () => {
   assert.match(druck, /\.mab-nur-druck \{ display: none; \}/);
   assert.match(druck, /\.mab-block button \{/);
-  const block = code.slice(code.indexOf('mab-nur-druck'), code.indexOf('Zehn Gelegenheiten'));
-  assert.match(block, /fensterSatz\(notizen, heute\)/);
-  assert.match(block, /daten\.keinZiel/);
-  assert.match(block, /daten\.keineReaktion/);
+  // Das Blatt kommt aus druckBlatt; die Absagen stehen im Blatt, nicht in der App.
+  const blatt = druckBlatt(daten, [notiz(HEUTE)], HEUTE);
+  assert.equal(blatt.schluss[0], daten.keinZiel);
+  assert.equal(blatt.schluss[1], daten.keineReaktion);
+  assert.equal(blatt.satz, fensterSatz([notiz(HEUTE)], HEUTE));
+  const block = code.slice(code.indexOf('function druckKarte('), code.indexOf('function render('));
+  assert.match(block, /druckKarte\(blatt\)|blatt\.satz/);
   assert.doesNotMatch(block, /Name: _|☐|☑|🔴/);
   for (const klasse of ['mab-nur-bildschirm', 'mab-nur-druck', 'mab-block']) {
     assert.ok(code.includes(klasse), `${klasse} wird nie benutzt`);

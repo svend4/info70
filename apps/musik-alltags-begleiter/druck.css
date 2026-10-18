@@ -4,7 +4,24 @@
    wie eine Leistungsliste aussieht. */
 .mab-nur-druck { display: none; }
 
+/* Links und Knöpfe mindestens 48 px hoch (docs/02): Textlinks sind sonst
+   nur so hoch wie ihre Zeile. Gilt auf dem Bildschirm, nicht im Druck. */
+#app a, .k-fuss a { display: inline-block; min-height: 3rem; line-height: 3rem; }
+
+/* Der Rückblick zum Kopieren: lange Zeilen brechen um, sonst wird die Seite bei 360 px breit. */
+.mab-bericht {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: monospace;
+  font-size: 0.8rem;
+  border: 2px solid var(--k-rand);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
 @media print {
+  @page { size: A4 portrait; margin: 15mm; }
   .mab-nur-bildschirm { display: none !important; }
   .mab-nur-druck { display: block !important; }
   /* Knöpfe sind auf Papier keine Knöpfe: die Knopffarben aus kinder.css

@@ -10,14 +10,14 @@ import { el, vorlesen, lokaleStimme } from '../../packages/kinder-ui/js/komponen
 import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
-  ARTEN, tagAus, fensterTage, beschneide, notizenAm, fensterSatz, bericht, pruefeDaten,
+  ARTEN, tagAus, fensterTage, beschneide, notizenAm, fensterSatz, bericht, druckBlatt, pruefeDaten,
 } from './logik.mjs';
+import daten from './daten/rituale.json' with { type: 'json' };
 
 installiereNetzwerkWaechter();
 
 const SCHLUESSEL = 'mab.notizen';
 const app = document.getElementById('app');
-const daten = await fetch('daten/rituale.json').then((r) => r.json());
 
 /**
  * Der heutige Tag, bei JEDEM Aufruf neu. Die erste Fassung bildete ihn einmal
@@ -103,6 +103,7 @@ function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
   }
   return el('button', {
     class: 'k-knopf k-knopf--neutral k-knopf--klein mab-nur-bildschirm',
+    'data-kennung': 'mab-vorlesen',
     onclick: () => vorlesen(text, 'de-DE', stimme),
   }, beschriftung);
 }
@@ -124,15 +125,34 @@ function katalogZeile(r) {
       el('p', { style: 'margin:0;font-size:0.9rem' }, `⚠️ ${r.grenze}`)) : null);
 }
 
+/**
+ * Das Druckblatt. Hier steht kein Zeichen, kein Emoji und keine Namenszeile:
+ * der Text kommt aus `druckBlatt` (logik.mjs), und der Test prüft ihn dort.
+ * Das Blatt trägt keine Seitenangabe (A18).
+ */
+function druckKarte(blatt) {
+  return el('section', { class: 'k-karte mab-block mab-nur-druck' },
+    el('h2', { style: 'margin-top:0;font-size:1.1rem' }, blatt.titel),
+    el('p', { style: 'margin:0 0 0.4rem' }, blatt.satz),
+    ...blatt.tage.map((t) => el('div', { style: 'margin-bottom:0.3rem' },
+      el('p', { style: 'margin:0;font-weight:700' }, `${tagText(t.tag)}${t.heute ? ', heute' : ''}`),
+      el('ul', { style: 'margin:0;padding-left:1.2rem' },
+        ...t.eintraege.map((e) => el('li', {}, `${e.gelegenheit} – ${e.art}`))))),
+    el('p', { style: 'margin:0.4rem 0 0' }, blatt.schluss[0]),
+    el('p', { style: 'margin:0.3rem 0 0' }, blatt.schluss[1]));
+}
+
 function render(fokusElement = null) {
   const heute = heuteJetzt();
   const heuteNotizen = notizenAm(notizen, heute);
-  const berichtsFeld = el('textarea', {
-    readonly: true,
-    style: 'width:100%;min-height:10rem;font-family:monospace;font-size:0.8rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.5rem',
+  const berichtText = bericht(daten, notizen, heute);
+  // Ein Textblock statt eines Eingabefelds: der Rückblick ist nur zum
+  // Kopieren da, und ein Eingabefeld gibt es in dieser App nicht (docs/02).
+  const berichtsFeld = el('pre', {
+    class: 'mab-bericht',
+    role: 'region',
     'aria-label': 'Rückblick über sieben Tage',
-  });
-  berichtsFeld.value = bericht(daten, notizen, heute);
+  }, berichtText);
 
   app.replaceChildren(...[
     el('div', { class: 'mab-nur-bildschirm' },
@@ -158,6 +178,7 @@ function render(fokusElement = null) {
           class: `k-knopf k-knopf--klein ${r.id === gelegenheit ? '' : 'k-knopf--neutral'}`,
           style: 'text-align:start;min-height:3rem',
           id: `mab-g-${r.id}`,
+          'data-kennung': `mab-g-${r.id}`,
           'aria-pressed': String(r.id === gelegenheit),
           onclick: () => { gelegenheit = r.id === gelegenheit ? null : r.id; meldung = ''; render(`mab-g-${r.id}`); },
         }, `${r.zeichen} ${r.name}`))),
@@ -172,6 +193,7 @@ function render(fokusElement = null) {
               class: 'k-knopf k-knopf--klein',
               style: 'text-align:start;min-height:3rem',
               id: `mab-a-${a.id}`,
+              'data-kennung': `mab-a-${a.id}`,
               onclick: () => notiere(a.id),
             }, `${a.zeichen} ${a.name}`))))
         : null,
@@ -190,6 +212,7 @@ function render(fokusElement = null) {
                 // Eigene Beschriftung je Knopf: bei sechs Notizen am Tag
                 // hieße sonst jeder Knopf gleich (Review Welle 80).
                 'aria-label': `Notiz entfernen: ${r?.name ?? ''} – ${a?.name ?? ''}`,
+                'data-kennung': `mab-entfernen-${index}`,
                 onclick: () => entferne(index),
               }, '✕ entfernen'));
           }))
@@ -220,6 +243,7 @@ function render(fokusElement = null) {
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein', 'aria-expanded': String(zeigeWarumKeineAmpel),
           id: 'mab-warum',
+          'data-kennung': 'mab-warum',
           onclick: () => { zeigeWarumKeineAmpel = !zeigeWarumKeineAmpel; render('mab-warum'); },
         }, zeigeWarumKeineAmpel ? '▲ Zuklappen' : '🚦 Warum hier keine Ampel steht')),
       zeigeWarumKeineAmpel
@@ -232,33 +256,31 @@ function render(fokusElement = null) {
       el('div', { class: 'k-antworten' },
         el('button', {
           class: 'k-knopf k-knopf--klein',
+          'data-kennung': 'mab-kopieren',
           onclick: (ev) => {
             const knopf = ev.currentTarget;
-            berichtsFeld.select();
             const melde = (text) => { knopf.textContent = text; };
+            // Ohne Zwischenablage bleibt der Text markiert, damit er von Hand kopiert werden kann.
+            const markiere = () => {
+              const bereich = document.createRange();
+              bereich.selectNodeContents(berichtsFeld);
+              window.getSelection().removeAllRanges();
+              window.getSelection().addRange(bereich);
+            };
             try {
-              const p = navigator.clipboard?.writeText(berichtsFeld.value);
-              if (!p) { melde('⚠️ Kopieren geht hier nicht – Text ist markiert'); return; }
-              p.then(() => melde('✔️ Kopiert!')).catch(() => melde('⚠️ Kopieren hat nicht geklappt – Text ist markiert'));
-            } catch { melde('⚠️ Kopieren geht hier nicht – Text ist markiert'); }
+              const p = navigator.clipboard?.writeText(berichtText);
+              if (!p) { markiere(); melde('⚠️ Kopieren geht hier nicht – Text ist markiert'); return; }
+              p.then(() => melde('✔️ Kopiert!')).catch(() => { markiere(); melde('⚠️ Kopieren hat nicht geklappt – Text ist markiert'); });
+            } catch { markiere(); melde('⚠️ Kopieren geht hier nicht – Text ist markiert'); }
           },
         }, '📋 Rückblick kopieren'),
-        el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Rückblick drucken'))),
-    // Auf dem Papier steht der Rückblick als Text – ohne Häkchen, ohne Farbe,
-    // ohne Namenszeile (docs/02).
-    el('section', { class: 'k-karte mab-block mab-nur-druck' },
-      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🎶 Musik im Alltag – sieben Tage'),
-      el('p', { style: 'margin:0 0 0.4rem' }, fensterSatz(notizen, heute)),
-      ...fensterTage(heute).filter((tag) => notizenAm(notizen, tag).length).map((tag) => el('div', { style: 'margin-bottom:0.3rem' },
-        el('p', { style: 'margin:0;font-weight:700' }, tagText(tag)),
-        el('ul', { style: 'margin:0;padding-left:1.2rem' },
-          ...notizenAm(notizen, tag).map((n) => {
-            const r = daten.rituale.find((x) => x.id === n.gelegenheit);
-            const a = daten.arten.find((x) => x.id === n.art);
-            return el('li', {}, `${r?.name ?? ''} – ${a?.name ?? ''}`);
-          })))),
-      el('p', { style: 'margin:0.4rem 0 0' }, daten.keinZiel),
-      el('p', { style: 'margin:0.3rem 0 0' }, daten.keineReaktion)),
+        el('button', {
+          class: 'k-knopf k-knopf--klein',
+          'data-kennung': 'mab-drucken',
+          onclick: () => window.print(),
+        }, '🖨️ Rückblick drucken'))),
+    // Das Druckblatt: Text ohne Häkchen, ohne Farbe, ohne Namenszeile (docs/02).
+    druckKarte(druckBlatt(daten, notizen, heute)),
     el('section', { class: 'k-karte mab-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📋 Zehn Gelegenheiten im Tag'),
       el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' },
@@ -267,6 +289,7 @@ function render(fokusElement = null) {
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein', 'aria-expanded': String(zeigeKatalog),
           id: 'mab-katalog',
+          'data-kennung': 'mab-katalog',
           onclick: () => { zeigeKatalog = !zeigeKatalog; render('mab-katalog'); },
         }, zeigeKatalog ? '▲ Liste zuklappen' : '▼ Die Gelegenheiten lesen')),
       zeigeKatalog ? el('div', {}, ...daten.rituale.map(katalogZeile)) : null),
@@ -315,7 +338,7 @@ if (fehler.length) {
   // Ohne diesen Neuaufbau bliebe der Vorlese-Knopf stumm oder liefe mit der
   // Standardstimme, die netzbasiert sein kann (Review Welle 80; Muster aus
   // apps/erste-woerter-tagebuch).
-  if ('speechSynthesis' in globalThis) {
+  if ('speechSynthesis' in window) {
     speechSynthesis.addEventListener?.('voiceschanged', () => render(), { once: true });
   }
 }

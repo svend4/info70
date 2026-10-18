@@ -131,5 +131,7 @@ mit“).
 
 ## 11. Tests
 
-`node --test apps/musik-alltags-begleiter/test/logik.test.mjs` (28 Tests), fast
-jeder mit Gegenprobe.
+`npm test` im App-Ordner: `test/logik.test.mjs` (28 Prüfungen) und `test/regeln.test.mjs`
+(17 Prüfungen) – zusammen 45 Tests, fast jeder mit Gegenprobe. Die Regeln prüfen den
+Drucktext, nicht den ganzen Quelltext, weil der Bildschirm Emojis trägt und Verbotenes
+ausdrücklich absagt.
