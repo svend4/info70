@@ -72,7 +72,7 @@ function zeichne() {
       el('p', {}, DRUCK_KOPF)),
     ...karten.map(karteBild),
     el('footer', { class: 'k-fuss mk-nur-bildschirm' },
-      el('span', {}, 'Werkzeug für Fachkräfte – ohne Verbindung nach draußen · ein Neuladen ohne Netz ist nicht zugesichert – nichts wird gespeichert –'),
+      el('span', {}, 'Werkzeug für Fachkräfte – ohne Verbindung nach draußen · ein Neuladen ohne Netz ist nicht zugesichert – nichts wird gespeichert – '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   if (merkeKnopf) document.getElementById(merkeKnopf)?.focus();
 }
