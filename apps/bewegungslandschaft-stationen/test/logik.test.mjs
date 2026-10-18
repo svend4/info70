@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import daten from '../daten/stationen.json' with { type: 'json' };
 import {
-  alleGewaehlt, alleKennungen, gewaehlteKarten, kannDrucken, kartenText, umschalten, zeileText,
+  PFLICHTMARKIERUNG, alleGewaehlt, alleKennungen, gewaehlteKarten, kannDrucken, kartenText, markierungFuer,
+  pruefeMarkierung, pruefeMasse, umschalten, zeileText,
 } from '../logik.mjs';
 
 // Prüft Daten und Auswahl. Die Regeln der Umgebung (Eingabefelder, Speicherung,
@@ -159,4 +160,31 @@ test('der Ausgabetext enthält keine Reste wie undefined oder null', () => {
   for (const k of daten.karten) {
     assert.ok(!/undefined|null|\[object/.test(kartenText(k)), `${k.id}: Rest im Text`);
   }
+});
+
+test('pruefeMasse: jede Maßzeile mit Zahl und Einheit trägt eine Seite von 58 bis 60; die Daten bestehen', () => {
+  for (const k of daten.karten) {
+    assert.deepEqual(pruefeMasse(k), [], `${k.id}: Maßzeile ohne Seite`);
+  }
+  const ohneSeite = { id: 'probe', abschnitte: [{ ueberschrift: 'Übungsmaß laut Quelle', zeilen: [{ text: 'Höhe 20 cm' }] }] };
+  assert.equal(pruefeMasse(ohneSeite).length, 1, 'Gegenprobe: Maßzahl ohne Seite wird gemeldet');
+  const aufSeite57 = { id: 'probe', abschnitte: [{ ueberschrift: 'Übungsmaß laut Quelle', zeilen: [{ text: 'Höhe 20 cm', seite: 'S. 57' }] }] };
+  assert.equal(pruefeMasse(aufSeite57).length, 1, 'Gegenprobe: Seite 57 ist keine Maßseite');
+  const ohneZahl = { id: 'probe', abschnitte: [{ ueberschrift: 'Übungsmaß laut Quelle', zeilen: [{ text: 'Keine Maße genannt' }] }] };
+  assert.deepEqual(pruefeMasse(ohneZahl), [], 'Zeile ohne Maßzahl braucht keine Maßseite');
+});
+
+test('Pflichtmarkierung: jede Karte mit Seitenangabe trägt sie im Drucktext; pruefeMarkierung findet nichts zu beanstanden', () => {
+  for (const k of daten.karten) {
+    assert.equal(markierungFuer(k), PFLICHTMARKIERUNG, `${k.id}: Markierung fehlt`);
+    assert.ok(kartenText(k).includes(PFLICHTMARKIERUNG), `${k.id}: Drucktext ohne Markierung`);
+  }
+  assert.deepEqual(pruefeMarkierung(daten.karten), []);
+  const ohneSeite = { id: 'probe', quelle: 'Eigenentwurf', abschnitte: [{ ueberschrift: 'Hinweis', zeilen: [{ text: 'ohne Seite' }] }], fuss: 'Eigenentwurf' };
+  assert.equal(markierungFuer(ohneSeite), null, 'Gegenprobe: ohne Seitenangabe keine Markierung');
+  assert.deepEqual(pruefeMarkierung([ohneSeite]), [], 'Gegenprobe: ohne Seitenangabe keine Beanstandung');
+});
+
+test('Pflichtmarkierung im Wortlaut: maschinell geprüft, noch nicht von einem Menschen', () => {
+  assert.equal(PFLICHTMARKIERUNG, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.');
 });

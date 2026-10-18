@@ -6,7 +6,9 @@
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import daten from './daten/stationen.json' with { type: 'json' };
-import { alleGewaehlt, gewaehlteKarten, kannDrucken, umschalten, zeileText } from './logik.mjs';
+import {
+  PFLICHTMARKIERUNG, alleGewaehlt, gewaehlteKarten, kannDrucken, markierungFuer, umschalten, zeileText,
+} from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -22,7 +24,9 @@ function karteDom(karte) {
       el('div', { class: 'bsl-abschnitt' },
         el('p', { class: 'bsl-ueberschrift' }, abschnitt.ueberschrift),
         ...abschnitt.zeilen.map((zeile) => el('p', { class: 'bsl-zeile' }, zeileText(zeile))))),
-    el('p', { class: 'bsl-fuss' }, karte.fuss));
+    el('p', { class: 'bsl-fuss' }, karte.fuss),
+    // Pflichtmarkierung auf jeder gedruckten Karte mit Seitenangabe (Pilot 1).
+    markierungFuer(karte) ? el('p', { class: 'bsl-pflicht' }, markierungFuer(karte)) : null);
 }
 
 function auswahlKnopf(karte) {
@@ -83,7 +87,7 @@ function render() {
 
     el('footer', { class: 'k-fuss bsl-nur-bildschirm' },
       el('p', {}, 'Werkzeug für Fachkräfte. Nichts wird gespeichert, es gibt keine Verbindung nach draußen.'),
-      el('p', {}, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.'),
+      el('p', {}, PFLICHTMARKIERUNG),
       el('a', { class: 'bsl-fusslink', href: '../../impressum.html' }, 'Impressum und Datenschutz')));
 
   fokussiere(merkeKennung);

@@ -9,8 +9,9 @@ Katalog: Katalogeintrag docs/10, Abschnitt Printmaterialien, Titel beibehalten.
 Altersgruppe 1 bis 3 Jahre, offline nach dem Laden. Kein Bildschirm für Kinder unter
 3 Jahren (Projektregel, ohne docs/02-Zeile).
 
-**Status: erster Stand.** Die Karten sind aus der Quelle belegt. Die Prüfung im Browser
-ist maschinell in Chromium erfolgt; die Prüfung auf dem Gerät steht noch aus.
+**Status: Ausbau (PRI-5).** Die Karten sind aus der Quelle belegt. Jede gedruckte Karte mit
+Seitenangabe trägt die Pflichtmarkierung. Die Prüfung im Browser ist maschinell in Chromium
+erfolgt (360 px, Druck je Auswahl); die Prüfung auf dem Gerät steht noch aus.
 Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 
 ## Was belegt ist
@@ -76,8 +77,9 @@ auf den Blättern erscheinen. Die App setzt selbst kein Datum und keine Adresse.
 
 ## Tests
 
-31 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Seiten, Zahlen, Ausgabe
-der Quelle, Kennzeichnung und Auswahl. `test/regeln.test.mjs` prüft die Projektregeln:
+34 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Seiten, Zahlen, Ausgabe
+der Quelle, Kennzeichnung, Auswahl, Maßseiten (`pruefeMasse`) und Pflichtmarkierung
+(`pruefeMarkierung`). `test/regeln.test.mjs` prüft die Projektregeln:
 keine Eingabefelder, keine Speicherung, keine externen Adressen, keine Druckzeichen,
 keine Namenszeile, Modellnamen-Freiheit, aria-live auf `#app`, Fokus nach Klick,
 Pflichtmarkierung der Seitenangaben, Umbruch des Titels und Höhe des Fuß-Links, Testzahl.

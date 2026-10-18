@@ -21,6 +21,10 @@ Maßangabe ihre Seite trägt.
   lebt nur in der geöffneten Seite.
 - Jede Karte und jede Maßzeile trägt eine Seitenangabe. Jede Übertragung und jeder
   Eigenentwurf ist als solcher gekennzeichnet.
+- Pflichtmarkierung (Lehre aus Pilot 1): Jede gedruckte Karte mit Seitenangabe trägt unten die
+  Markierung „noch nicht von einem Menschen geprüft“. Die Prüfung steht in `pruefeMarkierung`.
+- Maßzahlen: `pruefeMasse` verlangt für jede Maßzahl mit Einheit eine Seite von 58 bis 60.
+  Der Abgleich mit der Quelltextkopie (Workflow, zehn Maßzeilen) hat alle Zeilen als belegt geführt.
 - Die Aufsicht ist eine eigene Karte mit den Hinweisen von S. 57 und nur mit ihnen.
 - Bewusst nicht übernommen: Aufbaupläne, Zeichnungen, das Wort „Tunnel“, DGUV-Verweise,
   Höchstwerte, der Querverweis auf einen Baukasten und die Angabe „auf 100 bis 125 cm“.
@@ -48,8 +52,9 @@ die Aufsichtskarte Aufsicht und Umgebung. Die Daten stehen in `daten/stationen.j
 S. Die Karten sind statisch und der Druck ist eine Druckansicht.
 
 ## 8. Tests
-31 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Zahlen gegen die
-Quellenseiten, die Ausgabe der Quelle, die Auswahl und die Projektregeln. Details in der README.
+34 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Zahlen gegen die
+Quellenseiten, die Ausgabe der Quelle, die Auswahl, die Pflichtmarkierung je Karte und die Projektregeln.
+Details in der README.
 
 ## Offen
 - DGUV-Vorgaben für Bewegungsräume sind extern zu prüfen. Die App nennt keine.
@@ -63,4 +68,7 @@ Quellenseiten, die Ausgabe der Quelle, die Auswahl und die Projektregeln. Detail
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - Browser-Prüfung: maschinell in Chromium geprüft (360 px ohne horizontales Scrollen,
   Fuß-Link und Knöpfe mindestens 48 px hoch, Fokus nach Klick, JSON-Import mit Typangabe,
-  Druck mit einer Seite je Karte). Offen: Prüfung auf dem Gerät und in weiteren Browsern.
+  Druck je Auswahl mit einer Seite je Karte und Pflichtmarkierung je Karte). Offen: Prüfung
+  auf dem Gerät und in weiteren Browsern.
+- Der Fuß „Übungsmaß laut Quelle“ auf den Karten ohne Maße (Kriechen, Durchkriechen, Balancierweg)
+  ist eine offene Wortlaut-Frage; die Einträge sind unverändert.

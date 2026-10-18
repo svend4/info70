@@ -75,5 +75,61 @@ export function kartenText(karte) {
     karte.quelle,
     ...karte.abschnitte.flatMap((a) => [a.ueberschrift, ...a.zeilen.map(zeileText)]),
     karte.fuss,
-  ].join('\n');
+    markierungFuer(karte),
+  ].filter(Boolean).join('\n');
+}
+
+/** Pflichtmarkierung auf jeder gedruckten Karte mit Seitenangabe (docs/02 Z. 151–152, Pilot 1). */
+export const PFLICHTMARKIERUNG = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+
+/** Seitenangabe „S. n“ oder „S. n–m“ in einem Text. */
+const SEITE = /S\. \d+/;
+
+/** Maßzahl mit Einheit, zum Beispiel „1,2 m“ oder „50 cm“. */
+const MASS = /\d+(?:,\d+)?\s?(?:cm|m)\b/;
+
+/** Die Seiten, auf denen die Übungsmaße stehen (Quelle S. 58 bis 60). */
+const MASSSEITE = /^S\. (58|59|60)$/;
+
+/**
+ * Hat die Karte eine Seitenangabe, also eine Quellenzeile oder eine Maßzeile mit Seite?
+ * @param {object} karte
+ * @returns {boolean}
+ */
+export function hatSeitenangabe(karte) {
+  return SEITE.test(karte.quelle) || karte.abschnitte.some((a) => a.zeilen.some((z) => z.seite));
+}
+
+/**
+ * Pflichtmarkierung für eine Karte: steht darauf, sobald die Karte eine Seitenangabe trägt.
+ * @param {object} karte
+ * @returns {string|null}
+ */
+export function markierungFuer(karte) {
+  return hatSeitenangabe(karte) ? PFLICHTMARKIERUNG : null;
+}
+
+/**
+ * Prüft die Maßzeilen einer Karte: Jede Zeile mit einer Maßzahl trägt eine Seite von 58 bis 60.
+ * @param {object} karte
+ * @returns {string[]} Fehlermeldungen; leer heißt: alles in Ordnung
+ */
+export function pruefeMasse(karte) {
+  return karte.abschnitte
+    .filter((a) => a.ueberschrift === 'Übungsmaß laut Quelle')
+    .flatMap((a) => a.zeilen)
+    .filter((z) => MASS.test(z.text) && !MASSSEITE.test(z.seite ?? ''))
+    .map((z) => `${karte.id}: Maßzahl ohne Seite 58 bis 60: ${z.text}`);
+}
+
+/**
+ * Prüft die Pflichtmarkierung: jede Karte mit Seitenangabe trägt sie im Drucktext.
+ * @param {object[]} karten
+ * @returns {string[]} Fehlermeldungen; leer heißt: alles in Ordnung
+ */
+export function pruefeMarkierung(karten) {
+  return karten
+    .filter(hatSeitenangabe)
+    .filter((k) => !kartenText(k).includes(PFLICHTMARKIERUNG))
+    .map((k) => `${k.id}: Pflichtmarkierung fehlt`);
 }

@@ -1,0 +1,12 @@
+{
+  "id": "PRI-5",
+  "slug": "bewegungslandschaft-stationen",
+  "titel": "Bewegungslandschaften-Plakate Krippe",
+  "status_neu": "teilweise",
+  "app": "bewegungslandschaft-stationen",
+  "tests_app": 34,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/bewegungslandschaft-stationen/\">Bewegungslandschaften-Stationen – Stationskarten mit Übungsmaßen aus der Quelle (Fachkräfte, zum Drucken)</a>",
+  "readme_zeile": "| PRI-5 | Bewegungslandschaften-Plakate Krippe | teilweise (Ausbau) | `apps/bewegungslandschaft-stationen/` |",
+  "docs10_notiz": "Bewegungslandschaften-Plakate Krippe (PRI-5) ausgebaut: acht Karten, je gedruckte Karte ein Blatt A4 quer mit Pflichtmarkierung, Übungsmaße mit Seiten 58 bis 60 gegen die Quelle abgeglichen, 34 Tests. Offen bleiben DGUV-Prüfung durch eine Fachstelle und der Bezugspunkt der Angabe auf S. 60.",
+  "katalog_korrektur": "Bewegungslandschaften-Plakate Krippe: Ausbau nach Bauauftrag PRI-5. Gebaut: sieben Stationskarten und Aufsichtskarte, Druck je Karte ein Blatt A4 quer, Pflichtmarkierung je Karte, Übungsmaße mit Seitenangabe. Nicht übernommen: Aufbaupläne, Zeichnungen, Tunnel, DGUV-Vorgaben und die Angabe auf 100 bis 125 cm, weil die Quelle sie nicht belegt. Offen: DGUV-Prüfung durch eine Fachstelle, Fußzeile der Karten ohne Maße (Wortlaut) durch eine Fachkraft."
+}

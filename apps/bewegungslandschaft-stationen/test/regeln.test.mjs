@@ -125,7 +125,8 @@ test('Fokus nach Klick: jeder Knopf trägt eine eindeutige data-kennung; render(
 
 test('Pflichtmarkierung der Seitenangaben: im Fuß der App, in README und GDD unter „## Offen“; nie „von Hand geprüft“', () => {
   const satz = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
-  assert.ok(code['app.mjs'].includes(satz), 'app.mjs: Pflichtmarkierung im Fuß fehlt');
+  assert.ok(code['app.mjs'].includes('PFLICHTMARKIERUNG') && code['logik.mjs'].includes(satz), 'app.mjs: Pflichtmarkierung im Fuß fehlt');
+  assert.match(code['app.mjs'], /markierungFuer\(karte\) \? el\('p', \{ class: 'bsl-pflicht' \}/, 'die gedruckte Karte trägt keine Pflichtmarkierung');
   assert.ok(alle['README.md'].includes(satz), 'README.md: Pflichtmarkierung fehlt');
   const gdd = alle['GDD.md'];
   assert.ok(gdd.includes('## Offen'), 'GDD.md: Abschnitt „## Offen“ fehlt');

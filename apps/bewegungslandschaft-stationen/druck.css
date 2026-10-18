@@ -14,6 +14,7 @@
 .bsl-ueberschrift { font-weight: 700; margin: 0 0 0.15rem; }
 .bsl-zeile { margin: 0 0 0.15rem; font-size: 0.95rem; }
 .bsl-fuss { font-size: 0.8rem; color: #4b5563; margin: 0.6rem 0 0; }
+.bsl-pflicht { font-size: 0.8rem; color: #4b5563; margin: 0.3rem 0 0; }
 
 /* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um,
    sonst läuft „Bewegungslandschaften-Plakate“ über den Rand. */
@@ -69,4 +70,5 @@ h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
   .bsl-ueberschrift { font-size: 13pt; margin: 0 0 3pt; }
   .bsl-zeile { font-size: 15pt; margin: 0 0 3pt; }
   .bsl-fuss { font-size: 10pt; color: #000; margin-top: 16pt; }
+  .bsl-pflicht { font-size: 9pt; color: #000; margin: 4pt 0 0; }
 }
