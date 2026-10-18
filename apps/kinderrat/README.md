@@ -23,11 +23,12 @@ mitmach-arena до формального **Sitzungsmodus**: Tagesordnung, Redel
 
 Werbefrei, без аккаунтов и внешних запросов; обмен — только файлами.
 Локально хранится текущее заседание (`kr.sitzung`) + «Neue Sitzung».
-Совет: только имена (Vornamen).
+Совет: nur Initiale oder Nummer (только инициал или номер).
 
 ## Запуск и тесты
 
 ```bash
 npm run dev   # http://localhost:8070/apps/kinderrat/
 node --test apps/kinderrat/test/*.test.mjs
+npm test --workspace @info70/kinderrat   # 9 Tests (koffer + regeln)
 ```

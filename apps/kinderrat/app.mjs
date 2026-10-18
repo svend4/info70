@@ -57,18 +57,19 @@ function render() {
 }
 
 function redelisteKarte(s) {
-  const nameFeld = el('input', { type: 'text', maxlength: '20', placeholder: 'Name auf die Redeliste …',
-    style: 'flex:1;min-height:44px;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0 0.6rem;font-size:1rem', 'aria-label': 'Name auf die Redeliste' });
+  const nameFeld = el('input', { type: 'text', maxlength: '3', placeholder: 'Name auf die Redeliste …',
+    style: 'flex:1;min-height:44px;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0 0.6rem;font-size:1rem', 'aria-label': 'Name auf die Redeliste', 'aria-describedby': 'redeliste-hinweis' });
   const hinzu = () => { const n = nameFeld.value.trim(); if (!n) return; const x = lade(); x.redeliste.push(n); speichere(x); render(); };
   nameFeld.addEventListener('keydown', (e) => { if (e.key === 'Enter') hinzu(); });
   return el('section', { class: 'k-karte' },
     el('p', { style: 'font-weight:600;margin-top:0' }, '🙋 Redeliste – wer ist dran?'),
-    el('div', { style: 'display:flex;gap:0.5rem' }, nameFeld, el('button', { class: 'k-knopf k-knopf--klein', onclick: hinzu }, '➕')),
+    el('p', { id: 'redeliste-hinweis', style: 'font-size:0.85rem;color:#4b5563;margin:0 0 0.4rem' }, 'Nur Initiale oder Nummer, keine Namen.'),
+    el('div', { style: 'display:flex;gap:0.5rem' }, nameFeld, el('button', { id: 'redeliste-hinzu', 'data-kennung': 'redeliste-hinzu', class: 'k-knopf k-knopf--klein', onclick: hinzu }, '➕')),
     s.redeliste.length
       ? el('ol', { style: 'padding-left:1.4rem;margin:0.5rem 0 0' },
           ...s.redeliste.map((n, i) => el('li', { style: 'margin:0.25rem 0;display:flex;align-items:center;gap:0.5rem' },
             el('span', { style: i === 0 ? 'font-weight:700' : '' }, i === 0 ? `${n} 🎤 (dran)` : n),
-            el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'aria-label': `${n} hat gesprochen`, onclick: () => { const x = lade(); x.redeliste.splice(i, 1); speichere(x); render(); } }, '✓'))))
+            el('button', { id: `redeliste-erledigt-${i}`, 'data-kennung': `redeliste-erledigt-${i}`, class: 'k-knopf k-knopf--neutral k-knopf--klein', 'aria-label': `${n} hat gesprochen`, onclick: () => { const x = lade(); x.redeliste.splice(i, 1); speichere(x); render(); } }, '✓'))))
       : el('p', { style: 'font-size:0.85rem;color:#4b5563;margin:0.5rem 0 0' }, 'Noch niemand gemeldet. Die erste Person auf der Liste ist dran und darf ausreden.'));
 }
 

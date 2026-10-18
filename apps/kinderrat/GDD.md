@@ -31,7 +31,11 @@ nachvollziehbar. Datei-Austausch statt Server (fragFINN-konform).
 
 Keine externen Anfragen (NetzwerkWaechter), Austausch nur über selbst
 weitergegebene Dateien, nur `kr.sitzung` in localStorage + Löschknopf,
-Hinweis „nur Vornamen“, werbefrei, eltern.html.
+Hinweis „nur Initiale oder Nummer“, werbefrei, eltern.html. Das Redeliste-Feld
+ist auf 3 Zeichen begrenzt; der Hinweis „Nur Initiale oder Nummer, keine
+Namen.“ steht sichtbar direkt vor dem Feld und ist per aria-describedby
+verknüpft. Bereits gespeicherte Namen (kr.sitzung) werden beim Update nicht
+gelöscht; sie bleiben bis „Neue Sitzung“.
 
 ## 6. Tests
 
@@ -39,6 +43,10 @@ Hinweis „nur Vornamen“, werbefrei, eltern.html.
 Begründung), packeProtokoll (Ergebnis eingerechnet, gültig), protokollText
 (TOP/Abstimmung/Ergebnis/Begründung), pruefeProtokoll (fremd/kaputt),
 Startvorschläge.
+
+`test/regeln.test.mjs` (Quelltext-Prüfung): Redeliste maxlength 3, Hinweis
+sichtbar und per aria-describedby verknüpft, eltern.html/README/GDD ohne
+die frühere Angabe. Gesamt: 9 Tests (`npm test`).
 
 ## 7. Erweiterungen (Katalog)
 
