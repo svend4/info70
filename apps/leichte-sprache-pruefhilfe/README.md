@@ -33,9 +33,14 @@
 Werbefrei, без внешних запросов (NetzwerkWaechter), без ИИ; текст — только
 локально (`lspruef.text`) + «Text löschen». Всё в браузере.
 
+Над полем для текста стоит подсказка «Keine Namen von Kindern eingeben.»
+(видна, связана с полем через aria-describedby).
+
 ## Запуск и тесты
 
 ```bash
 npm run dev   # http://localhost:8070/apps/leichte-sprache-pruefhilfe/
 node --test apps/leichte-sprache-pruefhilfe/test/*.test.mjs
 ```
+
+Тестов: 16 (`npm test` в папке приложения).

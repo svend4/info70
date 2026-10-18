@@ -9,6 +9,10 @@ import { analysiere, bericht } from './logik.mjs';
 installiereNetzwerkWaechter();
 
 const SCHLUESSEL = 'lspruef.text';
+// Eingabehinweis am Textfeld (Freitext): sichtbar, als eigenes Element direkt vor dem Feld; das Feld
+// verweist per aria-describedby darauf. Die App hat keine Druckfassung, der Hinweis bleibt also überall stehen.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const HINWEIS_STIL = 'display:block;font-size:0.85rem;color:#4b5563;margin:0.2rem 0';
 const app = document.getElementById('app');
 const regeln = await fetch('daten/regeln.json').then((r) => r.json());
 
@@ -41,6 +45,7 @@ function render() {
     placeholder: 'Text hier einfügen …',
     style: 'width:100%;min-height:9rem;font-size:1rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.6rem',
     'aria-label': 'Zu prüfender Text',
+    'aria-describedby': 'lsp-hinweis-text',
     oninput: (ev) => { localStorage.setItem(SCHLUESSEL, ev.target.value); zeigeErgebnis(ev.target.value); },
   });
   feld.value = gespeichert;
@@ -85,6 +90,7 @@ function render() {
     el('p', { class: 'k-untertitel' }, 'Text regelbasiert auf Leichte/Einfache Sprache prüfen (lokal, ohne KI)'),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0;font-size:0.92rem' }, regeln.hinweis),
+      el('span', { id: 'lsp-hinweis-text', style: HINWEIS_STIL }, KINDER_HINWEIS),
       feld,
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); render(); } }, '🧹 Text löschen'))),

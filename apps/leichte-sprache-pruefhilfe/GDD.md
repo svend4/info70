@@ -35,7 +35,8 @@ Prüfen, keine harten Fehler (ehrliche Heuristik).
 
 Keine externen Anfragen (NetzwerkWaechter), keine KI, Text nur in localStorage
 (`lspruef.text`) + „Text löschen“, Bericht-Export lokal per Blob, werbefrei.
-Werkzeug für Erwachsene ohne eltern.html.
+Werkzeug für Erwachsene ohne eltern.html. Eingabehinweis „Keine Namen von
+Kindern eingeben.“ steht sichtbar direkt vor dem Textfeld (aria-describedby).
 
 ## 6. Tests
 
@@ -44,6 +45,8 @@ Werkzeug für Erwachsene ohne eltern.html.
 Bindestrich-Teil), `passivSignale`, `nominalstil` (nur Substantive),
 `fremdwoerter` (auch flektiert), `analysiere` (leer→grau, gut→grün,
 schwer→rot mit ≥3 Hinweisen), `bericht` (Kopf/Ergebnis/Blöcke).
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Zuordnung zum
+Textfeld. Testzahl gesamt: 16 (vorher 12).
 
 ## 7. Erweiterungen (Katalog)
 
