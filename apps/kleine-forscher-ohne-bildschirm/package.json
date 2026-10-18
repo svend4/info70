@@ -1,0 +1,11 @@
+{
+  "name": "@info70/kleine-forscher-ohne-bildschirm",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kleine Forscher ohne Bildschirm: sieben Versuchskarten für Fachkräfte und Eltern von Kindern von 1 bis 3 Jahren (PRI-8). Zum Ausdrucken, ohne Verbindung nach draußen, ohne Speicherung. Neuladen ohne Netz nicht zugesichert (F4).",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

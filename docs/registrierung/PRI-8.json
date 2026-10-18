@@ -1,0 +1,12 @@
+{
+  "id": "PRI-8",
+  "slug": "kleine-forscher-ohne-bildschirm",
+  "titel": "Kleine Forscher ohne Bildschirm",
+  "status_neu": "gebaut",
+  "app": "kleine-forscher-ohne-bildschirm",
+  "tests_app": 49,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/kleine-forscher-ohne-bildschirm/\">Kleine Forscher ohne Bildschirm – Versuchskarten zu Sand, Ton, Wasser und Werkzeug (Fachkräfte und Eltern, zum Drucken)</a>",
+  "readme_zeile": "| PRI-8 | Kleine Forscher ohne Bildschirm | gebaut | `apps/kleine-forscher-ohne-bildschirm/` |",
+  "docs10_notiz": "Kleine Forscher ohne Bildschirm (PRI-8) gebaut: sieben Versuchskarten, je gewählter Karte ein Blatt A4 hoch mit Pflichtmarkierung, Quellenzeile ohne Seitenzahl, 49 Tests. Die Sicherheitshinweise und die Materialanpassung (Knete statt Lehm) sind Eigenentwurf und offen für eine Fachkraft mit U3-Erfahrung.",
+  "katalog_korrektur": "Kleine Forscher ohne Bildschirm: gebaut nach Bauauftrag PRI-8 als Druckkartei. Gebaut: sieben Versuchskarten (Sand trocken, Sand nass, Ton, Wasser, Stapeln, Ineinanderlegen, Werkzeug), Auswahl und Druck je Karte ein Blatt A4 hoch. Quellenzeile ohne Seitenzahl; die Seitenangaben stehen in den Daten. Offen: Sicherheitshinweise durch eine Fachkraft mit U3-Erfahrung gegenlesen, Anzahl der Karten, Favicon (A3)."
+}

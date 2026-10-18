@@ -1,0 +1,92 @@
+{
+  "titel": "Kleine Forscher ohne Bildschirm",
+  "zielgruppe": "Für Fachkräfte und Eltern von Kindern von 1 bis 3 Jahren. Die Karten sind für Erwachsene; das Kind sieht keinen Bildschirm.",
+  "hinweis": "Die Fachkraft legt das Material bereit, liest die Karte, zeigt die Handlung vor und lässt das Kind ausprobieren. Es wird nichts bewertet. Versuche mit Wasser nur unter Aufsicht.",
+  "quelleKurz": "Praleska, Abschnitt „ПОЗНАВАТЕЛЬНО-ПРАКТИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ“, Gruppe „МАЛЫШИ“",
+  "sprachen": "Deutsch (de). Die Quelle ist russischsprachig; die deutschen Fassungen sind Eigenentwurf. uk und ru: nicht gebaut, offen.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "beschriftung": {
+    "kopf": "Versuchskarte (Eigenentwurf nach der Quelle)",
+    "begriffe": "Begriffe in der Quelle",
+    "material": "Material (Eigenentwurf)",
+    "lernziel": "Lernziel für Erwachsene (Eigenentwurf)",
+    "sicherheit": "Sicherheit (Eigenentwurf, nicht geprüft)"
+  },
+  "karten": [
+    {
+      "id": "sand-trocken",
+      "titel": "Sand trocken",
+      "begriffe": [
+        { "quelltext": "сухой и влажный песок", "deutsch": "trockener und nasser Sand" }
+      ],
+      "material": "trockener Sand, Eimer, kleines Schäufelchen",
+      "lernziel": "Das Kind fasst trockenen Sand an, füllt ihn mit dem Schäufelchen in den Eimer und sieht, wie er rieselt.",
+      "sicherheit": "Sand nicht in den Mund. Erwachsene bleiben dabei, bis das Kind fertig ist.",
+      "quelle": { "seite": "S. 63" }
+    },
+    {
+      "id": "sand-nass",
+      "titel": "Sand nass",
+      "begriffe": [
+        { "quelltext": "сухой и влажный песок", "deutsch": "trockener und nasser Sand" }
+      ],
+      "material": "nasser Sand, Schüssel, wenig Wasser",
+      "lernziel": "Das Kind fasst trockenen und nassen Sand an und vergleicht, wie sie sich anfühlen.",
+      "sicherheit": "Kein Wasser in den Mund. Wasser nur unter Aufsicht und in kleiner Menge.",
+      "quelle": { "seite": "S. 63" }
+    },
+    {
+      "id": "ton",
+      "titel": "Ton",
+      "begriffe": [
+        { "quelltext": "песок, глина, камушки", "deutsch": "Sand, Ton, Steine" }
+      ],
+      "material": "Knete statt Lehm, kleine Schale mit Wasser",
+      "lernziel": "Das Kind drückt die Knete und gießt wenig Wasser darauf; es beobachtet, wie sie weich wird.",
+      "sicherheit": "Knete nicht in den Mund. Wasser nur unter Aufsicht, in einer kleinen Schale.",
+      "quelle": { "seite": "S. 63" }
+    },
+    {
+      "id": "wasser",
+      "titel": "Wasser",
+      "begriffe": [],
+      "material": "flache Schale, Wasser, Becher",
+      "lernziel": "Das Kind gießt Wasser aus einem Becher in die Schale und beobachtet, wohin es fließt.",
+      "sicherheit": "Kein Wasser in den Mund. Nur unter Aufsicht und mit wenig Wasser arbeiten.",
+      "quelle": { "seite": "S. 63" }
+    },
+    {
+      "id": "stapeln",
+      "titel": "Stapeln",
+      "begriffe": [
+        { "quelltext": "пирамидок из колечек", "deutsch": "Pyramide aus Ringen" }
+      ],
+      "material": "Ringe einer Ringpyramide, ohne kleine Teile",
+      "lernziel": "Das Kind legt Ringe übereinander und steckt sie auf den Stab; es probiert aus, wie hoch der Turm wird.",
+      "sicherheit": "Kleine Teile nicht in den Mund. Erwachsene bleiben in der Nähe und räumen Kleinteile weg.",
+      "quelle": { "seite": "S. 64" }
+    },
+    {
+      "id": "ineinanderlegen",
+      "titel": "Ineinanderlegen",
+      "begriffe": [],
+      "material": "Becher oder Dosen, die ineinander passen, ohne scharfe Kanten",
+      "lernziel": "Das Kind steckt Becher ineinander und zieht sie wieder auseinander.",
+      "sicherheit": "Keine Teile in den Mund. Nur Becher ohne scharfe Kanten verwenden; Erwachsene bleiben dabei.",
+      "quelle": { "seite": "S. 63" }
+    },
+    {
+      "id": "werkzeug",
+      "titel": "Werkzeug",
+      "begriffe": [
+        { "quelltext": "достать палочкой", "deutsch": "mit dem Stäbchen herausholen" },
+        { "quelltext": "совочком", "deutsch": "mit dem Schäufelchen" },
+        { "quelltext": "Я сам", "deutsch": "Ich selbst" }
+      ],
+      "material": "Stab oder Stäbchen, Ball, Schäufelchen, Eimer mit Sand",
+      "lernziel": "Das Kind holt einen Ball mit dem Stab unter dem Schrank hervor und füllt Sand mit dem Schäufelchen in den Eimer.",
+      "sicherheit": "Stab nur kurz benutzen und nicht auf Gesichter richten. Erwachsene bleiben dabei.",
+      "quelle": { "seite": "S. 64" }
+    }
+  ]
+}
