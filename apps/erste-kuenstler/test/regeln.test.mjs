@@ -187,6 +187,30 @@ test('keine Bewertung von Kindern im Code und in den Daten: keine Punkte, Stufe,
   }
 });
 
+test('externe Fakten: jeder Satz mit Norm-, Studien-, Behörden- oder Erste-Hilfe-Angabe trägt eine Fundstelle oder den Vermerk', () => {
+  // Wie in puppentheater-werkstatt, aber je SATZ statt je Zeile: eine Zeile der JSON-Datei ist oft ein
+  // ganzer Absatz, und ein Vermerk am Ende würde die Sätze davor decken. Auch eine Verneinung („keine
+  // Referenzliste“) ist eine Aussage über die Welt draußen und braucht die Fundstelle oder den Vermerk.
+  // Ohne /i: der Schlüssel „elterntelefon“ im Code ist keine Behauptung; Prozent nur als Prosa („50 %“).
+  const behauptung = /(?<![\wÄÖÜäöüß])(?:EN \d|DIN\b|ISO \d|AWMF|BZgA|BIÖG|BIOeG|WHO\b|G-BA|Gemeinsamen? Bundesausschuss|Kinder-Richtlinie|U[78]a?\b|Leitlinie|Richtlinie|Verordnung|Gesetz|Studie|Erste[- ]Hilfe|Kinderklinik|Notruf|[Aa]mtlich|Warnung|Behörde|Ärzt|Elterntelefon|0800|Prozent)|\d+ ?% (?=\s)|\d{1,2}\.\s*(?:Monat|Lebensmonat)/;
+  const beleg = /Eigenentwurf, fachlich nicht geprüft|Praleska|\(S\. \d/;
+  // JSON-Werte einzeln lesen, damit kein Satz über die Grenze eines Feldes hinweg läuft.
+  const werte = (x) => typeof x === 'string' ? [x]
+    : Array.isArray(x) ? x.flatMap(werte)
+      : x && typeof x === 'object' ? Object.values(x).flatMap(werte) : [];
+  const befunde = [];
+  for (const d of ALLE_DATEIEN) {
+    const texte = d.endsWith('.json') ? werte(JSON.parse(alle[d])) : [alle[d]];
+    for (const text of texte) {
+      // Der Punkt in „24. Monat“, „S. 96“ und „U7“ endet keinen Satz.
+      for (const satz of text.replace(/\s+/g, ' ').split(/(?<![\dSZ])[.!?]\s+/)) {
+        if (behauptung.test(satz) && !beleg.test(satz)) befunde.push(`${d}: ${satz.slice(0, 80)}`);
+      }
+    }
+  }
+  assert.deepEqual(befunde, [], `Behauptung ohne Quelle oder Vermerk:\n${befunde.join('\n')}`);
+});
+
 test('Testzahl: README und GDD nennen die Zahl der Tests, die in test/ tatsächlich stehen', async () => {
   const dateien = (await readdir(new URL('test/', APP))).filter((d) => d.endsWith('.test.mjs'));
   let echt = 0;

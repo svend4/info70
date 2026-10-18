@@ -20,22 +20,26 @@ Der Katalogeintrag wollte „19 Meilensteine … als Checkliste plus Bericht“.
 und zwar nicht aus Geschmack, sondern aus zwei nachprüfbaren Gründen:
 
 1. **Der Zeitpunkt in der Quelle.** Die Merkmalsliste ist überschrieben mit „zum Ende des dritten
-   Lebensjahres“. Sie beschreibt den Zustand am Ende der Spanne. Eine Checkliste „für 1 bis 3“
-   würde daraus einen Weg machen, den die Quelle nicht behauptet.
-2. **Es gibt keine deutsche Referenz.** Die Grenzsteine der Entwicklung kennen keinen Bereich
-   „künstlerische Entwicklung“; bis drei Jahre stehen dort zum Malen zwei Punkte (Stifthaltung im
-   24. Monat unter Hand-Finger-Motorik; im 36. Monat, ob das Kind auf Nachfrage sagt, was es gemalt
-   hat – unter kognitiver Entwicklung). Ihre Autoren schreiben selbst, dass sie kein
-   Diagnoseinstrument sind. Die Kinder-Richtlinie des G-BA hat zur U7 einen einzigen Malpunkt (die
-   flache Spirale), zur U7a keinen, und die Stifthaltung erst zur U8 nach dem dritten Geburtstag.
+   Lebensjahres“ (Praleska, S. 96). Sie beschreibt den Zustand am Ende der Spanne. Eine Checkliste
+   „für 1 bis 3“ würde daraus einen Weg machen, den die Quelle nicht behauptet.
+2. **Es gibt keine deutsche Referenz** (Eigenentwurf, fachlich nicht geprüft). Die Grenzsteine der
+   Entwicklung kennen keinen Bereich „künstlerische Entwicklung“; bis drei Jahre stehen dort zum
+   Malen zwei Punkte (Stifthaltung im 24. Monat unter Hand-Finger-Motorik; im 36. Monat, ob das Kind
+   auf Nachfrage sagt, was es gemalt hat – unter kognitiver Entwicklung) (Eigenentwurf, fachlich nicht
+   geprüft). Ihre Autoren schreiben selbst, dass sie kein Diagnoseinstrument sind (Eigenentwurf,
+   fachlich nicht geprüft). Die Kinder-Richtlinie des G-BA hat zur U7 einen einzigen Malpunkt (die
+   flache Spirale), zur U7a keinen, und die Stifthaltung erst zur U8 nach dem dritten Geburtstag
+   (Eigenentwurf, fachlich nicht geprüft).
 
-**Korrektur nach der Gegenprobe:** die erste Fassung schloss mit „zu Singen, Zuhören, Kneten und
-Fingermalen steht in beiden nichts“. Im Richtlinientext selbst nachgelesen ist das falsch – zur U7a
-steht unter „Perzeption/Kognition“ der Punkt „Kann zuhören und konzentriert spielen, Als-Ob-Spiele.“,
-und „Singen“ kommt viermal vor, allerdings nur als Mittel („lässt sich durch Wiegen, Singen oder
-Ansprache … beruhigen“), nie als etwas, das das Kind tut. Der Schluss braucht diesen pauschalen
-Negativbefund gar nicht: es gibt bis drei Jahre kein Merkmal dafür, WIE ein Kind singt, formt oder
-malt. Genau so steht es jetzt in der App, und ein Test hält die zurückgezogene Fassung draußen.
+**Korrektur nach der Gegenprobe:** die erste Fassung machte hier einen pauschalen Negativbefund; er
+ist zurückgenommen. Im Richtlinientext selbst nachgelesen zeigt sich: zur U7a steht unter
+„Perzeption/Kognition“ der Punkt „Kann zuhören und konzentriert spielen, Als-Ob-Spiele.“, und
+„Singen“ kommt viermal vor, allerdings nur als Mittel
+(„lässt sich durch Wiegen, Singen oder Ansprache … beruhigen“), nie als etwas, das das Kind tut
+(Eigenentwurf, fachlich nicht geprüft). Der Schluss braucht diesen pauschalen Negativbefund gar
+nicht: es gibt bis drei Jahre kein Merkmal dafür, WIE ein Kind singt, formt oder malt (Eigenentwurf,
+fachlich nicht geprüft). Genau so steht es jetzt in der App, und ein Test hält die zurückgezogene
+Fassung draußen.
 
 Der Validator erzwingt, dass **beide** Gründe in der App stehen: fehlt „Grenzsteine“ oder „dritten
 Lebensjahr“ im Text, sind die Daten ungültig. Eine Entscheidung ohne ihre Begründung ist eine
@@ -55,35 +59,40 @@ Spanne 1 bis 3 steht nur im Rahmen.
 
 `pruefeDaten` rechnet beide Richtungen: ein `ideeDa`-Merkmal ohne Karte, eine Karte, die ein
 `nichtUebernommen`-Merkmal für sich beansprucht, und ein Verweis auf eine App, die es nicht gibt,
-machen die Daten ungültig. Die fünf `nichtUebernommen` sind die musikalischen Merkmale, die
-Instrumente (Metallofon, Xylofon, Triangel) oder „vom Programm vorgesehene“ Tanzbewegungen
-voraussetzen: dieser Korpus schafft nichts an und hat keinen Lehrplan.
+machen die Daten ungültig. Von den fünf `nichtUebernommen` setzen vier Instrumente oder ein Programm
+voraus (Metallofon, Xylofon, Triangel, Rhythmen auf Instrumenten, „vom Programm vorgesehene“
+Tanzbewegungen, ein- und zweiteilige Form); das fünfte ist eine Hörübung aus dem Gruppenalltag.
+Dieser Korpus schafft nichts an und hat keinen Lehrplan.
 
 ## 6. Sicherheit steht an jedem Material
 
-In diesem Alter kommt alles in den Mund. Jedes der zehn Materialien trägt seinen eigenen Satz
+In diesem Alter kommt alles in den Mund (Eigenentwurf, fachlich nicht geprüft). Jedes der zehn Materialien trägt seinen eigenen Satz
 (mindestens 30 Zeichen, vom Validator erzwungen), und totes Material – eines, das keine Karte
 benutzt – ist ein Datenfehler.
 
 Drei Stellen sind beim Bau eigens geprüft worden:
 
-* **Fingerfarbe.** Genannt ist EN 71-7 als Norm, nicht als Gesetz; genannt ist, was sie verlangt
-  (Bitterstoff, Stoffgrenzen, pH, Aufsichtshinweis auf der Packung), und ausdrücklich nicht, dass
-  die Farbe deshalb unbedenklich wäre. Ein Test verbietet die Wörter „gesetzlich“, „essbar“ und
-  „ungiftig“ in bejahender Form – mit Lookbehind, damit die Verneinung stehen bleiben darf.
-* **Salzteig** ist ausgeschlossen, ohne eine Mengenschwelle zu erfinden: die amtliche Warnung
-  nennt keine, also nennt die App auch keine. Ein Test weist jede Gramm- und Löffelangabe ab.
+* **Fingerfarbe.** Nur Farbe, die ausdrücklich als Spielzeug ausgewiesen ist, und die Packung vor dem
+  ersten Gebrauch lesen. Dass eine Farbe als Spielzeug verkauft wird, macht sie nicht unbedenklich
+  (Eigenentwurf, fachlich nicht geprüft). Eine frühere, nicht belegte Angabe dieser Art ist
+  gestrichen. Ein Test verbietet die Wörter
+  „gesetzlich“, „essbar“ und „ungiftig“ in bejahender Form – mit Lookbehind, damit die Verneinung
+  stehen bleiben darf.
+* **Salzteig** ist ausgeschlossen, ohne eine Mengenschwelle zu erfinden. Wie viel Salz schadet, ist
+  nicht belegt (Eigenentwurf, fachlich nicht geprüft); deshalb nennt die App keine Menge. Ein Test
+  weist im Begründungstext des Salzteig-Eintrags jede Zahl mit Gramm-, Teelöffel- oder Esslöffelangabe ab.
 * **Plastiktüte** ist an zwei Stellen ausdrücklich ausgeschlossen (Material und Karte), weil die
   Tütenpuppe die naheliegendste und gefährlichste Variante der Handpuppe ist.
 
 ## 7. Die Bildschirmregel, richtig zugeordnet
 
-Der Katalogeintrag wollte „BZgA-Empfehlung ‚keine Bildschirmzeit unter 3‘ direkt in der App“.
-Gebaut ist das – mit der Korrektur, die die Prüfung ergeben hat: die Drei-Jahres-Grenze ist
-**deutsch** (BIÖG, vormals BZgA; AWMF-Leitlinie 027-075 der DGKJ). Die WHO-Leitlinie für Kinder
-unter fünf Jahren kennt sie nicht: sie rät Einjährigen von Bildschirmzeit ab und lässt
-Zweijährigen bis zu einer Stunde. Derselbe Fehler stand in der App „Sprich mit mir!“ (die WHO
-war dort als Beleg für die Drei-Jahres-Grenze genannt) und ist in dieser Welle berichtigt worden.
+Der Katalogeintrag wollte die Empfehlung „keine Bildschirmzeit unter 3“ direkt in der App. Gebaut ist
+das – mit der Korrektur, die die Prüfung ergeben hat: die Drei-Jahres-Grenze ist **deutsch** (BIÖG,
+vormals BZgA; AWMF-Leitlinie zur Prävention dysregulierten Bildschirmmediengebrauchs in Kindheit und
+Jugend) (Eigenentwurf, fachlich nicht geprüft). Die WHO-Leitlinie für Kinder unter fünf Jahren kennt
+sie nicht; sie rät Kindern unter einem Jahr von Bildschirmzeit ab und setzt für Zweijährige eine
+Obergrenze (Eigenentwurf, fachlich nicht geprüft). Derselbe Fehler stand in der App „Sprich mit mir!“
+und ist in dieser Welle berichtigt worden.
 
 ## 8. Kein Speicher, kein Bericht
 
@@ -98,8 +107,8 @@ Situation, Schritte, Schluss, Grenze, Material mit Sicherheitssatz, die immer g�
 und die Pflichtmarkierung. Der Bildschirm fällt beim Drucken weg (`.ek-nur-bildschirm`); Zeichen und
 Emojis stehen nur auf dem Bildschirm, nie auf dem Blatt. Anders als in Nr. 60, wo ein Blatt alle fünf
 Achsen trägt, ist hier jede Karte für sich eine Tätigkeit. Schritte 13 pt. Keine Namenszeile, kein Haken,
-kein Datum. Die Druckprüfung steht in `test/regeln.test.mjs`: die Suite umfasst 42 Tests in zwei Dateien
-(logik 21, regeln 21).
+kein Datum. Die Druckprüfung steht in `test/regeln.test.mjs`: die Suite umfasst 43 Tests in zwei Dateien
+(logik 21, regeln 22).
 
 Pflichtmarkierung auf dem Blatt: „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von
 einem Menschen geprüft.“ Das Blatt trägt keine Seitenzahl (Standard für neue Apps, A18); die Markierung
@@ -137,3 +146,4 @@ Pflichtmarkierung: „Seitenangaben maschinell gegen den Quelltext geprüft, noc
 * Liedvorschläge: nicht gebaut.
 * Offline-Ideen: Abgleich der acht Karten mit der Katalogliste offen.
 * Favicon (A3).
+* Fachliche Prüfung der Angaben mit dem Vermerk „(Eigenentwurf, fachlich nicht geprüft)“ (Leitlinien, Grenzsteine, Kinder-Richtlinie, Telefonnummer): offen.

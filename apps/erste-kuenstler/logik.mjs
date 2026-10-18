@@ -1,6 +1,6 @@
 // Erste Künstler 1-3 (Praleska docs/10, Eltern-Werkzeuge Nr. 61, Quelle
-// S. 101-102: «ОСНОВНЫЕ ПОКАЗАТЕЛИ РАЗВИТИЯ ДЕТЕЙ (к концу третьего года
-// жизни)», Abschnitt «Художественная деятельность», Gruppe «МАЛЫШИ» =
+// S. 96 (Überschrift «ОСНОВНЫЕ ПОКАЗАТЕЛИ РАЗВИТИЯ ДЕТЕЙ (к концу третьего года
+// жизни)») und S. 101-102 (Abschnitt «Художественная деятельность», Gruppe «МАЛЫШИ» =
 // frühes Alter, von einem Jahr bis drei Jahren).
 //
 // TRAGENDE ENTSCHEIDUNG: KEINE CHECKLISTE.
@@ -10,19 +10,16 @@
 // sind nachpruefbar:
 //
 // 1. Die Quelle ueberschreibt ihre 19 Merkmale mit „zum Ende des dritten
-//    Lebensjahres". Sie beschreibt einen Zustand am ENDE der Spanne, nicht
-//    einen Weg dorthin. Ein Kind von vierzehn Monaten, das achtzehn davon
-//    nicht zeigt, ist vierzehn Monate alt - eine Checkliste „fuer 1 bis 3"
-//    wuerde die Quelle falsch lesen und Sorge herstellen, wo keine ist.
+//    Lebensjahres" (Praleska, S. 96). Sie beschreibt einen Zustand am ENDE der
+//    Spanne, nicht einen Weg dorthin. Ein Kind von vierzehn Monaten, das
+//    achtzehn davon nicht zeigt, ist vierzehn Monate alt - eine Checkliste „fuer
+//    1 bis 3" wuerde die Quelle falsch lesen und Sorge herstellen, wo keine ist
+//    (Eigenentwurf, fachlich nicht geprüft).
 //
-// 2. In Deutschland gibt es keine Referenzliste fuer kuenstlerische
-//    Entwicklung. Die „Grenzsteine der Entwicklung" kennen keinen solchen
-//    Bereich; im Altersband bis drei Jahre stehen dort zum Malen genau zwei
-//    Punkte - die Stifthaltung (24. Monat, Hand-Finger-Motorik) und die
-//    Frage, ob das Kind auf Nachfrage sagt, wen oder was es gemalt hat
-//    (36. Monat, und das unter KOGNITIVER Entwicklung). Zu Singen, Zuhoeren,
-//    Kneten und Fingermalen steht dort nichts. Eine Neunzehn-Punkte-Liste zum
-//    Abhaken haette den Anschein einer Norm, hinter der nichts steht.
+// 2. In Deutschland gibt es keine Referenzliste fuer kuenstlerische Entwicklung
+//    (Eigenentwurf, fachlich nicht geprüft). Die Belege dazu und ihre Vermerke
+//    stehen in daten/ideen.json unter keinMeilenstein; `pruefeDaten` prueft nur,
+//    dass beide Gruende dort stehen.
 //
 // Gebaut ist stattdessen eine Ideenkartei, geordnet nach dem, was der
 // Erwachsene SCHON SIEHT (`wennSie`). Die 19 Merkmale stehen vollstaendig da -
@@ -40,7 +37,7 @@
 // * KEIN LIEDTEXT. Bei vielen bekannten Fassungen ist nicht zu klaeren, ob sie
 //   frei sind (siehe Nr. 59).
 // * SICHERHEIT STEHT AN JEDEM MATERIAL, nicht nur im Vorspann: in diesem Alter
-//   kommt alles in den Mund.
+//   kommt alles in den Mund (Eigenentwurf, fachlich nicht geprüft).
 
 /** Die drei Taetigkeitsbereiche der Quelle - geschlossene Liste. */
 export const BEREICHE = Object.freeze(['sprache', 'musik', 'kunst']);
@@ -184,7 +181,7 @@ export const NICHT_GEPRUEFT = Object.freeze({
   keinDeuten: 'muss die Deutung nennen, um sie auszuschließen',
   keinWirkversprechen: 'muss das Wirkversprechen nennen, um es auszuschließen',
   keinErgebnis: 'nennt das vorzeigbare Ergebnis, um es abzulehnen',
-  keinBildschirm: 'nennt Empfehlungen samt Altersangaben und Stundenangabe',
+  keinBildschirm: 'nennt Empfehlungen samt Altersangaben',
   merkmale: 'die 19 Quellmerkmale im Wortlaut der Quelle, mit ihrer Einordnung',
   ausgeschlossen: 'die Ausschlussliste benennt, was sie ausschließt',
   quelle: 'Werk, Rechte und Zählung – russisch und mit Zahlen',
@@ -255,7 +252,7 @@ export function pruefeDaten(daten) {
     if (!nichtLeer(m.name)) fehler.push(`${wo}: name fehlt`);
     if (!ZEICHEN.test(m.zeichen ?? '')) fehler.push(`${wo}: zeichen fehlt`);
     if (!nichtLeer(m.woGefunden)) fehler.push(`${wo}: woGefunden fehlt – hier wird nichts angeschafft`);
-    // In diesem Alter kommt alles in den Mund. Material ohne Sicherheitssatz
+    // In diesem Alter kommt alles in den Mund (Eigenentwurf, fachlich nicht geprüft). Material ohne Sicherheitssatz
     // waere eine Luecke an der gefaehrlichsten Stelle.
     if (!nichtLeer(m.sicherheit) || (m.sicherheit ?? '').length < 30) {
       fehler.push(`${wo}: sicherheit fehlt oder ist zu knapp – jedes Material braucht seinen eigenen Satz`);
@@ -300,7 +297,7 @@ export function pruefeDaten(daten) {
   // Die beiden Gruende gegen die Checkliste muessen BEIDE dastehen - sonst
   // ist die Entscheidung eine Meinung.
   if (!/Grenzsteine/.test(daten?.keinMeilenstein ?? '')) {
-    fehler.push('keinMeilenstein nennt die Grenzsteine nicht – ohne sie ist „es gibt keine Referenzliste" eine Behauptung');
+    fehler.push('keinMeilenstein nennt die Grenzsteine nicht – ohne sie fehlt der Beleg für die Begründung');
   }
   if (!/dritten\s+Lebensjahr/.test(daten?.keinMeilenstein ?? '')) {
     fehler.push('keinMeilenstein nennt den Zeitpunkt der Quelle nicht');

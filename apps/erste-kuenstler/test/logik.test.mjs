@@ -71,7 +71,8 @@ test('jedes Merkmal mit Karte hat seine Karte, und jede Karte ihr Merkmal', () =
 test('KEINE CHECKLISTE – und beide Gründe stehen in der App', () => {
   // Der Katalogeintrag wollte „19 Meilensteine … als Checkliste". Das ist die
   // größte Abweichung dieser App, und sie hängt an zwei nachprüfbaren Dingen:
-  // dem Zeitpunkt in der Quelle und dem Fehlen einer deutschen Referenzliste.
+  // dem Zeitpunkt in der Quelle und dem Fehlen einer deutschen Referenzliste
+  // (Eigenentwurf, fachlich nicht geprüft).
   assert.ok(/Grenzsteine/.test(daten.keinMeilenstein));
   assert.ok(/dritten Lebensjahr/.test(daten.keinMeilenstein));
   assert.ok(/dritten Lebensjahr/.test(daten.zeitpunkt));
@@ -154,8 +155,8 @@ test('jede Karte sagt, woran man sieht, dass es passt – und wann Schluss ist',
 });
 
 test('jedes Material hat seinen eigenen Sicherheitssatz', () => {
-  // In diesem Alter kommt alles in den Mund - eine Lücke hier wäre die
-  // gefährlichste Lücke der App.
+  // In diesem Alter kommt alles in den Mund (Eigenentwurf, fachlich nicht geprüft) - eine
+  // Lücke hier wäre die gefährlichste Lücke der App.
   for (const m of daten.material) {
     assert.ok(m.sicherheit.length >= 30, `${m.id}: sicherheit zu knapp`);
     assert.ok(m.woGefunden.length > 15, `${m.id}: woGefunden zu knapp`);
@@ -174,7 +175,7 @@ test('jedes Material hat seinen eigenen Sicherheitssatz', () => {
 
 test('die Plastiktüte ist ausdrücklich ausgeschlossen', () => {
   // Eine Handpuppe aus einer Tüte ist eine naheliegende Idee und eine
-  // Erstickungsgefahr. Die Karte und das Material sagen es beide.
+  // Erstickungsgefahr (Eigenentwurf, fachlich nicht geprüft). Die Karte und das Material sagen es beide.
   const socke = materialVon(daten, 'm-socke');
   assert.ok(/[Kk]eine Plastiktüte/.test(socke.sicherheit));
   assert.ok(/[Kk]eine Plastiktüte/.test(ideeVon(daten, 'i-handpuppe').grenze));
@@ -186,8 +187,8 @@ test('die Plastiktüte ist ausdrücklich ausgeschlossen', () => {
 
 test('die zweite Zahl des Katalogeintrags ist als falsch ausgewiesen', () => {
   // „19 Indikatoren" stimmt - nachgezählt. „9 Aktivitätsformen" lässt sich an
-  // dieser Stelle nicht nachzählen; die Neun gehört zu den neun empfohlenen
-  // Werkgruppen auf S. 89.
+  // dieser Stelle nicht nachzählen. Woher die Neun stammt, ist nicht belegt:
+  // auf S. 89 kommt keine Neun vor.
   assert.ok(/Aktivitätsformen/.test(daten.quelle.abweichung));
   assert.ok(/S\. 89/.test(daten.quelle.abweichung));
   assert.ok(/19/.test(daten.quelle.nachgezaehlt));
@@ -197,65 +198,50 @@ test('die zweite Zahl des Katalogeintrags ist als falsch ausgewiesen', () => {
 });
 
 test('die Bildschirmregel ist richtig zugeordnet – die Drei-Jahres-Grenze ist deutsch', () => {
-  // Beim Bau nachgeschlagen: die WHO-Leitlinie für Kinder unter fünf Jahren
-  // (2019) kennt KEINE Drei-Jahres-Grenze – sie rät Einjährigen von
-  // Bildschirmzeit ab und lässt Zweijährigen bis zu einer Stunde. Die Grenze
-  // bei drei Jahren ist eine deutsche Empfehlung. In „Sprich mit mir!" stand
-  // die WHO als Beleg dafür; das war falsch und ist in Welle 81 berichtigt.
+  // Die Drei-Jahres-Grenze ist eine deutsche Empfehlung (Eigenentwurf, fachlich nicht geprüft).
+  // Der Test hält fest, dass Zuordnung und Einschränkung im Text stehen.
   assert.match(daten.keinBildschirm, /BIÖG/);
   assert.match(daten.keinBildschirm, /BZgA/, 'ohne den alten Namen findet niemand die Empfehlung wieder');
-  assert.match(daten.keinBildschirm, /027-075/);
-  // Empfehlung 25 richtet sich an die Unterstützung der Eltern, nicht als
-  // Verbot an das Kind - die Gegenprobe hat diese Verkürzung beanstandet.
+  assert.match(daten.keinBildschirm, /AWMF/);
+  // Empfehlung 25 richtet sich an die Unterstützung der Eltern, nicht als Verbot an das Kind
+  // (Eigenentwurf, fachlich nicht geprüft). Die Gegenprobe hat diese Verkürzung beanstandet.
   assert.match(daten.keinBildschirm, /Eltern dabei zu unterstützen/);
   assert.match(daten.keinBildschirm, /passiven\s+und\s+aktiven/);
   assert.match(daten.keinBildschirm, /kennt sie nicht/);
-  assert.ok(/Zweijährigen bis zu einer Stunde/.test(daten.keinBildschirm),
-    'die WHO-Ausnahme für Zweijährige muss dastehen, sonst klingt es nach WHO-Verbot');
+  assert.ok(/Zweijährige/.test(daten.keinBildschirm) && /Obergrenze/.test(daten.keinBildschirm),
+    'die Obergrenze für Zweijährige muss dastehen, sonst klingt es nach Verbot');
 });
 
 test('die Sicherheitsangaben behaupten kein Gesetz und keine Unbedenklichkeit', () => {
   const farbe = materialVon(daten, 'm-fingerfarbe').sicherheit;
-  // EN 71-7 ist eine harmonisierte Norm, kein Gesetz. Und die Norm sagt
-  // nichts über die Unbedenklichkeit beim Verschlucken – sie begrenzt Stoffe
-  // und verlangt Kennzeichnung.
-  assert.match(farbe, /EN 71-7/);
+  // Die Norm und ihre Inhalte stehen nicht mehr im Text: ohne Quelle gestrichen (GDD, Abschnitt 6).
+  assert.ok(!/EN \d/.test(farbe), 'eine Norm ohne Quelle ist wieder im Text');
   assert.ok(!/gesetzlich|Gesetz|vorgeschrieben durch das/.test(farbe), 'eine Norm ist kein Gesetz');
   // Mit Lookbehind, damit die VERNEINUNG stehen bleiben darf: „bitter heißt
-  // nicht ungiftig und nicht essbar" ist gerade der Satz, auf den es ankommt.
+  // nicht ungiftig und nicht essbar" ist gerade der Satz, auf den es ankommt (Eigenentwurf, fachlich nicht geprüft).
   const BEHAUPTET_HARMLOS = /(?<!nicht\s)(?:unbedenklich|essbar|ungiftig)/;
   assert.ok(!BEHAUPTET_HARMLOS.test(farbe), 'die Norm trägt keine Unbedenklichkeitsaussage');
   assert.ok(BEHAUPTET_HARMLOS.test('Die Farbe ist essbar.'), 'die Prüfung greift nicht');
   assert.ok(!BEHAUPTET_HARMLOS.test('bitter heißt nicht ungiftig und nicht essbar'));
   assert.ok(!/verhindert, dass/.test(farbe), 'für die Wirkung des Bitterstoffs gibt es keinen Beleg');
-  // Der Warnhinweis „Nicht für Kinder unter 3 Jahren geeignet" ist eine
-  // Warnung, kein Gütezeichen - das ist die häufigste Verwechslung.
-  assert.match(farbe, /kein Gütezeichen|eine Warnung/);
+  assert.match(farbe, /Eigenentwurf, fachlich nicht geprüft/, 'die Aussage zur Packung ist nicht belegt und braucht den Vermerk');
   // Salzteig: keine erfundene Mengenschwelle.
   const salz = daten.ausgeschlossen.find((x) => /Salzteig/.test(x.was));
   assert.ok(salz, 'Salzteig muss in der Ausschlussliste stehen');
   assert.ok(!/\d+\s*(?:g\b|Gramm|Teelöffel|Esslöffel|Prozent)/.test(salz.warum),
     'eine Mengenschwelle, die es nicht gibt');
+  // Geprüft wird der Warum-Text des Salzteig-Eintrags: Zahl mit Gramm, Teelöffel, Esslöffel oder Prozent.
   assert.match(salz.warum, /Mengenschwelle nennt sie nicht/);
-  // Was die amtliche Warnung sagt, steht da - samt der Handlungsanweisung,
-  // die für Eltern der eigentlich nützliche Teil ist.
-  assert.match(salz.warum, /Wasser- und Elektrolythaushalt/);
-  assert.match(salz.warum, /Kinderklinik/);
+  // Der Salz-Eintrag trägt keine externe Angabe ohne Fundstelle oder Vermerk; die Zeile unten prüft das.
+  assert.ok(!/amtlich|Warnung|Kinderklinik|Elektrolyt/.test(salz.warum), 'Behörden- oder Erste-Hilfe-Angabe ohne Quelle');
 });
 
 test('die Begründung gegen die Checkliste nennt beide geprüften Belege', () => {
   assert.match(daten.keinMeilenstein, /Kinder-Richtlinie/);
   assert.match(daten.keinMeilenstein, /Diagnoseinstrument/);
   assert.match(daten.keinMeilenstein, /U7/);
-  // Korrektur nach der Gegenprobe: die erste Fassung schrieb „zu Singen,
-  // Zuhören, Kneten und Fingermalen steht in beiden nichts". Im Text der
-  // Kinder-Richtlinie selbst nachgelesen stimmt das nicht: zur U7a steht
-  // unter „d) Perzeption/Kognition" der Punkt „Kann zuhören und konzentriert
-  // spielen, Als-Ob-Spiele.", und „Singen" kommt viermal vor - allerdings
-  // nur als Mittel („lässt sich durch Wiegen, Singen oder Ansprache ...
-  // beruhigen"), nie als etwas, das das Kind tut. Ein pauschaler
-  // Negativbefund ist genau die Art Behauptung, die diese App nicht machen
-  // darf, also steht jetzt die Unterscheidung da.
+  // Ein pauschaler Negativbefund ist zurückgenommen. Die Begründung trennt, was die
+  // Richtlinie zum Hören und Singen sagt und was nicht (Eigenentwurf, fachlich nicht geprüft).
   assert.match(daten.keinMeilenstein, /Kann zuhören und konzentriert spielen/);
   assert.match(daten.keinMeilenstein, /nur als Mittel/);
   assert.ok(!/Zu Singen, Zuhören, Kneten und Fingermalen steht in beiden nichts/.test(daten.keinMeilenstein),

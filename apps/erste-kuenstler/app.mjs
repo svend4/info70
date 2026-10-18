@@ -43,7 +43,7 @@ const EINORDNUNG_NAME = {
   beschreibend: '→ beschreibt das Kind, nicht das Tun des Erwachsenen',
 };
 
-function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
+function vorleseKnopf(text, beschriftung = '🔊 Vorlesen', kennung) {
   const stimme = lokaleStimme('de');
   if (stimme === null) {
     return el('p', { class: 'k-hinweis ek-nur-bildschirm', style: 'margin:0.6rem 0' },
@@ -51,6 +51,7 @@ function vorleseKnopf(text, beschriftung = '🔊 Vorlesen') {
   }
   return el('button', {
     class: 'k-knopf k-knopf--neutral k-knopf--klein ek-nur-bildschirm',
+    'data-kennung': kennung,
     onclick: () => vorlesen(text, 'de-DE', stimme),
   }, beschriftung);
 }
@@ -91,7 +92,7 @@ function ideenKarte(i) {
       ? el('div', { class: 'k-antworten ek-nur-bildschirm' },
         el('button', { class: 'k-knopf k-knopf--klein', 'data-kennung': 'ek-drucken', onclick: () => window.print() }, '🖨️ Diese Karte drucken'),
         vorleseKnopf([i.wennSie, ...(i.wasSieTun ?? []), `Es passt gerade, wenn: ${i.woranSieSehen}`,
-          `Schluss ist: ${i.aufhoeren}`, i.grenze].join(' '), '🔊 Karte vorlesen'))
+          `Schluss ist: ${i.aufhoeren}`, i.grenze].join(' '), '🔊 Karte vorlesen', 'ek-vorlesen-karte'))
       : null);
 }
 
@@ -126,7 +127,7 @@ function render(fokusElement = null) {
       el('div', { class: 'k-hinweis' }, el('p', { style: 'margin:0;font-weight:600' }, daten.hinweis)),
       el('p', { style: 'margin:0.6rem 0 0' }, daten.wasEsIst),
       hinweisKarte('📋 Warum hier nichts abgehakt wird:', daten.keinMeilenstein, daten.wasStattdessen),
-      vorleseKnopf(`${daten.hinweis} ${daten.wasEsIst} ${daten.keinMeilenstein}`, '🔊 Das Wichtigste vorlesen')),
+      vorleseKnopf(`${daten.hinweis} ${daten.wasEsIst} ${daten.keinMeilenstein}`, '🔊 Das Wichtigste vorlesen', 'ek-vorlesen-wichtiges')),
     el('section', { class: 'k-karte ek-nur-bildschirm k-hinweis' },
       el('p', { style: 'margin:0' }, `🧷 ${daten.sicherheitImmer}`)),
     el('section', { class: 'k-karte ek-nur-bildschirm' },
