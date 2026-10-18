@@ -444,7 +444,7 @@
   },
   {
    "titel": "Entdecker-Karten: Tiere und Pflanzen vor der Tuer",
-   "korrektur": "Bau Welle 90 (teilweise): Druck-Kartenset Tiere, Pflanzen, Stoffe, Jahreszeiten; Namen aus S. 50–51; Igel, Eichhörnchen, Amsel, Reh nicht übernommen. Seiten nur maschinell geprüft.",
+   "korrektur": "Bau Welle 90 (teilweise): Druck-Kartenset Tiere, Pflanzen, Stoffe, Jahreszeiten; Namen aus S. 50–51; Igel, Eichhörnchen, Amsel, Reh nicht übernommen. Seiten nur maschinell geprüft. Ausbau Etappe 2: Druckblatt je Karte mit Seitenangabe und Pflichtmarkierung; keine Zeichen und Emojis im Druck; Fokus geprüft. 40 Tests.",
    "typ": "kita-material",
    "alter": "1-3 (offline, fachkraftgeleitet)",
    "beschreibung": "Druck-Kartenset nach dem Konzept 'Sie leben neben dir': heimische Tiere und Baum/Strauch/Gras erkennen an Aussehen, Bewegung, Lauten; plus Mit-allen-Sinnen-Beobachtungsauftraege und Stoffe der unbelebten Natur (Wasser, Schnee, Eis, Sand, Ton, Steine).",
@@ -608,6 +608,7 @@
   },
   {
    "titel": "Musik-Alltags-Begleiter fuer Eltern",
+   "korrektur": "Ausbau Etappe 2: Ampel und Tagesstatistik entfallen; geblieben ist eine beschreibende Zahl (an wie vielen der letzten sieben Tage eine Notiz steht). Notizen nur sieben Tage im localStorage, mit Löschknopf. Liederlisten nicht gebaut (freie Werke in musikmomente-1-3, Reime in familienschatz-reime).",
    "typ": "eltern-werkzeug",
    "alter": "Erwachsene (Kinder 1-3)",
    "beschreibung": "Selbstbeobachtungs-Planer fuer musikalische Alltagsrituale (Weck-, Aufraeum-, Schlaflied, taegliche 1-5-Minuten-Hoerinsel) mit Ampel und Tagesstatistik statt Bildschirmzeit.",
@@ -1435,6 +1436,7 @@
   },
   {
    "titel": "Mess-Labor der kleinen Forscher",
+   "korrektur": "Ausbau Etappe 2: kein Druckblatt (laut Bauanleitung nicht vorgesehen); der Browser druckt den Bildschirm, darin steht der Titel mit Emoji, offen. 24 Tests.",
    "typ": "ko-nutzung-app",
    "alter": "5-7 (gemeinsam)",
    "engine": "Simulator",
