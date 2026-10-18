@@ -913,6 +913,7 @@
   },
   {
    "titel": "Kita-Kartograph: Wir zeichnen unseren Raum",
+   "korrektur": "Pilot 1 (Etappe 1): Druckblatt des Plans allein, ohne Emoji, mit Pflichtmarkierung (S. 138). Speicherung des letzten Plans im localStorage mit Löschknopf (docs/02, Z. 25). Seiten nur maschinell geprüft; A18 offen.",
    "typ": "ko-nutzung-app",
    "alter": "5-7",
    "beschreibung": "Aus der Geographie-Einfuehrung (Plan der Gruppe/des Gelaendes mit Symbolzeichen, Himmelsrichtungen, Landkarte): Kinder legen mit einfachen Symbolen einen Raumplan, finden ihren Ort auf der Karte; Ergebnis-Export in den Klassen-Koffer.",
@@ -1138,6 +1139,7 @@
   },
   {
    "titel": "Tischdienst-Trainer",
+   "korrektur": "Pilot 1 (Etappe 1): Druck nur des Platzsets, ohne Emoji, mit Pflichtmarkierung. Fokus nach dem Start auf der Überschrift des neuen Bildschirms. Keine Speicherung. Seiten nur maschinell geprüft; A18 offen.",
    "typ": "ko-nutzung-app",
    "alter": "4-5 (mit Erwachsenem), 5-7 kurz allein",
    "beschreibung": "Kleiner Simulator: Tisch in richtiger Reihenfolge decken (Tischdecke, Teller, Besteck links/rechts, Serviette, Blumen) - Reihenfolge und Raumlage werden spielerisch geuebt; dazu druckbares Platzset als Schablone.",
