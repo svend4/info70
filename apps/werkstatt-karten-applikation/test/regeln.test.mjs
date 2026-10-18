@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { access, readdir, readFile } from 'node:fs/promises';
 import daten from '../daten/karten.json' with { type: 'json' };
-import { kartenText } from '../logik.mjs';
+import { kartenText, PFLICHTSATZ } from '../logik.mjs';
 
 // Projektregeln, für diese App geprüft: docs/02 Z. 22–24 (keine Anfragen nach außen),
 // docs/02 Z. 79–82 (Druckbögen), docs/02 Z. 141–146 (keine Bewertung von Kindern).
@@ -79,7 +79,7 @@ test('Netzwerk-Wächter: aus packages/kinderschutz importiert, aufgerufen, und d
 });
 
 test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen, keine Emojis, weder auf den Karten noch im Code', () => {
-  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|\p{Extended_Pictographic}/u;
+  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□‣⁃∘⦁]|\p{Extended_Pictographic}/u;
   for (const k of daten.karten) {
     assert.ok(!zeichen.test(kartenText(k)), `${k.id}: Druckzeichen im Drucktext`);
   }
@@ -126,13 +126,23 @@ test('Fokus: jeder Knopf trägt eine data-kennung; render() merkt sich den Fokus
   assert.ok(merke > -1 && neu > merke && zurueck > neu, 'Fokus muss vor replaceChildren gemerkt und danach gesetzt werden');
 });
 
-test('Pflichtmarkierung der Seitenangaben: im Fuß der App, in README und GDD unter „## Offen“; nie „von Hand geprüft“', () => {
-  const satz = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
-  assert.ok(code['app.mjs'].includes(satz), 'app.mjs: Pflichtmarkierung im Fuß fehlt');
-  assert.ok(alle['README.md'].includes(satz), 'README.md: Pflichtmarkierung fehlt');
+test('Pflichtmarkierung: jede gedruckte Karte trägt den Satz im Druck (nicht nur im Bildschirmfuß); README und GDD unter „## Offen“; nie „von Hand geprüft“', () => {
+  assert.equal(PFLICHTSATZ, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.');
+  for (const k of daten.karten) {
+    assert.ok(kartenText(k).includes(PFLICHTSATZ), `${k.id}: die gedruckte Karte trägt den Satz nicht`);
+  }
+  // Der Druckpfad: karten.map(karteDom) baut jede gedruckte Karte; karteDom hängt den Satz an, nicht ausgeblendet.
+  const app = code['app.mjs'];
+  const dom = app.slice(app.indexOf('function karteDom'), app.indexOf('function auswahlKnopf'));
+  assert.match(dom, /el\('p', \{ class: 'wsk-pflicht' \}, PFLICHTSATZ\)/, 'karteDom: Pflichtmarkierung fehlt');
+  assert.ok(!/wsk-nur-bildschirm/.test(dom), 'karteDom: Pflichtmarkierung ist als Bildschirmteil markiert');
+  assert.match(app, /karten\.map\(karteDom\)/, 'die gedruckten Karten kommen nicht alle aus karteDom');
+  assert.match(code['druck.css'], /\.wsk-pflicht\s*\{/, 'druck.css: keine Regel für die Pflichtmarkierung');
+  assert.ok(!/wsk-pflicht[^}]*display:\s*none/.test(code['druck.css']), 'druck.css: Pflichtmarkierung im Druck ausgeblendet');
+  assert.ok(alle['README.md'].includes(PFLICHTSATZ), 'README.md: Pflichtmarkierung fehlt');
   const gdd = alle['GDD.md'];
   assert.ok(gdd.includes('## Offen'), 'GDD.md: Abschnitt „## Offen“ fehlt');
-  assert.ok(gdd.slice(gdd.indexOf('## Offen')).includes(satz), 'GDD.md: Pflichtmarkierung nicht unter „## Offen“');
+  assert.ok(gdd.slice(gdd.indexOf('## Offen')).includes(PFLICHTSATZ), 'GDD.md: Pflichtmarkierung nicht unter „## Offen“');
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!/von Hand geprüft/i.test(inhalt), `${d}: „von Hand geprüft“ ist nicht belegt`);
   }
@@ -155,8 +165,8 @@ test('Modellnamen-Freiheit: in keiner Datei der App allgemeine KI-Begriffe', () 
   }
 });
 
-test('keine Wörter der Bewertung (unsicher, Selbstwert, Risiko, Diagnose) und keine Stufen-Begriffe in der App', () => {
-  const muster = /unsicher|Selbstwert|Risiko|Diagnose|Stufe/i;
+test('keine Wörter der Bewertung (unsicher, Selbstwert, Risiko, Diagnose), keine Stufen-Begriffe und keine Gruppenziel-Aussage in der App', () => {
+  const muster = /unsicher|Selbstwert|Risiko|Diagnose|Stufe|Gruppenziel|Ergebnis der Gruppe/i;
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!muster.test(inhalt), `${d}: ${inhalt.match(muster)?.[0]}`);
   }

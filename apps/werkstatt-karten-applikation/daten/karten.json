@@ -54,12 +54,6 @@
             { "text": "Bei der Arbeit mit der Schere bleibt ein Erwachsener in Sichtweite. Die Schere wird nach jeder Arbeit geschlossen abgelegt.", "seite": "Eigenentwurf, Quelle S. 126" },
             { "text": "Quelle: die eigene Rolle des Kindes bei der Vorbeugung gefährlicher Situationen stärken, bei „при работе с ножницами и другими острыми предметами“.", "seite": "S. 126" }
           ]
-        },
-        {
-          "ueberschrift": "Ergebnis der Gruppe (Quelle S. 197)",
-          "zeilen": [
-            { "text": "Gruppenziel, keine Prüfung einzelner Kinder: „умеет резать ножницами по прямой, частично по кривой“ (gerade und teilweise kurvig schneiden).", "seite": "S. 197" }
-          ]
         }
       ],
       "fuss": "Technikbereich aus der Quelle (S. 181). Die drei Technikbereiche stehen ohne Reihenfolge. Material und Schrittfolge sind Eigenentwurf."
@@ -134,28 +128,44 @@
       "id": "ergaenzung-collage-flora",
       "art": "ergaenzung",
       "technik": "ergaenzung",
-      "titel": "Collage und Flora (Gruppe 5–7, S. 282–283)",
-      "quelle": "Praleska, S. 181 (Ziele für Gruppe 3 bis 5) und S. 282–283 (Gruppe 5 bis 7). Ergänzung, nicht einer der drei Technikbereiche. Die Einordnung ist Eigenentwurf.",
+      "titel": "Collage und Flora (Ziele Gruppe 3 bis 5, S. 181)",
+      "quelle": "Praleska, S. 181 (Ziele für Gruppe 3 bis 5). Ergänzung, nicht einer der drei Technikbereiche. Die Einordnung ist Eigenentwurf.",
       "abschnitte": [
         {
           "ueberschrift": "Ziele für Gruppe 3 bis 5 (Quelle S. 181)",
           "zeilen": [
-            { "text": "Kreative Wahl von Aufbau und Farben, auch beim Erstellen von Collagen.", "seite": "S. 181" },
+            { "text": "Kreative Wahl des Aufbaus und der Farben fördern, auch beim Erstellen von Collagen.", "seite": "S. 181" },
             { "text": "Quellenbegriff: „в создании коллажей“.", "seite": "S. 181" },
-            { "text": "Neue Arten der Applikation kennenlernen, dazu Elemente der Flora.", "seite": "S. 181" },
-            { "text": "Quellenbegriff: „элементы флористики“.", "seite": "S. 181" }
-          ]
-        },
-        {
-          "ueberschrift": "Nur für Gruppe 5 bis 7 (Quelle S. 282–283)",
-          "zeilen": [
-            { "text": "Collage aus Naturmaterial: Die Quelle nennt Naturmaterial und Collage für die Gruppe 5 bis 7. Sie ist keine Technik für Gruppe 3 bis 5.", "seite": "S. 282–283" },
-            { "text": "Flora-Technik mit Nadel und Pinzette bei kleinen, zerbrechlichen Teilen aus Naturmaterial.", "seite": "S. 283" },
-            { "text": "Collage-Technik: Quellenbegriff „помочь в освоении техники коллажа“.", "seite": "S. 283" }
+            { "text": "Interesse an neuen Arten der Applikation wecken, dazu Elemente der Flora.", "seite": "S. 181" },
+            { "text": "Quellenbegriff: „элементы флористики“.", "seite": "S. 181" },
+            { "text": "Mit der Applikation durch Reißen und mit zugänglichen Verfahren der Flora bekannt machen (Quellenbegriffe „способом обрывания“, „доступными приемами флористики“).", "seite": "S. 181" }
           ]
         }
       ],
-      "fuss": "Ergänzung aus der Quelle. Die Ziele für Gruppe 3 bis 5 stehen auf S. 181; die Techniken unter „Nur für Gruppe 5 bis 7“ gehören nicht zu Gruppe 3 bis 5."
+      "fuss": "Ergänzung aus der Quelle (S. 181). Die Ziele gelten für Gruppe 3 bis 5. Die Einordnung als Ergänzung ist Eigenentwurf."
+    },
+    {
+      "id": "ergaenzung-naturmaterial",
+      "art": "ergaenzung",
+      "technik": "ergaenzung",
+      "titel": "Naturmaterial und Collage-Technik (Gruppe 5 bis 7, S. 282–283)",
+      "quelle": "Praleska, S. 282–283 (Gruppe „Фантазеры“, Altersangabe 5 bis 6–7 Jahre nach S. 6). Ergänzung, nicht einer der drei Technikbereiche. Die Einordnung ist Eigenentwurf.",
+      "abschnitte": [
+        {
+          "ueberschrift": "Aussagen für Gruppe 5 bis 7 (Quelle S. 282)",
+          "zeilen": [
+            { "text": "Applikation aus verschiedenen Materialien, auch aus Naturmaterial (Quellenbegriff „природный материал“).", "seite": "S. 282" }
+          ]
+        },
+        {
+          "ueberschrift": "Techniken (Quelle S. 283)",
+          "zeilen": [
+            { "text": "Flora-Technik kennenlernen: mit einer Nadel (aus Kunststoff) und einer Pinzette an kleinen, zerbrechlichen Teilen aus Naturmaterial arbeiten.", "seite": "S. 283" },
+            { "text": "Bei der Collage-Technik helfen (Quellenbegriff „помочь в освоении техники коллажа“).", "seite": "S. 283" }
+          ]
+        }
+      ],
+      "fuss": "Ergänzung aus der Quelle (S. 282–283, Gruppe „Фантазеры“). Die Einordnung als Ergänzung ist Eigenentwurf."
     },
     {
       "id": "thema-kolobok",

@@ -124,7 +124,8 @@ test('Fokus nach Klick: jeder Knopf trägt eine eindeutige data-kennung; render(
 
 test('Pflichtmarkierung der Seitenangaben: im Fuß der App, in README und GDD unter „## Offen“; nie „von Hand geprüft“', () => {
   const satz = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
-  assert.ok(code['app.mjs'].includes(satz), 'app.mjs: Pflichtmarkierung im Fuß fehlt');
+  assert.ok(code['logik.mjs'].includes(`export const PFLICHTSATZ = '${satz}';`), 'logik.mjs: Pflichtsatz nicht als gemeinsame Konstante');
+  assert.match(code['app.mjs'], /el\('p', \{\}, PFLICHTSATZ\)/, 'app.mjs: Pflichtmarkierung im Fuß fehlt');
   assert.ok(alle['README.md'].includes(satz), 'README.md: Pflichtmarkierung fehlt');
   const gdd = alle['GDD.md'];
   assert.ok(gdd.includes('## Offen'), 'GDD.md: Abschnitt „## Offen“ fehlt');
@@ -132,6 +133,23 @@ test('Pflichtmarkierung der Seitenangaben: im Fuß der App, in README und GDD un
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!/von Hand geprüft/i.test(inhalt), `${d}: „von Hand geprüft“ ist nicht belegt`);
   }
+});
+
+test('Pflichtmarkierung im Druck: jede gedruckte Karte trägt den Satz im Blatt selbst, nicht nur im Bildschirmfuß', () => {
+  const satz = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+  for (const k of daten.karten) {
+    assert.ok(kartenText(k).includes(satz), `${k.id}: Satz fehlt auf der gedruckten Karte`);
+  }
+  // Die gedruckte Karte ist karteDom in app.mjs; dort darf nichts als Bildschirm-only markiert sein.
+  const karteDom = code['app.mjs'].match(/^function karteDom\(karte\) \{[\s\S]*?^\}/m)?.[0] ?? '';
+  assert.ok(karteDom, 'karteDom nicht gefunden');
+  assert.match(karteDom, /el\('section', \{ class: 'k-karte sss-karte'/, 'gedruckte Karte ist nicht die Karten-Sektion');
+  assert.ok(!/sss-nur-bildschirm/.test(karteDom), 'karteDom: gedruckte Karte als Bildschirm-only markiert');
+  assert.match(karteDom, /el\('p', \{ class: 'sss-pflicht' \}, PFLICHTSATZ\)/, 'karteDom: Pflichtsatz fehlt im Blatt');
+  // Im Druck wird die Zeile nicht ausgeblendet.
+  const druck = code['druck.css'].slice(code['druck.css'].indexOf('@media print'));
+  assert.match(druck, /\.sss-pflicht\s*\{[^}]*color:\s*#000;/, 'druck.css: Pflichtsatz nicht für den Druck gestaltet');
+  assert.ok(!/\.sss-pflicht[^}]*display:\s*none/.test(code['druck.css']), 'druck.css: Pflichtsatz ausgeblendet');
 });
 
 test('Modellnamen-Freiheit: in keiner Datei der App allgemeine KI-Begriffe, keine Modellbezeichnung', () => {
@@ -153,6 +171,9 @@ test('keine Fremdbegriffe und keine Bilder-Behauptung in den Dateien der App: Pi
   for (const d of CODE_DATEIEN) {
     assert.ok(!muster.test(code[d]), `${d}: ${code[d].match(muster)?.[0]}`);
   }
+  // Die Stationen haben keine Piktogramme; für die ganze Quelle gilt die Aussage nicht.
+  assert.ok(alle['README.md'].includes('Die Stationen haben keine Piktogramme; Bilder der Quelle sind nicht übernommen.'), 'README: Piktogramm-Satz fehlt');
+  assert.ok(!/die Quelle hat keine Bilder/i.test(alle['README.md']), 'README: Bilder-Behauptung für die ganze Quelle');
 });
 
 test('Testzahl: README und GDD nennen die Zahl der Tests, die in test/ tatsächlich stehen', async () => {

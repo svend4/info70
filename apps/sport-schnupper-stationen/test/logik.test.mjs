@@ -76,10 +76,15 @@ test('jede Karte nennt eine Seite; Spiel-, Übungs- und Wettbewerbskarten tragen
   }
 });
 
-test('jede Spiel-, Übungs- und Wettbewerbskarte trägt die Zeile „Ziel: Spiel nach vereinfachten Regeln (S. 229–230)“', () => {
-  for (const k of daten.karten.filter((x) => x.art !== 'uebersicht')) {
-    assert.ok(ALLE_ZEILEN(k).some((z) => zeileText(z) === ZIEL), `${k.id}: Ziel-Zeile fehlt`);
+test('Ziel-Zeile „Ziel: Spiel nach vereinfachten Regeln (S. 229–230)“ nur auf den acht Sportspielkarten; Übungen, benannte Spiele und Wettbewerbe haben sie nicht', () => {
+  const mitZiel = daten.karten.filter((k) => ALLE_ZEILEN(k).some((z) => zeileText(z) === ZIEL)).map((k) => k.id);
+  assert.deepEqual(mitZiel, ART('sportspiel').map((k) => k.id), 'Ziel-Zeile nicht genau auf den Sportspielen');
+  for (const k of [...ART('sportuebung'), ...ART('benanntes-spiel'), ...ART('wettbewerb')]) {
+    assert.ok(!kartenText(k).includes('vereinfachten Regeln'), `${k.id}: „vereinfachten Regeln“ steht ohne Quellenbeleg auf der Karte`);
+    assert.ok(!k.abschnitte.some((a) => a.ueberschrift === 'Einordnung'), `${k.id}: Einordnung ohne Quellenbeleg`);
   }
+  // Auf der Basketballkarte steht das Wort aus der Quelle („командную игру по упрощенным правилам“).
+  assert.ok(kartenText(daten.karten.find((k) => k.id === 'basketball')).includes('Mannschaftsspiel nach vereinfachten Regeln'));
 });
 
 test('Namen aus der Quelle: jede Karte nennt den russischen Namen so, wie die Quelle ihn schreibt', () => {
@@ -100,7 +105,7 @@ test('Namen aus der Quelle: jede Karte nennt den russischen Namen so, wie die Qu
   }
 });
 
-test('Eigenentwurf-Kennzeichnung: jede Karte trägt das Wort; jede Spiel-, Übungs- und Wettbewerbsform ist so überschrieben', () => {
+test('Eigenentwurf-Kennzeichnung: jede Karte trägt das Wort; jede Spiel-, Übungs- und Wettbewerbsform ist so überschrieben; Klammer-Titel sind als Übertragung gekennzeichnet', () => {
   for (const k of daten.karten) {
     assert.match(kartenText(k), /Eigenentwurf/, `${k.id}: ohne Kennzeichnung`);
   }
@@ -108,17 +113,25 @@ test('Eigenentwurf-Kennzeichnung: jede Karte trägt das Wort; jede Spiel-, Übun
     assert.ok(k.abschnitte.some((a) => /\(Eigenentwurf\)/.test(a.ueberschrift)),
       `${k.id}: Spiel- oder Übungsform nicht als Eigenentwurf überschrieben`);
   }
+  // Deutscher Titel in Klammern (Hockey hat „(Sportart offen)“, das ist keine Übertragung).
+  const klammern = daten.karten.filter((k) => /^\S.*\(.+\)$/.test(k.titel) && !/Sportart offen/.test(k.titel));
+  for (const id of ['dogoni', 'ne-zadenj', 'wettbewerb-rollen', 'wettbewerb-prellen']) {
+    assert.ok(klammern.some((k) => k.id === id), `${id}: Klammer-Titel nicht erkannt`);
+  }
+  for (const k of klammern) {
+    assert.ok(kartenText(k).includes('Der Titel in Klammern ist eine Übertragung (Eigenentwurf).'), `${k.id}: Klammer-Titel nicht als Übertragung gekennzeichnet`);
+  }
 });
 
-test('Winter- und Wasserübungen: die Karte sagt, dass die Quelle keine Sicherheitsregeln nennt, und die Fachkraft entscheidet', () => {
+test('Sicherheit: jede Karte trägt denselben Satz (die Quelle nennt keine Sicherheitsregeln, die Fachkraft entscheidet); keine zweite Sicherheitsaussage', () => {
+  const satz = 'Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft.';
+  for (const k of daten.karten) {
+    assert.ok(kartenText(k).includes(satz), `${k.id}: Sicherheitssatz fehlt`);
+    assert.ok(!/Sicherheitsregeln/.test(kartenText(k).replace(satz, '')), `${k.id}: abweichende Sicherheitsaussage`);
+  }
   for (const k of ART('sportuebung')) {
-    assert.ok(k.fuss.includes('Die Quelle nennt für diese Übung keine Sicherheitsregeln.'), `${k.id}: Hinweis fehlt`);
     assert.ok(k.fuss.includes('Eignung und Ort entscheidet die Fachkraft.'), `${k.id}: Entscheidung der Fachkraft fehlt`);
   }
-  const uebersicht = daten.karten.find((k) => k.id === 'uebersicht');
-  assert.ok(kartenText(uebersicht).includes(
-    'Aufsicht und Sicherheit: Eigenentwurf; die Quelle nennt für diese Stationen keine Sicherheitsregeln',
-  ), 'Übersicht: Satz zu Aufsicht und Sicherheit fehlt');
 });
 
 test('Hockey: die Sportart bleibt offen; der Titel legt keine Sportart fest', () => {
@@ -137,12 +150,14 @@ test('Rangliste nur verneint: kein Sieger, keine Punktzahl, kein Rang; jede Wett
   }
 });
 
-test('Übersicht: Ziel der Quelle, Sportfeste (S. 226), Olympische Thematik (S. 225) und Altersgruppe (S. 6)', () => {
+test('Übersicht: Ziel der Quelle, Sportliche Freizeiten und Sportfeste (S. 226), Olympische Thematik (S. 225) und Altersgruppe (S. 6); „Nachmittage“ steht auf keiner Karte', () => {
   const text = kartenText(daten.karten.find((k) => k.id === 'uebersicht'));
   assert.ok(text.includes('Spiele nach vereinfachten Regeln und elementare Wettbewerbe mit Gleichaltrigen (S. 229–230)'));
+  assert.ok(text.includes('Sportliche Freizeiten: 2 bis 4 Mal im Monat (S. 226)'), 'Sportliche Freizeiten (S. 226) fehlt');
   assert.ok(text.includes('Sportfeste: 2 bis 4 Mal im Jahr (S. 226)'));
   assert.ok(text.includes('Die olympische Thematik in Sportfeste und Feste einbeziehen (S. 225)'));
   assert.ok(text.includes('Altersgruppe 5 bis 7 Jahre') && text.includes('(S. 6)'));
+  assert.ok(!/Nachmittag/.test(daten.karten.map(kartenText).join('\n')), '„Nachmittage“ steht nicht in der Quelle');
 });
 
 test('Auswahl: nur gewählte Karten, feste Reihenfolge, unbekannte Kennungen ignoriert, keine Dubletten', () => {

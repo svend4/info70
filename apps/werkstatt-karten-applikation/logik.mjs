@@ -103,8 +103,14 @@ export function zeileText(zeile) {
 }
 
 /**
+ * Pflichtmarkierung der Seitenangaben. Steht auf jeder gedruckten Karte, im Druck
+ * sichtbar (app.mjs, druck.css) und im Bildschirmfuß.
+ */
+export const PFLICHTSATZ = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+
+/**
  * Gesamttext einer Karte, so wie er gedruckt wird: Titel, Quelle,
- * Abschnittsueberschriften mit Zeilen und Fusszeile.
+ * Abschnittsueberschriften mit Zeilen, Fusszeile und Pflichtmarkierung.
  * @param {object} karte
  * @returns {string}
  */
@@ -114,6 +120,7 @@ export function kartenText(karte) {
     karte.quelle,
     ...karte.abschnitte.flatMap((a) => [a.ueberschrift, ...a.zeilen.map(zeileText)]),
     karte.fuss,
+    PFLICHTSATZ,
   ].join('\n');
 }
 

@@ -17,6 +17,8 @@
 .wsk-zeile { margin: 0 0 0.15rem; font-size: 0.95rem; }
 .wsk-schritte { margin: 0 0 0.15rem; padding-left: 1.6rem; font-size: 0.95rem; }
 .wsk-fuss { font-size: 0.8rem; color: #4b5563; margin: 0.6rem 0 0; }
+/* Pflichtmarkierung der Seitenangaben: auf jeder Karte, auch im Druck (kein .wsk-nur-bildschirm). */
+.wsk-pflicht { font-size: 0.8rem; color: #4b5563; margin: 0.3rem 0 0; }
 
 /* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um,
    sonst laeuft der lange Titel ueber den Rand. */
@@ -74,4 +76,5 @@ h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
   .wsk-schritte { font-size: 13pt; margin: 0 0 2pt; padding-left: 1.6em; }
   .wsk-schritte li { margin: 0 0 2pt; }
   .wsk-fuss { font-size: 10pt; color: #000; margin-top: 10pt; }
+  .wsk-pflicht { font-size: 10pt; color: #000; margin: 4pt 0 0; }
 }

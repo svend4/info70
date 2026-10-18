@@ -6,7 +6,7 @@
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import daten from './daten/stationen.json' with { type: 'json' };
-import { alleGewaehlt, gewaehlteKarten, kannDrucken, umschalten, zeileText } from './logik.mjs';
+import { alleGewaehlt, gewaehlteKarten, kannDrucken, PFLICHTSATZ, umschalten, zeileText } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -22,7 +22,8 @@ function karteDom(karte) {
       el('div', { class: 'sss-abschnitt' },
         el('p', { class: 'sss-ueberschrift' }, abschnitt.ueberschrift),
         ...abschnitt.zeilen.map((zeile) => el('p', { class: 'sss-zeile' }, zeileText(zeile))))),
-    el('p', { class: 'sss-fuss' }, karte.fuss));
+    el('p', { class: 'sss-fuss' }, karte.fuss),
+    el('p', { class: 'sss-pflicht' }, PFLICHTSATZ));
 }
 
 function auswahlKnopf(karte) {
@@ -83,7 +84,7 @@ function render() {
 
     el('footer', { class: 'k-fuss sss-nur-bildschirm' },
       el('p', {}, 'Werkzeug für Fachkräfte. Nichts wird gespeichert, es gibt keine Verbindung nach draußen.'),
-      el('p', {}, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.'),
+      el('p', {}, PFLICHTSATZ),
       el('a', { class: 'sss-fusslink', href: '../../impressum.html' }, 'Impressum und Datenschutz')));
 
   fokussiere(merkeKennung);

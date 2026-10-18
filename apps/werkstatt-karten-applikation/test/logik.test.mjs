@@ -14,8 +14,9 @@ const ERGAENZUNG = daten.karten.filter((k) => k.art === 'ergaenzung');
 const THEMEN = daten.karten.filter((k) => k.art === 'thema');
 
 // Seiten, die in der Quelle belegt sind: 6 und 9 (Gruppe, Stundenplan), 126 (Sicherheit),
-// 181 (Applikation), 197 (Ergebnisindikator), 282 und 283 (Gruppe 5 bis 7).
-const ERLAUBTE_SEITEN = [6, 9, 126, 181, 197, 282, 283];
+// 181 (Applikation), 282 und 283 (Gruppe 5 bis 7). S. 197 fehlt bewusst: der Indikator dort
+// beschreibt einzelne Kinder und steht nicht auf den Karten (siehe den Test zur Schere).
+const ERLAUBTE_SEITEN = [6, 9, 126, 181, 282, 283];
 const SEITE = /^(Eigenentwurf(, (Quelle|Anregung) S\. \d+)?|S\. \d+(–\d+)?)$/;
 
 // Die 25 Werkthemen aus der Quelle, S. 181, in Listenfolge (nur die Titel).
@@ -39,9 +40,10 @@ function seitenIn(text) {
   return nummern;
 }
 
-test('Daten: 3 Technikkarten, 1 Ergänzungskarte, 25 Themenkarten; IDs eindeutig; Pflichtfelder gesetzt', () => {
+test('Daten: 3 Technikkarten, 2 Ergänzungskarten, 25 Themenkarten; IDs eindeutig; Pflichtfelder gesetzt', () => {
   assert.equal(TECHNIK.length, 3, 'es müssen 3 Technikkarten sein');
-  assert.equal(ERGAENZUNG.length, 1, 'es muss genau eine Ergänzungskarte geben');
+  assert.equal(ERGAENZUNG.length, 2, 'es müssen genau 2 Ergänzungskarten sein');
+  assert.equal(daten.karten.length, 30, 'insgesamt 30 Karten');
   assert.equal(THEMEN.length, 25, 'es müssen 25 Themenkarten sein');
   const ids = alleKennungen(daten);
   assert.equal(new Set(ids).size, ids.length, 'doppelte Kennungen');
@@ -54,8 +56,8 @@ test('Daten: 3 Technikkarten, 1 Ergänzungskarte, 25 Themenkarten; IDs eindeutig
   }
 });
 
-test('Reihenfolge: Technikkarten, dann Ergänzung, dann die Themen in Listenfolge 1 bis 25 mit den Quelltiteln aus S. 181', () => {
-  assert.deepEqual(alleKennungen(daten).slice(0, 4), ['schneiden', 'reissen', 'kleben', 'ergaenzung-collage-flora']);
+test('Reihenfolge: Technikkarten, dann die zwei Ergänzungen, dann die Themen in Listenfolge 1 bis 25 mit den Quelltiteln aus S. 181', () => {
+  assert.deepEqual(alleKennungen(daten).slice(0, 5), ['schneiden', 'reissen', 'kleben', 'ergaenzung-collage-flora', 'ergaenzung-naturmaterial']);
   assert.deepEqual(THEMEN.map((t) => t.nr), Array.from({ length: 25 }, (_, i) => i + 1));
   assert.deepEqual(THEMEN.map((t) => t.quelltitel), QUELLTITEL_LISTE);
 });
@@ -113,17 +115,20 @@ test('Eigenentwurf ist gekennzeichnet: jede Karte, jede Schrittfolge, jede Über
   }
 });
 
-test('Schneiden: Lehrziel S. 181, Ergebnisindikator S. 197, Sicherheitssatz als Eigenentwurf mit Quelle S. 126', () => {
+test('Schneiden: Lehrziel S. 181, Sicherheitssatz als Eigenentwurf mit Quelle S. 126; der Indikator S. 197 und jede Gruppenaussage fehlen auf allen Karten', () => {
   const karte = daten.karten.find((k) => k.id === 'schneiden');
   const zeilen = karte.abschnitte.flatMap((a) => a.zeilen);
   assert.ok(
     zeilen.some((z) => z.seite === 'S. 181' && z.text.includes('„обучать технике работы с ножницами“')),
     'Lehrziel S. 181 fehlt',
   );
-  assert.ok(
-    zeilen.some((z) => z.seite === 'S. 197' && z.text.includes('„умеет резать ножницами по прямой, частично по кривой“')),
-    'Ergebnisindikator S. 197 fehlt',
-  );
+  // Der Indikator auf S. 197 beschreibt einzelne Kinder: er steht auf keiner Karte, auch nicht als Gruppenziel.
+  for (const k of daten.karten) {
+    assert.ok(
+      !/S\. 197|умеет резать|Ergebnis der Gruppe|Gruppenziel/.test(kartenText(k)),
+      `${k.id}: Indikator S. 197 oder Gruppenaussage auf der Karte`,
+    );
+  }
   const sicherheit = karte.abschnitte.find((a) => /Sicherheitssatz/.test(a.ueberschrift));
   assert.ok(sicherheit, 'Sicherheitssatz fehlt');
   assert.match(sicherheit.ueberschrift, /Eigenentwurf.*S\. 126/);
@@ -134,18 +139,40 @@ test('Schneiden: Lehrziel S. 181, Ergebnisindikator S. 197, Sicherheitssatz als 
   );
 });
 
-test('Technikbereiche ohne Reihenfolge: die drei Technikkarten nennen weder Collage, Naturmaterial noch Flora oder Gruppe 5', () => {
+test('Technikbereiche ohne Reihenfolge: die drei Technikkarten nennen weder Collage, Naturmaterial noch Flora oder Gruppe 5; die zwei Ergänzungen sind getrennt', () => {
   for (const k of TECHNIK) {
     assert.ok(!/Collage|Naturmaterial|Flora|Gruppe 5/i.test(kartenText(k)), `${k.id}: Inhalt der Ergänzung auf einer Technikkarte`);
     assert.ok(/ohne Reihenfolge/.test(k.fuss), `${k.id}: Fußzeile sagt nicht „ohne Reihenfolge“`);
   }
-  const [erg] = ERGAENZUNG;
-  assert.match(erg.titel, /Gruppe 5–7, S\. 282–283/);
+  const ziele = ERGAENZUNG.find((k) => k.id === 'ergaenzung-collage-flora');
+  const fuenfBisSieben = ERGAENZUNG.find((k) => k.id === 'ergaenzung-naturmaterial');
+  assert.ok(ziele && fuenfBisSieben, 'beide Ergänzungen müssen vorhanden sein');
+  assert.equal(ziele.titel, 'Collage und Flora (Ziele Gruppe 3 bis 5, S. 181)');
+  assert.equal(fuenfBisSieben.titel, 'Naturmaterial und Collage-Technik (Gruppe 5 bis 7, S. 282–283)');
+  // Ziele für Gruppe 3 bis 5 nur mit S. 181; die Aussagen für Gruppe 5 bis 7 nur mit S. 282–283.
+  assert.ok(!/S\. 28[23]/.test(kartenText(ziele)), 'die Karte mit den Zielen für Gruppe 3 bis 5 nennt S. 282–283');
+  assert.ok(!/S\. 181/.test(kartenText(fuenfBisSieben)), 'die Karte für Gruppe 5 bis 7 nennt S. 181');
   assert.ok(
-    erg.abschnitte.some((a) => a.zeilen.some((z) => z.seite === 'S. 282–283' && /Naturmaterial/.test(z.text))),
-    'Naturmaterial-Collage ist nicht der Gruppe 5 bis 7 zugeordnet',
+    ziele.abschnitte.some((a) => a.zeilen.some((z) => z.seite === 'S. 181' && z.text.includes('„в создании коллажей“'))),
+    'Collagen-Ziel S. 181 fehlt',
   );
-  assert.match(kartenText(erg), /Eigenentwurf/);
+  assert.ok(
+    ziele.abschnitte.some((a) => a.zeilen.some((z) => z.seite === 'S. 181' && z.text.includes('„элементы флористики“'))),
+    'Flora-Ziel S. 181 fehlt',
+  );
+  assert.ok(
+    fuenfBisSieben.abschnitte.some((a) => a.zeilen.some((z) => z.seite === 'S. 282' && /Naturmaterial/.test(z.text))),
+    'Naturmaterial S. 282 fehlt',
+  );
+  assert.ok(
+    fuenfBisSieben.abschnitte.some((a) => a.zeilen.some((z) => z.seite === 'S. 283' && z.text.includes('„помочь в освоении техники коллажа“'))),
+    'Collage-Technik S. 283 fehlt',
+  );
+  for (const k of ERGAENZUNG) assert.match(kartenText(k), /Eigenentwurf/, `${k.id}: ohne Kennzeichnung`);
+  assert.ok(
+    !daten.karten.some((k) => /keine Technik für Gruppe/.test(kartenText(k))),
+    'die falsche Aussage „keine Technik für Gruppe 3 bis 5“ steht noch auf einer Karte',
+  );
 });
 
 test('jede Themenkarte hat eine vorhandene Gruppe, und jede Gruppe ist belegt', () => {
@@ -170,12 +197,12 @@ test('Auswahl: nur gewählte Karten, feste Reihenfolge, unbekannte Kennungen ign
 });
 
 test('Filter: der Technik-Filter wirkt nur auf Technikkarten, der Themen-Filter nur auf Themenkarten', () => {
-  assert.equal(sichtbar(daten).length, 29, 'ohne Filter sind alle Karten sichtbar');
+  assert.equal(sichtbar(daten).length, 30, 'ohne Filter sind alle Karten sichtbar');
   const schneiden = sichtbar(daten, { technik: 'schneiden' });
   assert.deepEqual(schneiden.filter((k) => k.art !== 'thema').map((k) => k.id), ['schneiden']);
   assert.equal(schneiden.filter((k) => k.art === 'thema').length, 25, 'der Technik-Filter darf Themen nicht ausblenden');
   const tiere = sichtbar(daten, { gruppe: 'tiere-maerchen' });
-  assert.equal(tiere.filter((k) => k.art !== 'thema').length, 4, 'der Themen-Filter darf Technikkarten nicht ausblenden');
+  assert.equal(tiere.filter((k) => k.art !== 'thema').length, 5, 'der Themen-Filter darf Technik- und Ergänzungskarten nicht ausblenden');
   assert.equal(tiere.filter((k) => k.art === 'thema').length, 7);
   const kombi = sichtbar(daten, { technik: 'kleben', gruppe: 'unterwegs' });
   assert.deepEqual(kombi.map((k) => k.id), ['kleben', 'thema-fahrzeuge', 'thema-flugzeug', 'thema-schiffe', 'thema-rakete']);

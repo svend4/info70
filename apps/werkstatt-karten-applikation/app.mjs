@@ -7,7 +7,7 @@ import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import daten from './daten/karten.json' with { type: 'json' };
 import {
-  alleGewaehlt, auswahlKennung, filterKennung, gewaehlteKarten, kannDrucken, sichtbar,
+  alleGewaehlt, auswahlKennung, filterKennung, gewaehlteKarten, kannDrucken, PFLICHTSATZ, sichtbar,
   sichtbareAbwaehlen, sichtbareWaehlen, umschalten, zaehlerText, zeileText,
 } from './logik.mjs';
 
@@ -17,6 +17,8 @@ const app = document.getElementById('app');
 let auswahl = alleGewaehlt(daten);
 let filter = { technik: 'alle', gruppe: 'alle' };
 
+// Jede gedruckte Karte kommt hierher und trägt die Pflichtmarkierung im Druck
+// (kein Bildschirm-only). Der Satz steht im Quelltext nur in logik.mjs.
 function karteDom(karte) {
   const kopfId = `karte-${karte.id}`;
   return el('section', { class: 'k-karte wsk-karte', 'aria-labelledby': kopfId },
@@ -31,7 +33,8 @@ function karteDom(karte) {
         el('p', { class: 'wsk-ueberschrift' }, abschnitt.ueberschrift),
         ...inhalt);
     }),
-    el('p', { class: 'wsk-fuss' }, karte.fuss));
+    el('p', { class: 'wsk-fuss' }, karte.fuss),
+    el('p', { class: 'wsk-pflicht' }, PFLICHTSATZ));
 }
 
 function auswahlKnopf(karte) {
@@ -119,7 +122,7 @@ function render() {
 
     el('footer', { class: 'k-fuss wsk-nur-bildschirm' },
       el('p', {}, 'Werkzeug für Fachkräfte, kein Bildschirm für Kinder. Nichts wird gespeichert, es gibt keine Verbindung nach draußen.'),
-      el('p', {}, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.'),
+      el('p', {}, PFLICHTSATZ),
       el('a', { class: 'wsk-fusslink', href: '../../impressum.html' }, 'Impressum und Datenschutz')));
 
   fokussiere(merkeKennung);
