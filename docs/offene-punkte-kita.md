@@ -47,6 +47,15 @@ aktualisiert. Die Nummern sind stabil, damit man in Nachrichten darauf verweisen
   geleert. Ist das so gewollt?
 - **A16. Schatzkarten-Generator.** Zielalter und ein Test des Ausdrucks (PDF) stehen aus.
 - **A17. Mini-Oper-Baukasten.** Titel „Mini-Oper-Baukasten (offline, ohne KI)“ bestätigen.
+- **A18. Seitenangaben in allen Apps (systemisch).** Die Checkliste in docs/02 verlangt: Eine Seitenangabe
+  steht nur mit der Markierung „проверено человеком“ (deutsch: „von einem Menschen geprüft“). Unsere Seiten
+  sind maschinell gegen die Textdatei geprüft. Die neuen Apps tragen deshalb die ehrliche Markierung „maschinell
+  geprüft, noch nicht von einem Menschen“. Entscheidung: menschliche Prüfung der Seiten nachholen oder die
+  Seitenangaben entfernen. Betrifft viele ältere Apps, nicht nur Welle 90.
+- **A19. Katalogtext Nr. 2 (Erfolgs-Momente) führt die verbotene Gruppierung.** docs/10 (Zeile 466) und
+  docs/praleska-katalog.json (Zeile 270) beschreiben die Karten als Hilfe für „unsichere Kinder mit niedrigem
+  Selbstwert“. Die App übernimmt das nicht (Regel 3). Empfehlung: den Katalogtext an Regel 3 angleichen. Entscheidung
+  der Projektleitung.
 
 ## B. Nacharbeiten (Arbeit ist begonnen oder fehlt noch)
 
