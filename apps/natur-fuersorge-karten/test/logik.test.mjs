@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { kartenFuer, pruefeDaten, quelleTextVon, zielVon } from '../logik.mjs';
+import { checklisteInhalt, kartenFuer, kartenInhalt, pruefeDaten, quelleTextVon, zielVon } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/karten.json', import.meta.url), 'utf8'));
 const kopie = (x) => JSON.parse(JSON.stringify(x));
@@ -10,11 +10,11 @@ test('die Daten sind in Ordnung', () => {
   assert.deepEqual(pruefeDaten(daten), []);
 });
 
-test('vier Aufgaben auf S. 96 mit russischem Wortlaut', () => {
+test('vier Aufgaben auf S. 96, je mit einem Begriff aus der Quelle (höchstens 6 Wörter)', () => {
   assert.equal(daten.ziele.length, 4);
   for (const z of daten.ziele) {
     assert.equal(z.quelle, 'S. 96', z.id);
-    assert.ok(z.zitat.length >= 20, z.id);
+    assert.ok(z.begriff.split(/\s+/).length <= 6, z.id);
   }
 });
 
@@ -52,15 +52,40 @@ test('der Filter nach Handlung liefert die passende Karte', () => {
   assert.equal(kartenFuer(daten).length, 3);
 });
 
-test('die Quellenzeile nennt Seite, Aufgabe und dass die Anregung Eigenentwurf ist', () => {
+test('der Hinweis auf der Karte nennt das Beispiel aus dem Text und die Anregung als Eigenentwurf, ohne Seitenangabe', () => {
   const t = quelleTextVon(daten, daten.karten[0]);
-  assert.match(t, /S\. 96/);
   assert.match(t, /Anregung: Eigenentwurf/);
+  assert.doesNotMatch(t, /S\. \d/);
+});
+
+test('der Karteninhalt liefert Titel, Beispiel aus dem Text und Anregung', () => {
+  const i = kartenInhalt(daten, daten.karten[0]);
+  assert.equal(i.titel, 'Gießen');
+  assert.equal(i.beispiel, 'Im Text: „полить комнатные растения, растения на грядках“');
+  assert.equal(i.anregung, daten.karten[0].anregung);
+});
+
+test('die Checkliste liefert Titel und Fragen, ohne Seitenangabe im Druckinhalt', () => {
+  const c = checklisteInhalt(daten);
+  assert.equal(c.fragen.length, daten.checkliste.fragen.length);
+  assert.doesNotMatch(c.hinweis, /S\. \d/);
 });
 
 test('zielVon findet eine Aufgabe und liefert null bei unbekannter Kennung', () => {
   assert.equal(zielVon(daten, 'z4').quelle, 'S. 96');
   assert.equal(zielVon(daten, 'zz'), null);
+});
+
+test('ein Begriff mit mehr als sechs Wörtern wird abgewiesen (keine ganzen Sätze aus der Quelle)', () => {
+  const d = kopie(daten);
+  d.ziele[0].begriff = 'развивать интерес к наблюдению за трудом взрослого по уходу';
+  assert.ok(pruefeDaten(d).some((f) => /z1: Begriff hat mehr als 6 Wörter/.test(f)));
+});
+
+test('ein Handlungsbeispiel mit mehr als sechs Wörtern wird abgewiesen', () => {
+  const d = kopie(daten);
+  d.handlungen[0].beispiel = 'а один два три четыре пять шесть семь';
+  assert.ok(pruefeDaten(d).some((f) => /h1: Beispiel hat mehr als 6 Wörter/.test(f)));
 });
 
 test('ein Feld „protokoll“ wird abgewiesen', () => {

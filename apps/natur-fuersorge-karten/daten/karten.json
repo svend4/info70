@@ -4,30 +4,31 @@
   "titel": "Natur-Fürsorge: Handlungen und Aufgaben für Fachkräfte",
   "hinweis": "Die vier Aufgaben stehen auf S. 96 als Aufgaben für die Fachkraft, nicht als Fähigkeiten der Kinder. Die drei Handlungen sind Beispiele aus dem Text. Die Anregungen auf den Karten und die Checkliste sind ein Eigenentwurf. Die Quelle sieht in diesem Abschnitt kein Protokoll über einzelne Kinder vor; deshalb gibt es hier keines.",
   "wasEsIst": "Eine Kartei zum Drucken für die Pflege von Zimmerpflanzen, Pflanzen auf dem Beet und Tieren der Naturecke. Die Karten zeigen die Handlungen; die Checkliste hilft Erwachsenen, den richtigen Zeitpunkt zu erkennen. Nichts wird gespeichert.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
   "ziele": [
     {
       "id": "z1",
       "text": "Das Interesse der Kinder am Beobachten der Pflegearbeit der Erwachsenen an Tieren und Pflanzen wecken.",
       "quelle": "S. 96",
-      "zitat": "развивать интерес к наблюдению за трудом взрослого по уходу за животными уголка природы и по выращиванию растений"
+      "begriff": "интерес к наблюдению за трудом взрослого"
     },
     {
       "id": "z2",
       "text": "Freude an den gepflegten Pflanzen und an der Fürsorge für die Tiere erleben.",
       "quelle": "S. 96",
-      "zitat": "способствовать возникновению у ребенка радости от цветения комнатных растений, от результатов проявления заботы о животных со стороны взрослого"
+      "begriff": "радости от цветения комнатных растений"
     },
     {
       "id": "z3",
       "text": "Den Wunsch stärken, einfache Handlungen der Pflege selbst auszuführen.",
       "quelle": "S. 96",
-      "zitat": "желания самостоятельно выполнять элементарные трудовые действия по уходу за растениями и животными"
+      "begriff": "самостоятельно выполнять элементарные трудовые действия"
     },
     {
       "id": "z4",
       "text": "Erkennen, wann eine Pflegehandlung nötig ist, je nach Zustand der Pflanzen und Tiere (zum Beispiel gießen, füttern, Käfig und Aquarium reinigen).",
       "quelle": "S. 96",
-      "zitat": "учить замечать и понимать своевременность проведения взрослым того или иного трудового действия по уходу за растениями или животными"
+      "begriff": "замечать и понимать своевременность"
     }
   ],
   "handlungen": [
@@ -86,7 +87,7 @@
   },
   "quelle": {
     "geprueft": true,
-    "werk": "Praleska, Gruppe „Малыши“, Unterabschnitt „Труд в природе“, S. 96 (Aufgaben). Begriffe in deutscher Übertragung, Zitate im russischen Original. Altersangabe S. 6 und S. 44.",
+    "werk": "Praleska, Gruppe „Малыши“, Unterabschnitt „Труд в природе“, S. 96 (Aufgaben). Begriffe im russischen Original, Erläuterungen in deutscher Sprache. Altersangabe S. 6 und S. 44.",
     "abweichung": "Der Katalogeintrag nannte „Kinder 2–3“ als Alter. Der Text nennt 1 bis 3 Jahre (S. 6, S. 44). Er nennt keine Altersnorm für die drei Handlungen. Der Katalog nannte ein Mini-Protokoll, welches Kind welche Handlung selbstständig zeigt; der Abschnitt sieht keine Dokumentation von Kindern vor, und das Protokoll wird hier nicht gebaut. Der Katalog nannte Bezüge zu BNE und zu den Länderplänen; beides steht nicht im Text (das Programm ist das belarussische Programm, S. 3). „Vier Ziele“ gilt für „Труд в природе“ auf S. 96, nicht für das ganze Kapitel „Приобщаемся к труду“ (S. 94, sechs allgemeine Aufgaben)."
   }
 }

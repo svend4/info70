@@ -17,7 +17,7 @@ Der Katalog wollte ein Mini-Protokoll, welches Kind welche Handlung selbstständ
 sieht dafür in diesem Abschnitt keine Dokumentation vor, und Notizen über einzelne Kinder gehören
 nicht ins Gerät. Die Prüfung lehnt Felder ab, die nach einem Kind aussehen (Name, Protokoll,
 Verlauf, Beobachtung, Notizen, Geburtsdatum und Varianten), und Texte mit Mustern wie „Name:“.
-Sie liest aber keinen Fließtext auf Namen; die Texte sind von Hand gelesen.
+Sie liest keinen Fließtext auf Namen; ob die Texte inhaltlich geprüft sind, sagt die Prüfung nicht.
 
 ## Die tragende Entscheidung 3: Handlungen aus dem Text, Anregungen als Eigenentwurf
 
@@ -37,12 +37,15 @@ Eigenentwurf markiert. Eine Altersnorm für die Handlungen gibt die Quelle nicht
 
 ## Prüfung
 
-- 18 Tests in `test/logik.test.mjs`: Aufgaben und Seiten, Handlungen als Textbeispiele, Eigenentwurf
-  je Karte, Abweisung von Feldern nach Kind, Altersangabe, Filter und Gegenproben.
-- Die russischen Zitate sind maschinell auf S. 96 nachgewiesen.
-- Browser bei 360 px: Karten, Filter, Druck, Knöpfe mindestens 44 px, keine externen Anfragen.
+- 45 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`: Aufgaben und Seiten, Begriffe bis
+  sechs Wörter, Handlungen als Textbeispiele, Eigenentwurf je Karte, Abweisung von Feldern nach Kind,
+  Altersangabe, Filter, Druckregeln, Speicher- und Netzregeln, Knopfhöhe und Gegenproben.
+- Die russischen Begriffe sind maschinell auf S. 96 nachgewiesen.
+- Pflichtmarkierung: Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+- Browser bei 360 px: Karten, Filter, Druck, Knöpfe mindestens 48 px, keine externen Anfragen.
 
 ## Offen
 
+- uk und ru: nicht vorhanden, offen.
 - Die Bedeutung der Angaben „S“ und „Erwachsene (Kinder 2–3)“ im Katalog ist nicht geklärt.
 - OCR-Fehler im Text (zum Beispiel „возниконовению“, S. 96) sind möglich; das Original ist nicht gegengeprüft.

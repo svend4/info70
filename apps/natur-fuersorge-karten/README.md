@@ -24,10 +24,11 @@ Belegt und mit Seite: die vier Aufgaben (S. 96), die Handlungen gießen („по
 
 ## So funktioniert es
 
-- Die vier Aufgaben stehen oben, mit russischem Wortlaut und Seite.
-- Drei Handlungskarten: der Textbeispiel-Satz und eine Anregung (Eigenentwurf).
+- Die vier Aufgaben stehen oben, mit deutscher Umschreibung, einem Begriff aus dem russischen Text
+  und Seite. Keine ganzen Sätze aus der Quelle.
+- Drei Handlungskarten: das Beispiel aus dem Text als Begriff und eine Anregung (Eigenentwurf).
 - Eine Checkliste für Erwachsene zum richtigen Zeitpunkt (Aufgabe 4), ausdrücklich als Eigenentwurf.
-- „Diese Karten drucken“ druckt Karten und Checkliste.
+- „Diese Karten drucken“ druckt Karten und Checkliste, ohne Seitenangabe auf dem Blatt.
 - Keine Eingabe, kein Name, keine Speicherung.
 
 ## Grenzen – ehrlich
@@ -38,11 +39,14 @@ Belegt und mit Seite: die vier Aufgaben (S. 96), die Handlungen gießen („по
 
 ## Prüfung
 
-- `node --test apps/natur-fuersorge-karten/test/*.mjs` – 18 Tests: vier Aufgaben auf S. 96,
-  Handlungen als Textbeispiele, Karten als Eigenentwurf, kein Feld nach Kind (Protokoll, Name,
-  Notiz u. a.), Altersangabe 1 bis 3, Filter, Gegenproben.
-- Alle russischen Zitate sind maschinell auf S. 96 nachgewiesen. Dieser Nachweis ist kein Test: Die Tests prüfen die Form, nicht den Wortlaut gegen die Quelle.
-- Browser bei 360 px: vier Karten am Anfang, Filter, Druck nur mit Karten, Knöpfe mindestens 44 px,
+- `npm test` im App-Ordner – 45 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`: vier
+  Aufgaben auf S. 96, Begriffe mit höchstens sechs Wörtern, Handlungen als Textbeispiele, Karten als
+  Eigenentwurf, kein Feld nach Kind (Protokoll, Name, Notiz u. a.), Altersangabe 1 bis 3, Filter,
+  Druckregeln (keine Zeichen, keine Namenszeile, keine Seitenangabe), Speicher- und Netzregeln,
+  Knopfhöhe 48 px, Fokus nach Klick.
+- Alle russischen Begriffe sind maschinell auf S. 96 nachgewiesen. Dieser Nachweis ist kein Test: Die Tests prüfen die Form, nicht den Wortlaut gegen die Quelle.
+- Pflichtmarkierung: Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+- Browser bei 360 px: vier Karten am Anfang, Filter, Druck nur mit Karten, Knöpfe mindestens 48 px,
   kein Überlauf, keine externen Anfragen. Die einzige Konsolenmeldung ist das `favicon.ico`.
 
 ## Starten

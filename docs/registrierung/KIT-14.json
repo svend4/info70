@@ -1,0 +1,12 @@
+{
+  "id": "KIT-14",
+  "slug": "natur-fuersorge-karten",
+  "titel": "Natur-Fürsorge-Karten (ohne Beobachtungsprotokoll)",
+  "status_neu": "teilweise (Ausbau)",
+  "app": "natur-fuersorge-karten",
+  "tests_app": 45,
+  "hub_zeile": "<a class=\"k-knopf\" style=\"text-decoration:none;text-align:center\" href=\"apps/natur-fuersorge-karten/\">🌱 Natur-Fürsorge-Karten – Pflege von Pflanzen und Tieren zum Drucken (Fachkräfte)</a>",
+  "readme_zeile": "| KIT-14 | Natur-Fürsorge-Karten (ohne Beobachtungsprotokoll) | teilweise (Ausbau) | `apps/natur-fuersorge-karten/` |",
+  "docs10_notiz": "Natur-Fürsorge-Karten (KIT-14) ausgebaut: die vier Aufgaben als Begriffe aus S. 96 statt ganzer Sätze, Druck ohne Seitenangabe, Fokus bleibt nach dem Filterklick auf derselben Kennung, Knöpfe 48 px, 45 Tests. Das Beobachtungsprotokoll je Kind ist nicht gebaut: die Quelle sieht dafür in diesem Abschnitt keine Grundlage vor, und Notizen über einzelne Kinder sind nach docs/02 ausgeschlossen. Offen bleiben die Entscheidung, den Katalogpunkt zu streichen, die Bezüge zu Bildung für nachhaltige Entwicklung und zu den Länderplänen (nicht im Text) und die Altersangabe 2–3 in docs/10.",
+  "katalog_korrektur": "Natur-Fürsorge-Karten: Ausbau nach Bauauftrag KIT-14. Gebaut: vier Aufgaben als Begriffe aus S. 96, drei Handlungskarten mit Anregung (Eigenentwurf), Checkliste für Erwachsene, Druck ohne Seitenangabe. Nicht gebaut: Beobachtungsprotokoll je Kind (Entscheidung offen: streichen oder nicht bauen), Bezug zu Bildung für nachhaltige Entwicklung und Landesplänen (nicht im Text), Bericht (optional)."
+}

@@ -1,4 +1,4 @@
-/* Karteikarten je Handlung und die Checkliste. Kein Haken, kein Name, kein Stern (docs/02).
+/* Karteikarten je Handlung und die Checkliste. Ohne Zeichen, ohne Namenszeile (docs/02).
    Auf dem Bildschirm sind die Druckregeln versteckt. */
 .nf-nur-druck { display: none; }
 .nf-kartentitel { font-size: 1.15rem; margin: 0 0 0.3rem; }
@@ -7,8 +7,10 @@
 .nf-zeile { border-top: 1px solid #d1d5db; padding: 0.6rem 0; }
 .nf-name { margin: 0 0 0.2rem; font-weight: 600; }
 .nf-liste { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+.k-fuss a { display: inline-block; min-height: 48px; line-height: 48px; }
 
 @media print {
+  @page { size: A4 portrait; margin: 12mm; }
   .nf-nur-bildschirm { display: none !important; }
   .nf-nur-druck { display: block !important; }
   body { background: #fff; }

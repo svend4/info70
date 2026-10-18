@@ -16,12 +16,13 @@
 // Gießen, Füttern und Ernten nennt S. 96 als Beispiele; jede Anregung auf einer
 // Karte ist als Eigenentwurf markiert.
 //
-// Politik docs/02: keine externen Anfragen, KEIN localStorage.
+// Politik docs/02: keine externen Anfragen, keine Speicherung im Browser.
+// Zitate: nur Begriffe von höchstens sechs Wörtern aus der Quelle, keine ganzen Sätze (docs/10).
 
 const KARTEN_SCHLUESSEL = Object.freeze(['id', 'handlung', 'anregung', 'eigenentwurf']);
 const HANDLUNG_SCHLUESSEL = Object.freeze(['id', 'titel', 'beispiel', 'quelle', 'ziel']);
-const ZIEL_SCHLUESSEL = Object.freeze(['id', 'text', 'quelle', 'zitat']);
-/** Felder, die nach Angaben über ein Kind aussehen. Keines davon darf in den Daten vorkommen. */
+const ZIEL_SCHLUESSEL = Object.freeze(['id', 'text', 'quelle', 'begriff']);
+const BEGRIFF_WORTE_MAX = 6;
 
 /**
  * Felder, die nach Angaben über ein Kind aussehen. Exakte Namen und Wortteile, damit auch
@@ -41,6 +42,7 @@ function alleTexte(o, acc = []) {
 }
 const seiteOk = (s) => typeof s === 'string' && /^S\. \d+(–\d+)?$/.test(s);
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
+const wortZahl = (s) => s.trim().split(/\s+/).length;
 
 /** Alle Schlüssel eines Objekts, rekursiv. */
 function schluesselIn(o, acc = []) {
@@ -59,10 +61,29 @@ export function kartenFuer(daten, { handlung = null } = {}) {
   return daten.karten.filter((k) => handlung === null || k.handlung === handlung);
 }
 
-/** Der Quellenhinweis einer Karte, in einem Satz. */
-export function quelleTextVon(daten, karte) {
+/** Der Hinweis unter einer Karte. Ohne Seitenangabe: die Karten tragen keine (A18-Standard). */
+export function quelleTextVon() {
+  return 'Beispiel aus dem Text; Anregung: Eigenentwurf';
+}
+
+/** Inhalt einer Handlungskarte, so wie sie auf dem Bildschirm und im Druck steht. */
+export function kartenInhalt(daten, karte) {
   const h = daten.handlungen.find((x) => x.id === karte.handlung);
-  return `Quelle: ${h?.quelle ?? '–'} · Aufgabe ${daten.ziele.findIndex((z) => z.id === h?.ziel) + 1} · Anregung: Eigenentwurf`;
+  return {
+    titel: h.titel,
+    beispiel: `Im Text: „${h.beispiel}“`,
+    anregung: karte.anregung,
+    hinweis: quelleTextVon(daten, karte),
+  };
+}
+
+/** Inhalt der Checkliste für Erwachsene. */
+export function checklisteInhalt(daten) {
+  return {
+    titel: daten.checkliste.titel,
+    fragen: [...daten.checkliste.fragen],
+    hinweis: 'Eigenentwurf der Fragen. Keine Namen, keine Notizen über Kinder.',
+  };
 }
 
 /**
@@ -86,13 +107,15 @@ export function pruefeDaten(daten) {
   for (const z of daten?.ziele ?? []) {
     for (const s of Object.keys(z)) if (!ZIEL_SCHLUESSEL.includes(s)) fehler.push(`${z.id}: unbekanntes Feld „${s}“`);
     if (z.quelle !== 'S. 96') fehler.push(`${z.id}: Quelle muss S. 96 sein`);
-    if (!nichtLeer(z.zitat) || z.zitat.length < 20) fehler.push(`${z.id}: russischer Wortlaut fehlt oder ist zu kurz`);
+    if (!nichtLeer(z.begriff)) fehler.push(`${z.id}: Begriff aus der Quelle fehlt`);
+    else if (wortZahl(z.begriff) > BEGRIFF_WORTE_MAX) fehler.push(`${z.id}: Begriff hat mehr als ${BEGRIFF_WORTE_MAX} Wörter`);
   }
   const handlungIds = (daten?.handlungen ?? []).map((h) => h.id);
   if (new Set(handlungIds).size !== handlungIds.length) fehler.push('doppelte Handlungs-Kennungen');
   for (const h of daten?.handlungen ?? []) {
     for (const s of Object.keys(h)) if (!HANDLUNG_SCHLUESSEL.includes(s)) fehler.push(`${h.id}: unbekanntes Feld „${s}“`);
     if (!nichtLeer(h.beispiel)) fehler.push(`${h.id}: Beispiel fehlt`);
+    else if (wortZahl(h.beispiel) > BEGRIFF_WORTE_MAX) fehler.push(`${h.id}: Beispiel hat mehr als ${BEGRIFF_WORTE_MAX} Wörter`);
     if (h.quelle !== 'S. 96') fehler.push(`${h.id}: Quelle muss S. 96 sein`);
     if (!zielIds.includes(h.ziel)) fehler.push(`${h.id}: Ziel „${h.ziel}“ gibt es nicht`);
   }
