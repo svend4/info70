@@ -1,7 +1,7 @@
 # Bauauftrag GEM-14: Grammatik-Zwerge
 
 Status: teilweise · Abschnitt: Gemeinsame Apps 3–5 · Ziel: Ausbau von apps/grammatik-zwerge/
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 

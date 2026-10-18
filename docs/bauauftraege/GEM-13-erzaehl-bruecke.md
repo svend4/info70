@@ -1,7 +1,7 @@
 # Bauauftrag GEM-13: Erzaehl-Bruecke
 
 Status: teilweise · Abschnitt: Gemeinsame Apps 3–5 · Ziel: Ausbau von apps/erzaehl-bruecke/
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 

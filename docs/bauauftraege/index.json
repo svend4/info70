@@ -10,8 +10,17 @@
     "nicht_bauen": 3,
     "bauauftraege_noetig": 68,
     "davon_blockiert": [
+      "KIN-17",
+      "GEM-8",
+      "GEM-13",
+      "GEM-14",
+      "GEM-16",
+      "GEM-19",
+      "CON-1",
       "CON-3",
+      "CON-4",
       "CON-6",
+      "CON-7",
       "CON-9",
       "CON-10"
     ]
@@ -59,7 +68,9 @@
       "app": "uhr-und-kalender-kind",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "KIN-18",
@@ -107,7 +118,9 @@
       "app": "mathe-entdecker",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "GEM-10",
@@ -131,7 +144,9 @@
       "app": "erzaehl-bruecke",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "GEM-14",
@@ -143,7 +158,9 @@
       "app": "grammatik-zwerge",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "GEM-16",
@@ -155,7 +172,9 @@
       "app": "design-entdecker",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "GEM-17",
@@ -179,7 +198,9 @@
       "app": "geschichten-wender",
       "faktenstand": "Quelle nicht im Repo prüfbar",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "GEM-22",
@@ -455,7 +476,9 @@
       "app": "stark-und-gesund",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "CON-2",
@@ -464,7 +487,7 @@
       "einheit": "Spielideen-Kartei: Was kann mein Baby mit...?",
       "status_plan_w91": "offen",
       "status": "teilweise",
-      "app": null,
+      "app": "baby-spielideen-kartei",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
@@ -493,7 +516,9 @@
       "app": "deutschland-kompass",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "CON-5",
@@ -502,7 +527,7 @@
       "einheit": "Tierkinder und ihre Familien (Geschichten-Pack)",
       "status_plan_w91": "offen",
       "status": "teilweise",
-      "app": null,
+      "app": "tierkinder-vorlesen",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
@@ -531,7 +556,9 @@
       "app": "herkunftssprachen-bruecke",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
+      "blockiert": [
+        "A7 quiz-kern"
+      ]
     },
     {
       "id": "CON-8",
@@ -580,7 +607,7 @@
       "einheit": "Kindertaenze Europas",
       "status_plan_w91": "offen",
       "status": "teilweise",
-      "app": null,
+      "app": "kindertaenze-europa",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
@@ -592,7 +619,7 @@
       "einheit": "Puppentheater-Werkstatt (Content-Pack)",
       "status_plan_w91": "offen",
       "status": "teilweise",
-      "app": null,
+      "app": "puppentheater-werkstatt",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
@@ -628,7 +655,7 @@
       "einheit": "Theater zuhause - Bastel- und Spielheft",
       "status_plan_w91": "offen",
       "status": "teilweise",
-      "app": null,
+      "app": "theater-zuhause-heft",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
@@ -700,7 +727,7 @@
       "einheit": "Fuehl- und Sortier-Werkstatt: Holz, Papier, Stoff",
       "status_plan_w91": "offen",
       "status": "teilweise",
-      "app": null,
+      "app": "fuehl-sortier-werkstatt",
       "faktenstand": "Quelle nicht im Repo prüfbar",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []

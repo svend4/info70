@@ -1,7 +1,7 @@
 # Bauauftrag KIN-17: Uhr- und Kalender-Kind (Einheit 17)
 
 Status: teilweise · Abschnitt: Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …) · Ziel: Ausbau von apps/uhr-und-kalender-kind
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 

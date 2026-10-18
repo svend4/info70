@@ -1,7 +1,7 @@
 # Bauauftrag GEM-8: Mathe-Entdecker: Zahlen, Formen, Reihen
 
 Status: teilweise · Abschnitt: Gemeinsame Apps 3–5 · Ziel: Ausbau von apps/mathe-entdecker
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 

@@ -1,7 +1,7 @@
 # Bauauftrag CON-4: Mein Ort, mein Land, unsere Erde (Content-Pack)
 
 Status: teilweise · Abschnitt: Content-Pakete, Funktionen, Dokumente · Ziel: Ausbau von `apps/deutschland-kompass/`
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 

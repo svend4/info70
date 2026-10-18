@@ -27,12 +27,22 @@ const STATUS_AB_WELLE_92 = {
   'PRI-7': 'teilweise', // Fühl- und Sortier-Werkstatt (Welle 93)
 };
 
-// Blockaden, die aus docs/10 und dem Plan (Abschnitt 5) stammen.
-const BLOCKADE = {
-  'CON-3': ['A7 quiz-kern'],
-  'CON-6': ['A7 quiz-kern'],
-  'CON-9': ['A7 quiz-kern'],
-  'CON-10': ['A7 quiz-kern'],
+// Blockaden. A7: die Einheit nutzt den Engine quiz-kern (Rekord und Rang nach Punkten,
+// docs/fragen-und-hinweise.md A7). Ausbau und Neubau sind erst nach der Entscheidung zulässig.
+const QUIZ_KERN = ['A7 quiz-kern'];
+const BLOCKADE = Object.fromEntries(
+  ['CON-1', 'CON-3', 'CON-4', 'CON-6', 'CON-7', 'CON-9', 'CON-10', 'GEM-8', 'GEM-13', 'GEM-14', 'GEM-16', 'GEM-19', 'KIN-17']
+    .map((id) => [id, QUIZ_KERN]),
+);
+
+// Apps aus Welle 92 und 93: der Plan nennt sie noch nicht, die Apps existieren.
+const APP_AB_WELLE_92 = {
+  'CON-2': 'baby-spielideen-kartei',
+  'CON-5': 'tierkinder-vorlesen',
+  'CON-11': 'kindertaenze-europa',
+  'CON-12': 'puppentheater-werkstatt',
+  'CON-18': 'theater-zuhause-heft',
+  'PRI-7': 'fuehl-sortier-werkstatt',
 };
 
 const zeilen = PLAN.split('\n').filter((l) => /^\| \d+ \| /.test(l));
@@ -50,7 +60,7 @@ for (const z of zeilen) {
     einheit,
     status_plan_w91: status,
     status: STATUS_AB_WELLE_92[id] ?? status,
-    app: app === '–' ? null : app,
+    app: APP_AB_WELLE_92[id] ?? (app === '–' ? null : app),
     faktenstand: fakten,
     naechster_schritt: schritt,
     blockiert: BLOCKADE[id] ?? [],

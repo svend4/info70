@@ -1,7 +1,7 @@
 # Bauauftrag GEM-16: Design-Entdecker: praktisch und schön
 
 Status: teilweise · Abschnitt: Gemeinsame Apps 3–5 · Ziel: Ausbau von apps/design-entdecker/
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 

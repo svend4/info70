@@ -5,7 +5,7 @@ Dieser Ordner enthält je Einheit eine Arbeitsanweisung (Bauauftrag) nach `VORLA
 ## Stand
 
 - `index.json`: 131 Einheiten, daraus 68 Bauaufträge (63 teilweise, 5 offen). Sechs Einheiten haben keinen Bauauftrag: 3 unklar (CON-13, CON-15, PRI-6), 3 nicht bauen (KIT-18, KIT-20, CON-17).
-- Vier Bauaufträge sind blockiert: CON-3, CON-6, CON-9, CON-10 (Entscheidung A7 zu `quiz-kern`).
+- 13 Bauaufträge sind durch A7 (`quiz-kern`) blockiert: CON-1, CON-3, CON-4, CON-6, CON-7, CON-9, CON-10, GEM-8, GEM-13, GEM-14, GEM-16, GEM-19, KIN-17. Die Liste steht in `tools/bauauftrag-index.mjs`.
 - Der Stand im Index entspricht dem Plan nach Welle 91 plus den sechs Änderungen der Wellen 92 und 93 (siehe `tools/bauauftrag-index.mjs`).
 
 ## Werkzeuge

@@ -1,7 +1,7 @@
 # Bauauftrag GEM-19: Geschichten-Wender (Stimmungs-Werkstatt)
 
 Status: teilweise · Abschnitt: Gemeinsame Apps 3–5 · Ziel: Ausbau von apps/geschichten-wender/
-Blockiert durch: keine
+Blockiert durch: A7 quiz-kern
 
 ## 1. Quelle
 
