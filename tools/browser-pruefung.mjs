@@ -79,6 +79,8 @@ ergebnis.kleineZiele = await page.evaluate(() => {
 // Jeder Knopf mit data-kennung: klicken, dann prüfen, ob der Fokus auf derselben Kennung liegt.
 const kennungen = await page.$$eval('button[data-kennung]', (els) => els.map((e) => e.dataset.kennung));
 ergebnis.klicks = [];
+// Ohne data-kennung wird nichts geklickt. Das darf nicht still als „ohne Befund“ enden.
+ergebnis.klickWarnung = kennungen.length ? null : 'Keine Knöpfe mit data-kennung gefunden: Klicks und Fokus nicht gemessen.';
 for (const k of kennungen) {
   // Vor jedem Auswahl-Knopf die Filter zurücksetzen, damit die Karte sichtbar ist.
   if (k.startsWith('auswahl-')) {
@@ -119,7 +121,9 @@ await page.emulateMedia({ media: 'print' });
 ergebnis.druck = await page.evaluate(() => {
   const text = document.body.innerText;
   const zeichen = /[☐☒☑✓✔✗✘★☆•●○◦·■□]|\p{Extended_Pictographic}/u.exec(text);
-  const sichtbar = (el) => getComputedStyle(el).display !== 'none';
+  // getComputedStyle prüft nur das Element selbst; in einem ausgeblendeten Bereich ist ein Kind trotzdem „block“.
+  // getClientRects ist leer, wenn das Element selbst oder ein Vorfahr nicht dargestellt wird.
+  const sichtbar = (el) => el.getClientRects().length > 0;
   return {
     zeichen: zeichen ? zeichen[0] : null,
     namenszeile: /Name\s*:|Vorname|Nachname|Datum|Wochentag/.test(text),
