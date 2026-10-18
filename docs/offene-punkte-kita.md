@@ -108,3 +108,28 @@ aktualisiert. Die Nummern sind stabil, damit man in Nachrichten darauf verweisen
 - Werkzeuge für Kita: 25 von 27 gebaut. Offen sind №84 und №86 (nicht gebaut, siehe A13).
 - Die übrigen Abschnitte sind in Arbeit: Inventar der Einheiten gegen die Apps läuft; die nächste Welle wird
   daraus gewählt.
+
+## F. Inventar der übrigen Katalogabschnitte (Stand Welle 90)
+
+Zuordnung der Einheiten zu vorhandenen Apps, geprüft von Lesern des Repos. „Unklar“ heißt: Es gibt eine
+ähnliche App, aber sie deckt die Einheit nicht ab (andere Altersstufe, andere Form oder anderer Umfang).
+Dafür muss entschieden werden, ob ausgebaut oder neu gebaut wird.
+
+- **Печатные материалы für Kita (19):**
+  - gebaut: 1, 3, 16, 19
+  - offen: 2, 5, 17, 18 (Wellen 90 und folgende)
+  - unklar: 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15. Dazu gehören Frischluft-Rituale, Mathe-Anfänge für 2–3 Jahre,
+    Mal- und Matsch-Kartei (vorhanden: 8 Karten statt rund 61 Impulse) und die Anzucht-Kartei.
+- **Контент-паки (12):**
+  - gebaut: 1, 7
+  - offen: 2, 3, 6, 10, 11, 12
+  - unklar: 4, 5, 8, 9
+- **Функции (3):**
+  - gebaut: 2 (Elternbrief-Generator)
+  - unklar: 1 (Trostverse mit dem Kindernamen: personenbezogen, Entscheidung nötig), 3 (Naturschutz-Rat:
+    Abstimmung der Kinder; die App „mitmach-arena“ ist ein Klassenrat-Werkzeug. Entscheidung nach A13 nötig)
+- **Документы (4):**
+  - gebaut: 4 (Rhythmus-Orchester)
+  - offen: 1 (Konzept-Mapping, internes Dokument), 3 (Theater-Heft, Druck)
+  - Entscheidung nötig: 2 (Krippen-Portfolio: Beobachtungsbogen je Kind, vergleichbar mit №84 und №86 → nach A13
+    nicht bauen)
