@@ -23,8 +23,8 @@ Bildungspläne.
 
 - **Рекомендация, не норма**: ориентиры — мягкие подсказки для рефлексии;
   свободная игра имеет приоритет, никаких «выполнено/не выполнено».
-- **Никаких данных о детях**: планируются предложения, а не дети; UI дважды
-  напоминает не вписывать имена. Нет Score, нет рейтинга, нет сравнения
+- **Никаких данных о детях**: планируются предложения, а не дети; an jedem Eingabefeld
+  steht die Hinweiszeile «Keine Namen von Kindern eingeben.» (im Druck ausgeblendet; das Feld verweist per aria-describedby darauf, der Feldname bleibt unverändert). Нет Score, нет рейтинга, нет сравнения
   детей (EU AI Act — «Planung, keine Diagnose»).
 - Обмен между устройствами команды — только файлом (`koffer.mjs`:
   `packeKoffer`/`pruefeKoffer`/`vereinigeKoffer`, по образцу mitmach-arena):
@@ -43,5 +43,5 @@ Bildungspläne.
 
 ```bash
 npm run dev   # → http://localhost:8070/apps/kita-wochenplaner/
-cd apps/kita-wochenplaner && npm test   # 40 Tests (logik, koffer, daten, regeln)
+cd apps/kita-wochenplaner && npm test   # 42 Tests (logik, koffer, daten, regeln)
 ```

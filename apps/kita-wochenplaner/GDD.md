@@ -39,7 +39,7 @@ Ausgewogenheits-Check (полосы по 6 областям + подсказки
 MVP: 6 областей + 3 возрастные группы + Tages-/Wochen-Hinweis в
 `daten/bereiche.json`. Схема данных: `bereiche[{id,name,emoji,beispiele}]`,
 `altersgruppen[{id,name,maxMinutenProAngebot,maxAngeboteProWoche,quelle,warntext}]`,
-`tagesHinweis{maxAngeboteProTag,warntext}`, `wochenHinweis{warntext}`, `wochenLastHinweis{warntext}`. Testzahl: 40 (`npm test`).
+`tagesHinweis{maxAngeboteProTag,warntext}`, `wochenHinweis{warntext}`, `wochenLastHinweis{warntext}`. Testzahl: 42 (`npm test`).
 Дидактический анти-шаблон-тест (node:test): ровно 6 областей, ориентиры
 = 15/20/25 и 10/15/17, каждый Warntext сформулирован как «Empfehlung», Tages-Hinweis
 обязан называть Freispiel, запрет оценочной лексики (Score/Ranking/Diagnose)
@@ -47,7 +47,7 @@ MVP: 6 областей + 3 возрастные группы + Tages-/Wochen-Hi
 
 ## 6. Политика соответствия (Pflicht, docs/02)
 [x] Werbefrei / без покупок  [x] Без аккаунтов и персональных данных
-(планируются предложения, не дети; UI: «Bitte keine Kindernamen»)
+(планируются предложения, не дети; UI: «Keine Namen von Kindern eingeben.» an jedem Eingabefeld)
 [x] Без внешних запросов (CSP `default-src 'self'` + installiereNetzwerkWaechter)
 [x] localStorage: только план `kwp.plan` + кнопка «Alle Daten löschen»
 [x] Privacy by default (ноль запросов привилегий)

@@ -37,6 +37,14 @@ const eingabeStil = 'width:100%;font:inherit;padding:0.6rem;border-radius:0.5rem
 const feldStil = 'display:block;font-weight:600;margin-top:0.75rem';
 // Fußlinks mindestens 48 px hoch (docs/02 Z. 50).
 const FUSS_LINK = 'display:inline-block;min-height:48px;line-height:48px';
+// Hinweiszeile an jedem sichtbaren Eingabefeld: keine Kindernamen eintragen.
+// Nur für den Bildschirm; im Druck ausgeblendet (druck.css, Klasse kwp-hinweis).
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const kinderHinweis = (id) => el('span', {
+  class: 'kwp-hinweis',
+  id,
+  style: 'display:block;font-weight:400;font-size:0.85rem;color:#4b5563;margin:0.25rem 0 0',
+}, KINDER_HINWEIS);
 
 function auswahlFeld(beschriftung, optionen, wert, beiWahl) {
   const select = el('select', { style: eingabeStil });
@@ -54,6 +62,7 @@ function kopfKarte(plan) {
     type: 'text', maxlength: '60', value: plan.woche,
     placeholder: 'z. B. KW 29 · Igelgruppe', style: eingabeStil,
     'aria-label': 'Überschrift für Woche und Gruppe',
+    'aria-describedby': 'kwp-hinweis-woche',
   });
   wocheFeld.addEventListener('change', () => {
     const p = ladePlan();
@@ -62,20 +71,23 @@ function kopfKarte(plan) {
   });
   return el('section', { class: 'k-karte kwp-nur-bildschirm' },
     el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🗓️ Woche & Gruppe'),
-    wocheFeld,
+    kinderHinweis('kwp-hinweis-woche'), wocheFeld,
     el('p', { style: 'font-size:0.85rem;color:#4b5563;margin:0.5rem 0 0' },
-      'Erscheint als Überschrift auf dem Aushang. Bitte keine Kindernamen - der Plan beschreibt Angebote, nicht Kinder.'));
+      'Erscheint als Überschrift auf dem Aushang. Der Plan beschreibt Angebote, nicht Kinder.'));
 }
 
 function formularKarte() {
   const dauerFeld = el('input', {
+    id: 'kwp-dauer',
     type: 'number', min: '5', max: '120', step: '5', value: entwurf.dauer,
-    inputmode: 'numeric', style: eingabeStil, 'aria-label': 'Dauer in Minuten',
+    inputmode: 'numeric', style: eingabeStil, 'aria-describedby': 'kwp-hinweis-dauer',
   });
   dauerFeld.addEventListener('input', () => { entwurf.dauer = dauerFeld.value; });
   const titelFeld = el('input', {
+    id: 'kwp-titel',
     type: 'text', maxlength: '60', value: entwurf.titel,
     placeholder: 'z. B. Klanggeschichte „Regenwetter“', style: eingabeStil,
+    'aria-describedby': 'kwp-hinweis-titel',
   });
   titelFeld.addEventListener('input', () => { entwurf.titel = titelFeld.value; });
   const beispiel = () => bereichVon(entwurf.bereich)?.beispiele ?? '';
@@ -88,8 +100,12 @@ function formularKarte() {
       (w) => { entwurf.bereich = w; beispielZeile.textContent = `💡 Ideen: ${beispiel()}`; }),
     auswahlFeld('Altersgruppe', daten.altersgruppen.map((g) => [g.id, `${g.name} (Empfehlung: bis ~${g.maxMinutenProAngebot} min, ${g.maxAngeboteProWoche} pro Woche)`]), entwurf.alter,
       (w) => { entwurf.alter = w; }),
-    el('label', { style: feldStil }, 'Dauer in Minuten', dauerFeld),
-    el('label', { style: feldStil }, 'Titel des Angebots (optional)', titelFeld),
+    el('div', { style: feldStil },
+      el('label', { for: 'kwp-dauer', style: 'display:block' }, 'Dauer in Minuten'),
+      kinderHinweis('kwp-hinweis-dauer'), dauerFeld),
+    el('div', { style: feldStil },
+      el('label', { for: 'kwp-titel', style: 'display:block' }, 'Titel des Angebots (optional)'),
+      kinderHinweis('kwp-hinweis-titel'), titelFeld),
     beispielZeile,
     el('div', { class: 'k-antworten' },
       el('button', {

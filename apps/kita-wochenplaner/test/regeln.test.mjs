@@ -90,7 +90,36 @@ test('Eingaben nur im Planungsbereich für Fachkräfte: Wochenname, Angebot, Dat
   assert.equal((code.app.match(/el\('select'/g) ?? []).length, 1, 'eine Auswahl erwartet (über auswahlFeld)');
   assert.ok(!/el\(\s*'(textarea)'/.test(code.app), 'app.mjs erzeugt ein Textfeld');
   assert.ok(!/<input|<textarea|<select/i.test(roh.index), 'index.html enthält ein Eingabefeld');
-  assert.match(code.app, /Bitte keine Kindernamen/, 'Hinweis gegen Kindernamen fehlt');
+  assert.match(code.app, /const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben\.';/, 'Hinweis gegen Kindernamen fehlt');
+});
+
+test('Eingabefelder: jedes sichtbare Eingabefeld hat direkt davor die Hinweiszeile „Keine Namen von Kindern eingeben.“; im Druck ausgeblendet', () => {
+  const sichtbar = [...code.app.matchAll(/const (\w+) = el\('input', \{[^}]*\}\);/g)]
+    .filter((m) => !m[0].includes('display:none'))
+    .map((m) => m[1]);
+  assert.deepEqual(sichtbar, ['wocheFeld', 'dauerFeld', 'titelFeld'], 'Woche/Gruppe, Dauer und Titel sind die sichtbaren Eingabefelder');
+  for (const feld of sichtbar) {
+    assert.match(code.app, new RegExp(`kinderHinweis\\([^)]*\\), ${feld}[,)]`), `${feld} hat keine Hinweiszeile direkt davor`);
+  }
+  assert.match(roh.druck, /@media\s+print\s*\{[\s\S]*\.kwp-hinweis\s*\{\s*display:\s*none\s*!important;?\s*\}/, 'Hinweiszeile wird im Druck nicht ausgeblendet');
+});
+
+test('Eingabefelder: jedes sichtbare Eingabefeld verweist per aria-describedby auf einen Hinweis; ohne aria-label steht der Feldname im eigenen label; Hinweis-ids sind eindeutig', () => {
+  const sichtbar = [...code.app.matchAll(/const (\w+) = el\('input', \{[^}]*\}\);/g)]
+    .filter((m) => !m[0].includes('display:none'));
+  assert.ok(sichtbar.length > 0, 'kein sichtbares Eingabefeld gefunden');
+  for (const [definition, feld] of sichtbar.map((m) => [m[0], m[1]])) {
+    const bezug = definition.match(/'aria-describedby': '([^']+)'/);
+    assert.ok(bezug, `${feld} hat kein aria-describedby`);
+    assert.match(code.app, new RegExp(`kinderHinweis\\('${bezug[1]}'\\)`), `${feld} verweist auf „${bezug[1]}“, dafür gibt es keinen Hinweis`);
+    if (!definition.includes("'aria-label'")) {
+      const kennung = definition.match(/\bid: '([^']+)'/);
+      assert.ok(kennung, `${feld} hat weder aria-label noch id`);
+      assert.match(code.app, new RegExp(`el\\('label', \\{ for: '${kennung[1]}'`), `${feld} hat kein label mit for="${kennung[1]}"`);
+    }
+  }
+  const hinweisIds = [...code.app.matchAll(/kinderHinweis\('([^']+)'\)/g)].map((m) => m[1]);
+  assert.equal(new Set(hinweisIds).size, hinweisIds.length, 'doppelte Hinweis-id');
 });
 
 test('keine Kontaktdaten im Quelltext: keine Mailadresse, keine Telefonnummer, keine Postleitzahl', () => {
