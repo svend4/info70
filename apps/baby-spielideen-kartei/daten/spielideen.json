@@ -1,0 +1,202 @@
+{
+  "titel": "Spielideen-Kartei: Was kann mein Baby mit...?",
+  "zielgruppe": "Für Eltern und Fachkräfte. Altersgruppe 0 bis 1 Jahr. Die Karten sind für Erwachsene; das Baby braucht dafür keinen Bildschirm.",
+  "katalog": "Katalogeintrag docs/10, Content-Pack 2. Titel beibehalten.",
+  "quellenHinweis": "Quelle: Praleska, Programm der Vorschulerziehung (Titel übertragen, Eigenentwurf). Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Abschnitt „Erkenntnis-praktische Tätigkeit“ (Übertragung, Eigenentwurf), S. 39 bis 41.",
+  "sprachen": "Deutsch (de). Die Quelle ist russischsprachig; die deutschen Fassungen sind Eigenentwurf. uk und ru: nicht vorhanden, offen.",
+  "listenHinweis": "Die Quelle setzt hinter die Aufzählung der Handlungen „и т. д.“ (S. 40). Die Liste ist deshalb nicht abschließend.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "sicherheitssatz": "Kleine Teile nur mit Erwachsenen; Gegenstände vor jeder Nutzung prüfen (Eigenentwurf).",
+  "gegenstaende": [
+    { "id": "pyramide", "name": "Pyramide", "quelltext": "пирамидки", "seite": "S. 40" },
+    { "id": "wuerfel", "name": "Würfel", "quelltext": "кубики", "seite": "S. 40" },
+    { "id": "kreisel", "name": "Kreisel", "quelltext": "юлу", "seite": "S. 40" },
+    { "id": "ball", "name": "Ball", "quelltext": "мяч", "seite": "S. 40" },
+    { "id": "holzfass", "name": "Holzfass", "quelltext": "бочонок", "seite": "S. 40" },
+    { "id": "holzei", "name": "Holzei", "quelltext": "деревянным яйцом", "seite": "S. 40" },
+    { "id": "pilz", "name": "Pilz", "quelltext": "грибком", "seite": "S. 40" },
+    { "id": "spielwagen", "name": "Spielwagen", "quelltext": "коляску", "seite": "S. 41" }
+  ],
+  "karten": [
+    {
+      "id": "festhalten",
+      "handlung": "Festhalten",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "удержать", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [
+        { "id": "wuerfel", "seite": "S. 40" },
+        { "id": "ball", "seite": "S. 40" }
+      ],
+      "spielidee": "Ein Erwachsener legt dem Baby einen Gegenstand in die Hand. Das Baby hält ihn, so lange es mag. Der Erwachsene bleibt in Reichweite."
+    },
+    {
+      "id": "schwenken",
+      "handlung": "Schwenken",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "махать", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Ein Erwachsener bewegt einen leichten Gegenstand langsam vor dem Baby hin und her. Das Baby schaut zu und darf danach selbst greifen."
+    },
+    {
+      "id": "in-den-mund-nehmen",
+      "handlung": "In den Mund nehmen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "отправить в рот", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene hält einen Gegenstand bereit, das Baby führt ihn zum Mund. Danach nimmt der Erwachsene ihn wieder ab."
+    },
+    {
+      "id": "betasten",
+      "handlung": "Betasten",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "потрогать", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene legt nacheinander verschiedene Gegenstände in die Hände des Babys. Das Baby betastet jeden einzeln, der Erwachsene schaut zu."
+    },
+    {
+      "id": "schuetteln",
+      "handlung": "Schütteln",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "потрясти", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene reicht einen Gegenstand, der beim Schütteln ein Geräusch macht. Das Baby schüttelt ihn, der Erwachsene hört mit."
+    },
+    {
+      "id": "von-hand-zu-hand",
+      "handlung": "Von einer Hand in die andere legen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "перекладывание игрушки из руки в руку", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene gibt dem Baby einen Gegenstand in eine Hand. Das Baby nimmt ihn in die andere Hand und wechselt hin und her."
+    },
+    {
+      "id": "klopfen",
+      "handlung": "Auf eine Fläche klopfen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "постукивание о поверхность", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Das Baby hält einen festen Gegenstand und klopft ihn auf eine stabile Unterlage, zum Beispiel auf den Boden oder einen Tisch. Der Erwachsene sitzt daneben."
+    },
+    {
+      "id": "aufreihen",
+      "handlung": "Aufreihen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "нанизывание", "seite": "S. 40", "liste": true },
+        { "quelltext": "кольца пирамидки нанизывает на стержень", "seite": "S. 40", "liste": true, "deutsch": "auf einen Stab aufreihen" }
+      ],
+      "gegenstaende": [
+        { "id": "pyramide", "seite": "S. 40" }
+      ],
+      "spielidee": "Der Erwachsene hält den Stab der Pyramide. Das Baby schiebt die Ringe einzeln auf den Stab und zieht sie wieder ab. Der Erwachsene hilft, wenn das Baby es möchte."
+    },
+    {
+      "id": "einlegen",
+      "handlung": "Einlegen und Ineinanderstecken",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "вкладывание", "seite": "S. 40", "liste": true, "deutsch": "Einlegen, Ineinanderstecken" }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene zeigt, wie ein kleiner Gegenstand in einen größeren gelegt wird. Das Baby legt Gegenstände ineinander und nimmt sie wieder heraus."
+    },
+    {
+      "id": "oeffnen",
+      "handlung": "Öffnen und Schließen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "открывание", "seite": "S. 40", "liste": true },
+        { "quelltext": "открывать и закрывать", "seite": "S. 40", "deutsch": "öffnen und schließen" }
+      ],
+      "gegenstaende": [
+        { "id": "holzfass", "seite": "S. 40" },
+        { "id": "holzei", "seite": "S. 40" },
+        { "id": "pilz", "seite": "S. 40" }
+      ],
+      "spielidee": "Das Baby öffnet und schließt das Holzfass. Danach darf es dasselbe mit einem anderen Holzfass, einem Holzei oder einem Pilz versuchen."
+    },
+    {
+      "id": "zusammendruecken",
+      "handlung": "Zusammendrücken",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "сжимание", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene gibt einen weichen Gegenstand. Das Baby drückt ihn zusammen und lässt ihn wieder los. Danach prüft der Erwachsene, ob er unbeschädigt ist."
+    },
+    {
+      "id": "auseinandernehmen",
+      "handlung": "Auseinandernehmen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "разъединение", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene gibt einen Gegenstand aus zwei Teilen, die sich lösen lassen. Das Baby trennt die Teile, der Erwachsene setzt sie danach wieder zusammen."
+    },
+    {
+      "id": "drehen",
+      "handlung": "Drehen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "скручивание", "seite": "S. 40", "liste": true }
+      ],
+      "gegenstaende": [],
+      "spielidee": "Der Erwachsene gibt einen Gegenstand mit einem drehbaren Teil. Das Baby dreht den Teil hin und her. Der Erwachsene achtet darauf, dass dabei nichts abbricht."
+    },
+    {
+      "id": "aufeinanderlegen",
+      "handlung": "Aufeinanderlegen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "кубики накладывает один на другой", "seite": "S. 40", "liste": true, "deutsch": "aufeinanderlegen" },
+        { "quelltext": "строит дом", "seite": "S. 40", "deutsch": "Haus bauen" },
+        { "quelltext": "строить башню", "seite": "S. 41", "deutsch": "Turm bauen", "verweis": true }
+      ],
+      "gegenstaende": [
+        { "id": "wuerfel", "seite": "S. 40" }
+      ],
+      "spielidee": "Der Erwachsene legt einen Würfel auf den anderen und zeigt es. Das Baby legt Würfel aufeinander, solange es mag. Der Erwachsene bleibt in der Nähe."
+    },
+    {
+      "id": "anwerfen",
+      "handlung": "Anwerfen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "юлу — «заводит»", "seite": "S. 40", "liste": true, "deutsch": "anwerfen, in Gang setzen" }
+      ],
+      "gegenstaende": [
+        { "id": "kreisel", "seite": "S. 40" }
+      ],
+      "spielidee": "Der Erwachsene dreht den Kreisel an und zeigt, wie er sich dreht. Das Baby schaut zu und darf danach mit Hilfe des Erwachsenen selbst anwerfen."
+    },
+    {
+      "id": "rollen",
+      "handlung": "Auf dem Boden rollen",
+      "quelle": "Praleska, S. 40",
+      "begriffe": [
+        { "quelltext": "мяч — катает по полу", "seite": "S. 40", "liste": true, "deutsch": "auf dem Boden rollen" }
+      ],
+      "gegenstaende": [
+        { "id": "ball", "seite": "S. 40" },
+        { "id": "spielwagen", "seite": "S. 41" }
+      ],
+      "spielidee": "Der Erwachsene rollt den Ball zum Baby, das Baby rollt ihn zurück. Mit dem Spielwagen geht es genauso."
+    }
+  ]
+}

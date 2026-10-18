@@ -1,0 +1,11 @@
+{
+  "name": "@info70/kindertaenze-europa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kindertänze Europas: Datenkarten zu Tänzen aus der Praleska, S. 267 (Gruppe „Фантазеры“, 5 bis 7 Jahre), zum Ausdrucken als A4-Blätter quer. Zielgruppe: Fachkräfte. Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

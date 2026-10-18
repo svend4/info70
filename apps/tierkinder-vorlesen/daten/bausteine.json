@@ -1,0 +1,117 @@
+{
+  "titel": "Tierkinder – Vorlesen",
+  "untertitel": "Vorlesetexte für Kinder von 3 bis 5 Jahren. Vorgelesen wird durch Erwachsene. Die Sätze sind Eigenentwurf.",
+  "hinweis": "Auf den Seiten 113 bis 114 der Quelle stehen Aufgaben für Erziehende, keine Geschichten. Die Quelle stellt ihre Inhalte auf S. 7 überwiegend als Aufgaben dar. Alle Sätze dieses Vorlesetextes sind neu geschrieben.",
+  "quelle": "Praleska. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Sachbezug: S. 113 bis 114.",
+  "katalog": "Katalogeintrag docs/10, Abschnitt Content-Pakete zu bestehenden Apps, Einheit Content-Pack 5.",
+  "sprachen": "uk und ru: nicht vorhanden, offen.",
+  "tierarten": [
+    {
+      "id": "fuchs",
+      "name": "Fuchs",
+      "seite": "S. 113–114",
+      "begriff": "лиса",
+      "orte": ["bau"],
+      "einleitung": "Heute hören wir von Fuchs-Eltern und ihren Kleinen."
+    },
+    {
+      "id": "wolf",
+      "name": "Wolf",
+      "seite": "S. 113–114",
+      "begriff": "волк",
+      "orte": ["bau"],
+      "einleitung": "Heute hören wir von Wolfs-Eltern und ihren Kleinen."
+    },
+    {
+      "id": "baer",
+      "name": "Bär",
+      "seite": "S. 114",
+      "begriff": "медведь",
+      "orte": ["hoehle"],
+      "einleitung": "Heute hören wir von Bären-Eltern und ihren Kleinen."
+    },
+    {
+      "id": "vogel",
+      "name": "Vogel",
+      "seite": "S. 113–114",
+      "begriff": "птицы",
+      "orte": ["nest"],
+      "einleitung": "Heute hören wir von Vogel-Eltern und ihren Kleinen."
+    },
+    {
+      "id": "kuh",
+      "name": "Kuh",
+      "seite": "S. 113–114",
+      "begriff": "коровы",
+      "orte": ["stall"],
+      "einleitung": "Heute hören wir von Kühen und ihren Kälbern."
+    },
+    {
+      "id": "huhn",
+      "name": "Huhn",
+      "seite": "S. 114",
+      "begriff": "курятник",
+      "orte": ["stall"],
+      "einleitung": "Heute hören wir von Hühnern und ihren Küken."
+    }
+  ],
+  "orte": [
+    {
+      "id": "bau",
+      "name": "Bau",
+      "seite": "S. 114",
+      "begriff": "нора",
+      "text": "Für ihre Kleinen bauen die Eltern einen Bau unter der Erde."
+    },
+    {
+      "id": "hoehle",
+      "name": "Höhle",
+      "seite": "S. 114",
+      "begriff": "берлога",
+      "text": "Die Eltern bauen eine Höhle, in der die Kleinen geschützt sind."
+    },
+    {
+      "id": "nest",
+      "name": "Nest",
+      "seite": "S. 114",
+      "begriff": "гнезда",
+      "text": "Für ihre Kleinen bauen die Eltern ein Nest."
+    },
+    {
+      "id": "stall",
+      "name": "Stall",
+      "seite": "S. 114",
+      "begriff": "коровник, курятник",
+      "text": "Für Tiere, die bei den Menschen leben, baut der Mensch einen Stall."
+    }
+  ],
+  "jungtiere": [
+    {
+      "id": "eltern",
+      "name": "Eltern sorgen",
+      "seite": "S. 114",
+      "begriff": "согревают и защищают",
+      "text": "Die Eltern wärmen ihre Kleinen und passen auf sie auf. Sie beschützen sie."
+    },
+    {
+      "id": "fruehling",
+      "name": "Frühling und Sommer",
+      "seite": "S. 114",
+      "begriff": "весной и летом",
+      "text": "Die Kleinen kommen im Frühling und im Sommer. Dann gibt es genug zu essen, und die Kleinen können groß werden, bevor der Winter kommt."
+    },
+    {
+      "id": "wachsen",
+      "name": "Groß werden",
+      "seite": "S. 114",
+      "begriff": "вырастают",
+      "text": "Die kleinen Tiere werden groß. Später bekommen sie selbst Nachwuchs."
+    }
+  ],
+  "schluss": {
+    "text": "Das war der Text für heute. Gute Nacht, ihr kleinen Tiere."
+  },
+  "sachfrage": {
+    "text": "Kannst du mit dem Finger zeigen, wo die Kleinen wohnen?"
+  }
+}

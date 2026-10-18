@@ -1,0 +1,64 @@
+/* Tierkinder – Vorlesen: Bildschirm und Druck.
+   Auf dem Bildschirm steuert die Auswahl den Vorlesetext. Gedruckt wird nur dieser
+   eine Text auf ein Blatt A4 hoch. Kopf, Auswahl und Fuß des Bildschirms verschwinden
+   (.bsl-nur-bildschirm). Keine Zeichen, Kästchen oder Namenszeile. */
+
+.bsl-knopfreihe { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.6rem; }
+.bsl-steuertitel { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.4rem; color: var(--k-blau-dunkel); }
+.bsl-schritt { font-weight: 600; margin: 0.6rem 0 0.3rem; }
+.bsl-hinweis { font-size: 0.95rem; color: #4b5563; margin: 0; }
+.bsl-zaehler { font-size: 0.95rem; margin: 0.4rem 0 0; }
+.bsl-druckbereich { display: flex; flex-direction: column; gap: 0.9rem; }
+.bsl-nur-druck { display: none; }
+.bsl-bezeichnung { font-weight: 600; margin: 0; }
+.bsl-absatz { margin: 0; }
+.bsl-text { font-size: 1.25rem; line-height: 1.5; margin: 0 0 0.2rem; }
+.bsl-kennzeichnung { font-size: 0.85rem; color: #4b5563; margin: 0; }
+.bsl-fuss { font-size: 0.85rem; color: #4b5563; margin: 0.6rem 0 0; }
+.bsl-fuss p { margin: 0 0 0.3rem; }
+.bsl-pflicht { font-weight: 600; }
+
+/* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um. */
+h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
+/* Link im Fuß: mindestens 44 px hoch und 8 px seitlich Abstand. */
+.bsl-fusslink { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; }
+
+@media print {
+  @page { size: A4 portrait; margin: 18mm 20mm; }
+  .bsl-nur-bildschirm { display: none !important; }
+  .bsl-nur-druck { display: block !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0;
+    display: block;
+  }
+
+  /* Ein Text, ein Blatt: der Druckbereich wird nicht zerrissen. */
+  .bsl-druckbereich { display: block; gap: 0; break-inside: avoid; }
+
+  .bsl-druckkopf {
+    font-size: 22pt;
+    color: #000;
+    margin: 0 0 6pt;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #000;
+  }
+  .bsl-bezeichnung { font-size: 12pt; margin: 0 0 14pt; }
+  .bsl-absatz { margin: 0 0 12pt; break-inside: avoid; }
+  .bsl-text { font-size: 16pt; line-height: 1.45; color: #000; margin: 0 0 3pt; }
+  .bsl-kennzeichnung { font-size: 10pt; color: #000; margin: 0; }
+  .bsl-fuss {
+    font-size: 9.5pt;
+    color: #000;
+    margin-top: 16pt;
+    padding-top: 6pt;
+    border-top: 0.75pt solid #000;
+    break-inside: avoid;
+  }
+}

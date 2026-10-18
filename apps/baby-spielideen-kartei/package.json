@@ -1,0 +1,11 @@
+{
+  "name": "@info70/baby-spielideen-kartei",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Spielideen-Kartei: Was kann mein Baby mit...? 16 Handlungen aus der Praleska, S. 40 und 41, mit Filter nach Gegenstand und Handlung und Druck je Karte ein Blatt A4 hoch. Zielgruppe: Eltern und Fachkräfte, Altersgruppe 0 bis 1 Jahr. Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

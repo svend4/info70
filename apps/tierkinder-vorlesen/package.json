@@ -1,0 +1,11 @@
+{
+  "name": "@info70/tierkinder-vorlesen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tierkinder – Vorlesen: Vorlesetexte für Erwachsene (3 bis 5 Jahre) aus festen eigenen Bausteinen zu Tierart, Ort und Jungtier-Thema. Quelle Praleska, S. 113 bis 114. Zum Ausdrucken, offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}
