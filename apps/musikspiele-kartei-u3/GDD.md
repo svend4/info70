@@ -45,9 +45,11 @@ gesetzt, weil `\b` in JavaScript bei kyrillischen Buchstaben nicht greift.
 
 ## Prüfung
 
-- 17 Tests in `test/logik.test.mjs`: Gattungen und Seiten, Titel ohne Autorenangabe, kein Feld für
-  Dauer, Gruppengröße oder Ort, keine Summe, Filter und die Abweisung fehlerhafter Daten.
-- Browser bei 360 px: dreizehn Karten, Filter, Druck, Knöpfe mindestens 44 px, keine externen
+- Insgesamt 38 Tests: 17 Logik-Tests in `test/logik.test.mjs` (Gattungen und Seiten, Titel ohne
+  Autorenangabe, kein Feld für Dauer, Gruppengröße oder Ort, keine Summe, Filter und die Abweisung
+  fehlerhafter Daten) und 21 Prüf-Tests in `test/regeln.test.mjs` (Druckregeln, Eingabe, Speicher,
+  Netz, Knopfhöhe, Fokus).
+- Browser bei 360 px: dreizehn Karten, Filter, Druck, Knöpfe mindestens 48 px, keine externen
   Anfragen.
 
 ## Offen
@@ -56,3 +58,5 @@ gesetzt, weil `\b` in JavaScript bei kyrillischen Buchstaben nicht greift.
   steht aus und wäre eine eigene Prüfung.
 - Ob die deutschen Kinderlieder des Katalogs gemeinfrei sind, ist nicht geprüft. Bis dahin
   bleiben sie draußen.
+- Die Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ steht auf dem Bildschirm dort, wo Seitenangaben stehen. Das Druckblatt trägt keine Seitenangabe.
+- uk und ru: nicht vorhanden, offen.

@@ -4,5 +4,8 @@
   "private": true,
   "description": "Musikspiele-Kartei für Kinder von 1 bis 3 Jahren: dreizehn Spielgattungen aus dem Musikabschnitt der Praleska-Quelle (S. 81–86) mit Titeln und Seiten, ohne Texte und Noten. Keine Gesamtzahl und kein Filter nach Dauer, Gruppengröße oder Ort, weil die Quelle diese Angaben nicht macht. Eigenentwurf der Formulierung. Zum Drucken, offline.",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
 }

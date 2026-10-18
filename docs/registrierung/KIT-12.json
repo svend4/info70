@@ -1,0 +1,12 @@
+{
+  "id": "KIT-12",
+  "slug": "musikspiele-kartei-u3",
+  "titel": "Musikspiele-Kartei U3",
+  "status_neu": "ausgebaut",
+  "app": "musikspiele-kartei-u3",
+  "tests_app": 38,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/musikspiele-kartei-u3/\">🎵 Musikspiele U3 – dreizehn Spielgattungen aus der Quelle mit Titel und Seite, zum Drucken (Fachkräfte)</a>",
+  "readme_zeile": "| `musikspiele-kartei-u3` | Für Fachkräfte mit Kindern von 1–3: dreizehn Spielgattungen aus der Quelle (S. 81–86) mit Titeln und Seiten, eine Karte je Blatt; keine Gesamtzahl, kein Filter nach Dauer, Gruppengröße oder Ort | kat.№78 |",
+  "docs10_notiz": "KIT-12 ausgebaut: Musikspiele-Kartei U3 mit dreizehn Gattungen aus S. 81–86, Titeln mit Seite, Druck eine Karte je Blatt ohne Seitenangaben, 38 Tests.",
+  "katalog_korrektur": "Keine Gesamtzahl: „ca. 50“, „46“ und „9“ im Eintrag hängen an einer Zählregel; die Listen enden mit „и др.“. Filter nach Dauer, Gruppengröße und Ort gibt die Quelle bei den Spielen nicht. Ausgebaut als musikspiele-kartei-u3 mit dreizehn Gattungen aus S. 81–86; Druck ohne Seitenangaben, eine Karte je Blatt. Deutsche Titel und Kinderlieder bleiben offen."
+}

@@ -1,10 +1,14 @@
-/* Karteikarten je Gattung. Kein Haken, kein Name, kein Stern (docs/02). Auf dem Bildschirm
+/* Karteikarten je Gattung. Kein Haken, kein Name, keine Auszeichnung (docs/02). Auf dem Bildschirm
    sind die Druckregeln versteckt. */
 .mk-nur-druck { display: none; }
 .mk-kartentitel { font-size: 1.15rem; margin: 0 0 0.3rem; }
 .mk-quelle { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
 .mk-alter { font-weight: 600; margin: 0.3rem 0; }
 .mk-liste { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
+.k-fuss a { display: inline-block; min-height: 48px; line-height: 48px; }
+
+@page { size: A4 portrait; margin: 12mm; }
 
 @media print {
   .mk-nur-bildschirm { display: none !important; }
@@ -14,9 +18,11 @@
   .mk-karte {
     break-inside: avoid;
     page-break-inside: avoid;
+    break-after: page;
+    page-break-after: always;
     border: 1pt solid #333;
     border-radius: 0;
-    margin: 0 0 6mm;
+    margin: 0;
     padding: 4mm;
     box-shadow: none;
   }

@@ -4,6 +4,8 @@ Kartei für Fachkräfte mit Kindern von 1 bis 3 Jahren. Sie gliedert die Musiksp
 Gattungen, die die Überschriften und Aufgaben der Praleska-Quelle zusammenfassen (S. 81–86), und zeigt je Gattung das Prinzip,
 die Seite und einige Titel als Beispiele.
 
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
 ## Was an der Quelle geprüft ist
 
 Der Katalogeintrag (Nr. 78) hatte drei Angaben, die der Text so nicht trägt. Die Gattungsnamen sind eine Zusammenfassung der Überschriften und Aufgaben der Quelle, keine Liste ihrer Überschriften:
@@ -23,11 +25,13 @@ Musikinstrumente (S. 86). Die Titel stehen dort mit Seite; Texte und Noten stehe
 ## So funktioniert es
 
 - Ein Knopf je Gattung zeigt die Karte. Ohne Auswahl sieht man alle dreizehn.
-- Jede Karte nennt die Seite der Quelle und, wo die Quelle es sagt, das Alter (zum Beispiel die
-  Melodie aus Frage und Antwort für das dritte Lebensjahr, S. 81).
+- Auf dem Bildschirm nennt jede Karte die Seite der Quelle und, wo die Quelle es sagt, das Alter
+  (zum Beispiel die Melodie aus Frage und Antwort für das dritte Lebensjahr). Wo die Quelle kein
+  Alter nennt, steht „nicht angegeben (Eigenentwurf)“.
 - Die Titel sind russische oder belarussische Originaltitel. Autoren- und Notenangaben aus den
   Listen werden nicht übernommen; eine Prüfung weist sie ab.
-- „Diese Karten drucken“ druckt nur die gewählte Auswahl.
+- „Diese Karten drucken“ druckt nur die gewählte Auswahl, eine Karte je Blatt A4 hoch, ohne
+  Seitenangaben. Auf dem Blatt stehen Gattung, Prinzip (Eigenentwurf), Titel aus der Quelle und das Alter.
 - Die App speichert nichts und stellt keine Verbindung nach außen her.
 
 ## Grenzen – ehrlich
@@ -41,12 +45,15 @@ Musikinstrumente (S. 86). Die Titel stehen dort mit Seite; Texte und Noten stehe
 
 ## Prüfung
 
-- `node --test apps/musikspiele-kartei-u3/test/*.mjs` – 17 Tests: dreizehn Gattungen mit Seite
-  81–86, Titel mit Seite und ohne Autorenangabe, kein Feld für Dauer, Gruppengröße oder Ort,
-  keine Summe im Text, Filter nach Gattung, und Gegenproben: ein Dauerfeld, ein Autor im Titel,
-  eine Zählung im Prinzip, ein Beispiel ohne Seite und zu wenige Gattungen werden abgewiesen.
+- `npm test` im Ordner der App (oder `node --test apps/musikspiele-kartei-u3/test/*.mjs`): 38 Tests,
+  davon 17 Logik-Tests und 21 Prüf-Tests. Logik: dreizehn Gattungen mit Seite 81–86, Titel mit Seite
+  und ohne Autorenangabe, kein Feld für Dauer, Gruppengröße oder Ort, keine Summe im Text, Filter nach
+  Gattung, und Gegenproben: ein Dauerfeld, ein Autor im Titel, eine Zählung im Prinzip, ein Beispiel
+  ohne Seite und zu wenige Gattungen werden abgewiesen. Prüf-Tests: keine Eingabe, keine Speicherung,
+  keine Netzaufrufe, Druck ohne Zeichen, Namenszeile und Seitenangabe, Knöpfe und Fußlink mindestens
+  48 px, Fokus nach dem Filtern.
 - Browser bei 360 px: dreizehn Karten am Anfang, Filter, Druck nur mit den Karten, Knöpfe mindestens
-  44 px, kein Überlauf, keine externen Anfragen. Die einzige Konsolenmeldung ist das `favicon.ico`.
+  48 px, kein Überlauf, keine externen Anfragen. Die einzige Konsolenmeldung ist das `favicon.ico`.
 
 ## Starten
 

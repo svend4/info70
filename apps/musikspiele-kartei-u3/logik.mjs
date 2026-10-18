@@ -22,7 +22,7 @@
 // Die Quelle nennt diese Angaben bei den einzelnen Spielen nicht. Das Feld gibt
 // es deshalb nicht.
 //
-// Politik docs/02: keine externen Anfragen, KEIN localStorage.
+// Politik docs/02: keine externen Anfragen, keine Speicherung.
 
 /** Erlaubte Schlüssel einer Gattung. Keine Dauer, keine Gruppengröße, kein Ort. */
 export const GATTUNG_SCHLUESSEL = Object.freeze(['id', 'gattung', 'quelle', 'prinzip', 'beispiele', 'altersHinweis']);
@@ -35,7 +35,7 @@ const VERBOTENE_FELDER = Object.freeze(['dauer', 'gruppe', 'gruppengroesse', 'or
  * die Grenze davor ist „kein Buchstabe“, weil \b für Kyrillisch nicht greift.
  */
 const AUTOREN = /(^|[^\p{L}])(муз|сл|обр)\./iu;
-/** Eine Summe oder Zählung. „ca.“ endet auf einen Punkt, daher kein \b dahinter. */
+/** Eine Summe oder Zählung. „ca.“ endet mit einem Schlusszeichen, daher kein \b dahinter. */
 const SUMMEN_TEXT = /(^|[^\p{L}])(ca\.|rund|insgesamt|gesamt)\s*\d+|\d+\s+(Spielprinzipien|Spielformen|Inszenierungsformen|Reigen)\b/iu;
 
 const nichtLeer = (s) => typeof s === 'string' && s.trim().length > 0;
@@ -50,6 +50,13 @@ export function gattungFuer(daten, id) {
 export function kartenFuer(daten, { gattung = null } = {}) {
   return daten.gattungen.filter((g) => gattung === null || g.id === gattung);
 }
+
+/** Die festen Zeilen des Druckblatts. Keine Seitenangabe, kein Zeichen, keine Namenszeile. */
+export const DRUCK_KOPF = 'Prinzipien: Eigenentwurf. Titel stammen aus der Quelle; Texte und Noten stehen hier nicht.';
+/** Die Zeile unter dem Prinzip auf jeder gedruckten Karte. */
+export const DRUCK_KARTE_FUSS = 'Prinzip: Eigenentwurf. Titel: Quelle.';
+/** Das Alter, wenn die Quelle keines nennt. */
+export const ALTER_OHNE_ANGABE = 'nicht angegeben (Eigenentwurf)';
 
 /** Der Quellenhinweis einer Karte, in einem Satz. */
 export function quelleTextVon(gattung) {
