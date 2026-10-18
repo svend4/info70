@@ -11,19 +11,23 @@ Altersgruppe 1 bis 3 Jahre, offline nach dem Laden. Kein Bildschirm für Kinder 
 
 **Status: Ausbau (PRI-5).** Die Karten sind aus der Quelle belegt. Jede gedruckte Karte mit
 Seitenangabe trägt die Pflichtmarkierung. Die Prüfung im Browser ist maschinell in Chromium
-erfolgt (360 px, Druck je Auswahl); die Prüfung auf dem Gerät steht noch aus.
+erfolgt (360 px). Die Druckmessung mit Auswahl steht nicht im Standardlauf; die Prüfung auf dem
+Gerät steht noch aus.
 Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 
 ## Was belegt ist
 
 - Übungen und Maße aus der Praleska, S. 57 bis 60. Jede Karte nennt ihre Seite,
   jede Maßzeile ebenfalls.
-- Die Zahlen sind unverändert übernommen: Kriechen zwischen Schnüren (S. 58),
-  Stehleiter 1,2 m (S. 58), 1,5 m (S. 59), Gymnastikleiter 1,7 bis 2 m (S. 60),
+- Die Zahlen sind unverändert übernommen: Stehleiter 1,2 m (S. 58), 1,5 m (S. 59),
+  Gymnastikleiter 1,7 bis 2 m (S. 60),
   schiefe Ebene Höhe 10 bis 30 cm, Breite 15 bis 20 cm, Länge 150 bis 200 cm (S. 59),
   Zielwurf horizontal Ziel 50 cm, Abstand 50 bis 60 cm (S. 59), Zielwurf vertikal
   Ziel 50 bis 60 cm, Abstand 80 bis 100 cm, auf Augen- und Brusthöhe (S. 60),
-  Durchkriechen und Balancierweg (S. 60).
+- Kriechen zwischen Schnüren und Durchkriechen nennen keine Maße (S. 58 bis 60).
+  Diese Karten tragen deshalb keinen Abschnitt „Übungsmaß laut Quelle“, sondern die Zeile
+  „die Quelle nennt hier keine Maße“ mit Seite. Für den Balancierweg nennt die Quelle auf S. 59
+  eine Bahn (15–20 cm breit, 2–3 m lang); die Karte übernimmt keine Maße, die Frage ist offen.
 - Aufsicht (S. 57): das Kind nicht aus dem Blick der Erwachsenen lassen; potenziell
   gefährliche Gegenstände aus der Reichweite entfernen. Der Wortlaut ist übertragen
   und als Übertragung gekennzeichnet.
@@ -31,8 +35,9 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
   (Национальный институт образования), 2007, ISBN 978-985-465-244-3.
 
 Die Übungsnamen, die Durchführungen und der Wortlaut der Maßangaben sind
-Eigenentwurf. Jede Karte trägt diese Kennzeichnung. Jede Stationskarte trägt in der
-Fußzeile den Satz „Übungsmaß laut Quelle, keine Sicherheitsgrenze.“
+Eigenentwurf. Jede Karte trägt diese Kennzeichnung. Die vier Stationskarten mit Maßen
+(Klettern, schiefe Ebene, Zielwurf horizontal und vertikal) tragen in der Fußzeile den Satz
+„Übungsmaß laut Quelle, keine Sicherheitsgrenze.“ Die drei Karten ohne Maße tragen ihn nicht.
 
 ## Was nicht übernommen wurde
 
@@ -77,12 +82,13 @@ auf den Blättern erscheinen. Die App setzt selbst kein Datum und keine Adresse.
 
 ## Tests
 
-34 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Seiten, Zahlen, Ausgabe
+35 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Seiten, Zahlen, Ausgabe
 der Quelle, Kennzeichnung, Auswahl, Maßseiten (`pruefeMasse`) und Pflichtmarkierung
 (`pruefeMarkierung`). `test/regeln.test.mjs` prüft die Projektregeln:
 keine Eingabefelder, keine Speicherung, keine externen Adressen, keine Druckzeichen,
 keine Namenszeile, Modellnamen-Freiheit, aria-live auf `#app`, Fokus nach Klick,
-Pflichtmarkierung der Seitenangaben, Umbruch des Titels und Höhe des Fuß-Links, Testzahl.
+Pflichtmarkierung der Seitenangaben, Umbruch des Titels und Höhe des Fuß-Links, Testzahl
+und dem Widerspruch: keine Karte trägt zugleich „Übungsmaß laut Quelle“ und „keine Maße“.
 
 ```bash
 node --test apps/bewegungslandschaft-stationen/test/*.test.mjs

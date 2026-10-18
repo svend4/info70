@@ -12,6 +12,8 @@ import {
 const STATIONEN = daten.karten.filter((k) => k.art === 'station');
 const AUFSICHT = daten.karten.filter((k) => k.art === 'aufsicht');
 const ALLE_ZEILEN = (karte) => karte.abschnitte.flatMap((a) => a.zeilen);
+// Den Maßabschnitt hat nur, wer Maße aus der Quelle nennt; sonst steht dort die Zeile „keine Maße“.
+const MASSABSCHNITT = (karte) => karte.abschnitte.find((a) => a.ueberschrift === 'Übungsmaß laut Quelle');
 const QUELLE_FORMAT = /^Praleska, S\. (\d+)(?:–(\d+))?$/;
 
 // Gültige Seite: „S. n“ oder „S. n–m“, beides im Bereich 57 bis 60.
@@ -56,10 +58,15 @@ test('Quelle je Karte: „Praleska, S. n“ oder „S. n–m“, nur auf den Sei
   assert.ok(!/Einheit/.test(daten.katalog), 'Katalog: Einheitennummer ist nicht belegt');
 });
 
-test('jede Maßzeile trägt ihre Seite, im Bereich 57 bis 60', () => {
+test('jede Maßzeile trägt ihre Seite, im Bereich 57 bis 60; ohne Maße steht die Zeile „die Quelle nennt hier keine Maße“ mit Seite', () => {
   for (const k of STATIONEN) {
-    const maße = k.abschnitte.find((a) => a.ueberschrift === 'Übungsmaß laut Quelle');
-    assert.ok(maße, `${k.id}: Abschnitt „Übungsmaß laut Quelle“ fehlt`);
+    const maße = MASSABSCHNITT(k);
+    if (!maße) {
+      const hinweise = ALLE_ZEILEN(k).filter((z) => z.text.includes('die Quelle nennt hier keine Maße'));
+      assert.equal(hinweise.length, 1, `${k.id}: ohne Maßabschnitt fehlt die Zeile „die Quelle nennt hier keine Maße“`);
+      assert.ok(hinweise[0].seite && seitenImBereich(hinweise[0].seite), `${k.id}: Hinweiszeile ohne gültige Seite`);
+      continue;
+    }
     for (const z of maße.zeilen) {
       assert.ok(z.seite && seitenImBereich(z.seite), `${k.id}: Maßzeile ohne gültige Seite: ${z.text}`);
     }
@@ -145,13 +152,18 @@ test('zeileText hängt die Seite in Klammern an; ohne Seite bleibt der Text', ()
   assert.equal(zeileText({ text: 'Durchführung ohne Seite' }), 'Durchführung ohne Seite');
 });
 
-test('jede Stationskarte nennt Quelle, Übungsmaß und Durchführung; ihre Fußzeile sagt „keine Sicherheitsgrenze“; die Aufsicht die Hinweise', () => {
+test('jede Stationskarte nennt Quelle und Durchführung; mit Maßen trägt sie „Übungsmaß laut Quelle“ und den Fuß „keine Sicherheitsgrenze“, ohne Maße die Zeile „keine Maße“; die Aufsicht die Hinweise', () => {
   for (const k of STATIONEN) {
     const text = kartenText(k);
     assert.ok(text.includes(k.quelle), `${k.id}: Quelle fehlt`);
-    assert.ok(text.includes('Übungsmaß laut Quelle'), `${k.id}: Übungsmaß fehlt`);
     assert.ok(text.includes('Durchführung (Eigenentwurf)'), `${k.id}: Durchführung fehlt`);
-    assert.ok(k.fuss.startsWith('Übungsmaß laut Quelle, keine Sicherheitsgrenze.'), `${k.id}: Fußzeile ohne Sicherheitsgrenze-Satz`);
+    if (MASSABSCHNITT(k)) {
+      assert.ok(text.includes('Übungsmaß laut Quelle'), `${k.id}: Übungsmaß fehlt`);
+      assert.ok(k.fuss.startsWith('Übungsmaß laut Quelle, keine Sicherheitsgrenze.'), `${k.id}: Fußzeile ohne Sicherheitsgrenze-Satz`);
+    } else {
+      assert.ok(!text.includes('Übungsmaß laut Quelle'), `${k.id}: Übungsmaß-Fuß ohne Maßabschnitt`);
+      assert.ok(text.includes('die Quelle nennt hier keine Maße'), `${k.id}: Hinweis „keine Maße“ fehlt`);
+    }
   }
   assert.ok(kartenText(AUFSICHT[0]).includes('Hinweise laut Quelle'), 'Aufsicht: Hinweise fehlen');
 });

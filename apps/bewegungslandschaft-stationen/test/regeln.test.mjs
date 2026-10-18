@@ -150,6 +150,20 @@ test('keine Wörter der Bewertung (unsicher, Selbstwert, Risiko, Diagnose) in de
   }
 });
 
+test('Widerspruch aufgelöst: keine Karte trägt zugleich „Übungsmaß laut Quelle“ und „die Quelle nennt hier keine Maße“', () => {
+  const beideAussagen = (karte) => kartenText(karte).includes('Übungsmaß laut Quelle')
+    && kartenText(karte).includes('die Quelle nennt hier keine Maße');
+  for (const karte of daten.karten) {
+    assert.ok(!beideAussagen(karte), `${karte.id}: trägt „Übungsmaß laut Quelle“ und „die Quelle nennt hier keine Maße“ zugleich`);
+  }
+  // Gegenprobe: eine Karte mit beiden Aussagen wird gemeldet.
+  const probe = {
+    id: 'probe', titel: 'Probe', quelle: 'Praleska, S. 58', fuss: 'Eigenentwurf',
+    abschnitte: [{ ueberschrift: 'Übungsmaß laut Quelle', zeilen: [{ text: 'die Quelle nennt hier keine Maße', seite: 'S. 58' }] }],
+  };
+  assert.equal(beideAussagen(probe), true, 'Gegenprobe: der Widerspruch muss gefunden werden');
+});
+
 test('Testzahl: README und GDD nennen die Zahl der Tests, die in test/ tatsächlich stehen', async () => {
   const dateien = (await readdir(new URL('test/', APP))).filter((d) => d.endsWith('.test.mjs'));
   let echt = 0;

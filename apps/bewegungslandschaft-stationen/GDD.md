@@ -14,8 +14,8 @@ Maßangabe ihre Seite trägt.
 - Der Druck zeigt nur die gewählten Karten, je Karte ein Blatt A4 quer. Keine Zeichen,
   Kästchen, Punkte, Sterne oder Emojis; keine Namenszeile, kein Tages- oder Wochentagsfeld
   (docs/02 Z. 79–82).
-- Die Maßangaben sind Übungsmaße. Jede Karte sagt, dass sie keine Sicherheitsgrenzen sind:
-  die sieben Stationskarten in der Fußzeile („Übungsmaß laut Quelle, keine Sicherheitsgrenze.“),
+- Die Maßangaben sind Übungsmaße. Jede Karte mit Maßen sagt, dass sie keine Sicherheitsgrenzen sind:
+  die vier Stationskarten mit Maßen in der Fußzeile („Übungsmaß laut Quelle, keine Sicherheitsgrenze.“),
   die Aufsichtskarte im Eigenentwurf. Geräte, Höhen und Untergrund prüft der Träger (Aufsichtskarte).
 - Keine Eingabefelder und keine Speicherung (Projektregel, ohne docs/02-Zeile). Der Filter
   lebt nur in der geöffneten Seite.
@@ -25,6 +25,12 @@ Maßangabe ihre Seite trägt.
   Markierung „noch nicht von einem Menschen geprüft“. Die Prüfung steht in `pruefeMarkierung`.
 - Maßzahlen: `pruefeMasse` verlangt für jede Maßzahl mit Einheit eine Seite von 58 bis 60.
   Der Abgleich mit der Quelltextkopie (Workflow, zehn Maßzeilen) hat alle Zeilen als belegt geführt.
+- Widerspruch aufgelöst, nach dem Text der Quelle (S. 58 bis 60): Kriechen zwischen Schnüren und
+  Durchkriechen nennen keine Maße; für den Balancierweg ist die Frage offen (siehe „Offen“). Die drei
+  Karten haben deshalb keinen Abschnitt „Übungsmaß laut Quelle“ und keinen Fuß dazu; die Zeile
+  „die Quelle nennt hier keine Maße“ bleibt auf allen dreien. Klettern, schiefe Ebene, Zielwurf
+  horizontal und vertikal nennen Maße mit Seite. Test: „Widerspruch aufgelöst“ in
+  `test/regeln.test.mjs`.
 - Die Aufsicht ist eine eigene Karte mit den Hinweisen von S. 57 und nur mit ihnen.
 - Bewusst nicht übernommen: Aufbaupläne, Zeichnungen, das Wort „Tunnel“, DGUV-Verweise,
   Höchstwerte, der Querverweis auf einen Baukasten und die Angabe „auf 100 bis 125 cm“.
@@ -52,7 +58,7 @@ die Aufsichtskarte Aufsicht und Umgebung. Die Daten stehen in `daten/stationen.j
 S. Die Karten sind statisch und der Druck ist eine Druckansicht.
 
 ## 8. Tests
-34 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Zahlen gegen die
+35 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Zahlen gegen die
 Quellenseiten, die Ausgabe der Quelle, die Auswahl, die Pflichtmarkierung je Karte und die Projektregeln.
 Details in der README.
 
@@ -62,13 +68,12 @@ Details in der README.
 - Der Bezugspunkt von „auf 100 bis 125 cm“ (S. 60) ist unklar; die Angabe fehlt deshalb.
 - Die Aufsicht steht nur auf S. 57; weitere Aufsichtsregeln sind nicht belegt.
 - Die Übertragung der Wörter sollte eine Fachkraft gegenlesen (Eigenentwurf).
-- Auf den Karten Kriechen zwischen Schnüren, Durchkriechen und Balancierweg nennt die Quelle
-  keine Maße. Der Fuß sagt trotzdem „Übungsmaß laut Quelle“, weil es so vorgegeben ist.
-  Eine Fachkraft entscheidet, ob der Satz dort anders lauten soll.
+- Balancierweg: Die Quelle nennt auf S. 59 unter „Ходьба“ eine Bahn („по дорожке“) mit 15 bis
+  20 cm Breite und 2 bis 3 m Länge. Die Karte Balancierweg übernimmt sie nicht, weil die Quelle
+  sie nicht mit den Elementen des Balancierwegs verbindet (S. 60). Eine Fachkraft entscheidet, ob das so bleibt.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - Browser-Prüfung: maschinell in Chromium geprüft (360 px ohne horizontales Scrollen,
-  Fuß-Link und Knöpfe mindestens 48 px hoch, Fokus nach Klick, JSON-Import mit Typangabe,
-  Druck je Auswahl mit einer Seite je Karte und Pflichtmarkierung je Karte). Offen: Prüfung
-  auf dem Gerät und in weiteren Browsern.
-- Der Fuß „Übungsmaß laut Quelle“ auf den Karten ohne Maße (Kriechen, Durchkriechen, Balancierweg)
-  ist eine offene Wortlaut-Frage; die Einträge sind unverändert.
+  Fuß-Link und Knöpfe mindestens 48 px hoch, Fokus nach Klick, JSON-Import mit Typangabe).
+  Die Druckmessung mit Auswahl (eine Seite je Karte, Pflichtmarkierung je Karte) steht nicht im
+  Standardlauf; der Standardlauf druckt mit leerer Auswahl. Offen: Prüfung auf dem Gerät und in
+  weiteren Browsern.
