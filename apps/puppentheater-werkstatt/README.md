@@ -6,8 +6,8 @@ Bausteinen. „Neuer Vorschlag“ zieht neu; „Blatt drucken“ druckt den Vors
 
 Katalog: docs/10, Abschnitt „Контент-паки к существующим приложениям“ (Content-Packs), Eintrag
 „Puppentheater-Werkstatt (Content-Pack)“, Content-Pack 12. Titel beibehalten. Die App ist für
-Erwachsene; die Gruppe setzt den Auftrag um. Offline nach dem Laden, ohne Speicherung, ohne
-Verbindung nach draußen.
+Erwachsene; die Gruppe setzt den Auftrag um. Ohne Speicherung, ohne Verbindung nach draußen.
+Ein Neuladen ohne Netz ist nicht zugesichert: die App hat keinen Service Worker (F4).
 
 **Status: erster Stand.** Geprüft sind die Tests mit `node --test`. Eine Prüfung im Browser,
 bei 360 px Breite und auf dem Gerät steht noch aus.
