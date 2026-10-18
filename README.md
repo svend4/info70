@@ -321,6 +321,9 @@ Hilfe-Insel.
 | `bewegungslandschaft-stationen` | Для Fachkraft (1–3): станционные карточки с учебными размерами S. 58–60, без планов и без DGUV; не пределы безопасности | печатные №5 |
 | `werkstatt-karten-applikation` | Для Fachkraft (3–5): карточки Schneiden, Reißen, Kleben; Ziele S. 181; Collage für 3–5 als Ziel, Naturmaterial für 5–7 (S. 282–283); 25 Themen-Titel | печатные №17 |
 | `sport-schnupper-stationen` | Для Fachkraft (5–7): карточки игр и упражнений S. 229–230; без рангов и без Piktogramme; Eigenentwurf gekennzeichnet | печатные №18 |
+| `baby-spielideen-kartei` | Для родителей и Fachkraft (0–1): карточки действий из S. 40 (16), глоссарий исправлен; только немецкий; uk/ru не выдуманы | пакеты №2 |
+| `tierkinder-vorlesen` | Для Erwachsener (3–5): собственные тексты для чтения вслух из блоков (животное, место, детёныш), без ИИ и без имени ребёнка; только немецкий | пакеты №5 |
+| `kindertaenze-europa` | Для Fachkraft (5–7): datenpaket 22 танца, названия из S. 267, шаги — собственные тексты (Eigenentwurf); Sirtaki и Reigen не из Quelle | пакеты №11 |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
 метод «Eltern-Kompass») — ссылка «👪 Für Eltern» в подвале. Единая витрина —

@@ -351,6 +351,7 @@
   },
   {
    "titel": "Spielideen-Kartei: Was kann mein Baby mit...?",
+   "korrektur": "Bau Welle 92 (teilweise): 16 Druckkarten aus S. 40 (nur de); keine Entwicklungsschritte-Zahl; uk/ru offen. Seiten nur maschinell geprüft.",
    "typ": "content-pack",
    "alter": "Eltern von Kindern 0-1",
    "beschreibung": "Die 17 benannten Objekthandlungen (greifen, umlegen, klopfen, aufreihen, einfuellen, oeffnen, Turm bauen, Ball rollen...) plus 10 Entwicklungsschritte werden zu einer Spielideen-Kartei mit sicheren Alltagsgegenstaenden - digitaler Erwachsenen-Katalog plus Druckkarten.",
@@ -838,6 +839,7 @@
   },
   {
    "titel": "Tierkinder und ihre Familien (Geschichten-Pack)",
+   "korrektur": "Bau Welle 92 (teilweise): Vorlesetexte aus eigenen Bausteinen für 3–5; Tierarten aus S. 113–114; kein KI, kein Kindname; nur de. Seiten nur maschinell geprüft.",
    "typ": "content-pack",
    "alter": "3-5 (Ko-Nutzung, Vorlesen durch Erwachsene)",
    "beschreibung": "Vorlage-Set fuer den Geschichten-Generator: kurze Gute-Nacht-Geschichten ueber Tiereltern und ihre Jungen (Fuchsbau, Vogelnest, warum Tierkinder im Fruehling kommen), jeweils mit einer Kuschel-Sachfrage am Ende.",
@@ -1397,6 +1399,7 @@
   },
   {
    "titel": "Kindertaenze Europas",
+   "korrektur": "Bau Welle 92 (teilweise): Datenpaket mit Titeln aus S. 267; Sirtaki und Reigen nicht aufgenommen; Schritte als Eigenentwurf. Seiten nur maschinell geprüft.",
    "typ": "content-pack",
    "alter": "5-7 (Kita) / Familien",
    "engine": "Datenpaket fuer Kartei + Navigator",
