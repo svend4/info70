@@ -16,11 +16,14 @@ Dieser Ordner enthält je Einheit eine Arbeitsanweisung (Bauauftrag) nach `VORLA
   - Jedes Zitat „…“ (S. n) steht auf Seite n der Arbeitskopie.
   - Keine Modellnamen.
   - Jede Kennung im Index hat eine Datei.
-  - Das Skript braucht die Arbeitskopie der Pralęska. Sie liegt nicht im Repo (Entscheidung A10). Ohne sie bricht es mit Exit-Code 2 ab.
+  - Das Skript braucht die Textkopie der Pralęska. Die Datei `PRALESKA.pdf` liegt auf dem Branch `main` (Commit `c3deddf`); die Textkopie erzeugt `tools/quelle-holen.sh`. Ohne Kopie bricht das Skript mit Exit-Code 2 ab.
+- `tools/quelle-holen.sh <Ordner>`: liest `PRALESKA.pdf` aus `origin/main`, erzeugt `all.txt` mit Formfeed zwischen den Seiten und korrigiert die kyrillische Kodierung (Windows-1251). Ausgabe außerhalb des Repos; nichts wird committet.
 
 ## Regeln
 
-1. Ein Bauauftrag beschreibt, was gebaut werden soll. Er enthält keinen Text der Pralęska, nur Seitenangaben und Zitate bis 12 Wörter.
+0. Seitenzahlen beziehen sich auf die gedruckte Seite der PDF. Seite n ist Index n-1 nach dem Split an Formfeed.
+
+1. Ein Bauauftrag beschreibt, was gebaut werden soll. Er enthält keinen Satz aus der Pralęska. Erlaubt sind Seitenangaben, Begriffe und Titel (höchstens 6 Wörter) in Anführungszeichen. Grundlage: docs/10, Abschnitt „Правовая и этическая рамка адаптации“, Punkt 1.
 2. Alles, was nicht aus der Quelle stammt, ist mit „(Eigenentwurf)“ gekennzeichnet.
 3. Seitenangaben sind maschinell geprüft, nicht von Menschen. Die Pflichtmarkierung steht in Abschnitt 6 und in der App (A18, offen).
 4. Standard für neue Apps (Vorschlag, bis A18 entschieden ist): Seitenzahlen erscheinen nicht auf dem Druckblatt, nur in den Daten und in der Dokumentation.

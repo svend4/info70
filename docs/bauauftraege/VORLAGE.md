@@ -6,8 +6,9 @@ Blockiert durch: <keine | A7 quiz-kern | A18 | …>
 ## 1. Quelle
 
 - Praleska, S. <n> (<n–m>), Abschnitt „<Titel im Original>“, Gruppe „<Gruppenname>“.
-- Zitate (höchstens 12 Wörter, mit Seite):
-  - „<Zitat>“ (S. <n>)
+- Begriffe und Titel in Anführungszeichen, höchstens 6 Wörter, mit Seite:
+  - „<Begriff oder Titel>“ (S. <n>)
+- Keine ganzen Sätze aus dem Buch. Sätze werden mit Seitenangabe umschrieben (docs/10, „Правовая и этическая рамка“, Punkt 1: ни одного дословного текста).
 - Alles, was nicht aus der Quelle stammt, ist mit „(Eigenentwurf)“ gekennzeichnet.
 - Seitenangaben werden gegen die Arbeitskopie geprüft (`tools/bauauftrag-pruefen.mjs`). Ergebnis: <geprüft | nicht gefunden: …>.
 

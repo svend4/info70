@@ -1,4 +1,5 @@
 // Prüft die Bauaufträge in docs/bauauftraege/ gegen die Arbeitskopie der Pralęska.
+// Zitate sind Begriffe und Titel, höchstens 6 Wörter (docs/10, Rechtsrahmen Punkt 1).
 // Aufruf: node tools/bauauftrag-pruefen.mjs [Pfad-zu-all.txt]
 // Standard: die Arbeitskopie im Scratchpad (nicht im Repo). Ohne sie bricht das Skript ab.
 // Geprüft wird: Abschnitte der Vorlage vorhanden; jedes Zitat „…“ (S. n) steht auf Seite n;
@@ -52,6 +53,8 @@ for (const datei of dateien) {
   let geprueft = 0;
   for (const [, zitat, seiteText] of zitate) {
     const seite = Number(seiteText);
+    const woerter = zitat.trim().split(/\s+/).length;
+    if (woerter > 6) probleme.push(`Zitat zu lang (${woerter} Wörter, zulässig 6): „${zitat.slice(0, 50)}…“ (docs/10, Rechtsrahmen Punkt 1)`);
     if (seite < 1 || seite > seiten.length) {
       probleme.push(`Seite ${seite} außerhalb des Quelltextes (1–${seiten.length}): „${zitat.slice(0, 40)}…“`);
       continue;
