@@ -2,7 +2,7 @@
   "name": "@info70/fuehl-sortier-werkstatt",
   "version": "0.1.0",
   "private": true,
-  "description": "Fühl- und Sortier-Werkstatt: Holz, Papier, Stoff. Druckkarten nach Praleska, S. 52 und 53, mit Filter nach Material und Sortierauftrag und Druck je Karte ein Blatt A4 hoch. Zielgruppe: Fachkräfte und Eltern, Kinder 2 bis 3 Jahre. Offline, ohne Speicherung.",
+  "description": "Fühl- und Sortier-Werkstatt: Holz, Papier, Stoff. Druckkarten nach Praleska, S. 52 und 53, mit Filter nach Material und Sortierauftrag und Druck je Karte ein Blatt A4 hoch. Zielgruppe: Fachkräfte und Eltern. Altersangabe 2 bis 3 Jahre aus dem Katalog; die Quelle nennt für Малыши 1 bis 3 (S. 6, siehe A20). Ohne Speicherung. Ohne Verbindung nach draußen. Ein Neuladen ohne Netz ist nicht zugesichert: die App hat keinen Service Worker (F4 in docs/fragen-und-hinweise.md).",
   "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {

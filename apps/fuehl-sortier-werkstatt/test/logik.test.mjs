@@ -9,8 +9,9 @@ import {
 // Prüft Daten und Logik. Die Regeln der Umgebung (Eingabefelder, Speicherung,
 // Netz, Druckzeichen, Pflichtmarkierung je Karte, Testzahl) stehen in test/regeln.test.mjs.
 
-// Zitate wörtlich aus der Quelle (Praleska, S. 6, 52 und 53), mit Seite. Zeilenumbrüche
-// mit Trennstrich sind aufgelöst. Die Seiten sind gegen den Quelltext abgeglichen.
+// Festgehaltene Zitat-Tabelle (Praleska, S. 6, 52 und 53), mit Seite. Zeilenumbrüche
+// mit Trennstrich sind aufgelöst. Der Abgleich gegen den Quelltext lief außerhalb des Repos (F3);
+// hier steht nur die Kopie.
 const ZITATE_QUELLE = new Map([
   ['дерево', 'S. 52'],
   ['бумага', 'S. 52'],
@@ -83,13 +84,13 @@ test('Sicherheitskarte: Ziel S. 53 ohne Stern, Vorsicht-Satz als Übertragung, K
   assert.equal(s[0].hinweis, 'Kleinteile außer Reichweite lassen (Eigenentwurf, Fachkraft prüft).');
 });
 
-test('Lernziele und Begriffe stehen wörtlich in der Quelle, mit der angegebenen Seite', () => {
+test('Lernziele und Begriffe stehen mit der angegebenen Seite in der festgehaltenen Zitat-Tabelle (Quellenabgleich außerhalb des Repos, F3)', () => {
   for (const k of daten.karten) {
     assert.equal(ZITATE_QUELLE.get(k.ziel.quelltext), k.ziel.seite,
-      `${k.id}: Ziel „${k.ziel.quelltext}“ steht nicht mit dieser Seite in der Quelle`);
+      `${k.id}: Ziel „${k.ziel.quelltext}“ steht nicht mit dieser Seite in der Zitat-Tabelle`);
     for (const b of k.begriffe ?? []) {
       assert.equal(ZITATE_QUELLE.get(b.quelltext), b.seite,
-        `${k.id}: Begriff „${b.quelltext}“ steht nicht mit dieser Seite in der Quelle`);
+        `${k.id}: Begriff „${b.quelltext}“ steht nicht mit dieser Seite in der Zitat-Tabelle`);
     }
   }
   assert.ok(daten.altersHinweis.includes('„от одного года до трех лет“ (S. 6)'), 'Altersangabe der Quelle ohne Seite');
@@ -243,5 +244,5 @@ test('Aufbau: Kopf je Art; Abschnitte nur mit Zeilen', () => {
   assert.ok(!farbe.abschnitte.some(([u]) => u.startsWith('Gegenstände')));
   const sicher = kartenAufbau(daten, karte('sicherheit'));
   assert.equal(sicher.kopf, 'Sicherheitskarte (Eigenentwurf)');
-  assert.deepEqual(sicher.abschnitte.map(([u]) => u), ['Lernziel aus der Quelle', 'Hinweis (Eigenentwurf)']);
+  assert.deepEqual(sicher.abschnitte.map(([u]) => u), ['Quelle und Ziel', 'Hinweis (Eigenentwurf)']);
 });

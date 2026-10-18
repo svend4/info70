@@ -39,7 +39,8 @@ Umschlag, drei Formen, fünf Spielszenen (Daten in `daten/heft.json`). Die Szene
 Igel, Schnecke, Hase, Maus, Kasper, Ente, Mond, Lampe, Vogel und Bär.
 
 ## 6. Politik (docs/02)
-- Keine Anfragen nach außen (docs/02 Z. 22–24).
+- Keine Anfragen nach außen (docs/02 Z. 22–24). Ohne Verbindung nach draußen.
+  Ein Neuladen ohne Netz ist nicht zugesichert: die App hat keinen Service Worker (F4 in docs/fragen-und-hinweise.md).
 - Druckblatt nach docs/02 Z. 79–82: keine Zeichen, keine Namenszeile, keine Punkte.
 - Keine Bewertung von Kindern (docs/02 Z. 141–146).
 - Projektregeln ohne docs/02-Zeile: keine Speicherung; das Werkzeug ist für Erwachsene.
@@ -48,8 +49,8 @@ Igel, Schnecke, Hase, Maus, Kasper, Ente, Mond, Lampe, Vogel und Bär.
 S bis M. Die Inhalte sind statisch. Der Filter lebt nur in der geöffneten Seite.
 
 ## 8. Tests
-42 Tests in zwei Dateien. `test/logik.test.mjs` prüft Aufbau, Zitate, Satzzahl, Filter, Druckreihenfolge
-und die Ziffern im Druck. `test/regeln.test.mjs` prüft die Projektregeln. Details in der README.
+48 Tests in zwei Dateien. `test/logik.test.mjs` prüft Aufbau, Quellenhinweis, Zitate, Satzzahl, Filter,
+Druckreihenfolge und die Ziffern im Druck. `test/regeln.test.mjs` prüft die Projektregeln. Details in der README.
 
 ## Offen
 - Fachprüfung der Bastelschritte und Materialien (Eigenentwurf). Insbesondere Sicherheit bei
@@ -62,10 +63,15 @@ und die Ziffern im Druck. `test/regeln.test.mjs` prüft die Projektregeln. Detai
 - Die Übertragung von „театра Петрушки“ als Kasper ist Eigenentwurf (docs/10 nennt sie als deutsches Äquivalent).
 - uk und ru: nicht vorhanden, offen.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+- Seitenangaben, Markierung „проверено человеком“: docs/02 Z. 151–152 verlangt sie für Seitenangaben;
+  Entscheidung A18 in docs/fragen-und-hinweise.md ist offen. Die Pflichtmarkierung oben nennt nur die
+  maschinelle Prüfung.
+- Zitatprüfung: Die Gegenprüfung der Zitate lief außerhalb des Repos (F3). Im Repo stehen die
+  festgehaltenen Zitate (`test/logik.test.mjs`).
 - Browser-Prüfung (Druck auf A4, Darstellung bei 360 px) und Prüfung auf dem Gerät stehen aus.
-- Vorlesefunktion (docs/02, Checkliste „есть озвучивание“): nicht gebaut. Der Geltungsbereich der
-  Checkliste für dieses Werkzeug ist offen (docs/fragen-und-hinweise.md, F2).
-- Registrierung durch den Auftraggeber: Hub, Root-README (Gesamtzahl der Tests) und Impressum (Zahl
-  „gar nichts“). Eine neue Seite, die nichts speichert, erhöht diese Zahl um eins. Bis zur Registrierung
-  schlagen zwei Repo-Tests fehl: `packages/kinderschutz/test/datenschutz-zusage.test.mjs` und
-  `packages/kinderschutz/test/testzahlen.test.mjs`.
+- Vorlesefunktion: docs/02 verlangt sie (Z. 44 und 77, Checkliste „есть озвучивание“). Nicht gebaut;
+  der Geltungsbereich für dieses Werkzeug ist offen (docs/fragen-und-hinweise.md, F2).
+- Favicon: Die App hat keines. favicon.ico gibt 404, wie in allen Apps (A3 in docs/fragen-und-hinweise.md, offen).
+- Registrierung durch den Auftraggeber (Hub, Root-README, Impressum): erledigt. Die beiden Repo-Tests
+  `packages/kinderschutz/test/datenschutz-zusage.test.mjs` und `packages/kinderschutz/test/testzahlen.test.mjs`
+  laufen grün.

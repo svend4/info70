@@ -20,23 +20,23 @@ const code = Object.fromEntries(await Promise.all(CODE_DATEIEN.map(async (d) => 
 const alle = Object.fromEntries(await Promise.all(ALLE_DATEIEN.map(async (d) => [d, await lese(d)])));
 
 test('keine Eingabefelder für Kinder: kein input, textarea, select, form, contenteditable', () => {
-  const muster = /<\s*(input|textarea|select|form)\b|contenteditable|el\(\s*['"](input|textarea|select|form)['"]/i;
+  const muster = /<\s*(input|textarea|select|form)\b|contenteditable|(el|createElement)\(\s*['"](input|textarea|select|form)['"]/i;
   for (const d of ['index.html', 'app.mjs']) {
     assert.ok(!muster.test(code[d]), `${d}: Eingabeelement gefunden`);
   }
 });
 
 test('keine Speicherung: kein localStorage, sessionStorage, IndexedDB, Cookie oder Cache', () => {
-  const muster = /localStorage|sessionStorage|indexedDB|document\.cookie|\bcaches\b|navigator\.storage/;
+  const muster = /localStorage|sessionStorage|indexedDB|document\.cookie|cookieStore|openDatabase|\bcaches\b|navigator\.storage/;
   for (const d of CODE_DATEIEN) {
     assert.ok(!muster.test(code[d]), `${d}: Speicher-Zugriff gefunden`);
   }
 });
 
 test('keine externen Adressen, keine Netzaufrufe in den Dateien der App, kein @import', () => {
-  const netz = /\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|importScripts|new Worker/;
+  const netz = /\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|importScripts|new Worker|window\[|globalThis|wss?:/;
   for (const d of CODE_DATEIEN) {
-    assert.ok(!/https?:\/\//i.test(code[d]), `${d}: externe Adresse`);
+    assert.ok(!/https?:\/\/|(?<![:\w])\/\/[\w-]+\.[a-z]{2,}/i.test(code[d]), `${d}: externe Adresse`);
   }
   for (const d of ['app.mjs', 'logik.mjs']) {
     assert.ok(!netz.test(code[d]), `${d}: Netzaufruf gefunden`);
@@ -75,7 +75,8 @@ test('Netzwerk-Wächter: aus packages/kinderschutz importiert und aufgerufen', a
 });
 
 test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen, keine Emojis', () => {
-  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|\p{Extended_Pictographic}/u;
+  // Zeichenblöcke statt Aufzählung: Pfeile, Math-Zeichen, Dingbats, geometrische Formen, Emojis.
+  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|[←-⋿⌀-➿⦀-⧿⬀-⯿■-◿・]|\p{Extended_Pictographic}/u;
   for (const k of daten.karten) {
     assert.ok(!zeichen.test(kartenText(daten, k)), `${k.id}: Druckzeichen im Drucktext`);
   }
@@ -85,15 +86,16 @@ test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen,
 });
 
 test('Drucktext ohne Namenszeile und ohne Tages- oder Wochentagsfeld', () => {
-  const namenUndTage = /\bName\b|Namenszeile|\bDatum\b|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTag\b|_{3,}|…{2,}/i;
+  // „Name“ auch in Zusammensetzungen (Vorname, Nachname, Namensfeld); „Namen“ im Fließtext bleibt erlaubt.
+  const namenUndTage = /Name(?!n\b)|Datum|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTage?\b|_{3,}|…{2,}/i;
   for (const k of daten.karten) {
     assert.ok(!namenUndTage.test(kartenText(daten, k)), `${k.id}: Namenszeile oder Tagesfeld im Druck`);
   }
   assert.ok(!/Name\s*:|_{3,}/.test(code['app.mjs'] + code['druck.css']), 'app.mjs oder druck.css: Namenszeile');
 });
 
-test('keine Bewertung von Kindern: kein Punkt, keine Rangliste, keine Einstufung, kein richtig oder falsch im Druck', () => {
-  const wertung = /\b(Punkte?|Rangliste|Einstufung|richtig|falsch|Ergebnis)\b/i;
+test('keine Bewertung von Kindern: kein Punkt, keine Punktzahl, keine Rangliste, keine Einstufung, kein Fehler, kein richtig oder falsch im Druck', () => {
+  const wertung = /\b(Bewertung(en)?|Punkte?|Punktzahl|Punkten|Rang|Rangliste|Einstufung|Stufe|Platz|Prozent|Sterne?|Ergebnis|Noten?|Fehler|richtig|falsch)\b/i;
   for (const k of daten.karten) {
     assert.ok(!wertung.test(kartenText(daten, k)), `${k.id}: Wertung im Drucktext`);
   }
@@ -152,6 +154,17 @@ test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, jede Karte auf e
   assert.match(code['app.mjs'], /el\('a', \{ href: '\.\.\/\.\.\/impressum\.html' \}, 'Impressum und Datenschutz'\)/);
 });
 
+test('Knöpfe mindestens 48 px hoch: die gemeinsame Klasse .k-knopf hat min-height 3rem (docs/02, touch ≥ 48 px)', async () => {
+  const kinderCss = await readFile(new URL('../../../packages/kinder-ui/css/kinder.css', import.meta.url), 'utf8');
+  assert.match(kinderCss, /\.k-knopf\s*\{[^}]*min-height:\s*3rem;/);
+});
+
+test('Zufall und Uhr: kein Math.random, crypto, Date.now oder Datum in den Dateien der App; die Karten sind statisch', () => {
+  for (const d of ['app.mjs', 'logik.mjs', 'daten/werkstatt.json', 'index.html', 'druck.css']) {
+    assert.ok(!/Math\.random|crypto|Date\.now|new Date|performance\./.test(code[d]), `${d}: Zufall oder Uhr`);
+  }
+});
+
 test('Druckbereich: nur die gewählten Karten, der Katalog ist nur auf dem Bildschirm', () => {
   const app = code['app.mjs'];
   assert.match(app, /el\('div', \{ class: 'fsw-nur-druck', id: 'druckbereich' \}, \.\.\.gewaehlt\.map\(druckKarte\)\)/);
@@ -185,7 +198,8 @@ test('keine uk- und ru-Fassung im Quelltext erfunden: der Vermerk steht im Quell
   assert.ok(!/"(uk|ru)"\s*:/.test(code['daten/werkstatt.json']), 'Daten: uk- oder ru-Schlüssel');
 });
 
-test('Modellnamen-Freiheit: in keiner Datei der App allgemeine KI-Begriffe und keine Modellbezeichnung', () => {
+// Modellnamen sind Entscheidung A1 (docs/offene-punkte-kita.md), hier bewusst nicht geprüft.
+test('keine KI-Begriffe in den Dateien der App', () => {
   const muster = /\bKI\b|LLM|Sprachmodell|Chatbot|künstliche Intelligenz/i;
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!muster.test(inhalt), `${d}: ${inhalt.match(muster)?.[0]}`);

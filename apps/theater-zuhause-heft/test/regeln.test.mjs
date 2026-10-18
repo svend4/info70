@@ -21,23 +21,23 @@ const alle = Object.fromEntries(await Promise.all(ALLE_DATEIEN.map(async (d) => 
 const gedruckt = druckSeiten(daten).map((s) => seiteText(daten, s)).join('\n');
 
 test('keine Eingabefelder für Kinder: kein input, textarea, select, form, contenteditable', () => {
-  const muster = /<\s*(input|textarea|select|form)\b|contenteditable|el\(\s*['"](input|textarea|select|form)['"]/i;
+  const muster = /<\s*(input|textarea|select|form)\b|contenteditable|(el|createElement)\(\s*['"](input|textarea|select|form)['"]/i;
   for (const d of ['index.html', 'app.mjs']) {
     assert.ok(!muster.test(code[d]), `${d}: Eingabeelement gefunden`);
   }
 });
 
 test('keine Speicherung: kein localStorage, sessionStorage, IndexedDB, Cookie oder Cache', () => {
-  const muster = /localStorage|sessionStorage|indexedDB|document\.cookie|\bcaches\b|navigator\.storage/;
+  const muster = /localStorage|sessionStorage|indexedDB|document\.cookie|cookieStore|openDatabase|\bcaches\b|navigator\.storage/;
   for (const d of CODE_DATEIEN) {
     assert.ok(!muster.test(code[d]), `${d}: Speicher-Zugriff gefunden`);
   }
 });
 
 test('keine externen Adressen, keine Netzaufrufe in den Dateien der App, kein @import', () => {
-  const netz = /\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|importScripts|new Worker/;
+  const netz = /\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|importScripts|new Worker|window\[|globalThis|wss?:/;
   for (const d of CODE_DATEIEN) {
-    assert.ok(!/https?:\/\//i.test(code[d]), `${d}: externe Adresse`);
+    assert.ok(!/https?:\/\/|(?<![:\w])\/\/[\w-]+\.[a-z]{2,}/i.test(code[d]), `${d}: externe Adresse`);
   }
   for (const d of ['app.mjs', 'logik.mjs']) {
     assert.ok(!netz.test(code[d]), `${d}: Netzaufruf gefunden`);
@@ -76,7 +76,8 @@ test('Netzwerk-Wächter: aus packages/kinderschutz importiert und aufgerufen', a
 });
 
 test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen, keine Emojis', () => {
-  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|\p{Extended_Pictographic}/u;
+  // Zeichenblöcke statt Aufzählung: Pfeile, Math-Zeichen, Dingbats, geometrische Formen, Emojis.
+  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|[←-⋿⌀-➿⦀-⧿⬀-⯿■-◿・]|\p{Extended_Pictographic}/u;
   assert.ok(!zeichen.test(gedruckt), 'Druckzeichen im gedruckten Text');
   for (const d of CODE_DATEIEN) {
     assert.ok(!zeichen.test(code[d]), `${d}: Druckzeichen gefunden`);
@@ -84,8 +85,12 @@ test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen,
 });
 
 test('gedruckter Text ohne Namenszeile und ohne Tages- oder Wochentagsfeld', () => {
-  const namenUndTage = /\bName\b|Namenszeile|\bDatum\b|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTag\b|_{3,}|…{2,}/i;
+  // „Name“ auch in Zusammensetzungen (Vorname, Kindername); „Namen“ im Fließtext bleibt erlaubt.
+  const namenUndTage = /Name(?!n\b)|Datum|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTage?\b|Tages|_{3,}|…{2,}/i;
   assert.ok(!namenUndTage.test(gedruckt), `Namenszeile oder Tagesfeld im Druck: ${gedruckt.match(namenUndTage)?.[0]}`);
+  // Wochentags-Kürzel mit Punkt (Mo., Di., Sa./So.). Ohne i-Flag, damit „so.“ im Fließtext nicht trifft.
+  const kuerzel = /\b(Mo|Di|Mi|Do|Fr|Sa|So)\./;
+  assert.ok(!kuerzel.test(gedruckt), `Wochentags-Kürzel im Druck: ${gedruckt.match(kuerzel)?.[0]}`);
   assert.ok(!/Name\s*:|_{3,}/.test(code['app.mjs'] + code['druck.css']), 'app.mjs oder druck.css: Namenszeile');
 });
 
@@ -169,7 +174,8 @@ test('keine uk- und ru-Fassung im Quelltext erfunden: der Vermerk steht im Quell
   assert.ok(!/"(uk|ru)"\s*:/.test(code['daten/heft.json']), 'Daten: uk- oder ru-Schlüssel');
 });
 
-test('Modellnamen-Freiheit: in keiner Datei der App allgemeine KI-Begriffe und keine Modellbezeichnung', () => {
+// Modellnamen sind Entscheidung A1 (offen, docs/offene-punkte-kita.md). Dieser Test prüft nur KI-Begriffe.
+test('keine KI-Begriffe in den Dateien der App', () => {
   const muster = /\bKI\b|LLM|Sprachmodell|Chatbot|künstliche Intelligenz/i;
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!muster.test(inhalt), `${d}: ${inhalt.match(muster)?.[0]}`);
@@ -180,6 +186,44 @@ test('keine Wörter der Bewertung (unsicher, Selbstwert, Risiko, Diagnose) in de
   const muster = /unsicher|Selbstwert|Risiko|Diagnose/i;
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!muster.test(inhalt), `${d}: ${inhalt.match(muster)?.[0]}`);
+  }
+});
+
+test('keine Bewertung von Kindern in Code und Daten: keine Punkte, Stufe, Rang, Einstufung, Note (docs/02 Z. 141–146)', () => {
+  // Dokumente dürfen solche Wörter verneinen („keine Punkte“), Oberfläche und Daten nicht.
+  const muster = /unsicher|Selbstwert|Risiko|Diagnose|\bPunkte?\b|Rangliste|\bRang\b|Einstufung|\bStufe\b|\bPlatz\b|Prozent|\bSterne?\b|\bErgebnis\b|\bNoten?\b/i;
+  for (const d of CODE_DATEIEN) {
+    assert.ok(!muster.test(code[d]), `${d}: ${code[d].match(muster)?.[0]}`);
+  }
+});
+
+test('noscript: der Hinweis ohne JavaScript steht ohne Attribut im Körper (a11y-Prüfung) und ist im Druck ausgeblendet', () => {
+  assert.match(code['index.html'], /<noscript>[^<]+<\/noscript>/);
+  assert.match(code['druck.css'], /@media print \{[\s\S]*noscript\s*\{\s*display: none !important;\s*\}/);
+});
+
+test('Knöpfe mindestens 48 px hoch: die gemeinsame Klasse .k-knopf hat min-height 3rem (docs/02, touch ≥ 48 px)', async () => {
+  const kinderCss = await readFile(new URL('../../../packages/kinder-ui/css/kinder.css', import.meta.url), 'utf8');
+  assert.match(kinderCss, /\.k-knopf\s*\{[^}]*min-height:\s*3rem;/);
+});
+
+test('Zufall: logik.mjs nutzt weder Math.random noch Date.now noch crypto; app.mjs importiert nur el und ruft mischen() nicht auf', () => {
+  for (const d of ['logik.mjs', 'daten/heft.json', 'index.html', 'druck.css']) {
+    assert.ok(!/Math\.random|crypto|Date\.now|new Date|performance\./.test(code[d]), `${d}: Zufall oder Uhr`);
+  }
+  const treffer = code['app.mjs'].match(/Math\.random/g) ?? [];
+  assert.ok(treffer.length <= 1, `app.mjs: ${treffer.length} Stellen mit Math.random, höchstens 1 erlaubt`);
+  assert.match(code['app.mjs'], /^import \{ el \} from '\.\.\/\.\.\/packages\/kinder-ui\/js\/komponenten\.mjs';$/m);
+  assert.doesNotMatch(code['app.mjs'], /\bmischen\(/);
+});
+
+test('Offline-Wortlaut: „offline“ kommt in keiner Datei der App vor; der feste Satz steht in README, GDD, index.html und package.json', () => {
+  const satz = 'Ein Neuladen ohne Netz ist nicht zugesichert: die App hat keinen Service Worker (F4 in docs/fragen-und-hinweise.md).';
+  for (const [d, inhalt] of Object.entries(alle)) {
+    assert.ok(!/offline/i.test(inhalt), `${d}: „offline“ als Eigenschaft`);
+  }
+  for (const d of ['index.html', 'package.json', 'README.md', 'GDD.md']) {
+    assert.ok(alle[d].includes(satz), `${d}: fester Offline-Wortlaut fehlt`);
   }
 });
 

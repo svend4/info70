@@ -1,7 +1,7 @@
 // Fühl- und Sortier-Werkstatt: reine Logik ohne DOM, testbar.
 // Die Karten stehen in daten/werkstatt.json. Hier wird nur gefiltert, gewählt und
 // der Kartenaufbau zusammengesetzt. Bildschirm und Druck zeigen denselben Aufbau.
-// Keine Speicherung, keine Bewertung von Kindern.
+// Keine Speicherung, keine Wertung von Kindern.
 
 const KOPF = {
   material: 'Materialkarte (Eigenentwurf)',
@@ -78,7 +78,7 @@ export function kannDrucken(karten) {
 }
 
 /**
- * Lernziel aus der Quelle, mit Seite. Die deutsche Übertragung ist Eigenentwurf.
+ * Quelle und Ziel, mit Seite; bei Beispielen ist es das Beispiel aus der Quelle. Die deutsche Übertragung ist Eigenentwurf.
  * @param {object} karte
  * @returns {string}
  */
@@ -114,7 +114,7 @@ export function gegenstandZeilen(karte) {
  */
 export function kartenAufbau(daten, karte) {
   const abschnitte = [
-    ['Lernziel aus der Quelle', [zielZeile(karte)]],
+    ['Quelle und Ziel', [zielZeile(karte)]],
     ['Begriff in der Quelle', begriffZeilen(karte)],
     ['Gegenstände aus dem Alltag (Eigenentwurf)', gegenstandZeilen(karte)],
     ['Aufgabe (Eigenentwurf)', karte.aufgabe ? [karte.aufgabe] : []],

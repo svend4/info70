@@ -158,6 +158,13 @@ test('der Hinweis „kein Bildschirm“ steht unter „Eigenentwurf“, nicht un
   assert.ok(!anregung.zeilen.join(' ').includes('Bildschirm'), 'der Bildschirm-Satz steht bei der Quelle');
 });
 
+test('Quellenhinweis: Verlagsangabe und Copyright-Vermerk getrennt; НИО ist nicht aufgelöst und nicht gleichgesetzt', () => {
+  const q = daten.quellenHinweis;
+  assert.ok(q.includes('Minsk: НИО, 2007, S. 2'), 'Verlagsangabe fehlt');
+  assert.ok(q.includes('Copyright-Vermerk: НМУ «Национальный институт образования», 2007'), 'Copyright-Vermerk fehlt');
+  assert.ok(!/НИО\s*\(/.test(q), 'НИО ist mit einer Auflösung gleichgesetzt');
+});
+
 test('Zitate aus der Quelle haben höchstens zwölf Wörter', () => {
   for (const f of daten.formen) {
     const woerter = f.begriff.quelltext.trim().split(/\s+/).length;
