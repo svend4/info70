@@ -1,13 +1,13 @@
 {
   "titel": "Sport-Schnupper-Stationen",
   "katalog": "Katalogeintrag docs/10, Z. 484 (Einheit 18), Abschnitt Printmaterialien für Kita. Altersgruppe 5 bis 7 Jahre, offline.",
-  "quellenHinweis": "Quelle: Praleska. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Textfassung, S. 225 bis 230 und S. 6. Die Namen der Spiele und Übungen stehen in der Quelle. Die Regeln sind Eigenentwurf und auf jeder Karte als solcher gekennzeichnet.",
+  "quellenHinweis": "Quelle: Praleska. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Textfassung, S. 224 bis 230 und S. 6. Die Namen der Spiele und Übungen stehen in der Quelle. Die Regeln sind Eigenentwurf und auf jeder Karte als solcher gekennzeichnet.",
   "karten": [
     {
       "id": "uebersicht",
       "art": "uebersicht",
       "titel": "Übersicht: Sport-Schnupper-Stationen",
-      "quelle": "Praleska, S. 225–230",
+      "quelle": "Praleska, S. 224–230",
       "abschnitte": [
         {
           "ueberschrift": "Ziel der Quelle",
@@ -33,7 +33,7 @@
         {
           "ueberschrift": "Hinweis",
           "zeilen": [
-            { "text": "Aufsicht und Sicherheit: Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft." }
+            { "text": "Aufsicht und Sicherheit: Die Quelle nennt auf S. 224 als Aufgabe das sichere Fallen beim Gehen auf Glatteis, beim Schlittenfahren, auf Schlittschuhen und beim Skilaufen. Sicherheit für die übrigen Stationen ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)" }
           ]
         },
         {
@@ -56,7 +56,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Kleine Holzklötze stehen als Figur am Boden. Die Kinder werfen einen leichten Stab auf die Figur. Die Fachkraft legt die Entfernung fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "basketball",
@@ -69,7 +69,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Zwei Kinder werfen sich den Ball zu. Danach wird der Ball in einen Korb oder eine niedrige Zielfläche geworfen. Höhe und Abstand legt die Fachkraft fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "tischtennis",
@@ -81,7 +81,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein leichter Ball wird mit einem Schläger über eine Leine oder einen niedrigen Tisch zum Partner gespielt. Es geht um den Ballwechsel, ohne Wertung." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "badminton",
@@ -94,7 +94,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Kinder schlagen einen Federball mit dem Schläger zum Partner. Die Fachkraft gibt die Richtung vor oder spielt mit." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "handball",
@@ -106,7 +106,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein weicher Ball wird mit den Händen zu Mitspielern gepasst oder in ein Ziel geworfen. Ohne Wertung." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "fussball",
@@ -119,7 +119,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Kinder rollen einen Ball zu einem Partner oder in ein Tor aus Hütchen, Stangen oder Schnüren. Ohne Wertung." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "hockey",
@@ -132,7 +132,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein Ball oder eine Scheibe wird mit einem Schläger zu einem Partner geschoben. Die Fachkraft legt die Sportart vor dem Spiel fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "lapta",
@@ -144,7 +144,7 @@
         { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
         { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein Kind schlägt den Ball mit einem Stab weg und läuft zu einer Markierung. Die anderen Kinder holen den Ball. Die Fachkraft legt die Markierungen fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "schlittenfahren",
@@ -156,7 +156,7 @@
         { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Zu zweit Schlitten fahren; beim Abfahren und beim Bremsen üben", "seite": "S. 230" } ] },
         { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Zwei Kinder fahren gemeinsam auf dem Schlitten. Die Fachkraft wählt Ort und Ablauf." } ] }
       ],
-      "fuss": "Eigenentwurf: Übungsform. Eignung und Ort entscheidet die Fachkraft. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Übungsform. Die Fachkraft entscheidet über Eignung und Ort. Sicherheit: Die Quelle nennt auf S. 224 als Aufgabe das sichere Fallen beim Schlittenfahren. Weitere Sicherheitsregeln sind Eigenentwurf."
     },
     {
       "id": "gleiten-eisbahn",
@@ -168,7 +168,7 @@
         { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Nach dem Anlauf gleiten; im Gleiten in die Hocke gehen und wieder aufstehen", "seite": "S. 230" } ] },
         { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Das Kind läuft an und gleitet über die vereiste Bahn. Im Gleiten geht es in die Hocke und steht wieder auf." } ] }
       ],
-      "fuss": "Eigenentwurf: Übungsform. Eignung und Ort entscheidet die Fachkraft. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Übungsform. Die Fachkraft entscheidet über Eignung und Ort. Sicherheit: Die Quelle nennt auf S. 224 als Aufgabe das sichere Fallen beim Gehen auf Glatteis. Sicherheit beim Gleiten auf vereisten Bahnen ist Eigenentwurf."
     },
     {
       "id": "skilaufen",
@@ -180,7 +180,7 @@
         { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Wechselschritt auf Ski über unebenes Gelände; Drehungen im Stand und in der Bewegung; Anstieg im Treppenschritt, Abfahrt in tiefer Haltung; ruhiges Tempo", "seite": "S. 230" } ] },
         { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder gehen auf Skiern über eine kurze Strecke im Gelände. Strecke und Tempo legt die Fachkraft fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Übungsform. Eignung und Ort entscheidet die Fachkraft. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Übungsform. Die Fachkraft entscheidet über Eignung und Ort. Sicherheit: Die Quelle nennt auf S. 224 als Aufgabe das sichere Fallen beim Skilaufen. Weitere Sicherheitsregeln sind Eigenentwurf."
     },
     {
       "id": "fahrrad",
@@ -192,7 +192,7 @@
         { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Selbstständig aufsteigen; geradeaus und im Kreis fahren; rechts und links abbiegen; eine Acht fahren", "seite": "S. 230" } ] },
         { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Das Kind steigt selbst auf, fährt geradeaus, im Kreis und in einer Acht. Die Fachkraft legt die Strecke fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Übungsform. Eignung und Ort entscheidet die Fachkraft. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Übungsform. Die Fachkraft entscheidet über Eignung und Ort. Sicherheit: Die Quelle nennt keine Regel speziell für diese Übung; allgemein nennt sie auf S. 222 als Aufgabe das Einhalten von Regeln der Bewegungssicherheit. Konkrete Regeln sind Eigenentwurf."
     },
     {
       "id": "schwimmen",
@@ -204,7 +204,7 @@
         { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Auf Brust und Rücken gleiten und dabei Ein- und Ausatmen abwechseln; von der Brust auf den Rücken und zurück drehen; Beine auf und ab wie beim Brustschwimmen, mit Halt an Handläufen oder am Boden; Armbewegungen; frei schwimmen", "seite": "S. 230" } ] },
         { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Das Kind übt die Bewegungen der Quelle im Wasser. Ort, Wassertiefe und Begleitung legt die Fachkraft fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Übungsform. Eignung und Ort entscheidet die Fachkraft. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Übungsform. Die Fachkraft entscheidet über Eignung und Ort. Sicherheit: Die Quelle nennt keine Regel speziell für diese Übung; allgemein nennt sie auf S. 222 als Aufgabe das Einhalten von Regeln der Bewegungssicherheit. Konkrete Regeln sind Eigenentwurf."
     },
     {
       "id": "kto-pervyj",
@@ -215,7 +215,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Auf ein Zeichen der Fachkraft drehen sich alle Kinder einmal um die eigene Achse. Niemand wird gewertet." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "slalom",
@@ -226,7 +226,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder laufen zwischen aufgestellten Hütchen oder Stangen hindurch. Die Fachkraft legt den Weg fest." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "dogoni",
@@ -237,7 +237,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Ein Kind läuft voraus, die anderen versuchen, es einzuholen. Danach wechseln die Rollen." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "shire-shag",
@@ -248,7 +248,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder gehen im Wechsel mit weiten und kurzen Schritten, die die Fachkraft ansagt." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "ne-zadenj",
@@ -259,7 +259,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder gehen zwischen aufgestellten Gegenständen hindurch, ohne sie zu berühren." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "po-sledam",
@@ -270,7 +270,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Fachkraft legt eine Spur aus Schnüren, Hütchen oder Markierungen. Die Kinder gehen der Spur nach." } ] }
       ],
-      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "wettbewerb-rollen",
@@ -281,7 +281,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Wettbewerbsform im Abschnitt Schnelligkeit", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Alle Kinder rollen einen Ball zu einem Ziel. Keine Punkte, keine Zählung. Die Fachkraft entscheidet, wie oft gerollt wird." } ] }
       ],
-      "fuss": "Eigenentwurf: Wettbewerbsform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Wettbewerbsform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     },
     {
       "id": "wettbewerb-prellen",
@@ -292,7 +292,7 @@
         { "ueberschrift": "Quelle", "zeilen": [ { "text": "Wettbewerbsform im Abschnitt Schnelligkeit, Prellen in bestimmter Zeit", "seite": "S. 230" }, { "text": "Der Titel in Klammern ist eine Übertragung (Eigenentwurf)." } ] },
         { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Alle Kinder prellen einen Ball für eine kurze, feste Zeit. Keine Zählung, keine Punkte." } ] }
       ],
-      "fuss": "Eigenentwurf: Wettbewerbsform ohne Rangliste. Keine Wertung einzelner Kinder. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft."
+      "fuss": "Eigenentwurf: Wettbewerbsform ohne Rangliste. Keine Wertung einzelner Kinder. Sicherheit ist Eigenentwurf. Die Fachkraft entscheidet über Eignung und Aufsicht. (Eigenentwurf)"
     }
   ]
 }

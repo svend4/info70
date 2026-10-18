@@ -1,10 +1,10 @@
 # Sport-Schnupper-Stationen: Kurz-GDD
 
 ## 1. Warum
-Kinder von 5 bis 7 Jahren brauchen Bewegung, Spiel und einfache Wettbewerbe. Die Praleska beschreibt dafür Sportspiele, Sportübungen und Sportfeste (S. 225 bis 230, Altersgruppe S. 6). Fachkräfte brauchen diese Angaben als Karten, die sie für Bewegungstage und Sportfeste ausdrucken.
+Kinder von 5 bis 7 Jahren brauchen Bewegung, Spiel und einfache Wettbewerbe. Die Praleska beschreibt dafür Sportspiele, Sportübungen und Sportfeste (S. 224 bis 230, Altersgruppe S. 6). Fachkräfte brauchen diese Angaben als Karten, die sie für Bewegungstage und Sportfeste ausdrucken.
 
 ## 2. Wer und Kernerlebnis
-Wer: Fachkräfte in der Kita. Kinder nehmen teil, sie nutzen das Werkzeug nicht.
+Wer: Fachkräfte in der Kita. Die Einordnung als Kita oder Vorschule ist Eigenentwurf. Kinder nehmen teil, sie nutzen das Werkzeug nicht.
 Kernerlebnis: Die Fachkraft wählt Stationen, druckt und hat Karten, auf denen jeder Name seine Quellenseite trägt und jede Regel als Eigenentwurf erkennbar ist.
 
 ## 3. Entscheidungen
@@ -14,7 +14,7 @@ Kernerlebnis: Die Fachkraft wählt Stationen, druckt und hat Karten, auf denen j
 - Wettbewerbe ohne Rangliste, ohne Punkte und ohne Zählung. Die Namen der Wettbewerbe stehen in der Quelle; die Form ohne Rangliste ist Eigenentwurf.
 - Keine Eingabefelder und keine Speicherung (Projektregel, ohne docs/02-Zeile). Die Auswahl lebt nur in der geöffneten Seite.
 - Jede Karte trägt eine Seitenangabe, jede Zeile mit Quellenbezug ebenfalls. Jede Übertragung und jeder Eigenentwurf ist als solcher gekennzeichnet; deutsche Titel in Klammern sind Übertragungen und tragen den Hinweis auf der Karte. Der Pflichtsatz zu den Seitenangaben steht auf jedem gedruckten Blatt, nicht nur im Bildschirmfuß.
-- Keine Sicherheitsregeln aus Fremdquellen. Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft. Jede Karte sagt das mit demselben Satz.
+- Keine stationsbezogenen Sicherheitsregeln in der Quelle; allgemeine Ziele stehen auf S. 222 bis 224. Die Quelle nennt auf S. 224 als Aufgabe das sichere Fallen beim Gehen auf Glatteis, beim Schlittenfahren, auf Schlittschuhen und beim Skilaufen. Die Karten zu Schlittenfahren und Skilaufen nennen diese Aufgabe mit Seitenangabe; die Karte Gleiten auf vereisten Bahnen nennt davon nur das Gehen auf Glatteis. Für die übrigen Stationen ist Sicherheit Eigenentwurf und Sache der Fachkraft. Jede Karte sagt, woher ihre Sicherheitsaussage stammt.
 - Die Winter- und Wasserübungen (S. 230) sind mit Quellenangabe aufgenommen; über ihre Eignung für die Kita entscheidet die Fachkraft.
 - Bewusst nicht übernommen: Technik-Piktogramme, Ersatz-Spielnamen aus dem Katalog, Eishockey, Team Deutschland, Special Olympics, DOSB-Verweise (siehe README).
 
@@ -37,13 +37,13 @@ Kernerlebnis: Die Fachkraft wählt Stationen, druckt und hat Karten, auf denen j
 S. Die Karten sind statisch und der Druck ist eine Druckansicht.
 
 ## 8. Tests
-38 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Namen gegen die Quelle, die Kennzeichnung, die Ziel-Zeile, den Sicherheitssatz, die Wettbewerbe ohne Rangliste, den Pflichtsatz auf dem Blatt, die Eigenentwurf-Kennzeichnung je Karte, die Knopfhöhe, die Zufallsregel, die Bewertungsregel und die Projektregeln. Details in der README.
+38 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Namen gegen die Quelle, die Kennzeichnung, die Ziel-Zeile, die Sicherheitsaussagen, die Wettbewerbe ohne Rangliste, den Pflichtsatz auf dem Blatt, die Eigenentwurf-Kennzeichnung je Karte, die Knopfhöhe, die Zufallsregel, die Bewertungsregel und die Projektregeln. Details in der README.
 
 ## Offen
 - uk und ru: nicht vorhanden, offen.
 - Hockey-Widerspruch in der Quelle (S. 229): die Liste nennt „хоккей на траве“ (Feldhockey), der Technik-Absatz nennt Schläger und Scheibe. Die Karte lässt die Sportart offen; eine Fachkraft legt sie fest. Der Widerspruch steht auch auf S. 246: dort nennt die Liste der Sportspiele der Gruppe „Фантазеры“ „хоккей“ (ohne Zusatz).
 - Ziel-Zeile auf den Sportspielen: der Satz „играм по упрощенным правилам“ steht auf S. 229 vor der Einzelliste (dort durch Silbentrennung geteilt); nur bei Basketball steht das Wort einzeln. Ob die Zeile für die Sportspiele ohne eigenen Einzeleintrag gelten soll, ist eine fachliche Lesart.
-- Sicherheitsaussagen fehlen: die Quelle nennt für Sportspiele, Übungen und Wettbewerbe keine Sicherheitsregeln. Die Karten sagen das; es wird keine Regel gesetzt.
+- Sicherheitsaussagen: Für Schlittenfahren und Skilaufen stehen die Aufgaben aus S. 224 auf den Karten. Die Karte Gleiten auf vereisten Bahnen nennt nur das Gehen auf Glatteis aus S. 224; Sicherheit beim Gleiten ist Eigenentwurf. Für die übrigen Stationen gilt: Keine stationsbezogenen Sicherheitsregeln in der Quelle; allgemeine Ziele stehen auf S. 222 bis 224. Die Karten sagen das, es wird keine Regel gesetzt.
 - Eignung der Winter- und Wasserübungen (Schlittenfahren, Gleiten auf vereisten Bahnen, Skilaufen, Vorbereitung auf das Schwimmen) für eine deutsche Kita ist eine fachliche Entscheidung.
 - Katalogzahl „8 benannte Spiele“: gezählt auf S. 230 sind 6 Spielnamen und 2 Wettbewerbsformen in Anführungszeichen. Die 8 Sportspiele auf S. 229 stehen ohne Anführungszeichen. Die Katalogzahl passt nur zu den 8 Anführungsnamen; der Katalogeintrag ist nicht geändert.
 - Nicht als Karten aufgenommen: die Gleichgewichtsübungen «великан», «цапля», «ласточка» (S. 228) und «волчок» (S. 230). Es sind allgemeine Übungen, keine Sportübungen. Ob sie aufgenommen werden, ist offen.

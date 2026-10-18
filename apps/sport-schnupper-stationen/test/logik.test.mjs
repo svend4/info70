@@ -12,9 +12,9 @@ const ART = (art) => daten.karten.filter((k) => k.art === art);
 const ALLE_ZEILEN = (karte) => karte.abschnitte.flatMap((a) => a.zeilen);
 const QUELLE_FORMAT = /^Praleska, S\. (\d+)(?:–(\d+))?$/;
 const ZIEL = 'Ziel: Spiel nach vereinfachten Regeln (S. 229–230)';
-const ERLAUBTE_SEITEN = new Set([6, 225, 226, 227, 228, 229, 230]);
+const ERLAUBTE_SEITEN = new Set([6, 224, 225, 226, 227, 228, 229, 230]);
 
-// Gültige Seite: „S. n“ oder „S. n–m“. Erlaubt sind die Seite 6 und die Seiten 225 bis 230.
+// Gültige Seite: „S. n“ oder „S. n–m“. Erlaubt sind die Seite 6 und die Seiten 224 bis 230.
 function seiteGueltig(text) {
   const m = text.match(/^S\. (\d+)(?:–(\d+))?$/);
   if (!m) return false;
@@ -55,7 +55,7 @@ test('feste Reihenfolge: Übersicht, dann Sportspiele, Sportübungen, benannte S
   ]);
 });
 
-test('Quelle je Karte: „Praleska, S. n“ oder „S. n–m“; jede Zeilenseite gültig (Seite 6 und 225 bis 230)', () => {
+test('Quelle je Karte: „Praleska, S. n“ oder „S. n–m“; jede Zeilenseite gültig (Seite 6 und 224 bis 230)', () => {
   for (const k of daten.karten) {
     assert.match(k.quelle, QUELLE_FORMAT, `${k.id}: Quelle „${k.quelle}“ hat nicht das Format`);
     assert.ok(seiteGueltig(k.quelle.replace('Praleska, ', '')), `${k.id}: Seite außerhalb der Quelle`);
@@ -123,14 +123,23 @@ test('Eigenentwurf-Kennzeichnung: jede Karte trägt das Wort; jede Spiel-, Übun
   }
 });
 
-test('Sicherheit: jede Karte trägt denselben Satz (die Quelle nennt keine Sicherheitsregeln, die Fachkraft entscheidet); keine zweite Sicherheitsaussage', () => {
-  const satz = 'Die Quelle nennt für diese Stationen keine Sicherheitsregeln; Sicherheit ist Eigenentwurf und Sache der Fachkraft.';
+test('Sicherheit: die Quelle nennt Sicherheitsaufgaben nur auf S. 224 (Schlittenfahren, Gehen auf Glatteis, Skilaufen); bei Fahrrad und Schwimmen nennt sie keine Regel, nur das allgemeine Ziel auf S. 222; sonst ist Sicherheit Eigenentwurf; keine Aussage „keine Sicherheitsregeln“', () => {
+  const aus224 = ['schlittenfahren', 'gleiten-eisbahn', 'skilaufen'];
+  const ohneRegel = ['fahrrad', 'schwimmen'];
+  const satzOhneRegel = 'Die Quelle nennt keine Regel speziell für diese Übung; allgemein nennt sie auf S. 222 als Aufgabe das Einhalten von Regeln der Bewegungssicherheit. Konkrete Regeln sind Eigenentwurf.';
   for (const k of daten.karten) {
-    assert.ok(kartenText(k).includes(satz), `${k.id}: Sicherheitssatz fehlt`);
-    assert.ok(!/Sicherheitsregeln/.test(kartenText(k).replace(satz, '')), `${k.id}: abweichende Sicherheitsaussage`);
+    const text = kartenText(k);
+    assert.ok(!/keine Sicherheitsregeln/.test(text), `${k.id}: falsche Aussage „keine Sicherheitsregeln“`);
+    if (aus224.includes(k.id)) {
+      assert.ok(text.includes('S. 224') && /sichere Fallen/.test(text), `${k.id}: Sicherheitsaufgabe aus S. 224 fehlt`);
+    } else if (ohneRegel.includes(k.id)) {
+      assert.ok(text.includes(satzOhneRegel), `${k.id}: Satz „keine Regel speziell für diese Übung“ mit S. 222 fehlt`);
+    } else {
+      assert.match(text, /Sicherheit[^.]*Eigenentwurf/, `${k.id}: Sicherheit nicht als Eigenentwurf gekennzeichnet`);
+    }
   }
   for (const k of ART('sportuebung')) {
-    assert.ok(k.fuss.includes('Eignung und Ort entscheidet die Fachkraft.'), `${k.id}: Entscheidung der Fachkraft fehlt`);
+    assert.ok(k.fuss.includes('Die Fachkraft entscheidet über Eignung und Ort.'), `${k.id}: Entscheidung der Fachkraft fehlt`);
   }
 });
 

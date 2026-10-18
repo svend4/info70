@@ -31,6 +31,7 @@ function auswahlKnopf(karte) {
   return el('button', {
     class: `k-knopf k-knopf--klein ${gewaehlt ? '' : 'k-knopf--neutral'}`,
     'aria-pressed': String(gewaehlt),
+    id: `auswahl-${karte.id}`,
     'data-kennung': `auswahl-${karte.id}`,
     onclick: () => { auswahl = umschalten(auswahl, karte.id); render(); },
   }, karte.titel);
@@ -59,11 +60,13 @@ function render() {
       el('div', { class: 'sss-knopfreihe' },
         el('button', {
           class: 'k-knopf k-knopf--klein k-knopf--neutral',
+          id: 'alle-waehlen',
           'data-kennung': 'alle-waehlen',
           onclick: () => { auswahl = alleGewaehlt(daten); render(); },
         }, 'Alle wählen'),
         el('button', {
           class: 'k-knopf k-knopf--klein k-knopf--neutral',
+          id: 'keine-waehlen',
           'data-kennung': 'keine-waehlen',
           onclick: () => { auswahl = new Set(); render(); },
         }, 'Keine wählen')),
@@ -72,6 +75,7 @@ function render() {
       el('div', { class: 'k-antworten' },
         el('button', {
           class: 'k-knopf',
+          id: 'drucken',
           'data-kennung': 'drucken',
           disabled: !druckbar,
           onclick: () => window.print(),
