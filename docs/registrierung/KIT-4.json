@@ -4,7 +4,7 @@
   "titel": "Kita-Wochenplaner Bildungsangebote",
   "status_neu": "teilweise",
   "app": "kita-wochenplaner",
-  "tests_app": 40,
+  "tests_app": 41,
   "hub_zeile": "<a class=\"k-knopf\" style=\"text-decoration:none;text-align:center\" href=\"apps/kita-wochenplaner/\">🗓️ Kita-Wochenplaner – Bildungsangebote ausgewogen planen (Fachkräfte)</a>",
   "readme_zeile": "| KIT-4 | Kita-Wochenplaner Bildungsangebote | teilweise (Ausbau) | `apps/kita-wochenplaner/` |",
   "docs10_notiz": "Kita-Wochenplaner (KIT-4) ausgebaut: Dauer-Richtwerte als Obergrenze der Quellenspanne (S. 10), neuer Richtwert je Woche (S. 9–10), Druck ohne Zeichen und Emojis, Fokus nach Klick, 40 Tests. Offen bleiben die Abbildung der Landes-Bildungspläne und die Entscheidung zu Eingabefeldern für Fachkräfte.",
