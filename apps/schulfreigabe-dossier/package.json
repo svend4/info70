@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "description": "Schulfreigabe-Dossier 'Null-Daten-Nachweis' fuer schulische Datenschutzbeauftragte: technische Erklaerung, Muster-Verfahrensbeschreibung, Checkliste und BFSG/EAA-Erklaerung als druckbares Dokument. Angaben werden nicht gespeichert.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "license": "AGPL-3.0-only",
   "type": "module"
 }

@@ -23,6 +23,10 @@ docs/09, Ось E. Готовое **проверочное досье**: тех�
 попадают лишь в распечатку и **не сохраняются** в localStorage. При
 перезагрузке страницы они исчезают.
 
+Над формой и у каждого из пяти полей стоит подсказка «Keine Namen von Kindern
+eingeben.» (видна на экране, связана с полем через aria-describedby). В печати
+подсказки скрыты (druck.css).
+
 ## Политика
 
 Werbefrei, без внешних запросов (NetzwerkWaechter), без persistence.
@@ -34,3 +38,5 @@ Werbefrei, без внешних запросов (NetzwerkWaechter), без per
 npm run dev   # http://localhost:8070/apps/schulfreigabe-dossier/
 node --test apps/schulfreigabe-dossier/test/*.test.mjs
 ```
+
+Тестов: 13 (`npm test` в папке приложения).

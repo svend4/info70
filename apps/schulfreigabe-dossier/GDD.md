@@ -32,7 +32,9 @@ Baukastens dokumentarisch ab.
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei. Datensparsamkeit:
 Eingaben bleiben im Arbeitsspeicher, **kein localStorage** – nur Druck.
-Werkzeug für Erwachsene, ohne eltern.html.
+Werkzeug für Erwachsene, ohne eltern.html. Eingabehinweise „Keine Namen von
+Kindern eingeben.“ über dem Formular und an jedem der fünf Felder
+(aria-describedby); im Druck ausgeblendet (druck.css, Klasse sd-hinweis).
 
 ## 6. Tests
 
@@ -40,6 +42,9 @@ Werkzeug für Erwachsene, ohne eltern.html.
 löschbar/keine personenbezogenen Daten/Verfahrensbeschreibung/BFSG),
 Platzhalter bei leeren Feldern, ausgefüllte Werte, Determinismus, ≥8
 Prüfpunkte als [x], escapeHtml/HTML-Fassung.
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Zuordnung je Feld
+(aria-describedby), Feldnamen unverändert, Ausblendung im Druck. Testzahl
+gesamt: 13 (vorher 6).
 
 ## 7. Erweiterungen (Katalog)
 

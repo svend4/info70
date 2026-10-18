@@ -4,6 +4,8 @@
 
 @media print {
   .sd-nur-bildschirm { display: none !important; }
+  /* Eingabehinweise („Keine Namen von Kindern eingeben.“) gehören nicht aufs Blatt. */
+  .sd-hinweis { display: none !important; }
 
   html { font-size: 11pt; }
   body { background: #fff; }

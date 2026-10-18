@@ -12,6 +12,12 @@ installiereNetzwerkWaechter();
 const app = document.getElementById('app');
 const werte = {}; // nur im Arbeitsspeicher – bewusst KEIN localStorage
 
+// Eingabehinweis an den fünf freien Feldern: einmal über dem Formular und je Feld als eigenes Element direkt
+// vor dem Feld; das Feld verweist per aria-describedby darauf. Das Formular ist im Druck ausgeblendet
+// (Klasse sd-nur-bildschirm); druck.css blendet die Hinweise zusätzlich aus (Klasse sd-hinweis).
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const HINWEIS_STIL = 'display:block;font-size:0.85rem;color:#4b5563;margin:0.2rem 0';
+
 function kopiere(text) {
   if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => fallbackKopie(text));
   else fallbackKopie(text);
@@ -26,13 +32,17 @@ function fallbackKopie(text) {
 function render() {
   const felder = Object.entries(FELDER).map(([code, def]) => {
     const eingabe = el('input', {
+      id: `sd-feld-${code}`,
       style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem',
       placeholder: def.platzhalter, 'aria-label': def.label, maxlength: 120,
+      'aria-describedby': `sd-hinweis-${code}`,
       oninput: (e) => { werte[code] = e.target.value; aktualisierePreview(); },
     });
     eingabe.value = werte[code] ?? '';
-    return el('label', { style: 'display:block;margin-top:0.4rem' },
-      el('span', { style: 'font-weight:600;display:block' }, def.label), eingabe);
+    return el('div', { style: 'display:block;margin-top:0.4rem' },
+      el('label', { for: `sd-feld-${code}`, style: 'font-weight:600;display:block' }, def.label),
+      el('span', { id: `sd-hinweis-${code}`, class: 'sd-hinweis', style: HINWEIS_STIL }, KINDER_HINWEIS),
+      eingabe);
   });
 
   const preview = el('pre', { id: 'sd-preview', style: 'white-space:pre-wrap;font-family:inherit;margin:0;font-size:0.95rem;line-height:1.4' }, baueDossier(werte));
@@ -42,6 +52,7 @@ function render() {
     el('p', { class: 'k-untertitel' }, 'Null-Daten-Nachweis für schulische Datenschutzbeauftragte – fertig zum Ausdrucken.'),
     el('section', { class: 'k-karte sd-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, 'Angaben (optional – leere Felder bleiben als [Platzhalter])'),
+      el('span', { id: 'sd-hinweis-formular', class: 'sd-hinweis', style: HINWEIS_STIL }, KINDER_HINWEIS),
       ...felder,
       el('p', { style: 'font-size:0.85rem;color:#4b5563;margin-bottom:0' }, '🔒 Diese Angaben bleiben nur auf diesem Gerät im Arbeitsspeicher und werden nicht gespeichert. Beim Neuladen sind sie weg.')),
     el('section', { class: 'k-karte' },
