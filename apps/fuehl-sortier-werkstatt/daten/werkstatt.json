@@ -1,0 +1,142 @@
+{
+  "titel": "Fühl- und Sortier-Werkstatt: Holz, Papier, Stoff",
+  "zielgruppe": "Für Fachkräfte und Eltern. Altersgruppe 2 bis 3 Jahre (Katalog docs/10). Die Karten sind für Erwachsene; das Kind braucht dafür keinen Bildschirm. Die Fachkraft leitet an.",
+  "katalog": "Katalogeintrag docs/10, Abschnitt „Печатные материалы для Kita (офлайн)“, Nr. 7. Im Katalog steht „Fuehl- und Sortier-Werkstatt“ (ASCII-Umschrift); die App schreibt „Fühl-“.",
+  "quellenHinweis": "Quelle: Praleska, Programm der Vorschulerziehung (Titel übertragen, Eigenentwurf). Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Abschnitt „ЧЕЛОВЕК И РУКОТВОРНЫЙ МИР“ (Übertragung, Eigenentwurf), S. 52 und 53.",
+  "altersHinweis": "Die Quelle nennt für die Gruppe „Малыши“ den Bereich „от одного года до трех лет“ (S. 6). Die Angabe 2 bis 3 Jahre stammt aus dem Katalog docs/10, nicht aus der Quelle.",
+  "sprachen": "Deutsch (de). Die Quelle ist russischsprachig; die deutschen Fassungen sind Eigenentwurf. uk und ru: nicht vorhanden, offen.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "materialien": [
+    { "id": "holz", "name": "Holz" },
+    { "id": "papier", "name": "Papier" },
+    { "id": "stoff", "name": "Stoff" }
+  ],
+  "sortierungen": [
+    { "id": "farbe", "name": "Nach Farbe" },
+    { "id": "form", "name": "Nach Form" },
+    { "id": "material", "name": "Nach Material" },
+    { "id": "weich-hart", "name": "Nach weich / hart" }
+  ],
+  "karten": [
+    {
+      "id": "holz",
+      "art": "material",
+      "titel": "Holz",
+      "materialien": ["holz"],
+      "sortierung": null,
+      "ziel": {
+        "quelltext": "сделанных из различного материала (дерево, бумага, ткань)",
+        "seite": "S. 52",
+        "deutsch": "Dinge aus verschiedenem Material kennenlernen, hier aus Holz"
+      },
+      "begriffe": [
+        { "quelltext": "дерево", "seite": "S. 52", "deutsch": "Holz" }
+      ],
+      "gegenstaende": ["Holzlöffel", "Holzklötze", "Holzschale"],
+      "frage": "Ist die Oberfläche glatt oder rau?"
+    },
+    {
+      "id": "papier",
+      "art": "material",
+      "titel": "Papier",
+      "materialien": ["papier"],
+      "sortierung": null,
+      "ziel": {
+        "quelltext": "сделанных из различного материала (дерево, бумага, ткань)",
+        "seite": "S. 52",
+        "deutsch": "Dinge aus verschiedenem Material kennenlernen, hier aus Papier"
+      },
+      "begriffe": [
+        { "quelltext": "бумага", "seite": "S. 52", "deutsch": "Papier" }
+      ],
+      "gegenstaende": ["Pappschachtel", "Packpapier", "Küchenpapier"],
+      "frage": "Was passiert mit dem Papier, wenn du es zusammendrückst?"
+    },
+    {
+      "id": "stoff",
+      "art": "material",
+      "titel": "Stoff",
+      "materialien": ["stoff"],
+      "sortierung": null,
+      "ziel": {
+        "quelltext": "сделанных из различного материала (дерево, бумага, ткань)",
+        "seite": "S. 52",
+        "deutsch": "Dinge aus verschiedenem Material kennenlernen, hier aus Stoff"
+      },
+      "begriffe": [
+        { "quelltext": "ткань", "seite": "S. 52", "deutsch": "Stoff" }
+      ],
+      "gegenstaende": ["Geschirrtuch", "Waschlappen", "Stoffbeutel"],
+      "frage": "Fühlt sich der Stoff weich oder rau an?"
+    },
+    {
+      "id": "farbe",
+      "art": "sortierung",
+      "titel": "Nach Farbe sortieren",
+      "materialien": ["holz", "papier", "stoff"],
+      "sortierung": "farbe",
+      "ziel": {
+        "quelltext": "имеющих одинаковый и разный цвет",
+        "seite": "S. 52",
+        "deutsch": "gleiche und verschiedene Farben an Dingen erkennen"
+      },
+      "aufgabe": "Die Fachkraft legt Dinge aus Holz, Papier und Stoff vor das Kind. Das Kind legt Dinge mit derselben Farbe zusammen; Dinge mit anderer Farbe bleiben getrennt.",
+      "frage": "Welche haben dieselbe Farbe?"
+    },
+    {
+      "id": "form",
+      "art": "sortierung",
+      "titel": "Nach Form sortieren",
+      "materialien": ["holz", "papier", "stoff"],
+      "sortierung": "form",
+      "ziel": {
+        "quelltext": "по форме, цвету, величине, назначению",
+        "seite": "S. 53",
+        "deutsch": "Dinge nach Form, Farbe, Größe und Verwendung unterscheiden"
+      },
+      "aufgabe": "Die Fachkraft legt Dinge aus Holz, Papier und Stoff vor, die sich in der Form unterscheiden, zum Beispiel rund und eckig. Das Kind legt Dinge mit gleicher Form zusammen.",
+      "frage": "Welche sind rund, welche eckig?"
+    },
+    {
+      "id": "material",
+      "art": "sortierung",
+      "titel": "Nach Material sortieren",
+      "materialien": ["holz", "papier", "stoff"],
+      "sortierung": "material",
+      "ziel": {
+        "quelltext": "сделанных из различного материала (дерево, бумага, ткань)",
+        "seite": "S. 52",
+        "deutsch": "Dinge nach dem Material unterscheiden: Holz, Papier, Stoff"
+      },
+      "aufgabe": "Die Fachkraft legt Dinge aus Holz, Papier und Stoff gemischt hin. Das Kind legt Holz zu Holz, Papier zu Papier und Stoff zu Stoff.",
+      "frage": "Woraus ist das gemacht?"
+    },
+    {
+      "id": "weich-hart",
+      "art": "sortierung",
+      "titel": "Nach weich und hart sortieren",
+      "materialien": ["holz", "papier", "stoff"],
+      "sortierung": "weich-hart",
+      "ziel": {
+        "quelltext": "шубка — из меха, она мягкая",
+        "seite": "S. 52",
+        "deutsch": "Materialien nach Weichheit unterscheiden; Beispiel aus der Quelle: eine Pelzjacke ist weich"
+      },
+      "aufgabe": "Die Fachkraft legt Dinge aus Holz, Papier und Stoff hin und dazu ein Fell als Beispiel für weich (Übertragung von „меха“, S. 52). Das Kind fühlt jedes Stück an und legt weiche und harte Stücke getrennt. „hart“ als Gegenbegriff ist Eigenentwurf.",
+      "frage": "Ist es weich oder hart?"
+    },
+    {
+      "id": "sicherheit",
+      "art": "sicherheit",
+      "titel": "Sicherheit",
+      "materialien": [],
+      "sortierung": null,
+      "ziel": {
+        "quelltext": "быть осторожными с острыми, холодными, горячими предметами",
+        "seite": "S. 53",
+        "deutsch": "Vorsicht mit scharfen, kalten und heißen Gegenständen"
+      },
+      "hinweis": "Kleinteile außer Reichweite lassen (Eigenentwurf, Fachkraft prüft)."
+    }
+  ]
+}

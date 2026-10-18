@@ -1,0 +1,11 @@
+{
+  "name": "@info70/theater-zuhause-heft",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Theater zuhause – Bastel- und Spielheft für Erwachsene mit Kindern von einem bis zu drei Jahren: drei Formen (Fingertheater, Tischtheater, Handpuppe) mit Bastelschritten und fünf Spielszenen, zum Drucken. Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

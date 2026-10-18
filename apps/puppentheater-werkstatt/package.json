@@ -1,0 +1,11 @@
+{
+  "name": "@info70/puppentheater-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Puppentheater-Werkstatt: ein Gestaltungsauftrag aus der Praleska (S. 286 bis 288) und ein Stückanfang aus eigenen Bausteinen. Für Fachkräfte in Gruppen mit Kindern von 5 bis 7 Jahren. Zum Ausdrucken, offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

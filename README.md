@@ -80,7 +80,7 @@ npm test       # тесты (node --test)
 - Мультиязычность: `feed-forscher` — de/en/uk/ru + Leichte Sprache,
   `elternabend-kit` — de/en/uk/ru, `kettenbrief-stopper` — de/en + Leichte Sprache.
 
-**Проверки.** Полный прогон: **2306 тестов**. CI
+**Проверки.** Полный прогон: **2427 тестов**. CI
 (`.github/workflows/test.yml`) гоняет весь набор плюс запрет внешних URL и
 сторонних пакетов. Тестами закреплены не только логика, но и обещания: a11y-аудит
 всех страниц, соответствие текста Datenschutz-страницы реализации и охват
@@ -321,6 +321,9 @@ Hilfe-Insel.
 | `bewegungslandschaft-stationen` | Для Fachkraft (1–3): станционные карточки с учебными размерами S. 58–60, без планов и без DGUV; не пределы безопасности | печатные №5 |
 | `werkstatt-karten-applikation` | Для Fachkraft (3–5): карточки Schneiden, Reißen, Kleben; Ziele S. 181; Collage für 3–5 als Ziel, Naturmaterial für 5–7 (S. 282–283); 25 Themen-Titel | печатные №17 |
 | `sport-schnupper-stationen` | Для Fachkraft (5–7): карточки игр и упражнений S. 229–230; без рангов и без Piktogramme; Eigenentwurf gekennzeichnet | печатные №18 |
+| `puppentheater-werkstatt` | Для Fachkraft (5–7, Lesart; S. 199–200): задания по дизайну из S. 287–288 и начало пьесы из собственных блоков; только немецкий; uk/ru и фольклорный модуль не сделаны | пакеты №12 |
+| `theater-zuhause-heft` | Для родителей (1–3): печатное Heft, три формы домашнего театра (S. 73), пять собственных сцен; только немецкий | документы №18 |
+| `fuehl-sortier-werkstatt` | Для Fachkraft (2–3): карточки дерево, бумага, ткань и задания на сортировку (S. 52–53); только немецкий | печатные №7 |
 | `baby-spielideen-kartei` | Для родителей и Fachkraft (0–1): карточки действий из S. 40 (16), глоссарий исправлен; только немецкий; uk/ru не выдуманы | пакеты №2 |
 | `tierkinder-vorlesen` | Для Erwachsener (3–5): собственные тексты для чтения вслух из блоков (животное, место, детёныш), без ИИ и без имени ребёнка; только немецкий | пакеты №5 |
 | `kindertaenze-europa` | Для Fachkraft (5–7): datenpaket 22 танца, названия из S. 267, шаги — собственные тексты (Eigenentwurf); Sirtaki и Reigen не из Quelle | пакеты №11 |

@@ -1,0 +1,103 @@
+{
+  "titel": "Puppentheater-Werkstatt",
+  "zielgruppe": "Für Fachkräfte in Gruppen mit Kindern von 5 bis 7 Jahren. Die Karten sind für Erwachsene; die Gruppe setzt den Auftrag um.",
+  "katalog": "Katalogeintrag docs/10, Content-Pack 12 (Puppentheater-Werkstatt). Titel beibehalten.",
+  "quellenHinweis": "Quelle: Praleska, Programm der Vorschulerziehung (Titel übertragen, Eigenentwurf). Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Abschnitt „Детский дизайн“, Gruppe „ФАНТАЗЕРЫ“, S. 286 bis 288.",
+  "gruppenHinweis": "Die Quelle nennt die Gruppe „ФАНТАЗЕРЫ“ die älteste im Kindergarten (S. 199). Ihre Altersangaben lauten „шестой—седьмой годы жизни“ (S. 199) und „пяти-шести лет“ (S. 200). Die Angabe 5 bis 7 Jahre ist die Lesart dieser Stellen (Eigenentwurf); eine Fachkraft prüft sie.",
+  "auftragHinweis": "Ein Vorschlag besteht aus einem Gestaltungsauftrag mit Seitenangabe aus der Quelle und einem Stückanfang aus eigenen Bausteinen. Die Bausteine sind Eigenentwurf: keine fremden Märchen, keine fremden Stücktexte, keine Lieder.",
+  "sprachen": "Deutsch (de). Die Quelle ist russischsprachig; die deutschen Fassungen sind Eigenentwurf. uk und ru: nicht vorhanden, offen.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "beschriftung": {
+    "kopf": "Gestaltungsauftrag (Eigenentwurf nach der Quelle)",
+    "auftrag": "Auftrag (Eigenentwurf)",
+    "begriffe": "Begriffe in der Quelle",
+    "stueckanfang": "Stückanfang (Eigenentwurf)"
+  },
+  "gestaltung": [
+    {
+      "id": "plakat",
+      "titel": "Plakat zur Vorstellung",
+      "aufgabe": "Gestaltet ein Plakat, das die Vorstellung ankündigt. Es zeigt den Titel, die Figuren und den Ort der Vorstellung.",
+      "quelle": "Praleska, S. 287 und S. 288 (Abschnitt „Детский дизайн“, Gruppe „ФАНТАЗЕРЫ“)",
+      "begriffe": [
+        { "quelltext": "Афиша для выставки", "seite": "S. 288", "deutsch": "Plakat, Ankündigung" },
+        { "quelltext": "создание афиши для музыкального «концерта»", "seite": "S. 287" }
+      ]
+    },
+    {
+      "id": "einladung",
+      "titel": "Einladungskarte zur Vorstellung",
+      "aufgabe": "Gestaltet eine Einladungskarte für die Vorstellung. Sie nennt den Titel des Stücks und die Zeit der Vorstellung.",
+      "quelle": "Praleska, S. 288 (Abschnitt „Детский дизайн“, Gruppe „ФАНТАЗЕРЫ“)",
+      "begriffe": [
+        { "quelltext": "Пригласительные билеты для выставки", "seite": "S. 288", "deutsch": "Einladungskarten; in der Quelle für eine Ausstellung" }
+      ]
+    },
+    {
+      "id": "kulisse",
+      "titel": "Kulisse und Dekoration",
+      "aufgabe": "Gestaltet den Hintergrund für das Stück: eine Kulisse mit dem Ort der Geschichte und einige Dekorationsteile, die dazu passen.",
+      "quelle": "Praleska, S. 288 (Abschnitt „Детский дизайн“, Gruppe „ФАНТАЗЕРЫ“)",
+      "begriffe": [
+        { "quelltext": "разработка элементов дизайна кукол, кулис, декораций", "seite": "S. 288", "deutsch": "Elemente für Kulissen und Dekorationen gestalten" }
+      ]
+    },
+    {
+      "id": "puppe",
+      "titel": "Puppe gestalten",
+      "aufgabe": "Gestaltet eine Puppe für das Stück. Die Puppe hat ein Merkmal, an dem man die Figur erkennt.",
+      "quelle": "Praleska, S. 288 (Abschnitt „Детский дизайн“, Gruppe „ФАНТАЗЕРЫ“)",
+      "begriffe": [
+        { "quelltext": "элементов дизайна кукол", "seite": "S. 288", "deutsch": "Elemente der Puppengestaltung" }
+      ]
+    },
+    {
+      "id": "kleidung",
+      "titel": "Kleidung für eine Puppe",
+      "aufgabe": "Entwerft ein Kleidungsstück für eine Puppe des Stücks. Es passt zur Figur und lässt sich leicht an- und ausziehen.",
+      "quelle": "Praleska, S. 287 und S. 288 (Abschnitt „Детский дизайн“, Gruppe „ФАНТАЗЕРЫ“)",
+      "begriffe": [
+        { "quelltext": "Одежда для кукол", "seite": "S. 288", "deutsch": "Kleidung für Puppen" },
+        { "quelltext": "одежды для кукол", "seite": "S. 287" }
+      ]
+    }
+  ],
+  "bausteine": {
+    "kennzeichnung": "Eigenentwurf",
+    "figur": [
+      "Eine Maus mit einem roten Hut hat heute einen großen Auftritt.",
+      "Ein Fuchs, der immer zu spät kommt, soll eine Vorstellung geben.",
+      "Eine Schnecke mit einem sehr großen Rucksack möchte ins Theater.",
+      "Ein Bär, der nicht einschlafen kann, sucht jemanden zum Erzählen.",
+      "Eine Krähe mit einer Brille liest gern Briefe vor.",
+      "Ein Hase baut am liebsten Brücken aus Holzklötzen.",
+      "Eine Puppe ohne Wort wartet hinter dem Vorhang."
+    ],
+    "ort": [
+      "Das Stück beginnt auf einem Dachboden voller alter Koffer.",
+      "Die Bühne ist ein Marktplatz mit vielen bunten Ständen.",
+      "Es ist Abend am Rand eines kleinen Teiches.",
+      "Die Geschichte spielt in einer Bäckerei am frühen Morgen.",
+      "Alles findet in einem Garten mit einem Brunnen statt.",
+      "Die Bühne ist ein kleiner Bahnhof, der fast leer ist.",
+      "Es regnet, und alle stehen unter einem großen Regenschirm."
+    ],
+    "problem": [
+      "Plötzlich ist der Schlüssel verschwunden.",
+      "Auf einmal liegt ein Brief da, den niemand lesen kann.",
+      "Die Brücke ist weg, und der Weg ist versperrt.",
+      "Die Musik fehlt, und niemand weiß, wo sie geblieben ist.",
+      "Die Vorstellung soll gleich beginnen, aber das Publikum ist noch nicht da.",
+      "Ein Wunsch ist da, aber das passende Wort fehlt.",
+      "Ein großes Paket steht vor der Tür, und niemand weiß, was darin ist."
+    ],
+    "ende": [
+      "Die Gruppe entscheidet, wie es weitergeht.",
+      "Dann klopft es an der Tür.",
+      "Dann kommt ein unerwarteter Gast.",
+      "Wer kommt jetzt?",
+      "Wie geht die Geschichte weiter?",
+      "Dann öffnet sich der Vorhang."
+    ]
+  }
+}

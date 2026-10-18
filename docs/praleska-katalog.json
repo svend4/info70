@@ -494,6 +494,7 @@
   },
   {
    "titel": "Fuehl- und Sortier-Werkstatt: Holz, Papier, Stoff",
+   "korrektur": "Bau Welle 93 (teilweise): Materialkarten und Sortieraufträge nach S. 52–53; Ziele für ältere Kinder nicht übernommen; nur de. Seiten nur maschinell geprüft.",
    "typ": "kita-material",
    "alter": "2-3 (offline, fachkraftgeleitet)",
    "beschreibung": "Druck-Anleitung fuer eine Material-Werkstatt: Fuehlen, Sortieren und Zuordnen von Alltagsmaterialien (Holz/Papier/Stoff, warm/kalt, weich/hart) plus einfache Sicherheitsregeln - Realspiel ohne Bildschirm, abgeleitet aus den Dingwelt-Zielen.",
@@ -575,6 +576,7 @@
   },
   {
    "titel": "Theater zuhause - Bastel- und Spielheft",
+   "korrektur": "Bau Welle 93 (teilweise): Heft mit drei Formen aus S. 73 und fünf eigenen Szenen; nur de. Seiten nur maschinell geprüft.",
    "typ": "doku",
    "alter": "Eltern (Kind 1-3)",
    "beschreibung": "Bebilderte Anleitung fuer die drei Heimtheater-Formen aus der Praleska (Fingertheater, Tischtheater, Handpuppe) mit Bastelvorlagen und 5 einfachen Spielszenen nach gemeinfreien Maerchenmustern.",
@@ -1460,6 +1462,7 @@
   },
   {
    "titel": "Puppentheater-Werkstatt (Content-Pack)",
+   "korrektur": "Bau Welle 93 (teilweise): Gestaltungsaufträge aus S. 287–288; Stückanfang aus eigenen Bausteinen; nur de. Altersangabe 5–7 ist Lesart (S. 199–200). Seiten nur maschinell geprüft.",
    "typ": "content-pack",
    "alter": "5-7",
    "engine": "Geschichten-Generator",

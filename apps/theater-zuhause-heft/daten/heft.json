@@ -1,0 +1,110 @@
+{
+  "titel": "Theater zuhause – Bastel- und Spielheft",
+  "zielgruppe": "Für Erwachsene, die mit einem Kind von einem bis zu drei Jahren spielen. Das Kind braucht dafür keinen Bildschirm.",
+  "quellenHinweis": "Quelle: Praleska: Programm der vorschulischen Bildung (Titel übertragen, Eigenentwurf). Minsk: НИО (Национальный институт образования), 2007, S. 2. ISBN 978-985-465-244-3.",
+  "sprachen": "Deutsch. Die Quelle ist russischsprachig; die deutschen Fassungen sind Eigenentwurf. uk und ru: nicht vorhanden, offen.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "vermerkBastel": "Bastelschritte: Eigenentwurf",
+  "sicherheitssatz": "Schere, Nadel und Kleber nur mit einem Erwachsenen; kleine Teile wie Knöpfe nicht in Reichweite des Kindes lassen (Eigenentwurf).",
+  "umschlag": {
+    "untertitel": "Drei Formen zum Basteln und Spielen und fünf kurze Spielszenen.",
+    "zielgruppe": "Für Erwachsene mit einem Kind von einem bis zu drei Jahren. Die Quelle ordnet die Gruppe „Малыши“ dem frühen Alter von einem bis zu drei Jahren zu (Praleska, S. 6).",
+    "hinweis": "Für dieses Heft braucht Ihr Kind keinen Bildschirm. Sie basteln und spielen, das Kind schaut zu und reagiert.",
+    "anregung": "Die Quelle regt Eltern an, erste häusliche Formen des Theaters zu schaffen und einfache Texte für Kinder mit ihnen zu spielen. Sie nennt dafür drei Formen; die deutschen Namen sind Eigenentwurf. Sie sieht vor, Eltern dabei Unterstützung zu geben (Praleska, S. 73).",
+    "figuren": "Die Quelle nennt bei den Freizeitspielen für die Kleinen außerdem Figuren des Puppentheaters, die emotionalen Komfort schaffen und einen vertrauensvollen Kontakt zu Erwachsenen und Gleichaltrigen herstellen sollen (Praleska, S. 72).",
+    "inhalt": "Fingertheater, Tischtheater, Handpuppe (Kasper) und fünf Spielszenen. Die Bastelschritte und die Szenen sind Eigenentwurf.",
+    "quelle": "Praleska, S. 6, S. 72 und S. 73"
+  },
+  "formen": [
+    {
+      "id": "fingertheater",
+      "name": "Fingertheater",
+      "begriff": { "quelltext": "пальчикового", "seite": "S. 73", "deutsch": "Fingertheater" },
+      "quelle": "Praleska, S. 73",
+      "beschreibung": "Die Figur sitzt auf dem Finger des Erwachsenen. Der Erwachsene spielt mit ihr, das Kind schaut zu.",
+      "material": "Materialien aus dem Haushalt: Papier oder ein fester Stoffrest, Filzstift, Schere, Klebestift oder Klebeband. Wenn vorhanden, auch Wolle und Stoffreste zum Aufkleben.",
+      "schritte": [
+        "Einen Streifen Papier oder Stoff so zuschneiden, dass er um einen Finger des Erwachsenen passt und etwas übersteht.",
+        "Den Streifen zu einem Ring kleben. Bei Stoff die offene Kante zusammennähen.",
+        "Auf den Ring ein Gesicht zeichnen oder Wolle und Stoffreste für Haare und Kleidung aufkleben.",
+        "Die Figur auf den Finger stecken und prüfen, dass sie locker sitzt und keine scharfen Kanten hat.",
+        "Die Figur mit dem Finger bewegen und mit ihr sprechen. Die passenden Szenen stehen weiter hinten im Heft."
+      ],
+      "passendeSzenen": ["szene-1", "szene-4"]
+    },
+    {
+      "id": "tischtheater",
+      "name": "Tischtheater",
+      "begriff": { "quelltext": "настольного", "seite": "S. 73", "deutsch": "Tischtheater" },
+      "quelle": "Praleska, S. 73",
+      "beschreibung": "Auf dem Tisch steht eine Kulisse aus Karton. Die Figuren aus Papier sitzen auf Stäben und werden vor der Kulisse bewegt.",
+      "material": "Materialien aus dem Haushalt: fester Karton, Papier, Filzstift, Schere, Klebstoff, doppelseitiges Klebeband und für jede Figur ein Holzstab oder ein fester Trinkhalm.",
+      "schritte": [
+        "Aus Karton eine Kulisse zuschneiden, zum Beispiel mit einem Haus, einem Baum oder einem Weg. Den unteren Rand nach hinten falten, damit die Kulisse auf dem Tisch stehen bleibt.",
+        "Die Kulisse mit Filzstift bemalen oder mit Papier bekleben.",
+        "Eine Figur aus Papier zeichnen und ausschneiden.",
+        "Die Figur mit doppelseitigem Klebeband auf den Stab kleben.",
+        "Die Kulisse aufstellen. Die Figur hinter der Kulisse hervorholen und über den Tisch führen."
+      ],
+      "passendeSzenen": ["szene-2", "szene-5"]
+    },
+    {
+      "id": "handpuppe",
+      "name": "Handpuppe (Kasper)",
+      "begriff": { "quelltext": "театра Петрушки", "seite": "S. 73", "deutsch": "Handpuppe, Kasper" },
+      "quelle": "Praleska, S. 73",
+      "beschreibung": "Die Figur sitzt über der Hand des Erwachsenen. Mit den Fingern bewegt der Erwachsene den Mund der Figur.",
+      "material": "Materialien aus dem Haushalt: eine saubere Socke oder ein Stoffrest, Wolle, Knöpfe oder Stoffreste für Augen und Mund, Filzstift, Nadel und Faden oder Stoffkleber.",
+      "schritte": [
+        "Die Hand in die Socke stecken und mit dem Filzstift die Stellen für Augen und Mund markieren.",
+        "Die Augen aus Knöpfen oder Stoffresten setzen. Knöpfe nur mit Nadel und Faden festnähen oder mit Stoffkleber befestigen.",
+        "Für den Mund einen Streifen Stoff einnähen oder aufkleben, so dass er sich beim Öffnen der Finger bewegt.",
+        "Aus Wolle oder einem Stoffrest Haare oder eine Mütze fertigen und festmachen.",
+        "Die Hand hineinstecken und den Mund ausprobieren: Er soll sich ohne Kraft öffnen und schließen."
+      ],
+      "passendeSzenen": ["szene-3"]
+    }
+  ],
+  "szenen": [
+    {
+      "id": "szene-1",
+      "titel": "Wo ist die Sonne?",
+      "gespielt": "Fingertheater",
+      "rollen": "Igel, Schnecke",
+      "text": "Der Igel ruft: „Wo ist die Sonne?“ Die Schnecke kommt langsam um die Ecke. „Ich habe sie nicht gesehen“, sagt sie. Dann wird es dunkel, eine Wolke schiebt sich davor. „Vielleicht kommt sie gleich wieder“, sagt die Schnecke.",
+      "ende": "Ob die Sonne wiederkommt, bleibt offen. Das Kind darf zeigen, wo sie sein könnte."
+    },
+    {
+      "id": "szene-2",
+      "titel": "Der Ball rollt weiter",
+      "gespielt": "Tischtheater",
+      "rollen": "Hase, Maus",
+      "text": "Der Hase hat einen roten Ball. Die Maus kommt um die Kulisse herum und möchte den Ball. „Gib mir den Ball“, sagt die Maus. Der Hase rollt ihn zu ihr. Die Maus rollt ihn zurück, und der Ball verschwindet hinter dem Haus.",
+      "ende": "Wer den Ball holt, bleibt offen. Das Kind darf sagen, was der Hase jetzt macht."
+    },
+    {
+      "id": "szene-3",
+      "titel": "Kasper sucht seine Mütze",
+      "gespielt": "Handpuppe (Kasper)",
+      "rollen": "Kasper, Ente",
+      "text": "Kasper kommt hinter dem Vorhang hervor. „Hallo, ich suche meine Mütze“, sagt er. „Hier ist sie nicht“, quakt die Ente. „Vielleicht war sie am Teich?“, fragt Kasper. Die Ente watschelt los.",
+      "ende": "Ob Kasper seine Mütze findet, bleibt offen. Das Kind darf sagen, wo sie sein könnte."
+    },
+    {
+      "id": "szene-4",
+      "titel": "Die Lampe wird müde",
+      "gespielt": "Fingertheater",
+      "rollen": "Mond, Lampe",
+      "text": "Der Mond schaut zum Fenster herein. Dort brennt noch die Lampe. „Bist du müde?“, fragt der Mond. Die Lampe blinzelt und wird langsam dunkler. „Ein bisschen“, sagt sie leise.",
+      "ende": "Ob die Lampe wieder hell wird, bleibt offen. Das Kind darf sagen, was die Lampe jetzt macht."
+    },
+    {
+      "id": "szene-5",
+      "titel": "Der Vogel trägt einen Zweig",
+      "gespielt": "Tischtheater",
+      "rollen": "Vogel, Bär",
+      "text": "Der Vogel trägt einen langen Zweig zu seinem Nest. Der Bär sieht zu. „Das ist zu schwer“, brummt der Bär. Der Vogel versucht es noch einmal. Dann rutscht der Zweig herunter und fällt auf den Boden.",
+      "ende": "Wie das Nest doch noch fertig wird, bleibt offen. Das Kind darf sagen, was der Vogel jetzt tut."
+    }
+  ]
+}

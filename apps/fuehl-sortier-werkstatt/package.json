@@ -1,0 +1,11 @@
+{
+  "name": "@info70/fuehl-sortier-werkstatt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fühl- und Sortier-Werkstatt: Holz, Papier, Stoff. Druckkarten nach Praleska, S. 52 und 53, mit Filter nach Material und Sortierauftrag und Druck je Karte ein Blatt A4 hoch. Zielgruppe: Fachkräfte und Eltern, Kinder 2 bis 3 Jahre. Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}
