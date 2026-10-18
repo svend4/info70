@@ -4,5 +4,8 @@
   "private": true,
   "description": "Barrierefreiheitserklaerungs-Generator fuer Kinderseiten: Formular ausfuellen oder BFSG-Check-Pruefprotokoll importieren erzeugt eine fertige Erklaerung zur Barrierefreiheit (BFSG/EAA, EN 301 549/WCAG 2.1 AA) als Markdown/HTML inkl. Leichte-Sprache-Abschnitt und Feedback-/Durchsetzungshinweisen. Formular-zu-Text-Engine. Zielgruppe: Betreiber.",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/eingabe-hinweis.test.mjs"
+  }
 }

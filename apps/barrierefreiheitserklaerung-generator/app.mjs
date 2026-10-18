@@ -20,13 +20,21 @@ function cfgToErklaerung(c) {
 
 const herunterladen = (inhalt, name, typ) => { const url = URL.createObjectURL(new Blob([inhalt], { type: typ })); const a = el('a', { href: url, download: name }); a.click(); URL.revokeObjectURL(url); };
 
+// Eingabehinweis am Feld (Freitext, der in die öffentliche Erklärung kommt): sichtbar, als eigenes
+// Element direkt vor dem Feld. Das Feld verweist per aria-describedby darauf; der Feldname bleibt gleich.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+
 function eingabe(label, key, cfg, opts = {}) {
-  const gemeinsam = { value: cfg[key], style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem;font-size:0.95rem', 'aria-label': label };
+  const hinweisId = `bfe-hinweis-${key}`;
+  const gemeinsam = { value: cfg[key], style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem;font-size:0.95rem', 'aria-label': label, ...(opts.hinweis ? { 'aria-describedby': hinweisId } : {}) };
   const feld = opts.mehrzeilig
     ? el('textarea', { ...gemeinsam, style: gemeinsam.style + ';min-height:4rem', placeholder: opts.platzhalter ?? '' })
     : el('input', { ...gemeinsam, type: opts.type ?? 'text', placeholder: opts.platzhalter ?? '' });
   feld.addEventListener('input', () => { const c = lade(); c[key] = feld.value; speichere(c); aktualisiereVorschau(); });
-  return el('label', { style: 'display:block;margin:0.5rem 0' }, el('span', { style: 'display:block;font-weight:600;font-size:0.9rem;margin-bottom:0.2rem' }, label), feld);
+  return el('label', { style: 'display:block;margin:0.5rem 0' },
+    el('span', { style: 'display:block;font-weight:600;font-size:0.9rem;margin-bottom:0.2rem' }, label),
+    opts.hinweis ? el('span', { id: hinweisId, style: 'display:block;font-size:0.85rem;color:#4b5563;margin:0 0 0.2rem' }, KINDER_HINWEIS) : null,
+    feld);
 }
 
 function aktualisiereVorschau() {
@@ -85,14 +93,14 @@ function render() {
       el('p', { id: 'bfe-import-status', style: 'font-size:0.88rem;margin:0.4rem 0 0;color:var(--k-blau-dunkel)' }, '')),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '📝 Angaben'),
-      eingabe('Anbieter / Verantwortliche/r', 'anbieter', cfg, { platzhalter: 'z. B. Kinder-Werkstatt e. V.' }),
-      eingabe('Adresse des Angebots (URL)', 'url', cfg, { platzhalter: 'https://…' }),
-      eingabe('Stand der Erklärung (Datum)', 'stand', cfg, { platzhalter: 'z. B. 18.07.2026' }),
+      eingabe('Anbieter / Verantwortliche/r', 'anbieter', cfg, { platzhalter: 'z. B. Kinder-Werkstatt e. V.', hinweis: true }),
+      eingabe('Adresse des Angebots (URL)', 'url', cfg, { platzhalter: 'https://…', hinweis: true }),
+      eingabe('Stand der Erklärung (Datum)', 'stand', cfg, { platzhalter: 'z. B. 18.07.2026', hinweis: true }),
       el('span', { style: 'display:block;font-weight:600;font-size:0.9rem;margin:0.5rem 0 0.2rem' }, 'Stand der Vereinbarkeit'),
       konformitaetWahl,
-      eingabe('Bekannte Barrieren (eine pro Zeile)', 'bekannteBarrieren', cfg, { mehrzeilig: true, platzhalter: 'z. B. Ein Video hat noch keine Untertitel.' }),
-      eingabe('Kontakt für Feedback (Name/Funktion)', 'kontaktName', cfg, { platzhalter: 'z. B. Redaktion' }),
-      eingabe('Kontakt-E-Mail', 'kontaktEmail', cfg, { type: 'email', platzhalter: 'kontakt@…' })),
+      eingabe('Bekannte Barrieren (eine pro Zeile)', 'bekannteBarrieren', cfg, { mehrzeilig: true, platzhalter: 'z. B. Ein Video hat noch keine Untertitel.', hinweis: true }),
+      eingabe('Kontakt für Feedback (Name/Funktion)', 'kontaktName', cfg, { platzhalter: 'z. B. Redaktion', hinweis: true }),
+      eingabe('Kontakt-E-Mail', 'kontaktEmail', cfg, { type: 'email', platzhalter: 'kontakt@…', hinweis: true })),
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '👁️ Vorschau'),
       vorschau),

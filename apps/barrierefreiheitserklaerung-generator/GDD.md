@@ -37,12 +37,25 @@ Keine externen Anfragen (NetzwerkWaechter), Angaben nur in localStorage
 werbefrei. Der Markdown→HTML-Wandler escapt Inhalte; die Ausgabe enthält
 kein Script und keine externen Ressourcen (Test).
 
+Eingabehinweis „Keine Namen von Kindern eingeben.“ an allen sechs freien
+Feldern (Anbieter, URL, Stand, Bekannte Barrieren, Kontakt-Name, Kontakt-
+E-Mail): sichtbar, als eigenes Element direkt vor dem Feld, per
+aria-describedby verknüpft. Der Feldname bleibt gleich.
+
+Entscheidung: Hinweis an allen freien Feldern. Kontakt-Name, URL und Stand
+haben ihn deshalb ebenfalls.
+
 ## 6. Tests
 
 `test/logik.test.mjs`: leseBfsgProtokoll (X von Y → Konformität),
 baueErklaerung übernimmt Angaben, alle Pflichtabschnitte inkl. Leichter
 Sprache + Durchsetzung, Konformitätsvarianten, Platzhalter bei leeren
 Angaben, HTML-Struktur ohne Script/externe Bezüge, escapeHtml im Wandler.
+
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit (kein
+display:none, sr-only, aria-hidden), Platzierung direkt vor dem Feld,
+aria-describedby, welche sechs Felder den Hinweis haben (alle freien Felder).
+Testzahl: 12 (7 Logik, 5 Hinweis); `npm test` grün.
 
 ## 7. Erweiterungen (Katalog)
 

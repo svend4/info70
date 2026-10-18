@@ -11,6 +11,11 @@
   автоматически переводится в статус конформности (voll / teilweise / nicht).
 - Поля: анбитер, URL, дата, статус конформности, известные барьеры
   (по одной на строку), контакт для обратной связи.
+- Подсказка у всех шести свободных полей («Anbieter», «URL», «Stand»,
+  «Bekannte Barrieren», «Kontakt-Name», «Kontakt-E-Mail»):
+  «Keine Namen von Kindern eingeben.» Стоит отдельным элементом прямо перед
+  полем и связана с ним через `aria-describedby`; в печати не скрывается
+  (отдельной печатной формы у приложения нет).
 - Готовая декларация со всеми обязательными разделами: Stand der
   Vereinbarkeit, Nicht barrierefreie Inhalte, **In einfacher Sprache**,
   Feedback und Kontakt, **Durchsetzungsverfahren** (Schlichtungsstelle).
@@ -33,5 +38,6 @@ Werbefrei, без внешних запросов (NetzwerkWaechter); данны
 
 ```bash
 npm run dev   # http://localhost:8070/apps/barrierefreiheitserklaerung-generator/
+npm test      # в папке приложения: logik + eingabe-hinweis (12 Tests)
 node --test apps/barrierefreiheitserklaerung-generator/test/*.test.mjs
 ```
