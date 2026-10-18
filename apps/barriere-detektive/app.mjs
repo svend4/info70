@@ -36,6 +36,7 @@ function render() {
     placeholder: 'Name der App oder Seite …',
     style: 'flex:1;min-height:44px;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0 0.6rem;font-size:1rem',
     'aria-label': 'Name der App oder Seite',
+    'aria-describedby': 'bd-name-hinweis',
   });
   const hinzufuegen = () => {
     const name = eingabe.value.trim();
@@ -49,7 +50,8 @@ function render() {
 
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, 'Eine Barriere ist eine Hürde, die manche Kinder aussperrt. Trag eine App oder Seite ein, die du magst, und prüfe sie mit der Detektiv-Checkliste. (Es reicht der Name – sonst nichts.)'),
+      el('p', { style: 'margin-top:0' }, 'Eine Barriere ist eine Hürde, die manche Kinder aussperrt. Trag eine App oder Seite ein, die du magst, und prüfe sie mit der Detektiv-Checkliste. (Es reicht der Name – sonst nichts. Dein eigener Name ist nicht gemeint.)'),
+      el('p', { id: 'bd-name-hinweis', style: 'margin:0 0 0.4rem;font-weight:700' }, 'Nur den Namen der App eintragen, keinen eigenen Namen.'),
       el('div', { style: 'display:flex;gap:0.5rem' },
         eingabe,
         el('button', { class: 'k-knopf k-knopf--klein', onclick: hinzufuegen }, '➕ Prüfen'))),

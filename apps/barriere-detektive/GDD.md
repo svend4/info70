@@ -16,7 +16,10 @@ Kinder 8-12. Nachbarn: kinderrechte-entdecker (Teilhabe), mitmach-arena
 
 ## 3. Ablauf
 
-1. App/Seite eintragen (nur Name).
+1. App/Seite eintragen (nur Name). Sichtbarer Hinweis direkt am Feld:
+   „Nur den Namen der App eintragen, keinen eigenen Namen.“ (verknüpft per
+   aria-describedby); der Satz „Es reicht der Name – sonst nichts.“ sagt
+   zusätzlich, dass kein eigener Name gemeint ist.
 2. 6-Punkte-Checkliste abhaken; Fairness-Balken + Einordnung live.
 3. Ab 2 Apps: „Fairste App küren“ → Rangliste (stabil, fairste zuerst).
 4. „Warum ist das wichtig?“ → 4 Lektionen.
