@@ -319,6 +319,8 @@ Hilfe-Insel.
 | `erfolgs-momente-kartei` | Для Fachkraft: карточки о совместных делах группы, Grundgedanke S. 15–16; конкретные дела — Eigenentwurf; без оценки отдельных детей | печатные №2 |
 | `entdecker-karten-natur` | Для Fachkraft (1–3): печатные карточки животных, растений, веществ и сезонов; названия из S. 50–51; без Igel/Eichhörnchen (нет в Quelle) | печатные №4 |
 | `bewegungslandschaft-stationen` | Для Fachkraft (1–3): станционные карточки с учебными размерами S. 58–60, без планов и без DGUV; не пределы безопасности | печатные №5 |
+| `werkstatt-karten-applikation` | Для Fachkraft (3–5): карточки Schneiden, Reißen, Kleben; Ziele S. 181; Collage für 3–5 als Ziel, Naturmaterial für 5–7 (S. 282–283); 25 Themen-Titel | печатные №17 |
+| `sport-schnupper-stationen` | Для Fachkraft (5–7): карточки игр и упражнений S. 229–230; без рангов и без Piktogramme; Eigenentwurf gekennzeichnet | печатные №18 |
 
 У каждого детского приложения есть страница для родителей (`eltern.html`,
 метод «Eltern-Kompass») — ссылка «👪 Für Eltern» в подвале. Единая витрина —

@@ -191,3 +191,19 @@ Ergebnis einer Zuordnung gegen die vorhandenen Apps. Empfehlungen sind Vorschlä
   und A19 zu entscheiden. Empfehlung: ausbauen, nach der Entscheidung.
 - **Funktion №1 Trostvers-Generator:** `familienschatz-reime` hat keinen Generator und keinen Kindernamen. Der Name eines
   Kindes wäre ein personenbezogenes Datum. Entscheidung nötig.
+
+## I. Welle 91 (Stand nach Prüfung und Nachbesserung)
+
+Gebaut, beide als „teilweise“ im Katalog markiert:
+
+- **Werkstatt-Karten Applikation** (Printabschnitt №17): Druck-Kartenset für 3–5 Jahre. Offen: Ergebnisindikator
+  S. 197 (Merkmale einzelner Kinder) nicht auf den Karten, Entscheidung der Redaktion; Sternchen vor einzelnen
+  Zielen auf S. 181, 282, 283 nicht gedeutet; Scherentyp für 3–5 nicht im Text; Layout des Drucks nicht am PDF
+  sichtgeprüft (die PDF-Seitenzahl ist geprüft).
+- **Sport-Schnupper-Stationen** (№18): Stationskarten für 5–7 Jahre. Offen: Lesart des Gruppensatzes „упрощенным
+  правилам“ (S. 229) für die Sportspiele; Hockey-Widerspruch der Quelle (S. 229 und S. 246); Sicherheitsaussagen
+  fehlen in der Quelle, die Karten sagen das; Eignung der Winter- und Wasserübungen ist eine fachliche Entscheidung.
+
+Die Browserprüfung betrifft den Druck und die Bedienung bei 360 px. Die Prüfskripte liegen außerhalb des Repos.
+Die gedruckten Blätter wurden nicht mit einem echten Drucker geprüft. Seitenangaben sind maschinell geprüft (A18).
+Stand des Printabschnitts: 9 von 19 gebaut; offen sind №6–№15, siehe Abschnitt H.
