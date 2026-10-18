@@ -46,7 +46,18 @@ function zeige(...knoten) {
   const gleicher = merke
     ? app.querySelector(`button[data-kennung="${merke}"]:not([disabled])`)
     : null;
-  (gleicher ?? app.querySelector('button:not([disabled])'))?.focus();
+  if (gleicher) {
+    gleicher.focus();
+    return;
+  }
+  // Neuer Bildschirm: der Fokus geht auf die Überschrift, nicht auf den Seitenkörper.
+  const ueberschrift = app.querySelector('h1, h2');
+  if (ueberschrift) {
+    ueberschrift.setAttribute('tabindex', '-1');
+    ueberschrift.focus();
+    return;
+  }
+  app.querySelector('button:not([disabled])')?.focus();
 }
 
 const vorlesenKnopf = (text) =>
