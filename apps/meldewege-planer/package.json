@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "description": "Meldewege-Planer fuer Kinderangebote: fuehrt Betreiber durch den Aufbau eines kindgerechten Meldewegs (Ausloeser, Erreichbarkeit, Rueckmeldung, Hilfeverweis) und exportiert fertige kindgerechte Melde-Texte (de/uk/ru) plus eine Prozess-Dokumentation. DSA/JuSchG/UN-KRK. Zielgruppe: Betreiber.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "license": "AGPL-3.0-only",
   "type": "module"
 }

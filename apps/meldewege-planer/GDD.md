@@ -36,7 +36,8 @@ für BzKJ-Aufsicht und Förderanträge.
 Keine externen Anfragen (NetzwerkWaechter), Konfiguration nur in
 localStorage (mwp.cfg) + Zurücksetzen, Export lokal per Blob, werbefrei.
 Das Ansprechpartner-Feld ist eine Rolle, kein Kindername; die erzeugten
-Texte enthalten keine externen Links (Test).
+Texte enthalten keine externen Links (Test). Unter dem Feld steht der Hinweis
+„Keine Namen von Kindern eingeben.“ (aria-describedby).
 
 ## 6. Tests
 
@@ -46,6 +47,9 @@ gleiche Schlüssel), jede Sprache mit 116 111 und „kein Petzen“,
 baueMeldetexte je Sprache nicht leer und ohne externe Links, baueProzessDoku
 übernimmt Auswahl und nennt DSA/JuSchG/116 111, leere Konfiguration liefert
 Grundgerüst mit offenen Punkten.
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Zuordnung zum
+Feld Ansprechperson; Label „kein Kindername“ unverändert. Testzahl gesamt: 10
+(vorher 6).
 
 ## 7. Erweiterungen (Katalog)
 

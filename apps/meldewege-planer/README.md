@@ -25,7 +25,8 @@
 
 Werbefrei, без внешних запросов (NetzwerkWaechter); конфигурация — только
 локально (`mwp.cfg`) + «Zurücksetzen». Поле ответственного — это роль, не
-персональные данные ребёнка.
+персональные данные ребёнка. Под полем «Ansprechperson» стоит подсказка
+«Keine Namen von Kindern eingeben.» (видна, связана с полем через aria-describedby).
 
 ## Запуск и тесты
 
@@ -33,3 +34,5 @@ Werbefrei, без внешних запросов (NetzwerkWaechter); конфи
 npm run dev   # http://localhost:8070/apps/meldewege-planer/
 node --test apps/meldewege-planer/test/*.test.mjs
 ```
+
+Тестов: 10 (`npm test` в папке приложения).

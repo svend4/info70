@@ -13,6 +13,10 @@ const SCHLUESSEL = 'mwp.cfg';
 const app = document.getElementById('app');
 const daten = await fetch('daten/meldewege.json').then((r) => r.json());
 const SPRACHEN = [['de', 'Deutsch'], ['uk', 'Українська'], ['ru', 'Русский']];
+// Eingabehinweis am Feld Ansprechperson (Freitext): sichtbar, als eigenes Element direkt vor dem Feld; das
+// Feld verweist per aria-describedby darauf. Die App hat keine Druckfassung, der Hinweis bleibt also überall stehen.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const HINWEIS_STIL = 'display:block;font-size:0.85rem;color:#4b5563;margin:0.2rem 0';
 
 const lade = () => ({ gruende: [], reaktion: '24h', bestaetigung: true, rueckmeldung: false, ansprechpartner: '', sprache: 'de', ...JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}') });
 const speichere = (c) => localStorage.setItem(SCHLUESSEL, JSON.stringify(c));
@@ -34,7 +38,7 @@ function render() {
 
   const knopf = (aktiv, label, onclick) => el('button', { class: `k-knopf k-knopf--klein${aktiv ? '' : ' k-knopf--neutral'}`, 'aria-pressed': String(aktiv), onclick }, label);
 
-  const nameFeld = el('input', { type: 'text', value: cfg.ansprechpartner, maxlength: 60, style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem', 'aria-label': 'Ansprechperson (Rolle/Redaktion, kein Kindername)', placeholder: 'z. B. „Redaktion Kinderseite“' });
+  const nameFeld = el('input', { type: 'text', value: cfg.ansprechpartner, maxlength: 60, style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem', 'aria-label': 'Ansprechperson (Rolle/Redaktion, kein Kindername)', 'aria-describedby': 'mwp-hinweis-ansprechperson', placeholder: 'z. B. „Redaktion Kinderseite“' });
   nameFeld.addEventListener('input', () => { const c = lade(); c.ansprechpartner = nameFeld.value; speichere(c); const z = app.querySelector('#mwp-doku'); if (z) z.value = baueProzessDoku(daten, c); });
 
   app.replaceChildren(
@@ -52,6 +56,7 @@ function render() {
       el('p', { style: 'font-weight:600;margin-top:0' }, '2) Wie schnell reagiert ihr?'),
       el('div', { class: 'k-antworten' }, ...daten.reaktionszeiten.map((r) => knopf(r.id === cfg.reaktion, r.name, () => { const c = lade(); c.reaktion = r.id; speichere(c); render(); }))),
       el('p', { style: 'font-weight:600;margin:0.8rem 0 0.3rem' }, 'Ansprechperson (Rolle, kein Kindername):'),
+      el('span', { id: 'mwp-hinweis-ansprechperson', style: HINWEIS_STIL }, KINDER_HINWEIS),
       nameFeld),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '3) Rückmeldung an das Kind'),
