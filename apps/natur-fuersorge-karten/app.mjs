@@ -20,6 +20,7 @@ function knopf(text, aktiv, onklick, id) {
     class: `k-knopf k-knopf--klein${aktiv ? '' : ' k-knopf--neutral'}`,
     'aria-pressed': String(aktiv),
     id,
+    'data-kennung': id,
     onclick: onklick,
   }, text);
 }
@@ -70,14 +71,14 @@ function zeichne(fokus = null) {
     el('section', { class: 'nf-nur-bildschirm', style: 'margin-top:1rem' },
       el('p', { style: 'font-weight:600' }, `${karten.length} ${karten.length === 1 ? 'Karte' : 'Karten'} und die Checkliste in dieser Auswahl`),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', id: 'nf-drucken', onclick: () => window.print() }, '🖨️ Diese Karten drucken'))),
+        el('button', { class: 'k-knopf', id: 'nf-drucken', 'data-kennung': 'nf-drucken', onclick: () => window.print() }, '🖨️ Diese Karten drucken'))),
     el('section', { class: 'nf-nur-druck' },
       el('p', { style: 'font-weight:600' }, `${daten.titel} – Karten`),
       el('p', {}, 'Die Beispiele stammen aus dem Text der Quelle. Die Anregungen sind Eigenentwurf. Kein Protokoll über Kinder.')),
     ...karten.map(karteBild),
     checklisteBild(),
     el('footer', { class: 'k-fuss nf-nur-bildschirm' },
-      el('span', {}, 'Werkzeug für Fachkräfte · läuft offline · nichts wird gespeichert · '),
+      el('span', {}, 'Werkzeug für Fachkräfte · ohne Verbindung nach draußen · ein Neuladen ohne Netz ist nicht zugesichert · nichts wird gespeichert · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   if (fokus) document.getElementById(fokus)?.focus();
 }

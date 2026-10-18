@@ -22,7 +22,9 @@ Sie liest keinen Fließtext auf Namen; ob die Texte inhaltlich geprüft sind, sa
 ## Die tragende Entscheidung 3: Handlungen aus dem Text, Anregungen als Eigenentwurf
 
 Gießen, Füttern und Ernten nennt der Text als Beispiele. Jede Anregung auf einer Karte ist als
-Eigenentwurf markiert. Eine Altersnorm für die Handlungen gibt die Quelle nicht.
+Eigenentwurf markiert. Eine Altersnorm für die Handlungen gibt die Quelle nicht: Die drei Handlungen
+auf S. 96 nennen kein Alter. Das Alter „zum Ende des dritten Lebensjahres“ gehört auf S. 96 zu den
+Entwicklungsindikatoren, nicht zu den Handlungen.
 
 ## Was als Quelle gilt und was als Eigenentwurf
 

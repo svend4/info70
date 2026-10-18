@@ -9,7 +9,8 @@ für die Fachkraft und drei Handlungen als Beispiele. Die Anregungen auf den Kar
 Der Katalogeintrag (Nr. 80) hatte vier Angaben, die der Text so nicht trägt:
 
 - **„Kinder 2–3“**: Der Text sagt 1 bis 3 Jahre (S. 6, S. 44). Eine Altersnorm für die Handlungen
-  gibt er nicht.
+  gibt er nicht: Die drei Handlungen auf S. 96 nennen kein Alter. Das Alter „zum Ende des dritten
+  Lebensjahres“ gehört auf S. 96 zu den Entwicklungsindikatoren, nicht zu den Handlungen.
 - **Mini-Protokoll „welches Kind welche Handlung selbstständig zeigt“**: Die Quelle sieht in diesem
   Abschnitt keine Dokumentation von Kindern vor. Ein solches Protokoll wäre eine Notiz über einzelne
   Kinder; es wird hier nicht gebaut.

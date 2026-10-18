@@ -18,6 +18,8 @@
   .nf-karte {
     break-inside: avoid;
     page-break-inside: avoid;
+    break-after: page;
+    page-break-after: always;
     border: 1pt solid #333;
     border-radius: 0;
     margin: 0 0 6mm;
@@ -25,6 +27,8 @@
     box-shadow: none;
     min-height: 5.5cm;
   }
+  /* Die letzte Karte (die Checkliste) bekommt keinen Umbruch danach: kein leeres Blatt am Ende. */
+  .nf-karte:last-of-type { break-after: auto; page-break-after: auto; }
   .nf-kartentitel { font-size: 12pt; margin: 0 0 2mm; }
   .nf-karte p, .nf-karte li { font-size: 10pt; line-height: 1.35; }
   .nf-quelle { color: #000; font-size: 8.5pt; }
