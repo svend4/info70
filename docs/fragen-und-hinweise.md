@@ -56,3 +56,9 @@ Stand: 18.10.2026, nach Welle 91. Dieses Dokument ergänzt `docs/offene-punkte-k
 - Vier Kita-Einheiten waren als „nicht gebaut“ eingetragen, obwohl sie in Variante A gebaut sind. Korrigiert.
 - Die Zahl „gebaut“ in Gruppe 2 (53 plus 4 in Variante A) ist eine Einschätzung aus README und GDD. Eine Zeile-für-Zeile-Prüfung fehlt; sie ist Teil von Serie C.
 - Der Faktenstand ist die größte Lücke: Nur 38 von 131 Einheiten der Gruppe 2 haben einen Vermerk, dass die Quelle geprüft wurde.
+
+## F. Ergänzungen aus Welle 92
+
+- **F1. Touch-Größe 48 px** (docs/02, Checkliste „touch ≥ 48 px“). Die Footer-Links der Apps der Wellen 90–92 hatten 44 px; nachgebessert auf 48 px. Ältere Apps: unbekannt, wahrscheinlich ebenso. Entscheidung: Repo-weit prüfen und angleichen (Serie C), oder die Regel auf Kinder-Apps begrenzen?
+- **F2. Vorlesefunktion („есть озвучивание“, docs/02 Checkliste).** 116 von 224 Apps rufen `vorlesen()` auf, 108 nicht. Die neuen Fachkraft- und Eltern-Werkzeuge haben keine. Entscheidung: gilt die Regel für Kinder-Apps oder für alle? Bei Fachkraft-Werkzeugen wird die Ausnahme im GDD begründet.
+- **F3. Prüfskripte.** Die Gegenprüfung der Zitate (38 Angaben) fand nur außerhalb des Repos statt; im Repo gibt es für Quellenprüfungen nur Konstanten. Siehe B1 und A10.

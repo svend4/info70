@@ -197,7 +197,7 @@ Lesart: „Nächster Schritt“ ist die nächste Aktion für diese Einheit. Die 
 
 **Serie A – neue Apps (Gruppe 2, Status „offen“ oder „unklar“ mit klarer Entscheidung).** Reihenfolge: Katalogreihenfolge, ohne quiz-kern und ohne offene Entscheidung.
 
-- **Welle 92 (in Arbeit):** Content-Pack 2 *Spielideen-Kartei: Was kann mein Baby mit…?* (0–1 Jahr, Druck, Eltern), Content-Pack 5 *Tierkinder und ihre Familien* (Vorlese-Generator, 3–5), Content-Pack 11 *Kindertänze Europas* (Datenpaket).
+- **Welle 92 (gebaut, geprüft, nachgebessert):** Content-Pack 2 *Spielideen-Kartei* (`baby-spielideen-kartei`, 16 Karten, nur Deutsch), Content-Pack 5 *Tierkinder* (`tierkinder-vorlesen`, Bausteine ohne KI), Content-Pack 11 *Kindertänze* (`kindertaenze-europa`, 22 Karten). Alle drei bleiben „teilweise“: uk/ru nicht erfunden, Lücken offen (siehe `fragen-und-hinweise.md`, F).
 - **Welle 93:** Content-Pack 12 *Puppentheater-Werkstatt* (Generator), Dokumente Nr. 18 *Theater zuhause* (Heft für Eltern), Printmaterial 7 *Fühl- und Sortier-Werkstatt* (2–3 Jahre, Druck).
 - **Welle 94:** Printmaterial 8 *Kleine Forscher ohne Bildschirm* (1–3 Jahre, Druck).
 - **Danach:** Printmaterial 6 sowie Funktionen Nr. 13 (Trostvers) und Nr. 15 (Naturschutz-Rat) nach Entscheidung (Abschnitt 5).
