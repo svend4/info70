@@ -60,10 +60,17 @@ test('Handlungsliste: 17 Nennungen wörtlich aus S. 40, daraus 16 Karten (Aufrei
   assert.equal(daten.karten.length, 17 - 1, '17 Nennungen ergeben 16 Karten');
 });
 
-test('Quelle je Karte: „Praleska, S. 40“; jede Seitenangabe liegt auf S. 40 oder S. 41', () => {
+test('Quelle je Karte: „Praleska, S. 40“, und „Praleska, S. 40–41“ genau dort, wo eine Angabe auf S. 41 liegt (Aufeinanderlegen, Auf dem Boden rollen)', () => {
+  const ausS41 = [];
   for (const k of daten.karten) {
-    assert.equal(k.quelle, 'Praleska, S. 40', `${k.id}: Quellenangabe`);
+    const seiten = new Set([...k.begriffe, ...k.gegenstaende].map((x) => x.seite));
+    const erwartet = seiten.has('S. 41') ? 'Praleska, S. 40–41' : 'Praleska, S. 40';
+    if (seiten.has('S. 41')) ausS41.push(k.id);
+    assert.equal(k.quelle, erwartet, `${k.id}: Quellenangabe „${k.quelle}“, Seiten der Karte: ${[...seiten].join(', ')}`);
   }
+  assert.deepEqual(ausS41, ['aufeinanderlegen', 'rollen'], 'die Karten mit S. 41 sind nicht genau diese zwei');
+  assert.equal(daten.karten.find((k) => k.id === 'aufeinanderlegen').quelle, 'Praleska, S. 40–41');
+  assert.equal(daten.karten.find((k) => k.id === 'rollen').quelle, 'Praleska, S. 40–41');
   for (const b of [...alleBegriffe(), ...daten.gegenstaende]) {
     assert.match(b.seite, /^S\. (40|41)$/, `Seite fehlt oder liegt außerhalb: ${b.quelltext} (${b.seite})`);
   }

@@ -18,6 +18,9 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
   Sie hat 17 Nennungen. „нанизывание“ und „кольца пирамидки нанизывает на стержень“ sind eine
   Handlung (Aufreihen). Daraus entstehen 16 Karten.
 - Die Liste steht mit „и т. д.“ (S. 40). Sie ist nicht abschließend; die App sagt das.
+- Zwei Karten tragen die Quellenangabe „Praleska, S. 40–41“: Aufeinanderlegen (Verweis
+  „строить башню“, S. 41) und Auf dem Boden rollen (Spielwagen, „коляску“, S. 41). Alle anderen
+  Karten tragen „Praleska, S. 40“.
 - Acht Gegenstände: Pyramide, Würfel, Kreisel, Ball, Holzfass, Holzei, Pilz (S. 40), Spielwagen
   (S. 41). Jede Verknüpfung trägt ihre Seite.
 - Glossen: вкладывание heißt Einlegen, Ineinanderstecken (nicht einfüllen). строит дом heißt
@@ -52,7 +55,7 @@ Jede Übertragung ist als Eigenentwurf gekennzeichnet. Russische Zitate haben h�
 ## Technik
 
 - `index.html`: Grundgerüst, Content-Security-Policy `default-src 'self'`, Stylesheets aus
-  `packages/kinder-ui` und `druck.css`. Der Fuß-Link zum Impressum ist mindestens 44 px hoch.
+  `packages/kinder-ui` und `druck.css`. Der Fuß-Link zum Impressum ist mindestens 48 px hoch.
 - `app.mjs`: Oberfläche, Filter, Auswahl und Druckknopf (`window.print()`), Netzwerk-Wächter
   aus `packages/kinderschutz`. Jeder Knopf trägt eine eindeutige `data-kennung`; nach jedem
   Neuaufbau der Anzeige bekommt der Knopf mit derselben Kennung den Fokus zurück.

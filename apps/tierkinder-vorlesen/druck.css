@@ -20,8 +20,8 @@
 
 /* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um. */
 h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
-/* Link im Fuß: mindestens 44 px hoch und 8 px seitlich Abstand. */
-.bsl-fusslink { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; }
+/* Link im Fuß: mindestens 48 px hoch (Touch-Ziel) und 8 px seitlich Abstand. */
+.bsl-fusslink { display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; }
 
 @media print {
   @page { size: A4 portrait; margin: 18mm 20mm; }

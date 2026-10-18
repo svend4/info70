@@ -61,7 +61,7 @@ Fußzeile den Satz „Übungsmaß laut Quelle, keine Sicherheitsgrenze.“
 - `daten/stationen.json`: alle acht Karten mit Quelle, Seite und Kennzeichnung.
 - `druck.css`: `@media print`, A4 quer, Bildschirmelemente ausgeblendet, je Karte ein Blatt.
   Auf dem Bildschirm: Titel bricht auch innerhalb eines Wortes um (bei 360 px Breite),
-  Fuß-Link mindestens 44 px hoch.
+  Fuß-Link mindestens 48 px hoch.
 
 Abweichung von der Vorlage: Die Vorlage lädt ihre Daten per `fetch`. Diese App lädt
 die Karten per JSON-Import mit Typangabe, weil die Regel kein `fetch` im Quelltext erlaubt.

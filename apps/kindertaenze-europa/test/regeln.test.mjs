@@ -108,7 +108,7 @@ test('Keine Felder für Kinder und keine uk- oder ru-Fassungen in den Daten; der
   assert.ok(code['daten/tanze.json'].includes('"uk und ru: nicht vorhanden, offen."'), 'Sprachhinweis fehlt');
 });
 
-test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 44 px hoch', () => {
+test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 48 px hoch', () => {
   const css = code['druck.css'];
   assert.match(css, /@media print \{/);
   assert.match(css, /@page\s*\{\s*size: A4 landscape;/);
@@ -118,7 +118,8 @@ test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf e
   assert.match(code['app.mjs'], /onclick: \(\) => window\.print\(\)/);
   assert.match(css, /h1\.k-titel\s*\{[^}]*overflow-wrap:\s*anywhere;[^}]*word-break:\s*normal;/);
   assert.match(code['app.mjs'], /el\('a', \{ class: 'ktz-fusslink'/);
-  assert.match(css, /\.k-fuss a, \.ktz-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px;[^}]*padding:\s*0 8px;/);
+  assert.match(css, /\.k-fuss a, \.ktz-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*48px;[^}]*padding:\s*0 8px;/);
+  assert.ok(!/min-height:\s*44px/.test(css), 'druck.css: Fuß-Link noch auf 44 px');
 });
 
 test('Fokus: jeder Knopf trägt eine data-kennung; render() merkt sich den Fokus, baut neu auf und setzt ihn zurück', () => {
@@ -145,9 +146,12 @@ test('Pflichtmarkierung: jede gedruckte Karte trägt den Satz im Druck; README u
   assert.match(app, /tanze\.map\(karteDom\)/, 'die gedruckten Karten kommen nicht alle aus karteDom');
   assert.ok(!/\.ktz-pflicht\s*\{[^}]*display:\s*none/.test(code['druck.css']), 'druck.css: Pflichtmarkierung im Druck ausgeblendet');
   assert.ok(alle['README.md'].includes(PFLICHTSATZ), 'README.md: Pflichtmarkierung fehlt');
+  const readme = alle['README.md'];
+  assert.match(readme, /^## Offen$/m, 'README.md: Abschnitt „## Offen“ fehlt');
+  assert.ok(readme.slice(readme.indexOf('\n## Offen\n')).includes(PFLICHTSATZ), 'README.md: Pflichtmarkierung nicht unter „## Offen“');
   const gdd = alle['GDD.md'];
-  assert.ok(gdd.includes('## Offen'), 'GDD.md: Abschnitt „## Offen“ fehlt');
-  assert.ok(gdd.slice(gdd.indexOf('## Offen')).includes(PFLICHTSATZ), 'GDD.md: Pflichtmarkierung nicht unter „## Offen“');
+  assert.match(gdd, /^## Offen$/m, 'GDD.md: Abschnitt „## Offen“ fehlt');
+  assert.ok(gdd.slice(gdd.indexOf('\n## Offen\n')).includes(PFLICHTSATZ), 'GDD.md: Pflichtmarkierung nicht unter „## Offen“');
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!/von Hand geprüft/i.test(inhalt), `${d}: „von Hand geprüft“ ist nicht belegt`);
   }

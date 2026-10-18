@@ -31,7 +31,7 @@ Kernerlebnis: Die Fachkraft wählt Stationen, druckt und hat Karten, auf denen j
 - Keine Anfragen nach außen (docs/02 Z. 22–24): Content-Security-Policy `default-src 'self'`, Netzwerk-Wächter, kein `fetch` im Quelltext der App.
 - Keine Bewertung von Kindern (docs/02 Z. 141–146, Release-Regel). Keine Speicherung und kein Bildschirm für Kinder: Projektregeln, ohne docs/02-Zeile.
 - Druckblatt nach docs/02 Z. 79–82: keine Zeichen, keine Namenszeile.
-- Oberfläche auf der Basis von `packages/kinder-ui` (Touch-Ziele, Kontrast, Schriftgröße). Fuß-Link mindestens 44 px hoch; nach einem Klick bleibt der Fokus auf dem gleichen Knopf.
+- Oberfläche auf der Basis von `packages/kinder-ui` (Touch-Ziele, Kontrast, Schriftgröße). Fuß-Link mindestens 48 px hoch; nach einem Klick bleibt der Fokus auf dem gleichen Knopf.
 
 ## 7. Aufwand
 S. Die Karten sind statisch und der Druck ist eine Druckansicht.

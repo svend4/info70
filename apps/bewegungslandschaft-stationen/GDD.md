@@ -42,7 +42,7 @@ die Aufsichtskarte Aufsicht und Umgebung. Die Daten stehen in `daten/stationen.j
   für Kinder unter 3 Jahren: Projektregeln, ohne docs/02-Zeile.
 - Druckblatt nach docs/02 Z. 79–82: keine Zeichen, keine Namenszeile.
 - Oberfläche auf der Basis von `packages/kinder-ui` (Touch-Ziele, Kontrast, Schriftgröße).
-  Fuß-Link mindestens 44 px hoch; nach einem Klick bleibt der Fokus auf dem gleichen Knopf.
+  Fuß-Link mindestens 48 px hoch; nach einem Klick bleibt der Fokus auf dem gleichen Knopf.
 
 ## 7. Aufwand
 S. Die Karten sind statisch und der Druck ist eine Druckansicht.
@@ -62,5 +62,5 @@ Quellenseiten, die Ausgabe der Quelle, die Auswahl und die Projektregeln. Detail
   Eine Fachkraft entscheidet, ob der Satz dort anders lauten soll.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - Browser-Prüfung: maschinell in Chromium geprüft (360 px ohne horizontales Scrollen,
-  Fuß-Link und Knöpfe mindestens 44 px hoch, Fokus nach Klick, JSON-Import mit Typangabe,
+  Fuß-Link und Knöpfe mindestens 48 px hoch, Fokus nach Klick, JSON-Import mit Typangabe,
   Druck mit einer Seite je Karte). Offen: Prüfung auf dem Gerät und in weiteren Browsern.

@@ -41,7 +41,7 @@ Jede Karte nennt ihre Seite und trägt den Satz „Seitenangaben maschinell gege
 - `app.mjs`: Oberfläche und Druckknopf (`window.print()`), Netzwerk-Wächter aus `packages/kinderschutz`. Jeder Knopf trägt eine eindeutige `data-kennung`; nach jedem Neuaufbau bekommt der Knopf mit derselben Kennung den Fokus zurück.
 - `logik.mjs`: Auswahl, feste Reihenfolge, Textzeilen. Ohne DOM.
 - `daten/stationen.json`: alle 22 Karten mit Quelle, Seite und Kennzeichnung. Die Karten kommen per JSON-Import mit Typangabe, ohne `fetch`.
-- `druck.css`: `@media print`, A4 quer, Bildschirmelemente ausgeblendet, je Karte ein Blatt. Auf dem Bildschirm bricht der Titel auch innerhalb eines Wortes um (bei 360 px Breite), der Fuß-Link ist mindestens 44 px hoch.
+- `druck.css`: `@media print`, A4 quer, Bildschirmelemente ausgeblendet, je Karte ein Blatt. Auf dem Bildschirm bricht der Titel auch innerhalb eines Wortes um (bei 360 px Breite), der Fuß-Link ist mindestens 48 px hoch.
 
 ## Drucken
 

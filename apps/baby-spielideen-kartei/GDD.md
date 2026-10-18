@@ -13,8 +13,11 @@ ihrer Seitenangabe und druckt die gewählten Karten.
 ## 3. Entscheidungen
 - 16 Karten. Die Quelle nennt auf S. 40 17 Nennungen; „нанизывание“ und „кольца пирамидки
   нанизывает на стержень“ sind eine Handlung (Aufreihen).
-- Jede Karte trägt Handlung, Quellenangabe S. 40, Begriffe mit Seite, Gegenstand mit Seite,
+- Jede Karte trägt Handlung, Quellenangabe, Begriffe mit Seite, Gegenstand mit Seite,
   Spielidee und Sicherheitssatz (Eigenentwurf) sowie die Pflichtmarkierung.
+- Quellenangabe: „Praleska, S. 40“. Zwei Karten tragen „Praleska, S. 40–41“, weil eine ihrer
+  Angaben auf S. 41 liegt: Aufeinanderlegen (Verweis „строить башню“) und Auf dem Boden rollen
+  (Spielwagen, „коляску“). Die Angabe folgt aus den Seiten der Karte; test/logik.test.mjs prüft das.
 - Der Druck zeigt nur die gewählten Karten, je Karte ein Blatt A4 hoch. Keine Zeichen,
   Kästchen, Punkte, Sterne oder Emojis; keine Namenszeile, kein Tages- oder Wochentagsfeld
   (docs/02 Z. 79–82).
@@ -65,3 +68,6 @@ Projektregeln. Details in der README.
 - uk und ru: nicht vorhanden, offen.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - Browser-Prüfung und Prüfung auf dem Gerät stehen aus.
+- Vorlesefunktion (docs/02, Checkliste „есть озвучивание“): Die Zielgruppe der App sind Erwachsene.
+  Vorlesen ist nicht gebaut. Der Geltungsbereich der Checkliste für diese Art Werkzeug ist offen
+  (Frage in docs/fragen-und-hinweise.md, F2).

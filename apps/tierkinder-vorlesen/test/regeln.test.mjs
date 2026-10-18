@@ -106,7 +106,7 @@ test('Druckblatt ohne Namenszeile und ohne Tages- oder Wochentagsfeld; Stil wie 
   assert.ok(!/Name\s*:|_{3,}/.test(code['app.mjs'] + code['druck.css']), 'app.mjs oder druck.css: Namenszeile');
 });
 
-test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, Vorlesetext nur im Druck; Titel bricht um, Fuß-Link 44 px hoch', () => {
+test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, Vorlesetext nur im Druck; Titel bricht um, Fuß-Link 48 px hoch (Touch-Ziel), keine alte Höhe mehr', () => {
   const css = code['druck.css'];
   assert.match(css, /@media print \{/);
   assert.match(css, /@page\s*\{\s*size: A4 portrait;/);
@@ -117,7 +117,8 @@ test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, Vorlesetext nur 
   assert.match(code['app.mjs'], /id: 'druckbereich'|id: 'druckbereich',/);
   assert.match(css, /h1\.k-titel\s*\{[^}]*overflow-wrap:\s*anywhere;[^}]*word-break:\s*normal;/);
   assert.match(code['app.mjs'], /el\('a', \{ class: 'bsl-fusslink'/);
-  assert.match(css, /\.bsl-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px;[^}]*padding:\s*0 8px;/);
+  assert.match(css, /\.bsl-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*48px;[^}]*padding:\s*0 8px;/);
+  assert.ok(!/\b44 ?px\b/.test(css + alle['README.md'] + alle['GDD.md']), 'alte Höhe 44 px steht noch in druck.css, README.md oder GDD.md');
 });
 
 test('Fokus nach Klick: jeder Knopf trägt eine eindeutige data-kennung; render() merkt sich den Fokus und setzt ihn zurück', () => {

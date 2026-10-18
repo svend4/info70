@@ -68,7 +68,7 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
 - `druck.css`: `@media print`, A4 quer, Bildschirmelemente ausgeblendet, je Karte ein Blatt,
   Schrittfolgen nummeriert. Die Pflichtmarkierung ist auf dem Bildschirm und im Druck sichtbar.
   Auf dem Bildschirm bricht der Titel auch innerhalb eines Wortes um (bei 360 px Breite), der
-  Fuß-Link ist mindestens 44 px hoch.
+  Fuß-Link ist mindestens 48 px hoch.
 
 ## Daten als JSON-Modul
 

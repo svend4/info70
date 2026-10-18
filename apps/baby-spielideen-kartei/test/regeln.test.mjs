@@ -120,7 +120,7 @@ test('Eigenentwurf-Kennzeichnung im Druck: Handlung, Gegenstand, Spielidee und S
   assert.ok(daten.sprachen.includes('Eigenentwurf'), 'Sprachenvermerk ohne Eigenentwurf');
 });
 
-test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 44 px hoch', () => {
+test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 48 px hoch', () => {
   const css = code['druck.css'];
   assert.match(css, /@media print \{/);
   assert.match(css, /@page\s*\{\s*size: A4 portrait;/);
@@ -131,8 +131,9 @@ test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, jede Karte auf e
   assert.match(css, /page-break-after: always;/);
   // Bei 360 px: die Überschrift bricht innerhalb eines Wortes um.
   assert.match(css, /h1\.k-titel\s*\{[^}]*overflow-wrap:\s*anywhere;[^}]*word-break:\s*normal;/);
-  // Fuß-Link: mindestens 44 px hoch.
-  assert.match(css, /\.k-fuss a\s*\{[^}]*min-height:\s*44px;/);
+  // Fuß-Link: mindestens 48 px hoch (docs/02, touch ≥ 48 px); 44 px reichen nicht.
+  assert.match(css, /\.k-fuss a\s*\{[^}]*min-height:\s*48px;/);
+  assert.doesNotMatch(css, /\.k-fuss a\s*\{[^}]*min-height:\s*44px;/);
   assert.match(code['app.mjs'], /el\('a', \{ href: '\.\.\/\.\.\/impressum\.html' \}, 'Impressum und Datenschutz'\)/);
 });
 

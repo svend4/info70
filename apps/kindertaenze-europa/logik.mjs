@@ -128,7 +128,8 @@ export function zaehlerText(gewaehlt, gesamt) {
 
 /**
  * Quellenzeile mit Seite. Das Zitat steht unverändert aus der Quelle, der
- * Absatz ebenso.
+ * Absatz ebenso. Bei den neun belarussischen Titeln ist das Zitat die Angabe
+ * zur Liste auf S. 267.
  * @param {{ seite: number, absatz: string, quelle_zitat: string }} t
  * @returns {string}
  */

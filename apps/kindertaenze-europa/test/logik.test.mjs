@@ -23,6 +23,35 @@ const STARTUMFANG = [
   'Мiкiта', 'Полька-Янка',
 ];
 
+// Abschrift von S. 267 der Praleska, die Absätze „Танцы“ und „Белорусские пляски“, mit
+// zusammengezogenen Zeilen (Silbentrennung am Zeilenende entfernt). Sie dient nur dem
+// Vergleich der Zitate; die App zeigt sie nicht.
+const S267 = [
+  'Танцы: «Менуэт», муз. Л. Боккерини; «Мазурка», муз. П. Чайковского; «Полонез», муз. М. ',
+  'Огиньского; «Итальянская полька», муз. С. Рахманинова; танец с бубнами «Неаполитанская песенка», ',
+  'муз. П. Чайковского; испанский танец «Арагонская хота», муз. М. Глинки; «Танец с саблями», муз. ',
+  'А. Хачатуряна; «Узбекский танец», муз. Р. Глиера (отрывок из музыкальной драмы «Гульсара»); ',
+  'восточный танец — отрывки из балета «Лебединое озеро», «Щелкунчик», муз. П. Чайковского; танец ',
+  'дружбы «Веселые тройки», муз. Н. Александровой; «Полька», хорват. нар. мел. (обр. В. Герчик); ',
+  'русский танец «Травушка-муравушка» или «Ходила младешенька по борочку», рус. нар. мел.; танец с ',
+  'платочками «Калина», рус. нар. мел.; танец мальчиков «Чеботуха», рус. нар. мел. (обр. В. ',
+  'Златарева); «Сударушка», рус. нар. мел. (обр. Ю. Слонова); «Гопак», «Казачок», «Коло», укр. нар. ',
+  'мел.; танец парами «Шастак», бел. нар. мел. (обр. Д. Камiнскага) или «Кацілася чорна галка» ',
+  '(обр. А. Рэмізоўскай); мексиканский танец, мексик. нар. мел.; итальянский танец; испанский ',
+  'танец; китайский танец; «Трапятуха», муз. В. Волах (обр. І. Кавалеўскага); «Трасуха», муз. А. ',
+  'Пыталева, сл. М. Чарняўскага; танец с куклами «Кукляндия», муз. П. Овсянникова, сл. М. ',
+  'Пляцковского и др. Белорусские пляски: «Трасуха», «Весялуха», «Крыжачок», «Лявонiха», «Бульба», ',
+  '«Грачанiкi», «Ойра», «Перапёлачка», «Мiкiта», «Шастак», бел. нар. мел.; «Полька-Янка», бел. нар. ',
+  'мел. (обр. Д. Ардзянтава) и др.',
+].join('');
+
+// Die neun belarussischen Titel: ihr Zitat steht auf S. 267 nicht als zusammenhängender
+// Wortlaut, weil Titel und Angabe in einer Liste stehen. Ihre Quellenangabe ist deshalb
+// die Listen-Fassung.
+const LISTE_S267 = 'Liste S. 267: belarussische Tänze (Umschrift Eigenentwurf)';
+const NEUN = ['trasucha', 'wesjaluha', 'kryschatschok', 'ljawonicha', 'bulba', 'gratschaniki', 'ojra',
+  'perapjolatschka', 'mikita'];
+
 test('Daten: 22 Tanzkarten, davon 20 mit Volksmelodie-Angabe und 2 mit Komponistenangabe; Kennungen eindeutig; Pflichtfelder gesetzt', () => {
   assert.equal(daten.tanze.length, 22);
   assert.equal(TANZ.length, 20);
@@ -37,12 +66,20 @@ test('Daten: 22 Tanzkarten, davon 20 mit Volksmelodie-Angabe und 2 mit Komponist
   }
 });
 
-test('Startumfang: die 20 Titel mit Volksmelodie-Angabe stehen in Quellenfolge wie auf S. 267', () => {
+test('Startumfang und Zitatprüfung: die 20 Titel stehen in Quellenfolge wie auf S. 267; jeder Titel steht auf S. 267; jedes Quellenzitat steht wörtlich dort, außer den neun belarussischen Titeln mit der Listen-Fassung', () => {
   assert.deepEqual(TANZ.map((t) => t.quelltitel || 'мексиканский танец'), STARTUMFANG);
   for (const t of TANZ) {
-    assert.match(t.quelle_zitat, /нар\. мел\./, `${t.id}: keine Volksmelodie-Angabe`);
     assert.ok(['Танцы', 'Белорусские пляски'].includes(t.absatz), `${t.id}: Absatz nicht auf S. 267`);
+    if (t.quelltitel) assert.ok(S267.includes(`«${t.quelltitel}»`), `${t.id}: Titel steht nicht auf S. 267`);
+    if (NEUN.includes(t.id)) {
+      assert.equal(t.quelle_zitat, LISTE_S267, `${t.id}: Quellenangabe ist nicht die Listen-Fassung`);
+      assert.ok(S267.includes('бел. нар. мел.'), `${t.id}: die Liste S. 267 nennt keine belarussische Angabe`);
+    } else {
+      assert.ok(S267.includes(t.quelle_zitat), `${t.id}: Quellenzitat steht nicht wörtlich auf S. 267`);
+      assert.match(t.quelle_zitat, /нар\. мел\./, `${t.id}: keine Volksmelodie-Angabe`);
+    }
   }
+  assert.deepEqual(TANZ.filter((t) => t.quelle_zitat === LISTE_S267).map((t) => t.id), NEUN);
 });
 
 test('Tanzart mit Komponistenangabe: nur Menuett und Polonaise, mit „муз.“, ohne Volksmelodie-Angabe und ohne Melodie-Zeile', () => {

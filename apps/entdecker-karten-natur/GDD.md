@@ -44,7 +44,7 @@ Das Kartenset hat 19 Karten: 7 Tiere, 3 Pflanzen, 6 Stoffe, 3 Jahreszeiten. Alle
 
 ## 8. Tests
 
-34 Tests in zwei Dateien: `test/logik.test.mjs` (Daten, Quelle je Eintrag, Seitenform, Kennzeichnung und Fußzeile, Filter, Blätter, Sicherheitssatz, Fehlerweg beim Laden) und `test/regeln.test.mjs` (Projektregeln am Quelltext: keine Felder über Kinder, keine Eingabefelder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter mit Fehlerweg, CSP, keine Druckzeichen, keine Namenszeile im Druck, Blattkopf, Footer-Link 44 px, Pflichtmarkierung, `aria-live` auf `#app`, verbotene Wörter, keine Bewertung, Fokus nach Neuaufbau, Modellnamen-Freiheit).
+34 Tests in zwei Dateien: `test/logik.test.mjs` (Daten, Quelle je Eintrag, Seitenform, Kennzeichnung und Fußzeile, Filter, Blätter, Sicherheitssatz, Fehlerweg beim Laden) und `test/regeln.test.mjs` (Projektregeln am Quelltext: keine Felder über Kinder, keine Eingabefelder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter mit Fehlerweg, CSP, keine Druckzeichen, keine Namenszeile im Druck, Blattkopf, Footer-Link 48 px, Pflichtmarkierung, `aria-live` auf `#app`, verbotene Wörter, keine Bewertung, Fokus nach Neuaufbau, Modellnamen-Freiheit).
 
 ## Offen
 

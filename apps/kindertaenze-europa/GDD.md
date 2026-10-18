@@ -18,6 +18,7 @@ Datenkarte. Jede Karte nennt die Quellenseite und die Melodie-Angabe der Quelle.
 - Sirtaki und Reigen sind nicht aufgenommen, weil die Quelle sie auf S. 267 nicht nennt. Ein
   Eintrag dazu wäre Eigenentwurf ohne Quellenbezug.
 - Die Quelltitel stehen wörtlich in russischer Schrift, als Zitat von höchstens 12 Wörtern.
+  Bei neun belarussischen Titeln ist die Quellenangabe die Liste S. 267 (siehe „## Offen“).
 - Melodie-Herkunft nur mit Seite, zum Beispiel „kroatische Volksmelodie (Quelle S. 267)“.
   Tanz-Herkunft steht nicht in den Daten; die Quelle nennt sie nicht.
 - Deutsche Namen sind Umschrift oder Übertragung und als Eigenentwurf gekennzeichnet.
@@ -49,11 +50,11 @@ Liste auf dem Bildschirm.
 ## 6. Politik (docs/02 Z. 22–24, Z. 79–82, Z. 141–146)
 - Keine Anfragen nach außen (docs/02 Z. 22–24): kein `fetch` im Quelltext der App, Netzwerk-Wächter,
   Content-Security-Policy.
-- Keine Bewertung von Kindern (docs/02 Z. 141–146). Keine Speicherung und kein Bildschirm für
-  Kinder unter 3 Jahren: Projektregeln ohne Zeilenangabe in den Anforderungen.
+- Keine Bewertung von Kindern (docs/02 Z. 141–146). Keine Speicherung und keine Bildschirme für
+  Kinder, ohne Altersgrenze: Projektregeln ohne Zeilenangabe in den Anforderungen.
 - Druckblatt nach docs/02 Z. 79–82: keine Zeichen, keine Namenszeile.
 - Keine Modellnamen und keine verbotenen Fachbegriffe in den Dateien (Projektregel).
-- Oberfläche auf der Basis von `packages/kinder-ui`. Fuß-Link mindestens 44 px hoch; nach einem
+- Oberfläche auf der Basis von `packages/kinder-ui`. Fuß-Link mindestens 48 px hoch; nach einem
   Klick bleibt der Fokus auf dem gleichen Knopf.
 
 ## 7. Aufwand
@@ -61,9 +62,9 @@ M. Die Daten sind statisch. Die Schritte und Hinweise sind Eigenentwurf und brau
 Gegenlesen durch eine Fachkraft.
 
 ## 8. Tests
-28 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten gegen die Quelle, den Startumfang,
-die Zitatlängen, die Schrittbeschreibungen, die Auswahl und die Projektregeln. Details in der
-README.
+28 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, den Startumfang und die Zitate gegen
+die Abschrift von S. 267, die Zitatlängen, die Schrittbeschreibungen, die Auswahl und die
+Projektregeln. Details in der README.
 
 ## Offen
 - Sirtaki und Reigen: Eigenentwurf ohne Quellenbezug. Die Quelle nennt sie auf S. 267 nicht.
@@ -83,8 +84,10 @@ README.
   mexikanischer Volksmelodie-Angabe. Der deutsche Name ist Eigenentwurf.
 - Die Angabe „и др.“ auf S. 267 zeigt, dass die Quelle mehr Tänze nennt als hier stehen. Nicht
   aufgenommen.
-- Bei den belarussischen Titeln steht die Angabe „бел. нар. мел.“ in der Quelle für eine Liste.
-  Die Karte zeigt Titel und Angabe, nicht die ganze Liste.
+- Neun belarussische Titel (Trasucha bis Mikita): ihr Zitat steht auf S. 267 nicht als
+  zusammenhängender Wortlaut. Die Quellenangabe ist deshalb „Liste S. 267: belarussische Tänze
+  (Umschrift Eigenentwurf)“. Die Titel stehen in der Liste; die Karte nennt die Liste, nicht ihren
+  ganzen Wortlaut.
 - Katalogeintrag docs/10: Er nennt Schrittfolgen, Herkunftsgeschichten, Familien als Zielgruppe
   und 26 Tänze. Die Quelle belegt keine Schrittfolgen und keine Herkunftsgeschichten; Familien
   als Zielgruppe sind nicht belegt; die Zahl 26 ist mit S. 267 allein nicht abgeglichen.
@@ -92,5 +95,6 @@ README.
 - Schritte, Hinweise, Umschriften der Namen und die Altersangabe sind Eigenentwurf. Eine
   Fachkraft liest sie gegen und entscheidet, ob sie passen.
 - uk und ru: nicht vorhanden, offen.
+- Vorlesefunktion nicht gebaut (Zielgruppe Fachkraft; Geltungsbereich der Checkliste offen).
 - Prüfung im Browser (360 px, Druck, Fokus) und auf dem Gerät steht aus.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.

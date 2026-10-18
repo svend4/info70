@@ -91,7 +91,7 @@ test('Drucktext ohne Namenszeile und ohne Tages- oder Wochentagsfeld', () => {
   assert.ok(!/Name\s*:|_{3,}/.test(code['app.mjs'] + code['druck.css']), 'app.mjs oder druck.css: Namenszeile');
 });
 
-test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 44 px hoch', () => {
+test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 48 px hoch', () => {
   const css = code['druck.css'];
   assert.match(css, /@media print \{/);
   assert.match(css, /@page\s*\{\s*size: A4 landscape;/);
@@ -101,9 +101,10 @@ test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf e
   assert.match(code['app.mjs'], /onclick: \(\) => window\.print\(\)/);
   // Bei 360 px: die Überschrift bricht innerhalb eines Wortes um.
   assert.match(css, /h1\.k-titel\s*\{[^}]*overflow-wrap:\s*anywhere;[^}]*word-break:\s*normal;/);
-  // Footer-Link: mindestens 44 px hoch, inline-flex, zentriert, 8 px seitlich.
+  // Footer-Link: mindestens 48 px hoch (docs/02 Checkliste, touch ≥ 48 px), inline-flex, zentriert, 8 px seitlich.
   assert.match(code['app.mjs'], /el\('a', \{ class: 'sss-fusslink'/);
-  assert.match(css, /\.sss-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px;[^}]*padding:\s*0 8px;/);
+  assert.match(css, /\.sss-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*48px;[^}]*padding:\s*0 8px;/);
+  assert.ok(!/\.sss-fusslink[^}]*min-height:\s*44px/.test(css), 'druck.css: Fuß-Link noch auf 44 px');
 });
 
 test('Fokus nach Klick: jeder Knopf trägt eine eindeutige data-kennung; render() merkt sich den Fokus und setzt ihn zurück', () => {

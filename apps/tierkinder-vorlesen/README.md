@@ -22,6 +22,8 @@ Der Schluss des Vorlesetextes ist Eigenentwurf ohne Quelle.
 ## Katalog und Altersgruppe
 
 - Katalogeintrag docs/10, Abschnitt Content-Pakete zu bestehenden Apps, Einheit Content-Pack 5.
+  „Einheit Content-Pack 5“ ist die Projektkennung dieser App im Katalog. Die Angabe steht im
+  Katalog, nicht in der Quelle, und wird auf dem Blatt nicht gedruckt.
 - Altersgruppe 3 bis 5 Jahre, Vorlesen durch Erwachsene (Katalogangabe).
 - Die App ist ein Werkzeug für Erwachsene. Kein Bildschirm für Kinder (Projektregel ohne eigene Fundstelle).
 - Offline nach dem Laden.
@@ -31,19 +33,25 @@ Der Schluss des Vorlesetextes ist Eigenentwurf ohne Quelle.
 Praleska, S. 113 bis 114, Abschnitte über Ernährung und über das Wachsen der Tiere (im Quelltext mit Sternchen markiert):
 
 - Tierarten: Fuchs, Wolf, Vogel und Kuh (S. 113 und 114), Bär (S. 114), Huhn über den Stall (S. 114).
-- Orte: Bau für Fuchs und Wolf (S. 114, „нора“), Höhle für den Bären (S. 114, „берлога“),
+- Orte: Bau für Fuchs und Wolf (S. 114, „нора“; die Quelle nennt dazu keine Lage, der Satz
+  zum Bau ist Eigenentwurf), Höhle für den Bären (S. 114, „берлога“),
   Nest für Vögel (S. 114, „гнезда“), Stall für Haustiere (S. 114, „коровник, курятник“).
 - Jungtier-Themen (S. 114): Eltern wärmen und schützen die Jungen; Jungtiere kommen im
   Frühling und im Sommer, damit sie bis zum Winter groß werden; die kleinen Tiere werden
   groß und bekommen selbst Nachwuchs.
 - Die Quelle ordnet auf S. 7 ihre Inhalte überwiegend als Aufgaben für Erziehende ein.
   Auf S. 113 bis 114 stehen Aufgaben, keine Geschichten.
+- Die Abschnitte auf S. 113 bis 114 sind in der Quelle für ältere Kinder der Gruppe markiert
+  (Fußnote 1 auf S. 113: die Sternchen * kennzeichnen Aufgaben für ältere Kinder der Gruppe).
+  Das steht auch im Hinweis auf dem Druckblatt.
 
 Die Quelle nennt auf S. 112 Tiere aus der näheren Umgebung (Übertragung, kein Zitat).
 Das Wort „heimisch“ wird nicht verwendet.
 
 Ausgabe der Quelle, wie auf der Titelseite der Textdatei: Minsk: НИО (Национальный
-институт образования), 2007. ISBN 978-985-465-244-3.
+институт образования), 2007. ISBN 978-985-465-244-3. Die Titelseite nennt das Institut als
+„НАЦИОНАЛЬНЫЙ ИНСТИТУТ ОБРАЗОВАНИЯ“ in Minsk. „Nationales Institut für Bildung (Minsk)“ ist
+die deutsche Übertragung dieser Angabe; die Quellenzeile des Druckblatts nennt sie ebenso.
 
 ## Was Eigenentwurf ist
 
@@ -84,7 +92,7 @@ Ausgabe der Quelle, wie auf der Titelseite der Textdatei: Minsk: НИО (Нац�
 - `logik.mjs`: Zuordnung Tierart zu Ort, Auswahl, Vorlesetext, Pflichtmarkierung. Ohne DOM.
 - `daten/bausteine.json`: alle Bausteine mit Seite, Quellenbegriff und Vermerk.
 - `druck.css`: `@media print`, A4 hoch, nur der eine Vorlesetext. Auf dem Bildschirm
-  bricht der Titel auch innerhalb eines Wortes um (bei 360 px Breite), der Fuß-Link ist mindestens 44 px hoch.
+  bricht der Titel auch innerhalb eines Wortes um (bei 360 px Breite), der Fuß-Link ist mindestens 48 px hoch.
 
 Die Bausteine kommen per JSON-Import mit Typangabe (`with { type: 'json' }`), nicht per `fetch`.
 Dafür braucht der Browser Unterstützung für Import-Attribute. Welche Browserversionen das sind,

@@ -98,13 +98,13 @@ test('Markierung: jede gedruckte Karte trägt Eigenentwurf und eine Seitenangabe
   for (const [datei, text] of quellen) assert.ok(!/von Hand geprüft/i.test(text), `${datei}: „von Hand geprüft“`);
 });
 
-test('druck.css blendet die Bildschirmteile aus, bindet das Blatt ein und gibt dem Footer-Link 44 px Höhe', () => {
+test('druck.css blendet die Bildschirmteile aus, bindet das Blatt ein und gibt dem Footer-Link 48 px Höhe', () => {
   assert.match(css, /@media print/);
   assert.match(css, /\.ek-nur-bildschirm\s*\{\s*display:\s*none/);
   assert.match(html, /href="druck\.css"/);
   const markiert = (app.match(/ek-nur-bildschirm/g) ?? []).length;
   assert.ok(markiert >= 4, `nur ${markiert} Bildschirmteile markiert`);
-  assert.match(css, /\.ek-link\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px;[^}]*padding:\s*0 8px;/);
+  assert.match(css, /\.ek-link\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*48px;[^}]*padding:\s*0 8px;/);
   assert.match(app, /class: 'ek-link'/, 'Footer-Link ohne Klasse ek-link');
 });
 

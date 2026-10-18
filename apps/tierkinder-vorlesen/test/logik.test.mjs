@@ -34,12 +34,13 @@ test('Daten: 6 Tierarten, 4 Orte, 3 Jungtier-Themen; IDs je Liste eindeutig, Pfl
   }
 });
 
-test('Quelle je Eintrag: Tierarten, Orte und Jungtier-Themen tragen eine Seite (113 bis 114) und einen Quellenbegriff', () => {
+test('Quelle je Eintrag: Tierarten, Orte und Jungtier-Themen tragen eine Seite (113 bis 114) und einen Quellenbegriff; Quellenzeile nennt das Institut; Hinweis nennt die Altersmarkierung', () => {
   for (const e of [...daten.tierarten, ...daten.orte, ...daten.jungtiere]) {
     assert.ok(seitenImBereich(e.seite), `${e.id}: Seite „${e.seite}“ ist nicht gültig`);
     assert.match(e.begriff, /[а-яё]/i, `${e.id}: Quellenbegriff ist nicht russisch oder fehlt`);
   }
-  assert.match(daten.quelle, /Praleska\. Minsk: НИО \(Национальный институт образования\), 2007\. ISBN 978-985-465-244-3\./);
+  assert.match(daten.quelle, /Praleska\. Minsk: НИО \(Национальный институт образования\), 2007\. Nationales Institut für Bildung \(Minsk\)\. ISBN 978-985-465-244-3\. Sachbezug: S\. 113 bis 114\./);
+  assert.ok(daten.hinweis.includes('Die Abschnitte auf S. 113 bis 114 sind in der Quelle für ältere Kinder der Gruppe markiert.'), 'Hinweis ohne Altersmarkierung der Quelle');
   assert.match(daten.katalog, /^Katalogeintrag docs\/10, .*Content-Pack 5\.$/);
 });
 
@@ -139,19 +140,20 @@ test('Jeder Absatz trägt die Kennzeichnung Eigenentwurf; jeder Absatz mit Sachb
   }
 });
 
-test('Jeder gedruckte Vorlesetext trägt die Pflichtmarkierung, für alle Kombinationen', () => {
+test('Jeder gedruckte Vorlesetext trägt die Pflichtmarkierung und den Hinweis auf die Altersmarkierung, für alle Kombinationen', () => {
   assert.equal(PFLICHTMARKIERUNG, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.');
   for (const k of alleKombinationen(daten)) {
     const t = vorlesetext(daten, k);
     assert.equal(t.pflicht, PFLICHTMARKIERUNG, `${JSON.stringify(k)}: Pflichtmarkierung fehlt`);
+    assert.ok(t.hinweis.includes('für ältere Kinder der Gruppe markiert.'), `${JSON.stringify(k)}: Altersmarkierung fehlt auf dem Blatt`);
     assert.ok(vorlesetextAlsText(t).includes(PFLICHTMARKIERUNG));
   }
 });
 
-test('Keine Lesart als Quelle: kein Winterschlaf, kein „heimisch“, keine Höchst- oder Grenzangabe', () => {
+test('Keine Lesart als Quelle: kein Winterschlaf, kein „heimisch“, keine Höchst- oder Grenzangabe, keine Lage „unter der Erde“ (Quelle nennt nur нора)', () => {
   const alles = JSON.stringify(daten) + alleKombinationen(daten)
     .map((k) => vorlesetextAlsText(vorlesetext(daten, k))).join('\n');
-  const verboten = /Winterschlaf|heimisch|Höchst|Grenzwert|Mindestabstand|mindestens|höchstens|maximal|Sicherheit/i;
+  const verboten = /Winterschlaf|heimisch|Höchst|Grenzwert|Mindestabstand|mindestens|höchstens|maximal|Sicherheit|unter der Erde/i;
   assert.ok(!verboten.test(alles), `verbotene Angabe gefunden: ${alles.match(verboten)?.[0]}`);
 });
 

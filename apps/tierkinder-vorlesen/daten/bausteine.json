@@ -1,8 +1,8 @@
 {
   "titel": "Tierkinder – Vorlesen",
   "untertitel": "Vorlesetexte für Kinder von 3 bis 5 Jahren. Vorgelesen wird durch Erwachsene. Die Sätze sind Eigenentwurf.",
-  "hinweis": "Auf den Seiten 113 bis 114 der Quelle stehen Aufgaben für Erziehende, keine Geschichten. Die Quelle stellt ihre Inhalte auf S. 7 überwiegend als Aufgaben dar. Alle Sätze dieses Vorlesetextes sind neu geschrieben.",
-  "quelle": "Praleska. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Sachbezug: S. 113 bis 114.",
+  "hinweis": "Auf den Seiten 113 bis 114 der Quelle stehen Aufgaben für Erziehende, keine Geschichten. Die Abschnitte auf S. 113 bis 114 sind in der Quelle für ältere Kinder der Gruppe markiert. Die Quelle stellt ihre Inhalte auf S. 7 überwiegend als Aufgaben dar. Alle Sätze dieses Vorlesetextes sind neu geschrieben.",
+  "quelle": "Praleska. Minsk: НИО (Национальный институт образования), 2007. Nationales Institut für Bildung (Minsk). ISBN 978-985-465-244-3. Sachbezug: S. 113 bis 114.",
   "katalog": "Katalogeintrag docs/10, Abschnitt Content-Pakete zu bestehenden Apps, Einheit Content-Pack 5.",
   "sprachen": "uk und ru: nicht vorhanden, offen.",
   "tierarten": [
@@ -61,7 +61,7 @@
       "name": "Bau",
       "seite": "S. 114",
       "begriff": "нора",
-      "text": "Für ihre Kleinen bauen die Eltern einen Bau unter der Erde."
+      "text": "Für ihre Kleinen bauen die Eltern einen Bau als Zuhause."
     },
     {
       "id": "hoehle",

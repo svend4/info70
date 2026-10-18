@@ -179,7 +179,7 @@ test('Modellnamen-Gegenprobe: die Prüfung erkennt Kennungsform und nicht-allgem
   assert.ok(!KI_ERLAUBT.test('Intelligenz'), 'das Wort allein ist kein allgemeiner Begriff');
 });
 
-test('Grundgerüst index.html: lang de, Viewport, noscript, Stylesheets, Modul app.mjs, Titel wie im Katalog, Footer-Link mindestens 44 px', () => {
+test('Grundgerüst index.html: lang de, Viewport, noscript, Stylesheets, Modul app.mjs, Titel wie im Katalog, Footer-Link mindestens 48 px', () => {
   assert.match(html, /<html lang="de">/);
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1" \/>/);
   assert.match(html, /<noscript>/);
@@ -187,8 +187,8 @@ test('Grundgerüst index.html: lang de, Viewport, noscript, Stylesheets, Modul a
   assert.ok(html.includes('href="druck.css"'), 'druck.css fehlt');
   assert.ok(html.includes('<script type="module" src="app.mjs"></script>'), 'app.mjs fehlt');
   assert.ok(html.includes(`<title>${daten.titel}</title>`), 'der Seitentitel weicht vom Katalogtitel ab');
-  assert.match(html, /\.k-fuss a \{ display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; \}/,
-    'Footer-Links ohne 44 px Mindesthöhe');
+  assert.match(html, /\.k-fuss a \{ display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; \}/,
+    'Footer-Links ohne 48 px Mindesthöhe');
 });
 
 test('Fachkraft-Satz, Eigenentwurf-Kennzeichnung und Pflichtmarkierung der Seitenangaben stehen im Druckkopf, im Footer und im GDD unter „Offen“', () => {

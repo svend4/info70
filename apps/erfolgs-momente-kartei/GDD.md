@@ -30,7 +30,7 @@ Fundstellen in docs/02: keine Anfragen nach außen Z. 22–24; Druckbögen Z. 79
 
 ## 5. Tests
 
-Die Suite führt 23 Tests aus. `test/logik.test.mjs` prüft das Kartenset (IDs eindeutig, Seitenangaben, Eigenentwurf-Kennzeichnung, Zitatlänge), die Gegenproben der Prüfung (jede Artikelform, Plural, Gegenprobe ohne Treffer), Auswahl, Druckform, Druckzeilen und Druck-Texte. `test/regeln.test.mjs` prüft die Projektregeln: keine Felder über Kinder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter, CSP, Druckzeichen, Namenszeile, Markierung je Karte und Prüfangabe, Druck-CSS mit Footer-Link (44 px), aria-live und Fokus, Wortliste in den ausgelieferten Dateien, Modellnamen (nur über allgemeine Begriffe geprüft) und die Testzahl.
+Die Suite führt 23 Tests aus. `test/logik.test.mjs` prüft das Kartenset (IDs eindeutig, Seitenangaben, Eigenentwurf-Kennzeichnung, Zitatlänge), die Gegenproben der Prüfung (jede Artikelform, Plural, Gegenprobe ohne Treffer), Auswahl, Druckform, Druckzeilen und Druck-Texte. `test/regeln.test.mjs` prüft die Projektregeln: keine Felder über Kinder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter, CSP, Druckzeichen, Namenszeile, Markierung je Karte und Prüfangabe, Druck-CSS mit Footer-Link (48 px), aria-live und Fokus, Wortliste in den ausgelieferten Dateien, Modellnamen (nur über allgemeine Begriffe geprüft) und die Testzahl.
 
 ## Offen
 

@@ -19,7 +19,9 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
 
 - Die 20 Titel mit Volksmelodie-Angabe auf S. 267 (Absätze „Танцы“ und „Белорусские пляски“),
   in Quellenfolge. Die Titel stehen auf den Karten wörtlich in russischer Schrift, mit
-  Seitenangabe.
+  Seitenangabe. Bei neun belarussischen Titeln (Trasucha bis Mikita) nennt die Quellenzeile die
+  Liste S. 267, weil ihr Zitat dort nicht als zusammenhängender Wortlaut steht:
+  „Liste S. 267: belarussische Tänze (Umschrift Eigenentwurf)“.
 - Die Tanzarten Menuett und Polonaise mit Komponistenangabe (S. 267). Sie tragen nur die Tanzart
   mit Komponistenangabe, keine Melodie-Angabe.
 - Die Melodie-Herkunft je Tanz, zum Beispiel „kroatische Volksmelodie (Quelle S. 267)“. Sie ist
@@ -60,7 +62,7 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
   dazu die Bewegungsbegriffe und die Hinweise zur Quelle.
 - `druck.css`: `@media print`, A4 quer, Bildschirmelemente ausgeblendet, je Karte ein Blatt.
   Der Titel bricht auch innerhalb eines Wortes um (bei 360 px Breite), der Fuß-Link ist
-  mindestens 44 px hoch.
+  mindestens 48 px hoch.
 
 Abweichung von der Vorlage: Die Daten kommen per JSON-Import mit Typangabe
 (`with { type: 'json' }`), nicht per `fetch`, weil die Regel keine Anfrage nach außen erlaubt.
@@ -78,7 +80,7 @@ Blättern erscheinen. Die App setzt selbst kein Datum und keine Adresse.
 
 ## Tests
 
-28 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Startumfang, Seiten, Melodie-Angaben,
+28 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Startumfang und Zitate gegen S. 267, Seiten, Melodie-Angaben,
 Zitatlängen, Schrittbeschreibungen, Filter, Auswahl und Kartentext. `test/regeln.test.mjs` prüft
 die Projektregeln: keine Eingabefelder, keine Speicherung, keine externen Adressen, keine
 Druckzeichen, keine Namenszeile, keine Felder für Kinder, aria-live auf `#app`, Fokus nach Klick,
@@ -87,3 +89,36 @@ Pflichtmarkierung der Seitenangaben, Verweise auf die Anforderungen, Wortwahl, T
 ```bash
 node --test apps/kindertaenze-europa/test/*.test.mjs
 ```
+
+## Offen
+- Sirtaki und Reigen: Eigenentwurf ohne Quellenbezug. Die Quelle nennt sie auf S. 267 nicht.
+  Entscheidung der Projektleitung. (Auf S. 259 und S. 266 nennt die Quelle „хоровод“, auf S. 267
+  „Коло“ mit ukrainischer Volksmelodie-Angabe.)
+- Anzahl der Titel: 20 Titel mit Volksmelodie-Angabe (Startumfang) oder alle Titel aus S. 267.
+  Entscheidung der Projektleitung.
+- Menuett und Polonaise sind im Datensatz, obwohl sie nicht zum Volksmelodie-Startumfang gehören.
+  Entscheidung der Projektleitung.
+- „Трасуха“ steht auf S. 267 zweimal: im Absatz „Танцы“ mit Komponistenangabe und im Absatz
+  „Белорусские пляски“ mit belarussischer Volksmelodie-Angabe. Die App nimmt die zweite Fassung.
+  Ob die Komponistenfassung auch aufgenommen wird, entscheidet die Projektleitung.
+- Alternativtitel: „Травушка-муравушка“ oder „Ходила младешенька по борочку“ (S. 267); „Шастак“ oder
+  „Кацілася чорна галка“ (S. 267). Die App zeigt den Alternativtitel nur bei Шастак; bei
+  Травушка-муравушка steht er im Quellenzitat. Die Wahl der Fassung entscheidet die Projektleitung.
+- Mexikanischer Tanz: die Quelle nennt keinen Eigentitel, nur „мексиканский танец“ mit
+  mexikanischer Volksmelodie-Angabe. Der deutsche Name ist Eigenentwurf.
+- Die Angabe „и др.“ auf S. 267 zeigt, dass die Quelle mehr Tänze nennt als hier stehen. Nicht
+  aufgenommen.
+- Neun belarussische Titel (Trasucha bis Mikita): ihr Zitat steht auf S. 267 nicht als
+  zusammenhängender Wortlaut. Die Quellenangabe ist deshalb „Liste S. 267: belarussische Tänze
+  (Umschrift Eigenentwurf)“. Die Titel stehen in der Liste; die Karte nennt die Liste, nicht ihren
+  ganzen Wortlaut.
+- Katalogeintrag docs/10: Er nennt Schrittfolgen, Herkunftsgeschichten, Familien als Zielgruppe
+  und 26 Tänze. Die Quelle belegt keine Schrittfolgen und keine Herkunftsgeschichten; Familien
+  als Zielgruppe sind nicht belegt; die Zahl 26 ist mit S. 267 allein nicht abgeglichen.
+  Entscheidung der Projektleitung.
+- Schritte, Hinweise, Umschriften der Namen und die Altersangabe sind Eigenentwurf. Eine
+  Fachkraft liest sie gegen und entscheidet, ob sie passen.
+- uk und ru: nicht vorhanden, offen.
+- Vorlesefunktion nicht gebaut (Zielgruppe Fachkraft; Geltungsbereich der Checkliste offen).
+- Prüfung im Browser (360 px, Druck, Fokus) und auf dem Gerät steht aus.
+- Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.

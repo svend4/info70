@@ -49,7 +49,7 @@ Bildschirm vor und druckt ihn bei Bedarf auf ein Blatt.
 - Keine Bewertung von Kindern (docs/02 Z. 141–146). Keine Speicherung und kein Bildschirm
   für Kinder: Projektregeln ohne eigene Fundstelle.
 - Druckblatt nach docs/02 Z. 79–82.
-- Oberfläche auf der Basis von `packages/kinder-ui`. Fuß-Link mindestens 44 px hoch. Nach einem
+- Oberfläche auf der Basis von `packages/kinder-ui`. Fuß-Link mindestens 48 px hoch. Nach einem
   Klick bleibt der Fokus auf dem gleichen Knopf.
 
 ## 7. Aufwand

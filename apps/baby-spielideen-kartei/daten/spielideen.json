@@ -162,7 +162,7 @@
     {
       "id": "aufeinanderlegen",
       "handlung": "Aufeinanderlegen",
-      "quelle": "Praleska, S. 40",
+      "quelle": "Praleska, S. 40–41",
       "begriffe": [
         { "quelltext": "кубики накладывает один на другой", "seite": "S. 40", "liste": true, "deutsch": "aufeinanderlegen" },
         { "quelltext": "строит дом", "seite": "S. 40", "deutsch": "Haus bauen" },
@@ -188,7 +188,7 @@
     {
       "id": "rollen",
       "handlung": "Auf dem Boden rollen",
-      "quelle": "Praleska, S. 40",
+      "quelle": "Praleska, S. 40–41",
       "begriffe": [
         { "quelltext": "мяч — катает по полу", "seite": "S. 40", "liste": true, "deutsch": "auf dem Boden rollen" }
       ],
