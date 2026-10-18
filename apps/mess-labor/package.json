@@ -2,7 +2,7 @@
   "name": "@info70/mess-labor",
   "version": "0.1.0",
   "private": true,
-  "description": "Mess-Labor der kleinen Forscher: acht Mess-Experimente mit Haushaltsdingen (Laenge, Gewicht, Volumen, Zeit, Temperatur) nach dem Forschungskreis Vermuten -> Ausprobieren -> Schlussfolgern. Die App sammelt nur die Vermutung und sagt dann 'Geraet weglegen und wirklich ausprobieren' - das Experiment passiert ohne Bildschirm; widerlegte Vermutungen werden als Forschungserfolg gefeiert (keine Beschaemung). Erwachsenen-Hinweis bei Wasser/Kueche. Praleska docs/10 (Top-30 Nr. 27). Offline, werbefrei, speichert nichts. Zielgruppe: 5-7 (Ko-Nutzung) / 8-12.",
+  "description": "Mess-Labor der kleinen Forscher: zehn Mess-Experimente mit Haushaltsdingen (Laenge, Gewicht, Volumen, Zeit, Temperatur) im Dreischritt Vermuten -> Ausprobieren -> Schlussfolgern. Die App sammelt nur die Vermutung und sagt dann 'Geraet weglegen und wirklich ausprobieren' - das Experiment passiert ohne Bildschirm; widerlegte Vermutungen werden als Forschungserfolg gefeiert (keine Beschaemung). Erwachsenen-Hinweis bei Wasser/Kueche. Praleska docs/10 (Top-30 Nr. 27). Offline, werbefrei, speichert nichts. Zielgruppe: 5-7 (Ko-Nutzung) / 8-12.",
   "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {

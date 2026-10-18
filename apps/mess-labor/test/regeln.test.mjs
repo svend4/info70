@@ -5,13 +5,13 @@ import { access, readdir, readFile } from 'node:fs/promises';
 // Projektregeln, für diese App geprüft: docs/02 Z. 22–24 (keine Anfragen nach außen),
 // docs/02 Z. 50 (Knöpfe und Fußlink mindestens 48 px), docs/02 Z. 141–146 (keine Bewertung
 // von Kindern); die Speicherregel, die Eingaberegel und die Zufallsregel haben keine
-// docs/02-Zeile, sie sind Projektregeln. Die App hat kein Druckblatt (Bauauftrag Abschnitt 8),
-// die Druckregeln der Vorlage entfallen deshalb. Die Prüfung liest die Dateien der App (ohne test/).
+// docs/02-Zeile, sie sind Projektregeln. Die App hat kein Druckblatt; druck.css blendet nur den
+// Bildschirm und die Schmuck-Emojis aus (Entscheidung des Nutzers). Die Prüfung liest die Dateien der App (ohne test/).
 // Die Testdateien selbst dürfen die verbotenen Wörter nennen, um sie zu verbieten.
 
 const APP = new URL('../', import.meta.url);
 const CODE_DATEIEN = ['index.html', 'app.mjs', 'logik.mjs', 'daten/experimente.json'];
-const ALLE_DATEIEN = [...CODE_DATEIEN, 'package.json', 'README.md', 'GDD.md'];
+const ALLE_DATEIEN = [...CODE_DATEIEN, 'druck.css', 'package.json', 'README.md', 'GDD.md'];
 
 const lese = (datei) => readFile(new URL(datei, APP), 'utf8');
 const code = Object.fromEntries(await Promise.all(CODE_DATEIEN.map(async (d) => [d, await lese(d)])));
@@ -50,12 +50,16 @@ test('kein Zufall, keine Uhr: Math.random, Date und performance kommen in keiner
   }
 });
 
-test('kein Druckblatt in dieser Einheit: keine Druckfunktion, kein druck.css', () => {
+test('kein Druckblatt: keine Druckfunktion; druck.css blendet nur den Bildschirm und die Schmuck-Emojis aus', async () => {
   assert.ok(!/window\.print|\bprint\(/.test(code['app.mjs']), 'app.mjs: Druckaufruf gefunden');
-  assert.ok(!/druck\.css/.test(code['index.html']), 'index.html: druck.css eingebunden');
+  assert.match(code['index.html'], /<link rel="stylesheet" href="druck\.css" \/>/, 'index.html: druck.css fehlt');
+  const druck = (await lese('druck.css')).replace(/\/\*[\s\S]*?\*\//g, '');
+  assert.match(druck, /@media print \{\s*#app \{ display: none !important; \}/, 'druck.css: Bildschirm wird im Druck nicht ausgeblendet');
+  assert.match(druck, /\.ml-nur-bildschirm \{ display: none !important; \}/, 'druck.css: Klasse ml-nur-bildschirm fehlt');
+  assert.ok(!/content\s*:|background|color\s*:|font|margin|padding|border|@page/i.test(druck), 'druck.css: keine Druckfassung');
 });
 
-test('Grundgerüst: deutsch, Viewport, CSP exakt, nur das gemeinsame Stylesheet und ein Modul-Skript', () => {
+test('Grundgerüst: deutsch, Viewport, CSP exakt, nur das gemeinsame Stylesheet und druck.css, ein Modul-Skript', () => {
   const html = code['index.html'];
   assert.match(html, /<html lang="de">/);
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1"/);
@@ -63,7 +67,7 @@ test('Grundgerüst: deutsch, Viewport, CSP exakt, nur das gemeinsame Stylesheet 
   assert.match(html, /<noscript>/);
   assert.match(html, /<title>Mess-Labor 🔬<\/title>/);
   const links = [...html.matchAll(/<link[^>]*href="([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(links, ['../../packages/kinder-ui/css/kinder.css']);
+  assert.deepEqual(links, ['../../packages/kinder-ui/css/kinder.css', 'druck.css']);
   const skripte = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(skripte, ['app.mjs']);
   assert.match(html, /<script type="module" src="app\.mjs"><\/script>/);

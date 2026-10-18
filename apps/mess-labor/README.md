@@ -2,7 +2,7 @@
 
 Kinder-App für 5–7 gemeinsam mit einem Erwachsenen und für 8–12 allein. Grundlage ist der
 Katalogeintrag docs/10 (Praleska), Top-30 Nr. 27, „Mess-Labor der kleinen Forscher“.
-Zehn Mess-Experimente mit Haushaltsdingen folgen dem Forschungskreis **Vermuten →
+Zehn Mess-Experimente mit Haushaltsdingen folgen dem eigenen Dreischritt **Vermuten →
 Ausprobieren → Schlussfolgern**.
 
 ## Was drin ist
@@ -19,14 +19,17 @@ Ausprobieren → Schlussfolgern**.
 - Nach jedem Experiment: Vergleich, Forscher-Satz und „Warum ist das so?“.
 - `logik.mjs` (ohne DOM): `pruefeExperimente`, `vergleicheVermutung`, `forscherSatz`,
   `geraeteOhneExperiment`.
-- Eigenentwurf: Die Experimente sind eigene Vorschläge. Nur die Geräteaufzählung
-  stammt aus der Quelle (S. 289, im Feld `quelle`).
+- Eigenentwurf: Alle zehn Experimente sind eigene Vorschläge (`eigenentwurf: true`).
+  Die Geräteaufzählung stammt aus der Quelle (S. 289); die Schnur steht dort nicht.
 
 ## Politik
 
 Werbefrei, ohne Konten, ohne Anfragen nach außen (Netzwerk-Wächter). Die App
 **speichert nichts** und hat keine Eingabefelder. Es gibt `eltern.html` für die
 Begleitung.
+
+Druck: keine Druckfassung. `druck.css` blendet beim Drucken den Bildschirm (`#app`)
+und die Schmuck-Emojis (Klasse `ml-nur-bildschirm`) aus.
 
 ## Start und Tests
 

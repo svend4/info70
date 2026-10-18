@@ -1,0 +1,8 @@
+/* Mess-Labor: Beim Drucken verschwindet der Bildschirm (#app). Eine Druckfassung gibt es nicht
+   (Bauauftrag GEM-22, Abschnitt 3: „Was gedruckt wird: nichts“). Die Schmuck-Emojis tragen die
+   Klasse ml-nur-bildschirm; sie fehlen im Druck auch dann, wenn ein Teil des Bildschirms gedruckt wird. */
+
+@media print {
+  #app { display: none !important; }
+  .ml-nur-bildschirm { display: none !important; }
+}

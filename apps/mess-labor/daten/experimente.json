@@ -16,7 +16,8 @@
       ],
       "vermutungen": ["Der Fuß", "Der Unterarm", "Ungefähr gleich"],
       "ergebnisse": ["Der Fuß war länger", "Der Unterarm war länger", "Ungefähr gleich"],
-      "erkenntnis": "Bei den meisten Menschen sind Fuß und Unterarm fast genau gleich lang! Der Körper steckt voller solcher Überraschungen. Mit einer Schnur kannst du alles vergleichen, ohne Zahlen zu kennen."
+      "erkenntnis": "Dein Befund gilt für deinen Körper. Vergleicht in der Familie: Sind bei allen die Schnüre gleich lang, oder gibt es Unterschiede? Mit einer Schnur kannst du alles vergleichen, ohne Zahlen zu kennen.",
+      "eigenentwurf": true
     },
     {
       "id": "orange",
@@ -31,7 +32,8 @@
       ],
       "vermutungen": ["Beide schwimmen", "Beide gehen unter", "Mit Schale schwimmt sie, ohne geht sie unter"],
       "ergebnisse": ["Beide schwammen", "Beide gingen unter", "Mit Schale schwamm sie, ohne ging sie unter"],
-      "erkenntnis": "Die Schale ist wie eine Schwimmweste: In ihr stecken viele winzige Luftpolster. Ohne Schale sinkt die Orange. Luft hilft beim Schwimmen – darum haben Schwimmflügel Luft in sich."
+      "erkenntnis": "Schau dir an, was die Orange gemacht hat, und überleg: Was an der Schale könnte beim Schwimmen helfen? Probiere danach mit einem großen Menschen aus, welche anderen Dinge schwimmen und welche untergehen – und frag dich, warum.",
+      "eigenentwurf": true
     },
     {
       "id": "apfel-kartoffel",
@@ -46,7 +48,8 @@
       ],
       "vermutungen": ["Der Apfel", "Die Kartoffel", "Ungefähr gleich"],
       "ergebnisse": ["Der Apfel war schwerer", "Die Kartoffel war schwerer", "Ungefähr gleich"],
-      "erkenntnis": "Größer heißt nicht immer schwerer! Es kommt darauf an, wie dicht etwas ist. Deine Hände sind schon eine gute Waage – eine echte Waage macht es genau."
+      "erkenntnis": "Größer heißt nicht immer schwerer! Es kommt darauf an, wie dicht etwas ist. Deine Hände sind schon eine gute Waage – eine echte Waage macht es genau.",
+      "eigenentwurf": true
     },
     {
       "id": "becher-flasche",
@@ -61,7 +64,8 @@
       ],
       "vermutungen": ["Weniger als 3 Becher", "3 bis 6 Becher", "Mehr als 6 Becher"],
       "ergebnisse": ["Weniger als 3 Becher", "3 bis 6 Becher", "Mehr als 6 Becher"],
-      "erkenntnis": "Du hast Volumen gemessen – mit dem Becher als Mess-Einheit! Genau so machen es Forscher*innen: Sie wählen eine Einheit und zählen, wie oft sie hineinpasst."
+      "erkenntnis": "Du hast Volumen gemessen – mit dem Becher als Mess-Einheit! So kann man messen: Man wählt eine Einheit und zählt, wie oft sie hineinpasst. Was wäre mit einem größeren Becher anders?",
+      "eigenentwurf": true
     },
     {
       "id": "schritte",
@@ -76,7 +80,8 @@
       ],
       "vermutungen": ["Ich brauche mehr Schritte", "Der große Mensch braucht mehr", "Wir brauchen gleich viele"],
       "ergebnisse": ["Ich brauchte mehr Schritte", "Der große Mensch brauchte mehr", "Wir brauchten gleich viele"],
-      "erkenntnis": "Kleine Füße, mehr Schritte – große Füße, weniger Schritte. Darum haben sich die Menschen auf feste Einheiten wie den Meter geeinigt: Damit alle dasselbe messen."
+      "erkenntnis": "Haben kleine und große Füße gleich viele Schritte gebraucht? Wenn nicht, sieht man: Schritte sind bei verschiedenen Menschen verschieden lang. Darum braucht man feste Einheiten wie den Meter, damit alle dasselbe messen.",
+      "eigenentwurf": true
     },
     {
       "id": "rampe",
@@ -91,7 +96,8 @@
       ],
       "vermutungen": ["Die Dose rollt weiter", "Der Ball rollt weiter", "Beide gleich weit"],
       "ergebnisse": ["Die Dose rollte weiter", "Der Ball rollte weiter", "Beide ungefähr gleich"],
-      "erkenntnis": "Faire Messung heißt: gleicher Startpunkt, kein Anschieben! Was weiter rollt, hängt von Form, Gewicht und Boden ab – probier es auf Teppich und glattem Boden, dann kann die Messung anders ausfallen."
+      "erkenntnis": "Faire Messung heißt: gleicher Startpunkt, kein Anschieben! Was weiter rollt, hängt von Form, Gewicht und Boden ab – probier es auf Teppich und glattem Boden, dann kann die Messung anders ausfallen.",
+      "eigenentwurf": true
     },
     {
       "id": "eis",
@@ -106,7 +112,8 @@
       ],
       "vermutungen": ["Im Wasserglas", "Auf dem Teller", "Beide gleich schnell"],
       "ergebnisse": ["Im Wasserglas", "Auf dem Teller", "Beide ungefähr gleich"],
-      "erkenntnis": "Meistens gewinnt das Wasserglas: Wasser umschließt den Würfel von allen Seiten und bringt ständig Wärme heran – Luft wärmt viel langsamer. Zeit messen kann man übrigens auch mit einem Lied: Wie oft hast du es gesungen?"
+      "erkenntnis": "Denk nach: Was ist um den Eiswürfel herum – im Glas und auf dem Teller? Was davon ist Luft, was ist Wasser? Zeit messen kann man übrigens auch mit einem Lied: Wie oft hast du es gesungen?",
+      "eigenentwurf": true
     },
     {
       "id": "fenster-boden",
@@ -121,7 +128,8 @@
       ],
       "vermutungen": ["Am Boden", "Am Fenster", "Überall gleich"],
       "ergebnisse": ["Am Boden", "Am Fenster", "Überall gleich"],
-      "erkenntnis": "Am Fenster ist es im Winter oft am kältesten – dort kommt die Kälte von draußen durch. Und warme Luft steigt nach oben! Die Haut ist ein Gefühls-Messgerät; ein Thermometer misst genauer."
+      "erkenntnis": "Denk nach: Woher kommt die Kühle am Fenster? Und wohin steigt die warme Luft im Zimmer? Die Haut ist ein Gefühls-Messgerät; ein Thermometer misst genauer.",
+      "eigenentwurf": true
     },
     {
       "id": "lupe-oberflaeche",

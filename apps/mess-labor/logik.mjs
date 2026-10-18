@@ -1,6 +1,6 @@
 // Mess-Labor der kleinen Forscher: reine Logik (ohne DOM), testbar.
-// Didaktik „Vermutung → Prüfung → Schlussfolgerung“ (Stiftung-Kinder-
-// forschen-Ansatz, eigene Inhalte): Die App sammelt die Vermutung, das echte
+// Ablauf „Vermutung → Prüfung → Schlussfolgerung“ (eigener Entwurf, eigene
+// Inhalte): Die App sammelt die Vermutung, das echte
 // Experiment passiert OHNE Bildschirm, danach wird verglichen – ohne Scham:
 // falsche Vermutungen sind Forschung. Praleska docs/10 (Top-30 Nr. 27).
 
