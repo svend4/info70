@@ -1,0 +1,11 @@
+{
+  "name": "@info70/sport-schnupper-stationen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sport-Schnupper-Stationen: Stationskarten für 8 Sportspiele, 5 Sportübungen, 6 benannte Spiele und 2 Wettbewerbe aus der Praleska (S. 225 bis 230 und S. 6), zum Ausdrucken als A4-Blätter quer. Zielgruppe: Fachkräfte. Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

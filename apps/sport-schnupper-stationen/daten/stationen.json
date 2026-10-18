@@ -1,0 +1,311 @@
+{
+  "titel": "Sport-Schnupper-Stationen",
+  "katalog": "Katalogeintrag docs/10, Z. 484 (Einheit 18), Abschnitt Printmaterialien für Kita. Altersgruppe 5 bis 7 Jahre, offline.",
+  "quellenHinweis": "Quelle: Praleska. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Textfassung, S. 225 bis 230 und S. 6. Die Namen der Spiele und Übungen stehen in der Quelle. Die Regeln sind Eigenentwurf und auf jeder Karte als solcher gekennzeichnet.",
+  "karten": [
+    {
+      "id": "uebersicht",
+      "art": "uebersicht",
+      "titel": "Übersicht: Sport-Schnupper-Stationen",
+      "quelle": "Praleska, S. 225–230",
+      "abschnitte": [
+        {
+          "ueberschrift": "Ziel der Quelle",
+          "zeilen": [
+            { "text": "Spiele nach vereinfachten Regeln und elementare Wettbewerbe mit Gleichaltrigen", "seite": "S. 229–230" },
+            { "text": "Altersgruppe 5 bis 7 Jahre, Gruppe „Фантазеры“. Die Einordnung als Kita oder Vorschule ist Eigenentwurf.", "seite": "S. 6" }
+          ]
+        },
+        {
+          "ueberschrift": "Sportfeste und Gesundheitstage",
+          "zeilen": [
+            { "text": "Sportliche Nachmittage: 2 bis 4 Mal im Monat", "seite": "S. 226" },
+            { "text": "Sportfeste: 2 bis 4 Mal im Jahr", "seite": "S. 226" },
+            { "text": "Gesundheitstage und Gesundheitswochen in den Ferien", "seite": "S. 226" }
+          ]
+        },
+        {
+          "ueberschrift": "Olympische Thematik",
+          "zeilen": [
+            { "text": "Die olympische Thematik in Sportfeste und Feste einbeziehen", "seite": "S. 225" }
+          ]
+        },
+        {
+          "ueberschrift": "Hinweis",
+          "zeilen": [
+            { "text": "Aufsicht und Sicherheit: Eigenentwurf; die Quelle nennt für diese Stationen keine Sicherheitsregeln." }
+          ]
+        },
+        {
+          "ueberschrift": "Wettbewerbe (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Ohne Rangliste, ohne Punkte und ohne Bewertung einzelner Kinder." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Auswahl und Gliederung dieser Übersicht. Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft."
+    },
+    {
+      "id": "gorodki",
+      "art": "sportspiel",
+      "titel": "Городки (Gorodki)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle", "seite": "S. 229" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Wurfholz seitlich aus richtiger Ausgangsstellung werfen; einige Figuren kennen; aus unterschiedlicher Entfernung treffen", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Kleine Holzklötze stehen als Figur am Boden. Die Kinder werfen einen leichten Stab auf die Figur. Die Fachkraft legt die Entfernung fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "basketball",
+      "art": "sportspiel",
+      "titel": "Баскетбол (Basketball)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle", "seite": "S. 229" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Ball mit beiden Händen von der Brust zuwerfen; mit rechter und linker Hand dribbeln; mit beiden Händen von der Brust in den Korb werfen; Mannschaftsspiel nach vereinfachten Regeln", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Zwei Kinder werfen sich den Ball zu. Danach wird der Ball in einen Korb oder eine niedrige Zielfläche geworfen. Höhe und Abstand legt die Fachkraft fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "tischtennis",
+      "art": "sportspiel",
+      "titel": "Настольный теннис (Tischtennis)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle, ohne eigene Aufgabe", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein leichter Ball wird mit einem Schläger über eine Leine oder einen niedrigen Tisch zum Partner gespielt. Es geht um den Ballwechsel, ohne Wertung." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "badminton",
+      "art": "sportspiel",
+      "titel": "Бадминтон (Badminton)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle", "seite": "S. 229" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Federball mit dem Schläger in eine vorgegebene Richtung schlagen; mit Erwachsenen spielen", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Kinder schlagen einen Federball mit dem Schläger zum Partner. Die Fachkraft gibt die Richtung vor oder spielt mit." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "handball",
+      "art": "sportspiel",
+      "titel": "Ручной мяч (Handball)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle, ohne eigene Aufgabe", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein weicher Ball wird mit den Händen zu Mitspielern gepasst oder in ein Ziel geworfen. Ohne Wertung." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "fussball",
+      "art": "sportspiel",
+      "titel": "Футбол (Fußball)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle", "seite": "S. 229" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Ball mit rechtem und linkem Fuß in eine Richtung rollen; um Gegenstände führen; ins Tor rollen; mehrmals gegen eine Wand prellen lassen; in Paaren zupassen", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Kinder rollen einen Ball zu einem Partner oder in ein Tor aus Hütchen, Stangen oder Schnüren. Ohne Wertung." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "hockey",
+      "art": "sportspiel",
+      "titel": "Hockey (Sportart offen)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "In der Aufzählung als „хоккей на траве“ genannt (Feldhockey). Im Technik-Absatz stehen Schläger und Scheibe. Die Quelle ist hier widersprüchlich; die Sportart bleibt offen.", "seite": "S. 229" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Den Gegenstand mit dem Schläger in eine Richtung schieben, ins Tor schieben und in Paaren einander zuschieben", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein Ball oder eine Scheibe wird mit einem Schläger zu einem Partner geschoben. Die Fachkraft legt die Sportart vor dem Spiel fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "lapta",
+      "art": "sportspiel",
+      "titel": "Русская лапта (Lapta)",
+      "quelle": "Praleska, S. 229",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Sportspiel in der Aufzählung der Quelle, ohne eigene Aufgabe", "seite": "S. 229" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform (Eigenentwurf)", "zeilen": [ { "text": "Ein Kind schlägt den Ball mit einem Stab weg und läuft zu einer Markierung. Die anderen Kinder holen den Ball. Die Fachkraft legt die Markierungen fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "schlittenfahren",
+      "art": "sportuebung",
+      "titel": "Катание на санках (Schlittenfahren)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Übung im Abschnitt Sportliche Übungen der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Zu zweit Schlitten fahren; beim Abfahren und beim Bremsen üben", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Zwei Kinder fahren gemeinsam auf dem Schlitten. Die Fachkraft wählt Ort und Ablauf." } ] }
+      ],
+      "fuss": "Eigenentwurf: Übungsform. Die Quelle nennt für diese Übung keine Sicherheitsregeln. Eignung und Ort entscheidet die Fachkraft."
+    },
+    {
+      "id": "gleiten-eisbahn",
+      "art": "sportuebung",
+      "titel": "Скольжение по ледяным дорожкам (Gleiten auf vereisten Bahnen)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Übung im Abschnitt Sportliche Übungen der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Nach dem Anlauf gleiten; im Gleiten in die Hocke gehen und wieder aufstehen", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Das Kind läuft an und gleitet über die vereiste Bahn. Im Gleiten geht es in die Hocke und steht wieder auf." } ] }
+      ],
+      "fuss": "Eigenentwurf: Übungsform. Die Quelle nennt für diese Übung keine Sicherheitsregeln. Eignung und Ort entscheidet die Fachkraft."
+    },
+    {
+      "id": "skilaufen",
+      "art": "sportuebung",
+      "titel": "Ходьба на лыжах (Skilaufen)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Übung im Abschnitt Sportliche Übungen der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Wechselschritt auf Ski über unebenes Gelände; Drehungen im Stand und in der Bewegung; Anstieg im Treppenschritt, Abfahrt in tiefer Haltung; ruhiges Tempo", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder gehen auf Skiern über eine kurze Strecke im Gelände. Strecke und Tempo legt die Fachkraft fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Übungsform. Die Quelle nennt für diese Übung keine Sicherheitsregeln. Eignung und Ort entscheidet die Fachkraft."
+    },
+    {
+      "id": "fahrrad",
+      "art": "sportuebung",
+      "titel": "Катание на двухколесном велосипеде (Fahrradfahren)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Übung im Abschnitt Sportliche Übungen der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Selbstständig aufsteigen; geradeaus und im Kreis fahren; rechts und links abbiegen; eine Acht fahren", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Das Kind steigt selbst auf, fährt geradeaus, im Kreis und in einer Acht. Die Fachkraft legt die Strecke fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Übungsform. Die Quelle nennt für diese Übung keine Sicherheitsregeln. Eignung und Ort entscheidet die Fachkraft."
+    },
+    {
+      "id": "schwimmen",
+      "art": "sportuebung",
+      "titel": "Подготовка к плаванию (Vorbereitung auf das Schwimmen)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Übung im Abschnitt Sportliche Übungen der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Aufgabe laut Quelle (übertragen)", "zeilen": [ { "text": "Auf Brust und Rücken gleiten und dabei Ein- und Ausatmen abwechseln; von der Brust auf den Rücken und zurück drehen; Beine auf und ab wie beim Brustschwimmen, mit Halt an Handläufen oder am Boden; Armbewegungen; frei schwimmen", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Übungsform (Eigenentwurf)", "zeilen": [ { "text": "Das Kind übt die Bewegungen der Quelle im Wasser. Ort, Wassertiefe und Begleitung legt die Fachkraft fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Übungsform. Die Quelle nennt für diese Übung keine Sicherheitsregeln. Eignung und Ort entscheidet die Fachkraft."
+    },
+    {
+      "id": "kto-pervyj",
+      "art": "benanntes-spiel",
+      "titel": "«Кто первый повернется» (Wer dreht sich zuerst?)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Auf ein Zeichen der Fachkraft drehen sich alle Kinder einmal um die eigene Achse. Niemand wird gewertet." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "slalom",
+      "art": "benanntes-spiel",
+      "titel": "«Слалом» (Slalom)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder laufen zwischen aufgestellten Hütchen oder Stangen hindurch. Die Fachkraft legt den Weg fest." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "dogoni",
+      "art": "benanntes-spiel",
+      "titel": "«Догони» (Fangen)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Ein Kind läuft voraus, die anderen versuchen, es einzuholen. Danach wechseln die Rollen." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "shire-shag",
+      "art": "benanntes-spiel",
+      "titel": "«Шире шаг» (Breiter Schritt)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder gehen im Wechsel mit weiten und kurzen Schritten, die die Fachkraft ansagt." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "ne-zadenj",
+      "art": "benanntes-spiel",
+      "titel": "«Не задень» (Nicht anstoßen)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Kinder gehen zwischen aufgestellten Gegenständen hindurch, ohne sie zu berühren." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "po-sledam",
+      "art": "benanntes-spiel",
+      "titel": "«По следам» (Den Spuren nach)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Spielname in der Aufzählung „Spiele“ der Quelle", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Die Fachkraft legt eine Spur aus Schnüren, Hütchen oder Markierungen. Die Kinder gehen der Spur nach." } ] }
+      ],
+      "fuss": "Eigenentwurf: Spielform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "wettbewerb-rollen",
+      "art": "wettbewerb",
+      "titel": "«Кто быстрее прокатит мяч» (Wer rollt den Ball schneller?)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Wettbewerbsform im Abschnitt Schnelligkeit", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Alle Kinder rollen einen Ball zu einem Ziel. Keine Punkte, keine Zählung. Die Fachkraft entscheidet, wie oft gerollt wird." } ] }
+      ],
+      "fuss": "Eigenentwurf: Wettbewerbsform ohne Rangliste. Keine Wertung einzelner Kinder."
+    },
+    {
+      "id": "wettbewerb-prellen",
+      "art": "wettbewerb",
+      "titel": "«Кто большее количество раз отобьет мяч об пол» (Wer prellt öfter?)",
+      "quelle": "Praleska, S. 230",
+      "abschnitte": [
+        { "ueberschrift": "Quelle", "zeilen": [ { "text": "Wettbewerbsform im Abschnitt Schnelligkeit, Prellen in bestimmter Zeit", "seite": "S. 230" } ] },
+        { "ueberschrift": "Einordnung", "zeilen": [ { "text": "Ziel: Spiel nach vereinfachten Regeln (S. 229–230)" } ] },
+        { "ueberschrift": "Spielform: ohne Rangliste (Eigenentwurf)", "zeilen": [ { "text": "Alle Kinder prellen einen Ball für eine kurze, feste Zeit. Keine Zählung, keine Punkte." } ] }
+      ],
+      "fuss": "Eigenentwurf: Wettbewerbsform ohne Rangliste. Keine Wertung einzelner Kinder."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+/* Sport-Schnupper-Stationen: Bildschirm und Druck.
+   Auf dem Bildschirm steuert die Auswahl den Druckbereich. Beim Drucken
+   verschwinden Kopf, Auswahl und Fuss (.sss-nur-bildschirm). Uebrig bleiben
+   nur die gewaehlten Karten, je Karte ein Blatt A4 quer, ohne Zeichen,
+   Kaestchen oder Namenszeile. */
+
+.sss-knopfreihe { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.6rem; }
+.sss-steuertitel { font-weight: 600; margin: 0 0 0.4rem; }
+.sss-zaehler { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
+.sss-druckbereich { display: flex; flex-direction: column; gap: 1rem; }
+.sss-titel { font-size: 1.35rem; margin: 0 0 0.2rem; color: var(--k-blau-dunkel); }
+.sss-quelle { font-size: 0.9rem; color: #4b5563; margin: 0 0 0.6rem; }
+.sss-abschnitt { margin: 0 0 0.6rem; }
+.sss-ueberschrift { font-weight: 700; margin: 0 0 0.15rem; }
+.sss-zeile { margin: 0 0 0.15rem; font-size: 0.95rem; }
+.sss-fuss { font-size: 0.8rem; color: #4b5563; margin: 0.6rem 0 0; }
+
+/* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um,
+   sonst läuft der lange Stationsname über den Rand. */
+h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
+/* Link im Fuß: mindestens 44 px hoch und 8 px seitlich Abstand. */
+.sss-fusslink { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; }
+
+@media print {
+  @page { size: A4 landscape; margin: 12mm 15mm; }
+  .sss-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0;
+    display: block;
+  }
+
+  .sss-druckbereich { display: block; gap: 0; }
+
+  /* Jede Karte auf ein eigenes Blatt, nie ueber einen Umbruch zerrissen. */
+  .k-karte.sss-karte {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .k-karte.sss-karte:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .sss-titel {
+    font-size: 26pt;
+    color: #000;
+    margin: 0 0 4pt;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #000;
+  }
+  .sss-quelle { font-size: 11pt; color: #000; margin: 0 0 10pt; }
+  .sss-abschnitt { margin: 0 0 9pt; break-inside: avoid; }
+  .sss-ueberschrift { font-size: 12pt; margin: 0 0 2pt; }
+  .sss-zeile { font-size: 14pt; margin: 0 0 2pt; }
+  .sss-fuss { font-size: 10pt; color: #000; margin-top: 12pt; }
+}

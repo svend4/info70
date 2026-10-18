@@ -1,0 +1,11 @@
+{
+  "name": "@info70/werkstatt-karten-applikation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Werkstatt-Karten: Schneiden, Reissen, Kleben. Drei Technikkarten, eine Ergaenzungskarte und 25 Themenkarten aus der Praleska (S. 181), zum Ausdrucken als A4-Blaetter quer. Zielgruppe: Fachkraefte. Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

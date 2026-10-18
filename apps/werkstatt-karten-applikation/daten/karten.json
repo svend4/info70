@@ -1,0 +1,636 @@
+{
+  "titel": "Werkstatt-Karten: Schneiden, Reissen, Kleben",
+  "untertitel": "Applikation für die Gruppe „Почемучки“, 3 bis 5 Jahre (Praleska, S. 6). Werkzeug für Fachkräfte.",
+  "katalog": "Katalogeintrag docs/10, Abschnitt Printmaterialien, Einheit №17 (Zeile 483). Titel wie im Katalog. Altersgruppe 3 bis 5 Jahre nach der Quelle (S. 6); der Katalog nennt 4 bis 5 Jahre, das ist nicht belegt.",
+  "quellenHinweis": "Quelle: Praleska, Programm für die vorschulische Bildung. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Seitenangaben nach der Textfassung der Quelle.",
+  "techniken": [
+    { "id": "schneiden", "titel": "Schneiden" },
+    { "id": "reissen", "titel": "Reißen" },
+    { "id": "kleben", "titel": "Kleben" },
+    { "id": "ergaenzung", "titel": "Ergänzung" }
+  ],
+  "gruppen": [
+    { "id": "tiere-maerchen", "titel": "Tiere und Märchen" },
+    { "id": "natur-himmel", "titel": "Natur und Himmel" },
+    { "id": "unterwegs", "titel": "Unterwegs" },
+    { "id": "familie-alltag", "titel": "Familie und Alltag" },
+    { "id": "feste-muster", "titel": "Feste und Muster" }
+  ],
+  "karten": [
+    {
+      "id": "schneiden",
+      "art": "technik",
+      "technik": "schneiden",
+      "titel": "Schneiden",
+      "quelle": "Praleska, S. 181. Technikbereich ohne Reihenfolge; Material und Schrittfolge sind Eigenentwurf.",
+      "abschnitte": [
+        {
+          "ueberschrift": "Ziel (Quelle)",
+          "zeilen": [
+            { "text": "Gerade und kurvige Linien mit der Schere schneiden.", "seite": "S. 181" },
+            { "text": "Quellenbegriff: „прямолинейное и криволинейное вырезание“.", "seite": "S. 181" },
+            { "text": "Lehrziel für Gruppe 3 bis 5: „обучать технике работы с ножницами“.", "seite": "S. 181" }
+          ]
+        },
+        {
+          "ueberschrift": "Material (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Papier, Bleistift, Schere.", "seite": "Eigenentwurf" }
+          ]
+        },
+        {
+          "ueberschrift": "Schrittfolge (Eigenentwurf)",
+          "art": "schritte",
+          "zeilen": [
+            { "text": "Mit dem Bleistift eine gerade Linie auf das Papier zeichnen.", "seite": "Eigenentwurf" },
+            { "text": "Die gerade Linie mit der Schere schneiden.", "seite": "Eigenentwurf" },
+            { "text": "Eine geschwungene Linie zeichnen und entlang der Linie kurvig schneiden.", "seite": "Eigenentwurf" },
+            { "text": "Die geschnittenen Teile auf dem Tisch ordnen.", "seite": "Eigenentwurf" }
+          ]
+        },
+        {
+          "ueberschrift": "Sicherheitssatz (Eigenentwurf, Quelle S. 126)",
+          "zeilen": [
+            { "text": "Bei der Arbeit mit der Schere bleibt ein Erwachsener in Sichtweite. Die Schere wird nach jeder Arbeit geschlossen abgelegt.", "seite": "Eigenentwurf, Quelle S. 126" },
+            { "text": "Quelle: die eigene Rolle des Kindes bei der Vorbeugung gefährlicher Situationen stärken, bei „при работе с ножницами и другими острыми предметами“.", "seite": "S. 126" }
+          ]
+        },
+        {
+          "ueberschrift": "Ergebnis der Gruppe (Quelle S. 197)",
+          "zeilen": [
+            { "text": "Gruppenziel, keine Prüfung einzelner Kinder: „умеет резать ножницами по прямой, частично по кривой“ (gerade und teilweise kurvig schneiden).", "seite": "S. 197" }
+          ]
+        }
+      ],
+      "fuss": "Technikbereich aus der Quelle (S. 181). Die drei Technikbereiche stehen ohne Reihenfolge. Material und Schrittfolge sind Eigenentwurf."
+    },
+    {
+      "id": "reissen",
+      "art": "technik",
+      "technik": "reissen",
+      "titel": "Reißen",
+      "quelle": "Praleska, S. 181. Technikbereich ohne Reihenfolge; Material und Schrittfolge sind Eigenentwurf.",
+      "abschnitte": [
+        {
+          "ueberschrift": "Ziel (Quelle)",
+          "zeilen": [
+            { "text": "Papier mit der Hand reißen und die Teile als Formen für eine Applikation verwenden.", "seite": "S. 181" },
+            { "text": "Quellenbegriff: „способом обрывания“.", "seite": "S. 181" }
+          ]
+        },
+        {
+          "ueberschrift": "Material (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Buntes Papier und eine Unterlage aus Papier.", "seite": "Eigenentwurf" }
+          ]
+        },
+        {
+          "ueberschrift": "Schrittfolge (Eigenentwurf)",
+          "art": "schritte",
+          "zeilen": [
+            { "text": "Ein Blatt buntes Papier auf den Tisch legen.", "seite": "Eigenentwurf" },
+            { "text": "An einer Kante mit Daumen und Zeigefinger einreißen und das Papier langsam auseinanderziehen.", "seite": "Eigenentwurf" },
+            { "text": "Den gerissenen Teil auf die Unterlage legen.", "seite": "Eigenentwurf" },
+            { "text": "Mehrere gerissene Teile zu einem Bild ordnen.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Technikbereich aus der Quelle (S. 181). Die drei Technikbereiche stehen ohne Reihenfolge. Material und Schrittfolge sind Eigenentwurf."
+    },
+    {
+      "id": "kleben",
+      "art": "technik",
+      "technik": "kleben",
+      "titel": "Kleben",
+      "quelle": "Praleska, S. 181 (Platzieren und Kleben). Technikbereich ohne Reihenfolge; Material und Schrittfolge sind Eigenentwurf.",
+      "abschnitte": [
+        {
+          "ueberschrift": "Ziel (Quelle)",
+          "zeilen": [
+            { "text": "Vorbereitete Formen auf einem Flanellgraphen oder auf Papier platzieren und aufkleben.", "seite": "S. 181" },
+            { "text": "Quellenbegriffe: „техники наклеивания“; Platzieren auf „фланелеграфе, листе бумаги“.", "seite": "S. 181" }
+          ]
+        },
+        {
+          "ueberschrift": "Material (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Ausgeschnittene oder gerissene Formen, ein Flanellgraph oder ein Papierbogen als Unterlage, Klebstoff für das Papier.", "seite": "Eigenentwurf" }
+          ]
+        },
+        {
+          "ueberschrift": "Schrittfolge (Eigenentwurf)",
+          "art": "schritte",
+          "zeilen": [
+            { "text": "Die Unterlage bereitlegen: Flanellgraph oder Papierbogen.", "seite": "Eigenentwurf" },
+            { "text": "Die Formen zunächst probeweise auf der Unterlage verteilen.", "seite": "Eigenentwurf" },
+            { "text": "Auf Papier: die Rückseite der Form dünn mit Klebstoff bestreichen und andrücken.", "seite": "Eigenentwurf" },
+            { "text": "Auf dem Flanellgraphen: die Formen ohne Klebstoff ablegen und verschieben.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Technikbereich aus der Quelle (S. 181). Die drei Technikbereiche stehen ohne Reihenfolge. Material und Schrittfolge sind Eigenentwurf."
+    },
+    {
+      "id": "ergaenzung-collage-flora",
+      "art": "ergaenzung",
+      "technik": "ergaenzung",
+      "titel": "Collage und Flora (Gruppe 5–7, S. 282–283)",
+      "quelle": "Praleska, S. 181 (Ziele für Gruppe 3 bis 5) und S. 282–283 (Gruppe 5 bis 7). Ergänzung, nicht einer der drei Technikbereiche. Die Einordnung ist Eigenentwurf.",
+      "abschnitte": [
+        {
+          "ueberschrift": "Ziele für Gruppe 3 bis 5 (Quelle S. 181)",
+          "zeilen": [
+            { "text": "Kreative Wahl von Aufbau und Farben, auch beim Erstellen von Collagen.", "seite": "S. 181" },
+            { "text": "Quellenbegriff: „в создании коллажей“.", "seite": "S. 181" },
+            { "text": "Neue Arten der Applikation kennenlernen, dazu Elemente der Flora.", "seite": "S. 181" },
+            { "text": "Quellenbegriff: „элементы флористики“.", "seite": "S. 181" }
+          ]
+        },
+        {
+          "ueberschrift": "Nur für Gruppe 5 bis 7 (Quelle S. 282–283)",
+          "zeilen": [
+            { "text": "Collage aus Naturmaterial: Die Quelle nennt Naturmaterial und Collage für die Gruppe 5 bis 7. Sie ist keine Technik für Gruppe 3 bis 5.", "seite": "S. 282–283" },
+            { "text": "Flora-Technik mit Nadel und Pinzette bei kleinen, zerbrechlichen Teilen aus Naturmaterial.", "seite": "S. 283" },
+            { "text": "Collage-Technik: Quellenbegriff „помочь в освоении техники коллажа“.", "seite": "S. 283" }
+          ]
+        }
+      ],
+      "fuss": "Ergänzung aus der Quelle. Die Ziele für Gruppe 3 bis 5 stehen auf S. 181; die Techniken unter „Nur für Gruppe 5 bis 7“ gehören nicht zu Gruppe 3 bis 5."
+    },
+    {
+      "id": "thema-kolobok",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 1,
+      "titel": "Abenteuer des Kolobok",
+      "quelltitel": "Приключения Колобка",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Приключения Колобка“, Nr. 1 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-welpe",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 2,
+      "titel": "Ich und ein Welpe",
+      "quelltitel": "Я и щенок",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Я и щенок“, Nr. 2 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-fahrzeuge",
+      "art": "thema",
+      "gruppe": "unterwegs",
+      "nr": 3,
+      "titel": "Ich fahre mit dem Zug, dem Auto oder dem Bus",
+      "quelltitel": "Я еду на поезде (машине, автобусе)",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Я еду на поезде (машине, автобусе)“, Nr. 3 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-flugzeug",
+      "art": "thema",
+      "gruppe": "unterwegs",
+      "nr": 4,
+      "titel": "Ich fliege mit dem Flugzeug",
+      "quelltitel": "Я лечу на самолете",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Я лечу на самолете“, Nr. 4 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-pilze",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 5,
+      "titel": "Papa und ich gehen auf Pilzsuche",
+      "quelltitel": "Мы с папой идем за грибами",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Мы с папой идем за грибами“, Nr. 5 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-sonne",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 6,
+      "titel": "Was die Sonne von oben sieht",
+      "quelltitel": "Что сверху видит солнышко",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Что сверху видит солнышко“, Nr. 6 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-tierfest",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 7,
+      "titel": "Das Fest der Tiere",
+      "quelltitel": "Праздник зверей",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Праздник зверей“, Nr. 7 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-stillleben",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 8,
+      "titel": "Stillleben mit Gemüse und Obst",
+      "quelltitel": "Натюрморт (овощи и фрукты)",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Натюрморт (овощи и фрукты)“, Nr. 8 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-kueken",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 9,
+      "titel": "Küken und Schmetterling",
+      "quelltitel": "Цыпленок и бабочка",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Цыпленок и бабочка“, Nr. 9 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-kamille",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 10,
+      "titel": "Kamillenwiese",
+      "quelltitel": "Ромашковый луг",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Ромашковый луг“, Nr. 10 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-regenbogen",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 11,
+      "titel": "Regenbogen über meinem Haus",
+      "quelltitel": "Радуга над моим домом",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Радуга над моим домом“, Nr. 11 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-apfelbaum",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 12,
+      "titel": "Apfelbaum in Blüte",
+      "quelltitel": "Яблоня в цвету",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Яблоня в цвету“, Nr. 12 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-schiffe",
+      "art": "thema",
+      "gruppe": "unterwegs",
+      "nr": 13,
+      "titel": "Schiffchen schwimmen",
+      "quelltitel": "Плывут кораблики",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Плывут кораблики“, Nr. 13 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-rakete",
+      "art": "thema",
+      "gruppe": "unterwegs",
+      "nr": 14,
+      "titel": "Flug der Rakete",
+      "quelltitel": "Полет ракеты",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Полет ракеты“, Nr. 14 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-reigen",
+      "art": "thema",
+      "gruppe": "feste-muster",
+      "nr": 15,
+      "titel": "Fröhlicher Reigen",
+      "quelltitel": "Веселый хоровод",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Веселый хоровод“, Nr. 15 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-geschenk",
+      "art": "thema",
+      "gruppe": "familie-alltag",
+      "nr": 16,
+      "titel": "Ein Geschenk für Mama oder Oma",
+      "quelltitel": "В подарок маме (бабушке)",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „В подарок маме (бабушке)“, Nr. 16 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-voegel",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 17,
+      "titel": "Die Vögel sind aus dem Süden zu uns gekommen",
+      "quelltitel": "К нам с юга птицы прилетели",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „К нам с юга птицы прилетели“, Nr. 17 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-muetze",
+      "art": "thema",
+      "gruppe": "familie-alltag",
+      "nr": 18,
+      "titel": "Mütze und Fäustlinge für die Puppe",
+      "quelltitel": "Шапочка и варежки для куклы",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Шапочка и варежки для куклы“, Nr. 18 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-waldschoene",
+      "art": "thema",
+      "gruppe": "natur-himmel",
+      "nr": 19,
+      "titel": "Die Waldschöne",
+      "quelltitel": "Лесная красавица",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Лесная красавица“, Nr. 19 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-pferde",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 20,
+      "titel": "Märchenhafte Pferdchen",
+      "quelltitel": "Сказочные лошадки",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Сказочные лошадки“, Nr. 20 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-floete",
+      "art": "thema",
+      "gruppe": "feste-muster",
+      "nr": 21,
+      "titel": "Fröhliche Flöte",
+      "quelltitel": "Веселая дудочка",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Веселая дудочка“, Nr. 21 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-tuch",
+      "art": "thema",
+      "gruppe": "familie-alltag",
+      "nr": 22,
+      "titel": "Tuch für die Oma, Kränzchen für die Enkelin",
+      "quelltitel": "Платочек для бабушки, веночек для внучки",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Платочек для бабушки, веночек для внучки“, Nr. 22 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-kleidung",
+      "art": "thema",
+      "gruppe": "familie-alltag",
+      "nr": 23,
+      "titel": "Schöne Kleidung",
+      "quelltitel": "Красивая одежда",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Красивая одежда“, Nr. 23 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-muster",
+      "art": "thema",
+      "gruppe": "feste-muster",
+      "nr": 24,
+      "titel": "Wozu dieses Muster?",
+      "quelltitel": "Для чего такой узор",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Для чего такой узор“, Nr. 24 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    },
+    {
+      "id": "thema-feuervogel",
+      "art": "thema",
+      "gruppe": "tiere-maerchen",
+      "nr": 25,
+      "titel": "Feuervogel",
+      "quelltitel": "Жар-птица",
+      "quelle": "Praleska, S. 181 (Themenvorschlag aus der Quelle).",
+      "abschnitte": [
+        {
+          "ueberschrift": "Themenvorschlag aus der Quelle",
+          "zeilen": [
+            { "text": "Quellentitel: „Жар-птица“, Nr. 25 der Liste.", "seite": "S. 181" },
+            { "text": "Deutscher Titel: Übertragung des Quelltitels.", "seite": "Eigenentwurf" }
+          ]
+        }
+      ],
+      "fuss": "Themenvorschlag aus der Quelle (S. 181). Der deutsche Titel ist Eigenentwurf."
+    }
+  ]
+}
