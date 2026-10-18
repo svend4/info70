@@ -2,6 +2,12 @@
   "version": 2,
   "zielgruppe": "4-7, nur gemeinsam mit einem Erwachsenen",
   "blickrichtung": "vom Platz aus gesehen – der Platz liegt immer unten am Bildschirm, und links und rechts gelten immer von dem Kind, das hier sitzt, aus",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "platzset": {
+    "kopf": "Schablone, Eigenentwurf nach Praleska, S. 187",
+    "hinweis": "Ausdrucken, auf den Tisch legen und die echten Teile darauf stellen. Die Felder sind nur eine Hilfe – wer es ohne kann, braucht sie nicht mehr.",
+    "figur": "Hier sitzt das Kind, für das du deckst."
+  },
   "rahmenSatz": "So ist das bei uns in Deutschland ausgemacht. Bei dir zu Hause kann es anders sein – und dann ist es dort richtig.",
   "ehrlichkeit": "Diese App übt das Planen: Was kommt wohin, und hat jeder eins? Das Tragen und das vorsichtige Hinstellen von echtem Geschirr kann ein Bildschirm nicht üben – das geht nur am echten Tisch. Darum ist der Bildschirm hier der kurze Teil.",
   "fuerAndere": "Der Tischdienst deckt nicht für sich, sondern für die anderen. Darum geht es hier auch nicht um deinen Platz, sondern um den Platz von jemand anderem.",

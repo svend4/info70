@@ -1,0 +1,12 @@
+{
+  "id": "GEM-17",
+  "slug": "tischdienst-trainer",
+  "titel": "Tischdienst-Trainer",
+  "status_neu": "gebaut",
+  "app": "tischdienst-trainer",
+  "tests_app": 49,
+  "hub_zeile": "<a class=\"k-knopf\" style=\"text-decoration:none;text-align:center\" href=\"apps/tischdienst-trainer/\">🍽️ Tischdienst-Trainer – decken und austeilen (4–7, gemeinsam)</a>",
+  "readme_zeile": "| `tischdienst-trainer` | Накрыть одно место или раздать каждому по одному: единого правильного порядка нет, подложку можно подсунуть позже | кат.№2 |",
+  "docs10_notiz": "Ko-Nutzung Nr. 17 (S. 187): Tischdienst-Trainer gebaut. Das Platzset ist eine Schablone mit Seitenangabe S. 187; Abweichungen von der Quelle stehen in der GDD unter „Offen“.",
+  "katalog_korrektur": "Die Reihenfolge ist keine Lösung, die App prüft nur den Endzustand. Solo-Modus nicht gebaut; links und rechts entfallen für 4-5. Entscheidung durch den Koordinator bestätigen."
+}

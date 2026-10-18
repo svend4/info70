@@ -1,13 +1,16 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { mischen } from '../../../packages/kinder-ui/js/komponenten.mjs';
 import {
   GELTUNGEN, SEITEN_ZONEN, MAX_HANDLUNGEN, ANKER, GESPERRTE_RAUMWOERTER,
+  REIHENFOLGE_MITTE, PFLICHTMARKIERUNG,
   varianteVon, schrittVon, unterlageVon, zonenVon, brauchtSeiten,
   darfJetzt, unterlageFehlt, anzahlReihenfolgen, allePermutationen,
   positionenJeSchritt, istAmPlatz, waehleLage, austeilenFertig,
   vorratVon, restVorrat, bleibtUebrig,
   angeboteneSchritte, seiteOhneAnker, gesperrtesRaumwort, pruefeDaten,
+  platzsetText,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/tischdienst.json', import.meta.url), 'utf8'));
@@ -318,7 +321,7 @@ test('Austeilen ordnet zu und zählt NICHT', () => {
   assert.equal(austeilenFertig({ figuren: 3 }, [0, 1]), false);
   assert.equal(austeilenFertig({ figuren: 3 }, [0, 1, 1, 2]), true, 'doppeltes Tippen zählt einmal');
   assert.equal(austeilenFertig({ figuren: 0 }, []), false);
-  for (let i = 0; i < 40; i++) assert.ok(a.lagen.includes(waehleLage(daten)));
+  for (let i = 0; i < 40; i++) assert.ok(a.lagen.includes(waehleLage(daten, mischen)));
 
   const gerechnet = kopie();
   gerechnet.austeilen.aufgabe = 'Wie viele Brettchen brauchst du?';
@@ -372,35 +375,28 @@ test('die Knopf-Reihenfolge wird einmal pro Sitzung gemischt', () => {
   // Vorher rief deckBildschirm() angeboteneSchritte() bei jeder
   // Darstellung auf – die Knöpfe sprangen unter dem Finger eines
   // Vierjährigen bei jedem Tipp neu durcheinander.
-  assert.match(app, /angebot = angeboteneSchritte\(variante, \[\]\)/);
+  assert.match(app, /angebot = angeboteneSchritte\(variante, \[\], mischen\)/);
   assert.match(app, /const offen = angebot\.filter\(\(x\) => !gelegt\.has\(x\.id\)\)/);
   assert.equal((app.match(/angeboteneSchritte\(/g) ?? []).length, 1, 'genau ein Aufruf, beim Start der Sitzung');
   // Und die Funktion selbst mischt weiterhin, damit nicht immer dasselbe
-  // Teil oben liegt.
+  // Teil oben liegt – das Mischen kommt als Parameter von außen.
   const ersten = new Set();
-  for (let i = 0; i < 60; i++) ersten.add(angeboteneSchritte(kita, [])[0].id);
+  for (let i = 0; i < 60; i++) ersten.add(angeboteneSchritte(kita, [], mischen)[0].id);
   assert.ok(ersten.size > 1, 'keine Rotation im Angebot');
 });
 
 test('das Platzset zeigt dieselbe Raumlage wie der Bildschirm', () => {
   // Vorher kam die Druckreihenfolge aus der Zonen-Liste: die Schablone
   // zeigte Teller und Gabel vertauscht – eine Vorlage, die das Kind
-  // genau falsch legen lässt. Geprüft wird die GERENDERTE Reihenfolge,
-  // nicht die Reihenfolge der Deklarationen.
-  const reihenfolgeAus = (quelle, name) => {
-    const i = quelle.indexOf(`const ${name} = [`);
-    assert.ok(i >= 0, `${name} nicht gefunden`);
-    const block = quelle.slice(i, quelle.indexOf('].filter(Boolean)', i));
-    return ['nebenLinks', 'mitte', 'nebenRechts', 'neben']
-      .map((z) => [z, block.indexOf(`'${z}'`)])
-      .filter(([, pos]) => pos >= 0)
-      .sort((a, b) => a[1] - b[1])
-      .map(([z]) => z);
-  };
-  const bildschirm = reihenfolgeAus(app.slice(app.indexOf('function gedeckFlaeche')), 'mittelreihe');
-  const druck = reihenfolgeAus(app.slice(app.indexOf('function platzset')), 'reihe');
-  assert.deepEqual(druck, bildschirm, 'Druck und Bildschirm ordnen die Zonen verschieden');
-  assert.deepEqual(bildschirm, ['nebenLinks', 'mitte', 'nebenRechts', 'neben']);
+  // genau falsch legen lässt. Bildschirm und Druck nehmen jetzt dieselbe
+  // Konstante; geprüft wird die Reihenfolge, die der Druck tatsächlich
+  // ausgibt, für jede Variante.
+  assert.deepEqual(REIHENFOLGE_MITTE, ['nebenLinks', 'mitte', 'nebenRechts', 'neben']);
+  for (const v of daten.varianten) {
+    const druck = platzsetText(daten, v).reihe.map((f) => f.id);
+    assert.deepEqual(druck, REIHENFOLGE_MITTE.filter((z) => druck.includes(z)), `${v.id}: Druck ordnet die Zonen verschieden`);
+  }
+  assert.ok(app.includes('REIHENFOLGE_MITTE.map((id) => zonen.find((z) => z.id === id))'), 'Bildschirm ohne REIHENFOLGE_MITTE');
 });
 
 test('geltungsbereich erreicht die Erwachsenen wirklich', () => {
@@ -468,10 +464,14 @@ test('das Platzset ist eine Schablone – kein Belohnungsblatt', () => {
   assert.match(druck, /min-height: 3\.2cm/);
   assert.match(app, /class: 'k-karte tdt-platzset'/);
   // Keine Häkchen-, Punkte-, Stern-, Tages- oder Namensfelder: das wäre
-  // ein Vergleichssystem auf Papier, mit Kindernamen an der Wand.
-  const platzsetTeil = app.slice(app.indexOf('function platzset'));
-  for (const verboten of ['Haken', 'Häkchen', 'Stern', 'Punkte', 'Name', 'Woche', 'Urkunde', 'geschafft']) {
-    assert.ok(!platzsetTeil.includes(verboten), `Platzset enthält ${verboten}`);
+  // ein Vergleichssystem auf Papier, mit Kindernamen an der Wand. Geprüft
+  // wird der gedruckte Text, also platzsetText – nicht der Bildschirm.
+  for (const v of daten.varianten) {
+    const gedruckt = JSON.stringify(platzsetText(daten, v));
+    for (const verboten of ['Haken', 'Häkchen', 'Stern', 'Punkte', 'Name', 'Woche', 'Urkunde', 'geschafft']) {
+      assert.ok(!gedruckt.includes(verboten), `${v.id}: Platzset enthält ${verboten}`);
+    }
+    assert.equal(platzsetText(daten, v).pflicht, PFLICHTMARKIERUNG);
   }
 });
 
@@ -513,11 +513,11 @@ test('Abschluss am echten Tisch, Sicherheit ohne Rangbehauptung', () => {
 });
 
 test('angeboteneSchritte lässt nichts doppelt anbieten und rotiert', () => {
-  assert.equal(angeboteneSchritte(kita, []).length, kita.schritte.length);
-  const rest = angeboteneSchritte(kita, ['set', 'becher']);
+  assert.equal(angeboteneSchritte(kita, [], mischen).length, kita.schritte.length);
+  const rest = angeboteneSchritte(kita, ['set', 'becher'], mischen);
   assert.equal(rest.length, kita.schritte.length - 2);
   assert.equal(rest.some((s) => s.id === 'set'), false);
   const ersten = new Set();
-  for (let i = 0; i < 60; i++) ersten.add(angeboteneSchritte(kita, [])[0].id);
+  for (let i = 0; i < 60; i++) ersten.add(angeboteneSchritte(kita, [], mischen)[0].id);
   assert.ok(ersten.size > 1, 'keine Rotation im Angebot');
 });

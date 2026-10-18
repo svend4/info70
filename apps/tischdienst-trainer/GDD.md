@@ -188,7 +188,7 @@ Einschränkung erreichte niemanden.
 
 ## 12. Tests
 
-`test/logik.test.mjs` (27): Daten gültig; `liegtUnter` als Endzustand (alle
+Insgesamt 49 Tests: 27 in `test/logik.test.mjs`, 22 in `test/regeln.test.mjs` (Projektregeln nach Vorlage der Puppentheater-Werkstatt, mit den Anpassungen am Kopf der Datei). Die Logik-Tests: Daten gültig; `liegtUnter` als Endzustand (alle
 n! Reihenfolgen, Unterlage auch zuletzt); Strukturgleichheit statt Schwelle
 samt Gegenrechnung und Quellprüfung von `darfJetzt`; später gelegte Decke
 wird untergeschoben; Geltungsnamen wie design-entdecker; Abmachungen ohne
@@ -199,3 +199,20 @@ grün); Austeilen ohne Zahlen; zwei vollständige Gedecke; nur gemeinsam;
 Tippen statt Ziehen und kein Zähler; Platzset ohne Belohnungsfelder; Wörter
 dreisprachig und kein Vorlese-Versprechen für uk/ru; Abschluss ohne
 Häufigkeits-Rangbehauptung; Angebots-Rotation.
+
+## Offen
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Entscheidungen, die diese Einheit betreffen und noch offen sind (Bauauftrag GEM-17, Abschnitt 9):
+
+- Standard für Seitenangaben (A18): „S. 187“ steht jetzt auf der Schablone, als Entscheidung dieser Ausbaustufe. Der allgemeine Standard ist offen.
+- Vorlesefunktion (F2) und Favicon (A3).
+- Solo-Modus: nicht gebaut, der Katalog nennt „5–7 kurz allein“. Entscheidung bestätigen oder Solo-Variante bauen.
+- „Besteck links/rechts“ für 4–5: nicht übernommen, die Kita-Variante kommt ohne Seitenzonen aus. Entscheidung bestätigen.
+- Reihenfolge: Die Quelle nennt eine festgelegte Reihenfolge (S. 187), die App prüft nur den Endzustand. Entscheidung bestätigen, Katalogtext angleichen.
+- Sternchen (A11): Die Quelle erklärt es nicht. Die App baut keine Belohnung daraus.
+- Format und Anzahl des Platzsets je Blatt: nicht festgelegt. Gedruckt wird eine Schablone je Variante.
+- Zitatgrenze (A10 b): 6 oder 12 Wörter offen. Der Bauauftrag verwendet 6.
+- Das Feld `faktenstand` in `index.json` ist nicht geändert.
+- Impressum und Datenschutzerklärung vor einem Release (docs/02 Z. 160).

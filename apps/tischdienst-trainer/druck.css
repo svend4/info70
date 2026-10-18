@@ -6,7 +6,11 @@
 
 .tdt-platzset { margin-top: 1rem; }
 
+/* Fußlink: mindestens 48 px hoch (docs/02, Touch-Ziele). */
+.k-fuss a { display: inline-block; min-height: 48px; line-height: 48px; }
+
 @media print {
+  @page { size: A4 portrait; }
   .tdt-nur-bildschirm { display: none !important; }
 
   html { font-size: 13pt; }

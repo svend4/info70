@@ -31,7 +31,7 @@
 //    Bildschirm, also Bildschirm-links = Figur-links = Kind-links. Sonst
 //    müsste das Kind die Perspektive einer Gegenübersitzenden übernehmen,
 //    und das ist vor 7-8 nicht verfügbar. Deshalb gibt es keine zweite
-//    Sitzrichtung, auch nicht als Stufe. Und `links`/`rechts` darf in
+//    Sitzrichtung, auch nicht als Schwierigkeitsgrad. Und `links`/`rechts` darf in
 //    keinem Text ohne den Anker „von dem Kind, das hier sitzt“ vorkommen
 //    – der Validator prüft die Texte, nicht nur die Zonen-Objekte.
 //
@@ -52,7 +52,9 @@
 //    weniger“ ist Subtraktion und mit 4-5 nicht verfügbar. Geprüft wird
 //    nur „jede Figur hat eins, nichts bleibt übrig“ – Paarbildung ohne
 //    Zahlenantwort.
-import { mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
+// Zufall kommt NICHT aus dieser Datei: das Mischen wird als Parameter
+// übergeben (app.mjs gibt `mischen` aus kinder-ui hinein), damit diese
+// Datei ohne Zufallsquelle und ohne Uhr auskommt.
 
 /** Die Geltungsarten – dieselben Namen wie in apps/design-entdecker. */
 export const GELTUNGEN = ['pruefbar', 'ausgemacht', 'geschmack'];
@@ -62,6 +64,16 @@ export const SITZUNGSTYPEN = ['austeilen', 'decken'];
 
 /** Zonen, die eine Seite benennen – sie brauchen einen Anker. */
 export const SEITEN_ZONEN = ['nebenLinks', 'nebenRechts'];
+
+/**
+ * Die Reihe direkt am Platz, von links nach rechts. Bildschirm und
+ * Druck nehmen genau diese Reihenfolge – sonst druckt die Schablone
+ * Teller und Gabel vertauscht.
+ */
+export const REIHENFOLGE_MITTE = Object.freeze(['nebenLinks', 'mitte', 'nebenRechts', 'neben']);
+
+/** Die Pflichtmarkierung jeder gedruckten Karte (docs/02, Abschnitt 6 des Bauauftrags). */
+export const PFLICHTMARKIERUNG = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
 
 /** Höchstens so viele Handlungen pro Sitzung – je Typ. */
 export const MAX_HANDLUNGEN = 6;
@@ -207,9 +219,9 @@ export function istAmPlatz(schritt, zoneId) {
   return schritt.zone === zoneId;
 }
 
-/** Eine Austeil-Lage je Sitzung: heute sind nicht alle da. */
-export function waehleLage(daten) {
-  return mischen(daten?.austeilen?.lagen ?? [])[0] ?? null;
+/** Eine Austeil-Lage je Sitzung: heute sind nicht alle da. `mische` kommt von außen. */
+export function waehleLage(daten, mische) {
+  return mische(daten?.austeilen?.lagen ?? [])[0] ?? null;
 }
 
 /**
@@ -240,9 +252,37 @@ export function bleibtUebrig(lage) {
   return vorratVon(lage) - Number(lage?.figuren ?? 0) > 0;
 }
 
-/** Die Schritte einer Variante in zufälliger Anbietungsreihenfolge. */
-export function angeboteneSchritte(variante, gelegt) {
-  return mischen((variante?.schritte ?? []).filter((s) => !(gelegt ?? []).includes(s.id)));
+/** Die Schritte einer Variante in zufälliger Anbietungsreihenfolge. `mische` kommt von außen. */
+export function angeboteneSchritte(variante, gelegt, mische) {
+  return mische((variante?.schritte ?? []).filter((s) => !(gelegt ?? []).includes(s.id)));
+}
+
+/**
+ * Der Inhalt eines gedruckten Platzsets – nur Text, ohne Zeichen aus
+ * docs/02 Z. 79–82 (keine Emojis, keine Häkchen, keine Punkte). Der
+ * Bildschirm zeigt dieselbe Raumlage mit Emojis dazu; gedruckt wird
+ * ausschließlich das hier.
+ */
+export function platzsetText(daten, variante) {
+  const unterlage = unterlageVon(variante);
+  const zonen = zonenVon(daten, variante);
+  const feld = (zoneId) => {
+    const z = zonen.find((x) => x.id === zoneId);
+    if (!z) return null;
+    const namen = variante.schritte.filter((s) => s.zone === zoneId).map((s) => s.name);
+    return { id: z.id, name: z.name, inhalt: namen.length ? namen.join(' / ') : z.name };
+  };
+  return {
+    kopf: daten.platzset.kopf,
+    titel: `Platzset: ${variante.name}`,
+    unter: unterlage ? unterlage.name : null,
+    weiterWeg: feld('weiterWeg'),
+    reihe: REIHENFOLGE_MITTE.map(feld).filter(Boolean),
+    ohneFestenPlatz: variante.schritte.filter((s) => !s.zone).map((s) => s.name),
+    figur: daten.platzset.figur,
+    blickrichtung: daten.blickrichtung,
+    pflicht: daten.pflichtmarkierung,
+  };
 }
 
 /** Nennt der Text eine Seite ohne den Anker? */
@@ -274,6 +314,14 @@ export function gesperrtesRaumwort(text) {
 export function pruefeDaten(daten) {
   const fehler = [];
 
+  // Jede gedruckte Karte trägt die Pflichtmarkierung und die Seitenangabe.
+  if (daten?.pflichtmarkierung !== PFLICHTMARKIERUNG) {
+    fehler.push('pflichtmarkierung: muss der Wortlaut aus dem Bauauftrag sein');
+  }
+  if (!/Eigenentwurf/.test(daten?.platzset?.kopf ?? '') || !/S\. 187/.test(daten?.platzset?.kopf ?? '')) {
+    fehler.push('platzset.kopf: Eigenentwurf und Seitenangabe (S. 187) müssen auf der Schablone stehen');
+  }
+  if (!daten?.platzset?.figur) fehler.push('platzset.figur fehlt');
   if (!/immer unten am Bildschirm/.test(daten?.blickrichtung ?? '')) {
     fehler.push('blickrichtung: der Sitzplatz muss immer unten am Bildschirm liegen – sonst braucht das Kind Perspektivübernahme');
   }
@@ -423,7 +471,7 @@ export function pruefeDaten(daten) {
     // Ohne Vorrat und Übrig-Text koennte „es bleibt etwas uebrig“ nie
     // eintreten, und die Zuordnung waere nicht pruefbar.
     if (!a.vorratText) fehler.push('austeilen.vorratText fehlt – woher die Brettchen kommen, muss dastehen');
-    if (!a.uebrigText) fehler.push('austeilen.uebrigText fehlt – das Übrigbleiben ist der eigentliche Punkt');
+    if (!a.uebrigText) fehler.push('austeilen.uebrigText fehlt – das Übrigbleiben ist der eigentliche Kern');
     // Der mathematische Gehalt ist die WECHSELNDE Anzahl.
     if (!/heute|jeden Tag/.test(a.hinweis ?? '')) fehler.push('austeilen: der Hinweis muss sagen, dass es heute anders ist als gestern');
     // Und es wird NICHT gerechnet: keine Zahlenantwort, kein „eins

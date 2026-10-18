@@ -6,20 +6,19 @@
 // gelegte Decke wird untergeschoben, eine Abmachung wird gesagt und das
 // Umlegen angeboten, Geschmack bleibt unkommentiert. Siehe logik.mjs.
 // Politik docs/02: keine externen Anfragen.
-import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
+// Zufall nur hier: `mischen` wird an die Logik übergeben.
+import daten from './daten/tischdienst.json' with { type: 'json' };
+import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
   varianteVon, schrittVon, unterlageVon, zonenVon, unterlageFehlt,
   istAmPlatz, waehleLage, restVorrat, austeilenFertig,
-  angeboteneSchritte, pruefeDaten,
+  angeboteneSchritte, pruefeDaten, platzsetText, REIHENFOLGE_MITTE,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
-const daten = await fetch('daten/tischdienst.json').then((r) => r.json());
-
-const zoneVon = (id) => daten.zonen.find((z) => z.id === id);
 
 let variante = null;
 let lage = null;
@@ -29,7 +28,11 @@ let angebot = [];        // Reihenfolge der Sachen-Knöpfe, EINMAL gemischt
 let inDerHand = null;
 let meldung = null;      // {text, art, umlegen?} – nie ein Tadel
 
+// Der Fokus bleibt auf derselben Kennung, wenn derselbe Knopf nach dem
+// Neuaufbau wieder da ist. Gibt es ihn nicht mehr, beginnt der neue
+// Bildschirm vorne.
 function zeige(...knoten) {
+  const merke = document.activeElement?.dataset?.kennung;
   app.replaceChildren(...[
     el('div', { class: 'tdt-nur-bildschirm' },
       el('h1', { class: 'k-titel' }, '🍽️ Tischdienst'),
@@ -40,11 +43,17 @@ function zeige(...knoten) {
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
-  app.querySelector('button:not([disabled])')?.focus();
+  const gleicher = merke
+    ? app.querySelector(`button[data-kennung="${merke}"]:not([disabled])`)
+    : null;
+  (gleicher ?? app.querySelector('button:not([disabled])'))?.focus();
 }
 
 const vorlesenKnopf = (text) =>
-  el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(text) }, '🔊 Vorlesen');
+  el('button', {
+    class: 'k-knopf k-knopf--neutral', 'data-kennung': 'vorlesen',
+    onclick: () => vorlesen(text),
+  }, '🔊 Vorlesen');
 
 const erwachsenenKarte = (text) => el('div', { class: 'k-hinweis', style: 'margin-top:0.6rem' },
   el('p', { style: 'font-weight:700;margin-top:0' }, '👪 Für Erwachsene – redet zusammen:'),
@@ -72,7 +81,7 @@ function gate() {
         el('p', { style: 'margin:0.4rem 0 0' }, daten.nurGemeinsam)),
       vorlesenKnopf(intro),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: typBildschirm }, '👪 Wir sind zusammen – los!'))));
+        el('button', { class: 'k-knopf', 'data-kennung': 'los', onclick: typBildschirm }, '👪 Wir sind zusammen – los!'))));
 }
 
 // --------------------------------------------- Sitzungstyp (Erwachsene)
@@ -86,11 +95,11 @@ function typBildschirm() {
       el('p', { style: 'text-align:center;margin-top:0' }, 'Eines von beiden – zusammen wäre es zu viel für eine Sitzung.'),
       el('div', { class: 'k-antworten', role: 'group', 'aria-label': 'Aufgabe wählen' },
         el('button', {
-          class: 'k-knopf', style: 'min-height:4.5rem',
+          class: 'k-knopf', style: 'min-height:4.5rem', 'data-kennung': 'typ-austeilen',
           onclick: starteAusteilen,
         }, `${daten.austeilen.gegenstand.emoji} ${daten.austeilen.titel} (ab 4)`),
         el('button', {
-          class: 'k-knopf k-knopf--neutral', style: 'min-height:4.5rem',
+          class: 'k-knopf k-knopf--neutral', style: 'min-height:4.5rem', 'data-kennung': 'typ-decken',
           onclick: variantenBildschirm,
         }, '🍽️ Einen Platz decken')),
       vorlesenKnopf(`Was macht ihr heute? ${daten.austeilen.titel}. Oder einen Platz decken.`)));
@@ -100,7 +109,7 @@ function typBildschirm() {
 // Eins-zu-eins-Zuordnung OHNE Zahlen: „heute fehlt eines, also brauchst
 // du eins weniger“ wäre Subtraktion und mit 4-5 nicht verfügbar.
 function starteAusteilen() {
-  lage = waehleLage(daten);
+  lage = waehleLage(daten, mischen);
   verteiltAn = [];
   austeilBildschirm();
 }
@@ -130,6 +139,7 @@ function austeilBildschirm() {
             : (rest === 0
               ? 'Dieses Kind hat noch nichts, aber der Stapel ist leer'
               : `Dieses Kind hat noch nichts – antippen, um ${a.gegenstand.name} zu geben`),
+          'data-kennung': `kind-${p.i}`,
           onclick: () => {
             if (!verteiltAn.includes(p.i) && rest > 0) {
               verteiltAn = [...verteiltAn, p.i];
@@ -148,7 +158,7 @@ function austeilBildschirm() {
       el('p', { style: 'text-align:center;margin:0;font-size:0.95em' },
         '🧒 = ein Kind ist da · 🪑 = dieser Platz ist heute leer'),
       // Der Stapel. Ohne ihn koennte „es bleibt etwas uebrig“ nie
-      // eintreten, und genau das Uebrigbleiben ist der Punkt: heute sind
+      // eintreten, und genau das Uebrigbleiben ist der Kern: heute sind
       // nicht alle da. Gezaehlt wird nichts – man SIEHT es.
       el('div', { style: 'margin-top:1rem;padding-top:0.6rem;border-top:1px solid var(--k-rand)' },
         el('p', { style: 'margin:0 0 0.3rem;font-weight:700' },
@@ -166,8 +176,8 @@ function austeilBildschirm() {
       el('div', { class: 'k-hinweis', style: 'margin-top:0.8rem' },
         el('p', { style: 'margin:0' }, a.erklaerung)),
       fertig
-        // Kein Stern: diese App sagt im Gate „keine Sterne“ zu, und die
-        // Buchvorlage arbeitet an genau dieser Stelle mit einem
+        // Kein Belohnungszeichen: diese App sagt im Gate „keine Sterne“ zu,
+        // und die Buchvorlage arbeitet an genau dieser Stelle mit einem
         // Sternchen-Ziel. 🤝 markiert das Fertigsein, ohne zu belohnen.
         ? el('div', { class: 'k-hinweis k-hinweis--richtig', style: 'margin-top:0.6rem' },
           el('p', { style: 'margin:0' }, `🤝 ${a.fertigText} ${a.hinweis}`))
@@ -178,8 +188,8 @@ function austeilBildschirm() {
         : `${a.titel} ${a.aufgabe} ${a.vorratText} ${a.erklaerung}`),
       fertig
         ? el('div', { class: 'k-antworten' },
-          el('button', { class: 'k-knopf', onclick: ohneRichtigBildschirm }, 'Weiter ➡️'),
-          el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteAusteilen }, '🔁 Noch einmal austeilen'))
+          el('button', { class: 'k-knopf', 'data-kennung': 'austeil-weiter', onclick: ohneRichtigBildschirm }, 'Weiter ➡️'),
+          el('button', { class: 'k-knopf k-knopf--neutral', 'data-kennung': 'austeil-noch', onclick: starteAusteilen }, '🔁 Noch einmal austeilen'))
         : null));
 }
 
@@ -192,7 +202,7 @@ function variantenBildschirm() {
       el('p', { style: 'text-align:center;margin-top:0' }, 'Beides ist richtig gedeckt – nur anders.'),
       el('div', { class: 'k-antworten', role: 'group', 'aria-label': 'Tisch wählen' },
         ...daten.varianten.map((v) => el('button', {
-          class: 'k-knopf k-knopf--neutral', style: 'min-height:4.5rem',
+          class: 'k-knopf k-knopf--neutral', style: 'min-height:4.5rem', 'data-kennung': `variante-${v.id}`,
           onclick: () => { variante = varianteVon(daten, v.id); rahmenBildschirm(); },
         }, `${v.emoji} ${v.name} (ab ${v.ab.split('-')[0]})`))),
       ...daten.varianten.map((v) => el('p', { style: 'margin:0.4rem 0;font-size:0.95em' }, `${v.emoji} ${v.hinweis}`)),
@@ -213,7 +223,7 @@ function rahmenBildschirm() {
         el('p', { style: 'margin:0' }, '👉 Die Reihenfolge darfst du selbst wählen. Nur das Tischset oder die Decke gehört unter das Gedeck – aber auch das darf später kommen.')),
       vorlesenKnopf(daten.rahmenSatz),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: starteDecken }, 'Los ➡️'))));
+        el('button', { class: 'k-knopf', 'data-kennung': 'rahmen-los', onclick: starteDecken }, 'Los ➡️'))));
 }
 
 // --------------------------------------------------------------- Decken
@@ -222,7 +232,7 @@ function starteDecken() {
   // Einmal pro Sitzung mischen. Vorher wurde bei jedem Tipp neu gemischt,
   // und die Knöpfe sprangen unter dem Finger eines Vierjährigen hin und
   // her.
-  angebot = angeboteneSchritte(variante, []);
+  angebot = angeboteneSchritte(variante, [], mischen);
   inDerHand = null;
   meldung = null;
   deckBildschirm();
@@ -244,6 +254,7 @@ function gedeckFlaeche() {
     return el('button', {
       class: 'k-knopf k-knopf--neutral',
       'aria-label': `${z.frage}${dinge.length ? ` Hier liegt: ${dinge.map((d) => d.name).join(', ')}.` : ' Noch leer.'}`,
+      'data-kennung': `zone-${z.id}`,
       style: 'min-height:4.4rem;display:flex;flex-direction:column;align-items:center;'
         + 'justify-content:center;gap:0.2rem;padding:0.4rem',
       // Mit Teil in der Hand legt der Tipp ab. Die Frage der Zone bleibt
@@ -260,13 +271,8 @@ function gedeckFlaeche() {
   const reihen = [];
   if (weit) reihen.push(el('div', { style: 'display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem' },
     el('div', {}), zelle(weit), el('div', {})));
-  // Dieselbe Anordnung wie auf dem gedruckten Platzset (siehe platzset).
-  const mittelreihe = [
-    zonen.find((z) => z.id === 'nebenLinks'),
-    zonen.find((z) => z.id === 'mitte'),
-    zonen.find((z) => z.id === 'nebenRechts'),
-    zonen.find((z) => z.id === 'neben'),
-  ].filter(Boolean);
+  // Dieselbe Anordnung wie auf dem gedruckten Platzset (REIHENFOLGE_MITTE).
+  const mittelreihe = REIHENFOLGE_MITTE.map((id) => zonen.find((z) => z.id === id)).filter(Boolean);
   reihen.push(el('div', {
     style: `display:grid;grid-template-columns:repeat(${mittelreihe.length}, 1fr);gap:0.4rem`,
   }, ...mittelreihe.map(zelle)));
@@ -301,7 +307,7 @@ function deckBildschirm() {
           meldung.umlegen
             ? el('div', { class: 'k-antworten', style: 'margin-top:0.5rem' },
               el('button', {
-                class: 'k-knopf',
+                class: 'k-knopf', 'data-kennung': 'umlegen',
                 onclick: () => {
                   const s = schrittVon(variante, meldung.umlegen);
                   gelegt.set(s.id, s.zone);
@@ -311,7 +317,7 @@ function deckBildschirm() {
                 },
               }, '🔄 Umlegen'),
               el('button', {
-                class: 'k-knopf k-knopf--neutral',
+                class: 'k-knopf k-knopf--neutral', 'data-kennung': 'so-lassen',
                 onclick: () => { meldung = null; deckBildschirm(); },
               }, '👍 So lassen'))
             : null)
@@ -325,11 +331,11 @@ function deckBildschirm() {
       fertig ? null : el('div', { class: 'k-antworten', role: 'group', 'aria-label': 'Sache nehmen' },
         ...offen.map((s) => el('button', {
           class: `k-knopf ${inDerHand === s.id ? '' : 'k-knopf--neutral'}`,
-          style: 'min-height:3.4rem',
+          style: 'min-height:3.4rem', 'data-kennung': `sache-${s.id}`,
           onclick: () => { inDerHand = s.id; meldung = null; deckBildschirm(); },
         }, `${s.emoji} ${s.name}`))),
       hand ? el('button', {
-        class: 'k-knopf k-knopf--neutral',
+        class: 'k-knopf k-knopf--neutral', 'data-kennung': 'hand-zurueck',
         onclick: () => { inDerHand = null; meldung = null; deckBildschirm(); },
       }, '↩️ Doch etwas anderes') : null,
       vorlesenKnopf(fertig
@@ -344,8 +350,8 @@ function deckBildschirm() {
           : `Was nimmst du als Nächstes? ${offen.map((x) => x.name).join(', ')}.`)),
       fertig
         ? el('div', { class: 'k-antworten' },
-          el('button', { class: 'k-knopf', onclick: ohneRichtigBildschirm }, 'Fertig – weiter ➡️'),
-          el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteDecken }, '🔁 Noch einmal decken'))
+          el('button', { class: 'k-knopf', 'data-kennung': 'decken-fertig', onclick: ohneRichtigBildschirm }, 'Fertig – weiter ➡️'),
+          el('button', { class: 'k-knopf k-knopf--neutral', 'data-kennung': 'decken-noch', onclick: starteDecken }, '🔁 Noch einmal decken'))
         : null));
 }
 
@@ -397,7 +403,7 @@ function ohneRichtigBildschirm() {
           '👪 Die fremden Wörter liest am besten jemand vor, der sie kennt – die Gerätestimme kann sie nicht immer.')),
       vorlesenKnopf(`Das hier hat gar kein Richtig. ${daten.ohneRichtig.join(' ')}`),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: schluss }, 'Weiter ➡️'))));
+        el('button', { class: 'k-knopf', 'data-kennung': 'ohne-weiter', onclick: schluss }, 'Weiter ➡️'))));
 }
 
 // ------------------------------------------------------------- Schluss
@@ -417,54 +423,46 @@ function schluss() {
           ...daten.sicherheit.map((s) => el('li', { style: 'margin-bottom:0.3rem' }, s)))),
       vorlesenKnopf(text),
       el('div', { class: 'k-antworten' },
-        variante ? el('button', { class: 'k-knopf', onclick: () => window.print() }, '🖨️ Platzset drucken') : null,
-        el('button', { class: 'k-knopf k-knopf--neutral', onclick: typBildschirm }, '🔁 Noch etwas machen'),
-        el('button', { class: 'k-knopf k-knopf--neutral', onclick: gate }, '🏡 Zum Start'))),
+        variante ? el('button', { class: 'k-knopf', 'data-kennung': 'schluss-drucken', onclick: () => window.print() }, '🖨️ Platzset drucken') : null,
+        el('button', { class: 'k-knopf k-knopf--neutral', 'data-kennung': 'schluss-typ', onclick: typBildschirm }, '🔁 Noch etwas machen'),
+        el('button', { class: 'k-knopf k-knopf--neutral', 'data-kennung': 'schluss-start', onclick: gate }, '🏡 Zum Start'))),
     variante ? platzset() : null);
 }
 
 /**
- * Das druckbare Platzset: eine reine Schablone. Ausdrücklich OHNE
- * Häkchen-, Punkte-, Stern- oder Tagesfelder und ohne Namenszeile – das
- * wäre ein Belohnungs- und Vergleichssystem auf Papier, nur mit
- * Kindernamen an der Wand.
+ * Das druckbare Platzset. Der gedruckte Teil kommt aus platzsetText
+ * (logik.mjs) und ist reiner Text: keine Emojis, keine Häkchen, keine Namenszeile.
+ * Auch keine Punkte. Die Bildschirm-Hinweise darüber stehen in
+ * .tdt-nur-bildschirm und fallen beim Drucken weg.
  */
 function platzset() {
-  const unterlage = unterlageVon(variante);
-  const zonen = zonenVon(daten, variante).filter((z) => z.id !== unterlage.zone);
-  const feld = (z) => {
-    const dinge = variante.schritte.filter((s) => s.zone === z.id);
-    return el('div', {
-      class: 'tdt-feld',
-      style: 'border:3px dashed #000;border-radius:0.6rem;padding:0.4rem;display:flex;'
-        + 'flex-direction:column;align-items:center;justify-content:center;min-height:3.4rem',
-    },
-      el('span', { style: 'font-size:1.6rem;line-height:1' }, dinge.map((d) => d.emoji).join(' ') || '·'),
-      el('span', { style: 'font-size:0.8em;text-align:center' }, dinge.map((d) => d.name).join(' / ') || z.name));
-  };
-  // Dieselbe Anordnung wie auf dem Bildschirm (siehe gedeckFlaeche):
-  // links – Mitte – rechts. Vorher stand hier die Reihenfolge der
-  // Zonen-Liste, und die Schablone zeigte Teller und Gabel vertauscht.
-  const weit = zonen.find((z) => z.id === 'weiterWeg');
-  const reihe = [
-    zonen.find((z) => z.id === 'nebenLinks'),
-    zonen.find((z) => z.id === 'mitte'),
-    zonen.find((z) => z.id === 'nebenRechts'),
-    zonen.find((z) => z.id === 'neben'),
-  ].filter(Boolean);
-  return el('section', { class: 'k-karte tdt-platzset' },
-    el('h2', { style: 'margin-top:0;font-size:1.1em' }, `🖨️ Platzset: ${variante.name}`),
-    el('p', { style: 'margin:0 0 0.6rem;font-size:0.95em' },
-      'Ausdrucken, auf den Tisch legen und die echten Teile darauf stellen. Die gestrichelten Felder sind nur eine Hilfe – wer es ohne kann, braucht sie nicht mehr.'),
-    weit
-      ? el('div', { style: 'display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-bottom:0.5rem' },
-        el('div', {}), feld(weit), el('div', {}))
-      : null,
-    el('div', { style: `display:grid;grid-template-columns:repeat(${reihe.length}, 1fr);gap:0.5rem` },
-      ...reihe.map(feld)),
-    figur(),
-    el('p', { style: 'margin:0.6rem 0 0;font-size:0.85em' },
-      `Die Serviette hat keinen festen Platz – sie darf hin, wo das Kind mag. ${daten.blickrichtung}.`));
+  const t = platzsetText(daten, variante);
+  const feld = (f) => el('div', {
+    class: 'tdt-feld',
+    style: 'border:3px dashed #000;border-radius:0.6rem;padding:0.4rem;display:flex;'
+      + 'flex-direction:column;align-items:center;justify-content:center;min-height:3.4rem',
+  },
+    el('span', { style: 'font-size:0.8em;font-weight:700;text-align:center' }, f.name),
+    el('span', { style: 'font-size:0.8em;text-align:center' }, f.inhalt));
+  return el('section', { class: 'tdt-platzset-block' },
+    el('div', { class: 'tdt-nur-bildschirm' },
+      el('h2', { style: 'margin-top:1rem;font-size:1.1em' }, `🖨️ ${t.titel}`),
+      el('p', { style: 'margin:0 0 0.6rem;font-size:0.95em' }, daten.platzset.hinweis)),
+    el('div', { class: 'k-karte tdt-platzset' },
+      el('p', { style: 'margin:0 0 0.4rem;font-size:0.85em' }, t.kopf),
+      t.unter ? el('p', { style: 'margin:0 0 0.6rem;font-weight:700' }, `Unter dem Gedeck: ${t.unter}`) : null,
+      t.weiterWeg
+        ? el('div', { style: 'display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-bottom:0.5rem' },
+          el('div', {}), feld(t.weiterWeg), el('div', {}))
+        : null,
+      el('div', { style: `display:grid;grid-template-columns:repeat(${t.reihe.length}, 1fr);gap:0.5rem` },
+        ...t.reihe.map(feld)),
+      el('p', { style: 'margin:0.6rem 0 0;text-align:center' }, t.figur),
+      t.ohneFestenPlatz.length
+        ? el('p', { style: 'margin:0.4rem 0 0;font-size:0.9em' }, `Ohne festen Platz: ${t.ohneFestenPlatz.join(' / ')}`)
+        : null,
+      el('p', { style: 'margin:0.4rem 0 0;font-size:0.85em' }, `${t.blickrichtung}.`),
+      el('p', { class: 'tdt-pflicht', style: 'margin:0.6rem 0 0;font-size:0.8em' }, t.pflicht)));
 }
 
 const fehler = pruefeDaten(daten);

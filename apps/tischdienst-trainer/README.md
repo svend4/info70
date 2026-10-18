@@ -186,5 +186,11 @@ CSP `default-src 'self'`), **localStorage не используется**. Ес�
 
 ```bash
 npm run dev   # http://localhost:8070/apps/tischdienst-trainer/
-node --test apps/tischdienst-trainer/test/*.test.mjs   # 27 тестов
+npm test      # 49 Tests: logik.test.mjs 27, regeln.test.mjs 22
 ```
+
+## Seitenangaben
+
+Die Seitenangabe S. 187 steht auf der Schablone. Sie ist maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft:
+
+> Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
