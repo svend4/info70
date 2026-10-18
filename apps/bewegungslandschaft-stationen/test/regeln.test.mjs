@@ -4,7 +4,9 @@ import { access, readdir, readFile } from 'node:fs/promises';
 import daten from '../daten/stationen.json' with { type: 'json' };
 import { kartenText } from '../logik.mjs';
 
-// Projektregeln aus docs/02 und den Vorgaben der Fachkraft, für diese App geprüft.
+// Projektregeln, für diese App geprüft: docs/02 Z. 22–24 (keine Anfragen nach außen),
+// docs/02 Z. 79–82 (Druckbögen), docs/02 Z. 141–146 (keine Bewertung von Kindern);
+// die Altersregel und die Speicherregel haben keine docs/02-Zeile, sie sind Projektregeln.
 // Die Prüfung liest die Dateien der App (ohne test/). Die Testdateien selbst
 // dürfen die verbotenen Wörter nennen, um sie zu verbieten.
 
@@ -89,7 +91,7 @@ test('Drucktext ohne Namenszeile und ohne Tages- oder Wochentagsfeld', () => {
   assert.ok(!/Name\s*:|_{3,}/.test(code['app.mjs'] + code['druck.css']), 'app.mjs oder druck.css: Namenszeile');
 });
 
-test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite', () => {
+test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf eigener Seite; Titel bricht um, Fuß-Link 44 px hoch', () => {
   const css = code['druck.css'];
   assert.match(css, /@media print \{/);
   assert.match(css, /@page\s*\{\s*size: A4 landscape;/);
@@ -97,6 +99,39 @@ test('druck.css: A4 quer, Bildschirmelemente nur im Bildschirm, jede Karte auf e
   assert.match(css, /break-after: page;/);
   assert.match(css, /page-break-after: always;/);
   assert.match(code['app.mjs'], /onclick: \(\) => window\.print\(\)/);
+  // Bei 360 px: die Überschrift bricht innerhalb eines Wortes um.
+  assert.match(css, /h1\.k-titel\s*\{[^}]*overflow-wrap:\s*anywhere;[^}]*word-break:\s*normal;/);
+  // Footer-Link: mindestens 44 px hoch, inline-flex, zentriert, 8 px seitlich.
+  assert.match(code['app.mjs'], /el\('a', \{ class: 'bsl-fusslink'/);
+  assert.match(css, /\.bsl-fusslink\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px;[^}]*padding:\s*0 8px;/);
+});
+
+test('Fokus nach Klick: jeder Knopf trägt eine eindeutige data-kennung; render() merkt sich den Fokus und setzt ihn zurück', () => {
+  const app = code['app.mjs'];
+  const knoepfe = app.match(/el\('button'/g) ?? [];
+  const kennungen = app.match(/'data-kennung': /g) ?? [];
+  assert.equal(kennungen.length, knoepfe.length, `${knoepfe.length} Knöpfe, aber ${kennungen.length} data-kennung`);
+  const feste = [...app.matchAll(/'data-kennung': '([^']+)'/g)].map((m) => m[1]);
+  assert.equal(new Set(feste).size, feste.length, 'doppelte feste data-kennung');
+  assert.match(app, /'data-kennung': `auswahl-\$\{karte\.id\}`/, 'Stationsknöpfe ohne Kennung aus der Karten-Id');
+  assert.match(app, /function fokussiere\(kennung\)/);
+  assert.match(app, /button\[data-kennung\]/, 'fokussiere sucht nur Knöpfe mit data-kennung');
+  const merke = app.indexOf('const merkeKennung = document.activeElement?.dataset?.kennung;');
+  const neu = app.indexOf('app.replaceChildren(');
+  const zurueck = app.indexOf('fokussiere(merkeKennung);');
+  assert.ok(merke > -1 && neu > merke && zurueck > neu, 'Fokus muss vor replaceChildren gemerkt und danach gesetzt werden');
+});
+
+test('Pflichtmarkierung der Seitenangaben: im Fuß der App, in README und GDD unter „## Offen“; nie „von Hand geprüft“', () => {
+  const satz = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+  assert.ok(code['app.mjs'].includes(satz), 'app.mjs: Pflichtmarkierung im Fuß fehlt');
+  assert.ok(alle['README.md'].includes(satz), 'README.md: Pflichtmarkierung fehlt');
+  const gdd = alle['GDD.md'];
+  assert.ok(gdd.includes('## Offen'), 'GDD.md: Abschnitt „## Offen“ fehlt');
+  assert.ok(gdd.slice(gdd.indexOf('## Offen')).includes(satz), 'GDD.md: Pflichtmarkierung nicht unter „## Offen“');
+  for (const [d, inhalt] of Object.entries(alle)) {
+    assert.ok(!/von Hand geprüft/i.test(inhalt), `${d}: „von Hand geprüft“ ist nicht belegt`);
+  }
 });
 
 test('Modellnamen-Freiheit: in keiner Datei der App allgemeine KI-Begriffe, keine Modellbezeichnung', () => {

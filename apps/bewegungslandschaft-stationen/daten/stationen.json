@@ -1,7 +1,7 @@
 {
   "titel": "Bewegungslandschaften-Plakate Krippe",
-  "katalog": "Einheit №5 aus docs/10. Altersgruppe 1 bis 3 Jahre, offline.",
-  "quellenHinweis": "Quelle: Praleska, Textfassung, S. 57 bis 60. Die Zahlen stammen aus der Quelle. Die Wörter sind übertragen und auf jeder Karte als Eigenentwurf gekennzeichnet.",
+  "katalog": "Katalogeintrag docs/10, Abschnitt Printmaterialien. Altersgruppe 1 bis 3 Jahre, offline.",
+  "quellenHinweis": "Quelle: Praleska. Minsk: НИО (Национальный институт образования), 2007. ISBN 978-985-465-244-3. Textfassung, S. 57 bis 60. Die Zahlen stammen aus der Quelle. Die Wörter sind übertragen und auf jeder Karte als Eigenentwurf gekennzeichnet.",
   "karten": [
     {
       "id": "kriechen",
@@ -22,7 +22,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "klettern",
@@ -45,7 +45,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "schiefe-ebene",
@@ -68,7 +68,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "zielwurf-horizontal",
@@ -91,7 +91,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "zielwurf-vertikal",
@@ -113,7 +113,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "durchkriechen",
@@ -134,7 +134,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "balancierweg",
@@ -155,7 +155,7 @@
           ]
         }
       ],
-      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+      "fuss": "Übungsmaß laut Quelle, keine Sicherheitsgrenze. Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
     },
     {
       "id": "aufsicht",

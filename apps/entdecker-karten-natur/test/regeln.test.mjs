@@ -35,7 +35,7 @@ const KI_NENNUNG = /künstliche Intelligenz|\bAI\b|\bKI\b|LLM|Sprachmodell|Chatb
 const KI_ERLAUBT = /^(?:künstliche Intelligenz|KI|LLM|Sprachmodell|Chatbot)$/i;
 const DRUCKZEICHEN = /[☐☑☒✓✔✗✘★☆•●○◦·∙⋅]|\[\s+\]|\[[xX]\]|\p{Extended_Pictographic}/u;
 const NAMENSFELD = /Name|_{3,}/;
-const VERBOTEN = /unsicher|Selbstwert|Risiko|Diagnose/i;
+const VERBOTEN = /unsicher|Selbstwert|Risiko|Diagnose|Einheit/i;
 const BEWERTUNG = /Punkt|Stern|Rang|Note\b|Score|Stufe|Ampel|besser|schlechter/i;
 const EXTERN = /https?:\/\/|\/\/[a-z0-9-]+\.[a-z]{2,}|src\s*=\s*["']\/\/|url\(\s*["']?\/\//i;
 const SPEICHER = /localStorage|sessionStorage|indexedDB|document\.cookie|caches\./;
@@ -75,12 +75,15 @@ test('Keine externen Adressen: keine http(s)-Adresse und kein Adressen-Ohne-Sche
   assert.deepEqual(treffer, [], `externe Adresse in: ${treffer.join(', ')}`);
 });
 
-test('Keine Netzschnittstelle außer dem eigenen Datenabruf (fetch nur mit daten/karten.json)', () => {
+test('Netz: keine Netzschnittstelle außer dem einen Datenabruf, der einen Fehlerweg mit Meldung hat', () => {
   assert.equal(NETZ.test(app) || NETZ.test(ausgabeVon('logik.mjs')), false, 'XHR, WebSocket, Beacon oder Worker im Quelltext');
   const aufrufe = (app.match(/fetch\(/g) ?? []).length;
   const eigene = (app.match(/fetch\(\s*'daten\/karten\.json'\)/g) ?? []).length;
   assert.equal(aufrufe, eigene, 'fetch mit fremdem oder nicht relativem Ziel');
   assert.equal(eigene, 1, 'genau ein Datenabruf erwartet');
+  assert.match(app, /fetch\('daten\/karten\.json'\)\.then\(kartenAusAntwort\)/, 'der Abruf wird nicht ausgewertet');
+  assert.match(app, /\} catch \{\s*app\.replaceChildren\(el\('p', \{\}, FEHLER_LADEN\)\);/, 'kein Fehlerweg mit Meldung');
+  assert.match(app, /FEHLER_LADEN,?[^;]*\} from '\.\/logik\.mjs';/, 'FEHLER_LADEN kommt nicht aus logik.mjs');
 });
 
 test('Netzwerk-Wächter: app.mjs holt installiereNetzwerkWaechter aus packages/kinderschutz und ruft ihn auf', () => {
@@ -104,7 +107,7 @@ test('Keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte-Zeichen oder
   assert.ok(!DRUCKZEICHEN.test('Fell, Ohren, Schwanz: Welche Farbe?'), 'Gegenprobe: gewöhnlicher Text bleibt frei');
 });
 
-test('Drucktext ohne Namenszeile: Titel, Hinweise, Karten und Kopfzeile enthalten kein Namensfeld', () => {
+test('Drucktext ohne Namenszeile; die Dokumente sagen nicht, der Druck enthalte nur die Karten (der Blattkopf steht darauf)', () => {
   const druckText = [
     daten.titel, daten.sinne.text, daten.hinweis, ...daten.gruppen.map((g) => g.name),
     ...daten.karten.flatMap((k) => [k.titel, ...k.anregungen.map((a) => `${a.art} ${a.text}`)]),
@@ -112,6 +115,9 @@ test('Drucktext ohne Namenszeile: Titel, Hinweise, Karten und Kopfzeile enthalte
     zeichenketten(app),
   ].join('\n');
   assert.ok(!NAMENSFELD.test(druckText), 'ein Name- oder Unterstrich-Feld im Druck');
+  const doku = alleText.filter(([n]) => n.endsWith('.md')).map(([, t]) => t).join('\n');
+  assert.ok(!/nur die Karten/.test(doku), 'README oder GDD sagen „nur die Karten“, der Blattkopf steht aber auf dem Druck');
+  assert.ok(/nur die Karten/.test('Der Druck enthält nur die Karten'), 'Gegenprobe: der falsche Satz wird erkannt');
 });
 
 test('druck.css: @media print, Bildschirmteile werden ausgeblendet, keine Zeichen als content', () => {
@@ -136,10 +142,11 @@ test('aria-live="polite" steht auf #app, damit Änderungen angesagt werden', () 
   assert.match(html, /<main class="k-app" id="app" aria-live="polite"/);
 });
 
-test('Verbotene Wörter: unsicher, Selbstwert, Risiko und Diagnose kommen im Quelltext nicht vor', () => {
+test('Verbotene Wörter: unsicher, Selbstwert, Risiko, Diagnose und Einheit (Katalognummer statt Seite) kommen im Quelltext nicht vor', () => {
   const treffer = ausgabe.filter(([, q]) => VERBOTEN.test(q)).map(([d]) => d);
   assert.deepEqual(treffer, [], `verbotenes Wort in: ${treffer.join(', ')}`);
   assert.ok(VERBOTEN.test('ein Risiko'), 'Gegenprobe: das Muster findet das Wort');
+  assert.ok(VERBOTEN.test('Praleska, S. 50 bis 51, Einheit 4'), 'Gegenprobe: die Katalognummer wird erkannt');
 });
 
 test('Keine Bewertung: keine Punkte, Sterne, Ränge, Noten, Stufen oder Wertungswörter in den Texten', () => {
@@ -172,7 +179,7 @@ test('Modellnamen-Gegenprobe: die Prüfung erkennt Kennungsform und nicht-allgem
   assert.ok(!KI_ERLAUBT.test('Intelligenz'), 'das Wort allein ist kein allgemeiner Begriff');
 });
 
-test('Grundgerüst index.html: lang de, Viewport, noscript, Stylesheets, Modul app.mjs, Titel wie im Katalog', () => {
+test('Grundgerüst index.html: lang de, Viewport, noscript, Stylesheets, Modul app.mjs, Titel wie im Katalog, Footer-Link mindestens 44 px', () => {
   assert.match(html, /<html lang="de">/);
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1" \/>/);
   assert.match(html, /<noscript>/);
@@ -180,11 +187,30 @@ test('Grundgerüst index.html: lang de, Viewport, noscript, Stylesheets, Modul a
   assert.ok(html.includes('href="druck.css"'), 'druck.css fehlt');
   assert.ok(html.includes('<script type="module" src="app.mjs"></script>'), 'app.mjs fehlt');
   assert.ok(html.includes(`<title>${daten.titel}</title>`), 'der Seitentitel weicht vom Katalogtitel ab');
+  assert.match(html, /\.k-fuss a \{ display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; \}/,
+    'Footer-Links ohne 44 px Mindesthöhe');
 });
 
-test('Fachkraft-Satz und Eigenentwurf-Kennzeichnung stehen im Druckkopf und in der App', () => {
+test('Fachkraft-Satz, Eigenentwurf-Kennzeichnung und Pflichtmarkierung der Seitenangaben stehen im Druckkopf, im Footer und im GDD unter „Offen“', () => {
   assert.ok(daten.hinweis.includes('Mit der Fachkraft draußen beobachten'), 'der Satz zur Fachkraft fehlt');
   assert.ok(daten.hinweis.includes('Eigenentwurf'), 'der Hinweis ist nicht als Eigenentwurf gekennzeichnet');
   assert.ok(daten.sinne.text.includes('S. 50') && daten.sinne.text.includes('Eigenentwurf'), 'Quelle des Ziels fehlt');
-  assert.ok(app.includes('Eigenentwurf'), 'die App kennzeichnet die Karten nicht als Eigenentwurf');
+  assert.ok(app.includes('kartenFuss(k)') && ausgabeVon('logik.mjs').includes('Beobachtungsanregung: Eigenentwurf'),
+    'die Fußzeile der Karten kennzeichnet die Anregung nicht als Eigenentwurf');
+  const markierung = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+  assert.ok(app.includes(markierung), 'der Footer trägt die Pflichtmarkierung nicht');
+  const gdd = alleText.find(([n]) => n === 'GDD.md')[1];
+  assert.ok((gdd.split('## Offen')[1] ?? '').includes(markierung), 'das GDD trägt die Pflichtmarkierung nicht unter „## Offen“');
+  const alles = alleText.map(([, t]) => t).join('\n');
+  assert.ok(!/von Hand geprüft/i.test(alles), '„von Hand geprüft“ darf nirgends stehen');
+});
+
+test('Fokus nach Neuaufbau: jeder Knopf trägt eine eindeutige data-kennung, render() stellt den Fokus wieder her', () => {
+  const knoepfe = (app.match(/el\('button'/g) ?? []).length;
+  const kennungen = (app.match(/'data-kennung'/g) ?? []).length;
+  assert.equal(kennungen, knoepfe, `${knoepfe - kennungen} Knopf/Knöpfe ohne data-kennung`);
+  const eindeutig = new Set(['gruppe-alle', 'drucken', ...daten.gruppen.map((g) => `gruppe-${g.id}`)]);
+  assert.equal(eindeutig.size, daten.gruppen.length + 2, 'data-kennung-Werte sind nicht eindeutig');
+  assert.match(app, /const merken = document\.activeElement\?\.dataset\?\.kennung;/, 'Kennung wird vor dem Neuaufbau nicht gemerkt');
+  assert.match(app, /app\.querySelector\(`\[data-kennung="\$\{merken\}"\]`\)\?\.focus\(\);/, 'Fokus wird nach dem Neuaufbau nicht gesetzt');
 });

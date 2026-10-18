@@ -6,7 +6,7 @@
       "id": "morgenkreis",
       "titel": "Morgenkreis",
       "rolle": "Ansage des Tagesplans. Wer mag, sagt im Kreis den nächsten Punkt an und zeigt dazu das passende Bild. Jedes Kind darf übernehmen, keines muss.",
-      "anregung": "S. 15",
+      "grundgedanke": "Grundgedanke: S. 15 (Erfolg in gemeinsamer Tätigkeit)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Gruppengröße", "frage": "Wie viele Kinder passen in den Kreis, sodass jede Ansage gehört wird?", "seite": "S. 15" },
@@ -18,7 +18,7 @@
       "id": "tisch-decken",
       "titel": "Tisch decken",
       "rolle": "Platzdienst. Wer mag, legt an jedem Platz Teller, Becher und Serviette hin. Jedes Kind darf an einem Platz beginnen, keines muss.",
-      "anregung": "S. 15",
+      "grundgedanke": "Grundgedanke: S. 15 (Erfolg in gemeinsamer Tätigkeit)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Material", "frage": "Reichen Teller und Becher für alle Plätze, ohne dass nachgeholt werden muss?", "seite": "S. 15" },
@@ -30,7 +30,7 @@
       "id": "garderobe",
       "titel": "Garderobe",
       "rolle": "Ordnungsposten im Flur. Wer mag, hängt herabgefallene Jacken zurück an die Haken und stellt Schuhe paarweise ab. Jedes Kind darf, keines muss.",
-      "anregung": "S. 15",
+      "grundgedanke": "Grundgedanke: S. 15 (Erfolg in gemeinsamer Tätigkeit)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Material", "frage": "Hat jedes Kind einen Haken, der über ein Bild- oder Farbzeichen zu finden ist?", "seite": "S. 15" },
@@ -42,7 +42,7 @@
       "id": "aufraeumen",
       "titel": "Gemeinsam aufräumen",
       "rolle": "Kistenteam. Wer mag, räumt eine Materialkiste ein, deren Bild am Regal hängt. An einer Kiste dürfen mehrere Kinder gleichzeitig arbeiten. Jedes Kind darf, keines muss.",
-      "anregung": "S. 15",
+      "grundgedanke": "Grundgedanke: S. 15 (Erfolg in gemeinsamer Tätigkeit)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Material", "frage": "Trägt jede Kiste ein Bild, damit das Einräumen ohne Erklärung gelingt?", "seite": "S. 15" },
@@ -54,7 +54,7 @@
       "id": "spaziergang",
       "titel": "Spaziergang",
       "rolle": "Wegweisung. Wer mag, führt die Gruppe bis zur nächsten Ecke. Die Rolle wechselt bei jeder Pause, und wer möchte, darf sie übernehmen. Jedes Kind darf, keines muss.",
-      "anregung": "S. 15",
+      "grundgedanke": "Grundgedanke: S. 15 (Erfolg in gemeinsamer Tätigkeit)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Zeit", "frage": "Welche Strecke schafft die ganze Gruppe ohne Erschöpfung, damit die Wegweisung für alle machbar bleibt?", "seite": "S. 15" },
@@ -66,7 +66,7 @@
       "id": "singen",
       "titel": "Singen im Kreis",
       "rolle": "Takt. Wer mag, gibt den Takt mit einem Klanginstrument oder den Händen vor. Die Gruppe folgt, und die Rolle darf wechseln. Jedes Kind darf, keines muss.",
-      "anregung": "S. 16",
+      "grundgedanke": "Grundgedanke: S. 16 (Anerkennung durch Gleichaltrige)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Zeit", "frage": "Wie lang darf ein Lied sein, damit die Gruppe bis zum Ende aufmerksam mitgeht?", "seite": "S. 16" },
@@ -78,7 +78,7 @@
       "id": "bewegungsspiel",
       "titel": "Bewegungsspiel im Kreis",
       "rolle": "Bewegungsvorgabe. Wer mag, zeigt eine Bewegung vor, die alle nachmachen. Jedes Kind darf an die Reihe kommen, niemand muss.",
-      "anregung": "S. 15",
+      "grundgedanke": "Grundgedanke: S. 15 (Erfolg in gemeinsamer Tätigkeit)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Raum", "frage": "Ist der Platz frei von Hindernissen und groß genug für lebhafte Bewegung ohne Zusammenstoß?", "seite": "S. 15" },
@@ -90,7 +90,7 @@
       "id": "essen",
       "titel": "Gemeinsam essen",
       "rolle": "Schöpfdienst. Wer mag, reicht die Schüsseln am Tisch weiter und fragt die Nachbarn, ob sie noch etwas möchten. Jedes Kind darf, keines muss.",
-      "anregung": "S. 16",
+      "grundgedanke": "Grundgedanke: S. 16 (Anerkennung durch Gleichaltrige)",
       "einordnung": "Eigenentwurf",
       "impulse": [
         { "bedingung": "Material", "frage": "Steht jede Schüssel so, dass jedes Kind ohne Hilfe der Erwachsenen greifen kann?", "seite": "S. 16" },
@@ -107,8 +107,8 @@
       {
         "seite": "S. 15",
         "thema": "Erfolg in gemeinsamer Tätigkeit",
-        "text": "Erfolg hängt nach der Quelle an gemeinsamen, für Kinder bedeutsamen Tätigkeiten. Die Fachkraft schafft dafür Situationen des Erfolgs. Die Karten setzen deshalb bei Tätigkeiten der ganzen Gruppe an.",
-        "zitate": ["совместной, значимой для детей деятельности", "ситуации успеха"],
+        "text": "Die Beliebtheit eines Kindes in der Gleichaltrigengruppe hängt weitgehend vom Erfolg in gemeinsamer, für Kinder bedeutsamer Tätigkeit ab. Die Karten setzen deshalb bei Tätigkeiten der ganzen Gruppe an.",
+        "zitate": ["совместной, значимой для детей деятельности"],
         "uebertragung": "Eigenentwurf"
       },
       {
@@ -126,6 +126,6 @@
         "uebertragung": "Eigenentwurf"
       }
     ],
-    "fussnote": "Quelle: Programm Praleska in russischer Sprache, Seiten 15 und 16. Zitate sind kurz. Die deutschen Sätze sind Übertragung und Eigenentwurf. Material für die Fachkraft, nicht für Kinder."
+    "fussnote": "Quelle: Programm Praleska in russischer Sprache, Seiten 15 und 16. Zitate sind kurz. Die deutschen Sätze sind Übertragung und Eigenentwurf. Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft. Material für die Fachkraft, nicht für Kinder."
   }
 }

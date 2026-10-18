@@ -2,7 +2,7 @@
   "name": "@info70/erfolgs-momente-kartei",
   "version": "0.1.0",
   "private": true,
-  "description": "Erfolgs-Momente-Kartei: Druckkarten für Fachkräfte zu gemeinsamen Tätigkeiten der ganzen Gruppe (Morgenkreis, Tisch decken, Singen im Kreis). Jede Karte hat eine offene Rolle für alle Kinder und Impulsfragen zu Raum, Material, Zeit und Gruppengröße. Quelle Praleska S. 15 und 16, übrige Karten Eigenentwurf. Offline, werbefrei, speichert nichts.",
+  "description": "Erfolgs-Momente-Kartei: Druckkarten für Fachkräfte zu gemeinsamen Tätigkeiten der ganzen Gruppe (Morgenkreis, Tisch decken, Singen im Kreis). Jede Karte hat eine offene Rolle für alle Kinder und Impulsfragen zu Raum, Material, Zeit und Gruppengröße. Quelle Praleska; übrige Karten Eigenentwurf. Ohne Verbindung nach außen, werbefrei, speichert nichts.",
   "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {

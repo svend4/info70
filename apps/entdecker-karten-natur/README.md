@@ -13,7 +13,7 @@ Das Kartenset hat 19 Karten in vier Gruppen:
 - **Stoffe** (6): Wasser, Schnee, Eis, Sand, Ton, Steine. Anfassen, beobachten.
 - **Jahreszeiten** (3): Herbstlaub, Schnee, Blüte. Beobachten.
 
-Auf dem Bildschirm wählt die Fachkraft eine Gruppe, sieht die Vorschau und druckt den Kartenbogen. Der Druck enthält nur die Karten, ohne Bedienelemente. Gedruckt werden sechs Karten je A4-Blatt mit gestrichelten Schneidelinien.
+Auf dem Bildschirm wählt die Fachkraft eine Gruppe, sieht die Vorschau und druckt den Kartenbogen. Der Druck enthält einen Blattkopf (Titel, Gruppe, Blattnummer, Ziel und Hinweis für die Fachkraft; auf Blättern mit Steinen, Sand oder Ton zusätzlich ein Sicherheitssatz) und die Karten. Die Bedienelemente fehlen im Druck. Gedruckt werden sechs Karten je A4-Blatt mit gestrichelten Schneidelinien.
 
 ## Was belegt ist
 
@@ -24,6 +24,7 @@ Die Inhalte stammen aus der Praleska: das Ziel auf S. 50 (Tiere und Pflanzen der
 - Das Kartenformat ist Eigenentwurf. Die Quelle hat keine Karten und keinen Kartenkanon.
 - Aus dem Katalogvorschlag nicht übernommen: Igel, Eichhörnchen, Amsel und Reh (die Quelle nennt sie nicht); Pflanzen an Bewegung oder Lauten erkennen (die Quelle nennt das nicht); NABU-, BNE- und Bildungsplan-Bezüge als Quellenaussage.
 - Keine Bilder, Fotos oder Tonaufnahmen. Die Laute macht die Fachkraft selbst.
+- Der Sicherheitssatz zu Steinen, Sand und Ton (Kleinteile, 1 bis 3 Jahre) ist Eigenentwurf, keine Quellenaussage.
 - Keine Speicherung, keine Konten, keine Verbindung nach außen.
 
 ## Einsatz
@@ -32,7 +33,7 @@ Nicht jedes Tier ist draußen zu sehen. Dann zeigt die Fachkraft ein Bild oder a
 
 ## Tests
 
-Die Prüfung umfasst 31 Tests in zwei Dateien: `test/logik.test.mjs` (Daten und reine Logik) und `test/regeln.test.mjs` (Projektregeln am Quelltext).
+Die Prüfung umfasst 34 Tests in zwei Dateien: `test/logik.test.mjs` (Daten und reine Logik) und `test/regeln.test.mjs` (Projektregeln am Quelltext).
 
 ```bash
 node --test apps/entdecker-karten-natur/test/*.test.mjs

@@ -24,11 +24,11 @@ Das Kartenset hat 19 Karten: 7 Tiere, 3 Pflanzen, 6 Stoffe, 3 Jahreszeiten. Alle
 
 ## 6. Politik (docs/02)
 
-- Keine externen Anfragen: CSP `default-src 'self'; style-src 'self' 'unsafe-inline'` und der Netzwerk-Wächter.
+- Keine externen Anfragen (docs/02 Z. 22–24): CSP `default-src 'self'; style-src 'self' 'unsafe-inline'` und der Netzwerk-Wächter.
 - Nichts wird gespeichert: kein localStorage, kein Cookie. Der Filter lebt nur im Speicher der Seite.
-- Keine Bewertung und keine Einstufung von Kindern. Keine Eingabefelder für Namen, Notizen oder Beobachtungen.
-- Druckbogen: keine Häkchen, Kästchen, Sterne, Punkte-Zeichen oder Emojis; keine Tages- oder Wochentagsfelder; keine Namenszeile. Gedruckt werden nur die Karten, die Bedienelemente sind ausgeblendet.
-- Kein Kinderbildschirm.
+- Keine Bewertung und keine Einstufung von Kindern (docs/02 Z. 141–146, Release-Regel). Keine Eingabefelder für Namen, Notizen oder Beobachtungen.
+- Druckbogen (docs/02 Z. 79–82): keine Häkchen, Kästchen, Sterne, Punkte-Zeichen oder Emojis; keine Tages- oder Wochentagsfelder; keine Namenszeile. Gedruckt werden der Blattkopf (Titel, Gruppe, Blattnummer, Ziel, Hinweis für die Fachkraft) und die Karten; die Bedienelemente sind ausgeblendet.
+- Keine Bildschirme für Kinder unter 3 Jahren: Projektregel, ohne docs/02-Zeile. Das Werkzeug ist für die Fachkraft.
 
 ## 7. Entscheidungen
 
@@ -39,14 +39,19 @@ Das Kartenset hat 19 Karten: 7 Tiere, 3 Pflanzen, 6 Stoffe, 3 Jahreszeiten. Alle
 - **Blatt:** sechs Karten je A4-Blatt, zwei Spalten, drei Reihen. Gestrichelte Rahmen dienen als Schneidelinien. Kein Bild, kein Ton, kein Foto.
 - **Altersangabe:** 1 bis 3 Jahre, aus dem Katalogeintrag (fachkraftgeleitet, offline).
 - **Titel:** mit „Tür“ geschrieben (im Katalog als „Tuer“ umschrieben).
+- **Kleinteile:** Steine, Sand und Ton tragen auf dem Blatt den Satz „Steine, Sand und Ton nur mit der Fachkraft; kleine Teile von Kleinkindern fernhalten (Eigenentwurf, keine Quellenaussage).“. Der Satz steht nur auf Blättern, die eine dieser Karten enthalten.
+- **Fußzeile je Karte:** „Begriff: Quelle S. 51“ und „Beobachtungsanregung: Eigenentwurf“; bei Pflanzen „Benennen: Quelle S. 51“ und „draußen suchen: Eigenentwurf“.
 
 ## 8. Tests
 
-31 Tests in zwei Dateien: `test/logik.test.mjs` (Daten, Quelle je Eintrag, Seitenform, Kennzeichnung, Filter, Blätter) und `test/regeln.test.mjs` (Projektregeln am Quelltext: keine Felder über Kinder, keine Eingabefelder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter, CSP, keine Druckzeichen, keine Namenszeile im Druck, `aria-live` auf `#app`, verbotene Wörter, keine Bewertung, Modellnamen-Freiheit).
+34 Tests in zwei Dateien: `test/logik.test.mjs` (Daten, Quelle je Eintrag, Seitenform, Kennzeichnung und Fußzeile, Filter, Blätter, Sicherheitssatz, Fehlerweg beim Laden) und `test/regeln.test.mjs` (Projektregeln am Quelltext: keine Felder über Kinder, keine Eingabefelder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter mit Fehlerweg, CSP, keine Druckzeichen, keine Namenszeile im Druck, Blattkopf, Footer-Link 44 px, Pflichtmarkierung, `aria-live` auf `#app`, verbotene Wörter, keine Bewertung, Fokus nach Neuaufbau, Modellnamen-Freiheit).
 
 ## Offen
 
-- **Auswahl der Tiere:** redaktionelle Entscheidung. Ergänzen oder nicht: Igel, Eichhörnchen, Amsel, Reh? Die Quelle nennt sie nicht. Eine Ergänzung bräuchte einen eigenen Beleg und eine neue Seitenangabe.
+- Die Auswahl der Tiere (Igel, Eichhörnchen, Amsel, Reh) bleibt offen; die Quelle nennt sie nicht. Eine Ergänzung bräuchte einen eigenen Beleg und eine neue Seitenangabe.
 - **Kartenformat:** Karten, Gruppen, Anregungen und Blattaufteilung sind Eigenentwurf und nicht aus der Quelle belegt.
 - **Durchsicht durch eine Fachkraft** steht aus: Verständlichkeit, Altersgerechtheit und Ablauf draußen.
+- **Sicherheitssatz** zu Kleinteilen (Steine, Sand, Ton; 1 bis 3 Jahre) ist Eigenentwurf; eine Fachkraft soll ihn prüfen.
+- **Fehlerweg:** Fehlerstatus und ungültiges JSON beim Laden sind im Test geprüft. Ein Netzausfall (fetch wirft) ist nur im Quelltext abgedeckt und im Browser noch nicht geprüft.
+- Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - **Repo-Zählungen:** Mit dieser App ändern sich die Gesamtzahl der Tests im Wurzel-README und die Zahl der Apps im Impressum. Diese Dateien hat die App nicht geändert; sie müssen nachgezogen werden.

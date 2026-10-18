@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  BEDINGUNGEN, SEITE, ZITAT_LABEL, pruefeKarten, auswahlUmschalten, druckKarten, druckTexte, wortzahl,
+  BEDINGUNGEN, SEITE, GRUNDGEDANKE, KONKRET_LABEL, ZITAT_LABEL, pruefeKarten, auswahlUmschalten, druckKarten, druckTexte, wortzahl,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/karten.json', import.meta.url), 'utf8'));
@@ -10,9 +10,11 @@ const daten = JSON.parse(await readFile(new URL('../daten/karten.json', import.m
 // Gegenproben arbeiten mit einer Kopie, die echten Daten bleiben unverändert.
 const kopie = () => structuredClone(daten);
 
-test('Daten: 8 Tätigkeitskarten und 1 Quellenkarte, das Set ist gültig', () => {
+test('Daten: 8 Tätigkeitskarten und 1 Quellenkarte, IDs eindeutig, das Set ist gültig', () => {
   assert.equal(daten.karten.length, 8);
   assert.ok(daten.quelle, 'Quellenkarte fehlt');
+  const ids = [...daten.karten, daten.quelle].map((k) => k.id);
+  assert.equal(new Set(ids).size, ids.length, 'doppelte ID (auch für die Auswahlknöpfe)');
   assert.deepEqual(pruefeKarten(daten), []);
 });
 
@@ -30,9 +32,9 @@ test('Quelle je Eintrag: Seitenform „S. N“, Seiten 15, 16, 15 in dieser Reih
   for (const e of daten.quelle.eintraege) assert.match(e.seite, SEITE);
 });
 
-test('Jede Anregung und jede Impulsfrage trägt eine Seitenangabe', () => {
+test('Jeder Grundgedanke und jede Impulsfrage trägt eine Seitenangabe', () => {
   for (const k of daten.karten) {
-    assert.match(k.anregung, SEITE, `${k.id}: Anregung ohne Seite`);
+    assert.match(k.grundgedanke, GRUNDGEDANKE, `${k.id}: Grundgedanke ohne Seite`);
     for (const i of k.impulse) assert.match(i.seite, SEITE, `${k.id}: Impuls „${i.frage}“ ohne Seite`);
   }
 });
@@ -51,13 +53,28 @@ test('Zitate: höchstens 12 Wörter und russischer Text, nichts sonst aus der Qu
   }
 });
 
-test('Gegenprobe: pruefeKarten meldet Verstöße (Frage nach einem Kind, fehlende Seite, falsche Kartenzahl)', () => {
+test('Gegenprobe: pruefeKarten meldet Verstöße (Frage nach einem Kind in jeder Form, fehlende Seite, falsche Kartenzahl)', () => {
   const eins = kopie();
   eins.karten[0].impulse[0].frage = 'Wie geht es dieses Kind im Kreis?';
   assert.ok(pruefeKarten(eins).some((f) => /einzelnen Kindern/.test(f)), 'Frage nach einem Kind nicht erkannt');
 
+  // Jede Artikelform und jede Form von Kind (Kind, Kindes, Kinde), dazu ein Adjektiv und der Plural „einzelnen Kindern“.
+  const formen = [
+    'das Kind', 'dem Kind', 'dem Kinde', 'des Kindes', 'den Kind', 'dieses Kind', 'diesem Kind',
+    'dieser Kind', 'eines Kindes', 'einem Kind', 'ein Kind', 'dem jüngsten Kind', 'einzelnen Kindern',
+  ];
+  for (const form of formen) {
+    const k = kopie();
+    k.karten[2].impulse[1].frage = `Wie geht es ${form} im Kreis?`;
+    assert.ok(pruefeKarten(k).some((f) => /einzelnen Kindern/.test(f)), `Form nicht erkannt: „${form}“`);
+  }
+  // Gegenprobe zur Gegenprobe: eine Frage nach allen Kindern bleibt erlaubt.
+  const allen = kopie();
+  allen.karten[2].impulse[1].frage = 'Wie helfen wir den Kindern im Kreis?';
+  assert.ok(!pruefeKarten(allen).some((f) => /einzelnen Kindern/.test(f)), 'Frage nach allen Kindern wurde abgelehnt');
+
   const zwei = kopie();
-  delete zwei.karten[1].anregung;
+  delete zwei.karten[1].grundgedanke;
   assert.ok(pruefeKarten(zwei).some((f) => /Seitenangabe/.test(f)), 'fehlende Seite nicht erkannt');
 
   const drei = kopie();
@@ -80,12 +97,13 @@ test('druckKarten: nur die gewählten Karten, in Datenreihenfolge, unbekannte ID
   assert.deepEqual(druckKarten(daten, []), []);
 });
 
-test('druckTexte: Tätigkeitskarte mit Rolle, Impulsen und Fuß, Quellenkarte mit ihren Seiten', () => {
+test('druckTexte: Tätigkeitskarte mit Rolle, Impulsen, Grundgedanke und Fuß, Quellenkarte mit ihren Seiten', () => {
   const texte = druckTexte(druckKarten(daten, ['singen']));
   assert.equal(texte[0], 'Singen im Kreis');
   assert.ok(texte.includes('Offene Rolle für alle Kinder'));
   assert.ok(texte.some((t) => t.startsWith('Zeit: ') && t.endsWith('(S. 16)')), 'Impuls ohne Bedingung oder Seite');
-  assert.equal(texte.at(-1), 'Eigenentwurf – Anregung: S. 16');
+  assert.equal(texte.at(-2), 'Grundgedanke: S. 16 (Anerkennung durch Gleichaltrige)');
+  assert.equal(texte.at(-1), `${KONKRET_LABEL}: Eigenentwurf`);
 
   const quelle = druckTexte(druckKarten(daten, ['quelle']));
   assert.ok(quelle.includes('S. 15 – Erfolg in gemeinsamer Tätigkeit'));

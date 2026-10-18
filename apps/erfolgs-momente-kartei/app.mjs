@@ -1,10 +1,11 @@
 // Erfolgs-Momente-Kartei (für Fachkräfte): Karten wählen, gewählte drucken.
-// Gedruckt wird nur die Vorschau; sie zeigt den Text aus logik.mjs.
+// Gedruckt wird nur die Vorschau; sie rendert die Zeilen aus logik.mjs (druckZeilen).
+// Dieselben Zeilen bilden druckTexte, die die Tests prüfen.
 // Politik docs/02: keine externen Anfragen (NetzwerkWaechter), keine Speicherung,
 // keine Eingabefelder, keine Namenszeile auf dem Papier.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { pruefeKarten, auswahlUmschalten, druckKarten } from './logik.mjs';
+import { pruefeKarten, auswahlUmschalten, druckKarten, druckZeilen } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -21,29 +22,38 @@ function auswahlKnopf(karte) {
     class: `k-knopf k-knopf--klein ${an ? '' : 'k-knopf--neutral'}`,
     role: 'checkbox',
     'aria-checked': String(an),
+    'data-kennung': `karte-${karte.id}`,
     onclick: () => { auswahl = auswahlUmschalten(auswahl, karte.id); render(); },
   }, `${an ? '✓ ' : ''}${karte.titel}`);
 }
 
-// Jede Zeile der Karte ist ein Text aus logik.mjs; hier wird nichts ergänzt.
-function karteElement(k) {
-  if (k.art === 'quelle') {
-    return el('article', { class: 'k-karte ek-karte' },
-      el('h2', { class: 'ek-kartentitel' }, k.titel),
-      ...k.eintraege.map((e) => el('section', { class: 'ek-eintrag' },
-        el('p', { class: 'ek-kopf' }, e.kopf),
-        el('p', { class: 'ek-text' }, e.text),
-        ...e.zitate.map((z) => el('p', { class: 'ek-zitat' }, z)),
-        el('p', { class: 'ek-fuss' }, e.uebertragung))),
-      el('p', { class: 'ek-fuss' }, k.fuss));
+const KLASSE = {
+  label: 'ek-label',
+  text: 'ek-text',
+  impuls: 'ek-impuls',
+  kopf: 'ek-kopf',
+  zitat: 'ek-zitat',
+  anregung: 'ek-fuss',
+  uebertragung: 'ek-fuss',
+  fuss: 'ek-fuss',
+};
+
+// Eine Karte aus ihren Zeilen. Jeder Quelleneintrag wird ein Abschnitt; der Fuß steht außen.
+function karteElement(karte) {
+  const artikel = el('article', { class: 'k-karte ek-karte' });
+  let ziel = artikel;
+  for (const z of druckZeilen([karte])) {
+    if (z.typ === 'eintrag') {
+      ziel = el('section', { class: 'ek-eintrag' });
+      artikel.append(ziel);
+      continue;
+    }
+    if (z.typ === 'fuss') ziel = artikel;
+    ziel.append(z.typ === 'titel'
+      ? el('h2', { class: 'ek-kartentitel' }, z.text)
+      : el('p', { class: KLASSE[z.typ] }, z.text));
   }
-  return el('article', { class: 'k-karte ek-karte' },
-    el('h2', { class: 'ek-kartentitel' }, k.titel),
-    el('p', { class: 'ek-label' }, k.rollenLabel),
-    el('p', { class: 'ek-text' }, k.rolle),
-    el('p', { class: 'ek-label' }, k.impulsLabel),
-    ...k.impulse.map((t) => el('p', { class: 'ek-impuls' }, t)),
-    el('p', { class: 'ek-fuss' }, k.fuss));
+  return artikel;
 }
 
 function druckBereich() {
@@ -58,6 +68,8 @@ function druckBereich() {
 }
 
 function render() {
+  // Vor dem Neuaufbau merken, welcher Knopf den Fokus hatte; danach wieder dorthin.
+  const merken = document.activeElement?.dataset?.kennung;
   const keineAuswahl = auswahl.length === 0;
   app.replaceChildren(
     el('h1', { class: 'k-titel ek-nur-bildschirm' }, 'Erfolgs-Momente-Kartei'),
@@ -71,24 +83,34 @@ function render() {
       el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.6rem' },
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein',
+          'data-kennung': 'alle-waehlen',
           onclick: () => { auswahl = alleIds(); render(); },
         }, 'Alle auswählen'),
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein',
+          'data-kennung': 'auswahl-leeren',
           onclick: () => { auswahl = []; render(); },
         }, 'Auswahl leeren')),
       el('div', { class: 'k-antworten' },
         el('button', {
           class: 'k-knopf',
+          'data-kennung': 'drucken',
           disabled: keineAuswahl ? '' : null,
           onclick: () => window.print(),
         }, 'Ausgewählte Karten drucken')),
       keineAuswahl ? el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem' }, 'Bitte mindestens eine Karte auswählen.') : null),
     druckBereich(),
     el('footer', { class: 'k-fuss ek-nur-bildschirm' },
-      el('span', {}, 'Werkzeug für Fachkräfte · nichts wird gespeichert · keine Anmeldung · keine Verbindung nach außen · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum und Datenschutz')),
+      el('p', { style: 'margin:0 0 0.4rem' },
+        'Werkzeug für Fachkräfte · nichts wird gespeichert · keine Anmeldung · keine Verbindung nach außen'),
+      el('p', { style: 'margin:0 0 0.4rem' },
+        'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.'),
+      el('a', { href: '../../impressum.html', class: 'ek-link' }, 'Impressum und Datenschutz')),
   );
+  if (merken) {
+    const ziel = [...app.querySelectorAll('[data-kennung]')].find((n) => n.dataset.kennung === merken);
+    ziel?.focus();
+  }
 }
 
 async function start() {

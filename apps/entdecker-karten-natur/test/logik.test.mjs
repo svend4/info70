@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  KARTEN_PRO_BLATT, anregungsMarke, blaettern, blattKopf, filtereKarten, zaehleJeGruppe,
+  FEHLER_LADEN, KARTEN_PRO_BLATT, anregungsMarke, blaettern, blattKopf, filtereKarten,
+  kartenAusAntwort, kartenFuss, sicherheitsHinweis, zaehleJeGruppe,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/karten.json', import.meta.url), 'utf8'));
@@ -52,6 +53,7 @@ test('Quelle: Gruppen, Karten und Ziel tragen Seitenangaben aus dem Quelltext (S
   for (const g of daten.gruppen) {
     assert.equal(g.seite, 51, `${g.id}: Gruppe nicht auf S. 51`);
     assert.ok(g.quelle.includes('S. 51'), `${g.id}: Quelltext ohne S. 51`);
+    assert.ok(!/[„“"«»]/.test(g.quelle), `${g.id}: Anführungszeichen im Quellenwortlaut`);
   }
   for (const k of daten.karten) {
     assert.equal(Number.isInteger(k.seite), true, `${k.id}: Seite ist keine ganze Zahl`);
@@ -69,9 +71,13 @@ test('Seitenform: Anregungen haben Art und Text, Text bis 90 Zeichen, Arten je G
   }
 });
 
-test('Eigenentwurf: jede Anregung trägt Seitenangabe und Kennzeichnung', () => {
+test('Eigenentwurf: jede Anregung trägt Seitenangabe und Kennzeichnung, die Fußzeile trennt Quelle und Eigenentwurf', () => {
   for (const k of daten.karten) {
     assert.equal(anregungsMarke(k), `S. ${k.seite}, Eigenentwurf`, `${k.id}: Kennzeichnung`);
+    const erwartet = k.gruppe === 'pflanzen'
+      ? `Benennen: Quelle S. ${k.seite}; draußen suchen: Eigenentwurf`
+      : `Begriff: Quelle S. ${k.seite}; Beobachtungsanregung: Eigenentwurf`;
+    assert.equal(kartenFuss(k), erwartet, `${k.id}: Fußzeile`);
   }
 });
 
@@ -131,4 +137,26 @@ test('blattKopf: nennt Gruppe und Blattnummer, ohne Feld für einen Namen', () =
   const kopf = blattKopf({ gruppe: 'Tiere', nummer: 1, gesamt: 2 });
   assert.equal(kopf, 'Tiere, Blatt 1 von 2');
   assert.ok(!/Name/.test(kopf), 'die Kopfzeile darf kein Namensfeld haben');
+});
+
+test('Sicherheitshinweis: Blätter mit Steinen, Sand oder Ton tragen den Satz, alle anderen nicht', () => {
+  const satz = 'Steine, Sand und Ton nur mit der Fachkraft; kleine Teile von Kleinkindern fernhalten (Eigenentwurf, keine Quellenaussage).';
+  const kleinteile = ['stoff-sand', 'stoff-ton', 'stoff-steine'];
+  assert.equal(sicherheitsHinweis(daten.karten.filter((k) => kleinteile.includes(k.id))), satz);
+  assert.equal(sicherheitsHinweis(filtereKarten(daten.karten, 'tiere')), null, 'Tiere ohne Satz');
+  assert.equal(sicherheitsHinweis(daten.karten.filter((k) => k.id === 'stoff-wasser')), null, 'Wasser ohne Satz');
+  for (const blatt of blaettern(daten.karten)) {
+    const traegt = blatt.some((k) => kleinteile.includes(k.id));
+    assert.equal(sicherheitsHinweis(blatt) !== null, traegt, `Blatt mit ${blatt.map((k) => k.id).join(', ')}`);
+  }
+});
+
+test('Fehlerweg Laden: Fehlerstatus wirft, gültige Antwort liefert die Daten, Meldung steht fest', async () => {
+  assert.equal(FEHLER_LADEN, 'Die Karten konnten nicht geladen werden. Bitte die Seite neu laden.');
+  await assert.rejects(kartenAusAntwort({ ok: false, status: 404, json: async () => ({}) }), /404/);
+  await assert.rejects(
+    kartenAusAntwort({ ok: true, status: 200, json: async () => { throw new SyntaxError('kein JSON'); } }),
+    SyntaxError,
+  );
+  assert.deepEqual(await kartenAusAntwort({ ok: true, status: 200, json: async () => ({ a: 1 }) }), { a: 1 });
 });

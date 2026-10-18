@@ -44,11 +44,15 @@ test('feste Reihenfolge der Karten: Stationen in der Quellenfolge, dann die Aufs
   ]);
 });
 
-test('Quelle je Karte: „Praleska, S. n“ oder „S. n–m“, nur auf den Seiten 57 bis 60', () => {
+test('Quelle je Karte: „Praleska, S. n“ oder „S. n–m“, nur auf den Seiten 57 bis 60; Ausgabe und Katalogeintrag belegt', () => {
   for (const k of daten.karten) {
     assert.match(k.quelle, QUELLE_FORMAT, `${k.id}: Quelle „${k.quelle}“ hat nicht das Format`);
     assert.ok(seitenImBereich(k.quelle.replace('Praleska, ', '')), `${k.id}: Seite außerhalb 57 bis 60`);
   }
+  // Ausgabe wie auf der Titelseite der Textdatei (Verlag, Jahr, ISBN); Katalog ohne Nummer.
+  assert.match(daten.quellenHinweis, /Minsk: НИО \(Национальный институт образования\), 2007\. ISBN 978-985-465-244-3\./);
+  assert.match(daten.katalog, /^Katalogeintrag docs\/10, Abschnitt Printmaterialien\./);
+  assert.ok(!/Einheit/.test(daten.katalog), 'Katalog: Einheitennummer ist nicht belegt');
 });
 
 test('jede Maßzeile trägt ihre Seite, im Bereich 57 bis 60', () => {
@@ -140,12 +144,13 @@ test('zeileText hängt die Seite in Klammern an; ohne Seite bleibt der Text', ()
   assert.equal(zeileText({ text: 'Durchführung ohne Seite' }), 'Durchführung ohne Seite');
 });
 
-test('jede Stationskarte nennt Quelle, Übungsmaß und Durchführung; die Aufsicht die Hinweise', () => {
+test('jede Stationskarte nennt Quelle, Übungsmaß und Durchführung; ihre Fußzeile sagt „keine Sicherheitsgrenze“; die Aufsicht die Hinweise', () => {
   for (const k of STATIONEN) {
     const text = kartenText(k);
     assert.ok(text.includes(k.quelle), `${k.id}: Quelle fehlt`);
     assert.ok(text.includes('Übungsmaß laut Quelle'), `${k.id}: Übungsmaß fehlt`);
     assert.ok(text.includes('Durchführung (Eigenentwurf)'), `${k.id}: Durchführung fehlt`);
+    assert.ok(k.fuss.startsWith('Übungsmaß laut Quelle, keine Sicherheitsgrenze.'), `${k.id}: Fußzeile ohne Sicherheitsgrenze-Satz`);
   }
   assert.ok(kartenText(AUFSICHT[0]).includes('Hinweise laut Quelle'), 'Aufsicht: Hinweise fehlen');
 });

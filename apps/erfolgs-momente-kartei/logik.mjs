@@ -3,20 +3,24 @@
 // Quelle: Praleska (docs/10, Katalog-Konstruktor №2), S. 15 und S. 16.
 // Alles, was nicht als Quelle markiert ist, ist Eigenentwurf.
 // Politik docs/02: die Karten fragen nach der Lage, nie nach einzelnen Kindern.
-// Was gedruckt wird, entsteht hier als Text; der Bildschirm zeigt nur diesen Text.
+// Was gedruckt wird, entsteht hier als Zeilen; die Vorschau rendert genau diese Zeilen.
 
 export const BEDINGUNGEN = Object.freeze(['Raum', 'Material', 'Zeit', 'Gruppengröße']);
 export const SEITE = /^S\. \d+$/;
+export const GRUNDGEDANKE = /^Grundgedanke: S\. \d+ \(.+\)$/;
 export const TAETIGKEITEN = 8;
 export const ROLLE_LABEL = 'Offene Rolle für alle Kinder';
 export const IMPULS_LABEL = 'Impulse für die Fachkraft';
+export const KONKRET_LABEL = 'Konkrete Tätigkeit';
 export const ZITAT_LABEL = 'Zitat';
 export const UEBERTRAGUNG_LABEL = 'Übertragung';
 
 const QUELLE_SEITEN = ['S. 15', 'S. 16', 'S. 15'];
 const ZITAT_MAX_WOERTER = 12;
 // Eine Impulsfrage fragt nach der Lage, nicht nach einem bestimmten Kind.
-const EINZELKIND = /\b(?:dieses|jenes|welches|einzelne[mnrs]?|bestimmte[mnrs]?)\s+Kind\b|\bbei einem Kind\b|\beinem Kind\b|\bein Kind\b/i;
+// Erkannt werden die Artikelformen vor „Kind“ (Kind, Kindes, Kinde), ein optionales
+// Adjektiv dazwischen („dem jüngsten Kind“) und einzelne Kinder im Plural.
+const EINZELKIND = /\b(?:das|dem|des|den|dieses|diesem|dieser|jenes|jenem|jener|welches|welchem|welcher|eines|einem|einer|ein|einzelne[mnrs]?|bestimmte[mnrs]?)\s+(?:[a-zäöüß]+\s+)?Kind(?:es|e)?\b|\b(?:einzelne|bestimmte)[mnrs]?\s+Kinder(?:n)?\b/i;
 
 /** Anzahl der Wörter in einem Text. */
 export function wortzahl(text) {
@@ -42,7 +46,7 @@ export function pruefeKarten(daten) {
     if (!k.titel) fehler.push(`${wo}: Titel fehlt`);
     if (!/Jedes Kind darf/.test(k.rolle ?? '')) fehler.push(`${wo}: Rolle ist nicht offen für alle Kinder`);
     if (k.einordnung !== 'Eigenentwurf') fehler.push(`${wo}: nicht als Eigenentwurf gekennzeichnet`);
-    if (!SEITE.test(k.anregung ?? '')) fehler.push(`${wo}: Anregung ohne Seitenangabe`);
+    if (!GRUNDGEDANKE.test(k.grundgedanke ?? '')) fehler.push(`${wo}: Grundgedanke ohne Seitenangabe`);
     const impulse = k.impulse ?? [];
     if (impulse.length < 2 || impulse.length > 3) {
       fehler.push(`${wo}: ${impulse.length} Impulse statt 2 bis 3`);
@@ -108,21 +112,39 @@ function druckForm(k) {
     rolle: k.rolle,
     impulsLabel: IMPULS_LABEL,
     impulse: k.impulse.map((i) => `${i.bedingung}: ${i.frage} (${i.seite})`),
-    fuss: `${k.einordnung} – Anregung: ${k.anregung}`,
+    anregung: k.grundgedanke,
+    fuss: `${KONKRET_LABEL}: ${k.einordnung}`,
   };
 }
 
-/** Jeder Text, der auf Papier steht, in einer flachen Liste. */
-export function druckTexte(karten) {
-  const texte = [];
+/**
+ * Jede Zeile, die auf Papier steht, in Reihenfolge. `typ` sagt, was die Zeile ist.
+ * `eintrag` (Beginn eines Quelleneintrags) hat keinen Text und gliedert nur.
+ * Die Vorschau in app.mjs setzt genau diese Zeilen als Absätze.
+ */
+export function druckZeilen(karten) {
+  const zeilen = [];
   for (const k of karten) {
-    texte.push(k.titel);
+    zeilen.push({ typ: 'titel', text: k.titel });
     if (k.art === 'quelle') {
-      for (const e of k.eintraege) texte.push(e.kopf, e.text, ...e.zitate, e.uebertragung);
-      texte.push(k.fuss);
+      for (const e of k.eintraege) {
+        zeilen.push({ typ: 'eintrag' });
+        zeilen.push({ typ: 'kopf', text: e.kopf }, { typ: 'text', text: e.text });
+        for (const z of e.zitate) zeilen.push({ typ: 'zitat', text: z });
+        zeilen.push({ typ: 'uebertragung', text: e.uebertragung });
+      }
+      zeilen.push({ typ: 'fuss', text: k.fuss });
     } else {
-      texte.push(k.rollenLabel, k.rolle, k.impulsLabel, ...k.impulse, k.fuss);
+      zeilen.push({ typ: 'label', text: k.rollenLabel }, { typ: 'text', text: k.rolle });
+      zeilen.push({ typ: 'label', text: k.impulsLabel });
+      for (const i of k.impulse) zeilen.push({ typ: 'impuls', text: i });
+      zeilen.push({ typ: 'anregung', text: k.anregung }, { typ: 'fuss', text: k.fuss });
     }
   }
-  return texte;
+  return zeilen;
+}
+
+/** Die Texte der Zeilen in Reihenfolge: genau das, was auf Papier steht und was die Tests prüfen. */
+export function druckTexte(karten) {
+  return druckZeilen(karten).filter((z) => z.text !== undefined).map((z) => z.text);
 }

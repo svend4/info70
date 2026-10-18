@@ -1,7 +1,15 @@
-/* Erfolgs-Momente-Kartei: Druckansicht. Gedruckt wird nur der Druckbereich mit
-   den gewählten Karten. Titel, Auswahl und Fuß der Bildschirmseite verschwinden.
-   Auf dem Papier stehen keine Häkchen, Kästchen, Punkte, Sterne, Emojis,
-   keine Namenszeile und keine Tages- oder Wochentagsfelder (docs/02). */
+/* Erfolgs-Momente-Kartei: Druckansicht und ein Bildschirm-Teil.
+   Gedruckt wird nur der Druckbereich mit den gewählten Karten. Titel, Auswahl und Fuß der
+   Bildschirmseite verschwinden. Auf dem Papier stehen keine Häkchen, Kästchen, Punkte, Sterne,
+   Emojis, keine Namenszeile und keine Tages- oder Wochentagsfelder (docs/02 Z. 79–82). */
+
+/* Bildschirm: der Footer-Link ist mindestens 44 px hoch. */
+.ek-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 8px;
+}
 
 @media print {
   .ek-nur-bildschirm { display: none !important; }

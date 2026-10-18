@@ -30,11 +30,22 @@ function auswahlKnopf(karte) {
   return el('button', {
     class: `k-knopf k-knopf--klein ${gewaehlt ? '' : 'k-knopf--neutral'}`,
     'aria-pressed': String(gewaehlt),
+    'data-kennung': `auswahl-${karte.id}`,
     onclick: () => { auswahl = umschalten(auswahl, karte.id); render(); },
   }, karte.titel);
 }
 
+// Nach dem Neuaufbau bekommt der Knopf mit derselben Kennung den Fokus zurück.
+// Sonst landet der Fokus nach jedem Klick auf dem Seitenkörper.
+function fokussiere(kennung) {
+  if (!kennung) return;
+  const ziel = [...app.querySelectorAll('button[data-kennung]')]
+    .find((b) => b.dataset.kennung === kennung);
+  ziel?.focus();
+}
+
 function render() {
+  const merkeKennung = document.activeElement?.dataset?.kennung;
   const karten = gewaehlteKarten(daten, auswahl);
   const druckbar = kannDrucken(karten);
   app.replaceChildren(
@@ -47,10 +58,12 @@ function render() {
       el('div', { class: 'bsl-knopfreihe' },
         el('button', {
           class: 'k-knopf k-knopf--klein k-knopf--neutral',
+          'data-kennung': 'alle-waehlen',
           onclick: () => { auswahl = alleGewaehlt(daten); render(); },
         }, 'Alle wählen'),
         el('button', {
           class: 'k-knopf k-knopf--klein k-knopf--neutral',
+          'data-kennung': 'keine-waehlen',
           onclick: () => { auswahl = new Set(); render(); },
         }, 'Keine wählen')),
       el('p', { class: 'bsl-zaehler' },
@@ -58,6 +71,7 @@ function render() {
       el('div', { class: 'k-antworten' },
         el('button', {
           class: 'k-knopf',
+          'data-kennung': 'drucken',
           disabled: !druckbar,
           onclick: () => window.print(),
         }, 'Stationskarten drucken'))),
@@ -68,8 +82,11 @@ function render() {
           'Keine Karte gewählt. Wähle oben mindestens eine Karte.'),
 
     el('footer', { class: 'k-fuss bsl-nur-bildschirm' },
-      el('span', {}, 'Werkzeug für Fachkräfte. Nichts wird gespeichert, es gibt keine Verbindung nach draußen. '),
-      el('a', { href: '../../impressum.html' }, 'Impressum und Datenschutz')));
+      el('p', {}, 'Werkzeug für Fachkräfte. Nichts wird gespeichert, es gibt keine Verbindung nach draußen.'),
+      el('p', {}, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.'),
+      el('a', { class: 'bsl-fusslink', href: '../../impressum.html' }, 'Impressum und Datenschutz')));
+
+  fokussiere(merkeKennung);
 }
 
 render();
