@@ -4,5 +4,8 @@
   "private": true,
   "description": "Kita-Wochenplaner: Bildungsangebote ausgewogen über die Woche planen - Richtwerte als Empfehlung, Freispiel hat Vorrang (Werkzeug für Fachkräfte).",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/koffer.test.mjs test/daten.test.mjs test/regeln.test.mjs"
+  }
 }

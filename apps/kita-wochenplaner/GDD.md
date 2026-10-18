@@ -28,7 +28,7 @@ Ausgewogenheits-Check (полосы по 6 областям + подсказки
 1. Фахкрафт может **увидеть** дисбаланс недели за один взгляд (полосы областей)
    и назвать «пустую» область.
 2. Фахкрафт может **применить** возрастные ориентиры длительности
-   (~10/20/25 мин) — подсказка появляется ровно у превышающего предложения.
+   (Obergrenze ~15/20/25 мин, 10/15/17 предложений в неделю) — подсказка появляется ровно у превышающего предложения.
 3. Фахкрафт может **обосновать** «меньше — лучше»: подсказка при >3
    предложениях в день формулирует Freispiel-Vorrang как принцип.
 (Проверка в Praxistest: «покажи, какой области не хватает», «почему план
@@ -38,10 +38,10 @@ Ausgewogenheits-Check (полосы по 6 областям + подсказки
 Единица контента: Bildungsbereich с ориентирами и текстами подсказок.
 MVP: 6 областей + 3 возрастные группы + Tages-/Wochen-Hinweis в
 `daten/bereiche.json`. Схема данных: `bereiche[{id,name,emoji,beispiele}]`,
-`altersgruppen[{id,name,maxMinutenProAngebot,warntext}]`,
-`tagesHinweis{maxAngeboteProTag,warntext}`, `wochenHinweis{warntext}`.
+`altersgruppen[{id,name,maxMinutenProAngebot,maxAngeboteProWoche,quelle,warntext}]`,
+`tagesHinweis{maxAngeboteProTag,warntext}`, `wochenHinweis{warntext}`, `wochenLastHinweis{warntext}`. Testzahl: 40 (`npm test`).
 Дидактический анти-шаблон-тест (node:test): ровно 6 областей, ориентиры
-= 10/20/25, каждый Warntext сформулирован как «Empfehlung», Tages-Hinweis
+= 15/20/25 и 10/15/17, каждый Warntext сформулирован как «Empfehlung», Tages-Hinweis
 обязан называть Freispiel, запрет оценочной лексики (Score/Ranking/Diagnose)
 во всём датасете.
 

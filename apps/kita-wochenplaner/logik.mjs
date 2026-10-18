@@ -41,11 +41,13 @@ export function angeboteFuerTag(angebote, tagId) {
  * - typ 'tageslast': mehr als maxAngeboteProTag an einem Tag (Freispiel-Vorrang),
  * - typ 'leerer-bereich': ein Bildungsbereich kommt in der Woche nicht vor
  *   (nur gemeldet, wenn überhaupt schon etwas geplant ist).
+ * - typ 'wochenlast': eine Altersgruppe hat mehr Angebote in der Woche als ihr Richtwert.
  * @param {Array<{id: string, tag: string, bereich: string, alter: string, dauer: number, titel: string}>} angebote
  * @param {{bereiche: Array<{id: string, name: string, emoji: string}>,
- *          altersgruppen: Array<{id: string, maxMinutenProAngebot: number, warntext: string}>,
+ *          altersgruppen: Array<{id: string, name: string, maxMinutenProAngebot: number, maxAngeboteProWoche: number, warntext: string}>,
  *          tagesHinweis: {maxAngeboteProTag: number, warntext: string},
- *          wochenHinweis: {warntext: string}}} daten
+ *          wochenHinweis: {warntext: string},
+ *          wochenLastHinweis: {warntext: string}}} daten
  * @returns {Array<{typ: string, text: string}>}
  */
 export function pruefePlan(angebote, daten) {
@@ -86,6 +88,20 @@ export function pruefePlan(angebote, daten) {
           text: daten.wochenHinweis.warntext.replace('{bereich}', `${b.emoji} ${b.name}`),
         });
       }
+    }
+  }
+
+  for (const g of daten.altersgruppen) {
+    const anzahl = angebote.filter((a) => a.alter === g.id).length;
+    if (anzahl > g.maxAngeboteProWoche) {
+      hinweise.push({
+        typ: 'wochenlast',
+        alter: g.id,
+        text: daten.wochenLastHinweis.warntext
+          .replace('{gruppe}', g.name)
+          .replace('{anzahl}', String(anzahl))
+          .replace('{max}', String(g.maxAngeboteProWoche)),
+      });
     }
   }
 

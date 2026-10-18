@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "stand": "2026-07",
-  "hinweis": "Konzept nach Katalog Nr. 2 (docs/10, Praleska-Ableitung); alle Texte neu formuliert. Richtwerte sind Empfehlungen, keine Vorschrift - Freispiel hat Vorrang.",
+  "stand": "2026-10",
+  "hinweis": "Konzept nach Katalog Nr. 2 (docs/10, Praleska-Ableitung); alle Texte neu formuliert. Richtwerte sind Empfehlungen (Obergrenze der Quellenspanne, S. 9-10), keine Vorschrift - Freispiel hat Vorrang.",
   "bereiche": [
     {
       "id": "bewegung",
@@ -44,20 +44,35 @@
     {
       "id": "1-3",
       "name": "1-3 Jahre",
-      "maxMinutenProAngebot": 10,
-      "warntext": "Empfehlung für 1-3 Jahre: geplante Impulse möglichst kurz halten (etwa bis 10 Minuten). Die Jüngsten lernen vor allem im freien Spiel und in Alltagssituationen - ein kurzer Impuls reicht völlig."
+      "maxMinutenProAngebot": 15,
+      "warntext": "Empfehlung für 1-3 Jahre: geplante Impulse möglichst kurz halten (etwa bis 15 Minuten) und höchstens 10 geplante Angebote in der Woche. Die Jüngsten lernen vor allem im freien Spiel und in Alltagssituationen - ein kurzer Impuls reicht völlig.",
+      "maxAngeboteProWoche": 10,
+      "quelle": {
+        "seite": "S. 9-10"
+      },
+      "eigenentwurf": false
     },
     {
       "id": "3-5",
       "name": "3-5 Jahre",
       "maxMinutenProAngebot": 20,
-      "warntext": "Empfehlung für 3-5 Jahre: etwa bis 20 Minuten pro Angebot. Lieber ein kurzes Angebot mit viel Zeit zum Weiterspielen als ein langes Programm."
+      "warntext": "Empfehlung für 3-5 Jahre: etwa bis 20 Minuten pro Angebot und höchstens 15 geplante Angebote in der Woche. Lieber ein kurzes Angebot mit viel Zeit zum Weiterspielen als ein langes Programm.",
+      "maxAngeboteProWoche": 15,
+      "quelle": {
+        "seite": "S. 9-10"
+      },
+      "eigenentwurf": false
     },
     {
       "id": "5-7",
       "name": "5-7 Jahre",
       "maxMinutenProAngebot": 25,
-      "warntext": "Empfehlung für 5-7 Jahre: etwa bis 25 Minuten pro Angebot - auch Vorschulkinder brauchen danach wieder Bewegung und freies Spiel."
+      "warntext": "Empfehlung für 5-7 Jahre: etwa bis 25 Minuten pro Angebot und höchstens 17 geplante Angebote in der Woche - auch Vorschulkinder brauchen danach wieder Bewegung und freies Spiel.",
+      "maxAngeboteProWoche": 17,
+      "quelle": {
+        "seite": "S. 9-10"
+      },
+      "eigenentwurf": false
     }
   ],
   "tagesHinweis": {
@@ -66,5 +81,8 @@
   },
   "wochenHinweis": {
     "warntext": "Der Bereich {bereich} kommt in dieser Woche noch nicht vor. Kein Muss - aber vielleicht passt noch ein kleiner Impuls hinein?"
+  },
+  "wochenLastHinweis": {
+    "warntext": "Empfehlung für {gruppe}: in dieser Woche sind {anzahl} Angebote geplant (etwa bis {max}). Weniger, dafür tiefer - Freispiel hat Vorrang."
   }
 }

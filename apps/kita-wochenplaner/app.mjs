@@ -35,6 +35,8 @@ let meldung = null;
 
 const eingabeStil = 'width:100%;font:inherit;padding:0.6rem;border-radius:0.5rem;border:2px solid var(--k-rand);background:#fff;margin-top:0.25rem';
 const feldStil = 'display:block;font-weight:600;margin-top:0.75rem';
+// Fußlinks mindestens 48 px hoch (docs/02 Z. 50).
+const FUSS_LINK = 'display:inline-block;min-height:48px;line-height:48px';
 
 function auswahlFeld(beschriftung, optionen, wert, beiWahl) {
   const select = el('select', { style: eingabeStil });
@@ -84,7 +86,7 @@ function formularKarte() {
     auswahlFeld('Tag', TAGE.map((t) => [t.id, t.name]), entwurf.tag, (w) => { entwurf.tag = w; }),
     auswahlFeld('Bildungsbereich', daten.bereiche.map((b) => [b.id, `${b.emoji} ${b.name}`]), entwurf.bereich,
       (w) => { entwurf.bereich = w; beispielZeile.textContent = `💡 Ideen: ${beispiel()}`; }),
-    auswahlFeld('Altersgruppe', daten.altersgruppen.map((g) => [g.id, `${g.name} (Empfehlung: bis ~${g.maxMinutenProAngebot} min)`]), entwurf.alter,
+    auswahlFeld('Altersgruppe', daten.altersgruppen.map((g) => [g.id, `${g.name} (Empfehlung: bis ~${g.maxMinutenProAngebot} min, ${g.maxAngeboteProWoche} pro Woche)`]), entwurf.alter,
       (w) => { entwurf.alter = w; }),
     el('label', { style: feldStil }, 'Dauer in Minuten', dauerFeld),
     el('label', { style: feldStil }, 'Titel des Angebots (optional)', titelFeld),
@@ -92,11 +94,12 @@ function formularKarte() {
     el('div', { class: 'k-antworten' },
       el('button', {
         class: 'k-knopf',
+        'data-kennung': 'kwp-hinzufuegen',
         onclick: () => {
           const dauer = Math.round(Number(entwurf.dauer));
           if (!Number.isInteger(dauer) || dauer < 1 || dauer > 240) {
             meldung = { ok: false, text: 'Bitte eine Dauer zwischen 1 und 240 Minuten angeben.' };
-            return render();
+            return render('kwp-hinzufuegen');
           }
           const plan = ladePlan();
           plan.angebote.push({
@@ -109,8 +112,8 @@ function formularKarte() {
           });
           speicherePlan(plan);
           entwurf.titel = '';
-          meldung = { ok: true, text: 'Angebot eingeplant. ✔️' };
-          render();
+          meldung = { ok: true, text: 'Angebot eingeplant.' };
+          render('kwp-hinzufuegen');
         },
       }, '✅ Zum Wochenplan hinzufügen')));
 }
@@ -120,7 +123,7 @@ function tagesKarte(plan, tag) {
   return el('section', { class: 'k-karte' },
     el('h2', { style: 'margin-top:0;font-size:1.05rem' }, tag.name),
     liste.length === 0
-      ? el('p', { style: 'margin:0;color:#4b5563' }, 'Noch nichts geplant - Zeit für Freispiel. 🌈')
+      ? el('p', { style: 'margin:0;color:#4b5563' }, 'Noch nichts geplant - Zeit für Freispiel.', el('span', { class: 'kwp-nur-bildschirm' }, ' 🌈'))
       : el('ul', { style: 'list-style:none;padding:0;margin:0' },
           ...liste.map((a) => {
             const b = bereichVon(a.bereich);
@@ -128,16 +131,17 @@ function tagesKarte(plan, tag) {
             const name = a.titel || b?.name || a.bereich;
             return el('li', { style: 'display:flex;gap:0.5rem;align-items:flex-start;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--k-rand)' },
               el('div', {},
-                el('span', { style: 'font-weight:600' }, `${b?.emoji ?? '❓'} ${name}`),
-                el('small', { style: 'display:block;color:#4b5563' }, `${b?.name ?? a.bereich} · ${g?.name ?? a.alter} · ${a.dauer} min`)),
+                el('span', { style: 'font-weight:600' }, el('span', { class: 'kwp-nur-bildschirm' }, `${b?.emoji ?? '❓'} `), name),
+                el('small', { style: 'display:block;color:#4b5563' }, `${b?.name ?? a.bereich}, ${g?.name ?? a.alter}, ${a.dauer} min`)),
               el('button', {
                 class: 'k-knopf k-knopf--neutral k-knopf--klein kwp-nur-bildschirm',
+                'data-kennung': `kwp-entfernen-${a.id}`,
                 'aria-label': `Angebot „${name}“ am ${tag.name} entfernen`,
                 onclick: () => {
                   const p = ladePlan();
                   p.angebote = p.angebote.filter((x) => x.id !== a.id);
                   speicherePlan(p);
-                  render();
+                  render(`kwp-entfernen-${a.id}`);
                 },
               }, '🗑️'));
           })));
@@ -174,15 +178,16 @@ function werkzeugKarte(plan) {
     el('p', { style: 'font-size:0.9rem' },
       'Plan als Datei sichern oder mit Kolleg*innen zusammenführen - ganz ohne Server: hier exportieren, die Datei z. B. per USB-Stick weitergeben, dort importieren. Neue Angebote werden ergänzt, nichts wird überschrieben.'),
     el('div', { class: 'k-antworten' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => exportiere(plan) }, '📤 Plan exportieren (Datei)'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: importiere }, '📥 Plan importieren'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => window.print() }, '🖨️ Druckansicht (Aushang)'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'data-kennung': 'kwp-export', onclick: () => exportiere(plan) }, '📤 Plan exportieren (Datei)'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'data-kennung': 'kwp-import', onclick: importiere }, '📥 Plan importieren'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'data-kennung': 'kwp-druck', onclick: () => window.print() }, '🖨️ Druckansicht (Aushang)'),
       el('button', {
         class: 'k-knopf k-knopf--neutral k-knopf--klein',
+        'data-kennung': 'kwp-loeschen',
         onclick: () => {
           localStorage.removeItem(PLAN_SCHLUESSEL);
           meldung = { ok: true, text: 'Alle Daten wurden gelöscht.' };
-          render();
+          render('kwp-loeschen');
         },
       }, '🧹 Alle Daten löschen')));
 }
@@ -208,28 +213,28 @@ function importiere() {
       inhalt = JSON.parse(await datei.text());
     } catch {
       meldung = { ok: false, text: 'Die Datei ließ sich nicht lesen.' };
-      return render();
+      return render('kwp-import');
     }
     const fehler = pruefeKoffer(inhalt, { bereichIds, alterIds });
     if (fehler.length > 0) {
       meldung = { ok: false, text: `Import nicht möglich: ${fehler[0]}.` };
-      return render();
+      return render('kwp-import');
     }
     const vorher = ladePlan();
     const vereinigt = vereinigeKoffer(vorher, inhalt);
     speicherePlan(vereinigt);
     const neu = vereinigt.angebote.length - vorher.angebote.length;
     meldung = { ok: true, text: `${neu} Angebot${neu === 1 ? '' : 'e'} importiert und ergänzt. 🎉` };
-    render();
+    render('kwp-import');
   });
   document.body.append(eingabe);
   eingabe.click();
 }
 
-function render() {
+function render(fokus = null) {
   const plan = ladePlan();
   app.replaceChildren(
-    el('h1', { class: 'k-titel' }, '🗓️ Kita-Wochenplaner'),
+    el('h1', { class: 'k-titel', tabindex: '-1' }, el('span', { class: 'kwp-nur-bildschirm' }, '🗓️ '), 'Kita-Wochenplaner'),
     el('p', { class: 'k-untertitel kwp-nur-bildschirm' }, 'Bildungsangebote ausgewogen planen - Freispiel hat Vorrang (für Fachkräfte)'),
     // Kopfzeilen nur für den gedruckten Aushang:
     el('p', { class: 'kwp-nur-druck', style: 'text-align:center;font-size:1.15rem;font-weight:700;margin:0' },
@@ -249,9 +254,11 @@ function render() {
       'Erstellt mit dem Kita-Wochenplaner - werbefrei, ohne Konto, alle Daten bleiben in der Kita.'),
     el('footer', { class: 'k-fuss kwp-nur-bildschirm' },
       el('span', {}, 'Werkzeug für Fachkräfte · werbefrei · Daten bleiben auf diesem Gerät · '),
-      el('a', { href: 'eltern.html' }, '🏛️ Info für Träger & Leitung'), el('span', {}, ' · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
+      el('a', { href: 'eltern.html', style: FUSS_LINK }, el('span', { class: 'kwp-nur-bildschirm' }, '🏛️ '), 'Info für Träger & Leitung'), el('span', {}, ' · '),
+      el('a', { href: '../../impressum.html', style: FUSS_LINK }, 'Impressum & Datenschutz')));
   meldung = null;
+  // Fokus nach dem Neuzeichnen: derselbe Knopf, sonst die Überschrift (Pilot 1).
+  if (fokus) (app.querySelector(`[data-kennung="${fokus}"]`) ?? app.querySelector('h1')).focus();
 }
 
 render();

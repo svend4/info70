@@ -41,15 +41,15 @@ test('pruefePlan: leerer Plan liefert keine Hinweise', () => {
   assert.deepEqual(pruefePlan([], daten), []);
 });
 
-test('pruefePlan: Dauer-Richtwerte 10/20/25 min, Grenze inklusive', () => {
+test('pruefePlan: Dauer-Richtwerte 15/20/25 min, Grenze inklusive', () => {
   const genauAnDerGrenze = [
-    angebot({ alter: '1-3', dauer: 10 }),
+    angebot({ alter: '1-3', dauer: 15 }),
     angebot({ alter: '3-5', dauer: 20 }),
     angebot({ alter: '5-7', dauer: 25 }),
   ];
   assert.ok(!pruefePlan(genauAnDerGrenze, daten).some((h) => h.typ === 'dauer'), 'Grenzwert selbst löst keinen Hinweis aus');
 
-  for (const [alter, dauer] of [['1-3', 11], ['3-5', 21], ['5-7', 26]]) {
+  for (const [alter, dauer] of [['1-3', 16], ['3-5', 21], ['5-7', 26]]) {
     const hinweise = pruefePlan([angebot({ alter, dauer })], daten);
     const treffer = hinweise.filter((h) => h.typ === 'dauer');
     assert.equal(treffer.length, 1, `${alter} mit ${dauer} min muss Hinweis auslösen`);
@@ -75,6 +75,20 @@ test('pruefePlan: leere Bereiche werden nur bei nicht-leerem Plan gemeldet', () 
   assert.equal(leere.length, 5, 'alle Bereiche außer bewegung');
   assert.ok(!leere.some((h) => h.bereich === 'bewegung'));
   assert.ok(leere.every((h) => !h.text.includes('{bereich}')), 'Platzhalter ist ersetzt');
+});
+
+test('pruefePlan: Wochen-Richtwert je Altersgruppe, Grenze inklusive', () => {
+  const genauAnDerGrenze = Array.from({ length: 10 }, (_, i) => angebot({ alter: '1-3', dauer: 10, tag: ['mo', 'di', 'mi'][i % 3] }));
+  assert.ok(!pruefePlan(genauAnDerGrenze, daten).some((h) => h.typ === 'wochenlast'), '10 Angebote für 1-3 sind ok');
+
+  const elf = [...genauAnDerGrenze, angebot({ alter: '1-3', dauer: 10, tag: 'fr' })];
+  const treffer = pruefePlan(elf, daten).filter((h) => h.typ === 'wochenlast');
+  assert.equal(treffer.length, 1, '11 Angebote für 1-3 lösen genau einen Hinweis aus');
+  assert.equal(treffer[0].alter, '1-3');
+  assert.match(treffer[0].text, /1-3 Jahre/);
+  assert.match(treffer[0].text, /11 Angebote/);
+  assert.match(treffer[0].text, /bis 10/);
+  assert.match(treffer[0].text, /Empfehlung/);
 });
 
 test('pruefePlan: unbekannte Altersgruppe löst keinen Dauer-Hinweis aus (defensiv)', () => {
