@@ -2,8 +2,8 @@
   "version": 1,
   "zielgruppe": "Fachkräfte mit Kindern von 1 bis 3 Jahren (Gruppe „Малыши“, S. 80–87)",
   "titel": "Musikspiele für Kinder von 1 bis 3 Jahren",
-  "hinweis": "Die Karten gliedern die Musikspiele nach Gattungen, die die Überschriften und Aufgaben der Quelle zusammenfassen (S. 81–86). Die Seiten stimmen; die Namen sind eigen gefasst. Die Beispiele sind nur Titel, mit Seite. Die Lieder sind dort Notenbeispiele: Texte und Noten stehen hier nicht. Die Formulierung des Spielprinzips ist eigen.",
-  "wasEsIst": "Eine Kartei für Fachkräfte. Jede Karte beschreibt eine Gattung musikalischer Spiele und zeigt, wo die Quelle sie findet. Gedruckt wird auf Karteikarten; nichts wird gespeichert.",
+  "hinweis": "Die Karten gliedern die Musikspiele nach Gattungen, die die Überschriften und Aufgaben der Quelle zusammenfassen (S. 81–86). Die Seiten stimmen; die Namen sind eigen gefasst. Die Beispiele sind nur Titel, mit Seite. Texte und Noten stehen hier nicht. Die Formulierung des Spielprinzips ist eigen.",
+  "wasEsIst": "Eine Kartei für Fachkräfte. Jede Karte beschreibt eine Gattung musikalischer Spiele und zeigt, wo die Quelle sie findet. Gedruckt wird eine Karte je A4-Blatt hoch; nichts wird gespeichert.",
   "nichtInDerQuelle": "Dauer, Gruppengröße und Ort stehen in der Quelle nicht bei den einzelnen Spielen. Die Kartei filtert deshalb nur nach Gattung.",
   "gattungen": [
     {

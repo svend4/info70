@@ -20,6 +20,7 @@ function knopf(text, aktiv, onklick, id) {
   return el('button', {
     class: `k-knopf k-knopf--klein${aktiv ? '' : ' k-knopf--neutral'}`,
     id,
+    'data-kennung': id,
     'aria-pressed': String(aktiv),
     onclick: onklick,
   }, text);
@@ -71,7 +72,7 @@ function zeichne() {
       el('p', {}, DRUCK_KOPF)),
     ...karten.map(karteBild),
     el('footer', { class: 'k-fuss mk-nur-bildschirm' },
-      el('span', {}, 'Werkzeug für Fachkräfte – läuft offline – nichts wird gespeichert – '),
+      el('span', {}, 'Werkzeug für Fachkräfte – ohne Verbindung nach draußen · ein Neuladen ohne Netz ist nicht zugesichert – nichts wird gespeichert –'),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   if (merkeKnopf) document.getElementById(merkeKnopf)?.focus();
 }
