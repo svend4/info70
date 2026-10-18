@@ -23,9 +23,13 @@ Werbefrei, без аккаунтов и внешних запросов; обм�
 которые вы передаёте сами. Локально хранится текущая мастерская
 (`rw.werkstatt`) + кнопка «Neu anfangen».
 
+Перед обоими полями ввода (Gruppenname, Regelvorschlag) стоит видимый Hinweis
+«Keine Namen von Mitschüler*innen eintragen.»; поле ссылается на него через
+aria-describedby, а не через имя поля (aria-label).
+
 ## Запуск и тесты
 
 ```bash
 npm run dev   # http://localhost:8070/apps/regel-werkstatt/
-node --test apps/regel-werkstatt/test/*.test.mjs
+cd apps/regel-werkstatt && npm test   # 9 Tests (koffer, regeln)
 ```

@@ -32,12 +32,18 @@ verbindlich (Datum, Unterschriften).
 Keine externen Anfragen (NetzwerkWaechter), Austausch nur über selbst
 weitergegebene Dateien, nur `rw.werkstatt` in localStorage + Löschknopf,
 werbefrei, Druck-CSS (pw-nur-bildschirm/pw-nur-druck), eltern.html.
+Kinder-Eingaben: an Gruppenname und Regelvorschlag steht sichtbar der Hinweis
+„Keine Namen von Mitschüler*innen eintragen.“, per aria-describedby mit dem Feld
+verknüpft (nicht im Feldnamen).
 
 ## 6. Tests
 
 `test/koffer.test.mjs`: sortiere (stabil), packeKoffer/pruefeKoffer
 (gültig vs. fremd/kaputt), vereinigeKoffer (addieren + anhängen),
 Startvorschläge (sinnvolle Medienthemen, kurze Sätze).
+`test/regeln.test.mjs`: Hinweis „Keine Namen von Mitschüler*innen eintragen.“ an
+Gruppenname und Regelvorschlag (Text einmal, aria-describedby auf vorhandene ids,
+direkt vor dem Feld, nicht im Feldnamen, nicht versteckt). Testzahl: 9 (`npm test`).
 
 ## 7. Erweiterungen (Katalog)
 

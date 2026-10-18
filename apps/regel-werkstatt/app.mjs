@@ -17,6 +17,15 @@ const lade = () => JSON.parse(localStorage.getItem(SCHLUESSEL) ?? 'null')
   ?? { titel: 'Unsere Klasse', regeln: VORSCHLAEGE.map((text) => ({ text, stimmen: 0 })) };
 const speichere = (w) => localStorage.setItem(SCHLUESSEL, JSON.stringify(w));
 
+// Hinweis am Eingabefeld: keine Namen von Mitschüler*innen eintragen. Er steht
+// direkt vor dem Feld als eigenes Element und wird per aria-describedby
+// verknüpft; er gehört nicht in den Feldnamen (aria-label). Nicht versteckt.
+const NAMEN_HINWEIS = 'Keine Namen von Mitschüler*innen eintragen.';
+const namenHinweis = (id) => el('p', {
+  id,
+  style: 'font-size:0.9rem;color:#4b5563;margin:0 0 0.4rem',
+}, NAMEN_HINWEIS);
+
 function zeige(...knoten) {
   app.replaceChildren(...knoten);
 }
@@ -44,6 +53,7 @@ function render() {
     type: 'text', value: w.titel, maxlength: '30',
     style: 'flex:1;min-height:44px;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0 0.6rem;font-size:1rem',
     'aria-label': 'Name der Klasse',
+    'aria-describedby': 'rw-hinweis-gruppe',
   });
   titelFeld.addEventListener('change', () => { const x = lade(); x.titel = titelFeld.value.trim() || 'Unsere Klasse'; speichere(x); render(); });
 
@@ -51,6 +61,7 @@ function render() {
     type: 'text', maxlength: '80', placeholder: 'Neue Regel vorschlagen …',
     style: 'flex:1;min-height:44px;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0 0.6rem;font-size:1rem',
     'aria-label': 'Neue Regel vorschlagen',
+    'aria-describedby': 'rw-hinweis-regel',
   });
   const neuHinzu = () => {
     const text = neuFeld.value.trim();
@@ -63,9 +74,11 @@ function render() {
     ...kopf(),
     el('section', { class: 'k-karte pw-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '1) Wie heißt eure Gruppe?'),
+      namenHinweis('rw-hinweis-gruppe'),
       el('div', { style: 'display:flex;gap:0.5rem' }, titelFeld)),
     el('section', { class: 'k-karte pw-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '2) Vorschläge sammeln'),
+      namenHinweis('rw-hinweis-regel'),
       el('div', { style: 'display:flex;gap:0.5rem' }, neuFeld, el('button', { class: 'k-knopf k-knopf--klein', onclick: neuHinzu }, '➕')),
       el('p', { style: 'font-size:0.9rem;color:#4b5563;margin-bottom:0' }, 'Tippt eure Ideen ein. Ein paar Vorschläge sind schon da – ihr könnt sie ändern oder löschen.')),
     el('section', { class: 'k-karte pw-nur-bildschirm' },

@@ -4,5 +4,8 @@
   "private": true,
   "description": "Regel-Werkstatt: die Klasse handelt eigene Medienregeln aus (Vorschlaege, Abstimmung), sichert sie als Klassen-Koffer-Datei und druckt sie als Plakat. Beteiligung ohne Server.",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/koffer.test.mjs test/regeln.test.mjs"
+  }
 }
