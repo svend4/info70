@@ -19,11 +19,11 @@ if (!existsSync(QUELLE)) {
 const seiten = readFileSync(QUELLE, 'utf8').split('\f');
 
 // Vergleich: Zeilenumbrüche und Trennstriche am Zeilenende entfernen, Anführungszeichen und Groß/Klein ignorieren.
+// Satzzeichen zählen beim Vergleich nicht, Wörter und ihre Reihenfolge schon.
 const norm = (s) => s
   .replace(/-\n/g, '')
+  .replace(/[.,;:!?()«»„“”"‘’'–—\-]/g, ' ')
   .replace(/\s+/g, ' ')
-  .replace(/[«»„“”"‘’']/g, '')
-  .replace(/[–—]/g, '-')
   .toLowerCase()
   .trim();
 
@@ -60,8 +60,10 @@ for (const datei of dateien) {
       continue;
     }
     const seitenText = norm(seiten[seite - 1]);
+    // Zweiter Vergleich ohne Leerraum: Silbentrennungen im Layout setzen Leerzeichen mitten ins Wort (z. B. „измере ния“).
+    const seitenKompakt = seitenText.replace(/\s/g, '');
     for (const teil of zitat.split('…').map((t) => norm(t)).filter(Boolean)) {
-      if (!seitenText.includes(teil)) {
+      if (!seitenText.includes(teil) && !seitenKompakt.includes(teil.replace(/\s/g, ''))) {
         probleme.push(`S. ${seite}: Zitat nicht gefunden: „${teil.slice(0, 60)}“`);
       }
     }
