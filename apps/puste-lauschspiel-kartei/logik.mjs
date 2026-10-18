@@ -9,10 +9,10 @@
 // gibt es dazu eine Empfehlung in der stärksten Negativform, die das
 // Fachsystem kennt: nichtsprachliche mund- und zungenmotorische Übungen
 // sind bei Aussprachestörungen nicht wirksam und SOLLEN NICHT ANGEWENDET
-// WERDEN - Evidenzlevel 1, Empfehlungsgrad A, Abstimmung ohne eine einzige
-// Gegenstimme. Die zugrunde liegende Fachprüfung definiert diese
+// WERDEN (Eigenentwurf, fachlich nicht geprüft; ohne Literaturangabe, GDD Abschnitt 11).
+// Die zugrunde liegende Fachprüfung definiert diese
 // Behandlung genau als das, was die Quelle anbietet, und nennt Pusten in
-// Hörner und Tuten, Seifenblasen und Lippenmassage beim Namen.
+// Hörner und Tuten, Seifenblasen und Lippenmassage beim Namen (Eigenentwurf, fachlich nicht geprüft).
 //
 // Daraus folgt NICHT, dass man mit seinem Kind keine Seifenblasen pusten
 // darf. Es folgt, dass die Kartei das Versprechen nicht tragen kann. Also:
@@ -20,14 +20,14 @@
 //   - drei strukturell getrennte Register. `lautspiel` (mit Sprechlauten:
 //     Tierstimmen, Lautmalerei, Rufen) ist Spiel mit SPRACHE und von der
 //     Negativempfehlung gar nicht betroffen - sie betrifft ausdrücklich
-//     das NICHTsprachliche. `lauschspiel` ist Aufmerksamkeit und Hören.
+//     das NICHTsprachliche (Eigenentwurf, fachlich nicht geprüft). `lauschspiel` ist Aufmerksamkeit und Hören.
 //     `pustespiel` bleibt, aber als Spiel.
 //   - eine Pustekarte ist ohne den Satz, dass sie nichts trainiert,
 //     STRUKTURELL nicht ausdrückbar (`keinTraining` ist dort Pflicht) -
 //     dieselbe Bauart wie die Bauchlage in Nr. 49.
 //   - kein Wirkversprechen in irgendeinem Kartentext.
 //   - die Lautfolge steht als BERUHIGUNG da, nie als Ziel: „was in diesem
-//     Alter noch gar nicht dran ist". Für die Vokale steht keine
+//     Alter noch gar nicht dran ist" (Eigenentwurf, fachlich nicht geprüft). Für die Vokale steht keine
 //     Reihenfolge, weil für das Deutsche keine belegt ist.
 //   - kein Quiz: „rate mal" ist ein Spiel, und Danebenraten ist der
 //     Normalfall, nicht der Fehler.
@@ -251,7 +251,7 @@ export function pruefeDaten(daten) {
   // Eine Vokalreihenfolge wäre erfunden.
   for (const [feld, wert] of Object.entries(le)) {
     if (typeof wert !== 'string') continue;
-    if (/\b[aeiouäöü]\s*,\s*[aeiouäöü]\s*,\s*[aeiouäöü]/i.test(wert) && feld !== 'hinweis') {
+    if (/(?<![\p{L}\p{N}_])[aeiouäöü]\s*,\s*[aeiouäöü]\s*,\s*[aeiouäöü]/iu.test(wert) && feld !== 'hinweis') {
       fehler.push(`lauterwerb.${feld}: sieht nach einer Vokalreihenfolge aus – dafür ist keine belegt`);
     }
   }

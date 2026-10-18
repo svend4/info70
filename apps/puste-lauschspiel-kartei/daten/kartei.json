@@ -1,16 +1,16 @@
 {
   "hinweis": "Das Gerät ist in Ihrer Hand, nicht beim Kind. Ihr Kind sieht keinen Bildschirm – es spielt mit Ihnen.",
-  "keinTrainingsversprechen": "Diese Kartei verspricht keine bessere Aussprache. Das ist der wichtigste Satz hier, und er steht am Anfang, weil die Vorlage dieser Kartei das Gegenteil versprach: aus Pusten, Lippenlecken und Zungenübungen sollten „Grundlagen der Artikulation“ entstehen. Für das Deutsche gibt es dazu eine Empfehlung in der stärksten Negativform, die das Fachsystem kennt: nichtsprachliche mund- und zungenmotorische Übungen sind bei Aussprachestörungen nicht wirksam und sollen nicht angewendet werden. Die Fachgruppe war darin ohne eine einzige Gegenstimme einig.",
+  "keinTrainingsversprechen": "Diese Kartei verspricht keine bessere Aussprache. Das ist der wichtigste Satz hier, und er steht am Anfang, weil die Vorlage dieser Kartei das Gegenteil versprach: aus Pusten, Lippenlecken und Zungenübungen sollten „Grundlagen der Artikulation“ entstehen. Für das Deutsche gibt es dazu eine Empfehlung in der stärksten Negativform, die das Fachsystem kennt: nichtsprachliche mund- und zungenmotorische Übungen sind bei Aussprachestörungen nicht wirksam und sollen nicht angewendet werden (Eigenentwurf, fachlich nicht geprüft).",
   "wasBleibt": "Geblieben ist das, was die Spiele wirklich sind: schöne Minuten zu zweit, bei denen etwas passiert, das man hören kann. Spiele mit Sprechlauten – Tierstimmen, Lautmalerei, Rufen und Antworten – sind etwas anderes als Zungenübungen: da ist Sprache drin, und darum stehen sie hier mit gutem Gewissen. Pustespiele stehen als Spiele da, nicht als Übung.",
   "keinQuiz": "Hier wird nichts abgefragt und nichts bewertet. „Rate mal, wer gerufen hat“ ist ein Spiel und keine Prüfung: wer danebenrät, hat gewonnen, denn dann wird noch einmal gerufen. Es gibt keine Punkte und keine Runde, die man schafft.",
   "keineUebersetzung": "Diese Kartei gibt es nur auf Deutsch. Das ist eine bewusste Entscheidung: Spielanleitungen in eine andere Sprache zu übertragen, ohne dass jemand mit dieser Sprache gegengelesen hat, wäre eine Behauptung – und eine falsch übersetzte Anleitung ist schlimmer als keine. Spielen Sie die Spiele in Ihrer Familiensprache; die Laute wechseln dabei, das Spiel bleibt dasselbe.",
   "abbruch": "Aufhören ist die Regel, nicht die Ausnahme. Dreht sich Ihr Kind weg, presst es die Lippen zusammen, wird es ärgerlich: aus. Ein Mund ist nichts, woran geübt wird, auch nicht spielerisch.",
-  "wennSorge": "Wenn Sie sich Sorgen um das Sprechen Ihres Kindes machen, ist diese Kartei nicht der Weg. Sprechen Sie Ihre Kinderarztpraxis an – von dort führt der Weg zu einer logopädischen Abklärung, und die arbeitet mit Sprache, nicht mit Pusteübungen. Beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden, auch über die Sorge selbst.",
-  "mehrsprachig": "Wächst Ihr Kind mit mehreren Sprachen auf, gilt die deutsche Lautreihenfolge weiter unten nicht einfach so für es. Jede Sprache hat ihre eigenen Laute und ihre eigene Reihenfolge, und was im Deutschen spät kommt, kann in einer anderen Sprache früh dran sein.",
-  "lautstaerke": "Bei den Lauschspielen gilt: leise ist besser als laut. Eine Pfeife oder ein Triangel dicht am Ohr kann richtig laut werden – für Schlaginstrumente lässt die Spielzeugnorm Spitzenwerte zu, die weit über dem liegen, was man einem Ohr daneben zumuten will. Also anschlagen, wo Abstand ist, und nie neben dem Kopf.",
+  "wennSorge": "Wenn Sie sich Sorgen um das Sprechen Ihres Kindes machen, ist diese Kartei nicht der Weg. Sprechen Sie Ihre Kinderarztpraxis an – von dort führt der Weg zu einer logopädischen Abklärung, und die arbeitet mit Sprache, nicht mit Pusteübungen (Eigenentwurf, fachlich nicht geprüft). Beim Elterntelefon (0800 111 0 550) können Sie anonym und kostenfrei darüber reden, auch über die Sorge selbst (Eigenentwurf, fachlich nicht geprüft).",
+  "mehrsprachig": "Wächst Ihr Kind mit mehreren Sprachen auf, gilt die deutsche Lautreihenfolge weiter unten nicht einfach so für es. Jede Sprache hat ihre eigenen Laute und ihre eigene Reihenfolge, und was im Deutschen spät kommt, kann in einer anderen Sprache früh dran sein (Eigenentwurf, fachlich nicht geprüft).",
+  "lautstaerke": "Bei den Lauschspielen gilt: leise ist besser als laut (Eigenentwurf, fachlich nicht geprüft). Eine Pfeife oder ein Triangel dicht am Ohr kann richtig laut werden (Eigenentwurf, fachlich nicht geprüft). Also anschlagen, wo Abstand ist, und nie neben dem Kopf.",
   "pusteRegister": {
     "titel": "Warum die Pustespiele hier anders dastehen als in der Vorlage",
-    "text": "Pusten, Lecken, Lippenspitzen und Blasinstrumente sind in der Fachprüfung, auf die sich die Empfehlung stützt, genau als „nichtsprachliche mundmotorische Behandlung“ definiert – samt Seifenblasen und Tuten. Die Prüfung fand dafür drei kleine Studien mit insgesamt 22 Kindern; die einzige mit Zufallszuteilung hatte vier. Daraus folgt kein Nutzen für die Aussprache. Es folgt aber auch kein Verbot, mit seinem Kind Seifenblasen zu pusten. Darum steht jede Pustekarte hier mit einem Satz, der sagt, dass sie nichts trainiert."
+    "text": "Pusten, Lecken, Lippenspitzen und Blasinstrumente sind in der Fachprüfung, auf die sich die Empfehlung stützt, genau als „nichtsprachliche mundmotorische Behandlung“ definiert – samt Seifenblasen und Tuten (Eigenentwurf, fachlich nicht geprüft). Ein Verbot, mit seinem Kind Seifenblasen zu pusten, gibt es hier nicht. Darum steht jede Pustekarte hier mit einem Satz, der sagt, dass sie nichts trainiert."
   },
   "spiele": [
     {
@@ -23,7 +23,7 @@
         "Warten Sie. Vielleicht pustet es zurück, vielleicht greift es danach.",
         "Wenn es greift, ist das kein Fehlversuch – greifen ist auch eine Antwort."
       ],
-      "keinTraining": "Dieses Spiel übt keine Aussprache und keine Sprechatmung. Es ist ein Spiel.",
+      "keinTraining": "Dieses Spiel übt keine Aussprache und keine Sprechatmung (Eigenentwurf, fachlich nicht geprüft). Es ist ein Spiel.",
       "sicherheit": "Eine Feder und ein Wattebällchen sind klein genug, um verschluckt zu werden. Sie bleiben auf dem Tisch und in Ihrer Sicht, und das Spiel endet, wenn Sie den Tisch verlassen.",
       "abbruchzeichen": "Wegdrehen, Lippen zusammenpressen, Ärger."
     },
@@ -37,8 +37,8 @@
         "Benennen Sie, was passiert: „weg“, „noch eine“, „aus“.",
         "Tauschen Sie die Rollen nur, wenn Ihr Kind selbst danach greift."
       ],
-      "keinTraining": "Auch das ist ein Spiel und keine Übung – Seifenblasenpusten steht in der Fachprüfung namentlich bei den Dingen, die der Aussprache nicht helfen.",
-      "sicherheit": "Die Lösung gehört nicht in den Mund. Wenn Ihr Kind doch davon geschluckt hat und nichts weiter passiert, hilft meist ein Entschäumer aus der Apotheke und ein paar Schlucke stilles Wasser; bei Husten, Atemnot oder Erbrechen rufen Sie den Giftnotruf oder die 112. Nehmen Sie gekaufte Lösung, nicht selbst gemischtes Spülmittel, und achten Sie auf den glatten Boden darunter.",
+      "keinTraining": "Auch das ist ein Spiel und keine Übung – Seifenblasenpusten ist kein Training für die Aussprache (Eigenentwurf, fachlich nicht geprüft).",
+      "sicherheit": "Seifenblasenlösung nicht in den Mund (Eigenentwurf, fachlich nicht geprüft). Nehmen Sie gekaufte Lösung, nicht selbst gemischtes Spülmittel, und achten Sie auf den glatten Boden darunter.",
       "abbruchzeichen": "Greifen nach der Flasche, Husten, Reiben der Augen."
     },
     {
@@ -51,7 +51,7 @@
         "Halten Sie Ihrem Kind die Hand hin, damit es dasselbe versucht.",
         "Machen Sie es langsam und übertrieben vor – das Zuschauen ist die halbe Freude."
       ],
-      "keinTraining": "Nichts daran trainiert das Sprechen. Es sieht nur schön aus.",
+      "keinTraining": "Nichts daran trainiert das Sprechen (Eigenentwurf, fachlich nicht geprüft). Es sieht nur schön aus.",
       "sicherheit": "Papierschnipsel landen im Mund, wenn man nicht dabei ist. Die Schnipsel bleiben auf Ihrer Hand, nicht auf dem Boden, und werden danach eingesammelt.",
       "abbruchzeichen": "Schnipsel in den Mund stecken, Wegdrehen."
     },
@@ -65,7 +65,7 @@
         "Warten Sie ab. Antwortet es mit einem Laut, antworten Sie darauf.",
         "Nehmen Sie den Laut Ihres Kindes und machen Sie ihn nach, auch wenn er nicht nach dem Tier klingt."
       ],
-      "warumSprache": "Hier sind Sprechlaute drin: das ist Spiel mit Sprache und keine Zungenübung. Ein Laut, der immer für dasselbe steht, ist für Ihr Kind schon ein Wort.",
+      "warumSprache": "Hier sind Sprechlaute drin: das ist Spiel mit Sprache und keine Zungenübung. Ein Laut, der immer für dasselbe steht, ist für Ihr Kind schon ein Wort (Eigenentwurf, fachlich nicht geprüft).",
       "sicherheit": "Keines. Hier wird nur gesprochen.",
       "abbruchzeichen": "Wegdrehen, Stillwerden."
     },
@@ -79,7 +79,7 @@
         "Antwortet es, rufen Sie noch einmal – näher oder weiter weg.",
         "Lassen Sie es auch rufen und antworten Sie selbst."
       ],
-      "warumSprache": "Rufen und Antworten ist Verständigung: einer macht etwas, der andere darauf. Das ist der Teil, der beim Sprechenlernen wirklich zählt.",
+      "warumSprache": "Rufen und Antworten ist Verständigung: einer macht etwas, der andere darauf. Das ist der Teil, der beim Sprechenlernen wirklich zählt (Eigenentwurf, fachlich nicht geprüft).",
       "sicherheit": "Rufen Sie nicht aus einem Raum, in dem Ihr Kind etwas Gefährliches erreichen kann, während Sie es nicht sehen.",
       "abbruchzeichen": "Weinen, Suchen, Unruhe – dann ist das Nichtsehen zu viel."
     },
@@ -91,9 +91,9 @@
       "soGehts": [
         "Begleiten Sie, was Sie tun, mit einem Laut: „brumm“ beim Schieben, „plopp“ beim Zumachen.",
         "Benutzen Sie denselben Laut immer für dieselbe Sache.",
-        "Warten Sie, bis Ihr Kind den Laut übernimmt – das kann Wochen dauern und muss nicht kommen."
+        "Warten Sie, bis Ihr Kind den Laut übernimmt – das kann Wochen dauern und muss nicht kommen (Eigenentwurf, fachlich nicht geprüft)."
       ],
-      "warumSprache": "Ein gleichbleibender Laut für eine gleichbleibende Sache ist der Anfang von Wörtern. Hier ist Sprache drin und nicht Mundmotorik.",
+      "warumSprache": "Ein gleichbleibender Laut für eine gleichbleibende Sache ist der Anfang von Wörtern (Eigenentwurf, fachlich nicht geprüft). Hier ist Sprache drin und nicht Mundmotorik.",
       "sicherheit": "Keines.",
       "abbruchzeichen": "Wegdrehen."
     },
@@ -121,7 +121,7 @@
         "Machen Sie dann ein Geräusch hinter Ihrem Rücken.",
         "Legen Sie die Gegenstände vor Ihr Kind; es darf zeigen, greifen oder gar nichts tun."
       ],
-      "keinRaten": "Es wird nicht abgefragt. Wenn Ihr Kind alle Gegenstände nimmt, ist das die Antwort eines Zweijährigen, und sie ist richtig.",
+      "keinRaten": "Es wird nicht abgefragt. Wenn Ihr Kind alle Gegenstände nimmt, ist das die Antwort eines Zweijährigen, und sie ist richtig (Eigenentwurf, fachlich nicht geprüft).",
       "sicherheit": "Schlüssel und Löffel gehen in den Mund, die Dose hat vielleicht einen Rand. Nehmen Sie, was Sie Ihrem Kind auch sonst in die Hand geben, und bleiben Sie dabei.",
       "abbruchzeichen": "Alles wegschieben, Wegkrabbeln."
     },
@@ -159,84 +159,84 @@
       "id": "f-endkonsonant",
       "was": "Der letzte Laut eines Wortes fällt weg",
       "beispiel": "„Foge“ für Vogel, „Bau“ für Baum",
-      "normalBis": "etwa dreieinhalb Jahre",
-      "satz": "Das ist in diesem Alter normal und verschwindet von selbst."
+      "normalBis": "etwa dreieinhalb Jahre (Eigenentwurf, fachlich nicht geprüft)",
+      "satz": "Das ist in diesem Alter normal (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "id": "f-plosivierung",
       "was": "Ein Zischlaut wird zu einem harten Laut",
       "beispiel": "„Donne“ für Sonne, „Tuh“ für Schuh",
-      "normalBis": "etwa dreieinhalb Jahre",
-      "satz": "Normal, und kein Grund für eine Übung."
+      "normalBis": "etwa dreieinhalb Jahre (Eigenentwurf, fachlich nicht geprüft)",
+      "satz": "Normal, und kein Grund für eine Übung (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "id": "f-r-ersatz",
       "was": "Das r wird durch einen Hauchlaut ersetzt",
       "beispiel": "„Holler“ für Roller",
-      "normalBis": "etwa dreieinhalb Jahre",
-      "satz": "Normal. Das r gehört zu den Lauten, die ohnehin später kommen."
+      "normalBis": "etwa dreieinhalb Jahre (Eigenentwurf, fachlich nicht geprüft)",
+      "satz": "Normal, und das r gehört zu den Lauten, die ohnehin später kommen (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "id": "f-silbe-faellt",
       "was": "Eine unbetonte Silbe fällt weg",
       "beispiel": "„Nane“ für Banane, „Fon“ für Telefon",
-      "normalBis": "etwa drei Jahre",
-      "satz": "Normal – und oft die liebsten Wörter einer Familie."
+      "normalBis": "etwa drei Jahre (Eigenentwurf, fachlich nicht geprüft)",
+      "satz": "Normal – und oft die liebsten Wörter einer Familie (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "id": "f-schlange",
       "was": "Das ng am Wortende wird vorn gebildet",
       "beispiel": "„Schlane“ für Schlange",
-      "normalBis": "etwa dreieinhalb Jahre",
-      "satz": "Normal."
+      "normalBis": "etwa dreieinhalb Jahre (Eigenentwurf, fachlich nicht geprüft)",
+      "satz": "Normal (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "id": "f-unterschiedlich",
       "was": "Dasselbe Wort klingt jeden Tag anders",
       "beispiel": "heute „Nane“, morgen „Bana“",
-      "normalBis": "etwa zweieinhalb Jahre",
-      "satz": "Auch das ist in diesem Alter normal; die Form wird mit der Zeit beständiger."
+      "normalBis": "etwa zweieinhalb Jahre (Eigenentwurf, fachlich nicht geprüft)",
+      "satz": "Auch das ist in diesem Alter normal; die Form wird mit der Zeit beständiger (Eigenentwurf, fachlich nicht geprüft)."
     }
   ],
   "lauterwerb": {
-    "titel": "Welche Laute wann kommen – zur Beruhigung, nicht als Ziel",
-    "hinweis": "Diese Reihenfolge ist für das Deutsche beschrieben und gilt als Orientierung, nicht als Plan. Sie steht hier, damit Sie sehen, was in diesem Alter noch gar nicht dran ist – nicht, damit geübt wird. Für die Vokale gibt es keine belegte Reihenfolge, auch nicht für ä, ö und ü; wer eine nennt, erfindet sie.",
-    "frueh": "m, b, p, d, t, n – und kurz danach f, v, l",
-    "spaeter": "k, g, der ach-Laut und r",
-    "spaet": "ng und j, dann ts, der ich-Laut, sch – und s und z ganz zuletzt",
-    "verbindungen": "Zwei Konsonanten hintereinander („Stuhl“, „Blume“) kommen erst, wenn die einzelnen Laute sitzen.",
-    "keinZiel": "Ein Laut, der noch nicht kommt, ist keine Aufgabe. Es gibt in dieser Kartei kein Spiel, das einen bestimmten Laut üben soll."
+    "titel": "Welche Laute wann kommen – zur Beruhigung, nicht als Ziel (Eigenentwurf, fachlich nicht geprüft)",
+    "hinweis": "Für diese Reihenfolge gibt es keine Literaturangabe; sie gilt als Orientierung, nicht als Plan (Eigenentwurf, fachlich nicht geprüft). Sie steht hier, damit Sie sehen, was in diesem Alter noch gar nicht dran ist – nicht, damit geübt wird (Eigenentwurf, fachlich nicht geprüft). Für die Vokale gibt es keine belegte Reihenfolge, auch nicht für ä, ö und ü; wer eine nennt, erfindet sie.",
+    "frueh": "m, b, p, d, t, n – und kurz danach f, v, l (Eigenentwurf, fachlich nicht geprüft)",
+    "spaeter": "k, g, der ach-Laut und r (Eigenentwurf, fachlich nicht geprüft)",
+    "spaet": "ng und j, dann ts, der ich-Laut, sch – und s und z ganz zuletzt (Eigenentwurf, fachlich nicht geprüft)",
+    "verbindungen": "Zwei Konsonanten hintereinander („Stuhl“, „Blume“) kommen erst, wenn die einzelnen Laute sitzen (Eigenentwurf, fachlich nicht geprüft).",
+    "keinZiel": "Ein Laut, der noch nicht kommt, ist keine Aufgabe (Eigenentwurf, fachlich nicht geprüft). Es gibt in dieser Kartei kein Spiel, das einen bestimmten Laut üben soll."
   },
   "ausgeschlossen": [
     {
       "quellNr": "a01",
       "was": "„Die Marmelade von den Lippen lecken“ und ähnliche Zungen- und Lippenübungen",
-      "warum": "Nichtsprachliche mund- und zungenmotorische Übungen sind bei Aussprachestörungen nicht wirksam und sollen nach der deutschen Fachempfehlung nicht angewendet werden – in der stärksten Negativform, die das System kennt, und ohne Gegenstimme in der Fachgruppe."
+      "warum": "Nichtsprachliche mund- und zungenmotorische Übungen sind bei Aussprachestörungen nicht wirksam und sollen nach der deutschen Fachempfehlung nicht angewendet werden – in der stärksten Negativform, die das System kennt (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "quellNr": "a02",
       "was": "Pusten als Übung für die Sprechatmung",
-      "warum": "Dass Pusteübungen die Sprechatmung gesunder Kleinkinder verbessern, ist nicht belegt. Pustespiele stehen in dieser Kartei darum als Spiele, jedes mit dem Satz, dass es nichts trainiert."
+      "warum": "Für eine Verbesserung der Sprechatmung gesunder Kleinkinder durch Pusteübungen gibt es in dieser Kartei keinen Nachweis. Pustespiele stehen in dieser Kartei darum als Spiele, jedes mit dem Satz, dass es nichts trainiert."
     },
     {
       "quellNr": "a03",
       "was": "Einen Luftballon aufpusten lassen",
-      "warum": "Nicht aufgeblasene Luftballons und Fetzen geplatzter Ballons sind gefährlich, weil sie sich an die Atemwege anlegen und dicht abschließen können; die vorgeschriebene Warnung steht seit Jahrzehnten auf der Packung und wurde wegen tödlicher Unfälle beibehalten. Ein Verbot für Kinder, Ballons aufzupusten, gibt es ausdrücklich NICHT – dass hier keiner aufgepustet wird, ist die Vorsicht dieser Kartei und keine Rechtsfolge."
+      "warum": "Nicht aufgeblasene Luftballons und Fetzen geplatzter Ballons können gefährlich sein, weil sie sich an die Atemwege anlegen und dicht abschließen können (Eigenentwurf, fachlich nicht geprüft). Diese Kartei spricht kein Verbot aus – dass hier keiner aufgepustet wird, ist ihre eigene Vorsicht und keine Rechtsfolge."
     },
     {
       "quellNr": "a04",
       "was": "Ballongas zum Stimmeverstellen",
-      "warum": "Ballongas ist farb- und geruchlos, und die Kinder- und Jugendärzte warnen ausdrücklich: es kann von gesundheitsschädlich bis lebensgefährlich sein. Das gehört nicht in die Nähe eines Kleinkindes."
+      "warum": "Ballongas ist farb- und geruchlos; das gehört nicht in die Nähe eines Kleinkindes (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "quellNr": "a05",
-      "was": "Eine Lautliste als Übungsplan („bis zum Ende dieses Alters sollen diese Laute sitzen“)",
-      "warum": "Die Lautfolge der Vorlage ist die des Russischen und auf das Deutsche nicht übertragbar – das ы gibt es hier nicht, die Umlaute fehlen dort. Für die deutschen Vokale ist überhaupt keine Erwerbsreihenfolge belegt. Übernommen ist darum nur, was in diesem Alter normal ist, und zwar zur Beruhigung."
+      "was": "Eine Lautliste als Übungsplan („bis zum Ende dieses Alters sollen diese Laute sitzen“, S. 68)",
+      "warum": "Die Lautfolge der Vorlage ist die des Russischen und auf das Deutsche nicht übertragbar – das ы gibt es hier nicht, die Umlaute fehlen dort. Für die deutschen Vokale ist überhaupt keine Erwerbsreihenfolge belegt. Übernommen ist darum nur, was in diesem Alter normal ist, und zwar zur Beruhigung (Eigenentwurf, fachlich nicht geprüft)."
     },
     {
       "quellNr": "a06",
       "was": "„Phonematisches Hören“ als Ziel für Zwei- und Dreijährige",
-      "warum": "Mit Lauten bewusst umgehen – heraushören, vergleichen, trennen – ist ein Thema der Jahre vor der Schule, nicht dieses Alters. Die Lauschspiele hier sind Spiele mit Aufmerksamkeit, und sie behaupten nichts darüber hinaus."
+      "warum": "Mit Lauten bewusst umgehen – heraushören, vergleichen, trennen – ist hier kein Ziel für dieses Alter. Die Lauschspiele hier sind Spiele mit Aufmerksamkeit, und sie behaupten nichts darüber hinaus."
     }
   ],
   "quelle": {

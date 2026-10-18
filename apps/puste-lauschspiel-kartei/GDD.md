@@ -14,7 +14,7 @@ Namen — beides nachgezählt, und beides stimmt mit der Katalogangabe:
 «надуй пузырь».
 
 Das dritte Ziel nennt die Laute, die bis zum Ende des frühen Kindesalters
-sitzen sollen: die Vokale а, о, у, и, **ы** und die Konsonanten м, б, п, н,
+sitzen sollen (S. 68): die Vokale а, о, у, и, **ы** und die Konsonanten м, б, п, н,
 т, д, к, г, ф, в — eine Liste für das **Russische**.
 
 ## 1. Tragend: das Versprechen ist zurückgenommen
@@ -24,15 +24,14 @@ Die Quelle will aus Artikulationsübungen, Pusteübungen und Hörspielen die
 Hörens“ bilden. Für das Deutsche steht dem eine Empfehlung in der
 **stärksten Negativform** entgegen, die das Fachsystem kennt:
 nichtsprachliche mund- und zungenmotorische Übungen sind bei
-Aussprachestörungen **nicht wirksam und sollen nicht angewendet werden** —
-höchstes Evidenzlevel, höchster Empfehlungsgrad, Abstimmung ohne eine
-einzige Gegenstimme.
+Aussprachestörungen **nicht wirksam und sollen nicht angewendet werden**
+(Eigenentwurf, fachlich nicht geprüft).
 
-Die zugrunde liegende systematische Übersichtsarbeit definiert diese
-Behandlung **genau als das, was die Quelle anbietet** — Lächeln, Lippen
-spitzen, in Hörner und Tuten pusten, Seifenblasen, Lippenmassage — und
-stützt sich auf drei kleine Studien mit zusammen 22 Kindern; die einzige mit
-Zufallszuteilung hatte vier.
+Diese Empfehlung hat in dieser Kartei **keine Literaturangabe** und ist damit
+**nicht belegt**; sie steht als offener Punkt in Abschnitt 11. Welche
+Behandlung die zugrunde liegende Fachprüfung genau meint (Lippenmassage,
+Seifenblasen, Pusten in Hörner und Tuten), ist ebenfalls offen. Studienzahlen
+stehen hier nicht, weil keine Literaturangabe vorliegt.
 
 Daraus folgt **kein Verbot**, mit seinem Kind Seifenblasen zu pusten. Es
 folgt, dass die Kartei das Versprechen nicht tragen kann.
@@ -41,7 +40,7 @@ folgt, dass die Kartei das Versprechen nicht tragen kann.
 
 - `lautspiel` — Spiele **mit Sprechlauten** (Tierstimmen, Lautmalerei, Rufen
   und Antworten). Die Negativempfehlung betrifft ausdrücklich das
-  **NICHT**sprachliche; hier ist Sprache drin. Pflichtfeld `warumSprache`:
+  **NICHT**sprachliche (Eigenentwurf, fachlich nicht geprüft). Hier ist Sprache drin. Pflichtfeld `warumSprache`:
   die Karte muss selbst sagen, worin der Unterschied liegt.
 - `lauschspiel` — Hinhören und Aufmerksamkeit. Pflichtfeld `keinRaten`.
 - `pustespiel` — bleibt, aber als Spiel. Pflichtfeld `keinTraining`.
@@ -79,8 +78,8 @@ Alltags-Sprachimpulse sind `apps/sprachbruecken-impulskarten`.
 ## 5. Die Lautfolge als Beruhigung, nie als Ziel
 
 Die russische Lautliste ist nicht übertragbar: das **ы** gibt es im
-Deutschen nicht, die Umlaute fehlen dort. Für das Deutsche ist eine
-Erwerbsreihenfolge der **Konsonanten** beschrieben, und sie steht hier als
+Deutschen nicht, die Umlaute fehlen dort. Die Konsonantenreihe unten hat
+**keine Literaturangabe** (Eigenentwurf, fachlich nicht geprüft); sie steht hier als
 das, was in diesem Alter **noch nicht dran ist** — mit dem ausdrücklichen
 Satz, dass ein fehlender Laut keine Aufgabe ist und es in dieser Kartei kein
 Spiel gibt, das einen bestimmten Laut üben soll.
@@ -92,7 +91,7 @@ ein Feld ab, das wie ein Vokalinventar aussieht.
 Dazu der Satz, dass die deutsche Reihenfolge für ein mehrsprachiges Kind
 nicht einfach so gilt.
 
-## 6. Was in diesem Alter normal ist
+## 6. Was in diesem Alter normal ist (Eigenentwurf, fachlich nicht geprüft)
 
 Sechs Zeilen mit Beispiel und „noch normal bis …“. Jede Zeile muss die
 Normalität aussprechen, und eine Übungsaufforderung in der Beruhigung wird
@@ -100,25 +99,22 @@ abgewiesen — sonst kippt der Trost in eine Aufgabe.
 
 ## 7. Sicherheit — und keine erfundene Warnung
 
-- **Luftballon ausgeschlossen.** Belegt ist der Mechanismus: nicht
-  aufgeblasene Ballons und Fetzen legen sich an die Atemwege und schließen
-  dicht ab; die vorgeschriebene Warnung besteht seit Jahrzehnten und wurde
-  wegen tödlicher Unfälle beibehalten. **Nicht belegt ist ein Verbot** —
-  Kinder dürfen Ballons aufpusten, und das steht so da: der Verzicht hier
-  ist die Vorsicht der Kartei. Der Validator weist eine Formulierung ab, die
-  daraus eine Rechtsfolge macht.
-- **Ballongas ausgeschlossen** — farb- und geruchlos, und die Kinder- und
-  Jugendärzte warnen ausdrücklich. In der ersten Fassung dieser Kartei kam
+- **Luftballon ausgeschlossen.** Nicht aufgeblasene Ballons und Fetzen
+  geplatzter Ballons können gefährlich sein, weil sie sich an die Atemwege
+  anlegen und dicht abschließen können (Eigenentwurf, fachlich nicht geprüft).
+  Die Kartei spricht **kein
+  Verbot** aus; dass hier keiner aufgepustet wird, ist ihre eigene Vorsicht.
+  Der Validator weist eine Formulierung ab, die daraus eine Rechtsfolge macht.
+- **Ballongas ausgeschlossen** — farb- und geruchlos; das gehört nicht in die
+  Nähe eines Kleinkindes (Eigenentwurf, fachlich nicht geprüft). In der ersten Fassung dieser Kartei kam
   es gar nicht vor; die Faktenklärung hat die Lücke gefunden.
-- **Seifenblasenlösung:** der Weg, den die Giftinformationszentren nennen —
-  Entschäumer und einige Schlucke stilles Wasser, bei Husten, Atemnot oder
-  Erbrechen der Notruf. Gekaufte Lösung statt selbst gemischtem Spülmittel,
-  und der rutschige Boden ist mitgenannt.
+- **Seifenblasenlösung:** nicht in den Mund (Eigenentwurf, fachlich nicht geprüft). Gekaufte Lösung
+  statt selbst gemischtem Spülmittel, und der rutschige Boden ist mitgenannt.
+  Erste-Hilfe-Angaben (etwa bei Verschlucken) stehen nicht in der Kartei: ohne
+  Quelle gestrichen (ELT-8).
 - **Keine Hyperventilations-Warnung.** Dazu ist nichts belegbar, und eine
   erfundene Warnung schwächt die echten. Ein Test verbietet das Wort.
-- **Lautstärke am Ohr:** für Perkussionsspielzeug lässt die Spielzeugnorm
-  Spitzenwerte zu, die weit über dem liegen, was man einem Ohr daneben
-  zumuten will.
+- **Lautstärke am Ohr:** leise ist besser als laut (Eigenentwurf, fachlich nicht geprüft). Eine Pfeife oder ein Triangel dicht am Ohr kann richtig laut werden (Eigenentwurf, fachlich nicht geprüft). Also anschlagen, wo Abstand ist, und nie neben dem Kopf.
 
 ## 8. Nur auf Deutsch, und das ist ausgesprochen
 
@@ -146,9 +142,9 @@ Quelle nennen dürfen, um es auszuschließen).
 
 ## 10. Tests
 
-Insgesamt 42 Tests in den Dateien `test/logik.test.mjs` und `test/regeln.test.mjs`.
+Insgesamt 44 Tests in den Dateien `test/logik.test.mjs` und `test/regeln.test.mjs`.
 
-`test/regeln.test.mjs`: keine Eingabefelder, keine Speicherung, keine Netzaufrufe, Daten per JSON-Import; Zufall und Uhr nicht in logik.mjs; Druckzeichen nicht auf dem Blatt, Emojis im Quelltext nur dort, wo sie der Bildschirm trägt; keine Namenszeile und kein Tagesfeld; keine Seitenangabe auf dem Blatt; jedes Blatt mit Registerhinweis, als Eigenentwurf gekennzeichnet, und mit dem Block, der für jede Karte gilt; das Dementi auf jedem Pustespiel; eine Karte je Blatt; Links und Knöpfe 48 px hoch; Fokus über data-kennung; die Lippenübung in der Ausschlussliste; kein uk- oder ru-Schlüssel; die Begriffsprüfung der Dateien (ohne Modellnamen, A1); Testzahl in README und GDD.
+`test/regeln.test.mjs`: keine Eingabefelder, keine Speicherung, keine Netzaufrufe, Daten per JSON-Import; Zufall und Uhr nicht in logik.mjs; Druckzeichen nicht auf dem Blatt, Emojis im Quelltext nur dort, wo sie der Bildschirm trägt; keine Namenszeile und kein Tagesfeld; keine Seitenangabe auf dem Blatt; jedes Blatt mit Registerhinweis, als Eigenentwurf gekennzeichnet, und mit dem Block, der für jede Karte gilt; das Dementi auf jedem Pustespiel; eine Karte je Blatt; Links und Knöpfe 48 px hoch; Fokus über data-kennung; die Lippenübung in der Ausschlussliste; kein uk- oder ru-Schlüssel; externe Fakten nur mit Fundstelle oder Vermerk; die volle Marke statt der Kurzform; die Begriffsprüfung der Dateien (ohne Modellnamen, A1); Testzahl in README und GDD.
 
 `test/logik.test.mjs`: Daten gültig; das Versprechen ist wörtlich
 zurückgenommen (mit Gegenprobe); eine Pustekarte ohne Dementi ist nicht
@@ -163,3 +159,24 @@ nichts; Luftballon und Ballongas ausgeschlossen, ohne erfundenes Verbot (mit
 Gegenprobe); Sicherheit auf jeder Karte und keine Hyperventilations-Warnung;
 nur auf Deutsch und ausgesprochen; die Quellbilanz; jedes Register belegt;
 Druckblatt und Politik; Hilfsfunktionen.
+
+## 11. Offene Punkte (ohne Literaturangabe)
+
+Diese Aussagen stehen in der App, ohne dass die Textkopie sie belegt. Sie sind
+nicht als Tatsache gekennzeichnet, sondern als offen; die Entscheidung liegt
+bei der Redaktion.
+
+- **Negativempfehlung** (Abschnitt 1, Ausschlussliste a01, Pflichtsatz im
+  Validator): „nicht wirksam und sollen nicht angewendet werden“ und „stärkste
+  Negativform“. Der Validator verlangt den Wortlaut. Die Aussage trägt jetzt
+  den Vermerk „(Eigenentwurf, fachlich nicht geprüft)“ (ELT-8). Offen bleibt:
+  Literaturangabe nachtragen, oder die Aussage umformulieren (dann ändern sich
+  Validator und Test).
+- **Fachprüfung** (`pusteRegister.text`, Kopf von `logik.mjs`, `package.json`):
+  welche Behandlung die Prüfung definiert, ist ohne Literaturangabe. Die Sätze
+  tragen den Vermerk „(Eigenentwurf, fachlich nicht geprüft)“.
+- **Lautfolge** (`lauterwerb.hinweis`, `frueh`, `spaeter`, `spaet`,
+  `verbindungen`) und die Altersangaben der Beruhigungsliste (`normalBis`):
+  mit dem Vermerk „(Eigenentwurf, fachlich nicht geprüft)“ gekennzeichnet,
+  aber nicht belegt. Die Entwicklungsaussage „verschwindet von selbst“ ist
+  gestrichen (ELT-8, Befund 3).

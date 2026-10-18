@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { access, readdir, readFile } from 'node:fs/promises';
 import daten from '../daten/kartei.json' with { type: 'json' };
 import { spieleIm, kartenDruckText, druckBlock } from '../logik.mjs';
+import { fileURLToPath } from 'node:url';
+import { externeFakten } from '../../../packages/kinderschutz/src/externe-fakten.mjs';
 
 // Projektregeln, für diese App geprüft: docs/02 Z. 22–24 (keine Anfragen nach außen),
 // docs/02 Z. 79–82 (Druckbögen), docs/02 Z. 141–146 (keine Bewertung von Kindern);
@@ -163,6 +165,14 @@ test('Eigenentwurf-Kennzeichnung: Registerhinweis steht auf jedem Blatt, im Quel
   assert.match(logik, /\(Eigenentwurf\)/);
 });
 
+test('Die Marke steht vollständig: keine Kurzform mit Doppelpunkt in den Dateien der App', () => {
+  // Statt „Eigenentwurf: …“ steht die volle Marke am Satz. Der Registerhinweis „(Eigenentwurf)“
+  // ist ein Etikett des Blatts und keine Aussage über eine Norm, Studie oder Erste Hilfe.
+  for (const [d, inhalt] of Object.entries(alle)) {
+    assert.ok(!/Eigenentwurf\s*:/.test(inhalt), `${d}: Kurzform statt der vollen Marke`);
+  }
+});
+
 test('druck.css: A4 hoch, Bildschirmteile ausgeblendet, eine Karte je Blatt, Knöpfe und Links 48 px', () => {
   assert.match(druck, /@media print \{/);
   assert.match(druck, /@page \{ size: A4 portrait;/);
@@ -258,4 +268,11 @@ test('package.json: privat, ES-Modul, Testskript vorhanden', () => {
   assert.equal(pkg.private, true);
   assert.equal(pkg.type, 'module');
   assert.match(pkg.scripts?.test ?? '', /node --test/);
+});
+
+test('externe Fakten: jede Zeile mit Norm, Studie oder Erste Hilfe trägt Fundstelle oder Vermerk', async () => {
+  // Die Prüfung steht im Paket packages/kinderschutz und läuft hier für diese App mit,
+  // damit die App-Kopie sie selbst trägt.
+  const pfad = fileURLToPath(APP).replace(/\/$/, '');
+  assert.deepEqual(await externeFakten(pfad), []);
 });

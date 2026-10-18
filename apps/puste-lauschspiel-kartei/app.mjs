@@ -34,7 +34,7 @@ const BESCHRIFTUNG = {
   lauschspiel: '👂 Lauschspiele',
 };
 const UNTERTITEL = {
-  pustespiel: 'Schön – und ohne Wirkung aufs Sprechen',
+  pustespiel: 'Schön – ein Spiel, kein Übungsversprechen',
   lautspiel: 'Hier ist Sprache drin',
   lauschspiel: 'Hinhören, nicht abfragen',
 };
@@ -50,6 +50,7 @@ function vorleseKnopf(text, beschriftung = 'Vorlesen', kennung = 'vorlesen') {
   }
   return el('button', {
     class: 'k-knopf k-knopf--neutral plk-nur-bildschirm',
+    id: kennung,
     'data-kennung': kennung,
     onclick: () => vorlesen(text, 'de-DE', stimme),
   }, bild('🔊'), beschriftung);
@@ -118,6 +119,7 @@ function render() {
         ...REGISTER.map((r) => el('button', {
           class: `k-knopf ${r === register ? '' : 'k-knopf--neutral'}`,
           style: 'min-height:3.6rem;text-align:start',
+          id: `reg-${r}`,
           'data-kennung': `reg-${r}`,
           'aria-pressed': String(r === register),
           onclick: () => { register = r; render(); },
@@ -130,9 +132,10 @@ function render() {
         ...liste.map(spielKarte),
         el('section', { class: 'k-karte plk-nur-bildschirm' },
           el('div', { class: 'k-antworten' },
-            el('button', { class: 'k-knopf', 'data-kennung': 'drucken', onclick: () => window.print() }, '🖨️ Diese Karten drucken'),
+            el('button', { class: 'k-knopf', id: 'drucken', 'data-kennung': 'drucken', onclick: () => window.print() }, '🖨️ Diese Karten drucken'),
             el('button', {
               class: 'k-knopf k-knopf--neutral',
+              id: 'andere-art',
               'data-kennung': 'andere-art',
               onclick: () => { register = null; fokusNach = 'auswahl-titel'; render(); },
             }, bild('↩️'), 'Andere Art'))))
@@ -150,9 +153,9 @@ function render() {
       el('div', { class: 'k-hinweis' }, el('p', { style: 'margin:0;font-weight:600' }, daten.lauterwerb.keinZiel))),
 
     el('section', { class: 'k-karte plk-nur-bildschirm' },
-      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, bild('😌'), 'Was in diesem Alter normal ist'),
+      el('h2', { style: 'margin-top:0;font-size:1.1rem' }, bild('😌'), 'Was in diesem Alter normal ist (Eigenentwurf, fachlich nicht geprüft)'),
       el('p', { style: 'margin:0 0 0.5rem;font-size:0.95rem' },
-        'Wenn Ihr Kind so spricht, ist nichts zu tun. Das verschwindet von selbst.'),
+        'Wenn Ihr Kind so spricht, ist nichts zu tun (Eigenentwurf, fachlich nicht geprüft).'),
       ...daten.physiologisch.map((p) => el('div', { style: 'padding:0.4rem 0;border-top:1px solid var(--k-rand)' },
         el('p', { style: 'margin:0;font-weight:600' }, p.was),
         el('p', { style: 'margin:0.1rem 0 0;font-size:0.95rem' }, `z. B. ${p.beispiel}`),
@@ -162,6 +165,7 @@ function render() {
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, bild('🚫'), 'Was hier nicht drinsteht – und warum'),
       el('button', {
         class: 'k-knopf k-knopf--neutral',
+        id: 'ausschluss',
         'data-kennung': 'ausschluss',
         'aria-expanded': String(zeigeAusschluss),
         onclick: () => { zeigeAusschluss = !zeigeAusschluss; render(); },

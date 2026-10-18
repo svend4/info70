@@ -23,10 +23,13 @@ test('Daten sind gültig', () => {
 test('das Versprechen der Quelle ist zurückgenommen – wörtlich', () => {
   // Die Quelle wollte „Grundlagen der Artikulation" aus Pusten und
   // Lippenlecken. Für das Deutsche steht dem eine Empfehlung in der
-  // stärksten Negativform entgegen.
+  // stärksten Negativform entgegen (Eigenentwurf, fachlich nicht geprüft).
   assert.match(daten.keinTrainingsversprechen, /verspricht keine bessere Aussprache/);
   assert.match(daten.keinTrainingsversprechen, /sollen nicht angewendet werden/);
-  assert.match(daten.keinTrainingsversprechen, /ohne eine einzige Gegenstimme/);
+  // Die Fachaussage ohne Literaturangabe trägt den Vermerk (ELT-8, Befund 4).
+  assert.match(daten.keinTrainingsversprechen, /\(Eigenentwurf, fachlich nicht geprüft\)/);
+  // Keine erfundene Studien- oder Abstimmungsangabe: die Zahlen und die Gegenstimme sind weg.
+  assert.doesNotMatch(daten.keinTrainingsversprechen, /Gegenstimme|Studie|Übersichtsarbeit/);
   // Und die Ausschlussliste nennt die Empfehlung noch einmal beim Namen.
   assert.ok(daten.ausgeschlossen.some((a) => /nicht wirksam|sollen nicht angewendet/i.test(a.warum)));
   const ohne = kopie();
@@ -58,7 +61,7 @@ test('eine Pustekarte ist ohne das Trainings-Dementi nicht ausdrückbar', () => 
 
 test('ein Lautspiel sagt, warum Sprache darin vorkommt', () => {
   // Das ist der Unterschied, auf dem die Zulässigkeit beruht: die
-  // Negativempfehlung betrifft ausdrücklich das NICHTsprachliche.
+  // Negativempfehlung betrifft ausdrücklich das NICHTsprachliche (Eigenentwurf, fachlich nicht geprüft).
   for (const s of spieleIm(daten, 'lautspiel')) assert.ok(s.warumSprache, s.id);
   const ohne = kopie();
   delete ohne.spiele.find((s) => s.register === 'lautspiel').warumSprache;
@@ -141,6 +144,10 @@ test('die Lautfolge ist Beruhigung und kein Ziel – und für Vokale gibt es kei
   const vokale = kopie();
   vokale.lauterwerb.frueh = 'a, o, u, dann i';
   assert.ok(pruefeDaten(vokale).some((x) => /Vokalreihenfolge/.test(x)));
+  // Umlaute am Wortanfang werden ebenfalls erkannt.
+  const umlaut = kopie();
+  umlaut.lauterwerb.spaeter = 'ä, ö, ü';
+  assert.ok(pruefeDaten(umlaut).some((x) => /Vokalreihenfolge/.test(x)));
   // Und die Lautfolge gilt nicht für ein mehrsprachiges Kind.
   assert.match(daten.mehrsprachig, /gilt die deutsche Lautreihenfolge weiter unten nicht einfach so/);
 });
@@ -165,16 +172,19 @@ test('die Beruhigungsliste sagt Normalität und fordert nichts', () => {
 test('Luftballon und Ballongas sind ausgeschlossen – ohne erfundenes Verbot', () => {
   const ballon = daten.ausgeschlossen.find((a) => /Luftballon/.test(a.was));
   assert.ok(ballon);
-  // Der Mechanismus, der belegt ist: nicht aufgeblasene Ballons und Fetzen
-  // legen sich an die Atemwege und schließen dicht ab.
+  // Der Mechanismus trägt den Vermerk (Eigenentwurf, fachlich nicht geprüft): nicht aufgeblasene Ballons und
+  // Fetzen legen sich an die Atemwege und schließen dicht ab.
+  assert.match(ballon.warum, /Eigenentwurf/);
   assert.match(ballon.warum, /anlegen und dicht abschließen|dicht abschließen/);
-  // Und das, was NICHT belegt ist: ein Verbot gibt es nicht.
-  assert.match(ballon.warum, /gibt es ausdrücklich NICHT/);
+  // Und ein Verbot wird nicht ausgesprochen: die Kartei spricht keines aus.
+  assert.match(ballon.warum, /spricht kein Verbot aus/);
   assert.match(ballon.warum, /Vorsicht dieser Kartei|keine Rechtsfolge/);
   const gas = daten.ausgeschlossen.find((a) => /Ballongas/.test(a.was));
   assert.ok(gas, 'Ballongas fehlt – es war in der ersten Fassung gar nicht bedacht');
   assert.match(gas.warum, /farb- und geruchlos/);
-  assert.match(gas.warum, /lebensgefährlich/);
+  // Die Vorsicht bleibt, aber als Eigenentwurf – ohne Autoritätsangabe.
+  assert.match(gas.warum, /Eigenentwurf/);
+  assert.doesNotMatch(gas.warum, /Ärzte|warnen/);
   // Gegenprobe: ein Verbot zu behaupten wird abgewiesen.
   const mut = kopie();
   mut.ausgeschlossen.find((a) => /Luftballon/.test(a.was)).warum = 'Kinder unter acht dürfen Luftballons nicht aufpusten.';
@@ -189,10 +199,12 @@ test('Sicherheit steht auf jeder Karte, und keine erfundene Warnung', () => {
     assert.ok(s.sicherheit, s.id);
     assert.ok(s.abbruchzeichen, s.id);
   }
-  // Seifenblasen: der Weg, den die Giftinformationszentren nennen.
+  // Seifenblasen: keine Erste-Hilfe-Anweisung ohne Quelle – nur der Eigenentwurf.
   const blasen = spielVon(daten, 'p-seifenblasen');
-  assert.match(blasen.sicherheit, /Entschäumer/);
-  assert.match(blasen.sicherheit, /Giftnotruf|112/);
+  assert.match(blasen.sicherheit, /Seifenblasenlösung nicht in den Mund \(Eigenentwurf, fachlich nicht geprüft\)/);
+  // Erste-Hilfe-Angaben ohne Quelle sind gestrichen (ELT-8): kein Verschlucken-Rat.
+  assert.doesNotMatch(blasen.sicherheit, /Verschlucken|Rat einholen|Erste Hilfe/i);
+  assert.doesNotMatch(blasen.sicherheit, /Entschäumer|Giftnotruf|112/);
   // Keine Hyperventilations-Warnung: dazu ist nichts belegbar, und eine
   // erfundene Warnung schwächt die echten.
   assert.doesNotMatch(JSON.stringify(daten), /Hyperventilation|zu viel Luft|Schwindel durch Pusten/i);
