@@ -290,8 +290,8 @@ test('die immer gültige Sicherheitsregel steht auf dem Blatt', () => {
   // Review Welle 81: `karte()` liefert `sicherheitImmer` und das GDD sagt,
   // sie gehöre auf die Karte – gerendert war sie nur im Bildschirmteil. Wer
   // die Karte ausdruckt und an den Schrank hängt, sieht den Bildschirmtext
-  // nie wieder.
-  assert.match(code, /ek-nur-druck[^)]*\}, `🧷 \$\{k\.sicherheitImmer\}`\)/);
+  // nie wieder. Das Blatt (druckBlatt) rendert den Text aus blattTeile.
+  assert.match(code, /el\('p', \{ class: 'ek-sicherheit' \}, t\.sicherheitImmer\)/);
   // Und ohne offene Karte wäre das Blatt leer.
   assert.match(code, /Wählen Sie zuerst eine Idee aus/);
 });
@@ -326,7 +326,8 @@ test('Math.random kommt nicht vor', () => {
 
 test('gedruckt wird die offene Karte, nicht die ganze Kartei', () => {
   assert.ok(/@media print/.test(druck));
-  assert.ok(/\.ek-idee:not\(\.ek-offen\)\s*\{\s*display:\s*none\s*!important/.test(druck));
+  assert.ok(/\.ek-zu\s*\{\s*display:\s*none/.test(druck), 'zugeklappte Karten sind nicht verborgen');
+  assert.ok(/druckBlatt\(offeneIdee\)/.test(code), 'das Blatt baut nicht auf der offenen Karte auf');
   assert.ok(/\.ek-nur-bildschirm\s*\{\s*display:\s*none\s*!important/.test(druck));
   const schrittGroesse = druck.match(/\.ek-schritte li \{[^}]*font-size:\s*(\d+)pt/);
   assert.ok(schrittGroesse && Number(schrittGroesse[1]) >= 12, 'die Schritte sind auf Papier zu klein');

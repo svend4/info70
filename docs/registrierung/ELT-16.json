@@ -1,0 +1,12 @@
+{
+  "id": "ELT-16",
+  "slug": "erste-kuenstler",
+  "titel": "Erste Künstler 1–3: Eltern-Ideenkartei ohne Checkliste",
+  "status_neu": "ausgebaut",
+  "app": "erste-kuenstler",
+  "tests_app": 42,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/erste-kuenstler/\">🎨 Erste Künstler – Ideen für Kinder von 1 bis 3, nach dem, was Sie gerade sehen (Eltern, ohne Checkliste)</a>",
+  "readme_zeile": "| ELT-16 | Erste Künstler 1–3: Eltern-Ideenkartei ohne Checkliste | ausgebaut | `apps/erste-kuenstler/` |",
+  "docs10_notiz": "Eltern-Werkzeug Nr. 61 (S. 101–102): Erste Künstler 1–3 ausgebaut. Druckblatt mit der offenen Ideenkarte, Blattkopf als Eigenentwurf, Pflichtmarkierung auf dem Blatt; 42 Tests (Logik und Druckregeln). Die Checkliste aus dem Katalogeintrag ist bewusst nicht gebaut, Begründung in der App. Keine Speicherung, keine Anfragen nach außen.",
+  "katalog_korrektur": "Checkliste mit 19 Meilensteinen und Bericht nicht gebaut: die Quelle beschreibt den Stand am Ende des dritten Lebensjahres, eine deutsche Referenzliste für künstlerische Entwicklung gibt es nicht. Die App ordnet nach der Gelegenheit, die der Erwachsene sieht, und zeigt die 19 Merkmale nur zum Nachschlagen. Die zweite Zahl „9 Aktivitätsformen“ lässt sich an dieser Stelle nicht nachzählen (S. 89 nennt neun Werkgruppen). Zur Entscheidung durch den Koordinator: Katalogeintrag anpassen; uk- und ru-Familienlieder und Liedvorschläge nicht gebaut; Offline-Ideen gegen die Katalogliste offen; Favicon fehlt (A3). Bildschirmregel nennt BIÖG und AWMF; die WHO-Leitlinie wird nicht als Quelle der Drei-Jahres-Grenze genannt."
+}

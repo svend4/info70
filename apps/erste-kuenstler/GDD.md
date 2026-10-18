@@ -92,9 +92,18 @@ Tests prüfen, dass im Code weder `localStorage` noch `datenKarte` noch ein Expo
 
 ## 9. Druck
 
-Gedruckt wird die **offene** Karte, nicht die ganze Kartei (`.ek-idee:not(.ek-offen)` wird
-ausgeblendet) – anders als in Nr. 60, wo ein Blatt alle fünf Achsen trägt, ist hier jede Karte für
-sich eine Tätigkeit. Schritte 13 pt (gemessen: 17,3 px). Keine Namenszeile, kein Haken.
+Gedruckt wird ein Blatt mit der **offenen** Karte, nicht die ganze Kartei. Das Blatt (`druckBlatt` in
+`app.mjs`) rendert nur den Text aus `blattTeile` in `logik.mjs`: Blattkopf mit „Eigenentwurf“, Titel,
+Situation, Schritte, Schluss, Grenze, Material mit Sicherheitssatz, die immer gültige Sicherheitsregel
+und die Pflichtmarkierung. Der Bildschirm fällt beim Drucken weg (`.ek-nur-bildschirm`); Zeichen und
+Emojis stehen nur auf dem Bildschirm, nie auf dem Blatt. Anders als in Nr. 60, wo ein Blatt alle fünf
+Achsen trägt, ist hier jede Karte für sich eine Tätigkeit. Schritte 13 pt. Keine Namenszeile, kein Haken,
+kein Datum. Die Druckprüfung steht in `test/regeln.test.mjs`: die Suite umfasst 42 Tests in zwei Dateien
+(logik 21, regeln 21).
+
+Pflichtmarkierung auf dem Blatt: „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von
+einem Menschen geprüft.“ Das Blatt trägt keine Seitenzahl (Standard für neue Apps, A18); die Markierung
+steht trotzdem darauf, weil die Abnahme sie verlangt.
 
 ## 10. Barrierefreiheit
 
@@ -118,3 +127,13 @@ zugleich offen. Vorlesen nur mit lokaler Stimme, mit `voiceschanged`-Listener.
 * Keine Lieder und keine Liedtexte (Rechtslage wie in Nr. 59).
 * Kein eigenes Urteil über ein Kind, in keiner Form.
 * Was ein einzelner Gegenstand aushält, prüft der Spielzeug-Check U3.
+
+## Offen
+
+Pflichtmarkierung: „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“
+
+* uk und ru: nicht vorhanden, offen. Keine Liedtexte, keine uk/ru-Familienlieder (Abschnitt 11).
+* Checkliste mit 19 Meilensteinen und Bericht (Katalog): gestrichen. Offen ist, ob der Katalogeintrag angepasst wird.
+* Liedvorschläge: nicht gebaut.
+* Offline-Ideen: Abgleich der acht Karten mit der Katalogliste offen.
+* Favicon (A3).

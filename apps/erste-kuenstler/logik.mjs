@@ -133,6 +133,42 @@ export function karte(daten, ideeId) {
 }
 
 /**
+ * Der Inhalt eines Druckblatts, Teil für Teil. Hier steht nur Text: keine
+ * Emojis, keine Symbole. Die Zeichen gehören zum Bildschirm; das Blatt
+ * (app.mjs, druckBlatt) rendert genau diese Teile, und test/regeln.test.mjs
+ * prüft sie Karte für Karte.
+ */
+export function blattTeile(daten, ideeId) {
+  const k = karte(daten, ideeId);
+  if (!k) return null;
+  const i = k.idee;
+  return {
+    kopf: daten?.blattkopf ?? '',
+    titel: i.name,
+    wennSie: i.wennSie,
+    schritte: i.wasSieTun ?? [],
+    passt: `Es passt gerade, wenn: ${i.woranSieSehen}`,
+    schluss: `Schluss ist: ${i.aufhoeren}`,
+    grenze: `Grenze: ${i.grenze}`,
+    brauchenKopf: 'Was Sie dafür brauchen',
+    brauchen: k.material.map((m) => ({ name: m.name, wo: m.woGefunden, sicherheit: m.sicherheit })),
+    sicherheitImmer: k.sicherheitImmer,
+    pflicht: daten?.pflichtmarkierung ?? '',
+  };
+}
+
+/** Das ganze Blatt als Text in der Reihenfolge, in der es gedruckt wird. */
+export function kartenText(daten, ideeId) {
+  const t = blattTeile(daten, ideeId);
+  if (!t) return '';
+  return [
+    t.kopf, t.titel, t.wennSie, ...t.schritte, t.passt, t.schluss, t.grenze, t.brauchenKopf,
+    ...t.brauchen.flatMap((m) => [m.name, m.wo, m.sicherheit]),
+    t.sicherheitImmer, t.pflicht,
+  ].join('\n');
+}
+
+/**
  * Die Stellen, die ausdruecklich NICHT durch die Textnetze laufen - jede mit
  * ihrem Grund. Alles andere wird geprueft.
  *
@@ -257,7 +293,8 @@ export function pruefeDaten(daten) {
 
   // --- Die Absaetze, die die App über sich selbst sagt --------------------
   for (const feld of ['hinweis', 'wasEsIst', 'keinMeilenstein', 'wasStattdessen', 'zeitpunkt', 'keinDeuten',
-    'keinWirkversprechen', 'keinErgebnis', 'keinBildschirm', 'sicherheitImmer', 'elterntelefon']) {
+    'keinWirkversprechen', 'keinErgebnis', 'keinBildschirm', 'sicherheitImmer', 'elterntelefon',
+    'blattkopf', 'pflichtmarkierung']) {
     if (!nichtLeer(daten?.[feld])) fehler.push(`${feld} fehlt`);
   }
   // Die beiden Gruende gegen die Checkliste muessen BEIDE dastehen - sonst

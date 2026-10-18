@@ -1,33 +1,32 @@
-/* Druck: EINE Ideenkarte, die man neben das Papier legt. Gedruckt wird die
-   offene Karte; die zugeklappten bleiben weg – anders als in Nr. 60, wo ein
-   Blatt alle fünf Achsen trägt, ist hier jede Karte für sich eine Tätigkeit.
-   Kein Haken, keine Namenszeile, kein Stern (docs/02). */
+/* Druck: EIN Blatt, die offene Ideenkarte, neben das Papier gelegt. Beim Drucken
+   verschwindet alles, was nur auf dem Bildschirm steht (.ek-nur-bildschirm). Das
+   Blatt kommt aus blattTeile in logik.mjs: ohne Zeichen, ohne Namenszeile, ohne
+   Tagesfeld. Kein Haken, keine Bewertung (docs/02). Die zugeklappten Karten sind mit
+   .ek-zu verborgen und gehören nie aufs Papier. */
 .ek-nur-druck { display: none; }
+.ek-zu { display: none; }
+
+/* Knöpfe und der Fußlink: mindestens 48 px hoch (docs/02, Touch-Ziel 48 px). */
+.k-fuss a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; }
+.ek-verweis { display: flex; align-items: center; min-height: 48px; }
 
 @media print {
+  @page { size: A4 portrait; margin: 14mm 15mm; }
   .ek-nur-bildschirm { display: none !important; }
   .ek-nur-druck { display: block !important; }
-  /* Nur die offene Karte kommt aufs Papier. */
-  .ek-idee:not(.ek-offen) { display: none !important; }
-  .ek-idee button {
-    background: none !important;
-    color: #000 !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    min-height: 0 !important;
-    font: inherit !important;
-    text-align: start !important;
-    width: auto !important;
-  }
-  body { background: #fff; }
-  .k-app { max-width: none; padding: 0; }
-  .ek-idee { border: none; border-radius: 0; margin: 0 !important; padding: 0 !important; box-shadow: none; }
-  .ek-idee h3 { font-size: 15pt; margin: 0 0 3mm; }
-  .ek-idee h4 { font-size: 11pt; margin: 4mm 0 1mm; }
-  .ek-idee p { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
-  .ek-idee li { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  a[href]::after { content: ""; }
+  body { background: #fff; color: #000; }
+  .k-app { max-width: none; padding: 0; display: block; }
+
+  /* Das Blatt ist eine einzige Seite und wird nie über einen Umbruch zerrissen. */
+  .ek-blatt { break-inside: avoid; page-break-inside: avoid; }
+  .ek-kopf { font-size: 10pt; color: #000; margin: 0 0 2mm; }
+  .ek-titel { font-size: 18pt; color: #000; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 1pt solid #000; }
+  .ek-blatt p { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  .ek-blatt li { font-size: 11pt; line-height: 1.45; margin: 0 0 2mm; }
+  .ek-ueberschrift { font-size: 12pt; margin: 4mm 0 1mm; }
   /* Die Schritte liest man mit einer Hand am Kind – größer als der Rest. */
   .ek-schritte li { font-size: 13pt; line-height: 1.5; margin: 0 0 3mm; }
-  a[href]::after { content: ""; }
+  .ek-sicherheit { margin-top: 4mm; }
+  .ek-pflicht { font-size: 9pt; color: #000; margin-top: 6mm; }
 }
