@@ -37,7 +37,7 @@ Blockiert durch: keine
 - Lücken laut Befund (Ausbau):
   - Lupe fehlt. Kein Experiment nutzt die Lupe, obwohl die Quelle sie nennt (S. 289). Eigenentwurf-Vorschlag: Oberfläche eines Haushaltsgegenstands vergrößert betrachten und die Vermutung über Details festhalten.
   - Lineal fehlt als Gerät. Länge wird mit Schnur und Schritten gemessen; das Lineal nennt nur die Quelle (S. 289).
-  - Thermometer nur als Zusatz („falls vorhanden“) bei Hand-Temperatur; die Messung mit Gerät ist optional.
+  - Thermometer nur als Zusatz (falls vorhanden) bei der Hand-Temperatur; die Messung mit Gerät ist optional.
 
 ## 4. Daten
 

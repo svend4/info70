@@ -33,7 +33,7 @@ Blockiert durch: keine
 - Bildschirme oder Blätter: Kartei-Ansicht mit den drei Registern pustespiel, lautspiel und lauschspiel; Karte je Spiel mit Anleitung und Registerhinweis; Druckfassung ohne Haken, Punkte und Namenszeile (druck.css vorhanden).
 - Ablauf: Register wählen → spieleIm(daten, register) → Spielkarte mit spielText(spiel) → Anzeige oder Druck.
 - Was gedruckt wird: eine Spielkarte je Blatt A4 hoch, mit Registerhinweis; Pustespiele mit dem Satz, dass nichts trainiert wird (Eigenentwurf-Formulierung).
-- Bestand laut Datei: zehn Spiele, je drei Pustespiele, Lautspiele und Lauschspiele mit vier Lauschspielen.
+- Bestand laut Datei: zehn Spiele, davon drei Pustespiele, drei Lautspiele und vier Lauschspiele.
 - Befund zur Quelle: das Versprechen der Quelle, die Übungen bildeten die Grundlage der Artikulation, ist zurückgenommen (docs/10, Abweichung Welle 79). Das Pustespiel-Register darf kein Wirkversprechen tragen.
 - Lücken laut Befund (Ausbau):
   - Die Übung „слижем с губ варенье“ (S. 67) fehlt im Bestand. Die Ausschlussliste der Datei ist zu prüfen, ob sie dort mit Begründung steht.
