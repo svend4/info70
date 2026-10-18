@@ -6,7 +6,7 @@ Blockiert durch: keine
 ## 1. Quelle
 
 - Praleska, S. 163 (163–172), Abschnitt „Обучение элементам нотной грамоты, игре на музыкальных инструментах“ auf S. 170, Gruppe „Почемучки“ auf S. 170 und 172.
-- Zitate (höchstens 12 Wörter, mit Seite):
+- Begriffe und Titel in Anführungszeichen, höchstens 6 Wörter, mit Seite:
   - „прохлопывать, протопывать“ (S. 163)
   - „на музыкальной лесенке“ (S. 163)
   - „обучать игре в ритмическом оркестре“ (S. 170)
