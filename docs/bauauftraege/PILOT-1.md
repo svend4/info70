@@ -27,10 +27,34 @@ Sitzung `session_01WhwZAoPHW57BAd7JMNWZaQ`, Commit `cbe3a5a`.
 
 ## GEM-17 Tischdienst-Trainer (Ausbau, Aufwand S)
 
-Sitzung `session_011s4uQ6nJwuboFdpA7kq4DZ`: noch keine Abgabe zum Stand 14:30 UTC.
+Sitzung `session_011s4uQ6nJwuboFdpA7kq4DZ`, Commit `8861bc8`.
+
+**Ergebnis der Prüfung:**
+- Tests der App: 49 von 49 bestanden.
+- Browser bei 360 px: kein Überlauf, Knöpfe und Links mindestens 48 px, Speicher gleich null, nur `localhost`.
+- Fokus: 1 Abweichung. Der Knopf `los` (Start) wechselt den Bildschirm, der Fokus springt auf `typ-austeilen`. Das ist eine Schwäche, kein Ausfall.
+
+**Verstöße (nicht bestanden):**
+1. Druck: Das Emoji „🤔“ (`app.mjs`, Zeile 93) erscheint im Druckinhalt. Der Bildschirmtext ist nicht als Bildschirmteil markiert und wird deshalb gedruckt.
+2. Druck: Die Pflichtmarkierung fehlt im gedruckten Text.
+
+**Ursache:** Dasselbe wie bei GEM-10. Die Anleitung von Pilot 1 verlangte die Druckprüfung noch nicht; die Sitzung hat nur die Tests der App laufen lassen.
+
+## Vergleich der beiden Sitzungen
+
+| Prüfpunkt | GEM-10 | GEM-17 |
+|---|---|---|
+| Tests der App | 29 bestanden | 49 bestanden |
+| Überlauf bei 360 px | nein | nein |
+| Knopfhöhe ≥ 48 px | ja | ja |
+| Fokus nach Klick | 54 von 54 | 1 Abweichung |
+| Speicher | 0 | 0 |
+| Emoji im Druck | ja (🗺) | ja (🤔) |
+| Pflichtmarkierung im Druck | fehlt | fehlt |
+| Eigenes Druckblatt | nein | teilweise |
 
 ## Bewertung des Verfahrens
 
 - Die Technik funktioniert: Der Ausbau läuft in einer Sitzung durch, die Tests laufen, die Browser-Prüfung läuft. Die Dauer ist nicht gemessen; die Sitzung meldet sie im Bericht.
-- Die Lücke liegt bei den Regeln für den Druck, die die Anleitung nicht ausreichend verlangt.
+- Die Lücke liegt bei den Regeln für den Druck, die die Anleitung nicht ausreichend verlangt. Beide Sitzungen verletzen dieselbe Regel: Emojis im Druck und fehlende Pflichtmarkierung.
 - Vor einer Ausweitung (Etappe 2) muss die Anleitung ergänzt werden, und die Auswertung muss den Druck-Schritt als Pflicht ausweisen.
