@@ -33,7 +33,8 @@ passend zur Null-externe-Requests-Politik.
 Keine externen Anfragen (NetzwerkWaechter) – die Logik parst nur Text und
 lädt nichts nach (Test). Importiertes HTML bleibt im Seitenspeicher; nur die
 Prüf-Haken liegen lokal (lip.status) + Zurücksetzen. Export per Blob,
-werbefrei.
+werbefrei. Eingabehinweis „Keine Namen von Kindern eingeben.“ steht sichtbar
+direkt vor dem HTML-Textfeld (aria-describedby).
 
 ## 6. Tests
 
@@ -41,6 +42,8 @@ werbefrei.
 (href+src, dedupliziert, Anker ignoriert, script-src erfasst), extern-Flag,
 statistik, PRUEFPUNKTE, bericht (externe Links + Prüfpunkte, ehrlich bei 0),
 Sicherheit (kein Netzwerkzugriff, robust bei beliebigem Text).
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Zuordnung zum
+HTML-Feld. Testzahl gesamt: 11 (vorher 7).
 
 ## 7. Erweiterungen (Katalog)
 

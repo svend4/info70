@@ -28,9 +28,14 @@ Werbefrei, без внешних запросов (NetzwerkWaechter); импор
 живёт только в памяти страницы, галочки — в `lip.status` + сброс. Всё в
 браузере.
 
+Под кнопкой выбора файлов и над полем для HTML стоит подсказка «Keine Namen von
+Kindern eingeben.» (видна, связана с полем через aria-describedby).
+
 ## Запуск и тесты
 
 ```bash
 npm run dev   # http://localhost:8070/apps/link-inventar-pruefer/
 node --test apps/link-inventar-pruefer/test/*.test.mjs
 ```
+
+Тестов: 11 (`npm test` в папке приложения).

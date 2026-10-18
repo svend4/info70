@@ -11,6 +11,10 @@ installiereNetzwerkWaechter();
 const STATUS_SCHLUESSEL = 'lip.status';
 const app = document.getElementById('app');
 const KAT_EMOJI = { extern: '🔗', video: '🎬', social: '📱', appstore: '📲', shop: '🛒', intern: '🏠', mailto: '✉️', tel: '📞' };
+// Eingabehinweis am HTML-Textfeld (Freitext): sichtbar, als eigenes Element direkt vor dem Feld; das Feld
+// verweist per aria-describedby darauf. Die App hat keine Druckfassung, der Hinweis bleibt also überall stehen.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const HINWEIS_STIL = 'display:block;font-size:0.85rem;color:#4b5563;margin:0.2rem 0';
 
 let links = []; // aktueller Import (nur im Speicher der Seite)
 const ladeStatus = () => JSON.parse(localStorage.getItem(STATUS_SCHLUESSEL) ?? '{}');
@@ -34,7 +38,7 @@ function render() {
     verarbeite(texte.join('\n'));
   });
 
-  const einfuegeFeld = el('textarea', { style: 'width:100%;min-height:5rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.5rem;font-family:monospace;font-size:0.78rem', 'aria-label': 'HTML einfügen', placeholder: '… oder HTML hier einfügen' });
+  const einfuegeFeld = el('textarea', { style: 'width:100%;min-height:5rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.5rem;font-family:monospace;font-size:0.78rem', 'aria-label': 'HTML einfügen', 'aria-describedby': 'lip-hinweis-html', placeholder: '… oder HTML hier einfügen' });
 
   const linkKarten = externe.map((l) =>
     el('div', { style: 'padding:0.5rem 0;border-top:1px solid var(--k-rand)' },
@@ -58,6 +62,7 @@ function render() {
       el('p', { style: 'font-weight:600;margin-top:0' }, '📥 HTML importieren'),
       el('p', { style: 'font-size:0.88rem;color:#4b5563;margin-top:0' }, 'Exportierte HTML-Dateien laden oder Quelltext einfügen. Nichts wird gesendet – die Analyse läuft nur in Ihrem Browser.'),
       datei,
+      el('span', { id: 'lip-hinweis-html', style: HINWEIS_STIL }, KINDER_HINWEIS),
       einfuegeFeld,
       el('button', { class: 'k-knopf k-knopf--klein', style: 'margin-top:0.4rem', onclick: () => verarbeite(einfuegeFeld.value) }, '🔍 Eingefügtes HTML prüfen')),
     el('section', { class: 'k-karte' },

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "description": "Link-Inventar-Pruefer fuer Kinderseiten: Offline-Werkzeug, das aus importierten HTML-Dateien (oder eingefuegtem Quelltext) alle Links extrahiert und klassifiziert (extern/Video/Social/App-Store/Shop) und je externem Link durch eine Pruefliste (kindgeeignet, gekennzeichnet, Tracking) fuehrt. Bericht-Export. KEIN Netzwerkzugriff. Zielgruppe: Betreiber.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "license": "AGPL-3.0-only",
   "type": "module"
 }
