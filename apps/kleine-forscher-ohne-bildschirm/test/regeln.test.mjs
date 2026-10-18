@@ -130,6 +130,7 @@ test('Eigenentwurf-Kennzeichnung: Blattkopf, Material, Lernziel und Sicherheit u
   assert.match(b.material, /Eigenentwurf/, 'Material ohne Eigenentwurf-Kennzeichnung');
   assert.match(b.lernziel, /Eigenentwurf/, 'Lernziel ohne Eigenentwurf-Kennzeichnung');
   assert.match(b.sicherheit, /Eigenentwurf/, 'Sicherheit ohne Eigenentwurf-Kennzeichnung');
+  assert.match(daten.hinweis, /Versuche mit Wasser nur unter Aufsicht \(Eigenentwurf\)\./, 'hinweis: Sicherheitsaussage ohne Eigenentwurf-Kennzeichnung');
   for (const k of daten.karten) {
     for (const begriff of k.begriffe) {
       assert.match(begriff.deutsch ?? '', /./, `${k.id}: Übertragung fehlt`);
