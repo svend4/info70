@@ -1,68 +1,20 @@
 {
-  "version": 1,
+  "version": 2,
   "zielgruppe": "5-7, in der Kita und zu Hause",
   "hinweis": "Jedes Ding bekommt ein eigenes Zeichen. Zwei Dinge mit demselben Zeichen wären auf dem Plan nicht auseinanderzuhalten – deshalb prüft der Validator, dass jedes Zeichen nur einmal vergeben ist.",
   "symbole": [
-    {
-      "id": "tuer",
-      "name": "Tür",
-      "emoji": "🚪"
-    },
-    {
-      "id": "fenster",
-      "name": "Fenster",
-      "emoji": "🪟"
-    },
-    {
-      "id": "tisch",
-      "name": "Tisch",
-      "emoji": "🪑"
-    },
-    {
-      "id": "teppich",
-      "name": "Teppich",
-      "emoji": "🟦"
-    },
-    {
-      "id": "bauecke",
-      "name": "Bauecke",
-      "emoji": "🧱"
-    },
-    {
-      "id": "leseecke",
-      "name": "Leseecke",
-      "emoji": "📚"
-    },
-    {
-      "id": "waschbecken",
-      "name": "Waschbecken",
-      "emoji": "🚰"
-    },
-    {
-      "id": "garderobe",
-      "name": "Garderobe",
-      "emoji": "🧥"
-    },
-    {
-      "id": "pflanze",
-      "name": "Pflanze",
-      "emoji": "🪴"
-    },
-    {
-      "id": "spielzeug",
-      "name": "Spielzeugregal",
-      "emoji": "🧸"
-    },
-    {
-      "id": "malecke",
-      "name": "Maltisch",
-      "emoji": "🖍️"
-    },
-    {
-      "id": "musik",
-      "name": "Musikecke",
-      "emoji": "🥁"
-    }
+    { "id": "tuer", "name": "Tür", "emoji": "🚪", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "fenster", "name": "Fenster", "emoji": "🪟", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "tisch", "name": "Tisch", "emoji": "🪑", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "teppich", "name": "Teppich", "emoji": "🟦", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "bauecke", "name": "Bauecke", "emoji": "🧱", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "leseecke", "name": "Leseecke", "emoji": "📚", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "waschbecken", "name": "Waschbecken", "emoji": "🚰", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "garderobe", "name": "Garderobe", "emoji": "🧥", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "pflanze", "name": "Pflanze", "emoji": "🪴", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "spielzeug", "name": "Spielzeugregal", "emoji": "🧸", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "malecke", "name": "Maltisch", "emoji": "🖍️", "quelle": { "seite": "S. 138" }, "eigenentwurf": true },
+    { "id": "musik", "name": "Musikecke", "emoji": "🥁", "quelle": { "seite": "S. 138" }, "eigenentwurf": true }
   ],
   "fragen": [
     "Wo sitzt du am liebsten – legt das Zeichen dorthin?",

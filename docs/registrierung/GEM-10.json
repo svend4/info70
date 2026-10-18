@@ -1,0 +1,12 @@
+{
+  "id": "GEM-10",
+  "slug": "kita-kartograph",
+  "titel": "Kita-Kartograph: Wir zeichnen unseren Raum",
+  "status_neu": "teilweise",
+  "app": "kita-kartograph",
+  "tests_app": 29,
+  "hub_zeile": "<a href=\"apps/kita-kartograph/index.html\">Kita-Kartograph</a>: Kinder ab 5 legen mit Symbolen einen Plan ihres Raumes; die Zeichenerklärung baut sich von allein auf.",
+  "readme_zeile": "| GEM-10 | Kita-Kartograph: Wir zeichnen unseren Raum | teilweise (Ausbau) | `apps/kita-kartograph/` |",
+  "docs10_notiz": "Kita-Kartograph (GEM-10) ausgebaut: Norden-Knöpfe ohne Neuaufbau, Daten per Import, Regelprüfung mit 29 Tests; offen bleiben Speicher des letzten Plans, Kartenverweis und Export.",
+  "katalog_korrektur": "Kita-Kartograph: Ausbau nach Bauauftrag GEM-10. Gebaut: Raster, Zeichenerklärung, Norden, Vorlesen, Löschknopf, Elternseite. Offen: Ort auf der Karte (Verweis oder eigene Karte), Export, Herkunftsländer-Ansicht, Außengelände."
+}

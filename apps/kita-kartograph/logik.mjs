@@ -31,21 +31,37 @@ export function spalteVon(index, groesse = GROESSE) {
   return index % groesse;
 }
 
-/** Menschliche Feldbezeichnung: „Reihe 2, Platz 3“. */
+/** Menschliche Feldbezeichnung: „Reihe 2, Spalte 3“. */
 export function feldName(index, groesse = GROESSE) {
-  return `Reihe ${zeileVon(index, groesse) + 1}, Platz ${spalteVon(index, groesse) + 1}`;
+  return `Reihe ${zeileVon(index, groesse) + 1}, Spalte ${spalteVon(index, groesse) + 1}`;
+}
+
+/** Ein Feldindex ist gültig, wenn er eine ganze Zahl im Raster ist. */
+function feldGueltig(index, groesse = GROESSE) {
+  return Number.isInteger(index) && index >= 0 && index < felderAnzahl(groesse);
 }
 
 /**
  * Setzt ein Symbol. Dasselbe Symbol noch einmal auf dasselbe Feld nimmt es
  * wieder weg; ein anderes Symbol ersetzt das alte. Gibt einen NEUEN Plan
- * zurück und lässt den alten unberührt.
+ * zurück und lässt den alten unberührt. Ungültiges Feld oder unbekanntes
+ * Symbol: der Plan kommt unverändert zurück.
  */
-export function setzeSymbol(plan, index, symbolId) {
+export function setzeSymbol(plan, index, symbolId, symbole) {
+  if (!feldGueltig(index) || !symbole.some((s) => s.id === symbolId)) return plan;
   const neu = { ...plan };
   if (neu[index] === symbolId) delete neu[index];
   else neu[index] = symbolId;
   return neu;
+}
+
+/**
+ * Legt die Himmelsrichtung fest. Der Zustand ist { plan, norden }; es kommt
+ * ein neuer Zustand zurück. Eine Kante, die es nicht gibt, ist ein Fehler.
+ */
+export function setzeNorden(zustand, kante) {
+  if (!KANTEN.some((k) => k.id === kante)) throw new Error(`Unbekannte Kante: ${kante}`);
+  return { ...zustand, norden: kante };
 }
 
 export function leerePlan() {
@@ -55,6 +71,29 @@ export function leerePlan() {
 /** Wie viele Felder sind belegt? */
 export function anzahlGelegt(plan) {
   return Object.keys(plan || {}).length;
+}
+
+/**
+ * Liest den gespeicherten Zustand aus dem Text der Quelle (null, wenn nichts da
+ * ist). Übernimmt nur bekannte Symbole auf gültigen Feldern, damit ein alter
+ * oder verfälschter Eintrag den Plan nicht unsichtbar verfälscht. Bei jedem
+ * Lesefehler kommt ein leerer Plan mit Norden oben zurück.
+ */
+export function ladeZustand(text, symbole) {
+  const leer = { plan: leerePlan(), norden: 'oben' };
+  if (!text) return leer;
+  try {
+    const roh = JSON.parse(text);
+    const plan = {};
+    for (const [index, id] of Object.entries(roh.plan || {})) {
+      const feld = Number(index);
+      if (feldGueltig(feld) && symbole.some((s) => s.id === id)) plan[feld] = id;
+    }
+    const norden = KANTEN.some((k) => k.id === roh.norden) ? roh.norden : 'oben';
+    return { plan, norden };
+  } catch {
+    return leer;
+  }
 }
 
 /**

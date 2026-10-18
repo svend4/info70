@@ -39,7 +39,7 @@
 
 ## Устойчивость
 
-`lade()` принимает только **известные символы на допустимых клетках**:
+`ladeZustand()` принимает только **известные символы на допустимых клетках**:
 иначе старая или испорченная запись незаметно исказила бы план.
 `planText` и `legende` тоже пропускают неизвестные id.
 
@@ -55,5 +55,5 @@ Werbefrei, без аккаунтов, без внешних запросов. Х
 
 ```bash
 npm run dev   # http://localhost:8070/apps/kita-kartograph/
-node --test apps/kita-kartograph/test/*.test.mjs
+npm test      # 29 Tests: Logik und Projektregeln
 ```

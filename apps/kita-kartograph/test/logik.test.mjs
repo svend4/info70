@@ -3,11 +3,12 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
   GROESSE, KANTEN, felderAnzahl, zeileVon, spalteVon, feldName,
-  setzeSymbol, leerePlan, anzahlGelegt, legende, planText, pruefeDaten,
+  setzeSymbol, setzeNorden, ladeZustand, leerePlan, anzahlGelegt, legende, planText, pruefeDaten,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/symbole.json', import.meta.url), 'utf8'));
 const kopie = () => JSON.parse(JSON.stringify(daten));
+const S = daten.symbole;
 
 test('Symboldaten sind gültig', () => {
   assert.deepEqual(pruefeDaten(daten), []);
@@ -24,29 +25,27 @@ test('jedes Zeichen ist nur einmal vergeben – sonst wäre der Plan mehrdeutig'
   assert.ok(pruefeDaten(doppelt).some((f) => /wird schon für etwas anderes benutzt/.test(f)));
 });
 
-test('Feldrechnung: Zeile, Spalte und Name', () => {
-  assert.equal(zeileVon(0), 0);
-  assert.equal(spalteVon(0), 0);
+test('Feldrechnung an den vier Ecken: Zeile, Spalte und Name', () => {
+  const ecken = [0, GROESSE - 1, felderAnzahl() - GROESSE, felderAnzahl() - 1];
+  assert.deepEqual(ecken.map((i) => [zeileVon(i), spalteVon(i)]), [[0, 0], [0, 5], [5, 0], [5, 5]]);
   assert.equal(zeileVon(GROESSE), 1);
   assert.equal(spalteVon(GROESSE), 0);
-  assert.equal(zeileVon(felderAnzahl() - 1), GROESSE - 1);
-  assert.equal(spalteVon(felderAnzahl() - 1), GROESSE - 1);
-  assert.equal(feldName(0), 'Reihe 1, Platz 1');
-  assert.equal(feldName(felderAnzahl() - 1), `Reihe ${GROESSE}, Platz ${GROESSE}`);
+  assert.equal(feldName(0), 'Reihe 1, Spalte 1');
+  assert.equal(feldName(felderAnzahl() - 1), `Reihe ${GROESSE}, Spalte ${GROESSE}`);
 });
 
 test('setzeSymbol: legen, ersetzen, wieder wegnehmen – und das Original bleibt heil', () => {
   const leer = leerePlan();
-  const a = setzeSymbol(leer, 3, 'tuer');
+  const a = setzeSymbol(leer, 3, 'tuer', S);
   assert.equal(a[3], 'tuer');
   assert.equal(anzahlGelegt(leer), 0, 'das Original wurde verändert');
   assert.equal(anzahlGelegt(a), 1);
   // anderes Symbol ersetzt
-  const b = setzeSymbol(a, 3, 'fenster');
+  const b = setzeSymbol(a, 3, 'fenster', S);
   assert.equal(b[3], 'fenster');
   assert.equal(anzahlGelegt(b), 1);
   // dasselbe Symbol nimmt weg
-  const c = setzeSymbol(b, 3, 'fenster');
+  const c = setzeSymbol(b, 3, 'fenster', S);
   assert.equal(c[3], undefined);
   assert.equal(anzahlGelegt(c), 0);
   // frühere Stände bleiben unverändert
@@ -54,32 +53,70 @@ test('setzeSymbol: legen, ersetzen, wieder wegnehmen – und das Original bleibt
   assert.equal(b[3], 'fenster');
 });
 
+test('setzeSymbol: ungültiges Feld oder unbekanntes Symbol lässt den Plan unverändert', () => {
+  const plan = setzeSymbol(leerePlan(), 0, 'tuer', S);
+  for (const feld of [-1, felderAnzahl(), 1.5, 'x', undefined]) {
+    assert.equal(setzeSymbol(plan, feld, 'tisch', S), plan, `Feld ${feld} wurde angenommen`);
+  }
+  assert.equal(setzeSymbol(plan, 1, 'gibtesnicht', S), plan);
+});
+
 test('die Zeichenerklärung zeigt nur, was wirklich liegt – mit Anzahl', () => {
   let plan = leerePlan();
-  assert.deepEqual(legende(plan, daten.symbole), []);
-  plan = setzeSymbol(plan, 0, 'tisch');
-  plan = setzeSymbol(plan, 1, 'tisch');
-  plan = setzeSymbol(plan, 7, 'tuer');
-  const l = legende(plan, daten.symbole);
+  assert.deepEqual(legende(plan, S), []);
+  plan = setzeSymbol(plan, 0, 'tisch', S);
+  plan = setzeSymbol(plan, 1, 'tisch', S);
+  plan = setzeSymbol(plan, 7, 'tuer', S);
+  const l = legende(plan, S);
   assert.deepEqual(l.map((s) => [s.id, s.anzahl]), [['tuer', 1], ['tisch', 2]], 'Reihenfolge folgt der Symbolliste');
   // Nach dem Wegnehmen verschwindet der Eintrag wieder
-  plan = setzeSymbol(plan, 7, 'tuer');
-  assert.deepEqual(legende(plan, daten.symbole).map((s) => s.id), ['tisch']);
+  plan = setzeSymbol(plan, 7, 'tuer', S);
+  assert.deepEqual(legende(plan, S).map((s) => s.id), ['tisch']);
 });
 
 test('planText liest den Plan von oben links nach unten rechts vor', () => {
   let plan = leerePlan();
-  assert.equal(planText(plan, daten.symbole), 'Der Plan ist noch leer.');
-  plan = setzeSymbol(plan, 8, 'tuer');
-  plan = setzeSymbol(plan, 2, 'fenster');
-  const text = planText(plan, daten.symbole);
+  assert.equal(planText(plan, S), 'Der Plan ist noch leer.');
+  plan = setzeSymbol(plan, 8, 'tuer', S);
+  plan = setzeSymbol(plan, 2, 'fenster', S);
+  const text = planText(plan, S);
   assert.match(text, /Tür \(1×\)/);
   assert.match(text, /Fenster \(1×\)/);
   // Feld 2 kommt vor Feld 8, egal in welcher Reihenfolge gelegt wurde
-  assert.ok(text.indexOf('Reihe 1, Platz 3') < text.indexOf('Reihe 2, Platz 3'), 'Reihenfolge stimmt nicht');
+  assert.ok(text.indexOf('Reihe 1, Spalte 3') < text.indexOf('Reihe 2, Spalte 3'), 'Reihenfolge stimmt nicht');
   // Ein unbekanntes Symbol im Plan taucht nicht auf, statt zu stören
   const kaputt = { ...plan, 5: 'gibtesnicht' };
-  assert.ok(!planText(kaputt, daten.symbole).includes('gibtesnicht'));
+  assert.ok(!planText(kaputt, S).includes('gibtesnicht'));
+});
+
+test('setzeNorden: Kante setzen gibt einen neuen Zustand, der alte bleibt', () => {
+  const zustand = { plan: setzeSymbol(leerePlan(), 4, 'tisch', S), norden: 'oben' };
+  for (const k of KANTEN) {
+    const neu = setzeNorden(zustand, k.id);
+    assert.equal(neu.norden, k.id);
+    assert.equal(neu.plan[4], 'tisch', 'der Plan ging verloren');
+  }
+  assert.equal(zustand.norden, 'oben', 'das Original wurde verändert');
+  assert.throws(() => setzeNorden(zustand, 'nordost'), /Unbekannte Kante/);
+});
+
+test('ladeZustand: gespeicherter Zustand kommt unverändert zurück, Müll wird verworfen', () => {
+  const gut = { plan: { 0: 'tuer', 35: 'musik' }, norden: 'links' };
+  assert.deepEqual(ladeZustand(JSON.stringify(gut), S), gut);
+
+  const verfaelscht = JSON.stringify({
+    plan: { 0: 'tuer', 36: 'tisch', '-1': 'tisch', 2: 'gibtesnicht', 3: 'fenster', x: 'tisch' },
+    norden: 'nordost',
+  });
+  assert.deepEqual(ladeZustand(verfaelscht, S), { plan: { 0: 'tuer', 3: 'fenster' }, norden: 'oben' });
+});
+
+test('ladeZustand: nichts gespeichert oder kaputter Text ergibt einen leeren Plan', () => {
+  const leer = { plan: {}, norden: 'oben' };
+  assert.deepEqual(ladeZustand(null, S), leer);
+  assert.deepEqual(ladeZustand('', S), leer);
+  assert.deepEqual(ladeZustand('{kaputt', S), leer);
+  assert.deepEqual(ladeZustand('null', S), leer);
 });
 
 test('Gesprächsimpulse und Schritte führen zum echten Raum', () => {

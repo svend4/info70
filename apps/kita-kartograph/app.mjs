@@ -8,12 +8,14 @@
 //
 // Ein Klick baut die Seite NICHT neu auf: #app ist eine aria-live-Region,
 // ein Komplettaustausch würde bei jedem gelegten Zeichen alles vorlesen.
+// Das gilt auch für die Himmelsrichtung: ihre Knöpfe werden nur umgefärbt.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
+import daten from './daten/symbole.json' with { type: 'json' };
 import {
   GROESSE, KANTEN, felderAnzahl, feldName,
-  setzeSymbol, leerePlan, anzahlGelegt, legende, planText, pruefeDaten,
+  setzeSymbol, setzeNorden, ladeZustand, leerePlan, anzahlGelegt, legende, planText, pruefeDaten,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -22,45 +24,42 @@ bootAnzeige();
 const SPEICHER = 'kartograph.plan';
 const LOESCH_KNOPF = 'alles-loeschen';
 const app = document.getElementById('app');
-const daten = await fetch('daten/symbole.json').then((r) => r.json());
 const symbolVon = (id) => daten.symbole.find((s) => s.id === id) ?? null;
 
-// Reihenfolge beachten: lade() liefert BEIDE Werte zurück, statt `norden`
-// von innen zu setzen. Täte es das, liefe es in die temporale Todeszone
-// der noch nicht initialisierten Variable – und der catch-Zweig würde den
-// ReferenceError verschlucken und den Plan stillschweigend leeren.
-const gespeichert = lade();
+function liesSpeicher() {
+  try {
+    return localStorage.getItem(SPEICHER);
+  } catch {
+    return null;
+  }
+}
+
+const gespeichert = ladeZustand(liesSpeicher(), daten.symbole);
 let plan = gespeichert.plan;
 let norden = gespeichert.norden;
 let gewaehlt = daten.symbole[0].id;
 let felder = new Map();
 let symbolKnoepfe = new Map();
+let nordenKnoepfe = new Map();
+let nordAnzeige = null;
+let planGruppe = null;
 let legendeBox = null;
 let statusZeile = null;
 
-function lade() {
+function sichere() {
   try {
-    const roh = JSON.parse(localStorage.getItem(SPEICHER) || '{}');
-    const sauber = {};
-    // Nur bekannte Symbole auf gültigen Feldern übernehmen: Ein alter oder
-    // verfälschter Eintrag soll den Plan nicht unsichtbar verfälschen.
-    for (const [index, id] of Object.entries(roh.plan || {})) {
-      const n = Number(index);
-      if (Number.isInteger(n) && n >= 0 && n < felderAnzahl() && symbolVon(id)) sauber[n] = id;
-    }
-    const kante = KANTEN.some((k) => k.id === roh.norden) ? roh.norden : 'oben';
-    return { plan: sauber, norden: kante };
+    localStorage.setItem(SPEICHER, JSON.stringify({ plan, norden }));
   } catch {
-    return { plan: leerePlan(), norden: 'oben' };
+    // Ohne Speicher (privates Fenster, gesperrt) bleibt der Plan bis zum Neuladen sichtbar.
   }
 }
 
-function sichere() {
-  localStorage.setItem(SPEICHER, JSON.stringify({ plan, norden }));
+function knopfKlasse(an) {
+  return `k-knopf k-knopf--klein ${an ? '' : 'k-knopf--neutral'}`;
 }
 
 function tippeFeld(index) {
-  plan = setzeSymbol(plan, index, gewaehlt);
+  plan = setzeSymbol(plan, index, gewaehlt, daten.symbole);
   sichere();
   schreibeFeld(index);
   aktualisiereNebenteile();
@@ -70,16 +69,38 @@ function waehleSymbol(id) {
   gewaehlt = id;
   for (const [sid, knopf] of symbolKnoepfe) {
     const an = sid === id;
-    knopf.className = `k-knopf k-knopf--klein ${an ? '' : 'k-knopf--neutral'}`;
+    knopf.className = knopfKlasse(an);
     knopf.setAttribute('aria-pressed', String(an));
   }
   if (statusZeile) statusZeile.textContent = statusText();
 }
 
+function waehleNorden(id) {
+  const neu = setzeNorden({ plan, norden }, id);
+  plan = neu.plan;
+  norden = neu.norden;
+  sichere();
+  markiereNorden();
+}
+
+function markiereNorden() {
+  for (const [id, knopf] of nordenKnoepfe) {
+    const an = id === norden;
+    knopf.className = knopfKlasse(an);
+    knopf.setAttribute('aria-pressed', String(an));
+  }
+  if (nordAnzeige) nordAnzeige.textContent = `🧭 Norden ist ${kantenName()}`;
+  if (planGruppe) planGruppe.setAttribute('aria-label', `Plan des Raumes, ${GROESSE} mal ${GROESSE} Felder. Norden ist ${kantenName()}.`);
+}
+
+function kantenName() {
+  return KANTEN.find((k) => k.id === norden).name;
+}
+
 function statusText() {
   const s = symbolVon(gewaehlt);
   const gelegt = anzahlGelegt(plan);
-  return `Ausgewählt: ${s.emoji} ${s.name}. Auf dem Plan liegen ${gelegt} ${gelegt === 1 ? 'Zeichen' : 'Zeichen'}.`;
+  return `Ausgewählt: ${s.emoji} ${s.name}. Auf dem Plan liegen ${gelegt} Zeichen.`;
 }
 
 function schreibeFeld(index) {
@@ -105,6 +126,7 @@ function legendeInhalt() {
     el('ul', { style: 'margin:0;padding-left:1.2rem' },
       ...eintraege.map((s) => el('li', {}, `${s.emoji} = ${s.name}${s.anzahl > 1 ? ` (${s.anzahl}×)` : ''}`))),
     el('button', {
+      'data-kennung': 'vorlesen-legende',
       class: 'k-knopf k-knopf--neutral k-knopf--klein',
       style: 'margin-top:0.5rem',
       onclick: () => vorlesen(planText(plan, daten.symbole)),
@@ -116,29 +138,34 @@ function planKarte() {
   const knoepfe = [];
   for (let i = 0; i < felderAnzahl(); i++) {
     const knopf = el('button', {
+      'data-kennung': `feld-${i}`,
       class: 'k-knopf k-knopf--neutral',
-      style: 'aspect-ratio:1;padding:0;min-height:0;display:flex;align-items:center;justify-content:center',
+      style: 'padding:0;display:flex;align-items:center;justify-content:center',
       onclick: () => tippeFeld(i),
     });
     felder.set(i, knopf);
     schreibeFeld(i);
     knoepfe.push(knopf);
   }
-  const kante = KANTEN.find((k) => k.id === norden);
+  nordAnzeige = el('p', { style: 'text-align:center;font-weight:700;margin:0.2rem 0' });
+  planGruppe = el('div', {
+    role: 'group',
+    style: `display:grid;grid-template-columns:repeat(${GROESSE},1fr);gap:0.3rem;max-width:22rem;margin:0.5rem auto`,
+  }, ...knoepfe);
+  const nordKnoepfe = KANTEN.map((k) => {
+    const knopf = el('button', {
+      'data-kennung': `norden-${k.id}`,
+      onclick: () => waehleNorden(k.id),
+    }, `🧭 Norden ${k.name}`);
+    nordenKnoepfe.set(k.id, knopf);
+    return knopf;
+  });
+  markiereNorden();
   return el('section', { class: 'k-karte' },
     el('h2', { style: 'margin-top:0' }, '🗺️ Euer Raum'),
-    el('p', { style: 'text-align:center;font-weight:700;margin:0.2rem 0' }, `🧭 Norden ist ${kante.name}`),
-    el('div', {
-      role: 'group',
-      'aria-label': `Plan des Raumes, ${GROESSE} mal ${GROESSE} Felder. Norden ist ${kante.name}.`,
-      style: `display:grid;grid-template-columns:repeat(${GROESSE},1fr);gap:0.3rem;max-width:22rem;margin:0.5rem auto`,
-    }, ...knoepfe),
-    el('div', { class: 'k-antworten', role: 'group', 'aria-label': 'Wo ist Norden?' },
-      ...KANTEN.map((k) => el('button', {
-        class: `k-knopf k-knopf--klein ${norden === k.id ? '' : 'k-knopf--neutral'}`,
-        'aria-pressed': String(norden === k.id),
-        onclick: () => { norden = k.id; sichere(); render(); },
-      }, `🧭 Norden ${k.name}`))));
+    nordAnzeige,
+    planGruppe,
+    el('div', { class: 'k-antworten', role: 'group', 'aria-label': 'Wo ist Norden?' }, ...nordKnoepfe));
 }
 
 function symbolKarte() {
@@ -150,7 +177,8 @@ function symbolKarte() {
       ...daten.symbole.map((s) => {
         const an = gewaehlt === s.id;
         const knopf = el('button', {
-          class: `k-knopf k-knopf--klein ${an ? '' : 'k-knopf--neutral'}`,
+          'data-kennung': `zeichen-${s.id}`,
+          class: knopfKlasse(an),
           'aria-pressed': String(an),
           'aria-label': s.name,
           onclick: () => waehleSymbol(s.id),
@@ -177,6 +205,7 @@ function begleitKarte() {
       el('p', { style: 'font-weight:700;margin-top:0' }, 'Fragen zum Weiterreden:'),
       el('ul', { style: 'margin:0;padding-left:1.2rem' }, ...daten.fragen.map((f) => el('li', {}, f)))),
     el('button', {
+      'data-kennung': 'vorlesen-begleit',
       class: 'k-knopf k-knopf--neutral k-knopf--klein',
       style: 'margin-top:0.5rem',
       onclick: () => vorlesen(`${daten.schritte.join(' ')} ${daten.fragen.join(' ')}`),
@@ -190,9 +219,14 @@ function datenKarte() {
     el('div', { class: 'k-antworten' },
       el('button', {
         id: LOESCH_KNOPF,
+        'data-kennung': 'loeschen',
         class: 'k-knopf k-knopf--neutral',
         onclick: () => {
-          localStorage.removeItem(SPEICHER);
+          try {
+            localStorage.removeItem(SPEICHER);
+          } catch {
+            // Ohne Speicher gibt es nichts zu löschen.
+          }
           plan = leerePlan();
           norden = 'oben';
           render();
@@ -204,6 +238,7 @@ function datenKarte() {
 function render() {
   felder = new Map();
   symbolKnoepfe = new Map();
+  nordenKnoepfe = new Map();
   app.replaceChildren(...[
     el('h1', { class: 'k-titel' }, '🗺️ Kita-Kartograph'),
     el('p', { class: 'k-untertitel' }, 'Wir zeichnen unseren Raum von oben'),
@@ -214,10 +249,13 @@ function render() {
     datenKarte(),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werbefrei · ohne Anmeldung · keine Namen · Daten bleiben auf diesem Gerät · '),
-      el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
+      el('a', { href: 'eltern.html', style: FUSS_LINK }, '👪 Für Eltern'), el('span', {}, ' · '),
+      el('a', { href: '../../impressum.html', style: FUSS_LINK }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
 }
+
+// Fußlinks mindestens 48 px hoch (docs/02, Berührung).
+const FUSS_LINK = 'display:inline-block;min-height:48px;line-height:48px;padding:0 0.2rem';
 
 const fehler = pruefeDaten(daten);
 if (fehler.length) {

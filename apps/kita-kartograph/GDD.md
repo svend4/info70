@@ -44,10 +44,11 @@ ist kartographisch: Ein Plan hat eine Leserichtung.
 
 ## 5. Robustheit
 
-`lade()` übernimmt nur **bekannte Symbole auf gültigen Feldern**. Ein
+`ladeZustand()` übernimmt nur **bekannte Symbole auf gültigen Feldern**. Ein
 alter oder verfälschter Eintrag würde den Plan sonst unsichtbar
-verfälschen. `planText` und `legende` überspringen unbekannte ids
-ebenfalls, statt zu stören.
+verfälschen. Bei jedem Lesefehler kommt ein leerer Plan mit Norden oben.
+`planText` und `legende` überspringen unbekannte ids ebenfalls, statt zu
+stören.
 
 ## 6. Politik-Konformität (docs/02)
 
@@ -60,17 +61,47 @@ Kind. eltern.html, im Sammelband.
 
 ## 7. Tests
 
-`test/logik.test.mjs` (8): Daten gültig; jedes Zeichen nur einmal
+`test/logik.test.mjs`: Daten gültig; jedes Zeichen nur einmal
 vergeben (Mutation geprüft); Feldrechnung an allen vier Ecken;
-`setzeSymbol` legt, ersetzt und nimmt weg, ohne das Original zu ändern;
-die Zeichenerklärung zeigt nur Gelegtes, mit Anzahl und stabiler
-Reihenfolge, und leert sich wieder; `planText` sortiert nach Feld und
-ignoriert unbekannte Symbole; Gesprächsimpulse sind Fragen und die
+`setzeSymbol` legt, ersetzt und nimmt weg, ohne das Original zu ändern,
+und lässt den Plan bei ungültigem Feld oder Symbol unverändert; die
+Zeichenerklärung zeigt nur Gelegtes, mit Anzahl und stabiler Reihenfolge,
+und leert sich wieder; `planText` sortiert nach Feld und ignoriert
+unbekannte Symbole; `setzeNorden` lässt den Plan stehen und lehnt
+unbekannte Kanten ab; `ladeZustand` verwirft Müll und fällt bei kaputtem
+Text auf einen leeren Plan zurück; Gesprächsimpulse sind Fragen und die
 Schritte führen in den echten Raum und zur Sonne; kein bewertendes Wort
 im Datensatz.
+
+`test/regeln.test.mjs` prüft die Projektregeln aus dem
+Bauauftrag GEM-10: keine Eingabefelder, Speicherung nur über
+`kartograph.plan` in `localStorage` (Ausnahme, siehe 9), keine Netzaufrufe,
+Daten per JSON-Import, keine Zufallsquelle, Grundgerüst mit CSP,
+`aria-live` auf `#app`, Netzwerk-Wächter, Knopfhöhe 48 px,
+`data-kennung` auf jedem Knopf, Himmelsrichtung ohne Neuaufbau, kein
+Druck, keine Bewertung, Seitenangabe je Zeichen und die Testzahl hier.
+
+Die Summe ist 29 Tests (`npm test`).
 
 ## 8. Erweiterungen (Katalog)
 
 Zweite Ebene für das Außengelände, Weg-Modus („zeichne deinen Weg zur
 Tür“), Übergabe an `klassen-koffer-auswertung`, Symbol-Karten zum
 Ausdrucken für die Magnettafel.
+
+## 9. Offen
+
+- Speicherung des letzten Plans (`kartograph.plan`): Die Vorlagenregel
+  „keine Speicherung“ und docs/02 Z. 25–26 widersprechen sich. Die App
+  speichert derzeit; die Regelprüfung erlaubt genau diesen Schlüssel.
+  Entscheidung: Regel präzisieren oder Speicher streichen.
+- Ort auf der Karte finden (Katalog, S. 138): liegt in `deutschland-kompass`.
+  Entscheidung: Verweis genügt oder eigene Karte.
+- Herkunftsländer-Ansicht, Europakarte, Klassen-Koffer-Export, Außengelände
+  und Weg-Modus: nicht gebaut.
+- Symbol-Karten zum Ausdrucken: nicht gebaut; deshalb keine Druckregeln.
+- Altersgrenze: Katalog 5–7, App „ab 5“ ohne Obergrenze.
+- Favicon (A3): fehlt, der Browser meldet 404.
+- Vorlesefunktion (F2): gebaut, die Entscheidung dazu steht aus.
+- Seitenangaben ohne Markierung „noch nicht von einem Menschen geprüft“ (A18).
+- Zitatgrenze (A10 b): dieser Bauauftrag verwendet 6 Wörter.
