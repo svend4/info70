@@ -156,3 +156,38 @@ Gebaut, alle drei als „teilweise“ im Katalog markiert:
 
 Alle drei: Seitenangaben nur maschinell geprüft (A18). Der Browser-Lauf bei 360 px ist automatisiert; der
 Druck mit echtem Drucker und mit Fachkräften steht aus. Die Fehler aus der Gegenprüfung sind umgesetzt.
+
+## H. Analyse der unklaren Einheiten (Stand Welle 91)
+
+Ergebnis einer Zuordnung gegen die vorhandenen Apps. Empfehlungen sind Vorschläge, keine Entscheidungen.
+
+- **№6 Frischluft-Rituale-Kartei:** teilweise in `frischluft-familie` (Eltern, 3–5). Altersstufe 1–3 und Ritualkarten fehlen.
+  Entscheidung nötig: Das Immunsystem-Versprechen der Einheit ist im Repo als unbelegt ausgewiesen.
+- **№7 Fühl- und Sortier-Werkstatt:** teilweise in `dinge-des-alltags` (3–5, Bildschirm). Empfehlung: neu bauen für 2–3,
+  weil Altersstufe und Form sich ändern. (Analyse schlug „ausbauen“ vor; die Begründung spricht dagegen.)
+- **№8 Kleine Forscher ohne Bildschirm:** `mess-labor` passt nicht (5–12, Bildschirm). Empfehlung: neu bauen.
+  Die Analyse nannte „ausbauen“, ihre eigene Begründung widerspricht dem; hier gilt die Begründung.
+- **№9 Mathe-Anfänge-Spielkartei:** teilweise in `mathe-entdecker` (5–7, Quiz). Empfehlung: neu bauen (2–3, Körper und Dinge).
+- **№10 Tages- und Jahreszeiten-Ritualkarten:** Jahreszeiten gedeckt in `jahreszeiten-rad` und `wetter-forscher`, Tageszeiten
+  und Altersstufe 2–3 fehlen. Empfehlung: neu bauen (Bildschirm-Apps taugen nicht als Basis für unter 3).
+- **№11 Bewegungsbilder-Karten:** `tier-tanz-impulse` und `wie-bewegt-sich` sind Kinder-Bildschirm-Werkzeuge (3–5 und 5–7).
+  Empfehlung: neu bauen als Druckfassung für 1–3.
+- **№12 Mal- und Matsch-Impulskartei 1–3:** `erste-kuenstler` hat gleiche Altersstufe und Form, aber 8 statt ca. 61 Impulse.
+  Empfehlung: ausbauen.
+- **№13 Bau-Meister-Karten:** `morgenkreis-wochenplaner-u3` führt nur die Themenliste, bewusst ohne Inhalte.
+  Empfehlung: neu bauen; die Frage, ob Schrittkarten in den Planer gehören, ist eine Entscheidung.
+- **№14 Kleine-Helfer-Dienste-Set:** `tischdienst-trainer` (4–7, Bildschirm) und `aemtli-rad` (Schule). Entscheidung nötig.
+- **№15 Anzucht-Kartei:** `mini-gaertner-begleiter` hat Thema und Kulturen, aber kein Karten-Set für 3–5. Empfehlung: ausbauen.
+  Vorab: das vorhandene Pflanztagebuch prüfen.
+- **Content-Pack №8 Kreisspiele:** `bewegungs-schatzkiste` mit 1 Karte für 3–5, Vorlage für ca. 20. Empfehlung: ausbauen.
+- **Content-Pack №9 Farbwörter-Schatz:** `farb-labor` (5–7). Der Katalog nennt die Engine `quiz-kern`. Vor dem Bau klären:
+  `quiz-kern` speichert den Rekord im localStorage (`packages/quiz-kern/src/quiz.mjs`, Zeile 253) und vergibt Ränge nach Punkten
+  (Zeile 255). Das verletzt die Projektregeln. Der Befund betrifft mehrere Apps, die auf `quiz-kern` aufbauen (siehe Abschnitt D).
+- **Content-Pack №4 Mein Ort, mein Land, unsere Erde:** `deutschland-kompass` (5–7 mit Erwachsenen). Fehlt: Stufe Straße/Stadt
+  und Bundesland. Empfehlung: ausbauen.
+- **Content-Pack №5 Tierkinder und ihre Familien:** `geschichten-werkstatt` ist für 8–12 mit Kind-Bildschirm,
+  `klanggeschichten-erzeuger` für 1–3. Entscheidung nötig.
+- **Funktion №3 Naturschutz-Rat:** `mitmach-arena` hat Beteiligung und Datei-Export; Abstimmung von Kindern ist nach A13
+  und A19 zu entscheiden. Empfehlung: ausbauen, nach der Entscheidung.
+- **Funktion №1 Trostvers-Generator:** `familienschatz-reime` hat keinen Generator und keinen Kindernamen. Der Name eines
+  Kindes wäre ein personenbezogenes Datum. Entscheidung nötig.
