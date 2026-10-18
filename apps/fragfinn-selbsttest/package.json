@@ -4,5 +4,8 @@
   "private": true,
   "description": "fragFINN-Selbsttest: Content-Pack auf der kriterien-check-Engine - Betreiber pruefen die fragFINN-Aufnahmekriterien mit Hilfetexten und erhalten einen lokalen Pruefbericht (Datei-Export). Zielgruppe: Erwachsene.",
   "license": "AGPL-3.0-only",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "type": "module"
 }

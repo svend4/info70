@@ -31,14 +31,18 @@ offizielles Prüfergebnis – die verbindliche Prüfung macht fragFINN.
 
 Keine externen Anfragen (NetzwerkWaechter), nur `ffst.status`/`ffst.notiz`
 in localStorage + Löschknopf, Datei-Export lokal per Blob, werbefrei,
-Impressum. Angaben aus öffentlicher Recherche, ohne Gewähr.
+Impressum. Eingabehinweis am Notizfeld: „Keine Namen von Kindern eingeben.“
+(sichtbar, per aria-describedby). Angaben aus öffentlicher Recherche, ohne Gewähr.
 
 ## 6. Tests
 
 `test/kriterien.test.mjs`: ≥4 Bereiche/≥10 Kriterien, eindeutige IDs,
 Selbsttest-Kennzeichnung, je Aussage/Hilfe/Bezug, Abdeckung der fragFINN-
 Aufnahmethemen (Kindeignung, Interaktion, Links, Werbetrennung,
-Datensparsamkeit, Impressum).
+Datensparsamkeit, Impressum). `test/eingabe-hinweis.test.mjs`: Hinweis
+„Keine Namen von Kindern eingeben.“ als eigenes sichtbares Element direkt vor
+dem Notizfeld, per aria-describedby verknüpft, Feldname „Notizen“ unverändert.
+Gesamt 8 Tests (vorher 3).
 
 ## 7. Erweiterungen (Katalog)
 
