@@ -19,7 +19,7 @@ function aktualisiere() {
 }
 
 function eingabe(label, key, platz) {
-  const input = el('input', { type: 'text', value: cfg[key], maxlength: 80, style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem', 'aria-label': label, placeholder: platz });
+  const input = el('input', { type: 'text', value: cfg[key], maxlength: 80, style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem', 'aria-label': label, 'aria-describedby': 'erb-geraet-hinweis', placeholder: platz });
   input.addEventListener('input', () => { cfg[key] = input.value; aktualisiere(); });
   return el('label', { style: 'display:block;margin:0.4rem 0' }, el('span', { style: 'display:block;font-weight:600;font-size:0.9rem;margin-bottom:0.2rem' }, label), input);
 }
@@ -42,6 +42,8 @@ function render() {
       }, `${x.name} (${x.artikel})`)))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '2) Angaben (nur für den Brief, werden nicht gespeichert)'),
+      // Sichtbarer Hinweis bei den Eingabefeldern. Im Druck ausgeblendet (druck.css).
+      el('p', { id: 'erb-geraet-hinweis', class: 'erb-nur-bildschirm', style: 'font-size:0.9rem;font-weight:700;margin:0 0 0.5rem' }, 'Eingaben bleiben auf diesem Gerät, sie werden nicht gespeichert und nicht gesendet.'),
       eingabe('Verantwortliche Stelle / Empfänger', 'empfaenger', 'z. B. Datenschutz der KinderApp GmbH'),
       eingabe('Dienst / Angebot', 'dienst', 'z. B. name-der-app.de'),
       eingabe('Ihr Name', 'absender', 'z. B. Erika Musterfrau'),

@@ -16,7 +16,13 @@
   оговоркой о жалобе в надзорный орган (Art. 77). Копировать / `.txt` /
   печать.
 - **Datenvermeidung:** данные живут только в памяти страницы и **не
-  сохраняются** (тест проверяет: в коде нет `setItem`).
+  сохраняются** (тест проверяет: в коде нет `setItem`). Над полями стоит
+  подсказка «Eingaben bleiben auf diesem Gerät, sie werden nicht gespeichert
+  und nicht gesendet.».
+- **Имя ребёнка** остаётся в поле «Name des Kindes / der betroffenen Person»:
+  без него письмо не привязано к человеку. Для этого поля сознательно нет
+  общей подсказки «Keine Namen von Kindern eingeben.» (исключение записано в
+  `test/regeln.test.mjs`).
 - `logik.mjs` (чистая): `BRIEFE`, `findeBrief`, `baueBrief`.
 
 Образцы без гарантии, не юридическая консультация.

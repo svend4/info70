@@ -32,6 +32,9 @@ besonders starke Kinder-Löschrecht (Erwägungsgrund 65) betont.
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei. Es wird NICHTS
 gespeichert – die Angaben leben nur im Seitenspeicher (Test: kein setItem).
+Sichtbarer Hinweis bei den Eingabefeldern: „Eingaben bleiben auf diesem Gerät,
+sie werden nicht gespeichert und nicht gesendet.“ Das Namensfeld des Kindes
+bleibt (Zweck des Briefes); dort steht bewusst kein Kinder-Standardhinweis.
 Export/Druck lokal. Muster ohne Gewähr, keine Rechtsberatung.
 
 ## 6. Tests
@@ -40,6 +43,12 @@ Export/Druck lokal. Muster ohne Gewähr, keine Rechtsberatung.
 baueBrief übernimmt Angaben + Betreff + Fristhinweis + Art. 77, Löschantrag
 mit Kinder-Löschrecht (Erwägungsgrund 65), Widerruf setzt den Zweck ein,
 Platzhalter bei leeren Angaben, keine externen Links, Datenvermeidung.
+
+`test/regeln.test.mjs`: Hinweis „Eingaben bleiben auf diesem Gerät …“ bei den
+Angabenfeldern (aria-describedby, im Druck ausgeblendet); Ausnahme für das
+Namensfeld des Kindes mit Begründung (Zweck des Briefes); Ist-Prüfung ohne
+Speicher-, Cookie- und Netzaufrufe in app.mjs und logik.mjs. Gesamt 9 Tests
+(6 + 3).
 
 ## 7. Erweiterungen (Katalog)
 

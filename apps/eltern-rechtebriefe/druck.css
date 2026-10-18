@@ -8,6 +8,7 @@
   .k-app > * { display: none !important; }
   .k-app > *:has(.erb-nur-druck) { display: block !important; }
   .erb-nur-druck { display: block !important; }
+  .erb-nur-bildschirm { display: none !important; }
   .k-app > *:has(.erb-nur-druck) > *:not(.erb-nur-druck) { display: none !important; }
   .erb-nur-druck {
     white-space: pre-wrap;
