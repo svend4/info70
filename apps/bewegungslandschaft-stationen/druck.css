@@ -1,0 +1,66 @@
+/* Bewegungslandschaften-Plakate Krippe: Bildschirm und Druck.
+   Auf dem Bildschirm steuert die Auswahl den Druckbereich. Beim Drucken
+   verschwinden Kopf, Auswahl und Fuss (.bsl-nur-bildschirm). Uebrig bleiben
+   nur die gewaehlten Karten, je Karte ein Blatt A4 quer, ohne Zeichen,
+   Kaestchen oder Namenszeile. */
+
+.bsl-knopfreihe { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.6rem; }
+.bsl-steuertitel { font-weight: 600; margin: 0 0 0.4rem; }
+.bsl-zaehler { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
+.bsl-druckbereich { display: flex; flex-direction: column; gap: 1rem; }
+.bsl-titel { font-size: 1.35rem; margin: 0 0 0.2rem; color: var(--k-blau-dunkel); }
+.bsl-quelle { font-size: 0.9rem; color: #4b5563; margin: 0 0 0.6rem; }
+.bsl-abschnitt { margin: 0 0 0.6rem; }
+.bsl-ueberschrift { font-weight: 700; margin: 0 0 0.15rem; }
+.bsl-zeile { margin: 0 0 0.15rem; font-size: 0.95rem; }
+.bsl-fuss { font-size: 0.8rem; color: #4b5563; margin: 0.6rem 0 0; }
+
+@media print {
+  @page { size: A4 landscape; margin: 12mm 15mm; }
+  .bsl-nur-bildschirm { display: none !important; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0;
+    display: block;
+  }
+
+  .bsl-druckbereich { display: block; gap: 0; }
+
+  /* Jede Karte auf ein eigenes Blatt, nie ueber einen Umbruch zerrissen. */
+  .k-karte.bsl-karte {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .k-karte.bsl-karte:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .bsl-titel {
+    font-size: 28pt;
+    color: #000;
+    margin: 0 0 4pt;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #000;
+  }
+  .bsl-quelle { font-size: 11pt; color: #000; margin: 0 0 12pt; }
+  .bsl-abschnitt { margin: 0 0 12pt; break-inside: avoid; }
+  .bsl-ueberschrift { font-size: 13pt; margin: 0 0 3pt; }
+  .bsl-zeile { font-size: 15pt; margin: 0 0 3pt; }
+  .bsl-fuss { font-size: 10pt; color: #000; margin-top: 16pt; }
+}

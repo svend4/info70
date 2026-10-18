@@ -1,0 +1,225 @@
+{
+  "titel": "Entdecker-Karten: Tiere und Pflanzen vor der Tür",
+  "sinne": {
+    "seite": 50,
+    "text": "Ziel nach Praleska, S. 50: Tiere und Pflanzen der nächsten Umgebung mit allen Sinnen wahrnehmen (Eigenentwurf)."
+  },
+  "hinweis": "Mit der Fachkraft draußen beobachten (Eigenentwurf).",
+  "hinweisBildschirm": "Nicht jedes Tier ist draußen zu sehen. Dann zeigt die Fachkraft ein Bild oder ahmt den Laut nach (Eigenentwurf).",
+  "gruppen": [
+    {
+      "id": "tiere",
+      "name": "Tiere",
+      "seite": 51,
+      "quelle": "Eigenentwurf nach S. 51: Tiere erkennen und benennen an Aussehen, Bewegung und Lauten. Genannt sind Katze, Hund, Kuh, Huhn, Fuchs, Hase, Bär; die Quelle nennt sie mit „u. a.“."
+    },
+    {
+      "id": "pflanzen",
+      "name": "Pflanzen",
+      "seite": 51,
+      "quelle": "Eigenentwurf nach S. 51: Pflanzen der Umgebung benennen: Baum, Strauch, Gras."
+    },
+    {
+      "id": "stoffe",
+      "name": "Stoffe",
+      "seite": 51,
+      "quelle": "Eigenentwurf nach S. 51: Stoffe der unbelebten Natur: Wasser, Schnee, Eis, Sand, Ton, Steine."
+    },
+    {
+      "id": "jahreszeiten",
+      "name": "Jahreszeiten",
+      "seite": 51,
+      "quelle": "Eigenentwurf nach S. 51: Helle Zeichen der Jahreszeiten: Herbstlaub, Schnee, blühende Pflanzen."
+    }
+  ],
+  "karten": [
+    {
+      "id": "tier-katze",
+      "gruppe": "tiere",
+      "titel": "Katze",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Fell, Ohren, Schwanz: Welche Farbe und Form haben sie?" },
+        { "art": "hören", "text": "Miauen oder Schnurren: Welcher Laut ist zu hören?" },
+        { "art": "bewegen", "text": "Wie geht die Katze: schleichen, springen, laufen?" }
+      ]
+    },
+    {
+      "id": "tier-hund",
+      "gruppe": "tiere",
+      "titel": "Hund",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Fell, Schnauze, Ohren: Was fällt auf?" },
+        { "art": "hören", "text": "Bellen oder Winseln: Welcher Laut ist zu hören?" },
+        { "art": "bewegen", "text": "Wie läuft der Hund: schnell, langsam, mit wedelndem Schwanz?" }
+      ]
+    },
+    {
+      "id": "tier-kuh",
+      "gruppe": "tiere",
+      "titel": "Kuh",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Fell, Beine, Kopf: Welche Farbe hat die Kuh?" },
+        { "art": "hören", "text": "Muhen: Die Fachkraft ahmt den Laut nach." },
+        { "art": "bewegen", "text": "Wie geht die Kuh: langsam, mit schweren Schritten?" }
+      ]
+    },
+    {
+      "id": "tier-huhn",
+      "gruppe": "tiere",
+      "titel": "Huhn",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Federn, Kamm, Schnabel: Welche Farbe haben sie?" },
+        { "art": "hören", "text": "Gackern: Die Fachkraft ahmt den Laut nach." },
+        { "art": "bewegen", "text": "Wie bewegt sich das Huhn: picken, scharren, flattern?" }
+      ]
+    },
+    {
+      "id": "tier-fuchs",
+      "gruppe": "tiere",
+      "titel": "Fuchs",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Fell, Schwanz, Ohren: Welche Farbe hat das Fell?" },
+        { "art": "hören", "text": "Bellen oder Schreien: Die Fachkraft ahmt den Laut nach." },
+        { "art": "bewegen", "text": "Wie bewegt sich der Fuchs: schleichen, springen, rennen?" }
+      ]
+    },
+    {
+      "id": "tier-hase",
+      "gruppe": "tiere",
+      "titel": "Hase",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Ohren, Fell, Hinterbeine: Was fällt auf?" },
+        { "art": "hören", "text": "Hasen sind meist still: Woran sieht man, dass einer da ist?" },
+        { "art": "bewegen", "text": "Wie hoppelt der Hase: in langen Sprüngen?" }
+      ]
+    },
+    {
+      "id": "tier-baer",
+      "gruppe": "tiere",
+      "titel": "Bär",
+      "seite": 51,
+      "anregungen": [
+        { "art": "sehen", "text": "Fell, Tatzen, Schnauze: Was fällt auf?" },
+        { "art": "hören", "text": "Brummen oder Knurren: Die Fachkraft ahmt den Laut nach." },
+        { "art": "bewegen", "text": "Wie geht der Bär: watschelnd, auf vier Tatzen?" }
+      ]
+    },
+    {
+      "id": "pflanze-baum",
+      "gruppe": "pflanzen",
+      "titel": "Baum",
+      "seite": 51,
+      "anregungen": [
+        { "art": "benennen", "text": "Das ist ein Baum." },
+        { "art": "draußen suchen", "text": "Einen Baum in der Nähe suchen und zeigen." }
+      ]
+    },
+    {
+      "id": "pflanze-strauch",
+      "gruppe": "pflanzen",
+      "titel": "Strauch",
+      "seite": 51,
+      "anregungen": [
+        { "art": "benennen", "text": "Das ist ein Strauch." },
+        { "art": "draußen suchen", "text": "Einen Strauch in der Nähe suchen und zeigen." }
+      ]
+    },
+    {
+      "id": "pflanze-gras",
+      "gruppe": "pflanzen",
+      "titel": "Gras",
+      "seite": 51,
+      "anregungen": [
+        { "art": "benennen", "text": "Das ist Gras." },
+        { "art": "draußen suchen", "text": "Eine Stelle mit Gras suchen und zeigen." }
+      ]
+    },
+    {
+      "id": "stoff-wasser",
+      "gruppe": "stoffe",
+      "titel": "Wasser",
+      "seite": 51,
+      "anregungen": [
+        { "art": "anfassen, beobachten", "text": "Wie fühlt es sich an? Wohin fließt es?" }
+      ]
+    },
+    {
+      "id": "stoff-schnee",
+      "gruppe": "stoffe",
+      "titel": "Schnee",
+      "seite": 51,
+      "anregungen": [
+        { "art": "anfassen, beobachten", "text": "Wie fühlt er sich an? Was passiert in der Hand?" }
+      ]
+    },
+    {
+      "id": "stoff-eis",
+      "gruppe": "stoffe",
+      "titel": "Eis",
+      "seite": 51,
+      "anregungen": [
+        { "art": "anfassen, beobachten", "text": "Wie fühlt es sich an? Was geschieht in der warmen Hand?" }
+      ]
+    },
+    {
+      "id": "stoff-sand",
+      "gruppe": "stoffe",
+      "titel": "Sand",
+      "seite": 51,
+      "anregungen": [
+        { "art": "anfassen, beobachten", "text": "Wie fühlt er sich an? Wie rieselt er durch die Finger?" }
+      ]
+    },
+    {
+      "id": "stoff-ton",
+      "gruppe": "stoffe",
+      "titel": "Ton",
+      "seite": 51,
+      "anregungen": [
+        { "art": "anfassen, beobachten", "text": "Wie fühlt er sich an? Lässt er sich formen?" }
+      ]
+    },
+    {
+      "id": "stoff-steine",
+      "gruppe": "stoffe",
+      "titel": "Steine",
+      "seite": 51,
+      "anregungen": [
+        { "art": "anfassen, beobachten", "text": "Wie fühlen sie sich an? Welche Form und Farbe haben sie?" }
+      ]
+    },
+    {
+      "id": "jahr-herbstlaub",
+      "gruppe": "jahreszeiten",
+      "titel": "Herbstlaub",
+      "seite": 51,
+      "anregungen": [
+        { "art": "beobachten", "text": "Welche Farben hat das Laub? Liegt es am Boden?" }
+      ]
+    },
+    {
+      "id": "jahr-schnee",
+      "gruppe": "jahreszeiten",
+      "titel": "Schnee",
+      "seite": 51,
+      "anregungen": [
+        { "art": "beobachten", "text": "Ist Schnee zu sehen? Wo liegt er?" }
+      ]
+    },
+    {
+      "id": "jahr-bluete",
+      "gruppe": "jahreszeiten",
+      "titel": "Blüte",
+      "seite": 51,
+      "anregungen": [
+        { "art": "beobachten", "text": "Welche Pflanze blüht? Welche Farbe hat die Blüte?" }
+      ]
+    }
+  ]
+}

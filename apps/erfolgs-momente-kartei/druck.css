@@ -1,0 +1,41 @@
+/* Erfolgs-Momente-Kartei: Druckansicht. Gedruckt wird nur der Druckbereich mit
+   den gewählten Karten. Titel, Auswahl und Fuß der Bildschirmseite verschwinden.
+   Auf dem Papier stehen keine Häkchen, Kästchen, Punkte, Sterne, Emojis,
+   keine Namenszeile und keine Tages- oder Wochentagsfelder (docs/02). */
+
+@media print {
+  .ek-nur-bildschirm { display: none !important; }
+
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .ek-druckbereich { display: block; }
+
+  .ek-karte {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.5rem 0.7rem;
+    margin: 0 0 0.45rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ek-kartentitel { font-size: 1.1rem; margin: 0 0 0.3rem; }
+  .ek-label { font-weight: 700; font-size: 0.9rem; margin: 0.35rem 0 0.1rem; }
+  .ek-text, .ek-impuls, .ek-zitat, .ek-kopf { margin: 0.15rem 0; }
+  .ek-zitat { font-style: italic; }
+  .ek-eintrag { margin-bottom: 0.4rem; }
+  .ek-fuss { font-size: 0.8rem; margin: 0.35rem 0 0; }
+
+  a { color: #000; text-decoration: none; }
+}

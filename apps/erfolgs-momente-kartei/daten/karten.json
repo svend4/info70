@@ -1,0 +1,131 @@
+{
+  "titel": "Erfolgs-Momente-Kartei",
+  "hinweis": "Die Karten fragen nach der Lage: Raum, Material, Zeit und Gruppengröße. Sie beschreiben gemeinsame Tätigkeiten der ganzen Gruppe, keine einzelnen Kinder, und ordnen kein Kind ein. Auf dem Papier steht nur, was Sie gewählt haben. Nichts wird gespeichert.",
+  "karten": [
+    {
+      "id": "morgenkreis",
+      "titel": "Morgenkreis",
+      "rolle": "Ansage des Tagesplans. Wer mag, sagt im Kreis den nächsten Punkt an und zeigt dazu das passende Bild. Jedes Kind darf übernehmen, keines muss.",
+      "anregung": "S. 15",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Gruppengröße", "frage": "Wie viele Kinder passen in den Kreis, sodass jede Ansage gehört wird?", "seite": "S. 15" },
+        { "bedingung": "Zeit", "frage": "Wie viel Zeit hat der Kreis, damit jede Ansage ohne Eile möglich ist?", "seite": "S. 15" },
+        { "bedingung": "Material", "frage": "Liegen die Bildkarten für die Tagespunkte griffbereit, sodass niemand im Kreis suchen muss?", "seite": "S. 15" }
+      ]
+    },
+    {
+      "id": "tisch-decken",
+      "titel": "Tisch decken",
+      "rolle": "Platzdienst. Wer mag, legt an jedem Platz Teller, Becher und Serviette hin. Jedes Kind darf an einem Platz beginnen, keines muss.",
+      "anregung": "S. 15",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Material", "frage": "Reichen Teller und Becher für alle Plätze, ohne dass nachgeholt werden muss?", "seite": "S. 15" },
+        { "bedingung": "Raum", "frage": "Wie weit ist der Weg zwischen Abstellplatz und Tischen, damit auch jüngere Kinder ihn ohne Hilfe gehen können?", "seite": "S. 15" },
+        { "bedingung": "Zeit", "frage": "Wie viel Zeit ist vor dem Essen eingeplant, damit das Decken in Ruhe geschehen kann?", "seite": "S. 15" }
+      ]
+    },
+    {
+      "id": "garderobe",
+      "titel": "Garderobe",
+      "rolle": "Ordnungsposten im Flur. Wer mag, hängt herabgefallene Jacken zurück an die Haken und stellt Schuhe paarweise ab. Jedes Kind darf, keines muss.",
+      "anregung": "S. 15",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Material", "frage": "Hat jedes Kind einen Haken, der über ein Bild- oder Farbzeichen zu finden ist?", "seite": "S. 15" },
+        { "bedingung": "Raum", "frage": "Wie viel Platz haben die Kinder vor der Garderobe, wenn mehrere gleichzeitig anziehen?", "seite": "S. 15" },
+        { "bedingung": "Zeit", "frage": "Wie viel Zeit braucht die ganze Gruppe zum Anziehen, und ist dafür Zeit eingeplant?", "seite": "S. 15" }
+      ]
+    },
+    {
+      "id": "aufraeumen",
+      "titel": "Gemeinsam aufräumen",
+      "rolle": "Kistenteam. Wer mag, räumt eine Materialkiste ein, deren Bild am Regal hängt. An einer Kiste dürfen mehrere Kinder gleichzeitig arbeiten. Jedes Kind darf, keines muss.",
+      "anregung": "S. 15",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Material", "frage": "Trägt jede Kiste ein Bild, damit das Einräumen ohne Erklärung gelingt?", "seite": "S. 15" },
+        { "bedingung": "Zeit", "frage": "Wie viel Zeit liegt zwischen der Ankündigung und dem Ende, damit niemand hetzen muss?", "seite": "S. 15" },
+        { "bedingung": "Gruppengröße", "frage": "Wie viele Kinder können gleichzeitig räumen, ohne sich gegenseitig im Weg zu stehen?", "seite": "S. 15" }
+      ]
+    },
+    {
+      "id": "spaziergang",
+      "titel": "Spaziergang",
+      "rolle": "Wegweisung. Wer mag, führt die Gruppe bis zur nächsten Ecke. Die Rolle wechselt bei jeder Pause, und wer möchte, darf sie übernehmen. Jedes Kind darf, keines muss.",
+      "anregung": "S. 15",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Zeit", "frage": "Welche Strecke schafft die ganze Gruppe ohne Erschöpfung, damit die Wegweisung für alle machbar bleibt?", "seite": "S. 15" },
+        { "bedingung": "Raum", "frage": "Gibt es auf der Strecke einen Ort zum gemeinsamen Warten, an dem die Gruppe zusammenbleibt?", "seite": "S. 15" },
+        { "bedingung": "Gruppengröße", "frage": "Wie viele Erwachsene begleiten die Gruppe, damit Aufsicht und Wegweisung gleichzeitig gesichert sind?", "seite": "S. 15" }
+      ]
+    },
+    {
+      "id": "singen",
+      "titel": "Singen im Kreis",
+      "rolle": "Takt. Wer mag, gibt den Takt mit einem Klanginstrument oder den Händen vor. Die Gruppe folgt, und die Rolle darf wechseln. Jedes Kind darf, keines muss.",
+      "anregung": "S. 16",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Zeit", "frage": "Wie lang darf ein Lied sein, damit die Gruppe bis zum Ende aufmerksam mitgeht?", "seite": "S. 16" },
+        { "bedingung": "Raum", "frage": "Ist der Abstand im Kreis so groß, dass Kinder sich hören und sehen können?", "seite": "S. 16" },
+        { "bedingung": "Material", "frage": "Liegen genug Instrumente bereit, damit nicht um dasselbe Instrument gewartet werden muss?", "seite": "S. 16" }
+      ]
+    },
+    {
+      "id": "bewegungsspiel",
+      "titel": "Bewegungsspiel im Kreis",
+      "rolle": "Bewegungsvorgabe. Wer mag, zeigt eine Bewegung vor, die alle nachmachen. Jedes Kind darf an die Reihe kommen, niemand muss.",
+      "anregung": "S. 15",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Raum", "frage": "Ist der Platz frei von Hindernissen und groß genug für lebhafte Bewegung ohne Zusammenstoß?", "seite": "S. 15" },
+        { "bedingung": "Gruppengröße", "frage": "Wie viele Kinder passen in den Kreis, bevor die Runde zu lang wird?", "seite": "S. 15" },
+        { "bedingung": "Zeit", "frage": "Wie endet die Runde, sodass niemand ausscheidet und niemand verliert?", "seite": "S. 15" }
+      ]
+    },
+    {
+      "id": "essen",
+      "titel": "Gemeinsam essen",
+      "rolle": "Schöpfdienst. Wer mag, reicht die Schüsseln am Tisch weiter und fragt die Nachbarn, ob sie noch etwas möchten. Jedes Kind darf, keines muss.",
+      "anregung": "S. 16",
+      "einordnung": "Eigenentwurf",
+      "impulse": [
+        { "bedingung": "Material", "frage": "Steht jede Schüssel so, dass jedes Kind ohne Hilfe der Erwachsenen greifen kann?", "seite": "S. 16" },
+        { "bedingung": "Zeit", "frage": "Wie viel Zeit hat die Gruppe am Tisch, ohne dass Wartezeit entsteht?", "seite": "S. 16" },
+        { "bedingung": "Gruppengröße", "frage": "Gilt eine Regel, wie viel genommen wird, für alle Kinder gleich?", "seite": "S. 16" }
+      ]
+    }
+  ],
+  "quelle": {
+    "id": "quelle",
+    "titel": "Quellenkarte: Erfolg in der Gruppe",
+    "einordnung": "Quelle",
+    "eintraege": [
+      {
+        "seite": "S. 15",
+        "thema": "Erfolg in gemeinsamer Tätigkeit",
+        "text": "Erfolg hängt nach der Quelle an gemeinsamen, für Kinder bedeutsamen Tätigkeiten. Die Fachkraft schafft dafür Situationen des Erfolgs. Die Karten setzen deshalb bei Tätigkeiten der ganzen Gruppe an.",
+        "zitate": ["совместной, значимой для детей деятельности", "ситуации успеха"],
+        "uebertragung": "Eigenentwurf"
+      },
+      {
+        "seite": "S. 16",
+        "thema": "Anerkennung als Gruppenhaltung",
+        "text": "Die Quelle nennt die Anerkennung durch Gleichaltrige im Zusammenhang mit Erfolgssituationen. Die Karten lesen sie als Haltung der Gruppe, nicht als Rangfolge.",
+        "zitate": ["признанию их сверстниками"],
+        "uebertragung": "Eigenentwurf"
+      },
+      {
+        "seite": "S. 15",
+        "thema": "Psychische Gesundheit der Gruppe als Aufgabe",
+        "text": "Die Quelle sieht die Pflege der psychischen Gesundheit als Aufgabe der Fachkraft. Dazu gehören ein gutes Mikroklima in der Kindergruppe und menschliche Beziehungen unter den Kindern.",
+        "zitate": ["работа педагога по поддержанию психологического здоровья"],
+        "uebertragung": "Eigenentwurf"
+      }
+    ],
+    "fussnote": "Quelle: Programm Praleska in russischer Sprache, Seiten 15 und 16. Zitate sind kurz. Die deutschen Sätze sind Übertragung und Eigenentwurf. Material für die Fachkraft, nicht für Kinder."
+  }
+}

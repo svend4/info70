@@ -1,0 +1,11 @@
+{
+  "name": "@info70/entdecker-karten-natur",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Entdecker-Karten: Tiere und Pflanzen vor der Tuer. Druck-Kartenset fuer Fachkraefte (Altersgruppe 1-3, fachkraftgeleitet, offline) nach Praleska, S. 50 bis 51.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
+}

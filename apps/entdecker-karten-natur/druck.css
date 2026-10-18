@@ -1,0 +1,79 @@
+/* Entdecker-Karten: Druckansicht. Auf dem Bildschirm ist .ek-nur-druck unsichtbar.
+   Beim Drucken verschwinden Kopf, Filter, Knöpfe und Vorschau (.ek-nur-bildschirm).
+   Übrig bleibt der Kartenbogen: sechs Karten je A4-Blatt, jede Karte mit einem
+   gestrichelten Rahmen als Schneidelinie. Keine Zeichen, keine Kästchen, keine Punkte. */
+
+.ek-nur-druck { display: none; }
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+
+  .ek-nur-bildschirm { display: none !important; }
+  .ek-nur-druck { display: block; }
+
+  html { font-size: 10pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0;
+    display: block;
+  }
+
+  /* Ein Blatt füllt eine A4-Seite; danach beginnt das nächste. */
+  .ek-blatt {
+    display: flex;
+    flex-direction: column;
+    height: 268mm;
+    break-after: page;
+    page-break-after: always;
+  }
+  .ek-blatt:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .ek-blatt-kopf { margin: 0 0 3mm; font-size: 8.5pt; color: #000; }
+  .ek-blatt-kopf p { margin: 0 0 0.6mm; }
+  .ek-blatt-titel { font-size: 11pt; font-weight: 700; }
+
+  /* Zwei Spalten, drei Reihen: sechs Karten je Blatt. */
+  .ek-raster {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4mm;
+  }
+
+  /* Gestrichelter Rahmen = Schneidelinie. Keine Häkchen, keine Kästchen. */
+  .ek-druck .ek-karte {
+    box-shadow: none;
+    background: #fff;
+    border: 0.35mm dashed #000;
+    border-radius: 0;
+    margin: 0;
+    padding: 3mm;
+    overflow: hidden;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ek-druck .ek-karte-kopf { font-size: 7.5pt; color: #000; margin: 0 0 1mm; }
+  .ek-druck .ek-karte-titel { font-size: 13pt; color: #000; margin: 0 0 2mm; }
+  .ek-druck .ek-anregung { font-size: 9pt; margin: 0 0 1.8mm; color: #000; }
+  .ek-druck .ek-art { font-weight: 700; color: #000; }
+  .ek-druck .ek-marke {
+    display: inline;
+    border: 0;
+    background: none;
+    padding: 0;
+    margin-left: 1mm;
+    font-size: 7pt;
+    color: #000;
+    white-space: normal;
+  }
+  .ek-druck .ek-fuss { font-size: 7pt; color: #000; margin: 0; }
+}

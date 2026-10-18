@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <meta name="description" content="Entdecker-Karten: Tiere und Pflanzen vor der Tür. Druck-Kartenset für Fachkräfte mit Tieren, Pflanzen, Stoffen und Jahreszeiten zum Beobachten draußen. Offline, ohne Speicherung." />
+  <title>Entdecker-Karten: Tiere und Pflanzen vor der Tür</title>
+  <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" />
+  <link rel="stylesheet" href="druck.css" />
+  <style>
+    /* Bildschirmansicht. Die Druckansicht steht in druck.css. */
+    .ek-knopfzeile { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .ek-label { font-weight: 600; margin: 0 0 0.3rem; }
+    .ek-hinweis-text { font-size: 0.9rem; color: #4b5563; margin: 0.6rem 0 0; }
+    .ek-vorschau { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+    @media (min-width: 640px) { .ek-vorschau { grid-template-columns: 1fr 1fr; } }
+    .ek-karte { margin: 0; padding: 1rem 1.1rem; }
+    .ek-karte-kopf { margin: 0 0 0.2rem; font-size: 0.85rem; color: #4b5563; }
+    .ek-karte-titel { margin: 0 0 0.45rem; font-size: 1.2rem; }
+    .ek-anregung { margin: 0 0 0.45rem; font-size: 0.95rem; }
+    .ek-art { font-weight: 700; color: var(--k-blau-dunkel); }
+    .ek-marke {
+      display: inline-block; margin-left: 0.25rem; padding: 0.05rem 0.45rem;
+      font-size: 0.78rem; border-radius: 999px; background: #eff6ff;
+      color: var(--k-blau-dunkel); border: 1px solid var(--k-blau); white-space: nowrap;
+    }
+    .ek-fuss { margin: 0.4rem 0 0; font-size: 0.8rem; color: #4b5563; }
+  </style>
+</head>
+<body>
+  <main class="k-app" id="app" aria-live="polite" style="max-width:760px">
+    <noscript>Diese Seite braucht JavaScript. Es werden keine Daten gesammelt und keine Verbindungen nach draußen aufgebaut.</noscript>
+  </main>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

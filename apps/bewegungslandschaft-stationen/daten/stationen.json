@@ -1,0 +1,183 @@
+{
+  "titel": "Bewegungslandschaften-Plakate Krippe",
+  "katalog": "Einheit №5 aus docs/10. Altersgruppe 1 bis 3 Jahre, offline.",
+  "quellenHinweis": "Quelle: Praleska, Textfassung, S. 57 bis 60. Die Zahlen stammen aus der Quelle. Die Wörter sind übertragen und auf jeder Karte als Eigenentwurf gekennzeichnet.",
+  "karten": [
+    {
+      "id": "kriechen",
+      "art": "station",
+      "titel": "Kriechen zwischen Schnüren",
+      "quelle": "Praleska, S. 58",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Zwei parallel gelegte Schnüre; die Quelle nennt hier keine Maße", "seite": "S. 58" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Zwei Schnüre liegen parallel auf dem Boden. Das Kind kriecht auf allen Vieren zwischen ihnen hindurch." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "klettern",
+      "art": "station",
+      "titel": "Klettern mit Gerätehöhe",
+      "quelle": "Praleska, S. 58–60",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Für 1 Jahr bis 1 Jahr 6 Monate: Stehleiter 1,2 m hoch", "seite": "S. 58" },
+            { "text": "Für 1 Jahr 6 Monate bis 2 Jahre: Stehleiter 1,5 m hoch", "seite": "S. 59" },
+            { "text": "Für das dritte Lebensjahr: Gymnastikleiter 1,7 bis 2 m hoch", "seite": "S. 60" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Das Kind steigt auf die Leiter oder das Gerät in der Höhe seiner Altersstufe und klettert wieder herunter. Die Fachkraft bleibt in der Nähe." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "schiefe-ebene",
+      "art": "station",
+      "titel": "Schiefe Ebene",
+      "quelle": "Praleska, S. 59",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Für das dritte Lebensjahr: Höhe 10 bis 30 cm", "seite": "S. 59" },
+            { "text": "Breite 15 bis 20 cm", "seite": "S. 59" },
+            { "text": "Länge 150 bis 200 cm", "seite": "S. 59" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Das Kind geht die schräge Bahn hinauf und wieder herunter. Die Fachkraft bleibt in der Nähe." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "zielwurf-horizontal",
+      "art": "station",
+      "titel": "Zielwurf horizontal",
+      "quelle": "Praleska, S. 59",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Für 1 Jahr 6 Monate bis 2 Jahre: Ziel 50 cm Durchmesser", "seite": "S. 59" },
+            { "text": "Abstand 50 bis 60 cm", "seite": "S. 59" },
+            { "text": "Mit der rechten und mit der linken Hand", "seite": "S. 59" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Das Kind wirft einen Ball mit der rechten und mit der linken Hand auf eine waagerecht liegende Zielfläche." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "zielwurf-vertikal",
+      "art": "station",
+      "titel": "Zielwurf vertikal",
+      "quelle": "Praleska, S. 60",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Für das dritte Lebensjahr: Ziel 50 bis 60 cm Durchmesser, auf Augen- und Brusthöhe des Kindes", "seite": "S. 60" },
+            { "text": "Abstand 80 bis 100 cm", "seite": "S. 60" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Das Kind wirft einen Ball auf eine senkrechte Zielfläche, die auf Augen- und Brusthöhe des Kindes angebracht ist." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "durchkriechen",
+      "art": "station",
+      "titel": "Durchkriechen",
+      "quelle": "Praleska, S. 60",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Unter einer Schnur, einem Stuhl oder einem Tisch hindurch und durch einen Reifen; die Quelle nennt hier keine Maße", "seite": "S. 60" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Das Kind kriecht unter einer Schnur, einem Stuhl oder einem Tisch hindurch und danach durch einen Reifen." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "balancierweg",
+      "art": "station",
+      "titel": "Balancierweg",
+      "quelle": "Praleska, S. 60",
+      "abschnitte": [
+        {
+          "ueberschrift": "Übungsmaß laut Quelle",
+          "zeilen": [
+            { "text": "Gewundene Schnur, Reihe Bausteine, Balken mit geglätteter Oberfläche; die Quelle nennt hier keine Maße", "seite": "S. 60" }
+          ]
+        },
+        {
+          "ueberschrift": "Durchführung (Eigenentwurf)",
+          "zeilen": [
+            { "text": "Das Kind geht den Weg aus Schnur, Bausteinen und Balken entlang und hält dabei das Gleichgewicht." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Übungsname, Durchführung und Wortlaut der Maßangaben. Zahlen wie in der Quelle."
+    },
+    {
+      "id": "aufsicht",
+      "art": "aufsicht",
+      "titel": "Aufsicht und Umgebung",
+      "quelle": "Praleska, S. 57",
+      "abschnitte": [
+        {
+          "ueberschrift": "Hinweise laut Quelle (Übertragung, Eigenentwurf)",
+          "zeilen": [
+            { "text": "„das Kind nicht aus dem Blick der Erwachsenen lassen“", "seite": "S. 57" },
+            { "text": "„potenziell gefährliche Gegenstände aus der Reichweite entfernen“", "seite": "S. 57" }
+          ]
+        },
+        {
+          "ueberschrift": "Eigenentwurf",
+          "zeilen": [
+            { "text": "Geräte, Höhen und Untergrund prüft der Träger; diese Angaben sind Übungsmaße und keine Sicherheitsgrenzen." }
+          ]
+        }
+      ],
+      "fuss": "Eigenentwurf: Wortlaut der Hinweise (Übertragung von S. 57) und der Satz darunter."
+    }
+  ]
+}
