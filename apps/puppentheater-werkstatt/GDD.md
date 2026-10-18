@@ -2,7 +2,7 @@
 
 ## 1. Warum
 Fachkräfte in Gruppen mit Kindern von 5 bis 7 Jahren können Figuren und eine kleine Bühne gemeinsam
-gestalten. Die Praleska beschreibt auf S. 286 bis 288 Gestaltungsaufgaben im Kinder-Design, darunter
+gestalten. Die Praleska beschreibt auf S. 286 bis 288 Themen für Kinderarbeiten im Kinder-Design (Liste „Рекомендуемая тематика детских работ“), darunter
 Afisha (Plakat), Einladungskarten für eine Ausstellung, Elemente für Kulissen, Dekorationen und Puppen
 sowie Kleidung für Puppen. Die Werkstatt macht sie als Karte nutzbar: Auftrag ziehen, Stückanfang
 ziehen, drucken.
@@ -46,7 +46,7 @@ je sechs oder sieben Sätze, selbst geschrieben.
 S. Die Daten sind statisch, die Logik ist klein. Der Aufwand liegt bei der fachlichen Prüfung der Texte.
 
 ## 8. Tests
-38 Tests in zwei Dateien. `test/logik.test.mjs` prüft die Daten gegen die geprüften Zitate und Seiten,
+39 Tests in zwei Dateien. `test/logik.test.mjs` prüft die Daten gegen die geprüften Zitate und Seiten,
 die Bausteine, die Ziehung über den Parameter und den Druckinhalt. `test/regeln.test.mjs` prüft die
 Projektregeln. Details in der README.
 
@@ -60,6 +60,9 @@ Projektregeln. Details in der README.
 - uk und ru: nicht vorhanden, offen. Ob ein Vertep/Batleika-Modul aus docs/10 kommt, ist nicht entschieden;
   es steht nicht auf S. 287 bis 288 und ist nicht gebaut.
 - Der Bildungsplan-Bereich aus docs/10 ist nicht geprüft und nicht übernommen.
+- Seitenangaben: docs/02 Z. 151–152 verlangt für Seitenangaben die Markierung „проверено человеком“. Das Blatt trägt
+  „noch nicht von einem Menschen geprüft“. Die Entscheidung dazu ist A18 in `docs/fragen-und-hinweise.md` (offen).
+- Die Zitatprüfung gegen den Quelltext lief außerhalb des Repos (F3). Im Repo steht die Kopie der geprüften Zitate.
 - Kein Sicherheitssatz auf dem Blatt: Die Vorlage „Spielideen-Kartei“ hat einen für Kleinteile, hier ist keine
   Quellenaussage dafür belegt. Eine Fachkraft entscheidet, ob ein Hinweis für die Materialien kommt.
 - Vorlesefunktion: nicht gebaut. Die Zielgruppe der App sind Fachkräfte; der Geltungsbereich der Checkliste für

@@ -24,7 +24,8 @@ Form. Eine Fachkraft prüft sie.
 ## Was belegt ist
 
 - Abschnitt „Детский дизайн“ (Kinder-Design), Gruppe „ФАНТАЗЕРЫ“, S. 286 bis 288.
-- Gestaltungsaufträge, je mit Seitenangabe:
+- Gestaltungsthemen aus der Liste „Рекомендуемая тематика детских работ“ (S. 286 und S. 288), je mit Seitenangabe.
+  Die Form „Gestaltungsauftrag“ ist Lesart:
   - Plakat: „Афиша для выставки“ (S. 288) und „создание афиши для музыкального «концерта»“ (S. 287).
   - Einladungskarte: „Пригласительные билеты для выставки“ (S. 288). Die Quelle meint eine Ausstellung.
   - Kulisse und Dekoration: „разработка элементов дизайна кукол, кулис, декораций“ (S. 288).
@@ -78,7 +79,9 @@ Eigenentwurf. uk und ru: nicht vorhanden, offen.
 - `app.mjs`: Oberfläche, der Knopf „Neuer Vorschlag“, der Druckknopf (`window.print()`), der
   Netzwerk-Wächter aus `packages/kinderschutz`. Jeder Knopf trägt eine eindeutige `data-kennung`;
   nach jedem Neuaufbau bekommt der Knopf mit derselben Kennung den Fokus zurück.
-  Dies ist die einzige Datei mit Zufall: `Math.random` steht hier einmal und wird als Funktion übergeben.
+  Dies ist die einzige Datei dieser App mit Zufall: `Math.random` steht hier einmal und wird als Funktion übergeben.
+  Das geteilte Modul `packages/kinder-ui/js/komponenten.mjs` hat eine eigene Funktion `mischen()` mit `Math.random`;
+  diese App ruft sie nicht auf.
 - `logik.mjs`: Ziehung, Textzusammenbau und Druckzeilen. Ohne DOM, ohne eigene Zufallsquelle;
   der Zufall kommt als Parameter `rng` (Zahlen von 0 bis unter 1). Damit läuft die Logik in Tests
   mit festen Werten.
@@ -95,7 +98,11 @@ selbst kein Datum und keine Adresse.
 
 ## Offen
 
-Siehe `GDD.md`, Abschnitt „## Offen“.
+Siehe `GDD.md`, Abschnitt „## Offen“. Dazu:
+
+- Seitenangaben: docs/02 Z. 151–152 verlangt die Markierung „проверено человеком“ für Seitenangaben. Das Blatt trägt
+  „noch nicht von einem Menschen geprüft“. Entscheidung A18 in `docs/fragen-und-hinweise.md` (offen).
+- Die Zitatprüfung gegen den Quelltext lief außerhalb des Repos (F3).
 
 ## Tests
 
@@ -104,7 +111,7 @@ Zitate und Seiten, die Bausteine, den Zufall über den Parameter und den Druckin
 `test/regeln.test.mjs` prüft die Projektregeln: keine Eingabefelder, keine Speicherung, keine
 externen Adressen, Zufall nur in `app.mjs`, keine Druckzeichen, keine Namenszeile, Pflichtmarkierung
 je Blatt, Eigenentwurf-Kennzeichnung, Fokus nach Klick, Modellnamen-Freiheit, Testzahl.
-Insgesamt sind es 38 Tests.
+Insgesamt sind es 39 Tests.
 
 ```bash
 node --test apps/puppentheater-werkstatt/test/*.test.mjs

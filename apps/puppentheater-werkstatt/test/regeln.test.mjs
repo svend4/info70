@@ -19,11 +19,19 @@ const lese = (datei) => readFile(new URL(datei, APP), 'utf8');
 const code = Object.fromEntries(await Promise.all(CODE_DATEIEN.map(async (d) => [d, await lese(d)])));
 const alle = Object.fromEntries(await Promise.all(ALLE_DATEIEN.map(async (d) => [d, await lese(d)])));
 
-// Ein Druckblatt für jede Stelle der Auswahl: alle Gestaltungsaufträge und Bausteine.
-const blaetter = [0, 0.2, 0.4, 0.6, 0.8, 0.99].map((w) => neuerVorschlag(daten, () => w));
+// Ein Druckblatt, auf dem jeder Eintrag jeder Liste vorkommt. neuerVorschlag zieht in fester
+// Reihenfolge: Auftrag, Figur, Ort, Problem, Ende. Blatt k nimmt in jeder Liste Eintrag k mod n.
+const ziehungen = [daten.gestaltung.length, daten.bausteine.figur.length, daten.bausteine.ort.length, daten.bausteine.problem.length, daten.bausteine.ende.length];
+const blaetter = Array.from({ length: Math.max(...ziehungen) }, (_, k) => {
+  let j = 0;
+  return neuerVorschlag(daten, () => {
+    const n = ziehungen[j++];
+    return ((k % n) + 0.5) / n;
+  });
+});
 
 test('keine Eingabefelder für Kinder: kein input, textarea, select, form, contenteditable', () => {
-  const muster = /<\s*(input|textarea|select|form)\b|contenteditable|el\(\s*['"](input|textarea|select|form)['"]/i;
+  const muster = /<\s*(input|textarea|select|form)\b|contenteditable|(el|createElement)\(\s*['"](input|textarea|select|form)['"]/i;
   for (const d of ['index.html', 'app.mjs']) {
     assert.ok(!muster.test(code[d]), `${d}: Eingabeelement gefunden`);
   }
@@ -37,9 +45,9 @@ test('keine Speicherung: kein localStorage, sessionStorage, IndexedDB, Cookie od
 });
 
 test('keine externen Adressen, keine Netzaufrufe in den Dateien der App, kein @import', () => {
-  const netz = /\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|importScripts|new Worker/;
+  const netz = /\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|importScripts|new Worker|window\[|globalThis|wss?:/;
   for (const d of CODE_DATEIEN) {
-    assert.ok(!/https?:\/\//i.test(code[d]), `${d}: externe Adresse`);
+    assert.ok(!/https?:\/\/|(?<![:\w])\/\/[\w-]+\.[a-z]{2,}/i.test(code[d]), `${d}: externe Adresse`);
   }
   for (const d of ['app.mjs', 'logik.mjs']) {
     assert.ok(!netz.test(code[d]), `${d}: Netzaufruf gefunden`);
@@ -86,7 +94,8 @@ test('Netzwerk-Wächter: aus packages/kinderschutz importiert und aufgerufen', a
 });
 
 test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen, keine Emojis', () => {
-  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|\p{Extended_Pictographic}/u;
+  // Zeichenblöcke statt Aufzählung: Pfeile, Math-Zeichen, Dingbats, geometrische Formen, Emojis.
+  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙‧▪▫◾◽■□]|[←-⋿⌀-➿⦀-⧿⬀-⯿■-◿・]|\p{Extended_Pictographic}/u;
   for (const [i, v] of blaetter.entries()) {
     assert.ok(!zeichen.test(kartenText(daten, v)), `Blatt ${i}: Druckzeichen im Drucktext`);
   }
@@ -96,7 +105,8 @@ test('keine Druckzeichen: keine Häkchen, Kästchen, Sterne, Punkte als Zeichen,
 });
 
 test('Druckblatt ohne Namenszeile und ohne Tages- oder Wochentagsfeld', () => {
-  const namenUndTage = /\bName\b|Namenszeile|\bDatum\b|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTag\b|_{3,}|…{2,}/i;
+  // „Name“ auch in Zusammensetzungen (Vorname, Nachname, Namensfeld); „Namen“ im Fließtext bleibt erlaubt.
+  const namenUndTage = /Name(?!n\b)|Datum|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTage?\b|_{3,}|…{2,}/i;
   for (const [i, v] of blaetter.entries()) {
     assert.ok(!namenUndTage.test(kartenText(daten, v)), `Blatt ${i}: Namenszeile oder Tagesfeld im Druck`);
   }
@@ -151,6 +161,11 @@ test('druck.css: A4 hoch, Bildschirmelemente nur im Bildschirm, das Blatt wird n
   assert.match(code['app.mjs'], /el\('a', \{ href: '\.\.\/\.\.\/impressum\.html' \}, 'Impressum und Datenschutz'\)/);
 });
 
+test('Knöpfe mindestens 48 px hoch: die gemeinsame Klasse .k-knopf hat min-height 3rem (docs/02, touch ≥ 48 px)', async () => {
+  const kinderCss = await readFile(new URL('../../../packages/kinder-ui/css/kinder.css', import.meta.url), 'utf8');
+  assert.match(kinderCss, /\.k-knopf\s*\{[^}]*min-height:\s*3rem;/);
+});
+
 test('Druckbereich: nur der eine Vorschlag, der Bildschirm-Vorschlag ist nur auf dem Bildschirm', () => {
   const app = code['app.mjs'];
   assert.match(app, /el\('div', \{ class: 'bsk-nur-druck', id: 'druckbereich' \}/);
@@ -160,7 +175,7 @@ test('Druckbereich: nur der eine Vorschlag, der Bildschirm-Vorschlag ist nur auf
 
 test('Fokus nach Klick: jeder Knopf trägt eine data-kennung, die Kennungen sind eindeutig; render() merkt sich den Fokus und setzt ihn zurück', () => {
   const app = code['app.mjs'];
-  const knoepfe = app.match(/el\('button'/g) ?? [];
+  const knoepfe = [...(app.match(/el\('button'/g) ?? []), ...(app.match(/createElement\('button'\)/g) ?? [])];
   const kennungen = app.match(/'data-kennung': /g) ?? [];
   assert.equal(kennungen.length, knoepfe.length, `${knoepfe.length} Knöpfe, aber ${kennungen.length} data-kennung`);
   const feste = [...app.matchAll(/'data-kennung': '([^']+)'/g)].map((m) => m[1]);
@@ -182,17 +197,19 @@ test('keine uk- und ru-Fassung erfunden: der Vermerk steht im Quelltext, in den 
   assert.ok(!/"(uk|ru)"\s*:/.test(code['daten/werkstatt.json']), 'Daten: uk- oder ru-Schlüssel');
 });
 
-test('Modellnamen-Freiheit: in keiner Datei der App allgemeine KI-Begriffe und keine Modellbezeichnung', () => {
+// Modellnamen sind Entscheidung A1 (docs/offene-punkte-kita.md), hier bewusst nicht geprüft.
+test('keine KI-Begriffe in den Dateien der App', () => {
   const muster = /\bKI\b|LLM|Sprachmodell|Chatbot|künstliche Intelligenz/i;
   for (const [d, inhalt] of Object.entries(alle)) {
     assert.ok(!muster.test(inhalt), `${d}: ${inhalt.match(muster)?.[0]}`);
   }
 });
 
-test('keine Wörter der Bewertung (unsicher, Selbstwert, Risiko, Diagnose) in der App', () => {
-  const muster = /unsicher|Selbstwert|Risiko|Diagnose/i;
-  for (const [d, inhalt] of Object.entries(alle)) {
-    assert.ok(!muster.test(inhalt), `${d}: ${inhalt.match(muster)?.[0]}`);
+test('keine Bewertung von Kindern im Code und in den Daten: keine Punkte, Stufe, Rang, Einstufung, Note (docs/02 Z. 141–146)', () => {
+  // Dokumente dürfen solche Wörter verneinen („keine Punkte“), Oberfläche und Daten nicht.
+  const muster = /unsicher|Selbstwert|Risiko|Diagnose|\bPunkte?\b|Rangliste|\bRang\b|Einstufung|\bStufe\b|\bPlatz\b|Prozent|\bSterne?\b|\bErgebnis\b|\bNoten?\b/i;
+  for (const d of CODE_DATEIEN) {
+    assert.ok(!muster.test(code[d]), `${d}: ${code[d].match(muster)?.[0]}`);
   }
 });
 
