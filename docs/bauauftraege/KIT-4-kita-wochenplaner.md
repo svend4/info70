@@ -90,7 +90,7 @@ speicherePlan(plan) -> void
 
 ## 6. Regeln (docs/02)
 
-- [ ] Keine Speicherung (localStorage, sessionStorage, IndexedDB, Cookie, Cache) (docs/02 Z. 17–30). Hinweis: die App speichert `kwp.plan` in localStorage (app.mjs Z. 24–27) mit Löschknopf (Z. 183); siehe Abschnitt 9.
+- [x] Speicherung nur in localStorage für Nutzerdaten mit Löschknopf (docs/02 Z. 25). Entscheidung des Nutzers: `kwp.plan` in localStorage mit Löschknopf ist erlaubt; sessionStorage, IndexedDB, Cookie und Cache bleiben verboten.
 - [ ] Keine Anfragen nach außen; CSP `default-src 'self'` (docs/02 Z. 22–24).
 - [ ] Keine Eingabefelder (docs/02 Z. 17–30, Projektregel). Konflikt: der Planer braucht Eingaben (Tag, Bereich, Altersgruppe, Minuten); siehe Abschnitt 9.
 - [ ] Keine Bewertung, Punkte, Rangliste, Stufe, Name eines Kindes (docs/02 Z. 141–146). Der Planer bewertet den Plan, nicht Kinder; die Oberfläche bittet, keine Kindernamen einzutragen.

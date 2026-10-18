@@ -55,6 +55,9 @@ Prüfe das Ergebnis gegen die Abnahme (Abschnitt 8 des Bauauftrags):
 
 Eine Abweichung behebst du. Die Messung „Neuladen ohne Netz“ ist keine Abnahmebedingung (F4); sie wird berichtet.
 
+- Externe Fakten (Normen, Studienzahlen, Erste-Hilfe-Angaben, Aussagen von Behörden oder Verbänden) stehen nur mit einer Quelle aus dem Praleska-Buch oder mit dem Vermerk „(Eigenentwurf, fachlich nicht geprüft)“ am Satz. Der Test „externe Fakten“ in `regeln.test.mjs` prüft das.
+- Vor jedem Satz „Die Quelle nennt keine …“ suchst du per grep in der Textkopie und nennst das Ergebnis im Bericht. Ohne Treffer-Nachweis steht der Satz nicht.
+
 **Fokus nach einem Bildschirmwechsel (Lehre aus Pilot 1):**
 - Verschwindet der angeklickte Knopf, weil der Bildschirm wechselt, steht der Fokus auf der Überschrift des neuen Bildschirms (`tabindex="-1"` und `.focus()`), nicht auf dem Körper der Seite.
 - Der Browser-Lauf meldet diesen Fall als Abweichung, wenn der Fokus anders liegt. Begründe die Abweichung im Bericht oder behebe sie.

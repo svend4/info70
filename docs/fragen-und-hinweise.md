@@ -64,3 +64,15 @@ Stand: 18.10.2026, nach Welle 91. Dieses Dokument ergänzt `docs/offene-punkte-k
 - **F2. Vorlesefunktion („есть озвучивание“, docs/02 Checkliste).** 116 von 224 Apps rufen `vorlesen()` auf, 108 nicht. Die neuen Fachkraft- und Eltern-Werkzeuge haben keine. Entscheidung: gilt die Regel für Kinder-Apps oder für alle? Bei Fachkraft-Werkzeugen wird die Ausnahme im GDD begründet.
 - **F3. Prüfskripte.** Die Gegenprüfung der Zitate (38 Angaben) fand nur außerhalb des Repos statt; im Repo gibt es für Quellenprüfungen nur Konstanten. Siehe B1 und A10.
 - **F4. Offline nach dem Laden.** `docs/02` (Checkliste) verlangt „Работает офлайн после загрузки“. Tatsächlich haben nur 4 von 227 Apps einen Service Worker. Ein Neuladen ohne Netz kann daher fehlschlagen; das hat die Browserprüfung der Welle 93 gemessen. Entscheidung: Service Worker für alle Apps (ein gemeinsamer Cache, mit Löschknopf für das Gerät), oder die Checkliste auf „ohne Verbindung nach draußen“ begrenzen. Bis dahin sagen die neuen Apps ausdrücklich, dass ein Neuladen ohne Netz nicht zugesichert ist.
+
+## Entscheidungen des Nutzers (18.10.2026)
+
+Die Entscheidungen stammen vom Nutzer (Макс) über die Beobachtungssitzung. Die Umsetzung steht jeweils dabei.
+
+- **F4 (entschieden).** Die Checkliste in `docs/02` lautet jetzt „Без обращений наружу; повторная загрузка офлайн не гарантируется“. Es gibt keinen Service Worker: der Cache ist nach der Speicherregel der Anleitung verboten, und das Risiko veralteter Versionen steigt. Wenn Offline-Betrieb in Kitas ohne WLAN zur echten Anforderung wird, ist das eine eigene Infrastruktur-Einheit.
+- **A7 (entschieden, Umsetzung offen).** Variante (a): `quiz-kern` ohne Rekord und Rang als Standard. Auf dem Abschlussbildschirm und im Duett keine Punkte und kein Pokal-Symbol. Beim Start wird ein alter Rekord einmal gelöscht (`removeItem`). Tests: `localStorage` wirft bei jedem Zugriff; das Ergebnis enthält nicht „Punkte“, „Rekord“ oder „Rang“. Alle 35 Apps werden getestet, die Impressum-Zahl wird per Skript neu gezählt. Eigene Einheit, nicht parallel zu den Workern, erst nach grünem Stand.
+- **KIT-4 (entschieden).** Speicherung in `localStorage` (`kwp.plan`) mit Löschknopf und Eingabefelder für Erwachsene sind erlaubt. Die Apps für Erwachsene mit Eingabefeldern stehen in `docs/erwachsenen-apps.json`; ein Test schlägt an, wenn eine App mit Eingabefeld dort fehlt. Bei jedem Eingabefeld steht der Hinweis „Keine Namen von Kindern eingeben.“
+- **GEM-22 (entschieden).** Im Druck ist der Bildschirm ausgeblendet; das Emoji im Titel steht nur am Bildschirm. Zahl der Experimente: zehn, davon acht aus der Quelle und zwei eigene.
+- **KIT-14 (entschieden).** Die vier Aufgaben stehen oberhalb der Hinweis-Box. Ein Protokoll je Kind wird nicht gebaut.
+- **PRI-5 (offen).** Weder registriert noch gelöscht, bis der Widerspruch zu „Übungsmaß laut Quelle“ nach dem Quelltext aufgelöst ist. Ein Test verbietet die Kombination.
+- **PRI-8 (registriert mit offenem Punkt).** Die Fachprüfung der Sicherheitstexte steht aus.

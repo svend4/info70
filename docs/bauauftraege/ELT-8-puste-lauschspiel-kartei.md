@@ -36,9 +36,9 @@ Blockiert durch: keine
 - Bestand laut Datei: zehn Spiele, davon drei Pustespiele, drei Lautspiele und vier Lauschspiele.
 - Befund zur Quelle: das Versprechen der Quelle, die Übungen bildeten die Grundlage der Artikulation, ist zurückgenommen (docs/10, Abweichung Welle 79). Das Pustespiel-Register darf kein Wirkversprechen tragen.
 - Lücken laut Befund (Ausbau):
-  - Die Übung „слижем с губ варенье“ (S. 67) fehlt im Bestand. Die Ausschlussliste der Datei ist zu prüfen, ob sie dort mit Begründung steht.
+  - Die Übung „слижем с губ варенье“ (S. 67) steht in der Ausschlussliste der Datei mit Begründung (Eintrag a01).
   - Kartentexte in uk und ru fehlen bewusst (GDD Abschnitt 8).
-  - Die Lautfolge der deutschen Konsonanten steht als Beruhigung, nie als Ziel (Eigenentwurf nach deutscher Fachliteratur; die Quelle nennt eine russische Reihenfolge, die nicht übertragbar ist).
+  - Die Lautfolge der deutschen Konsonanten steht als Beruhigung, nie als Ziel (Eigenentwurf, fachlich nicht geprüft; keine Literaturangabe. Die Quelle nennt eine russische Reihenfolge, die nicht übertragbar ist).
 
 ## 4. Daten
 
@@ -99,7 +99,7 @@ Keine Zufallsquelle in der Logikdatei; Zufall kommt als Parameter.
 
 ## 9. Offen
 
-- Die Übung „слижем с губ варенье“ (S. 67) fehlt im Bestand. Entscheidung, ob sie in die Ausschlussliste mit Begründung gehört.
+- Die Übung „слижем с губ варенье“ (S. 67) steht in der Ausschlussliste mit Begründung (a01). Erledigt.
 - Kartentexte uk und ru: der Katalog verlangt sie, die App lässt sie bewusst weg. Entscheidung, ob nachgeholt oder begründet bleibt.
 - Die deutsche Lautfolge ist Eigenentwurf; für Vokale ist keine Erwerbsreihenfolge belegt. Bestätigung offen.
 - Hyperventilations-Warnung wird bewusst nicht gedruckt (docs/10, Abweichung Welle 79).

@@ -1,4 +1,4 @@
-# Bauauftrag KIT-14: Natur-Fürsorge-Karten mit Beobachtungsprotokoll
+# Bauauftrag KIT-14: Natur-Fürsorge-Karten (ohne Beobachtungsprotokoll)
 
 Status: teilweise · Abschnitt: Kita-Werkzeuge (Fachkräfte) · Ziel: Ausbau von apps/natur-fuersorge-karten/
 Blockiert durch: keine
@@ -113,7 +113,7 @@ druckeAuswahl(karten, handlungIds) -> HTML
 - Bildung für nachhaltige Entwicklung und Landespläne: nicht im Text. Katalog-Korrektur.
 - Altersangabe: die Katalogzeile nennt 2–3, die Korrekturnotiz nennt 1 bis 3 (S. 6, S. 44). Die Zeile in docs/10 ist noch nicht angepasst.
 - Aufgaben im russischen Wortlaut: die README sagt, die vier Aufgaben stehen auf den Karten „mit russischem Wortlaut“. Das widerspricht docs/10, Rechtsrahmen Punkt 1 (keine ganzen Sätze). Auf deutsche Umschreibung mit Seitenangabe umstellen; Titel und Begriffe bleiben russisch.
-- Knöpfhöhe: die README nennt 44 px, die Regel verlangt 48 px (docs/02 Z. 50). Angleichen.
+- Knöpfhöhe: erledigt. Die Knöpfe und der Fußlink sind 48 px hoch (Entscheidung und Messung in der Prüfung).
 - Seitenzahlen auf den Karten: die App zeigt die Seite je Karte. Nach dem A18-Standard stehen Seiten nur in den Daten und in Abschnitt 1.
 - Katalog-Angabe „S“ (Aufwand) ist laut GDD ungeklärt.
 - Standard für Seitenangaben (A18, offen): In der App stehen keine Seitenzahlen auf dem Blatt; sie stehen in Abschnitt 1 und in den Daten als „quelle“.
