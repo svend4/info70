@@ -5,10 +5,14 @@
 .plk-nur-druck { display: none; }
 
 @media print {
+  @page { size: A4 portrait; margin: 12mm; }
   .plk-nur-bildschirm { display: none !important; }
   .plk-nur-druck { display: block !important; }
   body { background: #fff; }
   .k-app { max-width: none; padding: 0; }
+
+  /* Eine Karte je Blatt: jede Karte beginnt auf einer neuen Seite. */
+  .plk-karte + .plk-karte { break-before: page; page-break-before: always; }
 
   .plk-karte {
     break-inside: avoid;

@@ -119,5 +119,5 @@ m, b, p, d, t, n, потом f, v, l; позже k, g, ach-Laut и r; поздн
 
 ```sh
 npm run dev
-node --test apps/puste-lauschspiel-kartei/test/*.test.mjs   # 17 тестов
+node --test apps/puste-lauschspiel-kartei/test/*.test.mjs   # 42 Tests
 ```

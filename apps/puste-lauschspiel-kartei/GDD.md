@@ -146,6 +146,10 @@ Quelle nennen dürfen, um es auszuschließen).
 
 ## 10. Tests
 
+Insgesamt 42 Tests: `test/logik.test.mjs` (17) und `test/regeln.test.mjs` (25).
+
+`test/regeln.test.mjs` (25): keine Eingabefelder, keine Speicherung, keine Netzaufrufe, Daten per JSON-Import; Zufall und Uhr nicht in logik.mjs; Druckzeichen nicht auf dem Blatt, Emojis im Quelltext nur dort, wo sie der Bildschirm trägt; keine Namenszeile und kein Tagesfeld; keine Seitenangabe auf dem Blatt; jedes Blatt mit Registerhinweis, als Eigenentwurf gekennzeichnet, und mit dem Block, der für jede Karte gilt; das Dementi auf jedem Pustespiel; eine Karte je Blatt; Links und Knöpfe 48 px hoch; Fokus über data-kennung; die Lippenübung in der Ausschlussliste; kein uk- oder ru-Schlüssel; die Begriffsprüfung der Dateien (ohne Modellnamen, A1); Testzahl in README und GDD.
+
 `test/logik.test.mjs` (17): Daten gültig; das Versprechen ist wörtlich
 zurückgenommen (mit Gegenprobe); eine Pustekarte ohne Dementi ist nicht
 ausdrückbar (drei Gegenproben: fehlend, zu schwach, am falschen Register);

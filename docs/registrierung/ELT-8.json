@@ -1,0 +1,12 @@
+{
+  "id": "ELT-8",
+  "slug": "puste-lauschspiel-kartei",
+  "titel": "Puste- und Lauschspiel-Kartei",
+  "status_neu": "ausgebaut",
+  "app": "puste-lauschspiel-kartei",
+  "tests_app": 42,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/puste-lauschspiel-kartei/\">🫧 Puste- und Lauschspiele – Spiele für 2–3, ohne Übungsversprechen (für Erwachsene)</a>",
+  "readme_zeile": "| `puste-lauschspiel-kartei` | Für Erwachsene: Spiele für 2–3 mit Lauten, Hören und Pusten, ohne Übungsversprechen; Karten je Blatt, Ausschlussliste mit Begründung | kat.№2 |",
+  "docs10_notiz": "ELT-8 ausgebaut: drei Register (Pusten, Spiele mit Lauten, Lauschen), jede gedruckte Karte mit Registerhinweis und Eigenentwurf-Kennzeichnung, Lippenübung in der Ausschlussliste begründet; 42 Tests.",
+  "katalog_korrektur": "Die Lippenübung aus S. 67 ist ausgeschlossen und begründet. Kartentexte uk und ru fehlen bewusst (offen, Entscheidung ausstehend)."
+}

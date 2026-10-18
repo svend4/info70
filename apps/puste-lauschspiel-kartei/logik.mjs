@@ -94,6 +94,36 @@ export function spielText(spiel) {
   ].filter(Boolean).join(' ');
 }
 
+/** Anzeigename je Register für den Registerhinweis auf der Karte. */
+export const REGISTER_NAME = Object.freeze({
+  pustespiel: 'Pustespiel',
+  lautspiel: 'Spiel mit Lauten',
+  lauschspiel: 'Lauschspiel',
+});
+
+/**
+ * Die Zeilen, die auf JEDE gedruckte Karte gehören: das fehlende
+ * Übungsversprechen, das Aufhören, der Weg bei Sorge. Lauschspiele tragen
+ * die Lautstärke dazu. Das Vorwort wird nicht mitgedruckt.
+ */
+export function druckBlock(daten, register) {
+  return [
+    daten.keinTrainingsversprechen,
+    daten.abbruch,
+    daten.wennSorge,
+    register === 'lauschspiel' ? daten.lautstaerke : '',
+  ].filter(Boolean);
+}
+
+/** Der Text, den eine gedruckte Karte trägt. Die Prüfung liest genau ihn. */
+export function kartenDruckText(daten, spiel) {
+  return [
+    `Register: ${REGISTER_NAME[spiel.register]} (Eigenentwurf)`,
+    spielText(spiel),
+    ...druckBlock(daten, spiel.register),
+  ].join(' ');
+}
+
 function texteAus(objekt, felder) {
   const flach = [];
   for (const feld of felder) {
