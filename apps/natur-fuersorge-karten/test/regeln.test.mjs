@@ -187,6 +187,17 @@ test('keine Bewertung von Kindern im Code und in den Daten: keine Punkte, Stufe,
   }
 });
 
+test('KIT-14: die Überschrift der vier Aufgaben steht im Quelltext vor der Hinweis-Box (DOM-Reihenfolge)', () => {
+  // Die Aufgaben-Sektion und die Hinweis-Box werden in einem Aufruf von replaceChildren übergeben:
+  // die Reihenfolge im Quelltext ist die Reihenfolge im DOM.
+  const app = code['app.mjs'];
+  const aufgaben = app.search(/el\('h2'[^\n]*'Die vier Aufgaben \(S\. 96\)'\)/);
+  const hinweis = app.search(/el\('p', \{ style: 'margin-top:0;font-weight:600' \}, daten\.hinweis\)/);
+  assert.ok(aufgaben >= 0, 'Überschrift „Die vier Aufgaben (S. 96)“ fehlt in app.mjs');
+  assert.ok(hinweis >= 0, 'Hinweis-Box (daten.hinweis) fehlt in app.mjs');
+  assert.ok(aufgaben < hinweis, 'die Aufgaben-Überschrift steht nach der Hinweis-Box');
+});
+
 test('Testzahl: README und GDD nennen die Zahl der Tests, die in test/ tatsächlich stehen', async () => {
   const dateien = (await readdir(new URL('test/', APP))).filter((d) => d.endsWith('.test.mjs'));
   let echt = 0;

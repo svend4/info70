@@ -39,7 +39,7 @@ Entwicklungsindikatoren, nicht zu den Handlungen.
 
 ## Prüfung
 
-- 45 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`: Aufgaben und Seiten, Begriffe bis
+- 46 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`: Aufgaben und Seiten, Aufgaben vor der Hinweis-Box, Begriffe bis
   sechs Wörter, Handlungen als Textbeispiele, Eigenentwurf je Karte, Abweisung von Feldern nach Kind,
   Altersangabe, Filter, Druckregeln, Speicher- und Netzregeln, Knopfhöhe und Gegenproben.
 - Die russischen Begriffe sind maschinell auf S. 96 nachgewiesen.

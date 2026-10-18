@@ -40,8 +40,8 @@ Belegt und mit Seite: die vier Aufgaben (S. 96), die Handlungen gießen („по
 
 ## Prüfung
 
-- `npm test` im App-Ordner – 45 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`: vier
-  Aufgaben auf S. 96, Begriffe mit höchstens sechs Wörtern, Handlungen als Textbeispiele, Karten als
+- `npm test` im App-Ordner – 46 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`: vier
+  Aufgaben auf S. 96 vor der Hinweis-Box, Begriffe mit höchstens sechs Wörtern, Handlungen als Textbeispiele, Karten als
   Eigenentwurf, kein Feld nach Kind (Protokoll, Name, Notiz u. a.), Altersangabe 1 bis 3, Filter,
   Druckregeln (keine Zeichen, keine Namenszeile, keine Seitenangabe), Speicher- und Netzregeln,
   Knopfhöhe 48 px, Fokus nach Klick.
