@@ -18,6 +18,9 @@
   спецификацией) и `<meta name="age-de.xml" content="age=…">`.
 - Экспорт `age-de.xml`, `.txt`-отчёта, копирование. Ступень 18 помечается
   как для детских предложений **недопустимая**.
+- Подсказка «Keine Namen von Kindern eingeben.» над полем URL: отдельный
+  элемент прямо перед полем, поле связано через `aria-describedby`; название
+  поля не меняется. Тесты: 13 (было 8).
 - `logik.mjs` (чистая): `empfohleneStufe`, `technischeMittel`, `ageDeXml`,
   `metaTag`, `stufeLabel`, `bericht`.
 

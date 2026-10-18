@@ -33,7 +33,8 @@ grundsätzlich unzulässig markiert (ehrliche Warnung).
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), Auswahl nur in localStorage
-(`jmstv.auswahl`) + „Zurücksetzen“, Downloads lokal per Blob, werbefrei.
+(`jmstv.auswahl`) + „Zurücksetzen“, Downloads lokal per Blob, werbefrei. Eingabehinweis „Keine Namen von Kindern
+eingeben.“ am URL-Feld.
 Werkzeug für Erwachsene ohne eltern.html. Kein Rechtsrat; das age-de.xml ist
 ein Template, dessen Element-Namen gegen die offizielle Spezifikation zu
 prüfen sind.
@@ -44,6 +45,9 @@ prüfen sind.
 (null ohne Auswahl, Maximum, Chat→12), `technischeMittel` (gestuft),
 `stufeLabel`, `ageDeXml` (wohlgeformt, minimum-age, URL-Fallback),
 `metaTag`, `bericht` (Stufe/Mittel/Label + 18er-Warnung).
+`test/eingabe-hinweis.test.mjs`: Hinweis „Keine Namen von Kindern eingeben.“
+am URL-Feld (sichtbar, direkt vor dem Feld, aria-describedby), Feldname
+unverändert. Gesamt 13 Tests (vorher 8).
 
 ## 7. Erweiterungen (Katalog)
 

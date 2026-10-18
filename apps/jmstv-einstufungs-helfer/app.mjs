@@ -15,6 +15,11 @@ const daten = await fetch('daten/einstufung.json').then((r) => r.json());
 const lade = () => JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{"merkmale":[],"interaktion":[],"url":""}');
 const speichere = (s) => localStorage.setItem(SCHLUESSEL, JSON.stringify(s));
 
+// Eingabehinweis am URL-Feld: keine Kindernamen eintragen. Sichtbar, als eigenes Element
+// direkt vor dem Feld; das Feld verweist per aria-describedby darauf. Der Feldname bleibt gleich.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const kinderHinweis = (id) => el('span', { id, style: 'display:block;font-size:0.85rem;color:#4b5563;margin:0 0 0.3rem' }, KINDER_HINWEIS);
+
 function download(name, text, typ = 'text/plain') {
   const url = URL.createObjectURL(new Blob([text], { type: `${typ};charset=utf-8` }));
   const a = el('a', { href: url, download: name });
@@ -53,7 +58,7 @@ function render() {
 
   const urlFeld = el('input', {
     type: 'text', value: s.url ?? '', placeholder: 'https://meine-kinderseite.example',
-    'aria-label': 'URL des Angebots (für das age-de.xml-Label)',
+    'aria-label': 'URL des Angebots (für das age-de.xml-Label)', 'aria-describedby': 'jmstv-hinweis-url',
     style: 'width:100%;padding:0.5rem;border:2px solid var(--k-rand);border-radius:0.5rem',
     oninput: (ev) => { const cur = lade(); cur.url = ev.target.value; speichere(cur); ergebnisNeu(); },
   });
@@ -104,6 +109,7 @@ function render() {
     interaktionKarten,
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.05rem' }, '3. URL des Angebots'),
+      kinderHinweis('jmstv-hinweis-url'),
       urlFeld,
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(SCHLUESSEL); render(); } }, '🧹 Zurücksetzen'))),
