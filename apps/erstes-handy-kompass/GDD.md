@@ -17,8 +17,9 @@ familien-medienvertrag (Regeln), elternabend-kit.
 
 8 Punkte abhaken (Jugendschutz, Standort, Kaufsperre, Notfall, Apps,
 Bildschirmzeit, Sperre/Updates, Nicht-Ärger-Pakt) – je Warum + „So geht’s“
-(Android/iOS). Fortschritt lokal (ehk.status). Am Ende: Kindname ins
-Druckformular tippen → Urkunde „Handy-Führerschein“ drucken.
+(Android/iOS). Fortschritt lokal (ehk.status). Am Ende: Initialen oder
+Spitzname (max. 12 Zeichen) ins Druckformular tippen → Urkunde
+„Handy-Führerschein“ drucken.
 
 ## 4. Didaktik
 
@@ -31,8 +32,9 @@ zum positiven Ritual statt zum Kontroll-Akt.
 
 Reine Anleitung: liest nichts vom Gerät. Keine externen Anfragen
 (NetzwerkWaechter), nur `ehk.status` (Häkchen) in localStorage + Löschknopf.
-Der Kindname wird NUR gedruckt, NICHT gespeichert (Datenvermeidung, per
-Test abgesichert). Werbefrei, Druck-CSS, Impressum.
+Im Urkunden-Feld nur Initialen oder Spitzname (max. 12 Zeichen), mit sichtbarem
+Hinweis am Feld. Der Eintrag wird NUR gedruckt, NICHT gespeichert
+(Datenvermeidung, per Test abgesichert). Werbefrei, Druck-CSS, Impressum.
 
 ## 6. Tests
 
@@ -40,6 +42,12 @@ Test abgesichert). Werbefrei, Druck-CSS, Impressum.
 Pflicht-Punkte (jugendschutz/standort/kaufsperre/notfall/apps), Inhalte
 (116 111, Nicht-Ärger-Pakt, fragFINN), Datenvermeidung (Name nicht
 gespeichert).
+
+`test/regeln.test.mjs`: Namensfeld mit maxlength 12 und neuer Beschriftung,
+Hinweis „Nur Initialen oder einen Spitznamen eintragen, keinen vollen Namen.“
+direkt am Feld (aria-describedby, im Druck ausgeblendet), kein Speichern des
+Namenswerts (nur ein Aufruf von speichere, mit dem Status), Urkunde zeigt den
+Wert live. Gesamt 8 Tests (4 + 4).
 
 ## 7. Erweiterungen (Katalog)
 

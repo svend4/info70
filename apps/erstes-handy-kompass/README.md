@@ -15,10 +15,12 @@ Bildschirmzeit-Absprache, Bildschirmsperre & Updates, **Nicht-Ärger-Pakt**
 
 ## Грамота
 
-Кнопка «Urkunde drucken» даёт грамоту с именем ребёнка и списком
-выполненных пунктов, местом для даты и подписей (`druck.css`). **Имя
-вводится только для печати и не сохраняется** (Datenvermeidung — проверяется
-тестом).
+Кнопка «Urkunde drucken» даёт грамоту со списком выполненных пунктов, местом
+для даты и подписей (`druck.css`). В грамоту вписываются **только инициалы или
+прозвище** (до 12 знаков): поле «Initialen oder Spitzname (nur für die Urkunde)»
+имеет подсказку «Nur Initialen oder einen Spitznamen eintragen, keinen vollen
+Namen.». Значение **не сохраняется** (Datenvermeidung — проверяется тестом в
+`test/regeln.test.mjs`, vier Prüfungen; вместе с `checkliste.test.mjs` 8 Tests).
 
 ## Политика
 

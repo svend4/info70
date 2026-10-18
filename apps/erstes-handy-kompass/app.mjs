@@ -20,10 +20,13 @@ function render() {
   const erledigt = daten.punkte.filter((p) => status[p.code]).length;
   const anteil = Math.round((erledigt / daten.punkte.length) * 100);
 
+  // Nur Initialen oder ein Spitzname (max. 12 Zeichen), kein voller Name.
   const nameFeld = el('input', {
-    type: 'text', maxlength: '30', placeholder: 'Name des Kindes (nur für den Druck)',
+    id: 'ehk-name',
+    type: 'text', maxlength: '12', placeholder: 'z. B. L. M. oder Spitzname',
     style: 'width:100%;min-height:44px;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0 0.6rem;font-size:1rem',
-    'aria-label': 'Name des Kindes für die Urkunde',
+    'aria-label': 'Initialen oder Spitzname (nur für die Urkunde)',
+    'aria-describedby': 'ehk-name-hinweis',
   });
   // Name live in die Urkunde spiegeln - aber NICHT speichern (Datenvermeidung).
   nameFeld.addEventListener('input', () => {
@@ -44,7 +47,9 @@ function render() {
     urkunde(),
     el('section', { class: 'k-karte ehk-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '🏅 Übergabe-Urkunde'),
-      el('p', { style: 'font-size:0.9rem' }, 'Name des Kindes eintippen (nur für den Ausdruck, wird nicht gespeichert), dann drucken:'),
+      el('p', { style: 'font-size:0.9rem' }, 'Initialen oder Spitzname eintippen, dann drucken. Der Eintrag wird nicht gespeichert.'),
+      el('label', { for: 'ehk-name', style: 'display:block;font-weight:600;font-size:0.9rem' }, 'Initialen oder Spitzname (nur für die Urkunde)'),
+      el('p', { id: 'ehk-name-hinweis', class: 'ehk-nur-bildschirm', style: 'margin:0.2rem 0 0.4rem;font-size:0.9rem;font-weight:700' }, 'Nur Initialen oder einen Spitznamen eintragen, keinen vollen Namen.'),
       nameFeld,
       el('div', { class: 'k-antworten', style: 'margin-top:0.5rem' },
         el('button', { class: 'k-knopf', onclick: () => window.print() }, '🖨️ Urkunde drucken'),
