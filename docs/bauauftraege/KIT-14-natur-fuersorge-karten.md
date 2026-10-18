@@ -1,4 +1,4 @@
-# Bauauftrag KIT-14: Natur-Fuersorge-Karten mit Beobachtungsprotokoll
+# Bauauftrag KIT-14: Natur-Fürsorge-Karten mit Beobachtungsprotokoll
 
 Status: teilweise · Abschnitt: Kita-Werkzeuge (Fachkräfte) · Ziel: Ausbau von apps/natur-fuersorge-karten/
 Blockiert durch: keine
@@ -13,36 +13,36 @@ Blockiert durch: keine
   - „полить комнатные растения“ (S. 96)
   - „покормить птичек, рыбок“ (S. 96)
   - „собрать овощи“ (S. 96)
-- Umschrieben ohne Anführungszeichen: die Quelle nennt vier Aufgaben für die Fachkraft (S. 96). Sie betreffen das Interesse an der Pflege durch Erwachsene, die Freude an Pflanzen und Tieren, eigene einfache Pflegehandlungen und das Gespuer für den richtigen Zeitpunkt der Pflege. Die Altersstufe ist 1 bis 3 Jahre (S. 6 und S. 44).
+- Umschrieben ohne Anführungszeichen: die Quelle nennt vier Aufgaben für die Fachkraft (S. 96). Sie betreffen das Interesse an der Pflege durch Erwachsene, die Freude an Pflanzen und Tieren, eigene einfache Pflegehandlungen und das Gespür für den richtigen Zeitpunkt der Pflege. Die Altersstufe ist 1 bis 3 Jahre (S. 6 und S. 44).
 - Nicht gefunden – offen:
-  - Mini-Protokoll, welches Kind welche Handlung selbstaendig zeigt (Katalogangabe). Suchbegriff „протокол“ im gesamten Text: keine Treffer; Beobachtung einzelner Kinder ist im Abschnitt nicht vorgesehen.
-  - Bezug zu Bildung für nachhaltige Entwicklung und zu Landesplaenen (Katalogangabe). Suchbegriff „устойчивое развитие“ auf S. 96: keine Treffer; die Quelle ist ein belarussisches Programm ohne Laender.
-- Anregungen auf den Karten und die Checkliste fuer Erwachsene sind Eigenentwurf.
+  - Mini-Protokoll, welches Kind welche Handlung selbstständig zeigt (Katalogangabe). Suchbegriff протокол im gesamten Text: keine Treffer; die Beobachtung einzelner Kinder ist im Abschnitt nicht vorgesehen.
+  - Bezug zu Bildung für nachhaltige Entwicklung und zu Landesplänen (Katalogangabe). Suchbegriff устойчивое развитие auf S. 96: keine Treffer; die Quelle ist ein belarussisches Programm ohne Länder.
+- Anregungen auf den Karten und die Checkliste für Erwachsene sind Eigenentwurf.
 - Keine ganzen Sätze aus dem Buch. Sätze werden mit Seitenangabe umschrieben (docs/10, „Правовая и этическая рамка“, Punkt 1: ни одного дословного текста).
 - Alles, was nicht aus der Quelle stammt, ist mit „(Eigenentwurf)“ gekennzeichnet.
-- Seitenangaben werden gegen die Arbeitskopie geprüft (`tools/bauauftrag-pruefen.mjs`). Ergebnis: <ausstehend>.
+- Seitenangaben werden gegen die Arbeitskopie geprüft (`tools/bauauftrag-pruefen.mjs`). Ergebnis: geprüft; das Skript meldet für diese Datei keine Fehler.
 
 ## 2. Zielgruppe und Lernziele
 
 - Zielgruppe: Fachkräfte mit Kindern von 1 bis 3 Jahren. Der Katalog nennt „2–3“; die Korrekturnotiz im Katalog und die Quelle (S. 6, S. 44) nennen 1 bis 3. Dieser Bauauftrag folgt der Korrektur. Verwendung: Druck.
 - Lernziele, prüfbar:
   1. Die Fachkraft kennt die vier Aufgaben der Quelle (S. 96) und ordnet jeder Handlungskarte eine davon zu (Eigenentwurf).
-  2. Die Fachkraft waehlt eine Handlungskarte (gießen, füttern oder ernten) und druckt sie mit der Checkliste.
-  3. Die Checkliste nennt den Zeitpunkt der Pflege und enthaelt keine Notiz über einzelne Kinder (Eigenentwurf).
+  2. Die Fachkraft wählt eine Handlungskarte (gießen, füttern oder ernten) und druckt sie mit der Checkliste.
+  3. Die Checkliste nennt den Zeitpunkt der Pflege und enthält keine Notiz über einzelne Kinder (Eigenentwurf).
 
 ## 3. Funktion
 
-- Katalog verlangt (docs/10, Eintrag KIT-14): Karten fuer erste Naturpflege-Handlungen (gießen, Voegel fuettern, ernten); ein Mini-Protokoll, welches Kind welche Handlung selbststaendig zeigt; Erwachsenen-Checkliste mit Bericht (optional), sonst Druckmaterial. Adaptation: heimische Arten, Jahreszeitenlauf, Bezug zu Bildung fuer nachhaltige Entwicklung; Protokoll lokal ohne personenbezogene Cloud-Daten.
+- Katalog verlangt (docs/10, Eintrag KIT-14): Karten für erste Naturpflege-Handlungen (gießen, Vögel füttern, ernten); ein Mini-Protokoll, welches Kind welche Handlung selbstständig zeigt; Erwachsenen-Checkliste mit Bericht (optional), sonst Druckmaterial. Adaptation: heimische Arten, Jahreszeitenlauf, Bezug zu Bildung für nachhaltige Entwicklung; Protokoll lokal ohne personenbezogene Cloud-Daten.
 - App leistet schon (README, GDD, `logik.mjs`):
   - vier Aufgaben aus S. 96 als Karten;
   - drei Handlungskarten mit dem Textbeispiel aus der Quelle und einer Anregung (Eigenentwurf);
-  - Checkliste fuer Erwachsene (Eigenentwurf);
+  - Checkliste für Erwachsene (Eigenentwurf);
   - Druck von Karten und Checkliste;
   - keine Eingabe, kein Name, keine Speicherung.
-- Bildschirme: Aufgabenuebersicht; Handlungskarten; Checkliste; Druckansicht.
-- Ablauf: Aufgabe lesen → Handlungskarte waehlen → Checkliste ansehen → Drucken.
-- Was gedruckt wird: die gewaehlten Handlungskarten (Titel, Textbeispiel als Begriff, Anregung als Eigenentwurf) und die Checkliste; eine Karte je Blatt A4 hoch; keine Seitenzahl auf dem Blatt (A18-Standard).
-- Luecke: das Mini-Protokoll ist nicht gebaut (Entscheidung in Abschnitt 9). Bildung fuer nachhaltige Entwicklung und Landesplaene sind nicht gebaut, weil die Quelle sie nicht enthaelt. Der Bericht ist nicht gebaut (optional im Katalog).
+- Bildschirme: Aufgabenübersicht; Handlungskarten; Checkliste; Druckansicht.
+- Ablauf: Aufgabe lesen → Handlungskarte wählen → Checkliste ansehen → Drucken.
+- Was gedruckt wird: die gewählten Handlungskarten (Titel, Textbeispiel als Begriff, Anregung als Eigenentwurf) und die Checkliste; eine Karte je Blatt A4 hoch; keine Seitenzahl auf dem Blatt (A18-Standard).
+- Lücke: das Mini-Protokoll ist nicht gebaut (Entscheidung in Abschnitt 9). Bildung für nachhaltige Entwicklung und Landespläne sind nicht gebaut, weil die Quelle sie nicht enthält. Der Bericht ist nicht gebaut (im Katalog optional).
 
 ## 4. Daten
 
@@ -57,29 +57,29 @@ Datei: `apps/natur-fuersorge-karten/daten/karten.json`. Schema: je Karte `id`, `
 ```
 ladeKarten(pfad = "daten/karten.json") -> {aufgaben, handlungen, checkliste}
   Schritt 1: Datei lesen; bei Fehler Abbruch
-  Schritt 2: aufgaben hat 4 Eintraege mit quelle.seite „S. 96“
-  Schritt 3: handlungen hat 3 Eintraege (giessen, fuettern, ernten)
+  Schritt 2: aufgaben hat 4 Einträge mit quelle.seite „S. 96“
+  Schritt 3: handlungen hat 3 Einträge (giessen, fuettern, ernten)
 
 zielVon(karte) -> Altersgruppe
-  Schritt 1: gib „1 bis 3 Jahre“ zurueck
+  Schritt 1: „1 bis 3 Jahre“ zurückgeben
   Schritt 2: der Katalogwert „2 bis 3“ ergibt einen Testfehler
 
 kartenFuer(karten, handlungIds) -> Karte[]
   Schritt 1: ist handlungIds leer, alle drei Handlungskarten und die Checkliste
-  Schritt 2: sonst nur die gewaehlten Handlungskarten
+  Schritt 2: sonst nur die gewählten Handlungskarten
 
 quelleTextVon(karte) -> Text
   Schritt 1: quellbegriff und Seite ausgeben, zum Beispiel „полить комнатные растения“ (S. 96)
-  Schritt 2: kein Satz aus der Quelle; hoechstens 6 Woerter
+  Schritt 2: kein Satz aus der Quelle; höchstens 6 Wörter
 
 pruefeDaten(karten) -> Fehlerliste
   Schritt 1: keine Felder name, protokoll, verlauf, beobachtung, notiz oder geburtsdatum (Muster im Test)
-  Schritt 2: jeder quellbegriff hoechstens 6 Woerter
+  Schritt 2: jeder quellbegriff höchstens 6 Wörter
   Schritt 3: Liste der Fehler leer, sonst Testfehler
 
 druckeAuswahl(karten, handlungIds) -> HTML
   Schritt 1: kartenFuer(karten, handlungIds) aufrufen
-  Schritt 2: Anzahl Karten gleich Anzahl gewaehlter Handlungen plus Checkliste, wenn gewaehlt
+  Schritt 2: Anzahl Karten gleich Anzahl gewählter Handlungen plus Checkliste, wenn gewählt
   Schritt 3: keine Namenszeile, keine Zeichen ☐☒☑✓✔★☆, keine Seitenzahl
 ```
 
@@ -87,7 +87,7 @@ druckeAuswahl(karten, handlungIds) -> HTML
 
 - [ ] Keine Speicherung (localStorage, sessionStorage, IndexedDB, Cookie, Cache) (docs/02 Z. 17–30). Die App speichert nichts (logik.mjs Z. 19).
 - [ ] Keine Anfragen nach außen; CSP `default-src 'self'` (docs/02 Z. 22–24).
-- [ ] Keine Eingabefelder (docs/02 Z. 17–30, Projektregel). Die App hat nur Auswahl-Knoepfe.
+- [ ] Keine Eingabefelder (docs/02 Z. 17–30, Projektregel). Die App hat nur Auswahl-Knöpfe.
 - [ ] Keine Bewertung, Punkte, Rangliste, Stufe, Name eines Kindes (docs/02 Z. 141–146). Das Mini-Protokoll ist ausgeschlossen (Abschnitt 9).
 - [ ] Druck: keine Zeichen ☐☒☑✓✔★☆, keine Emojis, keine Namenszeile, keine Tagesfelder (docs/02 Z. 79–82).
 - [ ] Mobile First 360 px; Knöpfe und Fußlink mindestens 48 px (docs/02 Z. 50). Die App-Dokumentation nennt 44 px; siehe Abschnitt 9.
@@ -98,25 +98,25 @@ druckeAuswahl(karten, handlungIds) -> HTML
 ## 7. Tests
 
 - `test/logik.test.mjs` (vorhanden, laut README 18 Tests): vier Aufgaben auf S. 96, Handlungen als Textbeispiele, Eigenentwurf je Karte, Abweisung von Feldern nach Kind, Altersangabe 1 bis 3, Filter, Gegenproben.
-- `test/regeln.test.mjs` (fehlt, anlegen nach Vorlage `apps/puppentheater-werkstatt/test/regeln.test.mjs`): Druck ohne Zeichen, Knopfhoehe 48 px, keine Modellnamen.
+- `test/regeln.test.mjs` (fehlt, anlegen nach Vorlage `apps/puppentheater-werkstatt/test/regeln.test.mjs`): Druck ohne Zeichen, Knopfhöhe 48 px, keine Modellnamen.
 
 ## 8. Abnahme
 
-- `npm test` im App-Ordner gruen; Testzahl in README und GDD stimmt.
-- Browser bei 360 px: vier Aufgaben am Anfang, Filter, Knoepfe mindestens 48 px, kein Ueberlauf, keine externen Anfragen, Speicher gleich null.
+- `npm test` im App-Ordner grün; Testzahl in README und GDD stimmt.
+- Browser bei 360 px: vier Aufgaben am Anfang, Filter, Knöpfe mindestens 48 px, kein Überlauf, keine externen Anfragen, Speicher gleich null.
 - Druck: Zahl gedruckter Karten gleich Auswahl; keine Zeichen; keine Seitenzahl auf dem Blatt.
 - Registrierung nur durch den Koordinator.
 
 ## 9. Offen
 
 - Mini-Protokoll je Kind: der Katalog verlangt es, die Quelle hat dafür keine Grundlage (siehe Abschnitt 1). Notizen über einzelne Kinder sind nach docs/02 Z. 141–146 ausgeschlossen. Entscheidung: nicht bauen (Ist-Stand) oder aus dem Katalog streichen.
-- Bildung fuer nachhaltige Entwicklung und Landesplaene: nicht im Text. Katalog-Korrektur.
+- Bildung für nachhaltige Entwicklung und Landespläne: nicht im Text. Katalog-Korrektur.
 - Altersangabe: die Katalogzeile nennt 2–3, die Korrekturnotiz nennt 1 bis 3 (S. 6, S. 44). Die Zeile in docs/10 ist noch nicht angepasst.
-- Aufgaben im russischen Wortlaut: die README sagt, die vier Aufgaben stehen „mit russischem Wortlaut“ auf den Karten. Das widerspricht docs/10, Rechtsrahmen Punkt 1 (keine ganzen Sätze). Auf deutsche Umschreibung mit Seitenangabe umstellen; Titel und Begriffe bleiben russisch.
-- Knopfhoehe: die README nennt 44 px, die Regel verlangt 48 px (docs/02 Z. 50). Angleichen.
+- Aufgaben im russischen Wortlaut: die README sagt, die vier Aufgaben stehen auf den Karten „mit russischem Wortlaut“. Das widerspricht docs/10, Rechtsrahmen Punkt 1 (keine ganzen Sätze). Auf deutsche Umschreibung mit Seitenangabe umstellen; Titel und Begriffe bleiben russisch.
+- Knöpfhöhe: die README nennt 44 px, die Regel verlangt 48 px (docs/02 Z. 50). Angleichen.
 - Seitenzahlen auf den Karten: die App zeigt die Seite je Karte. Nach dem A18-Standard stehen Seiten nur in den Daten und in Abschnitt 1.
-- Katalog-Angabe „S“ (Aufwand) ist laut GDD ungeklaert.
+- Katalog-Angabe „S“ (Aufwand) ist laut GDD ungeklärt.
 - Standard für Seitenangaben (A18, offen): In der App stehen keine Seitenzahlen auf dem Blatt; sie stehen in Abschnitt 1 und in den Daten als „quelle“.
 - Seitenangaben ohne Markierung „проверено человеком“ (A18).
 - Vorlesefunktion (F2), Favicon (A3).
-- Zitatgrenze: dieser Bauauftrag nutzt 6 Woerter (docs/10). A10 fragt, ob 12 gelten sollen (offen).
+- Zitatgrenze: dieser Bauauftrag nutzt 6 Wörter (docs/10). A10 fragt, ob 12 gelten sollen (offen).
