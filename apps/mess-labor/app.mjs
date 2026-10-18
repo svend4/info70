@@ -15,20 +15,24 @@ const daten = await fetch('daten/experimente.json').then((r) => r.json());
 
 let aktiv = null;       // gewähltes Experiment
 let vermutung = null;   // Index
-let phase = 'liste';    // liste | vermuten | probieren | ergebnis | fertig
-let ergebnis = null;    // Index
+let phase = 'liste';    // liste | vermuten | probieren | befund | fertig
+let befund = null;      // Index des beobachteten Ergebnisses
+
+// Fußlinks mindestens 48 px hoch (docs/02 Z. 50). kinder.css setzt dafür keine Höhe.
+const FUSS_LINK = 'display:inline-block;min-height:48px;line-height:48px;padding:0 0.2rem';
 
 function zeige(...knoten) {
   app.replaceChildren(...[
-    el('h1', { class: 'k-titel' }, '🔬 Mess-Labor'),
+    el('h1', { class: 'k-titel', tabindex: -1 }, '🔬 Mess-Labor'),
     el('p', { class: 'k-untertitel' }, 'Vermuten – ausprobieren – herausfinden'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werbefrei · das echte Experiment passiert ohne Bildschirm · nichts wird gespeichert · '),
-      el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
-      el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
+      el('a', { href: 'eltern.html', style: FUSS_LINK }, '👪 Für Eltern'), el('span', {}, ' · '),
+      el('a', { href: '../../impressum.html', style: FUSS_LINK }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
-  app.querySelector('button')?.focus();
+  // Nach einem Bildschirmwechsel landet der Fokus auf der Überschrift des neuen Bildschirms.
+  app.querySelector('h1')?.focus();
 }
 
 function schrittleiste(aktueller) {
@@ -46,7 +50,8 @@ function liste() {
       ...daten.experimente.map((e) => el('button', {
         class: 'k-knopf k-knopf--neutral',
         style: 'text-align:start;width:100%;margin:0.2rem 0',
-        onclick: () => { aktiv = e; vermutung = null; ergebnis = null; vermuten(); },
+        'data-kennung': `experiment-${e.id}`,
+        onclick: () => { aktiv = e; vermutung = null; befund = null; vermuten(); },
       }, `${e.emoji} ${e.titel}`))));
 }
 
@@ -57,12 +62,16 @@ function vermuten() {
       schrittleiste(0),
       el('p', { class: 'k-gross', style: 'text-align:center;margin:0.3rem 0' }, aktiv.emoji),
       el('p', { style: 'font-weight:700;font-size:1.15em;text-align:center' }, aktiv.frage),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(aktiv.frage) }, '🔊 Vorlesen'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'data-kennung': 'vorlesen-frage', onclick: () => vorlesen(aktiv.frage) }, '🔊 Vorlesen'),
       el('p', { style: 'font-weight:600;margin:0.5rem 0 0.2rem' }, 'Was vermutest du?'),
       el('div', { class: 'k-antworten' },
-        ...aktiv.vermutungen.map((v, i) => el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { vermutung = i; probieren(); } }, v))),
+        ...aktiv.vermutungen.map((v, i) => el('button', {
+          class: 'k-knopf k-knopf--neutral',
+          'data-kennung': `vermutung-${i}`,
+          onclick: () => { vermutung = i; probieren(); },
+        }, v))),
       el('div', { class: 'k-antworten', style: 'margin-top:0.4rem' },
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: liste }, '↩️ Andere Frage'))));
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'data-kennung': 'andere-frage', onclick: liste }, '↩️ Andere Frage'))));
 }
 
 function probieren() {
@@ -75,28 +84,32 @@ function probieren() {
       el('p', { style: 'margin:0.2rem 0' }, el('strong', {}, 'Du brauchst: '), aktiv.material),
       el('ol', { style: 'margin:0.3rem 0 0;padding-inline-start:1.3rem' },
         ...aktiv.anleitung.map((s) => el('li', { style: 'margin:0.2rem 0' }, s))),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.3rem', onclick: () => vorlesen(anleitungText) }, '🔊 Vorlesen')),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.3rem', 'data-kennung': 'vorlesen-anleitung', onclick: () => vorlesen(anleitungText) }, '🔊 Vorlesen')),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0 0 0.3rem;font-size:0.9rem;color:#4b5563' }, 'Komm zurück, wenn du fertig geforscht hast.'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: ergebnisWaehlen }, '✅ Ich habe es ausprobiert!'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: vermuten }, '↩️ Zurück'))));
+        el('button', { class: 'k-knopf', 'data-kennung': 'ausprobiert', onclick: befundWaehlen }, '✅ Ich habe es ausprobiert!'),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'data-kennung': 'zurueck-vermuten', onclick: vermuten }, '↩️ Zurück'))));
 }
 
-function ergebnisWaehlen() {
-  phase = 'ergebnis';
+function befundWaehlen() {
+  phase = 'befund';
   zeige(
     el('section', { class: 'k-karte' },
       schrittleiste(2),
       el('p', { style: 'font-weight:700;font-size:1.1em;text-align:center' }, 'Was hast du herausgefunden?'),
       el('div', { class: 'k-antworten' },
-        ...aktiv.ergebnisse.map((er, i) => el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { ergebnis = i; fertig(); } }, er)))));
+        ...aktiv.ergebnisse.map((er, i) => el('button', {
+          class: 'k-knopf k-knopf--neutral',
+          'data-kennung': `befund-${i}`,
+          onclick: () => { befund = i; fertig(); },
+        }, er)))));
 }
 
 function fertig() {
   phase = 'fertig';
-  const v = vergleicheVermutung(vermutung, ergebnis);
-  const satz = forscherSatz(aktiv, vermutung, ergebnis);
+  const v = vergleicheVermutung(vermutung, befund);
+  const satz = forscherSatz(aktiv, vermutung, befund);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross', style: 'text-align:center;margin:0' }, v.stimmte ? '🎯' : '💡'),
@@ -106,9 +119,9 @@ function fertig() {
       el('div', { class: 'k-karte', style: 'background:#eff6ff;margin-top:0.4rem' },
         el('p', { style: 'font-weight:600;margin:0 0 0.2rem' }, '🧠 Warum ist das so?'),
         el('p', { style: 'margin:0' }, aktiv.erkenntnis)),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.3rem', onclick: () => vorlesen(`${v.botschaft} ${satz} ${aktiv.erkenntnis}`) }, '🔊 Vorlesen'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.3rem', 'data-kennung': 'vorlesen-erkenntnis', onclick: () => vorlesen(`${v.botschaft} ${satz} ${aktiv.erkenntnis}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten', style: 'margin-top:0.4rem' },
-        el('button', { class: 'k-knopf', onclick: liste }, '🧪 Nächstes Experiment'))));
+        el('button', { class: 'k-knopf', 'data-kennung': 'naechstes-experiment', onclick: liste }, '🧪 Nächstes Experiment'))));
 }
 
 const fehler = pruefeExperimente(daten);

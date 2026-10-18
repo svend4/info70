@@ -1,34 +1,36 @@
 # Mess-Labor 🔬
 
-Детское приложение (5–7 вместе, 8–12 самостоятельно) — каталог **docs/10
-(Пралеска), Топ-30 №27**. Восемь измерительных экспериментов с домашними
-предметами по кругу исследования **Vermuten → Ausprobieren → Schlussfolgern**.
+Kinder-App für 5–7 gemeinsam mit einem Erwachsenen und für 8–12 allein. Grundlage ist der
+Katalogeintrag docs/10 (Praleska), Top-30 Nr. 27, „Mess-Labor der kleinen Forscher“.
+Zehn Mess-Experimente mit Haushaltsdingen folgen dem Forschungskreis **Vermuten →
+Ausprobieren → Schlussfolgern**.
 
-## Что внутри
+## Was drin ist
 
-- **8 экспериментов**: стопа против предплечья (шнур), апельсин с кожурой и
-  без (плавучесть), яблоко против картофеля (вес), сколько стаканов в
-  бутылке (объём как единица), комната в шагах (зачем нужен метр), гонка
-  качения с рампы (честное измерение), дуэль таяния льда, тепло/холод в
-  комнате.
-- **Принцип трамплина**: приложение собирает только гипотезу, затем прямо
-  говорит **«📵 отложи устройство и попробуй по-настоящему!»** — сам
-  эксперимент без экрана; потом возвращаешься и выбираешь, что вышло.
-- **Без стыда**: неподтверждённая гипотеза празднуется как успех
-  исследователя («Überraschung — genau dafür forscht man!») — закреплено
-  тестом. При воде/кухне — указание позвать взрослого (тоже тест).
-- Каждый финал: сравнение, «форшер-фраза» и «Warum ist das so?» — объяснение.
-- `logik.mjs` (чистая): `pruefeExperimente`, `vergleicheVermutung`,
-  `forscherSatz`.
+- **10 Experimente**: Fuß gegen Unterarm (Schnur), Orange mit und ohne Schale
+  (Schwimmen), Apfel gegen Kartoffel (Gewicht), Wie viel passt hinein (Messbecher),
+  Zimmer in Schritten, Das große Rollrennen (faire Messung), Das Schmelz-Duell
+  (Eis), Warm und kalt im Zimmer (Temperatur), Lupe und Oberfläche, Lineal und Stift.
+- **Sprungbrett**: Die App sammelt nur die Vermutung und sagt dann „Gerät weglegen
+  und wirklich ausprobieren!“. Das Experiment passiert ohne Bildschirm.
+- **Keine Scham**: Eine widerlegte Vermutung wird als Forschungserfolg gefeiert
+  (per Test gesichert). Bei Wasser und Küche weist die App auf einen großen
+  Menschen hin.
+- Nach jedem Experiment: Vergleich, Forscher-Satz und „Warum ist das so?“.
+- `logik.mjs` (ohne DOM): `pruefeExperimente`, `vergleicheVermutung`, `forscherSatz`,
+  `geraeteOhneExperiment`.
+- Eigenentwurf: Die Experimente sind eigene Vorschläge. Nur die Geräteaufzählung
+  stammt aus der Quelle (S. 289, im Feld `quelle`).
 
-## Политика
+## Politik
 
-Werbefrei, без аккаунтов, без внешних запросов (NetzwerkWaechter); **ничего
-не сохраняет**. Есть `eltern.html`, приложение в Eltern-Sammelband.
+Werbefrei, ohne Konten, ohne Anfragen nach außen (Netzwerk-Wächter). Die App
+**speichert nichts** und hat keine Eingabefelder. Es gibt `eltern.html` für die
+Begleitung.
 
-## Запуск и тесты
+## Start und Tests
 
 ```bash
 npm run dev   # http://localhost:8070/apps/mess-labor/
-node --test apps/mess-labor/test/*.test.mjs
+npm test      # 24 Tests in test/logik.test.mjs und test/regeln.test.mjs
 ```

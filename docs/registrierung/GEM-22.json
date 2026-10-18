@@ -1,0 +1,12 @@
+{
+  "id": "GEM-22",
+  "slug": "mess-labor",
+  "titel": "Mess-Labor der kleinen Forscher",
+  "status_neu": "teilweise",
+  "app": "mess-labor",
+  "tests_app": 24,
+  "hub_zeile": "<a class=\"k-knopf\" style=\"text-decoration:none;text-align:center\" href=\"apps/mess-labor/\">🔬 Mess-Labor – vermuten, ausprobieren, herausfinden (5–7 gemeinsam, 8–12)</a>",
+  "readme_zeile": "| GEM-22 | Mess-Labor der kleinen Forscher | teilweise (Ausbau) | `apps/mess-labor/` |",
+  "docs10_notiz": "Mess-Labor (GEM-22) ausgebaut: zehn Experimente, Lupe und Lineal neu, Geräte-Abdeckung und Erwachsenen-Hinweis bei Küche geprüft, 24 Tests; offen bleiben Altersangabe, Druckfassung und die Erprobung der neuen Experimente.",
+  "katalog_korrektur": "Mess-Labor: Ausbau nach Bauauftrag GEM-22. Gebaut: zehn Experimente mit Lupe und Lineal, Geräte-Prüfung, Erwachsenen-Hinweis bei Küche, Fokus nach Bildschirmwechsel, Fußlinks 48 px. Offen: Altersangabe (5–7 gemeinsam und 8–12 oder 3–5), Druckfassung Forscher-Heft, Erprobung der Eigenentwürfe."
+}

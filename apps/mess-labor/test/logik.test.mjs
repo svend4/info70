@@ -1,13 +1,13 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { pruefeExperimente, vergleicheVermutung, forscherSatz } from '../logik.mjs';
+import { pruefeExperimente, vergleicheVermutung, forscherSatz, geraeteOhneExperiment } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/experimente.json', import.meta.url), 'utf8'));
 
-test('Experiment-Bank gültig: ≥6 Experimente mit 3 Vermutungen/Ergebnissen + Erkenntnis', () => {
+test('Experiment-Bank gültig: ≥10 Experimente mit 3 Vermutungen/Ergebnissen + Erkenntnis', () => {
   assert.deepEqual(pruefeExperimente(daten), []);
-  assert.ok(daten.experimente.length >= 6);
+  assert.ok(daten.experimente.length >= 10);
   assert.deepEqual(daten.schritte, ['Vermuten', 'Ausprobieren', 'Schlussfolgern'], 'Forschungskreis-Didaktik');
 });
 
@@ -47,4 +47,27 @@ test('forscherSatz nennt Vermutung und Ergebnis', () => {
   assert.ok(satz.includes(e.vermutungen[0]));
   assert.ok(satz.includes(e.ergebnisse[2]));
   assert.match(satz, /^Ich habe vermutet/);
+});
+
+test('Geräte-Abdeckung: Waage, Messbecher, Schnur oder Lineal, Thermometer und Lupe kommen je in einem Experiment vor', () => {
+  assert.deepEqual(geraeteOhneExperiment(daten), []);
+  assert.ok(daten.experimente.some((e) => e.id === 'lupe-oberflaeche'), 'Lupe-Experiment fehlt');
+  assert.ok(daten.experimente.some((e) => e.id === 'lineal-stift'), 'Lineal-Experiment fehlt');
+});
+
+test('Prüfung schlägt an: fehlendes Gerät und fehlender Erwachsenen-Hinweis bei Küche werden gemeldet', () => {
+  const ohneLupe = structuredClone(daten);
+  ohneLupe.experimente[8] = { ...ohneLupe.experimente[8], material: 'ein Blatt Papier', anleitung: ['Schau genau hin.', 'Vergleiche.'] };
+  assert.ok(pruefeExperimente(ohneLupe).includes('Gerät ohne Experiment: Lupe'));
+  const kuechenTest = structuredClone(daten);
+  kuechenTest.experimente[2].material = 'eine Küchenwaage';
+  assert.ok(pruefeExperimente(kuechenTest).some((f) => /Erwachsenen-Hinweis/.test(f)));
+  const zuWenig = { experimente: daten.experimente.slice(0, 9) };
+  assert.deepEqual(pruefeExperimente(zuWenig), ['zu wenige Experimente']);
+});
+
+test('Eigenentwurf oder Quelle: jedes Experiment mit eigenentwurf false hat eine Seitenangabe', () => {
+  for (const e of daten.experimente) {
+    if (e.eigenentwurf === false) assert.match(e.quelle?.seite ?? '', /^S\. \d+$/, `${e.id}: Seitenangabe fehlt`);
+  }
 });

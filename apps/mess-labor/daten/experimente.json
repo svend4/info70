@@ -38,7 +38,7 @@
       "titel": "Apfel gegen Kartoffel",
       "emoji": "🍎",
       "frage": "Was ist schwerer: der größte Apfel oder die größte Kartoffel bei euch zu Hause?",
-      "material": "ein Apfel, eine Kartoffel, deine Hände als Waage (oder eine Küchenwaage)",
+      "material": "ein Apfel, eine Kartoffel, deine Hände als Waage (oder eine Küchenwaage – mit einem großen Menschen)",
       "anleitung": [
         "Nimm in jede Hand eins und wiege mit den Armen wie eine Waage.",
         "Wenn ihr eine Küchenwaage habt: wiege beide nacheinander.",
@@ -86,12 +86,12 @@
       "material": "ein Brett oder fester Karton als Rampe, eine Dose, ein Ball",
       "anleitung": [
         "Lehne das Brett an ein dickes Buch – fertig ist die Rampe.",
-        "Lass erst die Dose, dann den Ball vom selben Punkt losrollen (nicht anschieben!).",
+        "Lass erst die Dose, dann den Ball von derselben Stelle aus losrollen (nicht anschieben!).",
         "Markiere, wo jedes liegen bleibt."
       ],
       "vermutungen": ["Die Dose rollt weiter", "Der Ball rollt weiter", "Beide gleich weit"],
       "ergebnisse": ["Die Dose rollte weiter", "Der Ball rollte weiter", "Beide ungefähr gleich"],
-      "erkenntnis": "Faire Messung heißt: gleicher Startpunkt, kein Anschieben! Was weiter rollt, hängt von Form, Gewicht und Boden ab – probier es auf Teppich und glattem Boden, das Ergebnis kann sich ändern."
+      "erkenntnis": "Faire Messung heißt: gleicher Startpunkt, kein Anschieben! Was weiter rollt, hängt von Form, Gewicht und Boden ab – probier es auf Teppich und glattem Boden, dann kann die Messung anders ausfallen."
     },
     {
       "id": "eis",
@@ -122,6 +122,40 @@
       "vermutungen": ["Am Boden", "Am Fenster", "Überall gleich"],
       "ergebnisse": ["Am Boden", "Am Fenster", "Überall gleich"],
       "erkenntnis": "Am Fenster ist es im Winter oft am kältesten – dort kommt die Kälte von draußen durch. Und warme Luft steigt nach oben! Die Haut ist ein Gefühls-Messgerät; ein Thermometer misst genauer."
+    },
+    {
+      "id": "lupe-oberflaeche",
+      "titel": "Lupe und Oberfläche",
+      "emoji": "🔍",
+      "frage": "Welche Oberfläche sieht unter der Lupe am gröbsten aus: ein Blatt Papier, ein Stück Stoff oder deine Fingerkuppe?",
+      "material": "eine Lupe, ein Blatt Papier, ein Stück Stoff (zum Beispiel ein Handtuch)",
+      "anleitung": [
+        "Lege das Papier, den Stoff und deine Fingerkuppe nebeneinander auf den Tisch.",
+        "Schau mit der Lupe ganz nah auf jedes Teil, dann ein Stück weiter weg.",
+        "Welches sieht unter der Lupe am gröbsten aus?"
+      ],
+      "vermutungen": ["Das Papier", "Der Stoff", "Die Fingerkuppe"],
+      "ergebnisse": ["Das Papier war am gröbsten", "Der Stoff war am gröbsten", "Die Fingerkuppe war am gröbsten"],
+      "erkenntnis": "Mit der Lupe siehst du Einzelheiten, die mit bloßem Auge verschwinden: Papier und Stoff bestehen aus vielen feinen Fasern, und auch deine Haut hat Linien und Furchen. Je genauer man hinschaut, desto mehr entdeckt man.",
+      "eigenentwurf": true,
+      "quelle": { "seite": "S. 289" }
+    },
+    {
+      "id": "lineal-stift",
+      "titel": "Lineal und Stift",
+      "emoji": "📏",
+      "frage": "Wie viele Zentimeter ist ein Bleistift lang? Rate zuerst – und miss dann nach.",
+      "material": "ein Lineal, ein Bleistift",
+      "anleitung": [
+        "Rate zuerst: Ist der Stift kürzer als deine Hand, so lang wie deine Hand oder länger?",
+        "Lege das Lineal mit dem Nullstrich an ein Ende des Stifts.",
+        "Lies am anderen Ende ab, und vergleiche mit deinem Ratetipp."
+      ],
+      "vermutungen": ["Kürzer als meine Hand", "So lang wie meine Hand", "Länger als meine Hand"],
+      "ergebnisse": ["Der Stift war kürzer als meine Hand", "Der Stift war so lang wie meine Hand", "Der Stift war länger als meine Hand"],
+      "erkenntnis": "Das Lineal teilt jede Länge in gleich große Stücke, die Zentimeter. Ein Zentimeter ist überall gleich lang, egal wer misst. Mit der Schnur hast du nur verglichen – mit dem Lineal zählst du, und alle können dieselbe Zahl ablesen.",
+      "eigenentwurf": true,
+      "quelle": { "seite": "S. 289" }
     }
   ]
 }
