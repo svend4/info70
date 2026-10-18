@@ -45,7 +45,7 @@ Keine Zufallsquelle in der Logikdatei; Zufall kommt als Parameter.
 
 ## 6. Regeln (docs/02)
 
-- [ ] Keine Speicherung (localStorage, sessionStorage, IndexedDB, Cookie, Cache) (docs/02 Z. 17–30).
+- [ ] Speicherung nur wie docs/02, Z. 25: Nutzerdaten im localStorage, eigene Schlüssel, Löschknopf für genau diese Schlüssel. Kein sessionStorage, IndexedDB, Cookie, Cache. Werkzeuge ohne Nutzerdaten speichern nichts. Die Entscheidung je Einheit steht in Abschnitt 9.
 - [ ] Keine Anfragen nach außen; CSP `default-src 'self'` (docs/02 Z. 22–24).
 - [ ] Keine Eingabefelder (docs/02 Z. 17–30, Projektregel).
 - [ ] Keine Bewertung, Punkte, Rangliste, Stufe, Name eines Kindes (docs/02 Z. 141–146).

@@ -53,6 +53,10 @@ Sitzung `session_011s4uQ6nJwuboFdpA7kq4DZ`, Commit `8861bc8`.
 | Pflichtmarkierung im Druck | fehlt | fehlt |
 | Eigenes Druckblatt | nein | teilweise |
 
+## Speicherung in GEM-10 (Korrektur)
+
+Die Sitzung hat den Plan im localStorage gespeichert (`kartograph.plan`), mit Löschknopf. Das ist nach docs/02, Z. 25 erlaubt. Die Vorlage und die Anleitung hatten das fälschlich als „keine Speicherung“ beschrieben und sind korrigiert. Die Entscheidung bleibt: behalten, mit Löschknopf.
+
 ## Bewertung des Verfahrens
 
 - Die Technik funktioniert: Der Ausbau läuft in einer Sitzung durch, die Tests laufen, die Browser-Prüfung läuft. Die Dauer ist nicht gemessen; die Sitzung meldet sie im Bericht.

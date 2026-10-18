@@ -9,7 +9,7 @@ Diese Anleitung ist für eine Sitzung gedacht, die genau eine Einheit der Prales
 - Du registrierst nichts im Hub, in der Wurzel-README oder im Impressum. Das macht der Koordinator (die Hauptsitzung), nachdem alle Sitzungen gemerged sind.
 - Du schreibst keine Modellnamen in Dateien, keine ganzen Sätze aus der Praleska, keine Zitate über 6 Wörter (docs/10, Rechtsrahmen, Punkt 1).
 - Du verwendest `quiz-kern` nicht (A7 offen). Du baust keine Seitenzahlen auf das Druckblatt (A18: Standard für neue Apps).
-- Du schreibst keine Speicherung (kein localStorage, sessionStorage, IndexedDB, Cookie, Cache) und keine Anfragen nach außen.
+- Speicherung nur wie docs/02, Z. 25: Nutzerdaten im localStorage, mit Löschknopf für die eigenen Schlüssel; kein sessionStorage, IndexedDB, Cookie, Cache. Werkzeuge ohne Nutzerdaten speichern nichts. Keine Anfragen nach außen.
 
 ## Schritt 1: Ausgangslage prüfen
 
@@ -55,11 +55,16 @@ Prüfe das Ergebnis gegen die Abnahme (Abschnitt 8 des Bauauftrags):
 
 Eine Abweichung behebst du. Die Messung „Neuladen ohne Netz“ ist keine Abnahmebedingung (F4); sie wird berichtet.
 
+**Fokus nach einem Bildschirmwechsel (Lehre aus Pilot 1):**
+- Verschwindet der angeklickte Knopf, weil der Bildschirm wechselt, steht der Fokus auf der Überschrift des neuen Bildschirms (`tabindex="-1"` und `.focus()`), nicht auf dem Körper der Seite.
+- Der Browser-Lauf meldet diesen Fall als Abweichung, wenn der Fokus anders liegt. Begründe die Abweichung im Bericht oder behebe sie.
+
 **Druckprüfung ist Pflicht (Lehre aus Pilot 1, siehe `docs/bauauftraege/PILOT-1.md`):**
 - Die Tests der App enthalten die Druckprüfungen aus `apps/puppentheater-werkstatt/test/regeln.test.mjs`: keine Zeichen aus den Blöcken ☐☒☑✓✔★☆ und keine Emojis (`\p{Extended_Pictographic}`) im Druckinhalt, keine Namenszeile, Bildschirmteile ausgeblendet.
 - Emojis in Titeln und Überschriften gelten im Druck als verboten. Auf dem Bildschirm sind sie erlaubt.
 - Druckt die App Seitenangaben, steht die Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ auf jedem gedruckten Blatt.
 - Die App braucht ein eigenes Druckblatt mit `druck.css` und `@media print`. Druck des ganzen Bildschirms ist nicht zulässig.
+- Bildschirmteile, die im Druck nicht erscheinen sollen (auch Emojis), tragen die Klasse `nur-bildschirm` und werden in `druck.css` mit `display: none !important` ausgeblendet. Ein Emoji im Druckinhalt zählt als Verstoß, auch wenn es nur in einer Überschrift steht.
 - Im Bericht stehen die Werte `druck.zeichen` (muss leer sein) und `druck.pflichtZeilen` (muss der Zahl der Blätter mit Seitenangabe entsprechen).
 
 ## Schritt 5: Registrierungsdatei schreiben
