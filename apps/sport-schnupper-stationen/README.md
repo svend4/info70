@@ -49,7 +49,7 @@ Der Knopf „Stationskarten drucken“ öffnet den Druckdialog des Browsers. Dor
 
 ## Tests
 
-33 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Seiten, Namen aus der Quelle, Kennzeichnung, die Ziel-Zeile nur auf den Sportspielen, den Sicherheitssatz, Wettbewerbe ohne Rangliste und Auswahl. `test/regeln.test.mjs` prüft die Projektregeln: keine Eingabefelder, keine Speicherung, keine externen Adressen, keine Druckzeichen, keine Namenszeile, Modellnamen-Freiheit, aria-live auf `#app`, Fokus nach Klick, Pflichtmarkierung der Seitenangaben im Fuß und auf jeder gedruckten Karte, Umbruch des Titels, Höhe des Fuß-Links und Testzahl.
+38 Tests in zwei Dateien: `test/logik.test.mjs` prüft Daten, Seiten, Namen aus der Quelle, Kennzeichnung, die Ziel-Zeile nur auf den Sportspielen, den Sicherheitssatz, Wettbewerbe ohne Rangliste und Auswahl. `test/regeln.test.mjs` prüft die Projektregeln: keine Eingabefelder, keine Speicherung, keine externen Adressen, keine Druckzeichen, keine Namenszeile, Modellnamen-Freiheit, aria-live auf `#app`, Fokus nach Klick, Pflichtmarkierung der Seitenangaben im Fuß und auf jeder gedruckten Karte, Umbruch des Titels, Höhe des Fuß-Links, Knopfhöhe 3 rem, Eigenentwurf-Kennzeichnung je Karte, keine Zufallsquelle, keine Bewertung von Kindern, uk und ru (nicht vorhanden) und Testzahl.
 
 ```bash
 node --test apps/sport-schnupper-stationen/test/*.test.mjs

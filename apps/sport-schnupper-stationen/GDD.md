@@ -37,9 +37,10 @@ Kernerlebnis: Die Fachkraft wählt Stationen, druckt und hat Karten, auf denen j
 S. Die Karten sind statisch und der Druck ist eine Druckansicht.
 
 ## 8. Tests
-33 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Namen gegen die Quelle, die Kennzeichnung, die Ziel-Zeile, den Sicherheitssatz, die Wettbewerbe ohne Rangliste, den Pflichtsatz auf dem Blatt und die Projektregeln. Details in der README.
+38 Tests in zwei Dateien. Sie prüfen die Daten, die Seiten, die Namen gegen die Quelle, die Kennzeichnung, die Ziel-Zeile, den Sicherheitssatz, die Wettbewerbe ohne Rangliste, den Pflichtsatz auf dem Blatt, die Eigenentwurf-Kennzeichnung je Karte, die Knopfhöhe, die Zufallsregel, die Bewertungsregel und die Projektregeln. Details in der README.
 
 ## Offen
+- uk und ru: nicht vorhanden, offen.
 - Hockey-Widerspruch in der Quelle (S. 229): die Liste nennt „хоккей на траве“ (Feldhockey), der Technik-Absatz nennt Schläger und Scheibe. Die Karte lässt die Sportart offen; eine Fachkraft legt sie fest. Der Widerspruch steht auch auf S. 246: dort nennt die Liste der Sportspiele der Gruppe „Фантазеры“ „хоккей“ (ohne Zusatz).
 - Ziel-Zeile auf den Sportspielen: der Satz „играм по упрощенным правилам“ steht auf S. 229 vor der Einzelliste (dort durch Silbentrennung geteilt); nur bei Basketball steht das Wort einzeln. Ob die Zeile für die Sportspiele ohne eigenen Einzeleintrag gelten soll, ist eine fachliche Lesart.
 - Sicherheitsaussagen fehlen: die Quelle nennt für Sportspiele, Übungen und Wettbewerbe keine Sicherheitsregeln. Die Karten sagen das; es wird keine Regel gesetzt.

@@ -1,0 +1,12 @@
+{
+  "id": "PRI-18",
+  "slug": "sport-schnupper-stationen",
+  "titel": "Sport-Schnupper-Stationen",
+  "status_neu": "ausgebaut",
+  "app": "sport-schnupper-stationen",
+  "tests_app": 38,
+  "hub_zeile": "<a class=\"k-knopf k-knopf--neutral\" style=\"text-decoration:none;text-align:center\" href=\"apps/sport-schnupper-stationen/\">Sport-Schnupper-Stationen – Stationskarten zu Sportspielen, Sportübungen, Spielen und Wettbewerben (Fachkräfte, zum Drucken)</a>",
+  "readme_zeile": "| PRI-18 | Sport-Schnupper-Stationen | ausgebaut | `apps/sport-schnupper-stationen/` |",
+  "docs10_notiz": "Sport-Schnupper-Stationen (PRI-18) ausgebaut: 22 Stationskarten (Übersicht, acht Sportspiele, fünf Sportübungen, sechs benannte Spiele, zwei Wettbewerbe), je gewählter Karte ein Blatt A4 quer mit Pflichtmarkierung, 38 Tests. Regeltexte und Sicherheitssatz sind Eigenentwurf; die Sportart Hockey und die Winter- und Wasserübungen sind offen für eine Fachkraft.",
+  "katalog_korrektur": "Sport-Schnupper-Stationen: ausgebaut nach Bauauftrag PRI-18. Gebaut: 22 Karten mit Quellenseite (Übersicht, 8 Sportspiele, 5 Sportübungen, 6 benannte Spiele, 2 Wettbewerbe), Auswahl und Druck je Karte ein Blatt A4 quer. Offen: Katalogzahl »8 benannte Spiele« (Quelle: 6 Spielnamen und 2 Wettbewerbsformen), Sportart Hockey (S. 229 und S. 246 widersprechen sich), »Wer prellt öfter?« ohne Entsprechung im Quelltext, Katalogbegriffe ohne Quelle nicht übernommen, Favicon (A3)."
+}

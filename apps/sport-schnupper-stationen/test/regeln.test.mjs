@@ -194,6 +194,38 @@ test('Testzahl: README und GDD nennen die Zahl der Tests, die in test/ tatsächl
   }
 });
 
+test('Zufall nur in app.mjs: keine Zufallsquelle und keine Uhr; die Reihenfolge der Karten ist fest', () => {
+  // Bauauftrag Abschnitt 5: keine Zufallsquelle nötig. Sollte je eine nötig werden, steht sie nur in app.mjs.
+  for (const d of CODE_DATEIEN) {
+    assert.ok(!/Math\.random|crypto|Date\.now|new Date|performance\./.test(code[d]), `${d}: Zufall oder Uhr`);
+  }
+});
+
+test('Knöpfe mindestens 48 px hoch: die gemeinsame Klasse .k-knopf hat min-height 3rem (docs/02, touch ≥ 48 px)', async () => {
+  const kinderCss = await readFile(new URL('../../../packages/kinder-ui/css/kinder.css', import.meta.url), 'utf8');
+  assert.match(kinderCss, /\.k-knopf\s*\{[^}]*min-height:\s*3rem;/);
+});
+
+test('Eigenentwurf-Kennzeichnung: jede Karte trägt den Vermerk im Fuß und im gedruckten Text', () => {
+  for (const karte of daten.karten) {
+    assert.match(karte.fuss, /Eigenentwurf/, `${karte.id}: Fuß ohne Eigenentwurf-Kennzeichnung`);
+    assert.match(kartenText(karte), /Eigenentwurf/, `${karte.id}: Druck ohne Eigenentwurf-Kennzeichnung`);
+  }
+});
+
+test('uk und ru: nicht vorhanden, offen. Keine Fassung in den Daten, der Vermerk steht im GDD', () => {
+  assert.ok(alle['GDD.md'].includes('uk und ru: nicht vorhanden, offen.'), 'GDD.md: Vermerk fehlt');
+  assert.ok(!/"(uk|ru)"\s*:/.test(code['daten/stationen.json']), 'Daten: uk- oder ru-Schlüssel');
+});
+
+test('keine Bewertung von Kindern im Code und in den Daten: keine Punkte, Stufe, Einstufung, Platz, Ergebnis, Note (docs/02 Z. 141–146)', () => {
+  // Verneinungen wie „ohne Punkte“ sind erlaubt; „Rangliste“ ist ein Wettbewerbsbegriff ohne Rangwertung und nicht gesperrt.
+  const muster = /(?<!ohne |Keine |keine )\b(Punkte?|Stufe|Einstufung|Platz|Ergebnis|Noten?)\b/;
+  for (const d of CODE_DATEIEN) {
+    assert.ok(!muster.test(code[d]), `${d}: ${code[d].match(muster)?.[0]}`);
+  }
+});
+
 test('package.json: privat, ES-Modul, Testskript vorhanden', () => {
   const pkg = JSON.parse(alle['package.json']);
   assert.equal(pkg.private, true);
