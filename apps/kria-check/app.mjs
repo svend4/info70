@@ -18,6 +18,11 @@ const ladeStatus = () => JSON.parse(localStorage.getItem(STATUS_SCHLUESSEL) ?? '
 const speichereStatus = (s) => localStorage.setItem(STATUS_SCHLUESSEL, JSON.stringify(s));
 const ladeNotizen = () => localStorage.getItem(NOTIZ_SCHLUESSEL) ?? '';
 
+// Eingabehinweis am Notizfeld (Freitext): sichtbar, als eigenes Element direkt vor dem Feld; das Feld
+// verweist per aria-describedby darauf. Die App hat keine Druckfassung, der Hinweis bleibt also überall stehen.
+const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+const HINWEIS_STIL = 'display:block;font-size:0.85rem;color:#4b5563;margin:0.2rem 0';
+
 function bericht(status, notizen) {
   const erfuellt = ALLE.filter((k) => status[k.id]).length;
   const zeilen = [
@@ -87,6 +92,7 @@ function render() {
   const notizFeld = el('textarea', {
     style: 'width:100%;min-height:6rem;border:2px solid var(--k-rand);border-radius:0.5rem;padding:0.5rem;font-size:0.9rem',
     'aria-label': 'Notizen und Abwägungen',
+    'aria-describedby': 'kria-hinweis-notizen',
     placeholder: 'Abwägungen, Ausnahmen, geplante Maßnahmen mit Termin … (bleibt nur auf diesem Gerät)',
   });
   notizFeld.value = ladeNotizen();
@@ -111,6 +117,7 @@ function render() {
     ...bereichsKarten,
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📝 Notizen & Abwägungen'),
+      el('span', { id: 'kria-hinweis-notizen', style: HINWEIS_STIL }, KINDER_HINWEIS),
       notizFeld),
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Bericht (Anlage für Antrag, Beschaffung oder Träger-Beschluss)'),

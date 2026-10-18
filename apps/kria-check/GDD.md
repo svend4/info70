@@ -35,6 +35,8 @@ Arbeitsaufträgen statt zu Scham.
 Werbefrei, ohne Konto, keine externen Anfragen (NetzwerkWaechter),
 localStorage nur `kria.status`/`kria.notizen` + Löschknopf, Datei-Export
 lokal per Blob. Deutsch, mobile-first, Impressum im Footer.
+Eingabehinweis „Keine Namen von Kindern eingeben.“ steht sichtbar direkt vor
+dem Notizfeld (aria-describedby). Eine Druckfassung gibt es nicht.
 
 ## 6. Tests
 
@@ -42,6 +44,9 @@ lokal per Blob. Deutsch, mobile-first, Impressum im Footer.
 Hilfe-Pflicht ≥80 Zeichen, Rechtsbezug-Pflicht, Abdeckung der 5 Kernthemen
 aus dem Katalog (Kindeswohl, Datenminimierung, Dark Patterns, Beschwerdeweg,
 Alterseignung) + 116 111, Stop-Liste gegen Datensammel-Sprache.
+
+`test/eingabe-hinweis.test.mjs`: Hinweistext, Sichtbarkeit, Zuordnung Hinweis
+zum Notizfeld (aria-describedby). Testzahl gesamt: 8 (vorher 4).
 
 ## 7. Förder-/Nachweis-Anschluss
 
