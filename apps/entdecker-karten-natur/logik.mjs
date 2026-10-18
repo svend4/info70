@@ -97,3 +97,27 @@ export function kartenFuss(karte) {
 export function sicherheitsHinweis(karten) {
   return karten.some((k) => KLEINTEIL_KARTEN.includes(k.id)) ? SICHERHEITSHINWEIS : null;
 }
+
+/** Pflichtmarkierung auf jedem gedruckten Blatt mit Seitenangabe (docs/02 Z. 151–152, Pilot 1). */
+export const PFLICHTMARKIERUNG = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+
+/**
+ * Pflichtmarkierung für ein Blatt: steht darauf, sobald eine Karte eine Seitenangabe trägt.
+ * @param {Array<{ seite: number }>} karten
+ * @returns {string|null}
+ */
+export function blattMarkierung(karten) {
+  return karten.some((k) => Number.isInteger(k.seite)) ? PFLICHTMARKIERUNG : null;
+}
+
+/**
+ * Prüft die gedruckten Blätter: Jedes Blatt mit Seitenangabe trägt die Pflichtmarkierung.
+ * @param {Array<{ karten: Array<{ seite: number }>, markierung: string|null }>} blaetter
+ * @returns {string[]} Fehlermeldungen; leer heißt: alles in Ordnung
+ */
+export function pruefeMarkierung(blaetter) {
+  return blaetter.flatMap((b, i) => {
+    const soll = blattMarkierung(b.karten);
+    return soll && b.markierung !== soll ? [`Blatt ${i + 1}: Pflichtmarkierung fehlt`] : [];
+  });
+}

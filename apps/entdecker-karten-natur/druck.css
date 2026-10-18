@@ -38,6 +38,7 @@
   .ek-blatt-kopf { margin: 0 0 3mm; font-size: 8.5pt; color: #000; }
   .ek-blatt-kopf p { margin: 0 0 0.6mm; }
   .ek-blatt-titel { font-size: 11pt; font-weight: 700; }
+  .ek-blatt-fuss { margin: 2mm 0 0; font-size: 7.5pt; color: #000; }
 
   /* Zwei Spalten, drei Reihen: sechs Karten je Blatt. */
   .ek-raster {

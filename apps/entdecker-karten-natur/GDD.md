@@ -40,11 +40,12 @@ Das Kartenset hat 19 Karten: 7 Tiere, 3 Pflanzen, 6 Stoffe, 3 Jahreszeiten. Alle
 - **Altersangabe:** 1 bis 3 Jahre, aus dem Katalogeintrag (fachkraftgeleitet, offline).
 - **Titel:** mit „Tür“ geschrieben (im Katalog als „Tuer“ umschrieben).
 - **Kleinteile:** Steine, Sand und Ton tragen auf dem Blatt den Satz „Steine, Sand und Ton nur mit der Fachkraft; kleine Teile von Kleinkindern fernhalten (Eigenentwurf, keine Quellenaussage).“. Der Satz steht nur auf Blättern, die eine dieser Karten enthalten.
+- **Pflichtmarkierung:** Jedes gedruckte Blatt mit Seitenangabe trägt unten die Markierung „noch nicht von einem Menschen geprüft“ (Lehre aus Pilot 1). Der Bildschirm-Fuß trägt sie ebenfalls.
 - **Fußzeile je Karte:** „Begriff: Quelle S. 51“ und „Beobachtungsanregung: Eigenentwurf“; bei Pflanzen „Benennen: Quelle S. 51“ und „draußen suchen: Eigenentwurf“.
 
 ## 8. Tests
 
-34 Tests in zwei Dateien: `test/logik.test.mjs` (Daten, Quelle je Eintrag, Seitenform, Kennzeichnung und Fußzeile, Filter, Blätter, Sicherheitssatz, Fehlerweg beim Laden) und `test/regeln.test.mjs` (Projektregeln am Quelltext: keine Felder über Kinder, keine Eingabefelder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter mit Fehlerweg, CSP, keine Druckzeichen, keine Namenszeile im Druck, Blattkopf, Footer-Link 48 px, Pflichtmarkierung, `aria-live` auf `#app`, verbotene Wörter, keine Bewertung, Fokus nach Neuaufbau, Modellnamen-Freiheit).
+40 Tests in zwei Dateien: `test/logik.test.mjs` (Daten, Quelle je Eintrag, Tierliste aus der Quelle, Seitenform, Kennzeichnung und Fußzeile, Filter, Blätter, Sicherheitssatz, Pflichtmarkierung je Blatt, Fehlerweg beim Laden) und `test/regeln.test.mjs` (Projektregeln am Quelltext: keine Felder über Kinder, keine Eingabefelder, keine Speicherung, keine externen Adressen, Netzwerk-Wächter mit Fehlerweg, CSP, keine Druckzeichen, keine Namenszeile im Druck, Blattkopf, Footer-Link 48 px, Pflichtmarkierung je Blatt im Druck, Knopfhöhe 3rem, Zufall nur in `app.mjs`, `aria-live` auf `#app`, verbotene Wörter, keine Bewertung, Fokus nach Neuaufbau, Modellnamen-Freiheit).
 
 ## Offen
 
@@ -52,6 +53,7 @@ Das Kartenset hat 19 Karten: 7 Tiere, 3 Pflanzen, 6 Stoffe, 3 Jahreszeiten. Alle
 - **Kartenformat:** Karten, Gruppen, Anregungen und Blattaufteilung sind Eigenentwurf und nicht aus der Quelle belegt.
 - **Durchsicht durch eine Fachkraft** steht aus: Verständlichkeit, Altersgerechtheit und Ablauf draußen.
 - **Sicherheitssatz** zu Kleinteilen (Steine, Sand, Ton; 1 bis 3 Jahre) ist Eigenentwurf; eine Fachkraft soll ihn prüfen.
-- **Fehlerweg:** Fehlerstatus und ungültiges JSON beim Laden sind im Test geprüft. Ein Netzausfall (fetch wirft) ist nur im Quelltext abgedeckt und im Browser noch nicht geprüft.
+- **Fehlerweg:** Fehlerstatus, ungültiges JSON und ein Netzausfall (fetch wirft) zeigen im Browser die Meldung „Die Karten konnten nicht geladen werden“. Im Test und im Browser geprüft.
+- **Favicon:** Die App hat keins; der Browser fragt `favicon.ico` an und bekommt 404 (A3, Bauauftrag Abschnitt 9).
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - **Repo-Zählungen:** Mit dieser App ändern sich die Gesamtzahl der Tests im Wurzel-README und die Zahl der Apps im Impressum. Diese Dateien hat die App nicht geändert; sie müssen nachgezogen werden.

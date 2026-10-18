@@ -7,8 +7,8 @@
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
-  FEHLER_LADEN, KARTEN_PRO_BLATT, anregungsMarke, blaettern, blattKopf, filtereKarten,
-  kartenAusAntwort, kartenFuss, sicherheitsHinweis, zaehleJeGruppe,
+  FEHLER_LADEN, KARTEN_PRO_BLATT, PFLICHTMARKIERUNG, anregungsMarke, blaettern, blattKopf, blattMarkierung,
+  filtereKarten, kartenAusAntwort, kartenFuss, sicherheitsHinweis, zaehleJeGruppe,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -58,16 +58,19 @@ function karte(k) {
 
 // Ein gedrucktes Blatt: Kopf mit Quelle und Fachkraft-Satz, darunter das Raster der Karten.
 // Liegt eine Kleinteil-Karte auf dem Blatt, steht der Sicherheitssatz im Kopf.
+// Trägt das Blatt Seitenangaben, steht die Pflichtmarkierung im Druck (Pilot 1).
 function blatt(karten, nummer, gesamt, gruppenName) {
   const sicher = sicherheitsHinweis(karten);
-  return el('section', { class: 'ek-blatt' },
+  const markierung = blattMarkierung(karten);
+  return el('div', { class: 'ek-blatt' },
     el('header', { class: 'ek-blatt-kopf' },
       el('p', { class: 'ek-blatt-titel' }, daten.titel),
       el('p', {}, blattKopf({ gruppe: gruppenName, nummer, gesamt })),
       el('p', {}, daten.sinne.text),
       el('p', {}, daten.hinweis),
       sicher ? el('p', {}, sicher) : null),
-    el('div', { class: 'ek-raster' }, ...karten.map(karte)));
+    el('div', { class: 'ek-raster' }, ...karten.map(karte)),
+    markierung ? el('p', { class: 'ek-blatt-fuss' }, markierung) : null);
 }
 
 function render() {
@@ -101,7 +104,7 @@ function render() {
 
     el('footer', { class: 'k-fuss ek-nur-bildschirm' },
       el('span', {}, 'Werkzeug für Fachkräfte; werbefrei; nichts wird gespeichert; keine Verbindung nach draußen. '),
-      el('span', {}, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft. '),
+      el('span', {}, `${PFLICHTMARKIERUNG} `),
       el('a', { href: '../../impressum.html' }, 'Impressum und Datenschutz')));
 
   if (merken) app.querySelector(`[data-kennung="${merken}"]`)?.focus();

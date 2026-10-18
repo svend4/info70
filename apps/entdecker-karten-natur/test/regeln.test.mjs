@@ -198,7 +198,7 @@ test('Fachkraft-Satz, Eigenentwurf-Kennzeichnung und Pflichtmarkierung der Seite
   assert.ok(app.includes('kartenFuss(k)') && ausgabeVon('logik.mjs').includes('Beobachtungsanregung: Eigenentwurf'),
     'die Fußzeile der Karten kennzeichnet die Anregung nicht als Eigenentwurf');
   const markierung = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
-  assert.ok(app.includes(markierung), 'der Footer trägt die Pflichtmarkierung nicht');
+  assert.ok(app.includes('PFLICHTMARKIERUNG') && ausgabeVon('logik.mjs').includes(markierung), 'der Footer trägt die Pflichtmarkierung nicht');
   const gdd = alleText.find(([n]) => n === 'GDD.md')[1];
   assert.ok((gdd.split('## Offen')[1] ?? '').includes(markierung), 'das GDD trägt die Pflichtmarkierung nicht unter „## Offen“');
   const alles = alleText.map(([, t]) => t).join('\n');
@@ -213,4 +213,20 @@ test('Fokus nach Neuaufbau: jeder Knopf trägt eine eindeutige data-kennung, ren
   assert.equal(eindeutig.size, daten.gruppen.length + 2, 'data-kennung-Werte sind nicht eindeutig');
   assert.match(app, /const merken = document\.activeElement\?\.dataset\?\.kennung;/, 'Kennung wird vor dem Neuaufbau nicht gemerkt');
   assert.match(app, /app\.querySelector\(`\[data-kennung="\$\{merken\}"\]`\)\?\.focus\(\);/, 'Fokus wird nach dem Neuaufbau nicht gesetzt');
+});
+
+test('Pflichtmarkierung im Druck: jedes Blatt mit Seitenangabe trägt sie im Blattfuß (Pilot 1: vorher nur im Bildschirm-Fuß)', () => {
+  assert.match(app, /const markierung = blattMarkierung\(karten\);/, 'das Blatt fragt die Markierung nicht ab');
+  assert.match(app, /markierung \? el\('p', \{ class: 'ek-blatt-fuss' \}, markierung\) : null/, 'der Blattfuß zeigt die Markierung nicht');
+  assert.match(css, /\.ek-blatt-fuss\s*\{[^}]*color:\s*#000/, 'der Blattfuß hat keine Druckregel');
+});
+
+test('Knöpfe mindestens 48 px hoch: die gemeinsame Klasse .k-knopf hat min-height 3rem (docs/02, touch ≥ 48 px)', async () => {
+  const kinderCss = await readFile(new URL('../../../packages/kinder-ui/css/kinder.css', import.meta.url), 'utf8');
+  assert.match(kinderCss, /\.k-knopf\s*\{[^}]*min-height:\s*3rem;/);
+});
+
+test('Zufall nur in app.mjs: Math.random und Uhr stehen nirgends in den Ausgabe-Dateien (die Karten sind fest)', () => {
+  const treffer = ausgabe.filter(([, q]) => /Math\.random|crypto|Date\.now|new Date|performance\./.test(q)).map(([d]) => d);
+  assert.deepEqual(treffer, [], `Zufall oder Uhr in: ${treffer.join(', ')}`);
 });

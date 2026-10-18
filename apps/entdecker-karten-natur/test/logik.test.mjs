@@ -2,8 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  FEHLER_LADEN, KARTEN_PRO_BLATT, anregungsMarke, blaettern, blattKopf, filtereKarten,
-  kartenAusAntwort, kartenFuss, sicherheitsHinweis, zaehleJeGruppe,
+  FEHLER_LADEN, KARTEN_PRO_BLATT, PFLICHTMARKIERUNG, anregungsMarke, blaettern, blattKopf, blattMarkierung,
+  filtereKarten, kartenAusAntwort, kartenFuss, pruefeMarkierung, sicherheitsHinweis, zaehleJeGruppe,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/karten.json', import.meta.url), 'utf8'));
@@ -78,6 +78,13 @@ test('Eigenentwurf: jede Anregung trägt Seitenangabe und Kennzeichnung, die Fu�
       ? `Benennen: Quelle S. ${k.seite}; draußen suchen: Eigenentwurf`
       : `Begriff: Quelle S. ${k.seite}; Beobachtungsanregung: Eigenentwurf`;
     assert.equal(kartenFuss(k), erwartet, `${k.id}: Fußzeile`);
+  }
+});
+
+test('Tierkarten nur aus der Quellenliste: jeder Tiername steht im Quelltext der Gruppe (S. 51)', () => {
+  const quelle = daten.gruppen.find((g) => g.id === 'tiere').quelle;
+  for (const k of daten.karten.filter((k) => k.gruppe === 'tiere')) {
+    assert.ok(quelle.includes(k.titel), `${k.titel} steht nicht in der Quellenliste`);
   }
 });
 
@@ -159,4 +166,18 @@ test('Fehlerweg Laden: Fehlerstatus wirft, gültige Antwort liefert die Daten, M
     SyntaxError,
   );
   assert.deepEqual(await kartenAusAntwort({ ok: true, status: 200, json: async () => ({ a: 1 }) }), { a: 1 });
+});
+
+test('Pflichtmarkierung: jedes Blatt mit Seitenangabe trägt sie; pruefeMarkierung findet ein fehlendes Blatt', () => {
+  const blaetter = blaettern(daten.karten).map((karten) => ({ karten, markierung: blattMarkierung(karten) }));
+  assert.equal(blaetter.length, 4);
+  for (const b of blaetter) assert.equal(b.markierung, PFLICHTMARKIERUNG);
+  assert.deepEqual(pruefeMarkierung(blaetter), [], 'alle Blätter tragen die Markierung');
+  const ohne = blaetter.map((b, i) => (i === 2 ? { ...b, markierung: null } : b));
+  assert.deepEqual(pruefeMarkierung(ohne), ['Blatt 3: Pflichtmarkierung fehlt'], 'Gegenprobe: das fehlende Blatt wird genannt');
+  assert.equal(blattMarkierung([]), null, 'ein Blatt ohne Karten braucht keine Markierung');
+});
+
+test('Pflichtmarkierung im Wortlaut: maschinell geprüft, noch nicht von einem Menschen', () => {
+  assert.equal(PFLICHTMARKIERUNG, 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.');
 });

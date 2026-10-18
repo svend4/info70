@@ -1,0 +1,12 @@
+{
+  "id": "PRI-4",
+  "slug": "entdecker-karten-natur",
+  "titel": "Entdecker-Karten: Tiere und Pflanzen vor der Tür",
+  "status_neu": "teilweise",
+  "app": "entdecker-karten-natur",
+  "tests_app": 40,
+  "hub_zeile": "<a href=\"apps/entdecker-karten-natur/index.html\">Entdecker-Karten: Tiere und Pflanzen vor der Tür</a>: Druck-Kartenset für Fachkräfte mit Tieren, Pflanzen, Stoffen und Jahreszeiten zum Beobachten draußen; sechs Karten je A4-Blatt, offline, ohne Speicherung.",
+  "readme_zeile": "| PRI-4 | Entdecker-Karten: Tiere und Pflanzen vor der Tür | teilweise (Ausbau) | `apps/entdecker-karten-natur/` |",
+  "docs10_notiz": "Entdecker-Karten (PRI-4) ausgebaut: 19 Karten in vier Gruppen, Druck mit sechs Karten je Blatt und Pflichtmarkierung auf jedem Blatt, 40 Tests; Quelle S. 50 und S. 51. Offen bleiben die Durchsicht durch eine Fachkraft und der Sicherheitssatz zu Kleinteilen.",
+  "katalog_korrektur": "Entdecker-Karten: Ausbau nach Bauauftrag PRI-4. Gebaut: Gruppenfilter, Vorschau, Druck mit sechs Karten je A4-Blatt, Pflichtmarkierung je Blatt, Sicherheitssatz auf Blättern mit Steinen, Sand und Ton. Nicht übernommen: Igel, Eichhörnchen, Amsel und Reh, weil die Quelle sie auf S. 51 nicht nennt (der Katalog widerspricht sich); Entscheidung bei Koordinator und Fachkraft. Offen: Durchsicht durch eine Fachkraft."
+}

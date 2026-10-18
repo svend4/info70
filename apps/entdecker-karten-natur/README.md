@@ -2,7 +2,7 @@
 
 Ein Druck-Kartenset für Fachkräfte in der Kita. Die Karten gehören zu einem Beobachtungsgang draußen, den die Fachkraft begleitet. Altersgruppe 1 bis 3, fachkraftgeleitet, offline. Es ist kein Kinderbildschirm: Das Werkzeug ist für die Fachkraft.
 
-**Status: erster Stand (MVP).** Kartendaten, Filter nach Gruppe und der Druck mit sechs Karten je Blatt sind gebaut. Die Prüfung im Browser steht noch aus.
+**Status: Ausbau (PRI-4).** Kartendaten, Filter nach Gruppe und der Druck mit sechs Karten je Blatt sind gebaut. Auf jedem gedruckten Blatt steht die Pflichtmarkierung zur Seitenangabe. Die Prüfung im Browser bei 360 px ist bestanden. Offen bleiben die Durchsicht durch eine Fachkraft und der Sicherheitssatz.
 
 ## Was drin ist
 
@@ -13,7 +13,7 @@ Das Kartenset hat 19 Karten in vier Gruppen:
 - **Stoffe** (6): Wasser, Schnee, Eis, Sand, Ton, Steine. Anfassen, beobachten.
 - **Jahreszeiten** (3): Herbstlaub, Schnee, Blüte. Beobachten.
 
-Auf dem Bildschirm wählt die Fachkraft eine Gruppe, sieht die Vorschau und druckt den Kartenbogen. Der Druck enthält einen Blattkopf (Titel, Gruppe, Blattnummer, Ziel und Hinweis für die Fachkraft; auf Blättern mit Steinen, Sand oder Ton zusätzlich ein Sicherheitssatz) und die Karten. Die Bedienelemente fehlen im Druck. Gedruckt werden sechs Karten je A4-Blatt mit gestrichelten Schneidelinien.
+Auf dem Bildschirm wählt die Fachkraft eine Gruppe, sieht die Vorschau und druckt den Kartenbogen. Der Druck enthält einen Blattkopf (Titel, Gruppe, Blattnummer, Ziel und Hinweis für die Fachkraft; auf Blättern mit Steinen, Sand oder Ton zusätzlich ein Sicherheitssatz) und die Karten. Die Bedienelemente fehlen im Druck. Gedruckt werden sechs Karten je A4-Blatt mit gestrichelten Schneidelinien. Trägt ein Blatt Seitenangaben, steht unten die Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“
 
 ## Was belegt ist
 
@@ -33,7 +33,7 @@ Nicht jedes Tier ist draußen zu sehen. Dann zeigt die Fachkraft ein Bild oder a
 
 ## Tests
 
-Die Prüfung umfasst 34 Tests in zwei Dateien: `test/logik.test.mjs` (Daten und reine Logik) und `test/regeln.test.mjs` (Projektregeln am Quelltext).
+Die Prüfung umfasst 40 Tests in zwei Dateien: `test/logik.test.mjs` (Daten und reine Logik) und `test/regeln.test.mjs` (Projektregeln am Quelltext).
 
 ```bash
 node --test apps/entdecker-karten-natur/test/*.test.mjs
