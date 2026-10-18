@@ -123,6 +123,31 @@ export function planText(plan, symbole, groesse = GROESSE) {
   return `${eintraege.map((s) => `${s.name} (${s.anzahl}×)`).join(', ')}. ${zeilen.map((z) => z.text).join('. ')}.`;
 }
 
+/**
+ * Pflichtmarkierung auf jedem gedruckten Blatt. Sie steht dort, weil die
+ * Daten Seitenangaben tragen (Praleska S. 138); geprüft ist nur der Quelltext.
+ */
+export const PFLICHTMARKIERUNG = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+
+/**
+ * Der Druckbogen als Daten. Im Druck stehen keine Zeichen, nur Nummern: Jedes
+ * Symbol bekommt seine Position in der Symbolliste als Nummer, und die
+ * Zeichenerklärung nennt dieselbe Nummer. So bleibt der Plan lesbar, auch wenn
+ * der Drucker keine Emojis kann. Seitenzahlen stehen nicht auf dem Blatt.
+ */
+export function druckInhalt(plan, symbole, norden, groesse = GROESSE) {
+  const nummer = new Map(symbole.map((s, i) => [s.id, i + 1]));
+  const kante = KANTEN.find((k) => k.id === norden) ?? KANTEN[0];
+  return {
+    kopf: 'Kita-Kartograph, Eigenentwurf',
+    titel: 'Euer Raum',
+    norden: `Norden ist ${kante.name}.`,
+    felder: Array.from({ length: felderAnzahl(groesse) }, (_, i) => nummer.get(plan[i]) ?? ''),
+    legende: legende(plan, symbole).map((s) => ({ nummer: nummer.get(s.id), name: s.name, anzahl: s.anzahl })),
+    pflicht: PFLICHTMARKIERUNG,
+  };
+}
+
 /** Validiert die Symboldaten. */
 export function pruefeDaten(daten) {
   const fehler = [];

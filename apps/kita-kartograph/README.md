@@ -55,5 +55,11 @@ Werbefrei, без аккаунтов, без внешних запросов. Х
 
 ```bash
 npm run dev   # http://localhost:8070/apps/kita-kartograph/
-npm test      # 29 Tests: Logik und Projektregeln
+npm test      # 34 Tests: Logik und Projektregeln
 ```
+
+## Druck
+
+Кнопка «Plan drucken» печатает один лист A4 (`druck.css`): «Euer Raum» с
+номерами вместо знаков, сама Zeichenerklärung и обязательная пометка о
+проверке. Без эмодзи в печати; номер в клетке совпадает с номером в легенде.

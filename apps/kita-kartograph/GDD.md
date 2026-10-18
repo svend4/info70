@@ -78,16 +78,19 @@ Bauauftrag GEM-10: keine Eingabefelder, Speicherung nur über
 `kartograph.plan` in `localStorage` (Ausnahme, siehe 9), keine Netzaufrufe,
 Daten per JSON-Import, keine Zufallsquelle, Grundgerüst mit CSP,
 `aria-live` auf `#app`, Netzwerk-Wächter, Knopfhöhe 48 px,
-`data-kennung` auf jedem Knopf, Himmelsrichtung ohne Neuaufbau, kein
-Druck, keine Bewertung, Seitenangabe je Zeichen und die Testzahl hier.
+`data-kennung` auf jedem Knopf, Himmelsrichtung ohne Neuaufbau, Druckblatt
+(kein Emoji und kein Druckzeichen im Druckinhalt, Pflichtmarkierung auf dem
+Blatt, Bildschirmteile in `nur-bildschirm`, `@media print` in `druck.css`),
+keine Bewertung, Seitenangabe je Zeichen und die Testzahl hier.
 
-Die Summe ist 29 Tests (`npm test`).
+Die Summe ist 34 Tests (`npm test`).
 
 ## 8. Erweiterungen (Katalog)
 
 Zweite Ebene für das Außengelände, Weg-Modus („zeichne deinen Weg zur
 Tür“), Übergabe an `klassen-koffer-auswertung`, Symbol-Karten zum
-Ausdrucken für die Magnettafel.
+Ausdrucken für die Magnettafel. Das Druckblatt des Plans ist dagegen gebaut
+(Abschnitt 9).
 
 ## 9. Offen
 
@@ -99,7 +102,10 @@ Ausdrucken für die Magnettafel.
   Entscheidung: Verweis genügt oder eigene Karte.
 - Herkunftsländer-Ansicht, Europakarte, Klassen-Koffer-Export, Außengelände
   und Weg-Modus: nicht gebaut.
-- Symbol-Karten zum Ausdrucken: nicht gebaut; deshalb keine Druckregeln.
+- Druckblatt des Plans: gebaut (`druck.css`). Im Druck stehen Nummern statt
+  Zeichen, die Zeichenerklärung nennt dieselben Nummern, und die
+  Pflichtmarkierung steht darunter. Seitenzahlen stehen nicht auf dem Blatt.
+  Symbol-Karten zum Ausdrucken: nicht gebaut.
 - Altersgrenze: Katalog 5–7, App „ab 5“ ohne Obergrenze.
 - Favicon (A3): fehlt, der Browser meldet 404.
 - Vorlesefunktion (F2): gebaut, die Entscheidung dazu steht aus.

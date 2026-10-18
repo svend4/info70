@@ -15,7 +15,7 @@ import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import daten from './daten/symbole.json' with { type: 'json' };
 import {
   GROESSE, KANTEN, felderAnzahl, feldName,
-  setzeSymbol, setzeNorden, ladeZustand, leerePlan, anzahlGelegt, legende, planText, pruefeDaten,
+  setzeSymbol, setzeNorden, ladeZustand, leerePlan, anzahlGelegt, legende, planText, pruefeDaten, druckInhalt,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -45,6 +45,9 @@ let nordAnzeige = null;
 let planGruppe = null;
 let legendeBox = null;
 let statusZeile = null;
+// Das Druckblatt liegt außerhalb von #app: Ändert es sich, soll nichts vorgelesen werden.
+const druckBox = el('div', { class: 'nur-druck', id: 'druckbereich' });
+app.after(druckBox);
 
 function sichere() {
   try {
@@ -81,6 +84,7 @@ function waehleNorden(id) {
   norden = neu.norden;
   sichere();
   markiereNorden();
+  aktualisiereDruck();
 }
 
 function markiereNorden() {
@@ -115,6 +119,30 @@ function schreibeFeld(index) {
 function aktualisiereNebenteile() {
   if (statusZeile) statusZeile.textContent = statusText();
   if (legendeBox) legendeBox.replaceChildren(...legendeInhalt().filter(Boolean));
+  aktualisiereDruck();
+}
+
+// Das Druckblatt: nur Text und Nummern, ohne Emoji. Die Zeichen stehen in der
+// Zeichenerklärung unter derselben Nummer. Seitenzahlen stehen nicht auf dem Blatt.
+function aktualisiereDruck() {
+  druckBox.replaceChildren(...druckKinder());
+}
+
+function druckKinder() {
+  const d = druckInhalt(plan, daten.symbole, norden);
+  return [
+    el('p', { class: 'druck-kopf' }, d.kopf),
+    el('h1', { class: 'druck-titel' }, d.titel),
+    el('p', { class: 'druck-zeile' }, d.norden),
+    el('div', { class: 'druck-raster' },
+      ...d.felder.map((n) => el('div', { class: 'druck-feld' }, String(n)))),
+    el('h2', { class: 'druck-ueberschrift' }, 'Zeichenerklärung'),
+    d.legende.length
+      ? el('ul', { class: 'druck-liste' },
+        ...d.legende.map((s) => el('li', {}, `${s.nummer} = ${s.name}${s.anzahl > 1 ? ` (${s.anzahl}×)` : ''}`)))
+      : el('p', { class: 'druck-zeile' }, 'Noch nichts gelegt.'),
+    el('p', { class: 'druck-pflicht' }, d.pflicht),
+  ];
 }
 
 function legendeInhalt() {
@@ -194,7 +222,13 @@ function legendeKarte() {
   return el('section', { class: 'k-karte' },
     el('h2', { style: 'margin-top:0' }, '📋 Zeichenerklärung'),
     el('p', { style: 'margin-top:0' }, 'Ein Plan braucht eine Erklärung – sonst weiß niemand, wofür die Zeichen stehen. Sie baut sich hier von allein auf.'),
-    legendeBox);
+    legendeBox,
+    el('button', {
+      'data-kennung': 'drucken',
+      class: 'k-knopf k-knopf--neutral k-knopf--klein',
+      style: 'margin-top:0.5rem',
+      onclick: () => window.print(),
+    }, '🖨️ Plan drucken'));
 }
 
 function begleitKarte() {
@@ -239,7 +273,7 @@ function render() {
   felder = new Map();
   symbolKnoepfe = new Map();
   nordenKnoepfe = new Map();
-  app.replaceChildren(...[
+  app.replaceChildren(el('div', { class: 'nur-bildschirm' }, ...[
     el('h1', { class: 'k-titel' }, '🗺️ Kita-Kartograph'),
     el('p', { class: 'k-untertitel' }, 'Wir zeichnen unseren Raum von oben'),
     symbolKarte(),
@@ -251,7 +285,8 @@ function render() {
       el('span', {}, 'Werbefrei · ohne Anmeldung · keine Namen · Daten bleiben auf diesem Gerät · '),
       el('a', { href: 'eltern.html', style: FUSS_LINK }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html', style: FUSS_LINK }, 'Impressum & Datenschutz')),
-  ].filter(Boolean));
+  ].filter(Boolean)));
+  aktualisiereDruck();
 }
 
 // Fußlinks mindestens 48 px hoch (docs/02, Berührung).

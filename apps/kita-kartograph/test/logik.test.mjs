@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
   GROESSE, KANTEN, felderAnzahl, zeileVon, spalteVon, feldName,
-  setzeSymbol, setzeNorden, ladeZustand, leerePlan, anzahlGelegt, legende, planText, pruefeDaten,
+  setzeSymbol, setzeNorden, ladeZustand, leerePlan, anzahlGelegt, legende, planText, pruefeDaten, druckInhalt,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/symbole.json', import.meta.url), 'utf8'));
@@ -130,6 +130,21 @@ test('Gesprächsimpulse und Schritte führen zum echten Raum', () => {
   const ohneFrage = kopie();
   ohneFrage.fragen[0] = 'Das war es.';
   assert.ok(pruefeDaten(ohneFrage).some((f) => /soll eine Frage sein/.test(f)));
+});
+
+test('Druckbogen: jedes Feld zeigt die Nummer seines Symbols, die Erklärung nennt dieselbe Nummer', () => {
+  let plan = leerePlan();
+  plan = setzeSymbol(plan, 0, 'fenster', S);
+  plan = setzeSymbol(plan, 35, 'tuer', S);
+  plan = setzeSymbol(plan, 6, 'tuer', S);
+  const d = druckInhalt(plan, S, 'links');
+  // In der Symbolliste stehen Tür und Fenster vorn: Tür = 1, Fenster = 2.
+  assert.equal(d.felder.length, felderAnzahl());
+  assert.equal(d.felder[0], 2);
+  assert.equal(d.felder[1], '');
+  assert.equal(d.felder[35], 1);
+  assert.deepEqual(d.legende.map((l) => [l.nummer, l.anzahl]), [[1, 2], [2, 1]]);
+  assert.equal(d.norden, 'Norden ist links.');
 });
 
 test('Ton: keine Bewertung des Plans', () => {

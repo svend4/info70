@@ -2,21 +2,45 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { access, readdir, readFile } from 'node:fs/promises';
 import daten from '../daten/symbole.json' with { type: 'json' };
+import { druckInhalt, leerePlan, setzeSymbol, PFLICHTMARKIERUNG } from '../logik.mjs';
 
-// Projektregeln für diese App, nach der Vorlage der Puppentheater-Werkstatt, mit den Abweichungen
-// aus dem Bauauftrag GEM-10 (docs/bauauftraege, Abschnitt 6 und 9):
-//  - Speicherung: nur der letzte Plan unter `kartograph.plan`, löschbar (Entscheidung offen).
-//  - Druck ist nicht gebaut; die Druckregeln (Zeichen, Namenszeile, Pflichtmarkierung) entfallen.
+// Projektregeln für diese App, nach der Vorlage der Puppentheater-Werkstatt
+// (apps/puppentheater-werkstatt/test/regeln.test.mjs), mit den Abweichungen aus dem Bauauftrag
+// GEM-10 (docs/bauauftraege, Abschnitt 6 und 9):
+//  - Speicherung: nur der letzte Plan unter `kartograph.plan`, löschbar (docs/02 Z. 25).
+//  - Druck: ein eigenes Druckblatt mit druck.css; Zeichen als Nummern, keine Emojis, keine
+//    Namenszeile; die Pflichtmarkierung steht auf dem Blatt, weil die Daten Seitenangaben tragen.
 // Die Prüfung liest die Dateien der App (ohne test/). Die Testdateien selbst dürfen die verbotenen
 // Wörter nennen, um sie zu verbieten.
 
 const APP = new URL('../', import.meta.url);
-const CODE_DATEIEN = ['index.html', 'app.mjs', 'logik.mjs', 'daten/symbole.json'];
+const CODE_DATEIEN = ['index.html', 'app.mjs', 'logik.mjs', 'druck.css', 'daten/symbole.json'];
 const ALLE_DATEIEN = [...CODE_DATEIEN, 'eltern.html', 'package.json', 'README.md', 'GDD.md'];
+const PFLICHT = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
 
 const lese = (datei) => readFile(new URL(datei, APP), 'utf8');
 const code = Object.fromEntries(await Promise.all(CODE_DATEIEN.map(async (d) => [d, await lese(d)])));
 const alle = Object.fromEntries(await Promise.all(ALLE_DATEIEN.map(async (d) => [d, await lese(d)])));
+
+// Druckblätter: leer, ein Zeichen, alle Felder mit wechselnden Symbolen (Mehrfachanzahl),
+// und zwei Nordkanten. So kommt jedes Symbol auf mindestens einem Blatt vor.
+const alleBelegt = (() => {
+  let plan = leerePlan();
+  for (let i = 0; i < 36; i++) plan = setzeSymbol(plan, i, daten.symbole[i % daten.symbole.length].id, daten.symbole);
+  return plan;
+})();
+const blaetter = [
+  druckInhalt(leerePlan(), daten.symbole, 'oben'),
+  druckInhalt(setzeSymbol(leerePlan(), 0, daten.symbole[0].id, daten.symbole), daten.symbole, 'oben'),
+  druckInhalt(alleBelegt, daten.symbole, 'rechts'),
+  druckInhalt(alleBelegt, daten.symbole, 'links'),
+];
+// Alles, was auf dem Blatt gedruckt wird, als Text.
+const druckText = (d) => [
+  d.kopf, d.titel, d.norden, ...d.felder.map(String),
+  ...d.legende.map((s) => `${s.nummer} ${s.name} ${s.anzahl}`),
+  d.pflicht,
+].join('\n');
 
 test('keine Eingabefelder für Kinder: kein input, textarea, select, form, contenteditable', () => {
   const muster = /<\s*(input|textarea|select|form)\b|contenteditable|(el|createElement)\(\s*['"](input|textarea|select|form)['"]/i;
@@ -31,7 +55,7 @@ test('Speicherung: nur localStorage, nur unter kartograph.plan, jeder Zugriff in
   for (const d of CODE_DATEIEN) {
     assert.ok(!verboten.test(code[d]), `${d}: Speicher außer localStorage gefunden`);
   }
-  for (const d of ['index.html', 'logik.mjs', 'daten/symbole.json']) {
+  for (const d of ['index.html', 'logik.mjs', 'daten/symbole.json', 'druck.css']) {
     assert.ok(!/localStorage/.test(code[d]), `${d}: localStorage gehört nur in app.mjs`);
   }
   assert.equal(app.match(/localStorage\./g)?.length ?? 0, 3, 'app.mjs: genau drei Zugriffe erwartet (lesen, schreiben, löschen)');
@@ -49,6 +73,7 @@ test('keine externen Adressen, keine Netzaufrufe in den Dateien der App, kein @i
   for (const d of ['app.mjs', 'logik.mjs']) {
     assert.ok(!netz.test(code[d]), `${d}: Netzaufruf gefunden`);
   }
+  assert.ok(!/@import/.test(code['druck.css']), 'druck.css: @import');
 });
 
 test('Daten kommen per JSON-Import mit Typangabe, nicht per fetch', () => {
@@ -61,15 +86,16 @@ test('Zufall und Uhr: keine Stelle im Code; die Logik bleibt rein', () => {
   }
 });
 
-test('Grundgerüst: deutsch, Viewport, CSP exakt, nur das eigene Stylesheet der Bibliothek, ein Modul-Skript', () => {
+test('Grundgerüst: deutsch, Viewport, CSP exakt, nur Bibliotheks- und eigenes Stylesheet, ein Modul-Skript', () => {
   const html = code['index.html'];
   assert.match(html, /<html lang="de">/);
   assert.match(html, /<meta name="viewport" content="width=device-width, initial-scale=1"/);
   assert.match(html, /<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'"/);
   assert.match(html, /<noscript>/);
+  // Der Titel darf das Emoji tragen: Er gehört nicht zum Druck.
   assert.match(html, /<title>Kita-Kartograph 🗺️<\/title>/);
   const links = [...html.matchAll(/<link[^>]*href="([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(links, ['../../packages/kinder-ui/css/kinder.css']);
+  assert.deepEqual(links, ['../../packages/kinder-ui/css/kinder.css', 'druck.css']);
   const skripte = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(skripte, ['app.mjs']);
   assert.match(html, /<script type="module" src="app\.mjs"><\/script>/);
@@ -111,8 +137,53 @@ test('Himmelsrichtung wird in place umgefärbt: waehleNorden und markiereNorden 
   }
 });
 
-test('Druck ist nicht gebaut: kein window.print, kein Druckblatt', () => {
-  assert.ok(!/window\.print|@media print/.test(code['app.mjs'] + code['index.html']), 'Druckfunktion gefunden');
+test('Druckblatt: eigenes Blatt mit druck.css und @media print; Bildschirmteile tragen nur-bildschirm, das Blatt steht außerhalb von #app', () => {
+  const app = code['app.mjs'];
+  const css = code['druck.css'];
+  assert.match(css, /@media print \{/);
+  assert.match(css, /@page\s*\{\s*size: A4 portrait;/);
+  assert.match(css, /\.nur-bildschirm\s*\{\s*display: none !important;\s*\}/);
+  assert.match(css, /\.nur-druck\s*\{\s*display: block;/);
+  assert.match(css, /\.nur-druck\s*\{\s*display: none;\s*\}/);
+  assert.match(app, /el\('div', \{ class: 'nur-bildschirm' \}, \.\.\.\[/, 'Bildschirmteile nicht in nur-bildschirm');
+  assert.match(app, /const druckBox = el\('div', \{ class: 'nur-druck', id: 'druckbereich' \}\);\s*app\.after\(druckBox\);/);
+  assert.equal(app.match(/window\.print\(\)/g)?.length ?? 0, 1, 'window.print genau einmal (Knopf „Plan drucken“)');
+});
+
+test('Druckinhalt ohne Emoji und ohne Druckzeichen: nur Text und Nummern', () => {
+  // Zeichenblöcke wie in der Puppentheater-Prüfung; \p{Extended_Pictographic} fängt alle Emojis.
+  const zeichen = /[☐☒☑✓✔✗✘✅❌★☆•●○◦·∙■□]|[←-⋿⌀-➿⦀-⧿⬀-⯿■-◿・]|\p{Extended_Pictographic}/u;
+  for (const [i, d] of blaetter.entries()) {
+    assert.ok(!zeichen.test(druckText(d)), `Blatt ${i}: Emoji oder Druckzeichen im Druckinhalt`);
+  }
+});
+
+test('im Quelltext: die Funktion, die das Druckblatt baut, enthält kein Emoji', () => {
+  const app = code['app.mjs'];
+  const start = app.indexOf('function druckKinder()');
+  assert.ok(start > -1, 'druckKinder() fehlt');
+  const ende = app.indexOf('\n}\n', start);
+  const funktion = app.slice(start, ende);
+  assert.ok(!/\p{Extended_Pictographic}/u.test(funktion), 'druckKinder(): Emoji im Druckblatt');
+});
+
+test('Pflichtmarkierung auf jedem Druckblatt, und sie ist die vorgeschriebene Zeile', () => {
+  assert.equal(PFLICHTMARKIERUNG, PFLICHT);
+  for (const [i, d] of blaetter.entries()) {
+    assert.ok(druckText(d).includes(PFLICHT), `Blatt ${i}: Pflichtmarkierung fehlt im Druck`);
+  }
+  assert.match(code['app.mjs'], /el\('p', \{ class: 'druck-pflicht' \}, d\.pflicht\)/, 'Pflichtzeile fehlt im Druckblatt');
+  for (const [d, inhalt] of Object.entries(alle)) {
+    assert.ok(!/von Hand geprüft/i.test(inhalt), `${d}: „von Hand geprüft“ ist nicht belegt`);
+  }
+});
+
+test('Druckblatt ohne Namenszeile und ohne Tages- oder Wochentagsfeld', () => {
+  // „Name“ auch in Zusammensetzungen; „Namen“ im Fließtext bleibt erlaubt.
+  const namenUndTage = /Name(?!n\b)|Datum|Wochentag|\b(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)\b|\bTage?\b|_{3,}|…{2,}/i;
+  for (const [i, d] of blaetter.entries()) {
+    assert.ok(!namenUndTage.test(druckText(d)), `Blatt ${i}: Namenszeile oder Tagesfeld im Druck`);
+  }
 });
 
 test('Keine Bewertung von Kindern im Code und in den Daten: keine Punkte, Stufe, Rang, Einstufung, Note', () => {

@@ -1,0 +1,47 @@
+/* Kita-Kartograph: Bildschirm und Druck.
+   Auf dem Bildschirm stehen Titel, Zeichen, Plan und Erklärung mit Emojis; sie tragen
+   die Klasse nur-bildschirm. Das Druckblatt (nur-druck) steht außerhalb von #app: „Euer
+   Raum“ mit Nummern statt Zeichen, die Zeichenerklärung und die Pflichtmarkierung.
+   Gedruckt wird ein einziges Blatt A4 hoch. */
+
+.nur-druck { display: none; }
+
+@media print {
+  @page { size: A4 portrait; margin: 14mm 15mm; }
+  .nur-bildschirm { display: none !important; }
+  #app { display: none !important; }
+  .nur-druck { display: block; break-inside: avoid; page-break-inside: avoid; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .druck-kopf { font-size: 10pt; color: #000; margin: 0 0 2pt; }
+  .druck-titel {
+    font-size: 26pt;
+    color: #000;
+    margin: 0 0 4pt;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #000;
+  }
+  .druck-zeile { font-size: 13pt; margin: 0 0 8pt; }
+  .druck-raster {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 120mm;
+    margin: 0 0 12pt;
+    border-top: 0.6pt solid #000;
+    border-left: 0.6pt solid #000;
+  }
+  .druck-feld {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13pt;
+    border-right: 0.6pt solid #000;
+    border-bottom: 0.6pt solid #000;
+  }
+  .druck-ueberschrift { font-size: 13pt; margin: 0 0 3pt; }
+  .druck-liste { font-size: 13pt; margin: 0 0 3pt; padding-left: 1.2em; }
+  .druck-pflicht { font-size: 10pt; color: #000; margin: 18pt 0 0; }
+}
