@@ -1,0 +1,50 @@
+{
+  "stand": "2026-10-18",
+  "regel": "Kinder-Apps mit Eingabefeld. Status zeigt, ob der Eintrag korrigiert ist oder eine Entscheidung des Nutzers aussteht. Der Test packages/kinderschutz/test/erwachsenen-apps.test.mjs zählt die offenen Entscheidungen.",
+  "apps": [
+    {
+      "slug": "barriere-detektive",
+      "bereich": "🌱 Stark werden (Kinder)",
+      "status": "korrigiert: Hinweis am Feld",
+      "zielgruppeGeprueft": true,
+      "pruefung": "nach Feld"
+    },
+    {
+      "slug": "erstes-handy-kompass",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "status": "Entscheidung umgesetzt (Hinweis am Feld, siehe Umsetzung)",
+      "zielgruppeGeprueft": true,
+      "pruefung": "nach Feld",
+      "befund": "Das Textfeld 'Name des Kindes (nur für den Druck)' (app.mjs:23-27) wird live in die Urkunde gespiegelt (app.mjs:77). Der Name ist der Zweck der Urkunde, ein Hinweis 'Keine Namen von Kindern eingeben.' würde dem widersprechen; Max entscheidet zwischen Namensfeld behalten oder Namenszeile zum Handschr"
+    },
+    {
+      "slug": "kinderrat",
+      "bereich": "🌱 Stark werden (Kinder)",
+      "status": "korrigiert: nur Initiale oder Nummer (maxlength 3) und Hinweis am Feld",
+      "zielgruppeGeprueft": true,
+      "pruefung": "nach Feld"
+    },
+    {
+      "slug": "mitmach-arena",
+      "bereich": "🌱 Stark werden (Kinder)",
+      "status": "korrigiert: Hinweis am Feld",
+      "zielgruppeGeprueft": true,
+      "pruefung": "nach Feld"
+    },
+    {
+      "slug": "passwort-pruefstand",
+      "bereich": "🛡️ Sicher im Netz (Kinder 8–12)",
+      "status": "Entscheidung umgesetzt (Hinweis am Feld, siehe Umsetzung)",
+      "zielgruppeGeprueft": true,
+      "pruefung": "nach Feld",
+      "befund": "Kinder-App mit Freitext: Das Testpasswort (app.mjs:90-101, type=text, maxlength 40) kann ein echtes Passwort oder ein Name-plus-Jahr-Passwort sein. Die Warnung „Tippe hier NIE dein echtes Passwort ein!“ steht auf Start (app.mjs:77) und Prüfstand (app.mjs:112), aber das Feld ist ohne Verlust der Funk"
+    },
+    {
+      "slug": "regel-werkstatt",
+      "bereich": "🌱 Stark werden (Kinder)",
+      "status": "korrigiert: Hinweis am Feld",
+      "zielgruppeGeprueft": true,
+      "pruefung": "nach Feld"
+    }
+  ]
+}

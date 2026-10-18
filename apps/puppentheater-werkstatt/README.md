@@ -111,7 +111,7 @@ Zitate und Seiten, die Bausteine, den Zufall über den Parameter und den Druckin
 `test/regeln.test.mjs` prüft die Projektregeln: keine Eingabefelder, keine Speicherung, keine
 externen Adressen, Zufall nur in `app.mjs`, keine Druckzeichen, keine Namenszeile, Pflichtmarkierung
 je Blatt, Eigenentwurf-Kennzeichnung, Fokus nach Klick, Modellnamen-Freiheit, Testzahl.
-Insgesamt sind es 39 Tests.
+Insgesamt sind es 40 Tests.
 
 ```bash
 node --test apps/puppentheater-werkstatt/test/*.test.mjs

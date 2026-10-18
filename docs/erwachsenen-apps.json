@@ -1,0 +1,420 @@
+{
+  "stand": "2026-10-18",
+  "regel": "Apps für Erwachsene mit Eingabefeld (input, select, textarea). Jede steht hier genau einmal; Kinder-Apps mit Eingabefeld stehen in docs/kinder-apps-mit-eingabe.json. Der Test packages/kinderschutz/test/erwachsenen-apps.test.mjs prüft Vollständigkeit, Eintrag ohne Feld und ungeprüfte Einträge.",
+  "apps": [
+    {
+      "slug": "aemtli-rad",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "avv-checkliste-hosting",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "barrierefreiheitserklaerung-generator",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "beschwerde-brief-werkstatt",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "bfsg-check",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "compliance-koffer",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "dark-pattern-selbstinspektion",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "datenschutz-baukasten",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "dsa-selbstaudit",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "einwilligungs-pruefpfad",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "eltern-kompass-generator",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "eltern-rechtebriefe",
+      "bereich": "Familie & gemeinsam",
+      "pruefung": "nach Feld: Name des Kindes im Brief (Zweck des Werkzeugs)",
+      "freierText": true,
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "ausnahme": "Der Name des Kindes gehört zum Zweck des Briefes (Auskunft und Löschung nach DSGVO). Eingaben bleiben auf dem Gerät, sie werden nicht gespeichert und nicht gesendet; das steht am Feld."
+    },
+    {
+      "slug": "elternbrief-generator",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "ergebnis-plakat",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "erste-woerter-tagebuch",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "familien-bildschirmzeit",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "familien-medienvertrag",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "familien-notfall-fahrplan",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "familienrat",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "familienschatz-reime",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "foerder-navigator",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "fragfinn-selbsttest",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "gruppenklima-check",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "impressum-generator",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "interaktions-konzept-assistent",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "jmstv-einstufungs-helfer",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "ki-kennzeichnungs-generator",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "ki-transparenz-check",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "kita-mitmach-boerse",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "kita-unterstuetzungs-navigator",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "kita-wochenplaner",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "klanggeschichten-erzeuger",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "klassen-koffer-auswertung",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "kria-check",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "kriterien-check",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "leichte-sprache-pruefhilfe",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "link-inventar-pruefer",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "meilenstein-begleiter",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "meldewege-planer",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "mini-oper-baukasten",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "morgenkreis-wochenplaner-u3",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "musik-jahresplaner",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "netz-pass-urkunde",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "schatzkarten-generator",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "schulfreigabe-dossier",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: Freitext, Hinweis „Keine Namen von Kindern eingeben.“",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true,
+      "freierText": true
+    },
+    {
+      "slug": "seitenstark-qualitaets-check",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "selbstcheck-paedagogik",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "selbststaendigkeits-leiter",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "sicherer-krabbelraum-check",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "spiele-kauf-kompass",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "spielzeug-check-u3",
+      "bereich": "👪 Für Familie & gemeinsam",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "staerken-tagebuch",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "stations-konfigurator",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "unser-konzert-zaehlhilfe",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "vorsorge-check-juschg",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "wahlkabine",
+      "bereich": "🧑‍🏫 Für Kita & Fachkräfte (lokal, ohne Kinderdaten)",
+      "pruefung": "nach Bereich",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    },
+    {
+      "slug": "werbekennzeichnung",
+      "bereich": "🛠️ Für Betreiber*innen",
+      "pruefung": "nach Feld: kein Kindbezug",
+      "hinweisFehlt": false,
+      "zielgruppeGeprueft": true
+    }
+  ]
+}

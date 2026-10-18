@@ -46,7 +46,7 @@ je sechs oder sieben Sätze, selbst geschrieben.
 S. Die Daten sind statisch, die Logik ist klein. Der Aufwand liegt bei der fachlichen Prüfung der Texte.
 
 ## 8. Tests
-39 Tests in zwei Dateien. `test/logik.test.mjs` prüft die Daten gegen die geprüften Zitate und Seiten,
+40 Tests in zwei Dateien. `test/logik.test.mjs` prüft die Daten gegen die geprüften Zitate und Seiten,
 die Bausteine, die Ziehung über den Parameter und den Druckinhalt. `test/regeln.test.mjs` prüft die
 Projektregeln. Details in der README.
 

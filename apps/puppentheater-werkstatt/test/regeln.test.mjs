@@ -213,6 +213,22 @@ test('keine Bewertung von Kindern im Code und in den Daten: keine Punkte, Stufe,
   }
 });
 
+test('externe Fakten: Normen, Studienzahlen und Erste-Hilfe-Angaben nur mit Quelle aus dem Praleska-Buch oder mit Vermerk', () => {
+  // Eine Zeile mit einer positiven Behauptung dieser Art braucht eine Fundstelle („S. n“, „Praleska“)
+  // oder den Vermerk „Eigenentwurf, fachlich nicht geprüft“. Zeilen, die etwas verneinen („keine
+  // Studie“, „ohne Norm“), sind keine Behauptung. Die Liste der Muster wächst mit den Befunden.
+  const behauptung = /\b(EN \d|DIN\b|ISO \d|AWMF|BZgA|BIÖG|WHO\b|G-BA|§\s*\d|Richtlinie|Verordnung|Studie|randomis|Teilnehmer|Gegenstimme|Prozent|\d+\s*%|Erste[- ]Hilfe|Giftnotruf|Notruf|amtlich|Behörde)/i;
+  const verneint = /\b(kein|keine|keinen|keiner|ohne|nicht|nie)\b/i;
+  const beleg = /Eigenentwurf, fachlich nicht geprüft|\(S\. \d|Praleska/;
+  const befunde = [];
+  for (const d of ALLE_DATEIEN) {
+    alle[d].split('\n').forEach((zeile, i) => {
+      if (behauptung.test(zeile) && !verneint.test(zeile) && !beleg.test(zeile)) befunde.push(`${d}:${i + 1}`);
+    });
+  }
+  assert.deepEqual(befunde, [], `Behauptung ohne Quelle oder Vermerk: ${befunde.join(', ')}`);
+});
+
 test('Testzahl: README und GDD nennen die Zahl der Tests, die in test/ tatsächlich stehen', async () => {
   const dateien = (await readdir(new URL('test/', APP))).filter((d) => d.endsWith('.test.mjs'));
   let echt = 0;
