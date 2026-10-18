@@ -142,3 +142,17 @@ Dafür muss entschieden werden, ob ausgebaut oder neu gebaut wird.
   - offen: 1 (Konzept-Mapping, internes Dokument), 3 (Theater-Heft, Druck)
   - Entscheidung nötig: 2 (Krippen-Portfolio: Beobachtungsbogen je Kind, vergleichbar mit №84 und №86 → nach A13
     nicht bauen)
+
+## G. Welle 90 (Stand nach Prüfung und Nachbesserung)
+
+Gebaut, alle drei als „teilweise“ im Katalog markiert:
+
+- **Erfolgs-Momente-Kartei** (Katalog Printmaterialien №2): Karten zu gemeinsamen Tätigkeiten.
+  Offen: Durchsicht durch Fachkräfte (B-Punkt); Katalogtext mit „unsicheren Kindern“ (A19).
+- **Entdecker-Karten: Tiere und Pflanzen vor der Tür** (№4): Druck-Kartenset für 1–3 Jahre.
+  Offen: Igel, Eichhörnchen, Amsel und Reh (A-Entscheidung, Quelle nennt sie nicht).
+- **Bewegungslandschaften-Stationen** (№5): Stationskarten mit Übungsmaßen. Offen: DGUV-Vorgaben
+  extern prüfen; Fallhöhe und Untergrund nicht belegt.
+
+Alle drei: Seitenangaben nur maschinell geprüft (A18). Der Browser-Lauf bei 360 px ist automatisiert; der
+Druck mit echtem Drucker und mit Fachkräften steht aus. Die Fehler aus der Gegenprüfung sind umgesetzt.
