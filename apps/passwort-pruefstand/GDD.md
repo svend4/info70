@@ -53,7 +53,8 @@ LilaIgel7Roller» задают драматургию rot → gelb → grün.
 ## 6. Политика соответствия (Pflicht, docs/02)
 [x] Werbefrei / без покупок  [x] Без аккаунтов и персональных данных (пароль —
 только тестовый, живёт в оперативной памяти; предупреждение «NIE dein echtes
-Passwort» на каждом экране ввода)
+Passwort» на каждом экране ввода; direkt am Testfeld sichtbar: «Kein echtes
+Passwort eingeben, nur ein erfundenes Beispiel.», test/regeln.test.mjs)
 [x] Без внешних запросов (CSP self + NetzwerkWaechter первым делом)
 [x] localStorage: не используется вовсе — приложение ничего не хранит (кнопка
 удаления n/a: нечего удалять; статический тест запрещает браузерное хранилище

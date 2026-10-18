@@ -53,8 +53,13 @@
 - Политика docs/02: CSP `default-src 'self'`, NetzwerkWaechter первым делом,
   ноль хранения; статический тест запрещает обращения к браузерному хранилищу
   в `app.mjs`.
+- Testfeld: Es bleibt nur für ein erfundenes Beispiel. Direkt am Feld steht
+  sichtbar der Hinweis «Kein echtes Passwort eingeben, nur ein erfundenes
+  Beispiel.» (eigenes Element, per `aria-describedby` mit dem Feld verbunden).
+  `test/regeln.test.mjs` prüft den Hinweis und dass der Feld-Code weder
+  Speicher- noch Netzaufrufe enthält (3 Prüfungen in regeln.test.mjs).
 
 ```bash
 npm run dev   # → http://localhost:8070/apps/passwort-pruefstand/
-npm test      # юнит-тесты логики + валидация банка слов + проверки политики
+npm test      # юнит-тесты логики + валидация банка слов + проверки политики + Eingabe-Regeln (18 Tests)
 ```

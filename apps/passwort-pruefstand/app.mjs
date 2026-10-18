@@ -87,6 +87,12 @@ function startBildschirm() {
 
 function pruefstandBildschirm() {
   const ergebnis = el('div', {}, bewertungsKarte(''));
+  // Sichtbarer Hinweis direkt am Feld: das Feld ist nur für ein erfundenes Beispiel.
+  const feldHinweis = el('p', {
+    id: 'test-eingabe-hinweis',
+    class: 'k-hinweis k-hinweis--falsch',
+    style: 'margin:0.4rem 0 0.5rem;font-weight:800',
+  }, 'Kein echtes Passwort eingeben, nur ein erfundenes Beispiel.');
   const eingabe = el('input', {
     id: 'test-eingabe',
     type: 'text',
@@ -96,6 +102,7 @@ function pruefstandBildschirm() {
     maxlength: '40',
     placeholder: 'Quatsch-Passwort zum Testen …',
     'aria-label': 'Test-Passwort eingeben – niemals dein echtes',
+    'aria-describedby': 'test-eingabe-hinweis',
     style: FELD_STIL,
     oninput: () => ergebnis.replaceChildren(bewertungsKarte(eingabe.value)),
   });
@@ -111,6 +118,7 @@ function pruefstandBildschirm() {
       el('h2', { style: 'margin-top:0;text-align:center' }, '🔬 Der Prüfstand'),
       warnHinweis(),
       el('label', { for: 'test-eingabe', style: 'display:block;font-weight:700;margin:0.75rem 0 0.3rem' }, 'Dein TEST-Passwort:'),
+      feldHinweis,
       eingabe,
       ergebnis,
       el('div', { style: 'display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.75rem' },
