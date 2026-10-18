@@ -32,14 +32,21 @@ Hilfe zur Selbsthilfe gekennzeichnet (keine Rechtsberatung).
 
 Keine externen Anfragen (NetzwerkWaechter), Entwurf nur in localStorage
 (impgen.entwurf) + Löschknopf, Export lokal per Blob, werbefrei. Das
-generierte HTML enthält kein Script (Test).
+generierte HTML enthält kein Script (Test). Eingabehinweis „Keine Namen von
+Kindern eingeben.“ an allen freien Feldern (alle Felder sind Freitext: Name,
+Anschrift, E-Mail, Telefon, Vertretung, Register, USt-ID, Schulträger,
+Redaktion).
 
 ## 6. Tests
 
 `test/logik.test.mjs`: Rechtsform-/Feld-Konsistenz, sichtbareFelder
 (Redaktion), pflichtFelder (Telefon/USt-ID optional), fehlendeFelder,
 baueImpressum (§ 5 DDG + Pflichtangaben), § 18 MStV bei Redaktion,
-HTML-Ausgabe (h1/p, kein Script), Hinweise.
+HTML-Ausgabe (h1/p, kein Script), Hinweise. `test/eingabe-hinweis.test.mjs`:
+Hinweis „Keine Namen von Kindern eingeben.“ an allen Feldern des Katalogs und an
+allen sichtbaren Feldern je Rechtsform (auch E-Mail, Telefon, Vertretung, USt-ID);
+sichtbares Element direkt vor dem Feld, aria-describedby, Feldname unverändert.
+Gesamt 14 Tests (vorher 8).
 
 ## 7. Erweiterungen (Katalog)
 

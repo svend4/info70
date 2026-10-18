@@ -3,19 +3,22 @@
 // Feldern entsteht ein fertiges Impressum als Text/HTML. Wiederverwendbares
 // Muster (auch fuer Datenschutzerklaerung-Baukasten). Alles laeuft lokal.
 
-// Feld-Katalog: Beschriftung + Platzhalter je Feld-Code.
+// Eingabehinweis an allen freien Feldern (alle Felder sind Freitext).
+export const KINDER_HINWEIS = 'Keine Namen von Kindern eingeben.';
+
+// Feld-Katalog: Beschriftung + Platzhalter je Feld-Code; hinweis: Eingabehinweis am Feld (bei allen Feldern true).
 export const FELDER = Object.freeze({
-  name: { label: 'Name / Firma', platzhalter: 'Vor- und Nachname oder Firmenname' },
-  strasse: { label: 'Straße und Hausnummer', platzhalter: 'Musterstraße 1' },
-  plz_ort: { label: 'PLZ und Ort', platzhalter: '12345 Musterstadt' },
-  email: { label: 'E-Mail-Adresse', platzhalter: 'kontakt@beispiel.de' },
-  telefon: { label: 'Telefon (optional)', platzhalter: '030 1234567' },
-  vertretung: { label: 'Vertretungsberechtigte Person', platzhalter: 'z. B. 1. Vorsitzende*r / Geschäftsführung' },
-  register: { label: 'Register & Registernummer', platzhalter: 'z. B. Vereinsregister Amtsgericht Musterstadt, VR 1234' },
-  ustid: { label: 'Umsatzsteuer-ID (falls vorhanden)', platzhalter: 'DE123456789' },
-  traeger: { label: 'Schulträger', platzhalter: 'z. B. Stadt Musterstadt' },
-  redakteur: { label: 'Verantwortlich für den Inhalt (Name)', platzhalter: 'Vor- und Nachname' },
-  redakteur_adresse: { label: 'Anschrift der verantwortlichen Person', platzhalter: 'Straße, PLZ Ort' },
+  name: { label: 'Name / Firma', platzhalter: 'Vor- und Nachname oder Firmenname', hinweis: true },
+  strasse: { label: 'Straße und Hausnummer', platzhalter: 'Musterstraße 1', hinweis: true },
+  plz_ort: { label: 'PLZ und Ort', platzhalter: '12345 Musterstadt', hinweis: true },
+  email: { label: 'E-Mail-Adresse', platzhalter: 'kontakt@beispiel.de', hinweis: true },
+  telefon: { label: 'Telefon (optional)', platzhalter: '030 1234567', hinweis: true },
+  vertretung: { label: 'Vertretungsberechtigte Person', platzhalter: 'z. B. 1. Vorsitzende*r / Geschäftsführung', hinweis: true },
+  register: { label: 'Register & Registernummer', platzhalter: 'z. B. Vereinsregister Amtsgericht Musterstadt, VR 1234', hinweis: true },
+  ustid: { label: 'Umsatzsteuer-ID (falls vorhanden)', platzhalter: 'DE123456789', hinweis: true },
+  traeger: { label: 'Schulträger', platzhalter: 'z. B. Stadt Musterstadt', hinweis: true },
+  redakteur: { label: 'Verantwortlich für den Inhalt (Name)', platzhalter: 'Vor- und Nachname', hinweis: true },
+  redakteur_adresse: { label: 'Anschrift der verantwortlichen Person', platzhalter: 'Straße, PLZ Ort', hinweis: true },
 });
 
 // Rechtsformen mit ihren Pflichtfeldern.

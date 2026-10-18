@@ -4,7 +4,7 @@
 // optional lokal. Politik docs/02: keine externen Anfragen.
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { FELDER, RECHTSFORMEN, rechtsform, sichtbareFelder, fehlendeFelder, baueImpressum, baueImpressumHtml, HINWEISE } from './logik.mjs';
+import { FELDER, KINDER_HINWEIS, RECHTSFORMEN, rechtsform, sichtbareFelder, fehlendeFelder, baueImpressum, baueImpressumHtml, HINWEISE } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -36,15 +36,19 @@ function render() {
   redBox.addEventListener('change', () => { zustand.redaktionell = redBox.checked; sichern(); render(); });
 
   const feldEingaben = felder.map((f) => {
+    // Eingabehinweis (Kinderdaten) als eigenes Element direkt vor dem Feld; das Feld verweist per aria-describedby.
+    const hinweis = FELDER[f].hinweis === true;
     const eingabe = el(f === 'redakteur_adresse' ? 'input' : 'input', {
       type: f === 'email' ? 'email' : 'text',
       id: `ig-${f}`, value: zustand.werte[f] ?? '', placeholder: FELDER[f].platzhalter,
       style: `width:100%;min-height:44px;border:2px solid ${fehlt.includes(f) ? 'var(--k-rot)' : 'var(--k-rand)'};border-radius:0.5rem;padding:0 0.6rem;font-size:1rem`,
       'aria-label': FELDER[f].label,
+      ...(hinweis ? { 'aria-describedby': `ig-hinweis-${f}` } : {}),
     });
     eingabe.addEventListener('input', () => { zustand.werte[f] = eingabe.value; sichern(); render(); });
     return el('div', { style: 'margin:0.5rem 0' },
       el('label', { for: `ig-${f}`, style: 'font-weight:600;display:block;margin-bottom:0.2rem' }, FELDER[f].label),
+      hinweis ? el('span', { id: `ig-hinweis-${f}`, style: 'display:block;font-size:0.85rem;color:#4b5563;margin:0 0 0.2rem' }, KINDER_HINWEIS) : null,
       eingabe);
   });
 
