@@ -55,6 +55,13 @@ Prüfe das Ergebnis gegen die Abnahme (Abschnitt 8 des Bauauftrags):
 
 Eine Abweichung behebst du. Die Messung „Neuladen ohne Netz“ ist keine Abnahmebedingung (F4); sie wird berichtet.
 
+**Druckprüfung ist Pflicht (Lehre aus Pilot 1, siehe `docs/bauauftraege/PILOT-1.md`):**
+- Die Tests der App enthalten die Druckprüfungen aus `apps/puppentheater-werkstatt/test/regeln.test.mjs`: keine Zeichen aus den Blöcken ☐☒☑✓✔★☆ und keine Emojis (`\p{Extended_Pictographic}`) im Druckinhalt, keine Namenszeile, Bildschirmteile ausgeblendet.
+- Emojis in Titeln und Überschriften gelten im Druck als verboten. Auf dem Bildschirm sind sie erlaubt.
+- Druckt die App Seitenangaben, steht die Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ auf jedem gedruckten Blatt.
+- Die App braucht ein eigenes Druckblatt mit `druck.css` und `@media print`. Druck des ganzen Bildschirms ist nicht zulässig.
+- Im Bericht stehen die Werte `druck.zeichen` (muss leer sein) und `druck.pflichtZeilen` (muss der Zahl der Blätter mit Seitenangabe entsprechen).
+
 ## Schritt 5: Registrierungsdatei schreiben
 
 `docs/registrierung/<Kennung>.json` mit diesen Feldern:
