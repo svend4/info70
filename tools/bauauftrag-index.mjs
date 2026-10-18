@@ -1,0 +1,91 @@
+// Erzeugt docs/bauauftraege/index.json aus der Tabelle in docs/plan-praleska-umsetzung.md.
+// Aufruf: node tools/bauauftrag-index.mjs
+// Die Tabelle ist der Stand nach Welle 91. Die Änderungen der Wellen 92 und 93 stehen
+// unten in STATUS_AB_WELLE_92 und werden hier angewendet, nicht still im Plan.
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+
+const ROOT = new URL('../', import.meta.url);
+const PLAN = readFileSync(new URL('docs/plan-praleska-umsetzung.md', ROOT), 'utf8');
+
+// Abschnitt im Plan -> Kürzel für die Kennung
+const ABSCHNITT = [
+  ['Kinder-Apps', 'KIN'],
+  ['Gemeinsame Apps', 'GEM'],
+  ['Eltern-Werkzeuge', 'ELT'],
+  ['Kita-Werkzeuge', 'KIT'],
+  ['Content-Pakete', 'CON'],
+  ['Printmaterialien', 'PRI'],
+];
+
+// Welle 92 und 93: offen -> teilweise. Quelle: docs/10 „Stand Welle 92/93“ und die Registrierung.
+const STATUS_AB_WELLE_92 = {
+  'CON-2': 'teilweise', // Spielideen-Kartei Baby (Welle 92)
+  'CON-5': 'teilweise', // Tierkinder-Vorlesen (Welle 92)
+  'CON-11': 'teilweise', // Kindertänze Europas (Welle 92)
+  'CON-12': 'teilweise', // Puppentheater-Werkstatt (Welle 93)
+  'CON-18': 'teilweise', // Theater zuhause (Welle 93)
+  'PRI-7': 'teilweise', // Fühl- und Sortier-Werkstatt (Welle 93)
+};
+
+// Blockaden, die aus docs/10 und dem Plan (Abschnitt 5) stammen.
+const BLOCKADE = {
+  'CON-3': ['A7 quiz-kern'],
+  'CON-6': ['A7 quiz-kern'],
+  'CON-9': ['A7 quiz-kern'],
+  'CON-10': ['A7 quiz-kern'],
+};
+
+const zeilen = PLAN.split('\n').filter((l) => /^\| \d+ \| /.test(l));
+const eintraege = [];
+for (const z of zeilen) {
+  const s = z.split('|').slice(1, -1).map((x) => x.trim());
+  const [nr, abschnittText, einheit, status, app, fakten, schritt] = s;
+  const kuerzel = ABSCHNITT.find(([anfang]) => abschnittText.startsWith(anfang))?.[1];
+  if (!kuerzel) throw new Error('Unbekannter Abschnitt: ' + abschnittText);
+  const id = `${kuerzel}-${nr}`;
+  eintraege.push({
+    id,
+    abschnitt: abschnittText,
+    nr: Number(nr),
+    einheit,
+    status_plan_w91: status,
+    status: STATUS_AB_WELLE_92[id] ?? status,
+    app: app === '–' ? null : app,
+    faktenstand: fakten,
+    naechster_schritt: schritt,
+    blockiert: BLOCKADE[id] ?? [],
+  });
+}
+
+const soll = eintraege.filter((e) => e.status === 'teilweise' || e.status === 'offen');
+const unklar = eintraege.filter((e) => e.status === 'unklar');
+const nichtBauen = eintraege.filter((e) => e.status === 'nicht bauen');
+const gebaut = eintraege.filter((e) => e.status.startsWith('gebaut'));
+
+const zaehl = (liste, feld) => liste.reduce((m, e) => ((m[e[feld]] = (m[e[feld]] ?? 0) + 1), m), {});
+const bilanz = {
+  gesamt: eintraege.length,
+  gebaut: gebaut.length,
+  teilweise: eintraege.filter((e) => e.status === 'teilweise').length,
+  offen: eintraege.filter((e) => e.status === 'offen').length,
+  unklar: unklar.length,
+  nicht_bauen: nichtBauen.length,
+  bauauftraege_noetig: soll.length,
+  davon_blockiert: soll.filter((e) => e.blockiert.length > 0).map((e) => e.id),
+};
+
+const out = {
+  erzeugt: 'tools/bauauftrag-index.mjs',
+  stand: 'Plan Welle 91 plus Welle 92 und 93 (siehe STATUS_AB_WELLE_92)',
+  bilanz,
+  pro_abschnitt: zaehl(eintraege, 'abschnitt'),
+  bauauftraege: soll,
+  ohne_bauauftrag: [...unklar, ...nichtBauen].map((e) => ({ id: e.id, einheit: e.einheit, status: e.status })),
+};
+
+mkdirSync(new URL('docs/bauauftraege/', ROOT), { recursive: true });
+writeFileSync(new URL('docs/bauauftraege/index.json', ROOT), JSON.stringify(out, null, 2) + '\n');
+
+console.log('Gesamt', bilanz.gesamt, '| gebaut', bilanz.gebaut, '| teilweise', bilanz.teilweise, '| offen', bilanz.offen,
+  '| unklar', bilanz.unklar, '| nicht bauen', bilanz.nicht_bauen);
+console.log('Bauaufträge nötig:', bilanz.bauauftraege_noetig, '| davon blockiert:', bilanz.davon_blockiert.join(', '));
