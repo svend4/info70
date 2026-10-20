@@ -4,8 +4,14 @@
 // Kontakte. Datenvermeidung: Kontakte werden nur in den Ausdruck getippt und
 // NICHT gespeichert. Verweise auf 112, 110, 116 111 und juuuport (als Text, kein Request).
 
-/** Notruf: steht im Ausdruck vor den Schritten, weil er bei akuter Gefahr zuerst gelesen werden muss. */
-export const NOTRUF_ZEILE = 'Bei akuter Gefahr: 112 Rettung und Feuerwehr, 110 Polizei (Quelle: § 164 Absatz 1 TKG (Telekommunikationsgesetz 2021); Wortlaut am 20.10.2026 maschinell nachgelesen, nicht durch Menschen geprüft).';
+/**
+ * Notruf: steht im Ausdruck vor den Schritten, weil er bei akuter Gefahr zuerst gelesen werden muss.
+ * Gedruckt wird nur `text`; die Quelle steht im Feld `quelle` desselben Objekts.
+ */
+export const NOTRUF = {
+  text: 'Bei akuter Gefahr: 112 Rettung und Feuerwehr, 110 Polizei.',
+  quelle: '§ 164 Absatz 1 TKG (Telekommunikationsgesetz 2021); Wortlaut am 20.10.2026 maschinell nachgelesen, nicht durch Menschen geprüft',
+};
 
 /** Feste Wenn-dann-Schritte (die gelten für alle). */
 export const SCHRITTE = Object.freeze([
@@ -26,7 +32,7 @@ export function baueFahrplan(cfg = {}) {
   const zeilen = [
     'UNSER FAMILIEN-NOTFALL-FAHRPLAN',
     'Wenn im Netz etwas passiert – so gehen wir vor:',
-    NOTRUF_ZEILE,
+    NOTRUF.text,
     '',
   ];
   SCHRITTE.forEach((s, i) => {
