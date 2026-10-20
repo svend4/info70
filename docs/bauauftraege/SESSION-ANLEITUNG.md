@@ -10,6 +10,7 @@ Diese Anleitung ist für eine Sitzung gedacht, die genau eine Einheit der Prales
 - Du schreibst keine Modellnamen in Dateien, keine ganzen Sätze aus der Praleska, keine Zitate über 6 Wörter (docs/10, Rechtsrahmen, Punkt 1).
 - Du verwendest `quiz-kern` nicht (A7 offen). Du baust keine Seitenzahlen auf das Druckblatt (A18: Standard für neue Apps).
 - Speicherung nur wie docs/02, Z. 25: Nutzerdaten im localStorage, mit Löschknopf für die eigenen Schlüssel; kein sessionStorage, IndexedDB, Cookie, Cache. Werkzeuge ohne Nutzerdaten speichern nichts. Keine Anfragen nach außen.
+- Wer eine Datei ändert, die ein `sw.js` cacht, zählt dessen Cache-Namen (`const CACHE`) hoch und führt `node tools/sw-stand.mjs --schreiben` aus; sonst schlägt der Test „Service-Worker-Caches“ an.
 
 ## Schritt 1: Ausgangslage prüfen
 
