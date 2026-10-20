@@ -14,14 +14,18 @@ Diese Anleitung ist für eine Sitzung gedacht, die genau eine Einheit der Prales
 ## Schritt 1: Ausgangslage prüfen
 
 ```bash
+git fetch origin claude/children-network-programs-germany-hr0jh9
+git merge --ff-only origin/claude/children-network-programs-germany-hr0jh9   # nur Fast-Forward
+test -f docs/bauauftraege/<Kennung>-*.md || { echo "Bauauftrag fehlt, stoppen"; exit 1; }
 git fetch origin main                           # Quelle ist auf main, Commit c3deddf
-git rev-parse --abbrev-ref HEAD                 # muss die Arbeitsbranche sein
 tools/quelle-holen.sh "$TMPDIR/info70-quelle"   # Textkopie außerhalb des Repos
 node tools/bauauftrag-pruefen.mjs "$TMPDIR/info70-quelle/all.txt"
-npm test                                        # Ausgangslage grün (Root)
+npm run test:sitzung                            # Tests ohne die zwei Zählungs-Tests
 ```
 
-Wenn `npm test` vor deiner Arbeit rot ist, berichte das und stoppe. Baue nicht auf einem roten Stand auf.
+Schlägt `merge --ff-only` fehl, stoppe und melde es. Ändere den Checkout nicht von Hand (kein `git checkout -- …`, kein `stash`): dann fehlt die Bauauftrag-Datei, und du stoppst, statt auf einem alten Stand zu bauen.
+
+Wenn `npm run test:sitzung` vor deiner Arbeit rot ist, berichte das und stoppe. Baue nicht auf einem roten Stand auf. Die beiden Zählungs-Tests (Testzahlen und Impressum) sind nicht Teil dieser Prüfung; der Koordinator setzt die Zahlen (`npm run zahlen`).
 
 ## Schritt 2: Bauauftrag lesen
 
@@ -43,6 +47,8 @@ cd apps/<slug> && npm test && cd -                       # Tests der App grün
 node tools/serve.mjs 8099 &                              # Testserver (im Hintergrund)
 node tools/browser-pruefung.mjs <slug> 8099 "$TMPDIR/info70-pruefung"
 ```
+
+Das Messskript endet mit Fehlercode 1, wenn es eine Verletzung findet, und mit 2, wenn es nichts messen konnte. Ein Lauf mit Fehlercode ist keine Abnahme.
 
 Prüfe das Ergebnis gegen die Abnahme (Abschnitt 8 des Bauauftrags):
 
@@ -96,11 +102,15 @@ Die Datei enthält nur Text, die Koordinator-Sitzung übernimmt ihn.
 ```bash
 git add apps/<slug> docs/registrierung/<Kennung>.json
 git commit -m "Sitzung <Kennung>: <Titel>" -m "<Kurzbericht>" -m "Claude-Session: <URL>"
-git pull --rebase origin claude/children-network-programs-germany-hr0jh9
-git push -u origin claude/children-network-programs-germany-hr0jh9
+node tools/pfad-pruefung.mjs <slug> <Kennung>    # bricht ab, wenn der Commit fremde Dateien enthält
+for i in 1 2 3; do
+  git pull --rebase origin claude/children-network-programs-germany-hr0jh9 && \
+  git push -u origin claude/children-network-programs-germany-hr0jh9 && break
+  sleep $((i * 5))
+done
 ```
 
-Pushe nur auf die Arbeitsbranche, nicht auf `main`. Wenn der Rebase Konflikte zeigt, stoppe und melde sie; löse sie nicht selbst in fremden Dateien.
+Pushe nur auf die Arbeitsbranche, nicht auf `main`. Höchstens drei Versuche; nie `--force`. Wenn der Rebase Konflikte zeigt, stoppe und melde sie; löse sie nicht selbst in fremden Dateien. Schlägt der Push nach drei Versuchen fehl, stoppe und melde den Stand.
 
 Die Branch-Regel gilt: nur die Arbeitsbranche, keine neue Branch ohne Erlaubnis.
 
@@ -109,7 +119,7 @@ Die Branch-Regel gilt: nur die Arbeitsbranche, keine neue Branch ohne Erlaubnis.
 Am Ende antwortest du mit einem Kurzbericht in dieser Form:
 
 - Kennung, Titel, Status (gebaut oder Ausbau).
-- Ergebnis `npm test` der App und der Wurzel (Wurzel: Testzahl im README weicht erwartbar ab, bis der Koordinator sie setzt).
+- Ergebnis `npm test` der App und `npm run test:sitzung` der Wurzel (die Zählungs-Tests sind dort ausgenommen, bis der Koordinator die Zahlen setzt).
 - Browser-Messung: Ergebnis je Punkt (ok oder Abweichung mit Wert).
 - Offene Punkte aus dem Bauauftrag, die du nicht lösen konntest, und Gründe.
 - Zeit und, falls sichtbar, Token-Verbrauch der Sitzung (für die Messung im Pilot).
