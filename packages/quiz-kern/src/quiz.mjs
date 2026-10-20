@@ -8,7 +8,6 @@ import { el, vorlesen, mischen } from '../../kinder-ui/js/komponenten.mjs';
 import { boot as bootAnzeige } from '../../kinder-ui/js/anzeige.mjs';
 import { loescheDaten } from '../../kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel } from '../../kinder-ui/js/hilfe-insel.mjs';
-import { duettWertung, duettSatz } from './duett.mjs';
 import { amZug, staffelWertung, staffelSatz } from './staffel.mjs';
 
 const STANDARD_TEXTE = {
@@ -30,6 +29,7 @@ const STANDARD_TEXTE = {
   ergebnisKnopf: 'Zum Ergebnis 🏁',
   fertigTitel: 'Geschafft!',
   fertigSatz: 'Du hast alle Fragen durchgearbeitet.',
+  duettFertigSatz: 'Ihr habt alle Fragen durchgearbeitet.',
   nochmalKnopf: '🔁 Noch einmal',
   zumStartKnopf: '🏠 Zum Start',
 };
@@ -67,8 +67,6 @@ export function starteQuiz(konfig) {
   let duettFragen = [];
   let duettIndex = 0;
   let duettSpieler = 1;
-  let antwortenA = [];
-  let antwortenB = [];
 
   // Geschwister-Staffel (kooperativ): zwei Geschwister abwechselnd, ein Team.
   let staffelFragen = [];
@@ -262,8 +260,6 @@ export function starteQuiz(konfig) {
   // --- Duett-Modus (Familie): additiv, berührt den Einzel-/Klassen-Ablauf nicht.
   function starteDuett() {
     duettFragen = mischen(daten.fragen).slice(0, rundenGroesse);
-    antwortenA = [];
-    antwortenB = [];
     duettSpielerStart(1);
   }
 
@@ -309,7 +305,6 @@ export function starteQuiz(konfig) {
   }
 
   function duettAufloesung(f, richtig) {
-    (duettSpieler === 1 ? antwortenA : antwortenB).push(richtig);
     const titel = richtig ? t.richtigTitel : t.falschTitel;
     zeige(
       el('section', { class: 'k-karte' },
@@ -329,20 +324,12 @@ export function starteQuiz(konfig) {
   }
 
   function duettErgebnis() {
-    const w = duettWertung(antwortenA, antwortenB);
-    const zeile = (nr, ok) => el('span', { style: `display:inline-block;width:1.5rem;text-align:center` }, ok ? '✅' : '⬜');
     zeige(
       el('section', { class: 'k-karte' },
-        el('p', { class: 'k-gross' }, w.fuehrung === 'gleich' ? '🤝' : '🏆'),
-        el('p', { style: 'text-align:center;font-weight:700' }, duettSatz(w)),
-        el('div', { style: 'margin:0.5rem 0' },
-          el('div', { style: 'display:flex;justify-content:space-between;font-weight:600' },
-            el('span', {}, `Spieler 1: ${w.punkteA}`), el('span', {}, `Spieler 2: ${w.punkteB}`)),
-          el('p', { style: 'margin:0.3rem 0;color:#4b5563' }, `Gemeinsam als Team: ${w.team} von ${w.gesamt} · beide richtig: ${w.beide}`)),
-        ...w.zeilen.map((z) => el('div', { style: 'display:flex;justify-content:space-between;border-bottom:1px solid var(--k-rand);padding:0.15rem 0' },
-          el('span', {}, `${t.fallWort} ${z.nr}`),
-          el('span', {}, zeile(z.nr, z.a), ' ', zeile(z.nr, z.b)))),
-        vorlesenKnopf(duettSatz(w)),
+        el('p', { style: 'font-size:2rem;text-align:center;margin:0' }, '🤝'),
+        el('p', { style: 'text-align:center;font-weight:700;font-size:1.25rem' }, t.fertigTitel),
+        el('p', { style: 'text-align:center' }, t.duettFertigSatz),
+        vorlesenKnopf(`${t.fertigTitel} ${t.duettFertigSatz}`),
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf', onclick: starteDuett }, '🔁 Noch einmal zu zweit'),
           el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));

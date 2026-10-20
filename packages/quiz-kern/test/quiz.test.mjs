@@ -49,6 +49,19 @@ test('Endbildschirm: Geschafft, ohne Zahl, ohne richtig, ohne Stern, Pokal oder 
   assert.doesNotMatch(ergebnis, /fragen\.length|punkt|rekord|rang|richtig|⭐|🏆|🥇|🎖|🏅|🌟/i);
 });
 
+test('Duett-Endbildschirm: ohne Punkte, Pokal, „liegt vorn“, Unentschieden und Zahlen je Person', () => {
+  const anfang = code.indexOf('function duettErgebnis()');
+  const ende = code.indexOf('const staffelName');
+  assert.ok(anfang > 0 && ende > anfang, 'Duett-Endbildschirm gefunden');
+  const duett = code.slice(anfang, ende);
+  assert.match(duett, /t\.fertigTitel/, 'Titel ist Geschafft!');
+  assert.doesNotMatch(duett, /punkt|rekord|rang|richtig|liegt vorn|unentschieden|🏆|⭐|✅|⬜|fragen\.length/i);
+});
+
+test('Duett: Antworten werden nicht mehr je Person gesammelt', () => {
+  assert.doesNotMatch(code, /antwortenA|antwortenB|duettWertung|duettSatz/);
+});
+
 test('Start: der frühere Schlüssel wird einmal entfernt, nie clear()', () => {
   assert.match(code, /localStorage\.removeItem\(rekordSchluessel\)/);
   assert.ok(!/localStorage\.clear\(/.test(code));

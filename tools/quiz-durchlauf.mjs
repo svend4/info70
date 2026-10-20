@@ -1,16 +1,18 @@
-// Quiz-Durchlauf: startet ein Quiz im Einzel-Modus, beantwortet jede Frage (die erste Antwort gilt)
-// und prüft den Endbildschirm. Die Browser-Prüfung klickt nur Knöpfe mit data-kennung und sieht den
-// Endbildschirm deshalb nicht; dieses Werkzeug schon.
-// Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--ausgabe <ordner>]
-// Prüft je App:
-//   - der Endbildschirm wird erreicht; Anzahl beantworteter Fragen = „von“-Zahl der Runde
-//   - kein Muster „Zahl von Zahl“, kein Wort richtig, kein Rekord, kein Stern- oder Pokalzeichen,
-//     kein Rang-Symbol (k-gross) und kein Rang-Wort auf dem Endbildschirm
+// Quiz-Durchlauf: startet ein Quiz, beantwortet jede Frage (die erste Antwort gilt) und prüft den
+// Endbildschirm. Die Browser-Prüfung klickt nur Knöpfe mit data-kennung und sieht den Endbildschirm
+// deshalb nicht; dieses Werkzeug schon.
+// Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|alle] [--ausgabe <ordner>]
+// Prüft je App und Modus:
+//   - der Endbildschirm wird erreicht; beantwortete Fragen = Rundengröße (im Duett: je Person einmal)
+//   - kein Muster „Zahl von Zahl“, kein richtig, kein Rekord, kein Stern- oder Pokalzeichen, kein
+//     Rang-Symbol (k-gross), kein Rang-Wort, keine Punkte, kein Unentschieden, kein „liegt vorn“
+//     (Regeln in packages/kinderschutz/src/quiz-ende.mjs; Sterne zählen nur im Körper, nicht im Titel)
 //   - ein früher gespeicherter Rekord-Schlüssel wird beim Start entfernt; nach dem Durchlauf fehlt er
 //   - „Meine Daten löschen“ ist auf dem Startbildschirm vorhanden
 //   - die Druckansicht des Endbildschirms enthält keine Zeichen ☐☒☑✓✔★☆
-// Exit: 0 alles ok, 1 mindestens eine Verletzung, 2 Endbildschirm nicht erreicht.
+// Exit: 0 alles ok, 1 mindestens eine Verletzung, 2 Endbildschirm nicht erreicht oder Lauf abgebrochen.
 // Der Startknopf ist je App anders beschriftet; gewählt wird der erste Knopf der ersten Karte, der nicht „Vorlesen“ heißt.
+// Staffel ist nicht enthalten (Entscheidung ausstehend).
 import { createServer } from 'node:http';
 import { spawn } from 'node:child_process';
 import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -24,6 +26,13 @@ const VIEWPORT_PX = 360;
 const MAX_SCHRITTE = 1000;
 const NAV = /^(🔊|🔁|🏠|🔍)/;
 const ENDE = /🏠|Zum Start|Noch einmal|Noch eine|Neue Runde|Neue Klassen|Nochmal/;
+const MODI = ['einzel', 'duett'];
+const PRUEF_REIHENFOLGE = ['zahlVonZahl', 'richtig', 'rekord', 'punkte', 'unentschieden', 'liegtVorn', 'sterneOderPokal', 'rangSymbol', 'rangWort', 'anzahl', 'druckOhneSymbole', 'schluesselEntfernt', 'datenLoeschenDa'];
+const BEZEICHNUNG = {
+  zahlVonZahl: 'Zahl-von-Zahl', richtig: 'richtig', rekord: 'Rekord', punkte: 'Punkte', unentschieden: 'Unentschieden',
+  liegtVorn: 'liegt-vorn', sterneOderPokal: 'Stern/Pokal', rangSymbol: 'Rangsymbol', rangWort: 'Rangwort', anzahl: 'Anzahl',
+  druckOhneSymbole: 'Druck-Symbole', schluesselEntfernt: 'Schlüssel', datenLoeschenDa: 'Daten-löschen-Taste',
+};
 
 async function playwrightLaden() {
   for (const k of [process.env.PLAYWRIGHT_MODULE, 'playwright', '/opt/node22/lib/node_modules/playwright/index.js', '/opt/node-tools/node_modules/playwright/index.js'].filter(Boolean)) {
@@ -56,16 +65,17 @@ function rekordSchluessel(slug) {
   return quelle.match(/rekordSchluessel:\s*'([^']+)'/)?.[1] ?? null;
 }
 
-async function durchlauf(browser, slug, port) {
+async function durchlauf(browser, slug, port, modus) {
   const schluessel = rekordSchluessel(slug);
-  const ergebnis = { slug, ende: false, beantwortet: 0, runde: null, pruefungen: {}, schluesselKeiner: null, tasten: [] };
+  const duett = modus === 'duett';
+  const ergebnis = { slug, modus, ende: false, beantwortet: 0, runde: null, pruefungen: {}, tasten: [] };
   const context = await browser.newContext({ viewport: { width: VIEWPORT_PX, height: 740 }, deviceScaleFactor: 1 });
   const seite = await context.newPage();
   const fehler = [];
   seite.on('pageerror', (e) => fehler.push(String(e)));
   try {
     await seite.goto(`http://localhost:${port}/apps/${slug}/index.html`, { waitUntil: 'load' });
-    if (schluessel) {
+    if (schluessel && modus === 'einzel') {
       // Ein früherer Rekord soll beim Start entfernt werden.
       await seite.evaluate((k) => localStorage.setItem(k, '9'), schluessel);
       ergebnis.schluesselGesetzt = '9';
@@ -75,7 +85,12 @@ async function durchlauf(browser, slug, port) {
       ergebnis.schluesselNachStart = await seite.evaluate((k) => localStorage.getItem(k), schluessel);
     }
 
-    await seite.locator('main#app section.k-karte').first().locator('button').filter({ hasNotText: /Vorlesen/ }).first().click();
+    if (duett) {
+      await seite.locator('main#app button').filter({ hasText: /Duett-Modus starten/ }).first().click();
+      await seite.locator('main#app button').filter({ hasText: /Los/ }).first().click();
+    } else {
+      await seite.locator('main#app section.k-karte').first().locator('button').filter({ hasNotText: /Vorlesen/ }).first().click();
+    }
 
     for (let i = 0; i < MAX_SCHRITTE; i++) {
       const knoepfeEnde = await seite.evaluate(() => [...document.querySelectorAll('main#app button')].map((b) => b.textContent.trim()));
@@ -84,10 +99,16 @@ async function durchlauf(browser, slug, port) {
       const von = text.match(/(\d+) von (\d+)/);
       if (von && ergebnis.runde === null) ergebnis.runde = Number(von[2]);
       const knoepfe = await seite.evaluate(() => [...document.querySelectorAll('main#app .k-antworten button')].map((b) => b.textContent.trim()));
-      const weiter = knoepfe.findIndex((t) => /➡|Ergebnis|Fertig|Weiter/.test(t));
+      // Weiter-Knöpfe beginnen mit ihrem Wort oder tragen einen Pfeil; eine Antwort kann „Ergebnis“ enthalten.
+      const weiter = knoepfe.findIndex((t) => /➡|^(Weiter|Zum Ergebnis|Fertig|Ergebnis)\b/.test(t));
       if (weiter >= 0) { await seite.locator('main#app .k-antworten button').nth(weiter).click(); continue; }
       const antwort = knoepfe.findIndex((t) => !NAV.test(t));
-      if (antwort >= 0) { await seite.locator('main#app .k-antworten button').nth(antwort).click(); ergebnis.beantwortet++; continue; }
+      if (antwort >= 0) {
+        // „Los“ startet die nächste Person und ist keine Antwort.
+        if (!/^▶️?\s*Los\b/.test(knoepfe[antwort])) ergebnis.beantwortet++;
+        await seite.locator('main#app .k-antworten button').nth(antwort).click();
+        continue;
+      }
       break;
     }
 
@@ -103,15 +124,10 @@ async function durchlauf(browser, slug, port) {
       const koerper = ende.replace(titel, '').replace(fuss, '');
       const gesamt = pruefeEndeText(ende);
       const koerperPruef = pruefeEndeText(koerper);
-      const p = {
-        zahlVonZahl: gesamt.zahlVonZahl,
-        richtig: gesamt.richtig,
-        rekord: gesamt.rekord,
-        sterneOderPokal: koerperPruef.sterneOderPokal,
-        rangWort: gesamt.rangWort,
-      };
+      const p = { ...gesamt, sterneOderPokal: koerperPruef.sterneOderPokal };
       p.rangSymbol = (await seite.locator('main#app .k-gross').count()) === 0;
-      p.anzahl = ergebnis.runde === null ? false : ergebnis.beantwortet === ergebnis.runde;
+      const erwartet = ergebnis.runde === null ? null : (duett ? 2 * ergebnis.runde : ergebnis.runde);
+      p.anzahl = erwartet !== null && ergebnis.beantwortet === erwartet;
       // Druckansicht des Endbildschirms (nur Text, der im Druck sichtbar bleibt).
       await seite.emulateMedia({ media: 'print' });
       const druck = await seite.locator('main#app').innerText();
@@ -126,7 +142,7 @@ async function durchlauf(browser, slug, port) {
       p.datenLoeschenDa = tasten.some((t) => /Meine Daten löschen/.test(t));
       if (schluessel) {
         ergebnis.schluesselNachLauf = await seite.evaluate((k) => localStorage.getItem(k), schluessel);
-        p.schluesselEntfernt = ergebnis.schluesselGesetzt === '9' && ergebnis.schluesselNachStart === null && ergebnis.schluesselNachLauf === null;
+        if (modus === 'einzel') p.schluesselEntfernt = ergebnis.schluesselGesetzt === '9' && ergebnis.schluesselNachStart === null && ergebnis.schluesselNachLauf === null;
       } else {
         p.schluesselEntfernt = true;
       }
@@ -139,22 +155,14 @@ async function durchlauf(browser, slug, port) {
 }
 
 function zeile(e) {
-  if (!e.ende) return `${e.slug} | Endbildschirm NICHT erreicht (${e.beantwortet} Antworten)`;
+  const kopf = `${e.slug} [${e.modus}]`;
+  if (!e.ende) return `${kopf} | Endbildschirm NICHT erreicht (${e.beantwortet} Antworten)`;
   const p = e.pruefungen;
   const haken = (ok) => (ok ? 'ok' : 'FEHLT');
-  return [
-    e.slug,
-    `Fragen ${e.beantwortet}/${e.runde ?? '?'} ${haken(p.anzahl)}`,
-    `Zahl-von-Zahl ${haken(p.zahlVonZahl)}`,
-    `richtig ${haken(p.richtig)}`,
-    `Rekord ${haken(p.rekord)}`,
-    `Stern/Pokal ${haken(p.sterneOderPokal)}`,
-    `Rangsymbol ${haken(p.rangSymbol)}`,
-    `Rangwort ${haken(p.rangWort)}`,
-    `Schlüssel ${haken(p.schluesselEntfernt)}`,
-    `Daten-löschen-Taste ${haken(p.datenLoeschenDa)}`,
-    `Druck-Symbole ${haken(p.druckOhneSymbole)}${e.druckZeichen.length ? ` (${e.druckZeichen.join(' ')})` : ''}`,
-  ].join(' | ');
+  const teile = PRUEF_REIHENFOLGE.filter((k) => k in p).map((k) => `${BEZEICHNUNG[k]} ${haken(p[k])}`);
+  const menge = `Antworten ${e.beantwortet} (Runde ${e.runde ?? '?'}${e.modus === 'duett' ? ', je Person' : ''})`;
+  const druck = e.druckZeichen?.length ? ` (${e.druckZeichen.join(' ')})` : '';
+  return [kopf, menge, ...teile].join(' | ') + druck;
 }
 
 function bewerte(e) {
@@ -165,9 +173,13 @@ function bewerte(e) {
 async function main() {
   const args = process.argv.slice(2);
   const ausIdx = args.indexOf('--ausgabe');
+  const modIdx = args.indexOf('--modus');
   const ausgabe = ausIdx >= 0 ? args[ausIdx + 1] : join(tmpdir(), 'quiz-durchlauf');
-  const apps = args.filter((a, i) => a !== '--ausgabe' && i !== ausIdx + 1);
-  if (!apps.length) { console.error('Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--ausgabe <ordner>]'); process.exit(64); }
+  const modusWahl = modIdx >= 0 ? args[modIdx + 1] : 'einzel';
+  if (modusWahl !== 'alle' && !MODI.includes(modusWahl)) { console.error(`--modus: einzel, duett oder alle, nicht „${modusWahl}“`); process.exit(64); }
+  const modi = modusWahl === 'alle' ? MODI : [modusWahl];
+  const apps = args.filter((a, i) => ![ausIdx, ausIdx + 1, modIdx, modIdx + 1].includes(i) && a !== '--ausgabe' && a !== '--modus');
+  if (!apps.length) { console.error('Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|alle] [--ausgabe <ordner>]'); process.exit(64); }
   mkdirSync(ausgabe, { recursive: true });
 
   const port = await freierPort();
@@ -178,11 +190,13 @@ async function main() {
   let schlecht = 0;
   try {
     for (const slug of apps) {
-      const e = await durchlauf(browser, slug, port).catch((err) => ({ slug, ende: false, beantwortet: 0, runde: null, fehlerText: String(err) }));
-      writeFileSync(join(ausgabe, `${slug}.json`), JSON.stringify(e, null, 2));
-      if (e.fehlerText) { console.log(`${slug} | Lauf abgebrochen: ${e.fehlerText.split('\n')[0]}`); schlecht = Math.max(schlecht, 2); continue; }
-      console.log(zeile(e));
-      schlecht = Math.max(schlecht, bewerte(e));
+      for (const modus of modi) {
+        const e = await durchlauf(browser, slug, port, modus).catch((err) => ({ slug, modus, ende: false, beantwortet: 0, runde: null, fehlerText: String(err) }));
+        writeFileSync(join(ausgabe, `${slug}.${modus}.json`), JSON.stringify(e, null, 2));
+        if (e.fehlerText) { console.log(`${slug} [${modus}] | Lauf abgebrochen: ${e.fehlerText.split('\n')[0]}`); schlecht = Math.max(schlecht, 2); continue; }
+        console.log(zeile(e));
+        schlecht = Math.max(schlecht, bewerte(e));
+      }
     }
   } finally {
     await browser.close();

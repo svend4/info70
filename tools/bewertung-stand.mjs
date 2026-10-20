@@ -21,7 +21,9 @@ const ausnahmenListe = Object.keys(stand.ausnahmen ?? {});
 const erhoeht = stand.kern ? Object.entries(kern).filter(([f, n]) => n > (stand.kern[f] ?? 0)).map(([f, n]) => `quiz-kern/src/${f}: ${n} statt ${stand.kern[f] ?? 0}`) : [];
 const neueApps = stand.apps ? apps.filter((a) => !ausnahmenListe.includes(a) && !stand.apps.includes(a)).map((a) => `${a}: neu mit Rekord, Rang oder raenge im Code`) : [];
 const neu = [...erhoeht, ...neueApps];
-if (schreiben && neu.length) {
+// --erweitern: einmaliges Erweitern der Muster; die neuen Einträge werden gezeigt, nicht still übernommen.
+const erweitern = process.argv.includes('--erweitern');
+if (schreiben && neu.length && !erweitern) {
   console.error('Nicht geschrieben. Neue Treffer brauchen eine Entscheidung, nicht ein Schreiben:');
   for (const p of neu) console.error(`  ${p}`);
   process.exit(1);
@@ -33,5 +35,7 @@ if (!schreiben) {
 }
 
 const ausnahmen = stand.ausnahmen ?? {};
-await writeFile(STAND, `${JSON.stringify({ kern, apps: apps.filter((a) => !Object.keys(ausnahmen).includes(a)), ausnahmen }, null, 2)}\n`);
+const vorgeschlagen = stand.ausnahmen_vorgeschlagen ?? {};
+// Die Liste enthält auch die vorgeschlagenen Ausnahmen, bis Max sie bestätigt.
+await writeFile(STAND, `${JSON.stringify({ kern, apps: apps.filter((a) => !Object.keys(ausnahmen).includes(a)), ausnahmen, ausnahmen_vorgeschlagen: vorgeschlagen }, null, 2)}\n`);
 console.log(`docs/bewertung-stand.json geschrieben: quiz-kern ${Object.values(kern).reduce((s, n) => s + n, 0)} Treffer, ${apps.length} Apps.`);

@@ -1,5 +1,5 @@
 // Minimaler Service Worker: Cache-first für eigene Ressourcen -> offline nutzbar.
-const CACHE = 'nd-v5';
+const CACHE = 'nd-v6';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll([

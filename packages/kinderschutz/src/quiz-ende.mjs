@@ -10,6 +10,9 @@ export function pruefeEndeText(text) {
     zahlVonZahl: !/\d+\s*von\s*\d+/i.test(text),
     richtig: !/richtig/i.test(text),
     rekord: !/rekord/i.test(text),
+    punkte: !/punkt/i.test(text),
+    unentschieden: !/unentschieden/i.test(text),
+    liegtVorn: !/liegt vorn/i.test(text),
     sterneOderPokal: !STERNE.test(text),
     rangWort: !RANG_WORT.test(text),
   };

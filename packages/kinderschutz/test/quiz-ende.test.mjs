@@ -21,7 +21,9 @@ test('Gegenprobe: alter Endbildschirm mit richtig, Stern und Pokal scheitert', (
 });
 
 test('neuer Endbildschirm besteht alle Textprüfungen', () => {
-  assert.deepEqual(Object.values(pruefeEndeText(neu)), [true, true, true, true, true]);
+  const p = pruefeEndeText(neu);
+  assert.deepEqual(Object.entries(p).filter(([, ok]) => !ok), [], 'keine Regel schlägt an');
+  assert.ok(Object.keys(p).length >= 5);
 });
 
 test('Druck: Zeichen aus der Liste werden gefunden, Emoji nicht', () => {
