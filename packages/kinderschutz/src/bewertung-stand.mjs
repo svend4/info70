@@ -1,52 +1,91 @@
-// Stand der Ergebnis-Wertung (Rekord, Punkte, Ränge, Treffer). Zwei Ratchets:
+// Stand der Ergebnis-Wertung (Rekord, Punkte, Ränge, Treffer, Rangfolgen). Zwei Ratchets:
 //  - quiz-kern: je Datei die Zahl der Treffer im Code (ohne Kommentare). Der Motor führt weder Rekord
 //    noch Punkte noch Ränge; die Zählung soll 0 bleiben.
-//  - Apps: Liste der Apps, die Rekord, Rang, Rangliste, den Schlüssel raenge, eine Trophäe (🏆),
-//    einen Zähler (punkte, treffer, richtige, quizPunkte, kindPunkte) in der Anzeige oder einen Zähler
-//    mit „n von m“ im Code führen. Die Liste schrumpft nur; neue Einträge brauchen eine Entscheidung.
-// Verneinungen („kein Rekord“) und Kommentare zählen nicht.
-// Zwei Listen für Ausnahmen: „ausnahmen“ sind bestätigt (Max), „ausnahmen_vorgeschlagen“ sind offen und
-// bleiben in der Liste, bis Max sie bestätigt.
+//  - Apps: Liste der Apps mit einem Befund: Wort (Rekord, Rang, Rangliste, raenge, Trophäe, häufigsten,
+//    Rangfolge), Anzeige eines Zählers (punkte, treffer, richtige, quizPunkte, kindPunkte) oder ein
+//    Zähler mit „n von m“. Die Liste schrumpft nur; neue Einträge brauchen eine Entscheidung (--erweitern).
+// Verneinung: ein Verneinungswort (kein, keine, ohne, nicht, nie) hebt einen Begriff nur auf, wenn es
+// höchstens drei Wörter davor steht und kein Satz-, Kommentar- oder Klammerzeichen dazwischen liegt.
+// Kommentare zählen nicht. Die Konfiguration rekordSchluessel: '…' allein ist Migration und zählt nicht.
+// Ausnahmen: „ausnahmen“ sind bestätigt (Max), „ausnahmen_vorgeschlagen“ bleiben in der Liste, bis Max sie
+// bestätigt.
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-export const KERN_WORTE = /\brekord\b|\bpunkt\w*|\braenge\b|\brang\b|localStorage\.setItem/gi;
+// Wortgrenze, die auch nach einem Escape \b in Prüfmustern gilt: davor steht entweder kein Buchstabe
+// oder der Escape „\b“ selbst.
+const GRENZE = '(?:(?<![a-zäöüß])|(?<=\\\\b))';
+const ENDE = '(?![a-zäöüß])';
 
-// Wörter, die in der Anzeige oder im Code eine Wertung bedeuten.
-export const APP_WORTE = /Rekord|\bRänge?\b|Rangliste|\braenge\b|🏆/g;
+// Begriffe mit Wertung. Ohne Rücksicht auf Groß- und Kleinschreibung (REKORD, rekord, Rekord).
+// „rekord“ zählt auch als Teil eines Namens (REKORD_SCHLUESSEL). Englisch „range“ zählt nicht.
+export const APP_WORTE = new RegExp(
+  `rekord|${GRENZE}(?:rang|ränge|raenge)${ENDE}|rangliste|rangfolge|🏆`,
+  'gi',
+);
 // Zähler, die eine Wertung führen. Bekannte Namen aus den Apps; neue Namen kommen mit der Entscheidung.
-const ZAEHLER = 'punkte|treffer|richtige|quizPunkte|kindPunkte|elternPunkte';
+const ZAEHLER = 'punkte|treffer|richtige|quizPunkte|kindPunkte|elternPunkte|summen';
 // Zuwachs im Code: punkte++, richtige += 1
-const ZUWACHS = new RegExp(`\\b(?:${ZAEHLER})\\s*(?:\\+\\+|\\+=)`);
-// Anzeige: ${punkte} oder ${punkte()}
-// Ohne „.length“: treffer.length ist eine Anzahl von Fundstellen, kein Zähler.
-const ANZEIGE = new RegExp(`\\$\\{\\s*(?:${ZAEHLER})\\b(?!\\.length)[^}]*\\}`);
-// Regulärer Ausdruck als Konstante (Prüfmuster, keine Anzeige).
-const REGEX_KONSTANTE = /^\s*(?:export\s+)?const\s+\w+\s*=\s*\//;
+const ZUWACHS = new RegExp(`\\b(?:${ZAEHLER})\\s*(?:\\+\\+|\\+=)`, 'g');
+// Anzeige: ${punkte}, ${punkte()} oder ${fn(summen[id])}: der Zähler steht irgendwo im Ausdruck.
+// Ohne „.length“, das ist eine Anzahl von Fundstellen.
+const ANZEIGE = new RegExp(`\\$\\{[^}]*\\b(?:${ZAEHLER})\\b(?!\\.length)[^}]*\\}`, 'g');
 // Vergleichsanzeige „${a} von ${b}“
 const VON = /\$\{[^}]+\}\s*von\s*\$\{[^}]+\}/;
-// Verneinung in derselben Zeile: die Zeile sagt, dass etwas fehlt.
-const VERNEINUNG = /\b(kein|keine|keinen|keiner|ohne|nicht)\b/i;
+// Migration: nur die Konfigurationszeile allein, nicht eine Zeile mit weiteren Zugriffen.
+const MIGRATION = /^\s*rekordSchluessel\s*:\s*'[^']*'\s*,?\s*$/;
+// Verneinungswörter. Das Fenster ist auf drei Wörter und auf den Satzteil davor begrenzt.
+const VERNEINT_WORT = /^(kein|keine|keinen|keiner|keines|ohne|nicht|nie)$/i;
+const WORTFENSTER = 3;
+// Zeichen, die einen Satzteil beenden: Verneinung wirkt nicht darüber hinweg.
+const SATZTEIL = /[.;:!?,()[\]{}"„“|]/;
 
 /** Quelltext ohne Kommentare, damit Erklärungen über das Verbotene nicht zählen. */
 export function ohneKommentare(text) {
-  return text.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
+  return text
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .split('\n')
+    .map((z) => (/^\s*\/\//.test(z) ? '' : z.replace(/(?<![:\w])\/\/.*$/, '')))
+    .join('\n');
 }
 
-/** Trefferzahl je Datei in quiz-kern/src. */
+/** Zahl der Treffer je Datei in quiz-kern/src. Der Name rekordSchluessel allein gilt als Migration. */
 export async function kernTreffer(wurzel) {
   const dir = join(wurzel, 'packages', 'quiz-kern', 'src');
   const treffer = {};
   for (const f of (await readdir(dir)).filter((f) => f.endsWith('.mjs')).sort()) {
     const code = ohneKommentare(await readFile(join(dir, f), 'utf8'));
-    treffer[f] = [...code.matchAll(KERN_WORTE)].length;
+    let n = 0;
+    for (const zeile of code.split('\n')) {
+      if (/rekordSchluessel/.test(zeile)) continue;
+      n += [...zeile.matchAll(KERN_WORTE)].length;
+    }
+    treffer[f] = n;
   }
   return treffer;
+}
+export const KERN_WORTE = /rekord|\bpunkt\w*|\braenge\b|\brang\b|localStorage\.setItem/gi;
+
+/**
+ * Zahl der Treffer einer Zeile, ohne die, vor denen ein Verneinungswort im selben Satzteil und in den
+ * drei Wörtern davor steht. Escapes wie \b zählen nicht als Wort.
+ */
+export function zaehleTreffer(zeile, muster) {
+  let n = 0;
+  const flags = muster.flags.includes('g') ? muster.flags : `${muster.flags}g`;
+  for (const m of zeile.matchAll(new RegExp(muster.source, flags))) {
+    const davor = zeile.slice(0, m.index).replace(/\\[a-zA-Z]/g, ' ');
+    const satzteil = davor.split(SATZTEIL).pop();
+    const woerter = satzteil.match(/[\p{L}\p{N}]+/gu) ?? [];
+    const verneint = woerter.slice(-WORTFENSTER).some((w) => VERNEINT_WORT.test(w));
+    if (!verneint) n += 1;
+  }
+  return n;
 }
 
 /**
  * Warum eine Datei auffällt, als Liste von Gründen (leer = unauffällig).
- * Gründe: Wort (Rekord, Rang …), Anzeige (Zähler im Text), Zuwachs+von (Zähler mit Vergleichsanzeige).
+ * Gründe: Wort, Anzeige (Zähler im Text), Zuwachs+von (Zähler mit Vergleichsanzeige im Umfeld).
  */
 export function appGruende(name, text) {
   const js = /\.m?js$/.test(name);
@@ -54,10 +93,10 @@ export function appGruende(name, text) {
   const gruende = new Set();
   const zeilen = quelle.split('\n');
   zeilen.forEach((zeile, i) => {
-    if (VERNEINUNG.test(zeile) || REGEX_KONSTANTE.test(zeile)) return;
-    if ([...zeile.matchAll(APP_WORTE)].length) gruende.add('Wort');
-    if (js && ANZEIGE.test(zeile)) gruende.add('Anzeige');
-    if (js && ZUWACHS.test(zeile)) {
+    if (js && MIGRATION.test(zeile)) return;
+    if (zaehleTreffer(zeile, APP_WORTE) > 0) gruende.add('Wort');
+    if (js && zaehleTreffer(zeile, ANZEIGE) > 0) gruende.add('Anzeige');
+    if (js && zaehleTreffer(zeile, ZUWACHS) > 0) {
       const nah = zeilen.slice(Math.max(0, i - 3), i + 4).join('\n');
       if (VON.test(nah)) gruende.add('Zuwachs+von');
     }
@@ -65,7 +104,7 @@ export function appGruende(name, text) {
   return [...gruende];
 }
 
-/** Trefferzahl einer Datei (für Tests): Zeilen mit Wörtern oder Anzeigen plus Zuwächse mit „von“. */
+/** Trefferzahl einer Datei (für Tests): Zahl der Gründe. */
 export function appTrefferIn(name, text) {
   return appGruende(name, text).length;
 }

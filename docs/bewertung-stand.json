@@ -20,6 +20,7 @@
     "daten-schatz-mini",
     "deepfake-spuernase",
     "deutschland-kompass",
+    "eltern-kompass-generator",
     "ergebnis-plakat",
     "erste-woerter-lesewerkstatt",
     "fachquiz-erstes-lebensjahr",
@@ -33,6 +34,9 @@
     "herkunftssprachen-bruecke",
     "hoeflich-fair",
     "ich-schaff-das",
+    "interaktions-konzept-assistent",
+    "kita-familien-bruecke",
+    "kita-mitmach-boerse",
     "klang-detektive",
     "koeder-quiz",
     "koerper-entdecker",
@@ -52,9 +56,12 @@
     "quiz-karten-druck",
     "rechte-kompass",
     "reim-radar",
+    "schulanfang-spiel-navigator",
     "seiten-scanner",
+    "selbstcheck-paedagogik",
     "sharenting-spiegel",
     "sicher-unterwegs",
+    "staerken-tagebuch",
     "stark-im-chat",
     "stark-im-chat-mini",
     "stark-im-chat-plus",
@@ -63,12 +70,15 @@
     "tier-tanz-impulse",
     "tier-zu-gast",
     "uhr-und-kalender-kind",
+    "wahlkabine",
     "warum-heisst-das-so",
     "wer-dahinter",
     "wer-wohnt-wo"
   ],
   "ausnahmen": {
-    "barriere-detektive": "Fairness-Rangliste der Objekte (Orte), kein Lernstand und kein Rekord eines Kindes. Von Max bestätigt."
+    "barriere-detektive": "Fairness-Rangliste der Objekte (Orte), kein Lernstand und kein Rekord eines Kindes. Von Max bestätigt.",
+    "elterngespraech-trainer": "logik.mjs, GESAMTWERTUNG: ein Prüfmuster (Wächter gegen Gesamtwertungen in den Texten), keine Anzeige eines Ergebnisses. Auf Anweisung Max.",
+    "gesunder-koerper-ampel": "logik.mjs: die Prüfung verbietet raenge („diese App bewertet Kinder nicht“). Das Wort steht im Verbot, nicht im Ergebnis. Auf Anweisung Max."
   },
   "ausnahmen_vorgeschlagen": {
     "seiten-scanner": "Bewertung von Webseiten (Objekte) mit „n von MAX sicher“, kein Lernstand eines Kindes. Vorschlag nach Max-Liste (Bewertung eines Objekts).",
@@ -78,6 +88,13 @@
     "ergebnis-plakat": "Abstimmung über Plakat-Vorschläge (Objekte): der Gewinner der Stimmen wird gezeigt. Kein Lernstand. Vorschlag, nicht von Max bestätigt.",
     "mitmach-arena": "Abstimmung der Klasse über Vorschläge (Objekte): 🏆 beim Gewinner. Kein Lernstand. Vorschlag, nicht von Max bestätigt.",
     "quiz-karten-druck": "Die Variable richtige ist die richtige Antwort auf der Karte („Richtig: …“), kein Zähler. Vorschlag, nicht von Max bestätigt.",
-    "tier-tanz-impulse": "Die Variable treffer ist eine Fundstelle in einer Fehlermeldung, kein Zähler. Vorschlag, nicht von Max bestätigt."
+    "tier-tanz-impulse": "Die Variable treffer ist eine Fundstelle in einer Fehlermeldung, kein Zähler. Vorschlag, nicht von Max bestätigt.",
+    "eltern-kompass-generator": "Platzhalter im Eingabefeld des Generators („nur der Rekord, löschbar per Knopf“): Beispieltext für die Daten einer Familie, kein Rekord dieser App. Vorschlag, nicht von Max bestätigt.",
+    "interaktions-konzept-assistent": "logik.mjs: eine Rangfolge der Risikostufen (niedrig bis sehr hoch) für die Bewertung eines Konzepts, kein Ergebnis eines Kindes. Vorschlag, nicht von Max bestätigt.",
+    "schulanfang-spiel-navigator": "daten/navigator.json: das Wort „Rang“ im Satz („den Rang der führenden Tätigkeit“), kein Ergebnis. Vorschlag, nicht von Max bestätigt.",
+    "wahlkabine": "app.mjs: 🏆 beim Gewinner einer Wahl-Simulation über Vorschläge (Objekte), kein Lernstand eines Kindes. Vorschlag, nicht von Max bestätigt.",
+    "kita-familien-bruecke": "Instrument für Kita-Teams (README: „Инструмент для команд детских садов“). Die Punkte bewerten die Arbeit der Fachkräfte, nicht ein Kind. Vorschlag, nicht von Max bestätigt.",
+    "kita-mitmach-boerse": "Zählung der Rückmeldungen („interessiert“, „kann mithelfen“) je Angebot in einer Kita-Börse. Das ist ein Objekt, kein Ergebnis eines Kindes. Vorschlag, nicht von Max bestätigt.",
+    "selbstcheck-paedagogik": "logik.mjs: STUFEN_RANG ordnet die Stufen intern, damit der passende Impulstext gewählt wird. Ein Rang wird dem Kind nicht angezeigt. Vorschlag, nicht von Max bestätigt."
   }
 }
