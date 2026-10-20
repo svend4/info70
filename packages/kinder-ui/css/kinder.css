@@ -122,6 +122,8 @@ body {
 @media print {
   .k-fuss { display: none !important; }
 }
+/* Berührziele: Aufklapp-Zeilen (summary) mindestens 48 px hoch. */
+summary { min-height: 3rem; }
 
 .k-gross { font-size: 2.5rem; text-align: center; margin: 0.5rem 0; }
 
