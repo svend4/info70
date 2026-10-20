@@ -1,9 +1,22 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { appsAusArgs, istEnde, istWeiter, nichtQuizApps, nutztQuizMotor } from '../src/quiz-durchlauf-regeln.mjs';
+import { mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { appsAusArgs, codeDateien, istEnde, istWeiter, nichtQuizApps, nutztQuizMotor, quelltextAusOrdner } from '../src/quiz-durchlauf-regeln.mjs';
+
+// Alle Apps mit einem echten Import von quiz-kern (Stand: 26). Neue Quiz-App oder eine, die den Motor
+// verliert: dieser Test bricht, bis die Liste bewusst angepasst ist. So läuft eine neue Quiz-App nicht still
+// am Durchlauf vorbei.
+const QUIZ_APPS = [
+  'anzeige-oder-nicht', 'app-rechte-quiz', 'darf-ich-posten', 'deepfake-spuernase', 'fachquiz-erstes-lebensjahr',
+  'fake-shop-fahnder', 'generationen-quiz', 'herkunftssprachen-bruecke', 'impressum-detektive',
+  'jugendschutz-quiz-fachkraefte', 'kinderrechte-entdecker', 'koeder-quiz', 'koerper-entdecker', 'link-kompass',
+  'maerchen-gedicht-fabel', 'mathe-entdecker', 'mensch-tier-pflanze', 'mini-rechte-entdecker', 'nachrichten-detektive',
+  'nachrichten-detektive-junior', 'nachrichten-detektive-profi', 'plattform-rechte-13', 'reim-radar', 'stark-und-gesund',
+  'warum-heisst-das-so', 'wer-dahinter',
+];
 
 // Jede Erkennung hat einen Fall, der vorher falsch war, und ein Gegenbeispiel, das weiter richtig bleibt.
 // Die alten Muster stehen als Kontrolle daneben: sie müssen den Fehlfall tatsächlich treffen.
@@ -34,9 +47,13 @@ test('Ende: die bekannten Endknöpfe bleiben erkannt', () => {
   }
 });
 
-test('Quiz-Motor: eine App mit dem Import zählt, eine ohne nicht', () => {
+test('Quiz-Motor: ein echter Import zählt, ein Kommentar über den Motor nicht', () => {
   assert.equal(nutztQuizMotor("import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';"), true);
   assert.equal(nutztQuizMotor("import { x } from './logik.mjs';"), false);
+  // Kontrolle: die breite Suche nach dem Wort träfe den Kommentar; die Regel darf das nicht.
+  const kommentar = "// Bewusst NICHT auf quiz-kern gebaut: Der Motor bringt Punkte.\nexport const x = 1;";
+  assert.equal(/quiz-kern/.test(kommentar), true, 'Kontrolle: das Wort steht im Text');
+  assert.equal(nutztQuizMotor(kommentar), false);
 });
 
 test('Nicht-Quiz-Apps werden abgelehnt, statt falsch gemessen', () => {
@@ -61,16 +78,42 @@ test('Aufruf: Optionen fallen samt Wert weg, Namen bleiben in der Reihenfolge', 
   assert.deepEqual(appsAusArgs(['--modus', 'duett']), []);
 });
 
-test('Wirklicher Bestand: Stream-Б-Apps nutzen den Motor nicht, bekannte Quiz-Apps schon', async () => {
-  const wurzel = fileURLToPath(new URL('../../../', import.meta.url));
-  const lesen = async (slug) => {
-    const teile = await Promise.all(['app.mjs', 'index.html'].map((f) => readFile(join(wurzel, 'apps', slug, f), 'utf8').catch(() => '')));
-    return teile.join('\n');
-  };
-  for (const slug of ['chat-rechte', 'daten-schatz', 'notruf-held', 'wer-wohnt-wo']) {
-    assert.equal(nutztQuizMotor(await lesen(slug)), false, `${slug} ist keine quiz-kern-App`);
+test('Motor-Import in einer Nebendatei zählt: logik.mjs mit quiz-kern macht die App zur Quiz-App', () => {
+  const tmp = mkdtempSync(join(tmpdir(), 'quiz-regel-'));
+  try {
+    const app = join(tmp, 'app');
+    mkdirSync(join(app, 'test'), { recursive: true });
+    writeFileSync(join(app, 'app.mjs'), "import { x } from './logik.mjs';\n");
+    writeFileSync(join(app, 'index.html'), '<p>keine Quiz-Angabe</p>\n');
+    writeFileSync(join(app, 'logik.mjs'), "import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';\n");
+    writeFileSync(join(app, 'test', 'x.test.mjs'), "import '../../../packages/quiz-kern/src/quiz.mjs';\n");
+    // Kontrolle: die alte Regel las nur app.mjs und index.html und übersah die Nebendatei.
+    const alt = "import { x } from './logik.mjs';\n<p>keine Quiz-Angabe</p>";
+    assert.equal(nutztQuizMotor(alt), false, 'Kontrolle: die alte Regel fand die App nicht');
+    assert.equal(codeDateien(app).map((p) => p.split('/').pop()).join(' '), 'app.mjs index.html logik.mjs');
+    assert.equal(nutztQuizMotor(quelltextAusOrdner(app)), true);
+  } finally {
+    rmSync(tmp, { recursive: true, force: true });
   }
+});
+
+test('Die Liste der Quiz-Apps ist festgeschrieben: 26 Apps mit echtem Import, keine still dazu oder weg', () => {
+  const wurzel = fileURLToPath(new URL('../../../', import.meta.url));
+  const gefunden = readdirSync(join(wurzel, 'apps'))
+    .filter((a) => { try { return nutztQuizMotor(quelltextAusOrdner(join(wurzel, 'apps', a))); } catch { return false; } })
+    .sort();
+  assert.equal(QUIZ_APPS.length, 26);
+  assert.deepEqual(gefunden, [...QUIZ_APPS].sort(), 'Quiz-Apps haben sich geändert: Liste und Durchlauf prüfen');
+});
+
+test('Wirklicher Bestand: Stream-Б-Apps und Apps mit bloßem Kommentar nutzen den Motor nicht', async () => {
+  const wurzel = fileURLToPath(new URL('../../../', import.meta.url));
+  for (const slug of ['chat-rechte', 'daten-schatz', 'notruf-held', 'wer-wohnt-wo']) {
+    assert.equal(nutztQuizMotor(quelltextAusOrdner(join(wurzel, 'apps', slug))), false, `${slug} ist keine quiz-kern-App`);
+  }
+  // farb-labor erwähnt quiz-kern nur in einem Kommentar in logik.mjs.
+  assert.equal(nutztQuizMotor(quelltextAusOrdner(join(wurzel, 'apps', 'farb-labor'))), false, 'farb-labor: nur ein Kommentar');
   for (const slug of ['mathe-entdecker', 'koeder-quiz', 'wer-dahinter']) {
-    assert.equal(nutztQuizMotor(await lesen(slug)), true, `${slug} ist eine quiz-kern-App`);
+    assert.equal(nutztQuizMotor(quelltextAusOrdner(join(wurzel, 'apps', slug))), true, `${slug} ist eine quiz-kern-App`);
   }
 });

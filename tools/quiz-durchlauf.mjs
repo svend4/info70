@@ -22,7 +22,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { druckSymbole, pruefeEndeText } from '../packages/kinderschutz/src/quiz-ende.mjs';
-import { appsAusArgs, istEnde, istWeiter, nichtQuizApps } from '../packages/kinderschutz/src/quiz-durchlauf-regeln.mjs';
+import { appsAusArgs, istEnde, istWeiter, nichtQuizApps, quelltextAusOrdner } from '../packages/kinderschutz/src/quiz-durchlauf-regeln.mjs';
 
 const WURZEL = fileURLToPath(new URL('../', import.meta.url));
 const VIEWPORT_PX = 360;
@@ -61,12 +61,10 @@ async function serverStarten(port) {
   throw new Error('Dev-Server startet nicht');
 }
 
-/** Quelltext von app.mjs und index.html einer App (leer, wenn es die Datei nicht gibt). */
+/** Quelltext aller Code-Dateien einer App (leer, wenn der Ordner fehlt). */
 function quelltextVon(slug) {
-  return ['app.mjs', 'index.html'].map((f) => {
-    const pfad = join(WURZEL, 'apps', slug, f);
-    return existsSync(pfad) ? readFileSync(pfad, 'utf8') : '';
-  }).join('\n');
+  const ordner = join(WURZEL, 'apps', slug);
+  return existsSync(ordner) ? quelltextAusOrdner(ordner) : '';
 }
 
 /** Rekord-Schlüssel aus der App-Konfiguration; fehlt er, gibt es nichts zu prüfen. */

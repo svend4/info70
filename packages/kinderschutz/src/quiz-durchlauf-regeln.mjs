@@ -1,6 +1,12 @@
 // Erkennung für tools/quiz-durchlauf.mjs: welcher Knopf weiterführt, welcher Knopf das Ende anzeigt und
 // ob eine App den Quiz-Motor nutzt. Reine Funktionen, damit die Erkennung geprüft ist (Tests in test/).
 // Das Werkzeug prüft nur Quiz-Apps auf quiz-kern; andere Apps haben keinen Endbildschirm im Sinne des Werkzeugs.
+// Ob eine App den Quiz-Motor nutzt, entscheidet ein echter Import von quiz-kern in einer Code-Datei der App.
+// Kommentare zählen nicht: neun Apps erwähnen quiz-kern nur in Kommentaren („bewusst NICHT auf quiz-kern“).
+
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { ohneKommentare } from './bewertung-stand.mjs';
 
 // Weiter-Knöpfe beginnen mit ihrem Wort oder tragen einen Pfeil; eine Antwort kann „Ergebnis“ enthalten.
 export const WEITER = /➡|^(Weiter|Zum Ergebnis|Zum Abschluss|Fertig|Ergebnis)\b/;
@@ -16,9 +22,29 @@ export function istEnde(text) {
   return ENDE.test(text);
 }
 
-/** Nutzt die App den Quiz-Motor? Geprüft wird der Quelltext von app.mjs und index.html. */
+/** Nutzt die App den Quiz-Motor? Ein Import von quiz-kern (ohne Kommentare) in einer Code-Datei der App. */
 export function nutztQuizMotor(quelltext) {
-  return /quiz-kern/.test(quelltext);
+  return /(?:\bfrom|\bimport)\s*\(?\s*['"][^'"]*quiz-kern[^'"]*['"]/.test(ohneKommentare(quelltext));
+}
+
+/** Alle Code-Dateien einer App (.mjs, .js, .html), ohne test/ und ohne node_modules. */
+export function codeDateien(appOrdner) {
+  const liste = [];
+  const walk = (d) => {
+    for (const e of readdirSync(d, { withFileTypes: true })) {
+      if (e.name === 'node_modules' || e.name === 'test') continue;
+      const p = join(d, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (/\.(mjs|js|html)$/.test(e.name)) liste.push(p);
+    }
+  };
+  walk(appOrdner);
+  return liste.sort();
+}
+
+/** Zusammengefügter Quelltext aller Code-Dateien einer App. */
+export function quelltextAusOrdner(appOrdner) {
+  return codeDateien(appOrdner).map((p) => readFileSync(p, 'utf8')).join('\n');
 }
 
 /**
