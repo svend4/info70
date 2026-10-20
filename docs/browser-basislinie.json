@@ -1,0 +1,2294 @@
+{
+  "kategorien": [
+    "nichtGemessen",
+    "ohneKennung",
+    "klickFehler",
+    "ueberlauf",
+    "beruehrung",
+    "druck",
+    "konsole",
+    "fremdeHosts"
+  ],
+  "apps": {
+    "aemtli-rad": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 1,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "anzeige-einstellungen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "anzeige-oder-nicht": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "app-rechte-quiz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "architektur-spaziergang": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 22,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "autonomiephase-navigator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "avv-checkliste-hosting": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 22,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "baby-spielideen-kartei": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "barriere-detektive": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "barriere-spuernasen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 4,
+      "druck": 15,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "barrierefreiheitserklaerung-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "berechtigungs-safari": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 18,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "beschwerde-brief-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "beschwerde-lotse": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bewegungs-kartei-erstes-jahr": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 2,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bewegungs-richtwerte-3-5": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bewegungs-schatzkiste": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 15,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bewegungslandschaft-stationen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bewegungspausen-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bfsg-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 19,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "blasen-duell": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "bot-oder-buddy": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "buchecke-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "challenge-druck": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "chat-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "chat-rechte": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 2,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "compliance-koffer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "darf-ich-posten": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "dark-pattern-detektiv": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "dark-pattern-labyrinth": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "dark-pattern-selbstinspektion": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 12,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "daten-radiergummi": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "daten-schatz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "daten-schatz-mini": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "datenschutz-baukasten": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 5,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "deepfake-spuernase": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "deepfake-studio": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "design-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "deutschland-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 18,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "dinge-des-alltags": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "dsa-selbstaudit": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 9,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "eingewoehnungs-leitfaden": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "einwilligungs-pruefpfad": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 11,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "eltern-kompass-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 1,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "eltern-rechtebriefe": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "eltern-sammelband": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 12,
+      "druck": 33,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "elternabend-kit": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "elternbrief-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 1,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "elterngespraech-trainer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "elterngespraech-uebergang": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 23,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "entdecker-karten-natur": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "entwicklungs-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erfinder-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erfolgs-momente-kartei": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "ergebnis-plakat": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erste-kuenstler": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erste-woerter-lesewerkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erste-woerter-tagebuch": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 4,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erstes-handy-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "erzaehl-bruecke": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fachquiz-erstes-lebensjahr": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fake-shop-fahnder": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familien-bildschirmzeit": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familien-budget": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 25,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familien-datenschatz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familien-medienvertrag": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 21,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familien-notfall-fahrplan": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familienrat": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "familienschatz-reime": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 4,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "farb-labor": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "feed-forscher": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "feed-forscher-profi": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "filter-spiegel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "foerder-navigator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 14,
+      "druck": 19,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fomo-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "formular-falle": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "foto-ampel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fragfinn-selbsttest": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 22,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "freunde-in-der-gruppe": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "frischluft-familie": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fristen-radar": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fuehl-sortier-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "fuenf-helfer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "gefuehle-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "gemeinsam-gesund-essen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "generationen-quiz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "geschichten-wender": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "geschichten-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 3,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "gesunder-koerper-ampel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 18,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "grammatik-zwerge": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "gruppenklima-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 40,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "herkunftssprachen-bruecke": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "hoeflich-fair": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "ich-schaff-das": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "impressum-detektive": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "impressum-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 1,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "impulskarten-sujetspiel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "interaktions-konzept-assistent": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 5,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "jahreszeiten-rad": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 20,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "jmstv-einstufungs-helfer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "jugendschutz-quiz-fachkraefte": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kettenbrief-stopper": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 14,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "ki-kennzeichnungs-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 15,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "ki-transparenz-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 24,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kinderrat": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kinderrechte-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kindertaenze-europa": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kita-familien-bruecke": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kita-kartograph": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 36,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kita-mitmach-boerse": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kita-unterstuetzungs-navigator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kita-wochenplaner": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "klang-detektive": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "klanggeschichten-erzeuger": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 4,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "klassen-koffer-auswertung": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 2,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "klassenrat-handbuch": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kleine-forscher-ohne-bildschirm": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "koeder-quiz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "koerper-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kria-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 1,
+      "beruehrung": 54,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kriterien-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 1,
+      "beruehrung": 32,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kunst-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "kunst-gucken": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 4,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "lehrkraefte-szenariotraining": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "leichte-sprache-pruefhilfe": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "leichte-sprache-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "link-inventar-pruefer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "link-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "lootbox-labor": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "maerchen-gedicht-fabel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mathe-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "meilenstein-begleiter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "meldewege-planer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 8,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mensch-tier-pflanze": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mess-labor": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mini-gaertner-begleiter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mini-oper-baukasten": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mini-rechte-entdecker": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "mitmach-arena": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "morgenkreis-wochenplaner-u3": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "muenz-trick": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "musik-alltags-begleiter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "musik-detektive": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "musik-jahresplaner": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "musikmomente-1-3": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "musikspiele-kartei-u3": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "nachrichten-detektive": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "nachrichten-detektive-junior": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "nachrichten-detektive-profi": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "nahrungsnetz-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 18,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "natur-fuersorge-karten": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "netz-pass-urkunde": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 5,
+      "druck": 2,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "notruf-held": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "oer-vorlage": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 1,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "ombuds-landkarte": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 1,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "ornament-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "passwort-pruefstand": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "plattform-rechte-13": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "projektwoche": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 1,
+      "beruehrung": 0,
+      "druck": 18,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "puppentheater-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "puste-lauschspiel-kartei": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "quiz-karten-druck": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "rechte-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "rechte-lexikon": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 21,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "rechte-stationen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "regel-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 1,
+      "beruehrung": 0,
+      "druck": 3,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "reim-radar": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "reim-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 20,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "rhythmus-orchester": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 20,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "schatzkarten-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 3,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "schulanfang-spiel-navigator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 21,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "schulfreigabe-dossier": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "schulstart-begleiter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "schwungblatt-generator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "seiten-scanner": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "seitenstark-qualitaets-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 26,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "selbstcheck-paedagogik": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 12,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "selbststaendigkeits-leiter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sharenting-spiegel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sicher-unterwegs": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sicherer-krabbelraum-check": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 3,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "smarte-ohren": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sog-maschine": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "spiel-recht-balance": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "spielbegleiter-rollenspiel": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "spiele-kauf-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 10,
+      "druck": 4,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "spielzeug-check-u3": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "spiral-stopper": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sport-schnupper-stationen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sprachbruecken-impulskarten": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "sprich-mit-mir": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 16,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "spuren-lupe": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 7,
+      "druck": 15,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "staerken-tagebuch": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stark-im-chat": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stark-im-chat-mini": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stark-im-chat-plus": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stark-und-gesund": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "starke-zuege-poster": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stations-konfigurator": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 2,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stundenentwurf-bildschirmwoche": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stundenentwurf-chat": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stundenentwurf-datenschatz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stundenentwurf-feed": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stundenentwurf-kettenbrief": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "stundenentwurf-nachrichten": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "tagesblick-fachkraft": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 1,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "takt-pause": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "theater-zuhause-heft": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "tier-tanz-impulse": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "tier-zu-gast": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "tierkinder-vorlesen": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "tischdienst-trainer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "tonleiter-treppe": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 8,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "uhr-und-kalender-kind": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 6,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "unser-konzert-zaehlhilfe": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "verschwoerungs-werkstatt": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 7,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "vorlese-kompass": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "vorsorge-check-juschg": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 10,
+      "druck": 13,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "wachstums-bewegungs-begleiter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 3,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "wahlkabine": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "warum-heisst-das-so": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 10,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "wer-dahinter": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 11,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "wer-wohnt-wo": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 24,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "werbekennzeichnung": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 5,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "werkstatt-karten-applikation": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "wetter-forscher": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 15,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "wie-bewegt-sich": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "woerter-sortierer": {
+      "nichtGemessen": 0,
+      "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 8,
+      "konsole": 0,
+      "fremdeHosts": 0
+    }
+  }
+}
