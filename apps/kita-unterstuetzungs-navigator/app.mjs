@@ -210,7 +210,8 @@ function render() {
       druckKarte(),
 
       el('footer', { class: 'k-fuss' },
-        'Werkzeug für Fachkräfte und Träger · ohne Konto · nichts wird gespeichert · keine Verbindung nach außen')),
+        el('span', {}, 'Werkzeug für Fachkräfte und Träger · ohne Konto · nichts wird gespeichert · keine Verbindung nach außen · '),
+        el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz'))),
 
     druckBogen(),
     druckBericht());
