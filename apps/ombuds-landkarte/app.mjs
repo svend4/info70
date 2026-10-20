@@ -35,7 +35,7 @@ function render() {
 
 function stelleKarte(s) {
   return el('section', { class: 'k-karte' },
-    el('div', { style: 'display:flex;justify-content:space-between;align-items:baseline;gap:0.5rem' },
+    el('div', { style: 'display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5rem' },
       el('h2', { style: 'margin:0;font-size:1.1rem' }, s.name),
       el('span', { style: 'font-size:0.75rem;background:var(--k-hell,#eef6ff);border-radius:0.5rem;padding:0.1rem 0.5rem;white-space:nowrap' }, s.ebene)),
     el('p', { style: 'margin:0.4rem 0' }, el('strong', {}, 'Wofür: '), s.wofuer),

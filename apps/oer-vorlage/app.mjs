@@ -18,7 +18,7 @@ function karte(titel, ...kinder) {
 function blankoZeile(label) {
   return el('div', { style: 'padding:0.35rem 0;border-bottom:1px dashed var(--k-rand)' },
     el('span', { style: 'font-weight:700' }, label + ': '),
-    el('span', { style: 'color:#9ca3af' }, '________________________________________'));
+    el('span', { style: 'color:#9ca3af;overflow-wrap:anywhere' }, '________________________________________'));
 }
 
 function render() {

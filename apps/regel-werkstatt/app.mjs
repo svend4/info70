@@ -79,7 +79,7 @@ function render() {
     el('section', { class: 'k-karte pw-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '2) Vorschläge sammeln'),
       namenHinweis('rw-hinweis-regel'),
-      el('div', { style: 'display:flex;gap:0.5rem' }, neuFeld, el('button', { class: 'k-knopf k-knopf--klein', onclick: neuHinzu }, '➕')),
+      el('div', { style: 'display:flex;flex-wrap:wrap;gap:0.5rem' }, neuFeld, el('button', { class: 'k-knopf k-knopf--klein', onclick: neuHinzu }, '➕')),
       el('p', { style: 'font-size:0.9rem;color:#4b5563;margin-bottom:0' }, 'Tippt eure Ideen ein. Ein paar Vorschläge sind schon da – ihr könnt sie ändern oder löschen.')),
     el('section', { class: 'k-karte pw-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '3) Abstimmen – tippt auf 👍 für die Regeln, die ihr wollt'),
