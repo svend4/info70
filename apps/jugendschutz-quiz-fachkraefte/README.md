@@ -20,8 +20,8 @@ docs/09, №188. Квиз на движке quiz-kern: насколько уве
 
 ## Политика
 
-Werbefrei, без внешних запросов (NetzwerkWaechter); сохраняется только
-рекорд (`jsqf.rekord`), удаляется одной кнопкой.
+Werbefrei, без внешних запросов (NetzwerkWaechter); ничего не сохраняется;
+alter Schlüssel `jsqf.rekord` wird beim Start entfernt.
 
 ## Запуск и тесты
 

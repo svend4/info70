@@ -4,7 +4,6 @@ import { pruefeFragen } from '../src/schema.mjs';
 
 const gueltig = {
   version: 1,
-  raenge: [{ ab: 0, titel: 'Anfänger*in', emoji: '🌱' }],
   fragen: [
     { id: 'b1', typ: 'binaer', kategorie: 'Test', aussage: 'Eine lange Testaussage.', korrekt: 'ja', erklaerung: 'Eine ausreichend lange Erklärung dazu.' },
     { id: 'w1', typ: 'wahl', kategorie: 'Test', frage: 'Eine lange Testfrage?', antworten: ['A', 'B', 'C'], korrekt: 2, erklaerung: 'Eine ausreichend lange Erklärung dazu.' },
@@ -30,9 +29,4 @@ test('Fehler werden erkannt: doppelte IDs, falscher Typ, korrekt außerhalb', ()
   assert.ok(fehler.some((f) => f.includes('korrekt-Index')));
   assert.ok(fehler.some((f) => f.includes('unbekannter Typ')));
   assert.ok(fehler.some((f) => f.includes('Erklärung')));
-});
-
-test('Ränge: erster Rang muss bei 0 beginnen', () => {
-  const daten = { ...gueltig, raenge: [{ ab: 3, titel: 'Spät', emoji: '⏰' }] };
-  assert.ok(pruefeFragen(daten, { mindestFragen: 2 }).some((f) => f.includes('bei 0')));
 });

@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "Fachkraefte",
-  "raenge": [
-    { "ab": 0, "titel": "Einsteiger*in", "emoji": "🌱" },
-    { "ab": 5, "titel": "Kundig", "emoji": "🧭" },
-    { "ab": 9, "titel": "Jugendschutz-Profi", "emoji": "🎖️" },
-    { "ab": 12, "titel": "Multiplikator*in", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "f01",

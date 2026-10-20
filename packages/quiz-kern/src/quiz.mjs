@@ -17,7 +17,7 @@ const STANDARD_TEXTE = {
   intro: 'Bist du bereit?',
   startKnopf: '▶️ Los geht’s!',
   vorlesenKnopf: '🔊 Vorlesen',
-  datenHinweis: '🧹 Hier gibt es keine Werbung und keine Anmeldung. Gespeichert wird nur dein Rekord – auf diesem Gerät.',
+  datenHinweis: '🧹 Hier gibt es keine Werbung und keine Anmeldung. Gespeichert wird nichts.',
   datenLoeschen: 'Meine Daten löschen',
   hilfeKnopf: '🆘 Ich brauche Hilfe',
   fallWort: 'Frage',
@@ -29,7 +29,7 @@ const STANDARD_TEXTE = {
   weiterKnopf: 'Weiter ➡️',
   ergebnisKnopf: 'Zum Ergebnis 🏁',
   fertigTitel: 'Geschafft!',
-  ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
+  fertigSatz: 'Du hast alle Fragen durchgearbeitet.',
   nochmalKnopf: '🔁 Noch einmal',
   zumStartKnopf: '🏠 Zum Start',
 };
@@ -38,8 +38,8 @@ const STANDARD_TEXTE = {
  * Startet ein Quiz im gegebenen Wurzel-Element.
  * @param {{
  *   wurzel: HTMLElement,
- *   daten: { fragen: Array<object>, raenge?: Array<{ab:number,titel:string,emoji:string}> },
- *   rekordSchluessel: string,
+ *   daten: { fragen: Array<object> },
+ *   rekordSchluessel: string, // früherer Schlüssel der App; wird beim Start einmal entfernt
  *   rundenGroesse?: number,
  *   texte?: Partial<typeof STANDARD_TEXTE>,
  *   elternSeite?: boolean,
@@ -55,9 +55,13 @@ export function starteQuiz(konfig) {
   const rundenGroesse = Math.min(konfig.rundenGroesse ?? daten.fragen.length, daten.fragen.length);
   const t = { ...STANDARD_TEXTE, ...konfig.texte };
 
+  // Der frühere Schlüssel der App (Rekord) wird einmal entfernt. Nur dieser eine Schlüssel, nie clear().
+  if (rekordSchluessel) {
+    try { localStorage.removeItem(rekordSchluessel); } catch { /* gesperrter Speicher: nichts zu entfernen */ }
+  }
+
   let fragen = [];
   let index = 0;
-  let punkte = 0;
 
   // Duett-Modus (Familie): zwei Spieler*innen nacheinander am selben Gerät.
   let duettFragen = [];
@@ -96,17 +100,15 @@ export function starteQuiz(konfig) {
     el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', 'aria-label': 'Text vorlesen', onclick: () => vorlesen(text) }, t.vorlesenKnopf);
 
   function start() {
-    const rekord = Number(localStorage.getItem(rekordSchluessel) ?? 0);
     zeige(
       el('section', { class: 'k-karte' },
         el('p', {}, t.intro),
-        rekord > 0 ? el('p', {}, `⭐ ${t.ergebnisSatz(rekord, rundenGroesse, rekord).split('·')[0].trim()}`) : '',
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf', onclick: starteRunde }, t.startKnopf),
           vorlesenKnopf(`${t.titel}. ${t.untertitel} ${t.intro}`))),
       el('section', { class: 'k-karte' },
         el('p', { style: 'font-weight:600;margin-top:0' }, '👩‍🏫 Für den Unterricht'),
-        el('p', { style: 'font-size:0.9rem' }, 'Klassen-Modus: eine Anzeige für die ganze Klasse (Beamer/Tafel). Alle raten laut mit, dann wird gemeinsam aufgelöst – ohne Punkte, ohne Geräte der Kinder, ohne Daten.'),
+        el('p', { style: 'font-size:0.9rem' }, 'Klassen-Modus: eine Anzeige für die ganze Klasse (Beamer/Tafel). Alle raten laut mit, dann wird gemeinsam aufgelöst – ohne Wertung, ohne Geräte der Kinder, ohne Daten.'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteKlassenRunde }, '👩‍🏫 Klassen-Modus starten')),
       el('section', { class: 'k-karte' },
         el('p', { style: 'font-weight:600;margin-top:0' }, '👪 Zu zweit spielen'),
@@ -114,7 +116,7 @@ export function starteQuiz(konfig) {
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteDuett }, '👪 Duett-Modus starten')),
       el('section', { class: 'k-karte' },
         el('p', { style: 'font-weight:600;margin-top:0' }, '🧑‍🤝‍🧒 Für Geschwister'),
-        el('p', { style: 'font-size:0.9rem' }, 'Staffel-Modus: Ihr löst abwechselnd Fragen und punktet als EIN Team. Nach der Frage des jüngeren Kindes darf das ältere kurz erklären. Kooperativ, nichts wird gespeichert.'),
+        el('p', { style: 'font-size:0.9rem' }, 'Staffel-Modus: Ihr löst abwechselnd Fragen als EIN Team. Nach der Frage des jüngeren Kindes darf das ältere kurz erklären. Kooperativ, nichts wird gespeichert.'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: starteStaffel }, '🧑‍🤝‍🧒 Geschwister-Staffel starten')),
       mitHilfeInsel
         ? el('section', { class: 'k-karte' },
@@ -127,7 +129,7 @@ export function starteQuiz(konfig) {
         el('p', {}, t.datenHinweis),
         el('button', {
           class: 'k-knopf k-knopf--neutral k-knopf--klein',
-          // Gezielt nur den eigenen Rekord. localStorage.clear() würde auch
+          // Gezielt nur die eigenen Schlüssel der App. localStorage.clear() würde auch
           // die Anzeige-Einstellungen (hoher Kontrast, Schriftgröße) und die
           // Daten der Nachbar-Apps wegwerfen – für ein Kind, das Kontrast
           // braucht, mitten im Spiel ein Rückschritt.
@@ -138,7 +140,6 @@ export function starteQuiz(konfig) {
   function starteRunde() {
     fragen = mischen(daten.fragen).slice(0, rundenGroesse);
     index = 0;
-    punkte = 0;
     frage();
   }
 
@@ -230,7 +231,6 @@ export function starteQuiz(konfig) {
   }
 
   function aufloesung(f, richtig) {
-    if (richtig) punkte++;
     const titel = richtig ? t.richtigTitel : t.falschTitel;
     zeige(
       el('section', { class: 'k-karte' },
@@ -249,16 +249,11 @@ export function starteQuiz(konfig) {
   }
 
   function ergebnis() {
-    const rekord = Math.max(punkte, Number(localStorage.getItem(rekordSchluessel) ?? 0));
-    localStorage.setItem(rekordSchluessel, String(rekord));
-    const raenge = daten.raenge ?? [{ ab: 0, titel: '', emoji: '🎉' }];
-    const rang = [...raenge].reverse().find((r) => punkte >= r.ab) ?? raenge[0];
     zeige(
       el('section', { class: 'k-karte' },
-        el('p', { class: 'k-gross' }, rang.emoji),
-        rang.titel ? el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel) : '',
-        el('p', { style: 'text-align:center' }, t.ergebnisSatz(punkte, fragen.length, rekord)),
-        vorlesenKnopf(`${t.fertigTitel} ${t.ergebnisSatz(punkte, fragen.length, rekord)}. ${rang.titel}`),
+        el('p', { style: 'text-align:center;font-weight:700;font-size:1.25rem' }, t.fertigTitel),
+        el('p', { style: 'text-align:center' }, t.fertigSatz),
+        vorlesenKnopf(`${t.fertigTitel} ${t.fertigSatz}`),
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf', onclick: starteRunde }, t.nochmalKnopf),
           el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));

@@ -7,7 +7,7 @@
 
 /**
  * Prüft einen Fragen-Datensatz und liefert eine Liste von Fehlern (leer = ok).
- * @param {{version?: number, raenge?: Array<{ab: number}>, fragen: Array<object>}} daten
+ * @param {{version?: number, fragen: Array<object>}} daten
  * @param {{ mindestFragen?: number, mindestErklaerung?: number }} [optionen]
  * @returns {string[]}
  */
@@ -40,11 +40,5 @@ export function pruefeFragen(daten, { mindestFragen = 10, mindestErklaerung = 20
     }
   }
 
-  if (Array.isArray(daten.raenge) && daten.raenge.length > 0) {
-    if (daten.raenge[0].ab !== 0) fehler.push('erster Rang muss bei 0 beginnen');
-    for (const r of daten.raenge) {
-      if (!r.titel || !Number.isInteger(r.ab)) fehler.push('Rang ohne titel/ab');
-    }
-  }
   return fehler;
 }

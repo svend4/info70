@@ -10,9 +10,8 @@ test('Fragenbank: quiz-kern-Schema gültig, genug für eine 12er-Runde', () => {
   assert.ok(daten.fragen.length >= 12);
 });
 
-test('Zielgruppe Fachkräfte, erreichbare Ränge', () => {
+test('Zielgruppe Fachkräfte', () => {
   assert.equal(daten.zielgruppe, 'Fachkraefte');
-  assert.ok(Math.max(...daten.raenge.map((r) => r.ab)) <= daten.fragen.length);
 });
 
 test('inhaltliche Abdeckung der Fachkräfte-Themen (Katalog Nr. 188)', () => {

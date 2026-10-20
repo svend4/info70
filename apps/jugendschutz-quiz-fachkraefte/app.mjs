@@ -29,6 +29,5 @@ starteQuiz({
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächste Frage ➡️',
     fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
   },
 });

@@ -56,8 +56,3 @@ test('inhaltliche Abdeckung: Digital-Rechte und Hilfe-Angebot sind dabei', () =>
   const hilfe = daten.fragen.some((f) => JSON.stringify(f).includes('116 111'));
   assert.ok(hilfe, 'Nummer gegen Kummer (116 111) als konkretes Hilfeangebot');
 });
-
-test('Ränge sind mit einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= 12);
-});

@@ -25,7 +25,7 @@
 ## Политика
 
 Werbefrei, без аккаунтов и внешних запросов; случаи смоделированы (никакие
-реальные сайты не грузятся); только рекорд в `localStorage` (`imp.rekord`).
+реальные сайты не грузятся); в `localStorage` ничего не сохраняется; alter Schlüssel `imp.rekord` wird beim Start entfernt.
 
 ## Запуск и тесты
 

@@ -16,8 +16,8 @@ Kinder 8-12. Nachbarn: koeder-quiz (Betrug), nachrichten-detektive
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde aus dem Vorrat → binaer/wahl mit
-Erklärung → Rang + Rekord. Zusätzlich Klassen-Modus (mündliches Raten,
-gemeinsame Auflösung, ohne Punkte/Daten).
+Erklärung → Ergebnis ohne Punkt und Rang. Zusätzlich Klassen-Modus (mündliches Raten,
+gemeinsame Auflösung, ohne Wertung/Daten).
 
 ## 4. Didaktik
 
@@ -30,14 +30,14 @@ das Kind PRÜFT statt pauschal zu urteilen.
 ## 5. Politik-Konformität (docs/02)
 
 Netzwerk-Wächter in der App, quiz-kern macht keine Anfragen; Fälle sind
-nachgestellt (keine echten Seiten), nur `imp.rekord` in localStorage +
+nachgestellt (keine echten Seiten), nichts in localStorage (alter Schlüssel `imp.rekord` wird entfernt) +
 Löschknopf (im Kern), werbefrei, Vorlesen, eltern.html.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥16 Fragen), didaktische Balance
 (ja+nein), Typ-Mischung, Kategorie-Abdeckung (je ≥3), Rechtsbezug
-(DDG/MStV, Footer, Adresse, Warnzeichen), Rang-Erreichbarkeit.
+(DDG/MStV, Footer, Adresse, Warnzeichen).
 
 ## 7. Erweiterungen (Katalog)
 

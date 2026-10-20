@@ -27,6 +27,5 @@ starteQuiz({
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächster Fall ➡️',
     fertigTitel: 'Fall gelöst!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Fällen geknackt · Rekord: ${rekord}`,
   },
 });

@@ -1,28 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    {
-      "ab": 0,
-      "titel": "Rechte-Entdecker*in",
-      "emoji": "🌱"
-    },
-    {
-      "ab": 5,
-      "titel": "Rechte-Kenner*in",
-      "emoji": "🧭"
-    },
-    {
-      "ab": 9,
-      "titel": "Rechte-Profi",
-      "emoji": "🎖️"
-    },
-    {
-      "ab": 12,
-      "titel": "Botschafter*in der Kinderrechte",
-      "emoji": "🕊️"
-    }
-  ],
   "fragen": [
     {
       "id": "k01",

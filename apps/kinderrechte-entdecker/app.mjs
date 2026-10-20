@@ -24,7 +24,6 @@ starteQuiz({
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächste Frage ➡️',
     fertigTitel: 'Entdeckungsreise geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Rechten entdeckt · Rekord: ${rekord}`,
   },
 });
 

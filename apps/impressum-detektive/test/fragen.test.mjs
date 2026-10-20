@@ -33,8 +33,3 @@ test('Rechtsbezug und Kernbegriffe kommen vor (DDG/MStV, Footer, Adresse)', () =
   assert.match(alles, /Adresse/, 'ladungsfähige Adresse als Pflichtangabe');
   assert.match(alles, /Warnzeichen|Warnsignal/, 'fehlendes Impressum als Warnzeichen');
 });
-
-test('Ränge sind mit einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= 12, 'höchster Rang muss in einer Runde erreichbar sein');
-});

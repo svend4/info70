@@ -22,7 +22,7 @@ test('der Fuß trägt immer Impressum und den Datenschutz-Hinweis', () => {
   assert.match(quelle, /Werbefrei/);
 });
 
-test('Datenlöschung: der Knopf entfernt den Rekord – und nur ihn', () => {
+test('Datenlöschung: der Knopf entfernt nur die eigenen Schlüssel der App', () => {
   // docs/02-Checkliste: "localStorage очищается кнопкой".
   assert.match(quelle, /datenLoeschen/, 'Beschriftung vorhanden');
   assert.match(quelle, /loescheDaten\(rekordSchluessel\)/, 'der Knopf löscht wirklich – gezielt');
@@ -30,4 +30,26 @@ test('Datenlöschung: der Knopf entfernt den Rekord – und nur ihn', () => {
   // Schriftgröße) mit abräumen. Für ein Kind, das Kontrast braucht, wäre das
   // ein Rückschritt mitten im Spiel – deshalb hier verboten.
   assert.ok(!/localStorage\.clear\(/.test(code), 'kein clear(): es trifft fremde Schlüssel mit');
+});
+
+test('Einzel-Modus: kein Rekord, keine Punkte, keine Ränge, nichts wird gespeichert', () => {
+  // Einzel-Abschnitt: von start() bis zum Duett-Abschnitt. Duett und Staffel sind bis zur Entscheidung unverändert.
+  const anfang = code.indexOf('function start()');
+  const ende = code.indexOf('function starteDuett()');
+  assert.ok(anfang > 0 && ende > anfang, 'Einzel-Abschnitt gefunden');
+  const einzel = code.slice(anfang, ende);
+  assert.doesNotMatch(einzel, /\brekord\b|\bpunkt|\brang\b|\braenge\b|localStorage\.setItem/i);
+});
+
+test('Endbildschirm: Geschafft, ohne Zahl, ohne richtig, ohne Stern, Pokal oder Rang', () => {
+  const anfang = code.indexOf('function ergebnis()');
+  const ende = code.indexOf('function starteDuett()');
+  const ergebnis = code.slice(anfang, ende);
+  assert.match(ergebnis, /t\.fertigTitel/, 'Titel ist Geschafft!');
+  assert.doesNotMatch(ergebnis, /fragen\.length|punkt|rekord|rang|richtig|⭐|🏆|🥇|🎖|🏅|🌟/i);
+});
+
+test('Start: der frühere Schlüssel wird einmal entfernt, nie clear()', () => {
+  assert.match(code, /localStorage\.removeItem\(rekordSchluessel\)/);
+  assert.ok(!/localStorage\.clear\(/.test(code));
 });

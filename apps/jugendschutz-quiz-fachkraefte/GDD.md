@@ -18,7 +18,7 @@ elternabend-kit, projektwoche, kriterien-check, spiele-kauf-kompass.
 ## 3. Ablauf
 
 quiz-kern-Standard: 12 Fragen aus 14, binaer + wahl, Erklärung + Praxis-Tipp
-nach jeder Antwort, Ränge und Rekord, Klassen-/Team-Modus am Beamer.
+nach jeder Antwort, Klassen-/Team-Modus am Beamer.
 
 ## 4. Didaktik / Nutzen
 
@@ -29,8 +29,7 @@ Apps als Demo.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei. Nur der Rekord
-(jsqf.rekord) liegt lokal, löschbar. Quellen (jugendschutz.net,
+Keine externen Anfragen (NetzwerkWaechter), werbefrei. Es wird nichts gespeichert (alter Schlüssel jsqf.rekord wird entfernt). Quellen (jugendschutz.net,
 Spieleratgeber-NRW) nur als Text genannt, keine Links/Requests.
 
 ## 6. Tests
