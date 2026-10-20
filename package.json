@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "node tools/serve.mjs",
     "test": "node --test",
-    "test:sitzung": "node tools/test-sitzung.mjs",
+    "test:sitzung": "node tools/sitzung-pruefung.mjs",
     "zahlen": "node tools/zahlen.mjs"
   },
   "engines": {
