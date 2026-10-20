@@ -124,6 +124,9 @@ body {
 }
 /* Berührziele: Aufklapp-Zeilen (summary) mindestens 48 px hoch. */
 summary { min-height: 3rem; }
+/* Berührziele: Eingabefelder (Text, Zahl, Auswahl, mehrzeilig) mindestens 48 px hoch. Kästchen und
+   Radio-Knöpfe gehören nicht hierher: sie werden über die Trefferfläche gelöst, nicht über den Stil des Symbols. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="range"]):not([type="color"]):not([type="file"]), select, textarea { min-height: 3rem; }
 
 .k-gross { font-size: 2.5rem; text-align: center; margin: 0.5rem 0; }
 
