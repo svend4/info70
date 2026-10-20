@@ -304,7 +304,10 @@ const bildschirm = el('div', { class: 'mjp-nur-bildschirm' },
   listeTeil,
   festeTeil,
   drucken,
-  kartenTeil);
+  kartenTeil,
+  el('footer', { class: 'k-fuss' },
+    el('span', {}, 'Werkzeug für Fachkräfte · keine Verbindung nach außen · nur die Häkchen werden gespeichert · '),
+    el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
 
 app.replaceChildren(bildschirm, druckBogen);
 zeichneAlles();
