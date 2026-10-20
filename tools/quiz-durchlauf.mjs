@@ -1,20 +1,20 @@
 // Quiz-Durchlauf: startet ein Quiz, beantwortet jede Frage (die erste Antwort gilt) und prüft den
 // Endbildschirm. Die Browser-Prüfung klickt nur Knöpfe mit data-kennung und sieht den Endbildschirm
 // deshalb nicht; dieses Werkzeug schon.
-// Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|alle] [--ausgabe <ordner>]
+// Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|staffel|alle] [--ausgabe <ordner>]
 // Prüft je App und Modus:
 //   - der Endbildschirm wird erreicht; beantwortete Fragen = Rundengröße (im Duett: je Person einmal)
 //   - kein Muster „Zahl von Zahl“, kein richtig, kein Rekord, kein Stern- oder Pokalzeichen, kein
 //     Rang-Symbol (k-gross), kein Rang-Wort, keine Punkte, kein Unentschieden, kein „liegt vorn“
 //     (Regeln in packages/kinderschutz/src/quiz-ende.mjs; Sterne zählen nur im Körper, nicht im Titel)
 //   - ein früher gespeicherter Rekord-Schlüssel wird beim Start entfernt; nach dem Durchlauf fehlt er
-//   - „Meine Daten löschen“ ist auf dem Startbildschirm vorhanden
+//   - „Meine Daten löschen“ ist auf dem Startbildschirm nicht vorhanden (keinLoeschknopf)
 //   - die Druckansicht des Endbildschirms enthält keine Zeichen ☐☒☑✓✔★☆
 // Nur Apps mit dem Quiz-Motor quiz-kern. Andere Apps werden abgelehnt (Exit 64), statt falsch gemessen.
 // Exit: 0 alles ok, 1 mindestens eine Verletzung, 2 Endbildschirm nicht erreicht oder Lauf abgebrochen,
 // 64 Aufruf falsch (keine Quiz-App).
 // Der Startknopf ist je App anders beschriftet; gewählt wird der erste Knopf der ersten Karte, der nicht „Vorlesen“ heißt.
-// Staffel ist nicht enthalten (Entscheidung ausstehend).
+// Modi: einzel, duett und staffel. Mit --modus alle laufen alle drei.
 import { createServer } from 'node:http';
 import { spawn } from 'node:child_process';
 import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
@@ -187,10 +187,10 @@ async function main() {
   const modIdx = args.indexOf('--modus');
   const ausgabe = ausIdx >= 0 ? args[ausIdx + 1] : join(tmpdir(), 'quiz-durchlauf');
   const modusWahl = modIdx >= 0 ? args[modIdx + 1] : 'einzel';
-  if (modusWahl !== 'alle' && !MODI.includes(modusWahl)) { console.error(`--modus: einzel, duett oder alle, nicht „${modusWahl}“`); process.exit(64); }
+  if (modusWahl !== 'alle' && !MODI.includes(modusWahl)) { console.error(`--modus: einzel, duett, staffel oder alle, nicht „${modusWahl}“`); process.exit(64); }
   const modi = modusWahl === 'alle' ? MODI : [modusWahl];
   const apps = appsAusArgs(args);
-  if (!apps.length) { console.error('Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|alle] [--ausgabe <ordner>]'); process.exit(64); }
+  if (!apps.length) { console.error('Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|staffel|alle] [--ausgabe <ordner>]'); process.exit(64); }
   const keineQuiz = nichtQuizApps(apps.map((slug) => ({ slug, quelltext: quelltextVon(slug) })));
   if (keineQuiz.length) {
     console.error(`Keine Quiz-App auf quiz-kern: ${keineQuiz.join(', ')}. Das Werkzeug prüft nur Quiz-Apps und ist für diese Apps nicht anzuwenden.`);

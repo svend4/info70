@@ -35,6 +35,27 @@ test('offen: die Karte „Meine Daten löschen“ und removeItem werden gemeldet
   assert.ok(d.befunde.every((b) => b.art === 'offen (Entscheidung Max)'));
 });
 
+const befundeVon = (datei, zeile) => pruefeDiff(kopf(datei) + `@@ -1 +1 @@\n-${zeile}\n+x\n`)[0].befunde;
+
+test('Rang: „range“ ist kein Rang, Wörter aus dem Motor (rangSymbol, rangWort) und Rangliste schon', () => {
+  // Kontrolle: das alte Muster \brang trifft „range“ im Eingabefeld.
+  assert.ok(/\brang/i.test('<input type="range" min="0">'), 'Kontrolle: das alte Muster traf range');
+  assert.equal(befundeVon('apps/x/index.html', '<input type="range" min="0">').length, 1, 'Schieberegler: Befund');
+  assert.equal(befundeVon('apps/x/app.mjs', 'const rangSymbol = pick(stufen);').length, 0, 'rangSymbol bleibt erlaubt');
+  assert.equal(befundeVon('apps/x/app.mjs', 'const rangWort = stufe.wort;').length, 0, 'rangWort bleibt erlaubt');
+  assert.equal(befundeVon('apps/x/app.mjs', 'el(\'p\', {}, \'Rangliste\');').length, 0, 'Rangliste: kein Befund');
+  assert.equal(befundeVon('apps/x/app.mjs', 'el(\'p\', {}, \'Dein Rang: 5\');').length, 0, 'Dein Rang: kein Befund');
+});
+
+test('Prozent: CSS-Wert (width: 100%, translate(-50%)) ist ein Befund, Text mit „85 %“ nicht', () => {
+  // Kontrolle: das alte Muster \d\s?% zählte den CSS-Wert als erlaubt; die Prüfung muss ihn jetzt melden.
+  assert.equal(befundeVon('apps/x/index.html', '  width: 100%;').length, 1, 'CSS-Wert in einer HTML-Datei: Befund');
+  assert.equal(befundeVon('apps/x/style.css', '  width: 100%;').length, 1, 'CSS-Datei: Befund');
+  assert.equal(befundeVon('apps/x/app.mjs', 'el(\'div\', { style: \'transform:translate(-50%)\' });').length, 1, 'translate(-50%): Befund');
+  assert.equal(befundeVon('apps/x/app.mjs', 'el(\'p\', {}, \'Trefferquote 85 %\');').length, 0, 'Text „85 %“: kein Befund');
+  assert.equal(befundeVon('apps/x/app.mjs', 'el(\'p\', {}, \'Zu 85% gelöst\');').length, 0, 'Text „85%“: kein Befund');
+});
+
 test('Datei gelöscht wird gemeldet', () => {
   const diff = `diff --git a/apps/x/druck.css b/apps/x/druck.css\ndeleted file mode 100644\nindex 1111111..0000000\n--- a/apps/x/druck.css\n+++ /dev/null\n@@ -1,2 +0,0 @@\n-a {}\n-b {}\n`;
   const [d] = pruefeDiff(diff);

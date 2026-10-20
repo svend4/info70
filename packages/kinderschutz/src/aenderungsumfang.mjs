@@ -4,8 +4,16 @@
 // Löschungen von Karte, Knopf und Speicherung (Entscheidungen Max offen), gelöschte Dateien und Tests, die
 // ohne Ersatz entfernt wurden. Reine Funktion über den Text eines unified diff mit -U0 (Tests in test/).
 
-// Entfernungen, die zur erlaubten Liste gehören (Ergebnis-Wertung eines Kindes).
-export const ERLAUBT = /rekord|\brang|ränge|raenge|\bpunkt|ampel|\d\s?%|prozent|pokal|bestwert|bestenliste|🏆|🥇|🥈|🥉|⭐|🎖|🏅|🌟/i;
+// Entfernungen, die zur erlaubten Liste gehören (Ergebnis-Wertung eines Kindes). Rang nur als Wort oder als
+// Zusammensetzung aus dem Motor (rangSymbol, rangWort …), nicht als Teil von „range“ (<input type="range">).
+export const ERLAUBT = /rekord|\brang(?:liste|folge|platz|ordnung|symbol|wort|abzeichen)?\b|ränge|raenge|\bpunkt|ampel|prozent|pokal|bestwert|bestenliste|🏆|🥇|🥈|🥉|⭐|🎖|🏅|🌟/i;
+// Prozent zählt nur im Text. In *.css-Dateien nie; ein Wert mit % hinter Doppelpunkt oder Klammer
+// (width: 100%, translate(-50%)) ist ein CSS-Wert und zählt nicht.
+const PROZENT = /\d\s?%/;
+const CSS_WERT = /[:(]\s*-?\d+(?:[.,]\d+)?\s?%/;
+export function zaehltProzent(datei, zeile) {
+  return !/\.css$/.test(datei) && PROZENT.test(zeile) && !CSS_WERT.test(zeile);
+}
 // Entfernungen, deren Entscheidung bei Max liegt: Karte „Meine Daten löschen“, Knopf, Speicherung.
 export const OFFEN = /Meine Daten löschen|datenKarte|loescheDaten|Löschknopf|removeItem|localStorage\.clear|clear\(\)/;
 // Zeilen nur aus Klammern und Satzzeichen zählen als Struktur, nicht als Inhalt.
@@ -32,7 +40,7 @@ export function pruefeDiff(diff) {
       if (/^\s*test\(/.test(t)) aktuell.testsEntfernt++;
       else if (STRUKTUR.test(t)) aktuell.strukturell++;
       else if (OFFEN.test(t)) aktuell.befunde.push({ art: 'offen (Entscheidung Max)', zeile: t.trim() });
-      else if (!ERLAUBT.test(t)) aktuell.befunde.push({ art: 'Entfernung außerhalb der erlaubten Liste', zeile: t.trim() });
+      else if (!ERLAUBT.test(t) && !zaehltProzent(aktuell.datei, t)) aktuell.befunde.push({ art: 'Entfernung außerhalb der erlaubten Liste', zeile: t.trim() });
     } else if (zeile.startsWith('+')) {
       aktuell.hinzu++;
       if (/^\s*test\(/.test(zeile.slice(1))) aktuell.testsHinzu++;
