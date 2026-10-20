@@ -269,7 +269,10 @@ const bildschirm = el('div', { class: 'mop-nur-bildschirm' },
   requisitenKarte,
   klangKarte,
   anregungKarte,
-  druckKarte);
+  druckKarte,
+  el('footer', { class: 'k-fuss' },
+    el('span', {}, 'Werkzeug für Erwachsene · offline · nichts wird gespeichert · '),
+    el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
 
 app.replaceChildren(bildschirm, druckTeil);
 
