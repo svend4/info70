@@ -1,6 +1,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { erhoehungen, KATEGORIEN, pruefeSchreiben, zaehleKategorien } from '../src/browser-basislinie.mjs';
+import { spawnSync } from 'node:child_process';
+import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { erhoehungen, KATEGORIEN, pruefeSchreibort, pruefeSchreiben, zaehleKategorien } from '../src/browser-basislinie.mjs';
+
+const WURZEL = fileURLToPath(new URL('../../../', import.meta.url));
+const TOOL = join(WURZEL, 'tools', 'browser-basislinie.mjs');
+const DATEI = join(WURZEL, 'docs', 'browser-basislinie.json');
 
 const ergebnis = (verletzungen, extra = {}) => ({ status: 1, verletzungen, druck: { zeichen: [] }, beruehrung: { zuKleine: [] }, konsole: { fehler: [], seitenfehler: [] }, antwortFehler: [], netz: { fremd: [] }, ...extra });
 
@@ -41,4 +50,37 @@ test('Schreiben: nur Senkungen ohne --erweitern; eine Anlage ohne Vorgänger ist
   assert.equal(hoch.erlaubt, false, 'Kontrolle: Erhöhung ohne --erweitern wird abgelehnt');
   assert.equal(hoch.erhoehungen.length, 1);
   assert.equal(pruefeSchreiben(basis, { app: { druck: 4 } }, { erweitern: true }).erlaubt, true);
+});
+
+test('Schreibort: nur mit --integrator und nur aus der Repo-Wurzel', () => {
+  assert.equal(pruefeSchreibort({ cwd: WURZEL, wurzel: WURZEL, integrator: false }).erlaubt, false, 'ohne Flag: abgelehnt');
+  assert.equal(pruefeSchreibort({ cwd: join(WURZEL, 'apps', 'chat-rechte'), wurzel: WURZEL, integrator: true }).erlaubt, false, 'aus einer App: abgelehnt');
+  assert.equal(pruefeSchreibort({ cwd: join(WURZEL, 'apps'), wurzel: WURZEL, integrator: true }).erlaubt, false, 'aus einem Unterordner: abgelehnt');
+  assert.equal(pruefeSchreibort({ cwd: WURZEL, wurzel: WURZEL, integrator: true }).erlaubt, true, 'Integrator aus der Wurzel: erlaubt');
+});
+
+test('Kontrollfall im Prozess: aus einer App-Sitzung verweigert das Werkzeug das Schreiben, die Datei bleibt', () => {
+  const vorher = readFileSync(DATEI, 'utf8');
+  const leer = mkdtempSync(join(tmpdir(), 'basis-kontrolle-'));
+  try {
+    const lauf = spawnSync(process.execPath, [TOOL, '--schreiben', leer, '--integrator'], { cwd: join(WURZEL, 'apps', 'chat-rechte'), encoding: 'utf8' });
+    assert.equal(lauf.status, 64, lauf.stderr);
+    assert.match(lauf.stderr, /nicht aus/);
+    assert.equal(readFileSync(DATEI, 'utf8'), vorher, 'die Basislinie bleibt unverändert');
+  } finally {
+    rmSync(leer, { recursive: true, force: true });
+  }
+});
+
+test('Kontrollfall im Prozess: ohne --integrator wird auch aus der Wurzel nicht geschrieben', () => {
+  const vorher = readFileSync(DATEI, 'utf8');
+  const leer = mkdtempSync(join(tmpdir(), 'basis-kontrolle-'));
+  try {
+    const lauf = spawnSync(process.execPath, [TOOL, '--schreiben', leer], { cwd: WURZEL, encoding: 'utf8' });
+    assert.equal(lauf.status, 64, lauf.stderr);
+    assert.match(lauf.stderr, /--integrator/);
+    assert.equal(readFileSync(DATEI, 'utf8'), vorher, 'die Basislinie bleibt unverändert');
+  } finally {
+    rmSync(leer, { recursive: true, force: true });
+  }
 });

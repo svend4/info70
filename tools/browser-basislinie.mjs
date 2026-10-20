@@ -1,14 +1,14 @@
 // Basislinie der Browser-Prüfung: schreibt docs/browser-basislinie.json aus den Messungen eines Ordners
 // oder vergleicht einen Lauf damit. Die Datei darf nur kleiner werden; eine Erhöhung braucht --erweitern.
 // Aufruf:
-//   node tools/browser-basislinie.mjs --schreiben <messordner> [--erweitern]
+//   node tools/browser-basislinie.mjs --schreiben <messordner> --integrator [--erweitern]   (nur aus der Repo-Wurzel)
 //   node tools/browser-basislinie.mjs --vergleich <messordner>
 // Messordner: je App eine Datei <app>.json aus node tools/browser-pruefung.mjs <app> - <messordner>.
-// Exit: 0 ok, 1 Erhöhung gefunden (bei --vergleich) bzw. Schreiben abgelehnt, 64 Aufruf falsch.
+// Exit: 0 ok, 1 Erhöhung gefunden (bei --vergleich) bzw. Schreiben abgelehnt, 64 Aufruf oder Schreibort falsch.
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { erhoehungen, KATEGORIEN, pruefeSchreiben, zaehleKategorien } from '../packages/kinderschutz/src/browser-basislinie.mjs';
+import { erhoehungen, KATEGORIEN, pruefeSchreibort, pruefeSchreiben, zaehleKategorien } from '../packages/kinderschutz/src/browser-basislinie.mjs';
 
 const WURZEL = fileURLToPath(new URL('../', import.meta.url));
 const DATEI = join(WURZEL, 'docs', 'browser-basislinie.json');
@@ -18,8 +18,15 @@ const modus = args.includes('--schreiben') ? 'schreiben' : args.includes('--verg
 const ordnerIdx = args.indexOf(modus === 'schreiben' ? '--schreiben' : '--vergleich');
 const ordner = ordnerIdx >= 0 ? args[ordnerIdx + 1] : null;
 if (!modus || !ordner || !existsSync(ordner)) {
-  console.error('Aufruf: node tools/browser-basislinie.mjs --schreiben <messordner> [--erweitern] | --vergleich <messordner>');
+  console.error('Aufruf: node tools/browser-basislinie.mjs --schreiben <messordner> --integrator [--erweitern] | --vergleich <messordner>');
   process.exit(64);
+}
+if (modus === 'schreiben') {
+  const ort = pruefeSchreibort({ cwd: process.cwd(), wurzel: WURZEL, integrator: args.includes('--integrator') });
+  if (!ort.erlaubt) {
+    console.error(`Schreiben abgelehnt: ${ort.grund}`);
+    process.exit(64);
+  }
 }
 
 // Messungen einlesen. Eine App ohne Datei im Messordner wird nicht gezählt.

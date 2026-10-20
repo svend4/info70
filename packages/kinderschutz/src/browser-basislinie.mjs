@@ -3,7 +3,9 @@
 // ausdrücklich --erweitern. Dieses Modul entscheidet nichts über die Ausgabe des Messwerkzeugs, es zählt nur.
 // Das Tor (Fehler bei jeder Erhöhung) ist noch nicht eingeschaltet: Entscheidung Max ausstehend (№31).
 
-export const KATEGORIEN = ['nichtGemessen', 'ohneKennung', 'klickFehler', 'ueberlauf', 'beruehrung', 'druck', 'konsole', 'fremdeHosts'];
+import { resolve } from 'node:path';
+
+export const KATEGORIEN =['nichtGemessen', 'ohneKennung', 'klickFehler', 'ueberlauf', 'beruehrung', 'druck', 'konsole', 'fremdeHosts'];
 
 /** Zählt die Verletzungen eines Messergebnisses (JSON aus tools/browser-pruefung.mjs) je Kategorie. */
 export function zaehleKategorien(e) {
@@ -31,6 +33,20 @@ export function erhoehungen(basis, aktuell) {
     }
   }
   return liste;
+}
+
+/**
+ * Wo darf die Basislinie geschrieben werden? Nur mit dem Flag --integrator und nur aus dem Repo-Wurzelordner.
+ * Eine App-Sitzung oder ein Writer schreibt die gemeinsame Datei nicht, auch nicht mit Senkungen.
+ */
+export function pruefeSchreibort({ cwd, wurzel, integrator }) {
+  if (!integrator) {
+    return { erlaubt: false, grund: 'Schreiben nur mit --integrator: die Basislinie schreibt nur der Integrator.' };
+  }
+  if (resolve(cwd) !== resolve(wurzel)) {
+    return { erlaubt: false, grund: `Schreiben nur aus dem Repo-Wurzelordner (${resolve(wurzel)}), nicht aus ${resolve(cwd)}.` };
+  }
+  return { erlaubt: true, grund: '' };
 }
 
 /** Darf die Basislinie geschrieben werden? Nur Senkungen ohne --erweitern; eine Anlage ohne Vorgänger ist erlaubt. */
