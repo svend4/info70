@@ -27,6 +27,10 @@ installiereNetzwerkWaechter();
 const app = document.getElementById('app');
 const daten = await fetch('daten/tagebuch.json').then((r) => r.json());
 const SCHLUESSEL = 'ewt.eintraege';
+// Einzeln stehende Links: das Berührziel ist das a-Element selbst und muss
+// mindestens 48 px hoch und breit sein. inline-block (nicht flex), damit die
+// Unterstreichung des Links am Text bleibt; der Text selbst bleibt gleich.
+const EINZELLINK = 'display:inline-block;box-sizing:border-box;min-width:3rem;min-height:3rem;padding:0.75rem 0;line-height:1.5;vertical-align:middle';
 
 // Zustand im Speicher mit Durchschreiben. Im privaten Fenster wirft schon
 // der LESEzugriff, und dann war die App in Welle 78 zweimal funktionslos.
@@ -292,15 +296,15 @@ function render(fokusId = null) {
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🧭 Was woanders besser steht'),
       el('ul', { style: 'margin:0;padding-left:1.2rem' },
         el('li', {}, 'Ob die Entwicklung im Rahmen liegt – das gehört zu den Vorsorgeuntersuchungen: ',
-          el('a', { href: '../meilenstein-begleiter/' }, 'Meilenstein-Begleiter')),
+          el('a', { href: '../meilenstein-begleiter/', style: EINZELLINK }, 'Meilenstein-Begleiter')),
         el('li', {}, 'Was Sie tun können, damit Verständigung entsteht: ',
-          el('a', { href: '../sprich-mit-mir/' }, 'Sprich mit mir')),
+          el('a', { href: '../sprich-mit-mir/', style: EINZELLINK }, 'Sprich mit mir')),
         el('li', {}, 'Reime und Lieder als Sprachbad: ',
           el('a', { href: '../familienschatz-reime/' }, 'Familienschatz Reime')),
         el('li', {}, 'Später, für Schulkinder: ',
-          el('a', { href: '../herkunftssprachen-bruecke/' }, 'Herkunftssprachen-Brücke')),
+          el('a', { href: '../herkunftssprachen-bruecke/', style: EINZELLINK }, 'Herkunftssprachen-Brücke')),
         el('li', {}, 'Das Tagebuch für die Jahre danach: ',
-          el('a', { href: '../staerken-tagebuch/' }, 'Stärken-Tagebuch')))),
+          el('a', { href: '../staerken-tagebuch/', style: EINZELLINK }, 'Stärken-Tagebuch')))),
 
     el('footer', { class: 'k-fuss ewt-nur-bildschirm' },
       el('span', {}, 'Werkzeug für Eltern · kein Bildschirm fürs Kind · keine Bewertung · '),

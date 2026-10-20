@@ -83,7 +83,12 @@ app.replaceChildren(
     },
       ...kapitel.map((k) =>
         el('li', { style: 'margin:0.15rem 0' },
-          el('a', { href: `#kapitel-${k.name}` }, k.titel.replace('👪 Eltern-Kompass: ', '')))))),
+          // Eigenständiger Link: das a-Element selbst braucht 48 px Höhe und Breite (Messung am Element).
+          // Eine einzeilige Inline-Box misst nur 21 px, daher inline-flex mit 3rem (18 px Basisschrift = 54 px).
+          el('a', {
+            href: `#kapitel-${k.name}`,
+            style: 'display:inline-flex;align-items:center;box-sizing:border-box;min-height:3rem;min-width:3rem',
+          }, k.titel.replace('👪 Eltern-Kompass: ', '')))))),
   ...kapitel.map((k, i) => kapitelKnoten(k, i + 1)),
   el('footer', { class: 'k-fuss' },
     el('span', {}, 'Material für Erwachsene · diese Seite speichert nichts · '),

@@ -465,7 +465,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 12,
+      "beruehrung": 1,
       "druck": 33,
       "konsole": 0,
       "fremdeHosts": 0
@@ -585,7 +585,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 4,
+      "beruehrung": 0,
       "druck": 5,
       "konsole": 0,
       "fremdeHosts": 0
@@ -745,7 +745,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 14,
+      "beruehrung": 0,
       "druck": 19,
       "konsole": 0,
       "fremdeHosts": 0

@@ -60,7 +60,7 @@ function programmKarte(p) {
     p.beratung && p.beratung !== '-' ? el('p', { style: 'font-size:0.9rem;margin:0.25rem 0' }, `🗣️ ${p.beratung}`) : '',
     p.sitz ? el('p', { style: 'font-size:0.9rem;margin:0.25rem 0' }, `📍 Sitz erforderlich: ${SITZE.find(([w]) => w === p.sitz)[1]}`) : '',
     el('p', { style: 'font-size:0.85rem;margin:0.5rem 0 0' },
-      el('a', { href: p.quelle, rel: 'noopener' }, 'Originalquelle prüfen ↗')));
+      el('a', { href: p.quelle, rel: 'noopener', style: 'display:inline-flex;align-items:center;min-height:3rem;min-width:3rem;box-sizing:border-box' }, 'Originalquelle prüfen ↗')));
 }
 
 function rechner() {
