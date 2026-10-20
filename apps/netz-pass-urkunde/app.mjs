@@ -34,15 +34,17 @@ function stufenWahl() {
 }
 
 function stationKarte(st, status) {
-  const box = el('input', { type: 'checkbox', id: `npu-${st.id}`, style: 'width:1.6rem;height:1.6rem;flex-shrink:0;margin-top:0.15rem' });
+  // Kästchen 3rem (54 px). Der Text beginnt mit padding-top 0,75rem, damit seine erste Zeile
+  // (Zeilenhöhe 27 px) mittig zur Box steht: (54 − 27) / 2 = 13,5 px.
+  const box = el('input', { type: 'checkbox', id: `npu-${st.id}`, style: 'width:3rem;height:3rem;flex-shrink:0;margin:0' });
   box.checked = Boolean(status[st.id]);
   box.addEventListener('change', () => { const s = ladeStatus(); s[st.id] = box.checked; speichereStatus(s); render(); });
   return el('section', { class: 'k-karte npu-nur-bildschirm' },
     el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
       box,
-      el('label', { for: `npu-${st.id}`, style: 'flex:1' },
+      el('label', { for: `npu-${st.id}`, style: 'flex:1;padding-top:0.75rem' },
         el('span', { style: 'font-weight:600' }, `${st.emoji} ${st.text}`))),
-    el('div', { style: 'margin:0.4rem 0 0 2.2rem' },
+    el('div', { style: 'margin:0.4rem 0 0 3.6rem' },
       el('p', { style: 'font-size:0.92rem;margin:0.2rem 0;color:#374151' }, st.tipp),
       el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => vorlesen(`${st.text}. ${st.tipp}`) }, '🔊 Vorlesen')));
 }

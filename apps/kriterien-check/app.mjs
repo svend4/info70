@@ -39,7 +39,7 @@ function render() {
         const eingabe = el('input', {
           type: 'checkbox',
           id: `kc-${k.id}`,
-          style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem',
+          style: 'width:3rem;height:3rem;flex-shrink:0',
         });
         eingabe.checked = Boolean(status[k.id]);
         eingabe.addEventListener('change', () => {
@@ -49,13 +49,13 @@ function render() {
           render();
         });
         return el('div', { style: 'padding:0.4rem 0' },
-          el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
+          el('div', { style: 'display:flex;gap:0.6rem;align-items:center' },
             eingabe,
-            el('label', { for: `kc-${k.id}` },
+            el('label', { for: `kc-${k.id}`, style: 'min-width:0;overflow-wrap:anywhere' },
               el('span', {}, k.text),
               el('small', { style: 'display:block;color:#4b5563' }, k.quelle))),
           k.hilfe
-            ? el('details', { style: 'margin:0.25rem 0 0 2.1rem' },
+            ? el('details', { style: 'margin:0.25rem 0 0 3.6rem' },
                 el('summary', { style: 'cursor:pointer;font-size:0.85rem;color:var(--k-blau-dunkel)' }, '💡 So prüfst du das'),
                 el('p', { style: 'font-size:0.85rem;margin:0.3rem 0 0;color:#374151' }, k.hilfe))
             : '');

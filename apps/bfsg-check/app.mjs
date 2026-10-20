@@ -54,7 +54,7 @@ function render() {
     el('div', { style: 'height:0.4rem' }),
     farbfeld(hg, (v) => { hg = v; }, 'Hintergrund:'),
     el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.5rem 0' },
-      (() => { const b = el('input', { type: 'checkbox', id: 'bfsg-gross', style: 'width:1.3rem;height:1.3rem' }); b.checked = gross; b.addEventListener('change', () => { gross = b.checked; render(); }); return b; })(),
+      (() => { const b = el('input', { type: 'checkbox', id: 'bfsg-gross', style: 'width:3rem;height:3rem;flex-shrink:0' }); b.checked = gross; b.addEventListener('change', () => { gross = b.checked; render(); }); return b; })(),
       el('label', { for: 'bfsg-gross' }, 'große Schrift (ab ~18pt / 14pt fett)')),
     el('div', { style: `border-radius:0.5rem;padding:0.8rem;text-align:center;color:${/^#[0-9a-fA-F]{6}$/.test(vg) ? vg : '#000'};background:${/^#[0-9a-fA-F]{6}$/.test(hg) ? hg : '#fff'};border:1px solid var(--k-rand)` }, 'Beispiel-Text: Können alle das gut lesen?'),
     el('p', { class: `k-hinweis ${bewertung.stufe === 'ungenuegend' || bewertung.stufe === 'ungueltig' ? 'k-hinweis--falsch' : 'k-hinweis--richtig'}`, style: 'margin:0.5rem 0 0' }, bewertung.text));
@@ -64,14 +64,14 @@ function render() {
     return el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `${b.emoji} ${b.name} (${ok}/${b.kriterien.length})`),
       ...b.kriterien.map((k) => {
-        const eingabe = el('input', { type: 'checkbox', id: `bfsg-${k.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
+        const eingabe = el('input', { type: 'checkbox', id: `bfsg-${k.id}`, style: 'width:3rem;height:3rem;flex-shrink:0' });
         eingabe.checked = Boolean(status[k.id]);
         eingabe.addEventListener('change', () => { const s = ladeStatus(); s[k.id] = eingabe.checked; speichereStatus(s); render(); });
         return el('div', { style: 'padding:0.4rem 0' },
-          el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
+          el('div', { style: 'display:flex;gap:0.6rem;align-items:center' },
             eingabe,
             el('label', { for: `bfsg-${k.id}` }, el('span', {}, k.text), el('small', { style: 'display:block;color:#4b5563' }, k.bezug))),
-          el('details', { style: 'margin:0.25rem 0 0 2.1rem' },
+          el('details', { style: 'margin:0.25rem 0 0 3.6rem' },
             el('summary', { style: 'cursor:pointer;font-size:0.85rem;color:var(--k-blau-dunkel)' }, '💡 So prüfst du das'),
             el('p', { style: 'font-size:0.85rem;margin:0.3rem 0 0;color:#374151' }, k.hilfe)));
       }));

@@ -50,7 +50,7 @@ function kategorieKarte(kat) {
       const box = el('input', {
         type: 'checkbox',
         id: `fmv-${r.id}`,
-        style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem',
+        style: 'width:3rem;height:3rem;flex-shrink:0',
       });
       box.checked = Boolean(entwurf.ausgewaehlt[r.id]);
       box.addEventListener('change', () => {
@@ -58,7 +58,7 @@ function kategorieKarte(kat) {
         speichereEntwurf();
         render();
       });
-      return el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start;padding:0.4rem 0' },
+      return el('div', { style: 'display:flex;gap:0.6rem;align-items:center;padding:0.4rem 0' },
         box,
         el('label', { for: `fmv-${r.id}` }, r.text));
     }),

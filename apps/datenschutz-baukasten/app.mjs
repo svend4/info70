@@ -35,10 +35,10 @@ function render() {
       el('p', { style: 'font-weight:600;margin-top:0' }, '1) Welche Funktionen hat deine Seite?'),
       el('p', { style: 'font-size:0.9rem;color:#4b5563;margin-top:0' }, 'Nur ankreuzen, was wirklich zutrifft – je weniger, desto datensparsamer.'),
       ...BAUSTEINE.map((b) => {
-        const box = el('input', { type: 'checkbox', id: `dsb-${b.code}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
+        const box = el('input', { type: 'checkbox', id: `dsb-${b.code}`, style: 'width:3rem;height:3rem;flex-shrink:0' });
         box.checked = auswahl.includes(b.code);
         box.addEventListener('change', () => { const a = new Set(lade()); box.checked ? a.add(b.code) : a.delete(b.code); speichere([...a]); render(); });
-        return el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start;padding:0.3rem 0' }, box, el('label', { for: `dsb-${b.code}` }, b.name));
+        return el('div', { style: 'display:flex;gap:0.6rem;align-items:center;padding:0.3rem 0' }, box, el('label', { for: `dsb-${b.code}` }, b.name));
       })),
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '⚖️ Juristische Datenschutzerklärung'),

@@ -44,7 +44,7 @@ function render() {
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, b.name),
       ...b.aussagen.map((a) => {
-        const eingabe = el('input', { type: 'checkbox', id: `gk-${a.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
+        const eingabe = el('input', { type: 'checkbox', id: `gk-${a.id}`, style: 'width:3rem;height:3rem;flex-shrink:0;margin:0' });
         eingabe.checked = Boolean(status[a.id]);
         eingabe.addEventListener('change', () => {
           const s = ladeStatus();
@@ -55,10 +55,10 @@ function render() {
         return el('div', { style: 'padding:0.4rem 0' },
           el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
             eingabe,
-            el('label', { for: `gk-${a.id}` }, a.text)),
-          el('details', { style: 'margin:0.25rem 0 0 2.1rem' },
+            el('label', { for: `gk-${a.id}`, style: 'margin-top:0.75rem' }, a.text)),
+          el('details', { style: 'margin:0.25rem 0 0 3.6rem' },
             el('summary', { style: 'cursor:pointer;font-size:0.85rem;color:var(--k-blau-dunkel)' }, '💡 So stärkst du das'),
-            el('p', { style: 'font-size:0.85rem;margin:0.3rem 0 0;color:#374151' }, a.impuls)));
+            el('p', { style: 'font-size:0.85rem;margin:0.3rem 0 0;color:#374151;overflow-wrap:anywhere' }, a.impuls)));
       })));
 
   const berichtsFeld = el('textarea', {

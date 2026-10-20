@@ -47,10 +47,10 @@ function render() {
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '1) Was soll gemeldet werden können?'),
       ...daten.ausloeser.map((a) => {
-        const box = el('input', { type: 'checkbox', id: `mwp-${a.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
+        const box = el('input', { type: 'checkbox', id: `mwp-${a.id}`, style: 'width:3rem;height:3rem;flex-shrink:0;margin:0' });
         box.checked = cfg.gruende.includes(a.id);
         box.addEventListener('change', () => { const c = lade(); const s = new Set(c.gruende); box.checked ? s.add(a.id) : s.delete(a.id); c.gruende = [...s]; speichere(c); render(); });
-        return el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start;padding:0.3rem 0' }, box, el('label', { for: `mwp-${a.id}` }, el('span', { style: 'font-weight:600' }, a.name), el('small', { style: 'display:block;color:#4b5563' }, `Kind sieht: „${a.kinder}“`)));
+        return el('div', { style: 'display:flex;gap:0.6rem;align-items:center;padding:0.3rem 0' }, box, el('label', { for: `mwp-${a.id}` }, el('span', { style: 'font-weight:600' }, a.name), el('small', { style: 'display:block;color:#4b5563' }, `Kind sieht: „${a.kinder}“`)));
       })),
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '2) Wie schnell reagiert ihr?'),
@@ -61,7 +61,7 @@ function render() {
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600;margin-top:0' }, '3) Rückmeldung an das Kind'),
       ...[['bestaetigung', 'Eingang bestätigen („Danke, wir haben deine Meldung“)'], ['rueckmeldung', 'Über das Ergebnis zurückmelden']].map(([k, label]) => {
-        const box = el('input', { type: 'checkbox', id: `mwp-${k}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0' });
+        const box = el('input', { type: 'checkbox', id: `mwp-${k}`, style: 'width:3rem;height:3rem;flex-shrink:0' });
         box.checked = Boolean(cfg[k]);
         box.addEventListener('change', () => { const c = lade(); c[k] = box.checked; speichere(c); render(); });
         return el('div', { style: 'display:flex;gap:0.6rem;align-items:center;padding:0.3rem 0' }, box, el('label', { for: `mwp-${k}` }, label));

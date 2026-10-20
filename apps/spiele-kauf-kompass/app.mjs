@@ -37,14 +37,14 @@ function render() {
     return el('section', { class: 'k-karte skk-blatt' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `${b.emoji} ${b.name}`, el('span', { class: 'skk-nur-bildschirm' }, ` (${ok}/${b.punkte.length})`)),
       ...b.punkte.map((p) => {
-        const box = el('input', { type: 'checkbox', id: `skk-${p.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
+        const box = el('input', { type: 'checkbox', id: `skk-${p.id}`, style: 'width:3rem;height:3rem;flex-shrink:0;margin:0' });
         box.checked = Boolean(status[p.id]);
         box.addEventListener('change', () => { const s = ladeStatus(); s[p.id] = box.checked; speichereStatus(s); render(); });
         return el('div', { style: 'padding:0.4rem 0' },
-          el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
+          el('div', { style: 'display:flex;gap:0.6rem;align-items:center' },
             box,
             el('label', { for: `skk-${p.id}`, style: 'flex:1;font-weight:600' }, p.frage)),
-          el('div', { style: 'margin:0.2rem 0 0 2.1rem' },
+          el('div', { style: 'margin:0.2rem 0 0 3.6rem' },
             el('p', { style: 'font-size:0.9rem;color:#374151;margin:0.2rem 0' }, p.warum),
             el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => vorlesen(`${p.frage}. ${p.warum}`) }, '🔊 Vorlesen')));
       }));

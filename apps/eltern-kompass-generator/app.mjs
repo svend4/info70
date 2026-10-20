@@ -46,7 +46,7 @@ function render() {
   const cfg = lade();
   const c = zuCfg(cfg);
 
-  const kostenBox = el('input', { type: 'checkbox', id: 'ekg-kostenfrei', style: 'width:1.4rem;height:1.4rem' });
+  const kostenBox = el('input', { type: 'checkbox', id: 'ekg-kostenfrei', style: 'width:3rem;height:3rem;flex-shrink:0' });
   kostenBox.checked = cfg.kostenfrei !== false;
   kostenBox.addEventListener('change', () => { const x = lade(); x.kostenfrei = kostenBox.checked; speichere(x); render(); });
 

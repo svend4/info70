@@ -61,16 +61,16 @@ function render() {
     return el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, `${b.emoji} ${b.name} (${ok}/${b.kriterien.length})`),
       ...b.kriterien.map((k) => {
-        const eingabe = el('input', { type: 'checkbox', id: `avv-${k.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' });
+        const eingabe = el('input', { type: 'checkbox', id: `avv-${k.id}`, style: 'width:48px;height:48px;flex-shrink:0;margin:0' });
         eingabe.checked = Boolean(status[k.id]);
         eingabe.addEventListener('change', () => { const s = ladeStatus(); s[k.id] = eingabe.checked; speichereStatus(s); render(); });
         return el('div', { style: 'padding:0.4rem 0' },
-          el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
+          el('div', { style: 'display:flex;gap:0.6rem;align-items:center' },
             eingabe,
             el('label', { for: `avv-${k.id}` },
               el('span', {}, k.text),
               el('small', { style: 'display:block;color:#4b5563' }, k.bezug))),
-          el('details', { style: 'margin:0.25rem 0 0 2.1rem' },
+          el('details', { style: 'margin:0.25rem 0 0 calc(48px + 0.6rem)' },
             el('summary', { style: 'cursor:pointer;font-size:0.85rem;color:var(--k-blau-dunkel)' }, '💡 Worauf achten'),
             el('p', { style: 'font-size:0.85rem;margin:0.3rem 0 0;color:#374151' }, k.hilfe)));
       }));

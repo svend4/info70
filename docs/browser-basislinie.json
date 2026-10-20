@@ -75,7 +75,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 11,
+      "beruehrung": 0,
       "druck": 9,
       "konsole": 0,
       "fremdeHosts": 0
@@ -205,7 +205,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 10,
+      "beruehrung": 0,
       "druck": 9,
       "konsole": 0,
       "fremdeHosts": 0
@@ -355,7 +355,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 5,
+      "beruehrung": 0,
       "druck": 6,
       "konsole": 0,
       "fremdeHosts": 0
@@ -445,7 +445,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 1,
+      "beruehrung": 0,
       "druck": 7,
       "konsole": 0,
       "fremdeHosts": 0
@@ -665,7 +665,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 21,
+      "beruehrung": 0,
       "druck": 1,
       "konsole": 0,
       "fremdeHosts": 0
@@ -785,7 +785,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 11,
+      "beruehrung": 0,
       "druck": 10,
       "konsole": 0,
       "fremdeHosts": 0
@@ -915,7 +915,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 20,
+      "beruehrung": 0,
       "druck": 5,
       "konsole": 0,
       "fremdeHosts": 0
@@ -965,7 +965,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 1,
+      "beruehrung": 0,
       "druck": 5,
       "konsole": 0,
       "fremdeHosts": 0
@@ -985,7 +985,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 5,
+      "beruehrung": 0,
       "druck": 10,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1045,7 +1045,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 12,
+      "beruehrung": 0,
       "druck": 9,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1204,8 +1204,8 @@
       "nichtGemessen": 0,
       "ohneKennung": 1,
       "klickFehler": 0,
-      "ueberlauf": 1,
-      "beruehrung": 27,
+      "ueberlauf": 0,
+      "beruehrung": 0,
       "druck": 12,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1214,8 +1214,8 @@
       "nichtGemessen": 0,
       "ohneKennung": 1,
       "klickFehler": 0,
-      "ueberlauf": 1,
-      "beruehrung": 16,
+      "ueberlauf": 0,
+      "beruehrung": 0,
       "druck": 0,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1335,7 +1335,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 8,
+      "beruehrung": 0,
       "druck": 5,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1525,7 +1525,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 5,
+      "beruehrung": 0,
       "druck": 2,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1765,7 +1765,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 13,
+      "beruehrung": 0,
       "druck": 10,
       "konsole": 0,
       "fremdeHosts": 0
@@ -1865,7 +1865,7 @@
       "ohneKennung": 1,
       "klickFehler": 0,
       "ueberlauf": 0,
-      "beruehrung": 10,
+      "beruehrung": 0,
       "druck": 4,
       "konsole": 0,
       "fremdeHosts": 0

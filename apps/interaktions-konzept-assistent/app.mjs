@@ -29,8 +29,8 @@ function render() {
     const aktiv = auswahl.includes(f.id);
     return el('label', { for: `ika-${f.id}`, style: `display:block;padding:0.6rem;border:2px solid ${aktiv ? 'var(--k-blau-dunkel)' : 'var(--k-rand)'};border-radius:0.6rem;margin:0.4rem 0;cursor:pointer;background:${aktiv ? '#eff6ff' : '#fff'}` },
       el('div', { style: 'display:flex;gap:0.6rem;align-items:flex-start' },
-        Object.assign(el('input', { type: 'checkbox', id: `ika-${f.id}`, style: 'width:1.5rem;height:1.5rem;flex-shrink:0;margin-top:0.15rem' }), { checked: aktiv, onchange: () => { const s = new Set(lade()); aktiv ? s.delete(f.id) : s.add(f.id); speichere([...s]); render(); } }),
-        el('div', {},
+        Object.assign(el('input', { type: 'checkbox', id: `ika-${f.id}`, style: 'width:3rem;height:3rem;flex-shrink:0;margin-top:0' }), { checked: aktiv, onchange: () => { const s = new Set(lade()); aktiv ? s.delete(f.id) : s.add(f.id); speichere([...s]); render(); } }),
+        el('div', { style: 'margin-top:0.75rem' },
           el('span', { style: 'font-weight:600' }, `${f.emoji} ${f.name}`),
           el('span', { style: `margin-left:0.5rem;font-size:0.8rem;font-weight:600;color:${RISIKO_FARBE[f.risiko]}` }, `Risiko: ${f.risiko}`),
           el('span', { style: 'display:block;font-size:0.9rem;color:#4b5563' }, f.beschreibung))));

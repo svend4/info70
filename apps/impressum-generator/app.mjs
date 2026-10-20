@@ -31,7 +31,7 @@ function render() {
         onclick: () => { zustand.code = r.code; sichern(); render(); },
       }, r.name)));
 
-  const redBox = el('input', { type: 'checkbox', id: 'ig-red', style: 'width:1.4rem;height:1.4rem' });
+  const redBox = el('input', { type: 'checkbox', id: 'ig-red', style: 'flex:none;width:3rem;height:3rem' });
   redBox.checked = zustand.redaktionell;
   redBox.addEventListener('change', () => { zustand.redaktionell = redBox.checked; sichern(); render(); });
 
