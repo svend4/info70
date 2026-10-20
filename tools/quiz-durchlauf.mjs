@@ -10,7 +10,9 @@
 //   - ein früher gespeicherter Rekord-Schlüssel wird beim Start entfernt; nach dem Durchlauf fehlt er
 //   - „Meine Daten löschen“ ist auf dem Startbildschirm vorhanden
 //   - die Druckansicht des Endbildschirms enthält keine Zeichen ☐☒☑✓✔★☆
-// Exit: 0 alles ok, 1 mindestens eine Verletzung, 2 Endbildschirm nicht erreicht oder Lauf abgebrochen.
+// Nur Apps mit dem Quiz-Motor quiz-kern. Andere Apps werden abgelehnt (Exit 64), statt falsch gemessen.
+// Exit: 0 alles ok, 1 mindestens eine Verletzung, 2 Endbildschirm nicht erreicht oder Lauf abgebrochen,
+// 64 Aufruf falsch (keine Quiz-App).
 // Der Startknopf ist je App anders beschriftet; gewählt wird der erste Knopf der ersten Karte, der nicht „Vorlesen“ heißt.
 // Staffel ist nicht enthalten (Entscheidung ausstehend).
 import { createServer } from 'node:http';
@@ -20,12 +22,12 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { druckSymbole, pruefeEndeText } from '../packages/kinderschutz/src/quiz-ende.mjs';
+import { appsAusArgs, istEnde, istWeiter, nichtQuizApps } from '../packages/kinderschutz/src/quiz-durchlauf-regeln.mjs';
 
 const WURZEL = fileURLToPath(new URL('../', import.meta.url));
 const VIEWPORT_PX = 360;
 const MAX_SCHRITTE = 1000;
 const NAV = /^(🔊|🔁|🏠|🔍)/;
-const ENDE = /🏠|Zum Start|Noch einmal|Noch eine|Neue Runde|Neue Klassen|Nochmal/;
 const MODI = ['einzel', 'duett', 'staffel'];
 const PRUEF_REIHENFOLGE = ['zahlVonZahl', 'richtig', 'rekord', 'punkte', 'unentschieden', 'liegtVorn', 'sterneOderPokal', 'rangSymbol', 'rangWort', 'anzahl', 'druckOhneSymbole', 'schluesselEntfernt', 'keinLoeschknopf'];
 const BEZEICHNUNG = {
@@ -57,6 +59,14 @@ async function serverStarten(port) {
   }
   kind.kill();
   throw new Error('Dev-Server startet nicht');
+}
+
+/** Quelltext von app.mjs und index.html einer App (leer, wenn es die Datei nicht gibt). */
+function quelltextVon(slug) {
+  return ['app.mjs', 'index.html'].map((f) => {
+    const pfad = join(WURZEL, 'apps', slug, f);
+    return existsSync(pfad) ? readFileSync(pfad, 'utf8') : '';
+  }).join('\n');
 }
 
 /** Rekord-Schlüssel aus der App-Konfiguration; fehlt er, gibt es nichts zu prüfen. */
@@ -96,13 +106,13 @@ async function durchlauf(browser, slug, port, modus) {
 
     for (let i = 0; i < MAX_SCHRITTE; i++) {
       const knoepfeEnde = await seite.evaluate(() => [...document.querySelectorAll('main#app button')].map((b) => b.textContent.trim()));
-      if (knoepfeEnde.some((t) => ENDE.test(t))) { ergebnis.ende = true; break; }
+      if (knoepfeEnde.some((t) => istEnde(t))) { ergebnis.ende = true; break; }
       const text = await seite.locator('main#app').innerText();
       const von = text.match(/(\d+) von (\d+)/);
       if (von && ergebnis.runde === null) ergebnis.runde = Number(von[2]);
       const knoepfe = await seite.evaluate(() => [...document.querySelectorAll('main#app .k-antworten button')].map((b) => b.textContent.trim()));
       // Weiter-Knöpfe beginnen mit ihrem Wort oder tragen einen Pfeil; eine Antwort kann „Ergebnis“ enthalten.
-      const weiter = knoepfe.findIndex((t) => /➡|^(Weiter|Zum Ergebnis|Fertig|Ergebnis)\b/.test(t));
+      const weiter = knoepfe.findIndex((t) => istWeiter(t));
       if (weiter >= 0) { await seite.locator('main#app .k-antworten button').nth(weiter).click(); continue; }
       const antwort = knoepfe.findIndex((t) => !NAV.test(t));
       if (antwort >= 0) {
@@ -181,8 +191,13 @@ async function main() {
   const modusWahl = modIdx >= 0 ? args[modIdx + 1] : 'einzel';
   if (modusWahl !== 'alle' && !MODI.includes(modusWahl)) { console.error(`--modus: einzel, duett oder alle, nicht „${modusWahl}“`); process.exit(64); }
   const modi = modusWahl === 'alle' ? MODI : [modusWahl];
-  const apps = args.filter((a, i) => ![ausIdx, ausIdx + 1, modIdx, modIdx + 1].includes(i) && a !== '--ausgabe' && a !== '--modus');
+  const apps = appsAusArgs(args);
   if (!apps.length) { console.error('Aufruf: node tools/quiz-durchlauf.mjs <app> [<app> …] [--modus einzel|duett|alle] [--ausgabe <ordner>]'); process.exit(64); }
+  const keineQuiz = nichtQuizApps(apps.map((slug) => ({ slug, quelltext: quelltextVon(slug) })));
+  if (keineQuiz.length) {
+    console.error(`Keine Quiz-App auf quiz-kern: ${keineQuiz.join(', ')}. Das Werkzeug prüft nur Quiz-Apps und ist für diese Apps nicht anzuwenden.`);
+    process.exit(64);
+  }
   mkdirSync(ausgabe, { recursive: true });
 
   const port = await freierPort();
