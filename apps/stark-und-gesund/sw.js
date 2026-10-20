@@ -1,5 +1,5 @@
 // Minimaler Service Worker: Cache-first für eigene Ressourcen -> offline nutzbar.
-const CACHE = 'sug-v4';
+const CACHE = 'sug-v5';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll([
@@ -12,6 +12,10 @@ self.addEventListener('install', (e) => {
     '../../packages/kinder-ui/css/kinder.css',
     '../../packages/kinder-ui/js/komponenten.mjs',
     '../../packages/quiz-kern/src/quiz.mjs',
+    '../../packages/kinder-ui/js/anzeige.mjs',
+    '../../packages/kinder-ui/js/daten-karte.mjs',
+    '../../packages/kinder-ui/js/hilfe-insel.mjs',
+    '../../packages/quiz-kern/src/staffel.mjs',
     '../../packages/kinderschutz/src/index.mjs',
     '../../packages/kinderschutz/src/kriterien.mjs',
   ])));

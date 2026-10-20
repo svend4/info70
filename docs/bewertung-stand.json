@@ -95,6 +95,9 @@
     "wahlkabine": "app.mjs: 🏆 beim Gewinner einer Wahl-Simulation über Vorschläge (Objekte), kein Lernstand eines Kindes. Vorschlag, nicht von Max bestätigt.",
     "kita-familien-bruecke": "Instrument für Kita-Teams (README: „Инструмент для команд детских садов“). Die Punkte bewerten die Arbeit der Fachkräfte, nicht ein Kind. Vorschlag, nicht von Max bestätigt.",
     "kita-mitmach-boerse": "Zählung der Rückmeldungen („interessiert“, „kann mithelfen“) je Angebot in einer Kita-Börse. Das ist ein Objekt, kein Ergebnis eines Kindes. Vorschlag, nicht von Max bestätigt.",
-    "selbstcheck-paedagogik": "logik.mjs: STUFEN_RANG ordnet die Stufen intern, damit der passende Impulstext gewählt wird. Ein Rang wird dem Kind nicht angezeigt. Vorschlag, nicht von Max bestätigt."
+    "selbstcheck-paedagogik": "logik.mjs: STUFEN_RANG ordnet die Stufen intern, damit der passende Impulstext gewählt wird. Ein Rang wird dem Kind nicht angezeigt. Vorschlag, nicht von Max bestätigt.",
+    "autonomiephase-navigator": "Zielgruppe Eltern (Werkzeug für Erwachsene): live Rekord in localStorage (autonomie.rekord) und „Ihr bisher bester Durchgang: n von m“. Von Max geprüft; bleibt bis zu seiner Entscheidung unverändert.",
+    "staerken-tagebuch": "Werkzeug für Erwachsene: Zähler der Beobachtungen je Feld („Bisher n … in diesem Feld“, summen). Der Text sagt selbst „keine Punkte, keine Rangliste“. Von Max geprüft; bleibt bis zu seiner Entscheidung unverändert.",
+    "familien-datenschatz": "Eltern plus Kind 8–12: Punkte im Vergleich der Antworten der Familie. Von Max geprüft; bleibt bis zu seiner Entscheidung unverändert."
   }
 }

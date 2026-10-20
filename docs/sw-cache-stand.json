@@ -1,6 +1,6 @@
 {
   "apps/kinderrechte-entdecker/sw.js": {
-    "cache": "kre-v5",
+    "cache": "kre-v6",
     "dateien": {
       "apps/kinderrechte-entdecker": "6996934eac4a4daafb1b0c488d750540fef036e396464a3add4987c818bfafee",
       "apps/kinderrechte-entdecker/index.html": "6996934eac4a4daafb1b0c488d750540fef036e396464a3add4987c818bfafee",
@@ -10,13 +10,17 @@
       "apps/kinderrechte-entdecker/eltern.html": "d1e030051cc75ae4de161c365b6adfc967d304895fff78d303789362748187e2",
       "packages/kinder-ui/css/kinder.css": "45057110b594e26d76cc09c713303db1ade2eb2c0f7ee33abe57d1e501dcaba7",
       "packages/kinder-ui/js/komponenten.mjs": "1fcaa34007a26055a5e4a0f46f858aa0dfc590f8cb24bce7bd93097fc3ff5dbb",
-      "packages/quiz-kern/src/quiz.mjs": "6ed31847ad14a20add1f1168cf9e4bdac5b75e7c6ec751f783c08e77562e2e00",
+      "packages/quiz-kern/src/quiz.mjs": "990a6050100e72767e1a284ceadad75f1ab8e3a8de048c2e561f7b679e962698",
+      "packages/kinder-ui/js/anzeige.mjs": "f12ecdd7115cbcb05298c6cda1242f523b4a953548bc9fc448bc043dce257b3d",
+      "packages/kinder-ui/js/daten-karte.mjs": "9a5b95e1e479e958ec45470f22049fef46fdb9af36565d5408f31e124df3f1d1",
+      "packages/kinder-ui/js/hilfe-insel.mjs": "f23827e57343614677c9c24afb874b4c569cccbf0fd91dfca60a785a6869753e",
+      "packages/quiz-kern/src/staffel.mjs": "4d34e02aafa8df7ba284c5e5812a8fb5d3507656b4189f827145d6f366692694",
       "packages/kinderschutz/src/index.mjs": "78b11d6caf77cd4017b2b95ef6ee5fa0ae17e34e48b00c23fee3fe86b42244e1",
       "packages/kinderschutz/src/kriterien.mjs": "07f5b95f155e5b016bb1f6d5797e2c4afd7704dcdfa24a5291168670bee2b92e"
     }
   },
   "apps/koeder-quiz/sw.js": {
-    "cache": "kq-v4",
+    "cache": "kq-v5",
     "dateien": {
       "apps/koeder-quiz": "94180cbca1b26dc077b11a47da303f307df5e23e6d59e0918c39f3fc074ac0c9",
       "apps/koeder-quiz/index.html": "94180cbca1b26dc077b11a47da303f307df5e23e6d59e0918c39f3fc074ac0c9",
@@ -26,13 +30,17 @@
       "apps/koeder-quiz/eltern.html": "1dfdf6e8485576e5ea98d4d04abd71e3b69e30d7f807617a80d88370f83fbacd",
       "packages/kinder-ui/css/kinder.css": "45057110b594e26d76cc09c713303db1ade2eb2c0f7ee33abe57d1e501dcaba7",
       "packages/kinder-ui/js/komponenten.mjs": "1fcaa34007a26055a5e4a0f46f858aa0dfc590f8cb24bce7bd93097fc3ff5dbb",
-      "packages/quiz-kern/src/quiz.mjs": "6ed31847ad14a20add1f1168cf9e4bdac5b75e7c6ec751f783c08e77562e2e00",
+      "packages/quiz-kern/src/quiz.mjs": "990a6050100e72767e1a284ceadad75f1ab8e3a8de048c2e561f7b679e962698",
+      "packages/kinder-ui/js/anzeige.mjs": "f12ecdd7115cbcb05298c6cda1242f523b4a953548bc9fc448bc043dce257b3d",
+      "packages/kinder-ui/js/daten-karte.mjs": "9a5b95e1e479e958ec45470f22049fef46fdb9af36565d5408f31e124df3f1d1",
+      "packages/kinder-ui/js/hilfe-insel.mjs": "f23827e57343614677c9c24afb874b4c569cccbf0fd91dfca60a785a6869753e",
+      "packages/quiz-kern/src/staffel.mjs": "4d34e02aafa8df7ba284c5e5812a8fb5d3507656b4189f827145d6f366692694",
       "packages/kinderschutz/src/index.mjs": "78b11d6caf77cd4017b2b95ef6ee5fa0ae17e34e48b00c23fee3fe86b42244e1",
       "packages/kinderschutz/src/kriterien.mjs": "07f5b95f155e5b016bb1f6d5797e2c4afd7704dcdfa24a5291168670bee2b92e"
     }
   },
   "apps/nachrichten-detektive/sw.js": {
-    "cache": "nd-v6",
+    "cache": "nd-v7",
     "dateien": {
       "apps/nachrichten-detektive": "3bccd5a0c844c89f1ce7bbc702916328941b75638808cb50b7f1835d5a0fff58",
       "apps/nachrichten-detektive/index.html": "3bccd5a0c844c89f1ce7bbc702916328941b75638808cb50b7f1835d5a0fff58",
@@ -42,13 +50,17 @@
       "apps/nachrichten-detektive/eltern.html": "c5bb063968794c671efc8e6922eb2d9d9b1b5ee43d3ea2d229b62f265af271b3",
       "packages/kinder-ui/css/kinder.css": "45057110b594e26d76cc09c713303db1ade2eb2c0f7ee33abe57d1e501dcaba7",
       "packages/kinder-ui/js/komponenten.mjs": "1fcaa34007a26055a5e4a0f46f858aa0dfc590f8cb24bce7bd93097fc3ff5dbb",
-      "packages/quiz-kern/src/quiz.mjs": "6ed31847ad14a20add1f1168cf9e4bdac5b75e7c6ec751f783c08e77562e2e00",
+      "packages/quiz-kern/src/quiz.mjs": "990a6050100e72767e1a284ceadad75f1ab8e3a8de048c2e561f7b679e962698",
+      "packages/kinder-ui/js/anzeige.mjs": "f12ecdd7115cbcb05298c6cda1242f523b4a953548bc9fc448bc043dce257b3d",
+      "packages/kinder-ui/js/daten-karte.mjs": "9a5b95e1e479e958ec45470f22049fef46fdb9af36565d5408f31e124df3f1d1",
+      "packages/kinder-ui/js/hilfe-insel.mjs": "f23827e57343614677c9c24afb874b4c569cccbf0fd91dfca60a785a6869753e",
+      "packages/quiz-kern/src/staffel.mjs": "4d34e02aafa8df7ba284c5e5812a8fb5d3507656b4189f827145d6f366692694",
       "packages/kinderschutz/src/index.mjs": "78b11d6caf77cd4017b2b95ef6ee5fa0ae17e34e48b00c23fee3fe86b42244e1",
       "packages/kinderschutz/src/kriterien.mjs": "07f5b95f155e5b016bb1f6d5797e2c4afd7704dcdfa24a5291168670bee2b92e"
     }
   },
   "apps/stark-und-gesund/sw.js": {
-    "cache": "sug-v4",
+    "cache": "sug-v5",
     "dateien": {
       "apps/stark-und-gesund": "adac01381de9c58498d6639b5bfefaab4ab0f20b037deb852bc202f4f166aae5",
       "apps/stark-und-gesund/index.html": "adac01381de9c58498d6639b5bfefaab4ab0f20b037deb852bc202f4f166aae5",
@@ -58,7 +70,11 @@
       "apps/stark-und-gesund/eltern.html": "53465a6144bf608d6d6d1ff4b917e7cea3e3313b5f211a81d331ef72d776d8f4",
       "packages/kinder-ui/css/kinder.css": "45057110b594e26d76cc09c713303db1ade2eb2c0f7ee33abe57d1e501dcaba7",
       "packages/kinder-ui/js/komponenten.mjs": "1fcaa34007a26055a5e4a0f46f858aa0dfc590f8cb24bce7bd93097fc3ff5dbb",
-      "packages/quiz-kern/src/quiz.mjs": "6ed31847ad14a20add1f1168cf9e4bdac5b75e7c6ec751f783c08e77562e2e00",
+      "packages/quiz-kern/src/quiz.mjs": "990a6050100e72767e1a284ceadad75f1ab8e3a8de048c2e561f7b679e962698",
+      "packages/kinder-ui/js/anzeige.mjs": "f12ecdd7115cbcb05298c6cda1242f523b4a953548bc9fc448bc043dce257b3d",
+      "packages/kinder-ui/js/daten-karte.mjs": "9a5b95e1e479e958ec45470f22049fef46fdb9af36565d5408f31e124df3f1d1",
+      "packages/kinder-ui/js/hilfe-insel.mjs": "f23827e57343614677c9c24afb874b4c569cccbf0fd91dfca60a785a6869753e",
+      "packages/quiz-kern/src/staffel.mjs": "4d34e02aafa8df7ba284c5e5812a8fb5d3507656b4189f827145d6f366692694",
       "packages/kinderschutz/src/index.mjs": "78b11d6caf77cd4017b2b95ef6ee5fa0ae17e34e48b00c23fee3fe86b42244e1",
       "packages/kinderschutz/src/kriterien.mjs": "07f5b95f155e5b016bb1f6d5797e2c4afd7704dcdfa24a5291168670bee2b92e"
     }

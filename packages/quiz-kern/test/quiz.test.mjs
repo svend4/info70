@@ -22,14 +22,24 @@ test('der Fuß trägt immer Impressum und den Datenschutz-Hinweis', () => {
   assert.match(quelle, /Werbefrei/);
 });
 
-test('Datenlöschung: der Knopf entfernt nur die eigenen Schlüssel der App', () => {
-  // docs/02-Checkliste: "localStorage очищается кнопкой".
-  assert.match(quelle, /datenLoeschen/, 'Beschriftung vorhanden');
-  assert.match(quelle, /loescheDaten\(rekordSchluessel\)/, 'der Knopf löscht wirklich – gezielt');
-  // localStorage.clear() würde die Anzeige-Einstellungen (hoher Kontrast,
-  // Schriftgröße) mit abräumen. Für ein Kind, das Kontrast braucht, wäre das
-  // ein Rückschritt mitten im Spiel – deshalb hier verboten.
-  assert.ok(!/localStorage\.clear\(/.test(code), 'kein clear(): es trifft fremde Schlüssel mit');
+test('kein Löschknopf: der Engine hat keine Datenkarte mehr; nichts wird gespeichert, also gibt es nichts zu löschen', () => {
+  // Die Karte mit dem Datenhinweis und der Knopf „Meine Daten löschen“ sind entfernt (Entscheidung Max).
+  assert.doesNotMatch(code, /loescheDaten|datenLoeschen|datenHinweis|daten-karte/, 'keine Datenkarte im Motor');
+  // Der frühere Schlüssel wird beim Start einmal entfernt (siehe unten), nie mehr.
+});
+
+test('Staffel-Endbildschirm: ohne Zahl je Kind, ohne Sieger, ohne Punkte', () => {
+  const anfang = code.indexOf('function staffelErgebnis()');
+  const ende = code.indexOf('start();', anfang);
+  assert.ok(anfang > 0 && ende > anfang, 'Staffel-Endbildschirm gefunden');
+  const ergebnis = code.slice(anfang, ende);
+  assert.match(ergebnis, /t\.staffelFertigSatz/, 'neutraler Satz');
+  assert.match(ergebnis, /Zusammen seid ihr stark/, 'der Satz bleibt');
+  assert.doesNotMatch(ergebnis, /punkt|rekord|rang|richtig|jüngere|ältere|Team:|gewinnt|liegt vorn|unentschieden|fragen\.length|\bvon\b/i);
+});
+
+test('Staffel: die Antworten werden nicht mehr je Kind gesammelt', () => {
+  assert.doesNotMatch(code, /staffelEintraege|staffelWertung|staffelSatz/);
 });
 
 test('Einzel-Modus: kein Rekord, keine Punkte, keine Ränge, nichts wird gespeichert', () => {

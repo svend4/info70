@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { appGruende, appTreffer, appTrefferIn, kernTreffer, vergleiche } from '../src/bewertung-stand.mjs';
+import { appGruende, appTreffer, appTrefferIn, kernTreffer, kernTrefferIn, vergleiche } from '../src/bewertung-stand.mjs';
 
 // Ergebnis-Wertung (Rekord, Punkte, Ränge, Treffer). Der Stand in docs/bewertung-stand.json schrumpft nur;
 // node tools/bewertung-stand.mjs --schreiben streicht erledigte Einträge. Neue Einträge brauchen --erweitern
@@ -82,6 +82,15 @@ test('Kommentare nach Code zählen nicht', () => {
 test('Zähler im Aufruf zählt, Anzahl mit .length nicht', () => {
   assert.ok(appTrefferIn('app.mjs', 'Bisher ${beobachtungsWort(summen[feld.id])} in diesem Feld.') >= 1);
   assert.equal(appTrefferIn('app.mjs', 'const t = `${summen.length} Sachen`;'), 0);
+});
+
+test('Motor: der Name rekordSchluessel nimmt nicht die ganze Zeile mit', async () => {
+  // Kontrollfall (Max): eine Zeile mit setItem(rekordSchluessel, …) im echten Motor-Text darf nicht stumm bleiben.
+  const quelle = await readFile(join(WURZEL, 'packages', 'quiz-kern', 'src', 'quiz.mjs'), 'utf8');
+  const zeile = 'localStorage.setItem(rekordSchluessel, String(punkte));';
+  assert.equal(kernTrefferIn(zeile), 2, 'setItem und punkte zählen, der Name allein nicht');
+  assert.equal(kernTrefferIn(`${quelle}\n${zeile}\n`) - kernTrefferIn(quelle), 2, 'die Kontrollzeile im Motor-Text zählt');
+  assert.equal(kernTrefferIn('localStorage.removeItem(rekordSchluessel);'), 0, 'die einmalige Entfernung des alten Schlüssels zählt nicht');
 });
 
 test('Impressum: die Aussage über Rekorde fällt erst, wenn der Stand keine Apps mehr führt', async () => {

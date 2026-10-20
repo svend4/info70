@@ -1,8 +1,8 @@
 // Stand der Ergebnis-Wertung (Rekord, Punkte, Ränge, Treffer, Rangfolgen). Zwei Ratchets:
 //  - quiz-kern: je Datei die Zahl der Treffer im Code (ohne Kommentare). Der Motor führt weder Rekord
 //    noch Punkte noch Ränge; die Zählung soll 0 bleiben.
-//  - Apps: Liste der Apps mit einem Befund: Wort (Rekord, Rang, Rangliste, raenge, Trophäe, häufigsten,
-//    Rangfolge), Anzeige eines Zählers (punkte, treffer, richtige, quizPunkte, kindPunkte) oder ein
+//  - Apps: Liste der Apps mit einem Befund: Wort (Rekord, Rang, Rangliste, raenge, Rangfolge, Pokal-Symbol 🏆),
+//    Anzeige eines Zählers (punkte, treffer, richtige, quizPunkte, kindPunkte) oder ein
 //    Zähler mit „n von m“. Die Liste schrumpft nur; neue Einträge brauchen eine Entscheidung (--erweitern).
 // Verneinung: ein Verneinungswort (kein, keine, ohne, nicht, nie) hebt einen Begriff nur auf, wenn es
 // höchstens drei Wörter davor steht und kein Satz-, Kommentar- oder Klammerzeichen dazwischen liegt.
@@ -49,22 +49,29 @@ export function ohneKommentare(text) {
     .join('\n');
 }
 
-/** Zahl der Treffer je Datei in quiz-kern/src. Der Name rekordSchluessel allein gilt als Migration. */
+/** Zahl der Treffer je Datei in quiz-kern/src. */
 export async function kernTreffer(wurzel) {
   const dir = join(wurzel, 'packages', 'quiz-kern', 'src');
   const treffer = {};
   for (const f of (await readdir(dir)).filter((f) => f.endsWith('.mjs')).sort()) {
-    const code = ohneKommentare(await readFile(join(dir, f), 'utf8'));
-    let n = 0;
-    for (const zeile of code.split('\n')) {
-      if (/rekordSchluessel/.test(zeile)) continue;
-      n += [...zeile.matchAll(KERN_WORTE)].length;
-    }
-    treffer[f] = n;
+    treffer[f] = kernTrefferIn(await readFile(join(dir, f), 'utf8'));
   }
   return treffer;
 }
 export const KERN_WORTE = /rekord|\bpunkt\w*|\braenge\b|\brang\b|localStorage\.setItem/gi;
+
+/**
+ * Zahl der Treffer im Quelltext des Motors. Aus jeder Zeile wird nur der Name rekordSchluessel
+ * herausgenommen, nicht die ganze Zeile übersprungen: localStorage.setItem(rekordSchluessel, String(punkte))
+ * zählt 2, localStorage.removeItem(rekordSchluessel) zählt 0 (die einmalige Entfernung des alten Schlüssels).
+ */
+export function kernTrefferIn(quelle) {
+  let n = 0;
+  for (const zeile of ohneKommentare(quelle).split('\n')) {
+    n += [...zeile.replace(/rekordSchluessel/gi, '').matchAll(KERN_WORTE)].length;
+  }
+  return n;
+}
 
 /**
  * Zahl der Treffer einer Zeile, ohne die, vor denen ein Verneinungswort im selben Satzteil und in den

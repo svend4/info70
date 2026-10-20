@@ -6,9 +6,8 @@
 // CSP werden dort installiert; der Kern macht keine Netzwerkanfragen.
 import { el, vorlesen, mischen } from '../../kinder-ui/js/komponenten.mjs';
 import { boot as bootAnzeige } from '../../kinder-ui/js/anzeige.mjs';
-import { loescheDaten } from '../../kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel } from '../../kinder-ui/js/hilfe-insel.mjs';
-import { amZug, staffelWertung, staffelSatz } from './staffel.mjs';
+import { amZug } from './staffel.mjs';
 
 const STANDARD_TEXTE = {
   titel: 'Quiz',
@@ -16,8 +15,6 @@ const STANDARD_TEXTE = {
   intro: 'Bist du bereit?',
   startKnopf: '▶️ Los geht’s!',
   vorlesenKnopf: '🔊 Vorlesen',
-  datenHinweis: '🧹 Hier gibt es keine Werbung und keine Anmeldung. Gespeichert wird nichts.',
-  datenLoeschen: 'Meine Daten löschen',
   hilfeKnopf: '🆘 Ich brauche Hilfe',
   fallWort: 'Frage',
   binaerFrage: 'Stimmt das?',
@@ -30,6 +27,7 @@ const STANDARD_TEXTE = {
   fertigTitel: 'Geschafft!',
   fertigSatz: 'Du hast alle Fragen durchgearbeitet.',
   duettFertigSatz: 'Ihr habt alle Fragen durchgearbeitet.',
+  staffelFertigSatz: 'Ihr habt zusammen alle Fragen durchgearbeitet.',
   nochmalKnopf: '🔁 Noch einmal',
   zumStartKnopf: '🏠 Zum Start',
 };
@@ -71,7 +69,6 @@ export function starteQuiz(konfig) {
   // Geschwister-Staffel (kooperativ): zwei Geschwister abwechselnd, ein Team.
   let staffelFragen = [];
   let staffelIndex = 0;
-  let staffelEintraege = [];
 
   const fuss = () =>
     el('footer', { class: 'k-fuss' },
@@ -122,17 +119,7 @@ export function starteQuiz(konfig) {
             class: 'k-knopf k-knopf--neutral k-knopf--klein',
             onclick: () => zeige(hilfeInsel({ zurueck: start })),
           }, t.hilfeKnopf))
-        : null,
-      el('section', { class: 'k-karte' },
-        el('p', {}, t.datenHinweis),
-        el('button', {
-          class: 'k-knopf k-knopf--neutral k-knopf--klein',
-          // Gezielt nur die eigenen Schlüssel der App. localStorage.clear() würde auch
-          // die Anzeige-Einstellungen (hoher Kontrast, Schriftgröße) und die
-          // Daten der Nachbar-Apps wegwerfen – für ein Kind, das Kontrast
-          // braucht, mitten im Spiel ein Rückschritt.
-          onclick: () => { loescheDaten(rekordSchluessel); start(); },
-        }, t.datenLoeschen)));
+        : null);
   }
 
   function starteRunde() {
@@ -341,7 +328,6 @@ export function starteQuiz(konfig) {
   function starteStaffel() {
     staffelFragen = mischen(daten.fragen).slice(0, rundenGroesse);
     staffelIndex = 0;
-    staffelEintraege = [];
     staffelFrage();
   }
 
@@ -373,7 +359,6 @@ export function starteQuiz(konfig) {
   }
 
   function staffelAufloesung(f, richtig, seite) {
-    staffelEintraege.push({ spieler: seite, richtig });
     const titel = richtig ? t.richtigTitel : t.falschTitel;
     zeige(
       el('section', { class: 'k-karte' },
@@ -393,13 +378,12 @@ export function starteQuiz(konfig) {
   }
 
   function staffelErgebnis() {
-    const w = staffelWertung(staffelEintraege);
     zeige(
       el('section', { class: 'k-karte' },
         el('p', { class: 'k-gross' }, '🧑‍🤝‍🧒'),
-        el('p', { style: 'text-align:center;font-weight:700' }, staffelSatz(w)),
-        el('p', { style: 'text-align:center;color:#4b5563' }, 'Zusammen seid ihr stark – als Team gewinnt ihr immer!'),
-        vorlesenKnopf(staffelSatz(w)),
+        el('p', { style: 'text-align:center;font-weight:700' }, t.staffelFertigSatz),
+        el('p', { style: 'text-align:center;color:#4b5563' }, 'Zusammen seid ihr stark!'),
+        vorlesenKnopf(t.staffelFertigSatz),
         el('div', { class: 'k-antworten' },
           el('button', { class: 'k-knopf', onclick: starteStaffel }, '🔁 Noch eine Staffel'),
           el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, t.zumStartKnopf))));

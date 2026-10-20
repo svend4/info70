@@ -26,12 +26,12 @@ const VIEWPORT_PX = 360;
 const MAX_SCHRITTE = 1000;
 const NAV = /^(🔊|🔁|🏠|🔍)/;
 const ENDE = /🏠|Zum Start|Noch einmal|Noch eine|Neue Runde|Neue Klassen|Nochmal/;
-const MODI = ['einzel', 'duett'];
-const PRUEF_REIHENFOLGE = ['zahlVonZahl', 'richtig', 'rekord', 'punkte', 'unentschieden', 'liegtVorn', 'sterneOderPokal', 'rangSymbol', 'rangWort', 'anzahl', 'druckOhneSymbole', 'schluesselEntfernt', 'datenLoeschenDa'];
+const MODI = ['einzel', 'duett', 'staffel'];
+const PRUEF_REIHENFOLGE = ['zahlVonZahl', 'richtig', 'rekord', 'punkte', 'unentschieden', 'liegtVorn', 'sterneOderPokal', 'rangSymbol', 'rangWort', 'anzahl', 'druckOhneSymbole', 'schluesselEntfernt', 'keinLoeschknopf'];
 const BEZEICHNUNG = {
   zahlVonZahl: 'Zahl-von-Zahl', richtig: 'richtig', rekord: 'Rekord', punkte: 'Punkte', unentschieden: 'Unentschieden',
   liegtVorn: 'liegt-vorn', sterneOderPokal: 'Stern/Pokal', rangSymbol: 'Rangsymbol', rangWort: 'Rangwort', anzahl: 'Anzahl',
-  druckOhneSymbole: 'Druck-Symbole', schluesselEntfernt: 'Schlüssel', datenLoeschenDa: 'Daten-löschen-Taste',
+  druckOhneSymbole: 'Druck-Symbole', schluesselEntfernt: 'Schlüssel', keinLoeschknopf: 'kein Löschknopf',
 };
 
 async function playwrightLaden() {
@@ -88,6 +88,8 @@ async function durchlauf(browser, slug, port, modus) {
     if (duett) {
       await seite.locator('main#app button').filter({ hasText: /Duett-Modus starten/ }).first().click();
       await seite.locator('main#app button').filter({ hasText: /Los/ }).first().click();
+    } else if (modus === 'staffel') {
+      await seite.locator('main#app button').filter({ hasText: /Geschwister-Staffel starten/ }).first().click();
     } else {
       await seite.locator('main#app section.k-karte').first().locator('button').filter({ hasNotText: /Vorlesen/ }).first().click();
     }
@@ -139,7 +141,8 @@ async function durchlauf(browser, slug, port, modus) {
       await seite.locator('main#app button').filter({ hasText: /Zum Start|🏠/ }).first().click();
       const tasten = await seite.evaluate(() => [...document.querySelectorAll('main#app button')].map((b) => b.textContent.trim()));
       ergebnis.tasten = tasten;
-      p.datenLoeschenDa = tasten.some((t) => /Meine Daten löschen/.test(t));
+      // Entscheidung Max: die Karte und der Knopf „Meine Daten löschen“ sind aus dem Motor entfernt.
+      p.keinLoeschknopf = !tasten.some((t) => /Meine Daten löschen/.test(t));
       if (schluessel) {
         ergebnis.schluesselNachLauf = await seite.evaluate((k) => localStorage.getItem(k), schluessel);
         if (modus === 'einzel') p.schluesselEntfernt = ergebnis.schluesselGesetzt === '9' && ergebnis.schluesselNachStart === null && ergebnis.schluesselNachLauf === null;
