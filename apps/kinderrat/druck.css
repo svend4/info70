@@ -1,0 +1,10 @@
+/* Kinderrat: Druckansicht. Beim Drucken verschwinden Bedienung (Knöpfe, Eingabezeilen,
+   Hilfe-Karte) und Zeichen wie Emoji oder Mittelpunkte (.nur-bildschirm). Gedruckt wird
+   der Sitzungsstand: Titel, Redeliste, Tagesordnung mit Abstimmung, Ergebnis und Protokoll. */
+@media print {
+  .nur-bildschirm { display: none !important; }
+  body { background: #fff; color: #000; }
+  .k-app { max-width: none; min-height: auto; padding: 0; }
+  .k-karte { box-shadow: none; border: 1pt solid #333; break-inside: avoid; }
+  .k-fuss a { text-decoration: underline; }
+}
