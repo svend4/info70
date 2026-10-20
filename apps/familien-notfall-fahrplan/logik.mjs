@@ -2,7 +2,10 @@
 // Gemeinsam ausgefüllter, druckbarer Wenn-dann-Fahrplan für den Kühlschrank:
 // Was tue ich, wenn online etwas passiert? Feste Schritte + persönliche
 // Kontakte. Datenvermeidung: Kontakte werden nur in den Ausdruck getippt und
-// NICHT gespeichert. Verweise auf 116 111 und juuuport (als Text, kein Request).
+// NICHT gespeichert. Verweise auf 112, 110, 116 111 und juuuport (als Text, kein Request).
+
+/** Notruf: steht im Ausdruck vor den Schritten, weil er bei akuter Gefahr zuerst gelesen werden muss. */
+export const NOTRUF_ZEILE = 'Bei akuter Gefahr: 112 Rettung und Feuerwehr, 110 Polizei (Quelle: § 108 TKG).';
 
 /** Feste Wenn-dann-Schritte (die gelten für alle). */
 export const SCHRITTE = Object.freeze([
@@ -23,6 +26,7 @@ export function baueFahrplan(cfg = {}) {
   const zeilen = [
     'UNSER FAMILIEN-NOTFALL-FAHRPLAN',
     'Wenn im Netz etwas passiert – so gehen wir vor:',
+    NOTRUF_ZEILE,
     '',
   ];
   SCHRITTE.forEach((s, i) => {
