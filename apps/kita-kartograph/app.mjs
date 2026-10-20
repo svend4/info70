@@ -176,9 +176,11 @@ function planKarte() {
     knoepfe.push(knopf);
   }
   nordAnzeige = el('p', { style: 'text-align:center;font-weight:700;margin:0.2rem 0' });
+  // Das Raster ragt auf schmalen Bildschirmen bis knapp an den Kartenrand, damit jedes Feld
+  // mindestens 48 px breit ist (Berührung, docs/02). Ab etwa 445 px Bildschirmbreite steht es mittig.
   planGruppe = el('div', {
     role: 'group',
-    style: `display:grid;grid-template-columns:repeat(${GROESSE},1fr);gap:0.3rem;max-width:22rem;margin:0.5rem auto`,
+    style: `display:grid;grid-template-columns:repeat(${GROESSE},1fr);gap:0.25rem;width:min(22rem,calc(100% + 2rem));margin:0.5rem auto;margin-left:max(-1rem,calc(50% - 11rem))`,
   }, ...knoepfe);
   const nordKnoepfe = KANTEN.map((k) => {
     const knopf = el('button', {

@@ -9,6 +9,7 @@ import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { TONLEITER, tonFuer, richtungVon, folgeRichtig, baueAufgabe, pruefeTonleiter } from './logik.mjs';
+import { TETRACHORDE } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
@@ -118,12 +119,14 @@ function aktualisiereTreppe() {
 }
 
 /** Die Treppe: 8 Stufen, aufsteigend gezeichnet; onTritt(stufe) beim Tippen. */
+// Zwei Reihen zu je einem Tetrachord (unten Do-Re-Mi-Fa, oben Sol-La-Si-Do): bei 360 px
+// passen acht Knöpfe mit je 48 px nicht in eine Reihe, vier pro Reihe schon.
 function treppe(onTritt) {
-  return el('div', { role: 'group', 'aria-label': 'Tonleiter-Treppe von c bis c-Strich', style: 'display:flex;align-items:flex-end;gap:0.25rem;justify-content:center;flex-wrap:nowrap;overflow-x:auto;padding:0.3rem 0' },
+  return el('div', { role: 'group', 'aria-label': 'Tonleiter-Treppe von c bis c-Strich', style: 'display:grid;grid-template-columns:repeat(4,minmax(0,2.7rem));align-items:end;justify-content:center;gap:0.25rem;padding:0.3rem 0' },
     ...TONLEITER.map((t) => {
       const knopf = el('button', {
         class: 'k-knopf' + (spieltGerade.has(t.stufe) ? '' : ' k-knopf--neutral'),
-        style: `min-width:2.6rem;padding:0.4rem 0.2rem;display:flex;flex-direction:column;align-items:center;gap:0.1rem;height:${2.8 + t.stufe * 0.55}rem;justify-content:flex-end`,
+        style: `grid-row:${TETRACHORDE.erster.includes(t.stufe) ? 2 : 1};padding:0.4rem 0.2rem;display:flex;flex-direction:column;align-items:center;gap:0.1rem;height:${2.8 + t.stufe * 0.55}rem;justify-content:flex-end`,
         'aria-label': `Stufe ${t.stufe}: ${t.solmisation}, Ton ${t.deutsch}`,
         onclick: () => onTritt(t.stufe),
       }, el('span', { style: 'font-weight:700' }, t.solmisation), el('span', { style: 'font-size:0.75rem;opacity:0.8' }, t.deutsch));
