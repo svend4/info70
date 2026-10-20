@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir, access } from 'node:fs/promises';
+const ZAEHLUNG = { skip: process.env.SITZUNG ? 'Zählung gehört dem Koordinator' : false };
 
 // Nennt ein README oder GDD die Zahl der Tests einer App, muss sie stimmen.
 //
@@ -147,7 +148,7 @@ const korpusEcht = (await testeZaehlen(appsDir)) + (await testeZaehlen(new URL('
 const korpusText = await readFile(new URL('README.md', WURZEL), 'utf8');
 const korpusGenannt = korpusText.match(PROGNOSE);
 
-test('die Gesamtzahl der Tests im README stimmt', () => {
+test('die Gesamtzahl der Tests im README stimmt', ZAEHLUNG, () => {
   assert.ok(korpusGenannt, 'die Zeile „Полный прогон: **N тестов**" fehlt im README – greift das Muster noch?');
   assert.equal(Number(korpusGenannt[1]), korpusEcht,
     `README nennt ${korpusGenannt[1]} Tests, gezählt sind ${korpusEcht}`);
@@ -155,14 +156,14 @@ test('die Gesamtzahl der Tests im README stimmt', () => {
   assert.ok(korpusEcht > 1000, `nur ${korpusEcht} Tests gezählt – greift das Muster noch?`);
 });
 
-test('jede genannte Testzahl stimmt mit der Testdatei überein', () => {
+test('jede genannte Testzahl stimmt mit der Testdatei überein', ZAEHLUNG, () => {
   assert.deepEqual(befunde, [], befunde.join(' | '));
   // Plausibilität: die Regel darf nicht dadurch grün werden, dass sie nichts
   // mehr findet (ein geänderter Wortlaut der Befehlszeile zum Beispiel).
   assert.ok(geprueft >= 25, `nur ${geprueft} Zahlangaben gefunden – greift das Muster noch?`);
 });
 
-test('auch die Wellen-Berichte in docs/ nennen die richtige Testzahl', () => {
+test('auch die Wellen-Berichte in docs/ nennen die richtige Testzahl', ZAEHLUNG, () => {
   assert.deepEqual(docBefunde, [], docBefunde.join(' | '));
   // Dieselbe Plausibilitätsschranke: die Regel darf nicht grün werden, weil
   // sie nichts mehr zuordnet. Und kein Abschnitt darf mehrdeutig sein – sonst

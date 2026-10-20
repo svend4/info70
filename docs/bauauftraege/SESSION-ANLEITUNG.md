@@ -102,7 +102,7 @@ Die Datei enthält nur Text, die Koordinator-Sitzung übernimmt ihn.
 ```bash
 git add apps/<slug> docs/registrierung/<Kennung>.json
 git commit -m "Sitzung <Kennung>: <Titel>" -m "<Kurzbericht>" -m "Claude-Session: <URL>"
-node tools/pfad-pruefung.mjs <slug> <Kennung>    # bricht ab, wenn der Commit fremde Dateien enthält
+node tools/pfad-pruefung.mjs <slug> <Kennung>    # prüft ALLE Commits der Sitzung (origin/Branch..HEAD), Umbenennungen als Löschung + Neuanlage; bricht ab bei fremden Pfaden
 for i in 1 2 3; do
   git pull --rebase origin claude/children-network-programs-germany-hr0jh9 && \
   git push -u origin claude/children-network-programs-germany-hr0jh9 && break
