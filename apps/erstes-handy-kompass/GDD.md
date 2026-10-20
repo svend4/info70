@@ -34,7 +34,10 @@ Reine Anleitung: liest nichts vom Gerät. Keine externen Anfragen
 (NetzwerkWaechter), nur `ehk.status` (Häkchen) in localStorage + Löschknopf.
 Im Urkunden-Feld nur Initialen oder Spitzname (max. 12 Zeichen), mit sichtbarem
 Hinweis am Feld. Der Eintrag wird NUR gedruckt, NICHT gespeichert
-(Datenvermeidung, per Test abgesichert). Werbefrei, Druck-CSS, Impressum.
+(Datenvermeidung, per Test abgesichert). Der Wert liegt nur im Speicher der
+Seite (`namen-merker.mjs`), damit er ein Neuzeichnen nach einem Häkchen oder
+„Zurücksetzen“ übersteht; nach dem Neuladen ist das Feld leer. Werbefrei,
+Druck-CSS, Impressum.
 
 ## 6. Tests
 
@@ -43,11 +46,18 @@ Pflicht-Punkte (jugendschutz/standort/kaufsperre/notfall/apps), Inhalte
 (116 111, Nicht-Ärger-Pakt, fragFINN), Datenvermeidung (Name nicht
 gespeichert).
 
+`test/namen-merker.test.mjs` (ohne DOM, Modul-Ebene): der Name überlebt ein
+Neuzeichnen (Feld und Urkunde aus dem Modul), Eingabe überschreibt, Leeres ergibt
+die Linie, Kürzung auf 12 Zeichen, Urkunde getrimmt, das Modul speichert und
+verschickt nichts, app.mjs ist verdrahtet. 6 Prüfungen.
+
 `test/regeln.test.mjs`: Namensfeld mit maxlength 12 und neuer Beschriftung,
 Hinweis „Nur Initialen oder einen Spitznamen eintragen, keinen vollen Namen.“
 direkt am Feld (aria-describedby, im Druck ausgeblendet), kein Speichern des
 Namenswerts (nur ein Aufruf von speichere, mit dem Status), Urkunde zeigt den
-Wert live. Gesamt 8 Tests (4 + 4).
+Wert live, jede Schaltfläche trägt data-kennung gleich id. 5 Prüfungen.
+
+Gesamt 15 Tests (4 + 5 + 6); `npm test` in apps/erstes-handy-kompass.
 
 ## 7. Erweiterungen (Katalog)
 

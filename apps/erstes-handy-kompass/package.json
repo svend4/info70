@@ -4,5 +4,8 @@
   "private": true,
   "description": "Erstes-Handy-Kompass: interaktive Checkliste fuer die Handy-Uebergabe (Jugendschutz, Standort, Kaufsperren, Notfallkontakte, App-Auswahl) mit druckbarer Uebergabe-Urkunde. Zielgruppe: Eltern.",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  }
 }

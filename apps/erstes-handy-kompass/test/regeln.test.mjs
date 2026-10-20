@@ -43,7 +43,16 @@ test('Datenvermeidung: der Namenswert wird nie gespeichert, nur ehk.status wird 
 });
 
 test('Urkunde: zeigt den eingetragenen Kürzel-Wert wie bisher (live, nur im Ausdruck sichtbar)', () => {
-  assert.ok(app.includes("nameFeld.value.trim() || '________________'"), 'Live-Spiegelung fehlt');
-  assert.match(app, /id: 'ehk-urkunde-name'/);
+  // Der Wert kommt aus namen-merker.mjs (urkundenName: getrimmt, sonst Linie); die Live-Spiegelung füllt die Urkunde.
+  assert.ok(app.includes('ziel.textContent = urkundenName()'), 'Live-Spiegelung fehlt');
+  assert.ok(app.includes('merkeName(nameFeld.value)'), 'Eingabe wird nicht im Modul gemerkt');
+  assert.match(app, /id: 'ehk-urkunde-name'[^)]*\}, urkundenName\(\)\)/, 'Urkunde startet nicht mit dem gemerkten Wert');
   assert.match(app, /class: 'k-karte ehk-nur-druck'/, 'Urkunde ist nicht als Druckteil markiert');
+});
+
+test('Schaltflächen: jede trägt data-kennung gleich id (das Mess-Skript klickt über data-kennung)', () => {
+  assert.equal((app.match(/el\('button'/g) ?? []).length, 2, 'zwei Schaltflächen erwartet');
+  assert.equal((app.match(/'data-kennung'/g) ?? []).length, 2, 'jede Schaltfläche braucht data-kennung');
+  assert.ok(app.includes("id: 'ehk-drucken', 'data-kennung': 'ehk-drucken'"), 'Knopf „Urkunde drucken“ ohne data-kennung gleich id');
+  assert.ok(app.includes("id: 'ehk-zuruecksetzen', 'data-kennung': 'ehk-zuruecksetzen'"), 'Knopf „Zurücksetzen“ ohne data-kennung gleich id');
 });

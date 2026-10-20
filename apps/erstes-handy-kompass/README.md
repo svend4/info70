@@ -19,8 +19,11 @@ Bildschirmzeit-Absprache, Bildschirmsperre & Updates, **Nicht-Ärger-Pakt**
 для даты и подписей (`druck.css`). В грамоту вписываются **только инициалы или
 прозвище** (до 12 знаков): поле «Initialen oder Spitzname (nur für die Urkunde)»
 имеет подсказку «Nur Initialen oder einen Spitznamen eintragen, keinen vollen
-Namen.». Значение **не сохраняется** (Datenvermeidung — проверяется тестом в
-`test/regeln.test.mjs`, vier Prüfungen; вместе с `checkliste.test.mjs` 8 Tests).
+Namen.». Значение **не сохраняется**: оно живёт только в памяти страницы
+(`namen-merker.mjs`) и переживает перерисовку после галочки или «Zurücksetzen»;
+после перезагрузки поле пустое. Проверяют это (Datenvermeidung): пять Tests в
+`test/regeln.test.mjs` (Quelltext), шесть в `test/namen-merker.test.mjs` (без DOM),
+четыре в `test/checkliste.test.mjs`: всего 15 Tests.
 
 ## Политика
 
@@ -32,5 +35,10 @@ Reine Anleitung: приложение **не читает** устройство
 
 ```bash
 npm run dev   # http://localhost:8070/apps/erstes-handy-kompass/
-node --test apps/erstes-handy-kompass/test/*.test.mjs
+npm test      # in apps/erstes-handy-kompass: node --test test/*.test.mjs (15 Tests)
+node tools/browser-pruefung.mjs erstes-handy-kompass -   # Mess-Skript: 360 px, Klicks, Druck, Konsole
 ```
+
+Alle Schaltflächen tragen `data-kennung` gleich `id` (`ehk-drucken`,
+`ehk-zuruecksetzen`), damit das Mess-Skript sie klicken kann. Fußlinks und
+Häkchen sind mindestens 48 px hoch und breit; Emoji sind im Druck ausgeblendet.
