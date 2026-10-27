@@ -163,13 +163,13 @@ Prüfzylinder und Schablone den Gegenstand so messen, wie er jetzt ist, nicht
 so, wie er im Körper wird. Der Validator verlangt genau diesen Satz, das
 Ausmaß des Quellens und `kritisch: true`. Die Hausprüfung, die hier wirklich
 etwas zeigt, ist ein Glas Wasser und eine Stunde Geduld. Quelle: AWMF 001/031,
-Version 2.0, Stand 12/2024 (Volltext gelesen).
+Version 2.0, Stand 12/2024 (Volltext gelesen; diese Angabe ist nicht bestätigt).
 
 Aus derselben Leitlinie stammen drei Sätze im Notfallfeld: eine Knopfzelle in
 der Speiseröhre ist ein Notfall und soll unmittelbar entfernt werden,
 idealerweise innerhalb von zwei Stunden; in einer Auswertung tödlicher Verläufe
 war die Diagnose in 54 Prozent der Fälle nicht gestellt worden, und bei 95
-Prozent davon hatte niemand die Ingestion beobachtet. **Nicht** übernommen ist
+Prozent davon hatte niemand die Ingestion beobachtet (die beiden Prozentzahlen sind fachlich nicht geprüft, Entscheidung Max 14в: sie bleiben mit diesem Vermerk). **Nicht** übernommen ist
 die Vorbehandlung mit Sucralfat oder Honig: das ist eine ärztliche Maßnahme auf
 dem Weg zur Bergung, Honig ist bei Säuglingen unter einem Jahr wegen Botulismus
 ausdrücklich nicht zu geben, und eine gedruckte Dosierung würde im Ernstfall
