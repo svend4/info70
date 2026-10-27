@@ -76,3 +76,31 @@ Die Entscheidungen stammen vom Nutzer (Макс) über die Beobachtungssitzung. 
 - **KIT-14 (entschieden).** Die vier Aufgaben stehen oberhalb der Hinweis-Box. Ein Protokoll je Kind wird nicht gebaut.
 - **PRI-5 (offen).** Weder registriert noch gelöscht, bis der Widerspruch zu „Übungsmaß laut Quelle“ nach dem Quelltext aufgelöst ist. Ein Test verbietet die Kombination.
 - **PRI-8 (registriert mit offenem Punkt).** Die Fachprüfung der Sicherheitstexte steht aus.
+
+## Entscheidungen des Nutzers (27.10.2026): Fragen 1–37
+
+Max hat die 37 Fragen (Teile 1–5) beantwortet. Antwortzeile: 37в, 36а, 35а, 34а, 33а, 32а, 31а dann 31б, 30б, 29а, 28а, 27а, 26а, 25а, 24а, 23а, 22а, 21а, 20а, 19в, 18а, 17а, 16а, 15а, 14в, 13а, 12а, 11а dann 11б, 10в dann 10б, 9б, 8б, 7а, 6а, 5в,б, 4а, 3а, 2б, 1б. Stand je Punkt: **fertig**, **läuft**, **wartet** (auf Max oder auf einen vorigen Schritt).
+
+- **1б (fertig).** Rangsymbol-Wächter bleibt streng; das Emoji auf dem Staffel-Endbildschirm hat keine Klasse `k-gross`, die Größe steht im Stil (wie beim Duett). Quiz-Durchlauf: 26 Apps × 3 Modi grün.
+- **2б (wartet).** Ausnahmen bestätigt: seiten-scanner, ergebnis-plakat, mitmach-arena, wahlkabine. In den drei Abstimmungen (ergebnis-plakat, mitmach-arena, wahlkabine) wird 🏆 durch neutrale Worte ersetzt („Meiste Stimmen: …“).
+- **3а (wartet).** Ausnahmen bestätigt: sharenting-spiegel, lehrkraefte-szenariotraining, kita-familien-bruecke, foerder-navigator, nachdem im Quelltext belegt ist, dass kein Kind bewertet wird.
+- **4а (wartet).** Umbenennen statt Ausnahme, Verhalten unverändert: quiz-karten-druck, tier-tanz-impulse, eltern-kompass-generator, schulanfang-spiel-navigator, selbstcheck-paedagogik, interaktions-konzept-assistent, kita-mitmach-boerse.
+- **5в,б (wartet).** Für „Auf Anweisung Max“ bei elterngespraech-trainer und gesunder-koerper-ampel gibt es im Repo keine Quelle außer `docs/bewertung-stand.json` selbst. Daher б: beide Einträge verlassen die bestätigten Ausnahmen; die Treffer werden umbenannt.
+- **6а, 7а, 8б (wartet).** autonomiephase-navigator: Ausnahme plus Löschknopf (nur Ergänzung). staerken-tagebuch: Ausnahme (nur Zahl der Einträge). familien-datenschatz: 💎 und Zahlen auf beiden Seiten entfernt, Antworten und „einig/unterschiedlich“ bleiben.
+- **9б (fertig).** Service Worker entfernt: sw.js, Registrierung, `docs/sw-cache-stand.json`, `tools/sw-stand.mjs`, die Wächter-Module und -Tests in kinderrechte-entdecker, koeder-quiz, nachrichten-detektive, stark-und-gesund. Zusatz des Integrators: Die vier Apps räumen beim Start alte Registrierungen und Caches weg, sonst liefert ein Gerät mit altem Service Worker weiter die alte Fassung aus. Ein neuer Test (`kein-service-worker`) hält beides fest.
+- **10в dann 10б (wartet).** Erst messen, wo ☐☒☑✓✔★☆ wirklich gedruckt werden, und die Liste Max geben; dann neutrale Zeichen nur auf Kinder-Arbeitsblättern. Listen für Erwachsene behalten leere Kästchen (dokumentierte Ausnahme).
+- **11а dann 11б (wartet).** Jetzt nur Pläne und GDD-Entwürfe für die neue Welle (kein Code); danach Start mit höchstens 8 Agenten.
+- **12а, 13а, 14в, 15а (wartet).** Externe Fakten (Strang Г): zuerst nur Liste (327 blockierende Zeilen in 97 Apps; Recht und Geld vor Gesundheit; je Zeile ein Vorschlag), Änderungen erst nach Max' „да“ je Liste. Gesundheitszeilen bekommen „(Eigenentwurf, fachlich nicht geprüft)“. spielzeug-check-u3 behält 54 % und 95 % mit demselben Zusatz. Der TKG-Hinweis in familien-notfall-fahrplan bleibt.
+- **16а, 18а (erledigt ohne Arbeit).** Kein Pull Request; keine Sitzung wird archiviert.
+- **17а (liegt bei Max).** Leserechte für seine Umgebung kann nur der Sitzungsinhaber vergeben.
+- **19в.** Jeder Workflow-Lauf endet mit einer Zeile: Zahl der Agenten und geleistete Arbeit. Läuft die Arbeit ohne Entscheidung aus, steht in einer Zeile, worauf gewartet wird.
+- **20а (wartet).** Die Modellnamen-Listen in vier Tests (unser-konzert-zaehlhilfe, kita-unterstuetzungs-navigator, tagesblick-fachkraft, schatzkarten-generator) sind eine bewusste Ausnahme im Register; die Geschichte wird nicht umgeschrieben.
+- **21а, 22а (wartet).** Ein gemeinsames eingebettetes Favicon zusammen mit dem 48-px-Durchgang; ehrliche Maschinenkennzeichnung auf den Seiten-Links der alten Apps.
+- **23а, 25а (wartet).** Katalogtext korrigieren (docs/10 Zeile 466, docs/praleska-katalog.json Zeile 270) nach Regel 3; Wortlaut schlägt der Integrator vor. ELT-16 bleibt wie gebaut, der Katalogeintrag wird angepasst. **24а.** ELT-8 nur auf Deutsch.
+- **26а (wartet).** GDD-Entwürfe für zehn Apps (nur Dokumente).
+- **27а (wartet).** Impressum von feed-forscher und kettenbrief-stopper: „nur die Sprache wird gespeichert“, Zahlen per Skript, Löschknopf prüfen.
+- **28а (wartet).** Vorlese-Regel nur für Kinder-Apps; Werkzeuge für Erwachsene sind im GDD eine Ausnahme; danach Messung der Kinder-Apps ohne Vorlesen. **29а.** Max schickt kleine Posten später.
+- **30б (wartet).** Karte „Meine Daten löschen“ nur dort entfernen, wo die App nichts speichert (kein `setItem`); wo sie speichert, bleibt sie. Test: Speicher ⇒ Löschknopf, kein Speicher ⇒ kein Löschknopf.
+- **31а dann 31б (wartet).** Erst ein Delta-Tor (keine neuen Funde gegenüber der Basisdatei, die Basis wird nur kleiner), dann gemeinsame Ursachen beheben (data-kennung in quiz-kern und kinder-ui als reine Ergänzung; Druckzeichen). **32а.** Falschmeldungen des Quiz-Durchlaufs per Test beheben, ohne den Wächter zu lockern.
+- **33а (wartet).** Zähler-Ausnahme eng erweitert: nur Zeilen `localStorage.removeItem('<Literal>')`; `setItem` und `getItem` zählen weiter; Test „Migration schreibt nichts“.
+- **34а–37в (wartet).** 26 Apps = Kind; berechtigungs-safari und takt-pause Sonderfälle. berechtigungs-safari: neutral „Gefunden: N“, keine Punkte, Detektiv-Punkte, Punktestand, Pokal; Löschknopf bleibt; GDD, eltern.html, README angleichen. takt-pause wie familien-bildschirmzeit: neutraler einfarbiger Anzeiger, kein „gefeiert“ oder „geschafft“, keine Wochenübersicht (`tp.woche`); Timer, Ideen, neutrale Tageszeile und Löschknopf bleiben; Katalogname und README angleichen. Erlaubt sind neutrale Zähler „gesammelt/gefunden“; verboten sind Leistungsbewertung (Punkte, Rekord, Serien, Prozent, „richtig von“, „geschafft“, Sterne, Pokale, Tages- oder Wochenvergleich), per Wortlisten-Skript geprüft.
