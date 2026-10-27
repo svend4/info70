@@ -12,6 +12,7 @@ aktualisiert. Die Nummern sind stabil, damit man in Nachrichten darauf verweisen
   Das widerspricht der Regel „keine Modellidentifikatoren in Dateien des Repos“. Eine Ersetzung durch
   eine allgemeinere Prüfung schwächt die Schutzwirkung, deshalb ist sie nicht ohne Entscheidung erfolgt.
   Varianten: (a) so lassen; (b) Muster für Kennungen wie `name-5-5` ohne Familiennamen; (c) Prüfung streichen.
+  **Entschieden 27.10.2026 (Max 20а): Variante (a), bewusste Ausnahme.** Die Listen stehen in den vier Tests, weil diese Tests Modellnamen in den Texten der Apps finden sollen; die Geschichte der Commits wird nicht umgeschrieben (B7).
 - **A2. Druck ohne Knopf.** Zählhilfe: Strg+P druckt beide Bögen. Navigator: Strg+P druckt eine leere Seite.
   Vorschlag: ohne Auswahl den leeren Bogen zeigen (Änderung in der CSS).
 - **A3. favicon.ico 404.** Keine App im Repo hat ein Icon. Die Browserprüfung meldet das jedes Mal.
@@ -55,7 +56,7 @@ aktualisiert. Die Nummern sind stabil, damit man in Nachrichten darauf verweisen
 - **A19. Katalogtext Nr. 2 (Erfolgs-Momente) führt die verbotene Gruppierung.** docs/10 (Zeile 466) und
   docs/praleska-katalog.json (Zeile 270) beschreiben die Karten als Hilfe für „unsichere Kinder mit niedrigem
   Selbstwert“. Die App übernimmt das nicht (Regel 3). Empfehlung: den Katalogtext an Regel 3 angleichen. Entscheidung
-  der Projektleitung.
+  der Projektleitung. **Entschieden 27.10.2026 (Max 23а):** Katalogtext in docs/10 und docs/praleska-katalog.json an Regel 3 angeglichen.
 
 ## B. Nacharbeiten (Arbeit ist begonnen oder fehlt noch)
 

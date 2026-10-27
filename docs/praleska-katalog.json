@@ -268,7 +268,7 @@
       "korrektur": "Bau Welle 90 (teilweise): Karten zu gemeinsamen Tätigkeiten der Gruppe; Grundgedanke S. 15–16, konkrete Tätigkeiten Eigenentwurf. Gruppierung „unsichere Kinder“ nicht übernommen (Regel 3). Seiten nur maschinell geprüft.",
       "typ": "kita-material",
       "alter": "3-7 (Material fuer Fachkraefte)",
-      "beschreibung": "Druckkarten mit konkreten Impulsen, wie unsichere Kinder mit niedrigem Selbstwert Situationen des Erfolgs in fuer Kinder bedeutsamen gemeinsamen Taetigkeiten erleben koennen.",
+      "beschreibung": "Druckkarten mit konkreten Impulsen, wie alle Kinder der Gruppe Situationen des Erfolgs in fuer Kinder bedeutsamen gemeinsamen Taetigkeiten erleben koennen; die Karten ordnen kein Kind einer Gruppe zu.",
       "adaptionDE": "Verknuepft mit dem Resilienz-Konzept der deutschen Bildungsplaene; deutsche Alltagssituationen (Morgenkreis, Garderobe, Ausflug); Idee der Erfolgs-Situation uebernommen, alle Kartentexte eigenstaendig.",
       "quelleImBuch": "Situation des Erfolgs, Ich-Konzept, Anerkennung durch Peers (S. 15-16)",
       "aufwand": "S"
@@ -774,12 +774,12 @@
       "titel": "Erste Kuenstler 1-3 - Eltern-Ideenkartei mit Meilenstein-Check",
       "typ": "eltern-werkzeug",
       "alter": "Erwachsene (ueber Kinder 1-3) - KEIN Kinder-Screen",
-      "beschreibung": "Fuer Eltern: 19 Meilensteine der fruehen kuenstlerischen Entwicklung (Zuhoeren, Singen, Kritzeln, Kneten, Fingerfarben) als Checkliste plus passende Offline-Spielideen (Fingerpuppen-Theater, Fingermalen, Kleben mit Hilfe).",
+      "beschreibung": "Fuer Eltern: Ideenkartei mit Offline-Spielideen zum fruehen kuenstlerischen Tun (Zuhoeren, Singen, Kritzeln, Kneten, Fingerfarben; Fingerpuppen-Theater, Fingermalen, Kleben mit Hilfe); die 19 Merkmale der Quelle stehen nur zum Nachschlagen, eine Checkliste und ein Bericht werden nicht gebaut.",
       "adaptionDE": "Strikte Unter-3-Regel: reines Erwachsenen-Werkzeug plus Druckmaterial; Verweis auf BZgA-Empfehlung 'keine Bildschirmzeit unter 3' direkt in der App; Liedvorschlaege nur als gemeinfreie deutsche Kinderlieder plus Hinweis auf ukrainische/russische Familienlieder (ohne Fremdtexte).",
       "quelleImBuch": "S. 101-102, Osnovnye pokazateli Malyschi (19 Indikatoren, 9 Aktivitaetsformen)",
-      "engine": "Erwachsenen-Katalog+Checkliste+Bericht",
+      "engine": "Erwachsenen-Katalog",
       "aufwand": "M",
-      "korrektur": "Checkliste mit 19 Meilensteinen und Bericht nicht gebaut: die Quelle beschreibt den Stand am Ende des dritten Lebensjahres, eine deutsche Referenzliste für künstlerische Entwicklung gibt es nicht. Die App ordnet nach der Gelegenheit, die der Erwachsene sieht, und zeigt die 19 Merkmale nur zum Nachschlagen. Die zweite Zahl „9 Aktivitätsformen“ lässt sich nicht belegen (S. 89 enthält keine Neun; siehe App). Zur Entscheidung durch den Koordinator: Katalogeintrag anpassen; uk- und ru-Familienlieder und Liedvorschläge nicht gebaut; Offline-Ideen gegen die Katalogliste offen; Favicon fehlt (A3). Normangaben (BZgA/BIÖG, AWMF, WHO) sind aus der App entfernt oder mit dem Vermerk „(Eigenentwurf, fachlich nicht geprüft)“ versehen; die fachliche Prüfung steht aus."
+      "korrektur": "Checkliste mit 19 Meilensteinen und Bericht nicht gebaut: die Quelle beschreibt den Stand am Ende des dritten Lebensjahres, eine deutsche Referenzliste für künstlerische Entwicklung gibt es nicht. Die App ordnet nach der Gelegenheit, die der Erwachsene sieht, und zeigt die 19 Merkmale nur zum Nachschlagen. Die zweite Zahl „9 Aktivitätsformen“ lässt sich nicht belegen (S. 89 enthält keine Neun; siehe App). Entscheidung Max 25а (27.10.2026): so angenommen, Beschreibung und Engine des Katalogeintrags angepasst (der Titel bleibt als Schlüssel); uk- und ru-Familienlieder und Liedvorschläge nicht gebaut; Offline-Ideen gegen die Katalogliste offen; Favicon fehlt (A3). Normangaben (BZgA/BIÖG, AWMF, WHO) sind aus der App entfernt oder mit dem Vermerk „(Eigenentwurf, fachlich nicht geprüft)“ versehen; die fachliche Prüfung steht aus."
     },
     {
       "titel": "Wetter- und Jahreszeiten-Forscher",

@@ -4,7 +4,7 @@ Stand: 18.10.2026, nach Welle 91. Dieses Dokument ergänzt `docs/offene-punkte-k
 
 ## A. Fragen, die Sie entscheiden müssen
 
-- **A1. Namen von Modellen in Tests** (vier Dateien, siehe `offene-punkte-kita.md`, A1). Offen seit Welle 89.
+- **A1. Namen von Modellen in Tests** (vier Dateien, siehe `offene-punkte-kita.md`, A1). Offen seit Welle 89. **Entschieden 27.10.2026 (Max 20а): bewusste Ausnahme, die Listen bleiben.**
 - **A2. Druck ohne Auswahl** (Zählhilfe, Navigator): Ein Standardbogen oder kein Standard?
 - **A3. favicon.ico 404.** Keine der 221 Apps hat ein Icon. Ein gemeinsames Icon für alle oder unverändert?
 - **A4. Zurücksetzen im Navigator.** Soll es einen Knopf geben, der alle Antworten löscht?
@@ -18,7 +18,7 @@ Stand: 18.10.2026, nach Welle 91. Dieses Dokument ergänzt `docs/offene-punkte-k
 - **A12 (neu). Ergebnisindikator S. 197** („умеет резать ножницами“): Merkmal eines Kindes (Überschrift S. 189). Auf Karten nicht zulässig, bis die Redaktion entscheidet. Bestätigen?
 - **A20 (neu). Altersbereich der Fühl- und Sortier-Werkstatt.** Der Katalog nennt 2 bis 3 Jahre; die Quelle definiert die Gruppe „Малыши“ auf S. 6 als „от одного года до трех лет“ (1 bis 3). Die App übernimmt 2 bis 3 und sagt das auf dem Bildschirm. Welche Angabe gilt, entscheidet die Redaktion; die Angabe ist in `apps/fuehl-sortier-werkstatt/README.md` markiert.
 - **A18 (erweitert).** Die Pflichtmarkierung „maschinell geprüft“ steht jetzt auf allen neuen Karten. Für die über 200 älteren Apps mit Seitenangaben fehlt sie. Human-Prüfung nachholen oder Seitenangaben entfernen? Die Regel in `docs/02` Z. 151–152 verlangt für Seitenangaben die Markierung „проверено человеком“. Die Apps der Welle 93 (Puppentheater, Theater zuhause, Fühl-Werkstatt) tragen sie nicht; sie sind daher betroffen wie alle übrigen Apps mit Seitenangaben.
-- **A19.** Katalogtext Nr. 2 (Erfolgs-Momente) beschreibt die verbotene Gruppierung. Den Katalogtext angleichen?
+- **A19.** Katalogtext Nr. 2 (Erfolgs-Momente) beschreibt die verbotene Gruppierung. Den Katalogtext angleichen? **Entschieden 27.10.2026 (Max 23а): angeglichen.**
 
 ## B. Prozess und Repository
 
