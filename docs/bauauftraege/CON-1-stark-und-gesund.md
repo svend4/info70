@@ -40,7 +40,7 @@ Blockiert durch: keine (Index). A7 (quiz-kern) betrifft die App; siehe Abschnitt
 - App leistet schon (README, GDD, `daten/fragen.json`):
   - Quiz auf der Engine `@info70/quiz-kern` (Daten, Texte und Politik in der App);
   - Bank von 16 Fragen, Runde mit 12 Fragen; Fragetypen „binaer“ (ja oder nein) und „wahl“ (drei Antworten);
-  - jede Antwort mit Erklärung; Vorlesen über die Engine; offline über `sw.js`; `eltern.html`; Impressum;
+  - jede Antwort mit Erklärung; Vorlesen über die Engine; `eltern.html`; Impressum;
   - keine Anfrage an fremde Adressen (CSP `default-src 'self'`, Netzwerk-Wächter).
 - Abweichungen, die der Ausbau beheben muss (docs/02 Z. 141–146):
   - Ränge: `fragen.json` enthält vier Rangstufen mit Titeln und Symbolen;

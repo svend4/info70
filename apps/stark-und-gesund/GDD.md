@@ -39,9 +39,9 @@ Abhärtung, Warnsignale. Дидактический анти-шаблон-тес
 [x] Werbefrei / без покупок  [x] Без аккаунтов и персональных данных
 [x] Без внешних запросов (CSP self + NetzwerkWaechter)  [x] localStorage: только
 рекорд `sug.rekord` + кнопка удаления  [x] Privacy by default (ноль запросов
-привилегий; сервис-воркер только кэширует своё)  [x] Mobile First 360px/48px
-(классы kinder-ui)  [x] Vorlesen (кнопка «Vorlesen» из движка)  [x] Offline после
-загрузки (sw.js)  [x] eltern.html  [x] Impressum/DSGVO (ссылка в футере)
+привилегий; сервис-воркера нет, решение Max 9б)  [x] Mobile First 360px/48px
+(классы kinder-ui)  [x] Vorlesen (кнопка «Vorlesen» из движка)  [ ] Offline: sw.js
+убран (решение Max 9б)  [x] eltern.html  [x] Impressum/DSGVO (ссылка в футере)
 Особые риски темы: здоровье и тело — чувствительно. → Никаких оценок тела/веса,
 никакого сравнения детей, никакого ранжирования по здоровью (AI Act). Ранг — это
 очки за знания, а не оценка ребёнка. Формулировки без «жирный/худой»,

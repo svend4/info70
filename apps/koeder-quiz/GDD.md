@@ -51,7 +51,7 @@ quiz-kern (`binaer`: id, kategorie, aussage, korrekt ja/nein, erklaerung;
 только текст, никуда не ведут)  [x] localStorage: только рекорд `kq.rekord` +
 кнопка «Meine Daten löschen»  [x] Privacy by default (ноль запросов привилегий)
 [x] Mobile First 360px/48px (kinder-ui)  [x] Vorlesen (кнопка на каждом экране,
-из quiz-kern)  [x] Offline после загрузки (service worker)
+из quiz-kern)  [ ] Offline: service worker убран (решение Max 9б)
 [x] eltern.html  [ ] Impressum/DSGVO перед публикацией
 Особые риски темы: тема «тебя обманывают» может пугать → формулировки без
 драстики, наживки слегка утрированы, обязательные контраст-вопросы «настоящее

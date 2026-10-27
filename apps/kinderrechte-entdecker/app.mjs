@@ -27,5 +27,6 @@ starteQuiz({
   },
 });
 
-// Offline-Fähigkeit nach dem ersten Laden
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+// Kein Service Worker mehr: Registrierungen und Caches früherer Versionen entfernen, damit nichts Altes ausgeliefert wird.
+if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => r.unregister())).catch(() => {});
+if ('caches' in globalThis) caches.keys().then((ks) => ks.forEach((k) => caches.delete(k))).catch(() => {});
