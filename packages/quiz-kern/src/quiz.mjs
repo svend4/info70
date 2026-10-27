@@ -380,7 +380,7 @@ export function starteQuiz(konfig) {
   function staffelErgebnis() {
     zeige(
       el('section', { class: 'k-karte' },
-        el('p', { class: 'k-gross' }, '🧑‍🤝‍🧒'),
+        el('p', { style: 'font-size:2.5rem;text-align:center;margin:0.5rem 0' }, '🧑‍🤝‍🧒'),
         el('p', { style: 'text-align:center;font-weight:700' }, t.staffelFertigSatz),
         el('p', { style: 'text-align:center;color:#4b5563' }, 'Zusammen seid ihr stark!'),
         vorlesenKnopf(t.staffelFertigSatz),
