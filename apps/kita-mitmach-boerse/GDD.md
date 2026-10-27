@@ -70,3 +70,5 @@ Abstimmung über Angebote ist Auslegung; `praxis` sagt das.
   (Stick, Ablage, Abholung). Die App schreibt das nicht vor.
 - Ob die Summen je gezeigt werden dürfen, bevor eine Mindestzahl von Familien
   zusammen ist, entscheidet die Einrichtung; die App legt keine Zahl fest.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

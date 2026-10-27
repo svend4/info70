@@ -65,3 +65,5 @@ offen-Zähler); `massnahmenKatalog` (nur < 2, leer bei alles-grün).
 Träger-Vergleich als Papier-Workshop (bewusst nicht digital),
 Eltern-Perspektiv-Fragebogen als Druckbogen, Verlaufs-Vergleich zweier
 Runden über Datei-Koffer.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

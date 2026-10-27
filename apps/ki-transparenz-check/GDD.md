@@ -52,3 +52,5 @@ Feldname „Notizen“ unverändert. Gesamt 10 Tests (vorher 5).
 
 KI-Kennzeichnungs-Generator (№69, Kennzeichnungstexte de/uk/ru),
 Meldewege-Planer (№74); Verzahnung mit datenschutz-baukasten (№58).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

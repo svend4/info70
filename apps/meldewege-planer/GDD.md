@@ -55,3 +55,5 @@ Feld Ansprechperson; Label „kein Kindername“ unverändert. Testzahl gesamt: 
 
 Interaktions-Konzept-Assistent (№162), DSA-Selbstaudit (№168); weitere
 Sprachen; Verzahnung mit beschwerde-lotse (Kinder-Sicht).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

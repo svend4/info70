@@ -46,3 +46,5 @@ Abwesenheitsprüfung (kein Siegerzeichen, keine Siegerformulierung im Code).
 
 Ergebnis-Plakat (№241), Klassenrat-Themenpaket (№240); Stichwahl bei
 Gleichstand; Export ins Klassenrat-Protokoll.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

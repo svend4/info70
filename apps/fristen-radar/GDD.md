@@ -46,3 +46,5 @@ DTSTAMP), chronologische DTSTART-Reihenfolge – gegen die echten Programmdaten.
 
 Preise-und-Wettbewerbe-Paket (№245, mehr Karten); Erinnerungs-Vorlauf
 (VALARM); Verzahnung mit Compliance-Koffer.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

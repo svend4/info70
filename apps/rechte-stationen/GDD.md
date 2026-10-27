@@ -41,3 +41,5 @@ Apps existieren, Hilfe 116 111, keine externen Links.
 
 Druckbare Laufzettel je Station (mit stations-konfigurator), mehrsprachige
 Arbeitsblätter (leichte-sprache-werkstatt), Kopplung mit dem Klassenrat-Handbuch.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

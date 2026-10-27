@@ -44,3 +44,5 @@ Algorithmus/Blase/Transparenz benannt, keine externen Links.
 
 Weitere Stundenentwürfe je App, Einbindung in projektwoche, Leichte-Sprache-
 Arbeitsblattvariante (Ось E Inklusion).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

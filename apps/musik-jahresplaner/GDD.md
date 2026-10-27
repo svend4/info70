@@ -73,3 +73,5 @@ darum keine `eltern.html`.
 - `README.md` (Wurzel): Die Gesamtzahl der Tests im Repo steigt um die 34 neuen Tests.
 - `docs/10-praleska-baukasten.md`: Eintrag Nr. 87 und Statuszeile (gebaut, offene Nummern).
 - `index.html` (Hub) und ggf. Katalog-Übersichten: Eintrag der App.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

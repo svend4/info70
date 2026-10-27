@@ -44,3 +44,5 @@ Filter-Thema mit Stelle + Wegweiser-Satz, filtereStellen-Randfälle.
 
 Bundesland-Filter mit konkreten Adressen; Druck-Merkblatt „Wer hilft
 wobei“; Verknüpfung mit beschwerde-lotse (Kind → Eltern-Weg).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

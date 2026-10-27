@@ -45,3 +45,5 @@ Szenario 2/1/0 (genau ein 2, mind. ein 0), inhaltliche Abdeckung
 
 Fallkarten-Erweiterung (Sexting, Fake-Accounts); Verzahnung mit Schulfreigabe-
 Dossier und Elternabend-Kit; Leichte-Sprache-Handout.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

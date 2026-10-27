@@ -60,3 +60,5 @@ gesetzt, weil `\b` in JavaScript bei kyrillischen Buchstaben nicht greift.
   bleiben sie draußen.
 - Die Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ steht auf dem Bildschirm dort, wo Seitenangaben stehen. Das Druckblatt trägt keine Seitenangabe.
 - uk und ru: nicht vorhanden, offen.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

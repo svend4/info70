@@ -52,3 +52,5 @@ Gesamt 14 Tests (vorher 8).
 
 Datenschutzerklärung-Baukasten (№58) auf derselben Engine;
 Werbekennzeichnungs-Vorschau (№59); weitere Rechtsformen.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

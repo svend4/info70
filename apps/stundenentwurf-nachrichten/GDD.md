@@ -43,3 +43,5 @@ Drei-Fragen-Check und Deepfake benannt, keine externen Links.
 
 Kopplung mit „Mein Feed, deine Blase“, Einbindung in projektwoche, Leichte-
 Sprache-Arbeitsblattvariante (Ось E Inklusion).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

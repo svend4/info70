@@ -51,3 +51,5 @@ Entwicklungsindikatoren, nicht zu den Handlungen.
 - uk und ru: nicht vorhanden, offen.
 - Die Bedeutung der Angaben „S“ und „Erwachsene (Kinder 2–3)“ im Katalog ist nicht geklärt.
 - OCR-Fehler im Text (zum Beispiel „возниконовению“, S. 96) sind möglich; das Original ist nicht gegengeprüft.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

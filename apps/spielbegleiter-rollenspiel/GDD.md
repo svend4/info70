@@ -45,3 +45,5 @@ zu erkennen. Das ist Beobachten einzelner Kinder. Es wird nicht übernommen und 
 - Die Checkliste sollte von einer Fachkraft aus einer deutschen Kita gelesen werden, bevor sie in der
   Ausbildung eingesetzt wird.
 - Die Übertragung „Rollenspiel“, „Diade“ und „Triade“ ist eine eigene Übersetzung.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

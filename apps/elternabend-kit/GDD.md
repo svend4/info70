@@ -54,3 +54,5 @@ Listenlängen gleich), Handout-Substanz je Sprache (4 Module × 3 Tipps,
 Eltern-Kompass-Sammelband als Ausgabe-Paket zum Abend (bereits gebaut);
 weitere Handout-Sprachen (tr/ar/pl) über dieselben Kataloge;
 Kita-Variante des Abends (3-6 Jahre, andere Module).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

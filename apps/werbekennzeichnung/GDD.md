@@ -42,3 +42,5 @@ Werbe-Label in jeder Vorlage, Sicherheit (kein Script/keine externen Verweise).
 
 Mehr Typen (Affiliate, Gewinnspiel); Verknüpfung mit impressum-generator;
 Datenschutzerklärung-Baukasten (№58) auf derselben Vorlagen-Idee.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

@@ -41,3 +41,5 @@ Apps (mitmach-arena/kinderrat) existieren.
 
 Druckbare Rollenkarten-Vorlagen, Kopplung mit Ämtli-Rad (Rollen rotieren),
 mit rechte-stationen und projektwoche.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

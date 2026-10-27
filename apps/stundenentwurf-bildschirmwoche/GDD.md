@@ -44,3 +44,5 @@ anonym/kein-Upload/Papier benannt, Hilfe 116 111, keine externen Links.
 
 Einbindung in projektwoche, Leichte-Sprache-Arbeitsblattvariante (Ось E),
 Kopplung mit der Klassen-Koffer-Auswertung für die anonyme Diagrammphase.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

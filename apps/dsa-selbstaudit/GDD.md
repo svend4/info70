@@ -46,3 +46,5 @@ mischt korrekt, ampelBericht zählt/übernimmt/listet offene Punkte.
 
 Vorsorge-Check § 24a JuSchG (№175), AVV-Checkliste Hosting (№174); Ampel
 als wiederverwendbarer Baustein für weitere Audits.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

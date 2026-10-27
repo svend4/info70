@@ -47,3 +47,5 @@ Wächter (fetch + DOMParser statt Kopien, Druck-Kapitelstruktur).
 Mehrsprachige Ausgabe, sobald eltern.html-Seiten uk/ru-Fassungen haben
 (dieselben i18n-Pakete wie das elternabend-kit-Handout); thematische
 Teil-Broschüren (nur "Sicher im Netz", nur Kita-Werkzeuge).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

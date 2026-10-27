@@ -50,3 +50,5 @@ gesamt: 13 (vorher 6).
 
 Länderspezifische Checklisten-Varianten, PDF-Export mit Signaturfeld,
 Bündelung mit dem Compliance-Koffer (Betreiber-Achse).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

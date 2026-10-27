@@ -43,3 +43,5 @@ Fremdüberwachung, Test sichert das). Kind-nah → eltern.html, im Sammelband.
 
 Wochenverlauf über mehrere Wochen, Kopplung mit takt-pause (Ampel-Import),
 Familienbeschluss aus dem Familienrat als Ziel übernehmen.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

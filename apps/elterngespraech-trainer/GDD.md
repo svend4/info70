@@ -58,3 +58,5 @@ gegengeprüft – siehe „Offen“.
   wird.
 - Die Stufe 0 ist ein Urteil über den Text einer Antwort. Ob ein Gespräch in der
   Praxis gelingt, hängt von Beziehung und Kontext ab, das Werkzeug misst es nicht.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

@@ -46,3 +46,5 @@ jedes Kriterium mit Aussage/Hilfe/DSGVO-Bezug, thematische Abdeckung
 
 Schulfreigabe-Dossier „Null-Daten-Nachweis“ (№200, docs/); Verzahnung mit
 Vorsorge-Check und DSA-Selbstaudit.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

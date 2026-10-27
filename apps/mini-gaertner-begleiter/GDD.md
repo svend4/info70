@@ -64,3 +64,5 @@ Winter).
 
 Beet-Plan als Druckraster, Aussaat-Erinnerungsliste je Gruppe,
 Saatgut-Tauschbörse-Aushang, Kräuter-Erweiterung (Schnittlauch, Minze).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

@@ -70,3 +70,5 @@ Projektregeln. Details in der README.
 - Browser-Prüfung, Prüfung bei 360 px Breite und auf dem Gerät stehen aus.
 - Test mit Kindern der Zielgruppe (docs/02, Checkliste) steht aus.
 Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

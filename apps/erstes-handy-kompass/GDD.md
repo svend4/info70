@@ -63,3 +63,5 @@ Gesamt 15 Tests (4 + 5 + 6); `npm test` in apps/erstes-handy-kompass.
 
 Verknüpfung mit Berechtigungs-Safari und Familien-Medienvertrag;
 Alters-Varianten (Grundschule vs. weiterführend); Druck als A5-Urkunde.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

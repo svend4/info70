@@ -43,3 +43,5 @@ dokumentiert, alle Beispiel-Stundenentwürfe existieren.
 
 Interaktiver Entwurfs-Assistent (Formular → stunde.json-Download),
 Kompetenz-Filter, Kopplung mit leichte-sprache-werkstatt und projektwoche.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

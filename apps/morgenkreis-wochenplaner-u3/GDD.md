@@ -57,3 +57,5 @@ vier Einheiten pro Tag stehen in den Daten und sind als Eigenentwurf gekennzeich
 - Die Monatsregel für Lepka braucht einen Kalender, den der Planer nicht führt.
 - Die Titel sind russische und belarussische Originale; die deutsche Übertragung ist eine eigene
   Prüfung.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

@@ -58,3 +58,5 @@ den Hinweis haben. Testzahl: 11 (6 Logik, 5 Hinweis); `npm test` grün.
 
 Mehrsprachige Eltern-Kompass-Seite (de/uk/ru); Verzahnung mit Datenschutz-
 Baukasten (Daten-Angaben übernehmen) und Interaktions-Konzept-Assistent.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

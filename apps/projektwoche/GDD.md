@@ -53,3 +53,5 @@ familien-medienvertrag-Brücke, 116 111).
 Netz-Pass-Urkundendruck (docs/09) als Abschluss-Urkunde; Elternabend-Kit
 «Digital daheim» als Begleitformat; weitere Wochen-Varianten (13+ mit
 verschwoerungs-werkstatt und filter-spiegel) auf derselben JSON-Struktur.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

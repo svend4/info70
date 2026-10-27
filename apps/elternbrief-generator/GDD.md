@@ -49,3 +49,5 @@ Altersband-Texte unterscheiden sich, leer ohne Themen, ohne Kopf ohne Namen).
 uk/ru-Briefe (nur mit geprüfter Übersetzung), weitere Monatsthemen
 (Jahreszeiten), Kopplung mit vorlese-kompass/familienschatz-reime als
 Spielideen-Quelle.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

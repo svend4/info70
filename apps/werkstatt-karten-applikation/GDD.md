@@ -65,3 +65,5 @@ und die Projektregeln, dazu die Pflichtmarkierung auf jeder gedruckten Karte. De
 - Der Indikator auf S. 197 beschreibt Merkmale einzelner Kinder und ist deshalb nicht auf den Karten; die Redaktion entscheidet über eine Aufnahme.
 - Die Themengruppen für den Filter sind Eigenentwurf und stehen nicht im Quelltext.
 - aria-live auf `#app` umfasst den ganzen Bereich. Ob Hilfstechnik das gut ausliest, ist nicht geprüft.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

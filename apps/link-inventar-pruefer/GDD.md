@@ -49,3 +49,5 @@ HTML-Feld. Testzahl gesamt: 11 (vorher 7).
 
 Sitemap-Import; Vorschlag zur Kennzeichnung externer Links; Verzahnung mit
 Interaktions-Konzept-Assistent und Werbekennzeichnung.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

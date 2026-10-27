@@ -49,3 +49,5 @@ Barrierefreiheit, Datensparsamkeit).
 
 DSA-Selbstaudit (№168), Interaktions-Konzept-Assistent (№162); Verzahnung
 mit Barrierefreiheitserklärungs-Generator (№169).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

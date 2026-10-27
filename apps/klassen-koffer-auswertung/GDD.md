@@ -44,3 +44,5 @@ baueBericht.
 
 Export-Seite in quiz-kern/szenario (Ergebnis-Koffer schreiben), CSV-Export,
 Verlaufsvergleich über mehrere Termine, Kopplung mit „Meine Bildschirmwoche“.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

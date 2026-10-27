@@ -45,3 +45,5 @@ Fragen), druckbare Familien-Foto-Regeln (≥5).
 
 Sharenting-Spiegel in Leichter Sprache; uk/ru; Verzahnung mit foto-ampel
 (Familie) und Eltern-Kompass-Generator.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

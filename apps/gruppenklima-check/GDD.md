@@ -39,3 +39,5 @@ Aufwand: M. Переиспользовано: kinder-ui, kinderschutz, обра�
 ## 9. Kindertest-гипотезы
 Не с детьми — тест с командой Kita: понятны ли импульсы, ощущается ли инструмент
 как поддержка (а не контроль)? Фиксировать анонимно.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

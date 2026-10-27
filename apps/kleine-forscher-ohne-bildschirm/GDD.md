@@ -55,3 +55,5 @@ prüft die Projektregeln. Details in der README.
 - Neuladen ohne Netz: gemessen, keine Abnahmebedingung (F4).
 
 Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

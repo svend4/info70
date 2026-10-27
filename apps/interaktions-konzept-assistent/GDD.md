@@ -48,3 +48,5 @@ auch ohne Auswahl nutzbar, Katalogreihenfolge stabil.
 
 Meldewege-Planer (№177), Eltern-Kompass-Generator (№163); weitere Funktionen
 (Livestream, Foren); Verzahnung mit DSA-Selbstaudit.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

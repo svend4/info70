@@ -52,3 +52,5 @@ Textfeld. Testzahl gesamt: 16 (vorher 12).
 
 Silbenzählung/LIX-Wert, eigene Fremdwortliste per Import, Kopplung mit dem
 Barrierefreiheitserklärungs-Generator (Abschnitt in Leichter Sprache prüfen).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

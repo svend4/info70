@@ -54,3 +54,5 @@ Speicher-, Cookie- und Netzaufrufe in app.mjs und logik.mjs. Gesamt 9 Tests
 
 Weitere Muster (Berichtigung Art. 16, Widerspruch Art. 21); mehrsprachig
 (de/uk/ru); Verzahnung mit ombuds-landkarte (Beschwerdestellen).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

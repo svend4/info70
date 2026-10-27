@@ -47,3 +47,5 @@ Links, Schulsozialarbeit-Verweis vorhanden.
 
 Weitere Stundenentwürfe je App (№198 Datenschatz, folgende), Auswahl-Menü
 über mehrere Entwürfe, Einbindung in projektwoche als Tagesbaustein.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

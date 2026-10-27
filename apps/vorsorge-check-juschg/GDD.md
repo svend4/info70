@@ -47,3 +47,5 @@ zaehle), ampelBericht zählt/übernimmt/listet offene Punkte.
 
 AVV-Checkliste Hosting (№174), Schulfreigabe-Dossier (№200); Ampel-Modul
 für weitere Audits wiederverwendbar.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

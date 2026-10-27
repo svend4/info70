@@ -43,3 +43,5 @@ Die Quelle nennt Übungen im Gleichgewicht, aber keine messbare Größe. Die App
 - Die Zuordnung der 20-Meter-Zeit im Text (S. 131) ist nicht eindeutig; die Angabe ist entsprechend markiert.
 - Ob die Werte für deutsche Kitas als Orientierung taugen, prüft nur die Praxis. Eine Angleichung an
   deutsche Motorik-Studien ist nicht geprüft und steht nicht im Werkzeug.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

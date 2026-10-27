@@ -52,3 +52,5 @@ S. Die Karten sind statisch und der Druck ist eine Druckansicht.
 - Die Altersgruppe 5 bis 7 Jahre stammt aus S. 6; die Einordnung als Kita oder Vorschule ist Eigenentwurf.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - Nicht geprüft: Darstellung bei 360 px im Browser, Druckvorschau, Prüfung auf dem Gerät.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

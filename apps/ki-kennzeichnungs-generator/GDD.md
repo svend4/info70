@@ -52,3 +52,5 @@ Bezügen, escapeHtml neutralisiert Sonderzeichen.
 Barrierefreiheitserklärungs-Generator (№169), Eltern-Kompass-Generator
 (№163) auf derselben Engine; weitere Sprachen; Badge-Varianten (dezent/
 auffällig).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

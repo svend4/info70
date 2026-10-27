@@ -68,3 +68,5 @@
 - `docs/10-praleska-baukasten.md`: Eintrag Nr. 91 und Statuszeile.
 - `docs/praleska-katalog.json`: Eintrag „Mini-Oper-Baukasten“.
 - Hub (`index.html`) und Katalog-Übersichten: Eintrag der App.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

@@ -47,3 +47,5 @@ vier Zustände + Standard „ungeprüft“, `zaehle`/`befunde`/`behobene`,
 
 Compliance-Koffer (Nr. 232, bündelt Berichte), Screenshot-Anhänge je Befund,
 Kopplung mit dem DSA-Selbstaudit (Dark-Pattern-Kriterium).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

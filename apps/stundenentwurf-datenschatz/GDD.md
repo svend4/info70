@@ -47,3 +47,5 @@ externen Links.
 
 Weitere Stundenentwürfe je App, Auswahl-Menü über mehrere Entwürfe,
 Einbindung in projektwoche als Tagesbaustein.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

@@ -42,3 +42,5 @@ wcagStufe (AA/AAA-Grenzen, große Schrift), Kriterien-Schema + Kernthemen.
 
 Barrierefreiheitserklärungs-Generator (№66) auf der Formular-zu-Dokument-
 Engine; Hoher-Kontrast-Theme (№137); Screenreader-Audit-Pack (№138).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

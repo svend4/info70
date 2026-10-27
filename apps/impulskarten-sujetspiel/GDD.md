@@ -58,3 +58,5 @@ Jahre heißt deshalb „Impulskarten für das sujetabbildende Spiel“.
 - Die Übertragungen „Impulskarten“, „Spielproblemsituation“ und „sujetabbildend“ sind eigen. Die
   Quelle ist eine russische Ausgabe; eine Gegenprüfung mit deutschen Fachtexten steht aus.
 - Ob die Karten in einer deutschen Kita passen, prüft nur die Praxis.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

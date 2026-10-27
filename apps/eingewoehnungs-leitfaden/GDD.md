@@ -72,3 +72,5 @@ Gesamt: **21 Tests**, alle grün (`node --test apps/eingewoehnungs-leitfaden/tes
 ## 8. Erweiterungen (Katalog)
 
 Meilenstein-Begleiter (Nr. 4), Phasen-Vorlagen je Modell, uk/ru-Elterninfo.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

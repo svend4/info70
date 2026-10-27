@@ -61,3 +61,5 @@ Testzahl: 12 (7 Logik, 5 Hinweis); `npm test` grün.
 
 Eltern-Kompass-Generator (№163), Screenreader-/Tastatur-Audit-Pack (№253)
 auf derselben Basis; mehrsprachige Erklärung (de/uk/ru).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

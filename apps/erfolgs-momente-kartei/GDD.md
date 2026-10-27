@@ -44,3 +44,5 @@ Die Suite führt 23 Tests aus. `test/logik.test.mjs` prüft das Kartenset (IDs e
 - Die Übertragungen aus der russischsprachigen Quelle sind nicht gegengeprüft; eine Gegenprüfung mit deutschen Fachtexten steht aus.
 - Ob neun Karten reichen oder mehr Tätigkeiten gebraucht werden, zeigt die Praxis.
 - Ob das Werkzeug in die Liste der Apps mit Hilfe-Insel gehört, entscheidet das Projekt. Es steht dort nicht.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

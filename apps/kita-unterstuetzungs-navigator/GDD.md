@@ -40,3 +40,5 @@
 
 37 Tests in `test/logik.test.mjs` und `test/regeln.test.mjs`. Lauf:
 `node --test apps/kita-unterstuetzungs-navigator/test/*.test.mjs`.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

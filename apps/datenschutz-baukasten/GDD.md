@@ -49,3 +49,5 @@ keine externen Links/Skripte.
 
 Werbekennzeichnungs-Vorschau (№59), Cookie-/Consent-Hinweis-Baustein,
 weitere Rechtsgrundlagen; uk/ru-Version der Kinder-Fassung.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

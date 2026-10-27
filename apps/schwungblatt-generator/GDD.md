@@ -48,3 +48,5 @@ NaN), Progression (Stufe 1 Wellen/Berge, Stufe 3 Schleifen/Kreise), `pfad`
 
 Buchstaben-Vorformen (l, e, m) als Stufe 4, Liniensysteme (Klasse 1),
 wählbare Strichstärke, Namens-Vorlage in Herkunftssprachen.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

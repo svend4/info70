@@ -47,3 +47,5 @@ ein Schreibweg, „Alles löschen“ ruft removeItem auf den Schlüssel auf.
 
 App-seitiges Lesen des gesperrt-Hash (Navigationssperre je App), QR-Code für
 den Konfig-Link, Kopplung mit klassen-koffer-auswertung und projektwoche.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

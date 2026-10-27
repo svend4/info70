@@ -57,3 +57,5 @@ Das Kartenset hat 19 Karten: 7 Tiere, 3 Pflanzen, 6 Stoffe, 3 Jahreszeiten. Alle
 - **Favicon:** Die App hat keins; der Browser fragt `favicon.ico` an und bekommt 404 (A3, Bauauftrag Abschnitt 9).
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - **Repo-Zählungen:** Mit dieser App ändern sich die Gesamtzahl der Tests im Wurzel-README und die Zahl der Apps im Impressum. Diese Dateien hat die App nicht geändert; sie müssen nachgezogen werden.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

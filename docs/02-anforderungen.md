@@ -75,17 +75,11 @@
     `hilfeInsel` (116 111); охват закреплён тестом в `kinderschutz`
 [ ] Язык и контент соответствуют 8–12 годам; учебные цели описаны в README
 [ ] Mobile First (360 px), touch ≥ 48 px, контраст AA, есть озвучивание
-    (для детских приложений; для инструментов взрослых — исключение с
-    пояснением в GDD; решение Max 28а, 27.10.2026)
 [ ] Без обращений наружу; повторная загрузка офлайн не гарантируется
 [ ] Кнопка печати есть → есть и свой `druck.css` c `@media print`, и в нём
     скрыта экранная обвязка; печатный лист не несёт галочек, баллов,
     звёздочек, полей по дням и строки для имени (это была бы система
-    сравнения детей на бумаге). Исключение (решение Max 10в/10б,
-    27.10.2026): печатные списки для взрослых (чек-листы воспитателя,
-    наблюдения, операторов) могут иметь пустые клетки; на листе, где
-    отмечает ребёнок, вместо клеток — нейтральные маркеры («обвести
-    подходящее»)
+    сравнения детей на бумаге)
 [ ] Заявленный порядок шагов проверяется равенством структур, а не порогом
     «вариантов больше одного»: порог проходит и набор, оставляющий 2 из 720
 [ ] Приложение, которое ПЕРЕСТАВЛЯЕТ готовый текст, не делает это машинно:
@@ -154,17 +148,6 @@
     Мы держим её и без ИИ. *(Добавлено в волне 82: четыре приложения
     ссылались на это правило как на пункт docs/02, а пункта не было —
     нашла контрпроба.)*
-    Граница счётчиков (решение Max 37в, 27.10.2026): нейтральный счёт
-    собранного или найденного («Gefunden: 3 von 8» — что открыто в
-    содержании) разрешён; запрещено всё, что оценивает исполнение: очки,
-    рекорд, серии «N дней подряд», проценты и «richtig von», «geschafft»,
-    звёзды и кубки, сравнение дней и недель. Проверка:
-    `node tools/leistungs-woerter.mjs`. Все приложения, чьи README и GDD
-    называют детей пользователями, считаются детскими (решение 34а).
-    Правило хранения (решение 30б): приложение, которое что-то сохраняет,
-    имеет кнопку удаления; приложение, которое ничего не сохраняет, не
-    показывает карточку «Meine Daten löschen»; проверка —
-    `packages/kinderschutz/test/speicher-regel.test.mjs`.
 [ ] Ссылка на главу/параграф/страницу стоит только при явной пометке
     «проверено человеком»: выдуманная ссылка выглядит как проверенная
 [ ] Числа и названия ведомств проверены на актуальность перед печатью
@@ -177,3 +160,14 @@
 [ ] Impressum + Datenschutzerklärung актуальны (для публичного релиза)
 [ ] Проведён тест с детьми целевой группы (для мажорных релизов)
 ```
+
+## Ergänzungen vom 27.10.2026 (Entscheidungen Max)
+
+Die Zeilen oben bleiben unverändert, weil viele Dateien auf ihre Zeilennummern verweisen (22–24, 79–82, 141–146). Die Ergänzungen stehen hier am Ende.
+
+- **Vorlesen (Entscheidung 28а).** Die Zeile „есть озвучивание“ in der Checkliste gilt für Kinder-Apps. Werkzeuge für Erwachsene (Familie, Kita und Fachkräfte, Betreiber*innen) haben keine Vorlese-Pflicht; das GDD der App sagt es in einer Zeile.
+- **Druck (Entscheidungen 10в, 10б).** Zur Zeile „печатный лист не несёт галочек…“: Druckbare Listen für Erwachsene (Checklisten für Fachkräfte, Beobachtung, Betreiber*innen) dürfen leere Kästchen tragen. Auf einem Blatt, auf dem ein Kind etwas einträgt, stehen statt Kästchen neutrale Marker („Zutreffendes einkreisen“). Liste der gemessenen Zeichen: `docs/druck-symbole-liste.md`.
+- **Zähler (Entscheidung 37в).** Zur Zeile „Приложение не выставляет ребёнку оценку“: Ein neutraler Zähler des Gesammelten oder Gefundenen („Gefunden: 3 von 8“, was im Inhalt geöffnet wurde) ist erlaubt. Verboten ist, was die Ausführung bewertet: Punkte, Rekord, Serien („N Tage in Folge“), Prozent und „richtig von“, „geschafft“, Sterne und Pokale, der Vergleich von Tagen und Wochen. Prüfung: `node tools/leistungs-woerter.mjs`.
+- **Kind (Entscheidung 34а).** Eine App, deren README und GDD Kinder als Nutzer nennen, gilt als Kinder-App, auch für Jugendliche bis 15.
+- **Speicher (Entscheidung 30б).** Eine App, die etwas speichert, hat einen Löschknopf. Eine App, die nichts speichert, zeigt die Karte „Meine Daten löschen“ nicht. Prüfung: `packages/kinderschutz/test/speicher-regel.test.mjs` mit dem Stand `docs/speicher-stand.json`.
+- **Browser-Prüfung (Entscheidung 31а).** Für bestehende Apps gilt das Delta-Tor: `node tools/browser-tor.mjs <app>`; die Basislinie `docs/browser-basislinie.json` wird nur kleiner.

@@ -53,3 +53,5 @@ zum Notizfeld (aria-describedby). Testzahl gesamt: 8 (vorher 4).
 Bericht = Anlage für BzKJ-Antrag (Kindeswohl-Nachweis), fragFINN-/
 Seitenstark-Verfahren und Träger-Beschlüsse; Grundstein für die
 «Kinderrechte-Charta des Baukastens» (docs/09, Dokument-Einheit).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

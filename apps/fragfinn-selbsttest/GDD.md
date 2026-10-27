@@ -48,3 +48,5 @@ Gesamt 8 Tests (vorher 3).
 
 Seitenstark-Qualitäts-Check (№56) als Schwester; BFSG-Check (№61);
 Verknüpfung mit foerder-navigator (fragFINN als Verbreitungskanal).
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

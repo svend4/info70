@@ -77,3 +77,5 @@ herunterladen oder die Seite schließen. Nichts bleibt zurück.
 
 32 Tests. Zählung nach `^test(` über `test/logik.test.mjs` und `test/regeln.test.mjs`.
 Lauf: `node --test apps/unser-konzert-zaehlhilfe/test/*.test.mjs`.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

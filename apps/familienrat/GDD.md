@@ -42,3 +42,5 @@ pack/prüfe/vereinige (Stimmen addieren, falsche Art, unpassende Frage).
 
 QR-Code für den Familien-Koffer, mehr Vorlagen, Kopplung mit familien-
 medienvertrag (Beschluss → Vertragsbaustein) und kinderrat.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

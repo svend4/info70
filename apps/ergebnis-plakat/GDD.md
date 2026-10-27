@@ -44,3 +44,5 @@ Format-Kompatibilität mit dem mitmach-arena Klassen-Koffer (pruefeKoffer).
 
 Mehrere Diagrammtypen, QR-Code auf dem Plakat, Kopplung mit dem Klassenrat-
 Themenpaket und der Klassen-Koffer-Auswertung.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

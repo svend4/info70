@@ -53,3 +53,5 @@ unverändert. Gesamt 13 Tests (vorher 8).
 
 Compliance-Koffer (Nr. 232, bündelt Berichte), Kopplung mit dem
 Interaktions-Konzept-Assistent, weitere Stufen-Feinlogik.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

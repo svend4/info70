@@ -60,3 +60,5 @@ Testzahl: 12 (7 Logik, 5 Hinweis); `npm test` grün.
 
 Direkte Verknüpfung mit den Prüfwerkzeugen (Bericht per Klick übernehmen),
 Verschlüsselung des Koffers, Versions-Historie mehrerer Audit-Stände.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).

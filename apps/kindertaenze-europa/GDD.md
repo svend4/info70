@@ -98,3 +98,5 @@ Projektregeln. Details in der README.
 - Vorlesefunktion nicht gebaut (Zielgruppe Fachkraft; Geltungsbereich der Checkliste offen).
 - Prüfung im Browser (360 px, Druck, Fokus) und auf dem Gerät steht aus.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+**Vorlesen:** nicht vorgesehen. Werkzeug für Erwachsene; die Vorlese-Regel gilt für Kinder-Apps (Entscheidung Max 28а, 27.10.2026).
