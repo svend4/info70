@@ -1,0 +1,115 @@
+{
+  "regel": "Eine App, die Seitenangaben zeigt, trägt die Marke „nicht von einem Menschen geprüft“ (docs/02; Entscheidung Max 22а). Die Liste schrumpft nur; node --test packages/kinderschutz/test/seitenmarke.test.mjs prüft sie.",
+  "apps": {
+    "architektur-spaziergang": [
+      "daten/spaziergang.json"
+    ],
+    "avv-checkliste-hosting": [
+      "daten/kriterien.json"
+    ],
+    "bewegungs-kartei-erstes-jahr": [
+      "daten/kartei.json"
+    ],
+    "bewegungs-richtwerte-3-5": [
+      "index.html",
+      "logik.mjs",
+      "daten/richtwerte.json"
+    ],
+    "buchecke-check": [
+      "index.html",
+      "daten/checkliste.json"
+    ],
+    "elterngespraech-trainer": [
+      "daten/szenarien.json"
+    ],
+    "elterngespraech-uebergang": [
+      "daten/gespraech.json"
+    ],
+    "entwicklungs-kompass": [
+      "app.mjs",
+      "eltern.html",
+      "daten/indikatoren.json"
+    ],
+    "erste-woerter-tagebuch": [
+      "daten/tagebuch.json"
+    ],
+    "fachquiz-erstes-lebensjahr": [
+      "daten/fragen.json"
+    ],
+    "frischluft-familie": [
+      "daten/massnahmen.json"
+    ],
+    "impulskarten-sujetspiel": [
+      "app.mjs",
+      "logik.mjs",
+      "daten/karten.json"
+    ],
+    "kita-mitmach-boerse": [
+      "logik.mjs",
+      "daten/angebote.json"
+    ],
+    "kita-unterstuetzungs-navigator": [
+      "logik.mjs"
+    ],
+    "kita-wochenplaner": [
+      "daten/bereiche.json"
+    ],
+    "klanggeschichten-erzeuger": [
+      "logik.mjs",
+      "daten/stoffe.json"
+    ],
+    "kunst-gucken": [
+      "daten/achsen.json"
+    ],
+    "mess-labor": [
+      "daten/experimente.json"
+    ],
+    "mini-oper-baukasten": [
+      "index.html",
+      "logik.mjs"
+    ],
+    "morgenkreis-wochenplaner-u3": [
+      "index.html",
+      "logik.mjs",
+      "daten/plan.json"
+    ],
+    "musik-alltags-begleiter": [
+      "daten/rituale.json"
+    ],
+    "musik-jahresplaner": [
+      "app.mjs"
+    ],
+    "musikmomente-1-3": [
+      "logik.mjs",
+      "daten/musik.json"
+    ],
+    "puste-lauschspiel-kartei": [
+      "daten/kartei.json"
+    ],
+    "schatzkarten-generator": [
+      "app.mjs",
+      "logik.mjs"
+    ],
+    "schulanfang-spiel-navigator": [
+      "daten/navigator.json"
+    ],
+    "selbststaendigkeits-leiter": [
+      "daten/leiter.json"
+    ],
+    "spielbegleiter-rollenspiel": [
+      "app.mjs",
+      "index.html",
+      "logik.mjs",
+      "daten/karten.json"
+    ],
+    "spielzeug-check-u3": [
+      "daten/pruefungen.json"
+    ],
+    "sprich-mit-mir": [
+      "daten/impulse.json"
+    ],
+    "wachstums-bewegungs-begleiter": [
+      "daten/begleiter.json"
+    ]
+  }
+}
