@@ -27,13 +27,10 @@ const STATUS_AB_WELLE_92 = {
   'PRI-7': 'teilweise', // Fühl- und Sortier-Werkstatt (Welle 93)
 };
 
-// Blockaden. A7: die Einheit nutzt den Engine quiz-kern (Rekord und Rang nach Punkten,
-// docs/fragen-und-hinweise.md A7). Ausbau und Neubau sind erst nach der Entscheidung zulässig.
-const QUIZ_KERN = ['A7 quiz-kern'];
-const BLOCKADE = Object.fromEntries(
-  ['CON-1', 'CON-3', 'CON-4', 'CON-6', 'CON-7', 'CON-9', 'CON-10', 'GEM-8', 'GEM-13', 'GEM-14', 'GEM-16', 'GEM-19', 'KIN-17']
-    .map((id) => [id, QUIZ_KERN]),
-);
+// Blockaden. A7 (Rekord und Rang im Motor quiz-kern) war bis zum 27.10.2026 die einzige Blockade für dreizehn Einheiten.
+// A7 ist umgesetzt (Entscheidung Max, Variante a): der Motor kennt keinen Rekord, keine Punkte und keine Ränge mehr.
+// Neue Blockaden werden hier mit der Kennung der Einheit eingetragen.
+const BLOCKADE = {};
 
 // Apps aus Welle 92 und 93: der Plan nennt sie noch nicht, die Apps existieren.
 const APP_AB_WELLE_92 = {

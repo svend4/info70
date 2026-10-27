@@ -9,21 +9,7 @@
     "unklar": 3,
     "nicht_bauen": 3,
     "bauauftraege_noetig": 68,
-    "davon_blockiert": [
-      "KIN-17",
-      "GEM-8",
-      "GEM-13",
-      "GEM-14",
-      "GEM-16",
-      "GEM-19",
-      "CON-1",
-      "CON-3",
-      "CON-4",
-      "CON-6",
-      "CON-7",
-      "CON-9",
-      "CON-10"
-    ]
+    "davon_blockiert": []
   },
   "pro_abschnitt": {
     "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)": 23,
@@ -68,9 +54,7 @@
       "app": "uhr-und-kalender-kind",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "KIN-18",
@@ -118,9 +102,7 @@
       "app": "mathe-entdecker",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "GEM-10",
@@ -144,9 +126,7 @@
       "app": "erzaehl-bruecke",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "GEM-14",
@@ -158,9 +138,7 @@
       "app": "grammatik-zwerge",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "GEM-16",
@@ -172,9 +150,7 @@
       "app": "design-entdecker",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "GEM-17",
@@ -198,9 +174,7 @@
       "app": "geschichten-wender",
       "faktenstand": "Quelle nicht im Repo prüfbar",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "GEM-22",
@@ -476,9 +450,7 @@
       "app": "stark-und-gesund",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-2",
@@ -502,9 +474,7 @@
       "app": null,
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-4",
@@ -516,9 +486,7 @@
       "app": "deutschland-kompass",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-5",
@@ -542,9 +510,7 @@
       "app": null,
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-7",
@@ -556,9 +522,7 @@
       "app": "herkunftssprachen-bruecke",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-8",
@@ -582,9 +546,7 @@
       "app": null,
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen – ohne quiz-kern (Regelkonflikt)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-10",
@@ -596,9 +558,7 @@
       "app": null,
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
-      "blockiert": [
-        "A7 quiz-kern"
-      ]
+      "blockiert": []
     },
     {
       "id": "CON-11",

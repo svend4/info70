@@ -1,7 +1,9 @@
 # Bauauftrag KIN-17: Uhr- und Kalender-Kind (Einheit 17)
 
 Status: teilweise · Abschnitt: Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …) · Ziel: Ausbau von apps/uhr-und-kalender-kind
-Blockiert durch: A7 quiz-kern
+Blockiert durch: keine (A7 am 27.10.2026 umgesetzt)
+
+Stand 27.10.2026: A7 ist umgesetzt. Der Motor `quiz-kern` speichert nichts und kennt keinen Rekord, keine Punkte und keine Ränge mehr; die Quiz-Apps laufen ohne Wertung durch (Quiz-Durchlauf). Aussagen zu A7 weiter unten stammen aus der Zeit davor.
 
 ## 1. Quelle
 

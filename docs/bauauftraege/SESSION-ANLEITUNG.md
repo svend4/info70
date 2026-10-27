@@ -8,7 +8,7 @@ Diese Anleitung ist für eine Sitzung gedacht, die genau eine Einheit der Prales
 - Du änderst nicht: `index.html`, `README.md` (Wurzel), `impressum.html`, `docs/10-praleska-baukasten.md`, `docs/praleska-katalog.json`, `docs/plan-praleska-umsetzung.md`, `docs/fragen-und-hinweise.md`, `packages/`, andere Apps, andere Bauaufträge.
 - Du registrierst nichts im Hub, in der Wurzel-README oder im Impressum. Das macht der Koordinator (die Hauptsitzung), nachdem alle Sitzungen gemerged sind.
 - Du schreibst keine Modellnamen in Dateien, keine ganzen Sätze aus der Praleska, keine Zitate über 6 Wörter (docs/10, Rechtsrahmen, Punkt 1).
-- Du verwendest `quiz-kern` nicht (A7 offen). Du baust keine Seitenzahlen auf das Druckblatt (A18: Standard für neue Apps).
+- `quiz-kern` darf verwendet werden (A7 ist seit dem 27.10.2026 umgesetzt: der Motor kennt keinen Rekord, keine Punkte, keine Ränge); die App bleibt trotzdem ohne Wertung. Du baust keine Seitenzahlen auf das Druckblatt (A18: Standard für neue Apps).
 - Speicherung nur wie docs/02, Z. 25: Nutzerdaten im localStorage, mit Löschknopf für die eigenen Schlüssel; kein sessionStorage, IndexedDB, Cookie, Cache. Werkzeuge ohne Nutzerdaten speichern nichts. Keine Anfragen nach außen.
 - Kein Service Worker: eine App legt kein `sw.js` an und registriert keinen (Entscheidung Max 9б; Test `kein-service-worker`).
 

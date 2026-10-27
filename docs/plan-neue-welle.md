@@ -4,7 +4,7 @@ Stand: 27.10.2026. Entscheidung Max 11а: jetzt nur Pläne und GDD-Entwürfe, ke
 
 ## 1. Was sich geändert hat
 
-Dreizehn Bauaufträge waren durch „A7 quiz-kern“ blockiert (Rekord und Ränge im Motor). A7 ist umgesetzt: der Motor kennt keinen Rekord, keine Punkte und keine Ränge mehr, und alle 26 Quiz-Apps laufen ohne Wertung durch (Quiz-Durchlauf grün). Damit ist die Blockade aufgehoben:
+Dreizehn Bauaufträge waren durch „A7 quiz-kern“ blockiert (Bauaufträge und Index sind am 27.10.2026 angepasst) (Rekord und Ränge im Motor). A7 ist umgesetzt: der Motor kennt keinen Rekord, keine Punkte und keine Ränge mehr, und alle 26 Quiz-Apps laufen ohne Wertung durch (Quiz-Durchlauf grün). Damit ist die Blockade aufgehoben:
 
 | Gruppe | Aufträge |
 |---|---|

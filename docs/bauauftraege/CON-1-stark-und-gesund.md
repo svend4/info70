@@ -1,7 +1,9 @@
 # Bauauftrag CON-1: Content-Pack: Stark und gesund
 
 Status: teilweise · Abschnitt: Content-Pakete, Funktionen, Dokumente · Ziel: Ausbau von apps/stark-und-gesund/
-Blockiert durch: keine (Index). A7 (quiz-kern) betrifft die App; siehe Abschnitt 9.
+Blockiert durch: keine (A7 am 27.10.2026 umgesetzt)
+
+Stand 27.10.2026: A7 ist umgesetzt. Der Motor `quiz-kern` speichert nichts und kennt keinen Rekord, keine Punkte und keine Ränge mehr; die Quiz-Apps laufen ohne Wertung durch (Quiz-Durchlauf). Aussagen zu A7 weiter unten stammen aus der Zeit davor.
 
 ## 1. Quelle
 

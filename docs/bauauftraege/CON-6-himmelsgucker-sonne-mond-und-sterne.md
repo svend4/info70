@@ -1,7 +1,9 @@
 # Bauauftrag CON-6: Himmelsgucker: Sonne, Mond und Sterne
 
 Status: offen · Abschnitt: Content-Pakete, Funktionen, Dokumente · Ziel: neue App (Ordner `apps/himmelsgucker-sonne-mond-und-sterne/`)
-Blockiert durch: A7 quiz-kern
+Blockiert durch: keine (A7 am 27.10.2026 umgesetzt)
+
+Stand 27.10.2026: A7 ist umgesetzt. Der Motor `quiz-kern` speichert nichts und kennt keinen Rekord, keine Punkte und keine Ränge mehr; die Quiz-Apps laufen ohne Wertung durch (Quiz-Durchlauf). Aussagen zu A7 weiter unten stammen aus der Zeit davor.
 
 ## 1. Quelle
 
