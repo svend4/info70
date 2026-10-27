@@ -6,7 +6,8 @@
 //    Zähler mit „n von m“. Die Liste schrumpft nur; neue Einträge brauchen eine Entscheidung (--erweitern).
 // Verneinung: ein Verneinungswort (kein, keine, ohne, nicht, nie) hebt einen Begriff nur auf, wenn es
 // höchstens drei Wörter davor steht und kein Satz-, Kommentar- oder Klammerzeichen dazwischen liegt.
-// Kommentare zählen nicht. Die Konfiguration rekordSchluessel: '…' allein ist Migration und zählt nicht.
+// Kommentare zählen nicht. Die Konfiguration rekordSchluessel: '…' allein und eine Zeile, die nur
+// localStorage.removeItem('…') mit Literal enthält, sind Migration und zählen nicht.
 // Ausnahmen: „ausnahmen“ sind bestätigt (Max), „ausnahmen_vorgeschlagen“ bleiben in der Liste, bis Max sie
 // bestätigt.
 import { readdir, readFile } from 'node:fs/promises';
@@ -34,6 +35,12 @@ const ANZEIGE = new RegExp(`\\$\\{[^}]*\\b(?:${ZAEHLER})\\b(?!\\.length)[^}]*\\}
 const VON = /\$\{[^}]+\}\s*von\s*\$\{[^}]+\}/;
 // Migration: nur die Konfigurationszeile allein, nicht eine Zeile mit weiteren Zugriffen.
 const MIGRATION = /^\s*rekordSchluessel\s*:\s*'[^']*'\s*,?\s*$/;
+// Migration, zweite Form (Entscheidung Max 33а): eine Zeile, die nur einen alten Schlüssel mit Literal entfernt,
+// auch in einem Einzeiler try { … } catch {}. setItem und getItem zählen weiter; eine Variable statt Literal auch.
+const ENTFERNEN = /^\s*(?:try\s*\{\s*)?localStorage\.removeItem\(\s*'[^'\n]*'\s*\)\s*;?\s*(?:\}\s*catch\s*(?:\([^)]*\))?\s*\{[^{}\n]*\}\s*)?$/;
+
+/** Ist die Zeile reine Migration (alter Schlüssel nur genannt oder entfernt, nichts geschrieben oder gelesen)? */
+export const istMigrationsZeile = (zeile) => MIGRATION.test(zeile) || ENTFERNEN.test(zeile);
 // Verneinungswörter. Das Fenster ist auf drei Wörter und auf den Satzteil davor begrenzt.
 const VERNEINT_WORT = /^(kein|keine|keinen|keiner|keines|ohne|nicht|nie)$/i;
 const WORTFENSTER = 3;
@@ -100,7 +107,7 @@ export function appGruende(name, text) {
   const gruende = new Set();
   const zeilen = quelle.split('\n');
   zeilen.forEach((zeile, i) => {
-    if (js && MIGRATION.test(zeile)) return;
+    if (js && istMigrationsZeile(zeile)) return;
     if (zaehleTreffer(zeile, APP_WORTE) > 0) gruende.add('Wort');
     if (js && zaehleTreffer(zeile, ANZEIGE) > 0) gruende.add('Anzeige');
     if (js && zaehleTreffer(zeile, ZUWACHS) > 0) {

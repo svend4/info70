@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { appGruende, appTreffer, appTrefferIn, kernTreffer, kernTrefferIn, vergleiche } from '../src/bewertung-stand.mjs';
+import { appGruende, appTreffer, appTrefferIn, istMigrationsZeile, kernTreffer, kernTrefferIn, vergleiche } from '../src/bewertung-stand.mjs';
 
 // Ergebnis-Wertung (Rekord, Punkte, Ränge, Treffer). Der Stand in docs/bewertung-stand.json schrumpft nur;
 // node tools/bewertung-stand.mjs --schreiben streicht erledigte Einträge. Neue Einträge brauchen --erweitern
@@ -44,6 +44,27 @@ test('Verneinung gilt nur für die drei Wörter davor, nicht für die ganze Zeil
   assert.equal(appTrefferIn('app.mjs', 'Die Punkte, ohne Rekord'), 0);
   // Ein Verneinungswort, das weiter als drei Wörter entfernt steht, hebt ihn nicht auf.
   assert.equal(appTrefferIn('index.html', '<p>Es gibt keinen Grund zur Sorge, dass wir den Rekord brechen.</p>'), 1);
+});
+
+test('Migration schreibt nichts: nur removeItem mit Literal ist ausgenommen, setItem und getItem zählen weiter', () => {
+  const frei = ["localStorage.removeItem('imp.rekord');", "  localStorage.removeItem('imp.rekord')", "try { localStorage.removeItem('imp.rekord'); } catch {}", "try { localStorage.removeItem('imp.rekord'); } catch (e) { /* x */ }"];
+  for (const z of frei) {
+    assert.equal(istMigrationsZeile(z), true, z);
+    assert.deepEqual(appGruende('app.mjs', `${z}\n`), [], `${z} zählt nicht`);
+  }
+  const zaehlt = [
+    "localStorage.setItem('imp.rekord', '1');",
+    "localStorage.getItem('imp.rekord');",
+    "localStorage.removeItem(REKORD);",
+    "localStorage.removeItem(rekordSchluessel);",
+    "localStorage.removeItem('imp.rekord'); localStorage.setItem('imp.rekord', x);",
+    "localStorage.removeItem('imp.rekord') + localStorage.getItem('imp.rekord');",
+    "onclick: () => { localStorage.removeItem('imp.rekord'); start(); }",
+  ];
+  for (const z of zaehlt) {
+    assert.equal(istMigrationsZeile(z), false, `Kontrolle: ${z} ist keine Migration`);
+    assert.ok(appGruende('app.mjs', `${z}\n`).length >= 1, `Kontrolle: ${z} zählt`);
+  }
 });
 
 test('Migration: die Konfiguration rekordSchluessel nennt nur den alten Schlüssel und zählt nicht', () => {

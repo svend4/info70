@@ -1,0 +1,11 @@
+{
+  "regel": "Speicher ⇒ Löschknopf, kein Speicher ⇒ kein Löschknopf (Entscheidung Max 30б). Die Liste schrumpft nur; node --test packages/kinderschutz/test/speicher-regel.test.mjs prüft sie.",
+  "apps": {
+    "elternabend-kit": "speichert ohne Löschknopf",
+    "entwicklungs-kompass": "Löschknopf ohne Speicher",
+    "familienschatz-reime": "speichert ohne Löschknopf",
+    "kettenbrief-stopper": "speichert ohne Löschknopf",
+    "schulstart-begleiter": "Löschknopf ohne Speicher",
+    "stations-konfigurator": "speichert ohne Löschknopf"
+  }
+}
