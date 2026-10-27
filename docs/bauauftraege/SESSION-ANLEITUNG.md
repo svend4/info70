@@ -51,6 +51,8 @@ node tools/browser-pruefung.mjs <slug> 8099 "$TMPDIR/info70-pruefung"
 
 Das Messskript endet mit Fehlercode 1, wenn es eine Verletzung findet, und mit 2, wenn es nichts messen konnte. Ein Lauf mit Fehlercode ist keine Abnahme.
 
+Für eine bestehende App gilt das Delta-Tor (Entscheidung Max 31а): `node tools/browser-tor.mjs <slug> [<slug> …]` misst und vergleicht mit `docs/browser-basislinie.json`; eine Erhöhung in einer Kategorie ist ein Fehler, bestehende Verletzungen bleiben als Schuld. Die Basislinie schreibt nur der Integrator (`tools/browser-basislinie.mjs --schreiben <messordner> --integrator`, aus der Repo-Wurzel, nur Senkungen).
+
 Prüfe das Ergebnis gegen die Abnahme (Abschnitt 8 des Bauauftrags):
 
 - kein horizontaler Überlauf bei 360 px,
