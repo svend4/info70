@@ -25,6 +25,8 @@ const STATUS_AB_WELLE_92 = {
   'CON-12': 'teilweise', // Puppentheater-Werkstatt (Welle 93)
   'CON-18': 'teilweise', // Theater zuhause (Welle 93)
   'PRI-7': 'teilweise', // Fühl- und Sortier-Werkstatt (Welle 93)
+  'PRI-8': 'gebaut', // Kleine Forscher ohne Bildschirm (Etappe 3, docs/registrierung/PRI-8.json)
+  'GEM-17': 'gebaut', // Tischdienst-Trainer (docs/registrierung/GEM-17.json)
 };
 
 // Blockaden. A7 (Rekord und Rang im Motor quiz-kern) war bis zum 27.10.2026 die einzige Blockade für dreizehn Einheiten.
@@ -40,6 +42,7 @@ const APP_AB_WELLE_92 = {
   'CON-12': 'puppentheater-werkstatt',
   'CON-18': 'theater-zuhause-heft',
   'PRI-7': 'fuehl-sortier-werkstatt',
+  'PRI-8': 'kleine-forscher-ohne-bildschirm',
 };
 
 const zeilen = PLAN.split('\n').filter((l) => /^\| \d+ \| /.test(l));

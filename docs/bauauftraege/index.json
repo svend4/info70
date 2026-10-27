@@ -3,12 +3,12 @@
   "stand": "Plan Welle 91 plus Welle 92 und 93 (siehe STATUS_AB_WELLE_92)",
   "bilanz": {
     "gesamt": 131,
-    "gebaut": 57,
-    "teilweise": 63,
-    "offen": 5,
+    "gebaut": 59,
+    "teilweise": 62,
+    "offen": 4,
     "unklar": 3,
     "nicht_bauen": 3,
-    "bauauftraege_noetig": 68,
+    "bauauftraege_noetig": 66,
     "davon_blockiert": []
   },
   "pro_abschnitt": {
@@ -149,18 +149,6 @@
       "status": "teilweise",
       "app": "design-entdecker",
       "faktenstand": "nur Katalogtext",
-      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
-    },
-    {
-      "id": "GEM-17",
-      "abschnitt": "Gemeinsame Apps 3–5",
-      "nr": 17,
-      "einheit": "Tischdienst-Trainer",
-      "status_plan_w91": "teilweise",
-      "status": "teilweise",
-      "app": "tischdienst-trainer",
-      "faktenstand": "Quelle nicht im Repo prüfbar",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
       "blockiert": []
     },
@@ -688,18 +676,6 @@
       "status_plan_w91": "offen",
       "status": "teilweise",
       "app": "fuehl-sortier-werkstatt",
-      "faktenstand": "Quelle nicht im Repo prüfbar",
-      "naechster_schritt": "neu bauen (Welle)",
-      "blockiert": []
-    },
-    {
-      "id": "PRI-8",
-      "abschnitt": "Printmaterialien Kita",
-      "nr": 8,
-      "einheit": "Kleine Forscher ohne Bildschirm",
-      "status_plan_w91": "offen",
-      "status": "offen",
-      "app": null,
       "faktenstand": "Quelle nicht im Repo prüfbar",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
