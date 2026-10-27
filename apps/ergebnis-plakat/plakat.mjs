@@ -29,3 +29,15 @@ export function baueBalken(umfrage) {
     gleichstand: fuehrende.length > 1,
   };
 }
+
+/**
+ * Fußzeile des Plakats, neutral formuliert: nennt die Möglichkeit mit den meisten Stimmen,
+ * ohne Siegerwort und ohne Symbol.
+ * @param {{gesamt:number, gewinner:string|null, gleichstand:boolean}} p Ergebnis von baueBalken
+ * @returns {string}
+ */
+export function fussText(p) {
+  if (p.gleichstand) return `🤝 Unentschieden – ${p.gesamt} Stimmen insgesamt.`;
+  if (p.gewinner) return `Meiste Stimmen: ${p.gewinner} · ${p.gesamt} Stimmen insgesamt.`;
+  return 'Noch keine Stimmen abgegeben.';
+}

@@ -48,3 +48,15 @@ export function ergebnis(wahl) {
     gewinner: max > 0 && fuehrende.length === 1 ? fuehrende[0].text : null,
   };
 }
+
+/**
+ * Zeile unter den Balken, neutral formuliert: nennt die Antwort mit den meisten Stimmen,
+ * ohne Siegerwort und ohne Symbol. Bei Gleichstand der Hinweis, noch einmal zu reden.
+ * @param {{gleichstand:boolean, gewinner:string|null}} e Ergebnis von ergebnis()
+ * @returns {string}
+ */
+export function ergebnisZeile(e) {
+  if (e.gleichstand) return '🤝 Gleichstand – vielleicht noch einmal reden und wählen?';
+  if (e.gewinner) return `Meiste Stimmen: ${e.gewinner}`;
+  return 'Noch keine Stimmen.';
+}

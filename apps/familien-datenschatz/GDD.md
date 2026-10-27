@@ -20,10 +20,12 @@ familienrat, familien-medienvertrag, generationen-quiz.
 ## 3. Ablauf
 
 1) Start erklärt das Duett-Prinzip (Vorlesen).
-2) Pro Situation: Kind wählt → Eltern wählen (verdeckt) → Auflösung mit
-   Punkten beider, fairer Wahl, Erklärung und Gesprächsimpuls.
-3) Runde von 8 Situationen (aus 12), am Ende beide Punktzahlen + Einigkeit +
-   Familien-Botschaft. „Noch eine Runde“ / „Start“.
+2) Pro Situation: Kind wählt → Eltern wählen (verdeckt) → Auflösung mit den
+   Antworten beider, dem Satz „Ihr wart euch einig“ oder „Ihr habt
+   unterschiedlich entschieden“, fairer Wahl, Erklärung und Gesprächsimpuls.
+   Keine Punkte, keine Edelsteine.
+3) Runde von 8 Situationen (aus 12), am Ende die Zahl der Situationen, in denen
+   Kind und Eltern einig waren, + Familien-Botschaft. „Noch eine Runde“ / „Start“.
 
 ## 4. Didaktik / Nutzen
 
@@ -42,9 +44,11 @@ Werbefrei. Kinder-/Familien-App mit eltern.html, im Eltern-Sammelband gelistet.
 
 `test/logik.test.mjs`: ≥10 Szenarien, eindeutige IDs, gültige beste/auchOk
 (beste nicht in auchOk), Felder (Situation/Erklärung/Gesprächsimpuls),
-thematische Abdeckung (Art. 16/Ortung/Chat/Sharenting), `bewerte` (2/1/0),
-`vergleiche` (Punkte beider + einig), `rundeErgebnis` (Summen/Einigkeit/Max),
-`familienBotschaft` (kein Gewinner).
+thematische Abdeckung (Art. 16/Ortung/Chat/Sharenting). Abwesenheits-Tests:
+`bewerte` gibt es nicht mehr und der Bildschirm zeigt weder Edelsteine noch
+Zahlen hinter den Antworten (die zwei Sätze zur Einigkeit bleiben), `vergleiche`
+liefert nur einig + faire Wahl, `rundeErgebnis` nur Zahl der einigen Situationen
++ Gesamtzahl. `familienBotschaft` (kein Gewinner).
 
 ## 7. Erweiterungen (Katalog)
 

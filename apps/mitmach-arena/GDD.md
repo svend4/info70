@@ -1,6 +1,6 @@
 # 🗳️ Mitmach-Arena — Kurz-GDD
 
-Stand: 2026-10-18 · Testzahl: 15 (`npm test`). Angelegt nach `docs/vorlagen/kurz-gdd.md`, weil zum Zeitpunkt der Prüfung keine GDD vorlag. Inhalte sind aus README und Quelltext abgeleitet.
+Stand: 2026-10-18 · Testzahl: 18 (`npm test`). Angelegt nach `docs/vorlagen/kurz-gdd.md`, weil zum Zeitpunkt der Prüfung keine GDD vorlag. Inhalte sind aus README und Quelltext abgeleitet.
 
 ## 1. Феномен / потребность (Warum)
 Klassenrat und Familie treffen gemeinsame Entscheidungen. Die App lässt jede*n einmal abstimmen, ohne Konto und ohne Server, und zeigt das Ergebnis als Balken mit Anteilen. Zuschnitt laut README: Fokus BzKJ 2026 „Teilhabe, Demokratiefähigkeit, Interaktion“. Ohne ein Werkzeug fehlt ein gemeinsames, sichtbares Zählverfahren für Klassenratsbeschlüsse; Handzeichen bleiben möglich.
@@ -11,7 +11,7 @@ Klassenrat und Familie treffen gemeinsame Entscheidungen. Die App lässt jede*n 
 
 ## 3. Движок и петля (Wie)
 Движок: beteiligung (Abstimmung nach dem Prinzip „Handy herumgeben“).
-Петля: Frage anlegen oder Klassenrat-Vorlage wählen → Gerät reihum, jede*r tippt einmal → Ergebnis mit Balken und 🏆 bei der Mehrheit → optional Koffer exportieren, importieren und zusammenzählen.
+Петля: Frage anlegen oder Klassenrat-Vorlage wählen → Gerät reihum, jede*r tippt einmal → Ergebnis mit Balken und der neutralen Zeile „Meiste Stimmen: …“ → optional Koffer exportieren, importieren und zusammenzählen.
 Реиграбельность: vier Klassenrat-Vorlagen, eine neue Abstimmung pro Sitzung.
 
 ## 4. Lernziele (проверяемые!)
@@ -20,7 +20,7 @@ Klassenrat und Familie treffen gemeinsame Entscheidungen. Die App lässt jede*n 
 3. Kinder können eine Frage und Möglichkeiten formulieren, ohne Namen von Mitschüler*innen einzutragen (Hinweis am Feld).
 
 ## 5. Контент-план
-Единица контента: Frage mit 2 bis 4 Möglichkeiten. Speicher: localStorage `ma.umfrage`. Koffer-Datei: `art: mitmach-arena-umfrage`, `version: 1`, `frage`, `optionen`, `stimmen`. Vorlagen in `vorlagen.mjs`, mindestens vier, geprüft durch `vorlagen.test.mjs`.
+Единица контента: Frage mit 2 bis 4 Möglichkeiten. Speicher: localStorage `ma.umfrage`. Koffer-Datei: `art: mitmach-arena-umfrage`, `version: 1`, `frage`, `optionen`, `stimmen`. Vorlagen in `vorlagen.mjs`, mindestens vier, geprüft durch `vorlagen.test.mjs`. Ergebniszeile in `ergebnis.mjs`, geprüft durch `ergebnis.test.mjs` (auch: kein Siegerzeichen im Code).
 Eingabefelder: Frage maxlength 100, Möglichkeiten maxlength 60, jeweils mit sichtbarem Hinweis „Keine Namen von Mitschüler*innen eintragen.“ (`test/eingabe-hinweis.test.mjs`).
 
 ## 6. Политика соответствия (Pflicht, docs/02)

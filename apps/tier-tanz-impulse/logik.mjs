@@ -114,8 +114,8 @@ const TEMPO_WORT = /(^|[^a-zäöüß])(nicht\s+)?(langsam|mittelschnell|schnell)
 /** Selbstbezug: „hier“, „diese Karte“, „das hier“. */
 const SELBSTBEZUG = /\b(hier|diese|dieses|dieser)\b/i;
 
-/** Felder, die eine Bewertung einführen würden. */
-const BEWERTUNG = ['richtig', 'korrekt', 'punkte', 'note', 'stern', 'sterne', 'rang', 'bewertung', 'score'];
+/** Felder, die eine Bewertung einführen würden. Rangfelder prüft der Wertungs-Stand des Repos in allen Dateien der App. */
+const BEWERTUNG = ['richtig', 'korrekt', 'punkte', 'note', 'stern', 'sterne', 'bewertung', 'score'];
 
 /** Ein Tier holen. */
 export function tierVon(daten, id) {
@@ -289,9 +289,9 @@ export function pruefeDaten(daten) {
       const belegte = (tierVon(daten, k.tier)?.belegteBewegungen ?? []).map((b) => String(b));
       for (const m of String(k.woran ?? '').matchAll(SO_HEISST_DAS)) {
         const genannt = m[1].toLowerCase();
-        const treffer = belegte.find((b) => b.toLowerCase() === genannt);
-        if (treffer && treffer !== k.verb) {
-          fehler.push(`${wo}: woran beschreibt „${treffer}“, die Karte heißt aber „${k.verb}“ – das sind zwei Bewegungen`);
+        const fundstelle = belegte.find((b) => b.toLowerCase() === genannt);
+        if (fundstelle && fundstelle !== k.verb) {
+          fehler.push(`${wo}: woran beschreibt „${fundstelle}“, die Karte heißt aber „${k.verb}“ – das sind zwei Bewegungen`);
         }
       }
     } else if (k.geltung === 'ausgemacht') {

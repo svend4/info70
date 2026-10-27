@@ -1,0 +1,5 @@
+/* Familienschatz: Beim Drucken fällt die Karte „Meine Daten löschen“ weg
+   (.fsr-nur-bildschirm): ein Druckblatt trägt keinen Löschknopf (docs/02). */
+@media print {
+  .fsr-nur-bildschirm { display: none !important; }
+}

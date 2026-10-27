@@ -200,7 +200,7 @@ async function importiere(ev) {
 }
 
 function teamBildschirm(meldung) {
-  const { familien, summen } = zaehle(vereinige(teamEintraege), daten);
+  const { familien, rueckmeldungen } = zaehle(vereinige(teamEintraege), daten);
   const alle = [...daten.formate, ...daten.clubs];
   app.replaceChildren(
     kopf('🧑‍🏫 Dateien zählen'),
@@ -217,7 +217,7 @@ function teamBildschirm(meldung) {
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, 'Häkchen je Angebot'),
       ...alle.map((a) => el('div', { class: 'mb-zeile' },
         el('p', { class: 'mb-name' }, a.deutsch),
-        el('p', { class: 'mb-zahlen' }, `interessiert: ${summen[a.id].interessiert} · kann mithelfen: ${summen[a.id].mithilfe}`)))),
+        el('p', { class: 'mb-zahlen' }, `interessiert: ${rueckmeldungen[a.id].interessiert} · kann mithelfen: ${rueckmeldungen[a.id].mithilfe}`)))),
     el('section', { class: 'k-karte' },
       el('div', { class: 'k-hinweis' }, el('p', { style: 'margin:0;font-weight:600' }, daten.hinweis)),
       el('p', { style: 'margin:0.6rem 0 0' }, 'Dateien mit demselben Code zählen einmal; die zuletzt geladene gilt. Die App kann nicht erkennen, ob zwei Dateien von derselben Familie stammen. Eine Datei lässt sich auch von Hand bauen – die Zählung ist deshalb eine Stimmung, keine Erhebung.'),

@@ -3,6 +3,7 @@
 // zum Selbstsammeln. Bildschirmfrei fürs Kind gedacht (Anregung für Erwachsene).
 // Praleska docs/10 (Top-30 Nr. 13). Politik docs/02: keine externen Anfragen.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
+import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { pruefeSchatz, artName, naechsterIndex, normalisiereEintrag, eintragOk } from './logik.mjs';
 
@@ -63,7 +64,7 @@ function eigeneKarte() {
 
   return el('section', { class: 'k-karte' },
     el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '💎 Euer Familien-Liederschatz'),
-    el('p', { style: 'font-size:0.9rem' }, 'Sammelt hier eure eigenen Reime und Lieder – in jeder Familiensprache. Bleibt nur auf diesem Gerät.'),
+    el('p', { style: 'font-size:0.9rem' }, 'Sammelt hier eure eigenen Reime und Lieder – in jeder Familiensprache. Bleibt nur auf diesem Gerät und lässt sich unten mit „Meine Daten löschen“ ganz entfernen.'),
     form,
     liste);
 }
@@ -76,6 +77,7 @@ function render() {
     artenKarte(),
     beispielKarte(),
     eigeneKarte(),
+    datenKarte({ schluessel: SCHLUESSEL, was: 'euer Familien-Liederschatz', nachLoeschen: render, klasse: 'fsr-nur-bildschirm' }),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werkzeug für Eltern · werbefrei · Daten bleiben auf diesem Gerät · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));

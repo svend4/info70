@@ -31,7 +31,9 @@ Bewusst nicht-wertend formuliert; verweist bei Belastung an Fachstellen.
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), keine Konten, nur Rekord in
-localStorage (autonomie.rekord). Werbefrei. Werkzeug für Erwachsene OHNE
+localStorage (autonomie.rekord), nur auf diesem Gerät. Auf dem Startbildschirm
+löscht die Karte „Meine Daten löschen“ (datenKarte aus kinder-ui) diesen
+Schlüssel. Werbefrei. Werkzeug für Erwachsene OHNE
 eltern.html (kein Kinder-Screen; unter 3 gilt „kein Screen fürs Kind“).
 
 ## 6. Tests

@@ -64,7 +64,7 @@ function render() {
       eingabe('Altersgruppe', 'altersgruppe', cfg, { platzhalter: 'z. B. 8–12 Jahre' }),
       eingabe('Worum geht es? (kurz)', 'worum', cfg, { mehrzeilig: true, platzhalter: 'Ein bis zwei Sätze für Eltern.' }),
       eingabe('Was Ihr Kind lernt (Lernziele, eine pro Zeile)', 'lernziele', cfg, { mehrzeilig: true, platzhalter: 'Rechte kennen\nMut-Sätze üben' }),
-      eingabe('Welche Daten anfallen (eine pro Zeile, leer = keine)', 'daten', cfg, { mehrzeilig: true, platzhalter: 'nur der Rekord, löschbar per Knopf', hinweis: 'Leer lassen heißt: keine personenbezogenen Daten.' }),
+      eingabe('Welche Daten anfallen (eine pro Zeile, leer = keine)', 'daten', cfg, { mehrzeilig: true, platzhalter: 'nur Ihre Eingaben im Formular, nur auf diesem Gerät, löschbar per Knopf', hinweis: 'Leer lassen heißt: keine personenbezogenen Daten.' }),
       eingabe('Interaktion', 'interaktion', cfg, { platzhalter: 'z. B. Keine Interaktion mit Fremden.' }),
       el('div', { style: 'display:flex;gap:0.6rem;align-items:center;margin:0.5rem 0' }, kostenBox, el('label', { for: 'ekg-kostenfrei' }, 'Kostenfrei nutzbar')),
       eingabe('Zusätzlicher Hinweis (optional)', 'hinweise', cfg, { mehrzeilig: true, platzhalter: 'z. B. Klassen-Modus für den Unterricht.' })),

@@ -5,10 +5,10 @@
 // Bereich - Selbstreflexion, keine Diagnose und keine Leistungsmessung.
 
 /** Reihenfolge der Selbsteinschätzungs-Stufen (nur für die Impuls-Wahl intern). */
-export const STUFEN_RANG = { nicht: 0, 'eher-nicht': 1, eher: 2, voll: 3 };
+export const STUFEN_REIHENFOLGE = { nicht: 0, 'eher-nicht': 1, eher: 2, voll: 3 };
 
 /** @param {Record<string, string>} status @param {string} id */
-const gueltigeAntwort = (status, id) => Object.hasOwn(STUFEN_RANG, status?.[id]);
+const gueltigeAntwort = (status, id) => Object.hasOwn(STUFEN_REIHENFOLGE, status?.[id]);
 
 /**
  * Zählt beantwortete Aussagen (nur gültige Stufen) - für die Fortschritts-
@@ -48,7 +48,7 @@ export function auswertungFuerBereich(bereich, status = {}) {
   let impulsText = null;
   if (beantwortet.length > 0) {
     const schwaechste = [...beantwortet]
-      .sort((a, b) => STUFEN_RANG[a.stufe] - STUFEN_RANG[b.stufe])[0];
+      .sort((a, b) => STUFEN_REIHENFOLGE[a.stufe] - STUFEN_REIHENFOLGE[b.stufe])[0];
     impulsText = schwaechste.stufe === 'voll'
       ? bereich.impulsWennStark
       : schwaechste.aussage.impuls;

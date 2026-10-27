@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import {
-  TAGE_IM_RUECKBLICK, STUFEN_IDS, datumsSchluessel, letzteTage, beschneide,
+  TAGE_IM_RUECKBLICK, STUFEN_IDS, ERLAUBTE_SCHLUESSEL, datumsSchluessel, letzteTage, beschneide,
   zaehleStufen, alleBeantwortet, pruefeFaktoren,
 } from '../logik.mjs';
 
@@ -42,6 +42,24 @@ test('kein Scoring: keine Punkte, kein Rot, keine Ränge', () => {
   for (const s of daten.stufen) {
     assert.ok(!('punkte' in s) && !('wert' in s), `Stufe ${s.id} trägt einen Zahlenwert`);
   }
+});
+
+test('jeder unbekannte Schlüssel der obersten Ebene ist ein Fehler – auch ohne Namen von Wertungen', () => {
+  // Die Daten tragen genau die erlaubten Schlüssel.
+  assert.deepEqual(ERLAUBTE_SCHLUESSEL, ['version', 'zielgruppe', 'stufen', 'faktoren']);
+  for (const k of Object.keys(daten)) assert.ok(ERLAUBTE_SCHLUESSEL.includes(k), `Schlüssel nicht erlaubt: ${k}`);
+  // Ein eingefügter Rang-Schlüssel und jeder andere zusätzliche Schlüssel zeigt einen Fehler mit der Meldung.
+  for (const schluessel of ['raenge', 'rangfolge', 'bestenliste', 'summe', 'irgendwas']) {
+    const d = { ...JSON.parse(JSON.stringify(daten)), [schluessel]: [{ ab: 0, titel: 'x' }] };
+    const fehler = pruefeFaktoren(d);
+    assert.ok(
+      fehler.includes(`unbekannter Schlüssel: ${schluessel} (diese App bewertet Kinder nicht)`),
+      `kein Fehler für ${schluessel}`,
+    );
+    assert.equal(fehler.length, 1, `nur der unbekannte Schlüssel ist ein Fehler: ${fehler.join(' | ')}`);
+  }
+  // Auch bei sonst unvollständigen Daten wird der fremde Schlüssel gemeldet.
+  assert.ok(pruefeFaktoren({ faktoren: [], raenge: [] }).some((f) => /unbekannter Schlüssel: raenge/.test(f)));
 });
 
 test('datumsSchluessel nutzt das lokale Datum, nicht UTC', () => {

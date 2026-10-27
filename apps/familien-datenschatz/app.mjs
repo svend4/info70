@@ -1,11 +1,11 @@
 // Familien-Datenschatz (Eltern+Kind 8-12, docs/09 Ось F Nr. 271).
 // Szenario-Duett auf einem Gerät: Kind antwortet, dann Eltern (verdeckt),
 // dann Vergleich + Erklärung + Gesprächsimpuls. Kein Gewinner – Gesprächsanlass.
-// Politik docs/02: keine externen Anfragen, nur Rekord/Fortschritt lokal.
+// Politik docs/02: keine externen Anfragen, nichts wird gespeichert, keine Punkte.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { bewerte, vergleiche, rundeErgebnis, familienBotschaft } from './logik.mjs';
+import { vergleiche, rundeErgebnis, familienBotschaft } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
@@ -91,13 +91,13 @@ function aufloesung() {
   phase = 'aufloesung';
   const s = szenarien[index];
   const v = vergleiche(s, kindAntworten[index], elternAntworten[index]);
-  const punkteZeile = (name, code, punkte) => el('p', { style: 'margin:0.2rem 0' }, `${name}: ${textVon(code)} — ${'💎'.repeat(punkte) || '—'} (${punkte})`);
+  const antwortZeile = (name, code) => el('p', { style: 'margin:0.2rem 0' }, `${name}: ${textVon(code)}`);
 
   zeige(fortschritt(),
     el('section', { class: 'k-karte', style: `background:${v.einig ? '#dcfce7' : '#fef3c7'}` },
       el('p', { style: 'font-weight:700;margin-top:0' }, v.einig ? '🤝 Ihr wart euch einig!' : '💬 Ihr habt unterschiedlich entschieden'),
-      punkteZeile('🧒 Kind', kindAntworten[index], v.kindPunkte),
-      punkteZeile('🧑‍🦰 Eltern', elternAntworten[index], v.elternPunkte),
+      antwortZeile('🧒 Kind', kindAntworten[index]),
+      antwortZeile('🧑‍🦰 Eltern', elternAntworten[index]),
       el('p', { style: 'margin:0.4rem 0 0' }, `Faire Wahl: ${textVon(s.beste)}`)),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, s.erklaerung),
@@ -119,8 +119,6 @@ function ende() {
   zeige(
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0' }, '🏁 Euer Familien-Ergebnis'),
-      el('p', { style: 'margin:0.2rem 0' }, `🧒 Kind: ${r.kindGesamt} / ${r.maxPunkte} 💎`),
-      el('p', { style: 'margin:0.2rem 0' }, `🧑‍🦰 Eltern: ${r.elternGesamt} / ${r.maxPunkte} 💎`),
       el('p', { style: 'margin:0.4rem 0' }, `🤝 Einig bei ${r.einigCount} von ${r.gesamt} Situationen`),
       el('p', { style: 'margin:0.4rem 0 0;font-weight:600' }, familienBotschaft(r))),
     el('div', { class: 'k-antworten' },

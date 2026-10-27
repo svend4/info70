@@ -24,8 +24,9 @@ gegengeprüft – siehe „Offen“.
 
 - **Keine Gesamtpunktzahl, keine Rangliste.** Die Stufe beschreibt eine Antwort, nicht
   die Person. Die Beschreibung des Werkzeugs (`wasEsIst`) darf keine
-  Gesamtwertung nennen; der Test prüft „Gesamtpunkt“, „Rangliste“, „Ranking“ und
-  „von N Punkten“ dort.
+  Gesamtwertung nennen; der Test prüft „Gesamtpunkt“, „Ranking“ und „von N Punkten“
+  dort. Das Wort für eine Rangtabelle prüft der Wertungs-Stand des Repositorys in allen
+  Dateien der App.
 - **Die Falle ist als Falle markiert** und nur dort. Muster, vor denen gewarnt wird,
   stehen nicht in den Antworten 1 und 2.
 - **Keine Speicherung, keine Netzanfragen.** Die Netzwache aus `kinderschutz` läuft.
@@ -44,7 +45,7 @@ gegengeprüft – siehe „Offen“.
 
 - `pruefeDaten` (in `logik.mjs`) läuft beim Start; ein Fehler stoppt die Anzeige mit
   Begründung.
-- 11 Tests in `test/logik.test.mjs`.
+- 12 Tests in `test/logik.test.mjs`.
 - Browser bei 360 px: Überlauf 0, Ziele mindestens 44 px, Druck zeigt nur das Blatt.
 
 ## Offen

@@ -10,10 +10,13 @@ import { appVerletzungen, speicherBefund, verletzung, vergleiche } from '../src/
 const WURZEL = fileURLToPath(new URL('../../../', import.meta.url));
 
 test('Befund: Speicher, Löschmöglichkeit und Karte werden aus dem Code erkannt, Kommentare zählen nicht', () => {
-  assert.deepEqual(speicherBefund("localStorage.setItem('a.b', '1');\ndatenKarte({ schluessel: 'a.b' });"), { speichert: true, loeschbar: true, karte: true });
+  assert.deepEqual(speicherBefund("import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';\nlocalStorage.setItem('a.b', '1');\ndatenKarte({ schluessel: 'a.b' });"), { speichert: true, loeschbar: true, karte: true });
   assert.deepEqual(speicherBefund("localStorage.setItem('a.b', '1');\nel('button', { onclick: () => { localStorage.removeItem('a.b'); start(); } }, '🧹 Wahl löschen')"), { speichert: true, loeschbar: true, karte: false });
   assert.deepEqual(speicherBefund("// localStorage.setItem('x', 1)\nconst a = 1;"), { speichert: false, loeschbar: false, karte: false });
-  assert.deepEqual(speicherBefund("import { sprachwahl } from '../../packages/kinder-ui/js/sprache.mjs';"), { speichert: true, loeschbar: false, karte: false });
+  assert.deepEqual(speicherBefund("import { sprachwahl } from '../../packages/kinder-ui/js/sprache.mjs';\nsprachwahl({ speicherSchluessel: 'x.sprache' });"), { speichert: true, loeschbar: false, karte: false });
+  assert.deepEqual(speicherBefund("import { sprachwahl } from '../../packages/kinder-ui/js/sprache.mjs';\nsprachwahl({});"), { speichert: false, loeschbar: false, karte: false }, 'ohne Schlüssel speichert die Sprachwahl nichts');
+  assert.deepEqual(speicherBefund("function datenKarte() { return el('section', {}, 'Diese Seite speichert nichts.'); }\nconst k = datenKarte();"), { speichert: false, loeschbar: false, karte: false }, 'eine eigene Hinweis-Funktion ist keine Löschkarte');
+  assert.deepEqual(speicherBefund("import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';\ndatenKarte({ schluessel: 'a' });"), { speichert: false, loeschbar: true, karte: true });
   assert.deepEqual(speicherBefund("try { localStorage.removeItem('uhr.rekord'); } catch {}"), { speichert: false, loeschbar: true, karte: false }, 'die Migration beim Start ist keine Karte');
 });
 

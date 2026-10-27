@@ -1,47 +1,32 @@
 // Familien-Datenschatz: reine Logik (ohne DOM), testbar (docs/09 Ось F Nr. 271).
 // Szenario-Content-Pack als Familien-Duett: Kind und Eltern antworten getrennt
-// und vergleichen. Wertung wie im szenario-Muster (beste 2, auchOk 1).
+// und vergleichen. Es werden keine Punkte vergeben: gezeigt wird nur, ob die Antworten
+// gleich oder verschieden sind, dazu die faire Wahl, Erklärung und Gesprächsimpuls.
 
 export const CODES = ['geben', 'ablehnen', 'fragen'];
 
-/** Punkte einer Antwort für ein Szenario: beste=2, auchOk=1, sonst 0. */
-export function bewerte(szenario, antwort) {
-  if (antwort === szenario.beste) return 2;
-  if (Array.isArray(szenario.auchOk) && szenario.auchOk.includes(antwort)) return 1;
-  return 0;
-}
-
-/** Vergleicht die Antworten von Kind und Eltern für ein Szenario. */
+/** Vergleicht die Antworten von Kind und Eltern für ein Szenario (einig oder nicht, ohne Wertung). */
 export function vergleiche(szenario, kindAntwort, elternAntwort) {
   return {
-    kindPunkte: bewerte(szenario, kindAntwort),
-    elternPunkte: bewerte(szenario, elternAntwort),
     einig: kindAntwort === elternAntwort,
     beste: szenario.beste,
   };
 }
 
 /**
- * Ergebnis einer ganzen Runde.
+ * Ergebnis einer ganzen Runde: bei wie vielen Situationen waren Kind und Eltern einig.
  * @param {object[]} szenarien
  * @param {string[]} kindAntworten   parallel zu szenarien
  * @param {string[]} elternAntworten parallel zu szenarien
  */
 export function rundeErgebnis(szenarien, kindAntworten = [], elternAntworten = []) {
-  let kindGesamt = 0;
-  let elternGesamt = 0;
   let einigCount = 0;
-  szenarien.forEach((s, i) => {
-    kindGesamt += bewerte(s, kindAntworten[i]);
-    elternGesamt += bewerte(s, elternAntworten[i]);
+  szenarien.forEach((_s, i) => {
     if (kindAntworten[i] === elternAntworten[i]) einigCount++;
   });
   return {
-    kindGesamt,
-    elternGesamt,
     einigCount,
     gesamt: szenarien.length,
-    maxPunkte: szenarien.length * 2,
   };
 }
 

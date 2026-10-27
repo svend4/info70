@@ -21,7 +21,8 @@ autonomiephase-navigator.
 1) Kurzer Sinn-Hinweis (Bindung/Sprache, mehrsprachig einladen).
 2) Vier Arten (Kniereiter/Fingerspiel/Wiegenlied/Reim) mit warum/wie.
 3) Beispiele durchblättern („Noch eins“), vorlesen.
-4) Eigene Verse/Lieder sammeln (Titel + Text, lokal, löschbar), vorlesen.
+4) Eigene Verse/Lieder sammeln (Titel + Text, lokal, einzeln löschbar), vorlesen.
+5) Karte „Meine Daten löschen“: entfernt die ganze Sammlung vom Gerät.
 
 ## 4. Didaktik / Nutzen
 
@@ -34,7 +35,9 @@ die Familiensammlung – ausdrücklich in de/uk/ru und weiteren Sprachen.
 
 Beispieltexte sind Eigenproduktion (keine Übernahmen). Keine externen Anfragen
 (NetzwerkWaechter), keine Konten, nur die eigene Sammlung in localStorage
-(„schatz.eigene“, Titel gekappt auf 80 / Text auf 800 Zeichen) + Löschen.
+(„schatz.eigene“, Titel gekappt auf 80 / Text auf 800 Zeichen); gelöscht wird
+einzeln (🗑️ je Eintrag) oder ganz über die Karte „Meine Daten löschen“
+(`datenKarte`, entfernt den Schlüssel; beim Drucken ausgeblendet, `druck.css`).
 Werbefrei. Werkzeug für Eltern OHNE eltern.html, nicht im Sammelband (kein
 Kinder-Screen; Anregung für Erwachsene).
 
@@ -43,7 +46,9 @@ Kinder-Screen; Anregung für Erwachsene).
 `test/logik.test.mjs`: Schatz-Daten gültig (Arten+Beispiele passen), Beispiele
 als „eigener Text“ gekennzeichnet, jede Art mit warum/wie + Mehrsprachigkeit,
 `artName`/`naechsterIndex`, `normalisiereEintrag`/`eintragOk` (Titel Pflicht,
-Längen begrenzt).
+Längen begrenzt). `test/speicher.test.mjs`: ein Schreibweg, Schlüssel
+„schatz.eigene“, Karte „Meine Daten löschen“ mit diesem Schlüssel, Einzel-
+Löschknopf je Eintrag, Karte nur am Bildschirm.
 
 ## 7. Erweiterungen (Katalog)
 

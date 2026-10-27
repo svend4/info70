@@ -21,14 +21,14 @@ export function baueKarten(fragen = []) {
       };
     }
     // typ 'wahl'
-    const richtige = f.antworten?.[f.korrekt] ?? '';
+    const loesung = f.antworten?.[f.korrekt] ?? '';
     const optionen = (f.antworten ?? []).map((a, k) => `${String.fromCharCode(65 + k)}) ${a}`).join('  ');
     return {
       nr: i + 1,
       kategorie: f.kategorie ?? '',
       vorne: `${f.frage}${optionen ? `\n${optionen}` : ''}`,
-      antwort: richtige,
-      hinten: `Richtig: ${richtige}. ${f.erklaerung}`,
+      antwort: loesung,
+      hinten: `Richtig: ${loesung}. ${f.erklaerung}`,
     };
   });
 }

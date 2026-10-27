@@ -2,7 +2,7 @@
   "name": "@info70/familien-datenschatz",
   "version": "0.1.0",
   "private": true,
-  "description": "Familien-Datenschatz: Szenario-Duett fuer Eltern und Kind (8-12). Kind und Eltern entscheiden getrennt (Wahl des Kindes verdeckt) und vergleichen; Wertung wie im szenario-Muster (beste 2, auchOk 1). Familien-Situationen (Smart Speaker, Ortungs-App, heimliches Chat-Mitlesen, Sharenting, Kostenfallen) thematisieren bewusst auch elterliche Ueberwachung als Privatsphaere-Frage (UN-KRK Art. 16). Kein Gewinner, Gespraechsanlass, Vorlesen, offline. Zielgruppe: Familie.",
+  "description": "Familien-Datenschatz: Szenario-Duett fuer Eltern und Kind (8-12). Kind und Eltern entscheiden getrennt (Wahl des Kindes verdeckt) und vergleichen. Familien-Situationen (Smart Speaker, Ortungs-App, heimliches Chat-Mitlesen, Sharenting, Kostenfallen) thematisieren bewusst auch elterliche Ueberwachung als Privatsphaere-Frage (UN-KRK Art. 16). Kein Gewinner, Gespraechsanlass, Vorlesen, offline. Zielgruppe: Familie.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

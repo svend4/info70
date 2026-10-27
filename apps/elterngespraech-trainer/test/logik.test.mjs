@@ -80,6 +80,22 @@ test('keine Gesamtpunktzahl, keine Rangliste - im Text und im Code', async () =>
   assert.ok(pruefeDaten(d).some((f) => /Gesamtwertung/.test(f)));
 });
 
+test('das Prüfmuster trifft Gesamtpunkt, „von N Punkten“ und Ranking, aber keinen neutralen Text', () => {
+  for (const text of [
+    'Am Ende steht eine Gesamtpunktzahl.',
+    'Sie erreichen 4 von 5 Punkten.',
+    'Das Ranking der Gruppe steht unten.',
+  ]) {
+    assert.equal(GESAMTWERTUNG.test(text), true, `nicht getroffen: ${text}`);
+    const d = kopie();
+    d.wasEsIst += ` ${text}`;
+    assert.ok(pruefeDaten(d).some((f) => /Gesamtwertung/.test(f)), `pruefeDaten meldet nichts: ${text}`);
+  }
+  // Das Wort für eine Tabelle der Plätze ist nicht Teil des Musters; der Wertungs-Stand prüft es in allen Dateien.
+  assert.equal(GESAMTWERTUNG.test('Jede Antwort hat eine Stufe mit Erklärung zur Haltung.'), false);
+  assert.equal(GESAMTWERTUNG.test('Es gibt keine Gesamtzahl, nur die Stufe je Antwort.'), false);
+});
+
 test('die Reihenfolge der Antworten ist deterministisch und deckt alle Plätze ab', () => {
   for (let i = 0; i < 5; i += 1) {
     const r = reihenfolge(i);

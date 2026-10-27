@@ -77,7 +77,7 @@ function render(meldung = '') {
         el('button', { class: 'k-knopf k-knopf--klein', onclick: () => window.print() }, '🖨️ Laufzettel drucken'),
         el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => kopiere(zettel) }, '📋 Laufzettel kopieren'),
         el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => kopiere(teilen) }, '🔗 Konfig-Link kopieren'),
-        el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => { if (confirm('Alle Stationen löschen?')) { stationen = []; speichere(); render('Alle Stationen gelöscht.'); } } }, '🧹 Alles löschen'))) :
+        el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => { if (confirm('Alle Stationen löschen?')) { stationen = []; speichere(); try { localStorage.removeItem(SCHLUESSEL); } catch { /* Speicher gesperrt: nichts zu löschen */ } render('Alle Stationen gelöscht.'); } } }, '🧹 Alles löschen'))) :
       el('section', { class: 'k-karte' }, el('p', { style: 'margin:0;color:#4b5563' }, 'Noch keine Stationen. Lege oben die erste an – oder öffne einen geteilten Konfig-Link.')),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'für Lehrkräfte · werbefrei · läuft offline · '),

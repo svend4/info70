@@ -6,7 +6,7 @@ const voll = {
   appName: 'Rechte-Kompass', altersgruppe: '8–12 Jahre',
   worum: 'Kinder üben, ihr Recht auszusprechen.',
   lernziele: ['Rechte kennen', 'Mut-Sätze üben'],
-  daten: ['nur der Rekord, löschbar per Knopf'],
+  daten: ['nur Ihre Eingaben im Formular, nur auf diesem Gerät, löschbar per Knopf'],
   interaktion: 'Keine Interaktion mit Fremden.', kostenfrei: true,
   hinweise: 'Klassen-Modus für den Unterricht.',
 };
@@ -17,7 +17,7 @@ test('baueSektionen: alle Angaben erscheinen', () => {
   assert.match(html, /8–12 Jahre/);
   assert.match(html, /Recht auszusprechen/);
   assert.match(html, /<li>Rechte kennen<\/li>/);
-  assert.match(html, /Rekord, löschbar/);
+  assert.match(html, /Eingaben im Formular, nur auf diesem Gerät, löschbar/);
   assert.match(html, /Klassen-Modus/);
   assert.match(html, /116 111/, 'Hilfenummer immer dabei');
 });

@@ -22,8 +22,8 @@ export function anforderungenFuer(daten, ids = []) {
 
 /** Höchstes Risiko in der Auswahl (für einen Hinweis). */
 export function hoechstesRisiko(daten, ids = []) {
-  const rang = { niedrig: 1, mittel: 2, hoch: 3, 'sehr hoch': 4 };
-  return gewaehlteFunktionen(daten, ids).reduce((max, f) => (rang[f.risiko] > rang[max] ? f.risiko : max), 'niedrig');
+  const reihenfolge = { niedrig: 1, mittel: 2, hoch: 3, 'sehr hoch': 4 };
+  return gewaehlteFunktionen(daten, ids).reduce((max, f) => (reihenfolge[f.risiko] > reihenfolge[max] ? f.risiko : max), 'niedrig');
 }
 
 /** Ausfüllbare Moderationskonzept-Vorlage als Text. */

@@ -7,12 +7,15 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { ohneKommentare } from './bewertung-stand.mjs';
 
-// Schreibzugriff im App-Code oder die Sprachwahl der gemeinsamen Komponente, die die Sprache speichert.
-const SPEICHERT = /\.setItem\(|kinder-ui\/js\/sprache\.mjs/;
+// Schreibzugriff im App-Code oder die Sprachwahl der gemeinsamen Komponente, wenn die App ihr einen speicherSchluessel gibt
+// (ohne Schlüssel speichert die Komponente nichts).
+const SPEICHERT = /\.setItem\(|speicherSchluessel\s*:/;
 // Möglichkeit zu löschen (weit gefasst): die gemeinsame Karte, ein Aufruf zum Löschen oder ein removeItem/clear.
-const LOESCHBAR = /datenKarte\(|loescheDaten\(|\.removeItem\(|localStorage\.clear\(/;
-// Karte oder Knopf „Daten löschen“ (eng gefasst): ein removeItem allein, etwa die Migration beim Start, ist kein Knopf.
-const KARTE = /datenKarte\(|loescheDaten\(|Meine Daten löschen|Alle Daten löschen|Alles löschen/;
+const LOESCHBAR = /kinder-ui\/js\/daten-karte\.mjs|loescheDaten\(|\.removeItem\(|localStorage\.clear\(/;
+// Karte oder Knopf „Daten löschen“ (eng gefasst): die gemeinsame Karte (Import aus kinder-ui/js/daten-karte.mjs), ein Aufruf zum
+// Löschen oder die Beschriftung. Ein removeItem allein (Migration beim Start) und eine eigene Funktion namens datenKarte, die nur
+// einen Hinweis zeigt, sind kein Knopf.
+const KARTE = /kinder-ui\/js\/daten-karte\.mjs|loescheDaten\(|Meine Daten löschen|Alle Daten löschen|Alles löschen/;
 
 /** Befund aus dem Quelltext einer App (alle .mjs im App-Ordner, ohne Kommentare, zusammengefügt). */
 export function speicherBefund(code) {

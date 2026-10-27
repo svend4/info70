@@ -5,7 +5,7 @@
 
 **Статус: рабочий MVP.** Модель — «передай устройство»: взрослый/класс создаёт вопрос,
 устройство идёт по кругу, каждый голосует одним нажатием, результат смотрят вместе
-(наглядные столбики). Плюс **📦 Klassen-Koffer**: сбор голосов с нескольких устройств
+(наглядные столбики и нейтральная строка «Meiste Stimmen: …», без кубка). Плюс **📦 Klassen-Koffer**: сбор голосов с нескольких устройств
 без сервера.
 
 ## Klassen-Koffer (идея №6 из docs/05)
@@ -41,5 +41,5 @@ Feldlängen bleiben unverändert. Tests: `test/eingabe-hinweis.test.mjs` (Quellt
 ## Запуск и тесты
 ```bash
 npm run dev   # → http://localhost:8070/apps/mitmach-arena/
-npm test      # 15 Tests: Klassen-Koffer, Vorlagen, Eingabehinweis
+npm test      # 18 Tests: Klassen-Koffer, Vorlagen, Eingabehinweis, Ergebnis-Zeile
 ```

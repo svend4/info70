@@ -6,6 +6,6 @@
   "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {
-    "test": "node --test test/koffer.test.mjs test/vorlagen.test.mjs test/eingabe-hinweis.test.mjs"
+    "test": "node --test test/koffer.test.mjs test/vorlagen.test.mjs test/eingabe-hinweis.test.mjs test/ergebnis.test.mjs"
   }
 }

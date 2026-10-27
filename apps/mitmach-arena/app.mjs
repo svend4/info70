@@ -8,6 +8,7 @@ import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/ind
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { packeKoffer, pruefeKoffer, vereinigeKoffer } from './koffer.mjs';
 import { KLASSENRAT_VORLAGEN, ausVorlage } from './vorlagen.mjs';
+import { meisteStimmenText } from './ergebnis.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -117,17 +118,17 @@ function ergebnisBildschirm(kofferMeldung = null) {
   const u = lade();
   if (!u) return startBildschirm();
   const gesamt = Math.max(1, u.stimmen.reduce((a, b) => a + b, 0));
-  const maxStimmen = Math.max(...u.stimmen);
+  const meiste = meisteStimmenText(u);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { style: 'font-weight:600' }, u.frage),
       ...u.optionen.map((o, i) => {
         const anteil = Math.round((u.stimmen[i] / gesamt) * 100);
-        const gewinner = u.stimmen[i] === maxStimmen && maxStimmen > 0;
         return el('div', { style: 'margin:0.75rem 0' },
-          el('p', { style: 'margin:0 0 0.25rem' }, `${gewinner ? '🏆 ' : ''}${o} – ${u.stimmen[i]} (${anteil}%)`),
+          el('p', { style: 'margin:0 0 0.25rem' }, `${o} – ${u.stimmen[i]} (${anteil}%)`),
           el('div', { class: 'k-fortschritt' }, el('div', { style: `width:${anteil}%` })));
       }),
+      meiste ? el('p', { style: 'font-weight:600' }, meiste) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: abstimmenBildschirm }, '▶️ Weiter abstimmen'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

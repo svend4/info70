@@ -87,17 +87,18 @@ export function vereinige(eintraege) {
   return karte;
 }
 
-/** Die Summen je Angebot und die Zahl der Familien. Keine Namen, keine Liste der Codes. */
+/** Die Rückmeldungen je Angebot (Zahl der Häkchen „interessiert“ und „kann mithelfen“) und die Zahl
+ *  der Familien. Gezählt werden Häkchen zu Angeboten, kein Kind wird bewertet. Keine Namen, keine Liste der Codes. */
 export function zaehle(karte, daten) {
-  const summen = Object.fromEntries(alleIds(daten).map((id) => [id, { interessiert: 0, mithilfe: 0 }]));
+  const rueckmeldungen = Object.fromEntries(alleIds(daten).map((id) => [id, { interessiert: 0, mithilfe: 0 }]));
   for (const stimmen of karte.values()) {
     for (const s of stimmen) {
-      if (!summen[s.id]) continue;
-      if (s.interessiert) summen[s.id].interessiert += 1;
-      if (s.mithilfe) summen[s.id].mithilfe += 1;
+      if (!rueckmeldungen[s.id]) continue;
+      if (s.interessiert) rueckmeldungen[s.id].interessiert += 1;
+      if (s.mithilfe) rueckmeldungen[s.id].mithilfe += 1;
     }
   }
-  return { familien: karte.size, summen };
+  return { familien: karte.size, rueckmeldungen };
 }
 
 export function pruefeDaten(daten) {

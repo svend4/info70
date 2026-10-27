@@ -1,7 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { CODES, bewerte, vergleiche, rundeErgebnis, familienBotschaft } from '../logik.mjs';
+import * as logik from '../logik.mjs';
+
+const { CODES, vergleiche, rundeErgebnis, familienBotschaft } = logik;
 
 const daten = JSON.parse(await readFile(new URL('../daten/szenarien.json', import.meta.url), 'utf8'));
 const szenarien = daten.szenarien;
@@ -29,39 +31,42 @@ test('inhaltliche Abdeckung: Überwachung als Privatsphäre-Frage', () => {
   assert.match(text, /sharenting|posten|foto/, 'Sharenting');
 });
 
-test('bewerte: beste=2, auchOk=1, sonst 0', () => {
-  const s = { beste: 'ablehnen', auchOk: ['fragen'] };
-  assert.equal(bewerte(s, 'ablehnen'), 2);
-  assert.equal(bewerte(s, 'fragen'), 1);
-  assert.equal(bewerte(s, 'geben'), 0);
-  assert.equal(bewerte(s, undefined), 0);
+test('Abwesenheit: bewerte gibt es nicht mehr, der Bildschirm zeigt keine Edelsteine und keine Punktfelder', async () => {
+  assert.equal('bewerte' in logik, false, 'bewerte entfernt');
+  assert.deepEqual(Object.keys(logik).sort(), ['CODES', 'familienBotschaft', 'rundeErgebnis', 'vergleiche']);
+  const quelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(quelle, /💎/, 'kein Edelstein-Symbol');
+  assert.doesNotMatch(quelle, /kindPunkte|elternPunkte|kindGesamt|elternGesamt|maxPunkte/, 'keine Punktfelder');
+  assert.match(quelle, /Ihr wart euch einig/, 'Satz für gleiche Antworten bleibt');
+  assert.match(quelle, /Ihr habt unterschiedlich entschieden/, 'Satz für verschiedene Antworten bleibt');
+  assert.match(quelle, /Faire Wahl/, 'faire Wahl bleibt');
 });
 
-test('vergleiche: Punkte beider + einig-Flag', () => {
+test('vergleiche: nur einig-Flag und faire Wahl, keine Punkte von Kind oder Eltern', () => {
   const s = { beste: 'fragen', auchOk: ['geben'] };
   const v = vergleiche(s, 'fragen', 'geben');
-  assert.equal(v.kindPunkte, 2);
-  assert.equal(v.elternPunkte, 1);
   assert.equal(v.einig, false);
   assert.equal(v.beste, 'fragen');
+  assert.deepEqual(Object.keys(v).sort(), ['beste', 'einig'], 'sonst nichts');
+  assert.equal('kindPunkte' in v, false);
+  assert.equal('elternPunkte' in v, false);
   assert.equal(vergleiche(s, 'geben', 'geben').einig, true);
 });
 
-test('rundeErgebnis: Summen, Einigkeit, Maximum', () => {
+test('rundeErgebnis: nur Zahl der einigen Situationen und Gesamtzahl, keine Summen', () => {
   const drei = szenarien.slice(0, 3);
-  const kind = drei.map((s) => s.beste);          // alles beste
+  const kind = drei.map((s) => s.beste);
   const eltern = drei.map((s) => s.beste);
   const r = rundeErgebnis(drei, kind, eltern);
-  assert.equal(r.kindGesamt, 6);
-  assert.equal(r.elternGesamt, 6);
   assert.equal(r.einigCount, 3);
   assert.equal(r.gesamt, 3);
-  assert.equal(r.maxPunkte, 6);
+  assert.deepEqual(Object.keys(r).sort(), ['einigCount', 'gesamt']);
 
   // Uneinigkeit
   const eltern2 = drei.map((s) => (s.beste === 'geben' ? 'ablehnen' : 'geben'));
   const r2 = rundeErgebnis(drei, kind, eltern2);
-  assert.ok(r2.einigCount < 3);
+  assert.equal(r2.einigCount, 0);
+  assert.equal(r2.gesamt, 3);
 });
 
 test('familienBotschaft: kein Gewinner, Gesprächsanlass', () => {

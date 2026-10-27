@@ -32,14 +32,16 @@ Vertrag (Hash-Parameter) definiert; App-seitige Umsetzung ist Ausbaustufe.
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei. Lokal gespeichert wird
-nur die aktuelle Stationsliste (`sk.stationen`), löschbar. Konfig-Link ist
+nur die aktuelle Stationsliste (`sk.stationen`); „🧹 Alles löschen“ (nach
+Bestätigung) leert die Liste und entfernt den Schlüssel vom Gerät. Konfig-Link ist
 ein reiner URL-Hash (kein Server). Schulwerkzeug ohne eltern.html.
 
 ## 6. Tests
 
 `test/konfigurator.test.mjs`: baueStation/pruefeStation, stationsLink
 (Modul+gesperrt), kodiere/dekodiere-Round-Trip (Umlaute/Emoji), konfigLink/
-ausHash-Round-Trip, kaputter Hash -> [], gesamtdauer, baueLaufzettel.
+ausHash-Round-Trip, kaputter Hash -> [], gesamtdauer, baueLaufzettel. `test/speicher.test.mjs`:
+ein Schreibweg, „Alles löschen“ ruft removeItem auf den Schlüssel auf.
 
 ## 7. Erweiterungen (Katalog)
 

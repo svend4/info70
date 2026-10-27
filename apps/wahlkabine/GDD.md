@@ -19,7 +19,7 @@ kinderrat, aemtli-rad, regel-werkstatt.
 
 1) Frage, Antworten und Wählerzahl eingeben.
 2) Gerät herumreichen: jede*r wählt geheim, Stimme wird versiegelt.
-3) Nach der letzten Stimme: Ergebnis mit Balken, Gewinner oder Gleichstand.
+3) Nach der letzten Stimme: Ergebnis mit Balken und der neutralen Zeile „Meiste Stimmen: …“ oder Gleichstand.
 
 ## 4. Didaktik / Nutzen
 
@@ -38,8 +38,9 @@ Stimme→Person (Test sichert das ab). Kein eltern.html (Schulwerkzeug).
 
 `test/logik.test.mjs`: neueWahl (Zähler 0, keine Personen-Zuordnung),
 stimmeAb (nur gewählter Zähler steigt), fertig/offen (erst nach letzter
-Stimme, keine Überstimmen), ergebnis (sortiert, eindeutiger Gewinner),
-Gleichstand-Erkennung.
+Stimme, keine Überstimmen), ergebnis (sortiert, eindeutig meiste Stimmen),
+Gleichstand-Erkennung, ergebnisZeile (neutrale Zeile) und eine
+Abwesenheitsprüfung (kein Siegerzeichen, keine Siegerformulierung im Code).
 
 ## 7. Erweiterungen (Katalog)
 

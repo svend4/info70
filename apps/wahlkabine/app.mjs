@@ -6,7 +6,7 @@
 import { el, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
-import { neueWahl, stimmeAb, fertig, offen, ergebnis } from './logik.mjs';
+import { neueWahl, stimmeAb, fertig, offen, ergebnis, ergebnisZeile } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -95,7 +95,7 @@ function ergebnisBildschirm() {
         el('div', { style: 'display:flex;justify-content:space-between' }, el('span', {}, z.text), el('span', { style: 'font-weight:700' }, `${z.stimmen}`)),
         el('div', { style: 'background:#e5e7eb;border-radius:0.4rem;overflow:hidden;height:1.1rem' },
           el('div', { style: `width:${Math.round((z.stimmen / max) * 100)}%;background:var(--k-blau-dunkel);height:100%` })))),
-      el('p', { style: 'margin-bottom:0;font-weight:600' }, e.gleichstand ? '🤝 Gleichstand – vielleicht noch einmal reden und wählen?' : e.gewinner ? `🏆 Gewonnen hat: ${e.gewinner}` : 'Noch keine Stimmen.'),
+      el('p', { style: 'margin-bottom:0;font-weight:600' }, ergebnisZeile(e)),
       el('p', { style: 'font-size:0.9rem;color:#4b5563' }, `${e.gesamt} Stimmen · geheim abgegeben, kein Kind ist einer Stimme zuzuordnen.`)),
     el('section', { class: 'k-karte' },
       el('button', { class: 'k-knopf', onclick: () => { loesche(); startBildschirm(); } }, '🔁 Neue Wahl')));

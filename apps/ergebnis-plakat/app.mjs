@@ -6,7 +6,7 @@
 import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { pruefeKoffer } from '../mitmach-arena/koffer.mjs';
-import { baueBalken } from './plakat.mjs';
+import { baueBalken, fussText } from './plakat.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -44,15 +44,11 @@ function plakat() {
     el('p', { class: 'ep-frage' }, p.frage),
     ...p.balken.map((b, i) => el('div', { style: 'margin:0.6rem 0' },
       el('div', { style: 'display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem' },
-        el('span', {}, `${b.gewinner ? '🏆 ' : ''}${b.text}`),
+        el('span', {}, b.text),
         el('span', {}, `${b.prozent} % (${b.stimmen})`)),
       el('div', { style: 'background:#e5e7eb;border-radius:0.5rem;overflow:hidden;height:2rem;margin-top:0.2rem' },
         el('div', { class: 'ep-balken', style: `width:${Math.max(2, b.prozent)}%;background:${FARBEN[i % FARBEN.length]};height:100%` })))),
-    el('p', { class: 'ep-fuss' }, p.gleichstand
-      ? `🤝 Unentschieden – ${p.gesamt} Stimmen insgesamt.`
-      : p.gewinner
-        ? `🏆 Gewonnen hat: ${p.gewinner} · ${p.gesamt} Stimmen insgesamt.`
-        : 'Noch keine Stimmen abgegeben.'));
+    el('p', { class: 'ep-fuss' }, fussText(p)));
 }
 
 function render() {

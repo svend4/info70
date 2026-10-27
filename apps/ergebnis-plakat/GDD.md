@@ -19,7 +19,7 @@ kinderrat, familienrat.
 ## 3. Ablauf
 
 1) Klassen-Koffer-Datei importieren (oder laufende Umfrage laden / Beispiel).
-2) Großes Balkendiagramm mit %, Gewinner 🏆 / Gleichstand.
+2) Großes Balkendiagramm mit %; darunter die neutrale Zeile „Meiste Stimmen: …“ oder „Unentschieden“ (ohne Siegerzeichen).
 3) Plakat drucken (Balkenfarben werden mitgedruckt).
 
 ## 4. Didaktik / Nutzen
@@ -35,9 +35,10 @@ ohne eltern.html.
 
 ## 6. Tests
 
-`test/plakat.test.mjs`: baueBalken (Sortierung, Prozente, eindeutiger
-Gewinner, Gleichstand, keine Stimmen) und Format-Kompatibilität mit dem
-mitmach-arena Klassen-Koffer (pruefeKoffer).
+`test/plakat.test.mjs`: baueBalken (Sortierung, Prozente, meiste Stimmen
+eindeutig, Gleichstand, keine Stimmen), fussText (neutrale Fußzeile), eine
+Abwesenheitsprüfung (kein Siegerzeichen, keine Siegerformulierung im Code) und
+Format-Kompatibilität mit dem mitmach-arena Klassen-Koffer (pruefeKoffer).
 
 ## 7. Erweiterungen (Katalog)
 

@@ -79,7 +79,7 @@ test('dieselbe Familie zweimal zählt einmal – die spätere Datei gilt', () =>
   assert.equal(karte.size, 1);
   const z = zaehle(karte, daten);
   assert.equal(z.familien, 1);
-  assert.deepEqual(z.summen.f01, { interessiert: 0, mithilfe: 1 });
+  assert.deepEqual(z.rueckmeldungen.f01, { interessiert: 0, mithilfe: 1 });
 });
 
 test('die Summen nennen keine Codes und keine Namen', () => {
@@ -89,7 +89,7 @@ test('die Summen nennen keine Codes und keine Namen', () => {
   ]);
   const z = zaehle(karte, daten);
   assert.equal(z.familien, 2);
-  assert.deepEqual(z.summen.f02, { interessiert: 2, mithilfe: 1 });
+  assert.deepEqual(z.rueckmeldungen.f02, { interessiert: 2, mithilfe: 1 });
   assert.equal(/ABCDEF|GHJKLM/.test(JSON.stringify(z)), false);
 });
 

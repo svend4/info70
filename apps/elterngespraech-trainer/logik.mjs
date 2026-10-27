@@ -26,8 +26,10 @@ export const SCHULDZUWEISUNG = /\bliegt an der Erziehung\b|\bSie sind schuld\b|\
 export const ETIKETT = /\bDiagnose\b|\bDefizit\b|\bStörung\b|\bEntwicklungsverzögerung\b|\bProblemeltern\b|\bschwierige Eltern\b|\bbildungsferne Eltern\b/i;
 export const ANGST = /\bdürfen Sie sich nicht wundern\b|\bhinterherhinkt\b/i;
 
-/** Eine Gesamtzahl über Situationen: „von X Punkten“, „Gesamtpunkt“. */
-export const GESAMTWERTUNG = /\bvon \d+ Punkten\b|\bGesamtpunkt|\bRangliste\b|\bRanking\b/i;
+// Das Wort „Rangliste“ steht nicht in diesem Muster: der Wertungs-Stand
+// (packages/kinderschutz/src/bewertung-stand.mjs) prüft es ohnehin in allen Dateien der App.
+/** Eine Gesamtzahl über Situationen: „von X Punkten“, „Gesamtpunkt“, „Ranking“. */
+export const GESAMTWERTUNG = /\bvon \d+ Punkten\b|\bGesamtpunkt|\bRanking\b/i;
 
 /** Eine Seitenangabe, die eine Quelle nennt: „S. 23“, „PDF-S. 48“. */
 export const SEITE = /(?:PDF-)?S\.\s?\d+/;

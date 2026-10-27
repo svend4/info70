@@ -1,12 +1,14 @@
 // Kettenbrief-Stopper: erlebbare Simulation (8-12 Jahre), mehrsprachig (mini-i18n).
 // Eine Kettennachricht/Mutprobe/Gerücht rast durch die Klasse; das Kind erlebt
 // den Moment, in dem sie es selbst erreicht - und was sein "Stopp" verändert.
-// Politik: keine externen Anfragen; diese App speichert GAR NICHTS (außer der
-// Sprachwahl). Texte in daten/sprachen.json.
+// Politik: keine externen Anfragen; diese App speichert nur die Sprachwahl
+// (Schlüssel SPRACH_SCHLUESSEL, nur auf diesem Gerät) und hat dafür einen
+// Löschknopf auf dem Startbildschirm. Texte in daten/sprachen.json.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { erstelleSprache } from '../../packages/kinder-ui/js/sprache.mjs';
+import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { setzeRichtung } from '../../packages/kinder-ui/js/richtung.mjs';
 import { leichteSpracheSchalter, basisCode } from '../../packages/kinder-ui/js/leichte-sprache.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
@@ -18,7 +20,9 @@ bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
 const app = document.getElementById('app');
 const kataloge = await fetch('daten/sprachen.json').then((r) => r.json());
-const sprache = erstelleSprache({ kataloge, standard: 'de', speicherSchluessel: 'ks.sprache' });
+/** Der einzige Speicherschlüssel dieser App: die Sprachwahl (auch Leichte Sprache). */
+const SPRACH_SCHLUESSEL = 'ks.sprache';
+const sprache = erstelleSprache({ kataloge, standard: 'de', speicherSchluessel: SPRACH_SCHLUESSEL });
 const t = (k, e) => sprache.t(k, e);
 setzeRichtung(sprache.aktuelle());
 
@@ -33,6 +37,8 @@ let runde;
 let entscheidungGefallen;
 let stopper;
 let immun;
+/** Merkt über das Neuzeichnen hinweg, dass gerade gelöscht wurde: die neue Karte meldet es. */
+let datenGeloescht = false;
 
 const aktiv = () => baueTyp(aktiverTyp, t);
 
@@ -61,6 +67,25 @@ function sprachWahl() {
     // Leichte-Sprache-Schalter (BFSG): erscheint nur, weil ein de-ls-Katalog existiert.
     el('div', { style: 'margin-top:0.5rem' },
       leichteSpracheSchalter({ sprache, neuZeichnen: startBildschirm })));
+}
+
+/** Löschknopf für die gemerkte Sprachwahl (Speicherregel: Speicher ⇒ Löschknopf). */
+function datenKarte() {
+  const meldung = el('p', { style: 'margin:0.4rem 0 0;font-weight:700', 'aria-live': 'polite' }, datenGeloescht ? t('daten_geloescht') : '');
+  datenGeloescht = false;
+  return el('section', { class: 'k-karte' },
+    el('p', { style: 'margin-top:0' }, t('daten_hinweis')),
+    el('button', {
+      id: 'daten-loeschen',
+      class: 'k-knopf k-knopf--neutral k-knopf--klein',
+      onclick: () => {
+        loescheDaten(SPRACH_SCHLUESSEL);
+        datenGeloescht = true;
+        startBildschirm();
+        document.getElementById('daten-loeschen')?.focus();
+      },
+    }, t('daten_loeschen')),
+    meldung);
 }
 
 function gitter() {
@@ -93,8 +118,7 @@ function startBildschirm() {
             el('button', { class: 'k-knopf', onclick: () => starteExperiment(struktur) }, t('experiment_starten', { titel: typ.titel })),
             el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${typ.intro} ${typ.nachricht}`, stimme()) }, t('vorlesen'))));
       })),
-    el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, t('speichert_nichts'))),
+    datenKarte(),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }

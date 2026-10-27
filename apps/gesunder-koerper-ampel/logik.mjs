@@ -9,6 +9,10 @@
 /** So viele Tage zeigt der Rückblick – und so viele werden gespeichert. */
 export const TAGE_IM_RUECKBLICK = 7;
 
+/** Die Schlüssel der obersten Ebene, die die Daten haben dürfen. Jeder andere Schlüssel
+ *  ist ein Fehler: so kann keine Tabelle, keine Wertung und kein Zähler hineinkommen. */
+export const ERLAUBTE_SCHLUESSEL = Object.freeze(['version', 'zielgruppe', 'stufen', 'faktoren']);
+
 /** Die drei Selbstauskunfts-Stufen in fester Reihenfolge. */
 export const STUFEN_IDS = ['viel', 'etwas', 'nochNicht'];
 
@@ -80,11 +84,16 @@ export function alleBeantwortet(eintrag, faktoren) {
 /**
  * Validiert die Faktor-Daten. Prüft neben der Vollständigkeit ausdrücklich
  * die Politik dieser App: genau drei Stufen ohne Zahlenwert, kein Rot,
- * keine Ränge – damit aus der Selbstbeobachtung kein Bewertungswerkzeug
- * werden kann (EU AI Act: kein Scoring von Kindern).
+ * nur die erlaubten Schlüssel oben – damit aus der Selbstbeobachtung kein
+ * Bewertungswerkzeug werden kann (EU AI Act: kein Scoring von Kindern).
  */
 export function pruefeFaktoren(daten) {
   const fehler = [];
+  if (daten && typeof daten === 'object') {
+    for (const k of Object.keys(daten)) {
+      if (!ERLAUBTE_SCHLUESSEL.includes(k)) fehler.push(`unbekannter Schlüssel: ${k} (diese App bewertet Kinder nicht)`);
+    }
+  }
   const faktoren = daten?.faktoren;
   if (!Array.isArray(faktoren) || faktoren.length < 4) {
     fehler.push('faktoren: mindestens 4 erwartet');
@@ -129,6 +138,5 @@ export function pruefeFaktoren(daten) {
       if (s.emoji === '🔴' || s.emoji === '❌') fehler.push(`Stufe ${s.id}: kein Rot – ein ruhiger Tag ist kein Fehler`);
     }
   }
-  if (daten && 'raenge' in daten) fehler.push('raenge: diese App bewertet Kinder nicht');
   return fehler;
 }

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { STUFEN_RANG } from '../logik.mjs';
+import { STUFEN_REIHENFOLGE } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/fragen.json', import.meta.url), 'utf8'));
 
@@ -42,7 +42,7 @@ test('Stufen: 4-stufige Selbsteinschätzung, eindeutig, passend zur Logik', () =
   const ids = daten.stufen.map((s) => s.id);
   assert.equal(new Set(ids).size, 4, 'Stufen-Kennungen eindeutig');
   for (const s of daten.stufen) {
-    assert.ok(Object.hasOwn(STUFEN_RANG, s.id), `Stufe ${s.id} ist der Logik unbekannt`);
+    assert.ok(Object.hasOwn(STUFEN_REIHENFOLGE, s.id), `Stufe ${s.id} ist der Logik unbekannt`);
     assert.ok(s.text.startsWith('trifft'), `Stufe ${s.id}: Text muss eine "trifft ..."-Formulierung sein`);
   }
 });
