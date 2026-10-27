@@ -40,7 +40,7 @@ function startBildschirm() {
       el('p', {}, `Gemeine Nachrichten, fiese Gruppen, peinliche Fotos: In ${daten.szenarien.length} Chat-Situationen entscheidest du, was du tust. Kleine Züge, große Wirkung – du hast mehr Macht, als du denkst.`),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Training starten'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Gemeine Nachrichten, fiese Gruppen, peinliche Fotos. In zehn Chat-Situationen entscheidest du, was du tust. Du hast mehr Macht, als du denkst.') }, '🔊 Vorlesen'))),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Gemeine Nachrichten, fiese Gruppen, peinliche Fotos. In ${daten.szenarien.length} Chat-Situationen entscheidest du, was du tust. Du hast mehr Macht, als du denkst.`) }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0' }, '💛 Wichtig: Wirst du selbst gemobbt? Das ist NIE deine Schuld. Sprich mit Erwachsenen – oder ruf kostenlos und anonym an: Nummer gegen Kummer 116 111.')),
     el('section', { class: 'k-karte' },
