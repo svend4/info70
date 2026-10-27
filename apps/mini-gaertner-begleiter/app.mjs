@@ -88,9 +88,8 @@ function tagebuchKarte() {
         el('div', { style: 'flex:1;border:1px dashed #9ca3af;border-radius:0.3rem;min-height:4.2rem;padding:0.2rem;color:#6b7280;font-size:0.8rem' }, 'So sieht meine Pflanze aus (malen):'),
         el('div', { style: 'width:11rem;font-size:0.85rem' },
           el('p', { style: 'margin:0' }, 'So groß: ______ cm'),
-          el('p', { style: 'margin:0.3rem 0 0' }, 'Ich habe:'),
-          el('p', { style: 'margin:0.1rem 0 0' }, '☐ gegossen'),
-          el('p', { style: 'margin:0.1rem 0 0' }, '☐ gelockert · ☐ gejätet')))));
+          el('p', { style: 'margin:0.3rem 0 0' }, 'Ich habe (Zutreffendes einkreisen):'),
+          el('p', { style: 'margin:0.1rem 0 0' }, 'gegossen · gelockert · gejätet')))));
   }
   return el('section', { class: 'k-karte mgb-blatt' },
     // Keine Zeile fuer den Namen: ein Druckblatt mit Namensfeld ist der
