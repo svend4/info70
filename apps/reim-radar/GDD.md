@@ -20,7 +20,8 @@ junior.
 
 1) Gemeinsamer Start (Erwachsener liest/klatscht mit).
 2) 8 Aufgaben aus 14 (quiz-kern mischt, Vorlesen je Aufgabe).
-3) Punkte + Rang + Rekord; Duett-/Staffel-/Klassen-Modus vom quiz-kern geerbt.
+3) Rundenende ohne Wertung (keine Punkte, kein Rekord, keine Ränge);
+   Duett-/Staffel-/Klassen-Modus vom quiz-kern geerbt.
 
 ## 4. Didaktik / Nutzen
 
@@ -30,8 +31,9 @@ und Anlautbeispiele sind Eigenproduktion (kein Buchtext aus der Quelle).
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), keine Konten, nur Rekord in
-localStorage (reimradar.rekord). Werbefrei. Vorlesen (BFSG). Kinder-/Ko-
+Keine externen Anfragen (NetzwerkWaechter), keine Konten, nichts
+gespeichert (der frühere Schlüssel reimradar.rekord wird beim Start einmal
+entfernt). Werbefrei. Vorlesen (BFSG). Kinder-/Ko-
 Nutzungs-App mit eltern.html, im Eltern-Sammelband. Praleska-Adaption:
 deutsche Reim-/Anlautbeispiele, uk/ru als spätere Herkunftssprachen-Chance.
 
@@ -39,7 +41,8 @@ deutsche Reim-/Anlautbeispiele, uk/ru als spätere Herkunftssprachen-Chance.
 
 `test/fragen.test.mjs`: quiz-kern-Schema gültig (pruefeFragen), Mischung
 binär/wahl (Reim ja UND nein), Abdeckung (Reim/Anlaut/Wortlänge/Silben),
-Ränge in 8er-Runde erreichbar, Mindestvorrat 12.
+keine Ränge in den Daten, App-Code ohne Wertung und ohne Speicher,
+Mindestvorrat 12.
 
 ## 7. Erweiterungen (Katalog)
 

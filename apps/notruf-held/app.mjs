@@ -1,18 +1,18 @@
 // Notruf-Held: simulierter Wähltastatur-Trainer für 112 und 110 (5-7).
 // Das Kind erkennt die richtige Nummer, "wählt" sie auf einer Tastatur und
 // übt, was man am Telefon sagt. KEIN echter Anruf, keine Datenerfassung.
-// Praleska docs/10 (Top-30 Nr. 8). Politik docs/02: keine externen Anfragen.
+// Praleska docs/10 (Top-30 Nr. 8). Politik docs/02: keine externen Anfragen,
+// nichts im Speicher; das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
-import { nurZiffern, pruefeAnruf, rueckmeldung, bewerteRunde } from './logik.mjs';
+import { nurZiffern, pruefeAnruf, rueckmeldung } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
 
-const REKORD = 'notruf.rekord';
+try { localStorage.removeItem('notruf.rekord'); } catch {}
 const RUNDE = 6;
 const app = document.getElementById('app');
 const daten = await fetch('daten/situationen.json').then((r) => r.json());
@@ -20,7 +20,6 @@ const daten = await fetch('daten/situationen.json').then((r) => r.json());
 let runde = [];
 let index = 0;
 let eingabe = '';
-const eingaben = {};
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -28,14 +27,13 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, '112 und 110 üben – für den Notfall'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · kein echter Anruf · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · kein echter Anruf · nichts wird gespeichert ·'),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function start() {
-  const rekord = Number(localStorage.getItem(REKORD) ?? 0);
   const intro = 'Übe den Notruf. 112 ist für Feuerwehr und Rettung. 110 ist für die Polizei. Das ist nur zum Üben – es wird niemand echt angerufen.';
   zeige(
     el('section', { class: 'k-karte' },
@@ -43,11 +41,9 @@ function start() {
       el('p', {}, el('strong', {}, '112'), ' – Feuerwehr und Rettung.'),
       el('p', {}, el('strong', {}, '110'), ' – Polizei.'),
       el('p', { style: 'font-size:0.9rem;color:#4b5563' }, 'Das ist nur zum Üben. Es wird niemand echt angerufen.'),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE} 🏅`) : '',
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(intro) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))),
-    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: start })))));
 }
@@ -56,7 +52,6 @@ function starteRunde() {
   runde = mischen(daten.situationen).slice(0, Math.min(RUNDE, daten.situationen.length));
   index = 0;
   eingabe = '';
-  for (const k of Object.keys(eingaben)) delete eingaben[k];
   frage();
 }
 
@@ -101,7 +96,6 @@ function frage() {
 function anrufen(s) {
   const zahl = nurZiffern(eingabe);
   if (zahl.length < 3) { aktualisiereAnzeige(); return; }
-  eingaben[s.id] = zahl;
   const p = pruefeAnruf(zahl, s.nummer);
   const text = rueckmeldung(zahl, s.nummer, daten.nummern);
   const letzte = index + 1 >= runde.length;
@@ -110,7 +104,7 @@ function anrufen(s) {
   const vorleseText = `${text} Am Telefon sagst du: ${daten.notrufSchritte.join(' ')}`;
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, p.ok ? '🌟' : '💭'),
+      el('p', { class: 'k-gross' }, p.ok ? '📞' : '💭'),
       el('div', { class: `k-hinweis${p.ok ? ' k-hinweis--richtig' : ''}` },
         el('p', { style: 'font-weight:700;margin-top:0' }, p.ok ? 'Richtig gewählt!' : 'Schau nochmal:'),
         el('p', {}, text),
@@ -130,14 +124,11 @@ function weiter() {
 }
 
 function ende() {
-  const { richtig, gesamt } = bewerteRunde(runde, eingaben);
-  const rekordAlt = Number(localStorage.getItem(REKORD) ?? 0);
-  if (richtig > rekordAlt) localStorage.setItem(REKORD, String(richtig));
-  const schluss = `Du hast ${richtig} von ${gesamt} Notrufen richtig gewählt. Übe den Notruf auch mit einem Erwachsenen: deinen Namen und deine Adresse laut sagen.`;
+  const schluss = 'Ende der Runde. Übe den Notruf auch mit einem Erwachsenen: deinen Namen und deine Adresse laut sagen.';
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, richtig === gesamt ? '🏅' : '💪'),
-      el('p', { style: 'font-weight:700;text-align:center;font-size:1.2em' }, `${richtig} von ${gesamt} richtig gewählt`),
+      el('p', { class: 'k-gross' }, '🚑'),
+      el('p', { style: 'font-weight:700;text-align:center;font-size:1.2em' }, 'Ende der Runde'),
       el('p', { style: 'text-align:center' }, '👉 Übe mit einem Erwachsenen: Name und Adresse laut sagen.'),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(schluss) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },

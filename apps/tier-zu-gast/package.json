@@ -2,7 +2,7 @@
   "name": "@info70/tier-zu-gast",
   "version": "0.1.0",
   "private": true,
-  "description": "Ein Tier zu Gast - Verantwortungs-Trainer (5-7 und 8-12): Szenario-Trainer (Situation -> 3 Optionen 2/1/0 mit Erklaerung) rund um Meerschweinchen, Hamster, Kaninchen und Wellensittich. Kernbotschaften nach deutschem Tierschutz-Alltagswissen: soziale Tiere nie einzeln halten, Hamster sind nachtaktiv, Fluchttiere nicht hochheben, Heu+Gemuese statt Suessigkeiten, Ruhe und Sauberkeit, kranke Tiere zum Tierarzt, Sommerhitze ist gefaehrlich. Vorlesen fuer Nichtleser, 10 Szenen, Raenge. Praleska docs/10 (Kinder-Apps Nr. 4). Offline, werbefrei, nur Rekord lokal (loeschbar).",
+  "description": "Ein Tier zu Gast - Verantwortungs-Trainer (5-7 und 8-12): Szenario-Trainer (Situation -> 3 Optionen 2/1/0 mit Erklaerung) rund um Meerschweinchen, Hamster, Kaninchen und Wellensittich. Kernbotschaften nach deutschem Tierschutz-Alltagswissen: soziale Tiere nie einzeln halten, Hamster sind nachtaktiv, Fluchttiere nicht hochheben, Heu+Gemuese statt Suessigkeiten, Ruhe und Sauberkeit, kranke Tiere zum Tierarzt, Sommerhitze ist gefaehrlich. Vorlesen fuer Nichtleser, 10 Szenen. Praleska docs/10 (Kinder-Apps Nr. 4). Offline, werbefrei, speichert nichts.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

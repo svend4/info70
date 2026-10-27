@@ -9,11 +9,18 @@ test('Fragenbank: Schema gültig (quiz-kern)', () => {
   assert.deepEqual(pruefeFragen(daten, { mindestFragen: 16, mindestErklaerung: 80 }), []);
 });
 
-test('Ränge beginnen bei 0 und sind in einer 12er-Runde erreichbar', () => {
-  const raenge = daten.raenge;
-  assert.equal(raenge[0].ab, 0);
-  for (let i = 1; i < raenge.length; i++) assert.ok(raenge[i].ab > raenge[i - 1].ab, 'aufsteigend');
-  assert.ok(raenge.at(-1).ab <= 12, 'höchster Rang muss in einer Runde erreichbar sein');
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die 12er-Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+  assert.ok(daten.fragen.length >= 12, 'genug Fragen für eine 12er-Runde');
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.match(code, /^\s*rekordSchluessel: 'koerper\.rekord',\s*$/m, 'der alte Schlüssel wird nur über die Migrationszeile genannt');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar per Knopf|in der App löschen/, 'ohne Speicher kein Löschknopf');
 });
 
 test('binäre Fragen: beide Antworten kommen vor, Wahlantworten stehen nicht immer gleich', () => {

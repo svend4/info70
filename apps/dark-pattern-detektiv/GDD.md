@@ -16,8 +16,8 @@ lootbox-labor, muenz-trick, formular-falle. Bindet Hilfe-Insel ein.
 ## 3. Ablauf
 
 Start → 8 UI-Ausschnitte → 3 Optionen (2/1/0) → Auflösung: Erklärung +
-🏷️ Muster-Name. Wert-2-Antworten sammeln die entlarvten Muster; Ränge +
-Rekord. Hilfe-Insel jederzeit.
+🏷️ Muster-Name. Wert-2-Antworten sammeln die entlarvten Muster; am Ende steht
+„Ende der Runde“ ohne Wertung. Hilfe-Insel jederzeit.
 
 ## 4. Didaktik
 
@@ -29,15 +29,17 @@ Reaktion ist immer benannt.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), nur `dpd.rekord` + Löschung,
-werbefrei, Vorlesen, mobile-first, eltern.html, Hilfe-Insel (116 111).
-Beispiele erfunden, plattformneutral.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei, Vorlesen, mobile-first,
+eltern.html, Hilfe-Insel (116 111). Beispiele erfunden, plattformneutral.
+Die App speichert nichts und kennt keine Punkte, keinen Rekord, keine Ränge;
+der frühere Schlüssel `dpd.rekord` wird beim Start einmal entfernt.
 
 ## 6. Tests
 
-`test/szenarien.test.mjs`: Schema/Ränge, je Szenario Muster-Name +
-Erklärung + 2/1/0 (genau eine 2, mind. eine 0), Muster-Breite (5 Typen),
-Benennung in der Auflösung + Weitergeben-Szenario + Hilfe-Insel.
+`test/szenarien.test.mjs`: Schema, keine Ränge in den Daten, je Szenario
+Muster-Name + Erklärung + 2/1/0 (genau eine 2, mind. eine 0), Muster-Breite
+(5 Typen), Benennung in der Auflösung + Weitergeben-Szenario + Hilfe-Insel,
+App-Code ohne Wertung und ohne Speicher (nur die Migration des alten Schlüssels).
 
 ## 7. Erweiterungen (Katalog)
 

@@ -2,12 +2,6 @@
   "version": 1,
   "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
   "hinweis": "Namen, die halten was sie versprechen, stehen neben Namen, die in die Irre führen. Beide Sorten kommen vor – sonst lernt das Kind, dem Namen blind zu glauben.",
-  "raenge": [
-    { "ab": 0, "titel": "Wort-Neugierige*r", "emoji": "🌱" },
-    { "ab": 4, "titel": "Namen-Spürnase", "emoji": "🔎" },
-    { "ab": 8, "titel": "Wort-Forscher*in", "emoji": "📖" },
-    { "ab": 12, "titel": "Sprach-Expert*in", "emoji": "🏆" }
-  ],
   "fragen": [
     {
       "id": "w01",

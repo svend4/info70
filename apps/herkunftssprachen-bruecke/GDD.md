@@ -20,7 +20,8 @@ mathe-entdecker, gefuehle-entdecker, nachrichten-detektive-junior.
 1) Start (Vorlesen), Prinzip Brücken-Wörter vs. falsche Freunde.
 2) 11 Fälle aus 14 (quiz-kern mischt, Vorlesen). Kyrillisch stets mit
    Transliteration in Klammern.
-3) Punkte + Rang + Rekord; Duett-/Staffel-/Klassen-Modus vom quiz-kern geerbt.
+3) Ende der Runde ohne Wertung; Duett-/Staffel-/Klassen-Modus vom quiz-kern
+   geerbt.
 
 ## 4. Didaktik / Nutzen
 
@@ -32,16 +33,18 @@ beschränkt (Kognate, klassische falsche Freunde) – Genauigkeit vor Menge.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), keine Konten, nur Rekord in
-localStorage (herkunft.rekord). Werbefrei. Vorlesen (BFSG). Kinder-/Familien-App
-mit eltern.html, im Eltern-Sammelband.
+Keine externen Anfragen (NetzwerkWaechter), keine Konten. Die App speichert
+nichts und kennt keine Punkte, keinen Rekord, keine Ränge; der frühere
+Schlüssel `herkunft.rekord` wird beim Start einmal entfernt. Werbefrei.
+Vorlesen (BFSG). Kinder-/Familien-App mit eltern.html, im Eltern-Sammelband.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema, Mischung binär/wahl (Brücken JA UND
 falsche Freunde NEIN), Abdeckung (Brücken-Wörter/falsche Freunde/Vielfalt,
 Russisch+Ukrainisch benannt, Transliteration vorhanden), inhaltliche
-Korrektheit klassischer falscher Freunde (Dom, Angel), Ränge in 11er-Runde.
+Korrektheit klassischer falscher Freunde (Dom, Angel), keine Ränge in den Daten,
+App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

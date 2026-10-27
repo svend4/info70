@@ -16,7 +16,7 @@ werkstatt, feed-forscher, deepfake-studio.
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde → binaer/wahl mit Erklärung →
-Rang + Rekord. Zusätzlich Klassen-Modus.
+Rundenende ohne Wertung. Zusätzlich Klassen-Modus.
 
 ## 4. Didaktik
 
@@ -28,14 +28,17 @@ weiterschicken. Balance-Test: beide binaer-Antworten kommen vor.
 
 ## 5. Politik-Konformität (docs/02)
 
-Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle beschrieben, nur
-`wd.rekord` + Löschung, werbefrei, Vorlesen, eltern.html.
+Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle beschrieben,
+werbefrei, Vorlesen, eltern.html. Die App speichert nichts und kennt keine
+Punkte, keinen Rekord, keine Ränge; der frühere Schlüssel `wd.rekord` wird
+beim Start einmal entfernt.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥10), Balance (ja+nein),
 Typ-Mischung, Abdeckung Autor/Datum/Quelle/Transparenz (je ≥2),
-Wer/Wann/Woher + Nachprüfbarkeit + weiterschicken, Rang-Erreichbarkeit.
+Wer/Wann/Woher + Nachprüfbarkeit + weiterschicken, keine Ränge in den
+Daten, App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

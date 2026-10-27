@@ -36,8 +36,15 @@ test('die drei Detektiv-Fragen Wer/Wann/Woher werden explizit benannt', () => {
   assert.match(alles, /weiterschick|weiterleit/, 'erst prüfen, dann weiterschicken');
 });
 
-test('Ränge sind mit einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= daten.fragen.length, 'höchster Rang muss im Fragen-Vorrat erreichbar sein');
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die 12er-Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
   assert.ok(daten.fragen.length >= 12, 'genug Fragen für eine 12er-Runde');
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar per Knopf|in der App löschen/, 'ohne Speicher kein Löschknopf');
 });

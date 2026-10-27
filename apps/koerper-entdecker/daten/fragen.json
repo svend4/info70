@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
-  "raenge": [
-    { "ab": 0, "titel": "Körper-Neugierige*r", "emoji": "🌱" },
-    { "ab": 4, "titel": "Innen-Spürnase", "emoji": "🔎" },
-    { "ab": 8, "titel": "Körper-Forscher*in", "emoji": "🔬" },
-    { "ab": 12, "titel": "Körper-Expert*in", "emoji": "🫀" }
-  ],
   "fragen": [
     {
       "id": "k01",

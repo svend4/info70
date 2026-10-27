@@ -10,11 +10,17 @@ test('Fragenbank: Schema gültig (quiz-kern)', () => {
   assert.deepEqual(pruefeFragen(daten, { mindestFragen: 16, mindestErklaerung: 80 }), []);
 });
 
-test('Ränge beginnen bei 0 und sind in einer 12er-Runde erreichbar', () => {
-  const r = daten.raenge;
-  assert.equal(r[0].ab, 0);
-  for (let i = 1; i < r.length; i++) assert.ok(r[i].ab > r[i - 1].ab, 'aufsteigend');
-  assert.ok(r.at(-1).ab <= 12);
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die 12er-Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+  assert.ok(daten.fragen.length >= 12);
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar per Knopf|in der App löschen/, 'ohne Speicher kein Löschknopf');
 });
 
 test('beide Sorten Namen kommen vor – sonst lernt das Kind, dem Namen blind zu glauben', () => {

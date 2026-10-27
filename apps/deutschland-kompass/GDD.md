@@ -70,15 +70,16 @@ Erwachsenen — eltern.html sagt das ausdrücklich.
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten,
-**kein localStorage** — die Zähler gelten nur für die laufende Sitzung.
-Vorlesefunktion für Aufgaben, Erklärungen und Länderkarten; Windrose als
+**kein localStorage**, darum keine Karte „Meine Daten löschen“. Das Kind
+wird nicht bewertet: keine Punkte, kein Rekord, keine Ränge, kein Zähler;
+jede Antwort bekommt eine Erklärung. Vorlesefunktion für Aufgaben, Erklärungen und Länderkarten; Windrose als
 `role="img"` mit vollständiger Beschreibung, jedes Planfeld mit
 `aria-label` (Zeile, Spalte, Ort, „hier stehst du“). eltern.html, im
 Sammelband.
 
 ## 6. Tests
 
-`test/logik.test.mjs` (11): Daten gültig; Norden ist oben (Vorzeichen,
+`test/logik.test.mjs` (13): Daten gültig; Norden ist oben (Vorzeichen,
 unbekannte Richtung, Umkehrbarkeit); Uhrzeigersinn läuft um und
 Gegenrichtung stimmt; `imFeld`/`ortAn` am Planrand; `alleAufgaben`
 enthält nur Wege, die auf einem Ort enden, und zu jedem Weg auch den
@@ -88,7 +89,8 @@ dieselbe Aufgabe; `aufgabenText` unterscheidet Einzahl und Mehrzahl; der
 Validator meldet doppelte Felder, Orte außerhalb des Plans, ins Leere
 zeigende Antwortindizes, einen fehlenden Bereich und doppelte Antworten;
 die Geographie-Werte stehen fest; die Länderkarten sind sachlich und
-ohne Kriegsinhalte.
+ohne Kriegsinhalte; keine Bewertung im App-Code (Abwesenheits-Test) und die
+Speicherregel (kein setItem, keine Löschkarte).
 
 ## 7. Erweiterungen (Katalog)
 

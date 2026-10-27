@@ -29,6 +29,12 @@ nahrungsnetz-werkstatt, jahreszeiten-rad, mini-gaertner-begleiter (Garten).
    bzw. Stockwerk-Info; kein Beschämen bei Fehlern.
 3) Gast-Quiz: 8 Stimmt/Stimmt-nicht-Aussagen mit Erklärung; Abschluss:
    „raus und echte Tiere beobachten – als leiser Gast“.
+4) Ende des Wohn-Quiz: „Ende der Runde“ ohne Bewertung (keine Punkte, kein
+   Rekord, keine Ränge, kein „n von m richtig“); „Frage n von m“ und die
+   Erklärung nach jeder Antwort bleiben. Das Gast-Quiz endet unverändert mit
+   dem Titel „Du bist ein guter Gast in der Natur!“ (feste Zeile, an keine
+   Zahl gebunden, also kein neutraler Titel; offen: Max entscheidet, ob
+   daraus „Ende der Runde“ wird) und dem Ausblick aus Punkt 3.
 
 ## 4. Didaktik / Nutzen
 
@@ -47,19 +53,23 @@ Antwort.
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei, **speichert
-nichts**. Vorlesen lokal (Web Speech). Explizite Draußen-Botschaft am
+nichts** (darum keine Karte „Meine Daten löschen“); das Kind wird nicht
+bewertet. Vorlesen lokal (Web Speech). Explizite Draußen-Botschaft am
 Quiz-Ende (Bildschirm als Sprungbrett). eltern.html, im Sammelband.
 
 ## 6. Tests
 
-`test/logik.test.mjs` (9): Datenbestand gültig (4 Häuser, 5 Stockwerke,
+`test/logik.test.mjs` (11): Datenbestand gültig (4 Häuser, 5 Stockwerke,
 16 Jahreszeiten-Texte); Stockwerk-Reihenfolge und -Zuordnung; je Haus ≥3
 Quiz-Bewohner; deterministische Fragen (injizierter Wähler); Gast-Regeln
 (wahr+falsch, keine Beschämung, Kaulquappe geschützt); Validator meldet
 Widersprüche/Dubletten; Naturwissen (Winterschlaf der Haselmaus,
 Nussvorrat, Maulwurf, Insekten-Überwinterung auch als fertiges Tier);
 ganze Sätze (Artikel, Ortsangabe, Stockwerk-Kurzname); Gast-Erklärungen
-ohne vorgezogenes Lob.
+ohne vorgezogenes Lob; Abwesenheit von Zähler, Ergebnissatz, Stern und
+Geschafft-Titel im App-Code; Speicherregel (kein `setItem` und keine Sprachwahl
+über sprache.mjs, darum keine Karte „Meine Daten löschen“ und keine Zusage
+dafür auf der Eltern-Seite).
 
 ## 7. Erweiterungen (Katalog)
 

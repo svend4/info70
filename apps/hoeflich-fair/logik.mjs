@@ -1,32 +1,27 @@
 // Höflich & Fair – reine Logik (ohne DOM), testbar mit node --test.
-// Szenario-Trainer 2/1/0 zur Sprach-Etikette: danken, entschuldigen,
+// Szenario-Trainer zur Sprach-Etikette: danken, entschuldigen,
 // gratulieren, Mitgefühl und Bewunderung zeigen, bitten, grüßen, Grenzen
 // setzen. Praleska docs/10 (Kinder-Apps Nr. 13).
+// Das Kind wird nicht bewertet: jede Antwort bekommt nur eine Rückmeldung mit Erklärung.
 
-/** Maximalpunktzahl einer Runde. */
-export function maxPunkte(anzahl) {
-  return anzahl * 2;
-}
-
-/** Rang zur erreichten Punktzahl (höchster passender „ab“-Wert). */
-export function rangFuer(raenge, punkte) {
-  let treffer = raenge[0];
-  for (const r of raenge) if (punkte >= r.ab) treffer = r;
-  return treffer;
-}
-
-/** Abschluss-Satz mit Rang. */
-export function ergebnisSatz(raenge, punkte, anzahl) {
-  const r = rangFuer(raenge, punkte);
-  return `${r.emoji} ${r.titel} – ${punkte} von ${maxPunkte(anzahl)} Freundlichkeits-Punkten`;
+/**
+ * Rückmeldung zu einer gewählten Option (wert 2/1/0 der Daten): Emoji und Titel; `gut` färbt den Hinweis.
+ * @param {{wert?: number}} option
+ * @returns {{gut: boolean, emoji: string, titel: string}}
+ */
+export function rueckmeldungFuer(option) {
+  const wert = option?.wert ?? 0;
+  if (wert === 2) return { gut: true, emoji: '😊', titel: 'Genau die richtigen Worte!' };
+  if (wert === 1) return { gut: false, emoji: '👍', titel: 'Fast – geht noch freundlicher.' };
+  return { gut: false, emoji: '💭', titel: 'Schau nochmal hin.' };
 }
 
 /**
- * Validiert die Szenarien: je Szene genau EINE 2-Punkte-Option, genau eine
- * 1-Punkte-Option, mindestens eine 0-Punkte-Option, Erklärung vorhanden;
- * Kategorien eindeutig; Ränge in Rundengröße erreichbar.
+ * Validiert die Szenarien: je Szene genau EINE beste Option (wert 2), genau eine
+ * mittlere (wert 1), genau eine ungünstige (wert 0), Erklärung vorhanden;
+ * Kategorien eindeutig.
  */
-export function pruefeSzenarien(daten, runde) {
+export function pruefeSzenarien(daten) {
   const fehler = [];
   const szenarien = daten?.szenarien;
   if (!Array.isArray(szenarien) || szenarien.length < 10) {
@@ -46,19 +41,12 @@ export function pruefeSzenarien(daten, runde) {
     kategorien.add(s.kategorie);
     const werte = (s.optionen || []).map((o) => o.wert);
     if (werte.length !== 3) fehler.push(`${wo}: genau 3 Optionen erwartet`);
-    if (werte.filter((w) => w === 2).length !== 1) fehler.push(`${wo}: genau EINE 2-Punkte-Option`);
-    if (werte.filter((w) => w === 1).length !== 1) fehler.push(`${wo}: genau EINE 1-Punkte-Option`);
-    if (werte.filter((w) => w === 0).length !== 1) fehler.push(`${wo}: genau EINE 0-Punkte-Option`);
+    if (werte.filter((w) => w === 2).length !== 1) fehler.push(`${wo}: genau EINE beste Option (wert 2)`);
+    if (werte.filter((w) => w === 1).length !== 1) fehler.push(`${wo}: genau EINE mittlere Option (wert 1)`);
+    if (werte.filter((w) => w === 0).length !== 1) fehler.push(`${wo}: genau EINE ungünstige Option (wert 0)`);
     if (werte.some((w) => ![0, 1, 2].includes(w))) fehler.push(`${wo}: Werte nur 0/1/2`);
     const texte = (s.optionen || []).map((o) => o.text);
     if (new Set(texte).size !== texte.length) fehler.push(`${wo}: doppelte Optionstexte`);
-  }
-  const max = maxPunkte(Math.min(runde, szenarien.length));
-  for (const r of daten?.raenge || []) {
-    if (r.ab > max) fehler.push(`Rang ${r.titel}: ab=${r.ab} ist mit ${max} Punkten unerreichbar`);
-  }
-  if (!Array.isArray(daten?.raenge) || daten.raenge.length < 3 || daten.raenge[0].ab !== 0) {
-    fehler.push('raenge: mindestens 3, beginnend bei ab=0');
   }
   return fehler;
 }

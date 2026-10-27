@@ -3,6 +3,7 @@
 // Politik. Thema: Link-Arten (intern, gekennzeichnet extern, Download,
 // App-Store, Werbelink) an URL/Symbolen/Hinweisen erkennen und vor dem
 // Klicken pruefen. Warum gute Kinderseiten externe Links kennzeichnen.
+// Nichts wird gespeichert; der Motor entfernt beim Start nur den frueheren Schluessel.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -27,7 +28,6 @@ starteQuiz({
     binaerJa: '✅ Stimmt',
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächster Link ➡️',
-    fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Links richtig eingeordnet · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

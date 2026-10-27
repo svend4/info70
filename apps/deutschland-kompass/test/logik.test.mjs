@@ -8,6 +8,8 @@ import {
 
 const daten = JSON.parse(await readFile(new URL('../daten/karte.json', import.meta.url), 'utf8'));
 const kopie = () => JSON.parse(JSON.stringify(daten));
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 const erster = (liste) => liste[0];
 const ohneMischen = (liste) => [...liste];
 
@@ -176,4 +178,20 @@ test('Länderkarten sind sachlich und ohne Kriegsinhalte', () => {
   for (const wort of ['krieg', 'flucht', 'geflüchtet', 'soldat', 'bombe', 'angriff', 'besetzt']) {
     assert.ok(!text.includes(wort), `Länderkarte darf das nicht enthalten: ${wort}`);
   }
+});
+
+test('Kinder werden nicht bewertet: kein Zähler, keine Punkte, kein Rekord, kein Stern im App-Code', () => {
+  assert.doesNotMatch(appQuelle, /punkte|rekord|\brang\b|raenge|geschafft|Gefundene Wege|Richtig beantwortet|🌟|⭐|🏆/i, 'app.mjs führt weder Zähler noch Rang noch Rekord');
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Raenge');
+  assert.match(elternSeite, /keine Punkte, keinen Rekord und keine Ränge/, 'die Eltern-Seite sagt, was die App nicht kennt');
+});
+
+test('Speicherregel: speichert die App (setItem), gibt es einen Löschknopf; speichert sie nichts, gibt es keine Karte', () => {
+  const speichert = /localStorage\.setItem/.test(appQuelle);
+  const loeschbar = /Meine Daten l(ö|oe)schen|datenKarte|daten-karte|loescheDaten|removeItem/.test(appQuelle);
+  if (speichert) assert.ok(loeschbar, 'speichert die App, braucht sie einen Löschknopf');
+  else assert.ok(!loeschbar, 'speichert die App nichts, hat sie keine Karte und keinen Löschknopf');
+  assert.ok(!speichert, 'die App speichert nichts');
+  assert.doesNotMatch(appQuelle, /sprache\.mjs/, 'keine Sprachwahl mit Speicher');
+  assert.match(elternSeite, /speichert <strong>nichts<\/strong>/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
 });

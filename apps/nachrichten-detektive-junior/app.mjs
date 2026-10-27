@@ -1,8 +1,8 @@
 // Nachrichten-Detektive junior (Kinder 6-8, docs/09 Nr. 257). quiz-kern-
 // Variante mit Bildpaaren-Idee (per Emoji beschrieben) statt Textmeldungen:
 // „Echt oder ausgedacht?“. Für die Kleinen alle Fragen (keine Auswahl),
-// komplett vorlesbar. Ränge und Rekord bleiben erhalten. Politik docs/02:
-// keine externen Anfragen, werbefrei.
+// komplett vorlesbar. Das Kind wird nicht bewertet, nichts wird gespeichert.
+// Politik docs/02: keine externen Anfragen, werbefrei.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -28,6 +28,5 @@ starteQuiz({
     binaerNein: '🤔 Ausgedacht',
     weiterKnopf: 'Weiter ➡️',
     fertigTitel: 'Super gemacht! 🎉',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Bestwert: ${rekord}`,
   },
 });

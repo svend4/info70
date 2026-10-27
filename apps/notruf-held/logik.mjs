@@ -35,10 +35,3 @@ export function rueckmeldung(eingabe, ziel, nummern) {
   if (p.andereNotruf) return `Fast! ${p.gewaehlt} ist ${nummern[p.gewaehlt]}. Hier passt aber ${ziel} (${nummern[ziel]}) besser.`;
   return `Das ist keine Notrufnummer. Richtig ist ${ziel} – ${nummern[ziel]}.`;
 }
-
-/** Zählt richtige Wahlen einer Runde. */
-export function bewerteRunde(situationen, eingaben = {}) {
-  let richtig = 0;
-  for (const s of situationen) if (nurZiffern(eingaben[s.id] ?? '') === s.nummer) richtig++;
-  return { richtig, gesamt: situationen.length };
-}

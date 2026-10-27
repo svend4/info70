@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "6-8",
-  "raenge": [
-    { "ab": 0, "titel": "Spür-Nase", "emoji": "🐽" },
-    { "ab": 4, "titel": "Bild-Checker*in", "emoji": "🔍" },
-    { "ab": 8, "titel": "Echt-Fake-Profi", "emoji": "🎖️" },
-    { "ab": 12, "titel": "Detektiv-Meister*in", "emoji": "🕵️" }
-  ],
   "fragen": [
     {
       "id": "j01",

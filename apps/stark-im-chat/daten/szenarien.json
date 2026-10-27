@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Chat-Neuling", "emoji": "🌱" },
-    { "ab": 8, "titel": "Aufpasser*in", "emoji": "👀" },
-    { "ab": 14, "titel": "Mutmacher*in", "emoji": "💪" },
-    { "ab": 19, "titel": "Chat-Held*in", "emoji": "🦸" }
-  ],
   "szenarien": [
     {
       "id": "c01",

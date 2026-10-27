@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Schatzsucher*in", "emoji": "🗺️" },
-    { "ab": 8, "titel": "Schatzwächter*in", "emoji": "🛡️" },
-    { "ab": 14, "titel": "Meister-Wächter*in", "emoji": "🏰" },
-    { "ab": 19, "titel": "Legendäre*r Daten-Drache", "emoji": "🐉" }
-  ],
   "szenarien": [
     {
       "id": "s01",

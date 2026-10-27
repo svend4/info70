@@ -2,28 +2,6 @@
   "version": 1,
   "zielgruppe": "Fachkraefte",
   "hinweis": "Lernwerkzeug für Ausbildung und Praxis – kein Test für ein Kind. Jede Antwort nennt die Seite der Quelle. Wo die Quelle sich widerspricht oder etwas nicht zählt, sagt die Erklärung das.",
-  "raenge": [
-    {
-      "ab": 0,
-      "titel": "Einsteiger*in",
-      "emoji": "🌱"
-    },
-    {
-      "ab": 5,
-      "titel": "Kundig",
-      "emoji": "🧭"
-    },
-    {
-      "ab": 8,
-      "titel": "Sicher im ersten Jahr",
-      "emoji": "🍼"
-    },
-    {
-      "ab": 10,
-      "titel": "Multiplikator*in",
-      "emoji": "🏅"
-    }
-  ],
   "fragen": [
     {
       "id": "f01",

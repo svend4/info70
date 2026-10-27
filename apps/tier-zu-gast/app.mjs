@@ -3,23 +3,25 @@
 // leise sein, richtig füttern, Ruhe lassen, Verantwortung übernehmen.
 // Praleska docs/10 (Kinder-Apps Nr. 4). Alle Szenen Eigenproduktion,
 // Botschaften nach deutschem Tierschutz-Alltagswissen. Politik docs/02:
-// keine externen Anfragen, nur Rekord in localStorage (löschbar).
+// keine externen Anfragen, speichert NICHTS. Das Kind wird nicht bewertet: keine
+// Punkte, kein Rekord, keine Ränge; jede Antwort bekommt eine Rückmeldung mit Erklärung.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { maxPunkte, rangFuer, ergebnisSatz, pruefeSzenarien } from './logik.mjs';
+import { pruefeSzenarien } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
 
-const REKORD = 'tier.rekord';
+// Alter Schlüssel aus früheren Versionen: einmal beim Start entfernen.
+try { localStorage.removeItem('tier.rekord'); } catch {}
+
 const RUNDE = 10;
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -27,24 +29,21 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Verantwortung lernen – so geht es deinem Tier gut'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · diese App speichert nichts · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function start() {
-  const rekord = Number(localStorage.getItem(REKORD) ?? 0);
   const intro = `Ein Tier ist kein Spielzeug – es ist ein Gast, der sich auf dich verlässt. In ${RUNDE} Situationen entscheidest du, was für das Tier am besten ist.`;
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '🐇'),
       el('p', {}, intro),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${maxPunkte(RUNDE)} 🏅`) : '',
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(intro) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
-        rekord > 0 ? el('button', { class: 'k-knopf k-knopf--klein k-knopf--neutral', onclick: () => { localStorage.removeItem(REKORD); start(); } }, '🗑️ Rekord löschen') : '')),
+        el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0' }, '👉 Wichtigste Regel: Meerschweinchen, Kaninchen und Wellensittiche nie allein halten – sie brauchen Artgenossen.')));
 }
@@ -52,7 +51,6 @@ function start() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien).slice(0, Math.min(RUNDE, daten.szenarien.length));
   index = 0;
-  punkte = 0;
   frage();
 }
 
@@ -72,9 +70,8 @@ function frage() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   const gut = option.wert === 2;
-  const emoji = gut ? '🌟' : option.wert === 1 ? '👍' : '💭';
+  const emoji = gut ? '🐾' : option.wert === 1 ? '👍' : '💭';
   const titel = gut ? 'Genau richtig!' : option.wert === 1 ? 'Fast!' : 'Denk ans Tier.';
   const letzte = index + 1 >= szenarien.length;
   zeige(
@@ -95,16 +92,11 @@ function weiter() {
 }
 
 function ende() {
-  const rekordAlt = Number(localStorage.getItem(REKORD) ?? 0);
-  if (punkte > rekordAlt) localStorage.setItem(REKORD, String(punkte));
-  const rang = rangFuer(daten.raenge, punkte);
-  const satz = ergebnisSatz(daten.raenge, punkte, szenarien.length);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte(szenarien.length)} Tierfreund-Punkten`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(satz) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '🐇'),
+      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, 'Ende der Runde'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Ende der Runde. Sprich mit einem Erwachsenen darüber, welches Tier zu eurer Familie passen würde – und was es jeden Tag braucht.') }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, '🏠 Zum Start'))),
@@ -112,7 +104,7 @@ function ende() {
       el('p', { style: 'margin:0' }, '👉 Sprich mit einem Erwachsenen darüber, welches Tier zu eurer Familie passen würde – und was es jeden Tag braucht.')));
 }
 
-const fehler = pruefeSzenarien(daten, RUNDE);
+const fehler = pruefeSzenarien(daten);
 if (fehler.length) {
   app.replaceChildren(el('div', { class: 'k-hinweis k-hinweis--falsch' }, el('p', { style: 'margin:0' }, `Datenfehler: ${fehler[0]}`)));
 } else {

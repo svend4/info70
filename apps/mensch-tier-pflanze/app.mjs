@@ -2,7 +2,7 @@
 // gemeinsamen Lebenszeichen (atmen, essen, trinken, wachsen, bewegen,
 // reagieren, Nachwuchs). Ablauf aus @info70/quiz-kern (inkl. Vorlesen).
 // Praleska docs/10 (Kinder-Apps Nr. 9): 5-7 in Ko-Nutzung, 8-12 allein.
-// Politik docs/02: keine externen Anfragen, nur Rekord in localStorage.
+// Politik docs/02: keine externen Anfragen, nichts gespeichert, keine Wertung.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -26,7 +26,6 @@ starteQuiz({
     binaerJa: '✅ Stimmt',
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächste Frage ➡️',
-    fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

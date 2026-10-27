@@ -4,6 +4,8 @@ import { readFile } from 'node:fs/promises';
 import { JAHRESZEITEN, artikelVon, gross, bewohnerFuer, stockwerkVon, wohnFrage, stockwerkFrage, pruefeDaten } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/lebensraeume.json', import.meta.url), 'utf8'));
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 const wald = daten.lebensraeume.find((r) => r.id === 'wald');
 
 test('Datenbestand ist gültig: 4 Häuser, Wald mit 5 Stockwerken, alle Jahreszeiten', () => {
@@ -84,4 +86,24 @@ test('Gast-Erklärungen loben nicht vorab – sie erscheinen auch nach falscher 
   const gelobt = structuredClone(daten);
   gelobt.gastRegeln[0].erklaerung = `Richtig! ${gelobt.gastRegeln[0].erklaerung}`;
   assert.ok(pruefeDaten(gelobt).some((f) => f.includes('Bestätigung')));
+});
+
+test('Kinder werden nicht bewertet: kein Zähler, kein Ergebnissatz, kein Stern, kein Geschafft-Titel im App-Code', () => {
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Rang- oder Punkteschwellen');
+  assert.doesNotMatch(appQuelle, /treffer|punkte|rekord|raenge|rang\b/i, 'app.mjs zählt nichts und führt weder Rang noch Rekord');
+  assert.doesNotMatch(appQuelle, /von \$\{[^}]*\}\s*richtig|richtig\w*\s+von/i, 'kein Ergebnissatz „n von m richtig“ (Frage n von m bleibt erlaubt)');
+  assert.doesNotMatch(appQuelle, /[Gg]eschafft|🏆|🌟|⭐/, 'kein Geschafft-Titel, kein Pokal, kein Stern');
+  assert.match(appQuelle, /'Ende der Runde'/, 'am Ende des Wohn-Quiz steht ein neutraler Titel');
+  // Die Rückmeldung zu jeder Antwort bleibt: Erklärung oder Ortsangabe mit Tipp.
+  assert.match(appQuelle, /function feedbackKarte\(gut, text, weiter\)/);
+});
+
+test('Speicherregel: speichert die App (setItem), gibt es einen Löschknopf; speichert sie nichts, gibt es keine Karte', () => {
+  const speichert = /\.setItem\(/.test(appQuelle) || /sprache\.mjs/.test(appQuelle);
+  const hatKarte = /datenKarte\(|daten-karte\.mjs|Meine Daten l(ö|oe)schen/.test(appQuelle);
+  if (speichert) assert.ok(hatKarte || /removeItem/.test(appQuelle), 'wer speichert, lässt auch löschen');
+  else assert.equal(hatKarte, false, 'ohne Speicher keine Karte „Meine Daten löschen“');
+  assert.equal(speichert, false, 'diese App speichert nichts');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'auch die Eltern-Seite verspricht keinen Löschknopf');
+  assert.match(elternSeite, /speichert <strong>nichts<\/strong>/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
 });

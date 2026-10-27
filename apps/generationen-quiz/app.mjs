@@ -25,7 +25,6 @@ starteQuiz({
     binaerJa: '✅ Stimmt',
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächste Frage ➡️',
-    fertigTitel: 'Gemeinsam geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Fallen erkannt · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

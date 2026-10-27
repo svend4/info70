@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Shop-Spürnase", "emoji": "🐽" },
-    { "ab": 5, "titel": "Fake-Finder*in", "emoji": "🔎" },
-    { "ab": 9, "titel": "Betrugs-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 12, "titel": "Fake-Shop-Profi", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "b01",

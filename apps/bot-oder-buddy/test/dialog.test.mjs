@@ -1,10 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { TRICK_IDS, trickVorkommen, nachrichtenMitTrick, angebote, bewerteZuordnung, bewertung } from '../logik.mjs';
+import * as logik from '../logik.mjs';
+import { TRICK_IDS, trickVorkommen, nachrichtenMitTrick, angebote, bewerteZuordnung } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/dialog.json', import.meta.url), 'utf8'));
 const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 
 test('Dialogbank: Grundstruktur, Bot-Name, 5 Tricks, 12-15 Nachrichten, eindeutige IDs', () => {
   assert.equal(daten.version, 1);
@@ -58,15 +60,25 @@ test('Bot-Angebote: mindestens 2, je genau ein Annehmen und ein Ablehnen mit leh
   }
 });
 
-test('Logik: bewerteZuordnung unterscheidet richtig/falsch/harmlos, bewertung stuft sinnvoll', () => {
+test('Logik: bewerteZuordnung unterscheidet richtig/falsch/harmlos (Rueckmeldung zu jeder Antwort)', () => {
   const mitTrick = { trick: 'spiegeln' };
   assert.deepEqual(bewerteZuordnung(mitTrick, 'spiegeln'), { hatTrick: true, richtig: true, tatsaechlich: 'spiegeln' });
   assert.deepEqual(bewerteZuordnung(mitTrick, 'koeder'), { hatTrick: true, richtig: false, tatsaechlich: 'spiegeln' });
   assert.deepEqual(bewerteZuordnung({ trick: null }, 'fragen'), { hatTrick: false, richtig: false, tatsaechlich: null });
+});
 
-  const max = nachrichtenMitTrick(daten.dialog).length;
-  assert.ok(bewertung(max, max).titel.length >= 3);
-  assert.notEqual(bewertung(max, max).titel, bewertung(0, max).titel, 'Bestwert und Nullwert brauchen verschiedene Raenge');
+test('Kinder werden nicht bewertet: keine Rang-Funktion, kein Zaehler, kein Ergebnissatz im App-Code', () => {
+  assert.equal(logik.bewertung, undefined, 'logik.mjs hat keine Rang-Funktion mehr');
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Raenge');
+  assert.doesNotMatch(appQuelle, /punkte|maxPunkte|abgelehnt|rang\b|bewertung\(|rekord/i, 'app.mjs fuehrt weder Zaehler noch Rang noch Rekord');
+  assert.doesNotMatch(appQuelle, /Tricks erkannt|Angeboten abgelehnt|Geschafft/, 'kein Ergebnissatz am Ende');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Loeschknopf', () => {
+  assert.doesNotMatch(appQuelle, /setItem|removeItem|datenKarte|daten-karte|sprache\.mjs/, 'kein Speicher, keine Loeschkarte, keine Sprachwahl');
+  assert.doesNotMatch(appQuelle, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
+  assert.match(elternSeite, /speichert nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
 });
 
 test('kein offenes Eingabefeld und keine Speicherung im App-Code', () => {

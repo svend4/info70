@@ -1,39 +1,62 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { maxPunkte, rangFuer, ergebnisSatz, pruefeSzenarien } from '../logik.mjs';
+import * as logik from '../logik.mjs';
+import { rueckmeldungFuer, pruefeSzenarien } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/szenarien.json', import.meta.url), 'utf8'));
-const RUNDE = 10;
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 const szene = (id) => daten.szenarien.find((s) => s.id === id);
 const beste = (s) => s.optionen.find((o) => o.wert === 2);
 const halbe = (s) => s.optionen.find((o) => o.wert === 1);
 const schlechteste = (s) => s.optionen.find((o) => o.wert === 0);
 
 test('Szenarien sind gültig', () => {
-  assert.deepEqual(pruefeSzenarien(daten, RUNDE), []);
+  assert.deepEqual(pruefeSzenarien(daten), []);
 });
 
-test('Punkte und Ränge', () => {
-  assert.equal(maxPunkte(RUNDE), 20);
-  assert.equal(rangFuer(daten.raenge, 0).ab, 0);
-  assert.equal(rangFuer(daten.raenge, 20), daten.raenge.at(-1));
-  for (let i = 1; i < daten.raenge.length; i++) {
-    assert.ok(daten.raenge[i].ab > daten.raenge[i - 1].ab, 'Ränge aufsteigend');
+test('Rückmeldung zu jeder Antwort: Titel und Emoji je Option, nur die beste färbt den Hinweis', () => {
+  assert.deepEqual(rueckmeldungFuer({ wert: 2 }), { gut: true, emoji: '😊', titel: 'Genau die richtigen Worte!' });
+  assert.deepEqual(rueckmeldungFuer({ wert: 1 }), { gut: false, emoji: '👍', titel: 'Fast – geht noch freundlicher.' });
+  assert.deepEqual(rueckmeldungFuer({ wert: 0 }), { gut: false, emoji: '💭', titel: 'Schau nochmal hin.' });
+  assert.equal(rueckmeldungFuer(undefined).titel, 'Schau nochmal hin.', 'ohne Option die neutrale Rückfrage');
+  for (const s of daten.szenarien) for (const o of s.optionen) {
+    assert.ok(rueckmeldungFuer(o).titel.length >= 3, `${s.id}: Rückmeldung`);
+    assert.ok(s.erklaerung.length >= 150, `${s.id}: Erklärung zu jeder Antwort`);
   }
-  assert.match(ergebnisSatz(daten.raenge, 20, RUNDE), /20 von 20/);
+});
+
+test('Kinder werden nicht bewertet: keine Rang-, Punkte- oder Ergebnis-Funktion, keine Ränge in den Daten, kein Zähler im App-Code', () => {
+  for (const name of ['maxPunkte', 'rangFuer', 'ergebnisSatz']) {
+    assert.equal(logik[name], undefined, `logik.mjs hat kein ${name} mehr`);
+  }
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Ränge');
+  assert.doesNotMatch(appQuelle, /punkte|maxPunkte|rangFuer|ergebnisSatz|raenge|rang\b|🌟|🏅|🏆/i, 'app.mjs führt weder Zähler noch Rang noch Stern');
+  assert.doesNotMatch(appQuelle, /Geschafft/, 'kein „Geschafft“ als Titel');
+  assert.match(appQuelle, /Situation \$\{index \+ 1\} von \$\{szenarien\.length\}/, 'der Fortschritt der Runde („Situation n von m“) bleibt');
+  assert.match(appQuelle, /Ende der Runde/, 'das Ende der Runde ist neutral benannt');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Löschknopf; der alte Schlüssel wird einmal entfernt', () => {
+  assert.doesNotMatch(appQuelle, /setItem|getItem|datenKarte|daten-karte|sprache\.mjs/, 'kein Speicher, keine Löschkarte, keine Sprachwahl');
+  assert.doesNotMatch(appQuelle, /(Meine Daten|Rekord) l(ö|oe)schen/, 'ohne Speicher keine Karte und kein Löschknopf');
+  assert.match(appQuelle, /^try \{ localStorage\.removeItem\('hoeflich\.rekord'\); \} catch \{\}$/m, 'der alte Rekord-Schlüssel wird beim Start in einer Zeile entfernt');
+  assert.equal((appQuelle.match(/hoeflich\.rekord/g) ?? []).length, 1, 'der alte Schlüssel steht nur in dieser Zeile');
+  assert.match(elternSeite, /speichert nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
 });
 
 test('Validator greift: fehlende oder falsch gewichtete Optionen fallen auf', () => {
   const kaputt = JSON.parse(JSON.stringify(daten));
   kaputt.szenarien[0].optionen[1].wert = 2; // zwei beste Optionen
-  assert.ok(pruefeSzenarien(kaputt, RUNDE).some((f) => /EINE 2-Punkte-Option/.test(f)));
+  assert.ok(pruefeSzenarien(kaputt).some((f) => /EINE beste Option/.test(f)));
   const ohneNull = JSON.parse(JSON.stringify(daten));
   ohneNull.szenarien[0].optionen[2].wert = 1;
-  assert.ok(pruefeSzenarien(ohneNull, RUNDE).some((f) => /EINE 0-Punkte-Option/.test(f)));
+  assert.ok(pruefeSzenarien(ohneNull).some((f) => /EINE ungünstige Option/.test(f)));
   const doppelt = JSON.parse(JSON.stringify(daten));
   doppelt.szenarien[1].kategorie = doppelt.szenarien[0].kategorie;
-  assert.ok(pruefeSzenarien(doppelt, RUNDE).some((f) => /Kategorie .* doppelt/.test(f)));
+  assert.ok(pruefeSzenarien(doppelt).some((f) => /Kategorie .* doppelt/.test(f)));
 });
 
 test('inhaltliche Abdeckung: die Sprechhandlungen des Katalogs kommen vor', () => {
@@ -50,12 +73,12 @@ test('Grenze setzen: ein freundliches Nein ist die beste Antwort, nicht die schl
   assert.match(beste(s).text, /lieber die Hand/);
   // Die schlechteste Option ist NICHT das Neinsagen, sondern das stumme Mitmachen.
   assert.match(schlechteste(s).text, /obwohl du dich unwohl fühlst/);
-  assert.ok(!/Nein|nein/.test(schlechteste(s).text), 'ein Nein darf nie die 0-Punkte-Antwort sein');
+  assert.ok(!/Nein|nein/.test(schlechteste(s).text), 'ein Nein darf nie die ungünstigste Antwort sein');
   assert.match(s.erklaerung, /entscheidest du/);
   assert.match(s.erklaerung, /vertraust/, 'Verweis auf eine Vertrauensperson fehlt');
 });
 
-test('halbe Punkte gibt es nur für wirklich halb richtige Antworten', () => {
+test('die mittlere Antwort gibt es nur für wirklich halb richtige Antworten', () => {
   // Trauer zulassen ist halb richtig (echt, aber nicht im Moment),
   // den Sieg kleinreden ist es nicht.
   assert.match(halbe(szene('h03')).text, /traurig/);

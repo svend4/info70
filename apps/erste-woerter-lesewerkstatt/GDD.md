@@ -23,7 +23,8 @@ uhr-und-kalender-kind, mathe-entdecker.
 2) Hören: „🔊 Anhören“ (Web Speech) → aus 3 Schriftbildern wählen.
 3) Lesen: Wort groß + Silbenbögen → passendes Bild aus 3 wählen;
    Silben anhörbar. Auflösung stets ermutigend.
-4) Ende nach 8 Aufgaben mit aktivem Pause-Impuls; Rekord lokal.
+4) „Ende der Runde“ nach 8 Aufgaben mit aktivem Pause-Impuls; das Kind wird
+   nicht bewertet (keine Punkte, kein Rekord, keine Ränge), nichts wird gespeichert.
 
 ## 4. Didaktik / Nutzen
 
@@ -36,8 +37,9 @@ Feature: kurze Runde, klares Ende, Pause wird ausgesprochen.
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), Stimme nur lokal (Web Speech),
-nur Rekord in localStorage (lese.rekord). Werbefrei. Anzeige-Einstellungen
-(BFSG). Kinder-App mit eltern.html, im Sammelband.
+die App speichert nichts, darum auch keine Karte „Meine Daten löschen“ (der
+alte Schlüssel lese.rekord wird beim Start einmal entfernt). Werbefrei.
+Anzeige-Einstellungen (BFSG). Kinder-App mit eltern.html, im Sammelband.
 
 ## 6. Tests
 
@@ -45,6 +47,9 @@ nur Rekord in localStorage (lese.rekord). Werbefrei. Anzeige-Einstellungen
 lautgetreue Wörter), `istLautgetreu` (FAHNE/BALL/QUARK abgelehnt, HOSE ok),
 `hoerOptionen`/`bildOptionen` (3 eindeutige, richtige an 0), `silbenTeilen`
 (O-MA, TO-MA-TE, MOND ganz; Silben ergeben das Wort für die ganze Bank).
+Zwei Abwesenheits-Tests: keine Wertung im Code (kein Zähler, kein Rekord,
+keine Sterne), Speicherregel erfüllt (kein setItem, keine Karte, Migration
+in einer Zeile).
 
 ## 7. Erweiterungen (Katalog)
 

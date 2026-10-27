@@ -10,7 +10,7 @@ zu Gast – Verantwortungs-Trainer». **Engine:** Szenario-Trainer 2/1/0
 Zehn Alltagssituationen rund um Meerschweinchen, Hamster, Kaninchen und
 Wellensittich: leise sein, richtig füttern, Ruhe lassen, Sauberkeit,
 Krankheit erkennen, Hitze-Schutz, Tier zu Gast in der Gruppe. Je Szene
-3 Handlungsoptionen (2/1/0 Punkte) mit kindgerechter Erklärung – aktives
+3 Handlungsoptionen (Werte 2/1/0 je Option, nur für die Rückmeldung) mit kindgerechter Erklärung – aktives
 Verantwortungslernen statt bloßer Beobachtung.
 
 ## 2. Zielgruppe
@@ -20,10 +20,11 @@ Engine), wer-wohnt-wo (Wildtiere), mini-gaertner-begleiter.
 
 ## 3. Ablauf
 
-1) Intro mit Kernregel (nie einzeln halten) + Rekord (löschbar).
+1) Intro mit Kernregel (nie einzeln halten).
 2) 10 gemischte Szenen: Situation → 3 gemischte Optionen → Feedback
-   (🌟/👍/💭) mit Erklärung, Vorlesen überall.
-3) Ende: Rang (🌱→🏅), Gesprächsimpuls „Passt ein Tier zu uns?“.
+   (🐾/👍/💭) mit Erklärung, Vorlesen überall.
+3) Ende: «Ende der Runde», Gesprächsimpuls „Passt ein Tier zu uns?“; keine
+   Punkte, kein Rekord, keine Ränge – das Kind wird nicht bewertet.
 
 ## 4. Didaktik / Nutzen
 
@@ -33,27 +34,29 @@ Kaninchen/Wellensittiche nie einzeln; Hamster nachtaktiv → für kleine
 Kinder ungeeignet; Fluchttiere nicht hochheben; nicht fressen = Notfall;
 Hitze gefährlich). Ersetzt reine Beobachtung durch Verantwortungs-Szenen;
 Anschluss Sachunterricht Klasse 1–4. Validator erzwingt die
-Szenario-Invariante (genau eine 2er-, mindestens eine 0er-Option) und
-erreichbare Ränge. Ein Teilpunkt (1) steht nur dort, wo die Handlung
-wirklich halb richtig ist – Scheinlösungen wie „Spiegel statt Artgenosse“
-oder „ein nachtaktives Tier am Tag wecken“ geben 0, sonst widerspräche die
-Punktzahl der eigenen Erklärung.
+Szenario-Invariante (genau eine Option mit Wert 2, mindestens eine mit
+Wert 0). Der Wert 1 steht nur dort, wo die Handlung wirklich halb richtig
+ist – Scheinlösungen wie „Spiegel statt Artgenosse“ oder „ein nachtaktives
+Tier am Tag wecken“ geben 0, sonst widerspräche der Wert der eigenen
+Erklärung.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei; localStorage nur
-für den Rekord, mit 🗑️-Löschknopf im Start. Kein echtes Tier nötig –
+Keine externen Anfragen (NetzwerkWaechter), werbefrei; speichert nichts (der
+alte Schlüssel `tier.rekord` wird beim Start einmal entfernt, kein
+Löschknopf nötig). Kein echtes Tier nötig –
 und die App sagt ehrlich: „noch kein Tier“ ist auch tierfreundlich.
 eltern.html, im Sammelband.
 
 ## 6. Tests
 
-`test/logik.test.mjs` (7): Szenarien gültig (Invariante 2/1/0);
+`test/logik.test.mjs` (9): Szenarien gültig (Invariante 2/1/0);
 Kernbotschaften verankert (Artgenossen, nachtaktiv, Fluchttiere,
 Tierarzt, nicht schwitzen); beste Option ist nie „Nichts tun“;
-Ränge erreichbar/monoton; Validator-Negativproben; halbe Punkte nur für
+keine Ränge (Daten und Logik); Validator-Negativproben; Wert 1 nur für
 halb richtige Handlungen (Spiegel und Wecken geben 0); kein Beschämen +
-Erwachsene bei Gefahr im Boot.
+Erwachsene bei Gefahr im Boot; keine Wertung im App-Code; Speicherregel
+(kein Speicher, keine Karte, alter Schlüssel einmal entfernt).
 
 ## 7. Erweiterungen (Katalog)
 

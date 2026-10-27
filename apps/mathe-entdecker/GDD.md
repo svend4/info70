@@ -19,7 +19,7 @@ sicher-unterwegs, gefuehle-entdecker.
 
 1) Start (Vorlesen), gemeinsames Mitsprechen.
 2) 10 Aufgaben aus 16 (quiz-kern mischt, Vorlesen je Aufgabe).
-3) Punkte + Rang + Rekord; Duett-/Staffel-/Klassen-Modus vom quiz-kern geerbt.
+3) „Ende der Runde“ ohne Wertung; Duett-/Staffel-/Klassen-Modus vom quiz-kern geerbt.
 
 ## 4. Didaktik / Nutzen
 
@@ -30,16 +30,18 @@ Eigenproduktion (kein Buchtext aus der Quelle).
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), keine Konten, nur Rekord in
-localStorage (mathe.rekord). Werbefrei. Vorlesen (BFSG). Kinder-App mit
-eltern.html, im Eltern-Sammelband. Emojis als Mengenbilder (keine externen
-Assets).
+Keine externen Anfragen (NetzwerkWaechter), keine Konten. Die App speichert
+nichts und kennt keine Punkte, keinen Rekord, keine Ränge; der frühere
+Schlüssel mathe.rekord wird beim Start einmal entfernt. Werbefrei. Vorlesen
+(BFSG). Kinder-App mit eltern.html, im Eltern-Sammelband. Emojis als
+Mengenbilder (keine externen Assets).
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema gültig (pruefeFragen), Mischung
 binär/wahl (ja UND nein), Abdeckung (Mengen/Zählen/Formen/Reihen, Ecken,
-mehr/weniger), Ränge in 10er-Runde erreichbar, Mindestvorrat 12.
+mehr/weniger), keine Ränge in den Daten, App-Code ohne Wertung und ohne
+Speicher, Mindestvorrat 12.
 
 ## 7. Erweiterungen (Katalog)
 

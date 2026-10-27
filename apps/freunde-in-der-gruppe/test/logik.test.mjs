@@ -1,22 +1,24 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { punkteFuer, maxPunkte, rangFuer, ergebnisSatz } from '../logik.mjs';
+import * as logik from '../logik.mjs';
+import { rueckmeldungFuer } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/szenarien.json', import.meta.url), 'utf8'));
 const szenarien = daten.szenarien;
-const RUNDE = 12;
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 
 function saetze(text) {
   return text.split(/[.!?]+/).map((t) => t.trim()).filter(Boolean);
 }
 
-test('Grundstruktur: Version, ≥12 Szenen, eindeutige IDs, Ränge', () => {
+test('Grundstruktur: Version, ≥12 Szenen, eindeutige IDs, keine Ränge in den Daten', () => {
   assert.equal(daten.version, 1);
   assert.ok(szenarien.length >= 12, `mindestens 12 Szenen (ist: ${szenarien.length})`);
   const ids = szenarien.map((s) => s.id);
   assert.equal(new Set(ids).size, ids.length, 'IDs eindeutig');
-  assert.equal(daten.raenge[0].ab, 0);
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Ränge');
 });
 
 test('jede Szene: genau 3 Optionen, genau EINE mit Wert 2, Werte 0/1/2', () => {
@@ -54,16 +56,34 @@ test('einfache Sprache: kein Satz länger als 130 Zeichen', () => {
   }
 });
 
-test('Wertung + Rang-Logik', () => {
-  assert.equal(punkteFuer({ wert: 2 }), 2);
-  assert.equal(punkteFuer(undefined), 0);
-  assert.equal(maxPunkte(12), 24);
-  assert.equal(rangFuer(daten.raenge, 0).ab, 0);
-  assert.equal(rangFuer(daten.raenge, 100).titel, daten.raenge[daten.raenge.length - 1].titel);
-  assert.match(ergebnisSatz(daten.raenge, 24, 12), /24 von 24/);
+test('Rückmeldung zu jeder Antwort: Titel und Emoji je Option, nur die beste färbt den Hinweis', () => {
+  assert.deepEqual(rueckmeldungFuer({ wert: 2 }), { gut: true, emoji: '😊', titel: 'Wie freundlich!' });
+  assert.equal(rueckmeldungFuer({ wert: 1 }).titel, 'Fast!');
+  assert.equal(rueckmeldungFuer({ wert: 1 }).gut, false);
+  assert.equal(rueckmeldungFuer({ wert: 0 }).titel, 'Denk nochmal mit.');
+  assert.equal(rueckmeldungFuer(undefined).titel, 'Denk nochmal mit.', 'ohne Option die neutrale Rückfrage');
+  for (const s of szenarien) for (const o of s.optionen) {
+    assert.ok(rueckmeldungFuer(o).titel.length >= 3, `${s.id}: Rückmeldung`);
+    assert.ok(s.erklaerung.length >= 30, `${s.id}: Erklärung zu jeder Antwort`);
+  }
 });
 
-test('höchster Rang ist in einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= RUNDE * 2, `höchster Rang (${maxAb}) ≤ ${RUNDE * 2}`);
+test('Kinder werden nicht bewertet: keine Rang-, Punkte- oder Ergebnis-Funktion, kein Zähler, kein Rekord im App-Code', () => {
+  for (const name of ['punkteFuer', 'maxPunkte', 'rangFuer', 'ergebnisSatz']) {
+    assert.equal(logik[name], undefined, `logik.mjs hat kein ${name} mehr`);
+  }
+  assert.doesNotMatch(appQuelle, /punkte|maxPunkte|rangFuer|ergebnisSatz|raenge|rang\b|🌟|🏆/i, 'app.mjs führt weder Zähler noch Rang noch Stern');
+  assert.match(appQuelle, /Situation \$\{index \+ 1\} von \$\{szenarien\.length\}/, 'der Fortschritt der Runde („Situation n von m“) bleibt');
+  assert.doesNotMatch(appQuelle.slice(appQuelle.indexOf('function ende()')), /\$\{/, 'am Ende steht kein berechneter Wert');
+  assert.doesNotMatch(appQuelle, /Geschafft/, 'kein „Geschafft“ als Titel');
+  assert.match(appQuelle, /Ende der Runde/, 'das Ende der Runde ist neutral benannt');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Löschknopf; der alte Schlüssel wird einmal entfernt', () => {
+  assert.doesNotMatch(appQuelle, /setItem|getItem|datenKarte|daten-karte|sprache\.mjs/, 'kein Speicher, keine Löschkarte, keine Sprachwahl');
+  assert.doesNotMatch(appQuelle, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
+  assert.match(appQuelle, /^try \{ localStorage\.removeItem\('freunde\.rekord'\); \} catch \{\}$/m, 'der alte Rekord-Schlüssel wird beim Start in einer Zeile entfernt');
+  assert.equal((appQuelle.match(/freunde\.rekord/g) ?? []).length, 1, 'der alte Schlüssel steht nur in dieser Zeile');
+  assert.match(elternSeite, /speichert nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
 });

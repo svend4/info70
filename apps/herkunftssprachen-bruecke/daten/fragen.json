@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12 (auch Eltern / Herkunftssprache)",
-  "raenge": [
-    { "ab": 0, "titel": "Sprach-Entdecker*in", "emoji": "🌱" },
-    { "ab": 4, "titel": "Brücken-Bauer*in", "emoji": "🌉" },
-    { "ab": 8, "titel": "Wort-Detektiv*in", "emoji": "🔍" },
-    { "ab": 11, "titel": "Sprachen-Schatzmeister*in", "emoji": "💎" }
-  ],
   "fragen": [
     { "id": "b01", "typ": "binaer", "kategorie": "Brücken-Wörter", "aussage": "Das Wort „Telefon“ klingt auf Russisch (телефон – telefon) und Ukrainisch (телефон – telefon) fast genau gleich wie auf Deutsch.", "korrekt": "ja", "erklaerung": "Stimmt! „Telefon“ ist ein Wort, das viele Sprachen teilen. Solche Brücken-Wörter helfen dir, eine neue Sprache schneller zu verstehen. Deine Sprache ist ein Schatz." },
     { "id": "b02", "typ": "wahl", "kategorie": "Brücken-Wörter", "frage": "Auf Russisch heißt es „музыка“ (muzyka), auf Ukrainisch „музика“ (muzyka). Was ist das auf Deutsch?", "antworten": ["Museum", "Musik", "Maus"], "korrekt": 1, "erklaerung": "„Musik“! Das Wort ist in vielen Sprachen ähnlich. Wer solche Ähnlichkeiten sucht, baut Brücken zwischen seinen Sprachen." },

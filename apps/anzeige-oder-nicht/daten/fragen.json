@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Werbe-Späher*in", "emoji": "🔍" },
-    { "ab": 5, "titel": "Anzeige-Kenner*in", "emoji": "🏷️" },
-    { "ab": 9, "titel": "Werbe-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 12, "titel": "Anzeige-oder-nicht-Profi", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "b01",

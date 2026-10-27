@@ -1,28 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    {
-      "ab": 0,
-      "titel": "Spürnase in Ausbildung",
-      "emoji": "🔍"
-    },
-    {
-      "ab": 5,
-      "titel": "Nachwuchs-Detektiv*in",
-      "emoji": "🕵️"
-    },
-    {
-      "ab": 9,
-      "titel": "Profi-Detektiv*in",
-      "emoji": "🎖️"
-    },
-    {
-      "ab": 12,
-      "titel": "Meister-Detektiv*in",
-      "emoji": "🏆"
-    }
-  ],
   "fragen": [
     {
       "id": "f01",

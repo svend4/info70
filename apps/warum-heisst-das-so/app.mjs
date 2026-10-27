@@ -2,7 +2,7 @@
 // Quiz zu sprechenden Namen auf dem quiz-kern-Motor. Namen, die halten
 // was sie versprechen, stehen neben Namen, die in die Irre führen.
 // Praleska docs/10 (Kinder-Apps Nr. 23). Politik docs/02: keine externen
-// Anfragen, nur der Rekord liegt löschbar auf dem Gerät.
+// Anfragen, nichts wird gespeichert, das Kind wird nicht bewertet.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -26,7 +26,6 @@ starteQuiz({
     binaerJa: '✅ Stimmt',
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächste Frage ➡️',
-    fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

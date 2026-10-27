@@ -4,23 +4,22 @@
 // Kommentare ohne Aufsicht) und waehlen die sichere Handlung/Einschaetzung.
 // Lernziel: die Schutzmerkmale Moderation, Melde-Funktion, Spitzname erkennen -
 // OHNE Grooming-Inhalte, rein als Kriterien-Training. Nutzt Hilfe-Insel.
-// 2/1/0-Muster. Politik: keine externen Anfragen, nur Rekord in localStorage.
+// 2/1/0-Muster: bewertet wird die Antwortoption, nicht das Kind; jede Antwort bekommt eine
+// Rueckmeldung mit Erklaerung. Politik: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'cc.rekord';
+// Alter Schluessel aus frueheren Versionen: einmal beim Start entfernen.
+try { localStorage.removeItem('cc.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -28,30 +27,26 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Ist dieser Chat sicher? Erkenne die Schutzmerkmale.'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · diese App speichert nichts · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Moderiertes Gästebuch, offener Fremden-Chat, Kommentare ohne Aufsicht: In ${daten.szenarien.length} Beispielen schaust du dir eine Chat-Funktion an und entscheidest, wie sicher sie ist. Achte auf drei Schutzmerkmale: Moderation, Melde-Knopf und Spitzname statt echtem Namen.`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 🔎`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Achte auf drei Schutzmerkmale: Moderation, Melde-Knopf und Spitzname statt echtem Namen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')),
-    datenKarte({ schluessel: REKORD_SCHLUESSEL, was: 'dein Rekord', nachLoeschen: startBildschirm }));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')));
 }
 
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   szenarioBildschirm();
 }
 
@@ -73,7 +68,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   const titel = option.wert === 2 ? 'Sicher erkannt! 🔎✨' : option.wert === 1 ? 'Okay – aber schau genauer hin.' : 'Vorsicht – das ist nicht sicher.';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
   zeige(
@@ -85,7 +79,7 @@ function antworte(s, option) {
         el('p', { style: 'margin:0;font-size:0.9rem' }, `Merkmal: ${s.schutzmerkmal}`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.erklaerung}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächstes Beispiel ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächstes Beispiel ➡️' : 'Zum Schluss 🏁'))));
 }
 
 function weiter() {
@@ -95,14 +89,10 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Punkten · Rekord: ${rekord}`),
+      el('p', { class: 'k-gross' }, '🔎'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

@@ -8,19 +8,14 @@
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
-import { nachrichtenMitTrick, angebote, bewerteZuordnung, bewertung } from './logik.mjs';
+import { bewerteZuordnung } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
 const app = document.getElementById('app');
 const daten = await fetch('daten/dialog.json').then((r) => r.json());
 
-const maxPunkte = nachrichtenMitTrick(daten.dialog).length;
-const anzahlAngebote = angebote(daten.dialog).length;
-
 let index = 0;
-let punkte = 0;
-let abgelehnt = 0;
 let letzteKindAntwort = null;
 let ergebnisse = new Map(); // nachricht.id -> { wahl, hatTrick, richtig, tatsaechlich }
 
@@ -56,8 +51,6 @@ function fortschritt() {
 
 function startBildschirm() {
   index = 0;
-  punkte = 0;
-  abgelehnt = 0;
   letzteKindAntwort = null;
   ergebnisse = new Map();
   zeige(
@@ -93,7 +86,7 @@ function nachrichtBildschirm() {
   const nachricht = daten.dialog[index];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-untertitel', style: 'margin:0 0 0.5rem' }, `Nachricht ${index + 1} von ${daten.dialog.length} · 🕵️ ${punkte} Tricks erkannt`),
+      el('p', { class: 'k-untertitel', style: 'margin:0 0 0.5rem' }, `Nachricht ${index + 1} von ${daten.dialog.length}`),
       fortschritt(),
       el('div', { style: 'margin-top:0.75rem' },
         letzteKindAntwort ? kindBlase(letzteKindAntwort) : '',
@@ -121,7 +114,6 @@ function trickWahlBildschirm(nachricht) {
 function pruefeTrick(nachricht, wahl) {
   const ergebnis = bewerteZuordnung(nachricht, wahl);
   ergebnisse.set(nachricht.id, { wahl, ...ergebnis });
-  if (ergebnis.richtig) punkte++;
   let titel, text, klasse;
   if (!ergebnis.hatTrick) {
     titel = 'Gut aufgepasst – aber hier ist kein Trick!';
@@ -151,7 +143,6 @@ function pruefeTrick(nachricht, wahl) {
 
 function antworte(nachricht, antwort) {
   letzteKindAntwort = antwort.text;
-  if (antwort.art === 'ablehnen') abgelehnt++;
   if (antwort.feedback) {
     const klasse = antwort.art === 'ablehnen' ? 'k-hinweis--richtig' : 'k-hinweis--falsch';
     zeige(
@@ -175,15 +166,12 @@ function weiter() {
 }
 
 function aufloesungBildschirm() {
-  const rang = bewertung(punkte, maxPunkte);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '🔌'),
       el('p', { style: 'text-align:center;font-weight:700;font-size:1.15rem' }, `Auflösung: ${daten.botName} ist ein Programm.`),
       el('p', {}, 'Es fühlt nichts. Es erinnert sich nicht an dich – es speichert nur Daten. Es denkt nie an dich. Es hat nur ein Ziel: dich so lange wie möglich im Chat zu halten.'),
-      el('p', { style: 'text-align:center;font-weight:700' }, `${rang.emoji} ${rang.titel}`),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte} Tricks erkannt · ${abgelehnt} von ${anzahlAngebote} Angeboten abgelehnt`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Auflösung: Kimo ist ein Programm. Es fühlt nichts, es erinnert sich nicht, es will dich nur halten. Du hast ${punkte} von ${maxPunkte} Tricks erkannt und ${abgelehnt} von ${anzahlAngebote} Angeboten abgelehnt. Dein Rang: ${rang.titel}.`) }, '🔊 Vorlesen')),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Auflösung: Kimo ist ein Programm. Es fühlt nichts, es erinnert sich nicht, es will dich nur halten.`) }, '🔊 Vorlesen')),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, el('strong', {}, '📜 Dein Recht (AI Act): '), 'In Europa muss sich eine KI zu erkennen geben. Du darfst immer wissen, ob du mit einem Menschen oder mit einem Programm sprichst.'),
       el('p', {}, el('strong', {}, '🔒 Deine Regel: '), 'Persönliches gehört nicht in einen Bot-Chat – kein Name, keine Adresse, keine Fotos, keine Geheimnisse.'),

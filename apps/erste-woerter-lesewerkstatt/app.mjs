@@ -1,23 +1,24 @@
 // Erste-Wörter-Lesewerkstatt (5-7): kurze Lese-Sessions in drei Stufen –
 // Vokale hören, Silben hören, lautgetreue Wörter lesen (Bild-Selbstkontrolle
 // mit Silbenbögen). Runde ist bewusst kurz (Zeitbegrenzung), danach Pause.
-// Praleska docs/10 (Top-30 Nr. 25). Politik docs/02: nur Rekord lokal.
+// Praleska docs/10 (Top-30 Nr. 25). Das Kind wird nicht bewertet. Politik docs/02:
+// keine Texteingabe, keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { pruefeMaterial, hoerOptionen, bildOptionen, silbenTeilen } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
 
-const REKORD = 'lese.rekord';
+// Alter Schlüssel aus früheren Fassungen: einmal beim Start entfernen.
+try { localStorage.removeItem('lese.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/material.json').then((r) => r.json());
 
 let aufgaben = [];
 let index = 0;
-let punkte = 0;
 let beantwortet = false;
 
 function sprich(text) {
@@ -37,7 +38,7 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Erste Buchstaben, Silben und Wörter'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · kurze Runden · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · kurze Runden · nichts wird gespeichert · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
@@ -45,15 +46,12 @@ function zeige(...knoten) {
 }
 
 function start() {
-  const rekord = Number(localStorage.getItem(REKORD) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '🔤'),
       el('p', {}, 'Eine kleine Lese-Runde: erst Buchstaben hören, dann Silben, dann echte Wörter lesen. Acht Aufgaben – dann ist Pause!'),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von 8 ⭐`) : null,
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: () => { aufgaben = baueRunde(); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))),
-    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }));
+        el('button', { class: 'k-knopf', onclick: () => { aufgaben = baueRunde(); index = 0; frage(); } }, '▶️ Los geht’s'))));
 }
 
 function frage() {
@@ -94,12 +92,11 @@ function frage() {
 function antworte(a, richtig) {
   if (beantwortet) return;
   beantwortet = true;
-  if (richtig) punkte++;
   const letzte = index + 1 >= aufgaben.length;
   const loesung = a.typ === 'wort' ? `${a.wort.wort} – ${a.wort.emoji}` : a.ziel;
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, richtig ? '🌟' : '💭'),
+      el('p', { class: 'k-gross' }, richtig ? '👍' : '💭'),
       el('div', { class: `k-hinweis${richtig ? ' k-hinweis--richtig' : ''}` },
         el('p', { style: 'font-weight:700;margin-top:0' }, richtig ? 'Super gelesen!' : 'Fast!'),
         el('p', { style: 'margin-bottom:0;font-size:1.3rem;text-align:center' }, loesung)),
@@ -109,12 +106,10 @@ function antworte(a, richtig) {
 }
 
 function ende() {
-  const rekordAlt = Number(localStorage.getItem(REKORD) ?? 0);
-  if (punkte > rekordAlt) localStorage.setItem(REKORD, String(punkte));
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, '🏅'),
-      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, `${punkte} von ${aufgaben.length} geschafft!`),
+      el('p', { class: 'k-gross' }, '🏁'),
+      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, 'Ende der Runde'),
       el('p', { style: 'text-align:center' }, '👉 Jetzt ist Lese-Pause. Deine Augen haben gut gearbeitet – erzähl jemandem, welche Wörter du gelesen hast!'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, '🏠 Zum Start'))));

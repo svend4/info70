@@ -2,7 +2,7 @@
 // Mengen, Zählen, Formen, Reihen/Muster, Vergleichen, Raumrichtung, Teilen,
 // Zeit. Ablauf aus @info70/quiz-kern (inkl. Vorlesen, Klassen-/Duett-/Staffel-
 // Modus). Praleska docs/10 (Top-30 Nr. 6). Alle Aufgaben Eigenproduktion.
-// Politik docs/02: keine externen Anfragen, nur Rekord in localStorage.
+// Politik docs/02: keine externen Anfragen, nichts gespeichert, keine Wertung.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -27,6 +27,5 @@ starteQuiz({
     binaerNein: '🚫 Nein, stimmt nicht',
     weiterKnopf: 'Nächste Aufgabe ➡️',
     fertigTitel: 'Toll gerechnet!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
   },
 });

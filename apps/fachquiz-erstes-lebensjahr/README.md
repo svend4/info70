@@ -34,15 +34,17 @@ Der Katalogeintrag (Praleska, Kita-Abschnitt, Nr. 76) nannte **25 Meilensteine**
 ## So funktioniert es
 
 Vorrat: 13 Fragen (10 Wahl-, 3 ja/nein-Aussagen). Eine Runde: 10 zufällige Fragen,
-Rang nach Anzahl richtiger Antworten. Rekord und Löschknopf kommen aus `quiz-kern`.
-Der Eltern-Link ist aus, weil es keine `eltern.html` gibt.
+am Ende steht ein neutrales „Ende der Runde“. Die App kennt keine Punkte, keinen Rekord
+und keine Ränge und speichert nichts; einen Löschknopf braucht sie deshalb nicht. Der
+Ablauf kommt aus `quiz-kern`. Der Eltern-Link ist aus, weil es keine `eltern.html` gibt.
 
 ## Prüfung
 
-- `node --test apps/fachquiz-erstes-lebensjahr/test/*.mjs` – 7 Tests: Schema gültig,
+- `node --test apps/fachquiz-erstes-lebensjahr/test/*.mjs` – 8 Tests: Schema gültig,
   jede Erklärung mit Seite im Kapitel (S. 26–43) oder Einleitung (S. 5), Widersprüche
-  benannt, die Zahlen 25 und „(4—20)“ nicht als Fakt, beide ja/nein-Arten vorhanden.
-- Browser bei 360 px: volle Runde gespielt, Ergebnis „x von 10 richtig“, kein Überlauf,
+  benannt, die Zahlen 25 und „(4—20)“ nicht als Fakt, beide ja/nein-Arten vorhanden,
+  keine Ränge in den Daten, kein Speicher im App-Code.
+- Browser bei 360 px: volle Runde gespielt, Ende der Runde ohne Wertung, kein Überlauf,
   Antwort-Knöpfe 55 px, keine externen Anfragen. Die einzige Konsolenmeldung ist das
   fehlende `favicon.ico`.
 

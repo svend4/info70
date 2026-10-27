@@ -1,28 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
-  "raenge": [
-    {
-      "ab": 0,
-      "titel": "Natur-Neuling",
-      "emoji": "🌱"
-    },
-    {
-      "ab": 4,
-      "titel": "Lebens-Spürnase",
-      "emoji": "🔎"
-    },
-    {
-      "ab": 8,
-      "titel": "Natur-Forscher*in",
-      "emoji": "🔬"
-    },
-    {
-      "ab": 12,
-      "titel": "Lebens-Expert*in",
-      "emoji": "🌍"
-    }
-  ],
   "fragen": [
     {
       "id": "m01",

@@ -17,7 +17,7 @@ aussprechen), darf-ich-posten (Bild/Urheberrecht). Bindet Hilfe-Insel ein.
 
 Start → 8 Szenarien gemischt (Chat-Optik) → 3 Optionen (2/1/0) →
 Auflösung: Erklärung + 📜 Recht + 💡 Merksatz. Wert-2-Antworten sammeln
-Merksätze; Ränge + Rekord (localStorage). Hilfe-Insel jederzeit.
+Merksätze; am Ende steht „Ende der Runde“ ohne Wertung. Hilfe-Insel jederzeit.
 
 ## 4. Didaktik
 
@@ -29,16 +29,18 @@ eigener Fehler → Verantwortung. Ein Szenario hat bewusst zwei 0-Optionen
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), nur `cr.rekord` + Löschung,
-werbefrei, Vorlesen, mobile-first, eltern.html, Hilfe-Insel (116 111).
-Situationen erfunden, plattformneutral.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei, Vorlesen, mobile-first,
+eltern.html, Hilfe-Insel (116 111). Situationen erfunden, plattformneutral.
+Die App speichert nichts und kennt keine Punkte, keinen Rekord, keine Ränge;
+der frühere Schlüssel `cr.rekord` wird beim Start einmal entfernt.
 
 ## 6. Tests
 
-`test/szenarien.test.mjs`: Schema/Ränge, je Szenario Recht+Merksatz+
-Erklärung + 2/1/0 (genau eine 2, mind. eine 0), Doppel-Natur-Abdeckung
-(Art. 13 + Grenze + DSA-Melden + Petzen + Verantwortung + Art. 12),
-Artikel-Breite ≥3, Hilfe-Insel eingebunden.
+`test/szenarien.test.mjs`: Schema, keine Ränge in den Daten, je Szenario
+Recht+Merksatz+Erklärung + 2/1/0 (genau eine 2, mind. eine 0),
+Doppel-Natur-Abdeckung (Art. 13 + Grenze + DSA-Melden + Petzen +
+Verantwortung + Art. 12), Artikel-Breite ≥3, Hilfe-Insel eingebunden,
+App-Code ohne Wertung und ohne Speicher (nur die Migration des alten Schlüssels).
 
 ## 7. Erweiterungen (Katalog)
 

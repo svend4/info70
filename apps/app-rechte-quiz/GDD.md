@@ -16,7 +16,7 @@ Nachbarn: spuren-lupe, daten-schatz, formular-falle.
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde → binaer (Passt/Passt nicht) und
-wahl mit Erklärung → Rang + Rekord. Zusätzlich Klassen-Modus.
+wahl mit Erklärung → „Ende der Runde“ ohne Wertung. Zusätzlich Klassen-Modus.
 
 ## 4. Didaktik
 
@@ -28,14 +28,17 @@ Sprachaufgaben) übt echtes Überlegen.
 
 ## 5. Politik-Konformität (docs/02)
 
-Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle beschrieben, nur
-`arq.rekord` + Löschung, werbefrei, Vorlesen, eltern.html.
+Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle beschrieben,
+werbefrei, Vorlesen, eltern.html. Die App speichert nichts und kennt keine
+Punkte, keinen Rekord, keine Ränge; der frühere Schlüssel `arq.rekord` wird
+beim Start einmal entfernt.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥12), Balance (ja+nein bei
 „Passt das?“), Typ-Mischung, Berechtigungs-Abdeckung (Mikrofon/Kamera/
-Standort/Kontakte) + Kern-Regel + Rücknehmbarkeit, Rang-Erreichbarkeit.
+Standort/Kontakte) + Kern-Regel + Rücknehmbarkeit, keine Ränge in den Daten,
+App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

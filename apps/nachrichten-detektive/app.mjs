@@ -25,7 +25,6 @@ starteQuiz({
     binaerNein: '❌ Fake',
     weiterKnopf: 'Nächster Fall ➡️',
     fertigTitel: 'Ermittlung abgeschlossen!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Fällen gelöst · Rekord: ${rekord}`,
   },
 });
 

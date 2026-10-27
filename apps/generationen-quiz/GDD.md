@@ -18,8 +18,9 @@ daten-schatz, koeder-quiz. Familien-Linie mit Foto-Ampel, spiele-kauf-kompass.
 ## 3. Ablauf
 
 quiz-kern-Standard: 12 Fragen aus 14, binaer + wahl, Erklärung nach jeder
-Antwort (verbindet Kinder- und Senioren-Version der Masche), Ränge und
-Rekord, Klassen-/Familien-Modus. Rekord lokal.
+Antwort (verbindet Kinder- und Senioren-Version der Masche),
+„Ende der Runde“ ohne Wertung, Klassen-/Familien-Modus. Nichts wird
+gespeichert.
 
 ## 4. Didaktik / Nutzen
 
@@ -29,15 +30,17 @@ Gespräch zwischen den Generationen und macht beide Seiten sicherer.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei. Nur der Rekord
-(genq.rekord) liegt lokal, löschbar. eltern.html vorhanden; im
-Eltern-Sammelband gelistet.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei. Die App speichert
+nichts und kennt keine Punkte, keinen Rekord, keine Ränge; der frühere
+Schlüssel `genq.rekord` wird beim Start einmal entfernt. eltern.html
+vorhanden; im Eltern-Sammelband gelistet.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema gültig (≥12 Fragen), beide Welten
 vertreten (je ≥4), Kernbotschaft (Enkeltrick/Phishing/Fake-Gewinn/Druck,
-gleiche Masche benannt), erreichbare Ränge und binaer-Balance.
+gleiche Masche benannt), keine Ränge in den Daten, binaer-Balance,
+App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

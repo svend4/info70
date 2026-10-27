@@ -2,7 +2,7 @@
 
 **Einheit aus Katalog:** docs/10 (Praleska) Kinder-Apps Nr. 9 —
 «Mensch-Tier-Pflanze: Was uns verbindet». **Engine:** `quiz-kern`
-(Einzel-, Klassen-, Duett- und Staffel-Modus, Vorlesen, Rekord).
+(Einzel-, Klassen-, Duett- und Staffel-Modus, Vorlesen).
 Zielgruppe: 5–7 in Ko-Nutzung, 8–12 eigenständig.
 
 ## 1. Kernaussage
@@ -25,9 +25,8 @@ koerper-entdecker.
 16 Fragen im Vorrat, 12 pro Runde in zufälliger Reihenfolge — gemischte
 binäre Aussagen („Stimmt / Stimmt nicht“) und Wahlfragen mit drei
 Antworten. Nach jeder Antwort erscheint eine Erklärung; dort passiert das
-Lernen. Am Ende: Punkte, Rekord und einer von vier Rängen
-(Natur-Neuling → Lebens-Spürnase → Natur-Forscher\*in →
-Lebens-Expert\*in).
+Lernen. Am Ende steht „Ende der Runde“ ohne Wertung: keine Punkte, kein
+Rekord, keine Ränge.
 
 ## 4. Didaktik / Nutzen
 
@@ -62,22 +61,24 @@ uns die Belege fehlen.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Nur
-der Punkte-Rekord liegt unter `mtp.rekord` im localStorage und ist in der
-App löschbar. eltern.html, im Sammelband.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Die App
+speichert nichts und kennt keine Punkte, keinen Rekord, keine Ränge; der
+frühere Schlüssel `mtp.rekord` wird beim Start einmal entfernt. eltern.html,
+im Sammelband.
 
 ## 6. Tests
 
-`test/fragen.test.mjs` (8): Schema gültig bei erhöhter Latte (≥14 Fragen,
-Erklärung ≥80 Zeichen); Ränge beginnen bei 0, sind aufsteigend und in
-einer 12er-Runde erreichbar; binäre Fragen enthalten beide Antworten
+`test/fragen.test.mjs` (9): Schema gültig bei erhöhter Latte (≥14 Fragen,
+Erklärung ≥80 Zeichen); keine Ränge in den Daten, Vorrat reicht für eine
+12er-Runde; binäre Fragen enthalten beide Antworten
 (sonst lernt das Kind „immer ja“) und die richtige Wahlantwort steht nicht
 immer an derselben Stelle; alle neun Lebenszeichen-Kategorien
 kommen vor; mindestens drei Fragen vergleichen ausdrücklich Mensch,
 Tier **und** Pflanze; die drei typischen Verwechslungen sind aufgelöst
 (m02 „Tag und Nacht“, m12 „kein Gehirn“, Trinkhalm-Metapher, Auto-Beispiel);
 Ton ohne Beschämung und Angstmache; jede Erklärung ≥120 Zeichen mit
-Satzzeichen, ids in Reihenfolge.
+Satzzeichen, ids in Reihenfolge; App-Code und eltern.html ohne Wertung,
+ohne Speicher und ohne Löschkarte.
 
 ## 7. Erweiterungen (Katalog)
 

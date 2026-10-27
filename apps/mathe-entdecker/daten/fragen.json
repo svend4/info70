@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "5-7 (kurze Einheiten, 4-5 in Ko-Nutzung)",
-  "raenge": [
-    { "ab": 0, "titel": "Zahlen-Entdecker*in", "emoji": "🌱" },
-    { "ab": 3, "titel": "Formen-Finder*in", "emoji": "🔺" },
-    { "ab": 6, "titel": "Mengen-Meister*in", "emoji": "🔢" },
-    { "ab": 9, "titel": "Mathe-Zauberer*in", "emoji": "✨" }
-  ],
   "fragen": [
     { "id": "m01", "typ": "wahl", "kategorie": "Mengen", "frage": "Hier sind 🍎🍎🍎 und da 🍎🍎. Wo sind MEHR Äpfel?", "antworten": ["Bei den drei Äpfeln", "Bei den zwei Äpfeln", "Gleich viele"], "korrekt": 0, "erklaerung": "Drei ist mehr als zwei. Man kann die Äpfel nebeneinanderlegen und zuordnen – dann sieht man, wo einer übrig bleibt." },
     { "id": "m02", "typ": "wahl", "kategorie": "Zählen", "frage": "Zähle mit: 🐟🐟🐟🐟. Wie viele Fische sind das?", "antworten": ["Drei", "Vier", "Fünf"], "korrekt": 1, "erklaerung": "Eins – zwei – drei – vier. Beim Zählen tippt man jeden Fisch genau einmal an. Das Letzte, das du sagst, ist die Anzahl: vier." },

@@ -27,7 +27,6 @@ starteQuiz({
     binaerJa: '✅ Passt',
     binaerNein: '🚫 Passt nicht',
     weiterKnopf: 'Nächster Fall ➡️',
-    fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig geprüft · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

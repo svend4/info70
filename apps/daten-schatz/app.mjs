@@ -1,17 +1,17 @@
 // Daten-Schatz: Szenario-Trainer zum Datenschutz (8-12 Jahre).
 // Das Kind hütet seinen "Datenschatz" und entscheidet in Alltagssituationen:
-// erlauben, ablehnen oder erst Erwachsene fragen. Punkte: beste Antwort 2,
-// akzeptable 1. Politik: keine externen Anfragen, nur Rekord in localStorage.
+// erlauben, ablehnen oder erst Erwachsene fragen. Jede Antwort bekommt eine
+// Rückmeldung mit Erklärung, das Kind wird nicht bewertet. Politik: keine
+// externen Anfragen, nichts wird gespeichert.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
-const REKORD_SCHLUESSEL = 'ds.rekord';
+try { localStorage.removeItem('ds.rekord'); } catch {}
 const RUNDE = 10;
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
@@ -24,9 +24,6 @@ const ANTWORTEN = [
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -41,17 +38,14 @@ function zeige(...knoten) {
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Apps und Websites wollen deine Daten – und dein Geld. In ${RUNDE} Situationen aus einem Vorrat von ${daten.szenarien.length} (auch Kostenfallen wie Lootboxen und Abo-Tricks!) entscheidest du: erlauben, ablehnen – oder erst Erwachsene fragen?`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE * 2} 💎`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Wache übernehmen'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Apps und Websites fragen ständig nach deinen Daten. Du entscheidest: erlauben, ablehnen, oder erst Erwachsene fragen?') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', {}, '🧹 Hier gibt es keine Werbung und keine Anmeldung. Gespeichert wird nur dein Rekord – auf diesem Gerät.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+      el('p', {}, '🧹 Hier gibt es keine Werbung und keine Anmeldung. Es wird nichts gespeichert.')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
@@ -59,7 +53,6 @@ function startBildschirm() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien).slice(0, RUNDE);
   index = 0;
-  punkte = 0;
   szenarioBildschirm();
 }
 
@@ -78,10 +71,10 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, code) {
-  const wert = code === s.beste ? 2 : s.auchOk.includes(code) ? 1 : 0;
-  punkte += wert;
-  const titel = wert === 2 ? 'Starke Entscheidung! 💎💎' : wert === 1 ? 'Auch okay! 💎' : 'Vorsicht, Falle!';
-  const klasse = wert === 2 ? 'k-hinweis--richtig' : wert === 1 ? '' : 'k-hinweis--falsch';
+  const beste = code === s.beste;
+  const okay = !beste && s.auchOk.includes(code);
+  const titel = beste ? 'Starke Entscheidung!' : okay ? 'Auch okay!' : 'Vorsicht, Falle!';
+  const klasse = beste ? 'k-hinweis--richtig' : okay ? '' : 'k-hinweis--falsch';
   const besteAntwort = ANTWORTEN.find((a) => a.code === s.beste).text;
   zeige(
     el('section', { class: 'k-karte' },
@@ -91,7 +84,7 @@ function antworte(s, code) {
         el('p', { style: 'margin-bottom:0' }, `Beste Antwort: ${besteAntwort}`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.erklaerung}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Ende der Runde 🏁'))));
 }
 
 function weiter() {
@@ -101,15 +94,13 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
+  const text = `Du hast ${szenarien.length} Situationen angeschaut. Mit „Noch einmal“ kommen neue Situationen.`;
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Schatz-Punkten · Rekord: ${rekord}`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Du hast ${punkte} von ${maxPunkte()} Schatz-Punkten. Dein Rang: ${rang.titel}`) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '🗝️'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('p', { style: 'text-align:center' }, text),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Ende der Runde. ${text}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))));

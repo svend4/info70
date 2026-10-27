@@ -2,7 +2,7 @@
 
 **Einheit aus Katalog:** docs/10 (Praleska) Kinder-Apps Nr. 10 —
 «Der Koerper-Entdecker: Was in dir steckt». **Engine:** `quiz-kern`
-(Einzel-, Klassen-, Duett- und Staffel-Modus, Vorlesen, Rekord).
+(Einzel-, Klassen-, Duett- und Staffel-Modus, Vorlesen).
 Zielgruppe: 5–7 in Ko-Nutzung, 8–12 eigenständig.
 
 ## 1. Kernaussage
@@ -26,9 +26,9 @@ Wasser, Schlaf.
 
 18 Fragen im Vorrat, 12 pro Runde in zufälliger Reihenfolge — gemischte
 binäre Aussagen („Stimmt / Stimmt nicht“) und Wahlfragen mit drei
-Antworten. Nach jeder Antwort erscheint die Erklärung. Am Ende: Punkte,
-Rekord und einer von vier Rängen (Körper-Neugierige\*r →
-Innen-Spürnase → Körper-Forscher\*in → Körper-Expert\*in).
+Antworten. Nach jeder Antwort erscheint die Erklärung. Am Ende steht
+„Ende der Runde“, ohne Wertung des Kindes: keine Punkte, kein Rekord, keine
+Ränge.
 
 ## 4. Didaktik / Nutzen
 
@@ -75,15 +75,17 @@ Frage und jede Erklärung ist einzeln vorlesbar.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Nur
-der Punkte-Rekord liegt unter `koerper.rekord` im localStorage und ist
-in der App löschbar. eltern.html, im Sammelband.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Die App
+speichert nichts und kennt keine Punkte, keinen Rekord und keine Ränge; der
+frühere Schlüssel `koerper.rekord` wird beim Start einmal entfernt.
+eltern.html, im Sammelband.
 
 ## 6. Tests
 
-`test/fragen.test.mjs` (8): Schema gültig bei erhöhter Latte (≥16 Fragen,
-Erklärung ≥80 Zeichen); Ränge beginnen bei 0, sind aufsteigend und in
-einer 12er-Runde erreichbar; binäre Fragen enthalten beide Antworten und
+`test/fragen.test.mjs` (9): Schema gültig bei erhöhter Latte (≥16 Fragen,
+Erklärung ≥80 Zeichen); die Daten haben keine Ränge; App-Code ohne
+Ergebnissatz, ohne Speicher und ohne Löschkarte, Eltern-Seite ohne
+Löschknopf; binäre Fragen enthalten beide Antworten und
 die richtige Wahlantwort steht nicht immer an derselben Stelle; alle
 neun Organ-Kategorien kommen vor; die belegten Zahlenwerte sind
 festgenagelt (Ruhepuls 80–100, 206 Knochen, über 300 beim Baby, 9–11

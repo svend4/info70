@@ -3,25 +3,24 @@
 // Anders als im Daten-Schatz (feste drei Antworten) hat hier jedes Szenario
 // eigene Optionen mit Wert 2/1/0 - bewusst kein gemeinsamer Szenario-Kern,
 // solange es nur zwei Trainer-Apps gibt (docs/05, Methode 0: Regel der zwei).
-// Politik: keine externen Anfragen, nur Rekord in localStorage.
+// Das Kind wird nicht bewertet: die Werte 2/1/0 steuern nur die Rueckmeldung zu jeder
+// Antwort, es wird nichts addiert. Politik: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
 
-const REKORD_SCHLUESSEL = 'sic.rekord';
+// Alter Schluessel aus frueheren Versionen: einmal beim Start entfernen.
+try { localStorage.removeItem('sic.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -29,24 +28,21 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Hinschauen. Nicht mitmachen. Helfen.'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · diese App speichert nichts · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Gemeine Nachrichten, fiese Gruppen, peinliche Fotos: In ${daten.szenarien.length} Chat-Situationen entscheidest du, was du tust. Kleine Züge, große Wirkung – du hast mehr Macht, als du denkst.`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 💪`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Training starten'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Gemeine Nachrichten, fiese Gruppen, peinliche Fotos. In zehn Chat-Situationen entscheidest du, was du tust. Du hast mehr Macht, als du denkst.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, '💛 Wichtig: Wirst du selbst gemobbt? Das ist NIE deine Schuld. Sprich mit Erwachsenen – oder ruf kostenlos und anonym an: Nummer gegen Kummer 116 111.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+      el('p', { style: 'margin:0' }, '💛 Wichtig: Wirst du selbst gemobbt? Das ist NIE deine Schuld. Sprich mit Erwachsenen – oder ruf kostenlos und anonym an: Nummer gegen Kummer 116 111.')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
@@ -54,7 +50,6 @@ function startBildschirm() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   szenarioBildschirm();
 }
 
@@ -74,7 +69,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   const titel = option.wert === 2 ? 'Starker Zug! 💪💪' : option.wert === 1 ? 'Okay – aber da geht mehr! 💪' : 'Das macht es schlimmer …';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
   const beste = s.optionen.find((o) => o.wert === 2);
@@ -86,7 +80,7 @@ function antworte(s, option) {
         option.wert < 2 ? el('p', { style: 'margin-bottom:0' }, `Stärkster Zug: ${beste.text}`) : ''),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.erklaerung}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Schluss 🏁'))));
 }
 
 function weiter() {
@@ -96,15 +90,12 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
+  const satz = 'Ende der Runde. Merk dir drei Züge: Nicht mitmachen. Melden und einem Erwachsenen erzählen. Der betroffenen Person schreiben, dass sie nicht allein ist.';
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Mut-Punkten · Rekord: ${rekord}`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Du hast ${punkte} von ${maxPunkte()} Mut-Punkten. Dein Rang: ${rang.titel}`) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '💪'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(satz) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

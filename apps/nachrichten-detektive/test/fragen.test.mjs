@@ -30,7 +30,13 @@ test('KI-Radar-Paket vorhanden (Katalog Nr.1 Top-16)', () => {
   assert.ok(antworten.has('ja') && antworten.has('nein'), 'Balance auch im KI-Paket');
 });
 
-test('Ränge sind mit einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= 12, 'höchster Rang muss in einer Runde erreichbar sein');
+test('die Daten kennen keine Ränge; der Vorrat reicht für eine 12er-Runde', () => {
+  assert.equal(daten.raenge, undefined, 'kein Kind wird eingestuft');
+  assert.ok(daten.fragen.length >= 12);
+});
+
+test('der App-Code wertet nichts und speichert nichts (keine Karte, kein Löschknopf)', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|Geschafft|localStorage|setItem|datenKarte|Meine Daten/);
+  assert.match(code, /^\s*rekordSchluessel: 'nd\.rekord',\s*$/m, 'alter Schlüssel nur für die einmalige Entfernung');
 });

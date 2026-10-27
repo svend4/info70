@@ -13,13 +13,16 @@
   контекста, сатира vs. фейк, эмоции как красный флаг, боты/масса ≠ правда,
   обязательная маркировка ИИ (AI Act), фактчек, ответственность за
   случайный репост.
-- Ранги, рекорд, объяснение после каждого ответа, Klassen-Modus/Duett/
-  Geschwister-Staffel (из `quiz-kern`), Vorlesen.
+- Объяснение после каждого ответа, Klassen-Modus/Duett/Geschwister-Staffel
+  (из `quiz-kern`), Vorlesen. Раунд заканчивается экраном «Ermittlung abgeschlossen!»
+  без счёта и без оценки ребёнка.
 
 ## Политика
 
-Werbefrei, без внешних запросов (NetzwerkWaechter); хранится только рекорд
-(`ndp.rekord`), удаляется. Есть `eltern.html`, в Eltern-Sammelband.
+Werbefrei, без внешних запросов (NetzwerkWaechter); ничего не сохраняется,
+в приложении нет очков, рекорда и рангов, поэтому нет и карточки «Meine Daten
+löschen» (старая запись `ndp.rekord` прежних версий один раз удаляется при запуске).
+Есть `eltern.html`, в Eltern-Sammelband.
 
 ## Запуск и тесты
 

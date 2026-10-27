@@ -24,8 +24,7 @@ starteQuiz({
     binaerJa: '✅ Echt',
     binaerNein: '🎣 Köder',
     weiterKnopf: 'Nächste Nachricht ➡️',
-    fertigTitel: 'Köder-Check geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Nachrichten durchschaut · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });
 

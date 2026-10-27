@@ -10,12 +10,11 @@ test('Fragenbank: quiz-kern-Schema gültig, genug für eine 12er-Runde', () => {
   assert.ok(daten.fragen.length >= 12, `mindestens 12 Fragen (ist: ${daten.fragen.length})`);
 });
 
-test('Zielgruppe 13-15, gemischte Typen, erreichbare Ränge', () => {
+test('Zielgruppe 13-15, gemischte Typen, keine Ränge in den Daten', () => {
   assert.equal(daten.zielgruppe, '13-15');
   assert.ok(daten.fragen.some((f) => f.typ === 'wahl'), 'Profi-Stufe nutzt auch Mehrfachwahl');
   assert.ok(daten.fragen.some((f) => f.typ === 'binaer'), 'auch Ja/Nein dabei');
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= daten.fragen.length, 'oberster Rang erreichbar');
+  assert.equal(daten.raenge, undefined, 'kein Kind wird eingestuft');
 });
 
 test('Profi-Themen abgedeckt: Deepfake, KI-Texte, Quellencheck', () => {
@@ -30,4 +29,10 @@ test('wahl-Fragen: korrekt-Index zeigt auf eine gültige Antwort', () => {
     assert.ok(f.korrekt >= 0 && f.korrekt < f.antworten.length, `${f.id}: korrekt-Index ungültig`);
     assert.ok(f.antworten.length >= 3, `${f.id}: 13-15 sollte 3 Optionen bieten`);
   }
+});
+
+test('der App-Code wertet nichts und speichert nichts (keine Karte, kein Löschknopf)', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|Geschafft|localStorage|setItem|datenKarte|Meine Daten/);
+  assert.match(code, /^\s*rekordSchluessel: 'ndp\.rekord',\s*$/m, 'alter Schlüssel nur für die einmalige Entfernung');
 });

@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Neu im Labyrinth", "emoji": "🌀" },
-    { "ab": 3, "titel": "Augen auf!", "emoji": "👀" },
-    { "ab": 5, "titel": "Trick-Spürnase", "emoji": "🕵️" },
-    { "ab": 7, "titel": "Muster-Meister*in", "emoji": "🏆" }
-  ],
   "stationen": [
     {
       "id": "s01",
@@ -22,7 +16,7 @@
     {
       "id": "s02",
       "name": "Vorangekreuzte Häkchen",
-      "situation": "Vor dem ersten Spiel zeigt Glitzi eine Liste: ☑ „Glitzi darf dir jeden Tag Post schicken“ ☑ „Deine Punkte werden allen gezeigt“ ☑ „Extra-Angebote anzeigen“. Alle Häkchen sind schon gesetzt! Darunter leuchtet ein großer Knopf: „Weiter“.",
+      "situation": "Vor dem ersten Spiel zeigt Glitzi eine Liste: ☑ „Glitzi darf dir jeden Tag Post schicken“ ☑ „Deine Diamanten werden allen gezeigt“ ☑ „Extra-Angebote anzeigen“. Alle Häkchen sind schon gesetzt! Darunter leuchtet ein großer Knopf: „Weiter“.",
       "optionen": [
         { "text": "Einfach „Weiter“ tippen – die Häkchen waren ja schon drin", "istFalle": true },
         { "text": "Stopp! Jedes Häkchen einzeln lesen und selbst entscheiden, was angekreuzt bleibt", "istFalle": false },
@@ -46,7 +40,7 @@
       "name": "Versteckter Schließen-Knopf",
       "situation": "Plötzlich füllt eine Riesen-Werbung den ganzen Bildschirm: „GLITZI-SUPER-DEAL – JETZT HOLEN!“ Du willst sie nur wegmachen. Aber wo ist bloß der Schließen-Knopf?",
       "optionen": [
-        { "text": "🌟 JETZT HOLEN! (der riesige Glitzer-Knopf in der Mitte)", "istFalle": true },
+        { "text": "✨ JETZT HOLEN! (der riesige Glitzer-Knopf in der Mitte)", "istFalle": true },
         { "text": "🎀 Mehr erfahren", "istFalle": true },
         { "text": "✕ schließen (das winzige, blasse Kreuz in der Ecke)", "istFalle": false }
       ],
@@ -66,7 +60,7 @@
     {
       "id": "s06",
       "name": "Werbe-Schleife (Belohnung fürs Werbung-Schauen)",
-      "situation": "Level geschafft! Glitzi bietet an: „Nimm 10 Diamanten – ODER schau ein Werbevideo und bekomme 50! Danach wartet noch ein Video für 100! Und dann noch eins …“",
+      "situation": "Level zu Ende! Glitzi bietet an: „Nimm 10 Diamanten – ODER schau ein Werbevideo und bekomme 50! Danach wartet noch ein Video für 100! Und dann noch eins …“",
       "optionen": [
         { "text": "Video um Video schauen – mehr Diamanten sind mehr Diamanten!", "istFalle": true },
         { "text": "Die normale Belohnung nehmen und weiterspielen – deine Zeit ist mehr wert als Glitzer-Zahlen", "istFalle": false },

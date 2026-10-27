@@ -1,9 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { zeigerWinkel, uhrText, uhrOptionen, pruefeFragen, rangFuer } from '../logik.mjs';
+import * as logik from '../logik.mjs';
+import { zeigerWinkel, uhrText, uhrOptionen, pruefeFragen } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/fragen.json', import.meta.url), 'utf8'));
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 
 test('zeigerWinkel: Stunden- und Minutenzeiger stimmen', () => {
   assert.deepEqual(zeigerWinkel(3, 0), { minute: 0, stunde: 90 });
@@ -49,7 +52,22 @@ test('pruefeFragen erkennt kaputte Uhr-Frage (Ablenker == richtige Zeit)', () =>
   assert.ok(pruefeFragen(kaputt).some((f) => /klingt wie die richtige/.test(f)));
 });
 
-test('rangFuer', () => {
-  assert.equal(rangFuer(daten.raenge, 0).ab, 0);
-  assert.equal(rangFuer(daten.raenge, 100).titel, daten.raenge[daten.raenge.length - 1].titel);
+test('Kinder werden nicht bewertet: keine Rang-Funktion, keine Ränge in den Daten, kein Zähler im App-Code', () => {
+  assert.equal(logik.rangFuer, undefined, 'logik.mjs hat keine Rang-Funktion mehr');
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Rang- oder Punkteschwellen');
+  assert.doesNotMatch(appQuelle, /punkte|rangFuer|raenge|von \$\{fragen\.length\} richtig/i, 'app.mjs zählt nichts und zeigt keinen Rang');
+  assert.doesNotMatch(appQuelle, /Geschafft|🏆|🌟/, 'kein Geschafft-Titel, kein Pokal, kein Stern');
+  assert.match(appQuelle, /Ende der Runde/, 'am Ende steht ein neutraler Titel');
+});
+
+test('Speicherregel: speichert die App (setItem), gibt es einen Löschknopf; speichert sie nichts, gibt es keine Karte', () => {
+  const speichert = /\.setItem\(/.test(appQuelle);
+  const hatKarte = /datenKarte\(|Meine Daten l(ö|oe)schen/.test(appQuelle);
+  if (speichert) assert.ok(hatKarte || /removeItem/.test(appQuelle), 'wer speichert, lässt auch löschen');
+  else assert.equal(hatKarte, false, 'ohne Speicher keine Karte „Meine Daten löschen“');
+  assert.equal(speichert, false, 'diese App speichert nichts');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'auch die Eltern-Seite verspricht keinen Löschknopf');
+  assert.match(elternSeite, /speichert <strong>nichts<\/strong>/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  // Migration (Entscheidung 33а): der alte Rekord-Schlüssel wird beim Start einmal entfernt, in einer eigenen Zeile.
+  assert.ok(appQuelle.split('\n').some((z) => z.trim() === "try { localStorage.removeItem('uhr.rekord'); } catch {}"));
 });

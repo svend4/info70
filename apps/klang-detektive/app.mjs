@@ -2,17 +2,16 @@
 // (Ko-Nutzung) / 5-7. Hoch/tief, laut/leise, schnell/langsam, rauf/runter,
 // weich/scharf. Die Klänge werden im Browser synthetisiert – KEINE fremden
 // Audiodateien, KEINE externen Requests (CSP self). Praleska docs/10 (Nr. 20).
-// Politik docs/02: keine externen Anfragen, nur Rekord in localStorage.
+// Politik docs/02: keine externen Anfragen, nichts im Speicher; das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
-import { pruefeFragen, rangFuer } from './logik.mjs';
+import { pruefeFragen } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
 
-const REKORD = 'klang.rekord';
+try { localStorage.removeItem('klang.rekord'); } catch {}
 const RUNDE = 8;
 const app = document.getElementById('app');
 const daten = await fetch('daten/fragen.json').then((r) => r.json());
@@ -20,7 +19,6 @@ const daten = await fetch('daten/fragen.json').then((r) => r.json());
 let audio = null; // AudioContext wird erst bei der ersten Nutzer-Geste erzeugt
 let fragen = [];
 let index = 0;
-let punkte = 0;
 let beantwortet = false;
 
 function ctx() {
@@ -89,7 +87,7 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Spitz die Ohren – was hörst du?'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · Klänge im Browser erzeugt · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · Klänge im Browser erzeugt · nichts wird gespeichert ·'),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')),
   ].filter(Boolean));
@@ -97,16 +95,13 @@ function zeige(...knoten) {
 }
 
 function start() {
-  const rekord = Number(localStorage.getItem(REKORD) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '👂'),
       el('p', {}, `Du hörst kleine Klänge und rätst: hoch oder tief? laut oder leise? schnell oder langsam? In ${RUNDE} Rätseln wirst du zum Klang-Detektiv.`),
       el('p', { style: 'font-size:0.9rem;color:#4b5563' }, 'Am besten mit einem großen Menschen zusammen. Nicht zu laut stellen – schütze deine Ohren!'),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE} 🎧`) : null,
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; punkte = 0; frage(); } }, '▶️ Los geht’s'))),
-    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }));
+        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; frage(); } }, '▶️ Los geht’s'))));
 }
 
 function frage() {
@@ -128,11 +123,10 @@ function antworte(q, wahl) {
   if (beantwortet) return;
   beantwortet = true;
   const richtig = wahl === q.korrekt;
-  if (richtig) punkte++;
   const letzte = index + 1 >= fragen.length;
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, richtig ? '🌟' : '💭'),
+      el('p', { class: 'k-gross' }, richtig ? '👂' : '💭'),
       el('div', { class: `k-hinweis${richtig ? ' k-hinweis--richtig' : ''}` },
         el('p', { style: 'font-weight:700;margin-top:0' }, richtig ? 'Richtig gehört!' : 'Fast! Hör nochmal genau hin.'),
         el('p', { style: 'margin-bottom:0' }, q.erklaerung)),
@@ -144,16 +138,13 @@ function antworte(q, wahl) {
 }
 
 function ende() {
-  const rekordAlt = Number(localStorage.getItem(REKORD) ?? 0);
-  if (punkte > rekordAlt) localStorage.setItem(REKORD, String(punkte));
-  const rang = rangFuer(daten.raenge, punkte);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${fragen.length} richtig gehört`),
+      el('p', { class: 'k-gross' }, '🎧'),
+      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, 'Ende der Runde'),
+      el('p', { style: 'text-align:center' }, 'Magst du noch einmal Klänge belauschen?'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; punkte = 0; frage(); } }, '🔁 Noch einmal'),
+        el('button', { class: 'k-knopf', onclick: () => { fragen = mischen(daten.fragen).slice(0, RUNDE); index = 0; frage(); } }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, '🏠 Start'))));
 }
 

@@ -2,7 +2,7 @@
   "name": "@info70/mensch-tier-pflanze",
   "version": "0.1.0",
   "private": true,
-  "description": "Mensch, Tier, Pflanze - was uns verbindet: Vergleichs-Quiz zu den gemeinsamen Lebenszeichen (atmen, essen, trinken, wachsen, bewegen, reagieren, Nachwuchs) mit 16 Fragen, Erklaerung zu jeder Frage und vier Raengen. Klaert die haeufigen Verwechslungen: Pflanzen atmen Tag und Nacht (Atmung ist nicht Fotosynthese), Pflanzen reagieren auf Licht und Beruehrung, haben aber kein Gehirn; Leitungsbahnen als 'viele duenne Trinkhalme'. Mitteleuropaeische Flora und Fauna, Bezug Sachunterricht. Vorlesefunktion fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 9). Offline, werbefrei, nur der Rekord liegt loeschbar auf dem Geraet. Zielgruppe: 5-7 in Ko-Nutzung, 8-12 eigenstaendig.",
+  "description": "Mensch, Tier, Pflanze - was uns verbindet: Vergleichs-Quiz zu den gemeinsamen Lebenszeichen (atmen, essen, trinken, wachsen, bewegen, reagieren, Nachwuchs) mit 16 Fragen, Erklaerung zu jeder Frage. Klaert die haeufigen Verwechslungen: Pflanzen atmen Tag und Nacht (Atmung ist nicht Fotosynthese), Pflanzen reagieren auf Licht und Beruehrung, haben aber kein Gehirn; Leitungsbahnen als 'viele duenne Trinkhalme'. Mitteleuropaeische Flora und Fauna, Bezug Sachunterricht. Vorlesefunktion fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 9). Offline, werbefrei, nichts wird gespeichert, keine Wertung. Zielgruppe: 5-7 in Ko-Nutzung, 8-12 eigenstaendig.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

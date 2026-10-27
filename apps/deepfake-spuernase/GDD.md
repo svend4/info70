@@ -17,7 +17,7 @@ deepfake-studio, wer-dahinter, verschwoerungs-werkstatt.
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde → binaer/wahl mit Erklärung →
-Rang + Rekord. Zusätzlich Klassen-Modus.
+neutrales „Ende der Runde“ ohne Wertung. Zusätzlich Klassen-Modus.
 
 ## 4. Didaktik
 
@@ -30,14 +30,15 @@ dann teilen. Balance-Test: beide binaer-Antworten kommen vor.
 ## 5. Politik-Konformität (docs/02)
 
 Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle beschrieben (keine
-echten Bilder), nur `dfs.rekord` + Löschung, werbefrei, Vorlesen,
-eltern.html.
+echten Bilder), es wird nichts gespeichert (keine Punkte, kein Rekord,
+keine Ränge; der alte Schlüssel `dfs.rekord` wird beim Start einmal entfernt),
+daher keine Karte „Meine Daten löschen“; werbefrei, Vorlesen, eltern.html.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥12), Balance (ja+nein),
 Typ-Mischung, Kategorie-Abdeckung, Prüfmerkmale (Hände/Licht/Text/Quelle)
-+ KI-Kennzeichnung + teilen, Rang-Erreichbarkeit.
++ KI-Kennzeichnung + teilen, keine Ränge in den Daten, kein Speicher im App-Code.
 
 ## 7. Erweiterungen (Katalog)
 

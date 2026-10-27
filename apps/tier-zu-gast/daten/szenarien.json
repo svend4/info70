@@ -2,12 +2,6 @@
   "version": 1,
   "zielgruppe": "5-7 und 8-12",
   "hinweis": "Ein Tier zu Gast – Verantwortungs-Trainer (Praleska docs/10, Kinder-Apps Nr. 4; Struktur adaptiert, alle Szenen Eigenproduktion). Botschaften ausgerichtet an deutschem Tierschutz-Alltagswissen und Heimtier-Empfehlungen: Meerschweinchen, Kaninchen und Wellensittiche nie einzeln halten; Hamster sind nachtaktiv; Kaninchen am Boden streicheln; kranke Tiere zum Tierarzt.",
-  "raenge": [
-    { "ab": 0, "titel": "Tierfreund-Anfänger*in", "emoji": "🌱" },
-    { "ab": 8, "titel": "Tier-Kenner*in", "emoji": "🐾" },
-    { "ab": 14, "titel": "Tier-Versteher*in", "emoji": "💚" },
-    { "ab": 18, "titel": "Verantwortungs-Profi", "emoji": "🏅" }
-  ],
   "szenarien": [
     {
       "id": "t01", "thema": "Meerschweinchen", "emoji": "🐹",

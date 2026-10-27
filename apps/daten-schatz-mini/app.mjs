@@ -1,23 +1,21 @@
 // Daten-Schatz Mini (6-8, docs/09 Ось A / Nr. 165). Einfache 6-8-Variante:
 // große Piktogramme, Vorlesen, nur zwei Antworten. Das Kind sortiert: „Darf
-// jeder wissen“ oder „Bleibt geheim“. Erste Datensparsamkeit. Politik docs/02:
-// keine externen Anfragen, nur Bestwert lokal.
+// jeder wissen“ oder „Bleibt geheim“. Erste Datensparsamkeit. Das Kind wird
+// nicht bewertet. Politik docs/02: keine externen Anfragen, nichts gespeichert.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
 
-const REKORD = 'dsm.rekord';
+try { localStorage.removeItem('dsm.rekord'); } catch {}
 const app = document.getElementById('app');
 const daten = await fetch('daten/sachen.json').then((r) => r.json());
 
 let runde = [];
 let index = 0;
-let punkte = 0;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -32,18 +30,15 @@ function zeige(...knoten) {
 }
 
 function start() {
-  const rekord = Number(localStorage.getItem(REKORD) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '🔒🌍'),
       el('p', {}, 'Manche Sachen darf jeder wissen. Zum Beispiel deine Lieblings-Farbe. Andere Sachen bleiben geheim. Zum Beispiel dein Passwort. Sortiere mit!'),
-      rekord > 0 ? el('p', {}, `Dein Bestwert: ${rekord} von ${daten.sachen.length} ⭐`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s!'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Manche Sachen darf jeder wissen. Andere Sachen bleiben geheim. Sortiere mit!') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '🧹 Hier gibt es keine Werbung. Du musst dich nicht anmelden.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD); start(); } }, 'Meine Daten löschen')),
+      el('p', { style: 'margin:0' }, '🧹 Hier gibt es keine Werbung. Du musst dich nicht anmelden. Es wird nichts gespeichert.')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: start })))));
 }
@@ -51,7 +46,6 @@ function start() {
 function starteRunde() {
   runde = mischen(daten.sachen);
   index = 0;
-  punkte = 0;
   frage();
 }
 
@@ -72,7 +66,6 @@ function frage() {
 
 function antworte(s, geheimGewaehlt) {
   const richtig = geheimGewaehlt === s.geheim;
-  if (richtig) punkte++;
   const titel = richtig ? 'Richtig! 🎉' : 'Fast! Schau mal:';
   vorlesen(`${titel} ${s.erklaerung}`);
   zeige(
@@ -93,15 +86,12 @@ function weiter() {
 }
 
 function ende() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD) ?? 0));
-  localStorage.setItem(REKORD, String(rekord));
-  const alle = punkte === runde.length;
-  vorlesen(`Super gemacht! Du hast ${punkte} von ${runde.length} richtig sortiert.`);
+  const text = `Ende der Runde. Du hast ${runde.length} Karten angeschaut.`;
+  vorlesen(text);
   zeige(
     el('section', { class: 'k-karte', style: 'text-align:center' },
-      el('p', { class: 'k-gross' }, alle ? '🏆' : '🌟'),
-      el('p', { style: 'font-weight:700' }, `Super gemacht! Du hast ${punkte} von ${runde.length} richtig sortiert.`),
-      el('p', {}, `Bestwert: ${rekord}`),
+      el('p', { class: 'k-gross' }, '🗝️'),
+      el('p', { style: 'font-weight:700' }, text),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: start }, '🏠 Zum Start'))));

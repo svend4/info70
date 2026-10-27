@@ -40,7 +40,8 @@ Quiz den Widerspruch und löst ihn nicht auf.
 
 ## Prüfung
 
-- 7 Tests in `test/fragen.test.mjs`: Schema (quiz-kern), Seitenangaben im erlaubten
-  Bereich, Widersprüche benannt, Katalogzahlen nicht als Fakt, Mindestvorrat für Runde.
-- Browser bei 360 px: volle Runde, Ende mit Punktzahl, kein Überlauf, Knöpfe 55 px,
+- 8 Tests in `test/fragen.test.mjs`: Schema (quiz-kern), Seitenangaben im erlaubten
+  Bereich, Widersprüche benannt, Katalogzahlen nicht als Fakt, Mindestvorrat für Runde,
+  keine Ränge in den Daten, kein Speicher im App-Code.
+- Browser bei 360 px: volle Runde, Ende der Runde ohne Wertung, kein Überlauf, Knöpfe 55 px,
   keine externen Anfragen.

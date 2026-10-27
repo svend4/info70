@@ -97,11 +97,5 @@
       ],
       "erklaerung": "Merke dir die drei Schutzmerkmale: Moderation (jemand prüft), Melde-Funktion (du kannst Probleme melden) und dass du keinen echten Namen angeben musst (Spitzname). Fehlen sie, ist besondere Vorsicht nötig – Aussehen und Beliebtheit sagen nichts über Sicherheit."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Chat-Prüfer*in", "emoji": "🔎" },
-    { "ab": 7, "titel": "Schutzmerkmal-Kenner*in", "emoji": "🛡️" },
-    { "ab": 12, "titel": "Sicherheits-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 15, "titel": "Chat-Check-Profi", "emoji": "🏅" }
   ]
 }

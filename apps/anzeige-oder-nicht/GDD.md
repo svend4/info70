@@ -16,7 +16,7 @@ lootbox-labor, dark-pattern-detektiv.
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde → binaer/wahl mit Erklärung →
-Rang + Rekord. Zusätzlich Klassen-Modus.
+„Ende der Runde“ ohne Wertung. Zusätzlich Klassen-Modus.
 
 ## 4. Didaktik
 
@@ -29,14 +29,16 @@ Erwachsenen, nie heimlich.
 ## 5. Politik-Konformität (docs/02)
 
 Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle erfunden (keine
-echten Marken/Personen), nur `aon.rekord` + Löschung, werbefrei, Vorlesen,
-eltern.html.
+echten Marken/Personen), werbefrei, Vorlesen, eltern.html. Die App speichert
+nichts und kennt keine Punkte, keinen Rekord, keine Ränge; der frühere
+Schlüssel `aon.rekord` wird beim Start einmal entfernt.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥12), Balance (ja+nein),
 Typ-Mischung, Kategorie-Abdeckung, Werbeformen (#anzeige/Merch/
-Produktplatzierung/Affiliate) + Meinung-Abgrenzung, Rang-Erreichbarkeit.
+Produktplatzierung/Affiliate) + Meinung-Abgrenzung, keine Ränge in den Daten,
+App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

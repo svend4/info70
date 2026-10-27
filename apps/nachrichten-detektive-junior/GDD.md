@@ -17,8 +17,8 @@ mini-rechte-entdecker (6-8), smarte-ohren (6-8), gefuehle-entdecker (5-7).
 ## 3. Ablauf
 
 quiz-kern-Standard für die Kleinen: alle 12 Fragen (keine Auswahl), Ja/Nein
-(„Echt“/„Ausgedacht“), Erklärung nach jeder Antwort, Vorlesen, Ränge und
-Rekord, Klassen-Modus.
+(„Echt“/„Ausgedacht“), Erklärung nach jeder Antwort, Vorlesen, Klassen-Modus.
+Am Ende steht ein Abschluss-Titel ohne Wertung; kein Kind wird bewertet.
 
 ## 4. Didaktik / Nutzen
 
@@ -30,14 +30,16 @@ Leseschwäche zugänglich (BFSG).
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei, komplett vorlesbar.
-Nur der Rekord (ndj.rekord) liegt lokal, löschbar. eltern.html vorhanden; im
-Eltern-Sammelband gelistet.
+Es wird nichts gespeichert (keine Punkte, kein Rekord, keine Ränge; der alte
+Schlüssel `ndj.rekord` wird beim Start einmal entfernt), daher keine Karte
+„Meine Daten löschen“. eltern.html vorhanden; im Eltern-Sammelband gelistet.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema gültig (≥12 Fragen), Zielgruppe 6-8
-nur binaer mit erreichbaren Rängen, Balance echt/ausgedacht (je ≥4, Differenz
-≤2), Lernkern „Kann das wirklich sein?“ und kurze Sätze (≤100 Zeichen).
+nur binaer ohne Ränge in den Daten, Balance echt/ausgedacht (je ≥4, Differenz
+≤2), Lernkern „Kann das wirklich sein?“ und kurze Sätze (≤100 Zeichen), kein
+Speicher und keine Wertung im App-Code.
 
 ## 7. Erweiterungen (Katalog)
 

@@ -1,12 +1,16 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import * as logik from '../logik.mjs';
 import {
-  NOTRUFNUMMERN, nurZiffern, istNotrufnummer, pruefeAnruf, rueckmeldung, bewerteRunde,
+  NOTRUFNUMMERN, nurZiffern, istNotrufnummer, pruefeAnruf, rueckmeldung,
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/situationen.json', import.meta.url), 'utf8'));
 const situationen = daten.situationen;
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const MIGRATION = /^try \{ localStorage\.removeItem\('notruf\.rekord'\); \} catch \{\}$/m;
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 
 test('Daten: Situationen mit gültiger Notrufnummer, Warum, Schritte', () => {
   assert.ok(situationen.length >= 6, `mindestens 6 Situationen (ist: ${situationen.length})`);
@@ -60,9 +64,19 @@ test('rueckmeldung: passende Texte', () => {
   assert.match(rueckmeldung('999', '112', daten.nummern), /keine Notrufnummer/);
 });
 
-test('bewerteRunde: zählt richtige Wahlen', () => {
-  const eingaben = {};
-  for (const s of situationen) eingaben[s.id] = s.nummer;
-  assert.deepEqual(bewerteRunde(situationen, eingaben), { richtig: situationen.length, gesamt: situationen.length });
-  assert.equal(bewerteRunde(situationen, {}).richtig, 0);
+test('Kinder werden nicht bewertet: keine Runden-Auswertung, kein Zaehler, kein Rekord im App-Code', () => {
+  assert.equal(logik.bewerteRunde, undefined, 'logik.mjs zaehlt keine richtigen Wahlen mehr');
+  const ohneMigration = appQuelle.replace(MIGRATION, '');
+  assert.doesNotMatch(ohneMigration, /bewerteRunde|rekord|punkte|\brang\b|raenge|eingaben|richtig,? gesamt|gesamt\b/i, 'app.mjs fuehrt weder Zaehler noch Rang noch Rekord; nur die Migrationszeile nennt den alten Schluessel');
+  assert.doesNotMatch(appQuelle, /richtig gewählt`|von \$\{gesamt\}/, 'kein Ergebnissatz "N von M richtig gewaehlt"');
+  assert.doesNotMatch(appQuelle, /Geschafft|🏆|🏅|🌟|⭐/, 'kein Titel Geschafft, kein Pokal, keine Medaille, kein Stern');
+  assert.match(appQuelle, /'Richtig gewählt!'/, 'die Rueckmeldung zu jeder Antwort bleibt');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Loeschknopf; nur der alte Schluessel wird einmal entfernt', () => {
+  assert.doesNotMatch(appQuelle, /setItem|getItem|datenKarte|daten-karte|sprache\.mjs/, 'kein Speicher, keine Loeschkarte, keine Sprachwahl');
+  assert.doesNotMatch(appQuelle, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
+  assert.match(appQuelle, MIGRATION, 'der alte Rekord-Schluessel wird beim Start in einer eigenen Zeile entfernt');
+  assert.match(elternSeite, /speichert <strong>nichts<\/strong>/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
 });

@@ -16,7 +16,7 @@ Kinder 8-12. Nachbarn: koeder-quiz (Phishing), impressum-detektive
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde → binaer (Echt/Fake) und wahl mit
-Erklärung → Rang + Rekord. Zusätzlich Klassen-Modus.
+Erklärung → neutrales Rundenende ohne Wertung. Zusätzlich Klassen-Modus.
 
 ## 4. Didaktik
 
@@ -28,14 +28,16 @@ innehalten, Erwachsene fragen, Shop nachschlagen, keine Daten für „Rabatt“.
 ## 5. Politik-Konformität (docs/02)
 
 Netzwerk-Wächter in der App, quiz-kern macht keine Anfragen, Fälle
-nachgestellt (keine echten Shops), nur `fsf.rekord` in localStorage +
-Löschknopf, werbefrei, Vorlesen, eltern.html.
+nachgestellt (keine echten Shops), es wird nichts gespeichert (keine Punkte,
+kein Rekord, keine Ränge; der alte Schlüssel `fsf.rekord` wird beim Start
+einmal entfernt), daher keine Karte „Meine Daten löschen“ und kein Löschknopf;
+werbefrei, Vorlesen, eltern.html.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥12), Balance (ja+nein),
-Typ-Mischung, Kategorie-Abdeckung, fünf Kern-Warnsignale, Rang-
-Erreichbarkeit.
+Typ-Mischung, Kategorie-Abdeckung, fünf Kern-Warnsignale, keine
+Ränge in den Daten, kein Speicher im App-Code.
 
 ## 7. Erweiterungen (Katalog)
 

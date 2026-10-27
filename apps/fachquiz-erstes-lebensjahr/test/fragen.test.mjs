@@ -12,8 +12,15 @@ test('Fragenbank: quiz-kern-Schema gültig, genug für eine 10er-Runde', () => {
   assert.ok(daten.fragen.length >= 10);
 });
 
-test('erreichbare Ränge und Rundengröße passen zum Vorrat', () => {
-  assert.ok(Math.max(...daten.raenge.map((r) => r.ab)) <= 10);
+test('die Daten kennen keine Ränge; der Vorrat reicht für eine 10er-Runde', () => {
+  assert.equal(daten.raenge, undefined, 'keine Einstufung');
+  assert.ok(daten.fragen.length >= 10);
+});
+
+test('der App-Code wertet nichts und speichert nichts (keine Karte, kein Löschknopf)', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|Geschafft|localStorage|setItem|datenKarte|Meine Daten/);
+  assert.match(code, /^\s*rekordSchluessel: 'fqel\.rekord',\s*$/m, 'alter Schlüssel nur für die einmalige Entfernung');
 });
 
 test('jede Erklärung nennt eine Seite der Quelle im erlaubten Bereich', () => {

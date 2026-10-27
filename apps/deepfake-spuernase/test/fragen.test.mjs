@@ -36,8 +36,13 @@ test('die konkreten KI-Prüfmerkmale + AI-Act-Kennzeichnung kommen vor', () => {
   assert.match(alles, /weiterschick|weiterleit|teilen/, 'erst prüfen, dann teilen');
 });
 
-test('Ränge sind mit einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= daten.fragen.length);
+test('die Daten kennen keine Ränge; der Vorrat reicht für eine 12er-Runde', () => {
+  assert.equal(daten.raenge, undefined, 'kein Kind wird eingestuft');
   assert.ok(daten.fragen.length >= 12);
+});
+
+test('der App-Code wertet nichts und speichert nichts (keine Karte, kein Löschknopf)', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|Geschafft|localStorage|setItem|datenKarte|Meine Daten/);
+  assert.match(code, /^\s*rekordSchluessel: 'dfs\.rekord',\s*$/m, 'alter Schlüssel nur für die einmalige Entfernung');
 });

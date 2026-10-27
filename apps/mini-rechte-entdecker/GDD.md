@@ -16,7 +16,7 @@ gefuehle-entdecker, smarte-ohren (6-8).
 ## 3. Ablauf
 
 quiz-kern-Standard im Binaer-Modus: alle 10 Fragen (keine Auswahl),
-👍 Ja / 👎 Nein, ermutigende Erklärung, Vorlesen überall. Rang + Bestwert.
+👍 Ja / 👎 Nein, ermutigende Erklärung, Vorlesen überall. Am Ende „Super gemacht!“ ohne Wertung.
 Auch Klassen-Modus (für eine Gruppe Kleiner).
 
 ## 4. Didaktik
@@ -29,15 +29,18 @@ Bedienung erfüllt BFSG.
 
 ## 5. Politik-Konformität (docs/02)
 
-Netzwerk-Wächter, quiz-kern macht keine Anfragen, nur `mre.rekord` +
-Löschung, werbefrei, Vorlesen (Web Speech de-DE), große Knöpfe,
+Netzwerk-Wächter, quiz-kern macht keine Anfragen, die App speichert nichts
+und kennt keine Punkte, keinen Rekord, keine Ränge (der frühere Schlüssel
+`mre.rekord` wird beim Start einmal entfernt), werbefrei, Vorlesen (Web
+Speech de-DE), große Knöpfe,
 eltern.html.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥8), NUR binaer, Balance
 (ja+nein), Leichte-Sprache-Wächter (Aussage ≤90 Zeichen, Erklärungs-Sätze
-≤12 Wörter, kein Scham-Ton), Rechte-Abdeckung, Rang-Erreichbarkeit.
+≤12 Wörter, kein Scham-Ton), Rechte-Abdeckung, keine Ränge in den Daten,
+App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

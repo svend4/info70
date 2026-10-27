@@ -3,7 +3,7 @@
 // Anschauen. Praleska docs/10 (Kinder-Apps Nr. 21).
 // Alle Bilder liegen als data-URI in den Daten (CC0, Met Open Access) –
 // die App lädt nichts nach. Politik docs/02: keine externen Anfragen,
-// werbefrei, es wird nichts gespeichert.
+// werbefrei, es wird nichts gespeichert; das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
@@ -21,8 +21,6 @@ let modus = 'galerie';
 let offenes = null;
 let frage = null;
 let antwort = null;
-let richtige = 0;
-let gestellt = 0;
 
 function bildKachel(w, breite = '100%') {
   return el('img', {
@@ -112,8 +110,6 @@ function neueFrage() {
 }
 
 function antworte(sorte) {
-  gestellt += 1;
-  if (istRichtig(frage, sorte.id)) richtige += 1;
   antwort = sorte;
   render();
 }
@@ -153,12 +149,11 @@ function rateKarten() {
       antwort
         ? el('div', { class: `k-hinweis${istRichtig(frage, antwort.id) ? ' k-hinweis--richtig' : ''}` },
           el('p', { style: 'font-weight:700;margin-top:0' },
-            `${istRichtig(frage, antwort.id) ? '🌟 Richtig' : '💭 Schau nochmal'} – ${loesung.emoji} ${loesung.name}`),
+            `${istRichtig(frage, antwort.id) ? '👍 Richtig' : '💭 Schau nochmal'} – ${loesung.emoji} ${loesung.name}`),
           el('p', { style: 'margin:0 0 0.4rem' }, loesung.merkmal),
           el('p', { style: 'margin:0' }, w.hinsehen))
         : null,
-      antwort ? herkunft(w) : null,
-      el('p', { style: 'text-align:center;margin:0.5rem 0 0' }, `Richtig: ${richtige} von ${gestellt}`)),
+      antwort ? herkunft(w) : null),
   ];
 }
 

@@ -2,9 +2,10 @@
 // ECHTEN Handy (Eltern + Kind, 8-12). Zu jeder Berechtigung (Mikrofon,
 // Standort, Kontakte ...) erklaert die App kindgerecht, was sie bedeutet;
 // die Familie schaut selbst in den Einstellungen nach und entscheidet
-// "Braucht die App das wirklich?" - mit Detektiv-Punkten fuer entdeckte
-// Datenkraken. Diese App liest NICHTS vom Geraet aus (reine Anleitung).
-// Politik docs/02: keine externen Anfragen; Fortschritt nur lokal.
+// "Braucht die App das wirklich?" - ein neutraler Zaehler "Gefunden: N"
+// haelt die entdeckten Datenkraken fest, bewertet wird nichts. Diese App
+// liest NICHTS vom Geraet aus (reine Anleitung).
+// Politik docs/02: keine externen Anfragen; der Zaehler bleibt nur lokal.
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
@@ -17,7 +18,7 @@ const daten = await fetch('daten/berechtigungen.json').then((r) => r.json());
 
 const lade = () => JSON.parse(localStorage.getItem(SCHLUESSEL) ?? '{}');
 const speichere = (f) => localStorage.setItem(SCHLUESSEL, JSON.stringify(f));
-const punkte = () => Object.values(lade()).reduce((s, n) => s + (Number(n) || 0), 0);
+const gefundenGesamt = () => Object.values(lade()).reduce((s, n) => s + (Number(n) || 0), 0);
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -38,7 +39,7 @@ function render() {
       el('p', { style: 'margin-top:0' }, 'Apps fragen nach „Berechtigungen“: Mikrofon, Standort, Kontakte … Manche brauchen das – manche gar nicht (das sind die „Datenkraken“). Geht die Safari zusammen durch und schaut auf einem echten Handy in den Einstellungen nach.'),
       el('div', { class: 'k-hinweis', style: 'margin:0' },
         el('p', { style: 'margin:0;font-size:0.9rem' }, `🔎 ${daten.findenHinweis}`)),
-      el('p', { style: 'margin:0.75rem 0 0;font-weight:700' }, `🏆 Datenkraken gefunden: ${punkte()}`)),
+      el('p', { style: 'margin:0.75rem 0 0;font-weight:700' }, `🐙 Gefunden: ${gefundenGesamt()} (Datenkraken)`)),
     ...daten.stationen.map((s) => stationKarte(s, fund[s.code] ?? 0)),
     el('section', { class: 'k-karte k-hinweis--richtig' },
       el('p', { style: 'margin:0' }, `✅ ${daten.abschluss}`)),

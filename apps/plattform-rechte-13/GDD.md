@@ -19,7 +19,7 @@ obere Altersstufe der Kinderrechte-Linie.
 ## 3. Ablauf
 
 quiz-kern-Standard: 12 Fragen aus 14, binaer + wahl, Erklärung nach jeder
-Antwort, Ränge und Rekord, Klassen-Modus. Rekord lokal.
+Antwort, am Ende „Ende der Runde“ ohne Wertung, Klassen-Modus.
 
 ## 4. Didaktik / Nutzen
 
@@ -30,16 +30,17 @@ nach DSGVO Art. 17.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei. Nur der Rekord
-(pr13.rekord) liegt lokal, löschbar. eltern.html vorhanden; im
-Eltern-Sammelband gelistet.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei. Die App speichert
+nichts und kennt keine Punkte, keinen Rekord, keine Ränge; der frühere
+Schlüssel pr13.rekord wird beim Start einmal entfernt. eltern.html
+vorhanden; im Eltern-Sammelband gelistet.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema gültig (≥12 Fragen), Zielgruppe
-13-15 mit erreichbaren Rängen (Top-Rang ab 12), inhaltliche Abdeckung
+13-15 ohne Ränge in den Daten, inhaltliche Abdeckung
 (DSA Art. 17/20/28, DSGVO Art. 15/8, Alter 16, AI Act), beide binaer-
-Antworten kommen vor.
+Antworten kommen vor, App-Code ohne Wertung und ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

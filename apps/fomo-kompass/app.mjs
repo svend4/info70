@@ -2,24 +2,25 @@
 // FOMO = "Fear of missing out". Jedes Szenario zeigt eine typische Sog-/
 // Verpass-Mechanik (Streak, Autoplay, Countdown, Lesebestaetigung, Likes)
 // und trainiert die selbstbestimmte Reaktion: Grenze setzen statt reagieren.
-// 2/1/0-Muster wie rechte-kompass/stark-im-chat (docs/05).
-// Politik: keine externen Anfragen, nur Rekord in localStorage.
+// 2/1/0-Muster wie rechte-kompass/stark-im-chat (docs/05): die Stufe steuert nur
+// die Rueckmeldung zu der einen Antwort, es wird nichts gezaehlt.
+// Politik: keine externen Anfragen, nichts wird gespeichert, das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'fomo.rekord';
+// Alter Schlüssel aus früheren Fassungen: einmal beim Start entfernen.
+try { localStorage.removeItem('fomo.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
 
-const maxPunkte = () => szenarien.length * 2;
+const ANKER = 'Deine drei Anker gegen den Sog: 1) Fast nichts ist „jetzt oder nie“. 2) Streaks, Likes und Countdowns sind Zahlen, kein Zeugnis über dich. 3) Handy außer Reichweite + Töne aus = du bestimmst, wann.';
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -27,24 +28,21 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Die Angst, etwas zu verpassen – durchschauen und ruhig bleiben.'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · nichts wird gespeichert · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `„Jetzt oder nie!“, „Deine Streak reißt gleich!“, „Alle sind dabei!“ – in ${daten.szenarien.length} Situationen entscheidest du, wie du reagierst. FOMO heißt: die Angst, etwas zu verpassen. Apps benutzen sie mit Absicht. Du kannst sie durchschauen.`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 🧭`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('FOMO heißt: die Angst, etwas zu verpassen. Apps benutzen sie mit Absicht. Du kannst sie durchschauen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, '💛 Wenn dich das Handy oft unruhig oder traurig macht: Das liegt nicht an dir – das ist eingebaut. Reden hilft: mit Eltern, Freund*innen – oder kostenlos und anonym bei der Nummer gegen Kummer 116 111.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+      el('p', { style: 'margin:0' }, '💛 Wenn dich das Handy oft unruhig oder traurig macht: Das liegt nicht an dir – das ist eingebaut. Reden hilft: mit Eltern, Freund*innen – oder kostenlos und anonym bei der Nummer gegen Kummer 116 111.')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
@@ -52,7 +50,6 @@ function startBildschirm() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   szenarioBildschirm();
 }
 
@@ -72,7 +69,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   const titel = option.wert === 2 ? 'Ruhig und stark! 🧭✨' : option.wert === 1 ? 'Okay – aber der Sog hat dich noch.' : 'Genau das will die App …';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
   const beste = s.optionen.find((o) => o.wert === 2);
@@ -86,7 +82,7 @@ function antworte(s, option) {
         el('p', { style: 'margin:0' }, `💡 ${s.tipp}`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} Der Trick: ${s.mechanik} ${s.tipp}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ende der Runde 🏁'))));
 }
 
 function weiter() {
@@ -96,20 +92,17 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Kompass-Punkten · Rekord: ${rekord}`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Du hast ${punkte} von ${maxPunkte()} Kompass-Punkten. Dein Rang: ${rang.titel}`) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '🧭'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('p', { style: 'text-align:center' }, `Du hast alle ${szenarien.length} Situationen durchgespielt.`),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Ende der Runde. ${ANKER}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin:0' }, '📌 Deine drei Anker gegen den Sog: 1) Fast nichts ist „jetzt oder nie“. 2) Streaks, Likes und Countdowns sind Zahlen, kein Zeugnis über dich. 3) Handy außer Reichweite + Töne aus = du bestimmst, wann.')));
+      el('p', { style: 'margin:0' }, `📌 ${ANKER}`)));
 }
 
 startBildschirm();

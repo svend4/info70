@@ -32,7 +32,16 @@ test('Bildschirm-Pausen bauen die Brücke zur Takt-Pause-App', () => {
   assert.ok(bruecke, 'Vernetzung mit der Selbstregulations-App der Werkstatt');
 });
 
-test('Ränge sind mit einer 12er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= 12);
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die 12er-Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+  assert.ok(daten.fragen.length >= 12);
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.match(code, /^\s*rekordSchluessel: 'sug\.rekord',\s*$/m, 'der alte Schlüssel steht allein in einer Zeile (Migration)');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar|Punkte-Rekord|Knopf in der App/, 'ohne Speicher kein Löschknopf');
 });

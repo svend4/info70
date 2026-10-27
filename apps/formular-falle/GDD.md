@@ -17,7 +17,9 @@ dark-pattern-labyrinth. Bindet Hilfe-Insel ein.
 
 Start → 8 nachgebaute Formulare → 3 Handlungen (alles ausfüllen / nur
 Spitzname / abbrechen & Eltern fragen) mit 2/1/0 → Auflösung: Erklärung +
-Warnung-Label. Ränge + Rekord. Abschluss-Faustregel. Hilfe-Insel jederzeit.
+Warnung-Label. „Ende der Runde“ mit Abschluss-Faustregel; das Kind wird nicht
+bewertet (keine Punkte, kein Rekord, keine Ränge). Die Stufe 2/1/0 steuert nur
+die Rückmeldung zur einen Antwort. Hilfe-Insel jederzeit.
 
 ## 4. Didaktik
 
@@ -29,16 +31,19 @@ GUTES Formular (nur Spitzname) für den Kontrast, damit das Kind nicht
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), nur `ff.rekord` + Löschung,
-werbefrei, Vorlesen, mobile-first, eltern.html, Hilfe-Insel (116 111).
-Formulare erfunden, nichts wird eingegeben/übertragen.
+Keine externen Anfragen (NetzwerkWaechter), die App speichert nichts (darum
+keine Karte „Meine Daten löschen“; der alte Schlüssel `ff.rekord` wird beim
+Start einmal entfernt), werbefrei, Vorlesen, mobile-first, eltern.html,
+Hilfe-Insel (116 111). Formulare erfunden, nichts wird eingegeben/übertragen.
 
 ## 6. Tests
 
-`test/szenarien.test.mjs`: Schema/Ränge, je Szenario Warnung+Erklärung +
+`test/szenarien.test.mjs`: Schema (keine Ränge), je Szenario Warnung+Erklärung +
 2/1/0 (genau eine 2, mind. eine 0), positives Kontrast-Beispiel,
 Abdeckung (Adresse/Telefon/Foto/Schule/Pflichtfeld/Häkchen/Abo),
-Hilfe-Insel eingebunden.
+Hilfe-Insel eingebunden. Zwei Abwesenheits-Tests: keine Wertung im Code und in
+den Daten (kein Zähler, kein Rekord, keine Ränge), Speicherregel erfüllt (kein
+setItem, keine Karte, Migration in einer Zeile).
 
 ## 7. Erweiterungen (Katalog)
 

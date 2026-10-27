@@ -45,10 +45,3 @@ export function pruefeFragen(daten) {
   }
   return fehler;
 }
-
-/** Rang zur Punktzahl (höchster passender „ab“-Wert). */
-export function rangFuer(raenge, punkte) {
-  let treffer = raenge[0];
-  for (const r of raenge) if (punkte >= r.ab) treffer = r;
-  return treffer;
-}

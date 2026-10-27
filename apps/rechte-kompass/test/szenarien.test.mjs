@@ -4,14 +4,14 @@ import { readFile } from 'node:fs/promises';
 
 const daten = JSON.parse(await readFile(new URL('../daten/szenarien.json', import.meta.url), 'utf8'));
 const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 
-test('Szenarienbank: Grundstruktur, IDs, erreichbare Ränge', () => {
+test('Szenarienbank: Grundstruktur, IDs, keine Ränge', () => {
   assert.equal(daten.version, 1);
   assert.ok(daten.szenarien.length >= 10, 'mindestens 10 Szenarien');
   const ids = daten.szenarien.map((s) => s.id);
   assert.equal(new Set(ids).size, ids.length);
-  assert.equal(daten.raenge[0].ab, 0);
-  assert.ok(Math.max(...daten.raenge.map((r) => r.ab)) <= daten.szenarien.length * 2);
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Ränge: das Kind wird nicht bewertet');
 });
 
 test('jedes Szenario: 2/1/0-Muster mit genau einem stärksten Zug und einer Falle', () => {
@@ -46,4 +46,21 @@ test('Didaktik: Rechte gegen NAHE Menschen (Eltern/Familie) UND Institutionen; H
   assert.ok(/Schule|Rathaus|Gericht|Ärztin|Arzt/.test(alles), 'auch Institutionen-Situationen');
   assert.ok(/Sharenting/.test(alles), 'Sharenting benannt (Gefährdungsatlas)');
   assert.ok(appQuelle.includes('116 111'), 'Hilfeadresse in der App');
+});
+
+test('Kinder werden nicht bewertet: kein Zähler, kein Rang, kein Rekord, kein Ergebnissatz im App-Code', () => {
+  assert.doesNotMatch(appQuelle, /\bpunkte\b|maxPunkte|\brang\b|raenge|REKORD_SCHLUESSEL|Dein Rekord|Rekord:/, 'weder Punkte noch Rang noch Rekord');
+  assert.doesNotMatch(appQuelle, /Kompass-Punkten|Geschafft|Zum Ergebnis/, 'kein Ergebnissatz am Ende');
+  assert.match(appQuelle, /Ende der Runde/, 'das Ende heißt neutral „Ende der Runde“');
+  // 2/1/0 bleibt die Rückmeldung zu jeder Antwort, es wird aber nichts addiert.
+  assert.doesNotMatch(appQuelle, /\+=\s*option\.wert/, 'die Werte der Optionen werden nicht summiert');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Löschknopf; der alte Schlüssel wird einmal entfernt', () => {
+  assert.doesNotMatch(appQuelle, /setItem|getItem|datenKarte|loescheDaten|daten-karte|sprache\.mjs/, 'kein Speicher, keine Löschkarte, keine Sprachwahl');
+  const zeilen = appQuelle.split('\n').filter((z) => z.includes('removeItem'));
+  assert.deepEqual(zeilen, ["try { localStorage.removeItem('rk.rekord'); } catch {}"], 'genau eine Zeile: der alte Schlüssel, als Literal');
+  assert.doesNotMatch(appQuelle, /Meine Daten löschen/, 'ohne Speicher keine Karte');
+  assert.match(elternSeite, /speichert nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten löschen/, 'ohne Speicher keine Karte');
 });

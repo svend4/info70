@@ -2,7 +2,8 @@
 // Reimpaare, Anlaute, Wortlänge, Silben – der wichtigste Prädiktor für den
 // späteren Schriftspracherwerb. Ablauf aus @info70/quiz-kern (inkl. Vorlesen,
 // Klassen-/Duett-/Staffel-Modus). Praleska docs/10 (Top-30 Nr. 5).
-// Politik docs/02: keine externen Anfragen, nur Rekord in localStorage.
+// Politik docs/02: keine externen Anfragen, nichts gespeichert, keine Wertung;
+// der Motor entfernt beim Start nur den früheren Schlüssel.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -27,6 +28,5 @@ starteQuiz({
     binaerNein: '🚫 Nein, das reimt sich nicht',
     weiterKnopf: 'Nächste Aufgabe ➡️',
     fertigTitel: 'Toll gemacht!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig gehört · Rekord: ${rekord}`,
   },
 });

@@ -37,7 +37,15 @@ test('die wichtigsten Rechte sind abgedeckt', () => {
   assert.match(alles, /hilfe|erwachsene/, 'Hilfe holen ist stark');
 });
 
-test('Ränge sind erreichbar (kein Rang über der Fragenzahl)', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= daten.fragen.length);
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.match(code, /^\s*rekordSchluessel: '[^']+',\s*$/m, 'der alte Schlüssel steht nur für die einmalige Entfernung beim Start');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar|löschen/, 'ohne Speicher kein Löschknopf');
 });

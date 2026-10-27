@@ -1,25 +1,15 @@
-// Sicher unterwegs: reine Logik (ohne DOM), testbar. Szenario-Trainer 2/1/0
+// Sicher unterwegs: reine Logik (ohne DOM), testbar. Szenario-Trainer
 // zu Alltags- und Verkehrssicherheit. Praleska docs/10 (Top-30 Nr. 7).
+// Das Kind wird nicht bewertet: jede Option bekommt nur eine Rückmeldung mit Erklärung.
 
-/** Wertung einer Option (0/1/2) – hier nur zur Klarheit gekapselt. */
-export function punkteFuer(option) {
-  return option?.wert ?? 0;
-}
-
-/** Maximalpunktzahl einer Runde. */
-export function maxPunkte(anzahl) {
-  return anzahl * 2;
-}
-
-/** Rang zur erreichten Punktzahl (höchster passender „ab“-Wert). */
-export function rangFuer(raenge, punkte) {
-  let treffer = raenge[0];
-  for (const r of raenge) if (punkte >= r.ab) treffer = r;
-  return treffer;
-}
-
-/** Abschluss-Satz mit Rang. */
-export function ergebnisSatz(raenge, punkte, anzahl) {
-  const r = rangFuer(raenge, punkte);
-  return `${r.emoji} ${r.titel} – ${punkte} von ${maxPunkte(anzahl)} Sicherheits-Punkten`;
+/**
+ * Rückmeldung zu einer gewählten Option (wert 2/1/0 der Daten): Emoji und Titel; `gut` färbt den Hinweis.
+ * @param {{wert?: number}} option
+ * @returns {{gut: boolean, emoji: string, titel: string}}
+ */
+export function rueckmeldungFuer(option) {
+  const wert = option?.wert ?? 0;
+  if (wert === 2) return { gut: true, emoji: '😊', titel: 'Genau richtig!' };
+  if (wert === 1) return { gut: false, emoji: '👍', titel: 'Fast!' };
+  return { gut: false, emoji: '💭', titel: 'Denk nochmal mit.' };
 }

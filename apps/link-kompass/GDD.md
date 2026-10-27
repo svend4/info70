@@ -16,7 +16,7 @@ impressum-detektive.
 ## 3. Ablauf
 
 quiz-kern-Standard: Start → 12er-Runde → binaer/wahl mit Erklärung →
-Rang + Rekord. Zusätzlich Klassen-Modus.
+„Ende der Runde“ ohne Wertung. Zusätzlich Klassen-Modus.
 
 ## 4. Didaktik
 
@@ -29,13 +29,16 @@ Zweifel Erwachsene fragen“.
 ## 5. Politik-Konformität (docs/02)
 
 Netzwerk-Wächter, quiz-kern macht keine Anfragen, Fälle beschrieben (keine
-echten Links), nur `lk.rekord` + Löschung, werbefrei, Vorlesen, eltern.html.
+echten Links), werbefrei, Vorlesen, eltern.html. Die App speichert nichts und
+kennt keine Punkte, keinen Rekord, keine Ränge; der frühere Schlüssel
+`lk.rekord` wird beim Start einmal entfernt.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema (≥10), Balance (ja+nein),
 Typ-Mischung, Kategorie-Abdeckung, Link-Arten (intern/extern/Download/
-App-Store/Werbung/URL), Rang-Erreichbarkeit.
+App-Store/Werbung/URL), keine Ränge in den Daten, App-Code ohne Wertung und
+ohne Speicher.
 
 ## 7. Erweiterungen (Katalog)
 

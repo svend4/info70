@@ -3,24 +3,23 @@
 // nicht EINFORDERN. Jede Aufloesung nennt den KRK-Artikel und schenkt einen
 // "Mut-Satz": die hoefliche Formulierung, mit der man das Recht ausspricht.
 // 2/1/0-Muster wie stark-im-chat/daten-schatz (docs/05, Methode 0).
-// Politik: keine externen Anfragen, nur Rekord in localStorage.
+// Das Kind wird nicht bewertet: die Werte 2/1/0 steuern nur die Rueckmeldung zu jeder
+// Antwort, es wird nichts addiert. Politik: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'rk.rekord';
+// Alter Schluessel aus frueheren Versionen: einmal beim Start entfernen.
+try { localStorage.removeItem('rk.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
 let mutSaetze = [];
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -28,24 +27,21 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Deine Rechte kennen ist gut. Sie aussprechen ist stark.'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · diese App speichert nichts · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Das peinliche Foto, der volle Terminplan, die Abstimmung mit Handzeichen: In ${daten.szenarien.length} Situationen entscheidest du, wie du dein Recht vertrittst. Für jede starke Antwort sammelst du einen Mut-Satz zum Mitnehmen.`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 🧭`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('In zwölf Situationen entscheidest du, wie du dein Recht vertrittst. Für jede starke Antwort sammelst du einen Mut-Satz zum Mitnehmen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, '📜 Deine Rechte stehen in der UN-Kinderrechtskonvention – sie gilt für ALLE Kinder. Mehr entdecken? Spiel den ', el('a', { href: '../kinderrechte-entdecker/' }, '🕊️ Kinderrechte-Entdecker'), '. Wird ein Recht bei dir ernsthaft verletzt: Nummer gegen Kummer 116 111 (kostenlos, anonym).'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+      el('p', { style: 'margin:0' }, '📜 Deine Rechte stehen in der UN-Kinderrechtskonvention – sie gilt für ALLE Kinder. Mehr entdecken? Spiel den ', el('a', { href: '../kinderrechte-entdecker/' }, '🕊️ Kinderrechte-Entdecker'), '. Wird ein Recht bei dir ernsthaft verletzt: Nummer gegen Kummer 116 111 (kostenlos, anonym).')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
@@ -53,7 +49,6 @@ function startBildschirm() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   mutSaetze = [];
   szenarioBildschirm();
 }
@@ -74,7 +69,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   if (option.wert === 2) mutSaetze.push(s.satz);
   const titel = option.wert === 2 ? 'Klar gesprochen! 🧭✨' : option.wert === 1 ? 'Okay – aber dein Recht bleibt ungesagt.' : 'So verliert dein Recht …';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
@@ -88,7 +82,7 @@ function antworte(s, option) {
         el('p', { style: 'margin:0;font-weight:700' }, `💬 Mut-Satz: „${s.satz}“`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.erklaerung} Dein Mut-Satz: ${s.satz}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Schluss 🏁'))));
 }
 
 function weiter() {
@@ -98,15 +92,11 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Kompass-Punkten · Rekord: ${rekord}`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Du hast ${punkte} von ${maxPunkte()} Kompass-Punkten. Dein Rang: ${rang.titel}`) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '🧭'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Ende der Runde. ${mutSaetze.length > 0 ? `Deine gesammelten Mut-Sätze: ${mutSaetze.join('. ')}` : ''}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

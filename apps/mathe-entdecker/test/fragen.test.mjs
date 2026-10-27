@@ -28,8 +28,16 @@ test('inhaltliche Abdeckung: Mengen, Zählen, Formen, Reihen/Muster', () => {
   assert.match(alles, /mehr|weniger|gleich/, 'Mengenvergleich');
 });
 
-test('Ränge sind in einer 10er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= 10, `höchster Rang (${maxAb}) in 10er-Runde erreichbar`);
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, der Vorrat reicht für die 10er-Runde', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
   assert.ok(daten.fragen.length >= 12, 'genug Vorrat für Abwechslung');
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.match(code, /^\s*rekordSchluessel: '[^']+',\s*$/m, 'der alte Schlüssel steht nur für die einmalige Entfernung beim Start');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar|löschen/, 'ohne Speicher kein Löschknopf');
 });

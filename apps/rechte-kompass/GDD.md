@@ -18,8 +18,10 @@ liefert die Sprech-Praxis obendrauf.
 1. 12 Alltags-Szenarien, gemischt; 3 Reaktionen mit Wert 2/1/0.
 2. Stärkste Antwort = Recht HÖFLICH aussprechen (nie Rache, nie Schweigen).
 3. Auflösung: Erklärung + KRK-Artikel in Kindersprache + Mut-Satz.
-4. Wert-2-Antworten sammeln Mut-Sätze; Endbildschirm listet sie als
-   Mitnehm-Repertoire. Ränge + Rekord (localStorage).
+4. Wert-2-Antworten sammeln Mut-Sätze; Endbildschirm („Ende der Runde“)
+   listet sie als Mitnehm-Repertoire. Das Kind wird nicht bewertet: die Werte
+   2/1/0 steuern nur die Rückmeldung zu jeder Antwort; es gibt keine Punkte,
+   keinen Rekord und keine Ränge.
 
 ## 4. Didaktik
 
@@ -33,8 +35,9 @@ Polizei) - Selbstvertretung, nicht Drohung.
 
 ## 5. Politik-Konformität (docs/02)
 
-Werbefrei, ohne Konto, keine externen Anfragen (NetzwerkWaechter), nur
-`rk.rekord` in localStorage + Löschknopf, Vorlesen (Web Speech de-DE),
+Werbefrei, ohne Konto, keine externen Anfragen (NetzwerkWaechter), die App
+speichert nichts (darum keine Karte „Meine Daten löschen“; der alte Schlüssel
+`rk.rekord` wird beim Start einmal entfernt), Vorlesen (Web Speech de-DE),
 mobile-first, eltern.html (inkl. Abschnitt "Rechte gegen Eltern" - warum
 das kein Aufstand ist), 116 111 auf Start- und Hilfsebene.
 
@@ -43,7 +46,9 @@ das kein Aufstand ist), 116 111 auf Start- und Hilfsebene.
 `test/szenarien.test.mjs`: Schema + exakt [0,1,2]-Werteverteilung je
 Szenario, Artikel 1-54 + Artikelname + Mut-Satz-Pflicht, Stop-Liste im
 Mut-Satz, Artikel-Breite (≥5, Pflicht 12/16/31), Familien- UND
-Institutionen-Situationen, 116 111 in der App-Quelle.
+Institutionen-Situationen, 116 111 in der App-Quelle; Abwesenheits-Tests:
+keine Ränge, keine Wertung im App-Code, kein Speicher und keine Löschkarte,
+alter Schlüssel nur als einzeiliges removeItem.
 
 ## 7. Erweiterungen (Katalog)
 

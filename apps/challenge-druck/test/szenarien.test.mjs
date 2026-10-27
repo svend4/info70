@@ -31,3 +31,20 @@ test('Sicherheits-Leitplanken: keine Anleitungen, Hilfe-Adresse vorhanden', () =
   // Der gefährliche Trend wird benannt, aber nie mit Durchführungs-Details beschrieben
   assert.ok(!/so geht('s| es)|anleitung|schritt 1/i.test(text), 'keine Anleitungs-Sprache');
 });
+
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+
+test('Kinder werden nicht bewertet: kein Trefferzähler, kein Ergebnissatz, keine Ampelfarben, kein Held-Symbol', () => {
+  assert.doesNotMatch(appQuelle, /treffer|punkte|rekord|rang\b|stark\b|🦸|🏆/i, 'app.mjs zählt nichts und stuft nichts ein');
+  assert.doesNotMatch(appQuelle, /von 5 Tricks|Druck am Ende|Geschafft/, 'kein Ergebnissatz am Ende');
+  assert.doesNotMatch(appQuelle, /k-rot|k-gruen|f59e0b/, 'der Druck-Messer hat eine Farbe, keine Ampel');
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Raenge');
+  assert.match(appQuelle, /Ende der Runde/, 'das Ende heißt neutral „Ende der Runde“');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Löschknopf', () => {
+  assert.doesNotMatch(appQuelle, /setItem|removeItem|datenKarte|daten-karte|sprache\.mjs|localStorage/, 'kein Speicher, keine Löschkarte, keine Sprachwahl');
+  assert.match(elternSeite, /speichert überhaupt nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten löschen/, 'ohne Speicher keine Karte');
+});

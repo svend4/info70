@@ -1,26 +1,25 @@
 // Formular-Falle: nachgebaute Anmelde-/Gewinnspiel-Formulare bewerten (8-12).
 // Szenario-Trainer-Pack (docs/09 Nr. 48): Das Kind waehlt zwischen drei
-// Handlungen (alles ausfuellen / nur Spitzname / abbrechen & Eltern fragen) mit
-// 2/1/0-Wertung. Lernziel: Welche Datenabfragen duerfen auf einer guten
+// Handlungen (alles ausfuellen / nur Spitzname / abbrechen & Eltern fragen); die
+// Stufe 2/1/0 steuert nur die Rueckmeldung zur einen Antwort, es wird nichts
+// gezaehlt. Lernziel: Welche Datenabfragen duerfen auf einer guten
 // Kinderseite gar nicht vorkommen (Adresse, Telefon, Foto) und warum Pflicht-
 // felder mit Sternchen ein Warnsignal sind. Nutzt Hilfe-Insel (kinder-ui).
-// 2/1/0-Muster. Politik: keine externen Anfragen, nur Rekord in localStorage.
+// Politik: keine externen Anfragen, nichts wird gespeichert, das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'ff.rekord';
+// Alter Schlüssel aus früheren Fassungen: einmal beim Start entfernen.
+try { localStorage.removeItem('ff.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -28,30 +27,26 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Welche Daten will ein Formular – und was gibst du NICHT preis?'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · nichts wird gespeichert · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Anmelden, Gewinnspiel, App-Start: Formulare wollen oft mehr Daten, als sie brauchen. In ${daten.szenarien.length} Beispielen entscheidest du, was du ausfüllst – und was auf keinen Fall. Merke: Adresse, Telefon und Foto gehören in kein Kinder-Formular.`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 📝`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Formulare wollen oft mehr Daten, als sie brauchen. Adresse, Telefon und Foto gehören in kein Kinder-Formular.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')),
-    datenKarte({ schluessel: REKORD_SCHLUESSEL, was: 'dein Rekord', nachLoeschen: startBildschirm }));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')));
 }
 
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   szenarioBildschirm();
 }
 
@@ -73,7 +68,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   const titel = option.wert === 2 ? 'Stark geprüft! 📝✨' : option.wert === 1 ? 'Okay – aber da geht mehr Schutz.' : 'Vorsicht – Falle!';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
   zeige(
@@ -85,7 +79,7 @@ function antworte(s, option) {
         el('p', { style: 'margin:0;font-size:0.9rem' }, `🔎 ${s.warnung}`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.erklaerung}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächstes Formular ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächstes Formular ➡️' : 'Zum Ende der Runde 🏁'))));
 }
 
 function weiter() {
@@ -95,14 +89,11 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Punkten · Rekord: ${rekord}`),
+      el('p', { class: 'k-gross' }, '📝'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('p', { style: 'text-align:center' }, `Du hast alle ${szenarien.length} Formulare durchgespielt.`),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

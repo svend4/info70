@@ -27,6 +27,5 @@ starteQuiz({
     binaerNein: '🚨 Fake-Shop',
     weiterKnopf: 'Nächster Fall ➡️',
     fertigTitel: 'Fall gelöst!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Shops durchschaut · Rekord: ${rekord}`,
   },
 });

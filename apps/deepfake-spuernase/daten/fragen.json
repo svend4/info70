@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Bild-Prüfer*in", "emoji": "🔍" },
-    { "ab": 5, "titel": "KI-Späher*in", "emoji": "🤖" },
-    { "ab": 9, "titel": "Deepfake-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 12, "titel": "Deepfake-Spürnase-Profi", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "b01",

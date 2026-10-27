@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Köder-Schnapper", "emoji": "🐟" },
-    { "ab": 5, "titel": "Netz-Durchschauer", "emoji": "🐠" },
-    { "ab": 9, "titel": "Phishing-Profi", "emoji": "🎣" },
-    { "ab": 12, "titel": "Hai-sicher", "emoji": "🦈" }
-  ],
   "fragen": [
     {
       "id": "b01",

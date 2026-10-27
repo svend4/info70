@@ -16,7 +16,8 @@ prüfen), beschwerde-lotse. Bindet Hilfe-Insel ein.
 ## 3. Ablauf
 
 Start → 8 Beispiele gemischt (Chat-Funktion beschrieben) → 3 Optionen
-(2/1/0) → Auflösung: Erklärung + Schutzmerkmal-Label. Ränge + Rekord.
+(2/1/0) → Auflösung: Erklärung + Schutzmerkmal-Label. Ende: «Ende der Runde»,
+keine Punkte, keine Ränge, kein Rekord – das Kind wird nicht bewertet.
 Abschluss-Merksatz mit den drei Schutzmerkmalen. Hilfe-Insel jederzeit.
 
 ## 4. Didaktik
@@ -29,15 +30,17 @@ den Jüngeren (vorgegebene Nachrichten).
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), nur `cc.rekord` + Löschung,
+Keine externen Anfragen (NetzwerkWaechter), speichert nichts (der alte
+Schlüssel `cc.rekord` wird beim Start einmal entfernt, kein Löschknopf nötig),
 werbefrei, Vorlesen, mobile-first, eltern.html, Hilfe-Insel (116 111).
 Beispiele erfunden, plattformneutral.
 
 ## 6. Tests
 
-`test/szenarien.test.mjs`: Schema/Ränge, je Szenario Schutzmerkmal +
+`test/szenarien.test.mjs`: Schema (ohne Ränge), je Szenario Schutzmerkmal +
 Erklärung + 2/1/0 (genau eine 2, mind. eine 0), drei Schutzmerkmale +
-Gegenbeispiel, kein-Grooming-Wächter + 116 111 + Hilfe-Insel.
+Gegenbeispiel, kein-Grooming-Wächter + 116 111 + Hilfe-Insel, keine Wertung im Code,
+Speicherregel (kein Speicher, keine Karte).
 
 ## 7. Erweiterungen (Katalog)
 

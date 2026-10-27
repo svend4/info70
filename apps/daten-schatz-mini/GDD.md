@@ -19,7 +19,8 @@ nachrichten-detektive-junior.
 
 1) Karte mit Piktogramm + kurzer Satz, wird vorgelesen.
 2) Zwei Knöpfe: „🌍 Darf jeder wissen“ / „🔒 Bleibt geheim“.
-3) Rückmeldung + einfache Erklärung, am Ende ein ermutigendes Ergebnis.
+3) Rückmeldung + einfache Erklärung zu jeder Karte; am Ende „Ende der Runde“
+   ohne Bewertung (keine Punkte, kein Rekord, keine Ränge).
 
 ## 4. Didaktik / Nutzen
 
@@ -28,14 +29,17 @@ Datensparsamkeit für Erstleser*innen: konkret, bildhaft, hörbar. Schutzdaten
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei. Nur Bestwert lokal,
-löschbar. Vorlesen (BFSG). Kind-nah → eltern.html, im Eltern-Sammelband.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei. Es wird nichts
+gespeichert, darum gibt es keine Karte „Meine Daten löschen“; der frühere
+Eintrag (Schlüssel dsm.rekord) wird beim Start einmal entfernt. Vorlesen
+(BFSG). Kind-nah → eltern.html, im Eltern-Sammelband.
 
 ## 6. Tests
 
 `test/sachen.test.mjs`: Zielgruppe 6-8, ≥8 vollständige Karten, Balance
 (geheim/offen je ≥3), Leichte Sprache (kurze Sätze), Kern-Schutzdaten
-(Passwort/Adresse) sind geheim.
+(Passwort/Adresse) sind geheim, keine Bewertung und kein Speicher im
+App-Code (Abwesenheits-Tests), Speicherregel (kein setItem, keine Karte).
 
 ## 7. Erweiterungen (Katalog)
 

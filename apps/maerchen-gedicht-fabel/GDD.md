@@ -2,7 +2,7 @@
 
 **Einheit aus Katalog:** docs/10 (Praleska) Kinder-Apps Nr. 19 —
 «Maerchen, Gedicht oder Fabel?». **Engine:** `quiz-kern` (Einzel-,
-Klassen-, Duett- und Staffel-Modus, Vorlesen, Rekord). Zielgruppe: 6–10.
+Klassen-, Duett- und Staffel-Modus, Vorlesen). Zielgruppe: 6–10.
 
 ## 1. Kernaussage
 
@@ -16,9 +16,8 @@ das Zeichen, an dem man es hätte sehen können.
 
 18 Fragen im Vorrat, 12 pro Runde. Zehn davon zeigen einen
 **Beispieltext** und fragen „Was ist das?“ (drei Gattungen zur Auswahl),
-acht sind Aussagen über die Merkmale selbst. Am Ende: Punkte, Rekord und
-einer von vier Rängen (Geschichten-Neuling → Wörter-Spürnase →
-Gattungs-Kenner\*in → Sprach-Expert\*in).
+acht sind Aussagen über die Merkmale selbst. Am Ende steht „Ende der
+Runde“, ohne Wertung des Kindes: keine Punkte, kein Rekord, keine Ränge.
 
 Sieben Gattungen, jede mit mindestens einem eigenen Beispieltext:
 Märchen, Erzählung, Gedicht, Fabel, Rätsel, Sprichwort, Zungenbrecher.
@@ -59,17 +58,19 @@ ein erfundenes Sprichwort wäre keines. Das Feld `hinweis` in
 
 ## 6. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Nur
-der Punkte-Rekord liegt unter `gattung.rekord` im localStorage und ist
-in der App löschbar. Vorlesefunktion aus `quiz-kern` deckt Nichtleser ab
+Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Die App
+speichert nichts und kennt keine Punkte, keinen Rekord und keine Ränge; der
+frühere Schlüssel `gattung.rekord` wird beim Start einmal entfernt.
+Vorlesefunktion aus `quiz-kern` deckt Nichtleser ab
 (BFSG) — gerade beim Gedicht hört man die Zeilen, statt sie zu sehen.
 eltern.html, im Sammelband.
 
 ## 7. Tests
 
-`test/fragen.test.mjs` (8): Schema gültig bei erhöhter Latte (≥16 Fragen,
-Erklärung ≥80 Zeichen); Ränge beginnen bei 0 und sind in einer 12er-Runde
-erreichbar; alle sieben Gattungen kommen vor **und keine Kategorie
+`test/fragen.test.mjs` (9): Schema gültig bei erhöhter Latte (≥16 Fragen,
+Erklärung ≥80 Zeichen); die Daten haben keine Ränge; App-Code ohne
+Ergebnissatz, ohne Speicher und ohne Löschkarte, Eltern-Seite ohne
+Löschknopf; alle sieben Gattungen kommen vor **und keine Kategorie
 außerhalb dieser sieben**; zu jeder Gattung gibt es einen Beispieltext in
 der festen Form, dessen richtige Antwort zur Kategorie passt und dessen
 Ablenker die Gattung nie wiederholen; binäre Fragen enthalten beide

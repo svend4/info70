@@ -1,25 +1,24 @@
 // Dark-Pattern-Labyrinth: reine Spiel-Logik (ohne DOM), damit sie testbar ist.
 // Modell: 7 Stationen der Fake-App "Glitzi", pro Station genau EINE ehrliche
-// Option. Jede durchschaute Falle (= ehrliche Wahl) gibt einen Punkt.
+// Option. Das Kind wird nicht bewertet: der Stand kennt nur die Station.
 
 /**
  * Startet einen neuen Lauf durchs Labyrinth.
  * @param {number} anzahl Zahl der Stationen
- * @returns {{ index: number, punkte: number, anzahl: number }}
+ * @returns {{ index: number, anzahl: number }}
  */
 export function neuesSpiel(anzahl) {
-  return { index: 0, punkte: 0, anzahl };
+  return { index: 0, anzahl };
 }
 
 /**
- * Verarbeitet eine Entscheidung: ehrliche Wahl (istFalle=false) gibt 1 Punkt,
- * Falle gibt keinen. Liefert einen NEUEN Stand (unveränderlich).
- * @param {{ index: number, punkte: number, anzahl: number }} stand
- * @param {boolean} istFalle
+ * Verarbeitet eine Entscheidung: geht zur nächsten Station, egal wie gewählt
+ * wurde (Falle oder ehrlicher Ausweg). Liefert einen NEUEN Stand (unveränderlich).
+ * @param {{ index: number, anzahl: number }} stand
  */
-export function waehle(stand, istFalle) {
+export function waehle(stand) {
   if (istVorbei(stand)) return stand;
-  return { ...stand, index: stand.index + 1, punkte: stand.punkte + (istFalle ? 0 : 1) };
+  return { ...stand, index: stand.index + 1 };
 }
 
 /**
@@ -36,15 +35,6 @@ export function istVorbei(stand) {
  */
 export function ehrlicheOption(station) {
   return station.optionen.find((o) => !o.istFalle);
-}
-
-/**
- * Rang zum Punktestand: der höchste Rang, dessen Schwelle erreicht ist.
- * @param {number} punkte
- * @param {Array<{ ab: number, titel: string, emoji: string }>} raenge aufsteigend nach `ab`
- */
-export function rang(punkte, raenge) {
-  return [...raenge].reverse().find((r) => punkte >= r.ab) ?? raenge[0];
 }
 
 /**

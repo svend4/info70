@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "13-15",
-  "raenge": [
-    { "ab": 0, "titel": "Quellen-Späher*in", "emoji": "🔎" },
-    { "ab": 5, "titel": "Fakten-Checker*in", "emoji": "🧭" },
-    { "ab": 9, "titel": "Deepfake-Jäger*in", "emoji": "🕵️" },
-    { "ab": 12, "titel": "Desinfo-Profi", "emoji": "🎖️" }
-  ],
   "fragen": [
     { "id": "p01", "typ": "wahl", "kategorie": "Quellencheck", "frage": "Ein aufregendes Video kursiert ohne Quelle. Was prüfst du ZUERST?", "antworten": ["Wie viele Likes es hat", "Wer es zuerst veröffentlicht hat und ob seriöse Medien berichten", "Ob deine Freund*innen es geteilt haben"], "korrekt": 1, "erklaerung": "Reichweite ist kein Wahrheitsbeweis. Der erste Schritt ist immer die Quelle: Wer sagt das, seit wann, und berichten unabhängige, seriöse Medien ebenfalls darüber?" },
     { "id": "p02", "typ": "binaer", "kategorie": "Deepfake", "aussage": "Wenn ein Video echt aussieht und flüssig läuft, kann es kein KI-Deepfake sein.", "korrekt": "nein", "erklaerung": "Falsch. Moderne Deepfakes wirken sehr echt. Achte auf feine Fehler: unnatürliches Blinzeln, seltsame Zähne oder Hände, Licht/Schatten, die nicht passen, und Ton, der leicht asynchron ist." },

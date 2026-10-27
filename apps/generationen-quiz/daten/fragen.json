@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12+Großeltern",
-  "raenge": [
-    { "ab": 0, "titel": "Maschen-Neuling", "emoji": "🌱" },
-    { "ab": 5, "titel": "Trick-Erkenner*in", "emoji": "🔍" },
-    { "ab": 9, "titel": "Betrugs-Profi", "emoji": "🎖️" },
-    { "ab": 12, "titel": "Familien-Wächter*in", "emoji": "🛡️" }
-  ],
   "fragen": [
     {
       "id": "g01",

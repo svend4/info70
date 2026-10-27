@@ -2,12 +2,6 @@
   "version": 1,
   "zielgruppe": "6-10",
   "hinweis": "Alle Beispieltexte sind Eigenproduktion. Ausnahme: die beiden Sprichwörter sind altes deutsches Sprachgut (gemeinfrei) – ein erfundenes Sprichwort wäre keines.",
-  "raenge": [
-    { "ab": 0, "titel": "Geschichten-Neuling", "emoji": "🌱" },
-    { "ab": 4, "titel": "Wörter-Spürnase", "emoji": "🔎" },
-    { "ab": 8, "titel": "Gattungs-Kenner*in", "emoji": "📚" },
-    { "ab": 12, "titel": "Sprach-Expert*in", "emoji": "🏆" }
-  ],
   "fragen": [
     {
       "id": "g01",

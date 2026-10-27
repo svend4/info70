@@ -1,16 +1,10 @@
 {
   "version": 1,
   "zielgruppe": "5-7 (kurze Einheiten)",
-  "raenge": [
-    { "ab": 0, "titel": "Zeit-Entdecker*in", "emoji": "🌱" },
-    { "ab": 3, "titel": "Uhr-Kenner*in", "emoji": "🕐" },
-    { "ab": 6, "titel": "Kalender-Profi", "emoji": "📅" },
-    { "ab": 8, "titel": "Zeit-Meister*in", "emoji": "⏰" }
-  ],
   "fragen": [
     { "id": "u01", "typ": "uhr", "zeit": { "stunde": 3, "minute": 0 }, "ablenker": [{ "stunde": 9, "minute": 0 }, { "stunde": 6, "minute": 0 }], "erklaerung": "Der kleine Zeiger zeigt auf die 3, der große steht oben auf der 12 – das ist 3 Uhr." },
     { "id": "u02", "typ": "uhr", "zeit": { "stunde": 7, "minute": 0 }, "ablenker": [{ "stunde": 5, "minute": 0 }, { "stunde": 12, "minute": 0 }], "erklaerung": "Der kleine Zeiger zeigt auf die 7 – es ist 7 Uhr. Zeit fürs Frühstück oder Abendessen!" },
-    { "id": "u03", "typ": "uhr", "zeit": { "stunde": 4, "minute": 30 }, "ablenker": [{ "stunde": 4, "minute": 0 }, { "stunde": 10, "minute": 30 }], "erklaerung": "Der große Zeiger zeigt nach unten auf die 6 – eine halbe Stunde ist um. Wir sagen „halb 5“, weil die 5. Stunde halb geschafft ist." },
+    { "id": "u03", "typ": "uhr", "zeit": { "stunde": 4, "minute": 30 }, "ablenker": [{ "stunde": 4, "minute": 0 }, { "stunde": 10, "minute": 30 }], "erklaerung": "Der große Zeiger zeigt nach unten auf die 6 – eine halbe Stunde ist um. Wir sagen „halb 5“, weil die 5. Stunde zur Hälfte um ist." },
     { "id": "u04", "typ": "uhr", "zeit": { "stunde": 8, "minute": 30 }, "ablenker": [{ "stunde": 8, "minute": 0 }, { "stunde": 2, "minute": 30 }], "erklaerung": "Großer Zeiger unten auf der 6: halb. Der kleine Zeiger ist zwischen 8 und 9 – also „halb 9“." },
     { "id": "u05", "typ": "uhr", "zeit": { "stunde": 2, "minute": 15 }, "ablenker": [{ "stunde": 2, "minute": 45 }, { "stunde": 2, "minute": 0 }], "erklaerung": "Der große Zeiger zeigt auf die 3 – eine Viertelstunde ist um: „Viertel nach 2“." },
     { "id": "u06", "typ": "uhr", "zeit": { "stunde": 5, "minute": 45 }, "ablenker": [{ "stunde": 5, "minute": 15 }, { "stunde": 6, "minute": 15 }], "erklaerung": "Der große Zeiger zeigt auf die 9 – noch eine Viertelstunde bis zur vollen Stunde: „Viertel vor 6“." },

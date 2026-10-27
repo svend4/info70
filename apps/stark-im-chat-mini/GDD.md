@@ -19,7 +19,8 @@ daten-schatz-mini, gefuehle-entdecker.
 
 1) Szene mit Piktogramm + kurzer Satz, wird vorgelesen.
 2) Zwei Antworten (gemischt): eine starke, eine schwache.
-3) Rückmeldung + einfache Erklärung, am Ende ein ermutigendes Ergebnis.
+3) Rückmeldung + einfache Erklärung zu jeder Antwort. Ende: «Ende der Runde»,
+keine Punkte, kein Rekord, keine Ränge – das Kind wird nicht bewertet.
 
 ## 4. Didaktik / Nutzen
 
@@ -28,14 +29,16 @@ Erwachsene holen. Konkret, bildhaft, hörbar (BFSG).
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei. Nur Bestwert lokal,
-löschbar. Vorlesen. Kind-nah → eltern.html, im Eltern-Sammelband.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei. Speichert nichts (der
+alte Schlüssel `scm.rekord` wird beim Start einmal entfernt, kein Löschknopf
+nötig). Vorlesen. Kind-nah → eltern.html, im Eltern-Sammelband.
 
 ## 6. Tests
 
 `test/szenarien.test.mjs`: Zielgruppe 6-8, ≥6 vollständige Szenarien, genau
 zwei Optionen (2/0), Leichte Sprache (kurze Sätze), Kernbotschaften (Stopp,
-nett sein, Erwachsene holen).
+nett sein, Erwachsene holen), keine Wertung im Code, Speicherregel (kein
+Speicher, keine Karte).
 
 ## 7. Erweiterungen (Katalog)
 

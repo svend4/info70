@@ -19,8 +19,8 @@
 Движок: quiz-kern (тонкое приложение, как kinderrechte-entdecker).
 Основная петля: начало раунда → нагляднoe сообщение или вопрос →
 выбор («✅ Echt» / «🎣 Köder» либо 3 варианта) → объяснение с разбором
-предупреждающих признаков → следующее сообщение → ранг (рыбная лестница:
-Köder-Schnapper → Netz-Durchschauer → Phishing-Profi → Hai-sicher).
+предупреждающих признаков → следующее сообщение → «Ende der Runde» без оценки
+(ни очков, ни рангов).
 Реиграбельность: раунд 12 из банка 16, перемешивание вопросов и вариантов;
 банк расширяем контент-паками (`daten/fragen.json`).
 
@@ -48,8 +48,8 @@ quiz-kern (`binaer`: id, kategorie, aussage, korrekt ja/nein, erklaerung;
 ## 6. Политика соответствия (Pflicht, docs/02)
 [x] Werbefrei / без покупок  [x] Без аккаунтов и персональных данных
 [x] Без внешних запросов (CSP self + NetzwerkWaechter; все «ссылки» в вопросах —
-только текст, никуда не ведут)  [x] localStorage: только рекорд `kq.rekord` +
-кнопка «Meine Daten löschen»  [x] Privacy by default (ноль запросов привилегий)
+только текст, никуда не ведут)  [x] Ничего не сохраняется (нет очков, рекорда, рангов;
+старый ключ `kq.rekord` при запуске один раз удаляется)  [x] Privacy by default (ноль запросов привилегий)
 [x] Mobile First 360px/48px (kinder-ui)  [x] Vorlesen (кнопка на каждом экране,
 из quiz-kern)  [ ] Offline: service worker убран (решение Max 9б)
 [x] eltern.html  [ ] Impressum/DSGVO перед публикацией
@@ -69,7 +69,7 @@ nachrichten-detektive и kettenbrief-stopper — общий движок и об
 Aufwand: S–M (контент + тексты на готовом движке, дни). Переиспользуем:
 quiz-kern (весь ход игры), kinder-ui (el, vorlesen, CSS), kinderschutz
 (NetzwerkWaechter), паттерны тестов nachrichten-detektive (баланс-тест).
-Первый срез (playable): раунд 12 вопросов с рангами, рекордом и озвучкой —
+Первый срез (playable): раунд 12 вопросов с объяснением и озвучкой —
 готово в этом MVP.
 
 ## 9. Kindertest-гипотезы

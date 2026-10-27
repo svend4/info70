@@ -10,11 +10,10 @@ test('Fragenbank: Schema gültig (quiz-kern), genug für eine 12er-Runde', () =>
   assert.ok(daten.fragen.length >= 12, `mindestens 12 Fragen (ist: ${daten.fragen.length})`);
 });
 
-test('Zielgruppe 13-15 und erreichbare Ränge', () => {
+test('Zielgruppe 13-15; Kinder werden nicht bewertet: die Daten haben keine Ränge', () => {
   assert.equal(daten.zielgruppe, '13-15');
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= daten.fragen.length, 'oberster Rang erreichbar');
-  assert.ok(daten.fragen.length >= 12 && maxAb >= 12, 'Top-Rang ab 12 mit ausreichend Fragen');
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+  assert.ok(daten.fragen.length >= 12, 'genug Fragen für die 12er-Runde');
 });
 
 test('inhaltliche Abdeckung der konkreten Plattform-Rechte (Katalog Nr. 147)', () => {
@@ -31,4 +30,13 @@ test('inhaltliche Abdeckung der konkreten Plattform-Rechte (Katalog Nr. 147)', (
 test('didaktische Balance: beide binaer-Antworten kommen vor', () => {
   const antworten = new Set(daten.fragen.filter((f) => f.typ === 'binaer').map((f) => f.korrekt));
   assert.ok(antworten.has('ja') && antworten.has('nein'));
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.match(code, /^\s*rekordSchluessel: 'pr13\.rekord',\s*$/m, 'der alte Schlüssel steht allein in einer Zeile (Migration)');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar/, 'ohne Speicher kein Löschknopf');
 });

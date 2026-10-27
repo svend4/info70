@@ -36,8 +36,15 @@ test('bekannte falsche Freunde sind als „nein“ markiert (inhaltliche Korrekt
   assert.ok(angel && angel.korrekt === 'nein', 'Angel ≠ ангел (Engel) ist falscher Freund');
 });
 
-test('Ränge in einer 11er-Runde erreichbar', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= 11);
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
   assert.ok(daten.fragen.length >= 12);
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|geschafft/i, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar/, 'ohne Speicher kein Löschknopf');
 });

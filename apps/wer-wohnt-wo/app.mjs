@@ -3,7 +3,8 @@
 // Garten/Feld) mit Jahreszeiten-Wandel, Wohn-Quiz (Tier → Haus/Stockwerk)
 // und Gast-Quiz („der Mensch ist dort nur zu Gast“). Praleska docs/10
 // (Kinder-Apps Nr. 3). Politik docs/02: keine externen Anfragen, speichert
-// nichts.
+// nichts, das Kind wird nicht bewertet (zu jeder Antwort eine Erklärung, am Ende
+// „Ende der Runde“).
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
@@ -28,7 +29,6 @@ let jahreszeit = 'sommer';
 // Quiz-Zustand
 let aufgaben = [];
 let index = 0;
-let treffer = 0;
 
 function zeige(...knoten) {
   app.replaceChildren(...[
@@ -97,12 +97,11 @@ function starteWohnQuiz() {
   }
   aufgaben = mischen([...tiere, ...stockwerke]);
   index = 0;
-  treffer = 0;
   render();
 }
 
 function wohnQuizKarte() {
-  if (index >= aufgaben.length) return quizErgebnis('🏠', 'Wohn-Quiz geschafft!', starteWohnQuiz);
+  if (index >= aufgaben.length) return quizErgebnis('🏠', 'Ende der Runde', starteWohnQuiz);
   const a = aufgaben[index];
   return a.art === 'stockwerk' ? stockwerkKarte(a) : raumKarte(a);
 }
@@ -134,7 +133,6 @@ function stockwerkKarte(a) {
 
 function beantworteWohn(a, wahl) {
   const gut = wahl === a.richtig;
-  if (gut) treffer++;
   const raum = daten.lebensraeume.find((r) => r.id === a.richtig);
   const text = `${MitArtikel(a.bewohner.name)} wohnt ${raum.wo} ${raum.emoji}. ${a.bewohner.tipp}`;
   zeige(feedbackKarte(gut, text, () => { index++; render(); }));
@@ -142,7 +140,6 @@ function beantworteWohn(a, wahl) {
 
 function beantworteStockwerk(a, wahl) {
   const gut = wahl === a.richtig;
-  if (gut) treffer++;
   const s = WALD.stockwerke.find((x) => x.id === a.richtig);
   const text = `${MitArtikel(a.name)} ist in der ${s.kurz} zu Hause ${s.emoji}. ${s.info}`;
   zeige(feedbackKarte(gut, text, () => { index++; render(); }));
@@ -152,7 +149,6 @@ function beantworteStockwerk(a, wahl) {
 function starteGastQuiz() {
   aufgaben = mischen(daten.gastRegeln).slice(0, RUNDE);
   index = 0;
-  treffer = 0;
   render();
 }
 
@@ -172,7 +168,6 @@ function gastQuizKarte() {
 
 function beantworteGast(g, wahl) {
   const gut = wahl === g.richtig;
-  if (gut) treffer++;
   zeige(feedbackKarte(gut, g.erklaerung, () => { index++; render(); }));
 }
 
@@ -180,7 +175,7 @@ function beantworteGast(g, wahl) {
 function feedbackKarte(gut, text, weiter) {
   const titel = gut ? 'Genau richtig!' : 'Gut, dass wir drüber reden!';
   return el('section', { class: 'k-karte' },
-    el('p', { class: 'k-gross' }, gut ? '🌟' : '💭'),
+    el('p', { class: 'k-gross' }, gut ? '✅' : '💭'),
     el('div', { class: `k-hinweis${gut ? ' k-hinweis--richtig' : ''}` },
       el('p', { style: 'font-weight:700;margin-top:0' }, titel),
       el('p', { style: 'margin-bottom:0' }, text)),
@@ -189,17 +184,17 @@ function feedbackKarte(gut, text, weiter) {
       el('button', { class: 'k-knopf', onclick: weiter }, 'Weiter ➡️')));
 }
 
+const AUSBLICK = 'Und jetzt: raus und echte Tiere beobachten – als leiser Gast!';
+
 function quizErgebnis(emoji, titel, nochmal) {
-  const satz = `${titel} ${treffer} von ${aufgaben.length} richtig.`;
   return el('section', { class: 'k-karte' },
     el('p', { class: 'k-gross' }, emoji),
     el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, titel),
-    el('p', { style: 'text-align:center' }, `${treffer} von ${aufgaben.length} richtig`),
-    el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(satz) }, '🔊 Vorlesen'),
+    el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${AUSBLICK}`) }, '🔊 Vorlesen'),
     el('div', { class: 'k-antworten' },
       el('button', { class: 'k-knopf', onclick: nochmal }, '🔁 Noch einmal'),
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => { modus = 'erkunden'; render(); } }, '🔍 Zurück zum Erkunden')),
-    el('p', { style: 'margin:0.5rem 0 0;text-align:center;color:#4b5563;font-size:0.9rem' }, 'Und jetzt: raus und echte Tiere beobachten – als leiser Gast! 🌿'));
+    el('p', { style: 'margin:0.5rem 0 0;text-align:center;color:#4b5563;font-size:0.9rem' }, `${AUSBLICK} 🌿`));
 }
 
 function render() {

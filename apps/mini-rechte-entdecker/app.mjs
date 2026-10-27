@@ -28,6 +28,5 @@ starteQuiz({
     binaerNein: '👎 Nein',
     weiterKnopf: 'Weiter ➡️',
     fertigTitel: 'Super gemacht! 🎉',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Bestwert: ${rekord}`,
   },
 });

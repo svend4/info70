@@ -20,7 +20,9 @@ jedem Original wieder anwenden.
 
 Angeboten werden stets **alle drei** Möglichkeiten der jeweiligen Sorte.
 Würde die App nur die zutreffenden anbieten, wäre die Auswahl selbst
-schon ein Hinweis; ein Test hält das fest.
+schon ein Hinweis; ein Test hält das fest. Nach jeder Antwort zeigt die App die
+Lösung mit Erklärung; das Kind wird nicht bewertet: kein Zähler der richtigen
+Antworten, keine Punkte, kein Rekord, keine Ränge.
 
 ## 3. Herkunft der Bilder — der Grund für genau eine Quelle
 
@@ -87,14 +89,14 @@ Zuordnungen und Texte stehen in `daten/werke.quelle.json`.
 ## 7. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten,
-**kein localStorage** — der Zähler gilt nur für die laufende Sitzung.
+**kein localStorage**, also auch keine Karte „Meine Daten löschen“.
 Jedes Bild trägt einen Alternativtext mit Titel und Künstler, jede
 Galerie-Kachel ein `aria-label`; Vorlesefunktion für Bildtexte (BFSG).
 eltern.html, im Sammelband.
 
 ## 8. Tests
 
-`test/logik.test.mjs` (9): Daten gültig; jedes Bild ist eine eingebettete
+`test/logik.test.mjs` (11): Daten gültig; jedes Bild ist eine eingebettete
 data-URI und in den Daten steht keine Adresse außer den Museums-Belegen;
 die Herkunft ist bei jedem Werk vollständig und CC0, und der Validator
 weist eine Nicht-CC0-Lizenz sowie eine unvollständige Herkunft zurück;
@@ -104,7 +106,9 @@ gibt mindestens ein Werk ohne Genre; `baueFrage` liefert über je 300
 Ziehungen drei verschiedene Optionen mit der Lösung darunter, nie die
 Tafel, nie zweimal dasselbe Werk; die Optionen sind immer alle drei
 Sorten; `gattungVon`/`genreVon`; die Bildtexte sind ausführlich und der
-Dürer-Irrtum steht drin.
+Dürer-Irrtum steht drin; Abwesenheits-Test (kein Zähler, keine Punkte, kein
+Rekord, keine Ränge im App-Code); Speicherregel (kein Speicher, darum keine
+Löschkarte, Eltern-Seite sagt „speichert nichts“).
 
 ## 9. Erweiterungen (Katalog)
 

@@ -3,8 +3,8 @@
 // erklärt die App das Merkmal, an dem man sie erkennt.
 // Praleska docs/10 (Kinder-Apps Nr. 19). Alle Beispieltexte Eigenproduktion,
 // die beiden Sprichwörter sind gemeinfreies altes Sprachgut.
-// Politik docs/02: keine externen Anfragen, nur der Rekord liegt löschbar
-// auf dem Gerät.
+// Politik docs/02: keine externen Anfragen, nichts wird gespeichert; der
+// Motor entfernt beim Start nur den früheren Schlüssel.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -28,7 +28,6 @@ starteQuiz({
     binaerJa: '✅ Stimmt',
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächster Text ➡️',
-    fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

@@ -2,7 +2,7 @@
 
 **Einheit aus Katalog:** docs/10 (Praleska) Kinder-Apps Nr. 23 —
 «Warum heisst das so? Wort-Quiz». **Engine:** `quiz-kern` (Einzel-,
-Klassen-, Duett- und Staffel-Modus, Vorlesen, Rekord). Zielgruppe: 5–7
+Klassen-, Duett- und Staffel-Modus, Vorlesen, ohne Wertung). Zielgruppe: 5–7
 in Ko-Nutzung, 8–12 eigenständig.
 
 ## 1. Kernaussage
@@ -53,15 +53,17 @@ Sprachbrücke. Dieselbe Linie wie in `mensch-tier-pflanze` und
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Nur
-der Punkte-Rekord liegt unter `warum.rekord` im localStorage und ist in
-der App löschbar. Vorlesefunktion (BFSG). eltern.html, im Sammelband.
+Keine externen Anfragen (NetzwerkWaechter), werbefrei, ohne Konten. Die
+App speichert nichts und kennt keine Punkte, keinen Rekord, keine Ränge;
+der frühere Schlüssel `warum.rekord` wird beim Start einmal entfernt.
+Vorlesefunktion (BFSG). eltern.html, im Sammelband.
 
 ## 6. Tests
 
-`test/fragen.test.mjs` (9): Schema gültig bei erhöhter Latte (≥16 Fragen,
-Erklärung ≥80 Zeichen); Ränge beginnen bei 0 und sind in einer 12er-Runde
-erreichbar; beide Namenssorten sind mit je ≥6 Fragen vertreten und jede
+`test/fragen.test.mjs` (10): Schema gültig bei erhöhter Latte (≥16 Fragen,
+Erklärung ≥80 Zeichen); die Daten haben keine Ränge und die 12er-Runde
+bleibt möglich; App-Code ohne Wertung und ohne Speicher; beide
+Namenssorten sind mit je ≥6 Fragen vertreten und jede
 Frage trägt eine gültige `art`; jede irreführende Erklärung stellt richtig
 und die Kategorie „Namen, die täuschen“ ist sortenrein; die sechs
 klassischen Irrtümer sind einzeln an ids festgenagelt; die Schlussregel

@@ -13,15 +13,17 @@
   со **слоговыми дугами** и **само-контролем по картинке** (выбрать эмодзи).
 - Раунд ровно из **8 заданий** (2+3+3, от лёгкого к сложному), затем
   приложение само объявляет «Lese-Pause» — короткие сессии как принцип.
-- Озвучка через Web Speech (локально), рекорд в localStorage.
+- Озвучка через Web Speech (локально). Ребёнка не оценивают: нет очков,
+  рекорда и рангов, в конце — нейтральное «Ende der Runde». Ничего не хранится.
 - `logik.mjs` (чистая): `istLautgetreu`, `silbenTeilen` (O-MA, TO-MA-TE),
   `hoerOptionen`, `bildOptionen`, `pruefeMaterial`.
 
 ## Политика
 
-Werbefrei, без аккаунтов, без внешних запросов (NetzwerkWaechter); только
-рекорд в localStorage (`lese.rekord`). Есть `eltern.html`, приложение в
-Eltern-Sammelband.
+Werbefrei, без аккаунтов, без внешних запросов (NetzwerkWaechter); приложение
+ничего не сохраняет, поэтому нет и кнопки «Meine Daten löschen». Старый ключ
+прежних версий (`lese.rekord`) один раз удаляется при старте. Есть
+`eltern.html`, приложение в Eltern-Sammelband.
 
 ## Запуск и тесты
 

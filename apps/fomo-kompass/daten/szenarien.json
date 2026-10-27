@@ -133,11 +133,5 @@
       ],
       "tipp": "Online ist immer irgendwo „was los“ – das ist Absicht. Zeit mit echten Menschen ist wertvoller als jeder Chat. Der Chat wartet; der Nachmittag mit dem Freund kommt nicht wieder."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Sog-Spürnase", "emoji": "🧭" },
-    { "ab": 10, "titel": "Grenz-Zieher*in", "emoji": "✋" },
-    { "ab": 17, "titel": "Ruhe-Bewahrer*in", "emoji": "🌙" },
-    { "ab": 22, "titel": "FOMO-Kompass", "emoji": "🌟" }
   ]
 }

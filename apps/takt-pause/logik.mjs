@@ -1,14 +1,16 @@
 // Takt-Pause: reine Logik (ohne DOM), damit sie testbar ist.
+// Nichts hier bewertet das Kind: Es gibt eine Zeitphase, die Zeitanzeige und die Tageszeile.
 
 /**
- * Ampelfarbe je nach verbrauchtem Anteil der geplanten Zeit.
+ * Phase der geplanten Zeit. Rein zeitlich, ohne Wertung: 'laeuft', 'fastUm'
+ * (der Hinweis „such dir einen guten Stopp-Punkt“) oder 'um' (die Pause beginnt).
  * @param {number} anteil 0..∞ (1 = Zeit voll verbraucht)
- * @returns {'gruen'|'gelb'|'rot'}
+ * @returns {'laeuft'|'fastUm'|'um'}
  */
-export function ampelFarbe(anteil) {
-  if (anteil < 0.8) return 'gruen';
-  if (anteil < 1) return 'gelb';
-  return 'rot';
+export function taktPhase(anteil) {
+  if (anteil < 0.8) return 'laeuft';
+  if (anteil < 1) return 'fastUm';
+  return 'um';
 }
 
 /**
@@ -31,7 +33,8 @@ export function tagesSchluessel(datum = new Date()) {
 }
 
 /**
- * Tagesstatistik fortschreiben; bei Datumswechsel wird neu begonnen.
+ * Tageszeile fortschreiben (geplante Minuten und gemachte Pausen von heute);
+ * bei Datumswechsel wird neu begonnen. Es gibt keinen Verlauf über mehrere Tage.
  * @param {{datum: string, geplantMin: number, pausen: number}|null} bisher
  * @param {{geplantMin?: number, pausen?: number}} delta
  * @param {string} [heute]
@@ -44,29 +47,5 @@ export function aktualisiereTag(bisher, delta, heute = tagesSchluessel()) {
     datum: heute,
     geplantMin: basis.geplantMin + (delta.geplantMin ?? 0),
     pausen: basis.pausen + (delta.pausen ?? 0),
-  };
-}
-
-/**
- * Führt die Tagesstatistik in die Wochen-Historie ein (Upsert nach Datum,
- * sortiert, nur die letzten `maxTage`). Lokale Wochenkurve für den Rückblick.
- * @param {{datum:string, geplantMin:number, pausen:number}[]} woche
- * @param {{datum:string, geplantMin:number, pausen:number}|null} tag
- */
-export function mergeWoche(woche = [], tag, maxTage = 7) {
-  if (!tag || !tag.datum) return [...(woche ?? [])];
-  const ohne = (woche ?? []).filter((t) => t.datum !== tag.datum);
-  const neu = [...ohne, { datum: tag.datum, geplantMin: tag.geplantMin ?? 0, pausen: tag.pausen ?? 0 }];
-  neu.sort((a, b) => a.datum.localeCompare(b.datum));
-  return neu.slice(-maxTage);
-}
-
-/** Kennzahlen für den Wochen-Rückblick. */
-export function wochenStatistik(woche = []) {
-  const w = woche ?? [];
-  return {
-    tage: w.length,
-    pausenGesamt: w.reduce((s, t) => s + (t.pausen ?? 0), 0),
-    maxPausen: w.reduce((m, t) => Math.max(m, t.pausen ?? 0), 0),
   };
 }

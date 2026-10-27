@@ -52,10 +52,3 @@ export function pruefeFragen(daten) {
   if (!typen.has('uhr') || !typen.has('kalender')) fehler.push('beide Typen (uhr/kalender) nötig');
   return fehler;
 }
-
-/** Rang zur Punktzahl (höchster passender „ab“-Wert). */
-export function rangFuer(raenge, punkte) {
-  let treffer = raenge[0];
-  for (const r of raenge) if (punkte >= r.ab) treffer = r;
-  return treffer;
-}

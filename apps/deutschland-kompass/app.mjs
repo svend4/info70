@@ -2,7 +2,8 @@
 // Plan-Simulator mit den vier Himmelsrichtungen, Karten-Quiz zu
 // Deutschland und Welt sowie Länderkarten zum Nachschlagen.
 // Praleska docs/10 (Kinder-Apps Nr. 18). Politik docs/02: keine externen
-// Anfragen, werbefrei, es wird nichts gespeichert.
+// Anfragen, werbefrei, es wird nichts gespeichert. Das Kind wird nicht
+// bewertet: jede Antwort bekommt eine Erklärung, es gibt keinen Zähler.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
@@ -20,10 +21,8 @@ const zufall = (liste) => liste[Math.floor(Math.random() * liste.length)];
 let modus = 'plan';
 let aufgabe = null;
 let planAntwort = null;
-let geschafft = 0;
 let quizFrage = null;
 let quizAntwort = null;
-let quizPunkte = 0;
 
 function zeige(...knoten) {
   app.replaceChildren(...[
@@ -98,7 +97,6 @@ function neuePlanAufgabe() {
 
 function antwortePlan(ort) {
   const richtig = ort.id === aufgabe.ziel.id;
-  if (richtig) geschafft += 1;
   planAntwort = { ort, richtig };
   render();
 }
@@ -134,10 +132,9 @@ function planKarten() {
       planAntwort
         ? el('div', { class: `k-hinweis${planAntwort.richtig ? ' k-hinweis--richtig' : ''}` },
           el('p', { style: 'margin:0' }, planAntwort.richtig
-            ? `🌟 Genau: ${aufgabe.schritte === 1 ? 'ein Feld' : `${aufgabe.schritte} Felder`} nach ${aufgabe.richtung.name}, und du stehst ${aufgabe.ziel.wo}.`
+            ? `✅ Genau: ${aufgabe.schritte === 1 ? 'ein Feld' : `${aufgabe.schritte} Felder`} nach ${aufgabe.richtung.name}, und du stehst ${aufgabe.ziel.wo}.`
             : `💭 Nicht ganz: Nach ${aufgabe.richtung.name} geht es ${aufgabe.richtung.emoji}. Von dort aus landest du ${aufgabe.ziel.wo} – bei ${aufgabe.ziel.name}.`))
-        : null,
-      el('p', { style: 'text-align:center;margin:0.5rem 0 0' }, `Gefundene Wege: ${geschafft}`)),
+        : null),
     el('section', { class: 'k-karte' }, windrose()),
   ];
 }
@@ -152,7 +149,6 @@ function neueQuizFrage() {
 }
 
 function antworteQuiz(option) {
-  if (option.richtig) quizPunkte += 1;
   quizAntwort = option;
   render();
 }
@@ -186,7 +182,7 @@ function quizKarten() {
           }, o.text)))),
       quizAntwort
         ? el('div', { class: `k-hinweis${quizAntwort.richtig ? ' k-hinweis--richtig' : ''}` },
-          el('p', { style: 'font-weight:700;margin-top:0' }, quizAntwort.richtig ? '🌟 Richtig!' : '💭 Schau nochmal:'),
+          el('p', { style: 'font-weight:700;margin-top:0' }, quizAntwort.richtig ? '✅ Richtig!' : '💭 Schau nochmal:'),
           el('p', { style: 'margin:0' }, q.erklaerung))
         : null,
       quizAntwort
@@ -195,8 +191,7 @@ function quizKarten() {
           style: 'margin-top:0.5rem',
           onclick: () => vorlesen(q.erklaerung),
         }, '🔊 Erklärung vorlesen')
-        : null,
-      el('p', { style: 'text-align:center;margin:0.5rem 0 0' }, `Richtig beantwortet: ${quizPunkte}`)),
+        : null),
   ];
 }
 

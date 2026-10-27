@@ -97,11 +97,5 @@
       ],
       "erklaerung": "Wer die Muster kennt, kann auch anderen helfen. Einem Freund den Trick zu erklären – „das ist Countdown-Druck“ – schützt ihn vor einer übereilten Entscheidung. Namen für die Tricks zu haben macht euch beide stärker."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Muster-Späher*in", "emoji": "🔍" },
-    { "ab": 7, "titel": "Trick-Kenner*in", "emoji": "🧠" },
-    { "ab": 12, "titel": "Dark-Pattern-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 15, "titel": "Manipulations-Profi", "emoji": "🏅" }
   ]
 }

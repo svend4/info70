@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "4-6 (mit Erwachsenem)",
-  "raenge": [
-    { "ab": 0, "titel": "Reim-Anfänger*in", "emoji": "🌱" },
-    { "ab": 2, "titel": "Reim-Spürnase", "emoji": "👂" },
-    { "ab": 5, "titel": "Reim-Meister*in", "emoji": "🎵" },
-    { "ab": 7, "titel": "Wort-Zauberer*in", "emoji": "✨" }
-  ],
   "fragen": [
     { "id": "r01", "typ": "binaer", "kategorie": "Reime hören", "aussage": "Hört mal: „Maus“ und „Haus“. Reimen sich diese zwei Wörter?", "korrekt": "ja", "erklaerung": "Ja! „Maus“ und „Haus“ klingen am Ende gleich: -aus. Wörter, die am Ende gleich klingen, reimen sich." },
     { "id": "r02", "typ": "binaer", "kategorie": "Reime hören", "aussage": "Hört mal: „Sonne“ und „Banane“. Reimen sich diese zwei Wörter?", "korrekt": "nein", "erklaerung": "Nein, die enden verschieden: -onne und -ane. Sie reimen sich nicht. Reimen heißt: am Ende gleich klingen." },

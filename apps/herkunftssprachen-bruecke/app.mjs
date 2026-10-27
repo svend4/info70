@@ -2,7 +2,7 @@
 // auch Eltern). Brücken-Wörter (Kognate/Internationalismen) UND falsche Freunde
 // zwischen Deutsch, Russisch und Ukrainisch – die Herkunftssprache als Schatz.
 // Ablauf aus @info70/quiz-kern. Praleska docs/10 (Top-30 Nr. 12).
-// Politik docs/02: keine externen Anfragen, nur Rekord in localStorage.
+// Politik docs/02: keine externen Anfragen, nichts gespeichert.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -27,6 +27,5 @@ starteQuiz({
     binaerNein: '🚫 Nein, falscher Freund',
     weiterKnopf: 'Nächster Fall ➡️',
     fertigTitel: 'Super gebrückt!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} richtig · Rekord: ${rekord}`,
   },
 });

@@ -22,7 +22,9 @@ Nicht-Ärger-Pakt.
 2. Frage an die dritte Person; 3 Optionen (2/1/0), gemischt.
 3. Auflösung: Dynamik-Erklärung + ⚖️-Block "Dein Weg" mit DSA-Meldeweg
    und Menschen-Wegen.
-4. Ränge, Rekord (localStorage), Werkzeugkasten-Merksatz am Ende.
+4. Ende: «Ende der Runde» und der Werkzeugkasten-Merksatz; keine Punkte,
+   keine Ränge, kein Rekord - die Person wird nicht bewertet (2/1/0 ist die
+   Rückmeldung zur gewählten Antwort).
 
 ## 4. Didaktik
 
@@ -36,15 +38,17 @@ Rausekeln. Opfer-Hilfen immer anbieterunabhängig (116 111, JUUUPORT).
 
 Kein echter Chat (im Code dokumentiert, vom Test geprüft), plattform-
 neutral (Stop-Liste: keine Markennamen), keine externen Anfragen,
-nur `sicp.rekord` + Löschknopf, Vorlesen, mobile-first, ab-13-Hinweis.
+speichert nichts (der alte Schlüssel `sicp.rekord` wird beim Start einmal
+entfernt, kein Löschknopf nötig), Vorlesen, mobile-first, ab-13-Hinweis.
 StGB-Nennungen als Schutzwissen, nie als Anleitung.
 
 ## 6. Tests
 
-`test/szenarien.test.mjs`: Schema (Chat ≥3 Nachrichten, [0,1,2]-Werte),
+`test/szenarien.test.mjs`: Schema (Chat ≥3 Nachrichten, [0,1,2]-Werte, keine Ränge),
 Auflösung ≥100 + dsaWeg ≥80 Zeichen, DSA-Substanz (Art. 16/20/28,
 116 111, JUUUPORT), Phänomen-Breite (6 Muster + Screenshot + Spaß-
-Tarnung), Politik-Wächter (geskriptet, keine Plattformnamen).
+Tarnung), Politik-Wächter (geskriptet, keine Plattformnamen), keine Wertung im
+Code (Daten ohne Ränge), Speicherregel (kein Speicher, keine Karte).
 
 ## 7. Erweiterungen (Katalog)
 

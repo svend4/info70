@@ -157,11 +157,5 @@
       "satz": "Es geht um meinen Körper – bitte erklärt es MIR.",
       "erklaerung": "Bei Gesundheit gilt Artikel 12 besonders: Es ist dein Körper, also hast du ein Recht auf Erklärungen, die du verstehst, und auf deine Fragen. Gute Ärzt*innen freuen sich über Kinder, die nachfragen. Mama später fragen ist okay – aber aus zweiter Hand verstehen ist schwerer. Verweigern schadet am Ende deiner Gesundheit."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Rechte-Entdecker*in", "emoji": "🧭" },
-    { "ab": 10, "titel": "Rechte-Kenner*in", "emoji": "📜" },
-    { "ab": 17, "titel": "Rechte-Stimme", "emoji": "📣" },
-    { "ab": 22, "titel": "Rechte-Kompass", "emoji": "🌟" }
   ]
 }

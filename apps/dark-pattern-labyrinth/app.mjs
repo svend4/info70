@@ -2,15 +2,15 @@
 // Sieben Stationen, jede mit genau EINEM Dark Pattern; das Kind klickt sich
 // zum ehrlichen Ausgang. Nach jeder Wahl wird das Muster BENANNT und erklärt -
 // dort passiert das Lernen. Am Ende: Muster-Lexikon aller sieben Tricks.
-// Politik: keine externen Anfragen, nur Rekord (dpl.rekord) in localStorage.
+// Politik: keine externen Anfragen, nichts wird gespeichert, das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
-import { neuesSpiel, waehle, istVorbei, ehrlicheOption, rang, lexikon } from './spiel.mjs';
+import { neuesSpiel, waehle, istVorbei, ehrlicheOption, lexikon } from './spiel.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'dpl.rekord';
+try { localStorage.removeItem('dpl.rekord'); } catch {}
 const app = document.getElementById('app');
 const daten = await fetch('daten/stationen.json').then((r) => r.json());
 
@@ -33,18 +33,15 @@ function zeige(...knoten) {
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', {}, `Die „Glitzi-Sammel-App“ sieht niedlich aus – aber sie steckt voller Tricks, die dich festhalten und schubsen sollen. Klick dich durch ${daten.stationen.length} Stationen zum ehrlichen Ausgang. Jeder Trick, den du durchschaust, gibt einen Punkt!`),
+      el('p', {}, `Die „Glitzi-Sammel-App“ sieht niedlich aus – aber sie steckt voller Tricks, die dich festhalten und schubsen sollen. Klick dich durch ${daten.stationen.length} Stationen zum ehrlichen Ausgang. Nach jeder Wahl erfährst du, wie der Trick heißt.`),
       el('p', {}, '🎭 Keine Sorge: Alles hier ist nur nachgebaut. Es gibt keine echte Werbung und nichts zu kaufen – nur Tricks zum Durchschauen.'),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.stationen.length} 🕵️`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteLauf }, '▶️ Rein ins Labyrinth'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Die Glitzi-Sammel-App sieht niedlich aus, aber sie steckt voller Tricks. Klick dich durch sieben Stationen zum ehrlichen Ausgang. Jeder Trick, den du durchschaust, gibt einen Punkt. Keine Sorge: Alles ist nur nachgebaut, es gibt keine echte Werbung und nichts zu kaufen.') }, '🔊 Vorlesen'))),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Die Glitzi-Sammel-App sieht niedlich aus, aber sie steckt voller Tricks. Klick dich durch sieben Stationen zum ehrlichen Ausgang. Nach jeder Wahl erfährst du, wie der Trick heißt. Keine Sorge: Alles ist nur nachgebaut, es gibt keine echte Werbung und nichts zu kaufen.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, '💡 Solche Tricks heißen „Dark Patterns“. Für große Plattformen sind sie in der EU sogar verboten – trotzdem triffst du sie überall. Wer sie beim Namen kennt, tappt nicht mehr hinein.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+      el('p', { style: 'margin-top:0' }, '💡 Solche Tricks heißen „Dark Patterns“. Für große Plattformen sind sie in der EU sogar verboten – trotzdem triffst du sie überall. Wer sie beim Namen kennt, tappt nicht mehr hinein.')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
@@ -95,7 +92,7 @@ function glitziBildschirm(s, optionen) {
 }
 
 function antworte(station, option) {
-  stand = waehle(stand, option.istFalle);
+  stand = waehle(stand);
   const gut = !option.istFalle;
   const ehrlich = ehrlicheOption(station);
   zeige(
@@ -116,15 +113,12 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(stand.punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const r = rang(stand.punkte, daten.raenge);
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, r.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, r.titel),
-      el('p', { style: 'text-align:center' }, `🚪 Du hast den ehrlichen Ausgang erreicht: ${stand.punkte} von ${stand.anzahl} Tricks durchschaut · Rekord: ${rekord}`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Du hast den ehrlichen Ausgang erreicht und ${stand.punkte} von ${stand.anzahl} Tricks durchschaut. Dein Rang: ${r.titel}`) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '🚪'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('p', { style: 'text-align:center' }, `Du hast den ehrlichen Ausgang erreicht, nach ${stand.anzahl} Stationen.`),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Ende der Runde. Du hast den ehrlichen Ausgang erreicht, nach ${stand.anzahl} Stationen.`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteLauf }, '🔁 Noch einmal ins Labyrinth'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

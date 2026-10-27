@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Poster-Neuling", "emoji": "🖊️" },
-    { "ab": 5, "titel": "Rücksicht-Kenner*in", "emoji": "🤝" },
-    { "ab": 9, "titel": "Rechte-Checker*in", "emoji": "✅" },
-    { "ab": 12, "titel": "Fair-Post-Profi", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "b01",

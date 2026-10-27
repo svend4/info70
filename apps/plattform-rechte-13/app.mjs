@@ -3,6 +3,8 @@
 // Art. 17), Widerspruch (Art. 20), Datenauskunft/-löschung (DSGVO Art. 15/17),
 // Einwilligungsalter (Art. 8), Werbeverbot für Minderjährige (DSA Art. 28).
 // Ablauf kommt aus @info70/quiz-kern; hier nur Daten, Texte, Politik.
+// Das Kind wird nicht bewertet, nichts wird gespeichert; der Motor entfernt
+// beim Start nur den früheren Schlüssel.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -26,7 +28,6 @@ starteQuiz({
     binaerJa: '✅ Stimmt',
     binaerNein: '❌ Stimmt nicht',
     weiterKnopf: 'Nächste Frage ➡️',
-    fertigTitel: 'Geschafft!',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} Rechten gekannt · Rekord: ${rekord}`,
+    fertigTitel: 'Ende der Runde',
   },
 });

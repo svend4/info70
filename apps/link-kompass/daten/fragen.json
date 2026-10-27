@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Link-Leser*in", "emoji": "🔗" },
-    { "ab": 5, "titel": "Link-Kenner*in", "emoji": "🧭" },
-    { "ab": 9, "titel": "Klick-Profi", "emoji": "🖱️" },
-    { "ab": 12, "titel": "Link-Kompass-Meister*in", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "w01",

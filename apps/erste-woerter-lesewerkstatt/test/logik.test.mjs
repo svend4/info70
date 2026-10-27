@@ -2,8 +2,14 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { istLautgetreu, pruefeMaterial, hoerOptionen, bildOptionen, silbenTeilen } from '../logik.mjs';
+import { speicherBefund, verletzung } from '../../../packages/kinderschutz/src/speicher-regel.mjs';
 
-const daten = JSON.parse(await readFile(new URL('../daten/material.json', import.meta.url), 'utf8'));
+const lese = (name) => readFile(new URL(`../${name}`, import.meta.url), 'utf8');
+const daten = JSON.parse(await lese('daten/material.json'));
+const appQuelle = await lese('app.mjs');
+const logikQuelle = await lese('logik.mjs');
+const elternSeite = await lese('eltern.html');
+const startSeite = await lese('index.html');
 
 test('Material gültig: 5 Vokale, 8 Konsonanten, KV-Silben, lautgetreue Wörter', () => {
   assert.deepEqual(pruefeMaterial(daten), []);
@@ -57,4 +63,30 @@ test('jedes Wort der Bank lässt sich in Silben teilen (nicht leer)', () => {
     assert.ok(teile.length >= 1, w.wort);
     assert.equal(teile.join(''), w.wort, `${w.wort}: Silben ergeben das Wort`);
   }
+});
+
+const MIGRATION = "try { localStorage.removeItem('lese.rekord'); } catch {}";
+
+test('Kinder werden nicht bewertet: kein Zähler, kein Rekord, keine Sterne, kein Ergebnissatz', () => {
+  const code = (appQuelle + '\n' + logikQuelle).split('\n').filter((z) => z.trim() !== MIGRATION).join('\n');
+  assert.doesNotMatch(code, /punkte|rekord|\brang\b|treffer|geschafft/i, 'App-Code zählt nichts und stuft nichts ein');
+  assert.doesNotMatch(code, /⭐|🌟|🏅|🏆/u, 'keine Sterne, keine Medaille, kein Pokal');
+  assert.match(appQuelle, /Aufgabe \$\{index \+ 1\} von \$\{aufgaben\.length\}/, 'Fortschritt der Runde (Aufgabe N von M) bleibt');
+  assert.match(appQuelle, /Ende der Runde/, 'das Ende heißt neutral „Ende der Runde“');
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Ränge');
+  assert.doesNotMatch(startSeite, /rekord|punkte/i, 'die Beschreibung verspricht keine Wertung');
+  assert.match(elternSeite, /keine Punkte/, 'die Eltern-Seite sagt, dass nichts gewertet wird');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Löschknopf; der alte Schlüssel wird einmal entfernt', () => {
+  const code = appQuelle + '\n' + logikQuelle;
+  const befund = speicherBefund(code);
+  assert.equal(befund.speichert, false, 'kein setItem, keine Sprachwahl mit Schlüssel');
+  assert.equal(befund.karte, false, 'ohne Speicher keine Karte „Meine Daten löschen“');
+  assert.equal(verletzung(befund), null, 'Speicherregel erfüllt');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte|sprache\.mjs/, 'kein Schreiben, keine gemeinsame Löschkarte');
+  assert.ok(appQuelle.split('\n').includes(MIGRATION), 'Migration: eine Zeile mit Literal');
+  assert.equal((appQuelle.match(/lese\.rekord/g) ?? []).length, 1, 'der alte Schlüssel steht nur in dieser Zeile');
+  assert.doesNotMatch(elternSeite, /Meine Daten löschen/, 'die Eltern-Seite kennt keine Löschkarte');
+  assert.match(elternSeite, /speichert nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
 });

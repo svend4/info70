@@ -2,7 +2,7 @@
   "name": "@info70/uhr-und-kalender-kind",
   "version": "0.1.0",
   "private": true,
-  "description": "Uhr- und Kalender-Kind: Analoguhr lesen lernen fuer 5-7 (volle Stunde, halb, Viertel nach/vor - kindgerechte deutsche Uhrzeit-Sprache) und Kalender verstehen (7 Tage = Woche, Wochenende, Tagesphasen, 4 Jahreszeiten = Jahr). Die Uhr wird mit beweglichen Zeigern rein per HTML/CSS im Browser gezeichnet (keine Bilder, keine Requests); Zeigerwinkel und Uhrzeit-Sprache sind als reine Logik getestet. Praleska docs/10 (Top-30 Nr. 24). Offline, werbefrei, nur Rekord lokal. Zielgruppe: Vorschule.",
+  "description": "Uhr- und Kalender-Kind: Analoguhr lesen lernen fuer 5-7 (volle Stunde, halb, Viertel nach/vor - kindgerechte deutsche Uhrzeit-Sprache) und Kalender verstehen (7 Tage = Woche, Wochenende, Tagesphasen, 4 Jahreszeiten = Jahr). Die Uhr wird mit beweglichen Zeigern rein per HTML/CSS im Browser gezeichnet (keine Bilder, keine Requests); Zeigerwinkel und Uhrzeit-Sprache sind als reine Logik getestet. Praleska docs/10 (Top-30 Nr. 24). Offline, werbefrei, speichert nichts, keine Punkte, kein Rekord. Zielgruppe: Vorschule.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }

@@ -25,9 +25,20 @@ test('Kernbotschaft: dieselbe Masche bei Jung und Alt', () => {
   assert.match(alles, /derselbe|denselben|gleich|dieselbe masche/, 'gleiche Masche benannt');
 });
 
-test('erreichbare Ränge und Balance der binaer-Antworten', () => {
-  const maxAb = Math.max(...daten.raenge.map((r) => r.ab));
-  assert.ok(maxAb <= daten.fragen.length);
+test('Balance der binaer-Antworten', () => {
   const antworten = new Set(daten.fragen.filter((f) => f.typ === 'binaer').map((f) => f.korrekt));
   assert.ok(antworten.has('ja') && antworten.has('nein'));
+});
+
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die 12er-Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+  assert.ok(daten.fragen.length >= 12);
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|geschafft/i, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar per Knopf/, 'ohne Speicher kein Löschknopf');
 });

@@ -3,24 +3,20 @@
 // Beteiligungsrechte - Meinung sagen ist Art. 13, beleidigen nicht; Melden ist
 // mein Recht (DSA Art. 20), kein Petzen. Doppel-Natur: Freiheit + Verantwortung.
 // 2/1/0-Muster wie rechte-kompass/stark-im-chat. Nutzt Hilfe-Insel (kinder-ui).
-// Politik: keine externen Anfragen, nur Rekord in localStorage.
+// Politik: keine externen Anfragen, nichts wird gespeichert, das Kind wird nicht bewertet.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { hilfeInsel } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'cr.rekord';
+try { localStorage.removeItem('cr.rekord'); } catch {}
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
 let merksaetze = [];
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -35,24 +31,20 @@ function zeige(...knoten) {
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Darf ich das sagen? Ist Melden Petzen? Muss meine Idee gewinnen? In ${daten.szenarien.length} Chat-Situationen entscheidest du – und lernst das Recht dahinter. Denn Beteiligungsrechte haben zwei Seiten: Freiheit und Verantwortung.`),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} ⚖️`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Beteiligungsrechte haben zwei Seiten: Freiheit und Verantwortung. In acht Chat-Situationen entscheidest du und lernst das Recht dahinter.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin-top:0' }, 'Mehr zu deinen Rechten? Spiel den ', el('a', { href: '../rechte-kompass/' }, '🧭 Rechte-Kompass'), ' oder ', el('a', { href: '../stark-im-chat/' }, '💪 Stark im Chat'), '.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')),
-    datenKarte({ schluessel: REKORD_SCHLUESSEL, was: 'dein Rekord', nachLoeschen: startBildschirm }));
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => zeige(hilfeInsel({ zurueck: startBildschirm })) }, '🆘 Ich brauche Hilfe')));
 }
 
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   merksaetze = [];
   szenarioBildschirm();
 }
@@ -75,7 +67,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   if (option.wert === 2) merksaetze.push(s.merksatz);
   const titel = option.wert === 2 ? 'Genau! ⚖️✨' : option.wert === 1 ? 'Okay – aber da geht mehr.' : 'Nicht ganz …';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
@@ -89,7 +80,7 @@ function antworte(s, option) {
         el('p', { style: 'margin:0;font-weight:700' }, `💡 Merksatz: „${s.merksatz}“`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.erklaerung} Merksatz: ${s.merksatz}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächste Situation ➡️' : 'Zum Ende der Runde 🏁'))));
 }
 
 function weiter() {
@@ -99,14 +90,11 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Rechte-Punkten · Rekord: ${rekord}`),
+      el('p', { class: 'k-gross' }, '⚖️'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('p', { style: 'text-align:center' }, `Du hast alle ${szenarien.length} Situationen durchgespielt.`),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

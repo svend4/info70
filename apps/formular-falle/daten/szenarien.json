@@ -97,11 +97,5 @@
       ],
       "erklaerung": "Wenn Bleiben leicht und Löschen schwer gemacht wird, ist das ein Dark Pattern. Dein Recht auf Löschung bleibt trotzdem (DSGVO Art. 17). Such den kleinen Knopf – und wenn du nicht weiterkommst, hilft ein Erwachsener."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Formular-Prüfer*in", "emoji": "📝" },
-    { "ab": 7, "titel": "Daten-Wächter*in", "emoji": "🛡️" },
-    { "ab": 12, "titel": "Falle-Entlarver*in", "emoji": "🕵️" },
-    { "ab": 15, "titel": "Formular-Falle-Profi", "emoji": "🏅" }
   ]
 }

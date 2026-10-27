@@ -20,7 +20,9 @@ Vorschule 5–7. Nachbarn: sicher-unterwegs, gefuehle-entdecker, reim-radar.
 1) Start erklärt 112/110 und „nur zum Üben“ (Vorlesen).
 2) 6 Notfälle aus 8 (gemischt): richtige Nummer auf der Tastatur wählen,
    „📞 Anrufen“ → Rückmeldung, Warum und die Notruf-Sprech-Schritte (Vorlesen).
-3) Score (richtig/gesamt) + Rekord; Hinweis, Name/Adresse mit Erwachsenem zu üben.
+3) „Ende der Runde“ ohne Auswertung; Hinweis, Name/Adresse mit Erwachsenem zu üben.
+   Das Kind wird nicht bewertet: kein Score, keine Punkte, kein Rekord, keine Ränge;
+   Rückmeldung gibt es zu jeder Antwort, mit Erklärung.
 
 ## 4. Didaktik / Nutzen
 
@@ -31,15 +33,18 @@ Beispielen erlebbar. Bewusst als Simulation ohne echten Anruf.
 ## 5. Politik-Konformität (docs/02)
 
 Keine externen Anfragen (NetzwerkWaechter), KEIN echter Anruf (kein tel:-Link),
-keine Datenerfassung (DSGVO Art. 8), nur Rekord in localStorage (notruf.rekord).
-Werbefrei. Vorlesen + Anzeige-Einstellungen (BFSG). Kinder-App mit eltern.html,
+keine Datenerfassung (DSGVO Art. 8), die App speichert nichts (ein früher
+gespeicherter alter Eintrag wird beim Start einmal entfernt); darum keine Karte
+„Meine Daten löschen“. Werbefrei. Vorlesen + Anzeige-Einstellungen (BFSG). Kinder-App mit eltern.html,
 im Eltern-Sammelband.
 
 ## 6. Tests
 
 `test/logik.test.mjs`: Situationen mit gültiger Nummer (beide 112 UND 110
 vertreten), Notruf-Schritte, `nurZiffern`/`istNotrufnummer`/`pruefeAnruf`
-(ok/andere Notrufnummer/keine), `rueckmeldung`-Texte, `bewerteRunde`.
+(ok/andere Notrufnummer/keine), `rueckmeldung`-Texte; Abwesenheits-Test: keine Runden-Auswertung
+(`bewerteRunde`), kein Zähler, kein Rekord im App-Code; Speicherregel: kein
+Speicher, keine Löschkarte, Eltern-Seite sagt „speichert nichts“.
 
 ## 7. Erweiterungen (Katalog)
 

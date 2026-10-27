@@ -3,23 +3,23 @@
 // Hassrede, Blossstellung, Ausschluss, Fake-Accounts und Doxxing. Jede
 // Aufloesung zeigt zusaetzlich den konkreten Melde-/Hilfeweg nach DSA.
 // KEIN echter Chat: alle Verlaeufe sind geskriptete Szenarien (Politik!).
-// Politik: keine externen Anfragen, nur Rekord in localStorage.
+// Das Kind wird nicht bewertet: keine Punkte, kein Rekord, keine Ränge; jede Antwort
+// bekommt eine Rückmeldung mit Erklärung.
+// Politik: keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
-import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
 
 installiereNetzwerkWaechter();
 
-const REKORD_SCHLUESSEL = 'sicp.rekord';
+// Alter Schlüssel aus früheren Versionen: einmal beim Start entfernen.
+try { localStorage.removeItem('sicp.rekord'); } catch {}
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
-
-const maxPunkte = () => szenarien.length * 2;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -27,7 +27,7 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Gruppendynamik durchschauen. Rückgrat zeigen. Wege kennen.'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · kein echter Chat · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · kein echter Chat · diese App speichert nichts · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
@@ -45,18 +45,15 @@ function chatAnsicht(s) {
 }
 
 function startBildschirm() {
-  const rekord = Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0);
   zeige(
     el('section', { class: 'k-karte' },
       el('p', {}, `Das weitergeleitete Video, das „Satire“-Meme, die Gruppe ohne Emma, die Adresse im Squad-Chat: ${daten.szenarien.length} Chat-Verläufe, wie sie wirklich passieren. Du bist nie das Opfer und nie der Täter – du bist die Person, auf die es ankommt: die dritte.`),
       el('p', { style: 'font-size:0.9rem' }, '🔞 Ab 13. Alle Chats sind ausgedacht und nachgestellt – ähnliche Situationen kennst du trotzdem.'),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${daten.szenarien.length * 2} 🛡️`) : '',
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Training starten'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Acht Chat-Verläufe, wie sie wirklich passieren. Du bist nie Opfer und nie Täter. Du bist die Person, auf die es ankommt: die dritte.') }, '🔊 Vorlesen'))),
     el('section', { class: 'k-karte' },
-      el('p', { style: 'margin-top:0' }, '💛 Trifft es dich selbst? Das ist NIE deine Schuld. Hilfe, die sich auskennt: Nummer gegen Kummer 116 111 (kostenlos, anonym) · JUUUPORT.de (junge Scouts beraten online) · bei Bedrohungen: Polizei-Online-Wache.'),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten(REKORD_SCHLUESSEL); startBildschirm(); } }, 'Meine Daten löschen')),
+      el('p', { style: 'margin-top:0' }, '💛 Trifft es dich selbst? Das ist NIE deine Schuld. Hilfe, die sich auskennt: Nummer gegen Kummer 116 111 (kostenlos, anonym) · JUUUPORT.de (junge Scouts beraten online) · bei Bedrohungen: Polizei-Online-Wache.')),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
 }
@@ -64,7 +61,6 @@ function startBildschirm() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien);
   index = 0;
-  punkte = 0;
   szenarioBildschirm();
 }
 
@@ -85,7 +81,6 @@ function szenarioBildschirm() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
   const titel = option.wert === 2 ? 'Rückgrat gezeigt! 🛡️' : option.wert === 1 ? 'Verständlich – aber die Dynamik läuft weiter.' : 'Damit wirst du Teil der Dynamik …';
   const klasse = option.wert === 2 ? 'k-hinweis--richtig' : option.wert === 1 ? '' : 'k-hinweis--falsch';
   const beste = s.optionen.find((o) => o.wert === 2);
@@ -99,7 +94,7 @@ function antworte(s, option) {
         el('p', { style: 'margin:0;font-size:0.9rem' }, `⚖️ Dein Weg: ${s.dsaWeg}`)),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`${titel} ${s.aufloesung} Dein Weg: ${s.dsaWeg}`) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächster Verlauf ➡️' : 'Zum Ergebnis 🏁'))));
+        el('button', { class: 'k-knopf', onclick: weiter }, index + 1 < szenarien.length ? 'Nächster Verlauf ➡️' : 'Zum Schluss 🏁'))));
 }
 
 function weiter() {
@@ -109,15 +104,11 @@ function weiter() {
 }
 
 function endBildschirm() {
-  const rekord = Math.max(punkte, Number(localStorage.getItem(REKORD_SCHLUESSEL) ?? 0));
-  localStorage.setItem(REKORD_SCHLUESSEL, String(rekord));
-  const rang = [...daten.raenge].reverse().find((r) => punkte >= r.ab) ?? daten.raenge[0];
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte()} Punkten · Rekord: ${rekord}`),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(`Du hast ${punkte} von ${maxPunkte()} Punkten. Dein Rang: ${rang.titel}`) }, '🔊 Vorlesen'),
+      el('p', { class: 'k-gross' }, '🛡️'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, 'Ende der Runde'),
+      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen('Ende der Runde. Dein Werkzeugkasten: Beweise sichern, melden, blockieren, Menschen einbeziehen. Und der stärkste Satz bleibt: Ich mach da nicht mit.') }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏠 Zum Start'))),

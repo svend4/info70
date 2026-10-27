@@ -47,7 +47,9 @@ for (const a of apps) quellen.set(a, await laufzeitQuelle(a));
 // Jeder Aufruf von `.setItem(` zählt, auch über eine Hilfsvariable
 // (`speicher.setItem(`) oder `globalThis.localStorage?.setItem(`). Ein Muster, das
 // nur `localStorage.setItem` sieht, hat Welle 84 zweimal übersehen.
-const speichertSelbst = (q) => /\.setItem\(/.test(q);
+// Auch die Sprachwahl aus kinder-ui/js/sprache.mjs schreibt in den localStorage, sobald die App ihr einen
+// speicherSchluessel gibt (feed-forscher, kettenbrief-stopper); sie zählt als Speichern (Entscheidung Max 27а).
+const speichertSelbst = (q) => /\.setItem\(|speicherSchluessel\s*:/.test(q);
 // Seit dem Einzel-Umbau von quiz-kern schreibt der Kern nichts mehr: er entfernt nur den
 // frühere Rekord-Schlüssel beim Start. Wer `starteQuiz` aufruft, speichert deshalb nicht selbst.
 const speichernde = apps.filter((a) => speichertSelbst(quellen.get(a)));
@@ -56,7 +58,7 @@ test('jede App, die etwas speichert, lässt es auch löschen', async () => {
   const ohne = [];
   for (const a of speichernde) {
     const q = quellen.get(a);
-    const kannLoeschen = /removeItem|localStorage\.clear|datenKarte\(/.test(q)
+    const kannLoeschen = /removeItem|localStorage\.clear|datenKarte\(|loescheDaten\(/.test(q)
       // Manche Apps löschen durch Überschreiben mit einem leeren Stand.
       || /(löschen|Löschen|zurücksetzen|Zurücksetzen)/.test(q);
     if (!kannLoeschen) ohne.push(a);

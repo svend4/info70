@@ -4,6 +4,9 @@ import { readFile } from 'node:fs/promises';
 
 const daten = JSON.parse(await readFile(new URL('../daten/berechtigungen.json', import.meta.url), 'utf8'));
 const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const datenText = await readFile(new URL('../daten/berechtigungen.json', import.meta.url), 'utf8');
+const indexSeite = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 
 test('Stationen: die wichtigen Berechtigungen, eindeutige Codes', () => {
   assert.ok(daten.stationen.length >= 5);
@@ -35,4 +38,25 @@ test('Politik-Wächter: App liest NICHTS vom Gerät aus (reine Anleitung)', () =
   // Keine Geräte-Ausleseversuche im Code
   assert.ok(!/navigator\.permissions|getUserMedia|geolocation|navigator\.contacts/.test(appQuelle),
     'App darf keine echten Berechtigungen abfragen/auslesen');
+});
+
+test('Kinder werden nicht bewertet: keine Punkte, kein Punktestand, kein Pokal in Code, Daten und Seiten', () => {
+  const verboten = /punkte|punktestand|punktzahl|detektiv-punkt|🏆|pokal|rekord|rangliste|geschafft|sterne?\b/i;
+  for (const [name, text] of [['app.mjs', appQuelle], ['daten', datenText], ['index.html', indexSeite], ['eltern.html', elternSeite]]) {
+    assert.doesNotMatch(text, verboten, `${name}: keine Wertung`);
+  }
+});
+
+test('Neutraler Zaehler: "Gefunden: N" der Datenkraken, ohne Vergleich und ohne Ziel', () => {
+  assert.match(appQuelle, /Gefunden: \$\{gefundenGesamt\(\)\}/, 'der Zaehler zeigt nur die Zahl des Gefundenen');
+  assert.doesNotMatch(appQuelle, /gefundenGesamt\(\)\}\s*von/, 'kein "N von M" als Ziel oder Vergleich');
+  assert.doesNotMatch(appQuelle, /gefundenGesamt\(\)\s*[<>]/, 'keine Schwelle am Zaehler');
+});
+
+test('Speicherregel: die App speichert den Zaehler (setItem), darum gibt es den Knopf "Safari zuruecksetzen" mit removeItem', () => {
+  assert.match(appQuelle, /localStorage\.setItem/, 'die App speichert die Zahl der Funde');
+  assert.match(appQuelle, /localStorage\.removeItem\(SCHLUESSEL\)/, 'der Loeschknopf entfernt den gespeicherten Schluessel');
+  assert.match(appQuelle, /Safari zurücksetzen/, 'der Knopf ist beschriftet');
+  assert.doesNotMatch(appQuelle, /datenKarte|daten-karte/, 'keine gemeinsame Karte "Meine Daten loeschen" noetig, der eigene Knopf genuegt');
+  assert.match(elternSeite, /zurücksetzen/, 'die Eltern-Seite nennt den Weg zum Loeschen');
 });

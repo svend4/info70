@@ -7,6 +7,8 @@ import {
 } from '../logik.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/werke.json', import.meta.url), 'utf8'));
+const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
 const kopie = () => JSON.parse(JSON.stringify(daten));
 const erster = (liste) => liste[0];
 const ohneMischen = (liste) => [...liste];
@@ -130,4 +132,19 @@ test('Bildtexte laden zum Hinsehen ein und der Dürer-Irrtum steht drin', () => 
   const rhino = daten.werke.find((w) => w.id === 'duerer-rhinozeros');
   assert.match(rhino.hinsehen, /nie ein Nashorn gesehen/);
   assert.match(rhino.hinsehen, /gar nicht gibt/);
+});
+
+test('Kinder werden nicht bewertet: kein Zaehler der richtigen Antworten, keine Punkte, kein Rekord, keine Raenge im App-Code', () => {
+  assert.doesNotMatch(appQuelle, /richtige\b|gestellt|punkte|rekord|raenge|\brang\b/i, 'app.mjs fuehrt keinen Zaehler und keine Wertung');
+  assert.doesNotMatch(appQuelle, /Richtig: \d|Richtig: \$\{/, 'keine Anzeige "Richtig: N von M"');
+  assert.doesNotMatch(appQuelle, /Geschafft|🏆|🌟|⭐/, 'kein Titel Geschafft, kein Pokal, kein Stern');
+  assert.match(appQuelle, /istRichtig\(frage, antwort\.id\)/, 'die Rueckmeldung zu jeder Antwort bleibt');
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Raenge');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Loeschknopf', () => {
+  assert.doesNotMatch(appQuelle, /setItem|getItem|removeItem|datenKarte|daten-karte|sprache\.mjs/, 'kein Speicher, keine Loeschkarte, keine Sprachwahl');
+  assert.doesNotMatch(appQuelle, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
+  assert.match(elternSeite, /speichert <strong>nichts<\/strong>/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
+  assert.doesNotMatch(elternSeite, /Meine Daten l(ö|oe)schen/, 'ohne Speicher keine Karte');
 });

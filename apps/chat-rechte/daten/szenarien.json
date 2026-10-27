@@ -105,11 +105,5 @@
       "erklaerung": "Beteiligungsrechte haben zwei Seiten: Freiheit UND Verantwortung. Auch wer ein Recht hat, kann Fehler machen. Stark ist nicht, nie einen Fehler zu machen – stark ist, ihn zuzugeben und sich zu entschuldigen. Das gehört zu einem fairen Miteinander dazu.",
       "merksatz": "Freiheit + Verantwortung = faires Miteinander."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Rechte-Lerner*in", "emoji": "📘" },
-    { "ab": 7, "titel": "Fair-Chat-Kenner*in", "emoji": "💬" },
-    { "ab": 12, "titel": "Beteiligungs-Profi", "emoji": "⚖️" },
-    { "ab": 15, "titel": "Chat-Rechte-Meister*in", "emoji": "🏅" }
   ]
 }

@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "5-7 in Ko-Nutzung, 8-12 eigenständig",
-  "raenge": [
-    { "ab": 0, "titel": "Auf dem Weg", "emoji": "🌱" },
-    { "ab": 8, "titel": "Freundlich unterwegs", "emoji": "🙂" },
-    { "ab": 14, "titel": "Höflichkeits-Profi", "emoji": "🤝" },
-    { "ab": 18, "titel": "Wort-Künstler*in", "emoji": "✨" }
-  ],
   "szenarien": [
     {
       "id": "h01",

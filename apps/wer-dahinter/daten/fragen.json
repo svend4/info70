@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Spuren-Sucher*in", "emoji": "🔎" },
-    { "ab": 5, "titel": "Quellen-Kenner*in", "emoji": "📰" },
-    { "ab": 9, "titel": "Transparenz-Detektiv*in", "emoji": "🕵️" },
-    { "ab": 12, "titel": "Wer-steckt-dahinter-Profi", "emoji": "🏅" }
-  ],
   "fragen": [
     {
       "id": "b01",

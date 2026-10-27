@@ -1,15 +1,17 @@
-// Takt-Pause: die Bildschirmzeit-Ampel (8-12 Jahre).
+// Takt-Pause: der Bildschirmzeit-Takt (8-12 Jahre).
 // Selbstbeobachtung statt Fremdkontrolle: Das Kind plant selbst, wie lange
-// es Medien nutzt, die Ampel zeigt den Takt, die Pause wird gefeiert.
+// es Medien nutzt, ein Zeit-Anzeiger in einer Farbe zeigt den Takt, danach
+// kommen Ideen für die Pause. Das Kind wird nicht bewertet: keine Wochenübersicht,
+// keine Zähler mit Ziel, keine Farben mit Bedeutung.
 // Bewusst OHNE Push-Benachrichtigungen (keine Berechtigungs-Abfragen,
 // Privacy by default) - das Signal ist sichtbar und optional hörbar (Vorlesen).
-// Politik: keine externen Anfragen; localStorage nur Tagesstatistik + laufende Sitzung.
+// Politik: keine externen Anfragen; localStorage nur Tageszeile + laufende Sitzung.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
 import { loescheDaten } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
-import { ampelFarbe, formatZeit, aktualisiereTag, mergeWoche, wochenStatistik } from './logik.mjs';
+import { taktPhase, formatZeit, aktualisiereTag } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige(); // Anzeige-Einstellung (Kontrast/Schrift) anwenden (BFSG)
@@ -36,21 +38,19 @@ const PAUSEN_IDEEN = [
   '🍎 Einen Snack holen und in Ruhe essen',
 ];
 
-const FARBEN = { gruen: '#15803d', gelb: '#f59e0b', rot: '#b91c1c' };
-
 let tickTimer = null;
-let rotGemeldet = false;
+let endeGemeldet = false;
 
-const WOCHE_SCHLUESSEL = 'tp.woche';
+// Die frühere Wochenübersicht ist weg; ihr alter Schlüssel wird einmal vom Gerät entfernt.
+try { localStorage.removeItem('tp.woche'); } catch {}
 const ladeTag = () => JSON.parse(localStorage.getItem(TAG_SCHLUESSEL) ?? 'null');
 const ladeLaufend = () => JSON.parse(localStorage.getItem(LAUFEND_SCHLUESSEL) ?? 'null');
-const ladeWoche = () => JSON.parse(localStorage.getItem(WOCHE_SCHLUESSEL) ?? '[]');
 
 function zeige(...knoten) {
   clearInterval(tickTimer);
   app.replaceChildren(
-    el('h1', { class: 'k-titel' }, '🚦 Takt-Pause'),
-    el('p', { class: 'k-untertitel' }, 'Du bestimmst den Takt – die Ampel hilft dir.'),
+    el('h1', { class: 'k-titel' }, '⏱️ Takt-Pause'),
+    el('p', { class: 'k-untertitel' }, 'Du bestimmst den Takt – die Uhr hilft dir.'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
@@ -61,8 +61,6 @@ function zeige(...knoten) {
 
 function startBildschirm() {
   const tag = aktualisiereTag(ladeTag(), {});
-  // Tagesstand in die lokale Wochen-Historie einpflegen (für den Rückblick)
-  localStorage.setItem(WOCHE_SCHLUESSEL, JSON.stringify(mergeWoche(ladeWoche(), tag)));
   const wahl = { aktivitaet: null, dauer: null };
 
   const render = () => {
@@ -89,48 +87,16 @@ function startBildschirm() {
             class: 'k-knopf',
             disabled: !(wahl.aktivitaet && wahl.dauer),
             onclick: () => starteTakt(wahl.aktivitaet, wahl.dauer),
-          }, wahl.aktivitaet && wahl.dauer ? '🚦 Takt starten!' : 'Wähle Aktivität und Zeit …'))),
+          }, wahl.aktivitaet && wahl.dauer ? '⏱️ Takt starten!' : 'Wähle Aktivität und Zeit …'))),
       el('section', { class: 'k-karte' },
-        el('p', { style: 'margin-top:0' }, `Heute: ${tag.geplantMin} Minuten geplant · ${tag.pausen} Pause${tag.pausen === 1 ? '' : 'n'} geschafft ${tag.pausen >= 3 ? '🏆' : tag.pausen >= 1 ? '💪' : ''}`),
+        el('p', { style: 'margin-top:0' }, `Heute: ${tag.geplantMin} Minuten geplant · ${tag.pausen} Pause${tag.pausen === 1 ? '' : 'n'} gemacht`),
         el('p', { style: 'font-size:0.9rem' }, '💡 Takt-Regel: Erst planen, dann losschauen – und die Pause gehört dazu wie das Ausatmen zum Atmen.'),
         el('div', { class: 'k-antworten' },
-          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: rueckblickBildschirm }, '📅 Wochen-Rückblick'),
-          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten([TAG_SCHLUESSEL, LAUFEND_SCHLUESSEL, WOCHE_SCHLUESSEL]); startBildschirm(); } }, 'Meine Daten löschen'))),
+          el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { loescheDaten([TAG_SCHLUESSEL, LAUFEND_SCHLUESSEL]); startBildschirm(); } }, 'Meine Daten löschen'))),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: startBildschirm })))));
   };
   render();
-}
-
-function rueckblickBildschirm() {
-  const woche = ladeWoche();
-  const stat = wochenStatistik(woche);
-  const balken = (t) => {
-    const hoehe = stat.maxPausen > 0 ? Math.round((t.pausen / stat.maxPausen) * 100) : 0;
-    return el('div', { style: 'display:flex;flex-direction:column;align-items:center;gap:0.2rem;flex:1' },
-      el('div', { style: 'display:flex;align-items:flex-end;height:5rem' },
-        el('div', { style: `width:1.6rem;background:var(--k-blau-dunkel);border-radius:0.3rem 0.3rem 0 0;height:${Math.max(6, hoehe)}%`, title: `${t.pausen} Pausen`, 'aria-label': `${t.datum}: ${t.pausen} Pausen` })),
-      el('span', { style: 'font-size:0.7rem' }, `${t.pausen}`),
-      el('span', { style: 'font-size:0.6rem;color:#4b5563' }, t.datum.slice(5)));
-  };
-  zeige(
-    el('section', { class: 'k-karte' },
-      el('h2', { style: 'margin-top:0;font-size:1.15rem' }, '📅 Deine Woche'),
-      woche.length
-        ? el('div', { style: 'display:flex;gap:0.4rem;align-items:flex-end' }, ...woche.map(balken))
-        : el('p', { style: 'color:#4b5563' }, 'Noch keine Tage aufgezeichnet – plane heute deinen ersten Takt!'),
-      el('p', { style: 'margin-bottom:0' }, `Zusammen: ${stat.pausenGesamt} Pause${stat.pausenGesamt === 1 ? '' : 'n'} an ${stat.tage} Tag${stat.tage === 1 ? '' : 'en'}.`)),
-    el('section', { class: 'k-karte' },
-      el('p', { style: 'font-weight:600;margin-top:0' }, '🤔 Denk mal nach:'),
-      el('ul', { style: 'margin:0' },
-        el('li', {}, 'Wann war die Ampel rot – und wie hat sich das angefühlt?'),
-        el('li', {}, 'An welchem Tag ging es dir richtig gut?'),
-        el('li', {}, 'Was nimmst du dir für nächste Woche vor?')),
-      el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.5rem', onclick: () => vorlesen('Wann war die Ampel rot? An welchem Tag ging es dir gut? Was nimmst du dir für nächste Woche vor?') }, '🔊 Vorlesen')),
-    el('section', { class: 'k-karte' },
-      el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: startBildschirm }, '← Zurück'),
-        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(WOCHE_SCHLUESSEL); rueckblickBildschirm(); } }, '🧹 Woche löschen'))));
 }
 
 function starteTakt(aktivitaet, dauerMin) {
@@ -140,7 +106,7 @@ function starteTakt(aktivitaet, dauerMin) {
     dauerMin,
     ende: Date.now() + dauerMin * 60 * 1000,
   }));
-  rotGemeldet = false;
+  endeGemeldet = false;
   laufBildschirm();
 }
 
@@ -151,24 +117,26 @@ function laufBildschirm() {
   const gesamtSek = laufend.dauerMin * 60;
 
   const zeitAnzeige = el('p', { class: 'k-gross', style: 'font-variant-numeric:tabular-nums' }, '–:––');
-  const ampel = el('div', {
-    style: 'width:5rem;height:5rem;border-radius:50%;margin:0 auto;border:4px solid var(--k-rand);transition:background 0.5s',
-    role: 'img', 'aria-label': 'Zeit-Ampel',
+  // Zeit-Anzeiger in einer Farbe: der Kreis füllt sich mit der vergangenen Zeit, ohne Bedeutung der Farbe.
+  const zeitKreis = el('div', {
+    style: 'width:5rem;height:5rem;border-radius:50%;margin:0 auto;border:4px solid var(--k-rand)',
+    role: 'img', 'aria-label': 'Zeit-Anzeiger',
   });
-  const balken = el('div', { class: 'k-fortschritt' }, el('div', { style: 'width:0%' }));
+  const balken = el('div', { class: 'k-fortschritt' }, el('div', { style: 'width:0%;background:var(--k-blau-dunkel)' }));
   const hinweis = el('p', { style: 'text-align:center;min-height:1.5rem' }, '');
 
   const tick = () => {
     const restSek = (laufend.ende - Date.now()) / 1000;
     const anteil = (gesamtSek - restSek) / gesamtSek;
-    const farbe = ampelFarbe(anteil);
+    const phase = taktPhase(anteil);
+    const vergangen = Math.min(1, Math.max(0, anteil));
     zeitAnzeige.textContent = formatZeit(restSek);
-    ampel.style.background = FARBEN[farbe];
-    balken.firstChild.style.width = `${Math.min(100, Math.round(anteil * 100))}%`;
-    if (farbe === 'gelb') hinweis.textContent = '🟡 Gleich ist Pausen-Zeit – such dir einen guten Stopp-Punkt!';
-    if (farbe === 'rot' && !rotGemeldet) {
-      rotGemeldet = true;
-      vorlesen('Rot! Zeit für deine Pause. Du schaffst das!');
+    zeitKreis.style.background = `conic-gradient(var(--k-blau-dunkel) ${Math.round(vergangen * 360)}deg, var(--k-karte) 0)`;
+    balken.firstChild.style.width = `${Math.round(vergangen * 100)}%`;
+    if (phase === 'fastUm') hinweis.textContent = '⏳ Gleich ist Pausen-Zeit – such dir einen guten Stopp-Punkt!';
+    if (phase === 'um' && !endeGemeldet) {
+      endeGemeldet = true;
+      vorlesen('Die Zeit ist um. Zeit für deine Pause.');
       clearInterval(tickTimer);
       pauseBildschirm();
     }
@@ -177,12 +145,12 @@ function laufBildschirm() {
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-untertitel', style: 'margin-top:0' }, `${akt.emoji} ${akt.name} · ${laufend.dauerMin} Minuten geplant`),
-      ampel,
+      zeitKreis,
       zeitAnzeige,
       balken,
       hinweis,
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf k-knopf--richtig', onclick: () => { clearInterval(tickTimer); pauseBildschirm(); } }, '⏸️ Ich mach JETZT schon Pause (stark!)'),
+        el('button', { class: 'k-knopf', onclick: () => { clearInterval(tickTimer); pauseBildschirm(); } }, '⏸️ Ich mache jetzt schon Pause'),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { localStorage.removeItem(LAUFEND_SCHLUESSEL); clearInterval(tickTimer); startBildschirm(); } }, 'Abbrechen'))));
   tick();
   tickTimer = setInterval(tick, 1000);
@@ -211,11 +179,11 @@ function fertigBildschirm() {
   const tag = aktualisiereTag(ladeTag(), {});
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, tag.pausen >= 3 ? '🏆' : '💪'),
-      el('p', { style: 'text-align:center;font-weight:700' }, `Stark! Das war Pause Nummer ${tag.pausen} heute.`),
+      el('p', { class: 'k-gross' }, '🧘'),
+      el('p', { style: 'text-align:center;font-weight:700' }, `Das war Pause Nummer ${tag.pausen} heute.`),
       el('p', { style: 'text-align:center' }, 'Wie fühlt sich dein Kopf jetzt an? Frischer? Genau dafür sind Pausen da.'),
       el('div', { class: 'k-antworten' },
-        el('button', { class: 'k-knopf', onclick: startBildschirm }, '🚦 Neuen Takt planen'),
+        el('button', { class: 'k-knopf', onclick: startBildschirm }, '⏱️ Neuen Takt planen'),
         el('button', { class: 'k-knopf k-knopf--neutral', onclick: startBildschirm }, '🏁 Fertig für jetzt'))));
 }
 

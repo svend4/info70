@@ -1,7 +1,7 @@
 // Nachrichten-Detektive Profi (13-15, docs/09 Ось A / Nr. 164). quiz-kern-
 // Variante mit schwereren Fällen: Deepfake-Merkmale, KI-generierte Texte,
-// systematischer Quellencheck (Wer? Wo noch? Wie alt?). Ränge und Rekord wie
-// üblich. Politik docs/02: keine externen Anfragen, werbefrei.
+// systematischer Quellencheck (Wer? Wo noch? Wie alt?). Das Kind wird nicht
+// bewertet, nichts wird gespeichert. Politik docs/02: keine externen Anfragen, werbefrei.
 import { starteQuiz } from '../../packages/quiz-kern/src/quiz.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 
@@ -22,6 +22,5 @@ starteQuiz({
     startKnopf: '▶️ Ermittlung starten',
     fallWort: 'Fall',
     fertigTitel: 'Ermittlung abgeschlossen! 🎉',
-    ergebnisSatz: (punkte, von, rekord) => `${punkte} von ${von} geknackt · Bestwert: ${rekord}`,
   },
 });

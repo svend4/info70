@@ -1,12 +1,6 @@
 {
   "version": 1,
   "zielgruppe": "5-7 (Ko-Nutzung), Weiterführung 8-12",
-  "raenge": [
-    { "ab": 0, "titel": "Gruppen-Anfänger*in", "emoji": "🌱" },
-    { "ab": 8, "titel": "Gute*r Freund*in", "emoji": "🤝" },
-    { "ab": 15, "titel": "Streit-Schlichter*in", "emoji": "🕊️" },
-    { "ab": 21, "titel": "Gruppen-Held*in", "emoji": "🌟" }
-  ],
   "szenarien": [
     {
       "id": "f01", "thema": "Mitspielen", "emoji": "🧒",

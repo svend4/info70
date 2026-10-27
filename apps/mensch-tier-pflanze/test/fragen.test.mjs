@@ -11,11 +11,9 @@ test('Fragenbank: Schema gültig (quiz-kern)', () => {
   assert.ok(daten.fragen.length >= 14, 'genug Vorrat für Abwechslung über mehrere Runden');
 });
 
-test('Ränge beginnen bei 0 und sind in einer 12er-Runde erreichbar', () => {
-  const ab = daten.raenge.map((r) => r.ab);
-  assert.equal(ab[0], 0);
-  assert.deepEqual(ab, [...ab].sort((a, b) => a - b), 'Ränge aufsteigend');
-  assert.ok(Math.max(...ab) <= RUNDE, `höchster Rang (${Math.max(...ab)}) in ${RUNDE}er-Runde erreichbar`);
+test('Kinder werden nicht bewertet: die Daten haben keine Ränge, die 12er-Runde bleibt möglich', () => {
+  assert.ok(!('raenge' in daten), 'keine Rang- oder Punkteschwellen in den Daten');
+  assert.ok(daten.fragen.length >= RUNDE, `Vorrat (${daten.fragen.length}) reicht für eine ${RUNDE}er-Runde`);
 });
 
 test('binäre Fragen: beide Antworten kommen vor', () => {
@@ -77,4 +75,13 @@ test('Erklärungen sind eigenständige Sätze mit Substanz', () => {
   }
   const ids = daten.fragen.map((f) => f.id);
   assert.deepEqual(ids, [...ids].sort(), 'ids in Reihenfolge');
+});
+
+test('App-Code und Eltern-Seite: keine Wertung, kein Speicher, keine Karte „Meine Daten löschen“', async () => {
+  const code = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+  const eltern = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+  assert.doesNotMatch(code, /ergebnisSatz|raenge|Geschafft/, 'kein Ergebnissatz, keine Ränge, kein „Geschafft“');
+  assert.doesNotMatch(code, /setItem|datenKarte|daten-karte/, 'die App speichert nichts und hat keine Löschkarte');
+  assert.match(code, /^\s*rekordSchluessel: '[^']+',\s*$/m, 'der alte Schlüssel steht nur für die einmalige Entfernung beim Start');
+  assert.doesNotMatch(eltern, /Meine Daten löschen|löschbar|löschen/, 'ohne Speicher kein Löschknopf');
 });

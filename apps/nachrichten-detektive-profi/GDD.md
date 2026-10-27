@@ -20,7 +20,7 @@ nachrichten-detektive-junior (6–8), deepfake-spuernase, feed-forscher-profi.
 
 1) 12 Fälle pro Runde (aus 13), gemischt Ja/Nein und Mehrfachwahl.
 2) Nach jeder Antwort die Erklärung (die Prüfroutine dahinter).
-3) Rang + Rekord, Wiederholen.
+3) Ende der Runde ohne Wertung, Wiederholen.
 
 ## 4. Didaktik / Nutzen
 
@@ -30,15 +30,16 @@ AI Act (Kennzeichnung), DSA, Demokratiebildung.
 
 ## 5. Politik-Konformität (docs/02)
 
-Keine externen Anfragen (NetzwerkWaechter), werbefrei. Nur Rekord lokal,
-löschbar. Kind-nah → eltern.html, im Eltern-Sammelband. Klassen-Modus/Duett/
+Keine externen Anfragen (NetzwerkWaechter), werbefrei. Es wird nichts gespeichert
+(keine Punkte, kein Rekord, keine Ränge; der alte Schlüssel `ndp.rekord` wird beim
+Start einmal entfernt), daher keine Karte „Meine Daten löschen“. Kind-nah → eltern.html, im Eltern-Sammelband. Klassen-Modus/Duett/
 Staffel aus quiz-kern verfügbar.
 
 ## 6. Tests
 
 `test/fragen.test.mjs`: quiz-kern-Schema gültig (≥12), Zielgruppe 13-15,
-gemischte Typen, erreichbare Ränge, Profi-Themen (Deepfake/KI/Quellencheck)
-abgedeckt, wahl-Indizes gültig.
+gemischte Typen, keine Ränge in den Daten, Profi-Themen (Deepfake/KI/Quellencheck)
+abgedeckt, wahl-Indizes gültig, kein Speicher und keine Wertung im App-Code.
 
 ## 7. Erweiterungen (Katalog)
 

@@ -1,7 +1,8 @@
 // Challenge-Druck-Simulator: Gruppendruck als Mechanik durchschauen (8-12).
 // Ein geskripteter Gruppenchat draengt zu einer riskanten Challenge. Das Kind
-// benennt bei jeder Nachricht die Druck-Taktik (Druck-Messer sinkt bei
-// Treffer!) und sammelt am Ende erprobte Ausstiegs-Saetze.
+// benennt bei jeder Nachricht die Druck-Taktik (der Druck-Messer sinkt, wenn die
+// Taktik erkannt wird) und sammelt am Ende erprobte Ausstiegs-Saetze.
+// Das Kind wird nicht bewertet: kein Zaehler, kein Ergebnissatz, keine Ampelfarben.
 // Politik docs/02: keine Texteingabe, keine externen Anfragen, speichert NICHTS.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
@@ -16,7 +17,6 @@ const TAKTIKEN = Object.entries(daten.taktiken).map(([code, tk]) => ({ code, ...
 let szenario = null;
 let schritt = 0;      // Index in chat (ab 1: Druck-Nachrichten)
 let druck = 50;
-let treffer = 0;
 let feedback = null;
 
 function zeige(...knoten) {
@@ -32,11 +32,10 @@ function zeige(...knoten) {
 }
 
 function druckMesser() {
-  const farbe = druck >= 70 ? 'var(--k-rot)' : druck >= 40 ? '#f59e0b' : 'var(--k-gruen)';
   return el('div', {},
     el('p', { style: 'font-weight:600;margin-bottom:0.25rem' }, `🧲 Druck-Messer: ${druck} von 100`),
     el('div', { class: 'k-fortschritt', role: 'progressbar', 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-valuenow': druck },
-      el('div', { style: `width:${druck}%;background:${farbe}` })));
+      el('div', { style: `width:${druck}%;background:var(--k-blau)` })));
 }
 
 function startBildschirm() {
@@ -58,7 +57,6 @@ function starteSzenario(s) {
   szenario = s;
   schritt = 1;
   druck = 50;
-  treffer = 0;
   feedback = null;
   chatBildschirm();
 }
@@ -85,7 +83,7 @@ function chatBildschirm() {
             onclick: () => {
               const richtig = tk.code === nachricht.taktik;
               const echte = daten.taktiken[nachricht.taktik];
-              if (richtig) { treffer++; druck = Math.max(0, druck - 12); }
+              if (richtig) { druck = Math.max(0, druck - 12); }
               else { druck = Math.min(100, druck + 8); }
               feedback = {
                 richtig,
@@ -100,11 +98,10 @@ function chatBildschirm() {
 }
 
 function ausstiegBildschirm() {
-  const stark = treffer >= 4;
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, stark ? '🦸' : '🧲'),
-      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, `${treffer} von 5 Tricks durchschaut · Druck am Ende: ${druck}`),
+      el('p', { class: 'k-gross' }, '🧲'),
+      el('p', { class: 'k-untertitel', style: 'font-weight:700' }, `${szenario.titel} · Ende der Runde`),
       feedback ? el('div', { class: `k-hinweis ${feedback.richtig ? 'k-hinweis--richtig' : 'k-hinweis--falsch'}` },
         el('p', { style: 'margin:0;font-size:0.9rem' }, feedback.text)) : '',
       el('p', { style: 'font-weight:600' }, 'Und jetzt der wichtigste Teil – so steigst du aus:'),

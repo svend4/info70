@@ -1,17 +1,19 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { speicherBefund, verletzung } from '../../../packages/kinderschutz/src/speicher-regel.mjs';
 
 const daten = JSON.parse(await readFile(new URL('../daten/szenarien.json', import.meta.url), 'utf8'));
 const appQuelle = await readFile(new URL('../app.mjs', import.meta.url), 'utf8');
+const elternSeite = await readFile(new URL('../eltern.html', import.meta.url), 'utf8');
+const startSeite = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 
-test('Szenarienbank: Grundstruktur, IDs, erreichbare Ränge', () => {
+test('Szenarienbank: Grundstruktur, IDs, keine Rangschwellen', () => {
   assert.equal(daten.version, 1);
   assert.ok(daten.szenarien.length >= 10, 'mindestens 10 Szenarien');
   const ids = daten.szenarien.map((s) => s.id);
   assert.equal(new Set(ids).size, ids.length);
-  assert.equal(daten.raenge[0].ab, 0);
-  assert.ok(Math.max(...daten.raenge.map((r) => r.ab)) <= daten.szenarien.length * 2);
+  assert.ok(!('raenge' in daten), 'die Daten haben keine Ränge');
 });
 
 test('jedes Szenario: 2/1/0-Muster mit genau je einem 0/1/2, Mechanik + Tipp', () => {
@@ -47,4 +49,30 @@ test('Didaktik: stärkster Zug ist Grenze/Selbstschutz, nie Rückzug aus Wut; Hi
   }
   assert.ok(appQuelle.includes('116 111'), 'Hilfeadresse in der App');
   assert.match(appQuelle, /jetzt oder nie/i, 'Kernbotschaft „fast nichts ist jetzt oder nie“');
+});
+
+const MIGRATION = "try { localStorage.removeItem('fomo.rekord'); } catch {}";
+
+test('Kinder werden nicht bewertet: kein Zähler, kein Rekord, kein Rang, kein Ergebnissatz', () => {
+  const code = appQuelle.split('\n').filter((z) => z.trim() !== MIGRATION).join('\n');
+  assert.doesNotMatch(code, /punkte|rekord|\brang\b|raenge|treffer|geschafft|Zum Ergebnis/i, 'app.mjs zählt nichts und stuft nichts ein');
+  assert.doesNotMatch(code, /⭐|🌟|🏅|🏆/u, 'keine Sterne, keine Medaille, kein Pokal');
+  assert.match(code, /Situation \$\{index \+ 1\} von \$\{szenarien\.length\}/, 'Fortschritt der Runde (Situation N von M) bleibt');
+  assert.match(code, /Ende der Runde/, 'das Ende heißt neutral „Ende der Runde“');
+  assert.match(code, /option\.wert === 2/, 'die Rückmeldung zu jeder Antwort mit Erklärung bleibt');
+  assert.doesNotMatch(startSeite, /rekord|punkte/i, 'die Beschreibung verspricht keine Wertung');
+  assert.match(elternSeite, /keine Punkte/, 'die Eltern-Seite sagt, dass nichts gewertet wird');
+});
+
+test('Speicherregel: die App speichert nichts, darum keine Karte und kein Löschknopf; der alte Schlüssel wird einmal entfernt', () => {
+  const befund = speicherBefund(appQuelle);
+  assert.equal(befund.speichert, false, 'kein setItem, keine Sprachwahl mit Schlüssel');
+  assert.equal(befund.karte, false, 'ohne Speicher keine Karte „Meine Daten löschen“');
+  assert.equal(verletzung(befund), null, 'Speicherregel erfüllt');
+  assert.doesNotMatch(appQuelle, /setItem|loescheDaten|datenKarte|daten-karte|sprache\.mjs/, 'kein Schreiben, kein Löschbaustein');
+  assert.doesNotMatch(appQuelle, /Meine Daten löschen/, 'kein Löschknopf ohne Speicher');
+  assert.ok(appQuelle.split('\n').includes(MIGRATION), 'Migration: eine Zeile mit Literal');
+  assert.equal((appQuelle.match(/fomo\.rekord/g) ?? []).length, 1, 'der alte Schlüssel steht nur in dieser Zeile');
+  assert.doesNotMatch(elternSeite, /Meine Daten löschen/, 'die Eltern-Seite kennt keine Löschkarte');
+  assert.match(elternSeite, /speichert nichts/, 'die Eltern-Seite sagt, dass nichts gespeichert wird');
 });

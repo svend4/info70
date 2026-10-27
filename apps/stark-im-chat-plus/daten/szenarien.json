@@ -145,11 +145,5 @@
       "aufloesung": "Das ist die gefährlichste Form von Gruppen-Mobbing: viele „harmlose“ Sätze, die zusammen ein Klima bauen, in dem sich das Opfer selbst entfernt. Melde-Systeme greifen hier kaum – aber Öffentlichkeit in der Gruppe wirkt: Der Satz „30 Leute lesen mit“ macht die stille Mehrheit sichtbar, und auf die kommt es an.",
       "dsaWeg": "Wenn Melden nicht greift, greifen Menschen: Klassenrat als Format (mitmach-arena!), Vertrauenslehrkraft, Schulsozialarbeit. Für Lea: 116 111 oder die JUUUPORT-Scouts. Und für alle gilt DSA Art. 28: Plattformen müssen Minderjährige besonders schützen – aber das Klassenklima macht ihr selbst."
     }
-  ],
-  "raenge": [
-    { "ab": 0, "titel": "Mitleser*in", "emoji": "👀" },
-    { "ab": 7, "titel": "Stimme im Chat", "emoji": "💬" },
-    { "ab": 12, "titel": "Rückgrat der Gruppe", "emoji": "🦴" },
-    { "ab": 15, "titel": "Zivilcourage 13+", "emoji": "🛡️" }
   ]
 }

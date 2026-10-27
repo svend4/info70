@@ -1,25 +1,24 @@
 // Sicher unterwegs: Szenario-Trainer zu Alltags- und Verkehrssicherheit
 // (5-7 Ko-Nutzung, Weiterführung 8-12). 3 Optionen je Szene (2/1/0), Vorlesen.
 // Praleska docs/10 (Top-30 Nr. 7). Alle Szenen sind Eigenproduktion.
-// Politik docs/02: keine externen Anfragen, nur Rekord in localStorage.
+// Politik docs/02: keine externen Anfragen, die App speichert nichts. Das Kind wird nicht bewertet:
+// zu jeder Antwort gibt es eine Rückmeldung mit Erklärung, am Ende „Ende der Runde“.
 import { el, vorlesen, mischen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { boot as bootAnzeige } from '../../packages/kinder-ui/js/anzeige.mjs';
-import { datenKarte } from '../../packages/kinder-ui/js/daten-karte.mjs';
 import { hilfeInsel, hilfeInselKnopf } from '../../packages/kinder-ui/js/hilfe-insel.mjs';
-import { maxPunkte, rangFuer, ergebnisSatz } from './logik.mjs';
+import { rueckmeldungFuer } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 bootAnzeige();
 
-const REKORD = 'sicher.rekord';
+try { localStorage.removeItem('sicher.rekord'); } catch {}
 const RUNDE = 12;
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
 let szenarien = [];
 let index = 0;
-let punkte = 0;
 
 function zeige(...knoten) {
   app.replaceChildren(
@@ -27,26 +26,23 @@ function zeige(...knoten) {
     el('p', { class: 'k-untertitel' }, 'Klug entscheiden – auf der Straße und zu Hause'),
     ...knoten,
     el('footer', { class: 'k-fuss' },
-      el('span', {}, 'Werbefrei · ohne Anmeldung · Daten bleiben auf diesem Gerät · '),
+      el('span', {}, 'Werbefrei · ohne Anmeldung · diese App speichert nichts · '),
       el('a', { href: 'eltern.html' }, '👪 Für Eltern'), el('span', {}, ' · '),
       el('a', { href: '../../impressum.html' }, 'Impressum & Datenschutz')));
   app.querySelector('button')?.focus();
 }
 
 function start() {
-  const rekord = Number(localStorage.getItem(REKORD) ?? 0);
   const intro = `In ${RUNDE} Situationen entscheidest du, was am sichersten ist. Am besten spielst du mit einem Erwachsenen und redet darüber.`;
   zeige(
     el('section', { class: 'k-karte' },
       el('p', { class: 'k-gross' }, '🚸'),
       el('p', {}, intro),
-      rekord > 0 ? el('p', {}, `Dein Rekord: ${rekord} von ${RUNDE * 2} 🏅`) : '',
       el('button', { class: 'k-knopf k-knopf--neutral', onclick: () => vorlesen(intro) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '▶️ Los geht’s'))),
     el('section', { class: 'k-karte' },
       el('p', { style: 'margin:0' }, '👉 Im Notfall gilt: 112 für Feuerwehr und Rettung, 110 für die Polizei.')),
-    datenKarte({ schluessel: REKORD, was: 'dein Rekord', nachLoeschen: start }),
     el('section', { class: 'k-karte' },
       hilfeInselKnopf(() => zeige(hilfeInsel({ zurueck: start })))));
 }
@@ -54,7 +50,6 @@ function start() {
 function starteRunde() {
   szenarien = mischen(daten.szenarien).slice(0, Math.min(RUNDE, daten.szenarien.length));
   index = 0;
-  punkte = 0;
   frage();
 }
 
@@ -74,10 +69,7 @@ function frage() {
 }
 
 function antworte(s, option) {
-  punkte += option.wert;
-  const gut = option.wert === 2;
-  const emoji = gut ? '🌟' : option.wert === 1 ? '👍' : '💭';
-  const titel = gut ? 'Genau richtig!' : option.wert === 1 ? 'Fast!' : 'Denk nochmal mit.';
+  const { gut, emoji, titel } = rueckmeldungFuer(option);
   const letzte = index + 1 >= szenarien.length;
   zeige(
     el('section', { class: 'k-karte' },
@@ -97,15 +89,11 @@ function weiter() {
 }
 
 function ende() {
-  const rekordAlt = Number(localStorage.getItem(REKORD) ?? 0);
-  if (punkte > rekordAlt) localStorage.setItem(REKORD, String(punkte));
-  const rang = rangFuer(daten.raenge, punkte);
-  const satz = ergebnisSatz(daten.raenge, punkte, szenarien.length);
+  const satz = 'Ende der Runde. Sprich mit einem Erwachsenen über die Situationen, die schwer waren.';
   zeige(
     el('section', { class: 'k-karte' },
-      el('p', { class: 'k-gross' }, rang.emoji),
-      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, rang.titel),
-      el('p', { style: 'text-align:center' }, `${punkte} von ${maxPunkte(szenarien.length)} Sicherheits-Punkten`),
+      el('p', { class: 'k-gross' }, '🚸'),
+      el('p', { style: 'font-weight:700;font-size:1.2em;text-align:center' }, 'Ende der Runde'),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(satz) }, '🔊 Vorlesen'),
       el('div', { class: 'k-antworten' },
         el('button', { class: 'k-knopf', onclick: starteRunde }, '🔁 Noch einmal'),

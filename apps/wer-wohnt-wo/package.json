@@ -2,7 +2,7 @@
   "name": "@info70/wer-wohnt-wo",
   "version": "0.1.0",
   "private": true,
-  "description": "Wer wohnt wo? - Lebensraum-Haeuser: vier heimische Lebensraeume erkunden (Wald mit den 5 Stockwerken des Sachunterrichts, Wiese, Teich, Garten/Feld) mit Jahreszeiten-Wandel je Haus, Wohn-Quiz (13 heimische Tiere ihrem Zuhause zuordnen: Reh, Specht, Maulwurf, Stockente, Frosch, Igel, Feldhase ...) und Gast-Quiz zur Regel 'Der Mensch ist in der Natur nur zu Gast' (Wege, Laerm, Kaulquappen bleiben im Teich, Handstraussregel, Brut- und Setzzeit). Vorlesen fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 3). Offline, werbefrei, speichert nichts. Zielgruppe: 5-7 kurz eigenstaendig, 8-12 Vertiefung.",
+  "description": "Wer wohnt wo? - Lebensraum-Haeuser: vier heimische Lebensraeume erkunden (Wald mit den 5 Stockwerken des Sachunterrichts, Wiese, Teich, Garten/Feld) mit Jahreszeiten-Wandel je Haus, Wohn-Quiz (13 heimische Tiere ihrem Zuhause zuordnen: Reh, Specht, Maulwurf, Stockente, Frosch, Igel, Feldhase ...) und Gast-Quiz zur Regel 'Der Mensch ist in der Natur nur zu Gast' (Wege, Laerm, Kaulquappen bleiben im Teich, Handstraussregel, Brut- und Setzzeit). Vorlesen fuer Nichtleser. Praleska docs/10 (Kinder-Apps Nr. 3). Offline, werbefrei, speichert nichts, keine Punkte, kein Rekord. Zielgruppe: 5-7 kurz eigenstaendig, 8-12 Vertiefung.",
   "license": "AGPL-3.0-only",
   "type": "module"
 }
