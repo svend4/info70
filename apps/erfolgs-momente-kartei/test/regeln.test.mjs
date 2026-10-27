@@ -57,7 +57,7 @@ test('Keine Anfragen nach außen: kein http(s), Abrufe nur relativ, Ressourcen n
   assert.match(app, /fetch\('daten\/karten\.json'\)/, 'fetch nur für die eigenen Daten');
   const eingebunden = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(eingebunden.sort(),
-    ['../../packages/kinder-ui/css/kinder.css', 'app.mjs', 'druck.css'].sort());
+    ['../../packages/kinder-ui/css/kinder.css', '../../packages/kinder-ui/img/favicon.svg', 'app.mjs', 'druck.css'].sort());
 });
 
 test('Netzwerk-Wächter: eingebunden und beim Start aufgerufen (docs/02 Z. 22–24)', () => {

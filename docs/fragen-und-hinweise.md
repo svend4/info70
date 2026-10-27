@@ -6,7 +6,7 @@ Stand: 18.10.2026, nach Welle 91. Dieses Dokument ergänzt `docs/offene-punkte-k
 
 - **A1. Namen von Modellen in Tests** (vier Dateien, siehe `offene-punkte-kita.md`, A1). Offen seit Welle 89. **Entschieden 27.10.2026 (Max 20а): bewusste Ausnahme, die Listen bleiben.**
 - **A2. Druck ohne Auswahl** (Zählhilfe, Navigator): Ein Standardbogen oder kein Standard?
-- **A3. favicon.ico 404.** Keine der 221 Apps hat ein Icon. Ein gemeinsames Icon für alle oder unverändert?
+- **A3. favicon.ico 404.** Keine der 221 Apps hat ein Icon. Ein gemeinsames Icon für alle oder unverändert? **Entschieden 27.10.2026 (Max 21а): gemeinsames Icon, umgesetzt.**
 - **A4. Zurücksetzen im Navigator.** Soll es einen Knopf geben, der alle Antworten löscht?
 - **A5. Datumszeile** auf dem leeren Druckbogen des Navigators: bleiben oder streichen?
 - **A6. Zählhilfe, Ergänzungen** („Entfernen“ und Ablehnung doppelter Titel): bestätigen oder streichen?
@@ -95,7 +95,7 @@ Max hat die 37 Fragen (Teile 1–5) beantwortet. Antwortzeile: 37в, 36а, 35а,
 - **17а (liegt bei Max).** Leserechte für seine Umgebung kann nur der Sitzungsinhaber vergeben.
 - **19в.** Jeder Workflow-Lauf endet mit einer Zeile: Zahl der Agenten und geleistete Arbeit. Läuft die Arbeit ohne Entscheidung aus, steht in einer Zeile, worauf gewartet wird.
 - **20а (fertig).** Die Modellnamen-Listen in vier Tests (unser-konzert-zaehlhilfe, kita-unterstuetzungs-navigator, tagesblick-fachkraft, schatzkarten-generator) sind eine bewusste Ausnahme im Register; die Geschichte wird nicht umgeschrieben.
-- **21а, 22а (wartet auf den 48-px-Durchgang).** Ein gemeinsames eingebettetes Favicon zusammen mit dem 48-px-Durchgang; ehrliche Maschinenkennzeichnung auf den Seiten-Links der alten Apps.
+- **21а (fertig).** Ein gemeinsames Favicon (`packages/kinder-ui/img/favicon.svg`) in allen 354 Seiten; gleicher Ursprung statt `data:`, damit die Content-Security-Policy der Seiten unverändert bleibt. **22а (wartet).** Ein gemeinsames eingebettetes Favicon zusammen mit dem 48-px-Durchgang; ehrliche Maschinenkennzeichnung auf den Seiten-Links der alten Apps.
 - **23а, 25а (fertig).** Katalogtext korrigieren (docs/10 Zeile 466, docs/praleska-katalog.json Zeile 270) nach Regel 3; Wortlaut schlägt der Integrator vor. ELT-16 bleibt wie gebaut, der Katalogeintrag wird angepasst. **24а.** ELT-8 nur auf Deutsch.
 - **26а (wartet).** GDD-Entwürfe für zehn Apps (nur Dokumente).
 - **27а (fertig).** Impressum von feed-forscher und kettenbrief-stopper: „nur die Sprache wird gespeichert“, Zahlen per Skript, Löschknopf prüfen.

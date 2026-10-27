@@ -17,6 +17,7 @@ aktualisiert. Die Nummern sind stabil, damit man in Nachrichten darauf verweisen
   Vorschlag: ohne Auswahl den leeren Bogen zeigen (Änderung in der CSS).
 - **A3. favicon.ico 404.** Keine App im Repo hat ein Icon. Die Browserprüfung meldet das jedes Mal.
   Entscheidung: für alle Apps gemeinsam lösen oder unverändert lassen.
+  **Entschieden 27.10.2026 (Max 21а) und umgesetzt:** ein gemeinsames Icon `packages/kinder-ui/img/favicon.svg`, in jeder Seite (354 Seiten: Apps, Eltern-Seiten, Hub, Impressum) als `<link rel="icon">` auf der Zeile des Stylesheets, gleicher Ursprung, keine Anfrage nach außen. Die 18 Tests des Grundgerüsts lassen neben Stylesheets genau diesen Link zu.
 - **A4. Zurücksetzen im Navigator.** Es gibt keinen Knopf, der alle Antworten auf einmal löscht.
 - **A5. Datumszeile auf dem leeren Druckbogen des Navigators.** Sie bleibt, weil sie ein einzelnes
   Datum ist und kein Feld je Tag. Entfernen oder behalten?

@@ -68,7 +68,10 @@ test('Grundgerüst: deutsch, Viewport, CSP exakt, nur eigene Stylesheets und ein
   assert.match(html, /<noscript>/);
   assert.match(html, /<title>Musikspiele U3<\/title>/);
   assert.ok(!/\p{Extended_Pictographic}/u.test(html.match(/<title>.*?<\/title>/)?.[0] ?? ''), 'Titel mit Emoji: der Druck zeigt ihn als Kopfzeile');
-  const links = [...html.matchAll(/<link[^>]*href="([^"]+)"/g)].map((m) => m[1]);
+  const links = [...html.matchAll(/<link rel="stylesheet"[^>]*href="([^"]+)"/g)].map((m) => m[1]);
+  // Jeder andere Link ist genau das gemeinsame Favicon (gleicher Ursprung, Entscheidung Max 21а): nichts Fremdes.
+  const andereLinks = [...html.matchAll(/<link(?![^>]*rel="stylesheet")[^>]*>/g)].map((m) => m[0]);
+  assert.ok(andereLinks.every((l) => /^<link rel="icon" type="image\/svg\+xml" href="(?:\.\.\/\.\.\/)?packages\/kinder-ui\/img\/favicon\.svg" \/>$/.test(l)), `index.html: fremder Link ${andereLinks.join(' ')}`);
   assert.deepEqual(links, ['../../packages/kinder-ui/css/kinder.css', 'druck.css']);
   const skripte = [...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(skripte, ['app.mjs']);
