@@ -1,0 +1,12 @@
+{
+  "id": "KIN-17",
+  "slug": "uhr-und-kalender-kind",
+  "titel": "Uhr- und Kalender-Kind",
+  "status_neu": "teilweise",
+  "app": "uhr-und-kalender-kind",
+  "tests_app": 28,
+  "hub_zeile": "unverändert: bereits in index.html (Z. 88)",
+  "readme_zeile": "unverändert: bereits in README.md (Z. 216)",
+  "docs10_notiz": "Uhr- und Kalender-Kind (KIN-17), Ausbau: Kalenderfragen zu Monat, Jahreszeit, Dämmerung, Sonnenaufgang und Sonnenuntergang (k07 bis k11), Prüfung der Kalenderbeziehungen und Seitenangaben, 28 Tests. Offen: tageszeitFrage ist nicht verdrahtet, Stoppuhr nicht gebaut, Test mit Kindern steht aus.",
+  "katalog_korrektur": "Uhr- und Kalender-Kind: Ausbau nach Bauauftrag KIN-17. Gebaut: Analoguhr (volle, halbe, Viertelstunde); Kalenderfragen zu Woche, Monat, Jahreszeit und Jahr sowie zu Dämmerung, Sonnenaufgang und Sonnenuntergang als Quizfragen. Der Katalogtext „Wochen gleich Monat“ sollte durch 4 bis 5 Wochen nach S. 233 ersetzt werden. Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft. Offen: Stoppuhr, Test mit Kindern, uk und ru."
+}

@@ -34,3 +34,15 @@ Eltern-Sammelband.
 npm run dev   # http://localhost:8070/apps/uhr-und-kalender-kind/
 node --test apps/uhr-und-kalender-kind/test/*.test.mjs
 ```
+
+## Tests und Lernziele
+
+28 Tests in zwei Dateien: `test/logik.test.mjs` (Uhr, Kalender, Schreibweisen der Antworten, Seitenangaben, Tageszeit-Frage) und `test/regeln.test.mjs` (Eingabefelder, Speicher, Netz, Zufall, Wertung, Pflichtmarkierung, Testzahl, Lernziele).
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Lernziele (Bauauftrag KIN-17):
+- Die Uhrzeit auf einer Analoguhr lesen: volle Stunde, halbe Stunde, Viertelstunde.
+- Die Kalenderbeziehungen kennen: 7 Tage je Woche, 4 bis 5 Wochen je Monat, 3 Monate je Jahreszeit, 4 Jahreszeiten je Jahr.
+- Tageszeiten benennen, auch Dämmerung, Sonnenaufgang und Sonnenuntergang.
+- Die Redeweise „halb 5“ als 4:30 deuten.
