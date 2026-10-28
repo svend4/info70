@@ -11,6 +11,13 @@ import {
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht dort,
+// wo Seitenangaben erscheinen: auf dem Bildschirm unter dem Text der Karten „Rollen“ (S. 262), „Titel“ (S. 269), „Klang“
+// (S. 270) und „Anregung“ (S. 262) und im Druck unter der Zeile „Quellen“ des Gerüstbogens. Im Druck gehört sie zum
+// Druckinhalt (Klasse mop-nur-druck) und nicht zu einem Bildschirmteil.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const marke = () => el('p', { style: 'margin:0.4rem 0 0.8rem;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE);
+
 const app = document.getElementById('app');
 const zufall = () => Math.random();
 const FELD_STIL = 'width:100%;min-height:3rem;font-size:1rem;padding:0.4rem 0.6rem;box-sizing:border-box;'
@@ -116,6 +123,7 @@ const rollenKarte = el('section', { class: 'k-karte' },
   el('h3', {}, `Figuren als Vorschlag (S. ${SEITE.figuren})`),
   el('p', { style: 'margin-top:0' },
     `Beispiele aus der Quelle (S. ${SEITE.figuren}, dort „и др.“, also und andere). Die deutschen Namen in Klammern sind Eigenentwurf. Die Vorschläge sind nicht verpflichtend.`),
+  marke(),
   figurenListe);
 
 function setzeRollen(n) {
@@ -148,6 +156,7 @@ const titelKarte = el('section', { class: 'k-karte' },
   el('h2', {}, 'Titel (Auswahl)'),
   el('p', { class: 'k-hinweis', style: 'margin-top:0' },
     `Titel, ohne Text und Musik. Die Quelle nennt auf S. ${SEITE.titel} 18 Titel unter der Überschrift „Музыкальные инсценировки, сказки-драматизации“. Nicht alle sind Märchen.`),
+  marke(),
   el('label', { for: 'gm-titel', style: LABEL_STIL }, `Titel wählen (S. ${SEITE.titel})`),
   titelFeld);
 
@@ -202,6 +211,7 @@ const instrumentTeil = el('div', { style: 'margin-top:0.8rem' });
 const klangKarte = el('section', { class: 'k-karte' },
   el('h2', {}, `Klang (S. ${SEITE.klang})`),
   el('p', { style: 'margin-top:0' }, KLANG_HINWEIS),
+  marke(),
   instrumentKnopf,
   instrumentTeil);
 
@@ -219,6 +229,7 @@ function zeichneKlang() {
 const anregungKarte = el('section', { class: 'k-karte' },
   el('h2', {}, `Anregung (S. ${SEITE.anregung})`),
   el('p', { style: 'margin-top:0' }, ANREGUNG_QUELLE),
+  marke(),
   el('p', { class: 'k-hinweis' }, IMPULS_HINWEIS));
 
 // Druck
@@ -249,6 +260,7 @@ function zeichneDruck() {
     el('h1', { class: 'mop-druckkopf-titel' }, g.titel ? `Mini-Oper: ${g.titel}` : 'Mini-Oper: Gerüstbogen'),
     el('p', { class: 'mop-druckhinweis' },
       `${g.impuls} Quellen: S. ${SEITE.figuren}, S. ${SEITE.titel}, S. ${SEITE.klang}.`),
+    el('p', { class: 'mop-druckhinweis' }, MARKE_QUELLE),
     el('h2', {}, 'Szenen'),
     ...g.szenen.map((s) => druckBlock(s.bezeichnung)),
     el('h2', {}, 'Rollen'),

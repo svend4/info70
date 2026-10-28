@@ -14,6 +14,12 @@ import { ACHSEN, achseVon, gegenstandVon, blatt, pruefeDaten } from './logik.mjs
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht
+// auf dem Bildschirm an den zwei Stellen, die Seitenangaben zeigen: unter der Karte „Kein eigenes Malen und Kneten“
+// (S. 89–93) und unter der Quellenzeile der Herkunft (S. 88–89). Das Druckblatt trägt keine Seitenangabe und darum
+// auch keine Marke.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/achsen.json').then((r) => r.json());
 
@@ -128,7 +134,8 @@ function render(fokusElement = null) {
       hinweisKarte('🛒 Keine Einkaufsliste:', daten.keinKauf),
       hinweisKarte('🏛️ Kein Museumsbesuch nötig:', daten.keinMuseum),
       hinweisKarte('🧪 Kein Wirkversprechen:', daten.keinWirkversprechen),
-      hinweisKarte('🖌️ Kein eigenes Malen und Kneten:', daten.anderesThema)),
+      hinweisKarte('🖌️ Kein eigenes Malen und Kneten:', daten.anderesThema),
+      el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE)),
     el('section', { class: 'k-karte kg-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📖 Woher das kommt – und was nicht übernommen ist'),
       el('div', { class: 'k-antworten' },
@@ -140,6 +147,7 @@ function render(fokusElement = null) {
       zeigeHerkunft
         ? el('div', {},
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, daten.quelle.werk),
+          el('p', { style: 'margin:0.3rem 0 0;font-size:0.9rem' }, MARKE_QUELLE),
           el('p', { style: 'margin:0.3rem 0 0;font-size:0.9rem' }, daten.quelle.rechte),
           el('p', { style: 'margin:0.3rem 0 0;font-size:0.9rem' }, daten.quelle.nachgezaehlt),
           el('p', { style: 'margin:0.3rem 0 0;font-size:0.9rem' }, daten.fuenfteilung),

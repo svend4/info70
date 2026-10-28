@@ -12,6 +12,12 @@
 
 export const QUELLE = 'Praleska, Anhang „Психологическая служба в дошкольном учреждении“, S. 312–317';
 
+/**
+ * Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht
+ * jeweils unter der Zeile „Grundlage“: auf dem Bildschirm, im Bericht (Anzeige, Druck und Textdatei) und auf dem Druckbogen.
+ */
+export const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 /** Die vier Antworten. Eine Frage ohne Antwort wird nur gezählt, nicht beantwortet. */
 export const ANTWORTEN = ['geregelt', 'teilweise', 'nicht geregelt', 'Träger oder extern'];
 
@@ -275,6 +281,7 @@ export function berichtText(antworten, datum) {
     'Kita-Unterstützungs-Navigator: Bericht',
     `Stand: ${standText(datum)}`,
     `Grundlage: ${QUELLE}. Fragen und Hinweise sind Eigenentwurf.`,
+    MARKE_QUELLE,
     'Dieser Bericht enthält keine Namen, keine Angaben zu einzelnen Kindern, Familien oder Personen und keine Bewertung.',
   ];
   for (const block of BLOECKE) {

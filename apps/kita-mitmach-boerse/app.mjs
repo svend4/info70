@@ -11,6 +11,10 @@ import { CODE_LAENGE, alleIds, neuerCode, packeKoffer, pruefeDaten, pruefeKoffer
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht
+// in der Quellenzeile (Start- und Familien-Bildschirm) und unter dem Hinweis auf dem Team-Bildschirm.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 // Ein fehlender Katalog wird gemeldet, statt die Seite still abbrechen zu lassen.
 const daten = await fetch('daten/angebote.json')
@@ -100,7 +104,7 @@ function exportiere() {
 }
 
 const kopf = (text) => el('h1', { class: 'k-titel' }, text);
-const quelleZeile = () => el('p', { class: 'mb-quelle' }, `Quelle: ${daten.quelle.werk}`);
+const quelleZeile = () => el('p', { class: 'mb-quelle' }, `Quelle: ${daten.quelle.werk} ${MARKE_QUELLE}`);
 
 const footer = () => el('footer', { class: 'k-fuss' },
   el('span', {}, 'Werkzeug für Fachkräfte und Familien · läuft offline · keine Namen · '),
@@ -220,6 +224,7 @@ function teamBildschirm(meldung) {
         el('p', { class: 'mb-zahlen' }, `interessiert: ${rueckmeldungen[a.id].interessiert} · kann mithelfen: ${rueckmeldungen[a.id].mithilfe}`)))),
     el('section', { class: 'k-karte' },
       el('div', { class: 'k-hinweis' }, el('p', { style: 'margin:0;font-weight:600' }, daten.hinweis)),
+      el('p', { class: 'mb-quelle' }, MARKE_QUELLE),
       el('p', { style: 'margin:0.6rem 0 0' }, 'Dateien mit demselben Code zählen einmal; die zuletzt geladene gilt. Die App kann nicht erkennen, ob zwei Dateien von derselben Familie stammen. Eine Datei lässt sich auch von Hand bauen – die Zählung ist deshalb eine Stimmung, keine Erhebung.'),
       el('p', { style: 'margin:0.6rem 0 0' }, 'Bei sehr wenigen Familien lassen sich Summen auf einzelne Familien zurückführen. Das Team entscheidet, ob es die Summen zeigt.'),
       el('details', { style: 'margin-top:0.8rem' },

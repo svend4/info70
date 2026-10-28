@@ -11,6 +11,10 @@ import { pruefeDaten } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangabe der Quelle (S. 242) steht nur in der Quellenangabe der Ausschlussliste auf dem Bildschirm; das Druckblatt
+// trägt keine Seitenangabe und darum keine Marke (docs/02, Entscheidung Max 22а).
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/navigator.json').then((r) => r.json());
 
@@ -142,6 +146,7 @@ function render(fokusElement = null) {
             ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
               el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, daten.quelle.werk),
+          el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, MARKE_QUELLE),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.rechte),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.abweichung))
         : null),

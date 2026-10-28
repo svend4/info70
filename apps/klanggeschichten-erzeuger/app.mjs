@@ -12,6 +12,11 @@ import { VARIANTEN, erzeuge, textBlock, formVon, stoffVon, pruefeDaten } from '.
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht
+// auf dem Bildschirm im Quellenabsatz der Ausschlussliste, dort stehen die Seitenangaben (S. 80, 81, 86). Der Druck und
+// der kopierte Text tragen keine Seitenangabe und darum auch keine Marke.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/stoffe.json').then((r) => r.json());
 
@@ -155,7 +160,8 @@ function render(fokusElement = null) {
             ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
               el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem;color:#4b5563' },
-            `${daten.quelle.nachgezaehlt} ${daten.quelle.abweichung}`))
+            `${daten.quelle.nachgezaehlt} ${daten.quelle.abweichung}`),
+          el('p', { style: 'margin:0.3rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE))
         : null),
     el('section', { class: 'k-karte kge-nur-bildschirm' },
       el('p', { style: 'margin:0;font-size:0.9rem' },

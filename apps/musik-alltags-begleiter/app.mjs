@@ -16,6 +16,12 @@ import daten from './daten/rituale.json' with { type: 'json' };
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangabe der Quelle (S. 87–88) steht nur in den Daten (quelle.werk) und wird auf dem Bildschirm nicht gezeigt.
+// Die ehrliche Marke steht trotzdem in der Karte „Was hier nicht drinsteht“, im Quellenabsatz an der Stelle, an der die
+// Quellenzeile stünde, vor den Angaben zur Nachzählung (docs/02, Entscheidung Max 22а): kein Mensch hat die Seiten der
+// Quelle geprüft. Das Druckblatt und der kopierte Rückblick tragen keine Seitenangabe und darum auch keine Marke.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const SCHLUESSEL = 'mab.notizen';
 const app = document.getElementById('app');
 
@@ -306,6 +312,7 @@ function render(fokusElement = null) {
       el('ul', { style: 'margin:0;padding-left:1.2rem' },
         ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
           el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
+      el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
       el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem;color:#4b5563' },
         `${daten.quelle.nachgezaehlt} ${daten.zielAlsGanzes.warum}`)),
     el('section', { class: 'k-karte mab-nur-bildschirm' },

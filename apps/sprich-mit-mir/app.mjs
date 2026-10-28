@@ -213,6 +213,8 @@ function render(fokusId = null) {
       el('h2', { style: 'margin-top:0;font-size:1.05rem' }, `📚 ${daten.bloecke.praleska.titel}`),
       el('p', { style: 'margin:0 0 0.3rem;font-size:0.9rem' }, daten.bloecke.praleska.text),
       el('p', { style: 'margin:0;font-size:0.85rem;color:#4b5563' }, daten.quelle.abschnitt),
+      // Ehrliche Marke an der Seitenangabe (docs/02, Entscheidung Max 22а): kein Mensch hat sie geprüft.
+      el('p', { style: 'margin:0.3rem 0 0;font-size:0.85rem;color:#4b5563' }, 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.'),
       el('p', { style: 'margin:0.3rem 0 0;font-size:0.85rem;color:#4b5563' }, daten.quelle.nichtVonHier)),
     el('footer', { class: 'k-fuss' },
       el('span', {}, 'Werkzeug für Eltern · kein Bildschirm fürs Kind · keine Daten über dein Kind · '),

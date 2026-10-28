@@ -7,7 +7,7 @@ import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
   GITTER_MIN, GITTER_MAX, ORTE, SYMBOLE, STANDARD_GITTER, STANDARD_ZEICHEN, STANDARD_ORT,
-  QUELLE_KARTEN, QUELLE_LOESUNG,
+  QUELLE_KARTEN, QUELLE_LOESUNG, MARKE_QUELLE,
   erzeugeKarte, rasterZellen, wegkarten, loesungZeilen, legende, alsTextdatei, ortName,
 } from './logik.mjs';
 
@@ -195,7 +195,8 @@ const erklaerung = el('section', { class: 'k-karte sg-nur-bildschirm', 'aria-lab
     + 'Rechts und links gelten immer von dem Kind aus, das auf dem Start steht und nach vorn schaut (Pfeil am Start).'),
   el('p', {}, 'Spielnamen aus der Quelle (Programm «Пралеска», S. 246, eigene Übersetzung): '
     + '«С картой в путь» heißt „Mit der Karte unterwegs“, «Спрячь предмет и опиши путь к нему» heißt '
-    + '„Versteck den Gegenstand und beschreibe den Weg“.'),
+    + '„Versteck den Gegenstand und beschreibe den Weg“.'
+    + ` ${MARKE_QUELLE}`),
   el('p', {}, 'Eigenentwurf der App, nicht aus der Quelle: Raster, Zeichen, Wegkarten, Lösungsblatt und der Ablauf. '
     + 'Die Quelle nennt nur die Spielnamen.'),
   el('p', {}, 'Vorschlag, nicht aus der Quelle: vor dem Spiel ein Feld festlegen, zum Beispiel als einen großen Schritt. '

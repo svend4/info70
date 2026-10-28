@@ -9,6 +9,11 @@ import { ARTEN, eintraegeFuer, pruefeDaten } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben sind nicht von einem Menschen geprüft (Entscheidung Max 22а). Die Marke steht einmal im
+// Quellenabsatz auf dem Bildschirm und einmal im Druckkopf über den Angaben mit Seite.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const MARKE_DRUCK = 'Seitenangaben nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/richtwerte.json').then((r) => r.json());
 
@@ -41,6 +46,7 @@ function zeichne() {
       el('p', { style: 'margin-top:0;font-weight:600' }, daten.hinweis),
       el('p', {}, daten.wasEsIst),
       el('p', { class: 'rw-quelle' }, `Quelle: ${daten.quelle.werk}`),
+      el('p', { class: 'rw-quelle' }, MARKE_QUELLE),
       el('p', { class: 'rw-quelle' }, daten.quelle.abweichung)),
     el('section', { class: 'k-karte rw-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, 'Lebensjahr wählen'),
@@ -58,7 +64,8 @@ function zeichne() {
         el('button', { class: 'k-knopf', id: 'rw-drucken', onclick: () => window.print() }, '🖨️ Diese Angaben drucken'))),
     el('section', { class: 'rw-nur-druck' },
       el('p', { style: 'font-weight:600' }, `${daten.titel}`),
-      el('p', {}, 'Richtwerte aus dem Text, keine Norm. Keine Bewertung einzelner Kinder.')),
+      el('p', {}, 'Richtwerte aus dem Text, keine Norm. Keine Bewertung einzelner Kinder.'),
+      el('p', {}, MARKE_DRUCK)),
     liste.length === 0
       ? el('p', { class: 'k-hinweis rw-nur-bildschirm' }, 'Zu dieser Auswahl gibt es keine Angabe.')
       : el('section', { class: 'k-karte rw-karte' }, ...liste.map(zeile)),

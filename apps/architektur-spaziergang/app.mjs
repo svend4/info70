@@ -14,6 +14,9 @@ installiereNetzwerkWaechter();
 const app = document.getElementById('app');
 const daten = await fetch('daten/spaziergang.json').then((r) => r.json());
 const SCHLUESSEL = 'asp-auswahl';
+// Ehrliche Marke an Seitenangaben (docs/02, Entscheidung Max 22а): kein Mensch hat die Seiten geprüft.
+const SEITENMARKE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const MIT_SEITENANGABE = /(?:^|[\s(,;])(?:S\.\s?\d|Seiten?\s+\d)/;
 
 const GRUPPEN = [
   { art: 'bauform', titel: '🧱 Am Bau zu sehen', satz: 'Das Merkmal steckt im Gebäude selbst.' },
@@ -115,6 +118,10 @@ function karteAnsicht(k, auswahl) {
       // nicht gibt.
       k.quelle
         ? el('p', { class: 'asp-nur-bildschirm', style: 'margin:0.2rem 0;font-size:0.85rem;color:#4b5563' }, `📚 ${k.quelle}`)
+        : null,
+      // Trägt die Quellenzeile eine Seitenangabe, steht die Marke gleich darunter.
+      k.quelle && MIT_SEITENANGABE.test(k.quelle)
+        ? el('p', { class: 'asp-nur-bildschirm', style: 'margin:0 0 0.2rem;font-size:0.85rem;color:#4b5563' }, SEITENMARKE)
         : null,
       k.gegenbeispiel
         ? el('p', { class: 'asp-nur-bildschirm', style: 'margin:0.2rem 0;font-size:0.95rem' }, `↩️ Gegenbeispiel: ${k.gegenbeispiel}`)
@@ -229,6 +236,7 @@ function render(fokusElement = null) {
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, daten.quelle.werk),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.rechte),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.nachgezaehlt),
+          el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, SEITENMARKE),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.abweichung))
         : null),
 

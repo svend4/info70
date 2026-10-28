@@ -289,7 +289,10 @@ function render(fokusElement = null) {
           el('p', { style: 'margin:0;font-size:0.9rem' }, daten.quelle.norm),
           // Das Recht hat ein Ablaufdatum. Wer eine Artikelnummer liest, soll
           // sehen, bis wann sie gilt.
-          el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem' }, daten.quelle.rechtsstand))
+          el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem' }, daten.quelle.rechtsstand),
+          // Ehrliche Marke (docs/02, Entscheidung Max 22а): die Seitenangabe der Quelle steht nur in den Daten
+          // (quelle.werk), wird nirgends angezeigt und ist von keinem Menschen geprüft.
+          el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem' }, 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.'))
         : null),
     el('section', { class: 'k-karte szu3-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🚑 Wenn etwas passiert ist'),

@@ -25,6 +25,11 @@ import {
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht auf dem
+// Bildschirm im Quellenabsatz von „Was aus der Quelle wurde“, dort stehen die Seitenangaben (S. 78–80). Das Druckblatt trägt
+// keine Seitenangabe und darum auch keine Marke.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/musik.json').then((r) => r.json());
 
@@ -219,6 +224,7 @@ function render() {
       ? el('section', { class: 'k-karte mm-nur-bildschirm' },
         el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📖 Was aus der Quelle wurde'),
         el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' }, daten.quelle.werk),
+        el('p', { style: 'margin:0 0 0.4rem;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
         el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' }, daten.quelle.rechte),
         el('p', { style: 'margin:0 0 0.4rem;font-size:0.95rem' }, daten.quelle.nachgezaehlt),
         el('p', { style: 'margin:0 0 0.2rem;font-weight:600' },

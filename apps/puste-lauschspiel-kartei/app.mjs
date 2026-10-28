@@ -20,6 +20,11 @@ import { REGISTER, REGISTER_NAME, spieleIm, spielText, druckBlock, pruefeDaten }
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht auf dem
+// Bildschirm im Quellenabsatz der aufgeklappten Ausschlussliste, dort stehen die Seitenangaben (S. 67–68, S. 68). Die
+// Druckkarten tragen keine Seitenangabe und darum auch keine Marke.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 
 // Der einzige Zustand ist die Auswahl - im Speicher, nicht auf der Platte.
@@ -177,6 +182,7 @@ function render() {
             el('p', { style: 'margin:0.1rem 0 0;font-size:0.95rem' }, a.warum))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem;color:#4b5563' },
             `${daten.quelle.werk} · ${daten.quelle.rechte}`),
+          el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem;color:#4b5563' }, daten.quelle.nachgezaehlt),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem;color:#4b5563' }, daten.quelle.abweichung))
         : null),

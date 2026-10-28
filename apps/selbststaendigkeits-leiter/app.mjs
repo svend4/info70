@@ -17,6 +17,10 @@ import {
 installiereNetzwerkWaechter();
 
 const SCHLUESSEL = 'ssl.stand';
+// Die Seitenangabe der Quelle (S. 94–96) steht nur in den Daten (quelle.werk) und wird nirgends angezeigt. Die Marke steht
+// trotzdem im Quellenabsatz der Ausschlussliste: die Prüfung des Repos zählt jede Nutzerdatei (docs/02, Entscheidung
+// Max 22а). Wird quelle.werk einmal gezeigt, gehört die Marke direkt darunter.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
 const app = document.getElementById('app');
 const daten = await fetch('daten/leiter.json').then((r) => r.json());
 
@@ -253,7 +257,8 @@ function render(fokusElement = null) {
             ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
               el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem;color:#4b5563' },
-            `${daten.quelle.nachgezaehlt} ${daten.quelle.abweichung}`))
+            `${daten.quelle.nachgezaehlt} ${daten.quelle.abweichung}`),
+          el('p', { style: 'margin:0.3rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE))
         : null),
     datenKarte({
       schluessel: SCHLUESSEL,

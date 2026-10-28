@@ -7,7 +7,8 @@ import { join } from 'node:path';
 import { ohneKommentare } from './bewertung-stand.mjs';
 
 /** Eine Seitenangabe im Text: „S. 12“, „S. 12–14“, „Seite 12“, „стр. 12“. */
-export const SEITENANGABE = /(?<![\p{L}\p{N}])(?:S\.\s?\d+(?:\s?[–-]\s?\d+)?|Seiten?\s+\d+|стр\.\s?\d+)/u;
+// „S. 3“ nach „Abs. 2“ ist ein Satz („Art. 28 Abs. 3 S. 1“), keine Seite. „с. 300“ ist die kurze russische Form.
+export const SEITENANGABE = /(?<![\p{L}\p{N}])(?:(?<!Abs\.\s?\d+\s?)S\.\s?\d+(?:\s?[–-]\s?\d+)?|Seiten?\s+\d+|(?:стр|с)\.\s?\d+)/u;
 /** Die Marke: „nicht von einem Menschen geprüft“ in einer der gebräuchlichen Formen. */
 export const MARKE = /(?:nicht|noch nicht)\s+(?:von\s+einem\s+Menschen|durch\s+Menschen|von\s+Menschen)\s+geprüft/i;
 
@@ -51,10 +52,15 @@ export async function appsOhneMarke(wurzel) {
   return out;
 }
 
-/** Vergleich mit dem Stand: Probleme als Text, leer heißt ok. */
-export function vergleiche(stand, aktuell) {
+/**
+ * Vergleich mit dem Stand: Probleme als Text, leer heißt ok. `ausnahmen` sind Apps, deren Seitenangaben nirgends angezeigt oder
+ * gedruckt werden (nur in Daten, die ein Validator liest): eine Marke hätte nichts zu kennzeichnen. Der Grund steht im Stand.
+ */
+export function vergleiche(stand, aktuell, ausnahmen = {}) {
   const probleme = [];
-  for (const a of Object.keys(aktuell)) if (!(a in stand)) probleme.push(`${a}: Seitenangaben ohne Marke (neu)`);
-  for (const a of Object.keys(stand)) if (!(a in aktuell)) probleme.push(`${a}: Marke vorhanden oder keine Seitenangabe mehr, aus docs/seitenmarke-stand.json streichen`);
+  const betroffen = Object.keys(aktuell).filter((a) => !(a in ausnahmen));
+  for (const a of betroffen) if (!(a in stand)) probleme.push(`${a}: Seitenangaben ohne Marke (neu)`);
+  for (const a of Object.keys(stand)) if (!betroffen.includes(a)) probleme.push(`${a}: Marke vorhanden oder keine Seitenangabe mehr, aus docs/seitenmarke-stand.json streichen`);
+  for (const a of Object.keys(ausnahmen)) if (!(a in aktuell)) probleme.push(`Ausnahme ${a}: keine Seitenangabe ohne Marke mehr, Ausnahme streichen`);
   return probleme;
 }

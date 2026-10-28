@@ -9,6 +9,10 @@ import { alleFragen, BESCHRIFTUNG, berichtZeilen, EIGEN, pruefeDaten, zaehle, zu
 installiereNetzwerkWaechter();
 
 const DATEI_NAME = 'buchecke-check-team-bericht.txt';
+// Die Seitenangaben sind nicht von einem Menschen geprüft (Entscheidung Max 22а). Die Marke steht im Quellenabsatz
+// auf dem Bildschirm und im Bericht; Druck und Textdatei zeigen die Seitenangaben der Fragen und tragen die Marke darum auch.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const MARKE_BERICHT = 'Seitenangaben nicht von einem Menschen geprüft.';
 const app = document.getElementById('app');
 const status = document.getElementById('bc-status');
 
@@ -83,15 +87,21 @@ function bilanzInhalt() {
   ];
 }
 
+/** Die Zeilen des Berichts mit der Marke hinter den zwei Kopfzeilen (Titel, Hinweis); Druck und Textdatei tragen sie gleich. */
+function berichtMitMarke() {
+  const zeilen = berichtZeilen(daten, zustand);
+  return [...zeilen.slice(0, 2), MARKE_BERICHT, ...zeilen.slice(2)];
+}
+
 function druckInhalt() {
   return [
     el('p', { class: 'bc-druckzeile', style: 'font-weight:700;font-size:12pt' }, daten.titel),
-    ...berichtZeilen(daten, zustand).map((z) => el('p', { class: 'bc-druckzeile' }, z || ' ')),
+    ...berichtMitMarke().map((z) => el('p', { class: 'bc-druckzeile' }, z || ' ')),
   ];
 }
 
 function exportiere() {
-  const blob = new Blob([berichtZeilen(daten, zustand).join('\n')], { type: 'text/plain;charset=utf-8' });
+  const blob = new Blob([berichtMitMarke().join('\n')], { type: 'text/plain;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const anker = el('a', { href: url, download: DATEI_NAME });
   document.body.append(anker);
@@ -118,7 +128,8 @@ function aufbauen() {
     el('section', { class: 'k-karte bc-nur-bildschirm' },
       el('p', { style: 'margin-top:0;font-weight:600' }, daten.hinweis),
       el('p', { class: 'bc-quelle' }, `Quelle: ${daten.quelle.werk}`),
-      el('p', { class: 'bc-quelle' }, daten.quelle.abweichung)),
+      el('p', { class: 'bc-quelle' }, daten.quelle.abweichung),
+      el('p', { class: 'bc-quelle' }, MARKE_QUELLE)),
     ...daten.bereiche.map((b) => el('section', { class: 'bc-nur-bildschirm' },
       el('h2', { class: 'bc-bereichstitel' }, b.titel),
       ...b.fragen.map(frageBild))),

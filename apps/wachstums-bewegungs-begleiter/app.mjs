@@ -16,6 +16,10 @@ installiereNetzwerkWaechter();
 const app = document.getElementById('app');
 const daten = await fetch('daten/begleiter.json').then((r) => r.json());
 const SCHLUESSEL = 'wbb-heute';
+// Die Seitenangaben der Quelle (quelle.werk in den Daten) sind nicht von einem Menschen geprüft (docs/02, Entscheidung
+// Max 22а). Die Marke steht direkt unter dem Absatz, der sie zeigt (aufgeklappte Ausschlussliste, nur Bildschirm). Der
+// Zettel für die Küche zeigt keine Seitenangabe und trägt darum keine Marke; kommt quelle.werk dorthin, gehört sie mit.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
 
 /** Der heutige Tag in LOKALER Zeit – `toISOString` rechnet nach UTC und
  *  schreibt kurz nach Mitternacht noch das gestrige Datum (Review Welle 80). */
@@ -176,6 +180,7 @@ function render(fokusElement = null) {
             ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
               el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, daten.quelle.werk),
+          el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, MARKE_QUELLE),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.rechte),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.nachgezaehlt),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.abweichung))

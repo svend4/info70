@@ -8,6 +8,7 @@ import { el } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import {
   BLOECKE, ANTWORTEN, ANLAUFSTELLEN, QUELLE, zaehlText, berichtText,
+  MARKE_QUELLE,
 } from './logik.mjs';
 
 installiereNetzwerkWaechter();
@@ -163,6 +164,7 @@ function druckBogen() {
   return el('section', { class: 'k-druck k-druck-bogen', 'aria-label': 'Leerer Druckbogen' },
     el('h1', {}, 'Kita-Unterstützungs-Navigator: Checkliste'),
     el('p', {}, `Grundlage: ${QUELLE}. Fragen und Hinweise sind Eigenentwurf.`),
+    el('p', {}, MARKE_QUELLE),
     el('p', {}, 'Antwort von Hand eintragen: geregelt, teilweise, nicht geregelt oder Träger oder extern.'),
     el('p', {}, 'Datum'),
     linie(),
@@ -201,6 +203,7 @@ function render() {
           'Gegenstand sind die Einrichtung, das Team, die Gruppen und die Eltern insgesamt. Einzelne Kinder, einzelne Familien und einzelne Personen kommen hier nicht vor. Es werden keine Namen erfasst und niemand wird bewertet.'),
         el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' },
           `Grundlage: ${QUELLE}. Fragen und Hinweise sind Eigenentwurf. Die deutschen Übersetzungen in Klammern sind Eigenentwurf.`),
+        el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, MARKE_QUELLE),
         el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' },
           'Nichts wird gespeichert. Antworten bleiben nur, solange diese Seite offen ist.')),
 

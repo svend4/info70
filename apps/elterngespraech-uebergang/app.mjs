@@ -16,6 +16,12 @@ installiereNetzwerkWaechter();
 const app = document.getElementById('app');
 const daten = await fetch('daten/gespraech.json').then((r) => r.json());
 const SCHLUESSEL = 'eub-fragen';
+// Die Seitenangaben der Quellen sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht
+// bei jeder Quellenzeile mit Seitenangabe (Rechtsfragen, Vorbedingungen) und im Quellenabsatz. Das Blatt zum Drucken
+// trägt keine Seitenangabe und darum auch keine Marke.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const MIT_SEITENANGABE = /(?:^|[^\p{L}\p{N}])(?:S\.\s?\d|Seiten?\s+\d)/u;
+const markeZeile = (stil) => el('p', { style: stil }, MARKE_QUELLE);
 
 // Der Stand liegt im Arbeitsspeicher, localStorage ist die Kopie (Muster aus
 // Nr. 49). Sonst tut bei gesperrtem Speicher - privates Fenster, blockierte
@@ -118,6 +124,7 @@ function rechtAnsicht(r, auswahl) {
     el('div', { id: `eub-ri-${r.id}`, class: offen ? '' : 'eub-zu' },
       el('p', { style: 'margin:0.4rem 0 0.2rem' }, r.antwort),
       el('p', { style: 'margin:0.2rem 0 0;font-size:0.85rem;color:#4b5563' }, `📚 ${r.quelle}`),
+      MIT_SEITENANGABE.test(r.quelle) ? markeZeile('margin:0.1rem 0 0;font-size:0.85rem;color:#4b5563') : null,
       waehlKnopf(r.id, r.frage, auswahl),
       vorleseKnopf(`${r.frage} ${r.antwort}`)));
 }
@@ -183,7 +190,9 @@ function render(fokusElement = null) {
           ...daten.lernvoraussetzungen.map((v) => el('li', { style: 'margin-bottom:0.7rem' },
             el('span', { style: 'color:#4b5563' }, `„${v.kurz}“`), el('br'),
             el('strong', {}, '👉 '), el('span', {}, v.wasHierGilt),
-            v.quelle ? el('span', {}, el('br'), el('span', { style: 'font-size:0.85rem;color:#4b5563' }, `📚 ${v.quelle}`)) : null)))
+            v.quelle ? el('span', {}, el('br'), el('span', { style: 'font-size:0.85rem;color:#4b5563' }, `📚 ${v.quelle}`)) : null,
+            v.quelle && MIT_SEITENANGABE.test(v.quelle)
+              ? el('span', {}, el('br'), el('span', { style: 'font-size:0.85rem;color:#4b5563' }, MARKE_QUELLE)) : null)))
         : null),
 
     el('section', { class: 'k-karte eub-nur-bildschirm' },
@@ -231,6 +240,7 @@ function render(fokusElement = null) {
             ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
               el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, daten.quelle.werk),
+          markeZeile('margin:0.2rem 0 0;font-size:0.9rem'),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.rechte),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.nachgezaehlt),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.abweichung),

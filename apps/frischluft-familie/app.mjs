@@ -128,6 +128,8 @@ function render(fokusElement = null) {
             ...daten.ausgeschlossen.map((a) => el('li', { style: 'margin-bottom:0.5rem' },
               el('strong', {}, a.was), el('br'), el('span', {}, a.warum)))),
           el('p', { style: 'margin:0.6rem 0 0;font-size:0.9rem' }, daten.quelle.werk),
+          // Ehrliche Marke an der Seitenangabe der Quellenzeile (docs/02, Entscheidung Max 22а): kein Mensch hat die Seite geprüft.
+          el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.'),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.rechte),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.nachgezaehlt),
           el('p', { style: 'margin:0.2rem 0 0;font-size:0.9rem' }, daten.quelle.abweichung))

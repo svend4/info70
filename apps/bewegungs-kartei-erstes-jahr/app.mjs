@@ -129,6 +129,9 @@ function render() {
     el('section', { class: 'k-karte bk-nur-bildschirm' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '🚫 Was hier nicht drinsteht – und warum'),
       el('p', { style: 'margin:0 0 0.4rem' }, daten.quelle.bilanz),
+      // Die Seitenbereiche der Quelle stehen nur in den Daten (quelle.abschnitte), nicht auf dem Bildschirm;
+      // die ehrliche Marke steht trotzdem hier (docs/02, Entscheidung Max 22а).
+      el('p', { style: 'margin:0 0 0.4rem;font-size:0.9rem;color:#4b5563' }, 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.'),
       el('div', { class: 'k-antworten' },
         el('button', {
           class: 'k-knopf k-knopf--neutral', 'aria-expanded': String(zeigeAusschluss),

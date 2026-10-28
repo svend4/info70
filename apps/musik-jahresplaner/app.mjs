@@ -17,6 +17,13 @@ import {
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht auf dem
+// Bildschirm an den zwei Stellen, die die Quelle ausdrücklich nennen: im Quellenabsatz der fünf Bereiche und unter den
+// Festbeispielen (S. 174). Die Monatsübersicht und das Formular tragen die Seitenspannen nur als Beschriftung derselben fünf
+// Bereiche; die Marke steht in der Karte „Die fünf Bereiche“ davor. Der Jahresbogen zeigt die Seitenangaben auch auf dem Papier
+// und trägt die Marke darum im Druckteil, im Kopf unter dem Quellenhinweis.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const FELD_STIL = 'width:100%;min-height:3rem;font-size:1rem;padding:0.4rem 0.6rem;box-sizing:border-box;'
   + 'border:2px solid var(--k-blau);border-radius:0.5rem;background:#fff;color:inherit';
 const LABEL_STIL = 'display:block;font-weight:700;margin-top:0.8rem';
@@ -153,6 +160,7 @@ const bereicheTeil = el('section', { class: 'k-karte' },
   el('p', { class: 'k-hinweis', style: 'margin-top:0' },
     'Überschriften und Seiten stammen aus der Quelle (Praleska, Musikteil, Gruppe «ПОЧЕМУЧКИ»). '
     + 'Die deutschen Bezeichnungen sind Eigenbenennungen.'),
+  el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
   el('ol', { style: 'padding-left:1.2rem' },
     ...BEREICHE.map((b) => el('li', { style: 'margin-bottom:0.4rem' },
       el('strong', {}, b.name),
@@ -166,6 +174,7 @@ const festeTeil = el('section', { class: 'k-karte' },
   el('ul', { style: 'padding-left:1.2rem' },
     ...FESTE_QUELLE.map((f) => el('li', { style: 'margin-bottom:0.3rem' },
       `${f.name} – ${f.deutsch} (S. ${FEST_SEITE}; ${KENNZEICHNUNG_UEBERSETZUNG})`))),
+  el('p', { style: 'margin:0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
   el('p', { style: 'margin-top:0.8rem' }, 'Eigene Vorschläge:'),
   el('ul', { style: 'padding-left:1.2rem' },
     ...FESTE_VORSCHLAEGE.map((f) => el('li', { style: 'margin-bottom:0.3rem' },
@@ -183,6 +192,7 @@ const druckBogen = el('section', { class: 'mjp-nur-druck' },
   el('h1', { class: 'mjp-druckkopf-titel' }, 'Musik-Jahresplaner: Jahresbogen'),
   el('p', { class: 'mjp-druckhinweis' },
     'Bereiche nach Praleska, Musikteil, S. 160–174. Leere Linien zum Ausfüllen von Hand.'),
+  el('p', { class: 'mjp-druckhinweis' }, MARKE_QUELLE),
   ...druckGliederung().map((m) => el('section', { class: 'mjp-druckmonat' },
     el('h2', {}, m.name),
     ...m.bereiche.map((b) => el('div', { class: 'mjp-druckbereich' },

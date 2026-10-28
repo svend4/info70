@@ -8,6 +8,11 @@ import { abweichungen, bausteinVon, einheitAendern, einheitEntfernen, einheitHin
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht im
+// Quellenabsatz der ersten Karte, gleich unter der Zeile „Quelle“. Die Richtwerte, die Bausteine und die Abweichungen weiter
+// unten nennen Seiten derselben Quelle. Es gibt kein Druck-CSS: beim Drucken erscheint die Karte wie am Bildschirm.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/plan.json').then((r) => r.json());
 const DATEI_NAME = 'morgenkreis-wochenplan.json';
@@ -122,6 +127,7 @@ function zeichne(fokusId = null) {
       el('p', { style: 'margin-top:0;font-weight:600' }, daten.hinweis),
       el('p', {}, daten.wasEsIst),
       el('p', { class: 'mw-quelle' }, `Quelle: ${daten.quelle.werk}`),
+      el('p', { style: 'margin:0.4rem 0 0;font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
       el('p', { class: 'mw-quelle' }, daten.monatsregel)),
     el('section', { class: 'k-karte mw-nur-bildschirm' },
       el('p', { style: 'font-weight:600;margin-top:0' }, 'Richtwerte der Quelle (Einheiten pro Woche)'),

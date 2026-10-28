@@ -47,8 +47,15 @@ const VERSCHIEBUNG = { N: [0, -1], O: [1, 0], S: [0, 1], W: [-1, 0] };
 // Index = Drehungen im Uhrzeigersinn gegenüber der bisherigen Blickrichtung.
 const DREHUNG = ['geradeaus', 'rechts', 'umdrehen', 'links'];
 
+/**
+ * Die Marke an der Seitenangabe der Quelle (docs/02, Entscheidung Max 22а). Sie steht in der Quellenzeile der Karten
+ * und des Lösungsblatts (Bildschirm, Druck und Textdatei) und im Absatz „So funktioniert es“ der Seite.
+ */
+export const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+
 const QUELLE_SPIELE = 'Spielnamen aus der Quelle (Programm «Пралеска», S. 246, eigene Übersetzung): '
-  + '„Mit der Karte unterwegs“, „Versteck den Gegenstand und beschreibe den Weg“.';
+  + '„Mit der Karte unterwegs“, „Versteck den Gegenstand und beschreibe den Weg“.'
+  + ` ${MARKE_QUELLE}`;
 export const QUELLE_KARTEN = `${QUELLE_SPIELE} Raster, Zeichen, Wegkarten und Ablauf: Eigenentwurf der App.`;
 export const QUELLE_LOESUNG = `${QUELLE_SPIELE} Raster, Zeichen, Wegkarten, Lösungsblatt und Ablauf: `
   + 'Eigenentwurf der App. Nur für Erwachsene.';

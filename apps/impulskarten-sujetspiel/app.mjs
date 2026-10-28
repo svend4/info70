@@ -8,6 +8,11 @@ import { kartenFuer, pruefeDaten, quelleTextVon, zielVon } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben sind nicht von einem Menschen geprüft (Entscheidung Max 22а). Die Marke steht auf dem Bildschirm im
+// Quellenabsatz und im Druck auf jeder Karte: der Ausdruck läuft über mehrere Blätter, und jede Karte trägt eine Seitenangabe.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const MARKE_KURZ = 'Seitenangaben nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/karten.json').then((r) => r.json());
 
@@ -45,7 +50,8 @@ function karteBild(k) {
     el('h2', { class: 'ik-kartentitel' }, k.titel),
     el('p', { class: 'ik-figur' }, `Figur: ${FIGUR_NAME[k.figur]}`),
     el('p', {}, k.situation),
-    el('p', { class: 'ik-quelle' }, `Aufgabe ${nummer(k.ziel)} (${aufgabe.quelle}) · ${quelleTextVon(k)}`));
+    el('p', { class: 'ik-quelle' }, `Aufgabe ${nummer(k.ziel)} (${aufgabe.quelle}) · ${quelleTextVon(k)}`),
+    el('p', { class: 'ik-quelle ik-nur-druck', style: 'margin-top:0.1rem' }, MARKE_KURZ));
 }
 
 function zeichne() {
@@ -57,6 +63,7 @@ function zeichne() {
       el('p', { style: 'margin-top:0;font-weight:600' }, daten.hinweis),
       el('p', {}, daten.wasEsIst),
       el('p', { class: 'ik-quelle' }, `Quelle: ${daten.quelle.werk}`),
+      el('p', { class: 'ik-quelle' }, MARKE_QUELLE),
       el('p', {}, `Sujetabbildendes Spiel: ${daten.faktenZumSpiel.altersBereich} (${daten.faktenZumSpiel.quelleAlter}). Rollenspiel: ${daten.faktenZumSpiel.rollenspielAb} (${daten.faktenZumSpiel.quelleRollenspiel}).`),
       el('p', { class: 'ik-quelle' }, daten.faktenZumSpiel.hinweisTitel)),
     el('section', { class: 'k-karte ik-nur-bildschirm' },

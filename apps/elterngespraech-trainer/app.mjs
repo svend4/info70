@@ -9,6 +9,11 @@ import { pruefeDaten, reihenfolge } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
+// Die Seitenangaben sind nicht von einem Menschen geprüft (Entscheidung Max 22а). Die Marke steht dort, wo
+// Seitenangaben erscheinen: unter den Grundhaltungen, unter der Quellenzeile der Einordnung und auf dem Blatt.
+const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
+const MARKE_KURZ = 'Seitenangaben nicht von einem Menschen geprüft.';
+
 const app = document.getElementById('app');
 const daten = await fetch('daten/szenarien.json').then((r) => r.json());
 
@@ -30,6 +35,7 @@ function blatt() {
   return el('section', { class: 'et-blatt' },
     el('h2', {}, '🗣️ Gespräch mit Eltern – Grundhaltungen'),
     el('p', { class: 'et-hinweis' }, daten.hinweis),
+    el('p', { class: 'et-hinweis' }, MARKE_KURZ),
     ...daten.grundhaltungen.map((g) => el('div', { class: 'et-punkt' },
       el('p', { class: 'et-titel' }, g.titel),
       el('p', {}, g.text),
@@ -51,6 +57,7 @@ function start() {
     el('section', { class: 'k-karte' },
       el('h2', { style: 'margin-top:0;font-size:1.1rem' }, '📖 Grundhaltungen'),
       ...daten.grundhaltungen.map((g) => el('p', { style: 'margin:0.3rem 0' }, el('strong', {}, `${g.titel}: `), g.text, ' ', el('span', { style: 'color:#4b5563;font-size:0.9rem' }, `(${g.quelle})`))),
+      el('p', { style: 'margin:0.3rem 0;color:#4b5563;font-size:0.9rem' }, MARKE_KURZ),
       el('div', { class: 'k-antworten' }, el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', id: 'et-blatt', onclick: () => window.print() }, '🖨️ Blatt drucken'))),
     blatt(),
     el('footer', { class: 'k-fuss' },
@@ -89,6 +96,7 @@ function aufloesung() {
         el('strong', {}, `${STUFE[o.wert].zeichen} ${STUFE[o.wert].name}: `), o.text))),
       hinweisKarte('📖 Warum so eingestuft', s.erklaerung),
       el('p', { style: 'font-size:0.9rem;color:#4b5563' }, `Quelle: ${s.quelle}`),
+      el('p', { style: 'font-size:0.9rem;color:#4b5563' }, MARKE_QUELLE),
       el('button', { class: 'k-knopf', id: 'et-weiter', onclick: () => { index += 1; index < daten.szenarien.length ? frage() : ende(); } },
         index + 1 < daten.szenarien.length ? 'Nächstes Gespräch ➡️' : 'Zum Abschluss 🏁')));
 }
