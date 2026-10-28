@@ -1,0 +1,12 @@
+{
+  "id": "CON-18",
+  "slug": "theater-zuhause-heft",
+  "titel": "Theater zuhause – Bastel- und Spielheft",
+  "status_neu": "teilweise",
+  "app": "theater-zuhause-heft",
+  "tests_app": 59,
+  "hub_zeile": "unverändert: bereits in index.html (Z. 189)",
+  "readme_zeile": "unverändert: bereits in README.md (Z. 325)",
+  "docs10_notiz": "Theater zuhause – Bastel- und Spielheft (CON-18), Ausbau: Prüffunktionen für Pflichtmarkierung und verbotene Zeichen im Druck (pruefeMarkierung, druckeHeft), 59 Tests. Der Druckknopf ruft die Prüfung noch nicht auf; die bebilderte Anleitung ist nicht gebaut.",
+  "katalog_korrektur": "Theater zuhause – Bastel- und Spielheft: Ausbau nach Bauauftrag CON-18. Gebaut: neun Druckblätter (Umschlag, drei Formen, fünf Szenen) und die Pflichtmarkierung auf jeder Seite mit Seitenangabe. Prüffunktionen für Markierung und verbotene Zeichen, noch nicht am Druckknopf. Offen: Anschluss an den Druckknopf, bebilderte Anleitung (nicht gebaut), uk und ru."
+}

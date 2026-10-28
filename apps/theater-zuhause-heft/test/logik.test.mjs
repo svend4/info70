@@ -5,6 +5,7 @@ import {
   anzahlSaetze, begriffZeilen, druckSeiten, filterName, filterWerte, filtern, passendeSzenenZeilen,
   seiteBloecke, seiteText,
 } from '../logik.mjs';
+import { druckeHeft, PFLICHTMARKIERUNG, pruefeMarkierung } from '../logik.mjs';
 
 // Prüft Daten und Logik. Die Regeln der Umgebung (Eingabefelder, Speicherung,
 // Netz, Druckzeichen, Pflichtmarkierung je Seite, Testzahl) stehen in test/regeln.test.mjs.
@@ -208,4 +209,86 @@ test('anzahlSaetze zählt Satzenden, auch vor schließenden Anführungszeichen',
   assert.equal(anzahlSaetze('Der Igel ruft: „Wo ist die Sonne?“ Die Schnecke kommt.'), 2);
   assert.equal(anzahlSaetze('„Vielleicht war sie am Teich?“, fragt Kasper.'), 1);
   assert.equal(anzahlSaetze('Ohne Satzende'), 1);
+});
+
+// Druckprüfung: Pflichtmarkierung je Blatt mit Seitenangabe und verbotene Zeichen.
+const DRUCK_KOPIE = () => JSON.parse(JSON.stringify(daten));
+const VERBOTEN = ['\u2610', '\u2611', '\u2612', '\u2713', '\u2714', '\u2605', '\u2606'];
+
+test('pruefeMarkierung: das ganze Heft besteht die Prüfung ohne Fehler', () => {
+  assert.deepEqual(pruefeMarkierung(daten, druckSeiten(daten)), []);
+});
+
+test('pruefeMarkierung: die Pflichtmarkierung im Heft hat den festen Wortlaut', () => {
+  assert.equal(daten.pflichtmarkierung, PFLICHTMARKIERUNG);
+});
+
+test('pruefeMarkierung: ein Blatt mit Seitenangabe ohne Pflichtmarkierung wird mit Blattnummer gemeldet', () => {
+  const k = DRUCK_KOPIE();
+  k.pflichtmarkierung = 'Seitenangaben geprüft.';
+  const fehler = pruefeMarkierung(k, druckSeiten(k));
+  assert.equal(fehler.length, 4, 'Umschlag und die drei Formen tragen eine Seitenangabe');
+  assert.equal(fehler[0], 'Blatt 1: Seitenangabe ohne Pflichtmarkierung');
+});
+
+test('pruefeMarkierung: Blätter ohne Seitenangabe brauchen keine Markierung, die Blattnummer zählt trotzdem mit', () => {
+  const k = DRUCK_KOPIE();
+  k.pflichtmarkierung = 'Seitenangaben geprüft.';
+  const seiten = druckSeiten(k);
+  const szene = seiten.find((s) => s.art === 'szene');
+  const form = seiten.find((s) => s.art === 'form');
+  assert.deepEqual(pruefeMarkierung(k, [szene, form]), ['Blatt 2: Seitenangabe ohne Pflichtmarkierung']);
+});
+
+test('pruefeMarkierung: eine Seitenangabe als Objekt wird geprüft wie eine als Text', () => {
+  const k = DRUCK_KOPIE();
+  k.pflichtmarkierung = 'Seitenangaben geprüft.';
+  const mitSeite = { id: 'probe', art: 'szene', quelle: { seite: 'S. 73' } };
+  const ohneSeite = { id: 'probe-2', art: 'szene', quelle: { seite: '' } };
+  assert.deepEqual(pruefeMarkierung(k, [mitSeite, ohneSeite]), ['Blatt 1: Seitenangabe ohne Pflichtmarkierung']);
+});
+
+test('druckeHeft: eine fehlende oder geänderte Pflichtmarkierung im Heft bricht den Druck ab', () => {
+  const geaendert = DRUCK_KOPIE();
+  geaendert.pflichtmarkierung = 'Seitenangaben geprüft.';
+  assert.throws(() => druckeHeft(geaendert), /Druck abgebrochen: Blatt 1: Seitenangabe ohne Pflichtmarkierung/);
+  const fehlt = DRUCK_KOPIE();
+  delete fehlt.pflichtmarkierung;
+  assert.throws(() => druckeHeft(fehlt), /Druck abgebrochen/);
+});
+
+test('druckeHeft: neun Blätter in Druckreihenfolge, je Blatt genau der Text, den seiteText liefert', () => {
+  const heft = druckeHeft(daten);
+  const seiten = druckSeiten(daten);
+  assert.equal(heft.length, 9);
+  seiten.forEach((seite, i) => assert.equal(heft[i].join('\n'), seiteText(daten, seite), `Blatt ${i + 1}`));
+});
+
+test('druckeHeft: jedes Blatt mit Seitenangabe trägt die Pflichtmarkierung in seinen Druckzeilen', () => {
+  const heft = druckeHeft(daten);
+  druckSeiten(daten).forEach((seite, i) => {
+    if (/S\. \d+/.test(seite.quelle ?? '')) assert.ok(heft[i].includes(PFLICHT), `Blatt ${i + 1}`);
+  });
+});
+
+test('druckeHeft: jedes Zeichen aus der Liste des Bauauftrags bricht den Druck ab', () => {
+  for (const zeichen of VERBOTEN) {
+    const k = DRUCK_KOPIE();
+    k.umschlag.untertitel += ` ${zeichen}`;
+    assert.throws(() => druckeHeft(k), /verbotenes Zeichen/, `U+${zeichen.codePointAt(0).toString(16)}`);
+  }
+});
+
+test('druckeHeft: Flaggen, Tastenkappen und Hauttöne bricht den Druck ab', () => {
+  for (const emoji of ['\u{1F1E9}\u{1F1EA}', '1\uFE0F\u20E3', '\u{1F3FD}']) {
+    const k = DRUCK_KOPIE();
+    k.umschlag.untertitel += ` ${emoji}`;
+    assert.throws(() => druckeHeft(k), /verbotenes Zeichen/, emoji);
+  }
+});
+
+test('druckeHeft: ein Emoji im Text bricht den Druck ab', () => {
+  const k = DRUCK_KOPIE();
+  k.umschlag.untertitel += ' \u{1F4D6}';
+  assert.throws(() => druckeHeft(k), /verbotenes Zeichen/);
 });

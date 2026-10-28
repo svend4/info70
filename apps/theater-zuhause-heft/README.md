@@ -9,8 +9,8 @@ Katalog: docs/10, Abschnitt „Документы“ (Dokumente), Eintrag „The
 (Dokument Nr. 18). Titel nach dem Auftrag mit Gedankenstrich. Ohne Speicherung. Ohne Verbindung nach draußen.
 Ein Neuladen ohne Netz ist nicht zugesichert: die App hat keinen Service Worker (F4 in docs/fragen-und-hinweise.md).
 
-**Status: erster Stand.** Geprüft sind die Tests mit `node --test`. Eine Prüfung im Browser
-und auf dem Gerät steht noch aus.
+**Status: erster Stand.** Geprüft sind die Tests mit `node --test` und eine automatische Browser-Messung (360 px, Druckinhalt, Speicher, Netz). Offen:
+Prüfung auf dem Gerät und Druck auf A4 auf einem Drucker.
 Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 
 ## Was belegt ist
@@ -92,10 +92,13 @@ Siehe auch `GDD.md`, Abschnitt „## Offen“. Für diese App offen:
   (`docs/fragen-und-hinweise.md`, F2).
 - Favicon: Die App hat keines. `favicon.ico` gibt 404, wie in allen Apps (A3 in
   `docs/fragen-und-hinweise.md`, offen).
+- Druckprüfung: `pruefeMarkierung` und `druckeHeft` sind getestet, der Druckknopf ruft aber noch
+  `window.print()` direkt auf. Der Anschluss der Prüfung an den Knopf ersetzt eine bestehende Zeile
+  in `app.mjs` und ändert zusätzlich einen Test in `test/regeln.test.mjs`. Er ist offen.
 
 ## Tests
 
-48 Tests in zwei Dateien. `test/logik.test.mjs` prüft Aufbau, Quellenhinweis, Quellenzitate und Seiten,
+59 Tests in zwei Dateien. `test/logik.test.mjs` prüft Aufbau, Quellenhinweis, Quellenzitate und Seiten, Druckprüfung (`pruefeMarkierung`, `druckeHeft`: Pflichtmarkierung je Blatt mit Seitenangabe, verbotene Zeichen),
 Satzzahl der Szenen, Filter, Druckreihenfolge, Pflichtmarkierung je Seite und die Ziffern im
 Druck. `test/regeln.test.mjs` prüft die Projektregeln: keine Eingabefelder, keine Speicherung,
 keine externen Adressen und Netzaufrufe, keine Druckzeichen, keine Namenszeile und kein Tagesfeld,

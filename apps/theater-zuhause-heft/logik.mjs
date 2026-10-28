@@ -151,3 +151,52 @@ export function seiteText(daten, seite) {
 export function anzahlSaetze(text) {
   return text.trim().split(/(?<=[.!?][“”"’)]?)\s+/).filter((s) => s.length > 0).length;
 }
+
+// Druckprüfung. Die Zeichen stehen als Unicode-Escapes, damit diese Datei selbst keine enthält.
+// Verboten sind die sieben Zeichen aus Bauauftrag CON-18 und alle Emojis, dazu die Bausteine von
+// Flaggen (Regional Indicator), Tastenkappen (U+20E3) und Hauttöne (Emoji_Modifier). Auch Zeichen wie das Copyright-Zeichen
+// (U+00A9) zählen als Emoji-Zeichen; ein Vermerk mit so einem Zeichen bricht den Druck ab.
+const VERBOTENE_ZEICHEN = /[\u2610\u2611\u2612\u2713\u2714\u2605\u2606\u20E3]|\p{Extended_Pictographic}|\p{Regional_Indicator}|\p{Emoji_Modifier}/u;
+
+// Der feste Wortlaut der Pflichtmarkierung (Entscheidung A18, docs/02 Z. 151–152).
+export const PFLICHTMARKIERUNG = 'Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.';
+
+// Die Seitenangabe eines Blattes: das Feld quelle als Text oder als Objekt mit seite.
+function seitenangabe(blatt) {
+  const quelle = typeof blatt.quelle === 'object' ? blatt.quelle?.seite : blatt.quelle;
+  return typeof quelle === 'string' ? quelle : '';
+}
+
+/**
+ * Jedes Blatt mit einer Seitenangabe („S. n“ im Feld quelle) muss die Pflichtmarkierung im
+ * gedruckten Text tragen, so wie druckeHeft ihn ausgibt. Eine leere Liste heißt bestanden.
+ * @param {object} daten
+ * @param {object[]} blaetter
+ * @returns {string[]} Fehler mit Blattnummer
+ */
+export function pruefeMarkierung(daten, blaetter) {
+  const fehler = [];
+  blaetter.forEach((blatt, i) => {
+    if (!/S\. \d+/.test(seitenangabe(blatt))) return;
+    if (!seiteText(daten, blatt).split('\n').includes(PFLICHTMARKIERUNG)) {
+      fehler.push(`Blatt ${i + 1}: Seitenangabe ohne Pflichtmarkierung`);
+    }
+  });
+  return fehler;
+}
+
+/**
+ * Die Druckzeilen des ganzen Heftes, je Blatt in Druckreihenfolge. Vorher wird geprüft:
+ * fehlt eine Pflichtmarkierung oder steht ein verbotenes Zeichen im Text, bricht die Funktion ab.
+ * @param {object} daten
+ * @returns {string[][]}
+ */
+export function druckeHeft(daten) {
+  const blaetter = druckSeiten(daten);
+  const fehler = pruefeMarkierung(daten, blaetter);
+  if (fehler.length) throw new Error(`Druck abgebrochen: ${fehler.join('; ')}`);
+  const seiten = blaetter.map((seite) => seiteText(daten, seite).split('\n'));
+  const fundstelle = seiten.flat().find((zeile) => VERBOTENE_ZEICHEN.test(zeile));
+  if (fundstelle !== undefined) throw new Error(`Druck abgebrochen: verbotenes Zeichen in „${fundstelle}“`);
+  return seiten;
+}

@@ -49,7 +49,7 @@ Igel, Schnecke, Hase, Maus, Kasper, Ente, Mond, Lampe, Vogel und Bär.
 S bis M. Die Inhalte sind statisch. Der Filter lebt nur in der geöffneten Seite.
 
 ## 8. Tests
-48 Tests in zwei Dateien. `test/logik.test.mjs` prüft Aufbau, Quellenhinweis, Zitate, Satzzahl, Filter,
+59 Tests in zwei Dateien. `test/logik.test.mjs` prüft Aufbau, Quellenhinweis, Zitate, Satzzahl, Filter, Druckprüfung (`pruefeMarkierung`, `druckeHeft`),
 Druckreihenfolge und die Ziffern im Druck. `test/regeln.test.mjs` prüft die Projektregeln. Details in der README.
 
 ## Offen
@@ -60,6 +60,8 @@ Druckreihenfolge und die Ziffern im Druck. `test/regeln.test.mjs` prüft die Pro
   die richtige Zielgruppe ist, prüft eine Fachkraft.
 - Der Katalogeintrag (docs/10) nennt „gemeinfreie Maerchenmustern“ und „bebilderte Anleitung“.
   Gebaut ist ohne Märchenmuster (Auftrag) und ohne Bilder; die Entscheidung über Bilder ist offen.
+- Druckprüfung: `pruefeMarkierung` und `druckeHeft` sind getestet; der Druckknopf ruft noch
+  `window.print()` direkt auf. Der Anschluss ist offen.
 - Die Übertragung von „театра Петрушки“ als Kasper ist Eigenentwurf (docs/10 nennt sie als deutsches Äquivalent).
 - uk und ru: nicht vorhanden, offen.
 - Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
@@ -68,7 +70,7 @@ Druckreihenfolge und die Ziffern im Druck. `test/regeln.test.mjs` prüft die Pro
   maschinelle Prüfung.
 - Zitatprüfung: Die Gegenprüfung der Zitate lief außerhalb des Repos (F3). Im Repo stehen die
   festgehaltenen Zitate (`test/logik.test.mjs`).
-- Browser-Prüfung (Druck auf A4, Darstellung bei 360 px) und Prüfung auf dem Gerät stehen aus.
+- Automatische Browser-Messung (Darstellung bei 360 px, Druckinhalt, Speicher, Netz) ist grün. Offen: Druck auf A4 auf einem Drucker und Prüfung auf dem Gerät.
 - Vorlesefunktion: docs/02 verlangt sie (Z. 44 und 77, Checkliste „есть озвучивание“). Nicht gebaut;
   der Geltungsbereich für dieses Werkzeug ist offen (docs/fragen-und-hinweise.md, F2).
 - Favicon: Die App hat keines. favicon.ico gibt 404, wie in allen Apps (A3 in docs/fragen-und-hinweise.md, offen).
