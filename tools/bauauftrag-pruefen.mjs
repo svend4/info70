@@ -32,7 +32,7 @@ const SEKTIONEN = ['## 1. Quelle', '## 2. Zielgruppe', '## 3. Funktion', '## 4. 
   '## 6. Regeln', '## 7. Tests', '## 8. Abnahme', '## 9. Offen'];
 
 const index = JSON.parse(readFileSync(new URL('index.json', ORDNER), 'utf8'));
-const erwartet = new Map(index.bauauftraege.map((e) => [e.id, e]));
+const erwartet = new Map([...index.bauauftraege, ...(index.gebaut_mit_bauauftrag ?? [])].map((e) => [e.id, e]));
 
 const dateien = readdirSync(ORDNER).filter((d) => /^[A-Z]+-\d+-.*\.md$/.test(d));
 let fehler = 0;

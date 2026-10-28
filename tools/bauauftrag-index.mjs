@@ -90,6 +90,8 @@ const out = {
   bilanz,
   pro_abschnitt: zaehl(eintraege, 'abschnitt'),
   bauauftraege: soll,
+  // Gebaute Einheiten, deren Bauauftrag im Ordner bleibt (Verlauf); der Prüfer der Bauaufträge erwartet auch sie.
+  gebaut_mit_bauauftrag: eintraege.filter((e) => STATUS_AB_WELLE_92[e.id] === 'gebaut').map((e) => ({ id: e.id, einheit: e.einheit, status: e.status, app: e.app })),
   ohne_bauauftrag: [...unklar, ...nichtBauen].map((e) => ({ id: e.id, einheit: e.einheit, status: e.status })),
 };
 

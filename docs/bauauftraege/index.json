@@ -813,6 +813,20 @@
       "blockiert": []
     }
   ],
+  "gebaut_mit_bauauftrag": [
+    {
+      "id": "GEM-17",
+      "einheit": "Tischdienst-Trainer",
+      "status": "gebaut",
+      "app": "tischdienst-trainer"
+    },
+    {
+      "id": "PRI-8",
+      "einheit": "Kleine Forscher ohne Bildschirm",
+      "status": "gebaut",
+      "app": "kleine-forscher-ohne-bildschirm"
+    }
+  ],
   "ohne_bauauftrag": [
     {
       "id": "CON-13",
