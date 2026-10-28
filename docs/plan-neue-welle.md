@@ -37,7 +37,7 @@ PRI-8 „Kleine Forscher ohne Bildschirm“ war nie blockiert und ist bereits ge
 
 ## 4. Ablauf einer Stufe (11б)
 
-Je Auftrag ein Schreiber und ein unabhängiger Prüfer (Workflow), höchstens 8 Agenten gleichzeitig; der Integrator allein committet und führt Tests, Quiz-Durchlauf und Delta-Tor aus, bevor gepusht wird. Eine Stufe ist eine Gruppe von höchstens acht Aufträgen; zwischen den Stufen liest Max die Berichte. GDD-Entwürfe für Stufe 1 liegen unter `docs/neue-welle/` (siehe dort).
+Je Auftrag ein Schreiber und ein unabhängiger Prüfer (Workflow), höchstens 8 Agenten gleichzeitig; der Integrator allein committet und führt Tests, Quiz-Durchlauf und Delta-Tor aus, bevor gepusht wird. Eine Stufe ist eine Gruppe von höchstens acht Aufträgen; zwischen den Stufen liest Max die Berichte. GDD-Entwürfe für Stufe 1 liegen unter `docs/neue-welle/` (CON-3, CON-6, CON-9, CON-10; je mit dem Stand der Prüfung am Anfang). Der Entwurf für PRI-8 entfällt, die App ist gebaut.
 
 ## 5. Entscheidungen, die Max vor Stufe 1 treffen sollte
 

@@ -75,7 +75,7 @@ Die Entscheidungen stammen vom Nutzer (Макс) über die Beobachtungssitzung. 
 - **GEM-22 (entschieden).** Im Druck ist der Bildschirm ausgeblendet; das Emoji im Titel steht nur am Bildschirm. Zahl der Experimente: zehn, davon acht aus der Quelle und zwei eigene.
 - **KIT-14 (entschieden).** Die vier Aufgaben stehen oberhalb der Hinweis-Box. Ein Protokoll je Kind wird nicht gebaut.
 - **PRI-5 (offen).** Weder registriert noch gelöscht, bis der Widerspruch zu „Übungsmaß laut Quelle“ nach dem Quelltext aufgelöst ist. Ein Test verbietet die Kombination.
-- **PRI-8 (registriert mit offenem Punkt).** Die Fachprüfung der Sicherheitstexte steht aus.
+- **PRI-8 (registriert mit offenem Punkt).** Die Fachprüfung der Sicherheitstexte steht aus. Funde der GDD-Prüfung vom 28.10.2026 (maschinelle Beobachtungen, nicht von einem Menschen geprüft): (1) Die Karte „Ineinanderlegen“ trägt „S. 63“, die Quelle nennt das Ineinanderstecken von Matrjoschkas aber am Anfang von S. 64 (`daten/karten.json`, `test/logik.test.mjs` Z. 34); (2) der Katalog nennt 11 Lernziele, gebaut sind sieben Karten; (3) der Bauauftrag-Kopf und `docs/plan-praleska-umsetzung.md` führen PRI-8 noch als offen, obwohl die App gebaut und registriert ist; (4) Katalog-Korrektur und Registrierung nennen das Favicon (A3) noch als offen, es ist seit 21а erledigt.
 
 ## Entscheidungen des Nutzers (27.10.2026): Fragen 1–37
 
