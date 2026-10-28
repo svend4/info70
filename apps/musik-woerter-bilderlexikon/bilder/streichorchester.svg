@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ein Cello und eine Geige mit Bogen, Streichinstrumente">
+<title>Ein Cello und eine Geige mit Bogen, Streichinstrumente</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(60 6) scale(0.88)"><rect x="34" y="16" width="12" height="97.4" rx="3" fill="#111827"/>
+<path d="M40 176 V192" stroke-width="5"/>
+<path d="M40 78 C58.6 78 71 83.88 71 104.46 C71 113.28 63 120.14 63 127 C63 133.86 79 140.72 79 152.48 C79 165.22 61.84 176 40 176 C18.16 176 1 165.22 1 152.48 C1 140.72 17 133.86 17 127 C17 120.14 9 113.28 9 104.46 C9 83.88 21.4 78 40 78Z" fill="#78350f"/>
+<path d="M40 86.82 C55.25 86.82 65.42 91.64 65.42 108.52 C65.42 115.75 58.86 121.37 58.86 127 C58.86 132.63 71.98 138.25 71.98 147.89 C71.98 158.34 57.91 167.18 40 167.18 C22.09 167.18 8.02 158.34 8.02 147.89 C8.02 138.25 21.14 132.63 21.14 127 C21.14 121.37 14.58 115.75 14.58 108.52 C14.58 91.64 24.75 86.82 40 86.82Z" fill="#b45309" stroke="none"/>
+<rect x="35" y="24" width="10" height="99.08" rx="2" fill="#111827" stroke="none"/>
+<circle cx="40" cy="14" r="7.44" fill="#78350f"/>
+<path d="M37 14 a3 3 0 1 1 3 3" stroke-width="2.5"/>
+<path d="M27 24 h7 M46 24 h7 M27 34 h7 M46 34 h7" stroke-width="5"/>
+<path d="M36.4 24 V162.28" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M38.8 24 V162.28" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M41.2 24 V162.28" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M43.6 24 V162.28" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M31 154.28 h18 l-4 22 h-10Z" fill="#111827" stroke-width="2.5"/>
+<path d="M29 141.76 v-5 h22 v5Z" fill="#fef3c7" stroke-width="2.5"/>
+<path d="M24.4 124.76 q-5 9 0 17 q4 7 0 14 M55.6 124.76 q5 9 0 17 q-4 7 0 14" stroke-width="2.6"/></g>
+<g transform="translate(138 112) rotate(0) scale(0.92)"><rect x="-4.5" y="-80" width="9" height="75.2" rx="3" fill="#111827"/>
+<path d="M0 -36 C15.6 -36 26 -30.96 26 -13.32 C26 -5.76 18 0.12 18 6 C18 11.88 31 17.76 31 27.84 C31 38.76 17.36 48 0 48 C-17.36 48 -31 38.76 -31 27.84 C-31 17.76 -18 11.88 -18 6 C-18 0.12 -26 -5.76 -26 -13.32 C-26 -30.96 -15.6 -36 0 -36Z" fill="#b45309"/>
+<path d="M0 -28.44 C12.79 -28.44 21.32 -24.31 21.32 -9.84 C21.32 -3.64 14.76 1.18 14.76 6 C14.76 10.82 25.42 15.64 25.42 23.91 C25.42 32.86 14.24 40.44 0 40.44 C-14.24 40.44 -25.42 32.86 -25.42 23.91 C-25.42 15.64 -14.76 10.82 -14.76 6 C-14.76 1.18 -21.32 -3.64 -21.32 -9.84 C-21.32 -24.31 -12.79 -28.44 0 -28.44Z" fill="#d97706" stroke="none"/>
+<rect x="-3.5" y="-72" width="7" height="74.64" rx="2" fill="#111827" stroke="none"/>
+<circle cx="0" cy="-82" r="5.58" fill="#b45309"/>
+<path d="M-3 -82 a3 3 0 1 1 3 3" stroke-width="2.5"/>
+<path d="M-11.5 -72 h7 M4.5 -72 h7 M-11.5 -62 h7 M4.5 -62 h7" stroke-width="5"/>
+<path d="M-3.6 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M-1.2 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M1.2 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M3.6 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M-9 28.24 h18 l-4 22 h-10Z" fill="#111827" stroke-width="2.5"/>
+<path d="M-11 19.08 v-5 h22 v5Z" fill="#fef3c7" stroke-width="2.5"/>
+<path d="M-12.4 2.08 q-5 9 0 17 q4 7 0 14 M12.4 2.08 q5 9 0 17 q-4 7 0 14" stroke-width="2.6"/></g>
+<path d="M94 176 L190 120" stroke="#78350f" stroke-width="4"/>
+<path d="M96.02 179.46 L192.02 123.46" stroke="#ffffff" stroke-width="2.4"/>
+<path d="M97.84 173.76 L105.62 173.86" stroke="#111827" stroke-width="6"/>
+<g transform="translate(34 40) scale(0.8)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#1d4ed8" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(160 30) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#b91c1c" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ein Violoncello mit Bogen">
+<title>Ein Violoncello mit Bogen</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="86" y="16" width="12" height="86.8" rx="3" fill="#111827"/>
+<path d="M92 164 V180" stroke-width="5"/>
+<path d="M92 68 C110.6 68 123 73.76 123 93.92 C123 102.56 115 109.28 115 116 C115 122.72 131 129.44 131 140.96 C131 153.44 113.84 164 92 164 C70.16 164 53 153.44 53 140.96 C53 129.44 69 122.72 69 116 C69 109.28 61 102.56 61 93.92 C61 73.76 73.4 68 92 68Z" fill="#b45309"/>
+<path d="M92 76.64 C107.25 76.64 117.42 81.36 117.42 97.89 C117.42 104.98 110.86 110.49 110.86 116 C110.86 121.51 123.98 127.02 123.98 136.47 C123.98 146.7 109.91 155.36 92 155.36 C74.09 155.36 60.02 146.7 60.02 136.47 C60.02 127.02 73.14 121.51 73.14 116 C73.14 110.49 66.58 104.98 66.58 97.89 C66.58 81.36 76.75 76.64 92 76.64Z" fill="#d97706" stroke="none"/>
+<rect x="87" y="24" width="10" height="88.16" rx="2" fill="#111827" stroke="none"/>
+<circle cx="92" cy="14" r="7.44" fill="#b45309"/>
+<path d="M89 14 a3 3 0 1 1 3 3" stroke-width="2.5"/>
+<path d="M79 24 h7 M98 24 h7 M79 34 h7 M98 34 h7" stroke-width="5"/>
+<path d="M88.4 24 V150.56" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M90.8 24 V150.56" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M93.2 24 V150.56" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M95.6 24 V150.56" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M83 142.56 h18 l-4 22 h-10Z" fill="#111827" stroke-width="2.5"/>
+<path d="M81 130.52 v-5 h22 v5Z" fill="#fef3c7" stroke-width="2.5"/>
+<path d="M76.4 113.52 q-5 9 0 17 q4 7 0 14 M107.6 113.52 q5 9 0 17 q-4 7 0 14" stroke-width="2.6"/>
+<path d="M46 168 L168 96" stroke="#78350f" stroke-width="4"/>
+<path d="M48.03 171.44 L170.03 99.44" stroke="#ffffff" stroke-width="2.4"/>
+<path d="M50.88 165.12 L60.23 164.24" stroke="#111827" stroke-width="6"/>
+</g>
+</svg>

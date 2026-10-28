@@ -1,0 +1,131 @@
+/* Himmelsgucker: Bildschirm und Druck.
+   Auf dem Bildschirm stehen die Karten, die Fragen und die Druckauswahl mit der Vorschau. Beim Drucken
+   verschwindet alles, was zum Bildschirm gehört (.hg-nur-bildschirm). Übrig bleiben nur die gewählten
+   Blätter, je Blatt eine Seite A4 hoch, ohne Zeichen, Kästchen, Namenszeile oder Tagesfelder. */
+
+.hg-nur-druck { display: none; }
+
+/* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um. */
+h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
+.hg-titel:focus { outline: none; }
+
+/* Link im Fuß: mindestens 48 px hoch (docs/02, Touch-Ziel 48 px), 8 px seitlich Abstand. */
+.k-fuss a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; }
+
+/* Texte für das Kind sind etwas größer, damit Erwachsene sie bequem vorlesen. */
+.hg-text p { margin: 0 0 0.6rem; font-size: 1.1rem; overflow-wrap: anywhere; }
+.hg-text h2 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.hg-text .hg-erwachsene { font-size: 0.95rem; color: #374151; }
+.hg-text .hg-aufforderung { font-weight: 700; text-align: center; }
+.hg-text .hg-aufgabe { font-weight: 700; text-align: center; font-size: 1.2rem; }
+.hg-text .hg-marke { font-size: 0.9rem; color: #374151; border-top: 1px solid var(--k-rand); padding-top: 0.5rem; }
+.hg-text .hg-zaehler { font-weight: 700; }
+.hg-liste { margin: 0 0 0.6rem; padding-inline-start: 1.1rem; font-size: 0.95rem; }
+.hg-liste li { margin-bottom: 0.4rem; overflow-wrap: anywhere; }
+.hg-erwachsenenbox h2 { margin: 0 0 0.3rem; font-size: 1rem; }
+.hg-erwachsenenbox p { margin: 0 0 0.3rem; font-size: 0.95rem; overflow-wrap: anywhere; }
+
+/* Bilder: SVG füllt die Breite der Hülle und läuft nie über den Rand. */
+.hg-bild { display: block; flex: none; }
+.hg-bild svg { display: block; width: 100%; height: auto; }
+.hg-bild--klein { width: 4.5rem; }
+.hg-bild--gross { width: min(14rem, 100%); margin: 0 auto 0.9rem; }
+.hg-bild--breit { width: min(22rem, 100%); margin: 0 auto 0.9rem; }
+
+/* Die drei Karten auf dem Start: Bild und Text nebeneinander, große Berührfläche. */
+.hg-kartenliste { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.75rem; }
+.k-knopf.hg-kartenknopf { display: flex; align-items: center; gap: 0.9rem; text-align: start; padding: 0.6rem 0.9rem; min-height: 5.5rem; }
+.hg-kartentext { display: flex; flex-direction: column; min-width: 0; }
+.hg-kartentitel { font-size: 1.25rem; overflow-wrap: anywhere; }
+.hg-unterzeile { font-weight: 400; font-size: 0.9rem; overflow-wrap: anywhere; }
+
+/* Druckauswahl */
+.hg-anzahl { margin-top: 0.75rem; }
+.hg-anzahl-kopf { font-weight: 700; }
+.hg-anzahl-zeile { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.hg-anzahl-wert { font-weight: 700; font-size: 1.1rem; }
+.k-knopf[aria-disabled="true"] { opacity: 0.55; cursor: default; }
+.hg-vorschau-titel { margin: 0.5rem 0 0; font-size: 1.15rem; text-align: center; }
+.hg-vorschau, .hg-vorschau-liste { display: flex; flex-direction: column; gap: 1rem; }
+
+/* Das Blatt: derselbe Aufbau in der Vorschau und im Druck. Größen in rem, im Druck in pt und mm. */
+.hg-kopf { font-size: 0.8rem; color: #4b5563; margin: 0 0 0.1rem; }
+.hg-blatttitel { font-size: 1.35rem; margin: 0 0 0.4rem; color: var(--k-blau-dunkel); overflow-wrap: anywhere; }
+.hg-anleitung { margin: 0 0 0.3rem; font-size: 1rem; overflow-wrap: anywhere; }
+.hg-mondzeilen { display: grid; gap: 0.8rem; margin: 0.8rem 0; }
+.hg-mondzeile { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 1rem; }
+.hg-bild--blatt { width: min(7rem, 100%); }
+.hg-bild--wahl { width: 5rem; }
+.hg-wort { font-size: 1.1rem; font-weight: 700; overflow-wrap: anywhere; }
+.hg-feld { margin: 0 0 0.9rem; }
+.hg-feldtitel { font-size: 1.05rem; margin: 0 0 0.1rem; }
+.hg-feld .hg-aufgabe { margin: 0 0 0.4rem; font-size: 1rem; }
+.hg-wahlreihe { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: flex-end; }
+.hg-wahl { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; text-align: center; }
+.hg-kreuz { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3rem; max-width: 18rem; text-align: center; align-items: center; }
+.hg-mitte { font-size: 0.8rem; color: #4b5563; }
+.hg-rahmen { border: 2px solid #000; border-radius: 0.6rem; min-height: 8rem; }
+.hg-hinweis, .hg-quelle { font-size: 0.8rem; color: #4b5563; margin: 0.4rem 0 0; overflow-wrap: anywhere; }
+.hg-vorschau .hg-blatt { overflow-wrap: anywhere; }
+
+@media print {
+  @page { size: A4 portrait; margin: 14mm 15mm; }
+  .hg-nur-bildschirm { display: none !important; }
+  .hg-nur-druck { display: block; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  /* Jedes Blatt ist eine einzige Seite und wird nie über einen Umbruch zerrissen.
+     Seitenbudget: A4 hoch ist 297 mm, abzüglich 2 mal 14 mm Rand bleiben 269 mm nutzbare Höhe bei 180 mm Breite.
+     Die Höhe eines Blatts hängt an der Systemschrift (kinder.css): Eine breitere Schrift bricht Zeilen um. Das
+     Beobachtungsblatt ist 247 mm hoch (Chromium, Druckmedium), die Reserve von 22 mm reicht auch für DejaVu Sans
+     (README, Abschnitt „Drucken“). Sie entsteht aus der Zeilenhöhe 1,3 statt 1,5 der Bildschirmseite, einem Kasten
+     zum Malen von höchstens 45 mm und der Mondgestalt-Reihe, die nicht in eine zweite Zeile umbricht. Bei jeder
+     Änderung an Schriftgrößen, Rändern, Bildern oder dem Kasten neu messen; test/regeln.test.mjs hält diese Größen fest. */
+  .k-karte.hg-blatt {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    line-height: 1.3;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .k-karte.hg-blatt + .k-karte.hg-blatt {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .hg-bild svg { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .hg-kopf { font-size: 10pt; color: #000; margin: 0 0 2pt; }
+  .hg-blatttitel {
+    font-size: 24pt;
+    color: #000;
+    margin: 0 0 4pt;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #000;
+  }
+  .hg-anleitung { font-size: 13pt; margin: 0 0 3pt; }
+  .hg-mondzeilen { gap: 7mm; margin: 6mm 0 5mm; }
+  .hg-mondzeile { gap: 22mm; }
+  .hg-bild--blatt { width: 48mm; }
+  .hg-bild--wahl { width: 30mm; }
+  .hg-wort { font-size: 15pt; }
+  .hg-feld { margin: 0 0 4.5mm; break-inside: avoid; }
+  .hg-feldtitel { font-size: 14pt; margin: 0 0 1pt; }
+  .hg-feld .hg-aufgabe { font-size: 12pt; margin: 0 0 2mm; }
+  .hg-wahlreihe { gap: 8mm; }
+  /* Die Mondgestalten und „Kein Mond zu sehen“ stehen immer in einer Reihe: gleich breite Spalten, ein langes Wort
+     bricht innerhalb seiner Spalte um. Sonst rutscht bei breiter Schrift die letzte Wahl in eine zweite Zeile (16 mm mehr Höhe). */
+  .hg-wahlreihe--bilder { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4mm; align-items: end; }
+  .hg-wahlreihe--bilder .hg-wort { text-wrap: balance; }
+  .hg-kreuz { max-width: 95mm; gap: 1.5mm; }
+  .hg-kreuz .hg-wort { padding: 1mm 0; }
+  .hg-mitte { font-size: 10pt; color: #000; }
+  .hg-rahmen { border: 1.5pt solid #000; border-radius: 3mm; min-height: 42mm; }
+  .hg-hinweis, .hg-quelle { font-size: 10pt; color: #000; margin: 3mm 0 0; }
+}

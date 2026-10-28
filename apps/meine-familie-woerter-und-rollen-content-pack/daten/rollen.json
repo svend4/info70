@@ -1,0 +1,80 @@
+{
+  "modul": "rollen",
+  "titel": "Rollen",
+  "schluss": {
+    "ideen": [
+      "Spielt mit Kuscheltieren eine Familie nach und gebt jedem Tier ein Familienwort.",
+      "Malt zusammen Menschen, die für euch zur Familie gehören.",
+      "Sucht in einem Bilderbuch eine Familie und sagt die Wörter, die ihr schon kennt."
+    ],
+    "vermerk": "(Eigenentwurf)"
+  },
+  "karten": [
+    {
+      "id": "rolle-sohn",
+      "titel": "Sohn",
+      "modul": "rollen",
+      "erklaerung": "Ein Junge ist für seine Mama oder seinen Papa der Sohn.",
+      "frage": "Was ist ein Junge für seine Mama oder seinen Papa?",
+      "gespraech": "Auch große Männer sind noch Söhne. Fällt dir ein Sohn ein?",
+      "quelle": { "seite": "S. 117", "begriff": "сын, дочь, внук" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "rolle-tochter",
+      "titel": "Tochter",
+      "modul": "rollen",
+      "erklaerung": "Ein Mädchen ist für ihre Mama oder ihren Papa die Tochter.",
+      "frage": "Was ist ein Mädchen für ihre Mama oder ihren Papa?",
+      "gespraech": "Auch große Frauen sind noch Töchter. Fällt dir eine Tochter ein?",
+      "quelle": { "seite": "S. 117", "begriff": "сын, дочь, внук" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "rolle-enkel",
+      "titel": "Enkel",
+      "modul": "rollen",
+      "erklaerung": "Ein Kind ist für seine Oma oder seinen Opa, die Eltern von Mama oder Papa, der Enkel oder die Enkelin.",
+      "frage": "Oma oder Opa sind die Eltern von Mama oder Papa. Was ist ein Kind für seine Oma oder seinen Opa?",
+      "gespraech": "Manche Kinder sagen Oma und Opa, andere nehmen ein anderes Wort, vielleicht aus einer anderen Sprache. Magst du erzählen, welches Wort du kennst?",
+      "quelle": { "seite": "S. 117", "begriff": "сын, дочь, внук" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "rolle-schwester",
+      "titel": "Schwester",
+      "modul": "rollen",
+      "erklaerung": "Ein Mädchen ist die Schwester eines anderen Kindes, wenn beide dieselbe Mama oder denselben Papa haben.",
+      "frage": "Zwei Kinder haben dieselbe Mama oder denselben Papa. Was ist das Mädchen für das andere Kind?",
+      "gespraech": "Manche Kinder haben eine Schwester, manche nicht. Kennst du ein Mädchen, das eine Schwester hat?",
+      "quelle": { "seite": "S. 117", "begriff": "сестра, брат, племянник" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "rolle-bruder",
+      "titel": "Bruder",
+      "modul": "rollen",
+      "erklaerung": "Ein Junge ist der Bruder eines anderen Kindes, wenn beide dieselbe Mama oder denselben Papa haben.",
+      "frage": "Zwei Kinder haben dieselbe Mama oder denselben Papa. Was ist der Junge für das andere Kind?",
+      "gespraech": "Manche Kinder haben einen Bruder, manche nicht. Kennst du einen Jungen, der einen Bruder hat?",
+      "quelle": { "seite": "S. 117", "begriff": "сестра, брат, племянник" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "rolle-neffe",
+      "titel": "Neffe",
+      "modul": "rollen",
+      "erklaerung": "Ein Kind ist für seine Tante oder seinen Onkel, die Geschwister von Mama oder Papa, der Neffe oder die Nichte.",
+      "frage": "Tante oder Onkel sind die Geschwister von Mama oder Papa. Was ist ein Junge für seine Tante oder seinen Onkel?",
+      "gespraech": "Manche Kinder haben eine Tante oder einen Onkel, manche nicht. Magst du von jemandem erzählen, der so heißt?",
+      "quelle": { "seite": "S. 117", "begriff": "сестра, брат, племянник" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    }
+  ]
+}

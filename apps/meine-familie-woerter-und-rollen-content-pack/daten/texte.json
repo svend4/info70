@@ -1,0 +1,29 @@
+{
+  "titel": "Meine Familie: Wörter und Rollen",
+  "untertitel": "Für ein Kind von 3 bis 5 Jahren und eine erwachsene Person, gemeinsam.",
+  "start": {
+    "intro": "Ihr schaut zusammen Karten an. Die erwachsene Person liest vor, das Kind schaut, hört und redet mit.",
+    "wahl": "Wählt ein Thema.",
+    "fragen": "Fragen zu den Rollen",
+    "grenze": "Höchstens sechs Karten oder Fragen am Stück, danach eine Pause ohne Bildschirm."
+  },
+  "pause": {
+    "ueberschrift": "Bildschirm aus",
+    "satz": "Jetzt macht ihr zusammen weiter, ohne Bildschirm. Hier sind Ideen:"
+  },
+  "rueckmeldung": {
+    "passt": "Ja, das passt.",
+    "hier": "Schau mal: Hier passt das Wort"
+  },
+  "seitenmarke": "Seitenangaben nicht von einem Menschen geprüft.",
+  "sprachen": "Die Fassung ist deutsch. uk und ru: nicht vorhanden, offen.",
+  "hinweise": [
+    "Diese Seite ist für ein Kind von 3 bis 5 Jahren und eine erwachsene Person gemeinsam. Die erwachsene Person liest vor und redet mit.",
+    "Höchstens sechs Karten oder Fragen am Stück. Danach kommt eine Pause ohne Bildschirm (Eigenentwurf). Die Fragen zu den Rollen beginnen auf dem Startbildschirm, nicht mitten in einer Kartenreihe. Eine Kartenreihe und eine Runde Fragen sollten nicht ohne Pause aufeinander folgen.",
+    "Familien sind verschieden. In den Karten steht „Mama oder Papa“. Wenn bei euch andere Erwachsene für das Kind da sind, nehmt einfach deren Wörter (Eigenentwurf).",
+    "Hier wird nichts bewertet und nichts gespeichert. Es gibt keine Eingabefelder und keine Verbindung nach draußen.",
+    "Drucken: Karten wählen und drucken. Jede gewählte Karte kommt auf ein Blatt A4 hoch, ohne Namenszeile und ohne Seitenangabe. Im Druckdialog Kopf- und Fußzeilen ausschalten.",
+    "Quelle: Die Themen stammen aus der Praleska, S. 117, Abschnitt „Ребенок как член семьи“; die Karte „Blumen gießen“ stützt sich auf S. 103. Seitenangaben nicht von einem Menschen geprüft. Alle Texte der Karten sind Eigenentwurf.",
+    "Die Fassung ist deutsch. uk und ru: nicht vorhanden, offen."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "CON-6",
+  "slug": "himmelsgucker-sonne-mond-und-sterne",
+  "titel": "Himmelsgucker: Sonne, Mond und Sterne",
+  "status_neu": "gebaut",
+  "app": "himmelsgucker-sonne-mond-und-sterne",
+  "tests_app": 73,
+  "hub_zeile": "<a class=\"k-knopf\" style=\"text-decoration:none;text-align:center\" href=\"apps/himmelsgucker-sonne-mond-und-sterne/\">🌙 Himmelsgucker – Sonne, Mond und Sterne anschauen, Mondbilder zuordnen, Blätter für den Abendhimmel (5–7, gemeinsam)</a>",
+  "readme_zeile": "| CON-6 | Himmelsgucker: Sonne, Mond und Sterne | gebaut | `apps/himmelsgucker-sonne-mond-und-sterne/` |",
+  "docs10_notiz": "Himmelsgucker (CON-6) gebaut: eigene Karten-App für Kinder von 5 bis 7 Jahren mit einer erwachsenen Person (nicht quiz-kern): drei Karten (Sonne, Mond, Sterne), eine Mondbild-Runde mit drei Wörtern, zwei Zwei-Antworten-Fragen (Tag und Nacht), zwei Druckblätter (Mondblatt zum Verbinden und Ausmalen, nummerierte Beobachtungsblätter) ohne Seitenzahl, Vorlesen, 73 Tests. Beobachtungsblatt 247 mm von 269 mm nutzbarer Höhe (Reserve 22 mm), ein Blatt je Seite auch mit DejaVu Sans (Chromium, von Hand gemessen; die Seitenzahl im PDF misst kein Werkzeug der Wurzel). Quelle S. 138 und S. 114; Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft. Offen: Altersangabe (die Quelle stellt den Abschnitt in die Gruppe ПОЧЕМУЧКИ, S. 103), Raumfahrt, fachliche Durchsicht der Texte, Test mit Kindern.",
+  "katalog_korrektur": "Himmelsgucker: gebaut nach Bauauftrag CON-6 als eigene Karten-App, nicht als Pack für quiz-kern. Gebaut: drei Karten mit Vorlesen, Mondbild-Runde mit drei Optionen (Voller Mond, Halber Mond, Mondsichel), Zwei-Antworten-Fragen zu Sonne und Sternen, zwei Blätter: Mondblatt zum Verbinden und Ausmalen statt „zum Ankreuzen“ und nummeriertes Beobachtungsblatt für den Abendhimmel statt Beobachtungstagebuch mit Tagesfeldern; keine Seitenzahl auf dem Blatt. „halb“ heißt „Halber Mond“; die Quelle nennt die mittlere Gestalt nur „неполная“. Raumfahrt (ESA statt Kosmonauten) nicht aufgenommen. Offen: Engine-Entscheidung (quiz-kern oder eigene Karten-App), Altersangabe (S. 103: viertes und fünftes Lebensjahr der Gruppe ПОЧЕМУЧКИ gegen 5 bis 7 im Katalog), fachliche Durchsicht der Texte und des Sicherheitssatzes zur Sonne, Test mit Kindern, Eintrag der App unter den bewussten Auslassungen von hilfe-insel-abdeckung.test.mjs."
+}

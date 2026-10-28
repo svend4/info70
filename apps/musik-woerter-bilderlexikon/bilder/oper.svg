@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine Person singt auf einer Bühne mit rotem Vorhang">
+<title>Eine Person singt auf einer Bühne mit rotem Vorhang</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 168 H184 L194 190 H6Z" fill="#b45309"/>
+<path d="M60 20 H140 L176 168 H24Z" fill="#fef9c3" stroke="none"/>
+<path d="M12 12 H188 V30 H12Z" fill="#fbbf24"/>
+<path d="M16 30 H78 C70 60 66 110 72 170 H16Z" fill="#b91c1c"/>
+<path d="M184 30 H122 C130 60 134 110 128 170 H184Z" fill="#b91c1c"/>
+<path d="M34 34 C34 80 36 120 34 168 M50 34 C48 80 52 120 52 168 M166 34 C166 80 164 120 166 168 M150 34 C152 80 148 120 148 168" stroke="#7f1d1d" stroke-width="2.4"/>
+<path d="M92 112 H108 L122 168 H78Z" fill="#1d4ed8"/>
+<path d="M94 120 L74 112 L66 96" stroke="#1f2937" stroke-width="12"/><path d="M94 120 L74 112 L66 96" stroke="#f2c9a0" stroke-width="6"/><path d="M106 120 L126 112 L134 96" stroke="#1f2937" stroke-width="12"/><path d="M106 120 L126 112 L134 96" stroke="#f2c9a0" stroke-width="6"/>
+<circle cx="100" cy="92" r="14" fill="#f2c9a0"/>
+<path d="M86 91 C86 71.7 114 71.7 114 91 C107.7 83.6 92.3 83.6 86 91Z" fill="#7c2d12" stroke-width="3"/>
+<path d="M95 88 Q97 86 99 88 M101 88 Q103 86 105 88" stroke-width="2.4"/>
+<ellipse cx="100" cy="99" rx="4.2" ry="5" fill="#7f1d1d" stroke-width="2.2"/>
+<g transform="translate(142 60) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#b91c1c" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(52 70) scale(0.6)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#1d4ed8" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>

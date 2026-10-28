@@ -27,6 +27,10 @@ const STATUS_AB_WELLE_92 = {
   'PRI-7': 'teilweise', // Fühl- und Sortier-Werkstatt (Welle 93)
   'PRI-8': 'gebaut', // Kleine Forscher ohne Bildschirm (Etappe 3, docs/registrierung/PRI-8.json)
   'GEM-17': 'gebaut', // Tischdienst-Trainer (docs/registrierung/GEM-17.json)
+  'CON-3': 'gebaut', // Meine Familie: Wörter und Rollen (Stufe 1, Lauf E, docs/registrierung/CON-3.json)
+  'CON-6': 'gebaut', // Himmelsgucker (Stufe 1, Lauf E)
+  'CON-9': 'gebaut', // Farbwörter-Schatz (Stufe 1, Lauf E)
+  'CON-10': 'gebaut', // Musik-Wörter-Bilderlexikon (Stufe 1, Lauf E)
 };
 
 // Blockaden. A7 (Rekord und Rang im Motor quiz-kern) war bis zum 27.10.2026 die einzige Blockade für dreizehn Einheiten.
@@ -43,6 +47,10 @@ const APP_AB_WELLE_92 = {
   'CON-18': 'theater-zuhause-heft',
   'PRI-7': 'fuehl-sortier-werkstatt',
   'PRI-8': 'kleine-forscher-ohne-bildschirm',
+  'CON-3': 'meine-familie-woerter-und-rollen-content-pack',
+  'CON-6': 'himmelsgucker-sonne-mond-und-sterne',
+  'CON-9': 'farbwoerter-schatz',
+  'CON-10': 'musik-woerter-bilderlexikon',
 };
 
 const zeilen = PLAN.split('\n').filter((l) => /^\| \d+ \| /.test(l));

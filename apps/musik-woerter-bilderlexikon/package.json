@@ -1,0 +1,11 @@
+{
+  "name": "@info70/musik-woerter-bilderlexikon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Musik-Wörter-Bilderlexikon: 16 Fachwörter der Musik und 7 Instrumente aus der Praleska, S. 260, mit Bild, Erklärung in einfacher Sprache, Vorlesen und Druck je Wort ein Blatt A4 hoch. Zielgruppe: Kinder, allein oder mit einer erwachsenen Person (Altersspanne offen). Offline, ohne Speicherung.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

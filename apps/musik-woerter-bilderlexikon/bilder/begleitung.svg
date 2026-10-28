@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine Person singt, daneben spielt ein Klavier leise dazu">
+<title>Eine Person singt, daneben spielt ein Klavier leise dazu</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(140 118) scale(0.5)">
+<rect x="-78" y="-70" width="156" height="94" rx="8" fill="#374151"/>
+<rect x="-84" y="-76" width="168" height="14" rx="6" fill="#4b5563"/>
+<rect x="-40" y="-54" width="80" height="40" rx="3" fill="#fef3c7" stroke-width="3"/>
+<path d="M-32 -44 H32 M-32 -36 H32 M-32 -28 H32 M-32 -20 H32" stroke-width="1.6"/>
+<rect x="-78" y="-2" width="156" height="26" rx="3" fill="#ffffff"/>
+<path d="M-66 -1 V23" stroke-width="2"/><path d="M-54 -1 V23" stroke-width="2"/><path d="M-42 -1 V23" stroke-width="2"/><path d="M-30 -1 V23" stroke-width="2"/><path d="M-18 -1 V23" stroke-width="2"/><path d="M-6 -1 V23" stroke-width="2"/><path d="M6 -1 V23" stroke-width="2"/><path d="M18 -1 V23" stroke-width="2"/><path d="M30 -1 V23" stroke-width="2"/><path d="M42 -1 V23" stroke-width="2"/><path d="M54 -1 V23" stroke-width="2"/><path d="M66 -1 V23" stroke-width="2"/><path d="M78 -1 V23" stroke-width="2"/>
+<rect x="-70" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="-58" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="-34" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="-22" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="-10" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="14" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="26" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="50" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/><rect x="62" y="-1" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="-70" y="24" width="14" height="40" rx="3" fill="#111827"/><rect x="56" y="24" width="14" height="40" rx="3" fill="#111827"/>
+</g>
+<circle cx="44" cy="98" r="22" fill="#d9a066"/>
+<path d="M22 97 C22 66.1 66 66.1 66 97 C56.1 84.8 31.9 84.8 22 97Z" fill="#111827" stroke-width="3"/>
+<circle cx="23" cy="102" r="5" fill="#d9a066"/><circle cx="65" cy="102" r="5" fill="#d9a066"/>
+<path d="M32 92 Q37 87 42 92 M46 92 Q51 87 56 92" stroke-width="2.8"/>
+<ellipse cx="44" cy="109" rx="6.5" ry="8" fill="#7f1d1d" stroke-width="2.8"/>
+<path d="M22 132 Q44 124 66 132 L72 188 H16Z" fill="#b91c1c"/>
+<path d="M69.6 100.4 A8 8 0 0 1 69.6 111.6" stroke="#1f2937" stroke-width="2.8"/><path d="M76.6 93.4 A18 18 0 0 1 76.6 118.6" stroke="#1f2937" stroke-width="2.8"/>
+<g transform="translate(86 44) scale(0.8)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#1d4ed8" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+<g transform="translate(122 56) scale(0.5)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#6b7280" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(150 46) scale(0.5)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#6b7280" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(178 58) scale(0.5)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#6b7280" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>

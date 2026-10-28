@@ -1,0 +1,114 @@
+/* Musik-Wörter-Bilderlexikon: Bildschirm und Druck.
+   Auf dem Bildschirm stehen Themen, Listen, Karten und die Auswahl für den Druck. Beim Drucken verschwindet
+   alles, was die Klasse lk-nur-bildschirm trägt (der ganze Hauptbereich). Übrig bleiben nur die gewählten
+   Blätter im Druckbereich, je Wort ein Blatt A4 hoch, ohne Zeichen, Kästchen, Namenszeile, Datum oder Seitenzahl. */
+
+.lk-text { overflow-wrap: anywhere; }
+.lk-nur-druck { display: none; }
+
+/* Bei 360 px Breite bricht die Überschrift auch innerhalb eines Wortes um,
+   sonst läuft ein langes Wort wie „Instrumentalmusik“ über den Rand. */
+h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
+.lk-titel:focus { outline: none; }
+.lk-titel:focus-visible { outline: 4px solid var(--k-gelb); outline-offset: 4px; border-radius: 0.4rem; }
+
+.lk-aufforderung { font-size: 1.2rem; font-weight: 700; text-align: center; margin: 0 0 0.75rem; }
+.lk-thema { margin: 0; text-align: center; font-size: 0.95rem; color: #4b5563; }
+.lk-erwachsene { margin: 0 0 0.6rem; font-size: 0.95rem; }
+.lk-hinweis { margin: 0.6rem 0; }
+.lk-marke { margin: 0.4rem 0 0; font-size: 0.85rem; color: #4b5563; }
+.lk-gruppe { font-size: 1.1rem; margin: 0 0 0.6rem; }
+.lk-zaehler { margin: 0; font-weight: 600; }
+
+/* Listen: Themen und Wörter als Knöpfe mit einem kleinen Bild. Jeder Knopf ist mindestens 3rem hoch. */
+.lk-liste { display: flex; flex-direction: column; gap: 0.75rem; margin: 0.75rem 0; }
+.k-knopf.lk-bildknopf {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 4rem;
+  padding: 0.4rem 0.55rem;
+  text-align: start;
+}
+.lk-knopftext { display: flex; flex-direction: column; min-width: 0; overflow-wrap: anywhere; }
+.lk-knopftitel { font-size: 1.1rem; font-weight: 700; }
+.lk-unterzeile { font-size: 0.9rem; font-weight: 400; }
+.lk-bild-klein { flex: 0 0 auto; width: 2.8rem; height: 2.8rem; }
+/* Karten mit Listen: weniger Innenabstand, damit auch „Instrumentalmusik“ bei 360 px in einer Zeile steht. */
+.k-karte.lk-kompakt { padding: 1rem; }
+
+/* Karte: ein großes Bild, die Erklärung in größerer Schrift. */
+.lk-bild-gross { display: block; width: min(100%, 17rem); height: auto; aspect-ratio: 1; margin: 0 auto 0.5rem; }
+.lk-bild-mittel { display: block; width: min(100%, 11rem); height: auto; aspect-ratio: 1; margin: 0 auto 0.4rem; }
+.lk-erklaerung { font-size: 1.2rem; line-height: 1.5; margin: 0.5rem 0 1rem; }
+.lk-wort { font-size: 1.35rem; margin: 0 0 0.2rem; color: var(--k-blau-dunkel); text-align: center; }
+
+/* Auswahl für den Druck: Wörter als Knöpfe, die umbrechen. */
+.lk-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0 0; }
+.lk-chips .k-knopf { max-width: 100%; overflow-wrap: anywhere; }
+.k-knopf[aria-pressed="true"] { box-shadow: inset 0 0 0 3px var(--k-gelb); }
+.k-knopf[aria-disabled="true"] { opacity: 0.6; cursor: default; }
+
+/* Vorschau auf dem Bildschirm: das Blatt, so wie es gedruckt wird. */
+.lk-vorschau { display: flex; flex-direction: column; gap: 1rem; }
+.lk-vorschau .lk-gruppe { margin: 0; }
+.lk-blatt {
+  background: #fff;
+  border: 2px solid var(--k-rand);
+  border-radius: var(--k-radius);
+  padding: 1rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.lk-blatt-kopf { margin: 0; font-size: 0.8rem; color: #4b5563; }
+.lk-blatt-thema { margin: 0 0 0.3rem; font-size: 0.85rem; color: #4b5563; }
+.lk-blatt-wort { margin: 0 0 0.4rem; font-size: 1.5rem; color: var(--k-blau-dunkel); }
+.lk-blatt-bild { display: block; width: min(100%, 14rem); height: auto; aspect-ratio: 1; margin: 0 auto 0.5rem; }
+.lk-blatt-text { margin: 0 0 0.6rem; font-size: 1.05rem; }
+.lk-blatt-vermerk { margin: 0; font-size: 0.8rem; color: #4b5563; }
+
+/* Link im Fuß: mindestens 48 px hoch (Touch-Ziel), 8 px seitlich Abstand. */
+.k-fuss a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; }
+
+@media print {
+  @page { size: A4 portrait; margin: 14mm 15mm; }
+  .lk-nur-bildschirm { display: none !important; }
+  .lk-nur-druck { display: block; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  /* Jedes Blatt ist eine Seite und wird nie über einen Umbruch zerrissen. */
+  .lk-blatt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .lk-blatt:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .lk-blatt-kopf { font-size: 11pt; color: #000; }
+  .lk-blatt-thema { font-size: 12pt; color: #000; margin: 0 0 8pt; }
+  .lk-blatt-wort {
+    font-size: 44pt;
+    line-height: 1.1;
+    color: #000;
+    margin: 0 0 14pt;
+  }
+  .lk-blatt-bild { width: 130mm; height: 130mm; max-width: 100%; margin: 0 auto 16pt; }
+  .lk-blatt-text { font-size: 22pt; line-height: 1.4; max-width: 160mm; margin: 0 0 26pt; color: #000; }
+  .lk-blatt-vermerk { font-size: 10pt; color: #000; margin: 0; }
+}

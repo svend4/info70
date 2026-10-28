@@ -3,12 +3,12 @@
   "stand": "Plan Welle 91 plus Welle 92 und 93 (siehe STATUS_AB_WELLE_92)",
   "bilanz": {
     "gesamt": 131,
-    "gebaut": 59,
+    "gebaut": 63,
     "teilweise": 62,
-    "offen": 4,
+    "offen": 0,
     "unklar": 3,
     "nicht_bauen": 3,
-    "bauauftraege_noetig": 66,
+    "bauauftraege_noetig": 62,
     "davon_blockiert": []
   },
   "pro_abschnitt": {
@@ -453,18 +453,6 @@
       "blockiert": []
     },
     {
-      "id": "CON-3",
-      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
-      "nr": 3,
-      "einheit": "Meine Familie - Woerter und Rollen (Content-Pack)",
-      "status_plan_w91": "offen",
-      "status": "offen",
-      "app": null,
-      "faktenstand": "nur Katalogtext",
-      "naechster_schritt": "neu bauen (Welle)",
-      "blockiert": []
-    },
-    {
       "id": "CON-4",
       "abschnitt": "Content-Pakete, Funktionen, Dokumente",
       "nr": 4,
@@ -484,18 +472,6 @@
       "status_plan_w91": "offen",
       "status": "teilweise",
       "app": "tierkinder-vorlesen",
-      "faktenstand": "nur Katalogtext",
-      "naechster_schritt": "neu bauen (Welle)",
-      "blockiert": []
-    },
-    {
-      "id": "CON-6",
-      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
-      "nr": 6,
-      "einheit": "Himmelsgucker: Sonne, Mond und Sterne",
-      "status_plan_w91": "offen",
-      "status": "offen",
-      "app": null,
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
@@ -522,30 +498,6 @@
       "app": "bewegungs-schatzkiste",
       "faktenstand": "nur Katalogtext",
       "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
-      "blockiert": []
-    },
-    {
-      "id": "CON-9",
-      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
-      "nr": 9,
-      "einheit": "Farbwörter-Schatz",
-      "status_plan_w91": "offen",
-      "status": "offen",
-      "app": null,
-      "faktenstand": "nur Katalogtext",
-      "naechster_schritt": "neu bauen – ohne quiz-kern (Regelkonflikt)",
-      "blockiert": []
-    },
-    {
-      "id": "CON-10",
-      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
-      "nr": 10,
-      "einheit": "Musik-Woerter-Bilderlexikon",
-      "status_plan_w91": "offen",
-      "status": "offen",
-      "app": null,
-      "faktenstand": "nur Katalogtext",
-      "naechster_schritt": "neu bauen (Welle)",
       "blockiert": []
     },
     {
@@ -819,6 +771,30 @@
       "einheit": "Tischdienst-Trainer",
       "status": "gebaut",
       "app": "tischdienst-trainer"
+    },
+    {
+      "id": "CON-3",
+      "einheit": "Meine Familie - Woerter und Rollen (Content-Pack)",
+      "status": "gebaut",
+      "app": "meine-familie-woerter-und-rollen-content-pack"
+    },
+    {
+      "id": "CON-6",
+      "einheit": "Himmelsgucker: Sonne, Mond und Sterne",
+      "status": "gebaut",
+      "app": "himmelsgucker-sonne-mond-und-sterne"
+    },
+    {
+      "id": "CON-9",
+      "einheit": "Farbwörter-Schatz",
+      "status": "gebaut",
+      "app": "farbwoerter-schatz"
+    },
+    {
+      "id": "CON-10",
+      "einheit": "Musik-Woerter-Bilderlexikon",
+      "status": "gebaut",
+      "app": "musik-woerter-bilderlexikon"
     },
     {
       "id": "PRI-8",

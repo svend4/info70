@@ -799,7 +799,8 @@
       "adaptionDE": "Herkunftssprachen-Staerke: Verwandtschaftswoerter parallel de/uk/ru (Oma/babussja/babuschka); Haushalts-Aufgabenteilung bewusst geschlechtsneutral modernisiert (Abweichung von 2007er Rollenbildern, konform Bildungsplaene Gender-Sensibilitaet); Budget-Modul anschlussfaehig an fruehe Verbraucherbildung.",
       "quelleImBuch": "S. 117, 'Rebenok kak tschlen semji' (9 Lernziele, 6 Rollen, Familienbudget)",
       "engine": "quiz-kern (Content-Pack)",
-      "aufwand": "S"
+      "aufwand": "S",
+      "korrektur": "Meine Familie - Woerter und Rollen: gebaut nach Bauauftrag CON-3 als eigene Karten-App (nicht quiz-kern); der Quiz gilt nur den sechs Rollen (eigene Runde von sechs Fragen, vom Startbildschirm aus, nicht von den Karten; zwei Antworten, Erklärung danach), Haushalt, Höflichkeit und Familienbudget sind Karten zum Vorlesen mit Gesprächsimpuls. Abweichungen vom Katalogtext: statt „Neffe/Nichte“ steht die Karte „Neffe“, die Nichte steht im Satz (die Quelle nennt auf S. 117 nur den Neffen); keine Verwandtschaftswörter in uk und ru; keine Verbindung zu Bildungsplänen und früher Verbraucherbildung (nicht belegt); Familienbudget nur mit Wörtern, ohne Beträge. Offen: Alter (derselbe Abschnittstitel steht auf S. 214 in der Gruppe ФАНТАЗЕРЫ), Fachprüfung der Texte, weitere Familienwörter (Oma, Opa, Tante, Onkel), Hilfe-Insel. Vorlesen (F2) und Favicon (A3) sind umgesetzt."
     },
     {
       "titel": "Mein Ort, mein Land, unsere Erde (Content-Pack)",
@@ -933,7 +934,8 @@
       "adaptionDE": "Raumfahrt-Bezug europaeisch: ESA-Astronautinnen und -Astronauten statt Kosmonauten-Erzaehlung; Mondphasen-Blatt zum Ankreuzen als Offline-Material; Bezug: naturwissenschaftliche Grundbildung.",
       "aufwand": "S",
       "engine": "quiz-kern + Druckmaterial",
-      "quelleImBuch": "Astronomija (wwedenie), S. 138"
+      "quelleImBuch": "Astronomija (wwedenie), S. 138",
+      "korrektur": "Himmelsgucker: gebaut nach Bauauftrag CON-6 als eigene Karten-App, nicht als Pack für quiz-kern. Gebaut: drei Karten mit Vorlesen, Mondbild-Runde mit drei Optionen (Voller Mond, Halber Mond, Mondsichel), Zwei-Antworten-Fragen zu Sonne und Sternen, zwei Blätter: Mondblatt zum Verbinden und Ausmalen statt „zum Ankreuzen“ und nummeriertes Beobachtungsblatt für den Abendhimmel statt Beobachtungstagebuch mit Tagesfeldern; keine Seitenzahl auf dem Blatt. „halb“ heißt „Halber Mond“; die Quelle nennt die mittlere Gestalt nur „неполная“. Raumfahrt (ESA statt Kosmonauten) nicht aufgenommen. Offen: Engine-Entscheidung (quiz-kern oder eigene Karten-App), Altersangabe (S. 103: viertes und fünftes Lebensjahr der Gruppe ПОЧЕМУЧКИ gegen 5 bis 7 im Katalog), fachliche Durchsicht der Texte und des Sicherheitssatzes zur Sonne, Test mit Kindern, Eintrag der App unter den bewussten Auslassungen von hilfe-insel-abdeckung.test.mjs."
     },
     {
       "titel": "Bewegungs-Meilensteine: Beobachtungsbogen 3-5",
@@ -1118,7 +1120,8 @@
       "quelleImBuch": "S. 178 (bildhafte Farbnamen: wischnjowy, limonny, abrikossowy, morskaja wolna; warme/kalte, kontrastierende Farben)",
       "adaptionDE": "Farbnamen an deutsche Alltagsreferenzen angepasst (himbeerrot, tannengrün); explizite Herkunftssprachen-Chance: dieselbe Farbe in drei Sprachen hören. Bezug: sprachliche Bildung/Alltagsintegrierte Sprachförderung.",
       "engine": "quiz-kern + mini-i18n",
-      "aufwand": "S"
+      "aufwand": "S",
+      "korrektur": "Farbwörter-Schatz: gebaut nach Bauauftrag CON-9 als eigene Karten-App, nicht als Pack für quiz-kern und ohne mini-i18n. Gebaut: vier Gruppen (warm, kalt, Kontrast, neutral), Farbkarte mit Farbfläche, Name und Hinweis, Vorlesen mit der Stimme im Gerät, eine Runde mit höchstens sechs Farbwörtern, Druck je Karte ein Blatt A4 hoch. Abweichungen vom Katalogtext: nur Deutsch; „dreisprachig de/uk/ru“ und „dieselbe Farbe in drei Sprachen hören“ sind nicht eingelöst (uk und ru nicht vorhanden, offen; das Feld ru enthält nur den Begriff der Quelle); die Namen kirschrot, zitronengelb, aprikosenfarben, meergrün, himbeerrot und tannengrün sind Eigenentwurf nach dem Katalog, dazu eisblau, nachtblau, schneeweiß, aschgrau und rabenschwarz (Eigenentwurf, ohne Quelle); für Kontrast und neutral nennt der Bauauftrag keine Wörter, die Einträge der Gruppe Kontrast sind Paare; der Bezug zur sprachlichen Bildung ist im Bauauftrag nicht belegt und nicht übernommen; „салатовый“ (S. 178) hat keinen Eintrag. Keine Seitenzahl auf dem Blatt. Offen: Engine-Entscheidung (Frage 1 in docs/plan-neue-welle.md), Fachprüfung der Wörter, Gruppen und Farbwerte, Zahl der Farbwörter je Runde, Übersetzung uk und ru, Test mit Kindern, Eintrag der App unter den bewussten Auslassungen von hilfe-insel-abdeckung.test.mjs."
     },
     {
       "titel": "Werkstatt-Karten: Schneiden, Reissen, Kleben",
@@ -1341,7 +1344,8 @@
       "adaptionDE": "Deutsche Fachbegriffe in einfacher Sprache (BFSG/Leichte-Sprache-Naehe), Begriffspaare de/uk/ru; europaeische Orchestertradition, eigene Illustrationen, keine externen Medien.",
       "aufwand": "S",
       "engine": "quiz-kern (Content-Pack)",
-      "quelleImBuch": "Sluschanie musyki, S. 260"
+      "quelleImBuch": "Sluschanie musyki, S. 260",
+      "korrektur": "Musik-Woerter-Bilderlexikon: gebaut nach Bauauftrag CON-10 als eigene Karten-App für Kinder, nicht als Content-Pack für quiz-kern (der Motor zeigt keine Bilder und hat weder Wortliste mit Karte noch Instrumentenansicht noch Druck). Gebaut: 23 Wörter von S. 260 (16 Fachwörter, sieben Instrumente; Zählung: Eigenentwurf) in drei Themen (Musik 11, Orchester 5, Instrumente 7), je Wort ein eigenes Bild, eine Erklärung in höchstens zwei Sätzen und Vorlesen; Instrumentenansicht; Druck je gewähltem Wort ein Blatt A4 hoch ohne Seitenzahl. Abweichungen vom Katalogtext: Der Katalog nennt „Orchesterinstrumente“; die Quelle nennt sieben Instrumente zusammen mit „и других инструментах“ (S. 260), ob Cembalo, Orgel und Klavier als Orchesterinstrumente gelten, entscheidet eine Fachperson; die App führt alle sieben als Instrumente. Begriffspaare de/uk/ru: nur Deutsch; das russische Wort der Quelle liegt in den Daten, wird aber nicht gezeigt, uk ist leer. Die Nähe zur Leichten Sprache ist nicht belegt: einfache Sprache ohne Siegel. „Europäische Orchestertradition“ ist nicht aufgenommen: sie steht in der Quelle nicht (grep europ in der Textkopie: 0 Treffer). Weitere Instrumente („7+“) sind nicht aufgenommen: S. 260 nennt weitere Instrumente des Symphonieorchesters und Volksinstrumente nur ohne Namen; S. 161, in der Gruppe davor, nennt Geige, Flöte, Harfe und Trompete mit „и др.“, das gehört nicht zum Bauauftrag. Offen: Altersspanne (Katalog 5 bis 9, Quelle 5 bis 7), Fachprüfung der Erklärungen und Zeichnungen, Stil und Lizenz der Zeichnungen, ru anzeigen, uk, Test mit Kindern, Eintrag unter den bewussten Auslassungen von hilfe-insel-abdeckung.test.mjs. Vorlesen (F2) und Favicon (A3) sind umgesetzt."
     },
     {
       "titel": "Spielend schulreif - Eltern-Navigator",

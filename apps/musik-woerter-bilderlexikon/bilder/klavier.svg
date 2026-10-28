@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ein Klavier mit Tasten, Notenpult und Pedalen">
+<title>Ein Klavier mit Tasten, Notenpult und Pedalen</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="30" y="126" width="14" height="52" rx="3" fill="#111827"/>
+<rect x="156" y="126" width="14" height="52" rx="3" fill="#111827"/>
+<rect x="82" y="150" width="12" height="26" rx="3" fill="#fbbf24" stroke-width="3"/>
+<rect x="106" y="150" width="12" height="26" rx="3" fill="#fbbf24" stroke-width="3"/>
+<rect x="22" y="32" width="156" height="94" rx="8" fill="#374151"/>
+<rect x="16" y="26" width="168" height="14" rx="6" fill="#4b5563"/>
+<rect x="60" y="48" width="80" height="40" rx="3" fill="#fef3c7" stroke-width="3"/>
+<path d="M68 58 H132 M68 66 H132 M68 74 H132 M68 82 H132" stroke-width="1.6"/>
+<ellipse cx="84" cy="70" rx="4.5" ry="3.3" fill="#1f2937" stroke="none"/><ellipse cx="104" cy="62" rx="4.5" ry="3.3" fill="#1f2937" stroke="none"/><ellipse cx="120" cy="74" rx="4.5" ry="3.3" fill="#1f2937" stroke="none"/>
+<rect x="22" y="100" width="156" height="26" rx="3" fill="#ffffff"/>
+<path d="M34 101 V125" stroke-width="2"/>
+<path d="M46 101 V125" stroke-width="2"/>
+<path d="M58 101 V125" stroke-width="2"/>
+<path d="M70 101 V125" stroke-width="2"/>
+<path d="M82 101 V125" stroke-width="2"/>
+<path d="M94 101 V125" stroke-width="2"/>
+<path d="M106 101 V125" stroke-width="2"/>
+<path d="M118 101 V125" stroke-width="2"/>
+<path d="M130 101 V125" stroke-width="2"/>
+<path d="M142 101 V125" stroke-width="2"/>
+<path d="M154 101 V125" stroke-width="2"/>
+<path d="M166 101 V125" stroke-width="2"/>
+<rect x="30" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="42" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="66" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="78" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="90" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="114" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="126" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="150" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+<rect x="162" y="101" width="8" height="15" rx="1.5" fill="#111827" stroke="none"/>
+</g>
+</svg>

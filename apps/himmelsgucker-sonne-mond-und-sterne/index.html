@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <!-- uk und ru: nicht vorhanden, offen. Die Fassung ist deutsch; die Texte sind Eigenentwurf. -->
+  <meta name="description" content="Himmelsgucker für Kinder von 5 bis 7 Jahren zusammen mit einer erwachsenen Person: drei Karten zu Sonne, Mond und Sternenhimmel, eine Frage zu den Mondgestalten und zwei Blätter zum Ausdrucken für den Abendhimmel. Ohne Verbindung nach draußen, ohne Speicherung, ohne Wertung. Neuladen ohne Netz nicht zugesichert (F4)." />
+  <title>Himmelsgucker: Sonne, Mond und Sterne</title>
+  <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" /><link rel="icon" type="image/svg+xml" href="../../packages/kinder-ui/img/favicon.svg" />
+  <link rel="stylesheet" href="druck.css" />
+</head>
+<body>
+  <main class="k-app hg-nur-bildschirm" id="app" aria-live="polite">
+    <noscript>Diese Seite braucht JavaScript. Es werden keine Daten gesammelt und keine Verbindungen nach draußen aufgebaut.</noscript>
+  </main>
+  <div class="hg-nur-druck" id="druckbereich"></div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

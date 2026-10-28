@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine Person steht allein im Scheinwerferlicht und spielt Geige">
+<title>Eine Person steht allein im Scheinwerferlicht und spielt Geige</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M88 4 H112 L182 188 H18Z" fill="#fef9c3" stroke="none"/>
+<ellipse cx="100" cy="186" rx="68" ry="7" fill="#fde68a" stroke="none"/>
+<path d="M86 160 V184 M114 160 V184" stroke="#1f2937" stroke-width="14"/>
+<path d="M86 160 V184 M114 160 V184" stroke="#111827" stroke-width="8"/>
+<path d="M76 90 Q100 80 124 90 L120 162 H80Z" fill="#1d4ed8"/>
+<path d="M92 86 L100 104 L108 86Z" fill="#ffffff" stroke-width="2.6"/>
+<circle cx="100" cy="66" r="15" fill="#f2c9a0"/>
+<path d="M85 65 C85 44.25 115 44.25 115 65 C108.25 57 91.75 57 85 65Z" fill="#4b2e1a" stroke-width="3"/><circle cx="94.3" cy="66.75" r="1.5" fill="#1f2937" stroke="none"/><circle cx="105.7" cy="66.75" r="1.5" fill="#1f2937" stroke="none"/><path d="M95.2 72.75 Q100 78 104.8 72.75" stroke-width="2.6"/>
+<g transform="translate(112 92) rotate(70) scale(0.55)"><rect x="-4.5" y="-80" width="9" height="75.2" rx="3" fill="#111827"/>
+<path d="M0 -36 C15.6 -36 26 -30.96 26 -13.32 C26 -5.76 18 0.12 18 6 C18 11.88 31 17.76 31 27.84 C31 38.76 17.36 48 0 48 C-17.36 48 -31 38.76 -31 27.84 C-31 17.76 -18 11.88 -18 6 C-18 0.12 -26 -5.76 -26 -13.32 C-26 -30.96 -15.6 -36 0 -36Z" fill="#b45309"/>
+<path d="M0 -28.44 C12.79 -28.44 21.32 -24.31 21.32 -9.84 C21.32 -3.64 14.76 1.18 14.76 6 C14.76 10.82 25.42 15.64 25.42 23.91 C25.42 32.86 14.24 40.44 0 40.44 C-14.24 40.44 -25.42 32.86 -25.42 23.91 C-25.42 15.64 -14.76 10.82 -14.76 6 C-14.76 1.18 -21.32 -3.64 -21.32 -9.84 C-21.32 -24.31 -12.79 -28.44 0 -28.44Z" fill="#d97706" stroke="none"/>
+<rect x="-3.5" y="-72" width="7" height="74.64" rx="2" fill="#111827" stroke="none"/>
+<circle cx="0" cy="-82" r="5.58" fill="#b45309"/>
+<path d="M-3 -82 a3 3 0 1 1 3 3" stroke-width="2.5"/>
+<path d="M-11.5 -72 h7 M4.5 -72 h7 M-11.5 -62 h7 M4.5 -62 h7" stroke-width="5"/>
+<path d="M-3.6 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M-1.2 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M1.2 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M3.6 -72 V36.24" stroke="#d1d5db" stroke-width="1.4"/>
+<path d="M-9 28.24 h18 l-4 22 h-10Z" fill="#111827" stroke-width="2.5"/>
+<path d="M-11 19.08 v-5 h22 v5Z" fill="#fef3c7" stroke-width="2.5"/>
+<path d="M-12.4 2.08 q-5 9 0 17 q4 7 0 14 M12.4 2.08 q5 9 0 17 q-4 7 0 14" stroke-width="2.6"/></g>
+<path d="M122 96 L138 90 L146 84" stroke="#1f2937" stroke-width="13"/><path d="M122 96 L138 90 L146 84" stroke="#1d4ed8" stroke-width="7"/>
+<path d="M78 96 L64 118 L80 128" stroke="#1f2937" stroke-width="13"/><path d="M78 96 L64 118 L80 128" stroke="#1d4ed8" stroke-width="7"/>
+<path d="M66 132 L124 82" stroke="#78350f" stroke-width="4"/>
+<path d="M68.61 135.03 L126.61 85.03" stroke="#ffffff" stroke-width="2.4"/>
+<path d="M68.32 130 L74.41 130.03" stroke="#111827" stroke-width="6"/>
+<g transform="translate(40 70) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#b91c1c" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(168 80) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#1d4ed8" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>

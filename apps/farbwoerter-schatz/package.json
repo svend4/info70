@@ -1,0 +1,11 @@
+{
+  "name": "@info70/farbwoerter-schatz",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Farbwörter-Schatz: bildhafte Farbnamen (Praleska, S. 178) in vier Gruppen zum gemeinsamen Anschauen, für Kinder von 3 bis 5 Jahren nur mit einem Erwachsenen und von 5 bis 7 Jahren. Farbkarte mit Vorlesen und Druck je Karte ein Blatt A4 hoch. Ohne Speicherung, ohne Verbindung nach draußen. Neuladen ohne Netz nicht zugesichert (F4).",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

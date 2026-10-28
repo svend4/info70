@@ -1,0 +1,54 @@
+{
+  "modul": "hoeflichkeit",
+  "titel": "Höflichkeit",
+  "schluss": {
+    "ideen": [
+      "Spielt mit zwei Kuscheltieren: Das eine hilft, das andere sagt Danke.",
+      "Überlegt zusammen, wem ihr eine Freude machen könnt.",
+      "Erzählt euch, was ihr aneinander toll findet."
+    ],
+    "vermerk": "(Eigenentwurf)"
+  },
+  "karten": [
+    {
+      "id": "hoeflichkeit-danke",
+      "titel": "Danke sagen",
+      "modul": "hoeflichkeit",
+      "erklaerung": "Wenn jemand dir hilft oder dir etwas gibt, kannst du Danke sagen.",
+      "gespraech": "Wofür möchtest du Danke sagen?",
+      "quelle": { "seite": "S. 117", "begriff": "благодарить" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "hoeflichkeit-entschuldigung",
+      "titel": "Entschuldigung sagen",
+      "modul": "hoeflichkeit",
+      "erklaerung": "Wenn aus Versehen etwas passiert und jemand traurig ist, kannst du Entschuldigung sagen.",
+      "gespraech": "Auch Erwachsene sagen manchmal Entschuldigung. Magst du erzählen, wann das war?",
+      "quelle": { "seite": "S. 117", "begriff": "просить прощения" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "hoeflichkeit-mitfuehlen",
+      "titel": "Mitfühlen und trösten",
+      "modul": "hoeflichkeit",
+      "erklaerung": "Wenn jemand traurig ist, kannst du fragen, was los ist, oder einfach da sein.",
+      "gespraech": "Was hilft dir, wenn du traurig bist?",
+      "quelle": { "seite": "S. 117", "begriff": "высказывать сочувствие" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "hoeflichkeit-toll-finden",
+      "titel": "Etwas toll finden",
+      "modul": "hoeflichkeit",
+      "erklaerung": "Wenn jemand etwas Schönes gemacht hat, kannst du sagen, dass du es toll findest.",
+      "gespraech": "Was findest du an einem Menschen toll, der dir wichtig ist?",
+      "quelle": { "seite": "S. 117", "begriff": "восхищение" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    }
+  ]
+}

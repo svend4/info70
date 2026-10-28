@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine goldene Harfe mit vielen Saiten">
+<title>Eine goldene Harfe mit vielen Saiten</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M92 170 H176 a6 6 0 0 1 6 6 v4 H86 v-4 a6 6 0 0 1 6 -6Z" fill="#d97706"/>
+<path d="M40 62 L58 80 L138 168 L98 174Z" fill="#b45309"/>
+<path d="M66 73.92 V87.82" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M74.5 66.91 V97.19" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M83 61.37 V106.56" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M91.5 57.17 V115.94" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M100 54.21 V125.31" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M108.5 52.39 V134.68" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M117 51.62 V144.05" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M125.5 51.84 V153.42" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M134 52.96 V162.79" stroke="#1f2937" stroke-width="1.8"/>
+<rect x="144" y="30" width="16" height="142" rx="4" fill="#fbbf24"/>
+<path d="M149 40 V160" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+<path d="M160 28 C124 22 76 28 40 62 L58 80 C96 38 118 46 146 54 L146 28Z" fill="#fbbf24"/>
+<circle cx="74" cy="56" r="2.6" fill="#1f2937" stroke="none"/><circle cx="92" cy="45" r="2.6" fill="#1f2937" stroke="none"/><circle cx="112" cy="38" r="2.6" fill="#1f2937" stroke="none"/><circle cx="132" cy="36" r="2.6" fill="#1f2937" stroke="none"/>
+</g>
+</svg>

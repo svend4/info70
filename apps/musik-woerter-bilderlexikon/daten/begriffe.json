@@ -1,0 +1,414 @@
+{
+  "titel": "Musik-Wörter-Bilderlexikon",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "eigenentwurf": "Wort, Erklärung und Bild: Eigenentwurf, fachlich nicht geprüft.",
+  "sprachen": "uk und ru: nicht vorhanden, offen.",
+  "quelle": {
+    "werk": "Praleska, Minsk: НИО, 2007, ISBN 978-985-465-244-3.",
+    "seite": "S. 260",
+    "abschnitt": "„Развиваемся в деятельности“, S. 259",
+    "gruppe": "„ФАНТАЗЕРЫ“, S. 260",
+    "alter": "S. 199 bis 200"
+  },
+  "kategorien": [
+    {
+      "id": "musik",
+      "name": "Musik",
+      "bild": "bilder/melodie.svg"
+    },
+    {
+      "id": "orchester",
+      "name": "Orchester",
+      "bild": "bilder/dirigent.svg"
+    },
+    {
+      "id": "instrument",
+      "name": "Instrumente",
+      "bild": "bilder/harfe.svg"
+    }
+  ],
+  "begriffe": [
+    {
+      "id": "vokalmusik",
+      "de": "Vokalmusik",
+      "ru": "вокальная музыка",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/vokalmusik.svg",
+      "bildText": "Ein Kopf mit offenem Mund singt, Noten fliegen heraus",
+      "erklaerung": "Vokalmusik ist Musik zum Singen. Eine Stimme oder viele Stimmen singen, mit oder ohne Instrumente.",
+      "quelle": { "seite": "S. 260", "text": "вокальная" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "instrumentalmusik",
+      "de": "Instrumentalmusik",
+      "ru": "инструментальная музыка",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/instrumentalmusik.svg",
+      "bildText": "Geige, Trompete und Trommel mit fliegenden Noten",
+      "erklaerung": "Instrumentalmusik wird nur mit Instrumenten gespielt. Dazu singt niemand.",
+      "quelle": { "seite": "S. 260", "text": "инструментальная музыка" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "solist",
+      "de": "Solist",
+      "ru": "солист",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/solist.svg",
+      "bildText": "Eine Person steht allein im Scheinwerferlicht und spielt Geige",
+      "erklaerung": "Ein Solist oder eine Solistin singt oder spielt allein. Die anderen hören zu oder spielen leise dazu.",
+      "quelle": { "seite": "S. 260", "text": "солист" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "begleitung",
+      "de": "Begleitung",
+      "ru": "аккомпанемент",
+      "uk": null,
+      "kategorie": "orchester",
+      "bild": "bilder/begleitung.svg",
+      "bildText": "Eine Person singt, daneben spielt ein Klavier leise dazu",
+      "erklaerung": "Eine Begleitung spielt leise zu einer Stimme oder einem Instrument dazu. Ein Klavier kann zum Beispiel ein Lied begleiten.",
+      "quelle": { "seite": "S. 260", "text": "аккомпанемент" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "dirigent",
+      "de": "Dirigent",
+      "ru": "дирижер",
+      "uk": null,
+      "kategorie": "orchester",
+      "bild": "bilder/dirigent.svg",
+      "bildText": "Eine Person im schwarzen Anzug hebt beide Arme und hält einen Taktstock",
+      "erklaerung": "Ein Dirigent oder eine Dirigentin leitet das Orchester. Mit den Händen und einem Taktstock zeigt er oder sie, wann und wie die Musik klingen soll.",
+      "quelle": { "seite": "S. 260", "text": "дирижер" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "komponist",
+      "de": "Komponist",
+      "ru": "композитор",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/komponist.svg",
+      "bildText": "Ein Notenblatt mit Noten und ein Bleistift, der weiterschreibt",
+      "erklaerung": "Ein Komponist oder eine Komponistin erfindet neue Musik und schreibt sie in Noten auf.",
+      "quelle": { "seite": "S. 260", "text": "композитор" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "interpret",
+      "de": "Interpret",
+      "ru": "исполнитель",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/interpret.svg",
+      "bildText": "Eine Person singt in ein Mikrofon, Noten fliegen herum",
+      "erklaerung": "Ein Interpret oder eine Interpretin singt oder spielt ein Musikstück vor. Dasselbe Stück klingt bei jedem ein bisschen anders.",
+      "quelle": { "seite": "S. 260", "text": "исполнитель" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "melodie",
+      "de": "Melodie",
+      "ru": "мелодия",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/melodie.svg",
+      "bildText": "Noten auf fünf Linien, durch eine Wellenlinie verbunden",
+      "erklaerung": "Eine Melodie ist eine Reihe von Tönen, die zusammenpassen. Man kann sie singen oder summen.",
+      "quelle": { "seite": "S. 260", "text": "мелодия" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "rhythmus",
+      "de": "Rhythmus",
+      "ru": "ритм",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/rhythmus.svg",
+      "bildText": "Eine Trommel mit zwei Schlägeln und lange und kurze Schläge darunter",
+      "erklaerung": "Der Rhythmus sagt, wie lang oder kurz die Töne sind. Man kann ihn klatschen oder trommeln.",
+      "quelle": { "seite": "S. 260", "text": "ритм" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "tempo",
+      "de": "Tempo",
+      "ru": "темп",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/tempo.svg",
+      "bildText": "Ein Metronom mit schwingendem Pendel",
+      "erklaerung": "Das Tempo sagt, wie schnell oder langsam die Musik ist. Ein Metronom tickt gleichmäßig und zeigt das Tempo.",
+      "quelle": { "seite": "S. 260", "text": "темп" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "dynamik",
+      "de": "Dynamik",
+      "ru": "динамика",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/dynamik.svg",
+      "bildText": "Eine kleine leise Note und eine große laute Note mit wachsendem Keil",
+      "erklaerung": "Die Dynamik sagt, wie laut oder leise die Musik ist. Sie kann auch langsam lauter oder leiser werden.",
+      "quelle": { "seite": "S. 260", "text": "динамика" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "ballett",
+      "de": "Ballett",
+      "ru": "балет",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/ballett.svg",
+      "bildText": "Eine Tänzerin im Tutu steht auf Spitze, die Arme über dem Kopf",
+      "erklaerung": "Ballett ist Tanz auf der Bühne, zu Musik. Oft erzählt der Tanz eine Geschichte.",
+      "quelle": { "seite": "S. 260", "text": "балет" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "oper",
+      "de": "Oper",
+      "ru": "опера",
+      "uk": null,
+      "kategorie": "musik",
+      "bild": "bilder/oper.svg",
+      "bildText": "Eine Person singt auf einer Bühne mit rotem Vorhang",
+      "erklaerung": "Eine Oper ist ein Theaterstück, in dem gesungen wird. Ein Orchester spielt die Musik dazu.",
+      "quelle": { "seite": "S. 260", "text": "опера" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "konzert",
+      "de": "Konzert",
+      "ru": "концерт",
+      "uk": null,
+      "kategorie": "orchester",
+      "bild": "bilder/konzert.svg",
+      "bildText": "Musikerinnen und Musiker auf einer Bühne, davor Zuhörer von hinten",
+      "erklaerung": "Bei einem Konzert spielen oder singen Musikerinnen und Musiker für Zuhörer. Zuhörer nennt man auch Publikum.",
+      "quelle": { "seite": "S. 260", "text": "концерт" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "blasorchester",
+      "de": "Blasorchester",
+      "ru": "духовой оркестр",
+      "uk": null,
+      "kategorie": "orchester",
+      "bild": "bilder/blasorchester.svg",
+      "bildText": "Eine Trompete und eine Klarinette mit fliegenden Noten",
+      "erklaerung": "Ein Blasorchester spielt mit Instrumenten, in die man hineinbläst. Dazu gehören zum Beispiel Trompete, Klarinette und Tuba.",
+      "quelle": { "seite": "S. 260", "text": "духовой" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "streichorchester",
+      "de": "Streichorchester",
+      "ru": "струнный оркестр",
+      "uk": null,
+      "kategorie": "orchester",
+      "bild": "bilder/streichorchester.svg",
+      "bildText": "Ein Cello und eine Geige mit Bogen, Streichinstrumente",
+      "erklaerung": "Ein Streichorchester spielt mit Instrumenten, über deren Saiten ein Bogen streicht. Dazu gehören zum Beispiel Geige, Cello und Kontrabass.",
+      "quelle": { "seite": "S. 260", "text": "струнный оркестры" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "harfe",
+      "de": "Harfe",
+      "ru": "арфа",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/harfe.svg",
+      "bildText": "Eine goldene Harfe mit vielen Saiten",
+      "erklaerung": "Eine Harfe hat viele Saiten. Man zupft sie mit den Fingern, und die Harfe steht dabei auf dem Boden.",
+      "quelle": { "seite": "S. 260", "text": "арфе" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "kontrabass",
+      "de": "Kontrabass",
+      "ru": "контрабас",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/kontrabass.svg",
+      "bildText": "Ein großer Kontrabass mit langem Hals",
+      "erklaerung": "Der Kontrabass ist das größte Streichinstrument und klingt sehr tief. Man spielt ihn mit einem Bogen oder zupft die Saiten.",
+      "quelle": { "seite": "S. 260", "text": "контрабасе" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "violoncello",
+      "de": "Violoncello",
+      "ru": "виолончель",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/violoncello.svg",
+      "bildText": "Ein Violoncello mit Bogen",
+      "erklaerung": "Das Violoncello, kurz Cello, ist ein großes Streichinstrument mit tiefem Klang. Man sitzt beim Spielen und hält es zwischen den Knien.",
+      "quelle": { "seite": "S. 260", "text": "виолончели" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "cembalo",
+      "de": "Cembalo",
+      "ru": "клавесин",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/cembalo.svg",
+      "bildText": "Ein Cembalo mit geöffnetem Deckel und zwei Tastaturen",
+      "erklaerung": "Ein Cembalo hat Tasten wie ein Klavier. Drückt man eine Taste, wird im Inneren eine Saite gezupft.",
+      "quelle": { "seite": "S. 260", "text": "клавесине" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "orgel",
+      "de": "Orgel",
+      "ru": "орган",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/orgel.svg",
+      "bildText": "Eine Orgel mit Pfeifen, Tastatur und Pedalen",
+      "erklaerung": "Eine Orgel hat viele Pfeifen, durch die Luft strömt. Man spielt sie mit den Händen und mit den Füßen.",
+      "quelle": { "seite": "S. 260", "text": "органе" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "klavier",
+      "de": "Klavier",
+      "ru": "фортепиано",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/klavier.svg",
+      "bildText": "Ein Klavier mit Tasten, Notenpult und Pedalen",
+      "erklaerung": "Auf dem Klavier drückt man Tasten. Dann schlagen kleine Hämmer im Inneren auf die Saiten.",
+      "quelle": { "seite": "S. 260", "text": "фортепиано" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "klarinette",
+      "de": "Klarinette",
+      "ru": "кларнет",
+      "uk": null,
+      "kategorie": "instrument",
+      "bild": "bilder/klarinette.svg",
+      "bildText": "Eine schwarze Klarinette mit silbernen Klappen",
+      "erklaerung": "Die Klarinette ist ein Blasinstrument mit einem langen Rohr. Man bläst hinein und drückt mit den Fingern Klappen.",
+      "quelle": { "seite": "S. 260", "text": "кларнете" },
+      "eigenentwurf": true
+    }
+  ],
+  "texte": {
+    "start": {
+      "untertitel": "Wörter aus der Musik, mit Bild und Erklärung",
+      "aufforderung": "Wähle ein Thema.",
+      "vorlesen": "Musik-Wörter-Bilderlexikon. Wähle ein Thema: Musik, Orchester oder Instrumente.",
+      "wortzahl": "{n} Wörter",
+      "instrumente": "Alle sieben Instrumente zusammen ansehen",
+      "erwachseneHinweis": "Für Erwachsene: Karten zum Drucken, Hinweise zur Quelle und die sieben Instrumente zum Zeigen."
+    },
+    "liste": {
+      "untertitel": "{n} Wörter. Wähle ein Wort.",
+      "vorlesen": "{name}. Die Wörter: {liste}.",
+      "instrumente": "Alle sieben Instrumente zusammen ansehen"
+    },
+    "karte": {
+      "thema": "Thema: {name}",
+      "erwachsene": "Für Erwachsene",
+      "waehlen": "Für den Druck wählen",
+      "gewaehlt": "Für den Druck gewählt",
+      "zumDruck": "Karten drucken",
+      "zumDruckMitZahl": "Karten drucken ({n})"
+    },
+    "instrumente": {
+      "titel": "Die sieben Instrumente",
+      "einleitung": "Hier siehst du alle sieben Instrumente. Du kannst dir jede Erklärung vorlesen lassen.",
+      "alleVorlesen": "Alle vorlesen",
+      "vorlesenLabel": "{wort} vorlesen"
+    },
+    "druck": {
+      "titel": "Karten drucken",
+      "einleitung": "Wählen Sie die Wörter, die Sie drucken möchten. Jedes gewählte Wort kommt auf ein eigenes Blatt A4 hoch: Wort, Bild und Erklärung. Auf dem Blatt stehen keine Namenszeile, kein Datum und keine Seitenzahl.",
+      "hinweis": "Im Druckdialog Kopf- und Fußzeilen ausschalten, sonst können Datum oder Adresse der Seite auf dem Papier stehen. Die App setzt selbst kein Datum und keine Adresse.",
+      "alleWaehlen": "Alle {n} Wörter wählen",
+      "alleAbwaehlen": "Alle {n} Wörter abwählen",
+      "gewaehltNull": "Noch keine Karte gewählt.",
+      "gewaehltEins": "Gewählt: 1 Karte.",
+      "gewaehltViele": "Gewählt: {n} Karten.",
+      "drucken": "Gewählte Karten drucken ({n})",
+      "leeren": "Auswahl leeren",
+      "vorschau": "Vorschau"
+    },
+    "erwachsene": {
+      "titel": "Für Erwachsene",
+      "abschnitte": [
+        {
+          "titel": "Worum es geht",
+          "absaetze": [
+            "Das Lexikon erklärt 23 Wörter aus der Musik in einfacher Sprache: 16 Fachwörter und sieben Instrumente. Zu jedem Wort gibt es ein Bild und eine kurze Erklärung.",
+            "Kinder können allein blättern oder zusammen mit einer erwachsenen Person. Das Lexikon fragt nichts ab und bewertet kein Kind. Es gibt nur Wörter zum Anschauen, Hören und Drucken."
+          ]
+        },
+        {
+          "titel": "Woher die Wörter kommen",
+          "absaetze": [
+            "Die Wortliste folgt der Praleska, {seite} (Abschnitt {abschnitt}, Gruppe {gruppe}). Sie hat 16 Fachwörter der Musik (Zählung: Eigenentwurf) und sieben Instrumente, jeweils in der Reihenfolge der Quelle. Die Aufzählung der Fachwörter auf der Seite endet mit „и др.“ und ist nicht abschließend; Vokal- und Instrumentalmusik sowie Blas- und Streichorchester sind hier einzeln gezählt.",
+            "Ausgabe der Quelle: {werk}",
+            "Die deutschen Wörter, die Erklärungen und die Bilder sind Eigenentwurf, fachlich nicht geprüft."
+          ],
+          "marke": true
+        },
+        {
+          "titel": "Für welches Alter",
+          "absaetze": [
+            "Gedacht ist das Lexikon für Kinder von 5 bis 9 Jahren. Die Quelle ordnet die Wörter der Gruppe „ФАНТАЗЕРЫ“ zu, deren Alter als 5 bis 7 Jahre gelesen wird ({alter}, Lesart, Eigenentwurf). Welche Altersspanne gilt, ist offen."
+          ],
+          "marke": true
+        },
+        {
+          "titel": "Vorlesen",
+          "absaetze": [
+            "Der Knopf „Vorlesen“ nutzt die Stimme des Geräts, und zwar nur eine Stimme, die ohne Netz arbeitet. Hat das Gerät keine deutsche Stimme dieser Art, steht ein Hinweis statt des Knopfs. Bei Wörtern wie Violoncello oder Cembalo kann die Aussprache der Stimme abweichen."
+          ]
+        },
+        {
+          "titel": "Drucken",
+          "absaetze": [
+            "Auf der Seite „Karten drucken“ wählen Sie Wörter aus. Jedes gewählte Wort kommt auf ein eigenes Blatt A4 hoch, ohne Namenszeile, ohne Datum und ohne Seitenzahl. Im Druckdialog Kopf- und Fußzeilen ausschalten."
+          ]
+        },
+        {
+          "titel": "Sprachen und Daten",
+          "absaetze": [
+            "Die App ist deutsch. {sprachen}",
+            "Die App speichert nichts, hat keine Eingabefelder und baut keine Verbindung nach draußen auf. Ein Neuladen ohne Netz ist nicht zugesichert."
+          ]
+        }
+      ]
+    },
+    "knoepfe": {
+      "vorlesen": "Vorlesen",
+      "vorher": "Vorheriges Wort",
+      "weiter": "Nächstes Wort",
+      "zurListe": "Zurück zur Liste",
+      "zurueckThemen": "Zurück zu den Themen",
+      "karten": "Karten drucken",
+      "erwachsene": "Für Erwachsene"
+    },
+    "stimme": {
+      "keine": "Auf diesem Gerät gibt es keine deutsche Stimme, die ohne Netz arbeitet. Vorlesen ist hier deshalb aus."
+    },
+    "fuss": {
+      "text": "Werbefrei, ohne Anmeldung, nichts wird gespeichert, keine Verbindung nach draußen.",
+      "quelle": "Quelle der Wortliste: Praleska, S. 260.",
+      "impressum": "Impressum und Datenschutz"
+    }
+  }
+}

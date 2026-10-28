@@ -17,7 +17,7 @@ PRI-8 „Kleine Forscher ohne Bildschirm“ war nie blockiert und ist bereits ge
 
 | Stufe | Inhalt | Warum |
 |---|---|---|
-| 1 | CON-3, CON-6, CON-9, CON-10 (vier neue Apps) | Ohne Bauauftrag-Blockade, klar umrissen. CON-9 stand als „ohne quiz-kern (Regelkonflikt)“; der Konflikt ist weg, die Wahl der Engine ist eine Frage an Max. |
+| 1 | CON-3, CON-6, CON-9, CON-10 (vier neue Apps) | Ohne Bauauftrag-Blockade, klar umrissen. CON-9 stand als „ohne quiz-kern (Regelkonflikt)“; der Konflikt ist weg, die Wahl der Engine ist eine Frage an Max. **Stand 28.10.2026: gebaut (Lauf E, 16 Agenten, je Einheit zwei Prüfrunden; bei CON-9 hat der Integrator die Befunde der Zweitprüfung selbst behoben) und in Hub, README, Impressum, docs/10, Katalog und Index eingetragen. Alle vier sind eigene Karten-Apps (Weg B), nicht auf `quiz-kern`; die Wahl der Engine bleibt bei Max (`docs/fragen-fuer-max-2026-10-28.md`, Frage 31). Ergebnis und Befunde der Prüfer: `docs/arbeitsweise/lauf-e-ergebnis.json`.** |
 | 2 | Ausbau der neun entsperrten Apps | Die Lücke laut Befund steht im Bauauftrag; die Apps laufen schon auf dem neuen Motor. |
 | 3 | Die übrigen 53 Ausbau-Aufträge in der Reihenfolge ihres Faktenstands: zuerst Einträge mit geprüfter Quelle (38 von 131), danach die mit Katalogtext, zuletzt solche, deren Quelle nicht im Repo prüfbar ist | Neue Funktionen auf ungeprüften Fakten erhöhen die Schuld im Strang Г. |
 | – | CON-13 Trostvers-Generator, CON-15 Naturschutz-Rat, PRI-6 Frischluft-Rituale | „Unklar“: braucht eine Entscheidung von Max (`docs/offene-punkte-kita.md`, H), kein Bau davor. |

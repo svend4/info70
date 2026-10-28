@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ein Kopf mit offenem Mund singt, Noten fliegen heraus">
+<title>Ein Kopf mit offenem Mund singt, Noten fliegen heraus</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="80" cy="104" r="40" fill="#b07840"/>
+<path d="M40 103 C40 46 120 46 120 103 C102 80 58 80 40 103Z" fill="#1f1a17" stroke-width="3"/>
+<circle cx="40" cy="108" r="7" fill="#b07840"/><circle cx="120" cy="108" r="7" fill="#b07840"/>
+<path d="M58 96 Q66 88 74 96 M86 96 Q94 88 102 96" stroke-width="3.4"/>
+<ellipse cx="80" cy="126" rx="12" ry="15" fill="#7f1d1d" stroke-width="3.4"/>
+<ellipse cx="80" cy="134" rx="7" ry="5" fill="#fb7185" stroke="none"/>
+<path d="M50 150 Q80 140 110 150 L118 190 H42Z" fill="#1d4ed8"/>
+<path d="M117.6 116.4 A8 8 0 0 1 117.6 127.6" stroke="#1f2937" stroke-width="3.2"/><path d="M125.3 108.7 A19 19 0 0 1 125.3 135.3" stroke="#1f2937" stroke-width="3.2"/><path d="M133 101 A30 30 0 0 1 133 143" stroke="#1f2937" stroke-width="3.2"/>
+<g transform="translate(160 66) scale(0.9)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#b91c1c" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+<g transform="translate(168 126) scale(0.75)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#1d4ed8" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine Person im schwarzen Anzug hebt beide Arme und hält einen Taktstock">
+<title>Eine Person im schwarzen Anzug hebt beide Arme und hält einen Taktstock</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="52" y="168" width="96" height="18" rx="4" fill="#b45309"/>
+<path d="M88 138 V168 M112 138 V168" stroke="#1f2937" stroke-width="16"/>
+<path d="M88 138 V168 M112 138 V168" stroke="#111827" stroke-width="10"/>
+<path d="M78 82 Q100 72 122 82 L128 146 H72Z" fill="#111827"/>
+<path d="M72 146 L66 164 L86 146 M128 146 L134 164 L114 146" fill="#111827" stroke-width="3.4"/>
+<path d="M92 80 L100 108 L108 80Z" fill="#ffffff" stroke-width="2.6"/>
+<path d="M95 86 L105 86 L100 92Z" fill="#b91c1c" stroke-width="2"/>
+<path d="M82 90 L56 74 L46 48" stroke="#1f2937" stroke-width="15"/><path d="M82 90 L56 74 L46 48" stroke="#111827" stroke-width="9"/>
+<path d="M118 90 L146 78 L158 52" stroke="#1f2937" stroke-width="15"/><path d="M118 90 L146 78 L158 52" stroke="#111827" stroke-width="9"/>
+<circle cx="46" cy="44" r="7" fill="#d9a066" stroke-width="3"/><circle cx="158" cy="48" r="7" fill="#d9a066" stroke-width="3"/>
+<path d="M160 44 L188 14" stroke="#1f2937" stroke-width="6"/><path d="M160 44 L188 14" stroke="#ffffff" stroke-width="2.6"/>
+<circle cx="100" cy="58" r="15" fill="#d9a066"/>
+<path d="M85 57 C85 36.25 115 36.25 115 57 C108.25 49 91.75 49 85 57Z" fill="#9ca3af" stroke-width="3"/><circle cx="94.3" cy="58.75" r="1.5" fill="#1f2937" stroke="none"/><circle cx="105.7" cy="58.75" r="1.5" fill="#1f2937" stroke="none"/><path d="M95.2 64.75 Q100 70 104.8 64.75" stroke-width="2.6"/>
+<g transform="translate(30 28) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#1d4ed8" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(172 118) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#b91c1c" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "@info70/himmelsgucker-sonne-mond-und-sterne",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Himmelsgucker: Sonne, Mond und Sterne. Drei Karten, eine Frage zu den Mondgestalten und zwei Blätter zum Ausdrucken für Kinder von 5 bis 7 Jahren zusammen mit einer erwachsenen Person (Praleska, Abschnitt Astronomie, S. 138 und S. 114). Ohne Verbindung nach draußen, ohne Speicherung, ohne Wertung. Neuladen ohne Netz nicht zugesichert (F4).",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

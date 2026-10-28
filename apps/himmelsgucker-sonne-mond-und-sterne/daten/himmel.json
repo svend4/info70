@@ -1,0 +1,323 @@
+{
+  "titel": "Himmelsgucker: Sonne, Mond und Sterne",
+  "kurztitel": "Himmelsgucker",
+  "untertitel": "Sonne, Mond und Sterne zusammen anschauen",
+  "zielgruppe": "Für Kinder von 5 bis 7 Jahren zusammen mit einer erwachsenen Person.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "sprachen": "Deutsch (de). Die Quelle ist russischsprachig; die deutschen Texte sind Eigenentwurf. uk und ru: nicht vorhanden, offen.",
+  "quelle": {
+    "kurz": "Praleska, Abschnitt „Астрономия (введение)“, Gruppe „ПОЧЕМУЧКИ“",
+    "mitSeite": "Praleska, Abschnitt „Астрономия (введение)“ (S. 138), Gruppe „ПОЧЕМУЧКИ“",
+    "begriffe": [
+      { "quelltext": "Астрономия (введение)", "seite": "S. 138", "deutsch": "Astronomie, Einführung" },
+      { "quelltext": "Солнце, Луна, звезды", "seite": "S. 138", "deutsch": "Sonne, Mond, Sterne" }
+    ]
+  },
+  "karten": [
+    {
+      "id": "sonne",
+      "titel": "Die Sonne",
+      "modul": "himmelskoerper",
+      "bild": "sonne",
+      "bildText": "Die Sonne mit Strahlen auf blauem Himmel",
+      "unterzeile": "Warm und hell",
+      "text": [
+        "Die Sonne geht am Morgen auf und am Abend unter.",
+        "Am Tag siehst du sie am Himmel.",
+        "Die Sonne ist warm. Ihre Strahlen wärmen die Erde.",
+        "Halte deine Hand ins Sonnenlicht. Spürst du die Wärme?"
+      ],
+      "erklaerung": "Die Sonne scheint am Tag, und ihre Strahlen sind warm.",
+      "erwachsene": [
+        "Nie direkt in die Sonne schauen (Eigenentwurf, fachlich nicht geprüft).",
+        "Fragt: Wo ist es warm, und wo ist es kühl?"
+      ],
+      "begriffe": [
+        { "quelltext": "всходят и заходят", "seite": "S. 138", "deutsch": "gehen auf und gehen unter" },
+        { "quelltext": "солнечные лучи", "seite": "S. 138", "deutsch": "Sonnenstrahlen" }
+      ],
+      "frage": {
+        "titel": "Frage zur Sonne",
+        "text": "Wann siehst du die Sonne?",
+        "antworten": ["Am Tag", "In der Nacht"],
+        "passend": "Am Tag",
+        "antwortTitel": "Die Sonne siehst du am Tag.",
+        "erklaerung": "In der Nacht ist sie nicht am Himmel zu sehen."
+      },
+      "quelle": { "seite": "S. 138" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "mond",
+      "titel": "Der Mond",
+      "modul": "himmelskoerper",
+      "bild": "mond",
+      "icon": "mond-sichel",
+      "bildText": "Drei Mondbilder: ein ganz runder Mond, ein halber Mond und eine Mondsichel",
+      "unterzeile": "Rund, halb oder schmal",
+      "text": [
+        "Der Mond geht auf und geht wieder unter.",
+        "Er sieht nicht immer gleich aus.",
+        "Manchmal ist er ganz rund. Manchmal ist nur ein Teil von ihm hell.",
+        "Manchmal ist er nur ein dünner, gebogener Streifen. Das ist die Mondsichel."
+      ],
+      "erklaerung": "Der Mond kann ganz rund sein, nur zum Teil hell oder eine schmale Sichel.",
+      "erwachsene": [
+        "Die helle Seite kann rechts oder links liegen. Die Bilder zeigen sie rechts (Eigenentwurf).",
+        "Fragt: Habt ihr den Mond schon einmal gesehen? Wie sah er aus?"
+      ],
+      "begriffe": [
+        { "quelltext": "всходят и заходят", "seite": "S. 138", "deutsch": "gehen auf und gehen unter" },
+        { "quelltext": "полная, неполная, серпом", "seite": "S. 138", "deutsch": "voll, nicht voll, als Sichel" }
+      ],
+      "quelle": { "seite": "S. 138" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "sternenhimmel",
+      "titel": "Die Sterne",
+      "modul": "himmelskoerper",
+      "bild": "sternenhimmel",
+      "bildText": "Dunkler Himmel mit vielen kleinen Lichtern",
+      "unterzeile": "Kleine Lichter in der Dunkelheit",
+      "text": [
+        "Wenn es dunkel ist, siehst du am Himmel viele kleine Lichter.",
+        "Das sind die Sterne.",
+        "Am Tag sind sie nicht zu sehen. Da ist der Himmel zu hell.",
+        "Wenn ihr abends draußen seid, schaut zum Himmel."
+      ],
+      "erklaerung": "Die Sterne siehst du, wenn es dunkel ist.",
+      "erwachsene": [
+        "Fragt: Habt ihr schon einmal Sterne am Himmel gesehen? Wo war das?"
+      ],
+      "begriffe": [
+        { "quelltext": "звездное небо", "seite": "S. 114", "deutsch": "Sternenhimmel" },
+        { "quelltext": "Солнце, Луна, звезды", "seite": "S. 138", "deutsch": "Sonne, Mond, Sterne" }
+      ],
+      "frage": {
+        "titel": "Frage zu den Sternen",
+        "text": "Wann siehst du die Sterne?",
+        "antworten": ["Am Tag", "In der Nacht"],
+        "passend": "In der Nacht",
+        "antwortTitel": "Die Sterne siehst du, wenn es dunkel ist.",
+        "erklaerung": "Am Tag ist der Himmel zu hell dafür."
+      },
+      "quelle": { "seite": "S. 114" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "mond-voll",
+      "titel": "Voller Mond",
+      "modul": "mondphasen",
+      "bild": "mond-voll",
+      "benennung": "Das ist der volle Mond.",
+      "erklaerung": "Der Mond ist ganz rund zu sehen.",
+      "begriffe": [
+        { "quelltext": "полная", "seite": "S. 138", "deutsch": "voll" }
+      ],
+      "quelle": { "seite": "S. 138" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "mond-teilweise",
+      "titel": "Halber Mond",
+      "modul": "mondphasen",
+      "bild": "mond-teilweise",
+      "benennung": "Das ist der halbe Mond.",
+      "erklaerung": "Beim halben Mond ist der Mond nur teilweise hell. Du siehst ungefähr einen halben Kreis.",
+      "begriffe": [
+        { "quelltext": "неполная", "seite": "S. 138", "deutsch": "nicht voll, teilweise" }
+      ],
+      "quelle": { "seite": "S. 138" },
+      "eigenentwurf": true
+    },
+    {
+      "id": "mond-sichel",
+      "titel": "Mondsichel",
+      "modul": "mondphasen",
+      "bild": "mond-sichel",
+      "benennung": "Das ist die Mondsichel.",
+      "erklaerung": "Bei der Mondsichel ist nur ein dünner Streifen hell. Er ist gebogen wie ein Bogen.",
+      "begriffe": [
+        { "quelltext": "серпом", "seite": "S. 138", "deutsch": "wie eine Sichel" }
+      ],
+      "quelle": { "seite": "S. 138" },
+      "eigenentwurf": true
+    }
+  ],
+  "texte": {
+    "start": {
+      "titel": "Himmelsgucker",
+      "hinweis": "Für Erwachsene: Lest vor und schaut zusammen hin. Das Kind tippt auf die Karten und auf die Antworten. Es wird nichts bewertet und nichts gespeichert.",
+      "aufforderung": "Tippt auf eine Karte.",
+      "vorlesen": "Himmelsgucker. Sonne, Mond und Sterne. Tippt auf eine Karte."
+    },
+    "knoepfe": {
+      "vorlesen": "Vorlesen",
+      "weiter": "Weiter",
+      "zurueckKarten": "Zu den Karten",
+      "zurueckKarte": "Zurück zur Karte",
+      "druck": "Blätter zum Drucken",
+      "erwachsene": "Für Erwachsene",
+      "frageSonneSterne": "Eine Frage dazu",
+      "frageMond": "Mondbilder anschauen"
+    },
+    "stimme": {
+      "keine": "Auf diesem Gerät gibt es keine deutsche Stimme, die ohne Netz arbeitet. Vorlesen ist hier deshalb aus."
+    },
+    "karte": {
+      "erwachseneKopf": "Für Erwachsene",
+      "eigenentwurf": "Text und Bild sind Eigenentwurf nach der Quelle."
+    },
+    "frage": {
+      "mondTitel": "Mondbild {nr}",
+      "mondFortschritt": "Bild {nr} von {von}",
+      "mondAufgabe": "Schaut das Bild an. Wie heißt dieser Mond?",
+      "mondBildLabel": "Ein Mond am dunklen Himmel",
+      "angetippt": "Du hast „{auswahl}“ angetippt.",
+      "antwortenLabel": "Antworten"
+    },
+    "ende": {
+      "titel": "Und jetzt?",
+      "text": "Ihr könnt noch eine Karte anschauen. Oder ihr macht den Bildschirm aus und schaut zusammen nach draußen: zum Mond, zu den Sternen, oder spürt die Wärme der Sonne auf der Haut."
+    },
+    "druck": {
+      "titel": "Blätter zum Drucken",
+      "einleitung": "Für Erwachsene: Wählt die Blätter aus. Jedes Blatt kommt auf ein eigenes Blatt Papier, A4 hoch. Im Druckdialog die Kopf- und Fußzeilen ausschalten, sonst können Datum oder Adresse der Seite auf dem Papier stehen.",
+      "mondblattTitel": "Mondblatt",
+      "mondblattText": "Drei Mondbilder zum Verbinden und Ausmalen.",
+      "mondblattWaehlen": "Mondblatt wählen",
+      "mondblattGewaehlt": "Mondblatt gewählt",
+      "beobachtungTitel": "Beobachtungsblatt",
+      "beobachtungText": "Ein Blatt für den Abendhimmel: Mondgestalt, Himmelsrichtung und Wetter zum Einkreisen und ein Kasten zum Malen. Die Blätter sind nummeriert.",
+      "beobachtungWaehlen": "Beobachtungsblatt wählen",
+      "beobachtungGewaehlt": "Beobachtungsblatt gewählt",
+      "anzahlKopf": "Wie viele Beobachtungsblätter?",
+      "anzahlAnzeige": "Anzahl: {n}",
+      "mehr": "Mehr",
+      "weniger": "Weniger",
+      "keins": "Noch kein Blatt gewählt.",
+      "einBlatt": "Gewählt: 1 Blatt.",
+      "mehrBlaetter": "Gewählt: {n} Blätter.",
+      "drucken": "Blätter drucken ({n})",
+      "vorschau": "Vorschau",
+      "hinweis": "Der Druck enthält nur die gewählten Blätter, je Blatt eine Seite. Es gibt kein Feld für einen Namen und keine Felder für einzelne Tage."
+    },
+    "erwachsene": {
+      "titel": "Für Erwachsene",
+      "abschnitte": [
+        {
+          "titel": "Worum es geht",
+          "absaetze": [
+            "Himmelsgucker zeigt drei Karten (Sonne, Mond, Sterne), eine Frage zu den Mondgestalten und zwei Blätter zum Ausdrucken.",
+            "Der Bildschirm ist kurz. Das Beobachten am Himmel dauert länger und geschieht draußen.",
+            "Es gibt keine Wertung, keine Zähler und keinen Speicher."
+          ]
+        },
+        {
+          "titel": "So nutzt ihr es zusammen",
+          "absaetze": [
+            "Lest die Texte vor oder tippt auf „Vorlesen“. Die Stimme kommt vom Gerät. Gibt es keine, fehlt der Knopf.",
+            "Das Kind tippt auf eine Karte und dann auf eine Antwort. Jede Antwort bekommt dieselbe freundliche Erklärung."
+          ]
+        },
+        {
+          "titel": "Quelle",
+          "art": "quelle",
+          "absaetze": [
+            "Quelle: Praleska, Abschnitt „Астрономия (введение)“ (S. 138), Gruppe „ПОЧЕМУЧКИ“. Die Texte, Fragen und Bilder sind in eigenen Worten und in eigener Form gemacht (Eigenentwurf).",
+            "Altersangabe: Katalog und Bauauftrag nennen 5 bis 7 Jahre. Die Quelle beschreibt die Gruppe „ПОЧЕМУЧКИ“ mit dem vierten und fünften Lebensjahr (S. 103). Welche Angabe gilt, entscheidet die Redaktion (offen)."
+          ]
+        },
+        {
+          "titel": "Sicherheit",
+          "absaetze": [
+            "Nie direkt in die Sonne schauen (Eigenentwurf, fachlich nicht geprüft).",
+            "Ob und wann ihr abends nach draußen geht, entscheidet ihr selbst. Die App schlägt keine Zeit vor."
+          ]
+        },
+        {
+          "titel": "Nicht enthalten",
+          "absaetze": [
+            "Die Raumfahrt aus der Quelle ist nicht aufgenommen (offen).",
+            "Keine Eingabefelder, kein Name eines Kindes, keine Bewertung.",
+            "Eine fachliche Durchsicht der Texte (Astronomie, Sprache, Alter) steht aus."
+          ]
+        },
+        {
+          "titel": "Sprachen und Daten",
+          "absaetze": [
+            "Deutsch (de). uk und ru: nicht vorhanden, offen.",
+            "Nichts wird gespeichert. Es gibt keine Verbindung nach draußen."
+          ]
+        }
+      ],
+      "begriffeKopf": "Begriffe in der Quelle:"
+    },
+    "fuss": {
+      "text": "Nichts wird gespeichert. Es gibt keine Verbindung nach draußen.",
+      "impressum": "Impressum und Datenschutz"
+    }
+  },
+  "blaetter": {
+    "kopf": "Himmelsgucker",
+    "quelle": "Quelle: Praleska, Abschnitt „Астрономия (введение)“, Gruppe „ПОЧЕМУЧКИ“.",
+    "mondblatt": {
+      "kopf2": "Mondblatt (Eigenentwurf nach der Quelle)",
+      "titel": "Wie sieht der Mond aus?",
+      "anleitung": [
+        "Verbinde jedes Mondbild mit dem passenden Wort.",
+        "Male danach die helle Fläche des Mondes aus."
+      ],
+      "zeilen": [
+        { "bild": "mond-voll", "wort": "Mondsichel" },
+        { "bild": "mond-teilweise", "wort": "Voller Mond" },
+        { "bild": "mond-sichel", "wort": "Halber Mond" }
+      ],
+      "hinweis": "Für Erwachsene: Lest die Wörter vor. Sie stehen mit Absicht in einer anderen Reihenfolge als die Bilder."
+    },
+    "beobachtung": {
+      "kopf2": "Beobachtungsblatt (Eigenentwurf nach der Quelle)",
+      "titel": "Abendhimmel, Beobachtung Nr. {nr}",
+      "anleitung": [
+        "Schaut zusammen zum Himmel. Kreise ein, was ihr seht.",
+        "Male in den großen Kasten, was am Himmel ist."
+      ],
+      "felder": [
+        {
+          "id": "mondgestalt",
+          "titel": "Mondgestalt",
+          "aufgabe": "Welchen Mond siehst du? Kreise ihn ein.",
+          "art": "bilder",
+          "auswahl": ["mond-voll", "mond-teilweise", "mond-sichel"],
+          "keine": "Kein Mond zu sehen"
+        },
+        {
+          "id": "himmelsrichtung",
+          "titel": "Himmelsrichtung",
+          "aufgabe": "Wo steht der Mond? Kreise die Richtung ein.",
+          "art": "kreuz",
+          "oben": "Norden",
+          "links": "Westen",
+          "rechts": "Osten",
+          "unten": "Süden",
+          "mitte": "Hier stehst du"
+        },
+        {
+          "id": "wetter",
+          "titel": "Wetter",
+          "aufgabe": "Wie ist das Wetter? Kreise es ein.",
+          "art": "woerter",
+          "auswahl": ["klar", "wolkig", "Regen"]
+        },
+        {
+          "id": "malen",
+          "titel": "Mein Himmelsbild",
+          "aufgabe": "Male, was du am Himmel siehst.",
+          "art": "rahmen"
+        }
+      ],
+      "hinweis": "Für Erwachsene: Zeigt dem Kind die Himmelsrichtungen, zum Beispiel mit einem Kompass. Die Blätter sind nummeriert."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "modul": "haushalt",
+  "titel": "Haushalt",
+  "schluss": {
+    "ideen": [
+      "Räumt zusammen einen Korb mit Spielsachen auf.",
+      "Gießt zusammen eine Pflanze.",
+      "Deckt zusammen den Tisch für die nächste Mahlzeit."
+    ],
+    "vermerk": "(Eigenentwurf)"
+  },
+  "karten": [
+    {
+      "id": "haushalt-alle-helfen",
+      "titel": "Alle helfen mit",
+      "modul": "haushalt",
+      "erklaerung": "Zu Hause gibt es viel zu tun, und alle in der Familie helfen mit, jede und jeder so, wie es passt.",
+      "gespraech": "Jede Familie macht das ein bisschen anders. Wobei helft ihr euch zu Hause?",
+      "quelle": { "seite": "S. 117", "begriff": "распределении домашнего труда" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "haushalt-aufraeumen",
+      "titel": "Aufräumen",
+      "modul": "haushalt",
+      "erklaerung": "Beim Aufräumen kann ein Kind helfen und die Spielsachen zurück in die Kiste oder ins Regal legen.",
+      "gespraech": "Welche Spielsachen räumst du am liebsten weg?",
+      "quelle": { "seite": "S. 117", "begriff": "домашнем труде" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "haushalt-tisch-decken",
+      "titel": "Den Tisch decken",
+      "modul": "haushalt",
+      "erklaerung": "Beim Tischdecken kann ein Kind Servietten oder Löffel verteilen.",
+      "gespraech": "Magst du beim Tischdecken helfen? Was kannst du schon tragen?",
+      "quelle": { "seite": "S. 117", "begriff": "домашнем труде" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    },
+    {
+      "id": "haushalt-blumen-giessen",
+      "titel": "Blumen gießen",
+      "modul": "haushalt",
+      "erklaerung": "Ein Kind kann beim Blumengießen helfen und sehen, dass Pflanzen Wasser brauchen.",
+      "gespraech": "Welche Pflanze könnt ihr zusammen gießen?",
+      "quelle": { "seite": "S. 103", "begriff": "полить цветы" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf)"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine schwarze Klarinette mit silbernen Klappen">
+<title>Eine schwarze Klarinette mit silbernen Klappen</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="rotate(32 100 100)">
+<path d="M94 14 H106 L108 36 H92Z" fill="#d1d5db"/>
+<rect x="91" y="30" width="18" height="10" rx="2" fill="#fbbf24" stroke-width="3"/>
+<rect x="92" y="38" width="16" height="12" rx="3" fill="#111827"/>
+<rect x="90" y="50" width="20" height="108" rx="4" fill="#111827"/>
+<path d="M90 82 H110 M90 118 H110" stroke="#d1d5db" stroke-width="3"/>
+<path d="M90 150 L84 172 Q100 182 116 172 L110 150Z" fill="#111827"/>
+<circle cx="100" cy="62" r="4.6" fill="#d1d5db" stroke-width="2.6"/>
+<circle cx="100" cy="74" r="4.6" fill="#d1d5db" stroke-width="2.6"/>
+<circle cx="100" cy="94" r="4.6" fill="#d1d5db" stroke-width="2.6"/>
+<circle cx="100" cy="104" r="4.6" fill="#d1d5db" stroke-width="2.6"/>
+<circle cx="100" cy="130" r="4.6" fill="#d1d5db" stroke-width="2.6"/>
+<circle cx="100" cy="142" r="4.6" fill="#d1d5db" stroke-width="2.6"/>
+<rect x="108" y="66" width="12" height="7" rx="3.5" fill="#d1d5db" stroke-width="2.6"/><rect x="108" y="86" width="12" height="7" rx="3.5" fill="#d1d5db" stroke-width="2.6"/>
+<rect x="80" y="110" width="12" height="7" rx="3.5" fill="#d1d5db" stroke-width="2.6"/><rect x="80" y="134" width="12" height="7" rx="3.5" fill="#d1d5db" stroke-width="2.6"/>
+</g>
+</g>
+</svg>

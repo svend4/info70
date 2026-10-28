@@ -1,0 +1,44 @@
+{
+  "modul": "budget",
+  "titel": "Familienbudget",
+  "schluss": {
+    "ideen": [
+      "Sucht in der Wohnung eine Sache, die schon lange da ist und noch gut ist.",
+      "Sprecht darüber, was ihr immer braucht und was ihr euch nur wünscht.",
+      "Malt zusammen etwas, das ihr euch wünscht."
+    ],
+    "vermerk": "(Eigenentwurf, fachlich nicht geprüft)"
+  },
+  "karten": [
+    {
+      "id": "budget-brauchen-wuenschen",
+      "titel": "Brauchen und wünschen",
+      "modul": "budget",
+      "erklaerung": "Manches brauchen wir immer, und manches wünschen wir uns nur.",
+      "gespraech": "Was brauchst du immer? Was wünschst du dir?",
+      "quelle": { "seite": "S. 117", "begriff": "семейном бюджете" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf, fachlich nicht geprüft)"
+    },
+    {
+      "id": "budget-sparen",
+      "titel": "Sparen",
+      "modul": "budget",
+      "erklaerung": "Man kann Geld zur Seite legen und warten, bis es für etwas Besonderes reicht.",
+      "gespraech": "Was wäre für dich etwas Besonderes?",
+      "quelle": { "seite": "S. 117", "begriff": "семейном бюджете" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf, fachlich nicht geprüft)"
+    },
+    {
+      "id": "budget-sorgsam",
+      "titel": "Sorgsam sein",
+      "modul": "budget",
+      "erklaerung": "Wenn wir mit unseren Sachen sorgsam umgehen, halten sie länger.",
+      "gespraech": "Welche Sache von dir ist schon lange da und noch heil?",
+      "quelle": { "seite": "S. 117", "begriff": "бережливым" },
+      "eigenentwurf": true,
+      "vermerk": "(Eigenentwurf, fachlich nicht geprüft)"
+    }
+  ]
+}

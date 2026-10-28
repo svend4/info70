@@ -1,0 +1,101 @@
+/* Meine Familie: Wörter und Rollen. Bildschirm und Druck.
+   Auf dem Bildschirm stehen die Karten, die Fragen, die Pause und die Auswahl zum Druck. Beim Drucken
+   verschwinden alle Bildschirmteile (.mfw-nur-bildschirm). Übrig bleiben nur die gewählten Karten,
+   je Karte ein Blatt A4 hoch, ohne Zeichen, Kästchen, Namenszeile oder Seitenzahl. */
+
+.mfw-bildschirm { display: flex; flex-direction: column; gap: 1rem; flex: 1 1 auto; }
+.mfw-nur-druck { display: none; }
+
+.mfw-kopf { margin: 0; text-align: center; font-size: 0.9rem; color: #4b5563; }
+.mfw-text { margin: 0 0 0.6rem; overflow-wrap: anywhere; }
+.mfw-klein { margin: 0 0 0.8rem; font-size: 0.9rem; color: #4b5563; overflow-wrap: anywhere; }
+.mfw-zwischentitel { margin: 0 0 0.75rem; font-size: 1.1rem; color: var(--k-blau-dunkel); overflow-wrap: anywhere; }
+.mfw-satz { margin: 0 0 0.5rem; font-size: 1.35rem; font-weight: 600; line-height: 1.45; text-align: center; overflow-wrap: anywhere; }
+.mfw-rueckmeldung { margin: 0 0 0.5rem; font-size: 1.1rem; font-weight: 700; text-align: center; color: var(--k-blau-dunkel); overflow-wrap: anywhere; }
+.mfw-quelle { margin: 0; font-size: 0.8rem; color: #4b5563; text-align: center; overflow-wrap: anywhere; }
+.mfw-zaehler { margin: 0.6rem 0 0; font-size: 0.9rem; color: #4b5563; }
+.mfw-ideen { margin: 0 0 0.75rem; padding-inline-start: 1.25rem; }
+.mfw-ideen li { margin-bottom: 0.5rem; overflow-wrap: anywhere; }
+.mfw-frage { font-size: 1.3rem; }
+
+.mfw-bildschirm .k-karte > .k-antworten:first-child { margin-top: 0; }
+.mfw-reihe { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.mfw-reihe > .k-knopf { flex: 1 1 6rem; min-width: 0; overflow-wrap: anywhere; }
+
+/* Eine Farbe je Thema, als Streifen links an Karte und Knopf. Die Farbe trägt nichts allein: der Name steht daneben. */
+.mfw-modul-rollen { --mfw-farbe: #1d4ed8; }
+.mfw-modul-haushalt { --mfw-farbe: #15803d; }
+.mfw-modul-hoeflichkeit { --mfw-farbe: #b45309; }
+.mfw-modul-budget { --mfw-farbe: #6d28d9; }
+.k-karte[class*="mfw-modul-"] { border-inline-start: 0.6rem solid var(--mfw-farbe); }
+
+.k-knopf.mfw-modul {
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 0.1rem;
+  min-height: 4.5rem; text-align: start; border-inline-start: 0.6rem solid var(--mfw-farbe);
+}
+.mfw-modulname { font-size: 1.3rem; overflow-wrap: anywhere; }
+.mfw-modulzahl { font-size: 0.9rem; font-weight: 400; }
+.k-knopf.mfw-antwort { min-height: 5rem; font-size: 1.5rem; overflow-wrap: anywhere; }
+.k-knopf.mfw-wahl { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.25rem 0.75rem; text-align: start; overflow-wrap: anywhere; }
+.mfw-status { font-size: 0.85rem; font-weight: 400; }
+
+/* Bei 360 px Breite bricht der Titel auch innerhalb eines Wortes um,
+   sonst läuft „Meine Familie: Wörter und Rollen“ oder ein langes Wort über den Rand. */
+h1.k-titel { overflow-wrap: anywhere; word-break: normal; }
+
+/* Link im Fuß: mindestens 48 px hoch (Berührziel), 8 px seitlich Abstand. */
+.k-fuss a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; }
+
+@media print {
+  @page { size: A4 portrait; margin: 14mm 15mm; }
+  .mfw-nur-bildschirm { display: none !important; }
+  .mfw-nur-druck { display: block; }
+
+  html { font-size: 12pt; }
+  body { background: #fff; color: #000; }
+
+  .k-app {
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+    gap: 0;
+    display: block;
+  }
+
+  /* Jede Karte auf ein eigenes Blatt, nie über einen Umbruch zerrissen. Die Höhe lässt Luft zum Seitenrand,
+     damit kein leeres Blatt dahinter entsteht. */
+  .k-karte.mfw-karte {
+    display: flex;
+    flex-direction: column;
+    height: 250mm;
+    padding: 16mm;
+    margin: 0;
+    background: #fff;
+    border: 2.5pt solid #000;
+    border-radius: 0;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .k-karte.mfw-karte:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .mfw-druck-kopf { margin: 0; font-size: 12pt; color: #000; text-align: center; }
+  .mfw-druck-mitte { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+  .mfw-druck-titel {
+    margin: 0 0 12mm;
+    padding-bottom: 6mm;
+    font-size: 40pt;
+    line-height: 1.15;
+    text-align: center;
+    color: #000;
+    border-bottom: 1.5pt solid #000;
+    overflow-wrap: anywhere;
+  }
+  .mfw-druck-satz { margin: 0; font-size: 24pt; line-height: 1.4; text-align: center; color: #000; overflow-wrap: anywhere; }
+  .mfw-druck-vermerk { margin: 0; font-size: 10pt; color: #000; text-align: center; }
+}

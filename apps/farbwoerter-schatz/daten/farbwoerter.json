@@ -1,0 +1,46 @@
+{
+  "titel": "Farbwörter-Schatz",
+  "zielgruppe": "Für Kinder von 3 bis 5 Jahren nur gemeinsam mit einem Erwachsenen und für Kinder von 5 bis 7 Jahren. Ein Erwachsener liest vor und druckt die Karten.",
+  "sprachen": "Deutsch (de). Die Quelle ist russischsprachig; die deutschen Fassungen sind Eigenentwurf. uk und ru: nicht vorhanden, offen.",
+  "pflichtmarkierung": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "eigenentwurf": "Farbnamen, Farbflächen, Gruppen und alle Texte sind Eigenentwurf.",
+  "quelle": {
+    "werk": "Praleska, Programm der Vorschulerziehung (Titel übertragen, Eigenentwurf), Minsk: НИО, 2007",
+    "abschnitt": "„Рисование“",
+    "gruppe": "„ПОЧЕМУЧКИ“",
+    "seite": "S. 178",
+    "begriffe": ["вишневый", "салатовый", "малиновый", "лимонный", "абрикосовый", "цвет морской волны"],
+    "offeneListe": "и т. д."
+  },
+  "start": {
+    "text": "Der Farbwörter-Schatz zeigt Farben mit ihren Namen. Ein Erwachsener sitzt dabei und liest vor. Ihr schaut die Farbe an, hört das Wort und sagt es nach.",
+    "erwachsene": [
+      "Kinder von 3 bis 5 Jahren nutzen die App nur zusammen mit einem Erwachsenen. Eine Runde zeigt höchstens {n} Farbwörter, danach ist Bildschirm aus (Eigenentwurf, die Zahl ist offen).",
+      "Warm und kalt sind bei Farben eine Abmachung unter Menschen, kein Messwert. Grün liegt dazwischen; wer es anders einordnet, hat nicht unrecht (Eigenentwurf, fachlich nicht geprüft).",
+      "Niemand wird bewertet. Die App fragt nichts ab, zählt nichts, was ein Kind kann, und gibt keine Rückmeldung über ein Kind.",
+      "Die Farbkarten kann ein Erwachsener ausdrucken: eine Karte je Blatt A4 hoch. Nichts wird gespeichert, es gibt keine Verbindung nach draußen."
+    ]
+  },
+  "gruppen": [
+    { "id": "warm", "name": "Warme Farben", "text": "Rot, Orange und Gelb heißen warme Farben. Das haben sich Menschen so ausgemacht." },
+    { "id": "kalt", "name": "Kalte Farben", "text": "Blau zählt man zu den kalten Farben. Grün liegt dazwischen: Darüber sind sich Menschen nicht einig." },
+    { "id": "kontrast", "name": "Kontrastfarben", "text": "Kontrast heißt: Zwei Farben sehen nebeneinander ganz verschieden aus. Hier stehen Farbpaare." },
+    { "id": "neutral", "name": "Neutrale Farben", "text": "Weiß, Grau und Schwarz zählt man zu den neutralen Farben. Sie passen zu vielen anderen Farben." }
+  ],
+  "farbwoerter": [
+    { "id": "kirschrot", "de": "kirschrot", "ru": "вишневый", "uk": null, "gruppe": "warm", "farbe": "#B0102A", "satz": "Kirschrot ist so rot wie eine reife Kirsche.", "quelle": { "seite": "S. 178" }, "eigenentwurf": true },
+    { "id": "himbeerrot", "de": "himbeerrot", "ru": "малиновый", "uk": null, "gruppe": "warm", "farbe": "#D81E5B", "satz": "Himbeerrot ist das kräftige Rot einer Himbeere.", "quelle": { "seite": "S. 178" }, "eigenentwurf": true },
+    { "id": "aprikosenfarben", "de": "aprikosenfarben", "ru": "абрикосовый", "uk": null, "gruppe": "warm", "farbe": "#F5B07A", "satz": "Aprikosenfarben ist ein weiches, helles Orange wie eine Aprikose.", "quelle": { "seite": "S. 178" }, "eigenentwurf": true },
+    { "id": "zitronengelb", "de": "zitronengelb", "ru": "лимонный", "uk": null, "gruppe": "warm", "farbe": "#F2DF21", "satz": "Zitronengelb ist so gelb wie eine Zitrone.", "quelle": { "seite": "S. 178" }, "eigenentwurf": true },
+    { "id": "eisblau", "de": "eisblau", "ru": null, "uk": null, "gruppe": "kalt", "farbe": "#BDE3F5", "satz": "Eisblau ist ein helles Blau, das an Eis erinnert.", "eigenentwurf": true },
+    { "id": "nachtblau", "de": "nachtblau", "ru": null, "uk": null, "gruppe": "kalt", "farbe": "#1B2A5C", "satz": "Nachtblau ist ein sehr dunkles Blau wie der Himmel in der Nacht.", "eigenentwurf": true },
+    { "id": "meergruen", "de": "meergrün", "ru": "цвет морской волны", "uk": null, "gruppe": "kalt", "farbe": "#2A9D8F", "satz": "Meergrün ist ein Grün, das an das Meer erinnert.", "grenzfall": "Grün liegt zwischen warm und kalt. Manche nennen es kalt, andere warm. Wer es anders einordnet, hat nicht unrecht.", "quelle": { "seite": "S. 178" }, "eigenentwurf": true },
+    { "id": "tannengruen", "de": "tannengrün", "ru": null, "uk": null, "gruppe": "kalt", "farbe": "#1F5A3C", "satz": "Tannengrün ist ein dunkles Grün wie bei einer Tanne.", "grenzfall": "Grün liegt zwischen warm und kalt. Manche nennen es kalt, andere warm. Wer es anders einordnet, hat nicht unrecht.", "quelle": { "seite": "S. 178" }, "eigenentwurf": true },
+    { "id": "zitronengelb-nachtblau", "de": "zitronengelb und nachtblau", "ru": null, "uk": null, "gruppe": "kontrast", "teile": ["zitronengelb", "nachtblau"], "farbe": ["#F2DF21", "#1B2A5C"], "satz": "Gelb und Blau sehen nebeneinander ganz verschieden aus.", "eigenentwurf": true },
+    { "id": "aprikosenfarben-eisblau", "de": "aprikosenfarben und eisblau", "ru": null, "uk": null, "gruppe": "kontrast", "teile": ["aprikosenfarben", "eisblau"], "farbe": ["#F5B07A", "#BDE3F5"], "satz": "Orange und Blau sehen nebeneinander ganz verschieden aus.", "eigenentwurf": true },
+    { "id": "schneeweiss-rabenschwarz", "de": "schneeweiß und rabenschwarz", "ru": null, "uk": null, "gruppe": "kontrast", "teile": ["schneeweiß", "rabenschwarz"], "farbe": ["#FFFFFF", "#1A1A1D"], "satz": "Hell und dunkel: Weiß und Schwarz sehen nebeneinander ganz verschieden aus.", "eigenentwurf": true },
+    { "id": "schneeweiss", "de": "schneeweiß", "ru": null, "uk": null, "gruppe": "neutral", "farbe": "#FFFFFF", "satz": "Schneeweiß ist so weiß wie frischer Schnee.", "eigenentwurf": true },
+    { "id": "aschgrau", "de": "aschgrau", "ru": null, "uk": null, "gruppe": "neutral", "farbe": "#B4B4B0", "satz": "Aschgrau ist ein helles Grau wie Asche.", "eigenentwurf": true },
+    { "id": "rabenschwarz", "de": "rabenschwarz", "ru": null, "uk": null, "gruppe": "neutral", "farbe": "#1A1A1D", "satz": "Rabenschwarz ist ein tiefes Schwarz, wie bei einem Raben.", "eigenentwurf": true }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@info70/meine-familie-woerter-und-rollen-content-pack",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Meine Familie: Wörter und Rollen. Karten zum Vorlesen für Kinder von 3 bis 5 Jahren, nur gemeinsam mit einer erwachsenen Person: sechs Familienrollen mit einer Frage mit zwei Antworten, Haushalt, Höflichkeit und Familienbudget nach der Praleska, S. 117. Pause nach höchstens sechs Karten. Einzelne Karten zum Ausdrucken, ein Blatt A4 hoch je Karte. Ohne Wertung, ohne Speicherung, ohne Verbindung nach draußen.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/logik.test.mjs test/regeln.test.mjs"
+  }
+}

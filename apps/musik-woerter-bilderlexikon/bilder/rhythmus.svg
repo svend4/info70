@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Eine Trommel mit zwei Schlägeln und lange und kurze Schläge darunter">
+<title>Eine Trommel mit zwei Schlägeln und lange und kurze Schläge darunter</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(100 82) scale(1)">
+<path d="M-50 0 V46 C-50 62 50 62 50 46 V0Z" fill="#b91c1c"/>
+<path d="M-50 10 H50" stroke="#fbbf24" stroke-width="3"/>
+<path d="M-50 36 H50" stroke="#fbbf24" stroke-width="3"/>
+<path d="M-40 10 L-30 36 L-20 10 L-10 36 L0 10 L10 36 L20 10 L30 36 L40 10" stroke="#ffffff" stroke-width="2.4"/>
+<ellipse cx="0" cy="0" rx="50" ry="14" fill="#ffffff"/>
+<path d="M-34 -60 L-8 -8 M34 -60 L8 -8" stroke="#d97706" stroke-width="5"/>
+<circle cx="-35" cy="-62" r="6" fill="#d97706" stroke-width="3"/><circle cx="35" cy="-62" r="6" fill="#d97706" stroke-width="3"/>
+</g>
+<rect x="22" y="160" width="40" height="16" rx="8" fill="#1d4ed8"/>
+<rect x="72" y="160" width="16" height="16" rx="8" fill="#b91c1c"/>
+<rect x="98" y="160" width="16" height="16" rx="8" fill="#b91c1c"/>
+<rect x="124" y="160" width="54" height="16" rx="8" fill="#1d4ed8"/>
+</g>
+</svg>

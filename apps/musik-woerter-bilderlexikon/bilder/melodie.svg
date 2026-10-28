@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Noten auf fünf Linien, durch eine Wellenlinie verbunden">
+<title>Noten auf fünf Linien, durch eine Wellenlinie verbunden</title>
+<g fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 80 H186" stroke-width="2.6"/><path d="M16 92 H186" stroke-width="2.6"/><path d="M16 104 H186" stroke-width="2.6"/><path d="M16 116 H186" stroke-width="2.6"/><path d="M16 128 H186" stroke-width="2.6"/>
+<path d="M34 124 C48 124 48 98 62 98 C76 98 76 110 90 110 C104 110 104 84 118 84 C132 84 132 100 146 100 C159 100 159 78 172 78" stroke="#bfdbfe" stroke-width="12"/>
+<ellipse cx="34" cy="124" rx="9" ry="6.5" transform="rotate(-20 34 124)" fill="#1d4ed8" stroke-width="3.4"/><path d="M42 121 V92" stroke-width="3.6"/><ellipse cx="62" cy="98" rx="9" ry="6.5" transform="rotate(-20 62 98)" fill="#b91c1c" stroke-width="3.4"/><path d="M70 95 V66" stroke-width="3.6"/><ellipse cx="90" cy="110" rx="9" ry="6.5" transform="rotate(-20 90 110)" fill="#15803d" stroke-width="3.4"/><path d="M98 107 V78" stroke-width="3.6"/><ellipse cx="118" cy="84" rx="9" ry="6.5" transform="rotate(-20 118 84)" fill="#1d4ed8" stroke-width="3.4"/><path d="M126 81 V52" stroke-width="3.6"/><ellipse cx="146" cy="100" rx="9" ry="6.5" transform="rotate(-20 146 100)" fill="#b91c1c" stroke-width="3.4"/><path d="M154 97 V68" stroke-width="3.6"/><ellipse cx="172" cy="78" rx="9" ry="6.5" transform="rotate(-20 172 78)" fill="#15803d" stroke-width="3.4"/><path d="M180 75 V46" stroke-width="3.6"/>
+<g transform="translate(40 44) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#b91c1c" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g><g transform="translate(150 40) scale(0.7)">
+<ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-20)" fill="#15803d" stroke-width="3.5"/>
+<path d="M8 -3 V-38 C8 -28 22 -26 22 -13" stroke-width="4"/>
+</g>
+</g>
+</svg>
