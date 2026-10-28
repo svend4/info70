@@ -1,0 +1,73 @@
+diff --git a/packages/kinder-ui/js/komponenten.mjs b/packages/kinder-ui/js/komponenten.mjs
+index 64ac991..5c3eef4 100644
+--- a/packages/kinder-ui/js/komponenten.mjs
++++ b/packages/kinder-ui/js/komponenten.mjs
+@@ -1,5 +1,16 @@
+ // kinder-ui: kleine DOM- und Sprachhelfer ohne Abhängigkeiten.
+ 
++/**
++ * Kennung eines Knopfs für die Browser-Prüfung (data-kennung): aus aria-label, id oder Text, in Kleinbuchstaben
++ * mit Bindestrichen, höchstens 40 Zeichen; ein Knopf nur mit Symbol heißt „knopf“. Reine Funktion (Entscheidung Max 31б).
++ */
++export function kennungAus(...quellen) {
++  const roh = quellen.find((q) => typeof q === 'string' && q.trim()) ?? '';
++  const k = roh.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
++    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40).replace(/-+$/, '');
++  return k || 'knopf';
++}
++
+ /**
+  * DOM-Konstruktor: el('button', {class: 'k-knopf', onclick: fn}, 'Text', kind …)
+  * @param {string} tag
+@@ -20,6 +31,10 @@ export function el(tag, attrs = {}, ...kinder) {
+   // Rendern per `bedingung && el(...)` bzw. `bedingung ? el(...) : null`,
+   // ohne dass ein "null"/"false"-Textknoten erscheint.
+   knoten.append(...kinder.filter((k) => k != null && k !== false));
++  // Jeder Knopf ohne eigene Kennung bekommt eine aus Beschriftung oder id: reine Ergänzung, die die Browser-Prüfung braucht.
++  if (tag === 'button' && !knoten.hasAttribute('data-kennung')) {
++    knoten.setAttribute('data-kennung', kennungAus(knoten.getAttribute('aria-label'), knoten.id, knoten.textContent));
++  }
+   return knoten;
+ }
+ 
+diff --git a/packages/kinder-ui/test/knopf-kennung.test.mjs b/packages/kinder-ui/test/knopf-kennung.test.mjs
+new file mode 100644
+index 0000000..c789065
+--- /dev/null
++++ b/packages/kinder-ui/test/knopf-kennung.test.mjs
+@@ -0,0 +1,35 @@
++import { test } from 'node:test';
++import assert from 'node:assert/strict';
++import { el, kennungAus } from '../js/komponenten.mjs';
++
++// Entscheidung Max 31б: jeder Knopf aus el('button', …) trägt data-kennung, damit die Browser-Prüfung ihn klicken kann.
++function fakeKnoten(tag) {
++  const attr = new Map();
++  return {
++    tag, id: '', textContent: '',
++    setAttribute(n, v) { attr.set(n, v); if (n === 'id') this.id = v; },
++    getAttribute: (n) => (attr.has(n) ? attr.get(n) : null),
++    hasAttribute: (n) => attr.has(n),
++    addEventListener() {},
++    append(...kinder) { this.textContent = kinder.map((k) => (typeof k === 'string' ? k : k.textContent)).join(''); },
++  };
++}
++globalThis.document = { createElement: fakeKnoten };
++
++test('kennungAus: Kleinbuchstaben, Bindestriche, Umlaute aufgelöst, Symbole fallen weg', () => {
++  assert.equal(kennungAus('🔊 Nochmal vorlesen'), 'nochmal-vorlesen');
++  assert.equal(kennungAus('Nächste Frage ➡️'), 'naechste-frage');
++  assert.equal(kennungAus('Über Größe'), 'ueber-groesse');
++  assert.equal(kennungAus('🔊'), 'knopf', 'nur Symbol');
++  assert.equal(kennungAus(null, '', ''), 'knopf');
++  assert.equal(kennungAus('a'.repeat(80)).length, 40);
++  assert.equal(kennungAus(null, 'daten-loeschen', 'Text'), 'daten-loeschen', 'die erste nichtleere Quelle gilt');
++});
++
++test('el: ein Knopf bekommt eine Kennung, eine vorhandene bleibt, andere Elemente bekommen keine', () => {
++  assert.equal(el('button', {}, '🔁 Noch eine Runde').getAttribute('data-kennung'), 'noch-eine-runde');
++  assert.equal(el('button', { 'data-kennung': 'meine' }, 'Text').getAttribute('data-kennung'), 'meine');
++  assert.equal(el('button', { 'aria-label': 'Schließen' }, '✕').getAttribute('data-kennung'), 'schliessen');
++  assert.equal(el('p', {}, 'Text').hasAttribute('data-kennung'), false);
++  assert.equal(el('a', { href: '#' }, 'Link').hasAttribute('data-kennung'), false);
++});
