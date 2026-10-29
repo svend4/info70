@@ -19,6 +19,9 @@ export const LEISTUNGS_MUSTER = {
   geschafft: new RegExp(`${G}(?:geschafft|gemeistert|bestanden|durchgefallen)${E}`, 'gi'),
   sterneUndPokale: /⭐|🌟|★|☆|🏆|🥇|🥈|🥉|🏅|🎖|\bpokal|\bmedaille|\bsterne?\b/gi,
   vergleich: /wochenübersicht|wochenvergleich|tagesvergleich|(?:besser|mehr|weniger) als (?:gestern|letzte woche|vorige woche)/gi,
+  // Seit 29.10.2026 (Plan-Tor 1 nennt „Rang“, Befund B-21). Ein Unterstrich davor zählt als Teil eines Bezeichners
+  // (STATUS_RANG in foerder-navigator ist eine Sortierkonstante, kein Rang eines Kindes).
+  rang: new RegExp(`(?<![a-zäöüß_])(?:rangliste|rangfolge|rangordnung|rangplatz|ränge|rang)${E}`, 'gi'),
 };
 
 /** Treffer in einem Text: [{ gruppe, wort }]. Wörter hinter einer Verneinung zählen nicht. */

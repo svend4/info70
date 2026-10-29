@@ -26,3 +26,14 @@ test('Verneinung hebt den Treffer auf (höchstens drei Wörter davor), Kommentar
   assert.deepEqual(gruppen('// Punkte und Rekord\nconst a = 1;', 'app.mjs'), []);
   assert.ok(gruppen('Es gibt Punkte, aber keine Pause').includes('punkte'), 'Kontrolle: ohne Verneinung vor dem Wort bleibt es ein Treffer');
 });
+
+// Seit 29.10.2026 (Plan-Tor 1, Befund B-21): „Rang“ gehört zur Wortliste. Ein Bezeichner wie STATUS_RANG
+// ist keine Bewertung eines Kindes, „keine Ränge“ ist eine Verneinung und zählt nicht.
+test('Rang (Plan-Tor 1): Rang, Ränge, Rangliste und Rangfolge sind Treffer; Verneinung und Bezeichner nicht', () => {
+  for (const text of ['Dein Rang: Entdecker', 'Die Rangliste der Apps', 'Rangfolge der Schritte', 'Ränge der Stufen']) {
+    assert.ok(gruppen(text).includes('rang'), text);
+  }
+  assert.deepEqual(gruppen('Es gibt keine Ränge.'), []);
+  assert.deepEqual(gruppen('const STATUS_RANG = 3;', 'logik.mjs'), []);
+  assert.deepEqual(gruppen('Vorrang haben die Kinder'), []);
+});
