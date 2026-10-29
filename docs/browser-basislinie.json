@@ -710,6 +710,16 @@
       "konsole": 0,
       "fremdeHosts": 0
     },
+    "farbwoerter-schatz": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
     "feed-forscher": {
       "nichtGemessen": 0,
       "ohneKennung": 1,
@@ -927,6 +937,16 @@
       "ueberlauf": 0,
       "beruehrung": 0,
       "druck": 9,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "himmelsgucker-sonne-mond-und-sterne": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
       "konsole": 0,
       "fremdeHosts": 0
     },
@@ -1330,6 +1350,16 @@
       "konsole": 0,
       "fremdeHosts": 0
     },
+    "meine-familie-woerter-und-rollen-content-pack": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
     "meldewege-planer": {
       "nichtGemessen": 0,
       "ohneKennung": 1,
@@ -1443,6 +1473,16 @@
     "musik-jahresplaner": {
       "nichtGemessen": 0,
       "ohneKennung": 1,
+      "klickFehler": 0,
+      "ueberlauf": 0,
+      "beruehrung": 0,
+      "druck": 0,
+      "konsole": 0,
+      "fremdeHosts": 0
+    },
+    "musik-woerter-bilderlexikon": {
+      "nichtGemessen": 0,
+      "ohneKennung": 0,
       "klickFehler": 0,
       "ueberlauf": 0,
       "beruehrung": 0,
