@@ -1,0 +1,3035 @@
+{
+  "erzeugt": "tools/gruppe-2-stand.mjs (abgeleitet aus Plan 18.10 Abschnitt 6, Index 27.10 und Ergänzung 29.10)",
+  "hinweis": "Abgeleiteter Stand, keine Quelle. Maßgeblich sind die Pläne, der Index und die Ergänzung (Entscheidung 63). Nicht von einem Menschen geprüft.",
+  "zahlen": {
+    "gesamt": 131,
+    "gebaut": 63,
+    "teilweise": 62,
+    "unklar": 3,
+    "nicht_bauen": 3,
+    "davon_variante_a": 4,
+    "stufe_1": 4,
+    "stufe_2": 9,
+    "stufe_3": 53,
+    "stufe_3_faktengeprueft": 22,
+    "stufe_3_nur_katalogtext": 26,
+    "stufe_3_quelle_nicht_pruefbar": 5
+  },
+  "stufe_3_reihenfolge": [
+    "ELT-4",
+    "ELT-6",
+    "ELT-8",
+    "ELT-12",
+    "ELT-13",
+    "ELT-15",
+    "ELT-16",
+    "ELT-21",
+    "KIT-12",
+    "KIT-14",
+    "KIT-15",
+    "KIT-17",
+    "KIT-21",
+    "KIT-25",
+    "KIT-27",
+    "PRI-2",
+    "PRI-4",
+    "PRI-5",
+    "PRI-12",
+    "PRI-13",
+    "PRI-17",
+    "PRI-18",
+    "KIN-18",
+    "GEM-3",
+    "GEM-7",
+    "GEM-10",
+    "GEM-22",
+    "ELT-2",
+    "ELT-9",
+    "ELT-17",
+    "ELT-19",
+    "CON-2",
+    "CON-5",
+    "CON-8",
+    "CON-11",
+    "CON-12",
+    "CON-14",
+    "CON-16",
+    "CON-18",
+    "CON-19",
+    "PRI-3",
+    "PRI-9",
+    "PRI-10",
+    "PRI-11",
+    "PRI-14",
+    "PRI-15",
+    "PRI-16",
+    "PRI-19",
+    "KIN-7",
+    "KIN-11",
+    "KIT-3",
+    "KIT-4",
+    "PRI-7"
+  ],
+  "fehler": [],
+  "einheiten": [
+    {
+      "id": "KIN-1",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 1,
+      "einheit": "Ich schaff das! - Dranbleiben-Trainer",
+      "app": "ich-schaff-das",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "ich-schaff-das",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-2",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 2,
+      "einheit": "Gefuehle-Entdecker",
+      "app": "gefuehle-entdecker",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "gefuehle-entdecker",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-3",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 3,
+      "einheit": "Wer wohnt wo? - Lebensraum-Haeuser",
+      "app": "wer-wohnt-wo",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "wer-wohnt-wo",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-4",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 4,
+      "einheit": "Ein Tier zu Gast - Verantwortungs-Trainer",
+      "app": "tier-zu-gast",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "tier-zu-gast",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-5",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 5,
+      "einheit": "Freunde in der Gruppe - Sozial-Trainer",
+      "app": "freunde-in-der-gruppe",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "freunde-in-der-gruppe",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-6",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 6,
+      "einheit": "Tonleiter-Treppe",
+      "app": "tonleiter-treppe",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "tonleiter-treppe",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-7",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 7,
+      "einheit": "Rhythmus-Orchester",
+      "app": "rhythmus-orchester",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIN-7-rhythmus-orchester.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "rhythmus-orchester",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 49
+    },
+    {
+      "id": "KIN-8",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 8,
+      "einheit": "Ornament-Werkstatt: Muster legen",
+      "app": "ornament-werkstatt",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "ornament-werkstatt",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-9",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 9,
+      "einheit": "Mensch-Tier-Pflanze: Was uns verbindet (Vergleichs-Quiz)",
+      "app": "mensch-tier-pflanze",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "mensch-tier-pflanze",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-10",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 10,
+      "einheit": "Der Koerper-Entdecker: Was in dir steckt (Gesundheits-Quiz)",
+      "app": "koerper-entdecker",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "koerper-entdecker",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-11",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 11,
+      "einheit": "Nahrungsnetz-Werkstatt (Oekosystem-Simulator)",
+      "app": "nahrungsnetz-werkstatt",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIN-11-nahrungsnetz-werkstatt.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "nahrungsnetz-werkstatt",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 50
+    },
+    {
+      "id": "KIN-12",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 12,
+      "einheit": "Jahreszeiten-Rad (Simulator + Content-Pack)",
+      "app": "jahreszeiten-rad",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "jahreszeiten-rad",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-13",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 13,
+      "einheit": "Hoeflich & Fair: Sprach-Etikette (Einheit 13)",
+      "app": "hoeflich-fair",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "hoeflich-fair",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-14",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 14,
+      "einheit": "Gesunder-Körper-Ampel (Selbstbeobachtung) (Einheit 14)",
+      "app": "gesunder-koerper-ampel",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "gesunder-koerper-ampel",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-15",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 15,
+      "einheit": "Familien-Budget: klein anfangen (Simulator) (Einheit 15)",
+      "app": "familien-budget",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "familien-budget",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-16",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 16,
+      "einheit": "Erfinder-Werkstatt: Neue Dinge gestalten (Kreativ-Modul) (Einheit 16)",
+      "app": "erfinder-werkstatt",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "erfinder-werkstatt",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-17",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 17,
+      "einheit": "Uhr- und Kalender-Kind (Einheit 17)",
+      "app": "uhr-und-kalender-kind",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIN-17-uhr-und-kalender-kind.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "uhr-und-kalender-kind",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Stand 29.10: Ausbau committet (d4446a0, 28 Tests). Offen laut Bauauftrag Abschnitt 9: Rekord und Punkte/Rang (Fragen 50 und 51), Speicherregel localStorage (docs/02 Z. 25 bis 26 gegen die Vorlage), A18 Seitenangaben. Stufe 2 wartet auf die Entscheidungen 50 bis 60."
+      ]
+    },
+    {
+      "id": "KIN-18",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 18,
+      "einheit": "Deutschland-Kompass (Einheit 18)",
+      "app": "deutschland-kompass",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIN-18-deutschland-kompass.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "deutschland-kompass",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 23
+    },
+    {
+      "id": "KIN-19",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 19,
+      "einheit": "Märchen, Gedicht oder Fabel? (Einheit 19)",
+      "app": "maerchen-gedicht-fabel",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "maerchen-gedicht-fabel",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-20",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 20,
+      "einheit": "Reim-Werkstatt (Einheit 20)",
+      "app": "reim-werkstatt",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "reim-werkstatt",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-21",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 21,
+      "einheit": "Kunst-Entdecker (Einheit 21)",
+      "app": "kunst-entdecker",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "kunst-entdecker",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-22",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 22,
+      "einheit": "Erste-Wörter-Lesewerkstatt (Einheit 22)",
+      "app": "erste-woerter-lesewerkstatt",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "erste-woerter-lesewerkstatt",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIN-23",
+      "abschnitt": "Kinder-Apps 5–7 / 8–12 (docs/10 Z. 279–290 …)",
+      "nr": 23,
+      "einheit": "Warum heisst das so? Wort-Quiz (Einheit 23)",
+      "app": "warum-heisst-das-so",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "warum-heisst-das-so",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-1",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 1,
+      "einheit": "Gemeinsam gesund essen",
+      "app": "gemeinsam-gesund-essen",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "gemeinsam-gesund-essen",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-2",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 2,
+      "einheit": "Dinge des Alltags – Quiz-Content-Pack (Ko-Nutzung)",
+      "app": "dinge-des-alltags",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "dinge-des-alltags",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-3",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 3,
+      "einheit": "Klang-Detektive (Weiterführung ab 3)",
+      "app": "klang-detektive",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-3-klang-detektive.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "klang-detektive",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 24
+    },
+    {
+      "id": "GEM-4",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 4,
+      "einheit": "Meine fünf Helfer – Körper-Entdecker",
+      "app": "fuenf-helfer",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "fuenf-helfer",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-5",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 5,
+      "einheit": "Wetter- und Jahreszeiten-Forscher",
+      "app": "wetter-forscher",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "wetter-forscher",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-6",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 6,
+      "einheit": "Wie bewegen sich Tiere und Pflanzen?",
+      "app": "wie-bewegt-sich",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "wie-bewegt-sich",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-7",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 7,
+      "einheit": "Sicher unterwegs – Szenario-Trainer Alltag & Straße",
+      "app": "sicher-unterwegs",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-7-sicher-unterwegs.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "sicher-unterwegs",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 25
+    },
+    {
+      "id": "GEM-8",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 8,
+      "einheit": "Mathe-Entdecker: Zahlen, Formen, Reihen",
+      "app": "mathe-entdecker",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-8-mathe-entdecker.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "mathe-entdecker",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Stand 29.10: Ausbau committet (ecc9fa6, 43 Tests). Prüfung 3: freigabe_empfohlen. Offen: Entscheidungen 65 bis 67 (Bestand: Zufall, Stufe, Fokus, Wort Sterne)."
+      ]
+    },
+    {
+      "id": "GEM-9",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 9,
+      "einheit": "Notruf-Held: 112 und 110 üben",
+      "app": "notruf-held",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "notruf-held",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-10",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 10,
+      "einheit": "Kita-Kartograph: Wir zeichnen unseren Raum",
+      "app": "kita-kartograph, deutschland-kompass",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-10-kita-kartograph.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "kita-kartograph",
+          "vorhanden": true
+        },
+        {
+          "app": "deutschland-kompass",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 26
+    },
+    {
+      "id": "GEM-11",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 11,
+      "einheit": "Reim-Radar",
+      "app": "reim-radar",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "reim-radar",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-12",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 12,
+      "einheit": "Woerter-Sortierer",
+      "app": "woerter-sortierer",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "woerter-sortierer",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-13",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 13,
+      "einheit": "Erzaehl-Bruecke",
+      "app": "erzaehl-bruecke",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-13-erzaehl-bruecke.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "erzaehl-bruecke",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Stand 29.10: Ausbau committet (73b342a, 31 Tests). Prüfung abgeschlossen. Offen: Entscheidungen 65 bis 67 (Bestand)."
+      ]
+    },
+    {
+      "id": "GEM-14",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 14,
+      "einheit": "Grammatik-Zwerge",
+      "app": "grammatik-zwerge",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-14-grammatik-zwerge.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "grammatik-zwerge",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-15",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 15,
+      "einheit": "Klang-Detektive (Musik-Hoer-Quiz, 4-6)",
+      "app": "musik-detektive",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "musik-detektive",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-16",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 16,
+      "einheit": "Design-Entdecker: praktisch und schön",
+      "app": "design-entdecker",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-16-design-entdecker.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "design-entdecker",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-17",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 17,
+      "einheit": "Tischdienst-Trainer",
+      "app": "tischdienst-trainer",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "teilweise",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-17-tischdienst-trainer.md",
+      "status": "gebaut",
+      "abweichung_18_27": true,
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "tischdienst-trainer",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Abweichung: am 18.10 teilweise, im Index vom 27.10 nicht mehr unter „teilweise“; die Bilanz 27.10 zählt sie als gebaut. Der Grund des Wechsels steht in keiner Quelle."
+      ]
+    },
+    {
+      "id": "GEM-18",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 18,
+      "einheit": "Gesund-Ampel",
+      "app": "gesunder-koerper-ampel",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "gesunder-koerper-ampel",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-19",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 19,
+      "einheit": "Geschichten-Wender (Stimmungs-Werkstatt)",
+      "app": "geschichten-wender",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-19-geschichten-wender.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "geschichten-wender",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-20",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 20,
+      "einheit": "Tier-Tanz-Impulse",
+      "app": "tier-tanz-impulse",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "tier-tanz-impulse",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-21",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 21,
+      "einheit": "Farb-Labor",
+      "app": "farb-labor",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "farb-labor",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "GEM-22",
+      "abschnitt": "Gemeinsame Apps 3–5",
+      "nr": 22,
+      "einheit": "Mess-Labor der kleinen Forscher",
+      "app": "mess-labor",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/GEM-22-mess-labor.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "mess-labor",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 27
+    },
+    {
+      "id": "ELT-1",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 1,
+      "einheit": "Staerken-Tagebuch fuer Eltern",
+      "app": "staerken-tagebuch",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "staerken-tagebuch",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-2",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 2,
+      "einheit": "Meilenstein-Begleiter 1. Lebensjahr",
+      "app": "meilenstein-begleiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-2-meilenstein-begleiter.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "meilenstein-begleiter",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 28
+    },
+    {
+      "id": "ELT-3",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 3,
+      "einheit": "Sprich mit mir! Sprachanbahnung 0-1 mehrsprachig",
+      "app": "sprich-mit-mir",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "sprich-mit-mir",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-4",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 4,
+      "einheit": "Bewegungs-Kartei Babys erstes Jahr",
+      "app": "bewegungs-kartei-erstes-jahr",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-4-bewegungs-kartei-erstes-jahr.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "bewegungs-kartei-erstes-jahr",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 1
+    },
+    {
+      "id": "ELT-5",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 5,
+      "einheit": "Sicherer-Krabbelraum-Check",
+      "app": "sicherer-krabbelraum-check",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "sicherer-krabbelraum-check",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-6",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 6,
+      "einheit": "Erste-Woerter-Tagebuch",
+      "app": "erste-woerter-tagebuch",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-6-erste-woerter-tagebuch.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "erste-woerter-tagebuch",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 2
+    },
+    {
+      "id": "ELT-7",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 7,
+      "einheit": "Autonomiephase-Navigator ('Trotzphase')",
+      "app": "autonomiephase-navigator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "autonomiephase-navigator",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-8",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 8,
+      "einheit": "Puste- und Lauschspiel-Kartei",
+      "app": "puste-lauschspiel-kartei",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-8-puste-lauschspiel-kartei.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "puste-lauschspiel-kartei",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 3
+    },
+    {
+      "id": "ELT-9",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 9,
+      "einheit": "Vorlese-Kompass 1-3",
+      "app": "vorlese-kompass",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-9-vorlese-kompass.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "vorlese-kompass",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 29
+    },
+    {
+      "id": "ELT-10",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 10,
+      "einheit": "Musikmomente 1-3",
+      "app": "musikmomente-1-3",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "musikmomente-1-3",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-11",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 11,
+      "einheit": "Spielzeug-Check U3",
+      "app": "spielzeug-check-u3",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "spielzeug-check-u3",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-12",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 12,
+      "einheit": "Musik-Alltags-Begleiter fuer Eltern",
+      "app": "musik-alltags-begleiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-12-musik-alltags-begleiter.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "musik-alltags-begleiter",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 4
+    },
+    {
+      "id": "ELT-13",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 13,
+      "einheit": "Ich kann das schon! Selbststaendigkeits-Leiter",
+      "app": "selbststaendigkeits-leiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-13-selbststaendigkeits-leiter.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "selbststaendigkeits-leiter",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 5
+    },
+    {
+      "id": "ELT-14",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 14,
+      "einheit": "Reim- und Klanggeschichten-Erzeuger",
+      "app": "klanggeschichten-erzeuger",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "klanggeschichten-erzeuger",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-15",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 15,
+      "einheit": "Kunst-Gucken: Bilderbuch-Dialog-Guide",
+      "app": "kunst-gucken",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-15-kunst-gucken.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "kunst-gucken",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 6
+    },
+    {
+      "id": "ELT-16",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 16,
+      "einheit": "Erste Kuenstler 1-3 - Eltern-Ideenkartei mit Meilenstein-Check",
+      "app": "erste-kuenstler",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-16-erste-kuenstler.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "erste-kuenstler",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 7
+    },
+    {
+      "id": "ELT-17",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 17,
+      "einheit": "Wachstums- und Bewegungsbegleiter",
+      "app": "wachstums-bewegungs-begleiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-17-wachstums-bewegungs-begleiter.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "wachstums-bewegungs-begleiter",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 30
+    },
+    {
+      "id": "ELT-18",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 18,
+      "einheit": "Frischluft-Familie: Abhaertung kritisch adaptiert",
+      "app": "frischluft-familie",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "frischluft-familie",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-19",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 19,
+      "einheit": "Spielend schulreif - Eltern-Navigator",
+      "app": "schulanfang-spiel-navigator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-19-schulanfang-spiel-navigator.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "schulanfang-spiel-navigator",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 31
+    },
+    {
+      "id": "ELT-20",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 20,
+      "einheit": "Architektur-Spaziergang-Begleiter",
+      "app": "architektur-spaziergang",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "architektur-spaziergang",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "ELT-21",
+      "abschnitt": "Eltern-Werkzeuge",
+      "nr": 21,
+      "einheit": "Elterngespraech-Begleiter: Uebergang Kita-Grundschule",
+      "app": "elterngespraech-uebergang",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/ELT-21-elterngespraech-uebergang.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "elterngespraech-uebergang",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 8
+    },
+    {
+      "id": "KIT-1",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 1,
+      "einheit": "Entwicklungs-Kompass Kita (digitaler Beobachtungsbogen)",
+      "app": "entwicklungs-kompass",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut (Variante A)",
+      "status_27_10": null,
+      "variante_a": true,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "entwicklungs-kompass",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-2",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 2,
+      "einheit": "Wohlfuehl-Ampel Gruppe",
+      "app": "tagesblick-fachkraft",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut (Variante A)",
+      "status_27_10": null,
+      "variante_a": true,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "tagesblick-fachkraft",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-3",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 3,
+      "einheit": "Gruppenklima-Check",
+      "app": "gruppenklima-check",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-3-gruppenklima-check.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "gruppenklima-check",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 51
+    },
+    {
+      "id": "KIT-4",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 4,
+      "einheit": "Kita-Wochenplaner Bildungsangebote",
+      "app": "kita-wochenplaner",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-4-kita-wochenplaner.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "kita-wochenplaner",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 52
+    },
+    {
+      "id": "KIT-5",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 5,
+      "einheit": "Selbstcheck paedagogisches Ich",
+      "app": "selbstcheck-paedagogik",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "selbstcheck-paedagogik",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-6",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 6,
+      "einheit": "Kita-Familien-Bruecke (Erziehungspartnerschaft-Check)",
+      "app": "kita-familien-bruecke",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "kita-familien-bruecke",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-7",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 7,
+      "einheit": "Szenario-Trainer Elterngespraech",
+      "app": "elterngespraech-trainer",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "elterngespraech-trainer",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-8",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 8,
+      "einheit": "Eingewoehnungs-Tagebuch",
+      "app": "eingewoehnungs-leitfaden",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut (Variante A)",
+      "status_27_10": null,
+      "variante_a": true,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "eingewoehnungs-leitfaden",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-9",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 9,
+      "einheit": "Kita-Mitmach-Boerse (Eltern-Beteiligung)",
+      "app": "kita-mitmach-boerse",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "kita-mitmach-boerse",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-10",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 10,
+      "einheit": "Fachquiz Entwicklung im 1. Lebensjahr",
+      "app": "fachquiz-erstes-lebensjahr",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "fachquiz-erstes-lebensjahr",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-11",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 11,
+      "einheit": "Rollenspiel-Impulskarten",
+      "app": "impulskarten-sujetspiel",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "impulskarten-sujetspiel",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-12",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 12,
+      "einheit": "Musikspiele-Kartei U3",
+      "app": "musikspiele-kartei-u3",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-12-musikspiele-kartei-u3.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "musikspiele-kartei-u3",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 9
+    },
+    {
+      "id": "KIT-13",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 13,
+      "einheit": "Morgenkreis-Wochenplaner U3",
+      "app": "morgenkreis-wochenplaner-u3",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "morgenkreis-wochenplaner-u3",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-14",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 14,
+      "einheit": "Natur-Fuersorge-Karten mit Beobachtungsprotokoll",
+      "app": "natur-fuersorge-karten",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-14-natur-fuersorge-karten.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "natur-fuersorge-karten",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 10
+    },
+    {
+      "id": "KIT-15",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 15,
+      "einheit": "Spielbegleiter 3-5: Vom Hantieren zum Rollenspiel",
+      "app": "spielbegleiter-rollenspiel",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-15-spielbegleiter-rollenspiel.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "spielbegleiter-rollenspiel",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 11
+    },
+    {
+      "id": "KIT-16",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 16,
+      "einheit": "Bewegungspausen-Generator (Fiskultminutki)",
+      "app": "bewegungspausen-generator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "bewegungspausen-generator",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-17",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 17,
+      "einheit": "Bewegungs-Meilensteine: Beobachtungsbogen 3-5",
+      "app": "bewegungs-richtwerte-3-5",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-17-bewegungs-richtwerte-3-5.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "bewegungs-richtwerte-3-5",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 12
+    },
+    {
+      "id": "KIT-18",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 18,
+      "einheit": "Beobachtungsbogen \"Spiel-Entwicklung 3-5\"",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "nicht bauen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "nicht bauen – Begründung dokumentiert",
+      "bauauftrag": null,
+      "status": "nicht bauen",
+      "stufe": "nicht bauen",
+      "app_ordner": []
+    },
+    {
+      "id": "KIT-19",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 19,
+      "einheit": "Buchecke-Check",
+      "app": "buchecke-check",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "buchecke-check",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-20",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 20,
+      "einheit": "Beobachtungsbogen Musikalische Entwicklung 3-5",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "nicht bauen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "nicht bauen – Begründung dokumentiert",
+      "bauauftrag": null,
+      "status": "nicht bauen",
+      "stufe": "nicht bauen",
+      "app_ordner": []
+    },
+    {
+      "id": "KIT-21",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 21,
+      "einheit": "Musik-Jahresplaner fuer die Kita",
+      "app": "musik-jahresplaner",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-21-musik-jahresplaner.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "musik-jahresplaner",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 13
+    },
+    {
+      "id": "KIT-22",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 22,
+      "einheit": "Mini-Gaertner-Begleiter",
+      "app": "mini-gaertner-begleiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "mini-gaertner-begleiter",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-23",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 23,
+      "einheit": "Schulstart-Begleiter: Beobachtungsbogen zur Schulfaehigkeit",
+      "app": "schulstart-begleiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "gebaut (Variante A)",
+      "status_27_10": null,
+      "variante_a": true,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "schulstart-begleiter",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-24",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 24,
+      "einheit": "Schatzkarten-Generator",
+      "app": "schatzkarten-generator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "schatzkarten-generator",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-25",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 25,
+      "einheit": "Mini-Oper-Baukasten",
+      "app": "mini-oper-baukasten",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-25-mini-oper-baukasten.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "mini-oper-baukasten",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 14
+    },
+    {
+      "id": "KIT-26",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 26,
+      "einheit": "Unser Konzert – Mitbestimmen",
+      "app": "unser-konzert-zaehlhilfe",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "keiner (Quelle geprüft)",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "unser-konzert-zaehlhilfe",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "KIT-27",
+      "abschnitt": "Kita-Werkzeuge (Fachkräfte)",
+      "nr": 27,
+      "einheit": "Kita-Unterstuetzungs-Navigator",
+      "app": "kita-unterstuetzungs-navigator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/KIT-27-kita-unterstuetzungs-navigator.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "kita-unterstuetzungs-navigator",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 15
+    },
+    {
+      "id": "CON-1",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 1,
+      "einheit": "Content-Pack: Stark und gesund",
+      "app": "stark-und-gesund",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-1-stark-und-gesund.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "stark-und-gesund",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "CON-2",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 2,
+      "einheit": "Spielideen-Kartei: Was kann mein Baby mit...?",
+      "app": "baby-spielideen-kartei",
+      "app_quelle": "Index 27.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-2-spielideen-kartei-was-kann-mein-baby-mit.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "baby-spielideen-kartei",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 32
+    },
+    {
+      "id": "CON-3",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 3,
+      "einheit": "Meine Familie - Woerter und Rollen (Content-Pack)",
+      "app": "meine-familie-woerter-und-rollen-content-pack",
+      "app_quelle": "Dateiname des Bauauftrags",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-3-meine-familie-woerter-und-rollen-content-pack.md",
+      "status": "gebaut",
+      "stufe": 1,
+      "app_ordner": [
+        {
+          "app": "meine-familie-woerter-und-rollen-content-pack",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Am 18.10 offen; seit 27.10 nicht mehr im Index mit „teilweise“, daher gebaut (Bilanz 27.10)."
+      ]
+    },
+    {
+      "id": "CON-4",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 4,
+      "einheit": "Mein Ort, mein Land, unsere Erde (Content-Pack)",
+      "app": "deutschland-kompass",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-4-deutschland-kompass.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "deutschland-kompass",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Stand 29.10: Ausbau nicht committet (Arbeitsstand in con4-arbeitsstand.tgz, Übergabe docs/uebergabe-2026-10-29.md), 42 Tests. Prüfung 4: Nacharbeit R4-1 erledigt; freigabefähig nach den Entscheidungen 68 und 69."
+      ]
+    },
+    {
+      "id": "CON-5",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 5,
+      "einheit": "Tierkinder und ihre Familien (Geschichten-Pack)",
+      "app": "tierkinder-vorlesen",
+      "app_quelle": "Index 27.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-5-tierkinder-vorlesen.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "tierkinder-vorlesen",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 33
+    },
+    {
+      "id": "CON-6",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 6,
+      "einheit": "Himmelsgucker: Sonne, Mond und Sterne",
+      "app": "himmelsgucker-sonne-mond-und-sterne",
+      "app_quelle": "Dateiname des Bauauftrags",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-6-himmelsgucker-sonne-mond-und-sterne.md",
+      "status": "gebaut",
+      "stufe": 1,
+      "app_ordner": [
+        {
+          "app": "himmelsgucker-sonne-mond-und-sterne",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Am 18.10 offen; seit 27.10 nicht mehr im Index mit „teilweise“, daher gebaut (Bilanz 27.10)."
+      ]
+    },
+    {
+      "id": "CON-7",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 7,
+      "einheit": "Herkunftssprachen-Bruecke uk/ru",
+      "app": "herkunftssprachen-bruecke",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-7-herkunftssprachen-bruecke.md",
+      "status": "teilweise",
+      "stufe": 2,
+      "app_ordner": [
+        {
+          "app": "herkunftssprachen-bruecke",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "CON-8",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 8,
+      "einheit": "Kreisspiele-Sammlung mehrsprachig",
+      "app": "bewegungs-schatzkiste",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-8-bewegungs-schatzkiste.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "bewegungs-schatzkiste",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 34
+    },
+    {
+      "id": "CON-9",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 9,
+      "einheit": "Farbwörter-Schatz",
+      "app": "farbwoerter-schatz",
+      "app_quelle": "Dateiname des Bauauftrags",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "neu bauen – ohne quiz-kern (Regelkonflikt)",
+      "bauauftrag": "docs/bauauftraege/CON-9-farbwoerter-schatz.md",
+      "status": "gebaut",
+      "stufe": 1,
+      "app_ordner": [
+        {
+          "app": "farbwoerter-schatz",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Am 18.10 offen; seit 27.10 nicht mehr im Index mit „teilweise“, daher gebaut (Bilanz 27.10)."
+      ]
+    },
+    {
+      "id": "CON-10",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 10,
+      "einheit": "Musik-Woerter-Bilderlexikon",
+      "app": "musik-woerter-bilderlexikon",
+      "app_quelle": "Dateiname des Bauauftrags",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-10-musik-woerter-bilderlexikon.md",
+      "status": "gebaut",
+      "stufe": 1,
+      "app_ordner": [
+        {
+          "app": "musik-woerter-bilderlexikon",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Am 18.10 offen; seit 27.10 nicht mehr im Index mit „teilweise“, daher gebaut (Bilanz 27.10)."
+      ]
+    },
+    {
+      "id": "CON-11",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 11,
+      "einheit": "Kindertaenze Europas",
+      "app": "kindertaenze-europa",
+      "app_quelle": "Index 27.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-11-kindertaenze-europa.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "kindertaenze-europa",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 35
+    },
+    {
+      "id": "CON-12",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 12,
+      "einheit": "Puppentheater-Werkstatt (Content-Pack)",
+      "app": "puppentheater-werkstatt",
+      "app_quelle": "Index 27.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-12-puppentheater-werkstatt.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "puppentheater-werkstatt",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 36,
+      "hinweise": [
+        "Stand 29.10: App puppentheater-werkstatt ist vorhanden; das Feld app ist gesetzt. Offen: Vertep und Batleika sowie Eintrittskarten (Frage 60)."
+      ]
+    },
+    {
+      "id": "CON-13",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 13,
+      "einheit": "Trostvers-Generator (personalisierte Wiegenreime)",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "unklar",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Entscheidung treffen (offene-punkte-kita.md, H)",
+      "bauauftrag": null,
+      "status": "unklar",
+      "stufe": "unklar",
+      "app_ordner": []
+    },
+    {
+      "id": "CON-14",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 14,
+      "einheit": "Elternbrief-Generator Krippenjahr",
+      "app": "elternbrief-generator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-14-elternbrief-generator.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "elternbrief-generator",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 37
+    },
+    {
+      "id": "CON-15",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 15,
+      "einheit": "Naturschutz-Rat: Rote Liste & unser Planet (Klassen-Koffer)",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "unklar",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Entscheidung treffen (offene-punkte-kita.md, H)",
+      "bauauftrag": null,
+      "status": "unklar",
+      "stufe": "unklar",
+      "app_ordner": []
+    },
+    {
+      "id": "CON-16",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 16,
+      "einheit": "Konzept-Mapping Praleska nach DE",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-16-konzept-mapping-praleska-nach-de.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [],
+      "stufe3_reihenfolge": 38,
+      "hinweise": [
+        "Teilweise ohne App (Plan 18.10: „–“). Ort oder Art des Ergebnisses ist nicht entschieden (Frage 61 und Inventar, Abschnitt 4)."
+      ]
+    },
+    {
+      "id": "CON-17",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 17,
+      "einheit": "Krippen-Portfolio 'Erste Erfahrungen'",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "nicht bauen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "nicht bauen – Begründung dokumentiert",
+      "bauauftrag": null,
+      "status": "nicht bauen",
+      "stufe": "nicht bauen",
+      "app_ordner": []
+    },
+    {
+      "id": "CON-18",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 18,
+      "einheit": "Theater zuhause - Bastel- und Spielheft",
+      "app": "theater-zuhause-heft",
+      "app_quelle": "Index 27.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "offen",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/CON-18-theater-zuhause-heft.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "theater-zuhause-heft",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 39,
+      "hinweise": [
+        "Stand 29.10: App theater-zuhause-heft ist vorhanden (Druckprüfung, Commit 30fc97a). Der Status „teilweise“ ist veraltet; offen bleiben nur die Lücken aus Stufe 3."
+      ]
+    },
+    {
+      "id": "CON-19",
+      "abschnitt": "Content-Pakete, Funktionen, Dokumente",
+      "nr": 19,
+      "einheit": "Rhythmus-Orchester-Handbuch",
+      "app": "rhythmus-orchester",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/CON-19-rhythmus-orchester.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "rhythmus-orchester",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 40
+    },
+    {
+      "id": "PRI-1",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 1,
+      "einheit": "Bewegungs-Schatzkiste (Druck-Kartei)",
+      "app": "bewegungs-schatzkiste",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "gebaut",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Faktencheck gegen Quelle nachholen",
+      "bauauftrag": null,
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "bewegungs-schatzkiste",
+          "vorhanden": true
+        }
+      ]
+    },
+    {
+      "id": "PRI-2",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 2,
+      "einheit": "Erfolgs-Momente-Kartei",
+      "app": "erfolgs-momente-kartei",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-2-erfolgs-momente-kartei.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "erfolgs-momente-kartei",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 16
+    },
+    {
+      "id": "PRI-3",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 3,
+      "einheit": "Reime, Wiegenlieder, Kniereiter - Familienschatz-Paket",
+      "app": "familienschatz-reime",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-3-familienschatz-reime.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "familienschatz-reime",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 41
+    },
+    {
+      "id": "PRI-4",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 4,
+      "einheit": "Entdecker-Karten: Tiere und Pflanzen vor der Tuer",
+      "app": "entdecker-karten-natur",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-4-entdecker-karten-natur.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "entdecker-karten-natur",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 17
+    },
+    {
+      "id": "PRI-5",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 5,
+      "einheit": "Bewegungslandschaften-Plakate Krippe",
+      "app": "bewegungslandschaft-stationen",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-5-bewegungslandschaft-stationen.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "bewegungslandschaft-stationen",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 18
+    },
+    {
+      "id": "PRI-6",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 6,
+      "einheit": "Frischluft-Rituale-Kartei",
+      "app": null,
+      "app_quelle": null,
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "unklar",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "Entscheidung treffen (offene-punkte-kita.md, H)",
+      "bauauftrag": null,
+      "status": "unklar",
+      "stufe": "unklar",
+      "app_ordner": []
+    },
+    {
+      "id": "PRI-7",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 7,
+      "einheit": "Fuehl- und Sortier-Werkstatt: Holz, Papier, Stoff",
+      "app": "fuehl-sortier-werkstatt",
+      "app_quelle": "Index 27.10",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "offen",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/PRI-7-fuehl-sortier-werkstatt.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "fuehl-sortier-werkstatt",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 53,
+      "hinweise": [
+        "Stand 29.10: App fuehl-sortier-werkstatt ist vorhanden. Offen: Ausbau oder Neubau und Altersangabe 2 bis 3 gegen 1 bis 3 (Frage 59)."
+      ]
+    },
+    {
+      "id": "PRI-8",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 8,
+      "einheit": "Kleine Forscher ohne Bildschirm",
+      "app": "kleine-forscher-ohne-bildschirm",
+      "app_quelle": "Dateiname des Bauauftrags",
+      "faktenstand": "Quelle nicht im Repo prüfbar",
+      "status_18_10": "offen",
+      "status_27_10": null,
+      "variante_a": false,
+      "naechster_schritt": "neu bauen (Welle)",
+      "bauauftrag": "docs/bauauftraege/PRI-8-kleine-forscher-ohne-bildschirm.md",
+      "status": "gebaut",
+      "stufe": null,
+      "app_ordner": [
+        {
+          "app": "kleine-forscher-ohne-bildschirm",
+          "vorhanden": true
+        }
+      ],
+      "hinweise": [
+        "Am 18.10 offen; seit 27.10 nicht mehr im Index mit „teilweise“, daher gebaut (Bilanz 27.10)."
+      ]
+    },
+    {
+      "id": "PRI-9",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 9,
+      "einheit": "Mathe-Anfaenge-Spielkartei",
+      "app": "mathe-entdecker",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-9-mathe-entdecker.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "mathe-entdecker",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 42
+    },
+    {
+      "id": "PRI-10",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 10,
+      "einheit": "Tages- und Jahreszeiten-Ritualkarten",
+      "app": "jahreszeiten-rad, uhr-und-kalender-kind",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-10-jahreszeiten-rad.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "jahreszeiten-rad",
+          "vorhanden": true
+        },
+        {
+          "app": "uhr-und-kalender-kind",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 43
+    },
+    {
+      "id": "PRI-11",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 11,
+      "einheit": "Bewegungsbilder-Karten",
+      "app": "tier-tanz-impulse",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-11-tier-tanz-impulse.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "tier-tanz-impulse",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 44
+    },
+    {
+      "id": "PRI-12",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 12,
+      "einheit": "Mal- und Matsch-Impulskartei 1-3",
+      "app": "erste-kuenstler, morgenkreis-wochenplaner-u3",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-12-erste-kuenstler.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "erste-kuenstler",
+          "vorhanden": true
+        },
+        {
+          "app": "morgenkreis-wochenplaner-u3",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 19
+    },
+    {
+      "id": "PRI-13",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 13,
+      "einheit": "Bau-Meister-Karten",
+      "app": "morgenkreis-wochenplaner-u3",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-13-morgenkreis-wochenplaner-u3.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "morgenkreis-wochenplaner-u3",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 20
+    },
+    {
+      "id": "PRI-14",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 14,
+      "einheit": "Kleine-Helfer-Dienste-Set",
+      "app": "tischdienst-trainer, aemtli-rad",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-14-tischdienst-trainer.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "tischdienst-trainer",
+          "vorhanden": true
+        },
+        {
+          "app": "aemtli-rad",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 45
+    },
+    {
+      "id": "PRI-15",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 15,
+      "einheit": "Vom Samen zur Pflanze - Anzucht-Kartei fuer die Kita",
+      "app": "mini-gaertner-begleiter",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-15-mini-gaertner-begleiter.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "mini-gaertner-begleiter",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 46
+    },
+    {
+      "id": "PRI-16",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 16,
+      "einheit": "Sprachbruecken: Gespraechs-Impulskarten mehrsprachig",
+      "app": "sprachbruecken-impulskarten",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-16-sprachbruecken-impulskarten.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "sprachbruecken-impulskarten",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 47
+    },
+    {
+      "id": "PRI-17",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 17,
+      "einheit": "Werkstatt-Karten: Schneiden, Reissen, Kleben",
+      "app": "werkstatt-karten-applikation",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-17-werkstatt-karten-applikation.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "werkstatt-karten-applikation",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 21
+    },
+    {
+      "id": "PRI-18",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 18,
+      "einheit": "Sport-Schnupper-Stationen",
+      "app": "sport-schnupper-stationen",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "faktengeprüft",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-18-sport-schnupper-stationen.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "sport-schnupper-stationen",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 22
+    },
+    {
+      "id": "PRI-19",
+      "abschnitt": "Printmaterialien Kita",
+      "nr": 19,
+      "einheit": "Schwungblatt-Generator",
+      "app": "schwungblatt-generator",
+      "app_quelle": "Plan 18.10",
+      "faktenstand": "nur Katalogtext",
+      "status_18_10": "teilweise",
+      "status_27_10": "teilweise",
+      "variante_a": false,
+      "naechster_schritt": "Ausbau oder Entscheidung (Lücke laut Befund)",
+      "bauauftrag": "docs/bauauftraege/PRI-19-schwungblatt-generator.md",
+      "status": "teilweise",
+      "stufe": 3,
+      "app_ordner": [
+        {
+          "app": "schwungblatt-generator",
+          "vorhanden": true
+        }
+      ],
+      "stufe3_reihenfolge": 48
+    }
+  ]
+}

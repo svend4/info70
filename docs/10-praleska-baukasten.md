@@ -507,3 +507,38 @@
 политике docs/02. Для инструментов воспитателей дополнительный шаг: маппинг на
 Bildungsplan конкретной земли (у каждой из 16 земель свой план раннего
 образования — это же и множитель тиражирования).
+
+
+## Statuszeilen je Abschnitt (Stand 29.10.2026, Serie D)
+
+Diese Zeilen stehen am Ende, damit die Zeilennummern oben stimmen: Dort verweisen andere Dokumente auf diese Zeilen (z. B. „docs/10 Z. 279–290“). Quelle: `tools/gruppe-2-stand.mjs --docs10`, Logik in `packages/kinderschutz/src/gruppe-2-stand.mjs`, Stand aus Plan 18.10 Abschnitt 6, Index 27.10 und Ergänzung 29.10. Die Begriffe sind die des Plans 18.10, Abschnitt 2: gebaut heißt gleicher Gegenstand, gleicher Umfang und gleiche Altersstufe; teilweise heißt ein Teil ist gebaut. Die älteren Zeilen „Построено …“ oben in den Abschnitten zählen Einheiten mit einer App und sind damit nicht dasselbe.
+
+### Kinder-Apps 5–7 und 8–12 (23 Einheiten, Abschnitt 1 des Katalogs, Z. 277)
+
+> **Stand 29.10.2026 (Ableitung tools/gruppe-2-stand.mjs):** 23 Einheiten: gebaut 19, davon Variante A 0; teilweise 4; unklar 0; nicht bauen 0.
+> **Offen:** KIN-7 Rhythmus-Orchester; KIN-11 Nahrungsnetz-Werkstatt (Oekosystem-Simulator); KIN-17 Uhr- und Kalender-Kind (Einheit 17); KIN-18 Deutschland-Kompass (Einheit 18).
+
+### Apps für gemeinsame Nutzung 3–5 (22 Einheiten, Z. 303)
+
+> **Stand 29.10.2026 (Ableitung tools/gruppe-2-stand.mjs):** 22 Einheiten: gebaut 13, davon Variante A 0; teilweise 9; unklar 0; nicht bauen 0.
+> **Offen:** GEM-3 Klang-Detektive (Weiterführung ab 3); GEM-7 Sicher unterwegs – Szenario-Trainer Alltag & Straße; GEM-8 Mathe-Entdecker: Zahlen, Formen, Reihen; GEM-10 Kita-Kartograph: Wir zeichnen unseren Raum; GEM-13 Erzaehl-Bruecke; GEM-14 Grammatik-Zwerge; GEM-16 Design-Entdecker: praktisch und schön; GEM-19 Geschichten-Wender (Stimmungs-Werkstatt); GEM-22 Mess-Labor der kleinen Forscher.
+
+### Werkzeuge für Eltern (21 Einheiten, Z. 336)
+
+> **Stand 29.10.2026 (Ableitung tools/gruppe-2-stand.mjs):** 21 Einheiten: gebaut 9, davon Variante A 0; teilweise 12; unklar 0; nicht bauen 0.
+> **Offen:** ELT-2 (№47) Meilenstein-Begleiter 1. Lebensjahr; ELT-4 (№49) Bewegungs-Kartei Babys erstes Jahr; ELT-6 (№51) Erste-Woerter-Tagebuch; ELT-8 (№53) Puste- und Lauschspiel-Kartei; ELT-9 (№54) Vorlese-Kompass 1-3; ELT-12 (№57) Musik-Alltags-Begleiter fuer Eltern; ELT-13 (№58) Ich kann das schon! Selbststaendigkeits-Leiter; ELT-15 (№60) Kunst-Gucken: Bilderbuch-Dialog-Guide; ELT-16 (№61) Erste Kuenstler 1-3 - Eltern-Ideenkartei mit Meilenstein-Check; ELT-17 (№62) Wachstums- und Bewegungsbegleiter; ELT-19 (№64) Spielend schulreif - Eltern-Navigator; ELT-21 (№66) Elterngespraech-Begleiter: Uebergang Kita-Grundschule.
+
+### Werkzeuge für Kita und Fachkräfte (27 Einheiten, Z. 410)
+
+> **Stand 29.10.2026 (Ableitung tools/gruppe-2-stand.mjs):** 27 Einheiten: gebaut 16, davon Variante A 4; teilweise 9; unklar 0; nicht bauen 2.
+> **Offen:** KIT-3 (№69) Gruppenklima-Check; KIT-4 (№70) Kita-Wochenplaner Bildungsangebote; KIT-12 (№78) Musikspiele-Kartei U3; KIT-14 (№80) Natur-Fuersorge-Karten mit Beobachtungsprotokoll; KIT-15 (№81) Spielbegleiter 3-5: Vom Hantieren zum Rollenspiel; KIT-17 (№83) Bewegungs-Meilensteine: Beobachtungsbogen 3-5; KIT-18 (№84) Beobachtungsbogen "Spiel-Entwicklung 3-5" [nicht bauen]; KIT-20 (№86) Beobachtungsbogen Musikalische Entwicklung 3-5 [nicht bauen]; KIT-21 (№87) Musik-Jahresplaner fuer die Kita; KIT-25 (№91) Mini-Oper-Baukasten; KIT-27 (№93) Kita-Unterstuetzungs-Navigator.
+
+### Content-Pakete, Funktionen und Dokumente (19 Einheiten, Z. 442, 461 und 493)
+
+> **Stand 29.10.2026 (Ableitung tools/gruppe-2-stand.mjs):** 19 Einheiten: gebaut 4, davon Variante A 0; teilweise 12; unklar 2; nicht bauen 1.
+> **Offen:** CON-1 Content-Pack: Stark und gesund; CON-2 Spielideen-Kartei: Was kann mein Baby mit...?; CON-4 Mein Ort, mein Land, unsere Erde (Content-Pack); CON-5 Tierkinder und ihre Familien (Geschichten-Pack); CON-7 Herkunftssprachen-Bruecke uk/ru; CON-8 Kreisspiele-Sammlung mehrsprachig; CON-11 Kindertaenze Europas; CON-12 Puppentheater-Werkstatt (Content-Pack); CON-13 Trostvers-Generator (personalisierte Wiegenreime) [unklar]; CON-14 Elternbrief-Generator Krippenjahr; CON-15 Naturschutz-Rat: Rote Liste & unser Planet (Klassen-Koffer) [unklar]; CON-16 Konzept-Mapping Praleska nach DE; CON-17 Krippen-Portfolio 'Erste Erfahrungen' [nicht bauen]; CON-18 Theater zuhause - Bastel- und Spielheft; CON-19 Rhythmus-Orchester-Handbuch.
+
+### Printmaterialien für die Kita (19 Einheiten, Z. 467)
+
+> **Stand 29.10.2026 (Ableitung tools/gruppe-2-stand.mjs):** 19 Einheiten: gebaut 2, davon Variante A 0; teilweise 16; unklar 1; nicht bauen 0.
+> **Offen:** PRI-2 Erfolgs-Momente-Kartei; PRI-3 Reime, Wiegenlieder, Kniereiter - Familienschatz-Paket; PRI-4 Entdecker-Karten: Tiere und Pflanzen vor der Tuer; PRI-5 Bewegungslandschaften-Plakate Krippe; PRI-6 Frischluft-Rituale-Kartei [unklar]; PRI-7 Fuehl- und Sortier-Werkstatt: Holz, Papier, Stoff; PRI-9 Mathe-Anfaenge-Spielkartei; PRI-10 Tages- und Jahreszeiten-Ritualkarten; PRI-11 Bewegungsbilder-Karten; PRI-12 Mal- und Matsch-Impulskartei 1-3; PRI-13 Bau-Meister-Karten; PRI-14 Kleine-Helfer-Dienste-Set; PRI-15 Vom Samen zur Pflanze - Anzucht-Kartei fuer die Kita; PRI-16 Sprachbruecken: Gespraechs-Impulskarten mehrsprachig; PRI-17 Werkstatt-Karten: Schneiden, Reissen, Kleben; PRI-18 Sport-Schnupper-Stationen; PRI-19 Schwungblatt-Generator.
