@@ -16,6 +16,13 @@ export function pruefeBausteine(daten) {
   for (const s of daten?.treppe ?? []) {
     if (!s.titel || !s.impuls) fehler.push(`Treppe ${s.id}: titel/impuls fehlt`);
   }
+  const reihenfolge = (daten?.treppe ?? []).map((s) => s.id).join(',');
+  if (reihenfolge !== 'anfang,los,aber,ende') fehler.push('treppe: Reihenfolge anfang, los, aber, ende');
+  if (!/nichts[^.]*aufgenommen|kein Aufnehmen|keine Aufnahme/i.test(daten?.hinweis ?? '')) fehler.push('hinweis: „nichts wird aufgenommen“ fehlt');
+  if (!Array.isArray(daten?.weilSaetze) || daten.weilSaetze.length < 4) fehler.push('weilSaetze: mindestens 4 Einträge');
+  for (const satz of daten?.weilSaetze ?? []) {
+    if (!/\bweil …$/.test(satz)) fehler.push(`weilSaetze: „${satz}“ endet nicht auf „weil …“`);
+  }
   return fehler;
 }
 
@@ -45,4 +52,12 @@ export function baueGeruest(daten, elemente) {
     start: startSatz(elemente),
     stufen: daten.treppe.map((s) => ({ ...s })),
   };
+}
+
+/**
+ * Weil-Satz-Anstoß Nummer n, zyklisch durch die Liste. Ohne Zufall: der Anstoß
+ * endet auf „weil …“, das Kind ergänzt den Grund.
+ */
+export function weilSatz(daten, nummer) {
+  return daten.weilSaetze[nummer % daten.weilSaetze.length];
 }

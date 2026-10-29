@@ -6,6 +6,7 @@
 import { el, vorlesen } from '../../packages/kinder-ui/js/komponenten.mjs';
 import { installiereNetzwerkWaechter } from '../../packages/kinderschutz/src/index.mjs';
 import { pruefeBausteine, waehleElemente, baueGeruest } from './logik.mjs';
+import { weilSatz } from './logik.mjs';
 
 installiereNetzwerkWaechter();
 
@@ -13,6 +14,7 @@ const app = document.getElementById('app');
 const daten = await fetch('daten/bausteine.json').then((r) => r.json());
 let geruest = null;
 let extra = null;
+let weilNr = 0;
 
 function zeige(...knoten) {
   // replaceChildren filtert (anders als el()) keine falsy Kinder – daher filtern.
@@ -49,6 +51,7 @@ function wuerfeln() {
 }
 
 function zeigeGeruest() {
+  const weilText = el('p', { style: 'margin:0.2rem 0 0;font-weight:700;font-size:1.05rem' }, weilSatz(daten, weilNr));
   zeige(
     el('section', { class: 'k-karte', style: 'background:#eff6ff' },
       el('p', { style: 'margin:0;font-weight:700;font-size:1.15rem' }, geruest.start),
@@ -60,6 +63,13 @@ function zeigeGeruest() {
         el('p', { style: 'margin:0;font-weight:700' }, `${s.emoji} ${s.titel}`),
         el('p', { style: 'margin:0.2rem 0 0;font-size:0.95rem' }, s.impuls),
         el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.2rem', onclick: () => vorlesen(`${s.titel}. ${s.impuls}`) }, '🔊')))),
+    el('section', { class: 'k-karte' },
+      el('h2', { style: 'margin-top:0;font-size:1.05rem' }, '💬 Weil-Satz (Eigenentwurf)'),
+      el('p', { style: 'font-size:0.9rem;color:#4b5563;margin-top:0' }, 'Ergänze den Grund nach „weil“ – laut und mit deinen Worten.'),
+      weilText,
+      el('div', { class: 'k-antworten', style: 'margin-top:0.5rem' },
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => vorlesen(weilSatz(daten, weilNr)) }, '🔊 Vorlesen'),
+        el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', onclick: () => { weilNr += 1; weilText.textContent = weilSatz(daten, weilNr); } }, '🔁 Anderer Weil-Satz'))),
     extra ? el('section', { class: 'k-karte', style: 'background:#fef3c7' },
       el('p', { style: 'margin:0;font-weight:600' }, `✨ Überraschung: ${extra}`),
       el('button', { class: 'k-knopf k-knopf--neutral k-knopf--klein', style: 'margin-top:0.2rem', onclick: () => vorlesen(extra) }, '🔊 Vorlesen')) : null,

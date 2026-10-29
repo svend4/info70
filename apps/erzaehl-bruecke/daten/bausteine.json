@@ -1,5 +1,24 @@
 {
   "version": 1,
+  "seitenhinweis": "Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.",
+  "herkunft": {
+    "helden": { "eigenentwurf": true },
+    "orte": { "eigenentwurf": true },
+    "probleme": { "eigenentwurf": true },
+    "treppe": { "quelle": { "seite": "S. 143" }, "eigenentwurf": true },
+    "extraImpulse": { "eigenentwurf": true },
+    "weilSaetze": { "quelle": { "seite": "S. 143" }, "eigenentwurf": true }
+  },
+  "weilSaetze": [
+    "Wir nehmen einen Regenschirm mit, weil …",
+    "Das Eichhörnchen sammelt Nüsse, weil …",
+    "Im Herbst fallen die Blätter von den Bäumen, weil …",
+    "Die Kinder lachen laut, weil …",
+    "Die Katze sitzt am Fenster, weil …",
+    "Wir gießen die Blumen, weil …",
+    "Der Drache fliegt heute nicht, weil …",
+    "Wir gehen früh ins Bett, weil …"
+  ],
   "hinweis": "Erzähl-Brücke hilft Kindern beim freien Erzählen. Das Kind erzählt LAUT – die App liefert nur das Gerüst und ein paar Impulse. Es wird NICHTS aufgenommen und NICHTS gespeichert (kein Mikrofon, kein Ton). Am schönsten gemeinsam mit einem großen Menschen, der zuhört. Erzählen in jeder Familiensprache ist wertvoll.",
   "helden": [
     "ein mutiger kleiner Igel",
