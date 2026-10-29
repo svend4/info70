@@ -145,3 +145,41 @@
 46. **CON-9 (Farbwörter-Schatz):** а) слова групп «Kontrast» (три пары) и «neutral» (три слова) и «eisblau», «nachtblau» — Eigenentwurf; оставить с пометкой, профпроверка по искусствоведению/педагогике ★; б) шесть слов за раунд (Eigenentwurf) как лимит для 3–5 и 5–7: оставить ★; в) каталог обещает «dreisprachig de/uk/ru», сделан только немецкий: вычеркнуть обещание из каталога ★ или перевести позже (кто переводит); г) минимальная ширина экрана 360 px (при 320 px четыре переноса слов): оставить 360 ★.
 
 47. **CON-10 (Musik-Wörter-Bilderlexikon):** а) «7+ инструментов» из каталога: S. 161 называет скрипку, флейту, арфу, трубу «и др.»; оставить семь инструментов со S. 260 ★ или добавить эти четыре как Eigenentwurf; б) подсказку «нет немецкого голоса» показывать один раз вверху (сейчас на экране инструментов восемь раз) и не обещать озвучивание во вводном тексте, если голоса нет ★ да; в) пометка «Eigenentwurf» стоит мелко в подвале каждого экрана; достаточно ли (экран инструментов читает взрослый вслух) ★ достаточно; г) 23 собственных рисунка SVG (первая версия, без лиц людей): принять стиль и право на использование (авторские права на наши рисунки у проекта), нужна вычитка человеком ★ да, вычитка позже.
+
+## З. Nachtrag 28.10.2026: Analyse der Pläne 18.10 und 27.10 (Stufe 2)
+
+Grundlage: `docs/analyse-plaene-18-10-und-27-10.md`. Antworten wie bisher: Nummer und Buchstabe, ★ ist meine Empfehlung.
+
+48. **Serien C und D.** Die Faktenprüfung bereits gebauter Apps (Serie C, 53 Einheiten) und die Statuszeilen in docs/10 (Serie D) stehen im Plan vom 27.10 nicht mehr. а) wieder einplanen, nach Stufe 3 ★; б) streichen; в) als eigene Welle direkt nach Stufe 2.
+
+49. **Reihenfolge der Stufe 3.** 53 Ausbau-Einheiten: nach geprüftem Faktenstand (Plan vom 27.10) oder nach Altersstufen (Plan vom 18.10)? а) nach Faktenstand ★; б) nach Altersstufen.
+
+50. **Entfernen von Wertungsresten (Stufe 2).** CON-1 und CON-7 haben Punkte, Rang und Rekord im Bestand; CON-4 hat einen Punktzähler in app.mjs (Zeilen 26, 155, 199). а) Entfernen jetzt freigeben, nach der Liste im Bauauftrag ★; б) erst nach Abschluss von Stufe 2; в) je App eine eigene Liste.
+
+51. **Ränge.** Der Katalog verlangt Ränge (CON-1, CON-4), docs/02 Z. 141–146 verbietet sie. а) keine Ränge bauen und den Katalogtext angleichen ★; б) Ränge ohne Vergleich, nachdem die Regel geprüft ist.
+
+52. **Gesundheitsaussagen (CON-1).** Schlaf, Bildschirmpausen, Getränke und Hygiene sind im Quelltext (S. 13–20) nicht belegt; die Erklärungen sind Eigenentwurf und nicht geprüft. а) vor dem Ausbau fachlich prüfen lassen ★; б) diese Inhalte streichen; в) Ausbau ohne sie.
+
+53. **Sprachen uk und ru.** Der Katalog nennt de, uk und ru in mehreren Einheiten (GEM-8, GEM-19, CON-7, CON-12, PRI-7). а) zunächst nur Deutsch, uk und ru später mit Prüfung durch eine Lehrkraft ★; б) jetzt mit Prüfung.
+
+54. **Engine für die Ausbauten.** GEM-14 und GEM-16 nutzen ein eigenes Format, der Katalog nennt quiz-kern. а) eigenes Format behalten und den Katalog angleichen ★; б) auf quiz-kern umstellen.
+
+55. **Altersgruppen.** GEM-19: Katalog 8–12, App 5–7 (Dublette zur geschichten-werkstatt). CON-7: Katalog 4–7 und Eltern, App 8–12. GEM-13: App 5–8, Katalog 5–7. CON-12: 5–7 (S. 199). а) je Einheit den Katalog angleichen, wenn die App stimmt ★; б) App anpassen.
+
+56. **Bilder (GEM-13, GEM-16).** Wimmelbild, Foto- und Zeichenmaterial stehen im Katalog, in der App sind sie nicht belegt; die Bildrechte sind offen. а) in diesem Ausbau keine Bilder, nur Beschreibungen ★; б) eigene Zeichnungen mit Freigabe.
+
+57. **Begriffe in GEM-14.** Der Katalog nennt „hinter“, die App verwendet eine gesperrte Form; vor den Zielen S. 141 und 142 stehen Sternchen ohne Erklärung (A11). а) App-Form behalten und den Katalog korrigieren, wenn die Quelle das stützt ★; б) Katalog übernehmen. Die Bedeutung der Sternchen klärt der Prüfer aus der Quelle.
+
+58. **GEM-19: Abweichungen.** Der Name „Stimmungs-Werkstatt“ ist aus dem Anzeigenamen entfernt, „fröhliches Ende“ ist gestrichen, die Erzeugerfunktion (KI-bereit) ist nicht gebaut, das Muster „Uther 2004“ ist nicht in der Arbeitskopie geprüft. а) Abweichungen bestätigen ★, Erzeugerfunktion später; б) Name und Ende zurückholen.
+
+59. **PRI-7 Fühl- und Sortier-Werkstatt.** Die App existiert (43 Tests); der Index sagt „neu bauen“. Altersangabe: Katalog 2–3, Quelle 1–3 (A20). а) Ausbau ★; б) Neubau. Altersangabe 1–3 nach der Quelle ★.
+
+60. **CON-12 Puppentheater-Werkstatt.** Vertep und Batleika sind im Quelltext (S. 287–288) nicht belegt; „Eintrittskarten“ sind Einladungen zu einer Ausstellung. а) Vertep und Batleika streichen ★; б) mit anderer Quelle belegen. Eintrittskarten als Typ „einladung“ ★. Altersangabe 5–7 (S. 199) bestätigen.
+
+61. **Unklare Einheiten ohne Bauauftrag: PRI-6, CON-13, CON-15.** а) PRI-6 Frischluft-Rituale: nur Rituale ohne Gesundheitsversprechen; б) CON-13 Trostvers: personenbezogen (Kindernamen); ★ nur ohne Namen oder mit Einwilligung; в) CON-15 Naturschutz-Rat: ★ als Klassen-Koffer ohne Wertung. Antwort je Einheit.
+
+62. **Zitatgrenze (A10 b).** Werkzeug und Aufträge nutzen sechs Wörter; CON-2 und KIT-12 nennen die Frage „12 gelten sollen“. docs/10 Punkt 1 nennt keine Zahl. а) sechs Wörter ★; б) zwölf. Außerdem: die Herkunft der Zahl klärt der Koordinator.
+
+63. **Index und Registrierung.** CON-18, CON-12 (Feld app), PRI-7 und KIN-17 sind im Index veraltet. (Nachprüfung 28.10: Das Feld app von CON-12 ist gesetzt; veraltet sind Status und „neu bauen (Welle)“.) а) der Koordinator korrigiert nach jedem Ausbau ★; б) Index aus den Registrierungsdateien erzeugen (tools/bauauftrag-index.mjs).
+
+64. **Freigabe der Ausbauten.** а) Stufe 2 als Ganzes abschließen, sobald die Entscheidungen 50 bis 60 vorliegen ★; б) jede Einheit einzeln freigeben.
