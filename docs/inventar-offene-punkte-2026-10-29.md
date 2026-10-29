@@ -189,3 +189,7 @@ Die Empfehlung (★) ist die Option, die in der Fragenliste markiert ist. Sie is
 *Ergänzung 29.10.2026 abends:* Zusätzlich zu den Entscheidungen 68 und 69 brauchen die Befunde vom Nachmittag Entscheidungen von Max: 70 und 71 (Rang), 72 und 73 (Browser-Prüfung). Ohne sie bleibt der Bestand unverändert; die Befunde sind Auskunft.
 
 Seitenangaben in diesem Dokument (Abschnitt Serie C, 29.10.2026): Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+*Stand 29.10.2026 abends (wörtlicher Text):* Eine Prüfung auf sieben gleiche Wörter gegen den Text der Pralęska (`tools/wortgleich-pruefen.mjs`) findet 62 Stellen in 17 Apps, viele als Feld `zitat`, das die App anzeigt. Das verstößt gegen den Rechtsrahmen docs/10, Punkt 1. Befund ohne Text: `docs/befund-woertlich-2026-10-29.md`; Entscheidung: Frage 78. Bereits ersetzt (ohne Entscheidung, zur Bestätigung): drei Stellen in schulstart-begleiter, klanggeschichten-erzeuger und entwicklungs-kompass.
+
+Seitenangaben in diesem Dokument (Nachtrag 29.10.2026, wörtlicher Text): Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.

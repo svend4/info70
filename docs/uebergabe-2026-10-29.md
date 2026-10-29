@@ -100,4 +100,6 @@ Die Abschnitte 1 bis 8 bleiben stehen.
 
 **Stand der Messung.** Der Schalter `--alle-knoepfe` misst 232 Apps (Lauf 3, `docs/befund-browser-kennung-2026-10-29.md`, Abschnitt 9). Der Fokusverlust in 178 Apps bleibt bis zur Entscheidung 72 Bestand.
 
+**Wörtlicher Text (neu, Frage 78).** Die Prüfung `tools/wortgleich-pruefen.mjs` findet 62 Stellen in 17 Apps mit sieben oder mehr gleichen Wörtern aus dem Buch; viele sind Felder `zitat`, die die App anzeigt. Das verstößt gegen docs/10, Punkt 1. Die Liste ohne Text steht in `docs/befund-woertlich-2026-10-29.md`. Drei Stellen sind in dieser Sitzung ersetzt worden; Max bestätigt oder setzt sie zurück. Die übrigen Stellen bleiben, bis Max entschieden hat.
+
 Seitenangaben in diesem Abschnitt: Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
