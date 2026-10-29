@@ -82,6 +82,7 @@ Die Abschnitte 1 bis 8 bleiben stehen.
 **Wo die Arbeit nach dem Plan 18.10 steht.**
 - Serie D: erledigt (`docs/10`, Abschnitt am Dateiende; Quelle `tools/gruppe-2-stand.mjs --docs10`).
 - Serie C: Pilot mit fünf Apps abgeschlossen (`docs/serie-c-2026-10-29.md`). Welle 2 mit drei Apps (`entwicklungs-kompass`, `tagesblick-fachkraft`, `schulstart-begleiter`) lief zum Zeitpunkt dieses Nachtrags; das Ergebnis ist in diesem Dokument nachzutragen, sobald es vorliegt.
+  *Ergänzung (später am Abend):* Welle 2 ist abgeschlossen: 44 Angaben, 38 belegt, 2 als Übersetzung belegt, 3 nicht belegt, 1 ohne Quellenangabe. Befunde und Korrekturen stehen in `docs/serie-c-2026-10-29.md`, Abschnitt 3. Offen: Frage 77 (Einordnung der Kennung S18.6).
 - Serie A: abgeschlossen bis auf die Einheiten, die auf Entscheidungen warten (PRI-6, CON-13, CON-15 unklar; Frage 61).
 - Serie B (Ausbau): Stufe 1 gebaut, Stufe 2 bis auf CON-4 (Commit wartet auf 68 und 69) und die Entscheidungen 51 bis 59. Stufe 3 wartet auf 48, 49 und 64.
 - Gruppe 1 (Plan 18.10, Abschnitt 8): Die Zählung 100 gebaut, 34 teilweise, 3 offen, 2 nicht bauen ist nicht nachprüfbar. Eine Prüfung braucht eine Inventur (Entscheidung über den Aufwand).
