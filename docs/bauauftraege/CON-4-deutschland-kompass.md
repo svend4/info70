@@ -97,6 +97,7 @@ Keine Zufallsquelle in der Logikdatei; Zufall kommt als Parameter.
 ## 8. Abnahme
 
 Anmerkung 29.10.2026: Abweichung. Der Fokus nach dem Kopfknopf bleibt auf dem Knopf, weil browser-tor bei einem Überschrift-Fokus einen Klickfehler meldet (Exit 1). Entscheidung Max (Frage 68). Umgesetzt laut README Z. 58 und GDD Z. 97 bis 101.
+  Zeilenangaben aktualisiert (29.10.2026): README Z. 60 und GDD Z. 99 bis 103 (vorher: README Z. 58, GDD Z. 97 bis 101).
 
 - `npm test` im App-Ordner grün; Testzahl in README und GDD stimmt.
 - Browser bei 360 px: kein Überlauf, Knöpfe mindestens 48 px, Fokus nach Klick auf der Überschrift des neuen Bildschirms, Speicher gleich null, nur `localhost`.
