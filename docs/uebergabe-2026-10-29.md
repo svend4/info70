@@ -103,3 +103,13 @@ Die Abschnitte 1 bis 8 bleiben stehen.
 **Wörtlicher Text (neu, Frage 78).** Die Prüfung `tools/wortgleich-pruefen.mjs` findet 62 Stellen in 17 Apps mit sieben oder mehr gleichen Wörtern aus dem Buch; viele sind Felder `zitat`, die die App anzeigt. Das verstößt gegen docs/10, Punkt 1. Die Liste ohne Text steht in `docs/befund-woertlich-2026-10-29.md`. Drei Stellen sind in dieser Sitzung ersetzt worden; Max bestätigt oder setzt sie zurück. Die übrigen Stellen bleiben, bis Max entschieden hat.
 
 Seitenangaben in diesem Abschnitt: Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+## 10. Nachtrag 29.10.2026: Welle 3 der Serie C und Analyse Ausbau
+
+- Welle 3 der Serie C (fünf Apps der Stufe 1) ist korrigiert: `kleine-forscher-ohne-bildschirm` (Karte „Ineinanderlegen“, Feld `quelle.seite_bis`), `meine-familie-woerter-und-rollen-content-pack` (Gruppe „ПОЧЕМУЧКИ“ ab S. 103), `farbwoerter-schatz` (Hinweis zu tannengrün). Commit d8058fc. Neu: Fragen 79 und 80; Abschnitt 3a im Serie-C-Bericht.
+- Drei Analysen der 62 Einheiten „teilweise“: `docs/analyse-ausbau-2026-10-29.md` (Zusammenfassung, Abschnitt 8 mit der Liste aller Einheiten) und `docs/analyse-ausbau-2026-10-29.json` (je Einheit: Lücken, Teilarbeiten, offene Entscheidungen, Fachprüfung). Keine Einheit wurde ausgebaut; Stufe 3 bleibt gesperrt (Fragen 49 und 64).
+- Neue Fragen 81 bis 83: Pflicht-Nachzug und Druckverstöße, die Kinderdaten von `aemtli-rad` und das Register, der Vermerk 28а. Ergänzungen zu den Fragen 75 und 78 (Frage 78: zwölf Apps mit 44 Stellen in den 62 Einheiten).
+- Eine Aussage der Analyse B ist falsch und ist korrigiert: CON-1 hat die Migration des alten Schlüssels im Motor (`packages/quiz-kern/src/quiz.mjs`, Zeilen 56 bis 58), nicht in der App.
+- Offene Punkte für die nächste Sitzung: Entscheidungen 50 bis 60, 68 und 69 (Stufe 2); Frage 59 (PRI-7); Korrektur des Index für KIN-17, GEM-8 und GEM-13; die Bauaufträge mit veraltetem Stand (Liste in Abschnitt 3.8 der Analyse).
+
+Seitenangaben in diesem Abschnitt: Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.

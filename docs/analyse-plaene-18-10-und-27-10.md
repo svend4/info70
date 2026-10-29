@@ -156,3 +156,13 @@ Diese Einheiten haben eine App, aber nicht den vollen Umfang. Sie sind nicht „
 - Index: CON-18 (Status), CON-12 (Status und nächster Schritt), PRI-7 und KIN-17 sind im Index veraltet (Frage 63).
 - Prüfung der App-Felder: Von den 62 Einträgen der Liste `bauauftraege` verweisen 61 auf vorhandene Ordner unter `apps/`. Bei GEM-10, PRI-10, PRI-12 und PRI-14 nennt das Feld zwei Apps; beide Ordner sind vorhanden. Ausnahme ist CON-16 (kein App-Feld, Dokument fehlt).
 - Die Entscheidungen für PRI-6, CON-13 und CON-15 stehen aus (Frage 61). Erst danach gibt es Bauaufträge.
+
+## 10. Stand 29.10.2026 (Nachtrag zu den Abschnitten 1 bis 9)
+
+Dieser Abschnitt ändert nichts an den Abschnitten 1 bis 9. Er hält fest, was sich seit dem 28.10 geändert hat.
+
+- Stufe 2: KIN-17, GEM-8 und GEM-13 sind committet (der Index führt sie noch als „teilweise“). GEM-14, GEM-16, GEM-19, CON-1 und CON-7 warten auf Entscheidungen. CON-4 wartet auf die Fragen 68 und 69; der Arbeitsstand ist nicht committet.
+- Stufe 3: 53 Einheiten, keine begonnen. Nach der Analyse haben 34 davon Teilarbeiten, die ohne Entscheidung möglich wären. Sie gehören zu Stufe 3 und warten auf die Freigabe (Fragen 49 und 64).
+- Analyse der 62 Einheiten „teilweise“: `docs/analyse-ausbau-2026-10-29.md` (Zusammenfassung) und `docs/analyse-ausbau-2026-10-29.json` (je Einheit). Empfehlungen: 34 „teilweise sofort“, 14 „wartet auf Entscheidung“, 12 „Bauauftrag veraltet“, 2 „wartet auf Fachprüfung“.
+- Serie C und D: Serie D ist nach dem Plan vom 18.10 erledigt (Statuszeilen in docs/10). Serie C läuft mit Pilot, Welle 2 und Welle 3 (`docs/serie-c-2026-10-29.md`).
+- Die Unterschiede aus Abschnitt 5 bleiben bestehen (Welle 93 und 94, Ausbau-Reihenfolge, Serie C und D, Tore und Ablauf). Der Plan vom 27.10 ist für Tore und Ablauf verbindlicher als der vom 18.10.
