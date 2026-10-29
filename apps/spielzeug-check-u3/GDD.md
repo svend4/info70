@@ -229,3 +229,7 @@ geprüfter Quelle, die vier Zusagen der Kugel-Zeile, beide Irrtumsrichtungen der
 Klopapierrolle, „Hersteller“ erlaubt gegen „Hersteller Musterwerk“ verboten,
 kyrillische Schrift nur in der Quellenangabe, der eine löschbare Schlüssel und
 der Inhalt des Druckblatts.
+
+## Vorlesen (Entscheidung 28а)
+
+Keine Vorlese-Pflicht. Dieses Werkzeug richtet sich an Erwachsene. Die Zeile „есть озвучивание“ der Checkliste in `docs/02-anforderungen.md` gilt für Kinder-Apps (Ergänzung 28а vom 27.10.2026, am 29.10.2026 in die GDD übernommen).

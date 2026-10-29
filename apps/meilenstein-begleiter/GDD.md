@@ -47,3 +47,7 @@ Fenster wählbar).
 
 U7/U7a/U8/U9 als weitere Fenster (2.–5. Jahr), druckbare Fassung, uk/ru-Version,
 Kopplung mit dem Autonomiephase-Navigator.
+
+## Vorlesen (Entscheidung 28а)
+
+Keine Vorlese-Pflicht. Dieses Werkzeug richtet sich an Erwachsene. Die Zeile „есть озвучивание“ der Checkliste in `docs/02-anforderungen.md` gilt für Kinder-Apps (Ergänzung 28а vom 27.10.2026, am 29.10.2026 in die GDD übernommen).

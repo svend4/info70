@@ -83,3 +83,7 @@ koffer-муster mitmach-arena, схемный тест foerder-navigator. Пер
 экспортом/слиянием или планирует один человек? Читабелен ли аншлаг на
 родительской доске (шрифт, объём)? Где хочется «ещё поля» — и не тянут ли
 они за собой персональные данные (сопротивляться!).
+
+## Vorlesen (Entscheidung 28а)
+
+Keine Vorlese-Pflicht. Dieses Werkzeug richtet sich an Erwachsene. Die Zeile „есть озвучивание“ der Checkliste in `docs/02-anforderungen.md` gilt für Kinder-Apps (Ergänzung 28а vom 27.10.2026, am 29.10.2026 in die GDD übernommen).
