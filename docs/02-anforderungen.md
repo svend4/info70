@@ -150,6 +150,7 @@
     нашла контрпроба.)*
 [ ] Ссылка на главу/параграф/страницу стоит только при явной пометке
     «проверено человеком»: выдуманная ссылка выглядит как проверенная
+    *Anmerkung 29.10.2026 zur Zeile oben (Ergänzung 22а am Ende dieses Dokuments):* Ein Verweis auf Seite, Kapitel oder Paragraf darf in einer Nutzerdatei auch ohne Prüfung durch einen Menschen stehen, wenn daneben die Marke „nicht von einem Menschen geprüft“ steht; wenn die Prüfung belegt ist, lautet sie „maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft“. Die Zeile oben bleibt unverändert, weil sie vor dieser Ergänzung galt.
 [ ] Числа и названия ведомств проверены на актуальность перед печатью
     (BZgA → BIÖG с 13.02.2025; DGUV Regel 102-002 отозвано, действует
     102-602); процедурные детали, которые часто меняются, в приложение для

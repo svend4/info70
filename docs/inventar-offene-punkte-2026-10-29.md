@@ -131,6 +131,10 @@ Die Empfehlung (★) ist die Option, die in der Fragenliste markiert ist. Sie is
 | 67 | Fokus im Bestand, auch im Quiz-Motor | Bestand bleibt; Befund dokumentiert | GEM-13, GEM-8 |
 | 68 | CON-4 Umfang und Fokus | Umfang nach Brief; Fokus auf dem Knopf | CON-4 Commit |
 | 69 | Klammer (13) in GDD §6 von CON-4 | „(13 Prüfungen)“ | CON-4 Testzahlregel |
+| 70 | Rang in `autonomiephase-navigator` (Erwachsenen-App, Punkte und Rang nach Antworten) | а) Wortliste nur für Kinder-Apps ★ | `autonomiephase-navigator`; Entscheidung 51 (neu 29.10. abends, Frage 70) |
+| 71 | Rangliste in `barriere-detektive` (Kinder ordnen geprüfte Apps) | б) alphabetisch ohne Platz ★ | `barriere-detektive` (neu 29.10. abends, Frage 71) |
+| 72 | Browser-Tor: Knöpfe ohne `data-kennung` messen (Fokusverlust in 178 Apps) | б) Tor misst alle, Basislinie mit neuer Kategorie ★ | Browser-Tor, Basislinie, Bestand (neu 29.10. abends, Frage 72) |
+| 73 | Messstelle der Druckprüfung (Start oder Ende nach Klicks) | а) Endzustand für alle, Basislinie neu gesetzt ★ | `docs/browser-basislinie.json` (neu 29.10. abends, Frage 73) |
 
 ## 8. Ohne Entscheidung möglich (Koordinator, keine App-Änderung)
 
@@ -142,9 +146,21 @@ Die Empfehlung (★) ist die Option, die in der Fragenliste markiert ist. Sie is
 - Gruppe 1: Liste der 34 teilweisen Einheiten aus dem Katalog als Dokument erzeugen. Keine App-Änderung.
 - `stand-2026-10-29.json` fortlaufend pflegen, wenn sich eine Einheit ändert.
 
+**Stand 29.10.2026 abends (Erledigung der Punkte oben, datiert; die Zeilen darüber bleiben stehen):**
+
+- Zu „Gesamtzahl im Wurzel-README“: Gesetzt auf 3329 (Stand HEAD a7c7e85; im HEAD vorher 3262, also seit einem früheren Commit veraltet). Der Test `testzahlen` zählt die Arbeitskopie, also mit CON-4 (noch nicht committet); die Zahl wird beim CON-4-Commit mit `node tools/zahlen.mjs --schreiben` auf den neuen Stand gesetzt (Entscheidungen 68 und 69).
+- Zu „Werkzeug `leistungs-woerter.mjs`: Muster „Rang““ (B-21): erledigt. Gruppe `rang` ist eingetragen, ein Test ist dabei. Treffer im Bestand: zehn in zwei Apps; Befund in `docs/befund-rang-2026-10-29.md`, neue Fragen 70 und 71.
+- Zu „docs/02 Z. 151 bis 152“ (B-22): erledigt. Anmerkung in Zeile 153 (datiert, Ergänzung 22а); die alte Zeile bleibt.
+- Zu „Zurück-Knöpfe nicht geklickt“ (B-13): Der Schalter `--alle-knoepfe` ist eingebaut (opt-in, Tor und Basislinie unverändert). Ergebnis für 232 Apps: `docs/befund-browser-kennung-2026-10-29.md`, Daten `docs/browser-alle-knoepfe-2026-10-29.json`. Neue Fragen 72 und 73.
+- Zu „Messstelle druck“ (B-20): Ursache gefunden. Die Druckprüfung misst nach der Klick-Suche; ohne Klick ist das der Startzustand (204 Apps). Die Basislinie wird nicht gesenkt, bis Frage 73 entschieden ist.
+- Zu „Gruppe 1: Liste der 34 teilweisen Einheiten“: Nicht erzeugbar aus dem Katalog. `docs/ideen-katalog.json` und `docs/09-baukasten-katalog.md` nennen keinen Stand je Einheit; die Zahlen 100, 34, 3 und 2 stehen nur im Plan 18.10 (Abschnitt 8). Die Einzelergebnisse der sechs Gruppe-1-Agenten liegen nicht im Repository. Eine Liste braucht eine neue Inventur (Abschnitt 8 des Plans), also eine Entscheidung über den Aufwand.
+- `docs/browser-basislinie.json`: unverändert. Eine Senkung wartet auf Frage 73.
+
 ## 9. Empfehlung für die nächste Freigabe
 
 1. Entscheidungen 68 und 69: CON-4 committen und die Gesamtzahl setzen.
 2. Entscheidungen 51 bis 59: den Rest von Stufe 2 starten (`stufe-2-rest.md`).
 3. Entscheidung 64, Option b) „jede Einheit einzeln freigeben“: würde erlauben, Stufe-3-Einheiten ohne offene Entscheidung parallel zu beginnen. Das trifft Max.
+
+*Ergänzung 29.10.2026 abends:* Zusätzlich zu den Entscheidungen 68 und 69 brauchen die Befunde vom Nachmittag Entscheidungen von Max: 70 und 71 (Rang), 72 und 73 (Browser-Prüfung). Ohne sie bleibt der Bestand unverändert; die Befunde sind Auskunft.
 
