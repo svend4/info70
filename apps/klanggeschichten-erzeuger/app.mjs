@@ -1,4 +1,4 @@
-// Reim- und Klanggeschichten-Erzeuger (Praleska docs/10, Nr. 59, S. 81/86).
+// Reim- und Klanggeschichten-Erzeuger (Praleska docs/10, Nr. 59, S. 80–81/86).
 //
 // Der Erzeuger setzt Texte aus eigenen Bausteinen zusammen - kein
 // überliefertes Fingerspiel, kein Liedtext (siehe logik.mjs). Gleiche Auswahl,
@@ -13,7 +13,7 @@ import { VARIANTEN, erzeuge, textBlock, formVon, stoffVon, pruefeDaten } from '.
 installiereNetzwerkWaechter();
 
 // Die Seitenangaben der Quelle sind nicht von einem Menschen geprüft (docs/02, Entscheidung Max 22а). Die Marke steht
-// auf dem Bildschirm im Quellenabsatz der Ausschlussliste, dort stehen die Seitenangaben (S. 80, 81, 86). Der Druck und
+// auf dem Bildschirm im Quellenabsatz der Ausschlussliste, dort stehen die Seitenangaben (S. 79, 80–81, 86). Der Druck und
 // der kopierte Text tragen keine Seitenangabe und darum auch keine Marke.
 const MARKE_QUELLE = 'Seitenangaben der Quelle: nicht von einem Menschen geprüft.';
 

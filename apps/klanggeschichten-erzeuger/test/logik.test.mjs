@@ -200,7 +200,7 @@ test('die Quellbilanz ist nachgezählt', () => {
   assert.equal(daten.quelle.zahlen.zieleGesangskreativitaet, 4);
   assert.equal(daten.quelle.zahlen.zieleInstrumente, 6);
   assert.equal(daten.quelle.zahlen.zieleMitZeichen, 2);
-  assert.match(daten.quelle.nachgezaehlt, /Fußnote mit dieser Bedeutung steht auf S\. 80/);
+  assert.match(daten.quelle.nachgezaehlt, /Fußnote mit dieser Bedeutung steht auf S\. 79/);
   assert.match(daten.quelle.abweichung, /Marschak/);
   const k = kopie();
   k.quelle.zahlen.zieleInstrumente = 5;

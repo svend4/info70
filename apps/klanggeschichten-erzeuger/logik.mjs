@@ -1,5 +1,5 @@
 // Reim- und Klanggeschichten-Erzeuger (Praleska docs/10, Eltern-Werkzeuge
-// Nr. 59, Quelle S. 81 «Пение» und S. 86 «Игра на музыкальных инструментах»).
+// Nr. 59, Quelle S. 80–81 «Пение» und S. 86 «Игра на музыкальных инструментах»).
 //
 // TRAGENDE ENTSCHEIDUNGEN
 //
@@ -368,7 +368,7 @@ export function pruefeDaten(daten) {
   if (z.zieleGesangskreativitaet !== 4) fehler.push('quelle.zahlen: der Abschnitt auf S. 81 trägt 4 Ziele');
   if (z.zieleInstrumente !== 6) fehler.push('quelle.zahlen: der Abschnitt auf S. 86 trägt 6 Ziele');
   if (z.zieleMitZeichen !== 2) fehler.push('quelle.zahlen: zwei dieser Ziele tragen das Niveau-Zeichen');
-  if (!/Fußnote mit dieser Bedeutung steht auf S. 80/.test(daten?.quelle?.nachgezaehlt ?? '')) {
+  if (!/Fußnote mit dieser Bedeutung steht auf S. 79/.test(daten?.quelle?.nachgezaehlt ?? '')) {
     fehler.push('quelle.nachgezaehlt muss sagen, wo die Fußnote zum Zeichen steht');
   }
   if (!/Eigenproduktion/.test(daten?.quelle?.rechte ?? '')) fehler.push('quelle.rechte muss „Eigenproduktion“ aussprechen');

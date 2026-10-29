@@ -2,7 +2,7 @@
 
 ## 1. Феномен / потребность (Warum)
 Какому явлению отвечает: каталог №2 (docs/10, дериваты Праляски) — концепт
-«Staerken-Tagebuch fuer Eltern» из раздела «Individuelle Besonderheiten,
+«Staerken-Tagebuch fuer Eltern» из пункта перечня «Individuelle Besonderheiten,
 Begabungsarten, Temperament» (S. 18); UN-KRK Art. 5/18 (родительская
 компетенция); stärkenorientierte Beobachtung как стандарт немецкой
 элементарной педагогики. Что происходит без приложения: родители либо
@@ -88,3 +88,15 @@ foerder-navigator. Первый срез (playable): 4 поля с отметк�
 собственных наблюдений? Пробуют ли предложенные игры и возвращаются ли
 после них к новым отметкам? Считывают ли блок «bei Sorgen» как помощь,
 а не как тревожный сигнал?
+
+## Vorlesen (Entscheidung 28а)
+
+Keine Vorlese-Pflicht. Dieses Werkzeug richtet sich an Erwachsene. Die Zeile „есть озвучивание“ der Checkliste in `docs/02-anforderungen.md` gilt für Kinder-Apps (Ergänzung 28а vom 27.10.2026, am 29.10.2026 in die GDD übernommen).
+
+## Seitenangaben (Serie C, Pilot 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
+
+Ergebnis: Die Seite 18 stimmt. Korrektur 29.10.2026: «Individuelle Besonderheiten, Begabungsarten, Temperament» ist kein Abschnitt der Quelle, sondern ein Punkt in einer Aufzählung auf S. 18. Dafür steht jetzt „Punkt“ statt „Abschnitt“ (Wortlaut in README und GDD geändert, vorher „раздела“).

@@ -86,3 +86,15 @@ foerder-navigator/kita-wochenplaner. Первый срез (playable): 24 утв
 весь список? Не читается ли «Auf gutem Weg» как оценка? Возвращаются ли через
 месяцы (нужно ли напоминание — и как без пушей)? Понятен ли повторный клик
 как «убрать ответ»?
+
+## Vorlesen (Entscheidung 28а)
+
+Keine Vorlese-Pflicht. Dieses Werkzeug richtet sich an Erwachsene. Die Zeile „есть озвучивание“ der Checkliste in `docs/02-anforderungen.md` gilt für Kinder-Apps (Ergänzung 28а vom 27.10.2026, am 29.10.2026 in die GDD übernommen).
+
+## Seitenangaben (Serie C, Pilot 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
+
+Ergebnis: Die Angaben (S. 19 bis 20) stimmen als Übersetzung des Abschnitts «Autodiagnostik des beruflichen Ich». Keine Korrektur.

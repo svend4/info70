@@ -10,7 +10,7 @@ Miteinander, Bewegung & Geschick — «строит долго и сосредо
 экрана. Подход: взгляд на сильные стороны вместо дефицитов.
 
 **Статус: рабочий MVP.** Происхождение: каталог №2 (docs/10, дериваты
-Праляски) — концепт «Staerken-Tagebuch fuer Eltern» из раздела «Individuelle
+Праляски) — концепт «Staerken-Tagebuch fuer Eltern» из пункта перечня «Individuelle
 Besonderheiten, Begabungsarten, Temperament» (S. 18). Взято только понятие
 (наблюдение интересов/темперамента/полей одарённости); все моменты, тексты и
 игровые идеи сформулированы заново, ничего не переведено и не заимствовано.
@@ -54,3 +54,11 @@ node:test.
 npm run dev   # → http://localhost:8070/apps/staerken-tagebuch/
 node --test apps/staerken-tagebuch/test/
 ```
+
+## Seitenangaben (Serie C, Pilot 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
+
+Ergebnis: Die Seite 18 stimmt. Korrektur 29.10.2026: «Individuelle Besonderheiten, Begabungsarten, Temperament» ist kein Abschnitt der Quelle, sondern ein Punkt in einer Aufzählung auf S. 18. Dafür steht jetzt „Punkt“ statt „Abschnitt“ (Wortlaut in README und GDD geändert, vorher „раздела“).

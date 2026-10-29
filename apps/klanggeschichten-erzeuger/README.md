@@ -6,7 +6,7 @@
 Экрана для ребёнка нет, поэтому нет и `eltern.html`. Приложение **ничего не
 сохраняет**: кто хочет сохранить текст — печатает его.
 Каталог: docs/10, «👪 Инструменты для родителей», №59. Источник: «Пралеска»
-2007, с. 81 «Пение» и с. 86 «Игра на музыкальных инструментах».
+2007, с. 80–81 «Пение» и с. 86 «Игра на музыкальных инструментах».
 
 ## Несущее: всё — собственный текст, и это **проверено**, а не заявлено
 
@@ -46,7 +46,7 @@
 ## Никакой классификации детей
 
 Источник помечает часть целей знаком, который в его собственной сноске на
-с. 80 означает «задания для детей с относительно высоким уровнем
+с. 79 означает «задания для детей с относительно высоким уровнем
 музыкальности». Под этим знаком — **именно импровизация по сказкам**, на
 которую нацелена запись каталога.
 
@@ -105,3 +105,17 @@
 npm run dev            # http://localhost:8080/apps/klanggeschichten-erzeuger/
 node --test apps/klanggeschichten-erzeuger/test/logik.test.mjs   # 18 тестов
 ```
+
+## Seitenangaben (Serie C, Pilot 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
+
+Ergebnis: 21 Angaben in 31 Fundstellen; drei Angaben waren falsch, alle drei sind korrigiert:
+
+- «Пение» steht auf S. 80, nicht auf S. 81. Der Abschnitt mit den 4 Zielen bleibt auf S. 81, daher jetzt „S. 80–81“. Geändert in README, GDD, app.mjs (Kommentar), logik.mjs (Kommentar), daten/stoffe.json und package.json. Vorher überall „S. 81“ für «Пение».
+- Die Fußnote zum Zeichen steht auf S. 79, nicht auf S. 80. Geändert in README, GDD, app.mjs (Kommentar), logik.mjs (Prüfung und Kommentar), test/logik.test.mjs (Prüfung), daten/stoffe.json und package.json. Vorher überall „S. 80“ für die Fußnote.
+- „Dudelsack“ war eine falsche Übertragung von дудочка. Gemeint ist eine einfache Flöte (S. 79, 86, 87). Geändert zu „Flöte“ in GDD und daten/stoffe.json.
+
+Die alten Angaben stehen hier, damit der Verlauf nachvollziehbar bleibt.

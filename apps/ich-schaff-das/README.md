@@ -54,3 +54,11 @@ szenario-ядра в packages/ — отдельное рефакторинг-р�
 npm run dev   # → http://localhost:8070/apps/ich-schaff-das/
 npm test
 ```
+
+## Seitenangaben (Serie C, Pilot 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
+
+Ergebnis: Die beiden Angaben (S. 19) stimmen. Der Titel des Abschnitts «Познать, чтобы воспитывать» steht auf dieser Seite. Keine Korrektur.

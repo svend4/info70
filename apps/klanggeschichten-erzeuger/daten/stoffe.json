@@ -496,7 +496,7 @@
     {
       "quellNr": "x08",
       "was": "Das Instrumentarium der Quelle",
-      "warum": "Die Quelle stattet eine Gruppenecke mit Dudelsack, Trommel, Glöckchen, Xylophon und Metallophon aus. Eine Instrumentenliste wäre in einer Eltern-App ein Einkaufszettel, und bei Kindern unter drei Jahren kommt die Kleinteilgefahr dazu. Hier macht die Hand den Klang."
+      "warum": "Die Quelle stattet eine Gruppenecke mit Flöte, Trommel, Glöckchen, Xylophon und Metallophon aus. Eine Instrumentenliste wäre in einer Eltern-App ein Einkaufszettel, und bei Kindern unter drei Jahren kommt die Kleinteilgefahr dazu. Hier macht die Hand den Klang."
     }
   ],
   "bekannteAnfaenge": [
@@ -529,7 +529,7 @@
     "ein elefant der telefoniert"
   ],
   "quelle": {
-    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Abschnitte «Пение» (S. 81) und «Игра на музыкальных инструментах» (S. 86)",
+    "werk": "Praleska (Пралеска). Bildungsprogramm für Vorschulkinder, Minsk 2007, Abschnitte «Пение» (S. 80–81) und «Игра на музыкальных инструментах» (S. 86)",
     "rechte": "© НИО 2007. Übernommen sind ausschließlich Struktur und Methodik – die Improvisation auf Lautmalerei, die Melodie von Frage und Antwort und die Form der wachsenden Kette. Alle Texte dieser App sind Eigenproduktion.",
     "geprueft": true,
     "zahlen": {
@@ -537,7 +537,7 @@
       "zieleInstrumente": 6,
       "zieleMitZeichen": 2
     },
-    "nachgezaehlt": "Der Abschnitt «Песенно-игровое и песенно-инструментальное творчество» auf S. 81 trägt 4 Ziele, der Abschnitt «Игра на музыкальных инструментах» auf S. 86 trägt 6. Nachgezählt. Mit dem Zeichen für „Kinder mit relativ hohem Niveau der Musikalität“ sind davon 2 markiert – das vierte Ziel auf S. 81 (die Improvisation nach Märchen, also genau das, worauf der Katalogeintrag zielt) und das vierte Ziel auf S. 86 (das Spielen der Rhythmen von Lautmalereien). Die Fußnote mit dieser Bedeutung steht auf S. 80.",
+    "nachgezaehlt": "Der Abschnitt «Песенно-игровое и песенно-инструментальное творчество» auf S. 81 trägt 4 Ziele, der Abschnitt «Игра на музыкальных инструментах» auf S. 86 trägt 6. Nachgezählt. Mit dem Zeichen für „Kinder mit relativ hohem Niveau der Musikalität“ sind davon 2 markiert – das vierte Ziel auf S. 81 (die Improvisation nach Märchen, also genau das, worauf der Katalogeintrag zielt) und das vierte Ziel auf S. 86 (das Spielen der Rhythmen von Lautmalereien). Die Fußnote mit dieser Bedeutung steht auf S. 79.",
     "abweichung": "Nicht übernommen sind: die Einteilung nach Niveau der Musikalität, das Repertoire beider Abschnitte (es ist überwiegend nicht gemeinfrei – bei einem genannten Stück steht der Text von S. Marschak, gestorben 1964), die Instrumentenliste und die Nachdichtungen der beiden Märchen. Der Katalogeintrag wollte außerdem uk/ru-Varianten; die sind ausdrücklich weggelassen. Übernommen und gebaut sind drei Formen: Klanggeschichte, Frage-und-Antwort-Reim und Kettenreim."
   },
   "vorlagen": {

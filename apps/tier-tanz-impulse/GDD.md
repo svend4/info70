@@ -218,3 +218,13 @@ Bezug; Tempo-Behauptung gegen Karten-Tempo (plus die erlaubte Vergleichsform);
 Bewegung“ macht den Puls nicht zum An/Aus-Sprung. Die Zahl der Tests in GDD und
 README prüft ein Korpus-Test für alle Apps, die eine nennt
 (`packages/kinderschutz/test/testzahlen.test.mjs`).
+
+## Seitenangaben (Serie C, Pilot 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
+
+Ergebnis: Die Seiten 267 und 268 stimmen. Die Übungen beginnen auf S. 267, die Tanzliste steht auf S. 268. Nachgezählt: 24 Übungsbezeichnungen (je Titel bzw. Bewegung) und 23 Tanz-Einträge. Die Zählregel steht in dieser Datei noch nicht ausgeschrieben; sie wird nachgetragen.
+
+Offen (Frage 76): Die Altersangabe 3 bis 5 in dieser Datei stützen diese Seiten nicht. S. 268 steht unter der Überschrift «Фантазеры»; S. 6 der Quelle ordnet diese Gruppe dem älteren Vorschulalter zu, von fünf bis sechs oder sieben Jahren. Bis zur Entscheidung bleibt die Angabe unverändert.
