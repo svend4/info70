@@ -81,6 +81,7 @@ Keine Zufallsquelle in der Logikdatei; Zufall kommt als Parameter.
 - [ ] Keine Anfragen nach außen; CSP `default-src 'self'` (docs/02 Z. 22–24; die CSP-Umsetzung ist Eigenentwurf). Der NetzwerkWächter der App ist im Bestand.
 - [ ] Keine Eingabefelder (Projektregel; docs/02 Z. 17–30 begrenzt Datenerhebung und Kommunikation). Die Auswahl erfolgt über Schaltflächen.
 - [ ] Keine Bewertung, Punkte, Rangliste, Stufe, Name eines Kindes (docs/02 Z. 141–146). Verstoß im Bestand: der Zähler `quizPunkte` mit der Ausgabe „Richtig beantwortet“ in `apps/deutschland-kompass/app.mjs` (Z. 26, 155, 199). Er wird entfernt.
+  Anmerkung 29.10.2026: Nicht mehr zutreffend. Der Zähler ist mit Commit 96a1f89 (27.10.2026, Lauf C) entfernt; in `app.mjs` des HEAD steht auf den genannten Zeilen kein Zähler. `node tools/leistungs-woerter.mjs deutschland-kompass` meldet keinen Treffer.
 - [ ] Druck: in dieser Einheit nicht vorgesehen. Käme Druck hinzu, gelten docs/02 Z. 79–82.
 - [ ] Mobile First 360 px; Knöpfe und Fußlink mindestens 48 px (docs/02 Z. 50).
 - [ ] Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ Diese Einheit druckt keine Seitenangabe; Seitenangaben stehen nur in Abschnitt 1 und in den Daten (A18-Standard).
@@ -102,6 +103,7 @@ Keine Zufallsquelle in der Logikdatei; Zufall kommt als Parameter.
 
 - Ränge im Katalog (docs/10, Z. 451) gegen docs/02 Z. 141–146: Entscheidung nötig. Empfehlung: keine Ränge.
 - Punktzähler im Bestand (`app.mjs` Z. 26, 155, 199): Entfernung ist eine Änderung der App. Freigabe durch den Koordinator.
+  Anmerkung 29.10.2026: Erledigt. Der Zähler ist seit 96a1f89 (27.10.2026) entfernt; eine Freigabe ist nicht nötig.
 - Stufen Bundesland, Europa und Erde: Inhalte sind Eigenentwurf; die Quelle nennt Heimatkunde und Menschheit als Familie (S. 120), nicht die Stufenfolge.
 - Herkunftsland-Modul (uk/ru): offen.
 - A18 Seitenangaben: Standard (Vorschlag) ist, dass keine Seitenzahl auf dem Bildschirm steht; die Daten tragen `quelle`.

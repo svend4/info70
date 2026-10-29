@@ -100,6 +100,7 @@ endeRunde(ergebnisse) -> Anzeige
 - [ ] Keine Anfragen nach außen; CSP `default-src 'self'` (docs/02 Z. 22–24). Ist-Stand: CSP `default-src 'self'` und Netzwerk-Wächter (GDD).
 - [ ] Keine Eingabefelder (Projektregel der Vorlage). Ist-Stand: keine Eingabe; die App fragt Wissen, nicht Name, Größe oder Gewicht (GDD).
 - [ ] Keine Bewertung, Punkte, Rangliste, Stufe, Name eines Kindes (docs/02 Z. 141–146). Ist-Stand: Ränge und Punkte vorhanden (`raenge`, Engine). Verstoß gegen die Regel; der Ausbau entfernt sie.
+  Anmerkung 29.10.2026: Nicht mehr zutreffend. Ränge und Punkte sind mit Commit 96a1f89 (27.10.2026) aus Code und Daten entfernt; `test/fragen.test.mjs` prüft, dass `raenge` nicht in den Daten steht. Der Schlüssel `sug.rekord` steht nur noch für die einmalige Entfernung beim Start.
 - [ ] Druck: keine Zeichen ☐☒☑✓✔★☆, keine Emojis, keine Namenszeile, keine Tagesfelder (docs/02 Z. 79–82). Kein Druck vorgesehen.
 - [ ] Mobile First 360 px; Knöpfe und Fußlink mindestens 48 px (docs/02 Z. 50). Ist-Stand: Klassen aus `kinder-ui` (GDD); Messung offen.
 - [ ] Pflichtmarkierung auf jeder gedruckten Karte mit Seitenangabe: „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ (docs/02 Z. 151–152). Ist-Stand: Der Bildschirm zeigt keine Seitenangabe. Wenn die Quelle je Frage angezeigt wird, gilt die Markierung.

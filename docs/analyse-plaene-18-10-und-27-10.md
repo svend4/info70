@@ -82,10 +82,13 @@ Hinweis (28.10, Nachprüfung): Der Plan vom 18.10 widerspricht sich selbst. Die 
 | CON-1 | stark-und-gesund | blockiert durch Löschung und Fakten | Rekord und Ränge im Bestand (Empfehlung: entfernen), Ränge im Katalog, Gesundheitsfakten unbelegt, Test mit Kindern |
 | CON-7 | herkunftssprachen-bruecke | blockiert durch Löschung und Entscheidungen | Punkte, Rang und Rekord im Bestand (Empfehlung: entfernen), Altersgruppe 4–7 gegen 8–12, Wortkarten |
 
+Nachprüfung 29.10.2026 (zu CON-1, CON-4 und CON-7): Die Zählerzeilen sind im Code entfernt (Commit 96a1f89, 27.10.2026). Im HEAD bleibt bei CON-1 und CON-7 nur der Migrationsschlüssel `rekordSchluessel`. Die Angaben „Punkte, Rang und Rekord im Bestand“ und die Löschung als Blockade oben sind damit veraltet. Die übrigen Gründe bleiben (Fakten, Altersgruppen, Ränge im Katalog). CON-4: Der Ausbau „Vom Ort zur Erde“ ist im Code fertig und nicht committet; die Abweichungen vom Bauauftrag stehen in Frage 68.
+
 ## 7. Arbeitsliste (Stand 28.10)
 
 1. Stufe 2 abschließen: GEM-8, GEM-13, CON-4 (Schreiber laufen; danach unabhängige Prüfung, dann Commit).
 2. Freigaben für Löschungen (Max, Koordinator): CON-1, CON-4 (Punktzähler), CON-7. Erst nach Freigabe Stufe 2 vollständig.
+   Nachprüfung 29.10.2026: Diese Freigabe ist für die Zähler gegenstandslos (Commit 96a1f89). Offen bleibt die Frage nach den Rängen im Katalog (Frage 51).
 3. Entscheidungen Max: Nachtrag-Fragen 48 ff. (Altersgruppen, Begriffe, Bildrechte, Gesundheitsfakten, Engine, Serie C und D).
 4. Index korrigieren (Koordinator, `tools/bauauftrag-index.mjs`): CON-18, CON-12 (app), PRI-7, KIN-17, GEM-8, GEM-13, CON-4.
 5. Stufe 3 (53 Einheiten, nach Faktenstand): erst nach Abschluss von Stufe 2.

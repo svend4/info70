@@ -112,9 +112,11 @@ werden.
 5. Der bestehende Punktzähler (app.mjs Zeilen 26, 155, 199) bleibt unverändert. Nicht entfernen. Die App ist deshalb noch nicht für
    Kinder freigegeben (Tor 1). Die Treffer von `node tools/leistungs-woerter.mjs deutschland-kompass` mit genauem Grund unter
    grund_ausnahme und offen_fuer_max melden.
+   Anmerkung 29.10.2026: Gegenstandslos. Der Zähler ist seit 96a1f89 (27.10.2026) entfernt; siehe Abnahme unten.
 6. test/regeln.test.mjs: prüfe den NEUEN Modus (seine Dateien und den Abschnitt in index.html) auf Speicher, Netz, Zufall, Eingabe
    und Wertung. Der bestehende Punktzähler darf keinen roten Test auslösen; er steht im GDD als offen. Kein Test, der Bestehendes
    rot macht.
 7. Testzahl in README und GDD.
 Prüfen: npm test, leistungs-woerter, browser-tor. Die vollständige Abnahme gilt erst, wenn der Punktzähler entfernt ist
+   Anmerkung 29.10.2026: Der Punktzähler ist mit Commit 96a1f89 (27.10.2026) entfernt. Die Abnahme hängt nicht mehr am Zähler, sondern an den Entscheidungen (Fragen 65 bis 68).
 (Freigabe durch den Koordinator).

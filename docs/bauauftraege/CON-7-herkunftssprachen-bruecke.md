@@ -78,6 +78,7 @@ rekordEntfernen() -> void
 - [ ] Keine Anfragen nach außen; CSP `default-src 'self'` (docs/02 Z. 22–24; die CSP-Umsetzung ist Eigenentwurf). Der NetzwerkWächter ist im Bestand (README).
 - [ ] Keine Eingabefelder (Projektregel; docs/02 Z. 17–30 begrenzt Datenerhebung und Kommunikation). Antworten per Schaltfläche.
 - [ ] Keine Bewertung, Punkte, Rangliste, Stufe, Name eines Kindes (docs/02 Z. 141–146). Verstoß im Bestand: Punktzahl und Ergebnissatz (`app.mjs` Z. 30), Rekord (`app.mjs` Z. 17) und Ränge (`daten/fragen.json`, Feld `raenge`). Der Ausbau entfernt alle drei.
+  Anmerkung 29.10.2026: Nicht mehr zutreffend für Punktzahl, Ergebnissatz und Ränge: entfernt mit Commit 96a1f89 (27.10.2026); `daten/fragen.json` enthält kein Feld `raenge`. Der Schlüssel `herkunft.rekord` bleibt nur für die einmalige Entfernung beim Start.
 - [ ] Druck: nicht vorgesehen. Käme Druck hinzu, gelten docs/02 Z. 79–82.
 - [ ] Mobile First 360 px; Knöpfe und Fußlink mindestens 48 px (docs/02 Z. 50).
 - [ ] Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ Diese Einheit druckt nichts. Seitenangaben stehen nur in Abschnitt 1 und in den Daten (A18-Standard).
