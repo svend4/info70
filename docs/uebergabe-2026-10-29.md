@@ -72,3 +72,31 @@ Die Abschnitte 1 bis 7 bleiben stehen. Dieser Nachtrag gilt für den Stand danac
 2. CON-4 committen (`git add -- apps/deutschland-kompass`), danach `node tools/zahlen.mjs --schreiben` (README auf die Arbeitskopie), in `docs/10-praleska-baukasten.md` Z. 137 von „13 тестов“ auf „42 тестов“ setzen und die Notiz „Zählung 29.10. abends“ dort stehen lassen. Danach `node --test packages/kinderschutz/test/testzahlen.test.mjs` ohne Befund.
 3. Entscheidungen 70 bis 73 treffen. Bis dahin bleibt der Bestand unverändert.
 4. Hochladen: nur mit neuer Freigabe und einem Token für diese Sitzung oder vom eigenen Rechner aus, siehe `ANLEITUNG-lokal.md`.
+
+## 9. Nachtrag 29.10.2026 spät: Plan 18.10 weitergeführt
+
+Die Abschnitte 1 bis 8 bleiben stehen.
+
+**Commits seit `a7162d6`.** Die Liste steht im Befehl `git log --oneline a7162d6..HEAD`. Neu in diesem Nachtrag: Befunde und Layout im Browser-Werkzeug (B-23, zwei Layout-Korrekturen mit datierten Kommentaren), der kanonische Stand der Gruppe 2 mit den Statuszeilen am Ende von docs/10 (Serie D), das Werkzeug und der Pilot der Serie C (fünf Apps, drei Korrekturen in klanggeschichten-erzeuger), der Vermerk zur Vorlese-Pflicht (Entscheidung 28а) für neun weitere Erwachsenen-Werkzeuge.
+
+**Wo die Arbeit nach dem Plan 18.10 steht.**
+- Serie D: erledigt (`docs/10`, Abschnitt am Dateiende; Quelle `tools/gruppe-2-stand.mjs --docs10`).
+- Serie C: Pilot mit fünf Apps abgeschlossen (`docs/serie-c-2026-10-29.md`). Welle 2 mit drei Apps (`entwicklungs-kompass`, `tagesblick-fachkraft`, `schulstart-begleiter`) lief zum Zeitpunkt dieses Nachtrags; das Ergebnis ist in diesem Dokument nachzutragen, sobald es vorliegt.
+- Serie A: abgeschlossen bis auf die Einheiten, die auf Entscheidungen warten (PRI-6, CON-13, CON-15 unklar; Frage 61).
+- Serie B (Ausbau): Stufe 1 gebaut, Stufe 2 bis auf CON-4 (Commit wartet auf 68 und 69) und die Entscheidungen 51 bis 59. Stufe 3 wartet auf 48, 49 und 64.
+- Gruppe 1 (Plan 18.10, Abschnitt 8): Die Zählung 100 gebaut, 34 teilweise, 3 offen, 2 nicht bauen ist nicht nachprüfbar. Eine Prüfung braucht eine Inventur (Entscheidung über den Aufwand).
+
+**Neue Fragen für Max:** 74 (CON-16, Ort und Art des Ergebnisses), 75 (Zielgruppe von sechs Apps mit Vorlesefunktion), 76 (Altersgruppe von `tier-tanz-impulse`). Ergänzungen zu den Fragen 48, 49, 72 und 73 stehen bei den Fragen.
+
+**Zählwerte.** HEAD nach diesen Commits: die Zahl steht im README; sie wird mit `node tools/zahlen.mjs` auf einem Export von HEAD bestimmt (ohne die noch nicht committete Arbeit an CON-4). In der Arbeitskopie sind es mehr, weil CON-4 (42 Tests in der App) dazukommt. Die drei roten Befunde von `testzahlen` in der Arbeitskopie hängen weiter an CON-4 (README, `GDD.md` von deutschland-kompass, docs/10 Z. 137).
+
+**Nächste Schritte ohne neue Entscheidung.**
+1. Welle 2 der Serie C auswerten und das Ergebnis in `docs/serie-c-2026-10-29.md` und in die GDD der drei Apps eintragen (Pflichtmarkierung wie in den Pilot-Apps).
+2. Zählregel für `tier-tanz-impulse` in README und GDD ausschreiben (die Zahlen 24 und 23 stimmen laut Prüfung).
+3. Weitere Apps der Serie C nach demselben Verfahren; die Liste der Kandidaten steht in `docs/status-gruppe-2-2026-10-29.json` (gebaut, Faktenstand „nur Katalogtext“ oder „Quelle nicht im Repo prüfbar“).
+4. Die sechs Apps aus Frage 75 mit der Zielgruppe klären, bevor der Vermerk gesetzt wird.
+5. Die Layout-Stelle in `deutschland-kompass` (1 px, Modus-Bildschirm, im HEAD) mit der Freigabe von CON-4 beheben.
+
+**Stand der Messung.** Der Schalter `--alle-knoepfe` misst 232 Apps (Lauf 3, `docs/befund-browser-kennung-2026-10-29.md`, Abschnitt 9). Der Fokusverlust in 178 Apps bleibt bis zur Entscheidung 72 Bestand.
+
+Seitenangaben in diesem Abschnitt: Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
