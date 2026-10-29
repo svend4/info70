@@ -44,9 +44,8 @@ Sie sind in der Git-Historie von `daten/indikatoren.json` bis zum Stand f16a54b 
 ## Quellen
 
 - **Konzept:** `docs/10-praleska-baukasten.md`, Katalog Nr. 2 (Top-30 №2).
-- **Programm „Praleska“** (НИО, Минск, 2007), Volltext `PRALESKA.pdf`, Seite 205. Wörtlich
-  (Zeilenumbrüche durch Leerzeichen ersetzt, Seitenzahl = Anzahl der Formfeeds davor + 1):
-  «Готовность к школе, к обучению в ней — один из важных результатов психического развития в дошкольный период.»
+- **Programm „Praleska“** (НИО, Минск, 2007), Volltext `PRALESKA.pdf`, Seite 205. Der Begriff «Готовность к школе» (Schulreife) steht dort als Ergebnis der psychischen Entwicklung im Vorschulalter. Die Aussage ist eigene Übertragung, kein wörtliches Zitat (Seitenzahl = Anzahl der Formfeeds davor + 1).
+  Korrektur 29.10.2026 (Serie C, Welle 2): Vorher stand dort der ganze Satz wörtlich. Das überschritt die Zitatgrenze (docs/10, Rechtsrahmen Punkt 1); der Begriff bleibt.
   Die Bereiche und Angebote sind Eigenentwürfe. Sie sind nicht aus einzelnen Seiten abgeschrieben.
 - **Regel:** `docs/02-anforderungen.md`, Z. 141–146. Ein Kind wird nicht bewertet. Bewertet werden
   die eigenen Handlungen der Fachkraft und der Gegenstand.
@@ -87,3 +86,9 @@ node --test apps/schulstart-begleiter/test/*.test.mjs
 ```
 
 Ergebnis: 29 von 29 grün.
+
+## Seitenangaben (Serie C, Welle 2, 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft: 1 Angabe (S. 205). Der Begriff «Готовность к школе» steht auf dieser Seite als Ergebnis der psychischen Entwicklung im Vorschulalter; die Aussage passt zum Thema. Korrektur: Der volle Satz wurde entfernt (Zitatgrenze, Rechtsrahmen Punkt 1). Siehe oben unter „Quellen“.

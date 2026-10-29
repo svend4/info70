@@ -96,3 +96,9 @@ node --test apps/tagesblick-fachkraft/test/*.test.mjs
 npm run dev   # → http://localhost:8070/apps/tagesblick-fachkraft/
 npm test
 ```
+
+## Seitenangaben (Serie C, Welle 2, 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft: 2 Angaben. Das Thema steht auf S. 15 bis 18. Die Quelle nutzt dort благополучие (S. 15, 17, mit Zeilenumbruch: „emotionales Wohlbefinden“). „Wohlbefinden“ und „Psychologische Gesundheit“ sind Übertragungen. Keine Korrektur.

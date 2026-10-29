@@ -107,7 +107,7 @@ function kopfKarte() {
     el('p', { style: 'font-size:0.9rem' },
       'Je Bereich wird gezählt, wie viele Prüfpunkte umgesetzt sind (z. B. „erfüllt: 3 von 6“). Eine Gesamtzahl über alle Bereiche oder Prozentwerte gibt es bewusst nicht.'),
     el('p', { style: 'font-size:0.9rem;margin-bottom:0' },
-      'Jede Formulierung ist ein Eigenentwurf nach einem Merkmal aus dem Programm „Praleska“ (Minsk 2007), S. 17–19. Die Kennung, z. B. S18.6, nennt Seite und Merkmal; zitiert wird nicht.',
+      'Jede Formulierung ist ein Eigenentwurf nach einem Merkmal aus dem Programm „Praleska“ (Minsk 2007), S. 17–19. Die Kennung, z. B. S18.6, ist eine Zählung dieser App: Seite und laufende Nummer auf der Seite. Das Programm nummeriert nicht; zitiert wird nicht.',
       ' ', MARKE_QUELLE));
 }
 
@@ -184,7 +184,7 @@ function druckBogen() {
         ...bereich.angebote.map((p) => druckZeile(p)));
     }),
     el('p', { class: 'k-druck-fuss' },
-      'Merkmal-Kennungen (z. B. S18.6): Seite und Merkmal im Programm „Praleska“ (Nationales Institut für Bildung, Minsk 2007), S. 17–19. Die Formulierungen sind Eigenentwürfe, keine Zitate.',
+      'Merkmal-Kennungen (z. B. S18.6): Seite im Programm „Praleska“ (Nationales Institut für Bildung, Minsk 2007), S. 17–19, und laufende Nummer dieser App auf der Seite; das Programm nummeriert nicht. Die Formulierungen sind Eigenentwürfe, keine Zitate.',
       ' ', MARKE_QUELLE));
 }
 

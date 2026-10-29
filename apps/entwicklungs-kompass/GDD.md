@@ -117,3 +117,15 @@ Bewertung? Wird der Druckbogen in der Besprechung genutzt? (Protokoll: docs/05, 
 
 - Merkmal-Auswahl: S17.3, S18.1 und S19.1 sind übernommen, liegen aber nahe an der Einstufung, die S18.5 ausschließt. Eine Fachkraft entscheidet, ob sie bleiben oder ersetzt werden.
 - Leere Kästchen auf dem Druckbogen: docs/02 Z. 79–80 nennt Haken auf dem Papier; die Frage liegt beim Team.
+
+## Seitenangaben (Serie C, Welle 2, 29.10.2026)
+
+Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
+
+Geprüft: 41 Angaben (Werkzeug: 8) in README, GDD, app.mjs, eltern.html, indikatoren.json und dem Register. Maschinell, nicht von einem Menschen geprüft.
+
+- Die Zahl 11 stimmt: Das Register hat elf Merkmale, alle werden in Prüfpunkten genutzt. Mit den sieben ausgeschlossenen ergeben sich 18 Aufgaben-Spiegelstriche auf S. 17 bis 19 (4, 10 und 4). Die Wortlaute der Merkmale stehen auf der genannten Seite.
+- Die Quelle nummeriert ihre Punkte nicht. Die Kennung S18.6 ist eine Zählung dieser App: Seite 18 und der sechste Aufgaben-Spiegelstrich auf dieser Seite. Die Angaben in app.mjs, eltern.html und im Register sind dafür entsprechend formuliert (Korrektur 29.10.2026; vorher hieß es „nennt Seite und Merkmal im Programm“). Ob die Zählung im Register als „nicht belegt“ gelten soll, ist Frage 77.
+- Kürzung der Zitate auf höchstens sechs Wörter (Frage 62): zwei Zitate in der Tabelle und der Ausschlussliste der README hatten je sieben Wörter; sie sind auf fünf Wörter und eine Auslassung gekürzt, ebenso der Wortlaut S18.2 in daten/indikatoren.json. Vorher stand dort der volle Wortlaut.
+- Hinweis: Die Zuordnung „Feinmotorik unter S18.7“ (GDD) findet sich auf S. 17 bis 19 nicht im Wortlaut. Die Zuordnung ist Eigenentwurf, und die GDD nennt sie bereits als großzügig.
+- Keine Befunde bei der Seitenzahl: S. 17 bis 19 stimmen.
