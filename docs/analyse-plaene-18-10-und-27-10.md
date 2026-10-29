@@ -151,5 +151,5 @@ Diese Einheiten haben eine App, aber nicht den vollen Umfang. Sie sind nicht „
 ### 9.4 Noch zu klären
 
 - Index: CON-18 (Status), CON-12 (Status und nächster Schritt), PRI-7 und KIN-17 sind im Index veraltet (Frage 63).
-- Prüfung der App-Felder: Alle 62 Einträge der Liste `bauauftraege` mit Status „teilweise“ verweisen auf vorhandene Ordner unter `apps/`. Bei GEM-10, PRI-10, PRI-12 und PRI-14 nennt das Feld zwei Apps; beide Ordner sind vorhanden. Ausnahme ist CON-16 (kein App-Feld, Dokument fehlt).
+- Prüfung der App-Felder: Von den 62 Einträgen der Liste `bauauftraege` verweisen 61 auf vorhandene Ordner unter `apps/`. Bei GEM-10, PRI-10, PRI-12 und PRI-14 nennt das Feld zwei Apps; beide Ordner sind vorhanden. Ausnahme ist CON-16 (kein App-Feld, Dokument fehlt).
 - Die Entscheidungen für PRI-6, CON-13 und CON-15 stehen aus (Frage 61). Erst danach gibt es Bauaufträge.
