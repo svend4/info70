@@ -24,10 +24,11 @@ function download(text) {
 }
 
 function bausteinKarte(b, i) {
+  // Korrektur 29.10.2026 (Befund B-13, Browser-Prüfung): war white-space:nowrap; der Zusatz lief bei 360 px über den Rand.
   return el('section', { class: 'k-karte bpg-karte' },
     el('div', { style: 'display:flex;justify-content:space-between;gap:0.5rem;align-items:baseline' },
       el('h2', { style: 'margin:0;font-size:1.05rem' }, `${i + 1}. ${b.titel}`),
-      el('small', { style: 'color:#4b5563;white-space:nowrap' }, `${b.minuten} Min · ${phasenName.get(b.phase) ?? b.phase}`)),
+      el('small', { style: 'color:#4b5563;white-space:normal;overflow-wrap:anywhere' }, `${b.minuten} Min · ${phasenName.get(b.phase) ?? b.phase}`)),
     el('ol', { style: 'margin:0.4rem 0;padding-inline-start:1.3rem' },
       ...b.anleitung.map((s) => el('li', { style: 'margin:0.15rem 0' }, s))),
     el('p', { style: 'margin:0;font-style:italic' }, `🎵 „${b.vers}“`),

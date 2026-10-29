@@ -144,7 +144,16 @@ async function zaehlerLesen(seite) {
 // Zustand des aktuellen Bildschirms: Titel, Knöpfe mit Kennung, Überlauf bei 360 px.
 async function zustandMessen(seite) {
   return seite.evaluate((alle) => {
-    const sichtbar = (el) => el.getClientRects().length > 0;
+    // Korrektur 29.10.2026 (Befund B-23, nur mit --alle-knoepfe): Inhalt eines geschlossenen <details> ist nicht sichtbar,
+    // auch wenn er Maße hat (aemtli-rad: Knopf „Vorlesen“ im Abschnitt „Wie ist das fair?“). Ohne den Schalter bleibt es wie bisher.
+    // Ein Element in einem geschlossenen <details> (außer seiner <summary>) gilt dann als nicht sichtbar.
+    const verdecktVonDetails = (el) => {
+      const d = el.closest('details:not([open])');
+      if (!d) return false;
+      const summary = el.closest('summary');
+      return !(el.tagName === 'SUMMARY' || (summary && summary.parentElement === d));
+    };
+    const sichtbar = (el) => el.getClientRects().length > 0 && !(alle && verdecktVonDetails(el));
     const html = document.documentElement;
     if (alle) {
       // Knöpfe ohne Kennung bekommen eine Kennung aus Text und Nummer je Bildschirm; bereits vergebene bleiben.
@@ -227,9 +236,19 @@ async function nachKlickLesen(seite, kennung) {
 
 // Klickt den ersten sichtbaren, aktiven Knopf mit dieser Kennung.
 async function klicken(seite, kennung) {
-  const handle = await seite.evaluateHandle((k) => [...document.querySelectorAll('button[data-kennung]')]
-    .find((b) => b.dataset.kennung === k && b.getClientRects().length > 0
-      && !(b.disabled || b.getAttribute('aria-disabled') === 'true')) ?? null, kennung);
+  const handle = await seite.evaluateHandle(([k, alle]) => {
+    // Gleiche Regel wie in zustandMessen (B-23, nur mit --alle-knoepfe).
+    const verdecktVonDetails = (el) => {
+      const d = el.closest('details:not([open])');
+      if (!d) return false;
+      const summary = el.closest('summary');
+      return !(el.tagName === 'SUMMARY' || (summary && summary.parentElement === d));
+    };
+    return [...document.querySelectorAll('button[data-kennung]')]
+      .find((b) => b.dataset.kennung === k && b.getClientRects().length > 0
+        && !(alle && verdecktVonDetails(b))
+        && !(b.disabled || b.getAttribute('aria-disabled') === 'true')) ?? null;
+  }, [kennung, ALLE_KNOEPFE]);
   const el = handle.asElement();
   if (!el) return { status: 'nicht mehr vorhanden' };
   try {

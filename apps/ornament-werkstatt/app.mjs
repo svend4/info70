@@ -186,10 +186,12 @@ function setzeZelle(index) {
 function raster() {
   const vorlage = vorlageVon();
   const felder = aktiveFelder(vorlage);
+  // Korrektur 29.10.2026 (Befund B-13, Browser-Prüfung): war 1fr; die Mindestbreite der Knöpfe ließ das Raster bei 360 px
+  // über den Rand laufen (471 px bei 12 Spalten). minmax(0, 1fr) gibt den Spalten die Breite, die der Platz hergibt.
   return el('div', {
     role: 'group',
     'aria-label': `Raster der Vorlage ${vorlage.name}`,
-    style: `display:grid;grid-template-columns:repeat(${vorlage.spalten}, 1fr);gap:0.2rem;max-width:${vorlage.spalten * 3}rem;margin:0.4rem auto`,
+    style: `display:grid;grid-template-columns:repeat(${vorlage.spalten}, minmax(0, 1fr));gap:0.2rem;max-width:${vorlage.spalten * 3}rem;margin:0.4rem auto`,
   }, ...felder.map((aktiv, i) => {
     if (!aktiv) return el('div', { 'aria-hidden': 'true', style: 'aspect-ratio:1' });
     const knopf = el('button', {

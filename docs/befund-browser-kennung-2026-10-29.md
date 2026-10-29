@@ -73,3 +73,23 @@ Die Suche klickt jetzt 112 Mal auf „Zurück“-Knöpfe in 49 Apps. Die meisten
 - Frage 73: Messstelle der Druckprüfung. Solange sie nicht entschieden ist, bleibt `druck` in der Basislinie, wie sie ist. Der Schalter verschiebt die Zahlen je App; eine Senkung wäre ohne Entscheidung nicht sauber begründbar.
 - Die Funde in Abschnitt 7 sind Ausbesserungen im Bestand und brauchen eine Freigabe, bevor eine App geändert wird.
 - Der Bestand bleibt unverändert, bis Max die Entscheidungen 65 und 67 getroffen hat.
+
+## 9. Nachtrag: Lauf 3 (29.10.2026, nach den Korrekturen)
+
+Die Zahlen oben stammen aus Lauf 2. Danach kamen drei Änderungen dazu; die Tabelle und die Abschnitte oben bleiben stehen, damit die Herkunft der Zahlen nachvollziehbar ist.
+
+- **B-23 (Werkzeug, nur mit `--alle-knoepfe`):** Ein Element im geschlossenen `<details>` gilt nicht als sichtbar. Vorher meldete das Werkzeug in `aemtli-rad` einen Klickfehler auf „🔊 Vorlesen“, der im geschlossenen Abschnitt „🤔 Wie ist das fair?“ liegt. Ohne den Schalter bleibt die Regel unverändert; die Basislinie ist nicht betroffen.
+- **Layout (App-Änderung, zwei Stellen mit Kommentar und Datum):** `bewegungspausen-generator`: Der Zusatz „N Min · Phase“ hatte `white-space:nowrap` und lief bei 360 px um bis zu 65 px über den Rand; jetzt `normal` mit `overflow-wrap:anywhere`. `ornament-werkstatt`: Das Raster „Frei legen“ nutzte `1fr` mit Mindestbreite der Knöpfe und lief bei 12 Spalten auf 471 px; jetzt `minmax(0, 1fr)`.
+- **Ergebnis Lauf 3:** Klickfehler 0 (vorher 1). Überlauf: nur noch `deutschland-kompass`, 1 px, Schritt 6 im HEAD und Schritt 8 in der Arbeitskopie. Der Fehler steckt also im bestehenden Modus-Bildschirm, nicht im Ausbau CON-4; er wird mit der Freigabe von CON-4 behoben. Fokusverlust: 178 Apps, 4 465 Fälle (vorher 4 472). Druck im Endzustand: Summe 1 301 gegen 1 511 (vorher 1 307).
+
+| Größe (Lauf 3) | Wert |
+|---|---|
+| Klicks insgesamt | 7 414 |
+| davon auf Knöpfen ohne Kennung | 6 000 |
+| Apps mit Fokusverlust | 178 (4 465 Fälle) |
+| Klicks auf „Zurück“-Knöpfe | 112 in 49 Apps |
+| Apps mit Überlauf bei 360 px | 1 (`deutschland-kompass`, 1 px, Bestand) |
+| Apps mit Klickfehler | 0 |
+| Apps mit Berührzielen unter 48 px | 16 (unverändert; Entscheidung F1 offen) |
+
+Die Datei `docs/browser-alle-knoepfe-2026-10-29.json` enthält die Zahlen von Lauf 3 je App. Lauf 3 ist der Stand dieses Befunds.
