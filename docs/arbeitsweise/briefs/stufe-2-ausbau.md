@@ -24,6 +24,7 @@ arbeiten gleichzeitig an anderen Apps. Du änderst nur die App deiner Einheit (A
 - Keine Netzaufrufe und keine fremden Adressen (https://, //domain, www.). fetch nur mit einem Pfad in Anführungszeichen
   (`./` oder `daten/`).
 - Kein Zufall im Code der App (Math.random, crypto.getRandomValues). Zufallsreihen kommen als Parameter in die Logik.
+  Anmerkung 29.10.2026: Im Bestand von `erzaehl-bruecke` steht `Math.random` an zwei Stellen (`logik.mjs`, `app.mjs`). Sie bleiben bis zur Entscheidung Max (Frage 65). Neue Zeilen dürfen keinen Zufall nutzen.
 - Keine Wertung eines Kindes: keine Punkte, Rekord, Rang, Rangliste, Serie, Prozent, „richtig von“, „geschafft“, Sterne,
   Noten, Pokal. Erlaubt ist ein neutraler Zähler des Gefundenen („Gefunden: 3 von 8“).
 - Seitenangaben („S. n“) nur mit dem Vermerk im selben Dokument: „Seitenangaben maschinell gegen den Quelltext geprüft,
@@ -103,6 +104,7 @@ werden.
    das Wort „Stufe“ gilt als Bewertung (docs/02 Z. 141–146), und die Wertungsprüfung erkennt den Wortstamm. Eigene Logikdatei
    (logik-ebenen.mjs) und eigene Daten (daten/ebenen.json). Im Text und in Dateinamen des Modus kein Wort mit dem Stamm „Stuf“. Alle Inhalte sind Eigenentwurf (Bauauftrag Abschnitt 9: die Quelle nennt Heimatkunde und
    Menschheit als Familie, S. 120, nicht die Reihenfolge der Ebenen).
+   Korrektur 29.10.2026: Das Satzende oben trifft nicht zu. `tools/leistungs-woerter.mjs` prüft „Stufe“ nicht (seine Liste: Punkte, Rekord, Serie, Prozent, „richtig von“, „geschafft“, Sterne und Pokale, Vergleich). Das Verbot für neue Texte für Kinder gilt trotzdem; es wird von Hand oder im Regeltest geprüft. Bestandsstellen werden nicht geändert (Frage 66).
 2. Reine Logik mit Tests (test/ebenen.test.mjs): Reihenfolge der Ebenen, jede Ebene mit Inhalt und Eigenentwurf-Kennzeichnung,
    keine Wertungswörter in den Ebenen-Daten.
 3. Oberfläche: Schaltfläche „Vom Ort zur Erde“ im Startbildschirm; Vorlesen; im neuen Modus kein Punkt, kein Rang, kein Rekord.
