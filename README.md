@@ -57,13 +57,15 @@ npm test       # тесты (node --test)
 ## Статус
 
 **201 приложений (200 рабочих MVP + 1 прототип) + 3 общих пакета.** Первые 11
+
+*Stand 29.10.2026 (datierter Zusatz, die Zahl oben bleibt als Verlauf stehen):* 232 Ordner mit `index.html` unter `apps/` (Zählung mit `find apps -maxdepth 2 -name index.html`) und 3 gemeinsame Pakete.
 описаны в docs/01–08; остальные построены из каталогов-конструкторов
 ([docs/09](docs/09-baukasten-katalog.md) — немецкий корпус,
 [docs/10](docs/10-praleska-baukasten.md) — «Пралеска»).
 
 **Общие механизмы (один раз в пакете — работают везде):**
 
-- **`quiz-kern`** — 25 приложений: Klassen-Modus (одна проекция на класс, без
+- **`quiz-kern`** — 25 приложений (Stand 18.10.2026; *Zusatz 29.10.2026:* 26 Apps importieren `quiz-kern` in `app.mjs`): Klassen-Modus (одна проекция на класс, без
   устройств и данных учеников), Duett-Modus (двое по очереди, затем сравнение) и
   Geschwister-Staffel (двое как одна команда).
 - **Hilfe-Insel (116 111)** — 65 детских приложений. Охват задан критерием, а не
