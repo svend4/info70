@@ -105,6 +105,7 @@ werden.
    (logik-ebenen.mjs) und eigene Daten (daten/ebenen.json). Im Text und in Dateinamen des Modus kein Wort mit dem Stamm „Stuf“. Alle Inhalte sind Eigenentwurf (Bauauftrag Abschnitt 9: die Quelle nennt Heimatkunde und
    Menschheit als Familie, S. 120, nicht die Reihenfolge der Ebenen).
    Korrektur 29.10.2026: Das Satzende oben trifft nicht zu. `tools/leistungs-woerter.mjs` prüft „Stufe“ nicht (seine Liste: Punkte, Rekord, Serie, Prozent, „richtig von“, „geschafft“, Sterne und Pokale, Vergleich). Das Verbot für neue Texte für Kinder gilt trotzdem; es wird von Hand oder im Regeltest geprüft. Bestandsstellen werden nicht geändert (Frage 66).
+   Anmerkung 29.10.2026 (Prüfung CON-4): Dasselbe gilt für den Satz zu „Stufe“ oben (Z. 105). Er trifft nur für „Rangstufe“ zu (packages/kinderschutz/src/quiz-ende.mjs, RANG_WORT). „Stufe“ allein prüfen weder leistungs-woerter noch bewertung-stand.
 2. Reine Logik mit Tests (test/ebenen.test.mjs): Reihenfolge der Ebenen, jede Ebene mit Inhalt und Eigenentwurf-Kennzeichnung,
    keine Wertungswörter in den Ebenen-Daten.
 3. Oberfläche: Schaltfläche „Vom Ort zur Erde“ im Startbildschirm; Vorlesen; im neuen Modus kein Punkt, kein Rang, kein Rekord.

@@ -85,6 +85,7 @@ Keine Zufallsquelle in der Logikdatei; Zufall kommt als Parameter.
 - [ ] Druck: in dieser Einheit nicht vorgesehen. Käme Druck hinzu, gelten docs/02 Z. 79–82.
 - [ ] Mobile First 360 px; Knöpfe und Fußlink mindestens 48 px (docs/02 Z. 50).
 - [ ] Pflichtmarkierung „Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.“ Diese Einheit druckt keine Seitenangabe; Seitenangaben stehen nur in Abschnitt 1 und in den Daten (A18-Standard).
+  Anmerkung 29.10.2026: Überholt. README (Z. 57) und GDD (Z. 92 bis 95) tragen S. 119 und 120 mit dem Vermerk. Der Satz gilt nur für die Daten und Abschnitt 1.
 - [ ] Keine Modellnamen in Dateien; KI-Begriffe nur wie in der Vorlage. Modellnamen-Entscheidung A1 bleibt offen.
 - [ ] uk und ru: offen. Die Ukraine-Karte ist vorhanden; das Herkunftsland-Modul des Katalogs (docs/10, Z. 451) fehlt.
 
