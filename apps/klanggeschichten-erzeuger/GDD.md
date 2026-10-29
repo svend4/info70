@@ -109,7 +109,7 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
 
 Geprüft wurden alle Seitenangaben dieser Datei gegen die Textkopie der Pralęska (`tools/app-seiten-pruefen.mjs`, Urteil je Angabe im Lauf vom 29.10.2026). Das ist eine maschinelle Prüfung, keine Prüfung durch einen Menschen.
 
-Ergebnis: 21 Angaben in 31 Fundstellen; drei Angaben waren falsch, alle drei sind korrigiert:
+Ergebnis: 21 Angaben, davon 12 belegt und 9 mit falscher Seite. Die 9 falschen Stellen betreffen zwei Seitenangaben (die Überschrift «Пение» und die Fußnote zum Zeichen); alle sind korrigiert. Außerdem ein falscher Begriff. Im Einzelnen:
 
 - «Пение» steht auf S. 80, nicht auf S. 81. Der Abschnitt mit den 4 Zielen bleibt auf S. 81, daher jetzt „S. 80–81“. Geändert in README, GDD, app.mjs (Kommentar), logik.mjs (Kommentar), daten/stoffe.json und package.json. Vorher überall „S. 81“ für «Пение».
 - Die Fußnote zum Zeichen steht auf S. 79, nicht auf S. 80. Geändert in README, GDD, app.mjs (Kommentar), logik.mjs (Prüfung und Kommentar), test/logik.test.mjs (Prüfung), daten/stoffe.json und package.json. Vorher überall „S. 80“ für die Fußnote.
