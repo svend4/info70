@@ -7,11 +7,16 @@
   <meta name="description" content="Mathe-Entdecker: frühe mathematische Bildung als Vorlese-Quiz für 5–7. Mengen, Zählen, Formen, Reihen/Muster, Vergleichen, Raumrichtung, Teilen und Zeit. Offline, werbefrei, keine Datenerhebung." />
   <title>Mathe-Entdecker 🔢</title>
   <link rel="stylesheet" href="../../packages/kinder-ui/css/kinder.css" /><link rel="icon" type="image/svg+xml" href="../../packages/kinder-ui/img/favicon.svg" />
+  <link rel="stylesheet" href="reihen.css" />
 </head>
 <body>
+  <nav class="rv-leiste" id="modus-leiste" aria-label="Modus wählen">
+    <button class="k-knopf k-knopf--neutral" type="button" data-kennung="modus-reihen" aria-controls="reihen">Reihen legen</button>
+  </nav>
   <main class="k-app" id="app" aria-live="polite">
     <noscript>Diese Seite braucht JavaScript. Es werden keine Daten gesammelt.</noscript>
   </main>
+  <section class="rv-app" id="reihen" aria-live="polite" aria-labelledby="reihen-titel" hidden></section>
   <script type="module" src="app.mjs"></script>
 </body>
 </html>

@@ -4,5 +4,8 @@
   "private": true,
   "description": "Mathe-Entdecker: fruehe mathematische Bildung als Vorlese-Quiz fuer 5-7 auf @info70/quiz-kern. Mengen (mehr/weniger/gleich), Zaehlen bis 10, Formen und ihre Ecken, Reihen/Muster fortsetzen, Groessenvergleich, Raumrichtung, gerechtes Teilen und Tageszeiten. Aus 26 operationalisierten Praleska-Lernzielen abgeleitet, eigener Inhalt. Praleska docs/10 (Top-30 Nr. 6). Offline, werbefrei, keine Datenerhebung. Zielgruppe: Vorschule.",
   "license": "AGPL-3.0-only",
+  "scripts": {
+    "test": "node --test test/fragen.test.mjs test/logik.test.mjs test/regeln.test.mjs"
+  },
   "type": "module"
 }
