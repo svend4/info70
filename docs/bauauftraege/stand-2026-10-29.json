@@ -1,0 +1,55 @@
+{
+  "erzeugt": "Ergänzung zu docs/bauauftraege/index.json, Stand 29.10.2026 (Entscheidung 63). Der Index selbst bleibt unverändert.",
+  "hinweis": "Die Felder status und naechster_schritt im Index stammen vom Stand 27.10 und sind für die genannten Einheiten veraltet. Maßgeblich ist stand_2026_10_29. Ein Neuerzeugen mit tools/bauauftrag-index.mjs --schreiben würde diese Datei nicht berühren.",
+  "einheiten": [
+    {
+      "id": "CON-18",
+      "einheit": "Theater zuhause - Bastel- und Spielheft",
+      "app": "theater-zuhause-heft",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "App theater-zuhause-heft ist vorhanden (Druckprüfung, Commit 30fc97a). Der Status „teilweise“ ist veraltet; offen bleiben nur die Lücken aus Stufe 3."
+    },
+    {
+      "id": "PRI-7",
+      "einheit": "Fuehl- und Sortier-Werkstatt: Holz, Papier, Stoff",
+      "app": "fuehl-sortier-werkstatt",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "App fuehl-sortier-werkstatt ist vorhanden. Offen: Ausbau oder Neubau und Altersangabe 2 bis 3 gegen 1 bis 3 (Frage 59)."
+    },
+    {
+      "id": "CON-12",
+      "einheit": "Puppentheater-Werkstatt (Content-Pack)",
+      "app": "puppentheater-werkstatt",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "App puppentheater-werkstatt ist vorhanden; das Feld app ist gesetzt. Offen: Vertep und Batleika sowie Eintrittskarten (Frage 60)."
+    },
+    {
+      "id": "KIN-17",
+      "einheit": "Uhr- und Kalender-Kind (Einheit 17)",
+      "app": "uhr-und-kalender-kind",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "Ausbau committet (d4446a0, 28 Tests). Offen laut Bauauftrag Abschnitt 9: Rekord und Punkte/Rang (Fragen 50 und 51), Speicherregel localStorage (docs/02 Z. 25 bis 26 gegen die Vorlage), A18 Seitenangaben. Stufe 2 wartet auf die Entscheidungen 50 bis 60."
+    },
+    {
+      "id": "GEM-8",
+      "einheit": "Mathe-Entdecker: Zahlen, Formen, Reihen",
+      "app": "mathe-entdecker",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "Ausbau committet (ecc9fa6, 43 Tests). Prüfung 3: freigabe_empfohlen. Offen: Entscheidungen 65 bis 67 (Bestand: Zufall, Stufe, Fokus, Wort Sterne)."
+    },
+    {
+      "id": "GEM-13",
+      "einheit": "Erzaehl-Bruecke",
+      "app": "erzaehl-bruecke",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "Ausbau committet (73b342a, 31 Tests). Prüfung abgeschlossen. Offen: Entscheidungen 65 bis 67 (Bestand)."
+    },
+    {
+      "id": "CON-4",
+      "einheit": "Mein Ort, mein Land, unsere Erde (Content-Pack)",
+      "app": "deutschland-kompass",
+      "status_index_27_10": "teilweise",
+      "stand_2026_10_29": "Ausbau nicht committet (Arbeitsstand in con4-arbeitsstand.tgz, Übergabe docs/uebergabe-2026-10-29.md), 42 Tests. Prüfung 4: Nacharbeit R4-1 erledigt; freigabefähig nach den Entscheidungen 68 und 69."
+    }
+  ]
+}
