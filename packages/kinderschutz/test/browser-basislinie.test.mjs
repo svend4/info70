@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -82,5 +82,22 @@ test('Kontrollfall im Prozess: ohne --integrator wird auch aus der Wurzel nicht 
     assert.equal(readFileSync(DATEI, 'utf8'), vorher, 'die Basislinie bleibt unverändert');
   } finally {
     rmSync(leer, { recursive: true, force: true });
+  }
+});
+
+// Befund B-13 (29.10.2026): eine Messung mit --alle-knoepfe ist Auskunft. Sie darf die Basislinie nicht schreiben,
+// auch nicht aus der Wurzel mit --integrator.
+test('Kontrollfall im Prozess: eine Messung mit --alle-knoepfe verweigert das Schreiben, die Datei bleibt', () => {
+  const vorher = readFileSync(DATEI, 'utf8');
+  const messordner = mkdtempSync(join(tmpdir(), 'basis-alle-'));
+  try {
+    const messung = { ...ergebnis([]), status: 0, alleKnoepfe: true, zusammenfassung: { klicksInsgesamt: 1, beruehrziele: 1 } };
+    writeFileSync(join(messordner, 'testapp.json'), JSON.stringify(messung));
+    const lauf = spawnSync(process.execPath, [TOOL, '--schreiben', messordner, '--integrator'], { cwd: WURZEL, encoding: 'utf8' });
+    assert.equal(lauf.status, 64, lauf.stderr);
+    assert.match(lauf.stderr, /--alle-knoepfe/);
+    assert.equal(readFileSync(DATEI, 'utf8'), vorher, 'die Basislinie bleibt unverändert');
+  } finally {
+    rmSync(messordner, { recursive: true, force: true });
   }
 });

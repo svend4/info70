@@ -30,9 +30,17 @@ if (modus === 'schreiben') {
 }
 
 // Messungen einlesen. Eine App ohne Datei im Messordner wird nicht gezählt.
+// Eine Messung mit --alle-knoepfe (browser-pruefung.mjs, Befund B-13) ist Auskunft und darf die Basislinie nicht schreiben.
 const aktuell = {};
+const mitAlleKnoepfen = [];
 for (const f of readdirSync(ordner).filter((f) => f.endsWith('.json')).sort()) {
-  aktuell[f.replace(/\.json$/, '')] = zaehleKategorien(JSON.parse(readFileSync(join(ordner, f), 'utf8')));
+  const messung = JSON.parse(readFileSync(join(ordner, f), 'utf8'));
+  if (messung.alleKnoepfe === true) mitAlleKnoepfen.push(f);
+  aktuell[f.replace(/\.json$/, '')] = zaehleKategorien(messung);
+}
+if (modus === 'schreiben' && mitAlleKnoepfen.length) {
+  console.error(`Schreiben abgelehnt: ${mitAlleKnoepfen.length} Messung(en) mit --alle-knoepfe, z. B. ${mitAlleKnoepfen[0]}. Die Basislinie wird ohne diesen Schalter gemessen (Frage 73).`);
+  process.exit(64);
 }
 
 const basis = existsSync(DATEI) ? JSON.parse(readFileSync(DATEI, 'utf8')) : null;

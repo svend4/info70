@@ -1,0 +1,4647 @@
+{
+ "stand": "2026-10-29",
+ "werkzeug": "tools/browser-pruefung.mjs <app> - <ordner> --alle-knoepfe",
+ "hinweis": "Maschinelle Messung, Auskunft, kein Tor. Nicht von einem Menschen geprüft. Die Basislinie docs/browser-basislinie.json bleibt unverändert.",
+ "apps": [
+  {
+   "app": "aemtli-rad",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 0,
+   "klickFehler": 1,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "anzeige-einstellungen",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "anzeige-oder-nicht",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "app-rechte-quiz",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "architektur-spaziergang",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 240,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 22,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "autonomiephase-navigator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "avv-checkliste-hosting",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "baby-spielideen-kartei",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 82,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "barriere-detektive",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "barriere-spuernasen",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 72,
+   "klicksOhneKennung": 72,
+   "fokusverlust": 48,
+   "zurueckGeklickt": 2,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 13,
+   "basislinie": {
+    "druck": 13,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "barrierefreiheitserklaerung-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "berechtigungs-safari",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 22,
+   "klicksOhneKennung": 22,
+   "fokusverlust": 15,
+   "zurueckGeklickt": 2,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 16,
+   "basislinie": {
+    "druck": 16,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "beschwerde-brief-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 9,
+   "klicksOhneKennung": 9,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "beschwerde-lotse",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 16,
+   "klicksOhneKennung": 16,
+   "fokusverlust": 14,
+   "zurueckGeklickt": 7,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bewegungs-kartei-erstes-jahr",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 50,
+   "klicksOhneKennung": 50,
+   "fokusverlust": 36,
+   "zurueckGeklickt": 2,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 2,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bewegungs-richtwerte-3-5",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 9,
+   "klicksOhneKennung": 9,
+   "fokusverlust": 8,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bewegungs-schatzkiste",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 21,
+   "klicksOhneKennung": 21,
+   "fokusverlust": 20,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 15,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bewegungslandschaft-stationen",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 10,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bewegungspausen-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 9,
+   "klicksOhneKennung": 9,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 2,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bfsg-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "blasen-duell",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 300,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 12,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "bot-oder-buddy",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 7,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "buchecke-check",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 47,
+   "klicksOhneKennung": 47,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "challenge-druck",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 24,
+   "klicksOhneKennung": 24,
+   "fokusverlust": 13,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "chat-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "chat-rechte",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 2,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 2,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "compliance-koffer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 13,
+   "klicksOhneKennung": 13,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "darf-ich-posten",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "dark-pattern-detektiv",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "dark-pattern-labyrinth",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "dark-pattern-selbstinspektion",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 51,
+   "klicksOhneKennung": 51,
+   "fokusverlust": 50,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 11,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "daten-radiergummi",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "daten-schatz-mini",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "daten-schatz",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "datenschutz-baukasten",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "deepfake-spuernase",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "deepfake-studio",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 41,
+   "klicksOhneKennung": 41,
+   "fokusverlust": 39,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "design-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "deutschland-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 9,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 8,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 1,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 17,
+   "basislinie": {
+    "druck": 17,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "dinge-des-alltags",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "dsa-selbstaudit",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 30,
+   "klicksOhneKennung": 30,
+   "fokusverlust": 29,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 12,
+   "basislinie": {
+    "druck": 12,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "eingewoehnungs-leitfaden",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 24,
+   "klicksOhneKennung": 24,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "einwilligungs-pruefpfad",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 34,
+   "klicksOhneKennung": 34,
+   "fokusverlust": 33,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "eltern-kompass-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "eltern-rechtebriefe",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "eltern-sammelband",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 1,
+   "druckZeichenEndzustand": 33,
+   "basislinie": {
+    "druck": 33,
+    "beruehrung": 1,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "elternabend-kit",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 3,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 2,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 13,
+   "basislinie": {
+    "druck": 13,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "elternbrief-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 10,
+   "klicksOhneKennung": 10,
+   "fokusverlust": 9,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 11,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "elterngespraech-trainer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 2,
+   "klicksGesamt": 4,
+   "klicksOhneKennung": 4,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "elterngespraech-uebergang",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 239,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 23,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "entdecker-karten-natur",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "entwicklungs-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 97,
+   "klicksOhneKennung": 97,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erfinder-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erfolgs-momente-kartei",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "ergebnis-plakat",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erste-kuenstler",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 97,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erste-woerter-lesewerkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 2,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erste-woerter-tagebuch",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 9,
+   "klicksOhneKennung": 9,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erstes-handy-kompass",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "erzaehl-bruecke",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 22,
+   "klicksOhneKennung": 22,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fachquiz-erstes-lebensjahr",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fake-shop-fahnder",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familien-bildschirmzeit",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familien-budget",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 13,
+   "klicksOhneKennung": 13,
+   "fokusverlust": 13,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 24,
+   "basislinie": {
+    "druck": 24,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familien-datenschatz",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familien-medienvertrag",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familien-notfall-fahrplan",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familienrat",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 3,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 7,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 2,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "familienschatz-reime",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 4,
+   "klicksOhneKennung": 4,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "farb-labor",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "farbwoerter-schatz",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 7,
+   "klicksGesamt": 75,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": null
+  },
+  {
+   "app": "feed-forscher-profi",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 48,
+   "klicksOhneKennung": 48,
+   "fokusverlust": 47,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "feed-forscher",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 4,
+   "klicksGesamt": 38,
+   "klicksOhneKennung": 38,
+   "fokusverlust": 35,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "filter-spiegel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 15,
+   "klicksOhneKennung": 15,
+   "fokusverlust": 14,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "foerder-navigator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 10,
+   "klicksOhneKennung": 10,
+   "fokusverlust": 10,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 17,
+   "basislinie": {
+    "druck": 19,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fomo-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "formular-falle",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "foto-ampel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fragfinn-selbsttest",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "freunde-in-der-gruppe",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "frischluft-familie",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 180,
+   "klicksOhneKennung": 180,
+   "fokusverlust": 146,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fristen-radar",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fuehl-sortier-werkstatt",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 54,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "fuenf-helfer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "gefuehle-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "gemeinsam-gesund-essen",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "generationen-quiz",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "geschichten-wender",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 19,
+   "klicksOhneKennung": 19,
+   "fokusverlust": 9,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "geschichten-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 56,
+   "klicksOhneKennung": 56,
+   "fokusverlust": 55,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "gesunder-koerper-ampel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 61,
+   "klicksOhneKennung": 61,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 17,
+   "basislinie": {
+    "druck": 17,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "grammatik-zwerge",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "gruppenklima-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "herkunftssprachen-bruecke",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "himmelsgucker-sonne-mond-und-sterne",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 16,
+   "klicksGesamt": 39,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": null
+  },
+  {
+   "app": "hoeflich-fair",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "ich-schaff-das",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "impressum-detektive",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "impressum-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "impulskarten-sujetspiel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 11,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "interaktions-konzept-assistent",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "jahreszeiten-rad",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 79,
+   "klicksOhneKennung": 79,
+   "fokusverlust": 72,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 19,
+   "basislinie": {
+    "druck": 19,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "jmstv-einstufungs-helfer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 17,
+   "klicksOhneKennung": 17,
+   "fokusverlust": 17,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 3,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "jugendschutz-quiz-fachkraefte",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kettenbrief-stopper",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 2,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 8,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 13,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "ki-kennzeichnungs-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 14,
+   "klicksOhneKennung": 14,
+   "fokusverlust": 13,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 15,
+   "basislinie": {
+    "druck": 15,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "ki-transparenz-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kinderrat",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 17,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kinderrechte-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kindertaenze-europa",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 29,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kita-familien-bruecke",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kita-kartograph",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 103,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kita-mitmach-boerse",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 3,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 38,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kita-unterstuetzungs-navigator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 99,
+   "klicksOhneKennung": 99,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kita-wochenplaner",
+   "status": 0,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "klang-detektive",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 3,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "klanggeschichten-erzeuger",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 82,
+   "klicksOhneKennung": 82,
+   "fokusverlust": 74,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 4,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 4,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "klassen-koffer-auswertung",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "klassenrat-handbuch",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 12,
+   "basislinie": {
+    "druck": 12,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kleine-forscher-ohne-bildschirm",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 10,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "koeder-quiz",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "koerper-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kria-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 12,
+   "basislinie": {
+    "druck": 12,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kriterien-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kunst-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 11,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "kunst-gucken",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 74,
+   "klicksOhneKennung": 74,
+   "fokusverlust": 62,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 4,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 4,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "lehrkraefte-szenariotraining",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 4,
+   "klicksOhneKennung": 4,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "leichte-sprache-pruefhilfe",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 3,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "leichte-sprache-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "link-inventar-pruefer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 4,
+   "klicksOhneKennung": 4,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "link-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "lootbox-labor",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 11,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "maerchen-gedicht-fabel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mathe-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 2,
+   "klicksGesamt": 15,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "meilenstein-begleiter",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 16,
+   "klicksOhneKennung": 16,
+   "fokusverlust": 14,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "meine-familie-woerter-und-rollen-content-pack",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 21,
+   "klicksGesamt": 76,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": null
+  },
+  {
+   "app": "meldewege-planer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 9,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mensch-tier-pflanze",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mess-labor",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 12,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mini-gaertner-begleiter",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 91,
+   "klicksOhneKennung": 91,
+   "fokusverlust": 90,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mini-oper-baukasten",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 8,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mini-rechte-entdecker",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 12,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "mitmach-arena",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 9,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "morgenkreis-wochenplaner-u3",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 64,
+   "klicksOhneKennung": 64,
+   "fokusverlust": 64,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 10,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 3,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "muenz-trick",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 13,
+   "klicksOhneKennung": 13,
+   "fokusverlust": 10,
+   "zurueckGeklickt": 2,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "musik-alltags-begleiter",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 27,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "musik-detektive",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 15,
+   "klicksOhneKennung": 15,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "musik-jahresplaner",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 20,
+   "klicksOhneKennung": 20,
+   "fokusverlust": 19,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "musik-woerter-bilderlexikon",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 30,
+   "klicksGesamt": 165,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": null
+  },
+  {
+   "app": "musikmomente-1-3",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 55,
+   "klicksOhneKennung": 55,
+   "fokusverlust": 12,
+   "zurueckGeklickt": 3,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 12,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "musikspiele-kartei-u3",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 15,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "nachrichten-detektive-junior",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "nachrichten-detektive-profi",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "nachrichten-detektive",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "nahrungsnetz-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 23,
+   "klicksOhneKennung": 23,
+   "fokusverlust": 22,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 20,
+   "basislinie": {
+    "druck": 17,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "natur-fuersorge-karten",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "netz-pass-urkunde",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 13,
+   "klicksOhneKennung": 13,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 2,
+   "basislinie": {
+    "druck": 2,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "notruf-held",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 15,
+   "klicksOhneKennung": 15,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "oer-vorlage",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "ombuds-landkarte",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 7,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "ornament-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 1,
+   "beruehrungFunde": 10,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "passwort-pruefstand",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 11,
+   "klicksOhneKennung": 11,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 22,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "plattform-rechte-13",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "projektwoche",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 18,
+   "basislinie": {
+    "druck": 18,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "puppentheater-werkstatt",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "puste-lauschspiel-kartei",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 33,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "quiz-karten-druck",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "rechte-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "rechte-lexikon",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 21,
+   "klicksOhneKennung": 21,
+   "fokusverlust": 18,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 11,
+   "basislinie": {
+    "druck": 20,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "rechte-stationen",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 11,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "regel-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 2,
+   "klicksGesamt": 22,
+   "klicksOhneKennung": 22,
+   "fokusverlust": 12,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 3,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "reim-radar",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "reim-werkstatt",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 38,
+   "klicksOhneKennung": 38,
+   "fokusverlust": 38,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 18,
+   "basislinie": {
+    "druck": 18,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "rhythmus-orchester",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 19,
+   "klicksOhneKennung": 19,
+   "fokusverlust": 13,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 19,
+   "basislinie": {
+    "druck": 19,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "schatzkarten-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 3,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "schulanfang-spiel-navigator",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 234,
+   "zurueckGeklickt": 35,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 21,
+   "basislinie": {
+    "druck": 21,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "schulfreigabe-dossier",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "schulstart-begleiter",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 96,
+   "klicksOhneKennung": 96,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "schwungblatt-generator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 10,
+   "klicksOhneKennung": 10,
+   "fokusverlust": 9,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "seiten-scanner",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 60,
+   "klicksOhneKennung": 60,
+   "fokusverlust": 40,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "seitenstark-qualitaets-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 3,
+   "klicksOhneKennung": 3,
+   "fokusverlust": 2,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "selbstcheck-paedagogik",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 100,
+   "klicksOhneKennung": 100,
+   "fokusverlust": 98,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "selbststaendigkeits-leiter",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 265,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sharenting-spiegel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 4,
+   "klicksOhneKennung": 4,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sicher-unterwegs",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sicherer-krabbelraum-check",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 175,
+   "klicksOhneKennung": 175,
+   "fokusverlust": 147,
+   "zurueckGeklickt": 3,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 2,
+   "druckZeichenEndzustand": 2,
+   "basislinie": {
+    "druck": 2,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "smarte-ohren",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sog-maschine",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 10,
+   "klicksOhneKennung": 10,
+   "fokusverlust": 9,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 9,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "spiel-recht-balance",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 26,
+   "klicksOhneKennung": 26,
+   "fokusverlust": 24,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "spielbegleiter-rollenspiel",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "spiele-kauf-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 12,
+   "klicksOhneKennung": 12,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "spielzeug-check-u3",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 235,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 11,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "spiral-stopper",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 6,
+   "klicksOhneKennung": 6,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sport-schnupper-stationen",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 24,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sprachbruecken-impulskarten",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 14,
+   "klicksOhneKennung": 14,
+   "fokusverlust": 11,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "sprich-mit-mir",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 235,
+   "zurueckGeklickt": 12,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 18,
+   "basislinie": {
+    "druck": 15,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "spuren-lupe",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 2,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 13,
+   "basislinie": {
+    "druck": 13,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "staerken-tagebuch",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 91,
+   "klicksOhneKennung": 91,
+   "fokusverlust": 87,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 12,
+   "basislinie": {
+    "druck": 11,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stark-im-chat-mini",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stark-im-chat-plus",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stark-im-chat",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stark-und-gesund",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "starke-zuege-poster",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 6,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stations-konfigurator",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stundenentwurf-bildschirmwoche",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stundenentwurf-chat",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stundenentwurf-datenschatz",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stundenentwurf-feed",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stundenentwurf-kettenbrief",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "stundenentwurf-nachrichten",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 1,
+   "klicksOhneKennung": 1,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "tagesblick-fachkraft",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 1,
+   "basislinie": {
+    "druck": 1,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "takt-pause",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 25,
+   "klicksOhneKennung": 25,
+   "fokusverlust": 23,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 8,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "theater-zuhause-heft",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "tier-tanz-impulse",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 13,
+   "klicksOhneKennung": 13,
+   "fokusverlust": 7,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 17,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "tier-zu-gast",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "tierkinder-vorlesen",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 18,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "tischdienst-trainer",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 53,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "tonleiter-treppe",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 17,
+   "klicksOhneKennung": 17,
+   "fokusverlust": 5,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 6,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "uhr-und-kalender-kind",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 2,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "unser-konzert-zaehlhilfe",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 17,
+   "klicksOhneKennung": 17,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 3,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "verschwoerungs-werkstatt",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 300,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 2,
+   "basislinie": {
+    "druck": 5,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "vorlese-kompass",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 5,
+   "klicksOhneKennung": 5,
+   "fokusverlust": 3,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 10,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "vorsorge-check-juschg",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 33,
+   "klicksOhneKennung": 33,
+   "fokusverlust": 32,
+   "zurueckGeklickt": 1,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 12,
+   "basislinie": {
+    "druck": 12,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "wachstums-bewegungs-begleiter",
+   "status": 1,
+   "abbruch": "Klickgrenze 300 erreicht",
+   "bildschirme": 1,
+   "klicksGesamt": 300,
+   "klicksOhneKennung": 300,
+   "fokusverlust": 229,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 3,
+   "druckZeichenEndzustand": 13,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 3,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "wahlkabine",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 2,
+   "klicksOhneKennung": 2,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "warum-heisst-das-so",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 4,
+   "basislinie": {
+    "druck": 9,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "wer-dahinter",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 7,
+   "klicksOhneKennung": 7,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 3,
+   "basislinie": {
+    "druck": 10,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "wer-wohnt-wo",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 14,
+   "klicksOhneKennung": 14,
+   "fokusverlust": 13,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 15,
+   "basislinie": {
+    "druck": 22,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "werbekennzeichnung",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 4,
+   "klicksOhneKennung": 4,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 6,
+   "basislinie": {
+    "druck": 4,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "werkstatt-karten-applikation",
+   "status": 0,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 122,
+   "klicksOhneKennung": 0,
+   "fokusverlust": 0,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 0,
+   "basislinie": {
+    "druck": 0,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "wetter-forscher",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 14,
+   "klicksOhneKennung": 14,
+   "fokusverlust": 1,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 15,
+   "basislinie": {
+    "druck": 15,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "wie-bewegt-sich",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 7,
+   "basislinie": {
+    "druck": 8,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  },
+  {
+   "app": "woerter-sortierer",
+   "status": 1,
+   "abbruch": null,
+   "bildschirme": 1,
+   "klicksGesamt": 8,
+   "klicksOhneKennung": 8,
+   "fokusverlust": 4,
+   "zurueckGeklickt": 0,
+   "klickFehler": 0,
+   "ueberlaufFunde": 0,
+   "beruehrungFunde": 0,
+   "druckZeichenEndzustand": 5,
+   "basislinie": {
+    "druck": 7,
+    "beruehrung": 0,
+    "ueberlauf": 0,
+    "klickFehler": 0
+   }
+  }
+ ],
+ "zusammen": {
+  "apps": 232,
+  "statusVerteilung": {
+   "ok": 29,
+   "verletzt": 203,
+   "nichtGemessen": 0,
+   "abbruch": 10
+  },
+  "klicksGesamt": 7422,
+  "klicksOhneKennung": 6008,
+  "appsMitFokusverlust": 178,
+  "fokusverlustGesamt": 4472,
+  "appsMitZurueckGeklickt": 49,
+  "zurueckGeklicktGesamt": 112,
+  "appsMitUeberlauf": 3,
+  "appsMitBeruehrung": 16,
+  "appsMitKlickFehler": 1,
+  "druckSummeBasislinie": 1511,
+  "druckSummeEndzustand": 1307
+ }
+}

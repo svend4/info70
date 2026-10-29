@@ -1,6 +1,6 @@
 // Browser-Prüfung einer App bei 360 px: Überlauf, Berührziele, Klicks mit Fokusprüfung,
 // Druckansicht und Konsolenfehler.
-// Aufruf: node tools/browser-pruefung.mjs <app-ordner> [port|-] [ausgabeordner]
+// Aufruf: node tools/browser-pruefung.mjs <app-ordner> [port|-] [ausgabeordner] [--alle-knoepfe]
 //   app-ordner     Ordner unter apps/, z. B. tischdienst-trainer
 //   port           Ohne Angabe oder "-": das Skript startet selbst einen statischen Server aus dem
 //                  Repo-Root (wie tools/serve.mjs) auf einem freien Port und beendet ihn am Ende.
@@ -58,11 +58,15 @@ const TYPEN = {
 
 function nutzung(meldung) {
   console.error(meldung);
-  console.error('Aufruf: node tools/browser-pruefung.mjs <app-ordner> [port|-] [ausgabeordner]');
+  console.error('Aufruf: node tools/browser-pruefung.mjs <app-ordner> [port|-] [ausgabeordner] [--alle-knoepfe]');
   process.exit(2);
 }
 
-const [, , app, portArg, ausgabeArg] = process.argv;
+// --alle-knoepfe (Befund B-13, 29.10.2026): auch Knöpfe ohne data-kennung klicken, z. B. „↩️ Zurück“. Sie bekommen
+// im Lauf die Kennung „auto:<Text>#<Nummer>“. Ohne den Schalter bleibt alles wie bisher; die Basislinie wird
+// mit diesem Schalter nicht geschrieben (Auskunft, kein Tor).
+const ALLE_KNOEPFE = process.argv.includes('--alle-knoepfe');
+const [, , app, portArg, ausgabeArg] = process.argv.filter((a) => a !== '--alle-knoepfe');
 if (!app) nutzung('Kein App-Ordner angegeben.');
 if (!/^[a-z0-9][a-z0-9-]*$/.test(app) || !existsSync(join(ROOT, 'apps', app, 'index.html'))) {
   nutzung(`Keine App „${app}“ mit index.html unter apps/.`);
@@ -139,9 +143,22 @@ async function zaehlerLesen(seite) {
 
 // Zustand des aktuellen Bildschirms: Titel, Knöpfe mit Kennung, Überlauf bei 360 px.
 async function zustandMessen(seite) {
-  return seite.evaluate(() => {
+  return seite.evaluate((alle) => {
     const sichtbar = (el) => el.getClientRects().length > 0;
     const html = document.documentElement;
+    if (alle) {
+      // Knöpfe ohne Kennung bekommen eine Kennung aus Text und Nummer je Bildschirm; bereits vergebene bleiben.
+      // Zustandszeichen (☐ ☑ ✓ …) und Zahlen fallen aus dem Text, sonst wird ein Schalter nach jedem Klick ein
+      // „neuer“ Knopf, und die Suche klickt ihn endlos (Lauf 1, familien-budget: 300 Klicks auf einen Schalter).
+      const zaehler = new Map();
+      for (const b of document.querySelectorAll('button:not([data-kennung])')) {
+        const text = (b.textContent || b.getAttribute('aria-label') || '').replace(/[☐☑☒✓✔□■▢▣]/gu, '').replace(/\d+/g, '0')
+          .trim().replace(/\s+/g, ' ').slice(0, 40);
+        const n = zaehler.get(text) ?? 0;
+        zaehler.set(text, n + 1);
+        b.dataset.kennung = `auto:${text}#${n}`;
+      }
+    }
     const titel = ([...document.querySelectorAll('h1, h2, [role="heading"]')].find(sichtbar)?.textContent ?? '').trim().slice(0, 60);
     const knoepfe = [...document.querySelectorAll('button[data-kennung]')].map((b) => ({
       kennung: b.dataset.kennung,
@@ -157,7 +174,7 @@ async function zustandMessen(seite) {
       sichtbreite: html.clientWidth,
       ueberlaufPx: html.scrollWidth - html.clientWidth,
     };
-  });
+  }, ALLE_KNOEPFE);
 }
 
 // Berührziele: alle sichtbaren Ziele mit Maß, Auswahl der zu kleinen erfolgt im Node-Teil.
@@ -475,6 +492,7 @@ async function hauptlauf() {
     }
     ergebnis.port = port;
     ergebnis.eigenerServer = server !== null;
+    ergebnis.alleKnoepfe = ALLE_KNOEPFE;
     const adresse = `http://localhost:${port}/apps/${app}/index.html`;
     ergebnis.adresse = adresse;
     await pruefe(pw, adresse, ergebnis);
