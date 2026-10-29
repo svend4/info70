@@ -17,6 +17,9 @@ Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Mens
 ## Was belegt ist
 
 - Praleska, Abschnitt „ПОЗНАВАТЕЛЬНО-ПРАКТИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ“ (S. 63), Gruppe „МАЛЫШИ“ (S. 64).
+- Anmerkung 29.10.2026 (Seitenprüfung, Welle 3): Die Karte „Ineinanderlegen“ stützt sich auf den Stichpunkt, der auf
+  S. 63 beginnt; das Beispiel steht auf S. 64. In `daten/karten.json` steht `quelle.seite` „S. 63“ und zusätzlich
+  `quelle.seite_bis` „S. 64“. Seitenangaben maschinell gegen den Quelltext geprüft, noch nicht von einem Menschen geprüft.
 - Zitate, je mit Seite in den Daten (`daten/karten.json`, Feld `quelle.seite`):
   - „песок, глина, камушки“ (S. 63)
   - „сухой и влажный песок“ (S. 63)

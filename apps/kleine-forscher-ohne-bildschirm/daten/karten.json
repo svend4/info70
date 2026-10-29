@@ -73,7 +73,7 @@
       "material": "Becher oder Dosen, die ineinander passen, ohne scharfe Kanten",
       "lernziel": "Das Kind steckt Becher ineinander und zieht sie wieder auseinander.",
       "sicherheit": "Keine Teile in den Mund. Nur Becher ohne scharfe Kanten verwenden; Erwachsene bleiben dabei.",
-      "quelle": { "seite": "S. 63" }
+      "quelle": { "seite": "S. 63", "seite_bis": "S. 64", "anmerkung": "Stand 29.10.2026 (Seitenprüfung, Welle 3): Der Stichpunkt beginnt auf S. 63; das Beispiel „вкладывание матрешек“ steht auf S. 64. Das Feld seite bleibt bei S. 63 (Form „S. n“)." }
     },
     {
       "id": "werkzeug",

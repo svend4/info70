@@ -78,6 +78,9 @@ Rechtsrahmen Punkt 2: nur gemeinsam mit einem Erwachsenen und mit festen Sitzung
   Begriff, und „салатовый“ steht nur im Quellenhinweis: ein helles Grün ist nicht tannengrün. Alle sechs Namen des
   Bauauftrags tragen `quelle.seite` „S. 178“ (Bauauftrag, Abschnitt 4): die Seite belegt die Aufgabe „bildhafte
   Farbnamen“, nicht den deutschen Namen. Die übrigen Einträge tragen nur `eigenentwurf: true`.
+- Anmerkung 29.10.2026 (Welle 3): Der Eintrag tannengrün trägt `eigenentwurf: true` bereits (eine Agentenprüfung hatte das
+  Fehlen gemeldet; das war falsch). Offen ist, ob die Seitenangabe „S. 178“ bei tannengrün bleibt, weil die Seite keinen Begriff
+  für tannengrün nennt (Frage 80). Die Daten werden dazu nicht geändert, bis Max entscheidet.
 - Die Kennzeichnung steht auf der Farbkarte, auf dem Blatt (Zeile „Farbwort, Farbfläche und Hinweis: Eigenentwurf.“),
   im Fuß und beim Quellenhinweis.
 

@@ -56,6 +56,8 @@ test('Daten: jede Quelle hat die Form „S. n“ mit Seitenzahl aus dem Bauauftr
     assert.equal(k.quelle.seite, SEITEN[k.id], `${k.id}: Seite weicht vom Bauauftrag ab`);
     assert.match(k.quelle.seite, /^S\. \d+$/);
   }
+  // Seitenprüfung 29.10.2026: das Beispiel der Karte „Ineinanderlegen“ steht auf S. 64.
+  assert.equal(daten.karten.find((k) => k.id === 'ineinanderlegen').quelle.seite_bis, 'S. 64');
 });
 
 test('Daten: die Zitate stehen wörtlich und in der Reihenfolge des Bauauftrags', () => {

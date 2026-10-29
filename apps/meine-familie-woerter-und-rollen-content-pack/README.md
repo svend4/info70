@@ -48,6 +48,11 @@ Quelle: Praleska, Abschnitt „Ребенок как член семьи“ (S. 
   Entschuldigung sagen, Mitfühlen und trösten, Etwas toll finden.
 - Familienbudget: „семейном бюджете“ (S. 117) für Brauchen und wünschen und für Sparen; „бережливым“ (S. 117) für Sorgsam sein.
 - Die Gruppe „ПОЧЕМУЧКИ“ trägt auf S. 103 die Altersangabe „четвертый—пятый годы жизни“. Bauauftrag und Katalog sagen 3 bis 5 Jahre.
+- Anmerkung 29.10.2026 (Seitenprüfung, Welle 3): Die Überschrift der Gruppe „ПОЧЕМУЧКИ“ beginnt auf S. 103. Auf S. 114 steht
+  der Name nur als Kopfzeile dieser Seite; die Angabe „(S. 114)“ oben bleibt stehen und ist so zu lesen. Das vierte und fünfte
+  Lebensjahr entspricht den Altern 3 bis 5 Jahre (das vierte Lebensjahr beginnt mit dem dritten Geburtstag). Ob der Abschnitt
+  auch für die Gruppe „ФАНТАЗЕРЫ“ (S. 214) gilt, steht in Frage 79. Seitenangaben maschinell gegen den Quelltext geprüft,
+  noch nicht von einem Menschen geprüft.
 
 Die Seitenangaben und alle Zitate sind in der Bauarbeit maschinell gegen die Textkopie der Quelle geprüft worden (außerhalb des
 Repos, Seite n ist der n-te Abschnitt der Textkopie). Zitate haben höchstens sechs Wörter.

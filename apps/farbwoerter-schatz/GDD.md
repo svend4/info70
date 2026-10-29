@@ -114,6 +114,9 @@ nach docs/05, Methode 5); Ergebnisse liegen nicht vor, es sind Hypothesen (Eigen
   Buchstaben außer dem Aufzählungszeichen der Textkopie, keine ukrainischen Sonderbuchstaben). Offen sind: wer die Übersetzung prüft,
   was aus „салатовый“ und tannengrün wird (hell gegen dunkel), ob ein Sprachwechsel kommt, und ob uk und ru nur mit einer Stimme im
   Gerät vorgelesen werden. Das Versprechen des Katalogs „dreisprachig, dieselbe Farbe in drei Sprachen hören“ ist nicht eingelöst.
+- Anmerkung 29.10.2026 (Welle 3): tannengrün trägt `eigenentwurf: true` bereits; die Seite 178 nennt keinen Begriff für tannengrün.
+  Ob die Seitenangabe „S. 178“ bei diesem Eintrag bleibt, entscheidet Max (Frage 80). Seitenangaben maschinell gegen den Quelltext
+  geprüft, noch nicht von einem Menschen geprüft.
 - Sitzungslimit und Alter: die Zahl 6 und der Weg „Neue Runde“ sind Eigenentwurf. Für 5 bis 7 Jahre nennt docs/10 (Rechtsrahmen Punkt 2) kurze
   selbstständige Sitzungen; hier gilt dieselbe Runde und derselbe Hinweis für Erwachsene.
 - Farbwerte: wer sie wählt und auf welchem Gerät sie gelten. Druck: Hintergrundgrafiken; ein Ausmalblatt sieht der Bauauftrag nicht vor.
